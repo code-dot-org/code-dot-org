@@ -1,4 +1,3 @@
----
 sl:
   data:
     script:
@@ -231,7 +230,6 @@ sl:
             Variables:
               name: Spremenljivke
         algebra:
-          title: Računalništvo v računstvu
           lessons:
             'Eval: Conditionals':
               name: Pogoji
@@ -341,6 +339,10 @@ sl:
           lessons:
             Wrap-Up:
               name: Zaključek
+        cspunit2:
+          lessons:
+            The Internet:
+              name: Internet
         allthethings:
           lessons:
             Artist:
@@ -361,6 +363,12 @@ sl:
               name: Osnove Računalništva
         ECSPD2:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Povzetek
         sciencePD2b:
@@ -377,14 +385,25 @@ sl:
               name: Zaključek
         ECSPD2-iZone:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Povzetek
         ECSPD2-NexTech:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Povzetek
         asUnplugged:
-          description_audience: Starost 6-13
           lessons:
             Building a Foundation:
               name: Graditi temelje
@@ -400,8 +419,6 @@ sl:
               name: Napiši pesem
             The Big Event:
               name: Veliki dogodek
-        afterschool1:
-          description_audience: Starost 7-13
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -414,21 +431,10 @@ sl:
           lessons:
             While Loops:
               name: 'Zanka: dokler velja'
-        starwars:
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
-        starwarsblocks:
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
         mc:
           title: Minecraft Ura za kodo
           description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino v svet Minecraft-a
           description_short: Razišči svet Minecraft-a s pomočjo kode
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino v svet Minecraft-a
         ScienceP3OLPT3:
           lessons:
@@ -464,10 +470,7 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        CSF_Secret_Sample_Story:
-          description_audience: Starost 8-18+
         MikeTest:
-          description_audience: Starost 8-98
           lessons:
             Artist Functions:
               name: Umetnik Funkcije
@@ -484,10 +487,7 @@ sl:
             'Bee: Conditionals':
               name: 'Čebelica: Pogoji'
         gradeKinder:
-          description_audience: Starost 5-18
           lessons:
-            Debugging:
-              name: Odpravljanje napak
             Events:
               name: Dogodki
             'Jigsaw: Learn to drag and drop':
@@ -497,17 +497,13 @@ sl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Življenjski algoritmi: Zasadi seme'
         grade4:
-          description_audience: Starost 9-99
           lessons:
             Digital Citizenship:
               name: Digitalno državljanstvo
             Songwriting:
               name: Napiši pesem
         grade1:
-          description_audience: Starost 5-18
           lessons:
-            Debugging:
-              name: Odpravljanje napak
             Events:
               name: Dogodki
             'Jigsaw: Learn to drag and drop':
@@ -515,7 +511,6 @@ sl:
             Loops:
               name: Zanke
         grade5:
-          description_audience: Starost 10-110
           lessons:
             'Artist: For Loops':
               name: 'Umetnik: "For" zanke'
@@ -539,13 +534,16 @@ sl:
               name: 'Brez prijave: Pisanje pesmi s parametri'
         ecs-unit1:
           lessons:
+            0: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
+            1: |-
+              Unit 1, Days 1-2
+              What Is a Computer?
             Wrap-up:
               name: Povzetek
         grade3:
-          description_audience: Starost 5-18
           lessons:
-            " Bee: Conditionals":
-              name: " Čebelica: Pogoji"
             'Artist: Nested Loops':
               name: 'Umetnik: Ugnezdene zanke'
             Bee Debugging:
@@ -569,7 +567,6 @@ sl:
             Conditionals:
               name: Pogoji
         grade2:
-          description_audience: Starost 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -807,7 +804,7 @@ sl:
             Functions:
               name: Funkcije
             'null':
-              name: prazno
+              name: 'prazno'
         coursef-ramp:
           lessons:
             Introduction:
@@ -1102,6 +1099,8 @@ sl:
               name: Zabava s "for" zankami
             'Unplugged: Binary':
               name: Binarne slike
+            Artist Binary:
+              name: Umetnik Binarno
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1130,6 +1129,8 @@ sl:
               name: Digitalno državljanstvo
             'Unplugged: Binary':
               name: Binarne slike
+            Artist Binary:
+              name: Umetnik Binarno
             Graph Paper Programming:
               name: Obarvajmo kvadratke
             Relay Programming:
@@ -1142,8 +1143,6 @@ sl:
               name: Veliki dogodek
         csd6-2018:
           lessons:
-            Functions with Parameters_:
-              name: Funkcije s parametri\_
             Functions with Parameters:
               name: Funkcije s parametri
         coursee-2018:
@@ -1374,6 +1373,8 @@ sl:
               name: Digitalno državljanstvo
             'Unplugged: Binary':
               name: Binarne slike
+            Artist Binary:
+              name: Umetnik Binarno
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1432,7 +1433,7 @@ sl:
               display_name: Vsebina
           lessons:
             'null':
-              name: prazno
+              name: 'prazno'
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -1635,19 +1636,12 @@ sl:
               name: Pogoji
             Functions:
               name: Funkcije
-        maddie-test:
-          lessons:
-            stage 1:
-              name: stopnja 1
         csp3-pilot:
           lesson_groups:
             content:
               display_name: Vsebina
             required:
               display_name: Pregled
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1892,6 +1886,8 @@ sl:
               name: Pogojniki s kartami
             'Unplugged: Binary':
               name: Binarne slike
+            Artist Binary:
+              name: Umetnik Binarno
             Digital Citizenship:
               name: Digitalno državljanstvo
         coursee-2020:
@@ -1939,18 +1935,10 @@ sl:
           lessons:
             Spelling Bee:
               name: Čebelica črkuje besede
-        csp3-2020:
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Ustvarjanje funkcij
-        jess-test-script:
-          lessons:
-            Debugging:
-              name: Odpravljanje napak
         csp5-virtual:
           lessons:
             While Loops:
@@ -2025,8 +2013,6 @@ sl:
               display_name: Uvod
             lessonGroup-3:
               display_name: Spremenljivke
-            debugging:
-              display_name: Odpravljanje napak
         csd3-2021:
           lessons:
             Variables:
@@ -2046,11 +2032,6 @@ sl:
             Functions with Parameters:
               key: Funkcije s parametri
               name: Funkcije s parametri
-        csp3-2021:
-          lessons:
-            Debugging:
-              key: Odpravljanje napak
-              name: Odpravljanje napak
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2116,6 +2097,7 @@ sl:
               name: Binarne slike
             Artist Binary:
               key: Umetnik Binarno
+              name: Umetnik Binarno
           lesson_groups:
             csf_events:
               display_name: Dogodki
@@ -2198,20 +2180,10 @@ sl:
           lesson_groups:
             lesson group:
               display_name: Vsebina
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
         k5-onlinepd-2021:
           lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
             Loops:
               key: Zanke
               name: Zanke
@@ -2237,15 +2209,3 @@ sl:
             Computer Science Fundamentals:
               key: Osnove Računalništva
               name: Osnove Računalništva
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina

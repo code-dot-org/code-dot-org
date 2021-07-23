@@ -18,7 +18,6 @@ ka:
       Games/Score: თამაშები/ქულა
       Groups: ჯგუფები
       Input: შემომავალი ინფორმაცია
-      Location: ადგილმდებარეობა
       Locations: მდებარეობები
       Logic: ლოგიკა
       Loops: ციკლები
@@ -28,5 +27,4 @@ ka:
       Text: ტექსტი
       Variables: ცვლადები
       'Variables ': 'ცვლადები '
-      'Variables  ': 'ცვლადები  '
       World: სამყარო

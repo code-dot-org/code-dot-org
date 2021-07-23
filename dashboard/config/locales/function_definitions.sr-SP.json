@@ -15,16 +15,14 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "height": "висина",
-              "width": "Širina"
+              "height": "висина"
             }
           }
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
             "parameters": {
-              "height": "висина",
-              "width": "Širina"
+              "height": "висина"
             }
           },
           "draw a circle": {
@@ -544,11 +542,6 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "урадити нешто"
-          },
-          "draw background": {
-            "parameters": {
-              "color": "боја"
-            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -981,8 +974,7 @@
           },
           "checker": {
             "parameters": {
-              "size": "величина",
-              "color": "боја"
+              "size": "величина"
             }
           },
           "do something": {
@@ -1008,8 +1000,7 @@
           },
           "checker": {
             "parameters": {
-              "size": "величина",
-              "color": "боја"
+              "size": "величина"
             }
           },
           "do something": {
@@ -1048,8 +1039,7 @@
           },
           "filled square": {
             "parameters": {
-              "size": "величина",
-              "color": "боја"
+              "size": "величина"
             }
           },
           "black outline": {
@@ -1144,11 +1134,6 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "урадити нешто"
-          },
-          "draw background": {
-            "parameters": {
-              "color": "боја"
-            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1254,306 +1239,6 @@
             "name": "нацртај квадрат",
             "parameters": {
               "length": "дужина"
-            }
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a star": {
-            "name": "нацртајте звезду",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a circle": {
-            "name": "нацртај круг"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "дужина",
-              "repeat": "понављај"
-            }
-          },
-          "draw a triangle": {
-            "name": "нацртај троугао",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a house": {
-            "name": "нацртај кућу",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a square": {
-            "name": "нацртај квадрат",
-            "parameters": {
-              "length": "дужина"
-            }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "нацртајте звезду",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a circle": {
-            "name": "нацртај круг"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "дужина",
-              "repeat": "понављај"
-            }
-          },
-          "draw a triangle": {
-            "name": "нацртај троугао",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a house": {
-            "name": "нацртај кућу",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a square": {
-            "name": "нацртај квадрат",
-            "parameters": {
-              "length": "дужина"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "нацртајте звезду",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a circle": {
-            "name": "нацртај круг"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "дужина",
-              "repeat": "понављај"
-            }
-          },
-          "draw a triangle": {
-            "name": "нацртај троугао",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a house": {
-            "name": "нацртај кућу",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a square": {
-            "name": "нацртај квадрат",
-            "parameters": {
-              "length": "дужина"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "нацртајте звезду",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a circle": {
-            "name": "нацртај круг"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "дужина",
-              "repeat": "понављај"
-            }
-          },
-          "draw a triangle": {
-            "name": "нацртај троугао",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a house": {
-            "name": "нацртај кућу",
-            "parameters": {
-              "length": "дужина"
-            }
-          },
-          "draw a square": {
-            "name": "нацртај квадрат",
-            "parameters": {
-              "length": "дужина"
-            }
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "нацртај квадрат"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "нацртај квадрат"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "нацртајте звезду"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "нацртајте звезду"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "нацртајте звезду"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "нацртајте звезду"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "нацртај квадрат"
-          },
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "нацртај квадрат"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "нацртај квадрат"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "урадити нешто"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "заврши игру"
-          }
-        },
-        "courseF_bee_fwp5": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "Širina"
-            }
-          }
-        },
-        "courseF_bee_fwp6": {
-          "rowOfNectar": {
-            "parameters": {
-              "width": "Širina"
-            }
-          }
-        },
-        "courseF_bee_fwp7": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "Širina"
-            }
-          }
-        },
-        "courseF_bee_fwp8": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "Širina"
-            }
-          }
-        },
-        "courseF_bee_fwp9_predict1": {
-          "rowOfNectarOrHoney": {
-            "parameters": {
-              "width": "Širina"
             }
           }
         }

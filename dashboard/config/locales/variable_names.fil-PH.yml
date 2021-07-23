@@ -6,9 +6,6 @@ fil:
       Green: Luntian
       Red: Pula
       actor: aktor
-      age: edad
-      answer: sagot
-      binary: binary
       cats: mga Pusa
       color: kulay
       counter: taga pag bilang
@@ -27,8 +24,6 @@ fil:
       score: Score
       size: sukat
       speed: bilis
-      startX: startx
-      startY: startY
       width: lapad
       wizard: salamangkero
       x: x

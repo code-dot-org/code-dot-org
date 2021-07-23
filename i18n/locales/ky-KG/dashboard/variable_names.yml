@@ -2,8 +2,6 @@ ky:
   data:
     variable_names:
       actor: аткаруу
-      age: жашы
-      color: түс
       counter: эсептегич
       height: бийиктиги
       honey: бал

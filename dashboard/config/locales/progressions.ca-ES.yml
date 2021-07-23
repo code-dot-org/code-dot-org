@@ -3,8 +3,6 @@ ca:
   data:
     progressions:
       'Artist: Variables': 'Artista: Variables'
-      Debugging: Depuració
-      Design Mode: Mode de disseny
       Drawing: Dibuix
       Events: Esdeveniments
       For Loops: Per bucles

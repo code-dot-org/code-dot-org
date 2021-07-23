@@ -258,7 +258,6 @@ hy:
       ջնջել ձեր ուսանողներին հաշիվները:'
     delete_confirm: Համոզված եք, որ ցանկանում եք ջնջել Ձեր հաշիվը?
     update_email: Թարմացնել
-    remove_parent_email_label: Remove
   user_level:
     completed: Ավարտված
     tried: փորձել
@@ -494,7 +493,6 @@ hy:
     unplugged_conditionals:
       title: conditionals
     widgets:
-      audience: Ages 14+
       cta: Իմացեք, թե ինչպես
   landing:
     report_bug: Report Bug

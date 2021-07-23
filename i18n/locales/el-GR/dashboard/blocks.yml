@@ -8,17 +8,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           MOVE1:
             MOVES.Roll: Body Roll
             MOVES.ClapHigh: Παλαμάκια Ψηλά
@@ -62,17 +62,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': όλοι οι μονόκεροι
           MOVE:
             '"next"': "(Επόμενο)"
             '"prev"': "(Προηγούμενο)"
@@ -122,17 +122,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -146,17 +146,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           MOVE:
             '"rand"': "(Τυχαίο)"
             MOVES.XBend: Λύγισε
@@ -279,6 +279,10 @@ el:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} πήγαινε στο {LOCATION}"
         options:
@@ -299,17 +303,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           LOCATION:
             "{x: 200, y: 100}": πάνω
             "{x: 200, y: 300}": κάτω
@@ -327,17 +331,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           FORMAT:
             '"border"': όριο
             '"inner"': εσωτερικό τετράγωνο
@@ -345,7 +349,7 @@ el:
             '"circle"': κύκλος
             '"grid"': πλέγμα
             '"top"': πάνω σειρά
-            '"row"': τάξη
+            '"row"': γραμμή
             '"bottom"': κάτω σειρά
             '"left"': αριστερή στήλη
             '"column"': στήλη
@@ -386,18 +390,18 @@ el:
           που ονομάζεται {NAME} στο {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': εξωγήινος
+            '"ALIEN"': Εξωγήινος
             '"BEAR"': Αρκούδα
-            '"CAT"': γάτα
-            '"DOG"': σκύλος
-            '"DUCK"': πάπια
+            '"CAT"': Γάτα
+            '"DOG"': Σκύλος
+            '"DUCK"': Πάπια
             '"FROG"': Βάτραχος
-            '"MOOSE"': όλα τα ελάφια
+            '"MOOSE"': Ελάφι
             '"PINEAPPLE"': Ανανάς
-            '"ROBOT"': ρομπότ
+            '"ROBOT"': Ρομπότ
             '"SHARK"': Καρχαρίας
             '"SLOTH"': βραδύπους
-            '"UNICORN"': μονόκερος
+            '"UNICORN"': Μονόκερως
           LOCATION:
             "{x: 200, y: 100}": πάνω
             "{x: 200, y: 300}": κάτω
@@ -435,18 +439,18 @@ el:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
-            '"CAT"': όλες οι γάτες
-            '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
-            '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
-            '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"ALIEN"': Εξωγήινοι
+            '"BEAR"': Αρκούδες
+            '"CAT"': Γάτες
+            '"DOG"': Σκυλιά
+            '"DUCK"': Πάπιες
+            '"FROG"': Βάτραχοι
+            '"MOOSE"': Ελάφι
+            '"PINEAPPLE"': Ανανάδες
+            '"ROBOT"': Ρομπότ
+            '"SHARK"': Καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           LAYOUT:
             '"border"': όριο
             '"inner"': εσωτερικό τετράγωνο
@@ -454,7 +458,7 @@ el:
             '"circle"': κύκλος
             '"grid"': πλέγμα
             '"top"': πάνω σειρά
-            '"row"': τάξη
+            '"row"': γραμμή
             '"bottom"': κάτω σειρά
             '"left"': αριστερή στήλη
             '"column"': στήλη
@@ -488,25 +492,25 @@ el:
             '"fireworks"': Πυροτεχνήματα
             '"swirl"': Hypno
             '"kaleidoscope"': Καλειδοσκόπιο
-            '"lasers"': Πίστα χορού λέιζερ
+            '"lasers"': Πίστα χορού με λέιζερ
             '"splatter"': Πιτσιλιές χρωμάτων
             '"rainbow"': Ουράνιο τόξο
             '"snowflakes"': Χιόνι
-            '"text"': Τίτλος τραγουδιού
+            '"text"': Ονόματα τραγουδιών
             '"galaxy"': Διάστημα
-            '"sparkles"': Αστράκια
+            '"sparkles"': Σπινθήρες
             '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
             '"stars"': Αστέρια
           PALETTE:
-            '"rave"': Ασπρόμαυρο
-            '"cool"': Μπλουζ
+            '"rave"': Μαύρο και άσπρο
+            '"cool"': Δροσερό
             '"electronic"': Ηλεκτρονικό
             '"iceCream"': Παγωτό
             '"default"': Φωτεινό
             '"neon"': Νέον
             '"tropical"': Τροπικό
-            '"vintage"': Βίντατζ
+            '"vintage"': Εποχής
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
         text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
@@ -524,29 +528,29 @@ el:
             '"growing_stars"': Ανερχόμενοι αστέρες
             '"swirl"': Hypno
             '"kaleidoscope"': Καλειδοσκόπιο
-            '"lasers"': Πίστα χορού λέιζερ
+            '"lasers"': Πίστα χορού με λέιζερ
             '"splatter"': Πιτσιλιές χρωμάτων
             '"rainbow"': Ουράνιο τόξο
             '"ripples_random"': Τυχαίες πτυχώσεις
             '"ripples"': Πτυχώσεις
             '"snowflakes"': Χιόνι
-            '"text"': Τίτλος τραγουδιού
+            '"text"': Ονόματα τραγουδιών
             '"squiggles"': Μουτζούρες
             '"galaxy"': Διάστημα
-            '"sparkles"': Αστράκια
+            '"sparkles"': Σπινθήρες
             '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
             '"stars"': Αστέρια
             '"music_wave"': Κύματα
           PALETTE:
-            '"rave"': Ασπρόμαυρο
-            '"cool"': Μπλουζ
+            '"rave"': Μαύρο και άσπρο
+            '"cool"': Δροσερό
             '"electronic"': Ηλεκτρονικό
             '"iceCream"': Παγωτό
             '"default"': Φωτεινό
             '"neon"': Νέον
             '"tropical"': Τροπικό
-            '"vintage"': Βίντατζ
+            '"vintage"': Εποχής
             '"warm"': Κόκκινα
       Dancelab_setDanceSpeed:
         text: άλλαξε του {SPRITE} την ταχύτητα χορού σε {SPEED}
@@ -563,17 +567,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           SPEED:
             '1': κανονικό
             '2': γρήγορη
@@ -586,12 +590,12 @@ el:
           EFFECT:
             '"none"': Κανένα
             '"bubbles"': Μπουρμπουλήθρες
-            '"confetti"': Κομφετί
+            '"confetti"': Κονφέτι
             '"hearts_red"': Καρδιές
-            '"music_notes"': Νότες μουσικής
+            '"music_notes"': Μουσικές νότες
             '"pineapples"': Ανανάδες
             '"pizzas"': Πίτσες
-            '"smiling_poop"': Κακάκια
+            '"smiling_poop"': Κακά
             '"rain"': Βροχή
             '"floating_rainbows"': Ουράνιο τόξο
             '"smile_face"': Χαμόγελα
@@ -606,14 +610,14 @@ el:
             '"rand"': "(Τυχαίο)"
             '"bubbles"': Μπουρμπουλήθρες
             '"hearts_colorful"': Πολύχρωμες καρδιές
-            '"confetti"': Κομφετί
+            '"confetti"': Κονφέτι
             '"emojis"': Emojis
             '"hearts_red"': Καρδιές
-            '"music_notes"': Νότες μουσικής
+            '"music_notes"': Μουσικές νότες
             '"paint_drip"': Στάξιμο μπογιάς
             '"pineapples"': Ανανάδες
             '"pizzas"': Πίτσες
-            '"smiling_poop"': Κακάκια
+            '"smiling_poop"': Κακά
             '"rain"': Βροχή
             '"floating_rainbows"': Ουράνιο τόξο
             '"smile_face"': Χαμόγελα
@@ -637,17 +641,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -673,17 +677,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -700,34 +704,34 @@ el:
           THIS:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
       Dancelab_setTintEachInline:
         text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
       Dancelab_setTintInline:
         text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setVisible:
@@ -742,17 +746,17 @@ el:
           THIS:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           VISIBILITY:
             'true': ορατό
             'false': αόρατο
@@ -777,17 +781,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -822,17 +826,17 @@ el:
           GROUP:
             sprites: όλα
             '"ALIEN"': όλοι οι εξωγήινοι
-            '"BEAR"': αρκούδες
+            '"BEAR"': όλες οι αρκούδες
             '"CAT"': όλες οι γάτες
             '"DOG"': όλοι οι σκύλοι
-            '"DUCK"': πάπιες
-            '"FROG"': βάτραχοι
+            '"DUCK"': όλες οι πάπιες
+            '"FROG"': όλοι οι βάτραχοι
             '"MOOSE"': όλα τα ελάφια
-            '"PINEAPPLE"': ανανάδες
+            '"PINEAPPLE"': όλοι οι ανανάδες
             '"ROBOT"': όλα τα ρομπότ
-            '"SHARK"': καρχαρίες
+            '"SHARK"': όλοι οι καρχαρίες
             '"SLOTH"': βραδύποδες
-            '"UNICORN"': μονόκεροι
+            '"UNICORN"': Μονόκεροι
           PROPERTY:
             '"scale"': μέγεθος
             '"width"': πλάτος
@@ -951,10 +955,6 @@ el:
         text: αρχικοποίηση
       gamelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
-      gamelab_addTarget:
-        options:
-          OPT:
-            '"avoid"': Απόφυγε
       gamelab_allSpritesWithAnimation:
         text: aalab όλοι {ANIMATION}
       gamelab_atTime:
@@ -983,8 +983,6 @@ el:
         text: έγινε κλικ στο {SPRITE}
       gamelab_comment:
         text: 'σχόλιο: {COMMENT}'
-      gamelab_costumeImage:
-        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται {NAME} \n με κοστούμι {COSTUME} \n σε {LOCATION}"
       gamelab_destroy:
@@ -1051,8 +1049,6 @@ el:
             '"z"': ζ
       gamelab_isTouchingEdges:
         text: "{SPRITE} αγγίζει τις άκρες"
-      gamelab_isTouchingSprite:
-        text: "{SPRITE} αγγίζει {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} πήγαινε στο {LOCATION}"
       gamelab_keyPressed:
@@ -1096,7 +1092,6 @@ el:
       gamelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
       gamelab_locationModifier:
-        text: "{DISTANCE} pixels {DIRECTION} από {LOCATION}"
         options:
           DIRECTION:
             '"North"': Βοράς
@@ -1176,6 +1171,7 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': γαλαξίας
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': πλέγμα
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ουράνιο τόξο
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': επιστημονικής φαντασίας
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': αστέρια
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': υποβρύχια
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
@@ -1200,7 +1196,6 @@ el:
             '"direction"': κατεύθυνση κίνησης
             '"speed"': ταχύτητα
       gamelab_setProp_dropdown:
-        text: "΄όρισε {SPRITE} {PROPERTY} σε {SIZE}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1484,14 +1479,10 @@ el:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: δεν είναι η ετικέτα μου
-      Mikelab_joinText:
-        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'θέση x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
-      Mikelab_poemTextJoin:
-        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: τυχαίο χρώμα
       Mikelab_removeBehaviorSimple:
@@ -1526,10 +1517,6 @@ el:
           CORNER:
             '"right"': δεξιά
             '"left"': αριστερά
-      Mikelab_showText:
-        options:
-          PREPOSITION:
-            '"below"': που ακολουθεί
       Mikelab_sprite:
         text: καινούριο {COSTUME} χαρακτήρα σε {LOCATION}
         options:
@@ -1587,18 +1574,6 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: όρισε παρασκήνιο σε {BG_EFFECT} [PALETTE][1]
-        options:
-          BG_EFFECT:
-            '"solid"': συμπαγής
-            '"rainbow"': ουράνιο τόξο
-      PoemBot_setForegroundEffect:
-        text: όρισε προσκήνιο σε {FG_EFFECT}
-        options:
-          FG_EFFECT:
-            '"rain"': βροχή
-            '"bubbles"': μπουρμπουλήθρες
       RyanLab_moveForward:
         text: προχώρησε μπροστά
       RyanLab_turnLeft:
@@ -1637,7 +1612,7 @@ el:
           FORMAT:
             '"grid"': πλέγμα
             '"border"': όριο
-            '"row"': τάξη
+            '"row"': γραμμή
             '"random"': τυχαίο
       aalab_someGraduallyStartIntervention:
         options:
@@ -1738,7 +1713,6 @@ el:
             '"stoneBricks"': πέτρινα τούβλα
             '"mossyStoneBricks"': χορταριασμένα πέτρινα τούβλα
             '"crackedStoneBricks"': ραγισμένα πέτρινα τούβλα
-            '"chiseledStoneBricks"': διακοσμητικά πέτρινα τούβλα
             '"blueCoralBlock"': μπλοκ μπλε κοραλλιών
             '"pinkCoralBlock"': μπλοκ ροζ κοραλλιών
             '"magentaCoralBlock"': μπλοκ φούξια κοραλλιών

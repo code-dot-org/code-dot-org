@@ -5,9 +5,6 @@ pt:
       Green: Verde
       Red: Vermelho
       actor: ator
-      age: idade  
-      answer: resposta
-      binary: binário
       birds: pássaros
       cats: Gatos
       color: cor
@@ -18,7 +15,6 @@ pt:
       i: i
       left: para a esquerda
       length: comprimento
-      level: nível
       name: nome
       nectar: néctar
       points: pontos

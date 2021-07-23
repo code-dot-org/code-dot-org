@@ -184,7 +184,6 @@ kk:
       sign_in_to_save: Прогрессті сақтау үшін тіркеліңіз
       project_gallery: Жобалар
       educate_hoc: Код жазу Сағаты
-      stats: Статистика
       legal_privacy: Құпиялылық саясаты
       legal_tos: Қызмет көрсету шарттары
     user:
@@ -261,7 +260,6 @@ kk:
       оқушыларыңыздың аккаунттары өшпейді.'
     delete_confirm: Сіз аккаунтыңызды өшіргіңіз келеді ме?
     update_email: Өзгерту
-    remove_parent_email_label: Өшіру
   user_level:
     completed: Аяқталған
     tried: Байқап көру саны
@@ -481,7 +479,6 @@ kk:
     unplugged_conditionals:
       title: Шарттар
     widgets:
-      audience: Жас аралығы 14+
       cta: Қалай жасауды үйрең
   landing:
     report_bug: Қате туралы хабарлау

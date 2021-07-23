@@ -1,4 +1,3 @@
----
 mt:
   data:
     blocks:
@@ -28,10 +27,6 @@ mt:
             '"random"': bl-addoċċ
       Dancelab_randomColor:
         text: kulur bl-addoċċ
-      Dancelab_whenKey:
-        options:
-          KEY:
-            '"enter"': daħħal
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:

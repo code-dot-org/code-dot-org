@@ -63,10 +63,6 @@ mk:
             '"a"': А
             '"s"': Југ
             '"d"': Д
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': цврсто
       aalab_layoutSprites:
         options:
           FORMAT:

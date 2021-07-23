@@ -264,7 +264,6 @@ sr:
       about_contact: Контактирајте нас
       about_faqs: Често постављана питања
       learn: Научи
-      stats: Статистика
       help_us: Помози нам
       legal_privacy: Политика приватности
       legal_tos: Услови коришћења
@@ -337,7 +336,6 @@ sr:
     delete_confirm: Да ли сте сигурни да желите да обришете свој налог?
     update_email: Ажурирај
     parent_guardian_email_label: Имејл од родитеља/старатеља
-    remove_parent_email_label: Уклони
   user_level:
     completed: Готово
     tried: Покушао
@@ -453,8 +451,6 @@ sr:
       body: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
     unplugged_conditionals:
       title: Кондиционали
-    widgets:
-      audience: Узраста 14+
   multi-submittable:
     wrong_title: Хвала
     correct_title: Хвала
@@ -510,4 +506,3 @@ sr:
   cookie_banner:
     accept: Слажем се
   copy: Копирај
-  confirm: Потврди

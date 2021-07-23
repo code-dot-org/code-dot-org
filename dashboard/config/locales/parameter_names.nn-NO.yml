@@ -3,7 +3,6 @@ nn:
   data:
     parameter_names:
       actor: spelar
-      color: farge
       counter: teljar
       height: høgd
       honey: honning

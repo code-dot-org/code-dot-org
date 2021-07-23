@@ -1,12 +1,12 @@
 ---
-title: आधीच्या अवर ऑफ कोडची पोस्टर्स
+title: Past Hour of Code Posters
 ---
 
 {{ signup_button }}
 
-# आधीच्या अवर ऑफ कोडची पोस्टर्स
+# Past Hour of Code Posters
 
-### आमची आधीच्या वर्षांची पोस्टर्स शोधा आणि तुमच्या वर्गात लावा! नवीन पोस्टर्स शोधत आहात?[इथे क्लिक करा]({{ promote/promote_posters_url }}).
+### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
 
 * * *
 

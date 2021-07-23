@@ -25,10 +25,8 @@ ky:
   cancel: Жок кыл
   okay: Окай
   or: же
-  stage_number: "%{number}-сабак"
   already_started: 'Баштап койдуңар беле? Мындан уланткыла >> '
   continue: Улантуу
-  more_info: Кененирээк
   auth:
     signed_in: Киргенсиңер!
   signup_form:
@@ -62,8 +60,6 @@ ky:
     type:
       email: Эмейл
       google_classroom: Google Classroom
-  follower:
-    already_exists: Сиз %{section_name} секциясына кошулгансыз.
   crud:
     new_model: Жаңы %{model}
     show: көрсөт
@@ -86,15 +82,12 @@ ky:
       bounce: Bounce
       gamelab: Оюн лабы
       gamelab_jr: Game Lab (бета)
-      iceage: Муз доору
       infinity: Чексиздик
       minecraft_adventurer: Minecraft тентек
       minecraft_hero: Minecraft каарманы
       playlab_k1: Play Lab (мектепке чейин)
       scratch: Scratch
       weblab: Web Lab
-    popup:
-      prizes_link: кененирээк
   teacher:
     panel:
       section: Секция
@@ -103,7 +96,6 @@ ky:
   home:
     trynow: Дагы кара
   video:
-    tab: Видео.
     notes: Видео жокпу? Эскертмелери көрсөт.
     show_notes: Эскертмелери көрсөт
     label: Видео
@@ -191,5 +183,4 @@ ky:
       email_opt_in:
         opt_in_yes: Ооба
         opt_in_no: Жок
-  page_not_found_title: Барак табылган жок
   copy: Көчүрүү

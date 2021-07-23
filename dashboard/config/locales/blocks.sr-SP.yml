@@ -59,7 +59,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -79,7 +78,6 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -113,7 +111,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -169,7 +166,6 @@ sr:
             '"SHARK"': ајкуле
           FORMAT:
             '"diamond"': дијамант
-            '"row"': разред
             '"random"': насумичан
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -204,7 +200,6 @@ sr:
             '"SHARK"': ајкуле
           LAYOUT:
             '"diamond"': дијамант
-            '"row"': разред
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
@@ -248,7 +243,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -268,7 +262,6 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -276,7 +269,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -296,7 +288,6 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -346,7 +337,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -366,7 +356,6 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -374,7 +363,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -394,7 +382,6 @@ sr:
             '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
             '"x"': хоризонтална позиција
             '"y"': вертикална позиција
@@ -414,10 +401,6 @@ sr:
             '"space"': Простор
             '"x"': x
             '"y"': у
-      gamelab_addTarget:
-        options:
-          OPT:
-            '"avoid"': избегни
       gamelab_atTime:
         options:
           UNIT:
@@ -510,7 +493,6 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
-            '"width"': Širina
             '"height"': висина
       gamelab_spriteClicked:
         options:
@@ -617,10 +599,6 @@ sr:
           CORNER:
             '"right"': десно
             '"left"': лево
-      Mikelab_showText:
-        options:
-          PREPOSITION:
-            '"below"': испод
       Mikelab_sprite:
         options:
           LOCATION:
@@ -648,11 +626,6 @@ sr:
             '"a"': А
             '"s"': Југ
             '"d"': Д
-      Mikelab_whenYesNoClicked:
-        options:
-          KEY:
-            '"yes"': да
-            '"no"': не
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -660,29 +633,15 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
-      PoemBot_setBackgroundEffect:
-        options:
-          BG_EFFECT:
-            '"solid"': попуњено
-            '"rainbow"': Дуга
-      PoemBot_setForegroundEffect:
-        options:
-          FG_EFFECT:
-            '"rain"': киша
       RyanLab_moveForward:
         text: помери се напред
       RyanLab_turnLeft:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
-      Vector_where:
-        options:
-          PROPERTY:
-            "'shapeColor'": боја
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"row"': разред
             '"random"': насумичан
       aalab_someGraduallyStartIntervention:
         options:

@@ -6,41 +6,41 @@ title: Siaran Akhbar Mengenai Hour of Code untuk Pegawai-pegawai yang Terlantik
 
 # Contoh siaran akhbar untuk pegawai yang dilantik
 
-### Gunakan contoh bahasa siaran akhbar ini untuk membantu mengarang mesej anda tentang menyertai Jam Kod.
+### Use this sample press release language to help craft your message about participating in the Hour of Code.
 
 * * *
 
-#### Untuk Disiarkan Segera  
+#### For Immediate Release  
 
 
 #### [DATE]  
 
 
-#### Maklumat Hubungan: [CONTACT INFORMATION]
+#### Contact: [CONTACT INFORMATION]
 
 <br />
 
-**GABENOR/SENATOR/AHLIDEWAN/WAKIL/DATUKBANDAR/ AHLIMAJLIS [INSERT NAME] YANG MENYERTAI JAM KOD BERSAMA PELAJAR TEMPATAN** <br />
+**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
 
-Komuniti berhimpun untuk meningkatkan kesedaran tentang kepentingan pendidikan sains komputer dengan menyertai Minggu Pendidikan Sains Komputer<br /> <br />
+Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
 
-**TARIKH** - [**INSERT NAME**] menyertai pengetua dan ahli fakulti [**INSERT NAME OF SCHOOL**], pemimpin perniagaan dan keluarga tempatan hari ini untuk [**NAME OF EVENT**] dan menyertai Jam Kod sebagai sebahagian daripada Minggu Pendidikan Sains Komputer . [**INSERT NAME**] dan ahli komuniti adalah antara puluhan juta individu di seluruh dunia untuk mengambil bahagian di dalam acara pembelajaran terbesar dalam sejarah. <br />
+**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
 
 [**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Sekolah Rendah Daniels Run mengadakan acara Jam Kod di seluruh sekolah bertujuan memperkenalkan pelajarnya kepada sains komputer. Lebih daripada 700 pelajar daripada semua gred melakukan sekurang-kurangnya satu Jam Kod. Sebilangan ibu bapa dan sukarelawan daripada komuniti membantu perjalanan acara pada hari tersebut dan membawa kanak-kanak bersama untuk menghadiri perhimpunan yang mempamerkan kepentingan sains komputer dalam kehidupan para pelajar." <br />
+“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
 
 [**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Komputer berada di mana-mana sahaja, tetapi terlalu sedikit sekolah yang mengajar sains komputer berdanding 10 tahun yang lalu. Kanak-kanak perempuan dan pelajar yang mempunyai warna kulit berbeza terlalu dipencilkan. Berita baiknya ialah kita sedang mengubah situasi ini menjadi lebih baik. Jam Kod ialah get laluan ke arah menyediakan akses pendidikan sains komputer berkualiti tinggi kepada semua pelajar. <br />
+Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
 
-Lebih daripada 100 juta pelajar di seluruh dunia telah mencuba Jam Kod. Terima kasih kepada Jam Kod, sains komputer dipaparkan pada laman utama Google, MSN, Yahoo! dan Disney. Presiden Obama, Shakira dan Ashton Kutcher kesemuanya telah melancarkan Jam Kod bersama video. Lebih daripada 100 rakan kongsi bekerjasama menyokong pergerakan ini. <br />
+Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
 
 [**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“Kita perlu menggalakkan dan menghayati minat pelajar kita di dalam sains komputer,” kata [**INSERT NAME**]. "Setiap pelajar berhak mendapat peluang mempelajari sains komputer untuk mengakses kerjaya terbaik pada abad ke-21." <br />
+“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
 
 [**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
 
 [**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
 
-Untuk maklumat lanjut tentang [**EVENT/PROGRAM/ETC**], sila kunjungi [**INSERT WEBSITE**] atau hubungi [**INSERT CONTACT INFORMATION**]
+For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
 {{ signup_button }}

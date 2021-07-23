@@ -72,7 +72,7 @@ es:
             '"ROBOT"': robots
             '"SHARK"': tiburones
             '"SLOTH"': perezas
-            '"UNICORN"': unicornios
+            '"UNICORN"': todos los unicornios
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
@@ -247,7 +247,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
       Dancelab_getTime:
         text: hora actual en {UNIT}
         options:
@@ -279,6 +279,10 @@ es:
           UNIT:
             '"measures"': medidas
             '"seconds"': segundos
+          OP:
+            '">"': ">"
+            '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
         options:
@@ -345,7 +349,7 @@ es:
             '"circle"': círculo
             '"grid"': cuadrícula
             '"top"': fila superior
-            '"row"': renglon
+            '"row"': fila
             '"bottom"': fila inferior
             '"left"': columna izquierda
             '"column"': columna
@@ -386,18 +390,18 @@ es:
           llamado {NAME} en {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': alienígena
+            '"ALIEN"': Extraterrestre
             '"BEAR"': oso
-            '"CAT"': gato
+            '"CAT"': Gato
             '"DOG"': perro
-            '"DUCK"': pato
+            '"DUCK"': Pato
             '"FROG"': rana
-            '"MOOSE"': alces
+            '"MOOSE"': Alce
             '"PINEAPPLE"': piña
-            '"ROBOT"': robot
+            '"ROBOT"': Robot
             '"SHARK"': tiburón
             '"SLOTH"': pereza
-            '"UNICORN"': unicornio
+            '"UNICORN"': Unicornio
           LOCATION:
             "{x: 200, y: 100}": arriba
             "{x: 200, y: 300}": abajo
@@ -435,16 +439,16 @@ es:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': extraterrestres
-            '"BEAR"': osos
-            '"CAT"': gatos
-            '"DOG"': perros
-            '"DUCK"': patos
-            '"FROG"': ranas
-            '"MOOSE"': alces
-            '"PINEAPPLE"': piñas
-            '"ROBOT"': robots
-            '"SHARK"': tiburones
+            '"ALIEN"': Extraterrestres
+            '"BEAR"': Osos
+            '"CAT"': Gatos
+            '"DOG"': Perros
+            '"DUCK"': Patos
+            '"FROG"': Ranas
+            '"MOOSE"': alce
+            '"PINEAPPLE"': Piñas
+            '"ROBOT"': Robots
+            '"SHARK"': Tiburones
             '"SLOTH"': perezas
             '"UNICORN"': unicornios
           LAYOUT:
@@ -454,7 +458,7 @@ es:
             '"circle"': círculo
             '"grid"': cuadrícula
             '"top"': fila superior
-            '"row"': renglon
+            '"row"': fila
             '"bottom"': fila inferior
             '"left"': columna izquierda
             '"column"': columna
@@ -481,40 +485,40 @@ es:
         options:
           EFFECT:
             '"none"': Ninguna
-            '"circles"': Túnel
+            '"circles"': Círculos
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
-            '"swirl"': Hipnótico
+            '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
             '"rainbow"': Arcoíris
             '"snowflakes"': Nieve
-            '"text"': Título de la canción
+            '"text"': Nombres de canciones
             '"galaxy"': Espacio
-            '"sparkles"': Brillos
+            '"sparkles"': Chispas
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
           PALETTE:
             '"rave"': Blanco y negro
-            '"cool"': Azules
+            '"cool"': Frío
             '"electronic"': Música electrónica
             '"iceCream"': Helado
             '"default"': Luz
             '"neon"': Neón
             '"tropical"': Tropical
             '"vintage"': Vintage
-            '"warm"': Rojos
+            '"warm"': Tibio
       Dancelab_setBackgroundEffectWithPalette:
         text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
-            '"circles"': Túnel
+            '"circles"': Círculos
             '"quads"': Ángulos
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
@@ -522,7 +526,7 @@ es:
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
             '"growing_stars"': Estrellas crecientes
-            '"swirl"': Hipnótico
+            '"swirl"': Hipnosis
             '"kaleidoscope"': Caleidoscopio
             '"lasers"': Pista de baile láser
             '"splatter"': Salpicaduras de pintura
@@ -530,24 +534,24 @@ es:
             '"ripples_random"': Ondas aleatorias
             '"ripples"': Ondas
             '"snowflakes"': Nieve
-            '"text"': Título de la canción
+            '"text"': Nombres de canciones
             '"squiggles"': Garabatos
             '"galaxy"': Espacio
-            '"sparkles"': Brillos
+            '"sparkles"': Chispas
             '"spiral"': Espiral
             '"disco"': Cuadrados
             '"stars"': Estrellas
             '"music_wave"': Olas
           PALETTE:
             '"rave"': Blanco y negro
-            '"cool"': Azules
+            '"cool"': Frío
             '"electronic"': Música electrónica
             '"iceCream"': Helado
             '"default"': Luz
             '"neon"': Neón
             '"tropical"': Tropical
             '"vintage"': Vintage
-            '"warm"': Rojos
+            '"warm"': Tibio
       Dancelab_setDanceSpeed:
         text: cambiar {SPRITE} velocidad de baile a {SPEED}
         options:
@@ -588,7 +592,7 @@ es:
             '"bubbles"': Burbujas
             '"confetti"': Confeti
             '"hearts_red"': Corazones
-            '"music_notes"': Notas musicales
+            '"music_notes"': Notas de música
             '"pineapples"': Piñas
             '"pizzas"': Pizzas
             '"smiling_poop"': Caca
@@ -609,7 +613,7 @@ es:
             '"confetti"': Confeti
             '"emojis"': Emojis
             '"hearts_red"': Corazones
-            '"music_notes"': Notas musicales
+            '"music_notes"': Notas de música
             '"paint_drip"': Gotas de pintura
             '"pineapples"': Piñas
             '"pizzas"': Pizzas
@@ -655,7 +659,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
       Dancelab_setPropRandom:
         text: distribuye aleatoriamente {SPRITE} {PROPERTY}
         options:
@@ -666,7 +670,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
       Dancelab_setPropRandomEach:
         text: distribuir {GROUP} {PROPERTY} aleatoriamente
         options:
@@ -691,7 +695,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
       Dancelab_setTint:
         text: definir tinte {SPRITE} a {VAL}
       Dancelab_setTintEach:
@@ -766,7 +770,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -795,7 +799,7 @@ es:
             '"rotation"': rotación
             '"x"': posición horizontal
             '"y"': posición vertical
-            '"tint"': tonalidad
+            '"tint"': tinte
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -811,7 +815,7 @@ es:
             '"x"': posición horizontal
             '"y"': posición vertical
             '"direction"': dirección de movimiento
-            '"tint"': tonalidad
+            '"tint"': tinte
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -841,7 +845,7 @@ es:
             '"x"': posición horizontal
             '"y"': posición vertical
             '"direction"': dirección de movimiento
-            '"tint"': tonalidad
+            '"tint"': tinte
           RANGE:
             '"bass"': bajo
             '"mid"': medio
@@ -1021,7 +1025,7 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
-            '"tint"': tonalidad
+            '"tint"': tinte
             '"speed"': velocidad
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
@@ -1215,15 +1219,11 @@ es:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desierto
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': cuadrícula
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco
               iris
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciencia
               ficción
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrellas
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': bajo
               el agua
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': invierno
@@ -1289,8 +1289,6 @@ es:
             '"when"': cuando
             '"while"': mientras
       gamelab_spriteSay:
-        text: "{SPRITE} dice {SPEECH}"
-      gamelab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"
@@ -1590,17 +1588,6 @@ es:
         text: 'ubicación x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
-      Mikelab_poemTextJoin:
-        text: "{TEXT1} {VAR} {TEXT2}"
-        options:
-          TEXT1:
-            '"Balancing on the "': '"Equilibrio en el"'
-            '"A chubby cat "': '"Un gato gordito"'
-            '"The "': '"El "'
-          TEXT2:
-            '" fence"': '"valla"'
-            '""': '""'
-            '" breeze blows"': '"sopla la brisa"'
       Mikelab_randomColor:
         text: color aleatorio
       Mikelab_removeBehaviorSimple:
@@ -1615,10 +1602,6 @@ es:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciudad
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': pradera
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapa
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': subterráneo
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1651,11 +1634,6 @@ es:
           CORNER:
             '"right"': derecha
             '"left"': izquierda
-      Mikelab_showText:
-        options:
-          PREPOSITION:
-            '"above"': arriba
-            '"below"': abajo
       Mikelab_sprite:
         text: nuevo sprite de {COSTUME} en {LOCATION}
         options:
@@ -1737,24 +1715,6 @@ es:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
-      PoemBot_setBackgroundEffect:
-        text: stablecer efecto de fondo {BG_EFFECT} [PALETTE][1]
-        options:
-          BG_EFFECT:
-            '"solid"': sólido
-            '"rainbow"': arco iris
-      PoemBot_setForegroundEffect:
-        text: establecer efecto de primer plano {FG_EFFECT}
-        options:
-          FG_EFFECT:
-            '"rain"': lluvia
-            '"bubbles"': burbujas
-      PoemBot_stringConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:
@@ -1794,7 +1754,7 @@ es:
           FORMAT:
             '"grid"': cuadrícula
             '"border"': frontera
-            '"row"': renglon
+            '"row"': fila
             '"random"': aleatorio
       aalab_setSpeed:
         text: ajustar velocidad monstruo a {VAL}
@@ -1833,8 +1793,6 @@ es:
             '"quarantining"': cuarentena cuando enferma
             '"avoiding"': distanciamiento social
             '"none"': quedarse quieto
-      aalab_spriteSayChoices:
-        text: "{SPRITE} dice {SPEECH}"
       aalab_startIntervention:
         text: comienzan monstruos {BEHAVIOR}
         options:
@@ -1902,8 +1860,8 @@ es:
         options:
           DIR:
             "'ahead'": delante
-            "'right'": hacia la derecha
-            "'left'": hacia la izquierda
+            "'right'": a la derecha
+            "'left'": a la izquierda
       craft_ifStandingOn:
         text: |-
           si al pararse en {TYPE}
@@ -1913,9 +1871,9 @@ es:
             "'blueCoralBlock'": coral azul
             "'redCoralBlock'": coral rojo
             "'sand'": arena
-            "'wool_blue'": aguas profundas
+            "'wool_blue'": agua profunda
             "'planksOak'": tablones de roble
-            "'seaLantern'": linterna del mar
+            "'seaLantern'": linterna marina
       craft_ifStandingOnLimit:
         text: |-
           si al pararse en {TYPE}
@@ -1924,7 +1882,7 @@ es:
           TYPE:
             "'sand'": arena
             "'darkPrismarine'": prismarina oscura
-            "'seaLantern'": linterna del mar
+            "'seaLantern'": linterna marina
       craft_log:
         text: registro de mensaje {MESSAGE}
       craft_moveForward:
@@ -1951,11 +1909,11 @@ es:
             '"yellowDeadCoralBlock"': bloque de coral muerto amarillo
             '"prismarine"': prismarina
             '"darkPrismarine"': prismarina oscura
-            '"seaLantern"': linterna del mar
+            '"seaLantern"': linterna marina
             '"packedIce"': hielo compacto
             '"blueIce"': hielo azul
-            '"blackConcrete"': hormigón negro
-            '"seaGrass"': pradera marina
+            '"blackConcrete"': concreto negro
+            '"seaGrass"': hierba de mar
             '"kelp"': alga marina
             '"polishedGranite"': granito pulido
       craft_placePrismarine:
@@ -1977,7 +1935,7 @@ es:
             '"salmon"': salmón
             '"seaTurtle"': tortuga de mar
             '"squid"': calamar
-            '"tropicalFish"': pescado tropical
+            '"tropicalFish"': pez tropical
       craft_turn:
         text: girar a la {DIR}
         options:

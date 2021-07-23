@@ -19,7 +19,6 @@ pt:
       Games/Score: Jogos/Pontuação
       Groups: Grupos
       Input: Entrada
-      Location: Localização
       Locations: Localizações
       Logic: Lógica
       Loops: laços
@@ -30,5 +29,4 @@ pt:
       Text: Texto
       Variables: variáveis
       'Variables ': 'Variáveis '
-      'Variables  ': 'Variáveis  '
       World: Mundo

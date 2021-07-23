@@ -17,7 +17,6 @@ ga:
       Game/Score: Cluiche/Scór
       Games/Score: Cluichí/Scór
       Groups: Grúpaí
-      Input: Ionchur
       Location: Áit
       Locations: Áiteanna
       Logic: Loighic
@@ -29,5 +28,4 @@ ga:
       Text: Téacs
       Variables: Athróga
       'Variables ': 'Athróga '
-      'Variables  ': 'Athróga  '
       World: Domhan

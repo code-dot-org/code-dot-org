@@ -8,15 +8,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           MOVE1:
@@ -62,17 +62,17 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
-            '"UNICORN"': yksisarviset
+            '"UNICORN"': kaikki yksisarviset
           MOVE:
             '"next"': "(Seuraava)"
             '"prev"': "(Edellinen)"
@@ -122,15 +122,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           PROPERTY:
@@ -146,15 +146,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           MOVE:
@@ -277,6 +277,10 @@ fi:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} siirry paikkaan {LOCATION}"
         options:
@@ -297,15 +301,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           LOCATION:
@@ -325,15 +329,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           FORMAT:
@@ -384,18 +388,18 @@ fi:
           kutsui {NAME} paikkaan {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': avaruusolio
+            '"ALIEN"': Avaruusolento
             '"BEAR"': karhu
-            '"CAT"': kissa
+            '"CAT"': Kissa
             '"DOG"': koira
-            '"DUCK"': ankka
+            '"DUCK"': Ankka
             '"FROG"': sammakko
-            '"MOOSE"': kaikki hirvet
+            '"MOOSE"': Hirvi
             '"PINEAPPLE"': ananas
-            '"ROBOT"': robotti
+            '"ROBOT"': Robotti
             '"SHARK"': hai
             '"SLOTH"': laiskiainen
-            '"UNICORN"': yksisarvinen
+            '"UNICORN"': Yksisarvinen
           LOCATION:
             "{x: 200, y: 100}": ylös
             "{x: 200, y: 300}": alas
@@ -433,16 +437,16 @@ fi:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
-            '"CAT"': kaikki kissat
-            '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
-            '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
-            '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"ALIEN"': Alienit
+            '"BEAR"': Karhut
+            '"CAT"': Kissat
+            '"DOG"': Koirat
+            '"DUCK"': Ankat
+            '"FROG"': Sammakot
+            '"MOOSE"': hirvi
+            '"PINEAPPLE"': Ananakset
+            '"ROBOT"': Robotit
+            '"SHARK"': Hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           LAYOUT:
@@ -531,6 +535,7 @@ fi:
             '"ripples"': Aaltoilu
             '"snowflakes"': Lumi
             '"text"': Kappaleen nimet
+            '"squiggles"': Kiemurat
             '"galaxy"': Avaruus
             '"sparkles"': Kimallus
             '"spiral"': Kierre
@@ -562,15 +567,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           SPEED:
@@ -636,15 +641,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           PROPERTY:
@@ -672,15 +677,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           PROPERTY:
@@ -699,15 +704,15 @@ fi:
           THIS:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
       Dancelab_setTintEachInline:
@@ -716,15 +721,15 @@ fi:
           THIS:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
       Dancelab_setTintInline:
@@ -741,15 +746,15 @@ fi:
           THIS:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           VISIBILITY:
@@ -776,15 +781,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           PROPERTY:
@@ -821,15 +826,15 @@ fi:
           GROUP:
             sprites: kaikki
             '"ALIEN"': kaikki alienit
-            '"BEAR"': karhut
+            '"BEAR"': kaikki karhut
             '"CAT"': kaikki kissat
             '"DOG"': kaikki koirat
-            '"DUCK"': ankat
-            '"FROG"': sammakot
+            '"DUCK"': kaikki ankat
+            '"FROG"': kaikki sammakot
             '"MOOSE"': kaikki hirvet
-            '"PINEAPPLE"': ananakset
+            '"PINEAPPLE"': kaikki ananakset
             '"ROBOT"': kaikki robotit
-            '"SHARK"': hait
+            '"SHARK"': kaikki hait
             '"SLOTH"': laiskiaiset
             '"UNICORN"': yksisarviset
           PROPERTY:
@@ -855,6 +860,7 @@ fi:
             '"quads"': Kulmat
             '"flowers"': Kukat
             '"popsicles"': Mehutikut
+            '"squiggles"': Kiemurat
             '"growing_stars"': Kasvavat tähdet
             '"emojis"': Hymiöt
             '"hearts_colorful"': Sydämet
@@ -897,7 +903,7 @@ fi:
             '"left"': vasemmalle
             '"down"': alas
             '"right"': oikealle
-            '"space"': avaruus
+            '"space"': tyhjä väli
             '"enter"': syötä
             '"a"': a
             '"b"': b
@@ -947,10 +953,6 @@ fi:
         text: asetukset
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} alkaa {BEHAVIOR}
-      gamelab_addTarget:
-        options:
-          OPT:
-            '"avoid"': vältä
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -1001,6 +1003,9 @@ fi:
             '"speed"': nopeus
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': tätä
       gamelab_getTime:
         options:
           UNIT:
@@ -1165,6 +1170,7 @@ fi:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaksi
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ruudukko
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': sateenkaari
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': scifi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Tähdet
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': vedenalainen
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talvi
@@ -1189,7 +1195,6 @@ fi:
             '"direction"': liikkeen suunta
             '"speed"': nopeus
       gamelab_setProp_dropdown:
-        text: aseta {SPRITE} {PROPERTY} arvoksi {SIZE}
         options:
           PROPERTY:
             '"scale"': koko
@@ -1332,11 +1337,13 @@ fi:
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupChangePropBy:
         text: muutos {PROPERTY} {SELECT} {COSTUME} {VAL}
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
           PROPERTY:
             '"scale"': koko
             '"rotation"': kierto
@@ -1361,6 +1368,7 @@ fi:
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupDisplace:
         text: kaikki {COSTUME} lohko {COSTUME2} liikkuvat
       Mikelab_groupEdgesDisplace:
@@ -1368,6 +1376,9 @@ fi:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          SELECT:
+            '"average"': keskimäärin
+            '"this"': tätä
           PROPERTY:
             '"scale"': koko
             '"rotation"': kierto
@@ -1379,21 +1390,25 @@ fi:
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} pysähtyy {BEHAVIOR}"
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupRemoveTint:
         text: poista väri {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupSetProp:
         text: asettaa {PROPERTY} {SELECT} {COSTUME} {VAL}
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
           PROPERTY:
             '"scale"': koko
             '"rotation"': kierto
@@ -1405,6 +1420,7 @@ fi:
         options:
           SELECT:
             '"all"': kaikki
+            '"this"': tätä
       Mikelab_groupWhenClickedOn:
         text: kun {COSTUME} napsautettiin
       Mikelab_groupWhenXTouchesY:
@@ -1502,10 +1518,6 @@ fi:
           CORNER:
             '"right"': oikealle
             '"left"': vasemmalle
-      Mikelab_showText:
-        options:
-          PREPOSITION:
-            '"below"': alla
       Mikelab_sprite:
         text: uusi {COSTUME} sprite paikassa {LOCATION}
         options:
@@ -1550,8 +1562,8 @@ fi:
         text: kun {KEY} napsautettiin
         options:
           KEY:
-            '"yes"': kyllä
-            '"no"': ei
+            '"yes"': Kyllä
+            '"no"': Ei mitään
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1563,18 +1575,6 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: aseta taustaefekti {BG_EFFECT} [PALETTE][1]
-        options:
-          BG_EFFECT:
-            '"solid"': kiinteä
-            '"rainbow"': sateenkaari
-      PoemBot_setForegroundEffect:
-        text: aseta etuefekti {FG_EFFECT}
-        options:
-          FG_EFFECT:
-            '"rain"': sade
-            '"bubbles"': kuplat
       RyanLab_moveForward:
         text: siirry eteenpäin
       RyanLab_turnLeft:
@@ -1650,6 +1650,7 @@ fi:
           VAL:
             '0': pois
             '1': päällä
+            '"toggle"': Vaihda
       binary_drawString:
         text: piirtää merkkijono {STR}
       binary_goTo:
@@ -1722,7 +1723,6 @@ fi:
             '"stoneBricks"': kivitiilet
             '"mossyStoneBricks"': sammaleiset kivitiilet
             '"crackedStoneBricks"': haljenneet kivitiilet
-            '"chiseledStoneBricks"': koristeelliset kivitiilet
             '"blueCoralBlock"': sininen koralli-blokki
             '"pinkCoralBlock"': vaaleanpunainen koralli-blokki
             '"magentaCoralBlock"': magenta koralli-blokki

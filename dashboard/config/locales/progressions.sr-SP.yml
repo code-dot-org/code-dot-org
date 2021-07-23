@@ -3,8 +3,6 @@ sr:
   data:
     progressions:
       'Artist: Variables': 'Уметник: Променљиве'
-      Debugging: Отклањање грешака
-      Design Mode: Dizajn mod
       Events: Догађаји
       For Loops: Бројачке петље
       Free Play: Free Play

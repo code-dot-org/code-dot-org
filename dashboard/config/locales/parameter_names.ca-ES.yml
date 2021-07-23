@@ -3,7 +3,6 @@ ca:
   data:
     parameter_names:
       actor: actor
-      color: color
       counter: comptador
       height: alçcada
       honey: mel

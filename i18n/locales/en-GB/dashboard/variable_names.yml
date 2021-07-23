@@ -2,8 +2,6 @@ en-GB:
   data:
     variable_names:
       actor: actor
-      age: age
-      color: color
       height: height
       honey: honey
       nectar: nectar

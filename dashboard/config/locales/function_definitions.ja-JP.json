@@ -288,10 +288,7 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -299,10 +296,7 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -310,10 +304,7 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -321,10 +312,7 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -332,10 +320,7 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -343,10 +328,7 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -354,10 +336,7 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -365,10 +344,7 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -376,10 +352,7 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -387,10 +360,7 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -401,10 +371,7 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -937,10 +904,7 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
+            "name": "円 を かく"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -1259,10 +1223,7 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1270,10 +1231,7 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1434,10 +1392,7 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1445,10 +1400,7 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1456,10 +1408,7 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1467,18 +1416,12 @@
             "name": "０か1で もようを かく"
           },
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1486,10 +1429,7 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1497,10 +1437,7 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1508,10 +1445,7 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1519,10 +1453,7 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1530,10 +1461,7 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1541,10 +1469,7 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1552,10 +1477,7 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1563,10 +1485,7 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1574,10 +1493,7 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1585,10 +1501,7 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1596,10 +1509,7 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1607,10 +1517,7 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1618,10 +1525,7 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1629,10 +1533,7 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1640,10 +1541,7 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1651,10 +1549,7 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1662,10 +1557,7 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1673,10 +1565,7 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1684,10 +1573,7 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1695,10 +1581,7 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1706,10 +1589,7 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1717,10 +1597,7 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1728,10 +1605,7 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1739,10 +1613,7 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1750,10 +1621,7 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1761,10 +1629,7 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1772,10 +1637,7 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1783,10 +1645,7 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1794,10 +1653,7 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1805,10 +1661,7 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1816,10 +1669,7 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1827,10 +1677,7 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1838,10 +1685,7 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1849,10 +1693,7 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1860,10 +1701,7 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1871,10 +1709,7 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1882,10 +1717,7 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1893,10 +1725,7 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1904,10 +1733,7 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -1915,10 +1741,7 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "図形をかく",
-            "parameters": {
-              "binary": "２しんすう"
-            }
+            "name": "図形をかく"
           },
           "draw bit": {
             "name": "０か1で もようを かく"
@@ -3234,10 +3057,7 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
+            "name": "円 を かく"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3665,10 +3485,7 @@
             }
           },
           "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
+            "name": "円 を かく"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
@@ -3700,537 +3517,6 @@
             "parameters": {
               "length": "長さ"
             }
-          }
-        },
-        "Course E: Artist Project_examples_2021": {
-          "my function": {
-            "name": "my function"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a star": {
-            "name": "星形 を かく",
-            "parameters": {
-              "points": "ポイント",
-              "length": "長さ"
-            }
-          },
-          "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "風車をかく",
-            "parameters": {
-              "length": "長さ",
-              "repeat": "くりかえし"
-            }
-          },
-          "draw a triangle": {
-            "name": "三角形を描画します。",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a shape": {
-            "name": "図形をかく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a house": {
-            "name": "家 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a square": {
-            "name": "正方形 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "星形 を かく",
-            "parameters": {
-              "points": "ポイント",
-              "length": "長さ"
-            }
-          },
-          "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "風車をかく",
-            "parameters": {
-              "length": "長さ",
-              "repeat": "くりかえし"
-            }
-          },
-          "draw a triangle": {
-            "name": "三角形を描画します。",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a shape": {
-            "name": "図形をかく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a house": {
-            "name": "家 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a square": {
-            "name": "正方形 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "星形 を かく",
-            "parameters": {
-              "points": "ポイント",
-              "length": "長さ"
-            }
-          },
-          "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "風車をかく",
-            "parameters": {
-              "length": "長さ",
-              "repeat": "くりかえし"
-            }
-          },
-          "draw a triangle": {
-            "name": "三角形を描画します。",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a shape": {
-            "name": "図形をかく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a house": {
-            "name": "家 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a square": {
-            "name": "正方形 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "星形 を かく",
-            "parameters": {
-              "points": "ポイント",
-              "length": "長さ"
-            }
-          },
-          "draw a circle": {
-            "name": "円 を かく",
-            "parameters": {
-              "radius": "半径"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "風車をかく",
-            "parameters": {
-              "length": "長さ",
-              "repeat": "くりかえし"
-            }
-          },
-          "draw a triangle": {
-            "name": "三角形を描画します。",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a shape": {
-            "name": "図形をかく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a house": {
-            "name": "家 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          },
-          "draw a square": {
-            "name": "正方形 を かく",
-            "parameters": {
-              "length": "長さ"
-            }
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "橋を作る"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "道を作る"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "長い道を直す"
-          },
-          "fix short path": {
-            "name": "短い道を直す"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "短い橋をかける"
-          },
-          "build long bridge": {
-            "name": "長い橋をかける"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-            "name": "関数1"
-          },
-          "function 2": {
-            "name": "関数2"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "potential solution"
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "name": "窓わくをかく",
-            "parameters": {
-              "x": "x"
-            }
-          },
-          "draw fire": {
-            "name": "ほのおをかく"
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "ブースター"
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "何かしてください"
-          },
-          "draw hexagon": {
-            "name": "六角形 を かく"
-          },
-          "draw line of hexagons": {
-            "name": "六角形の列をかく"
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-            "name": "メガネをかく"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "正方形 を かく"
-          },
-          "draw ear stems": {
-            "name": "メガネをかく"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "正方形 を かく"
-          },
-          "draw ear stems": {
-            "name": "メガネをかく"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "星形 を かく"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "星形 を かく"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "星形 を かく"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "星形 を かく"
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "まどをかく"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "何かしてください"
-          },
-          "staggered squares": {
-            "name": "ずれた正方形"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "正方形を かく"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "正方形 を かく"
-          },
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "正方形を かく"
-          },
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "正方形を かく"
-          },
-          "do something": {
-            "name": "何かしてください"
-          },
-          "staggered squares": {
-            "name": "ずれた正方形"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "何かしてください"
-          },
-          "draw triangle": {
-            "name": "三角形を かく"
-          },
-          "draw line of triangles": {
-            "name": "三角形の列をかく"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw hexagon": {
-            "name": "六角形 を かく"
-          },
-          "draw line of hexagons": {
-            "name": "六角形の列をかく"
-          },
-          "staggered squares": {
-            "name": "ずれた正方形"
-          },
-          "draw a line of squares": {
-            "name": "draw a line of squares"
-          },
-          "draw square": {
-            "name": "正方形を かく"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "my design": {
-            "name": "私のデザイン"
-          },
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "my design": {
-            "name": "私のデザイン"
-          },
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "正方形 を かく"
-          },
-          "draw ear stems": {
-            "name": "メガネをかく"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "正方形 を かく"
-          },
-          "draw ear stems": {
-            "name": "メガネをかく"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "draw line of polygons": {
-            "name": "多角形の列をかく"
-          },
-          "draw polygon": {
-            "name": "多角形をかく"
-          },
-          "do something": {
-            "name": "何かしてください"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "pick along path": {
-            "name": "道に沿ってしゅうかくする"
-          },
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          },
-          "get all pumpkins": {
-            "name": "カボチャをすべてとる"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "pick along path": {
-            "name": "道に沿ってしゅうかくする"
-          },
-          "pumpkin square": {
-            "name": "pumpkin square"
-          },
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          },
-          "get produce": {
-            "name": "get produce"
-          },
-          "get all pumpkins": {
-            "name": "カボチャをすべてとる"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "pick along path": {
-            "name": "道に沿ってしゅうかくする"
-          },
-          "check for corn": {
-            "name": "トウモロコシか調べる"
-          },
-          "corn rectangle": {
-            "name": "corn rectangle"
-          },
-          "lettuce stairs": {
-            "name": "lettuce stairs"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          },
-          "get all pumpkins": {
-            "name": "カボチャをすべてとる"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "pick along path": {
-            "name": "道に沿ってしゅうかくする"
-          },
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          },
-          "get all pumpkins": {
-            "name": "カボチャをすべてとる"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "トウモロコシをしゅうかくする"
-          },
-          "get all pumpkins": {
-            "name": "カボチャをすべてとる"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "garden square"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "ゲームオーバー"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "counterを使って、進んでミツをとる"
           }
         }
       }
