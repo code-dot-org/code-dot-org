@@ -10,7 +10,8 @@ export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
     onResolveStateToggle: PropTypes.func.isRequired,
-    onDelete: PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired,
+    viewAsCodeReviewer: PropTypes.bool.isRequired
   };
 
   state = {
@@ -49,6 +50,7 @@ export default class Comment extends Component {
       isFromOlderVersionOfProject,
       isResolved
     } = this.props.comment;
+    const {onResolveStateToggle, viewAsCodeReviewer} = this.props;
 
     const {isShowingCommentOptions} = this.state;
 
@@ -62,26 +64,28 @@ export default class Comment extends Component {
       >
         <div style={styles.commentHeaderContainer}>
           {this.renderName()}
-          <div
-            className="fa fa-ellipsis-h"
-            style={styles.ellipsisMenu}
-            onClick={() =>
-              this.setState({
-                isShowingCommentOptions: !isShowingCommentOptions
-              })
-            }
-          >
-            {isShowingCommentOptions && (
-              <CommentOptions
-                isResolved={isResolved}
-                onResolveStateToggle={() => {
-                  this.props.onResolveStateToggle(id);
-                  this.setState({isShowingCommentOptions: false});
-                }}
-                onDelete={() => this.onDelete(id)}
-              />
-            )}
-          </div>
+          {!viewAsCodeReviewer && (
+            <div
+              className="fa fa-ellipsis-h"
+              style={styles.ellipsisMenu}
+              onClick={() =>
+                this.setState({
+                  isShowingCommentOptions: !isShowingCommentOptions
+                })
+              }
+            >
+              {isShowingCommentOptions && (
+                <CommentOptions
+                  isResolved={isResolved}
+                  onResolveStateToggle={() => {
+                    onResolveStateToggle(id);
+                    this.setState({isShowingCommentOptions: false});
+                  }}
+                  onDelete={() => this.onDelete(id)}
+                />
+              )}
+            </div>
+          )}
           {isResolved && <span className="fa fa-check" style={styles.check} />}
           <span style={styles.timestamp}>{timestampString}</span>
         </div>
