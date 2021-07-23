@@ -152,44 +152,44 @@ level 'blockly:Studio:hoc2015_blockly_15'
 lesson 'Events with Flappy', display_name: 'Events with Flappy', has_lesson_plan: false
 level 'courseC_video_flappyIntro'
 variants
-  level 'flappy_1'
   level 'courseC_flappy_events1'
+  level 'flappy_1'
 endvariants
 variants
-  level 'flappy_2'
   level 'courseC_flappy_events2'
+  level 'flappy_2'
 endvariants
 variants
-  level 'flappy_3'
   level 'courseC_flappy_events3'
+  level 'flappy_3'
 endvariants
 variants
-  level 'flappy_4'
   level 'courseC_flappy_events4'
+  level 'flappy_4'
 endvariants
 variants
-  level 'flappy_5'
   level 'courseC_flappy_events5'
+  level 'flappy_5'
 endvariants
 variants
-  level 'flappy_6'
   level 'courseC_flappy_events6'
+  level 'flappy_6'
 endvariants
 variants
-  level 'flappy_7'
   level 'courseC_flappy_events7'
+  level 'flappy_7'
 endvariants
 variants
-  level 'flappy_8'
   level 'courseC_flappy_events8'
+  level 'flappy_8'
 endvariants
 variants
-  level 'flappy_9'
   level 'courseC_flappy_events9'
+  level 'flappy_9'
 endvariants
 variants
-  level 'flappy_11'
   level 'courseC_flappy_events10'
+  level 'flappy_11'
 endvariants
 
 lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: false
@@ -424,23 +424,23 @@ bonus 'courseF_bee_fwp_challenge2'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: false
-level 'courseF_video_csMatters', named: true
-level 'InspirationalArtwork', named: true
-level 'FoodFight', named: true
-level 'Guess The Number', named: true
-level 'Choose Your Own Adventure', named: true
+level 'courseF_video_csMatters', progression: 'End of Course Projects'
+level 'InspirationalArtwork', progression: 'InspirationalArtwork'
+level 'FoodFight', progression: 'FoodFight'
+level 'Guess The Number', progression: 'Guess The Number'
+level 'Choose Your Own Adventure', progression: 'Choose Your Own Adventure'
 
 lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: false
-level 'Begin planning your project', named: true
+level 'Begin planning your project', progression: 'Begin planning your project'
 
 lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: false
-level 'Course F: Artist Project', named: true
-level 'Course F: Play Lab Project', named: true
+level 'Course F: Artist Project', progression: 'Course F: Artist Project'
+level 'Course F: Play Lab Project', progression: 'Course F: Play Lab Project'
 
 lesson 'Revise Your Project', display_name: 'Revise Your Project', has_lesson_plan: false
-level 'Course F: Artist Project - Revise', named: true
-level 'Course F: Play Lab Project - Revise', named: true
+level 'Course F: Artist Project - Revise', progression: 'Course F: Artist Project - Revise'
+level 'Course F: Play Lab Project - Revise', progression: 'Course F: Play Lab Project - Revise'
 
 lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: false
-level 'Prepare for your presentation', named: true
+level 'Prepare for your presentation', progression: 'Prepare for your presentation'
 
