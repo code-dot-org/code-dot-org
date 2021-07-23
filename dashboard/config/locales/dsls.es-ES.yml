@@ -10584,6 +10584,8 @@ es-ES:
         display_name: Proyecto de fin de curso
       courseD_EOC_examples_2021:
         display_name: Ejemplos de Proyecto
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -10595,7 +10597,8 @@ es-ES:
         - text: C
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
-        - feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
+        - text: Ninguna de las anteriores
+          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         markdown: |+
           <table>
@@ -10697,7 +10700,8 @@ es-ES:
         - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
           correct: true
           feedback: "¡Correcto!"
-        - feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
+        - text: La Granjera sólo recogerá la calabaza.
+          feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
         markdown: |
@@ -10786,10 +10790,17 @@ es-ES:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: No sucederá nada.
-        - {}
-        - correct: true
+          feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
+            abajo en la pantalla.
+        - text: El alien empezará a patrullar de derecha a izquierda.
+          feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
+            abajo en la pantalla.
+        - text: El alien empezará a moverse hacia arriba y hacia abajo en la pantalla.
+          correct: true
           feedback: "¡Correcto!"
-        - {}
+        - text: El alien desaparecerá de la parte superior de la pantalla.
+          feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
+            abajo en la pantalla.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
@@ -10827,23 +10838,37 @@ es-ES:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-        - {}
-        - correct: true
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: La planta rodadora comenzará a caer
+          correct: true
           feedback: "¡Correcto!"
-        - {}
+        - text: La planta rodadora se encenderá y apagará.
+          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseF_EOC_samples_2021:
         display_name: Proyecto de fin de curso
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: El sprite sólo girará a la derecha.
+          feedback: No es correcto. El sprite también se moverá hacia el este.
+        - text: El sprite sólo se moverá hacia el este.
+          feedback: No es correcto. El sprite no ha dejado de girar, por lo que hará
+            ambas cosas simultáneamente.
+        - text: El sprite girará y se moverá al mismo tiempo.
+          correct: true
+          feedback: "¡Correcto! Ambos comportamientos se producirán simultáneamente."
+        - text: El sprite girará primero y se moverá después.
+          feedback: No es correcto. En Laboratorio de Sprite, los bloques conectados
+            se suceden inmediatamente uno detrás de otro, por lo que ambos comportamientos
+            se producirán simultáneamente.
         questions:
-        - {}
+        - text: Lee el código y haz una predicción.
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: El artista dibujará un triángulo con lados de 50 pixeles.
@@ -10855,7 +10880,8 @@ es-ES:
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - feedback: La variable `longitud` se establece en 50 y se usa en el bloque
+        - text: El ordenador pedirá al usuario un número.
+          feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 píxeles.
         questions:
         - text: Hemos establecido la variable "longitud" en 50. ¿Qué sucederá cuando
@@ -10872,27 +10898,47 @@ es-ES:
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
-        - feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
+        - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
+          feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         markdown: "¡Ah! Usar bucles ´desde´hace este puzle mucho más fácil!"
         questions:
         - text: Lee el siguiente código. ¿Qué sucederá cuando hagas clic en "Ejecutar"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Ambos aviones se moverán un espacio a lo largo de la cuadrícula y
+            luego se detendrán.
+          feedback: No es así. Estos sprites tienen "comportamientos" que siguen funcionando
+            hasta que se les dice que se detengan.
+        - text: Ambos aviones comenzarán a moverse y no se detendrán.
+          correct: true
+          feedback: "¡Correcto! Estos comportamientos le dicen a los aviones que empiecen
+            a moverse y sigan adelante."
+        - text: Un avión se moverá primero y el otro después.
+          feedback: No es correcto. Cada bloque de código en el Laboratorio de Sprite
+            se ejecuta instantáneamente después del siguiente.
+        - text: Los aviones se estrellarán.
+          feedback: Incorrecto. Los aviones no están colocados de forma que se toquen.
         questions:
-        - {}
+        - text: Lee el código y haz una predicción.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: El programa imprimirá "¡Hola nombre!"
+          feedback: No es correcto. El bloque del nombre será reemplazado por lo que
+            usted escriba.
+        - text: El programa le dará la bienvenida con el nombre que introduzca.
+          correct: true
+          feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
+            nombres."
+        - text: El sprite cambiará de tamaño.
+          feedback: Es incorrecto. El texto se imprime en la pantalla.
+        - text: El ordenador hará otra pregunta.
+          feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
+            programa.
         questions:
-        - {}
+        - text: 'Este programa le permite responder a una pregunta escribiendo con
+            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
+            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: El artista resolverá el puzle correctamente.
@@ -10957,6 +11003,8 @@ es-ES:
         display_name: Proyecto de fin de curso
       express_EOC_examples_2021:
         display_name: Ejemplos de Proyecto
+        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+          dedica un tiempo a mirar los proyectos de ejemplo.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este programa.
@@ -10975,3 +11023,1407 @@ es-ES:
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
             ejecutes el programa?
+      CourseF_outbreak_story:
+        content1: descripción aquí
+        markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
+          Town!\nMonster Town solía ser un lugar feliz y saludable. A los monstruos
+          de Monster Town les encantaba pasearse para visitar a sus amigos. \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn día, uno de los monstruos empezó a sentirse mal.
+          ¡El monstruo había cogido un **virus**! Un virus es un pequeño organismo
+          que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado.
+          Siguieron visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPoco después, otros dos monstruos enfermaron. ¡Era
+          el mismo virus! Parece que se contagiaron de su amigo.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nEl virus se extendió lentamente a otros monstruos
+          que estaban cerca. Los monstruos sanos empezaron a preocuparse de que todos
+          pudieran enfermar. Los monstruos enfermos empezaron a preocuparse de que
+          iban a contagiar el virus a todos los demás.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Detener la propagación\nAfortunadamente,
+          tras estudiar el virus, los vecinos de Monster Town hicieron un importante
+          descubrimiento. Se dieron cuenta de que era menos probable que contagiaran
+          el virus si llevaban mascarillas en la boca. Con las mascarillas puestas,
+          era menos probable que los monstruos enfermos contagiaran el virus a los
+          sanos.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          ¿Qué ocurrirá a continuación?\n\nHoy vas a escribir código para crear y
+          ejecutar tu propia **simulación** del brote de virus en Monster Town.  Una
+          simulación es un modelo informático de un proceso o sistema. Aprende a codificar
+          y a hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
+          Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* * ¿Con qué rapidez se propagará el
+          virus?\n\n* * ¿Se enfermará todo el mundo?\n\n* * ¿Cómo ayudarán las mascarillas?\n\n\nCuando
+          hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje
+          sobre lo que crees que podemos hacer para ayudar a mantener a los demás
+          sanos cuando un virus llega a la ciudad. \n"
+      CourseF_outbreak_story2:
+        content1: descripción aquí
+        markdown: "# El Brote: Pensar como un científico\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLas simulaciones son una excelente
+          manera de aprender cosas que pueden ser difíciles de observar en el mundo
+          real. Ayudan a los científicos a resolver problemas y a probar nuevas ideas
+          de forma segura y eficaz. Tu simulación es una forma de mostrar cómo podría
+          ser un brote de virus en Monster Town.\n\n#¡Reiniciar y Repetir!\nIncluso
+          cuando escribes el código tú mismo, es imposible saber exactamente lo que
+          ocurrirá cuando pulses ejecutar. Los monstruos deambulan aleatoriamente,
+          por lo que no sabes si el virus se propagará rápida o lentamente. Siempre
+          que cambies el código, asegúrate de ejecutar la simulación más de una vez.
+          ¡Las cosas no sucederán de la misma manera dos veces!\n\n## Recogida de
+          datos\nIntenta anotar tus observaciones mientras ejecutas tu simulación.
+          Puedes contar el número de monstruos que enferman o utilizar un temporizador
+          para ver lo rápido que suceden las cosas. Por ejemplo, ¿cuánto tiempo suelen
+          tardar en enfermar todos los monstruos si ninguno tiene mascarilla? \n\n##
+          Hacer predicciones\nSi entiendes tu modelo, puedes usarlo para hacer predicciones.
+          Incluso puedes cambiar la forma en que se ejecuta tu simulación y adivinar
+          qué ocurrirá de forma diferente. Por ejemplo:\n* ¿Qué pasaría si hubiera
+          el doble de monstruos?\n* ¿Qué pasaría si los monstruos se movieran a la
+          mitad de velocidad?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## ¿Es Monster Town como el mundo real?\nHay un
+          límite a lo realista que puede ser cualquier modelo. \n#¿Qué tiene en común
+          tu simulación de brote con los brotes de virus del mundo real?\n* ¿Cuáles
+          son las diferencias?\nCuando termines esta actividad, comenta estas preguntas
+          con los profesores o con tu familia.\n\n#¿Qué más podemos modelar?\nYa has
+          creado un modelo funcional del brote en Monster Town. ¿Qué cosas no puede
+          hacer o mostrar tu simulación que te gustaría que pudiera hacer? Sigue adelante
+          y aprende a modelar aún más:\n* Aumentar el número de monstruos en la simulación\n*
+          Ayudar a los monstruos a recuperarse del virus\n* ¡Probabilidad, inmunidad,
+          vacunas y mucho más!\n\nTambién puedes compartir tu modelo de simulación
+          con otros, o compartir un mensaje sobre lo que crees que podemos hacer para
+          ayudar a mantener la salud de los demás cuando un virus llega a la ciudad.
+          \n"
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Historias de Espacios en Blanco
+
+          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Por el Divertido de Loop
+
+          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+      Internet-Unplugged_2021:
+        markdown: |
+          # El Internet
+
+          Construye tu propio Internet en la clase sólo usando pedazos de papel.
+      OPD-K5 About_dani:
+        markdown: |
+          # Primeros pasos: sobre este curso
+
+          ## Resumen del curso
+
+          Este curso tiene la intención de ser una introducción al currículo y los recursos de los Fundamentos de Ciencias de la Computación de Code.org para profesores. Mediante la lectura, los videos, al completar desafíos interactivos y reflexionar sobre tu aprendizaje, desarrollarás tu propia comprensión mientras te preparas para enseñar ciencias de la computación en tu clase.
+
+          ## Objetivos de aprendizaje
+
+          Al completar este curso en línea, los participantes:
+
+          - Aprenderán los conceptos básicos de la computación.
+          - Examinarán las mejores prácticas para enseñar estos conceptos básicos a tus alumnos
+          - Accederán a planes de estudio y recursos gratuitos para profesores
+          - Planificarán cómo comenzar a enseñar Fundamentos de Ciencias de la Computación
+          - Se conectarán con una comunidad de colegas educadores que están haciendo cambios positivos en sus aulas a través de la codificación
+
+          ## Requisitos previos
+
+          No se asume ninguna experiencia previa en codificación o educación en informática. Este es un curso para principiantes.
+
+          > **Una nota sobre la audiencia:** Este curso se centra en el plan de estudios gratuito de Fundamentos de Ciencias de la Computación de Code.org en el contexto de los alumnos de K-5. Aunque muchos de los mismos conceptos se pueden aplicar a cualquier curso de informática, si deseas enseñar un plan de estudios de computación más profundo que los Fundamentos de la Ciencia de la Computación (por ejemplo, uno de nuestros cursos de [Middle] (https://code.org/educate/csd) o [High school](https://code.org/educate/csp)), te recomendamos que busques más [oportunidades de desarrollo profesional en profundidad o en curso] (https://code.org/educate/professional-learning/middle-high).
+
+          ## Duración del curso
+
+          Completar este curso en línea debería tomar entre 3 y 7 horas, dependiendo de tu conocimiento previo y de cuán profundamente quieras adentrarte en los recursos de Code.org.
+      OPD-K5 Assessment_dani:
+        markdown: "# Planificación > Otros recursos\n\nCuando inicias sesión en Code.org
+          como profesor, tienes acceso a muchas funciones que tus alumnos no tienen.
+          Ya has visto cómo encontrar un curso, crear una sección y asignar tu clase
+          a esa sección. Sin embargo, también puedes:\n\n- **Seguir el progreso del
+          estudiante**: [Evalúa el aprendizaje](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress)
+          de todos tus estudiantes.\n- **Progreso del curso**: mira tu propio progreso
+          personal en las lecciones de Code.org, como alumno. Sus alumnos también
+          podrán ver su progreso en sus cuentas. Sin embargo, como profesor, también
+          puedes ver los planes de lecciones y ver las soluciones para cada desafío.\n-
+          **Ayuda y comunidad**: accede a [support.code.org] (https://support.code.org/),
+          donde puedes publicar preguntas, responder a las publicaciones de otros
+          profesores y leer las preguntas frecuentes del personal de Code.org. En
+          esta página, también podrás contactar directamente a Code.org con cualquier
+          pregunta que puedas tener.\n- **Desarrollo profesional**: Acceso [capacitación
+          en persona] (https://code.org/professional-development-workshops) para profesores.\n-
+          **Oradores invitados de informática**: [Encuentra profesionales de la industria
+          tecnológica inteligentes, apasionados y atractivos] (https://code.org/volunteer/local)
+          a quienes les encantaría hablar con tu clase sobre sus trabajos. \n\n<br/>\n---\n>
+          ## Visita support.code.org\n> Si te atascas o tienes preguntas, asegúrate
+          de consultar nuestros artículos de soporte en support.code.org. También
+          puedes comunicarte con nosotros directamente a través de esa página, también.
+          [nuestro foro](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
+          <a href=\"http://support.code.org\" target=\"blank\"><button class=\"plc\">Obtener
+          ayuda>></button></a>\n\nDespués de comentar en el foro, regresa aquí y haz
+          clic a continuación para pasar a la siguiente etapa.\n"
+      OPD-K5 CS Courses_dani:
+        markdown: |+
+          # Planificación > Comenzar en Code.org
+
+
+          ## Paso 1: Elige un curso
+          Todos nuestros cursos, desde prelectores hasta estudiantes de secundaria, figuran en nuestro **[catálogo de cursos] (https://studio.code.org/courses)**. Para encontrar las lecciones de Fundamentos de las Ciencias de la Computación con las que has estado practicando, ve a nuestra ** [página primaria] (https://code.org/educate/curriculum/elementary-school)** y ve a la sección "Cursos". Todos nuestros cursos están disponibles sin costo. Chatea con colegas de tu escuela para determinar cómo se puede integrar el plan de estudios del curso con una variedad de materias.
+          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
+          ***
+          ## Paso 2: Configura la sección de tu clase
+          Configura una sección en el aula para ver el progreso de tu estudiante, imprime tarjetas de inicio de sesión para tus estudiantes, administra tus cuentas e imprime certificados que pueden llevar a casa cuando terminen el curso. Haz clic en este enlace para **[ver un breve video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** que demuestra cómo configurar tu primera clase de informática en Code.org. También puedes encontrar los pasos en **[este artículo de soporte](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
+          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
+          ***
+          ## Paso 3: Asigna el curso a tu sección
+          Haz clic en el curso que estás enseñando; deberías ver una pantalla que se parece a la siguiente. Luego puedes hacer clic en "Asignar curso" y asignar ese curso a una de tus secciones.
+          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
+          ***
+          ## Paso 4: ¡Comienza a enseñar!
+          Lo único que necesitas es una lección para llevar los conceptos informáticos a tu salón de clases. Una vez que veas el entusiasmo de tus estudiantes por las Ciencias de la Computación, ve más allá con planes de lecciones diarias para guiar a tus estudiantes, actividades desconectadas que puedes hacer sin una computadora y foros para conectarte con otros profesores.
+
+
+      OPD-K5 CS Tips_dani:
+        markdown: |
+          # Primeros pasos > Navegar este curso en línea
+
+          Si has llegado hasta aquí, ¡felicidades! A medida que completes este curso, te familiarizarás con todo lo que Fundamentos de Ciencias de la Computación tiene para ofrecer.
+
+          Si tienes problemas, la siguiente información te ayudará a navegar y utilizar este espacio para tu aprendizaje profesional a medida que completes este curso en línea.
+
+          ---
+
+          ## Etapas
+
+          La página principal de desarrollo profesional se muestra a continuación. Esta página está dividida en varias __stages__, cada una de las cuales representa un tema o idea diferente.
+
+          <img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+          <br/>
+          <br/>
+
+          ## Rompecabezas
+
+          Cada etapa se compone de niveles que llamamos __puzzles__, que contienen videos, lecturas o preguntas individuales. Los desafíos se indican como círculos con números. Los colores del círculo del desafío cambiarán según tu progreso. En este desarrollo profesional, verás los siguientes tipos de círculos:
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+          <br/>
+
+          ## Acceso a desafíos
+
+          Los desafíos son visibles:
+          <p> -En la página principal de desarrollo profesional </p>
+          <p> -En el encabezado de cualquier otro desafío en el mismo escenario </p>
+          <p> -Desde el menú desplegable del encabezado en cualquier desafío </p>
+
+          <h4><details>
+          <summary style="color:#ffa400;">Haz clic aquí para ver más sobre cómo acceder a desafíos</summary>
+          <br>
+          <div><em>Una vez que haya terminado de ver esto, haz clic en la flecha de arriba para contraer la sección</em></div>
+          <br>
+          <img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+          </details></h4>
+
+          <br/>
+
+          ## Moviéndote entre desafíos
+
+          Haz clic en "Continuar" o "Siguiente recurso" después de cada desafío para avanzar al siguiente. O, en cualquier momento, puedes saltar a un nuevo desafío haciendo clic en ese número en el encabezado.
+
+          <h4><details>
+          <summary style="color:#ffa400;">Haz clic aquí para ver más sobre cómo moverse entre desafíos</summary>
+          <br>
+          <div><em>Una vez que hayas terminado de ver esto, haz clic en la flecha de arriba para contraer la sección</em></div>
+          <br>
+          <img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+          </details></h4>
+
+          <br/>
+          <br/>
+
+          > ¡Eso es todo! Siéntete libre de volver a este nivel en cualquier momento si necesitas una actualización sobre cómo funciona esta plataforma.
+      OPD-K5 Celebrate_dani:
+        markdown: |
+          # Pasos siguientes > ¡Celebra!
+
+          Felicitaciones por completar este curso en línea de desarrollo profesional. Si has completado todos los niveles en esta capacitación, puedes descargar e imprimir un certificado de logro ahora completando los siguientes pasos:
+
+          1. Visita [este enlace] (https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Ingresa tu nombre en el campo/cuadro de entrada.
+          3. Haz clic en Imprimir certificados.
+          4. Haz clic derecho en la imagen del certificado y elige "Guardar imagen como..." para que puedas descargarlo en tu computadora.
+
+          Y no lo olvides... ¡puedes regresar a este curso en línea en cualquier momento para revisar tu aprendizaje, acceder a enlaces o recursos, o simplemente refrescar tu memoria!
+
+          ¡Gracias por tu participación! ¡Estamos ansiosos por escuchar cómo implementas informática y Code Studio en tu salón de clases!
+      OPD-K5 CongratsFinal_dani:
+        markdown: |
+          # ¡Felicitaciones!
+
+          <img src="https://images.code.org/3e21c6e68f0b6565ba16ad2b63b892f0-image-1434398206115.jpg" width="450px">
+          <br/><br/>
+          A estas alturas, ya debería haber completado las etapas 1-8 y haber aprendido los fundamentos básicos de la computación. ¡Esperamos que te hayas divertido en el camino! También esperamos que haya estado considerando cómo podrías aplicar tu aprendizaje a tu práctica docente.
+          <br/><br/>
+          En la siguiente etapa, consideraremos algunas de las mejores prácticas para enseñar estos fundamentos en tu clase.
+      OPD-K5 Congrats_dani:
+        markdown: |
+          # Eventos > Revisión
+
+          En esta etapa, hiciste un juego divertido, combinando conceptos básicos y demostrando tu aprendizaje. Al permitirnos activar acciones basadas en otras partes de nuestro programa, los eventos nos permiten estirar nuestros músculos de codificación.
+
+          **Tómate un momento para revisar cómo se introducen los eventos en el plan de estudios de Fundamentos de las Ciencias de la Computación y considera cómo podrías implementar las actividades sugeridas en tu clase.**
+
+          ![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)
+      OPD-K5 Connect_dani:
+        markdown: |
+          # Pasos siguientes > Conéctate
+
+          Más allá de la capacitación formal adicional, puedes considerar acceder a la comunidad code.org para continuar aprendiendo informalmente de tus pares, o simplemente para encontrar apoyo y una red de pares. Lo puedes hacer de esta manera:
+
+          <br/> <br/>
+
+          > ** Continúa participando en la comunidad de aprendizaje profesional de profesores de code.org: ** El foro que has estado utilizando a lo largo de este curso será un gran recurso para avanzar. Puedes usarlo no solo para referirte a tu aprendizaje de este curso, sino para encontrar apoyo a medida que continúa tu viaje, o incluso para ofrecer apoyo a otras personas que necesitan su experiencia. Asegúrate de marcarlo ahora y visitarlo con frecuencia: [http://forum.code.org/c/csffont>(http://forum.code.org/c/csf)
+
+          <br/>
+
+          > ** Contáctate con [@teachcode] (http://twitter.com/teachcode) en Twitter. **
+
+          <br/>
+
+          > **Únete a la Asociación de Profesores de Computación (CSTA): **[La CSTA] (http://csta.acm.org/index.html) es una comunidad comprometida de educadores en todo el país que se compromete a llevar a cabo una informática educativa a sus alumnos al tiempo que sensibiliza sobre el tema al público en general. Organiza una conferencia anual y también tienen secciones que celebran reuniones locales.
+      OPD-K5 Culture_dani:
+        markdown: |+
+          # Mejores prácticas > Cultura en el aula
+
+          ¿Cómo podemos promover una cultura saludable en el aula para nuestras clases de computación? Primero, podemos asegurarnos de que todos en el aula, incluidos nosotros mismos, comprendamos las formas en que podemos actuar como informáticos y qué tener en cuenta. Esto mantiene a todos en la misma sintonía y facilita tu trabajo en el aula.
+
+          <img src="https://images.code.org/b5d9ae18a882a4359f096b9c6ade135e-image-1434398703448.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          ## Formas de actuar como un informático:
+
+          - **Sé curioso:** Cuando eres curioso, haces cosas como hurgar en diferentes menús, ejecutar fragmentos de código para ver qué sucede o verificar los efectos de diferentes configuraciones. La curiosidad, a menudo, lleva a poder responder a tus propias preguntas.
+          - **Haz preguntas:** Colabora con otros una vez que hayas intentado resolver un problema tú mismo.
+          - **Sé persistente:** Ten confianza para abordar problemas complejos abiertos y quédate con ellos. Esto se vuelve más fácil una vez que has escrito algunos programas exitosos y sabes lo bien que se siente superar un problema de programación difícil.
+          - **Divide los problemas grandes en problemas más pequeños y manejables:** Esto se llama **descomposición**.
+          - **Lee tu código: ** La computadora sigue tus instrucciones exactamente. El rastreo a través del código paso a paso (como si fuera la computadora que procesa las instrucciones) te ayudará a encontrar errores en tu lógica o pasos faltantes.
+          - **No te sientas mal por cometer errores:** Los errores no son fallas; solo te acercan un paso más a la creación de la solución o producto final adecuado.
+          - **Aléjate de tu pantalla:** Esto puede darte un descanso muy necesario y, a menudo, puedes volver a un problema con una nueva perspectiva.
+
+          ## Cosas por tener en cuenta al aprender informática:
+
+          - El mundo de la programación de computadoras se mueve tan rápido que realmente no hay profesores. **Todos somos aprendices** en diferentes etapas, pero todavía somos siempre aprendices.
+          - La programación se vuelve más cómoda cada vez que vuelves a ella. **No vas a ser un experto la primera vez.**
+          - No hay forma de evitarlo, el acto de programar y **aprender a programar lleva tiempo, ¡pero cualquiera puede hacerlo!**
+          - ¡Puedes compartir **tu propia experiencia auténtica aprendiendo a codificar** con tus estudiantes!
+
+          > ## Reflexionar:
+          > ¿Cómo planeas crear una cultura positiva en el aula cuando enseñas informática? [Tuitea tus pensamientos] (https://twitter.com/codeorg) y asegúrate de etiquetar @codeorg en tu tweet para que podamos responder.
+
+          > <a href="http://ctt.ec/pdL3a" target="blank"><button class="default">Compartir en Twitter >></button></a>
+
+      OPD-K5 Outline_dani:
+        markdown: |
+          # Primeros pasos > Esquema del curso
+
+          El curso se divide en once etapas, y cada etapa se compone de "niveles" o "desafíos". Aquí hay una descripción general de lo que aprenderás si completas el curso completo:
+
+          ## Etapa 1: Primeros pasos (10-30 minutos)
+
+          Al completar la Etapa 1, tú:
+
+          - Revisar los detalles del curso
+          - Practicar el uso de Code.org como plataforma de aprendizaje
+          - Planifica tu participación en este curso
+
+          ## Etapa 2: Fundamentos de la ciencia de la computación (10-30 minutos)
+
+          Al completar la Etapa 2, tú:
+
+          - Definirás las ciencias de la computación y revisarás vocabulario clave
+          - Identificarás los beneficios de la enseñanza y el aprendizaje de la informática.
+          - Diferenciarás entre "codificación" y "ciencia de la computación"
+          - Explicarás los beneficios de comenzar a codificar usando programación visual
+
+          ## Etapa 3: Mirando hacia el futuro (10 minutos)
+
+          Al completar la Etapa 3, tú:
+
+          - Te prepararás para "dominar los conceptos básicos" de la ciencia de la computación revisando lo que sigue en el curso
+
+          ## Etapa 4: Dominar los conceptos básicos: secuenciación (10-30 minutos)
+
+          Al completar la Etapa 4, tú:
+
+          - Definirás "programa" y "algoritmo"
+          - Usarás el motor de programación visual Code.org para escribir programas simples
+          - Reflexionarás sobre la aplicación del aula
+
+          ## Etapa 5: Dominar los conceptos básicos: bucles (20-45 minutos)
+
+          Al completar la Etapa 5, tú:
+
+          - Definirás "bucles" y explicar su importancia
+          - Practicarás la codificación de bucles simples
+          - Reflexionarás sobre la aplicación del aula
+
+          ## Etapa 6: Dominar lo básico: condicionales (20-45 minutos)
+
+          Al completar la Etapa 6, tú:
+
+          - Definirás "condicionales" y explicará su importancia
+          - Practicarás la codificación de condicionales simples
+          - Reflexionarás sobre la aplicación del aula
+
+          ## Etapa 7: Dominar lo básico: Funciones (20-45 minutos)
+
+          Al completar la Etapa 7, tú:
+
+          - Definirás "funciones" y explicarás su importancia
+          - Practicarás la codificación de funciones simples
+          - Reflexionarás sobre la aplicación del aula
+
+          ## Etapa 8: Dominar los conceptos básicos: eventos (30-60 minutos)
+
+          Al completar la Etapa 8, tú:
+
+          - Definirás "eventos" y explicar su importancia.
+          - Practicarás la codificación de eventos simples
+          - Reflexionarás sobre la aplicación del aula
+
+          ## Etapa 9: Mejores prácticas para la enseñanza de informática (30-60 minutos)
+
+          Al completar la Etapa 9, tú:
+
+          - Revisarás las mejores prácticas para enseñar informática
+
+          ## Etapa 10: Planificación (30-60 minutos)
+
+          Al completar la Etapa 10, tú:
+
+          - Explorás los recursos de Code.org, incluido el tablero del maestro
+          - Planificarás cómo podrías integrar la informática en tu práctica
+
+          ## Etapa 11: Próximos pasos (10-30 minutos)
+
+          Al completar la Etapa 11, tú:
+
+          - Reflexionarás sobre tu aprendizaje
+          - Planificarás los próximos pasos que puedes seguir para continuar tu aprendizaje
+          - Conectarás con una comunidad global de educadores interesados ​​en la educación en informática
+          - Compartirás tus conclusiones y comentarios sobre este curso
+
+          > **Nota**: Los tiempos sugeridos se proporcionan arriba para ayudarte a planificar tu aprendizaje. Ten en cuenta que es posible que desees pasar más o menos tiempo en una etapa determinada, dependiendo de tu conocimiento previo, interés y capacidad. Ten en cuenta que este curso es totalmente autodidacta; siempre puedes abandonar el curso y regresar o volver a visitar cualquier etapa o nivel en cualquier momento.
+      OPD-K5 Pair_dani:
+        markdown: |+
+          # Mejores prácticas > Programación en pareja
+
+          Una estrategia importante de gestión del aula que utilizan muchos educadores es la agrupación estratégica. En Code.org, sugerimos probar la estrategia de agrupación estratégica utilizada en las oficinas del mundo real de las principales empresas de tecnología: programación en pareja.
+
+          > **Programación en pareja** es lo que sucede cuando dos estudiantes usan una computadora para escribir un programa juntos. El Centro Nacional para Mujeres y Tecnología de la Información (NCWIT) tiene un [gran recurso sobre los beneficios de la programación en pareja](http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf).
+
+          La investigación muestra que la programación en pareja:
+
+          - Conduce a programas de estudiantes de mayor calidad en relación con programas de estudiantes no agrupados en parejas
+          - Reduce la llamada "brecha de confianza" entre estudiantes femeninas y masculinos, al tiempo que aumenta la confianza de programación de todos los estudiantes
+          <br/><br/>
+
+          Mira este video para comprender cómo funciona la programación en pareja y escucha directamente de los estudiantes cómo mejora su aprendizaje.
+
+          [![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)](https://www.youtube.com/watch?v=vgkahOzFH2Q)
+
+          [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-pair-programming.mp4)
+          <br/><br/>
+          La programación en pareja no solo es beneficiosa para los estudiantes, sino que también es algo que practican algunos programadores informáticos profesionales. Mira este video para aprender cómo presentar la programación en pareja a tus alumnos.
+
+          [![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)](https://www.youtube.com/watch?v=sxToW3ixrwo)
+
+          [¿No puedes ver el video? Haz clic aquí (https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
+          <br/>
+
+
+      OPD-K5 Participation_dani:
+        markdown: "# Comenzando> Planificando tu participación\n\nAntes de comenzar,
+          tómate un momento para considerar tus necesidades de aprendizaje, objetivos
+          y la experiencia única de aprender en un entorno en línea, a tu propio ritmo,
+          ¡especialmente si este es tu primer curso en línea!\n\n## Tú eres el jefe\n\nEste
+          curso en línea a tu propio ritmo está diseñado para ponerlo en el asiento
+          del conductor y darle control sobre tu propio aprendizaje. ***Tómate tu
+          tiempo y trabaja en este curso a tu propio ritmo. Se ofrecen tiempos sugeridos
+          para cada etapa. ***Si te encuentras pasando más o menos tiempo en una etapa
+          determinada, ¡no te preocupes! Nuestro objetivo principal es que te diviertas,
+          aprendas lo básico y apliques lo que aprendes en la práctica de tu clase
+          de la forma que mejor te convenga.\n\n## Conéctate\n\nUna manera de ayudar
+          a mantenerte motivado y enfocado durante tu aprendizaje es mantenerte activo
+          en nuestro <a href=\"http://forum.code.org/c/plc\"target=\"_new\"> Foro
+          de la Comunidad de Aprendizaje Profesional (PLC) </a>.\nComienza por presentarte
+          allí en nuestro <a href=\"http://forum.code.org/t/welcome-please-introduce-yourself/410\"
+          target=\"_new\"> hilo \"Presentaciones\" </a>. A lo largo del curso, usarás
+          el foro para compartir asincrónicamente tus pensamientos, conclusiones y
+          preguntas con otras personas que también están trabajando en el contenido.\n\n<a
+          href=\"http://forum.code.org/t/welcome-please-introduce-yourself/410/1\"
+          target=\"blank\"><button class=\"plc\">Preséntate ahora >></button></a><br>\n\n##
+          Encontrar ayuda cuando la necesitas\n\nSi te atasca en cualquier momento
+          durante el curso, dirígete a [support.code.org] (http://support.code.org)
+          y visita [nuestros foros de la comunidad] (https://support.code.org/hc/community/public/topics).
+          Probablemente encontrará la respuesta a tu pregunta allí. Si no lo haces
+          o aún estás atascado, puedes enviar un correo electrónico a [teacher@code.org]
+          (mailto: teacher@code.org), y un miembro del personal de Code.org se pondrá
+          en contacto contigo lo antes posible.\n\n## ¡Desarrolla la amistad!\n\nTen
+          en cuenta que somos un equipo pequeño y, debido a la escala de nuestros
+          esfuerzos, no podemos responder a todas las solicitudes de apoyo de la misma
+          manera que lo haría un instructor para un curso presencial. Por esa razón,
+          le recomendamos que ***trabaje en este curso en línea con un socio o grupo
+          de colegas***.\n\nCode.org reconoce el poder del aprendizaje y la colaboración
+          entre pares. De hecho, la \"Programación en pareja\" es una gran práctica
+          de la industria que exploraremos en la Etapa 8 como una mejor práctica en
+          el aula. Si crees que aprenderás mejor con un compañero o en un grupo, ¿por
+          qué no completar el curso con un amigo o un colega? Si no conoces a nadie
+          en la vida real que esté interesado en asociarse contigo, dirígete al [foro
+          de PLC](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411),
+          [Twitter](https://twitter.com/teachcode), o [Facebook](https://www.facebook.com/groups/1457214714576953/)
+          \ny encuentra a alguien de la comunidad de Code.org que quiera colaborar.\n\n##
+          Encuentra la experiencia de aprendizaje que funciona para ti\n\nFinalmente,
+          el aprendizaje en línea no es para todos. Este curso no tiene un instructor
+          o mecanismo incorporado para comunicarse en tiempo real con tus compañeros.
+          Si necesitas más atención personalizada o sabes que aprendes mejor en un
+          aula del mundo real donde hay más oportunidades de colaboración y compromiso,
+          te recomendamos que busques una de nuestras oportunidades de desarrollo
+          profesional en persona.\n\n<a href=\"http://code.org/professional-development-workshops\"
+          target=\"blank\"><button>\nEncuentra un taller en persona cerca de ti >></button></a>\n\n*
+          * *\n\n## ¿Cuál es tu plan?\n\nTómate un momento ahora para considerar cómo
+          y cuándo completarás este curso en línea para asegurarte de obtener el mayor
+          beneficio de la experiencia. Cuando hayas esbozado un buen plan, continúa
+          sumergiéndote más profundamente en la Etapa 1.\n"
+      OPD-K5 PostSurvey_dani:
+        markdown: |+
+          # Primeros pasos: realiza la encuesta posterior
+
+          ¡Gracias por utilizar el curso de desarrollo profesional en línea de Enseñanza de los Fundamentos de las Ciencias de la Computación!
+
+          Ya sea que hayas terminado o no todo el curso, queremos escuchar tus comentarios. ¡Envía esta breve encuesta para ayudarnos a mejorar el curso en el futuro!
+
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Realiza la encuesta posterior</a>
+
+      OPD-K5 PreSurvey_dani:
+        markdown: |+
+          # Primeros pasos > Realiza la encuesta previa
+
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa] (https://form.jotform.com/90556900301146). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Realiza la encuesta previa</a>
+
+      OPD-K5 Puzzles_dani:
+        markdown: |
+          # Mirando hacia el futuro> Todo sobre rompecabezas
+
+          En las etapas siguientes, usarás Code.org para aprender los conceptos básicos de la computación. Te enfrentarán a una serie de desafíos que deben resolverse. Para resolver los desafíos, tendrás que escribir programas usando diferentes personajes para completar diferentes objetivos. Practicaremos con nuestro primer desafío en la Etapa 3. Pero antes de llegar allí, aquí hay una descripción general de los diferentes tipos de desafíos que tú y tus estudiantes encontrarán:
+
+          ## Muestra de desafíos de laberinto
+
+          ![](//code.org/images/mockup_birds.png)
+          ![](//code.org/images/pvz.png)
+
+          Tendrás que llevar el pájaro enojado al cerdo, y tendrás que llevar al zombi al girasol.
+
+          ## Muestra de desafíos de artista
+
+          ![](//code.org/images/artist.png)
+
+          Tienes que hacer que el artista dibuje sobre las líneas grises moviéndolo alrededor del lienzo. Dibujarás una línea detrás de él dondequiera que vaya.
+
+          ## Muestra de desafíos de abeja
+
+          ![](//code.org/images/bee.png)
+
+          Tendrás que mover la abeja para recoger todo el néctar y hacer toda la miel. Las unidades de néctar y miel necesarias para cada desafío están escritas en la esquina inferior derecha de cada flor o panal.
+
+          ## Laboratorio de juego
+
+          ![](//code.org/images/playlab.png)
+
+          En Laboratorio de juego, crearás juegos e historias basadas en diferentes objetivos.
+
+          ## Flappy
+
+          ![](//code.org/images/flappy.png)
+
+          En Flappy, crearás tu propio juego de pájaro Flappy.
+          Los desafíos que conducen a la creación del juego te ayudan a aprender las piezas de código que necesitarás para tu juego.
+
+          ## Rebotar
+
+          ![](//code.org/images/bounce.png)
+
+          En Rebotar, puedes crear tu propio juego.
+          Al igual que en Flappy, los desafíos que conducen a la creación del juego te ayudan a aprender las piezas de código que necesitarás para tu juego.
+
+          * * *
+
+          En esta serie, te presentaremos desafíos de [Fundamentos de la Ciencia de la Computación] (http://code.org/educate/k5). Estos desafíos sirven como tutoriales en línea, que ayudan a los estudiantes a aprender conceptos como bucles, eventos, condicionales y funciones.
+
+          Durante esta experiencia de desarrollo profesional, intercalaremos varias progresiones de desafíos, y te brindaremos la oportunidad de familiarizarte con los conceptos de programación en Fundamentos de la Ciencia de la Computación y los personajes de los que tus estudiantes se enamorarán. Durante este curso, notarás que se mueve rápidamente entre diferentes entornos; ya sea acercando el pájaro enojado al cerdo, dibujando o haciendo que una abeja recolecte néctar. Estas transiciones suceden rápidamente en este curso para mostrarte una variedad de acertijos ofrecidos en Fundamentos de la Ciencia de la Computación. Tus estudiantes podrán pasar más tiempo con cada entorno.
+
+          Si deseas familiarizarte con la experiencia del estudiante, siempre puedes completar los cursos [Fundamento de la Ciencia de la Computación] (http://studio.code.org/) por tu cuenta en cualquier momento. Pero este curso te dará un claro panorama de lo que puedes esperar sacando algunos de los desafíos y lecciones más fundamentales para ti en un corto período de tiempo.
+      OPD-K5 Stage10Start_dani:
+        markdown: |
+          # Pasos siguientes > Repasemos
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## ¡Ya casi lo logras!
+
+          Hasta ahora, has aprendido los conceptos básicos de la codificación, has explorado cómo podrías enseñar ciencias de la computación y has creado un plan simple de los próximos pasos.
+
+          Al completar la Etapa 11, podrás:
+
+           - Reflexionar sobre tu aprendizaje
+           - Planificar los próximos pasos que puedes seguir para continuar tu aprendizaje
+           - Conectarte con una comunidad global de educadores interesados ​​en la educación de informática
+      OPD-K5 Stage1Go_dani:
+        markdown: |
+          # Primeros pasos > ¿Listo? ¿Preparado? ¡Ya!
+
+          <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+          Al completar esta etapa, deberías haber:
+
+          - Revisado los detalles del curso
+          - Aprendido a navegar por la plataforma de aprendizaje.
+          - Planificado tu participación en este curso.
+
+          En la siguiente etapa, haremos lo siguiente:
+
+          - Definiremos "ciencias de la computación" y revisaremos vocabulario clave
+          - Identificaremos los beneficios de la enseñanza y el aprendizaje de la informática.
+          - Diferenciaremos entre "codificación" y "informática"
+          - Explicaremos los beneficios de comenzar a codificar usando programación visual
+      OPD-K5 Stage2Go_dani:
+        markdown: |
+          # Fundamentos de la Ciencia de la Computación > Mirando hacia el futuro
+
+          Esperamos que esta etapa te haya dado una buena introducción a la computación.
+
+          Al completar esta etapa, deberías ser capaz de:
+
+          - Definir "computación" y revisar vocabulario clave
+          - Identificar los beneficios de la enseñanza y el aprendizaje de la informática
+          - Diferenciar entre "codificación" y "computación"
+          - Explicar los beneficios de comenzar a codificar usando programación visual
+
+          > **Consejo de enseñanza:** Si bien la informática puede ser una disciplina rica y compleja, en Code.org reconocemos que los maestros y los estudiantes necesitan dominar los conceptos básicos antes de sumergirse en proyectos de nivel superior. Este curso en línea te enseña a ti, el profesor, los conceptos básicos para que puedas ayudar a tus estudiantes a hacerlo también.
+
+          En la siguiente etapa, te presentaremos brevemente algunos marcos para pensar sobre el resto del contenido de este curso. Luego, nos sumergiremos y comenzaremos a aprender computación.
+      OPD-K5 Stage2Overview_dani:
+        markdown: |
+          # Fundamentos de Ciencias de la Computación > Descripción general de la etapa
+
+          En la Etapa 1, aprenderás sobre este curso y cómo navegar por la plataforma de aprendizaje. Ahora estás listo para sumergirte en el contenido real.
+
+          Comencemos con algunos fundamentos.
+
+          <img src="https://images.code.org/8af62f96e37199542519fae8580b0a29-image-1434146715374.jpg" width="450px" style="margin-right:45px; border-radius:10px;">
+
+          Al completar la Etapa 2, podrás:
+
+          - Definir "ciencias de la computación" y revisar vocabulario clave
+          - Identificar los beneficios de la enseñanza y el aprendizaje de la informática.
+          - Diferenciar entre "codificación" e "informática"
+          - Explicar los beneficios de comenzar a codificar usando programación visual
+
+          Planea pasar entre 10-30 minutos completando esta etapa.
+      OPD-K5 Stage3Go_dani:
+        markdown: "# Secuenciación > Reflexionar\n\n¡Felicidades! Acabas de escribir
+          un código. ¡Eres oficialmente un programador! ¡Nuestra plataforma rastrea
+          cuántas líneas de código has escrito y te dirá después de cada desafío!\n\n---\n\n¿Notaste
+          que el último desafío fue un poco más difícil? Fue un **desafío** exigente.
+          Los desafíos exigentes están destinados a ampliar los límites de lo que
+          harán los estudiantes. Dejamos en claro que deben intentarse, pero no exigimos
+          que se completen para que los estudiantes tengan éxito en la lección.\n\n<img
+          src=\"https://images.code.org/e3b9903cf4acc68be5c01c4118b3d53d-image-1434152749660.JPG\"
+          width=\"450px\" style=\"margin-right:45px; border-radius:10px;\">  \n\n---\n\n**Tómate
+          un momento ahora para revisar cómo la secuenciación (incluida la programación
+          y los algoritmos) se introducen en el plan de estudios de Fundamentos de
+          la Ciencia de la Computación, y piensa cómo podrías implementar las actividades
+          sugeridas en tu clase.**\n\n"
+      OPD-K5 Stage3Start_dani:
+        markdown: |
+          # Secuenciación > Descripción general de la etapa
+
+          <img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Al completar la Etapa 4, podrás:
+
+          - Definir "algoritmo" y "programa"
+          - Escribir programas usando bloques de código
+          - Reflexionar sobre la aplicación del aula
+
+          > **Qué esperar en esta etapa:** En los niveles que siguen, comenzaremos con un plan de lección desconectado para presentarte un concepto, para modelar cómo presentaría ideas a los estudiantes en su clase. Luego, te proporcionaremos instrucciones en video y te presentaremos una serie de desafíos y te pediremos que apliques tu aprendizaje. Para completar un desafío, deberás escribir código usando bloques de código Blockly. Estas lecciones son del Curso A, que está destinado a estudiantes de jardín de infantes. Cerraremos con la oportunidad de reflexionar sobre cómo puedes enseñar este concepto a tus alumnos. Debes pasar entre 10 y 30 minutos en esta etapa.
+
+          ¿Listo? ¡Vamos!
+      OPD-K5 Stage3aGo_dani:
+        content1: descripción aquí
+        markdown: "# Secuenciación > Lecciones desconectadas\n\nComo mencionamos,
+          nos gusta presentar temas de informática con lecciones desconectadas. Luego,
+          usamos actividades puente para pasar a las lecciones en línea más adelante.
+          Comenzar con estas lecciones desconectadas introduce conceptos de una manera
+          divertida y amigable. Luego, los estudiantes ya se sienten familiarizados
+          con el concepto cuando llegan a las lecciones en línea, y pueden relacionar
+          las lecciones en línea con la actividad desconectada.\n\nPara estas etapas
+          de programación que atravesarás, también comenzaremos con ejemplos de lecciones
+          desconectadas. Lee el siguiente plan de lección y mira los videos que lo
+          acompañan, pensando en cómo implementarías esto en su salón de clases con
+          tus alumnos.\n<br/>\n***\n<br/>\nComenzaremos con la secuencia. En su base,
+          este estilo de informática se trata de **secuencias**. Una secuencia es
+          un orden especial que sigue algo. En estos desafíos, queremos encontrar
+          la secuencia correcta de instrucciones para decirle a la computadora qué
+          hacer. Esta lista de instrucciones se llama **algoritmo**. Una vez que ese
+          algoritmo se codifica en un lenguaje que puede ser leído por una máquina,
+          se convierte en un **programa**.\n<br/>\n<br/>\n\n** 1. Revisa el plan de
+          lección \"[Mapas felices] (https://curriculum.code.org/csf/coursea/5/)\"del
+          Curso A.**\n<br/>\nRecuerda que el Curso A está destinado a estudiantes
+          de jardín de infantes. La secuencia también aparece en otros cursos, y puedes
+          encontrar ejemplos de esas lecciones en la parte inferior de esta página.\n\n<br/>\n\n**2.
+          Mira el video del estudiante: Mapas felices**\n<br/>\nEste es un video que
+          les mostrarías a tus alumnos para ayudarles a introducir el concepto de
+          secuencia y comenzar la lección desconectada.\n\n[![](https://images.code.org/f00fb02e8f24d57e88d396eb0f2c5cce-image-1571253011379.09.54
+          PM.png)](https://youtube.com/watch?v=hrnhiKAQ1_k)\n\n[¿No puedes ver el
+          video? Haz clic aquí](http://videos.code.org/2014/C1-happy-maps-unplugged.mp4)
+          \ \n\n<br/>\n\n** 3. Mira el video del profesor: Cómo facilitar \"Mapas
+          felices\" **\n<br/>\n\n[![](https://images.code.org/ab93b99493bfe68acc24aaaaf66d4129-image-1571253013543.10.01
+          PM.png)](https://youtube.com/watch?v=En6Bshuqljg)\n\n<br/>\n\n\n** 4. Revisa
+          otras lecciones desconectadas que introducen la secuenciación:**\n\n- Curso
+          A (jardín de infantes): [Algoritmos de la vida real: plantar una semilla]
+          (https://curriculum.code.org/csf-18/coursea/3/)\n- Curso B (Grado 1): [Mis
+          amigos robóticos Jr.] (https://curriculum.code.org/csf-18/coursea/3/), [Muévelo,
+          muévelo] (https://curriculum.code.org/csf-18/courseb/1/)\n- Curso C (Grado
+          2): [Aviones de papel] (https://curriculum.code.org/csf-18/coursec/4/)\n-
+          Curso D (Grado 3): [Programación de papel cuadriculado] (https://curriculum.code.org/csf-18/coursed/1/)\n-
+          Curso E, Curso F (Grados 4, 5): [Mis amigos robóticos] (https://curriculum.code.org/csf-18/coursee/1/)\n\n\n---\n\n\n>
+          ## Reflexionar\n> ¿Cómo explicarías el concepto de programación (incluyendo
+          secuenciación y algoritmos) a tus alumnos? Comparte tus pensamientos en
+          <a href=\"http://forum.code.org/t/teaching-sequencing/408\">nuestro foro</a>.\n\n>
+          <a href=\"http://forum.code.org/t/teaching-sequencing/408\" target=\"blank\"><button
+          class=\"plc\">Debatir en los foros>></button></a>\n\nDespués de comentar
+          en el foro, regresa aquí y haz clic más abajo para continuar.\n\nEn la siguiente
+          etapa, agregaremos algo de complejidad a nuestros programas mediante la
+          adición de bucles.\n"
+      OPD-K5 Stage4Go_dani:
+        markdown: |+
+          # Bucles > Lecciones desconectadas
+
+          En esta etapa, vimos cómo agregar bucles a un programa es más eficiente al codificar acciones repetitivas. En la siguiente etapa, veremos la codificación de **sentencias si** y otros condicionales.
+          <br/>
+
+          ** 1. Revisa "[Girar y girar] (https://levelbuilder.code.org/curriculum/coursec/7/Teacher)" Plan de lección del curso C:**
+          <br/>El curso C está destinado a estudiantes de segundo grado. También aparecen bucles en otros cursos, y puedes encontrar ejemplos de esas lecciones en la parte inferior de esta página.
+
+          <br/>
+
+          ** 2. Mira el video del estudiante: Girar y girar **
+          <br/>
+          Este es un video que mostrarías a tus alumnos para ayudarles a introducir el concepto de bucles y comenzar la lección desconectada.
+
+          [![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
+
+          [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-getting-loopy.mp4)
+
+          <br/>
+
+          **3. Mira el video del profesor: Cómo facilitar "Girar y girar"**
+          <br/>
+          Este video está destinado a ser un apoyo para ti como profesor, si estás buscando consejos sobre cómo ejecutar esta lección.
+          [![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
+
+
+          <br/>
+
+          **4. Revisa otras lecciones desconectadas que introducen bucles:**
+
+          - Curso A (jardín de infantes): [Bucles felices] (https://curriculum.code.org/csf-18/coursea/9/)
+          - Curso B (Grado 1): [Mis amigos robóticos y repetitivos Jr.] (https://curriculum.code.org/csf-18/courseb/8/)
+          - Curso E, F (Grado 4, 5): [Mis amigos robóticos y repetitivos] (https://curriculum.code.org/csf-18/coursee/6/)
+
+          ***
+
+          > ## Reflexionar
+          > ¿Cómo explicarías el concepto de bucles a tus alumnos? <br><br> [Comparte tus opiniones en nuestro foro.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
+
+          > <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discutir en los foros>></button></a>
+
+          Después de debatir en el foro, regresa aquí y haz clic a continuación para pasar a la siguiente etapa.
+
+      OPD-K5 Stage4Review_dani:
+        markdown: |-
+          # Bucles > Reflexionar
+
+          En esta etapa, exploramos cómo se pueden usar los bucles para hacer que el código sea más eficiente. En la siguiente etapa, veremos cómo los condicionales pueden ayudar a agregar lógica a un programa.
+
+          **Tómate un momento para revisar cómo se introducen los bucles en el plan de estudios de Fundamentos de la Ciencia de la Computación. Considera cómo podrías implementar las actividades sugeridas en tu clase.**
+
+          ![](https://images.code.org/c6dca0407f5a517823f7e71b8da3880b-image-1549050118354.jpg)
+      OPD-K5 Stage4Start_dani:
+        markdown: |
+          # Bucles > Descripción general de la Etapa 5
+
+          Esta etapa se basa en tu primera experiencia de programación al agregar el concepto central de **bucles**.
+
+          <img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          Al completar la Etapa 5, podrás:
+
+          - Practicar la codificación de bucles simples
+          - Reflexionar sobre la aplicación del aula
+
+          > **Qué esperar en esta etapa:** En los niveles que siguen, presentaremos una lección desconectada y una serie de desafíos del Curso C (destinados al Grado 2) que se centran en el concepto de bucles. Para completar un desafío, necesitarás escribir código usando programación visual basada en bloques. Cerraremos con la oportunidad de reflexionar. Debes pasar entre 20 y 45 minutos en esta etapa.
+
+          ¿Listo? ¡Vamos!
+      OPD-K5 Stage5Go_dani:
+        markdown: |
+          # Condicionales > Lecciones desconectadas
+
+          ** 1. Revisa "[Condicionales con tarjetas](https://curriculum.code.org/csf-18/coursed/13/)" Plan de lección del Curso D:**
+          <br/>
+          El curso D está destinado a estudiantes de grado 3. Esta misma lección también aparece en el curso E y el curso F. Los condicionales no están cubiertos en los cursos A, B o C.
+          <br/><br/>
+
+          **2. Mira el video del estudiante: condicionales con tarjetas**
+          <br/>
+          Este es un video que les mostrarías a tus alumnos para ayudarles a introducir el concepto de condicionales y comenzar la lección desconectada.
+          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
+          <br/>
+          [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
+
+          <br/><br/>
+          ** 3. Mira a un profesor modelar esta lección: "Condicionales con tarjetas"**
+          <br/>
+          Este video está destinado a ser un apoyo para ti como profesor, si estás buscando consejos sobre cómo ejecutar esta lección.
+
+
+          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
+
+          [¿No puedes ver el video? Haga clic aquí](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
+
+          <br/><br/>
+
+          ---
+
+          > ## Reflexionar
+          > ¿Cómo explicarías el concepto de condicionales a tus alumnos? Comparte tus pensamientos en [nuestro foro](http://forum.code.org/t/teaching-conditionals/406/1).
+
+          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Debatir en el foro>></button></a>
+
+          Después de comentar en el foro, regresa aquí y haz clic a continuación para pasar a la siguiente etapa.
+      OPD-K5 Stage5Review_dani:
+        markdown: |
+          # Condicionales> Reflexionar
+
+          En esta etapa, exploramos cómo los condicionales ayudan a los programadores a agregar lógica a su código. En la siguiente etapa, veremos cómo las funciones pueden ayudarte a llevar tu codificación al siguiente nivel.
+
+          **Tómate un momento para revisar cómo se introducen los condicionales en el plan de estudios de Fundamentos de la Ciencia de la Computación y cómo puedes implementar las actividades sugeridas en tu clase.**
+
+          ![](https://images.code.org/6335e7aa128d84c96ac402005cd9a3bb-image-1549053033052.jpg)
+      OPD-K5 Stage5Start_dani:
+        markdown: |
+          # # Condicionales > Descripción general de la etapa
+
+          <img src="https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png" width="450px"  style="border-radius:10px; float:right; margin: 0 0 40px 40px;"/>
+
+          Hasta ahora, ha escrito un programa simple y ha agregado bucles para aumentar la eficiencia. En esta etapa, exploraremos **sentencias si** que comienzan a agregar lógica a tu programa.
+
+          Al completar la Etapa 6, podrás:
+
+          - Practicar la codificación de condicionales simples
+          - Reflexionar sobre la aplicación del aula
+
+          > **Qué esperar en esta etapa:** Primero presentaremos una lección desconectada del Curso D (destinada al Grado 3) que introduce la idea de condicionales. Luego, completarás una serie de desafíos que te pedirán que apliques tu aprendizaje usando condicionales. Terminaremos con la oportunidad de reflexionar. Debes pasar entre 20 y 45 minutos en esta etapa.
+
+          ¿Listo? ¡Vamos!
+      OPD-K5 Stage6Go_dani:
+        markdown: |
+          # Funciones > Lecciones desconectadas
+
+          Los programadores siempre buscan formas de hacer que su código sea más eficiente. Una forma de hacerlo es a través de **funciones**, que les permiten reutilizar segmentos de código
+
+          **1. Revisa "[Funciones: composición de canciones](https://curriculum.code.org/csf-18/coursee/14/)" Plan de lección del curso E.**
+          <br/>
+          El curso E está destinado a estudiantes de 4.° grado. Las funciones no están cubiertas en los cursos A-D.
+
+          <br/>
+
+          ** 2. Mira el video del estudiante: Funciones: composición de canciones**
+          <br/>
+          Este es un video que les mostrarías a tus alumnos para ayudarles a introducir el concepto de funciones y comenzar la lección desconectada.
+
+          [![](https://images.code.org/7fe2de2239edca27f26ae77cd0dc4c35-image-1571253900570.24.39 PM.png)](https://youtube.com/watch?v=5iDCKkI6y2Y)
+
+          <br/>
+
+          [¿No puedes ver el video? Haga clic aquí](http://videos.code.org/2014/C3-songwriting-with-parameters.mp4)
+
+          <br/>
+
+          **3. Mira a un profesor modelar esta lección: "Funciones: composición de canciones"**
+          <br/>
+          Este video está destinado a ser un apoyo para ti como profesor, si estás buscando consejos sobre cómo ejecutar esta lección.
+          [![](https://images.code.org/cfa0204ea2de0de27dab274369069a58-image-1571253902872.24.46 PM.png)](https://youtube.com/watch?v=QuIMLel1mmw)
+          [¿No puedes ver el video? Haz clic aquí](https://videos.code.org/levelbuilder/unplugged-lessoninaction-songwritingwithfunctions-mp4.mp4)
+          <br/>
+
+          ---
+
+          > ## Reflexionar
+          > ¿Cómo explicarías el concepto de funciones a tus alumnos? Comparte tus pensamientos en <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank">nuestro foro</a>.
+
+          > <a href="http://forum.code.org/t/teaching-functions/407/1" target="blank"><button class="plc">Debatir en los foros>></button></a>
+
+          Después de comentar en el foro, regresa aquí y haz clic a continuación para pasar a la siguiente etapa.
+      OPD-K5 Stage6Review_dani:
+        markdown: |
+          # Funciones> Reflexionar
+
+          En esta etapa, exploramos cómo las funciones pueden convertirte en un mejor y más veloz programador al permitirte reutilizar segmentos de tu código. En la siguiente etapa, veremos el concepto central de los eventos y pondremos a prueba tus habilidades de codificación.
+
+          **Tómate un momento ahora para revisar cómo se introducen las funciones en el plan de estudios de Fundamentos de la Ciencia de la Computación y considera cómo podrías implementar las actividades sugeridas en tu clase.**
+
+          ![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+      OPD-K5 Stage6Start_dani:
+        markdown: |+
+          # Funciones > Descripción general del escenario
+
+          <img src="https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          En las primeras etapas, aprendiste a escribir un programa, agregar bucles y usar condicionales. En esta etapa, presentaremos el concepto de **funciones**.
+
+          Al completar la Etapa 7, podrá:
+
+          - Practicar la codificación de funciones simples
+          - Reflexionar sobre la aplicación del aula
+
+          > **Qué esperar en esta etapa:** Primero, verás una lección desconectada del Curso E (destinada al Grado 4) que presenta funciones. Luego aprenderás sobre las funciones a través del video y practicarás el uso de funciones en una variedad de desafíos. Luego reflexionarás sobre tu práctica. Debes pasar entre 20 y 45 minutos en esta etapa.
+
+          ¿Listo? ¡Vamos!
+
+      OPD-K5 Stage7Go_dani:
+        markdown: |+
+          # Eventos > Lecciones desconectadas
+
+          <br/>
+
+          **1. Revisa "[El gran evento] (https://curriculum.code.org/csf-18/coursec/11/)" Plan de lección del Curso C.**
+          <br/>
+          El Curso C está destinado a estudiantes en el Grado 2. Los eventos surgen en cada Curso de Fundamentos de la Ciencia de la Computación, de la A a la F. No todos los cursos tienen una lección desconectada para cubrir eventos, pero puedes ver la lección desconectada para el Curso A y el Curso B en la parte inferior de esta página.
+          <br/> <br/>
+
+          ** 2. Mira el video del estudiante: El gran evento **
+          <br/>
+          Este es un video que mostrarías a tus alumnos para ayudarles a presentar el concepto de eventos y comenzar la lección desconectada.
+
+          [![](https://images.code.org/e5d8d5fc84416e34232f3e00142e5b2a-image-1571254248844.30.31 PM.png)](https://youtube.com/watch?v=u0WV9shCoak)
+
+          [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C1-bigevent-unplugged.mp4)
+          <br/><br/>
+
+          ** 3. Mira el video del profesor: Cómo facilitar "El gran evento"**
+          <br/>
+          Este video está destinado a ser un apoyo para ti como profesor, si estás buscando consejos sobre cómo ejecutar esta lección.
+
+          [![](https://images.code.org/666ace3e1b7de917e112733112d358e4-image-1571254314712.31.50 PM.png)](https://youtube.com/watchv=aYECW6V8nQA)
+          <br/><br/>
+
+          **4. Revisa otras lecciones desconectadas que introducen eventos:**
+
+          - Curso A, Curso B (Jardín de infantes, Grado 1): [El gran evento Jr.](https://curriculum.code.org/csf-18/courseb/12/)
+
+          ---
+
+          > ## Reflexionar
+          > ¿Cómo explicaría el concepto de eventos a tus alumnos? Comparte tus pensamientos en <a href="http://forum.code.org/t/teaching-events/409/1">nuestro foro</a>.
+
+          > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">Debatir en los foros>></button></a>
+
+          Después de comentar en el foro, regresa aquí y haz clic a continuación para continuar.
+
+
+      OPD-K5 Stage7Start_dani:
+        markdown: "# Eventos > Descripción general del escenario\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
+          width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
+          40px;\">\n\nHasta ahora, has aprendido cómo secuenciar un programa, agregar
+          bucles y usar condicionales y funciones. ¡Ya casi terminas! \n\nEn esta
+          etapa, veremos los *eventos*, otro concepto central en computación. A medida
+          que exploremos eventos, sintetizarás lo que has aprendido hasta ahora y
+          escribirás algunos programas más complejos.\n\nAl completar la Etapa 8,
+          podrás:\n\n- Practicar la codificación de eventos simples\n- Reflexionar
+          sobre la aplicación del aula\n\n> **Qué esperar en esta etapa:** Comenzarás
+          con una lección desconectada del Curso C (destinada al Grado 2) que presenta
+          eventos. Luego, explorarás algunos desafíos del Curso F (destinados al Grado
+          5) que te permiten experimentar con bloques de eventos. Terminaremos con
+          la oportunidad de reflexionar. Debes pasar entre 20 y 45 minutos en esta
+          etapa.\n\n¿Listo? ¡Vamos!\n"
+      OPD-K5 Stage8Go_dani:
+        markdown: |
+          # Mejores prácticas > Reflexión
+
+          La Etapa 8 te presentó una serie de mejores prácticas para enseñar ciencias de la computación. Tómate un momento para considerar qué estrategias cubiertas en esta etapa podrías utilizar en tu práctica. En la siguiente etapa, crearás un plan simple y reflexionarás sobre el curso en tu conjunto.
+
+          ## ¿Qué estrategias utilizarás para facilitar el aprendizaje de las ciencias de la computación en tu salón de clases?
+
+          Estos son algunos ejemplos de nuestra comunidad de profesores:
+
+          - **Facilita actividades "desconectadas" ** para enseñar conceptos básicos (haz clic [aquí para obtener una lista completa de actividades desconectadas] (https://code.org/curriculum/unplugged).
+          - Implementa la regla **"preguntar 3 y luego yo"** en tu clase, que es cuando los estudiantes tienen que pedir ayuda a 3 compañeros de clase antes de que puedan hacerle la misma pregunta al profesor. Esto reduce la cantidad de estudiantes que debe responder individualmente y promueve el aprendizaje entre pares.
+          - **Mantén la calma, pero sigue siendo persistente **cuando surjan problemas (que ocurrirán). Tu reacción establece el tono para los estudiantes. Si a la primera señal de un problema, dices "Soy terrible en tecnología. Me rindo", tus estudiantes pensarán que está bien hacerlo también.
+          - **Siéntete orgulloso** de tus programas. Muéstralos, ponlos a trabajar, publícalos en línea. Este es un gran logro para ti y tus estudiantes que debe celebrarse.
+          - **Haz preguntas de sondeo** a un estudiante (incluso si no sabe la respuesta a las preguntas). Pregunta a tu clase si alguien tiene la respuesta. Siéntete cómodo diciendo "No lo sé; ¡resolvamos esto juntos!"
+
+          ---
+
+          > ## Reflexionar
+          Revisa más estrategias o agrega las tuyas <a href ="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4">en nuestros foros.</a>:
+
+          > <a href="http://forum.code.org/t/code-org-k5-professional-development-computer-science-pedagogy-6/14/4" target="blank"><button class="plc">Compartir tus estrategias>></button></a>
+
+          Después de explorar el hilo del foro y agregar tus pensamientos, haz clic a continuación para pasar a la Etapa 9.
+      OPD-K5 Stage8Start_dani:
+        markdown: |
+          # Mejores prácticas > Descripción general de la etapa
+
+          <img src="https://images.code.org/1faca2c2dd1c9bd64ab5def347524d9c-image-1434398377360.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+          **Has recorrido la mayor parte del contenido de este curso. ¡Felicitaciones!**
+
+          En la Etapa 1, revisaste la información del curso.
+          En la Etapa 2, exploraste la informática como disciplina.
+          En la Etapa 3, te preparaste para dominar los conceptos básicos de la computación.
+          En las etapas 4-8, tú mismo desempeñaste el papel de estudiante.
+          Ahora, pasemos a explorar cómo puedes enseñar lo que has aprendido a los jóvenes.
+
+          Al completar la Etapa 9, podrás:
+
+          - Revisar las mejores prácticas para enseñar computación
+
+          > ## Mirando hacia el futuro:
+          > Las mejores prácticas que cubriremos en esta etapa incluyen:
+
+          >- Establecer una cultura positiva en el aula que apoye el aprendizaje autodirigido, la experimentación y el fracaso
+          - Saber cuándo y cómo aplicar estrategias de diseño instruccional de otras áreas temáticas.
+          - Uso de estrategias de agrupación estratégicas como "programación de pares"
+          - Enseñar explícitamente estrategias de resolución de problemas metacognitivos
+          - "Desenchufar" y enseñar algunos conceptos básicos con tecnología mínima o nula
+          - Otras mejores prácticas sugeridas por la comunidad de maestros de Code.org
+
+          También te brindaremos la oportunidad de compartir tus mejores prácticas con nuestra comunidad.
+      OPD-K5 Stage9Go_dani:
+        markdown: |
+          # Planificación > Revisión
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          En esta etapa, deberías haber:
+
+          - Revisado el Panel de profesores y otros recursos en Code.org
+          - Planificado para integrar la informática en tu práctica
+
+          En la Etapa 11, nuestra etapa final, podrás
+
+          - Reflexionar sobre tu aprendizaje
+          - Planificar los próximos pasos que puedes seguir para continuar tu aprendizaje
+          - Conectarte con una comunidad global de educadores interesados ​​en la educación en informática
+      OPD-K5 Stage9Start_dani:
+        markdown: "# Planificación > Exploración de recursos para docentes\n\nA lo
+          largo de las etapas 4-8, echaste un vistazo a algunos de los recursos de
+          aprendizaje \"desconectados\" y en línea disponibles para Fundamentos de
+          las Ciencias de la Computación, ya que se alinearon con los conceptos de
+          informática que estabas aprendiendo.\n\nAhora que tienes una idea sobre
+          cómo codificar, igual que sobre cómo enseñar ciencias de la computación,
+          es hora de comenzar a planificar tu instrucción. En esta etapa, recorreremos
+          otras áreas de la plataforma Code.org y el ** [Panel del profesor](http://studio.code.org/)**.
+          \n\nAl completar la Etapa 10, podrás:\n\n- Explorar los recursos disponibles
+          para los profesores\n- Explorar Code.org ** [Panel del profesor] ​​(http://studio.code.org/)
+          **\n- Planificar cómo podrías integrar la informática en tu práctica\n\n***\n\nA
+          continuación se muestra una captura de pantalla del Panel del profesor.
+          Deberás iniciar sesión en tu cuenta de profesor de Code.org para verla:
+          una vez que hayas iniciado sesión, debería aparecer la pantalla predeterminada
+          que ves en el sitio web de Code.org. Si no tienes una cuenta de profesor,
+          puedes** [registrarte para obtener una aquí](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Using CS_dani:
+        markdown: "# Planificación > Preparación para una lección de Code Studio\n\nEchemos
+          un vistazo a cómo funciona Code Studio para ti y tus alumnos en un aula.\n\n##
+          Paso 1: Elige un curso\nConsulta nuestra [página de la escuela primaria]
+          (https://code.org/educate/curriculum/elementary-school) y encuentra los
+          planes de lecciones y los cursos completos para nuestras lecciones A-F de
+          los Fundamentos de las Ciencias de la Computación. O, si estás interesado
+          en nuestros cursos de secundaria o preparatoria, encontrarás cursos para
+          todos los niveles de grado, desde prelectores hasta personas de la tercera
+          edad en la escuela secundaria y todos los demás. Todos nuestros cursos están
+          disponibles sin costo. Chatea con colegas de tu escuela para determinar
+          cómo se puede integrar el plan de estudios del curso con una variedad de
+          materias.\n \n## Paso 2: Configura la sección de tu clase\nConfigura una
+          sección en el aula para ver el progreso de tu estudiante, imprime tarjetas
+          de inicio de sesión para tus estudiantes, administra tus cuentas e imprime
+          certificados que pueden llevar a casa cuando terminen el curso. Haz clic
+          en este enlace para [ver un breve video] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          que muestra cómo configurar tu primera clase de informática en Code.org.
+          También puedes encontrar los pasos en [este artículo de soporte](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
+          Paso 3: Asigna el curso a tu sección\nHaz clic en el curso que estás enseñando;
+          deberías ver una pantalla que se parece a la siguiente. Luego puedes hacer
+          clic en \"Asignar curso\" y asignar ese curso a una de tus secciones.\n\n##
+          Paso 4: ¡Comienza a enseñar!\nLo único que necesitas es una lección para
+          llevar los conceptos informáticos a tu salón de clases. Una vez que veas
+          el entusiasmo de tus estudiantes por las Ciencias de la Computación, ve
+          más allá con planes de lecciones diarias para guiar a tus estudiantes, actividades
+          desconectadas que puedes hacer sin una computadora y foros para conectarte
+          con otros profesores.\n\n\n\n"
+      OPD-K5 Vocabulary_dani:
+        markdown: |
+          # Fundamentos de la Ciencia de la Computación> Vocabulario clave
+
+          A medida que comienzas a aprender la computación, una de las tareas más importantes es familiarizarse con el lenguaje de codificación. En este curso y en todos los recursos de Fundamentos de la Ciencia de la Computación, utilizamos el mismo vocabulario utilizado en la industria de la computación. Alentar a los estudiantes jóvenes a aprender y usar términos profesionales les permite comunicarse con otros y desarrollar su conocimiento en computación sin tener que volver a aprender términos y conceptos más adelante. Los términos y conceptos utilizados en estos cursos se definen usando palabras que la mayoría de los estudiantes jóvenes deberían poder entender.
+
+          Esta es una [lista de términos de vocabulario] (http://code.org/curriculum/docs/k-5/glossary) utilizada en todos los recursos de Fundamentos de la Ciencia de la Computación; muchos de estos términos también se presentan en este curso. No tienes que aprender todas estas palabras en este momento. Usa esa lista como referencia durante este curso de desarrollo profesional en línea y cuando uses nuestros cursos con tus estudiantes.
+
+          <a href="http://code.org/curriculum/docs/k-5/glossary" target="blank"><button class="default">Ver el glosario >></button></a>
+
+          **Sugerencia didáctica:** La mejor práctica es introducir los términos con un lenguaje fácil de entender, relacionar los términos con experiencias anteriores, usar los términos repetidamente más allá de la propia lección durante todo el curso (y en otras situaciones) cuando sea apropiado, y reforzar el uso de los estudiantes en la comunicación oral y escrita.
+      OPD-K5 Welcome 2_dani:
+        markdown: |+
+          # Introducción> Cursos de fundamentos de Ciencia de la Computación
+
+          El objetivo del desarrollo profesional de Code.org es preparar a profesores como tú para integrar la computación en tus aulas y apoyar su crecimiento como profesores. Después de completar este curso en línea, estarás listo para enseñar uno o más de los siguientes cursos de Fundamentos de la Ciencia de la Computación de Code.org en tu salón de clases:
+
+           - **[Curso A](http://studio.code.org/s/coursea)**: aproximadamente 12 horas (Jardín de infantes)
+           - **[Curso B](http://studio.code.org/s/courseb)**: aproximadamente 12 horas (Grado 1)
+           - **[Curso C](http://studio.code.org/s/coursec)**: aproximadamente 18 horas (Grado 2)
+           - **[Curso D](http://studio.code.org/s/coursed)**: aproximadamente 18 horas (Grado 3)
+           - **[Curso E](http://studio.code.org/s/coursee)**: aproximadamente 18 horas (Grado 4)
+           - **[Curso F](http://studio.code.org/s/coursef)**: aproximadamente 20 horas (Grado 5)
+           - **[Fundamentos de la Ciencia de la Computación Express](http://studio.code.org/s/express)**: aproximadamente 20 horas (Edades de más de 8)
+           - **[Fundamentos de la Ciencia de la Computación Pre-Express](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Edades de 4-8)
+
+
+      OPD-K5 What is Mastery_dani:
+        markdown: |
+          # Mirando hacia el futuro > ¿Qué es el dominio?
+
+          En las siguientes etapas, dominarás los siguientes conceptos básicos básicos de computación:
+
+          - Etapa 4: secuenciación
+          - Etapa 5: bucles
+          - Etapa 6: condicionales
+          - Etapa 7: funciones
+          - Etapa 8: eventos
+
+          ## ¿Qué es el "dominio"?
+
+          Definimos "dominio" como ser capaz de hacer lo siguiente:
+
+          - Definir y explicar qué se entiende por concepto central y por qué es importante en informática
+          - Escribir programas simples aplicando el concepto (mediante el uso de programación visual para resolver desafíos)
+          - Reflexionar sobre cómo podría integrar el concepto en tu práctica
+
+          Usa esta lista como rúbrica mientras trabajas en el curso. A medida que completas cada etapa, pregúntate:
+
+          - ¿Puedo definir y explicar la importancia de este concepto central en particular a nivel principiante?
+          - ¿Pude completar con éxito los desafíos simples en esta etapa?
+          - ¿Tengo algunas ideas sobre cómo podría usar esto en mi clase?
+
+          Si respondes que sí a cada pregunta, continúa con la siguiente etapa. Si respondes que no a alguna de las preguntas, considera volver a visitar el escenario o explorar más sobre el tema en el lado del estudiante de Code Studio antes de continuar.
+
+          ##  Cosas por tener en cuenta al aprender computación:
+
+          - El mundo de la programación de computadoras se mueve tan rápido que realmente no hay profesores.** Todos somos aprendices** en diferentes etapas, pero todavía somos siempre aprendices.
+          - La programación se vuelve más cómoda cada vez que vuelves a ella. **No vas a ser un experto la primera vez.**
+          - No hay forma de evitarlo, el acto de programar y **aprender a programar lleva tiempo, ¡pero cualquiera puede hacerlo!**
+
+          > **Conclusión clave:** El objetivo de las próximas etapas no es convertirte en un científico de la computación, sino ayudarte a sentirte lo suficientemente cómodo con los conceptos centrales como para entusiasmarte a compartir tu conocimiento con tus estudiantes.
+
+          ## Después de "dominar" los conceptos, ¿qué viene después?
+
+          En **Etapa 9**, explorarás los currículos y recursos gratuitos de Code.org para profesores. Puedes optar por utilizar cualquiera de estos recursos u otros recursos curriculares de tu elección. Completar este curso te dará los conceptos básicos que necesitas para comprender cualquier plan de estudios de ciencias de la computación.
+
+          En **Etapas 10 y 11**, te guiaremos en la dirección de los recursos que puedes usar para aprender más o sentirte más preparado para enseñar estos conceptos en tu clase.
+      OPD-K5 Why teach CS_dani:
+        markdown: |-
+          # Fundamentos de Ciencias de la Computación > ¿Por qué enseñar informática?
+
+          <img src="//code.org/images/edquote1.png" width="250px" style="margin-right:45px; float:left">
+
+          La investigación muestra que la informática promueve el pensamiento crítico, la creatividad, la resolución de problemas y la participación en habilidades del mundo real. De hecho, un [estudio de investigación reciente] (https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e) reveló que las aulas con profesores ingeniosos ven puntajes más altos en inglés, matemáticas , y pruebas estandarizadas de ciencias después de enseñar lecciones de Fundamentos de Ciencias de la Computación.
+
+          ¿Por qué querrías enseñar informática si no eres un profesor de CTIM? Si estás tomando este curso, es probable que tengas una serie de tus propias respuestas a esa pregunta, pero si necesitas más inspiración, tómate un tiempo ahora y revisa [esta colección de videos] (http://code.org/educate/ inspirar) para tener una idea del "por qué". Estos videos son excelentes para compartir con tus estudiantes, tu administración, tus padres y tu comunidad si necesita ayuda para presentar un caso de Ciencia de la Computación en el aula. También podrías estar interesado en algunas de las estadísticas y pruebas en torno a la educación de la Ciencia de la Computación.
+
+          <a href="http://code.org/educate/inspire" target="blank"><button class="default">
+          Explora videos inspiradores >></button></a><a href="http://code.org/promote" target="blank"><button class="default">Explora la investigación >></button></a>
+
+          Dedica unos minutos a explorar nuestra investigación y toma nota de los hechos o ideas relevantes o interesantes que descubras.
+      OPD-K5 Younger Grades_dani:
+        markdown: |
+          # ¿Por qué enseñar computación en los primeros grados?
+
+          <img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+          Además de las prácticas de pensamiento informático que los estudiantes aprenden a través de la experiencia de codificación, la enseñanza de la informática en los primeros grados tiene un beneficio adicional para los estudiantes y para la sociedad, y podemos trabajar para crear más equidad en la industria tecnológica.
+
+          Si esperamos hasta la escuela secundaria o la universidad para presentarles a los estudiantes la computación, algunos estudiantes ya habrán decidido que la computación no es para ellos o sentirán que ya están demasiado atrasados ​​en comparación con los estudiantes que la estudian fuera de la escuela.
+
+          Exponer a los estudiantes a la computación en los grados K-5, cuando no tienen que optar por una clase como lo harían en la escuela secundaria, les permite a todos los estudiantes ver qué tan accesible es la materia y decidir si la disfrutan.
+
+          > ## ¿Por qué crees que enseñar ciencias de la computación vale la pena?
+          [Tuitea tus pensamientos] (https://twitter.com/teachcode) y asegúrate de etiquetar @teachcode en tu tweet para que podamos responder.
+
+          > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Share on Twitter >></button></a><br><br>
+          ¿No tienes una cuenta de Twitter? También puedes encontrarnos en [Facebook](https://www.facebook.com/Code.org/) o [Instagram](https://www.instagram.com/codeorg/).
+      OPD-K5 Your Plan_dani:
+        markdown: |
+          # Planificación > Tu plan
+
+          Esperamos que esta etapa te haya ayudado a presentarte los recursos disponibles en Code Studio. Mientras piensas en cómo en el futuro podríaS enseñar informática usando cualquiera de los recursos de code.org o Code Studio, tómate un momento para [compartir tu plan con la Comunidad de Aprendizaje Profesional (PLC)] (http://forum. code.org/t/teaching-computer-science-your-plans/412).
+
+          Comparte con nosotros:
+
+          - ¿Cuáles son tus objetivos para tu clase? ¿Cómo te ayudarán los recursos de Ciencias de la Computación o code.org a alcanzar esos objetivos?
+          - ¿Qué es lo que más te entusiasma cuando se trata de implementar algunos de estos recursos?
+          - ¿Qué desafíos prevés al tratar de alcanzar tus objetivos?
+          - ¿Qué preguntas tienes que esta comunidad podría ayudarte a responder?
+
+          Después de publicar tu plan inicial, siéntete libre de volver a visitar [este hilo] (http://forum.code.org/t/teaching-computer-science-your-plans/412) en el futuro para mantenernos al tanto sobre cómo van las cosas.
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publica tu plan>></button></a>
+
+          Después de comentar en el foro, regresa aquí y haz clic a continuación para continuar.
+      OPD-Stage3Start_dani:
+        markdown: |
+          # Mirando hacia el futuro > Descripción del escenario
+
+          <img src="https://images.code.org/0b8c948f309ae1df3d9920520e4a168c-image-1435004357188.JPG" width="450px" style="border-radius:10px;">
+
+          Al completar esta breve etapa, podrás:
+
+          - Prepararte para "dominar los conceptos básicos" de la computación revisando lo que sigue en el curso
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # El Poder de las Palabras
+
+          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Sigue el algoritmo
+
+          Ejecuta un juego y piensa qué comandos son necesarios para obtener el resultado correcto.
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
+            lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
+            flor debajo.
+          correct: true
+          feedback: "¡Correcto!"
+        - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: No lo sé.
+          feedback: El bloque 'si hay flor' asegura que la abeja intentará recoger
+            néctar solamente si hay una flor debajo de la nube.
+        questions:
+        - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
+            con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - text: Nada. El programa no activa la función.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará un solo cuadrado.
+          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: El artista dibujará dos cuadrados que se superponen.
+          feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
+            pixeles, pero el artista salta a 175 pixeles entre funciones.
+        - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
+          correct: true
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
+            un salto en el medio de ambas."
+        questions:
+        - text: ¿Qué sucederá cuando presiones "Ejecutar"?
+      courseF_EOC_2021:
+        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseF_EOC_examples_2021:
+        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
+        display_name: Proyecto de fin de curso
+      courseF_artist_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
+        display_name: Práctica con Artista
+      courseF_beeFor_practice:
+        description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
+        display_name: Práctica con Abeja
+      courseF_beeVar_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con las variables y la abeja!"
+        display_name: Práctica con Abeja
+      courseF_bee_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles y la abeja!"
+        display_name: Práctica con Abeja
+      courseF_events_freeplay:
+        description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
+          ¡Sigue añadiendo a tu programa o empieza algo nuevo!
+        display_name: Eventos - Juego Libre
+      courseF_events_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los eventos!"
+        display_name: 'Práctica de Eventos '
+        teacher_markdown: |+
+          # Resumen del Nivel de Elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecer|Inflar un pez|Un pingüino en movimiento|
+          |-|-|-|-|-|-|-|
+          | ***Tipo*** |**Revisar**|**Debug**|**Corregir**|**Debug**|**Contenido Opcional**|**Contenido Opcional**
+          | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos when/while*|
+
+
+      courseF_intro_apps:
+        description: "¡Bienvenido a Fundamentos de Informática! Todos estos proyectos
+          fueron creados con el Laboratorio de Sprite. Pruébalos ahora para ver lo
+          que es posible. Al final de este curso, serás capaz de hacer tus propios
+          proyectos como estos... ¡y más!"
+        display_name: Aplicaciones de Laboratorio Sprite
+        teacher_markdown: |
+          # Visión General de los Niveles de Elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar a través de tantos como ellos (o usted) quieran.
+
+          Las opciones aquí llevan a los alumnos a aplicaciones de muestra que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
+      courseF_labels_predict_multi:
+        answers:
+        - text: '"¡Una pizza marchando!"'
+          feedback: No es correcto. Las etiquetas de las variables no coinciden.
+        - text: '"¡Una comida marchando!"'
+          feedback: No es correcto. La etiqueta de una variable nunca se imprime.
+        - text: '"¡Una comida marchando!"'
+          feedback: No es correcto. La etiqueta de una variable nunca se imprime.
+        - text: '"¡Una que viene enseguida!"'
+          correct: true
+          feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
+        - text: No se imprimirá nada.
+          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
+            de impresión seguirán funcionando.
+        questions:
+        - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
+            se imprimirá si el usuario escribe "pizza"?
+      courseF_sprites_freeplay:
+        description: "¡Es tu turno de crear lo que quieras! ¿Qué tipo de proyecto
+          vas a hacer?"
+        display_name: Sprites - Juego Libre
+      courseF_sprites_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los sprites y los comportamientos!"
+        display_name: Práctica de Sprites
+        teacher_markdown: |+
+          # Visión general de los niveles de elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Escena del Desierto|Cambiar tamaño de la fruta.|Animación de un Velero|Un Día de Brisa|
+          |-|-|-|-|-|
+          | ***Tipo*** |**Revisar**|**Review**|**Revisar**|**Revisar**|
+          | ***Concepto***|*sprites, locations*|*sprites, propiedades*|*sprites, locations, behaviors*|*comportamientos*|
+
+
+      courseF_text_practice:
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. Sigue practicando con el texto y las indicaciones."
+        display_name: Práctica de Texto y Avisos
+        teacher_markdown: |+
+          # Visión General de los Niveles de Elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Avisos|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |-|-|-|-|-|-|-|-|
+          | ***Tipo*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
+          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+
+
+      courseF_variables_projects:
+        description: Crearás una tarjeta de felicitación, un chatbot o una historia
+          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
+          a la "Parte 2".
+        display_name: Elige un Proyecto
+        teacher_markdown: |
+          # Visión General del Nivel de Elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero se les debe animar a completar **dos** niveles para el mismo proyecto.
+
+          Es posible que los alumnos necesiten instrucciones muy claras para entender cómo navegar por las opciones existentes. Para cada una de las opciones del proyecto, hay dos subniveles disponibles. Para empezar, los alumnos deben elegir uno de los niveles marcados como "Parte 1". Una vez que terminen ese nivel, deben volver aquí y seleccionar la "Parte 2" del *mismo* proyecto. El primer nivel de cada elección proporcionará a los alumnos información sobre los componentes básicos de su proyecto. El segundo nivel es un "juego libre" que pretende permitir a los alumnos hacer los cambios que quieran en su código.
+      courseF_variables_samples:
+        description: Crearás una tarjeta de felicitación, un chatbot o una historia
+          en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
+          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
+          listo para empezar a planificar tu propio programa.
+        display_name: Exploración - Ejemplos de Programas
+        teacher_markdown: |
+          # Visión General de los Niveles de Elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+
+          Los alumnos deben mirar estos proyectos cuidadosamente antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o hacer que los alumnos los exploren por su cuenta.
+      courseF_variables_stop:
+        content1: descripción aquí
+        markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
+          \n\n\nEn el siguiente nivel, comenzarás a escribir el código de tu proyecto.
+          Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
+          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
+          o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
+          El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
+          de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
+          de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"

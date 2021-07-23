@@ -296,6 +296,7 @@ si:
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
     update_email: "යාවත්කාලීන කරන්න"
     parent_guardian_email_label: "මාපිය/භාරකරු e-තැපෑල"
+    remove_parent_email_label: "ඉවත් කරන්න"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
@@ -478,6 +479,7 @@ si:
     unplugged_conditionals:
       title: "කන්ඩිෂනලස්"
     widgets:
+      audience: "වයස 14+"
       cta: "කෙසේදැයි දැනගන්න"
   landing:
     report_bug: "දෝෂය වාර්තා කරන්න"
@@ -697,4 +699,5 @@ si:
         opt_in_no: 'නැහැ'
   cookie_banner:
     accept: 'මම එකඟයි'
+  page_not_found_title: "පිටුව සොයාගත නොහැක"
   copy: 'පිටපත් කරන්න'

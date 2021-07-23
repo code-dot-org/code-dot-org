@@ -172,5 +172,13 @@
   "moveSpriteLocation": "Twoje duszki są w tym samym miejscu. Przenieś jednego z nich za pomocą bloku „lokalizacja”. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
   "createDraggableSprite": "Duszek potrzebuje pokarm Twojego zwierzaka, aby zacząć zachowywać 'być przeciągalnym'. <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
   "createNotDraggableSPrite": "Tylko duszek jedzenia powinien być przeciągany. Usuń to zachowanie ze swojego zwierzaka.",
-  "moveSpriteByDrag": "Twój kod wygląda świetnie! Aby przeciągnąć swojego duszka, kliknij go podczas działania programu."
+  "moveSpriteByDrag": "Twój kod wygląda świetnie! Aby przeciągnąć swojego duszka, kliknij go podczas działania programu.",
+  "foodNotTouchPet": "Przeciągnij jedzenie duszka, aby dotknęło duszka zwierzaka.",
+  "spritesNeedUniqueCostumes": "Upewnij się, że wszystkie duszki mają różne kostiumy.",
+  "sayBlock": "Wpisz coś, co duszek ma powiedzieć w bloku „powiedz”.  <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Witaj świecie!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"domyślnie\"</title></block></value></block></xml>",
+  "clickButNoSay": "Kliknąłeś duszka, ale duszek nic nie powiedział. Dodaj blok „powiedz” do zdarzenia „po kliknięciu”. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Witaj świecie!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMACJA\" >\"domyślnie\"</title></block></value></block></xml>",
+  "singleSpriteNotClicked": "Upewnij się, że klikasz na duszka i że masz odpowiednie zdarzenia w swoim obszarze roboczym. <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"kiedy\"</title></block></xml>",
+  "clickButNoSpeech": "Kliknąłeś na duszka, ale żaden z duszków nic nie powiedział. Dodaj blok „powiedz” do zdarzenia „po kliknięciu”.",
+  "secondClickButNoSpeech": "Kliknąłeś więcej niż jednego duszka, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”.",
+  "thirdClickButNoSpeech": "Kliknąłeś więcej niż dwa duszki, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś  powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”."
 }

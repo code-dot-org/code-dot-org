@@ -8,15 +8,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           MOVE1:
@@ -62,17 +61,16 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
-            '"UNICORN"': सभी गेंडे
+            '"UNICORN"': गेंडा
           MOVE:
             '"next"': "(अगला)"
             '"prev"': "(पिछला)"
@@ -122,15 +120,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
@@ -146,15 +143,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           MOVE:
@@ -303,15 +299,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           LOCATION:
@@ -331,15 +326,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           FORMAT:
@@ -347,7 +341,6 @@ hi:
             '"inner"': अंदर वर्ग
             '"diamond"': हीरा
             '"circle"': गोला
-            '"grid"': ग्रिड
             '"top"': सबसे ऊपर की पंक्ति
             '"row"': पंक्ति
             '"bottom"': सबसे नीचे की पंक्ति
@@ -388,13 +381,13 @@ hi:
         text: "{LOCATION} पर {NAME} नामक {COSTUME} बनाएं"
         options:
           COSTUME:
-            '"ALIEN"': एलियन
+            '"ALIEN"': विदेशी
             '"BEAR"': भालू
             '"CAT"': बिल्ली
             '"DOG"': कुत्ता
-            '"DUCK"': बत्तख
+            '"DUCK"': बतख
             '"FROG"': मेंढक
-            '"MOOSE"': अमरीकी हिरण
+            '"MOOSE"': सभी अमरीकी हिरण
             '"PINEAPPLE"': अनानास
             '"ROBOT"': रोबोट
             '"SHARK"': शार्क
@@ -435,15 +428,14 @@ hi:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': एलियन्स
+            '"ALIEN"': सभी एलियन्स
             '"BEAR"': भालू
-            '"CAT"': बिल्लियां
-            '"DOG"': कुत्ते
+            '"CAT"': सभी बिल्लियां
+            '"DOG"': सभी कुत्ते
             '"DUCK"': बतख
             '"FROG"': मेंढक
-            '"MOOSE"': अमरीकी हिरण
+            '"MOOSE"': सभी अमरीकी हिरण
             '"PINEAPPLE"': अनानास
-            '"ROBOT"': रोबोट
             '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
@@ -452,7 +444,6 @@ hi:
             '"inner"': अंदर वर्ग
             '"diamond"': हीरा
             '"circle"': गोला
-            '"grid"': ग्रिड
             '"top"': सबसे ऊपर की पंक्ति
             '"row"': पंक्ति
             '"bottom"': सबसे नीचे की पंक्ति
@@ -563,15 +554,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           SPEED:
@@ -637,15 +627,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
@@ -673,15 +662,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
@@ -700,15 +688,14 @@ hi:
           THIS:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintEachInline:
@@ -717,15 +704,14 @@ hi:
           THIS:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
       Dancelab_setTintInline:
@@ -742,15 +728,14 @@ hi:
           THIS:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           VISIBILITY:
@@ -777,15 +762,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
@@ -822,15 +806,14 @@ hi:
           GROUP:
             sprites: सभी
             '"ALIEN"': सभी एलियन्स
-            '"BEAR"': सभी भालू
+            '"BEAR"': भालू
             '"CAT"': सभी बिल्लियां
             '"DOG"': सभी कुत्ते
-            '"DUCK"': सभी बत्तखें
-            '"FROG"': सभी मेंढक
+            '"DUCK"': बतख
+            '"FROG"': मेंढक
             '"MOOSE"': सभी अमरीकी हिरण
-            '"PINEAPPLE"': सभी अनानास
-            '"ROBOT"': सभी रोबोट
-            '"SHARK"': सभी शार्क्स
+            '"PINEAPPLE"': अनानास
+            '"SHARK"': संगीत प्रविधियां
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           PROPERTY:
@@ -883,7 +866,7 @@ hi:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
-            '"1"': '1'
+            '"1"': १
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -929,7 +912,7 @@ hi:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
-            '"1"': '1'
+            '"1"': १
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -979,6 +962,8 @@ hi:
         text: "{SPRITE} पर क्लिक किया"
       gamelab_comment:
         text: 'टिप्पणी: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: " {LOCATION} पर कॉस्ट्यूम  {COSTUME} \nके साथ\n{NAME} \nनामक एक नया \nस्प्राइट बनाएं"
       gamelab_destroy:
@@ -1166,7 +1151,6 @@ hi:
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': कोर्ट
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': रेगिस्तान
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': तारा समूह
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इंद्रधनुष
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': वैज्ञानिक साहित्य
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': तारे
@@ -1193,6 +1177,7 @@ hi:
             '"direction"': गतिविधि की दिशा
             '"speed"': गति
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} को {SIZE} पर सेट करें"
         options:
           PROPERTY:
             '"scale"': आकार
@@ -1474,6 +1459,8 @@ hi:
           DANCE:
             MOVES.ClapHigh: मछली
             MOVES.Clown: मेरा लेबल नहीं है
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1536,9 +1523,8 @@ hi:
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
             '"w"': पश्चिम
-            '"a"': A
+            '"a"': अ
             '"s"': दक्षिण
-            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -1547,16 +1533,15 @@ hi:
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
             '"w"': पश्चिम
-            '"a"': A
+            '"a"': अ
             '"s"': दक्षिण
-            '"d"': D
       Mikelab_whenMouseClicked:
         text: when mouse clicked
       Mikelab_whenYesNoClicked:
         text: जब {KEY} क्लिक किया गया
         options:
           KEY:
-            '"yes"': हाँ
+            '"yes"': हां
             '"no"': नहीं
       Mikelab_whileKeyPressed:
         options:
@@ -1569,6 +1554,18 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
+      PoemBot_setBackgroundEffect:
+        text: पृष्ठभूमि प्रभाव सेट करें {BG_EFFECT} [PALETTE][1]
+        options:
+          BG_EFFECT:
+            '"solid"': ठोस
+            '"rainbow"': इंद्रधनुष
+      PoemBot_setForegroundEffect:
+        text: आगे के भाग का प्रभाव {FG_EFFECT} सेट करें
+        options:
+          FG_EFFECT:
+            '"rain"': बारिश
+            '"bubbles"': बुलबुले
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:
@@ -1607,7 +1604,6 @@ hi:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': ग्रिड
             '"border"': बॉर्डर
             '"row"': पंक्ति
             '"random"': यादृच्छिक
@@ -1715,6 +1711,7 @@ hi:
             '"stoneBricks"': कृत्रिम पत्थर की ईंटें
             '"mossyStoneBricks"': कृत्रिम पत्थर की दलदले रंग की ईंटें
             '"crackedStoneBricks"': कृत्रिम पत्थर की दरारों वाली ईंटें
+            '"chiseledStoneBricks"': कृत्रिम पत्थर की सजावटी ईंटें
             '"blueCoralBlock"': नीला मूंगा ब्लॉक
             '"pinkCoralBlock"': गुलाबी मूंगा ब्लॉक
             '"magentaCoralBlock"': मैजेंटा मूंगा ब्लॉक
