@@ -173,12 +173,11 @@ class JavalabView extends React.Component {
                 showProjectTemplateWorkspaceIcon={
                   showProjectTemplateWorkspaceIcon
                 }
-                renderSettings={this.renderSettings}
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
                 style={styles.consoleParent}
-                leftColumn={
+                bottomRow={
                   <ControlButtons
                     isRunning={isRunning}
                     isDarkMode={isDarkMode}
@@ -188,6 +187,7 @@ class JavalabView extends React.Component {
                     isEditingStartSources={isEditingStartSources}
                     isReadOnlyWorkspace={isReadOnlyWorkspace}
                     onContinue={onContinue}
+                    renderSettings={this.renderSettings}
                   />
                 }
               />

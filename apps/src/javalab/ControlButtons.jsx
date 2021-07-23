@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
+import JavalabSettings from './JavalabSettings';
 
 export default function ControlButtons({
   isDarkMode,
@@ -13,7 +14,8 @@ export default function ControlButtons({
   toggleTest,
   isEditingStartSources,
   isReadOnlyWorkspace,
-  onContinue
+  onContinue,
+  renderSettings
 }) {
   const buttonStyles = {
     ...styles.button.all,
@@ -32,30 +34,27 @@ export default function ControlButtons({
     >
       <JavalabButton
         text={isRunning ? i18n.stop() : i18n.runProgram()}
-        icon={
-          <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa-2x" />
-        }
+        icon={<FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />}
         onClick={toggleRun}
         isHorizontal
-        className="noBorder"
-        style={buttonStyles}
+        style={{...buttonStyles, ...styles.button.orange, float: 'left'}}
       />
       <JavalabButton
         text={isTesting ? i18n.stopTests() : i18n.test()}
-        icon={<FontAwesome icon="flask" className="fa-2x" />}
+        icon={<FontAwesome icon="flask" className="fa" />}
         onClick={toggleTest}
         isHorizontal
-        className="noBorder"
-        style={buttonStyles}
+        style={{...buttonStyles, ...styles.button.white, float: 'left'}}
       />
       {!isEditingStartSources && (
         <JavalabButton
           text={i18n.finish()}
           onClick={onContinue}
-          style={styles.finish}
+          style={{...buttonStyles, ...styles.button.blue, float: 'right'}}
           isDisabled={isReadOnlyWorkspace}
         />
       )}
+      <JavalabSettings>{renderSettings()}</JavalabSettings>
     </div>
   );
 }
@@ -68,27 +67,49 @@ ControlButtons.propTypes = {
   toggleTest: PropTypes.func.isRequired,
   isEditingStartSources: PropTypes.bool,
   isReadOnlyWorkspace: PropTypes.bool.isRequired,
-  onContinue: PropTypes.func.isRequired
+  onContinue: PropTypes.func.isRequired,
+  renderSettings: PropTypes.func.isRequired
 };
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around'
+    _display: 'flex',
+    _flexDirection: 'row',
+    _justifyContent: 'space-around'
   },
   button: {
     all: {
-      fontSize: 16,
+      fontSize: 15,
       width: 140,
-      backgroundColor: 'transparent',
+      backgroundColor: color.orange,
+      borderColor: color.orange,
+      fontFamily: '"Gotham 5r"',
+      padding: '5px 12px',
+      margin: '5px 0 5px 5px',
       ':hover': {
-        color: color.orange,
+        color: color.white,
         boxShadow: 'none'
       }
     },
     light: {color: color.cyan},
-    dark: {color: color.lightest_gray}
+    dark: {color: color.lightest_gray},
+    orange: {
+      backgroundColor: color.orange,
+      borderColor: color.orange
+    },
+    white: {
+      backgroundColor: color.white,
+      borderColor: color.white,
+      color: color.dark_charcoal,
+      ':hover': {
+        color: color.dark_charcoal,
+        boxShadow: 'none'
+      }
+    },
+    blue: {
+      backgroundColor: color.default_blue,
+      borderColor: color.default_blue
+    }
   },
   finish: {
     backgroundColor: color.orange,
