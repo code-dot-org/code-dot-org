@@ -4,4 +4,8 @@ da:
     course:
       name:
         csp-2017:
+          assignment_family_title: AP® Principper i Datalogi
           title: Datalogi principperne ('17-'18)
+        csp-2018:
+          assignment_family_title: AP® Principper i Datalogi
+          title: Datalogi principperne ('18-'19)

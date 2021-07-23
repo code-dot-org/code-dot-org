@@ -6,14 +6,16 @@ ro:
         csd_category_name: Descoperiri Informatice ('17-'18)
         csd_2018_category_name: Descoperiri Informatice ('18-'19)
         csd_2019_category_name: Descoperiri Informatice ('19-'20)
-        csf_category_name: Fundamentele Informaticii (2017)
-        csf_2018_category_name: Fundamentele Informaticii (2018)
-        csf_2019_category_name: Fundamentele Informaticii (2019)
+        csd_2020_category_name: Descoperiri Informatice ('20-'21)
+        csd_2021_category_name: Descoperiri Informatice ('21-'22)
+        csf_category_name: Fundamentele CS
         csf_international_category_name: Fundamentele internaționale ale Informaticii
         csf2_draft_category_name: 'În curs de dezvoltare: Cursuri A - F'
-        csp_category_name: Principii de CS 15-16
+        csp_category_name: Pricipiile Informaticii ('15-'16)
         csp_2018_category_name: Pricipii Informatice ('18-'19)
         csp_2019_category_name: Pricipii Informatice ('19-'20)
+        csp_2020_category_name: Pricipii Informatice ('20-'21)
+        csp_2021_category_name: Pricipiile Informaticii ('21-'22)
         cspexams_category_name: Principiile practicilor test CS
         csp17_category_name: Pricipiile Informaticii ('17-'18)
         full_course_category_name: Toate cursurile
@@ -39,7 +41,7 @@ ro:
             'Artist: Shapes':
               name: 'Artist: Forme'
             'Bee: Loops':
-              name: 'Albină: bucle'
+              name: 'Ortografie: Bucle'
             'Bee: Sequence':
               name: 'Albină: Secvenţă'
             Building a Foundation:
@@ -92,11 +94,11 @@ ro:
             'Artist: Sequence':
               name: 'Artist: Secvenţă'
             'Bee: Conditionals':
-              name: 'Albină: Condiţionale'
+              name: 'Ortografie: Condiţionale'
             'Bee: Debugging':
-              name: 'Albină: Depanare'
+              name: 'Ortografie: Depanare'
             'Bee: Loops':
-              name: 'Albină: bucle'
+              name: 'Ortografie: Bucle'
             Binary Bracelets:
               name: Brăţări Binare
             Conditionals:
@@ -145,9 +147,9 @@ ro:
             'Artist: Patterns':
               name: 'Artist: Modele'
             'Bee: Conditionals':
-              name: 'Albină: Condiţionale'
+              name: 'Ortografie: Condiţionale'
             'Bee: Debugging':
-              name: 'Albină: Depanare'
+              name: 'Ortografie: Depanare'
             'Bee: Functions':
               name: 'Albină: Funcţii'
             'Bee: Nested Loops':
@@ -303,9 +305,9 @@ ro:
             'Artist: Sequence':
               name: 'Artist: Secvenţă'
             'Bee: Conditionals':
-              name: 'Albină: Condiţionale'
+              name: 'Ortografie: Condiţionale'
             'Bee: Debugging':
-              name: 'Albină: Depanare'
+              name: 'Ortografie: Depanare'
             'Bee: Nested Loops':
               name: 'Albină: Bucle imbricate'
             'Farmer: While Loops':
@@ -332,8 +334,8 @@ ro:
             uzabilității.
         algebra:
           title: Informatică în Algebră
-          description: Învață Programare Funcțională prin Algebră
-          description_short: Învață Programare Funcțională prin Algebră
+          description: Învață Programare Funcțională prin Algebră.
+          description_short: Învață Programare Funcțională prin Algebră.
           lessons:
             'Calc: Defining Variables':
               name: Definirea variabilelor și substituției
@@ -373,7 +375,7 @@ ro:
               name: 'Fără calculator: Rețeta pentru design'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Fără calculator: Jocuri video și planuri de coordonate'
-          student_description: Învață Programare Funcțională prin Algebră
+          student_description: Învață Programare Funcțională prin Algebră.
         infinity:
           title: Laborator de joacă Disney Infinity
           description: Folosește Laboratorul de Joacă pentru a crea o poveste sau
@@ -432,8 +434,6 @@ ro:
               name: Scrierea de programe pentru computer
         netsim:
           title: Simulator Internet
-          description: "[șir gol]"
-          description_short: "[șir gol]"
           lessons:
             Automatic DNS node:
               name: Nod automat DNS
@@ -453,7 +453,6 @@ ro:
               name: Peer to Peer - Transmiterea de numere
             Routers and addresses:
               name: Routere și adrese
-          student_description: "[șir gol]"
         pixelation:
           title: Pixelare
           description: Creaţi imagini cu biţi şi bytes.
@@ -562,29 +561,21 @@ ro:
             minute? Încearcă lecția noastră Codul Flappy!
         jigsaw:
           title: Puzzle
-          description: "[șir gol]"
-          description_short: "[șir gol]"
           lessons:
             Jigsaw:
               name: Puzzle
-          student_description: "[șir gol]"
         step:
           title: Pas
-          description: "[șir gol]"
-          description_short: "[șir gol]"
           lessons:
             Step:
               name: Pas
-          student_description: "[șir gol]"
         Hour of Code:
           title: Ora de Programare 2013
-          description: "[șir gol]"
           description_short: Încercați elemente de bază în informatică cu multe personaje
             amuzante!
           lessons:
             Hour of Code 2013:
               name: Ora de Programare 2013
-          student_description: "[șir gol]"
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -855,14 +846,11 @@ ro:
             What to Expect:
               name: La ce să ne așteptăm
         sciencePD2:
-          description: 'Etapa 2 online: Studiu de vara mixt'
-          description_short: 'Etapa 2 online: Studiu de vara mixt'
           lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
               name: Revizuire
-          student_description: 'Etapa 2 online: Studiu de vara mixt'
         sciencePD3:
           lessons:
             Welcome Back!:
@@ -887,8 +875,6 @@ ro:
               name: Routere și redundanță
             Tell Me a Secret - Encrypting Text:
               name: Nevoid de criptare
-            The Internet:
-              name: Internetul
             The Need for Addressing:
               name: Nevoia de adresare
             The Need for DNS:
@@ -1038,8 +1024,6 @@ ro:
               name: Încheiere
           student_description: 'Etapa 2 online: Studiu de vara mixt'
         algebraPD2:
-          description: 'Etapa 2 online: Studiu de vara mixt'
-          description_short: 'Etapa 2 online: Studiu de vara mixt'
           lessons:
             Teacher Dashboard:
               name: Tabloul de bord al profesorilor
@@ -1047,7 +1031,6 @@ ro:
               name: Rețeta pentru design
             Welcome!:
               name: Bine ai venit!
-          student_description: 'Etapa 2 online: Studiu de vara mixt'
         sciencePD2b:
           description: 'Etapa 2 online: Studiu de vara mixt'
           description_short: 'Etapa 2 online: Studiu de vara mixt'
@@ -1058,14 +1041,11 @@ ro:
               name: Revizuire
           student_description: 'Etapa 2 online: Studiu de vara mixt'
         science-PD2:
-          description: 'Etapa 2 online: Studiu de vara mixt'
-          description_short: 'Etapa 2 online: Studiu de vara mixt'
           lessons:
             Welcome!:
               name: Bine ai venit!
             Wrap-Up:
               name: Revizuire
-          student_description: 'Etapa 2 online: Studiu de vara mixt'
         Equity-OnlinePD:
           lessons:
             Creating Equitable Learning Environments:
@@ -1104,6 +1084,7 @@ ro:
             Wrap Up and Next Steps:
               name: Încheiere şi paşii următori
         asUnplugged:
+          description_audience: Vârste între 6-13 ani
           lessons:
             Binary Bracelets:
               name: Brăţări Binare
@@ -1123,6 +1104,8 @@ ro:
               name: Compunând Cântece
             The Big Event:
               name: Marele eveniment
+        afterschool1:
+          description_audience: Vârste între 7-13 ani
         sciencePD3_pre1:
           lessons:
             Welcome Back!:
@@ -1165,6 +1148,8 @@ ro:
               name: Suport predare - Lecții 17-20
             Teaching Support - Lessons 4-7:
               name: Suport predare - Lecții 4-7
+            Teaching Support - Lessons 8-12:
+              name: Suport predare - Lecții 8-12
         CSPPD3-Unit2:
           lessons:
             Challenge Overview:
@@ -1239,9 +1224,9 @@ ro:
             joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
           title: Ora de Programare Minecraft
-          description: Folosim blocuri de instructiuni pentru a-l lua pe Steve sau
-            Alex într-o aventură prin aceasta lume Minecraft
-          description_short: Explorează o lume Minecraft programând
+          description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau Alex
+            intr-o aventura in acest univers Minecraft.
+          description_short: Exploreaza o lume Minecraft prin cod.
           lessons:
             Hour of Code 2015:
               name: Ora de cod 2015
@@ -1285,17 +1270,22 @@ ro:
               name: 'Calcul: Definirea variabilelor'
             'Calc: Evaluation Blocks':
               name: 'Calcul: Blocuri de evaluare'
+            'Eval: Defining Functions':
+              name: 'Evaluare: definirea de funcții'
+            'Eval: Functions':
+              name: 'Evaluare: funcții'
             'Eval: Strings and Images':
               name: 'Evaluare: Șiruri și imagini'
             'Eval: Writing Contracts':
               name: 'Evaluare: Scrierea de contracte'
+            'Play Lab: Defining Functions':
+              name: 'Play Lab: Definirea Funcțiilor'
             'Unplugged: Contracts':
               name: 'Fără calculator: Contracte'
             'Unplugged: The Design Recipe':
               name: 'Fără calculator: Rețeta pentru design'
           student_description: Învață Programare Funcțională prin Algebră
         AlgebraB:
-          title: Informatică în Algebră
           description: Învață Programare Funcțională prin Algebră
           description_short: Învață Programare Funcțională prin Algebră
           lessons:
@@ -1547,11 +1537,24 @@ ro:
           lessons:
             Game Lab:
               name: Game Lab
+        cspunit1-support-test:
+          lessons:
+            Unit 1 Overview:
+              name: Prezentare generală - Lecția 1
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mod proiectare
         CSDU2-Draft:
           lessons:
+            Digital Footprint:
+              name: Amprenta digitală
             Peer Review:
               name: Împerecheaţi dispozitivele
+        CSF_Secret_Sample_Story:
+          description_audience: Vârste 8 - 18 ani+
         MikeTest:
+          description_audience: Vârste 8 - 98 ani
           lessons:
             Artist Functions:
               name: Funcţii de Artist
@@ -1579,8 +1582,9 @@ ro:
         kinderTest:
           lessons:
             'Bee: Conditionals':
-              name: 'Albină: Condiţionale'
+              name: 'Ortografie: Condiţionale'
         gradeKinder:
+          description_audience: Vârste 5 - 18 ani
           lessons:
             Debugging:
               name: Corectare erori
@@ -1597,12 +1601,18 @@ ro:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         grade4:
+          title: Gradele 4
+          description_audience: Vârstele 9-99 ani
           lessons:
+            Build a Star Wars Game!:
+              name: Construiește un joc Războiul Stelelor!
             Digital Citizenship:
               name: Cetățenia Digitală
             Songwriting:
               name: Compunând Cântece
         grade1:
+          title: Gradele 1
+          description_audience: Vârste 5 - 18 ani
           lessons:
             Debugging:
               name: Corectare erori
@@ -1621,6 +1631,8 @@ ro:
             'Debugging: Unspotted Bugs':
               name: 'Depanare: Gândăcei fără picățele'
         grade5:
+          title: Clasele 5
+          description_audience: Vârstele 10-110 ani
           lessons:
             'Artist: For Loops':
               name: 'Artist: Bucle pentru'
@@ -1659,9 +1671,12 @@ ro:
             Teaching Strategies:
               name: Strategii de predare
         ecs-unit4:
+          description: "(vechi) Unitate 4: programare"
+          description_short: "(vechi) Unitate 4: programare"
           lessons:
             Teaching Strategies:
               name: Strategii de predare
+          student_description: "(vechi) Unitate 4: programare"
         ecs-unit5:
           lessons:
             Unit 5 Overview:
@@ -1671,7 +1686,11 @@ ro:
             Unit 6 Overview:
               name: Prezentare generală - Lecția 6
         grade3:
+          title: Clasele 3
+          description_audience: Vârste 5 - 18 ani
           lessons:
+            " Bee: Conditionals":
+              name: " Ortografie: Condiţionale"
             'Artist: Nested Loops':
               name: 'Artist: Bucle Adunate'
             Bee Debugging:
@@ -1706,7 +1725,6 @@ ro:
             Lesson 2,3:
               name: Lecția 2,3
         csd3-2017:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -1723,9 +1741,12 @@ ro:
               name: Funcţii
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
         grade2:
+          description_audience: Vârste 5 - 18 ani
           lessons:
             Flappy:
               name: Flappy
@@ -1799,6 +1820,8 @@ ro:
             practice:
               display_name: Practicile de predare
           lessons:
+            Unit 1 Overview:
+              name: Prezentare generală - Lecția 1
             'Lessons 2-3: Binary Messages':
               name: 'Lecții 2-3: Mesaje Binare'
             'Lessons 4-6: Encoding and Sending Numbers':
@@ -1836,6 +1859,8 @@ ro:
             practice:
               display_name: Practicile de predare
           lessons:
+            Unit 1 Overview:
+              name: Prezentare generală - Lecția 1
             'Lessons 2 - 3: Binary Messages':
               name: 'Lecții 2-3: Mesaje Binare'
             'Lessons 4 - 6: Encoding and Sending Numbers':
@@ -1873,6 +1898,8 @@ ro:
           lessons:
             Peer Review:
               name: Împerecheaţi dispozitivele
+            Digital Footprint:
+              name: Amprenta digitală
             Lists:
               name: Liste
         csp2-support:
@@ -2269,6 +2296,8 @@ ro:
             csd6_1:
               display_name: 'Capitolul 1: Programare cu hardware'
           lessons:
+            Foo:
+              name: Foo
             Lists:
               name: Liste
             For Loops:
@@ -2279,6 +2308,10 @@ ro:
           lessons:
             Introduction:
               name: Introducere
+            Sprites:
+              name: Spiriduși
+            Input:
+              name: Intrare
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2317,6 +2350,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -2359,6 +2394,8 @@ ro:
               name: Ce Este un Computer?
         csd2-draft:
           lessons:
+            Digital Footprint:
+              name: Amprenta digitală
             Lists:
               name: Liste
         csd1-draft:
@@ -2371,6 +2408,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -2399,6 +2438,8 @@ ro:
           lessons:
             Peer Review:
               name: Împerecheaţi dispozitivele
+            Digital Footprint:
+              name: Amprenta digitală
         artist-and-bb8:
           lessons:
             Loops with BB-8:
@@ -2428,17 +2469,17 @@ ro:
                 ușor să devină frustrați și să renunțe. Prin această lecție, elevii
                 se vor familiariza cu ideea că frustrarea poate fi o parte importantă
                 a învățării. Frustrarea este prezentată aici ca o etapă a procesului
-                creativ, nu ca un indicator al eșecului.\r\rAceastă lecție poate fi
-                predată într-o oră de curs sau în două ore de curs. Dacă aveți mai
-                mult timp la dispoziție, prelungiți etapa de construcție și de revizuire
-                a activității intitulate Jocul cu bile."
+                creativ, nu ca un indicator al eșecului.\\\r\\\rAceastă lecție poate
+                fi predată într-o oră de curs sau în două ore de curs. Dacă aveți
+                mai mult timp la dispoziție, prelungiți etapa de construcție și de
+                revizuire a activității intitulate Jocul cu bile."
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi din viaţa reală: Plantează o sămânţă'
               description_teacher: "În această lecție, elevii vor relaționa conceptul
                 de algoritm cu activitățile de zi cu zi, din viața reală, prin plantarea
                 unei semințe. Scopul acestei activități este de a începe să dezvoltați
                 abilitatea de a transpune situații din lumea reală în scenarii online
-                și invers.\r"
+                și invers.\\\r"
             Learn to Drag and Drop:
               name: Secvențiere cu Glisare și fixare
               description_teacher: În această lecție, elevii își vor face o idee cu
@@ -3431,6 +3472,9 @@ ro:
             content:
               display_name: Conţinut
         express-2017:
+          title: Curs Expres
+          assignment_family_title: Curs Expres
+          description_audience: 'Vârsta: 9-18 ani'
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
             mai mari.'
@@ -3533,6 +3577,7 @@ ro:
             și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
             joc sau propria poveste pe care să le partajezi cu ceilalți.
         pre-express-2017:
+          description_audience: 'Vârsta: 4-8 ani'
           description_short: 'Introducere în știința calculatoarelor pentru copiii
             care încă nu au învățat să citească: o combinație a celor mai bune cursuri
             pentru grădiniță și clasa I.'
@@ -3590,6 +3635,8 @@ ro:
               name: Crearea de funcții
             Looping and Random Numbers:
               name: Utilizarea buclelor și numerelor aleatoare
+            foo:
+              name: foo
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -3951,7 +3998,7 @@ ro:
               display_name: Conținut curs suplimentar
           lessons:
             courseB_unplugged_MRF_2018:
-              name: courseB_unplugged_MRF_2018
+              name: courseB_unplugged_MRF\_2018
             'Programming: My Robotic Friends':
               name: 'Programare: Prietenii mei, roboții'
             Sequence in Maze:
@@ -4081,7 +4128,6 @@ ro:
             For Loops:
               name: Bucle Pentru
         csd3-1819draft:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -4092,6 +4138,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -4099,7 +4147,6 @@ ro:
             Functions:
               name: Funcţii
         csd3-2018:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -4110,6 +4157,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -4125,6 +4174,8 @@ ro:
             cspSurvey:
               display_name: Sondaj
           lessons:
+            Digital Footprint:
+              name: Amprenta digitală
             Lists:
               name: Liste
         coursea-2018:
@@ -4148,17 +4199,17 @@ ro:
                 ușor să devină frustrați și să renunțe. Prin această lecție, elevii
                 se vor familiariza cu ideea că frustrarea poate fi o parte importantă
                 a învățării. Frustrarea este prezentată aici ca o etapă a procesului
-                creativ, nu ca un indicator al eșecului.\r\rAceastă lecție poate fi
-                predată într-o oră de curs sau în două ore de curs. Dacă aveți mai
-                mult timp la dispoziție, prelungiți etapa de construcție și de revizuire
-                a activității intitulate Jocul cu bile."
+                creativ, nu ca un indicator al eșecului.\\\r\\\rAceastă lecție poate
+                fi predată într-o oră de curs sau în două ore de curs. Dacă aveți
+                mai mult timp la dispoziție, prelungiți etapa de construcție și de
+                revizuire a activității intitulate Jocul cu bile."
             'Real-life Algorithms: Plant a Seed':
               name: Plantează o sămânță
               description_teacher: "În această lecție, elevii vor relaționa conceptul
                 de algoritm cu activitățile de zi cu zi, din viața reală, prin plantarea
                 unei semințe. Scopul acestei activități este de a începe să dezvoltați
                 abilitatea de a transpune situații din lumea reală în scenarii online
-                și invers.\r"
+                și invers.\\\r"
             Learn to Drag and Drop:
               name: Să învățăm să glisăm și să fixăm
               description_teacher: În această lecție, elevii își vor face o idee cu
@@ -4237,6 +4288,7 @@ ro:
             și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
             joc sau propria poveste pe care să le partajezi cu ceilalți.
         express-2018:
+          title: Curs Expres
           assignment_family_title: Curs Expres
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
             pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria
@@ -4244,6 +4296,7 @@ ro:
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
             mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programare pe Hârtie Milimetrică
@@ -4317,8 +4370,6 @@ ro:
               name: Brăţări Binare
             'Unplugged: Binary':
               name: Imagini binare
-            Artist Binary:
-              name: Binar cu artist
             Internet:
               name: Internetul
             Crowdsourcing:
@@ -4415,8 +4466,6 @@ ro:
               name: Jocul Războinici ninja vs. Pirați
             'Unplugged: Binary':
               name: Imagini binare
-            Artist Binary:
-              name: Binar cu artist
             Loops in Ice Age:
               name: Bucle în Ice Age
             Nested Loops in Frozen:
@@ -4486,6 +4535,8 @@ ro:
             cspSurvey:
               display_name: Sondaj
           lessons:
+            Functions with Parameters_:
+              name: Funcții cu Parametrii\_
             Functions with Parameters:
               name: Funcții cu Parametrii
         coursee-2018:
@@ -5237,12 +5288,14 @@ ro:
             Wrap Up:
               name: Încheiere
         pre-express-2018:
+          title: Curs expres pentru preșcolari (2018)
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
             pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria
             poveste pe care să le partajezi cu ceilalți.
           description_short: 'Introducere în știința calculatoarelor pentru copiii
             care încă nu au învățat să citească: o combinație a celor mai bune cursuri
             pentru grădiniță și clasa I.'
+          description_audience: 'Vârsta: 4-8 ani'
           lessons:
             'Debugging: Unspotted Bugs':
               name: Bug-uri neidentificate
@@ -5300,7 +5353,6 @@ ro:
             Artist:
               name: Artist
         dance:
-          title: Petrecere dansantă
           description_short: Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara și încă 25!
           lessons:
@@ -5353,6 +5405,8 @@ ro:
               display_name: Bucle Pentru
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             end_of_course_project:
@@ -5396,10 +5450,10 @@ ro:
                 copii care îi pot face să se simtă furioși, răniți, triști sau să
                 le fie frică. Aceștia explorează modalități de a face față hărțuirii
                 online (cyberbullying) și de a răspunde online unui limbaj care îi
-                supără.\r\rElevii discută despre toate modurile în care utilizează
+                supără.\\\r\\\rElevii discută despre toate modurile în care utilizează
                 tehnologia pentru comunicare și explorează asemănările și deosebirile
                 dintre comunicarea în persoană și cea online. Elevii fac apoi brainstorming
-                pentru a găsi modalități de a răspunde la cyberbullying.\r\rPentru
+                pentru a găsi modalități de a răspunde la cyberbullying.\\\r\\\rPentru
                 mai multe informații, vizitați [r common-sense-media-power-of-words]"
             Envelope Variables:
               name: Variabile de tip plic
@@ -5615,7 +5669,7 @@ ro:
                 va acoperi mai multe lecții sau mai multe săptămâni, iar elevii își
                 vor petrece timpul făcând brainstorming, învățând despre procesul
                 de design, construind și apoi prezentând versiunea finală a proiectului.
-                \rÎn etapa de explorare, elevii vor putea accesa și utiliza programe
+                \\\rÎn etapa de explorare, elevii vor putea accesa și utiliza programe
                 realizate anterior în Artist și Laboratorul cu sprites, pe care le
                 pot folosi drept surse de inspirație. În continuare, elevii vor învăța
                 despre procesul de design și despre cum pot să-l implementeze în propriile
@@ -5784,11 +5838,11 @@ ro:
                 buclele „while”!'
               description_teacher: "Până la această lecție, elevii au folosit pentru
                 destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm
-                puțin lucrurile. \r\r_Buclele while_ sunt bucle care continuă să repete
-                comenzi atâta timp cât este îndeplinită o condiție. Buclele „while”
-                sunt folosite atunci când programatorul nu știe cu exactitate de câte
-                ori trebuie să se repete comenzile, dar știe ce condiție trebuie să
-                fie adevărată pentru ca bucla să se repete în continuare. De exemplu,
+                puțin lucrurile. \\\r\\\r_Buclele while_ sunt bucle care continuă
+                să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele
+                „while” sunt folosite atunci când programatorul nu știe cu exactitate
+                de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie
+                să fie adevărată pentru ca bucla să se repete în continuare. De exemplu,
                 elevii trebuie să umple gropile și să sape pentru a face grămezi de
                 pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor
                 sau înălțimea grămezilor de pământ, dar știu că trebuie să continue
@@ -5814,7 +5868,7 @@ ro:
                 codul rulează. Aici intră în scenă relațiile de condiționalitate.
                 Relațiile de condiționalitate permit unui computer să ia o decizie
                 pe baza informațiilor care sunt adevărate de fiecare dată când rulează
-                codul.\r\r"
+                codul.\\\r\\\r"
             Conditionals in Bee:
               description_student: 'Acum că înțelegeți relațiile de condiționalitate,
                 este timpul să programați Albinuța să le utilizeze atunci când strânge
@@ -5844,10 +5898,10 @@ ro:
                 website-uri. Elevii învață care este diferența dintre informațiile
                 private și informațiile personale, făcând distincția dintre informațiile
                 sigure care pot fi partajate online și informațiile care nu sunt sigure
-                și care nu ar trebui să fie partajate online. \r\rDe asemenea, elevii
-                vor analiza ce înseamnă să fie responsabili și respectuoși față de
-                comunitățile offline și online din care fac parte, învățând astfel
-                cum să devină buni cetățeni digitali."
+                și care nu ar trebui să fie partajate online. \\\r\\\rDe asemenea,
+                elevii vor analiza ce înseamnă să fie responsabili și respectuoși
+                față de comunitățile offline și online din care fac parte, învățând
+                astfel cum să devină buni cetățeni digitali."
             Build a Play Lab Game:
               name: Creează un joc în Laboratorul de joacă
             'Unplugged: Binary':
@@ -5861,7 +5915,6 @@ ro:
                 în care un computer poate stoca informații și mai complexe (cum ar
                 fi imagini și culori) în format binar.
             Artist Binary:
-              name: Binar cu artist
               description_student: În această lecție vei învăța cum să creezi imagini
                 folosind doar cifrele 0 și 1.
               description_teacher: În această serie de lecții online, elevii vor învăța
@@ -5897,6 +5950,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -5948,7 +6003,7 @@ ro:
                 și informațiile private.
               description_teacher: "Această lecție dezvoltată de Common Sense Education
                 prezintă diferența dintre informațiile care pot fi partajate în siguranță
-                online și informațiile care nu pot fi partajate în siguranță online.\r\rPe
+                online și informațiile care nu pot fi partajate în siguranță online.\\\r\\\rPe
                 măsură ce elevii vizitează site-uri care le solicită informații despre
                 identitatea lor, aceștia învață să adopte un proces de investigație
                 critică prin care dobândesc abilitățile necesare pentru a se proteja
@@ -6151,9 +6206,9 @@ ro:
                 În aceste clipuri video se discută și despre: tragerea blocurilor
                 Blockly, ștergerea blocurilor Blockly și conectarea blocurilor Blockly.
                 Apoi elevii își vor practica aptitudinile de _secvențiere_ și _depanare_
-                în Labirint. \rDepanarea este un element esențial al procesului de
-                învățare a programării. Elevii vor găsi câteva puzzle-uri care au
-                fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
+                în Labirint. \\\rDepanarea este un element esențial al procesului
+                de învățare a programării. Elevii vor găsi câteva puzzle-uri care
+                au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
                 pentru a identifica erorile, inclusiv buclele incorecte, blocurile
                 care lipsesc, blocurile suplimentare și blocurile care nu funcționează."
             Programming and Loops with the Artist:
@@ -6179,7 +6234,7 @@ ro:
                 este o experiență care va acoperi mai multe lecții sau mai multe săptămâni,
                 iar elevii își vor petrece timpul explorând concepte derivate din
                 brainstorming, învățând despre procesul de design, construind și prezentând
-                versiunea finală a proiectului. \r\rÎn etapa de explorare, elevii
+                versiunea finală a proiectului. \\\r\\\rÎn etapa de explorare, elevii
                 vor putea vizualiza exemple de proiecte realizate anterior în Artist
                 și în Laboratorul cu sprites, pe care le pot folosi drept surse de
                 inspirație. În continuare, elevii vor învăța despre procesul de design
@@ -6199,7 +6254,7 @@ ro:
               description_teacher: "Prin crearea unui poster interactiv în Laboratorul
                 cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire
                 la schimbul de date cu caracter personal și de informații private
-                pe internet.\r"
+                pe internet.\\\r"
             Aquatic Conditionals in Minecraft:
               name: Relații de condiționalitate în lumea subacvatică în Minecraft
             Access Ability:
@@ -6247,6 +6302,7 @@ ro:
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
             mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -6260,6 +6316,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmi: Programare cu hârtie de copiat'
@@ -6442,7 +6500,7 @@ ro:
               description_teacher: "În etapa anterioară, elevii au folosit bucle pentru
                 a crea desene extraordinare. Acum vor include în buclă acțiuni noi
                 pentru a-l ajuta pe culegător să strângă mai multe verdețuri care
-                cresc în legături mari.\r"
+                cresc în legături mari.\\\r"
             'Events: The Big Event':
               name: Marele eveniment
               description_student: 'Joacă un joc distractiv pentru a învăța mai multe
@@ -6469,7 +6527,7 @@ ro:
               description_teacher: "Această lecție îi ajută pe copii să își dea seama
                 de faptul că este esențial să spună unui adult în care au încredere
                 dacă există ceva în mediul online care îi face să se simtă furioși
-                sau triști sau dacă există ceva care îi face să le fie frică. \r\rElevii
+                sau triști sau dacă există ceva care îi face să le fie frică. \\\r\\\rElevii
                 învață că alte persoane se pot comporta uneori ca niște agresori atunci
                 când sunt online. Elevii află ce înseamnă „cyberbullying” și ce pot
                 să facă atunci când se confruntă cu acesta. După ce citesc un scenariu
@@ -6478,7 +6536,7 @@ ro:
                 și despre cum trebuie să reacționeze la acesta. La sfârșit, elevii
                 își folosesc cunoștințele asimilate pentru a crea o foaie simplă cu
                 sfaturi legate de „cyberbullying” pe care o vor include în jurnalul
-                lor.\r"
+                lor.\\\r"
             Events in Play Lab:
               name: Urmărire cu Evenimente
               description_student: A venit momentul să fim creativi și să creăm un
@@ -6547,9 +6605,9 @@ ro:
               description_teacher: "În colaborare cu **Common Sense Education**, în
                 această lecție elevii află de ce se folosesc parolele, care sunt avantajele
                 utilizării parolelor și descoperă strategii pentru crearea și menținerea
-                unor parole puternice și sigure.\r\rElevii învață trucuri cu privire
+                unor parole puternice și sigure.\\\r\\\rElevii învață trucuri cu privire
                 la parole, își testează parolele existente cu ajutorul unui joc interactiv
-                și creează parole noi folosind îndrumările pentru parole puternice.\r"
+                și creează parole noi folosind îndrumările pentru parole puternice.\\\r"
             Sticker Art with Loops:
               description_student: În această lecție vei desena imagini și mai grozave
                 în Artist, cu ajutorul buclelor!
@@ -6872,6 +6930,7 @@ ro:
           description_short: 'Introducere în știința calculatoarelor pentru copiii
             care încă nu au învățat să citească: o combinație a celor mai bune cursuri
             pentru grădiniță și clasa I.'
+          description_audience: 'Vârsta: 4-8 ani'
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -6940,10 +6999,11 @@ ro:
             cspSurvey:
               display_name: Sondaj
           lessons:
+            Digital Footprint:
+              name: Amprenta digitală
             Lists:
               name: Liste
         csd3-2019:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -6954,6 +7014,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -7130,6 +7192,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
           lessons:
             Crowdsourcing:
               name: Obţinând Informaţii/Critici
@@ -7180,6 +7244,7 @@ ro:
             csp_functions:
               display_name: Funcţii
         csp2-pilot-staging:
+          title: "(vechi) Unitatea 2: Internet"
           lesson_groups:
             csp_variables:
               display_name: Variabile
@@ -7218,6 +7283,7 @@ ro:
             csp_functions:
               display_name: Funcţii
         csp9-pilot-staging:
+          title: "(vechi) Unitatea 9: date"
           lesson_groups:
             csp_variables:
               display_name: Variabile
@@ -7301,10 +7367,11 @@ ro:
             cspSurvey:
               display_name: Sondaj
           lessons:
+            Digital Footprint:
+              name: Amprenta digitală
             Lists:
               name: Liste
         csd3-pilot:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -7315,6 +7382,8 @@ ro:
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Conditionals:
               name: Condiţionale
             Velocity:
@@ -7323,6 +7392,10 @@ ro:
               name: Funcţii
             Sprite Properties:
               name: Proprietăți spiriduș
+        maddie-test:
+          lessons:
+            stage 1:
+              name: etapa 1
         csp3-pilot:
           lesson_groups:
             content:
@@ -7372,6 +7445,11 @@ ro:
               display_name: Prezentare generală
             content:
               display_name: Conţinut
+          lessons:
+            Step 1:
+              name: Pasul 1
+            Step 2:
+              name: Pasul 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -7575,6 +7653,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -7601,6 +7681,8 @@ ro:
               display_name: Condiţionale
             csf_events:
               display_name: Evenimente
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_impacts:
@@ -7651,6 +7733,9 @@ ro:
               display_name: 'Capitolul 2: Styling şi CSS'
             cspSurvey:
               display_name: Sondaj
+          lessons:
+            Digital Footprint:
+              name: Amprenta digitală
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -7706,7 +7791,6 @@ ro:
             Functions with Parameters:
               name: Funcții cu Parametrii
         csd3-2020:
-          description_short: Programare
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -7727,6 +7811,8 @@ ro:
               name: Funcţii
             Text:
               name: Text
+            Sprites:
+              name: Spiriduși
         coursea-2020:
           title: Curs A (2020)
           description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
@@ -8031,7 +8117,7 @@ ro:
               description_teacher: "Această lecție îi ajută pe copii să își dea seama
                 de faptul că este esențial să spună unui adult în care au încredere
                 dacă există ceva în mediul online care îi face să se simtă furioși
-                sau triști sau dacă există ceva care îi face să le fie frică. \r\rElevii
+                sau triști sau dacă există ceva care îi face să le fie frică. \\\r\\\rElevii
                 învață că alte persoane se pot comporta uneori ca niște agresori atunci
                 când sunt online. Elevii află ce înseamnă „cyberbullying” și ce pot
                 să facă atunci când se confruntă cu acesta. După ce citesc un scenariu
@@ -8040,16 +8126,16 @@ ro:
                 și despre cum trebuie să reacționeze la acesta. La sfârșit, elevii
                 își folosesc cunoștințele asimilate pentru a crea o foaie simplă cu
                 sfaturi legate de „cyberbullying” pe care o vor include în jurnalul
-                lor.\r"
+                lor.\\\r"
             Powerful Passwords:
               description_student: În această lecție vei afla cum sunt protejate informațiile
                 cu ajutorul parolelor, precum și cum să creezi o parolă eficientă.
               description_teacher: "Elevii află de ce se folosesc parolele, care sunt
                 avantajele utilizării parolelor și descoperă strategii pentru crearea
-                și menținerea unor parole puternice și sigure.\r\rElevii învață trucuri
-                cu privire la parole, își testează parolele existente cu ajutorul
+                și menținerea unor parole puternice și sigure.\\\r\\\rElevii învață
+                trucuri cu privire la parole, își testează parolele existente cu ajutorul
                 unui joc interactiv și creează parole noi folosind îndrumările pentru
-                parole puternice.\r"
+                parole puternice.\\\r"
             'Programming: My Robotic Friends':
               name: Prietenii mei, roboții, ediția Juniori
               description_student: În această lecție vei pretinde că toți colegii
@@ -8129,7 +8215,7 @@ ro:
               description_teacher: "În etapa anterioară, elevii au folosit bucle pentru
                 a crea desene extraordinare. Acum vor include în buclă acțiuni noi
                 pentru a-l ajuta pe culegător să strângă mai multe verdețuri care
-                cresc în legături mari.\r"
+                cresc în legături mari.\\\r"
             Looking Ahead:
               description_student: Nu călca pe lavă! Aici vei începe să înveți despre
                 relațiile de condiționalitate în universul Minecraft.
@@ -8345,7 +8431,7 @@ ro:
                 codul rulează. Aici intră în scenă relațiile de condiționalitate.
                 Relațiile de condiționalitate permit unui computer să ia o decizie
                 pe baza informațiilor care sunt adevărate de fiecare dată când rulează
-                codul.\r\r"
+                codul.\\\r\\\r"
             Conditionals in Bee:
               description_student: 'Acum că înțelegeți relațiile de condiționalitate,
                 este timpul să programați Albinuța să le utilizeze atunci când strânge
@@ -8363,11 +8449,11 @@ ro:
                 buclele „while”!'
               description_teacher: "Până la această lecție, elevii au folosit pentru
                 destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm
-                puțin lucrurile. \r\r_Buclele while_ sunt bucle care continuă să repete
-                comenzi atâta timp cât este îndeplinită o condiție. Buclele „while”
-                sunt folosite atunci când programatorul nu știe cu exactitate de câte
-                ori trebuie să se repete comenzile, dar știe ce condiție trebuie să
-                fie adevărată pentru ca bucla să se repete în continuare. De exemplu,
+                puțin lucrurile. \\\r\\\r_Buclele while_ sunt bucle care continuă
+                să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele
+                „while” sunt folosite atunci când programatorul nu știe cu exactitate
+                de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie
+                să fie adevărată pentru ca bucla să se repete în continuare. De exemplu,
                 elevii trebuie să umple gropile și să sape pentru a face grămezi de
                 pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor
                 sau înălțimea grămezilor de pământ, dar știu că trebuie să continue
@@ -8399,7 +8485,6 @@ ro:
                 în care un computer poate stoca informații și mai complexe (cum ar
                 fi imagini și culori) în format binar.
             Artist Binary:
-              name: Binar cu artist
               description_student: În această lecție vei învăța cum să creezi imagini
                 folosind doar cifrele 0 și 1.
               description_teacher: În această serie de lecții online, elevii vor învăța
@@ -8415,10 +8500,10 @@ ro:
                 website-uri. Elevii învață care este diferența dintre informațiile
                 private și informațiile personale, făcând distincția dintre informațiile
                 sigure care pot fi partajate online și informațiile care nu sunt sigure
-                și care nu ar trebui să fie partajate online. \r\rDe asemenea, elevii
-                vor analiza ce înseamnă să fie responsabili și respectuoși față de
-                comunitățile offline și online din care fac parte, învățând astfel
-                cum să devină buni cetățeni digitali."
+                și care nu ar trebui să fie partajate online. \\\r\\\rDe asemenea,
+                elevii vor analiza ce înseamnă să fie responsabili și respectuoși
+                față de comunitățile offline și online din care fac parte, învățând
+                astfel cum să devină buni cetățeni digitali."
             Dance Party:
               name: Petrecere dansantă
               description_student: A venit momentul să sărbătorim! În această lecție
@@ -8461,6 +8546,8 @@ ro:
           lesson_groups:
             ramp_up:
               display_name: Avansare
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -8484,9 +8571,9 @@ ro:
                 În aceste clipuri video se discută și despre: tragerea blocurilor
                 Blockly, ștergerea blocurilor Blockly și conectarea blocurilor Blockly.
                 Apoi elevii își vor practica aptitudinile de _secvențiere_ și _depanare_
-                în Labirint. \rDepanarea este un element esențial al procesului de
-                învățare a programării. Elevii vor găsi câteva puzzle-uri care au
-                fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
+                în Labirint. \\\rDepanarea este un element esențial al procesului
+                de învățare a programării. Elevii vor găsi câteva puzzle-uri care
+                au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
                 pentru a identifica erorile, inclusiv buclele incorecte, blocurile
                 care lipsesc, blocurile suplimentare și blocurile care nu funcționează."
             Programming and Loops with the Artist:
@@ -8568,7 +8655,7 @@ ro:
               description_teacher: "Prin crearea unui poster interactiv în Laboratorul
                 cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire
                 la schimbul de date cu caracter personal și de informații private
-                pe internet.\r"
+                pe internet.\\\r"
             Access Ability:
               name: Design pentru accesibilitate
               description_student: 'În această lecție, elevii vor învăța despre accesibilitate
@@ -8658,7 +8745,7 @@ ro:
                 este o experiență care va acoperi mai multe lecții sau mai multe săptămâni,
                 iar elevii își vor petrece timpul explorând concepte derivate din
                 brainstorming, învățând despre procesul de design, construind și prezentând
-                versiunea finală a proiectului. \r\rÎn etapa de explorare, elevii
+                versiunea finală a proiectului. \\\r\\\rÎn etapa de explorare, elevii
                 vor putea vizualiza exemple de proiecte realizate anterior în Artist
                 și în Laboratorul cu sprites, pe care le pot folosi drept surse de
                 inspirație. În continuare, elevii vor învăța despre procesul de design
@@ -8701,6 +8788,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -8888,7 +8977,7 @@ ro:
                 va acoperi mai multe lecții sau mai multe săptămâni, iar elevii își
                 vor petrece timpul făcând brainstorming, învățând despre procesul
                 de design, construind și apoi prezentând versiunea finală a proiectului.
-                \rÎn etapa de explorare, elevii vor putea accesa și utiliza programe
+                \\\rÎn etapa de explorare, elevii vor putea accesa și utiliza programe
                 realizate anterior în Artist și Laboratorul cu sprites, pe care le
                 pot folosi drept surse de inspirație. În continuare, elevii vor învăța
                 despre procesul de design și despre cum pot să-l implementeze în propriile
@@ -8917,18 +9006,19 @@ ro:
                 propriile etichete care vor fi aplicate unor imagini cu pești generați
                 aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model
                 de învățare automatizată care trebuie să poată asocia singur noile
-                etichete cu imaginile corespunzătoare.\r\r\r**Verificarea corectitudinii:**
+                etichete cu imaginile corespunzătoare.\\\r\\\r\\\r**Verificarea corectitudinii:**
                 Elevii nu vor afla din acest tutorial dacă au finalizat corect nivelul.
                 Puteți omite diferite părți ale activității. Încurajați elevii să
                 urmărească toate clipurile video, să citească instrucțiunile și să
                 încerce diferite lucruri pe parcurs. Aceștia pot, în orice moment,
-                să vă comunice dvs. sau unui coleg de clasă ce au descoperit.\r"
+                să vă comunice dvs. sau unui coleg de clasă ce au descoperit.\\\r"
           student_description: Învață să folosești diferite tipuri de bucle, evenimente,
             funcții și relații de condiționalitate. Analizează diverse tehnici de
             rezolvare a problemelor și discută despre impactul social al computerelor
             și al Internetului. În a doua parte a acestui curs, concepe și creează
             un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
         express-2020:
+          title: Curs Expres (2020)
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor
             de mai jos! Învață să scrii programe pentru computer, să îți dezvolți
             abilitățile de rezolvare a problemelor și participă la provocări distractive!
@@ -8937,6 +9027,7 @@ ro:
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
             mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -8950,6 +9041,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -9025,6 +9118,7 @@ ro:
           description_short: 'Introducere în știința calculatoarelor pentru copiii
             care încă nu au învățat să citească: o combinație a celor mai bune cursuri
             pentru grădiniță și clasa I.'
+          description_audience: 'Vârsta: 4-8 ani'
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -9133,6 +9227,8 @@ ro:
               name: Numerele binare
         csp2-2020:
           lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
             cspSurvey2020:
               display_name: Chestionar după curs
           lessons:
@@ -9153,6 +9249,8 @@ ro:
               display_name: Chestionar după curs
         csp9-2020:
           lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
             cspSurvey2020:
               display_name: Chestionar după curs
         csp10-2020:
@@ -9183,6 +9281,9 @@ ro:
               display_name: 'Capitolul 1: Conţinutul Web şi HTML'
             csd2_2:
               display_name: 'Capitolul 2: Styling şi CSS'
+          lessons:
+            Digital Footprint:
+              name: Amprenta digitală
         csp5-virtual:
           lessons:
             Controlling Memory with Variables:
@@ -9248,14 +9349,18 @@ ro:
             k5_next_steps_1:
               display_name: Pașii următori
         dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: lecția 2
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
         csd3-virtual:
-          description_short: Programare
           lessons:
             Variables:
               name: Variabile
+            Sprites:
+              name: Spiriduși
             Sprite Properties:
               name: Proprietăți spiriduș
             Text:
@@ -9319,12 +9424,6 @@ ro:
           title: Se simulează o Epidemie
           description_short: Folosește Sprite Lab pentru a creea o simulare dintr-o
             epidemie a unui virus.
-        ml-playground:
-          lessons:
-            lesson14:
-              name: Lecția 14
-            lesson15:
-              name: Lecția 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9375,15 +9474,21 @@ ro:
             csd1_2:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csd2-2021:
+          lessons:
+            Digital Footprint:
+              key: Amprenta digitală
+              name: Amprenta digitală
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
         csd3-2021:
-          description_short: Programare
           lessons:
             Variables:
               key: Variabile
               name: Variabile
+            Sprites:
+              key: Spiriduși
+              name: Spiriduși
             Sprite Properties:
               key: Proprietăți spiriduș
               name: Proprietăți spiriduș
@@ -9452,6 +9557,11 @@ ro:
             Routers and Redundancy:
               key: Routere și redundanță
               name: Routere și redundanță
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+            lessonGroup-2:
+              display_name: Sondaj
         csp3-2021:
           lessons:
             Debugging:
@@ -9475,11 +9585,11 @@ ro:
           lessons:
             Machine Learning and Bias:
               name: Învățare Automată
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
         coursea-2021:
           title: Curs A (2021)
-          description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
-            pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria
-            poveste pe care să le partajezi cu ceilalți.
           description_short: O introducere în informatică pentru preșcolari.
           description_audience: 'Vârsta: 4-7 ani'
           lessons:
@@ -9582,7 +9692,6 @@ ro:
                 când dorește utilizatorul. Acesta este scopul evenimentelor.
             Events in Play Lab:
               key: Evenimente în Laboratorul de Joacă
-              name: Să ne mișcăm cu Evenimente
               description_student: Creează-ți propriul joc sau propria poveste.
               description_teacher: În această activitate online, elevii vor avea ocazia
                 să învețe cum să folosească evenimentele în Laboratorul de Joacă și
@@ -9608,9 +9717,6 @@ ro:
             joc sau propria poveste pe care să le partajezi cu ceilalți.
         courseb-2021:
           title: Curs B (2021)
-          description: Învață noțiunile de bază ale științei calculatoarelor și siguranței
-            pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria
-            poveste pe care să le partajezi cu ceilalți.
           description_short: O introducere în știința calculatoarelor pentru preșcolari.
             Asemănătoare cu Cursul A, dar cu o prezentare mai aprofundată a conceptelor.
           description_audience: 'Vârsta: 5-8 ani'
@@ -9713,7 +9819,6 @@ ro:
                 când dorește utilizatorul. Acesta este scopul evenimentelor.
             Events in Play Lab:
               key: Evenimente în Laboratorul de Joacă
-              name: O bătălie regală cu Evenimente
               description_student: Folosește evenimentele pentru a crea o poveste
                 sau un joc interactiv.
               description_teacher: În această activitate online, elevii vor avea ocazia
@@ -9742,11 +9847,6 @@ ro:
             joc sau propria poveste pe care să le partajezi cu ceilalți.
         coursec-2021:
           title: Curs C (2021)
-          description: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți
-            inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor
-            și învață cum să reacționezi la cyberbullying. La sfârșitul cursului,
-            creează-ți propriul joc sau propria poveste pe care să le partajezi cu
-            ceilalți!
           description_short: Învață noțiunile de bază ale științei calculatoarelor
             și creează desene, povești și jocuri.
           description_audience: 'Vârsta: 6-10 ani'
@@ -9847,12 +9947,6 @@ ro:
             Sticker Art with Loops:
               description_student: În această lecție vei desena imagini și mai grozave
                 în Artist, cu ajutorul buclelor!
-              description_teacher: Elevii vor fi extrem de încântați de desenele incredibile
-                pe care le vor crea, folosind un număr mic de blocuri și de stickere
-                digitale! Această lecție are la bază cunoștințele despre bucle asimilate
-                în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu
-                adevărat creativi. Această activitate este excelentă pentru crearea
-                de artefacte pentru portofolii sau pentru conferințe cu părinții/profesorii.
             'Events: The Big Event':
               key: 'Evenimente: Marele Eveniment'
               name: Marele eveniment
@@ -9875,7 +9969,6 @@ ro:
                 vizuale sau regulile.
             Events in Play Lab:
               key: Evenimente în Laboratorul de Joacă
-              name: Urmărire cu Evenimente
               description_student: A venit momentul să fim creativi și să creăm un
                 joc în Laboratorul de joacă!
               description_teacher: În această activitate online, elevii vor avea ocazia
@@ -9927,8 +10020,6 @@ ro:
             cu ceilalți!
         coursed-2021:
           title: "\t\nCurs D (2021)"
-          description: Elevii învață despre bucle, relații de condiționalitate și
-            evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
           description_short: Învață despre condiții. Creează propriile opere de artă,
             jocuri, chiar și o petrecere dansantă.
           description_audience: 'Vârsta: 7-11 ani'
@@ -10017,16 +10108,6 @@ ro:
               name: Condiționale cu Carduri
               description_student: Este timpul să jucăm un joc în care câștigi puncte
                 numai în anumite condiții!
-              description_teacher: Această lecție demonstrează modul în care pot fi
-                utilizate relațiile de condiționalitate pentru a adapta un program
-                în funcție de anumite informații specifice. Nu avem întotdeauna la
-                dispoziție toate informațiile de care avem nevoie atunci când scriem
-                un program. Poate uneori vreți să procedați diferit de la o situație
-                la ala, chiar dacă nu știți care situație va fi adevărată atunci când
-                codul rulează. Aici intră în scenă relațiile de condiționalitate.
-                Relațiile de condiționalitate permit unui computer să ia o decizie
-                pe baza informațiilor care sunt adevărate de fiecare dată când rulează
-                codul.
             Conditionals in Bee:
               key: Relații de condiționalitate în Albinuță
               description_student: 'Acum că înțelegeți relațiile de condiționalitate,
@@ -10086,7 +10167,6 @@ ro:
                 fi imagini și culori) în format binar.
             Artist Binary:
               key: Binar cu artist
-              name: Binar cu artist
               description_student: În această lecție vei învăța cum să creezi imagini
                 folosind doar cifrele 0 și 1.
               description_teacher: În această serie de lecții online, elevii vor învăța
@@ -10152,15 +10232,8 @@ ro:
             lessonGroup-6:
               display_name: Cetățenia Digitală
           name: coursed-2021
-          student_description: Elevii învață despre bucle, relații de condiționalitate
-            și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia
-            digitală.
         coursee-2021:
           title: "\t\nCurs E (2021)"
-          description: Începe să scrii cod cu algoritmi, bucle, relații de condiționalitate
-            și evenimente, după care vei trece la funcții. În a doua parte a acestui
-            curs, concepe și creează un proiect de final de curs pe care să-l partajezi
-            cu prietenii și familia.
           description_audience: 'Vârsta: 8-12 ani'
           lessons:
             Sequencing in the Maze:
@@ -10176,9 +10249,9 @@ ro:
                 În aceste clipuri video se discută și despre: tragerea blocurilor
                 Blockly, ștergerea blocurilor Blockly și conectarea blocurilor Blockly.
                 Apoi elevii își vor practica aptitudinile de _secvențiere_ și _depanare_
-                în Labirint. \rDepanarea este un element esențial al procesului de
-                învățare a programării. Elevii vor găsi câteva puzzle-uri care au
-                fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
+                în Labirint. \\\rDepanarea este un element esențial al procesului
+                de învățare a programării. Elevii vor găsi câteva puzzle-uri care
+                au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
                 pentru a identifica erorile, inclusiv buclele incorecte, blocurile
                 care lipsesc, blocurile suplimentare și blocurile care nu funcționează."
             Programming and Loops with the Artist:
@@ -10227,10 +10300,6 @@ ro:
                 cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire
                 la schimbul de date cu caracter personal și de informații private
                 pe internet.
-              description_teacher: "Prin crearea unui poster interactiv în Laboratorul
-                cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire
-                la schimbul de date cu caracter personal și de informații private
-                pe internet.\r"
             Digital Sharing:
               description_student: 'În această lecție vei afla mai multe despre provocările
                 și avantajele drepturilor de proprietate și ale drepturilor de autor. '
@@ -10328,7 +10397,9 @@ ro:
                 de soluții accesibile pentru aplicații ipotetice. '
           lesson_groups:
             ramp_up:
-              display_name: Avansare
+              display_name: Repetiții imbricate
+            csf_sprites:
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
@@ -10344,17 +10415,8 @@ ro:
             lessonGroup-7:
               display_name: Impactul computerelor
           name: coursee-2021
-          student_description: Începe să scrii cod cu algoritmi, bucle, relații de
-            condiționalitate și evenimente, după care vei trece la funcții. În a doua
-            parte a acestui curs, concepe și creează un proiect de final de curs pe
-            care să-l partajezi cu prietenii și familia.
         coursef-2021:
           title: Curs F (2021)
-          description: Învață să folosești diferite tipuri de bucle, evenimente, funcții
-            și relații de condiționalitate. Analizează diverse tehnici de rezolvare
-            a problemelor și discută despre impactul social al computerelor și al
-            Internetului. În a doua parte a acestui curs, concepe și creează un proiect
-            de final de curs pe care să-l partajezi cu prietenii și familia.
           description_short: Învățați toate conceptele din fundamentele informaticii
             şi creați propria dvs. artă, poveste sau joc.
           description_audience: 'Vârsta: 9-13 ani'
@@ -10508,25 +10570,8 @@ ro:
               description_student: Pentru proiectele mari este nevoie de timp și de
                 planificare. Găsește-ți sursa de inspirație, pregătește un plan și
                 pune-ți creativitatea la treabă!
-              description_teacher: "Următoarele cinci lecții le oferă elevilor posibilitatea
-                de a-și folosi abilitățile de scriere de cod în cadrul unui proiect
-                de final de curs. Acest proiect îi va ajuta să câștige experiență
-                în domeniul programării și să conceapă un proiect exemplificator,
-                pe care îl vor putea partaja cu colegii și cu cei dragi. Acest proiect
-                va acoperi mai multe lecții sau mai multe săptămâni, iar elevii își
-                vor petrece timpul făcând brainstorming, învățând despre procesul
-                de design, construind și apoi prezentând versiunea finală a proiectului.
-                \rÎn etapa de explorare, elevii vor putea accesa și utiliza programe
-                realizate anterior în Artist și Laboratorul cu sprites, pe care le
-                pot folosi drept surse de inspirație. În continuare, elevii vor învăța
-                despre procesul de design și despre cum pot să-l implementeze în propriile
-                proiecte. După aceea li se va pune la dispoziție spațiul necesar pentru
-                a-și crea propriul proiect în Artist, în Laboratorul cu sprites sau
-                în altă interfață pe care le-o puteți pune la dispoziție. (Aceasta
-                va fi probabil cea mai lungă etapă a proiectului). Elevii vor revizui
-                apoi codul, după testare și după revizuirea efectuată de către colegi.
-                În cele din urmă, elevii vor putea să prezinte colegilor de clasă
-                proiectele finalizate."
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta
+                și prezenta propriile proiecte realizate!
             lesson-1:
               name: Design pentru accesibilitate
               description_student: 'În această lecție, elevii vor învăța despre accesibilitate
@@ -10553,7 +10598,7 @@ ro:
                 cu fenomenul „cyberbullying”."
           lesson_groups:
             ramp_up:
-              display_name: Avansare
+              display_name: Spiriduși
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_variables:
@@ -10571,11 +10616,6 @@ ro:
             lessonGroup-7:
               display_name: Cetățenia Digitală
           name: coursef-2021
-          student_description: Învață să folosești diferite tipuri de bucle, evenimente,
-            funcții și relații de condiționalitate. Analizează diverse tehnici de
-            rezolvare a problemelor și discută despre impactul social al computerelor
-            și al Internetului. În a doua parte a acestui curs, concepe și creează
-            un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
         express-2021:
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor
             de mai jos! Învață să scrii programe pentru computer, să îți dezvolți
@@ -10585,6 +10625,7 @@ ro:
           description_short: 'O introducere în știința calculatoarelor: o combinație
             a celor mai bune programe pentru școala elementară destinate elevilor
             mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
           lessons:
             Dance Party:
               key: Petrecere dansantă
@@ -10608,14 +10649,6 @@ ro:
                 rezolvate incorect. Aceștia vor trebui să parcurgă codul existent
                 pentru a identifica erorile, inclusiv buclele incorecte, blocurile
                 care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
-            Collecting Treasure with Laurel:
-              description_student: Scrie algoritmi pentru a o ajuta pe Aventuriera
-                Laurel să adune o mulțime de pietre prețioase!
-              description_teacher: În această serie de puzzle-uri, elevii vor continua
-                să își dezvolte cunoștințele despre algoritmi și procesul de depanare.
-                Cu ajutorul unui nou personaj, Aventuriera Laurel, elevii vor crea
-                algoritmi secvențiali pentru a o ajuta pe Laurel să strângă comori
-                în timp ce merge pe o cărare.
             Creating Art with Code:
               description_student: Creați imagini extraordinare programând Artistul.
               description_teacher: În această lecție, elevii vor avea control asupra
@@ -10729,12 +10762,6 @@ ro:
             Changing Variables with Artist:
               description_student: În această lecție vei desena cu variabile care
                 se schimbă pe măsură ce programul rulează.
-              description_teacher: În această lecție, elevii vor explora crearea de
-                modele repetitive folosind variabile în mediul Artist. Elevii vor
-                învăța cum pot fi utilizate variabilele pentru a scrie și citi cod
-                cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii
-                vor încheia ora cu un nivel de joc liber, fără reguli, în care vor
-                demonstra ce au învățat și în care își vor crea propriile modele.
             For Loops with Bee:
               description_student: Bzz bzz! În aceste puzzle-uri vei îndruma o albină
                 către nectar și miere cu ajutorul buclelor `for`!
@@ -10807,6 +10834,8 @@ ro:
               display_name: Variabile
             csf_for_loops:
               display_name: Bucle Pentru
+            csf_sprites:
+              display_name: Spiriduși
             end_of_course_project:
               display_name: Proiect de final de curs
             lessonGroup-9:
@@ -10825,6 +10854,7 @@ ro:
           description_short: 'Introducere în știința calculatoarelor pentru copiii
             care încă nu au învățat să citească: o combinație a celor mai bune cursuri
             pentru grădiniță și clasa I.'
+          description_audience: 'Vârsta: 4-8 ani'
           lessons:
             Learn to Drag and Drop:
               key: Să învățăm să glisăm și să fixăm
@@ -10945,6 +10975,8 @@ ro:
               display_name: Simulare Epidemie
             lessonGroup-3:
               display_name: Variabile
+            Sprites:
+              display_name: Spiriduși
             variables:
               display_name: Variabile
         csd4-preview-2021:
@@ -10982,20 +11014,13 @@ ro:
             cspSurvey:
               display_name: Sondaj
         contagion-pilot:
+          description_audience: Clasele 5
           description_short: Utilizează Laboratorul Sprite pentru a programa simularea
             unei epidemii dintr-un virus
           description: Utilizează Laboratorul Sprite pentru a programa simularea unei
             epidemii dintr-un virus
           student_description: Utilizează Laboratorul Sprite pentru a programa simularea
             unei epidemii dintr-un virus
-        ai-unit-pilot:
-          lessons:
-            lesson14:
-              name: Lecția 14
-            lesson15:
-              name: Lecția 15
-            lesson17:
-              name: Lecția 15
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -11006,10 +11031,20 @@ ro:
           lesson_groups:
             lesson group:
               display_name: Conţinut
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introducere
             Sequencing:
               key: Secvențiere
               name: Secvențiere
@@ -11033,21 +11068,79 @@ ro:
               name: Bucle Pentru
             Sprite Lab:
               key: Laborator Sprite
-              name: Laborator Sprite
-            Lesson Planning:
-              name: Planificare lecție
           lesson_groups:
             k5_getting_started_1:
               display_name: Introducere
-            k5_next_steps_1:
-              display_name: Pașii următori
             Introduction:
               display_name: Introducere
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Sondaj
-        aiml-2021:
+        kodea-pd-2021:
           lessons:
-            lesson15:
-              name: Lecția 15
+            Computer Science Fundamentals:
+              key: Fundamentele informaticii
+              name: Fundamentele informaticii
+            'Mastering the Basics: Sequencing':
+              key: 'Cum să stăpâniți elementele de bază: Secvențiere'
+              name: 'Cum să stăpâniți elementele de bază: Secvențiere'
+            'Mastering the Basics: Loops':
+              key: 'Cum să stăpâniți elementele de bază: Bucle'
+              name: 'Cum să stăpâniți elementele de bază: Bucle'
+            'Mastering the Basics: Conditionals':
+              key: 'Cum să stăpâniți elementele de bază: Condiționale'
+              name: 'Cum să stăpâniți elementele de bază: Condiționale'
+            'Mastering the Basics: Functions':
+              key: 'Cum să stăpâniți elementele de bază: Funcții'
+              name: 'Cum să stăpâniți elementele de bază: Funcții'
+            'Mastering the Basics: Events':
+              key: 'Cum să stăpâniți elementele de bază: Evenimente'
+              name: 'Cum să stăpâniți elementele de bază: Evenimente'
+            Best Practices for Teaching Computer Science:
+              key: Cele mai bune practici în predarea informaticii
+              name: Cele mai bune practici în predarea informaticii
+            Planning:
+              key: Planificare
+              name: Planificare
+            Next Steps:
+              key: Pașii următori
+              name: Pașii următori
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Comunitatea profesorilor
+        self-paced-pl-csd3-2021:
+          lessons:
+            lesson-2:
+              name: Instrumente
+        self-paced-pl-csd5-2021:
+          lessons:
+            lesson-4:
+              name: Procesul de design
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Resurse
+            lessonGroup-2:
+              display_name: Unitatea 1
+            lessonGroup-4:
+              display_name: Unitatea 2
+            lessonGroup-5:
+              display_name: Unitatea 3
+            lessonGroup-6:
+              display_name: Unitatea 4
+            lessonGroup-7:
+              display_name: Unitatea 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
