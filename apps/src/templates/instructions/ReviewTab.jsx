@@ -38,8 +38,6 @@ export default class ReviewTab extends Component {
     codeReviewDataApi
       .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
       .done(data => {
-        console.log('PEER');
-        console.log(data);
         const id = (data && data.id) || null;
         this.setState({
           reviewCheckboxEnabled: data.canMarkReviewable,
