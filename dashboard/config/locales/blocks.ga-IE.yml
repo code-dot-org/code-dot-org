@@ -900,7 +900,7 @@ ga:
             '"left"': ar chlé
             '"down"': síos
             '"right"': ar dheis
-            '"space"': an spásbharra
+            '"space"': spás
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -977,8 +977,12 @@ ga:
             '"while"': chomh fada is atá
       gamelab_clickedOn:
         text: nuair a chliceáiltear {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'nóta trachta: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "déan sprid nua \n darb ainm {NAME} \n le culaith {COSTUME} \n {LOCATION}"
       gamelab_destroy:
@@ -1102,6 +1106,10 @@ ga:
         text: suíomh na luiche
       gamelab_moveForward:
         text: bog {SPRITE} {DISTANCE} picteilín ar aghaidh
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrólú suas anuas
       gamelab_printText:
@@ -1164,6 +1172,7 @@ ga:
             '"direction"': treo gluaiseachta
             '"speed"': luas
       gamelab_setProp_dropdown:
+        text: 'socraigh {PROPERTY} do {SPRITE}: {SIZE}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -1189,6 +1198,10 @@ ga:
           CONDITION:
             '"when"': nuair atá
             '"while"': chomh fada is atá
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: rothlam
       gamelab_turn:
@@ -1414,6 +1427,8 @@ ga:
           DANCE:
             MOVES.ClapHigh: iasc
             MOVES.Clown: ní mo-lipéad é
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'ionad x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1499,6 +1514,16 @@ ga:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': tuar ceatha
+      PoemBot_setForegroundEffect:
+        text: 'socraigh éifeacht an tulra: {FG_EFFECT}'
+        options:
+          FG_EFFECT:
+            '"rain"': báisteach
+            '"bubbles"': boilgeoga
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:
@@ -1609,6 +1634,7 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
+            '"chiseledStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta

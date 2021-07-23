@@ -219,6 +219,7 @@ bn:
       unsubmit: জমা না দেয়া
   user:
     update_email: আপডেট
+    remove_parent_email_label: মুছে ফেলা
   user_level:
     completed: সম্পূর্ণ হয়েছে
     tried: চেষ্টা করা হয়েছে
@@ -310,6 +311,7 @@ bn:
     unplugged_conditionals:
       title: শর্তযুক্ত
     widgets:
+      audience: বয়স 14+
       cta: শিখুন কিভাবে
   landing:
     report_bug: বাগ রিপোর্ট করুন

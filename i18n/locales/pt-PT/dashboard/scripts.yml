@@ -1,3 +1,4 @@
+---
 pt:
   data:
     script:
@@ -266,6 +267,7 @@ pt:
             Variables:
               name: Variáveis
         algebra:
+          title: Ciência da computação em álgebra
           lessons:
             'Eval: Boolean Operators':
               name: Operadores Booleanos
@@ -403,12 +405,12 @@ pt:
           student_description: Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!
         jigsaw:
           title: Quebra-cabeças
-          description: Experimente nosso tutorial sobre quebra-cabeça
-          description_short: Experimente nosso tutorial sobre quebra-cabeça
+          description: Experimente nosso tutorial sobre quebra-cabeça.
+          description_short: Experimente nosso tutorial sobre quebra-cabeça.
           lessons:
             Jigsaw:
               name: Quebra-cabeças
-          student_description: Experimente nosso tutorial sobre quebra-cabeça
+          student_description: Experimente nosso tutorial sobre quebra-cabeça.
         step:
           title: Avançar
           description: Etapa do tutorial
@@ -434,7 +436,6 @@ pt:
             Puzzles:
               name: Puzzles
         cspunit1:
-          description_short: Programação
           lessons:
             Binary Numbers:
               name: Números Binários
@@ -496,7 +497,6 @@ pt:
             reference:
               name: referência
         cspunit3:
-          description_short: Programação
           lessons:
             Creating Functions:
               name: Criando funções
@@ -543,19 +543,11 @@ pt:
             The Tutorial:
               name: O Tutorial
         sciencePD2:
-          description: 'Fase 2 Online: combinado de estudos de verão'
-          description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 Online: combinado de estudos de verão'
-        cspunit2:
-          description_short: Programação
-          lessons:
-            The Internet:
-              name: A Internet
         algebraPD2a:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -645,20 +637,12 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
               name: Resumo
           student_description: 'Fase 2 Online: combinado de estudos de verão'
         algebraPD2:
-          description: 'Fase 2 Online: combinado de estudos de verão'
-          description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
             Teacher Dashboard:
               name: Painel do Professor
@@ -666,7 +650,6 @@ pt:
               name: A receita do design
             Welcome!:
               name: Olá!
-          student_description: 'Fase 2 Online: combinado de estudos de verão'
         sciencePD2b:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
@@ -677,14 +660,11 @@ pt:
               name: Resumo
           student_description: 'Fase 2 Online: combinado de estudos de verão'
         science-PD2:
-          description: 'Fase 2 Online: combinado de estudos de verão'
-          description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
             Welcome!:
               name: Olá!
             Wrap-Up:
               name: Resumo
-          student_description: 'Fase 2 Online: combinado de estudos de verão'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -702,12 +682,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -717,18 +691,13 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
               name: Resumo
           student_description: 'Fase 2 Online: combinado de estudos de verão'
         asUnplugged:
+          description_audience: Dos 6 aos 13 anos
           lessons:
             Binary Bracelets:
               name: Pulseiras binárias
@@ -748,6 +717,8 @@ pt:
               name: Composição
             The Big Event:
               name: O Grande Evento
+        afterschool1:
+          description_audience: Dos 7 aos 13 anos
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -767,7 +738,6 @@ pt:
               name: Laboratório de brincadeiras da Idade do gelo
           student_description: Criar uma história ou faz um jogo com o Laboratório de Jogar da Era do Gelo!
         cspunit3temp:
-          description_short: Programação
           lessons:
             While Loops:
               name: Laços enquanto
@@ -780,7 +750,6 @@ pt:
               name: Laboratório de jogo Gumball
           student_description: Criar uma história ou faz um jogo com o Laboratório de jogo Gumball!
         starwars:
-          title: 'Star Wars: Construir uma Galáxia com Código'
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           lessons:
@@ -788,7 +757,6 @@ pt:
               name: Hora de Código 2015
           student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         starwarsblocks:
-          title: 'Star Wars: Construir uma Galáxia com Código'
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           lessons:
@@ -797,7 +765,7 @@ pt:
           student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         mc:
           title: Hora do Código de Minecraft
-          description: Utiliza blocos de código para levares o Steve ou a Alex numa aventura através deste mundo Minecraft
+          description: Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft.
           description_short: Explora um mundo Minecraft através do código
           lessons:
             Hour of Code 2015:
@@ -809,10 +777,6 @@ pt:
               name: Olá!
             Wrap-Up:
               name: Resumo
-        cspunit5:
-          description_short: Programação
-        cspunit4:
-          description_short: Programação
         AlgebraA:
           lessons:
             'Calc: Defining Variables':
@@ -892,7 +856,6 @@ pt:
             Post-Course Survey:
               name: Inquérito Pós-Curso
         csp3-2017:
-          description_short: Programação
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -963,7 +926,10 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de Ensino
+        CSF_Secret_Sample_Story:
+          description_audience: Dos 8 aos 18 anos+
         MikeTest:
+          description_audience: Dos 8 aos 98 anos
           lessons:
             Artist Functions:
               name: Funções do Artista
@@ -982,7 +948,10 @@ pt:
             'Bee: Conditionals':
               name: 'Abelha: Condicionais'
         gradeKinder:
+          description_audience: Dos 5 aos 18 anos
           lessons:
+            Debugging:
+              name: Depuração
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -994,13 +963,19 @@ pt:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Plante uma Semente'
         grade4:
+          title: Notas 4
+          description_audience: Dos 9 aos 99 anos
           lessons:
             Digital Citizenship:
               name: Cidadania digital
             Songwriting:
               name: Composição
         grade1:
+          title: Notas 1
+          description_audience: Dos 5 aos 18 anos
           lessons:
+            Debugging:
+              name: Depuração
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -1010,6 +985,8 @@ pt:
             Programming:
               name: Programação
         grade5:
+          title: Notas 5
+          description_audience: Dos 10 aos 110 anos
           lessons:
             'Artist: For Loops':
               name: 'Artista: laços for'
@@ -1033,18 +1010,20 @@ pt:
               name: 'Offline: escrever músicas com parâmetros'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
               name: Resumo
+        ecs-unit4:
+          description: 'Unidade 4: Programação'
+          description_short: 'Unidade 4: Programação'
+          student_description: 'Unidade 4: Programação'
         grade3:
+          title: Notas 3
+          description_audience: Dos 5 aos 18 anos
           lessons:
+            " Bee: Conditionals":
+              name: " Abelha: Condicionais"
             'Artist: Nested Loops':
               name: 'Artista: Laços Aninhados'
             Bee Debugging:
@@ -1061,8 +1040,24 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de Ensino
+          lessons:
+            Lesson 1,10:
+              name: Lição 1,10
+            Lesson 1,11:
+              name: Lição 1,11
+            Lesson 1,4:
+              name: Lição 1,4
+            Lesson 1,6:
+              name: Lição 1,6
+            Lesson 1,9:
+              name: Lição 1,9
+            Lesson 2,10:
+              name: Lição 2,10
+            Lesson 2,2:
+              name: Lição 2,2
+            Lesson 2,3:
+              name: Lição 2,3
         csd3-2017:
-          description_short: Programação
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1079,9 +1074,12 @@ pt:
               name: Funções
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
         grade2:
+          description_audience: Dos 5 aos 18 anos
           lessons:
             Flappy:
               name: Flappy Bird
@@ -1354,6 +1352,10 @@ pt:
           lessons:
             Introduction:
               name: Introdução
+            Sprites:
+              name: Sprites
+            Input:
+              name: Introdução
         csd5-draft:
           lessons:
             new stage:
@@ -1391,6 +1393,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1415,6 +1419,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1422,7 +1428,7 @@ pt:
             Functions:
               name: Funções
             'null':
-              name: 'nulo'
+              name: nulo
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1463,8 +1469,6 @@ pt:
           title: Curso D
           assignment_family_title: Curso D
           lessons:
-            'Algorithms: Graph Paper Programming':
-              description_teacher: Através da programação para desenhar as figuras, os alunos vão começar a entender o que de fato é programar. A aula vai começar com alunos dando instruções uns aos outros para colorir os quadrados em um papel quadriculado na tentativa de reproduzir uma figura existente. Se houver tempo, a aula pode ser concluída com imagens que os próprios alunos criaram.
             Nested Loops:
               name: Laços aninhados
         coursee-2017:
@@ -1488,8 +1492,6 @@ pt:
               name: Diversão com laços for
             Songwriting with Parameters:
               name: Composição de música com parâmetros
-            'Functions: Songwriting':
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Building a Foundation:
               name: Criar uma base
             Nested Loops:
@@ -1617,7 +1619,6 @@ pt:
             new stage:
               name: nova fase
         csp3-research-mxghyt:
-          description_short: Programação
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -1805,7 +1806,6 @@ pt:
             For Loops:
               name: Ciclos "for"
         csd3-1819draft:
-          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1816,6 +1816,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1827,7 +1829,6 @@ pt:
             new stage:
               name: nova fase
         csd3-2018:
-          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -1838,6 +1839,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -1884,8 +1887,6 @@ pt:
               name: Pulseiras binárias
             'Unplugged: Binary':
               name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -1920,8 +1921,6 @@ pt:
               name: Cidadania digital
             'Unplugged: Binary':
               name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
             Graph Paper Programming:
               name: Programação de papel milimetrico
             Relay Programming:
@@ -1943,7 +1942,7 @@ pt:
               display_name: Inquérito
           lessons:
             Functions with Parameters_:
-              name: Funções com parâmetros
+              name: Funções com parâmetros\_
             Functions with Parameters:
               name: Funções com parâmetros
         coursee-2018:
@@ -1964,7 +1963,6 @@ pt:
               name: Introdução
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: A Internet
             Crowdsourcing:
@@ -2046,7 +2044,6 @@ pt:
             Text Compression:
               name: Compressão de Texto
         csp3-2018:
-          description_short: Programação
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -2212,7 +2209,6 @@ pt:
             Artist:
               name: Artista
         dance:
-          title: Festa da Dança
           lessons:
             new stage:
               name: nova fase
@@ -2241,6 +2237,7 @@ pt:
             csp_project:
               display_name: Projecto
         coursef-2019:
+          title: Curso F (2019)
           lesson_groups:
             csf_variables:
               display_name: Variáveis
@@ -2248,6 +2245,8 @@ pt:
               display_name: Ciclos "for"
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -2272,6 +2271,7 @@ pt:
             Dance Party:
               name: Festa da Dança
         coursed-2019:
+          title: Curso D (2019)
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -2296,12 +2296,13 @@ pt:
               name: Cidadania digital
             'Unplugged: Binary':
               name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
             Dance Party:
               name: Festa da Dança
         coursee-2019:
+          title: Curso E (2019)
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -2317,7 +2318,6 @@ pt:
               name: Condicionais com cartas
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Internet:
               name: Internet
             Crowdsourcing:
@@ -2329,6 +2329,7 @@ pt:
             Songwriting:
               name: Composição
         express-2019:
+          title: Curso Expresso (2019)
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -2344,6 +2345,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Relay Programming:
               name: Programação por revezamento
@@ -2383,8 +2386,9 @@ pt:
             new stage:
               name: nova fase
             'null':
-              name: 'nulo'
+              name: nulo
         coursec-2019:
+          title: Curso C (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2410,6 +2414,7 @@ pt:
             cspSurvey:
               display_name: Inquérito
         coursea-2019:
+          title: Curso A (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2425,6 +2430,7 @@ pt:
             Going Places Safely:
               name: Ir a Locais de um modo Seguro
         courseb-2019:
+          title: Curso B (2019)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -2472,7 +2478,6 @@ pt:
             Lists:
               name: Listas
         csd3-2019:
-          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -2483,6 +2488,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -2550,7 +2557,6 @@ pt:
             Text Compression:
               name: Compressão de Texto
         csp3-2019:
-          description_short: Programação
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
@@ -2605,6 +2611,9 @@ pt:
             new stage:
               name: nova fase
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Crowdsourcing:
               name: Aberto ao público
@@ -2652,7 +2661,7 @@ pt:
             csp_project:
               display_name: Projecto
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2666,12 +2675,12 @@ pt:
         csp7-pilot-staging:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
           lessons:
             new stage:
               name: nova fase
             Libraries:
-              name: Bibliotecas 
+              name: Bibliotecas
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2683,6 +2692,7 @@ pt:
             csp_project:
               display_name: Projecto
         csp9-pilot-staging:
+          title: 'Unidade 9: Dados'
           lesson_groups:
             csp_variables:
               display_name: Variáveis
@@ -2755,7 +2765,6 @@ pt:
             Lists:
               name: Listas
         csd3-pilot:
-          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -2766,6 +2775,8 @@ pt:
           lessons:
             Variables:
               name: Variáveis
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Condicionais
             Velocity:
@@ -2778,6 +2789,8 @@ pt:
               name: Números Aleatórios
         maddie-test:
           lessons:
+            stage 1:
+              name: 1.ª ETAPA
             new stage:
               name: nova fase
         csp3-pilot:
@@ -2786,6 +2799,9 @@ pt:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          lessons:
+            Debugging:
+              name: Depuração
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -2815,6 +2831,11 @@ pt:
               display_name: Visão geral
             content:
               display_name: Conteúdo
+          lessons:
+            Step 1:
+              name: Passo 1
+            Step 2:
+              name: Passo 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -2962,6 +2983,8 @@ pt:
               display_name: Condicionais
             csf_events:
               display_name: Eventos
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -2979,6 +3002,8 @@ pt:
               display_name: Condicionais
             csf_events:
               display_name: Eventos
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
           lessons:
@@ -2989,7 +3014,7 @@ pt:
         csp7-pilot:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
             required:
               display_name: Visão geral
         csp8-pilot:
@@ -3021,7 +3046,7 @@ pt:
         csp7-2020:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
             cspSurvey2020:
               display_name: Inquérito Pós-Curso
         csp9-pilot:
@@ -3056,7 +3081,6 @@ pt:
             Functions with Parameters:
               name: Funções com parâmetros
         csd3-2020:
-          description_short: "Programação"
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Animações'
@@ -3079,7 +3103,10 @@ pt:
               name: Funções
             Text:
               name: Texto
+            Sprites:
+              name: Sprites
         coursea-2020:
+          title: Curso A (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3095,6 +3122,7 @@ pt:
             'Programming: Happy Maps':
               name: Mapas felizes
         courseb-2020:
+          title: Curso B (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3112,6 +3140,7 @@ pt:
             'Loops: Getting Loopy':
               name: Repetindo
         coursec-2020:
+          title: Curso C (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3131,6 +3160,7 @@ pt:
             'Events: The Big Event':
               name: O Grande Evento
         coursed-2020:
+          title: Curso D (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -3153,14 +3183,15 @@ pt:
               name: Condicionais com cartas
             'Unplugged: Binary':
               name: Imagens binárias
-            Artist Binary:
-              name: 'Artista: binário'
             Digital Citizenship:
               name: Cidadania digital
             Dance Party:
               name: Festa da Dança
         coursee-2020:
+          title: Curso E (2020)
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3172,10 +3203,10 @@ pt:
               name: O Rei Manda
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
             Digital Sharing:
               name: Partilha Digital
         coursef-2020:
+          title: Curso F (2020)
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -3183,6 +3214,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Envelope Variables:
               name: Variáveis do envelope
@@ -3195,6 +3228,7 @@ pt:
             Digital Sharing:
               name: Partilha Digital
         express-2020:
+          title: Curso Expresso (2020)
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -3210,6 +3244,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
           lessons:
             Dance Party:
               name: Festa da Dança
@@ -3253,6 +3289,8 @@ pt:
           lessons:
             new stage:
               name: nova fase
+            Debugging:
+              name: Depuração
         csp6-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3266,6 +3304,8 @@ pt:
               name: nova fase
         csp9-2020:
           lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
             cspSurvey2020:
               display_name: Inquérito Pós-Curso
           lessons:
@@ -3285,7 +3325,6 @@ pt:
             new stage:
               name: nova fase
         csp3-virtual:
-          description_short: Programação
           lessons:
             Creating Functions:
               name: Criando funções
@@ -3295,6 +3334,8 @@ pt:
               name: nova fase
             Tools:
               name: Ferramentas
+            Debugging:
+              name: Depuração
         csp5-virtual:
           lessons:
             While Loops:
@@ -3348,11 +3389,13 @@ pt:
             k5_next_steps_1:
               display_name: Próximos Passos
         dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: lição 2
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
         csd3-virtual:
-          description_short: "Programação"
           lessons:
             Shapes and Parameters:
               name: Formas e Parâmetros
@@ -3360,6 +3403,8 @@ pt:
               name: Variáveis
             Random Numbers:
               name: Números Aleatórios
+            Sprites:
+              name: Sprites
             Text:
               name: Texto
             Conditionals:
@@ -3415,18 +3460,14 @@ pt:
               name: Curso F
             csf:
               name: Fundamentos
-        ml-playground:
-          lessons:
-            lesson14:
-              name: Lição 14
-            lesson15:
-              name: Lição 15
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Introdução
             lessonGroup-3:
               display_name: Variáveis
+            debugging:
+              display_name: Depuração
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3440,7 +3481,6 @@ pt:
             cspSurvey:
               display_name: Inquérito
         csd3-2021:
-          description_short: "Programação"
           lessons:
             Shapes and Parameters:
               key: Formas e Parâmetros
@@ -3451,6 +3491,9 @@ pt:
             Random Numbers:
               key: Números Aleatórios
               name: Números Aleatórios
+            Sprites:
+              key: Sprites
+              name: Sprites
             Text:
               key: Texto
               name: Texto
@@ -3500,6 +3543,13 @@ pt:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A Internet'
+            lessonGroup-2:
+              display_name: Inquérito
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Depuração
+              name: Depuração
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3521,7 +3571,11 @@ pt:
         csp7-2021:
           lesson_groups:
             csp_libraries:
-              display_name: Bibliotecas 
+              display_name: Bibliotecas
+        csp9-2021:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Unidade 9: Dados'
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
@@ -3579,6 +3633,7 @@ pt:
             csf_events:
               display_name: Eventos
         coursed-2021:
+          title: Curso D (2021)
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação de papel milimetrico
@@ -3596,7 +3651,6 @@ pt:
               name: Imagens binárias
             Artist Binary:
               key: 'Artista: binário'
-              name: 'Artista: binário'
           lesson_groups:
             csf_sequencing:
               display_name: Sequenciação
@@ -3623,10 +3677,12 @@ pt:
               name: Partilha Digital
             'Functions: Songwriting':
               name: Composição
-              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.
           lesson_groups:
             ramp_up:
               display_name: Laços aninhados
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3645,6 +3701,8 @@ pt:
               key: Diversão com laços for
               name: Diversão com laços for
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
@@ -3677,6 +3735,8 @@ pt:
               display_name: Variáveis
             csf_for_loops:
               display_name: Ciclos "for"
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Eventos
         pre-express-2021:
@@ -3693,6 +3753,8 @@ pt:
               display_name: Introdução
             lessonGroup-3:
               display_name: Variáveis
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: Variáveis
         csd4-preview-2021:
@@ -3705,14 +3767,8 @@ pt:
           lesson_groups:
             cspSurvey:
               display_name: Inquérito
-        ai-unit-pilot:
-          lessons:
-            lesson14:
-              name: Lição 14
-            lesson15:
-              name: Lição 15
-            lesson17:
-              name: Lição 15
+        contagion-pilot:
+          description_audience: Notas 5
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3723,10 +3779,20 @@ pt:
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introdução
             Sequencing:
               key: Sequenciação
               name: Sequenciação
@@ -3751,18 +3817,12 @@ pt:
           lesson_groups:
             k5_getting_started_1:
               display_name: Introdução
-            k5_next_steps_1:
-              display_name: Próximos Passos
             Introduction:
               display_name: Introdução
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Inquérito
-        aiml-2021:
-          lessons:
-            lesson15:
-              name: Lição 15
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -3771,3 +3831,37 @@ pt:
             Next Steps:
               key: Próximos Passos
               name: Próximos Passos
+        self-paced-pl-csd3-2021:
+          lessons:
+            lesson-2:
+              name: Ferramentas
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: 'Unidade 2: Desenvolvimento da Web'
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Recursos
+            lessonGroup-2:
+              display_name: Unidade 1
+            lessonGroup-4:
+              display_name: Unidade 2
+            lessonGroup-5:
+              display_name: Unidade 3
+            lessonGroup-6:
+              display_name: Unidade 4
+            lessonGroup-7:
+              display_name: Unidade 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

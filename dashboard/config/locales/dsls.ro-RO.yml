@@ -1020,96 +1020,29 @@ ro-RO:
           Mai Încet\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n
           \n"
       Dance_Party_extras_intro_2019:
-        markdown: |
-          "# Continuă să dansezi!
-
-          În partea a 2-a, vei crea propriul proiect. Aici nu sunt puzzle-uri - avem aici un mănunchi de proiecte care prezintă diferite metode prin care petrecerile dansante pot deveni mai complexe.
-
-          Poți parcurge aceste niveluri _în orice ordine_. Mergi încoace și încolo pentru a vedea cum s-a făcut ceva la un nivel anterior sau combină conceptele din mai multe proiecte. Încearcă-le pe toate, alege-ți favoritul și petrece-ți timpul îmbunătățind proiectul respectiv pentru a-l face să fie special.
-
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Continuă</a>
-
-          <div class=""clearfix""></div>
-
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""2"">
-          <h2>
-          Înainte și înapoi
-          </h2>
-
-          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""3"">
-          <h2>
-          Mai multe butoane
-          </h2>
-
-          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
-
-          </div>
-          <div style=""float: left; margin: 10px"">
-          <a href=""4"">
-          <h2>
-          Intră în formație
-          </h2>
-
-          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""5"">
-          <h2>
-          Unde au dispărut?
-          </h2>
-
-          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""6"">
-          <h2>
-          Echipe de dans
-          </h2>
-
-          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""7"">
-          <h2>
-          Pătrimi
-          </h2>
-
-          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""8"">
-          <h2>
-          Joase, medii, înalte
-          </h2>
-
-          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
-
-          </div>
-
-          <div style=""float: left; margin: 10px"">
-          <a href=""9"">
-          <h2>
-          Mărește viteza, Micșorează viteza
-          </h2>
-
-          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
-
-          </div>"
+        markdown: '„# Continuă să dansezi!În partea a doua vei crea propriul proiect.
+          Aici nu ne jucăm cu puzzle-uri, ci cu proiecte care îți prezintă diferite
+          metode prin care petrecerile dansante pot deveni mai complexe.Poți parcurge
+          aceste niveluri _în orice ordine_. Mergi încoace și încolo pentru a vedea
+          cum s-a făcut ceva la un nivel anterior sau combină conceptele din mai multe
+          proiecte. Încearcă-le pe toate, alege-ți favoritul și petrece-ți timpul
+          îmbunătățind proiectul respectiv pentru a-l face să fie special.<a class=""btn
+          btn-large btn-primary next-stage submitButton pull-right"">Continuă</a><div
+          class=""clearfix""></div><div style=""float: left; margin: 10px""><a href=""2""><h2>Înainte
+          și înapoi</h2><img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""3""><h2>Mai multe butoane</h2><img
+          src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""4""><h2>Intră în formație</h2><img
+          src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""5""><h2>Unde au dispărut?</h2><img
+          src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""6""><h2>Grupuri de dansatori</h2><img
+          src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""7""><h2>Pătrimi</h2><img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""8""><h2>Note joase, medii
+          și înalte</h2><img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a></div><div
+          style=""float: left; margin: 10px""><a href=""9""><h2>Mărește viteza, Micșorează
+          viteza</h2><img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a></div>"'
       Internet Simulator Setup:
         content1: descrierea aici
       Internet Simulator Setup 2:
@@ -2626,3 +2559,344 @@ ro-RO:
         display_name: Proiect de final de curs
       courseF_EOC_2020:
         display_name: Proiect de final de curs
+      CourseF_outbreak_story:
+        content1: descrierea aici
+      CourseF_outbreak_story2:
+        content1: descrierea aici
+        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
+          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
+          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
+          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
+          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
+          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
+          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
+          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
+          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
+          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
+          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
+          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
+          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
+          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
+          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
+          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
+          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
+          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
+          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
+          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
+          termini această activitate, discută aceste întrebări cu profesorii sau familia
+          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
+          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
+          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
+          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
+          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
+          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
+          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
+          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
+      OPD-K5 CS Courses_dani:
+        markdown: "# Planificare > Cum să începeți pe Code.org## Pasul 1: Alegeți
+          un cursToate cursurile noastre – de la preșcolari la elevi de liceu – sunt
+          incluse în **[catalogul cursurilor](https://studio.code.org/courses)**.
+          Pentru a identifica lecțiile pentru Noțiuni de bază de știința calculatoarelor
+          cu care ați exersat, accesați **[pagina pentru școala elementară](https://code.org/educate/curriculum/elementary-school)**
+          și derulați până la secțiunea „Cursuri”. Toate cursurile noastre sunt puse
+          la dispoziție cu titlu gratuit. Discutați cu colegii din școala dvs. pentru
+          a stabili modul în care programa de curs poate fi integrată în diverse discipline.![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)***##
+          Pasul 2: Configurați secțiunea atribuită clasei dvs.Configurați secțiunea
+          atribuită clasei dvs. în așa fel încât să puteți vizualiza progresele elevilor
+          dvs., să imprimați carduri de autentificare pentru elevi, să le gestionați
+          conturile și să imprimați certificate pe care le pot lua acasă când termină
+          cursul. Faceți clic pe acest link pentru a **[vizualiza un scurt clip video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          în care se demonstrează cum puteți să configurați prima oră de știința calculatoarelor
+          pe Code.org. De asemenea, puteți găsi pașii în **[acest articol de asistență](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)***##
+          Pasul 3: Alocați cursul secțiunii dvs.Faceți clic pe cursul pe care îl predați
+          – ar trebui să vedeți un ecran care seamănă cu cel de mai jos. Puteți face
+          clic apoi pe „Alocare curs” și să alocați cursul respectiv uneia dintre
+          secțiunile dvs. ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)***##
+          Pasul 4: Începeți să predați! Aveți nevoie de o singură lecție pentru a
+          prezenta concepte de știința calculatoarelor în sala de clasă. După ce veți
+          vedea cât de entuziasmați sunt elevii dvs. cu privire la știința calculatoarelor,
+          continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
+          offline pe care le puteți desfășura fără să aveți nevoie de un computer
+          și cu forumurile pentru a lua legătura cu alți profesori."
+      OPD-K5 Stage3aGo_dani:
+        content1: descrierea aici
+      courseAB_EOC_2021:
+        display_name: Proiect de final de curs
+      courseB_EOC_2021:
+        display_name: Proiect de final de curs
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - text: '20'
+          correct: true
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_EOC_2021:
+        display_name: Proiect de final de curs
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '10'
+          correct: true
+        - text: '12'
+          correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_EOC_2021:
+        display_name: Proiect de final de curs
+      courseE_EOC_examples_2021:
+        display_name: Proiect de final de curs
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_EOC_2021:
+        display_name: Proiect de final de curs
+      courseF_EOC_examples_2021:
+        display_name: Proiect de final de curs
+      courseF_EOC_samples_2021:
+        display_name: Proiect de final de curs
+      courseF_events_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: descrierea aici
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: descrierea aici
+      csf_password_power-up_2021:
+        content1: descrierea aici
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: descrierea aici
+      express_EOC_2021:
+        display_name: Proiect de final de curs
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
