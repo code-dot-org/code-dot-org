@@ -73,6 +73,7 @@ class CommentOptions extends Component {
   }
 }
 
+export const UnconnectedCommentOptions = CommentOptions;
 export default connect(state => ({viewAs: state.viewAs}))(
   Radium(CommentOptions)
 );

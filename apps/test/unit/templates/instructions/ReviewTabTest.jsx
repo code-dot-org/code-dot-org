@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {Factory} from 'rosie';
 import './codeReview/CodeReviewTestHelper';
-import ReviewTab from '@cdo/apps/templates/instructions/ReviewTab';
+import {UnconnectedReviewTab as ReviewTab} from '@cdo/apps/templates/instructions/ReviewTab';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import {
   getStore,
@@ -40,7 +40,7 @@ describe('Code Review Tab', () => {
       })
     );
 
-    wrapper = shallow(<ReviewTab />);
+    wrapper = shallow(<ReviewTab viewAsCodeReviewer={false} />);
   });
 
   afterEach(() => {

@@ -7,17 +7,25 @@ import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
 const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
+const DEFAULT_PROPS = {
+  comment: DEFAULT_COMMENT,
+  onResolveStateToggle: () => {},
+  onDelete: () => {},
+  viewAsCodeReviewer: false
+};
 
 describe('Code Review Comment', () => {
-  const renderWrapper = (overrideProps = {}) => {
-    const combinedComment = {...DEFAULT_COMMENT, ...overrideProps};
-    return shallow(
-      <Comment
-        comment={combinedComment}
-        onResolveStateToggle={() => {}}
-        onDelete={() => {}}
-      />
-    );
+  const renderWrapper = (
+    overrideCommentAttributes = {},
+    overrideProps = {}
+  ) => {
+    const combinedComment = {...DEFAULT_COMMENT, ...overrideCommentAttributes};
+    const combinedProps = {
+      ...DEFAULT_PROPS,
+      ...overrideProps,
+      ...{comment: combinedComment}
+    };
+    return shallow(<Comment {...combinedProps} />);
   };
 
   const renderAndCheckBackgroundColor = (
@@ -52,8 +60,19 @@ describe('Code Review Comment', () => {
       isFromOlderVersionOfProject: true
     });
   });
+
   it('displays green check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
     expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
+  });
+
+  it('shows ellipsis and comment options when viewing not as code reviewer', () => {
+    const wrapper = renderWrapper();
+    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
+  });
+
+  it('hides ellipsis when viewing as code reviewer', () => {
+    const wrapper = renderWrapper({}, {viewAsCodeReviewer: true});
+    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(0);
   });
 });

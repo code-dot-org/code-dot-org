@@ -114,6 +114,7 @@ class ReviewTab extends Component {
   }
 }
 
+export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing
 }))(ReviewTab);
