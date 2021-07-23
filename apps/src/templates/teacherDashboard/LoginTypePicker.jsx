@@ -71,7 +71,7 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {providers, setLoginType, handleCancel, disabled} = this.props;
+    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
