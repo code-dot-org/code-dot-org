@@ -636,9 +636,7 @@ describe('entry tests', () => {
     'sprite_management/sprite_upload':
       './src/sites/studio/pages/sprite_management/sprite_upload.js',
     'sprite_management/sprite_management_directory':
-      './src/sites/studio/pages/sprite_management/sprite_management_directory.js',
-    'sprite_management/default_sprites_editor':
-      './src/sites/studio/pages/sprite_management/default_sprites_editor.js'
+      './src/sites/studio/pages/sprite_management/sprite_management_directory.js'
   };
 
   var pegasusEntries = {
