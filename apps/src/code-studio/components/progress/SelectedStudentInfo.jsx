@@ -164,6 +164,7 @@ const styles = {
     flexDirection: 'row'
   },
   studentInfo: {
+    minHeight: 80,
     width: 150,
     textAlign: 'center',
     display: 'flex',

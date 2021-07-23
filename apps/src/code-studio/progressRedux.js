@@ -676,24 +676,6 @@ export const levelsForLessonId = (state, lessonId) => {
   );
 };
 
-// export const getCurrentLevelWithProgress = state => {
-//   if (
-//     !state.currentLessonId ||
-//     !state.currentLevelId ||
-//     state.currentLevelId < 0
-//   ) {
-//     return null;
-//   }
-
-//   const lesson = state.lessons.find(
-//     lesson => lesson.id === state.currentLessonId
-//   );
-//   const level = lesson.levels.find(level =>
-//     level.ids.includes(state.currentLevelId)
-//   );
-//   return levelWithProgress(state, level, lesson.lockable);
-// };
-
 export const lessonExtrasUrl = (state, lessonId) =>
   state.lessonExtrasEnabled
     ? state.lessons.find(lesson => lesson.id === lessonId)
