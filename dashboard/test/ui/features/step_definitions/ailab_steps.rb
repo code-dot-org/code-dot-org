@@ -7,6 +7,6 @@ end
 
 Then /^I see the dynamic instructions are showing "((?:[^"\\]|\\.)*)" key$/ do |selector|
   steps %{
-    And element ".#{selector}" has one of css properties "opacity" equal to "1"
+    And element ".uitest-dynamic-instruction-#{selector}" has one of css properties "opacity" equal to "1"
   }
 end
