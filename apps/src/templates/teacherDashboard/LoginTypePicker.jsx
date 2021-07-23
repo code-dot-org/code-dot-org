@@ -5,48 +5,16 @@
  * external service like Microsoft Classroom or Clever.
  */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
+import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
-
-const style = {
-  root: {
-    width: styleConstants['content-width'],
-    height: '80vh',
-    left: 20,
-    right: 20
-  },
-  scroll: {
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    height: 'calc(80vh - 200px)'
-  },
-  thirdPartyProviderUpsell: {
-    marginBottom: '10px'
-  },
-  footer: {
-    position: 'absolute',
-    width: styleConstants['content-width'],
-    height: '100px',
-    left: 0,
-    bottom: '-65px',
-    padding: '0px 20px 20px 20px',
-    backgroundColor: '#fff',
-    borderRadius: '5px'
-  },
-  emailPolicyNote: {
-    marginBottom: '20px',
-    paddingTop: '20px',
-    borderTop: '1px solid #000'
-  }
-};
 
 /**
  * UI for selecting the login type of a class section:
@@ -63,13 +31,11 @@ class LoginTypePicker extends Component {
     // Provided by Redux
     providers: PropTypes.arrayOf(PropTypes.string)
   };
-
   openImportDialog = provider => {
     this.props.setRosterProvider(provider);
     this.props.handleCancel(); // close this dialog
     this.props.handleImportOpen(); // open the roster dialog
   };
-
   render() {
     const {title, providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle =
@@ -79,15 +45,25 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    // Adjust max height of the scrolling body of the dialog based on number of
-    // LoginCard types available to the user.
-    style.root.maxHeight = hasThirdParty ? '500px' : '360px';
+
+    // explicitly constrain the container as a whole to the width of the
+    // content. We expect that differing length of translations versus english
+    // source text can cause unexpected layout changes, and this constraint
+    // should help mitigate some of them.
+    const containerStyle = {maxWidth: styleConstants['content-width']};
+
+    // anchor email address policy note to footer just above 'Cancel' button
+    const emailPolicyNoteStyle = {
+      position: 'absolute',
+      top: '0px',
+      zIndex: '600'
+    };
 
     return (
-      <div style={style.root}>
-        <Heading1>{i18n.newSectionUpdated()}</Heading1>
+      <div style={containerStyle}>
+        <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
-        <div style={style.scroll}>
+        <div>
           <CardContainer>
             {withGoogle && (
               <GoogleClassroomCard onClick={this.openImportDialog} />
@@ -100,18 +76,18 @@ class LoginTypePicker extends Component {
             <WordLoginCard onClick={setLoginType} />
             <EmailLoginCard onClick={setLoginType} />
           </CardContainer>
-          {!hasThirdParty && (
-            <div>
-              {i18n.thirdPartyProviderUpsell() + ' '}
-              <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
-                {i18n.learnHow()}
-              </a>
-              {' ' + i18n.connectAccountThirdPartyProviders()}
-            </div>
-          )}
         </div>
-        <div style={style.footer}>
-          <div style={style.emailPolicyNote}>
+        {!hasThirdParty && (
+          <div>
+            {i18n.thirdPartyProviderUpsell() + ' '}
+            <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
+              {i18n.learnHow()}
+            </a>
+            {' ' + i18n.connectAccountThirdPartyProviders()}
+          </div>
+        )}
+        <DialogFooter>
+          <div style={emailPolicyNoteStyle}>
             <b>{i18n.note()}</b>
             {' ' + i18n.emailAddressPolicy() + ' '}
             <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
@@ -126,7 +102,7 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
-        </div>
+        </DialogFooter>
       </div>
     );
   }
@@ -135,7 +111,6 @@ export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
   providers: state.teacherSections.providers
 }))(LoginTypePicker);
-
 const PictureLoginCard = props => (
   <LoginTypeCard
     className="uitest-pictureLogin"
@@ -149,7 +124,6 @@ PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool
 };
-
 const WordLoginCard = props => (
   <LoginTypeCard
     className="uitest-wordLogin"
@@ -160,7 +134,6 @@ const WordLoginCard = props => (
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
-
 const EmailLoginCard = props => (
   <LoginTypeCard
     className="uitest-emailLogin"
@@ -171,7 +144,6 @@ const EmailLoginCard = props => (
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
-
 const GoogleClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
@@ -180,7 +152,6 @@ const GoogleClassroomCard = props => (
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
-
 const MicrosoftClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
@@ -189,7 +160,6 @@ const MicrosoftClassroomCard = props => (
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
-
 const CleverCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
