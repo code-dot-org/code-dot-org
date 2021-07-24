@@ -257,10 +257,13 @@ class I18nScriptUtils
     base = Pathname.new(level_content_directory)
     relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
     relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+    script_name = script_i18n_name.split('.')[0]
+    error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
     Honeybadger.notify(
       error_class: 'Destination directory for script is attempting to change',
-      error_message: "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+      error_message: error_message
     )
+    puts error_message
     return true
   end
 end
