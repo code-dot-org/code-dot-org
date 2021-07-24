@@ -115,7 +115,7 @@ class LevelDslTest < ActiveSupport::TestCase
     DSL
     level = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl})
 
-    level_modified = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl_without_content})
+    level_modified = Multi.create_from_level_builder({}, {name: 'my_multi', dsl_text: input_dsl_without_content}, 'my_multi')
 
     assert_equal 'content1', level.properties['content1']
     assert_nil level_modified.properties['content1']
