@@ -1101,7 +1101,7 @@ Given(/^I create a temp multi level$/) do
   @temp_level_name = "temp-level-#{Time.now.to_i}-#{rand(1_000_000)}"
   steps "And I am on \"http://studio.code.org/levels/new?type=Multi\""
   steps 'And I enter temp level multi dsl text'
-  steps 'And I scroll to "input[type=\'submit\']"'
+  steps 'And I scroll to ".footer"'
   steps 'And I click "input[type=\'submit\']" to load a new page'
   @temp_level_id = @browser.current_url.split('/')[-2]
   puts "created temp level with id #{@temp_level_id}"
