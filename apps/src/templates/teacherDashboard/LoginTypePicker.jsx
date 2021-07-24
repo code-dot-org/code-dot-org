@@ -89,16 +89,16 @@ class LoginTypePicker extends Component {
             <PictureLoginCard onClick={setLoginType} />
             <WordLoginCard onClick={setLoginType} />
             <EmailLoginCard onClick={setLoginType} />
-            {!hasThirdParty && (
-              <div>
-                {i18n.thirdPartyProviderUpsell() + ' '}
-                <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
-                  {i18n.learnHow()}
-                </a>
-                {' ' + i18n.connectAccountThirdPartyProviders()}
-              </div>
-            )}
           </CardContainer>
+          {!hasThirdParty && (
+            <div>
+              {i18n.thirdPartyProviderUpsell() + ' '}
+              <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
+                {i18n.learnHow()}
+              </a>
+              {' ' + i18n.connectAccountThirdPartyProviders()}
+            </div>
+          )}
         </div>
         <div style={style.footer}>
           <div style={style.emailPolicyNote}>
