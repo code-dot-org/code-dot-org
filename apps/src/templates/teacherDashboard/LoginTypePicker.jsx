@@ -18,32 +18,32 @@ import styleConstants from '../../styleConstants';
 const style = {
   root: {
     width: styleConstants['content-width'],
-    // height: '80vh',
-    // left: 20,
-    // right: 20
+    height: '80vh',
+    left: 20,
+    right: 20
   },
   scroll: {
-    // overflowX: 'hidden',
-    // overflowY: 'auto',
-    // height: 'calc(80vh - 200px)'
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    height: 'calc(80vh - 200px)'
   },
   thirdPartyProviderUpsell: {
-    // marginBottom: '10px'
+    marginBottom: '10px'
   },
   footer: {
-    // position: 'absolute',
-    // width: styleConstants['content-width'],
-    // height: '100px',
-    // left: 0,
-    // bottom: '-65px',
-    // padding: '0px 20px 20px 20px',
-    // backgroundColor: '#fff',
-    // borderRadius: '5px'
+    position: 'absolute',
+    width: styleConstants['content-width'],
+    height: '100px',
+    left: 0,
+    bottom: '-65px',
+    padding: '0px 20px 20px 20px',
+    backgroundColor: '#fff',
+    borderRadius: '5px'
   },
   emailPolicyNote: {
-    // marginBottom: '20px',
-    // paddingTop: '20px',
-    // borderTop: '1px solid #000'
+    marginBottom: '20px',
+    paddingTop: '20px',
+    borderTop: '1px solid #000'
   }
 };
 
