@@ -355,5 +355,3 @@ pt:
       timeforcs_demo_conditionals:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um ponto", e "se eu comprar uma carta preta, você ganha um ponto".
-      TheRightApp_2019:
-        desc: "* Toda a gente usa computador nestes dias, especialmente smartphones. \\r\n* As aplicações para smartphones, ou \"apps\", ajudam as pessoas a fazer chamadas para amigos, ouvir música, fazer compras, ou simplesmente explorar a internet. \\r\n* É importante para os programadores perceber as necessidades dos outros e desenhar apps com isso em mente!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

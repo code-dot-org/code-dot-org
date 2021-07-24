@@ -490,11 +490,23 @@ bg:
         title: Повтори програмирането
       courseB_unplugged_MRF_2019:
         title: Моите приятели роботи
+      BuildingAFoundation_2019:
+        title: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Условия
         desc: За да научат за условията, учениците играят на карти и трябва да създадат
           правила като "Ако изтеглиш червена карта, аз получавам точка" и "Ако изтеглиш
           черна карта, ще получиш точка."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'превод липсва: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'превод липсва: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'превод липсва: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Програмиране на милиметрова хартия
         desc: Учениците ще напишат алгоритъм (набор от инструкции) с помощта на предварително
@@ -512,6 +524,15 @@ bg:
           представена в различни варианти.  Този урок развива тази концепция с една
           стъпка напред, тъй като илюстрира как  компютърът може да съхранява още
           по-сложна информация (като изображения и цветове) с двоичен код.
+      SongwritingParameters_2019:
+        title: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'превод липсва: en-US.data.unplugged.Internet_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'превод липсва: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'превод липсва: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Да повтаряме
         desc: Този урок въвежда програмирането на повторения (повтаря указанията)

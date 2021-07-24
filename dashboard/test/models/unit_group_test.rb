@@ -393,6 +393,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit1)
     unit2 = create(:script, name: 'unit2')
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit2)
+    unit1.reload
+    unit2.reload
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -428,6 +430,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     unit_group.has_numbered_units = true
     unit_group.save!
+    unit_group.reload
 
     assert_equal 'Unit 1 - unit1-title', unit_group.summarize[:scripts].first[:title]
     assert_equal 'Unit 1 - unit1-title', unit1.summarize[:title]

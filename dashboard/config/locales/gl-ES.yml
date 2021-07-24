@@ -255,6 +255,7 @@ gl:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi agregado como o teu profesor"
     registered: Registrouse para %{section_name}.
+    already_exists: Xa te uniches ao grupo %{section_name}.
     error:
       signed_in: Antes de proseguires, pecha a sesión
       username_not_found: Nome de usuario %{username} non atopado
@@ -328,6 +329,7 @@ gl:
       about_contact: Póñase en contacto
       about_faqs: Preguntas frecuentes
       learn: Aprenda
+      stats: Ver estatísticas
       help_us: Axúdenos
       teach: Ensinar
       about: Sobre
@@ -423,6 +425,7 @@ gl:
       usar os servizos de Code.org incluso sen a supervisión dun profesor.
     update_email: Actualizar
     parent_guardian_email_label: Enderezo de correo electrónico da persoa responsable
+    remove_parent_email_label: Excluír
   user_level:
     completed: Concluído
     tried: Probado
@@ -628,6 +631,8 @@ gl:
       title: Minecraft
     unplugged_conditionals:
       title: Condicionais
+    widgets:
+      audience: A partir de 14 anos
   landing:
     report_bug: Comunicar erro
     support: Obter axuda
@@ -789,4 +794,5 @@ gl:
         opt_in_no: Non
   cookie_banner:
     accept: Acepto
+  page_not_found_title: Páxina non atopada
   copy: Copiar

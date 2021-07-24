@@ -338,6 +338,7 @@ it:
     added_teacher: "%{name} è stato aggiunto come tuo insegnante"
     registered: Ti sei iscritto alla classe %{section_name}.
     captcha_required: Compila il CAPTCHA per entrare in classe.
+    already_exists: Ti sei già iscritto alla classe %{section_name}.
     error:
       signed_in: Per favore esci prima di procedere
       username_not_found: Nome utente %{username} non trovato
@@ -1409,6 +1410,7 @@ it:
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
   copy: Copia
+  confirm: Confermare
   maker:
     google_oauth:
       login_with_google: Accedi all'App Maker con Google

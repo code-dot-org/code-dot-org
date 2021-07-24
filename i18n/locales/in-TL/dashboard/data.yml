@@ -620,6 +620,12 @@ in:
         csf_lots_of_sprites: 'crwdns2547482:0crwdne2547482:0'
         playlab_2021: crwdns2572172:0crwdne2572172:0
         playlab_2021_reader: crwdns2572174:0crwdne2572174:0
+        csp_defining_calling_functions: crwdns2590714:0crwdne2590714:0
+        csp_tutorial_datatab: crwdns2688464:0crwdne2688464:0
+        csp_tutorial_libraries: crwdns2688466:0crwdne2688466:0
+        PL-Video-21: crwdns2688468:0crwdne2688468:0
+        csp_tutorial_datavis1: crwdns2688592:0crwdne2688592:0
+        csp_tutorial_datavis2: crwdns2688594:0crwdne2688594:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

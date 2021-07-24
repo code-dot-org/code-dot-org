@@ -1,0 +1,95 @@
+{
+  "uz-UZ": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Harakatlar/O‘zini tutish"
+        },
+        "variable/coursef/2021": {
+          "word": "O‘zgaruvchi"
+        },
+        "input/coursef/2021": {
+          "word": "Kiritish"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Mashinalar o‘rganishi"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Aniqlash"
+        },
+        "debugging/courseb/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "drop/courseb/2021": {
+          "word": "Tashlash"
+        },
+        "debugging/coursea/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "drop/coursea/2021": {
+          "word": "Tashlash"
+        },
+        "debugging/coursec/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Sequencing"
+        },
+        "binary/coursec/2021": {
+          "word": "Binarli"
+        },
+        "debugging/coursed/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Shartli bayonotlar"
+        },
+        "debugging/express/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "sequencing/express/2021": {
+          "word": "Sequencing"
+        },
+        "behavior/express/2021": {
+          "word": "Harakatlar/O‘zini tutish"
+        },
+        "conditionals/express/2021": {
+          "word": "Shartli bayonotlar"
+        },
+        "function/express/2021": {
+          "word": "Funksiya"
+        },
+        "variable/express/2021": {
+          "word": "O‘zgaruvchi"
+        },
+        "define/express/2021": {
+          "word": "Aniqlash"
+        },
+        "drop/pre-express/2021": {
+          "word": "Tashlash"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)"
+        },
+        "behavior/coursee/2021": {
+          "word": "Harakatlar/O‘zini tutish"
+        },
+        "copyright/coursee/2021": {
+          "word": "Mualliflik huquqi"
+        },
+        "function/coursee/2021": {
+          "word": "Funksiya"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Shartli bayonotlar"
+        },
+        "define/coursee/2021": {
+          "word": "Aniqlash"
+        }
+      }
+    }
+  }
+}

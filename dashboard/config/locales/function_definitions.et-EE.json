@@ -567,6 +567,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "tee midagi"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "värv"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -999,7 +1004,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "suurus"
+              "size": "suurus",
+              "color": "värv"
             }
           },
           "do something": {
@@ -1025,7 +1031,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "suurus"
+              "size": "suurus",
+              "color": "värv"
             }
           },
           "do something": {
@@ -1064,7 +1071,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "suurus"
+              "size": "suurus",
+              "color": "värv"
             }
           },
           "black outline": {
@@ -1160,6 +1168,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "tee midagi"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "värv"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1360,6 +1373,623 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "lõpeta mäng"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "points": "punktid",
+              "length": "pikkus"
+            }
+          },
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "points": "punktid",
+              "length": "pikkus"
+            }
+          },
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "points": "punktid",
+              "length": "pikkus"
+            }
+          },
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          },
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binaarne"
+            }
           }
         }
       }

@@ -120,6 +120,40 @@
         },
         "frozen square iterative": {
           "frozen_create_square": "Додајте више блокова да направите квадрат"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Изабери тип плесача овде."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Додај овај блок у свој програм.",
+          "arrow_buttons": "Притисни тастер стрелице за контролу плесача."
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Неки блокови су већ постављени за почетак"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Притисни \"Изврши\" дугме да покренеш програм"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Понови команде постављањем блокова овде"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Ископај ово гвожђе!"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Кликни сијалицу када ти треба савет!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Ово је облачић"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
         }
       }
     }

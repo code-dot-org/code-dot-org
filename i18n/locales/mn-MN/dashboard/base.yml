@@ -260,6 +260,7 @@ mn:
     invite_sent: 'Урилга илгээлээ'
     added_teacher: '%{name} таныг багшаар нэмлээ'
     registered: "Та %{section_name}-д бүртгэгдлээ."
+    already_exists: 'Та аль хэдийнэ %{section_name} хэсэгт элссэн байна.'
     error:
       signed_in: 'Үргэлжлэхээс өмнө гарна уу'
       username_not_found: 'Нэвтрэх нэр %{username} олдсонгүй'

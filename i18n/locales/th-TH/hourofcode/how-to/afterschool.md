@@ -4,7 +4,7 @@ title: Hour of Code How-to Guide for After-school
 
 {{ signup_button }}
 
-# วิธีการสอน Hour of Code วันละ 1 ชั่วโมง ในช่วงหลังเลิกเรียน และ ในกลุ่มชมรม
+# จะสอนกิจกรรมชั่วโมงเขียนโค้ด 1 ชั่วโมงในช่วงหลังเลิกเรียนและภายในชมรมได้อย่างไร
 
 ### Join the movement and introduce your students to computer science with these steps.
 
