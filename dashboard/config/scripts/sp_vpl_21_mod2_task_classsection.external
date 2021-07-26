@@ -1,0 +1,15 @@
+name 'SP-VPL-21-mod2-Task-ClassSection'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Find a resource
+
+#### 1. Open a new tab and log into your teacher account on Code.org.
+#### 2. Click on the "Create a section" button in the classroom sections area of your "My Dashboard" page. 
+#### 3. Follow the prompts to create a class section. 
+
+
+
+
+MARKDOWN
