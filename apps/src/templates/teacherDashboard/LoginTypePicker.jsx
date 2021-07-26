@@ -16,6 +16,13 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 
 const style = {
+  container: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    maxHeight: '360px',
+    left: '20px',
+    right: '20px'
+  },
   scroll: {
     overflowX: 'hidden',
     overflowY: 'auto',
@@ -74,24 +81,24 @@ class LoginTypePicker extends Component {
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
     // Set style of LoginTypePicker container and adjust max height of the scrolling
     // body of the dialog based on number of LoginCard types available to the user.
-    const loginTypePickerContainerStyle = hasThirdParty
-      ? {
-          width: styleConstants['content-width'],
-          height: '80vh',
-          maxHeight: '500px',
-          left: '20px',
-          right: '20px'
-        }
-      : {
-          width: styleConstants['content-width'],
-          height: '80vh',
-          maxHeight: '360px',
-          left: '20px',
-          right: '20px'
-        };
+    // const loginTypePickerContainerStyle = hasThirdParty
+    //   ? {
+    //       width: styleConstants['content-width'],
+    //       height: '80vh',
+    //       maxHeight: '500px',
+    //       left: '20px',
+    //       right: '20px'
+    //     }
+    //   : {
+    //       width: styleConstants['content-width'],
+    //       height: '80vh',
+    //       maxHeight: '360px',
+    //       left: '20px',
+    //       right: '20px'
+    //     };
 
     return (
-      <div style={loginTypePickerContainerStyle}>
+      <div style={style.container}>
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
         <div style={style.scroll}>
