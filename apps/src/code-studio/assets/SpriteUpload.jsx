@@ -46,7 +46,7 @@ export default class SpriteUpload extends React.Component {
 
     switch (spriteAvailability) {
       case SpriteLocation.level:
-        destination = `/level-animations/${filename}`;
+        destination = `/level_animations/${filename}`;
         break;
       case SpriteLocation.library:
         destination = `/spritelab/category_${category}/${filename}`;

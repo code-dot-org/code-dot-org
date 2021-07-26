@@ -1,0 +1,74 @@
+{
+  "sq-AL": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Sjellja"
+        },
+        "variable/coursef/2021": {
+          "word": "Variabël"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Përcakto"
+        },
+        "debugging/courseb/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursea/2021": {
+          "word": "Rregullimi"
+        },
+        "debugging/coursec/2021": {
+          "word": "Rregullimi"
+        },
+        "binary/coursec/2021": {
+          "word": "Binare"
+        },
+        "debugging/coursed/2021": {
+          "word": "Rregullimi"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Kushtet"
+        },
+        "debugging/express/2021": {
+          "word": "Rregullimi"
+        },
+        "behavior/express/2021": {
+          "word": "Sjellja"
+        },
+        "conditionals/express/2021": {
+          "word": "Kushtet"
+        },
+        "function/express/2021": {
+          "word": "Funksion"
+        },
+        "variable/express/2021": {
+          "word": "Variabël"
+        },
+        "define/express/2021": {
+          "word": "Përcakto"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Rregullimi"
+        },
+        "behavior/coursee/2021": {
+          "word": "Sjellja"
+        },
+        "copyright/coursee/2021": {
+          "word": "E drejta e autorit"
+        },
+        "function/coursee/2021": {
+          "word": "Funksion"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Kushtet"
+        },
+        "define/coursee/2021": {
+          "word": "Përcakto"
+        }
+      }
+    }
+  }
+}

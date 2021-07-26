@@ -240,6 +240,7 @@ lt:
       educate_inspire: "Įkvėpkite mokinius"
       educate_community: "Virtuali bendruomenė"
       educate_tools: "Įrankiai ir vaizdo įrašai"
+      stats: "Statistika"
       legal_privacy: "Privatumo politika"
       legal_tos: "Naudojimo taisyklės"
     user:
@@ -317,6 +318,7 @@ lt:
     delete_text_teacher_note: "Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus panaikintos."
     delete_confirm: 'Ar tikrai norite panaikinti savo paskyrą?'
     update_email: "Atnaujinti"
+    remove_parent_email_label: "Pašalinti"
     none: "Nė vienas"
   user_level:
     completed: 'Baigta'
@@ -492,6 +494,7 @@ lt:
     unplugged_conditionals:
       title: "Sąlyginiai sakiniai"
     widgets:
+      audience: "Amžius 14+"
       cta: "Sužinok, kaip"
   landing:
     report_bug: "Pranešti apie problemą"
@@ -670,4 +673,5 @@ lt:
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Sutinku'
+  page_not_found_title: "Puslapis nerastas"
   copy: 'Kopijuoti'

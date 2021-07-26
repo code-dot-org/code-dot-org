@@ -253,6 +253,7 @@ ka:
     invite_sent: მოწვევა გაგზავნილია
     added_teacher: "%{name} გიმატებთ, როგორც მასწავლებელს"
     registered: თქვენ დარეგისტრირდით სექციაში %{section_name}.
+    already_exists: თქვენ უკვე შეუერთდით სექციას %{section_name}.
     error:
       signed_in: თუ შეიძლება გაგრძელებამდე გამოდით თქვენი ანგარიშიდან
       username_not_found: მომხმარებლის სახელი %{username} არ მოიძებნა
@@ -470,6 +471,7 @@ ka:
     account_successfully_updated: ანგარიში წარმატებით განახლდა.
     update_email: განახლება
     parent_guardian_email_label: მშობლის/მეურვის ელფოსტა
+    remove_parent_email_label: წაშლა
     none: არცერთი
   user_level:
     completed: დასრულებულია
@@ -1147,4 +1149,5 @@ ka:
   courses_category: ყველა კურსი
   cookie_banner:
     accept: ვეთანხმები
+  page_not_found_title: გვერდი არ მოიძებნა
   copy: კოპირება

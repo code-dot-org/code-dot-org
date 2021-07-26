@@ -8722,6 +8722,1819 @@
         },
         "courseE_farmer_predict2": {
           "courseE_farmer_ramp12e_b": "Lausnin fyrir þessa þraut er mjög lík lausninni fyrir síðustu þraut, nema hvað snúningurinn er í hina áttina."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Láttu dansara birtast á skjánum.\n\n_Þetta borð endar eftir 4 takta._",
+          "challenges": "**Valfrjálsar áskoranir**\n\n-   Velja að spila annað lag.\n-   Færa dansarann á annan stað.\n-   Búa til fleiri en einn dansara."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Dansarinn verður að gera hreyfingu.\n-   Þú verður að ýta á örvarlykil.\n\n_Þetta borð endar eftir 4 takta._",
+          "challenges": "**Valfrjáls áskorun**\n\nNota fleiri en einn <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> kubb."
+        },
+        "CourseD_Dance_2020_03_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Báðir dansararnir verða að framkvæma hreyfingu.\n-   Þú verður að ýta á örvarlyklana.\n\n_Þetta borð endar eftir 6 takta._",
+          "challenges": "**Valfrjáls áskorun**\n\n-   Láttu dansarann bregðast við vinstri og hægri örvarlyklunum."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Dansarinn þarf að skipta um hreyfingu eftir 4 takta.\n\n_Borðið endar eftir 7 takta._"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Eftir 6 takta verður dansarinn að vera að dansa öðruvísi en hann gerði eftir 4 takta.\n\n-   Borðið endar eftir 11 takta.\\*",
+          "challenges": "**Valfrjáls áskorun**\n\n-   Breyta bakgrunninum í hvert sinn sem dansararnir skipta um hreyfingu."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Búðu til einn aðaldansara og hóp aukadansara á fyrstu 4 töktum lagsins.\n\n_Þetta borð endar eftir 7 takta._",
+          "challenges": "**Valfrjáls áskorun**\n\n-   Búa til fleiri en einn hóp aukadansara."
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Breyttu stærðinni á minnst einum dansara.\n\n-   Borðið endar eftir 6 takta.\\_",
+          "challenges": "**Valfrjáls áskorun**\n\n-   Prófa að breyta öðrum eiginleikum svo sem breidd eða snúningi."
+        },
+        "CourseD_Dance_2020_08_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Breyttu litnum á minnst einum dansara.\n\n_Borðið endar eftir 6 takta._",
+          "tint_hint": "Tókstu eftir að dansararnir fá ekki nákvæmlega þann lit sem þú valdir? Það er vegna þess að **litur** sem þú velur blandast litum dansaranna."
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "validation": "**Hvernig klára ég þetta borð?**\n\n-   Ýttu bara á \"Ljúka\" hnappinn!",
+          "repeat_every_ideas": "**Vantar þig hugmyndir?**\n\n-   Breyttu stærð dansara endurtekið til að láta hann stækka.\n-   Breyttu snúningi dansara endurtekið til að láta hann snúast í hringi.\n\n_Þú getur líka notað neikvæðar tölur til að láta áhrifin virka öfugt!_",
+          "next_previous": "**Valfrjáls áskorun**\n\n-   Þú getur líka notað þennan nýja atvikskubb til að fara í gegnum röð danshreyfinga með því að stilla hreyfinguna á `(Handahóf)`, `(Næsta)` eða `(Fyrri)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1_2021": {
+          "alternate": "Skiptingakubburinn er í flokknum \"Dansarar\"."
+        },
+        "CourseE_HOC 2018 Level_10_2021": {
+          "voyage_aquatic_10a": "Sjá **Hafluktir** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hvernig getur þú notað skilyrði með þeim til að komast í gegnum neðansjávarhofið?"
+        },
+        "CourseE_HOC 2018 Level_7a_2021": {
+          "aquatic7": "Þú getur notað `ef slóð` kubbinn til að hjálpa þér að snúa til hægri."
+        },
+        "CourseE_HOC 2018 Level_9b_2021": {
+          "voyage_aquatic_9a": "Sérðu rauðu og bláu kóralkubbana? Þeir sýna þér hvenær á að snúa til hægri og vinstri í gegnum rifið."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_b": "Ef þú kallar rétt á föllin, er þetta slóðin sem þú munt ferðast eftir...",
+          "Function_intro_Ryan_a": "Þú getur kallað á sama fall oftar en einu sinni í forriti! Prófaðu að kalla á það tvisvar til að leysa þessa þraut."
+        },
+        "MC_HOC_2017_01_RETRY_2021": {
+          "MC_HOC_2017_01_RETRY_a": "Dragðu einn `færa áfram` kubb úr verkfærakassanum út á vinnusvæðið og festu hann neðan við kubbinn `þegar keyrt`.",
+          "MC_HOC_2017_01_RETRY_b": "Ekki gleyma að smella á \"Keyra\" til að keyra kóðann fyrir Umbann.",
+          "MC_HOC_2017_01_RETRY_c": "Eftir að Umbinn hefur keyrt allan sinn kóða getur þú fært leikmanninn með örvarlyklunum!"
+        },
+        "MC_HOC_2017_02_Cole_2021": {
+          "MC_HOC_2017_02_Cole_a": "Færðu Umbann fram um tvo reiti svo hann standi á þrýstihellunni. Það opnar dyrnar fyrir leikmanninn.",
+          "MC_HOC_2017_02_Cole_b": "Ýttu á \"Keyra Umba\"!\n\nÞú getur keyrt kóðann þó hann sé ekki réttur. Keyrðu og endurstilltu kóðann aftur og aftur þar til þú finnur út hvar vandamálið er.",
+          "MC_HOC_2017_02_Cole_c": "Eftir að Umbinn hefur opnað dyrnar getur þú notað örvarlyklana til að færa leikmanninn á appelsínugula reitinn.",
+          "MC_HOC_2017_02_Cole_d": "Gættu þess að Umbinn sé að fylgja slóðinni sem sýnd er á kortinu!"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_a": "Eftir að þú hefur komið Umbanum á þrýstihelluna getur þú notað örvarlyklana til að færa leikmanninn á áttavitann!",
+          "MC_HOC_2017_03_Cole_b": "Finnst þér kóðinn vera orðinn langur? Spreyttu þig á að nota `endurtaka` lykkju til að stytta kóðann!"
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_b": "Notaðu kubbinn `snúa hægri` til að breyta stefnu Umbans ",
+          "MC_HOC_2017_04POINT5_RYAN_a": "Umbinn þarf bara að komast á fyrri þrýstihelluna til að opna fyrir Alex eða Steve að komast að öxinni."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Umbinn þarf að `færa áfram` 7 sinnum. Hvernig getur þú notað `endurtaka` lykkju til að láta það gerast?",
+          "MC_HOC_2017_04_Cole_c": "Ýttu á \"Keyra Umba\"!\n\nÞú getur keyrt kóðann þó hann sé ekki réttur. Keyrðu og endurstilltu kóðann aftur og aftur þar til þú finnur út hvar vandamálið er.",
+          "MC_HOC_2017_04_Cole_b": "Þegar Umbinn kemst á þrýstihelluna opnar hann dyrnar fyrir leikmanninn."
+        },
+        "MC_HOC_2017_05_Cole_2021": {
+          "MC_HOC_2017_05_Cole_a": "Veistu að þú getur sett eins mikinn kóða og þú vilt innan í lykkju? Prófaðu að setja planka **og** fara áfram innan í `endurtaka` lykkju til að ljúka þessari þraut.",
+          "MC_HOC_2017_05_Cole_b": "Komdu Umbanum yfir ána með því að byggja brú."
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Prófaðu að setja fleiri en ein fyrirmæli innan í `endurtaka` lykkju!",
+          "MC_HOC_2017_06_Cole_b": "Hjálpaðu Umbanum að byggja brúna alla leið yfir vatnið! "
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "MC_HOC_2017_07_Cole_c": "Það eina sem Umbinn þarf að gera er að opna slóðina að námuvagninum.",
+          "MC_HOC_2017_07_Cole_a": "Finndu út hvað fallið `opna slóð` gerir og leystu þrautina með því að kalla á það eins oft og með þarf með því að nota litla græna kubbinn `opna slóð` úr verkfærakassanum.",
+          "MC_HOC_2017_07_Cole_b": "Notaðu fallkubbana ásamt öðrum kubbum í verkfærakassanum til að leysa þessa þraut."
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_b": "Veistu ekki hvert á að fara? Reyndu að finna punktalínuna!",
+          "MC_HOC_2017_10_Cole_a": "Þessa þraut er auðveldara að leysa með föllum!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_a": "Ýttu á \"Keyra Umba\"!\n\nÞú getur keyrt kóðann þó hann sé ekki réttur. Keyrðu og endurstilltu kóðann aftur og aftur þar til þú finnur út hvar vandamálið er.",
+          "MC_HOC_2017_08_RY_b": "Það eru MARGAR lausnir á þessari þraut. Prófaðu!",
+          "MC_HOC_2017_08_RY_c": "Prófaðu að fylgja punktalínunni svo þú komist yfir hraunið."
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Prófaðu að láta Umbann byggja brýr svo að Alex eða Steve geti gengið um utan við jaðar kortsins."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Það koma nokkrar leiðir til greina. Hver þeirra er styst?",
+          "mc_8_b": "Notaðu `endurtaka` lykkju til að einfalda kóðann.",
+          "mc_8_c": "Markmið þitt er að komast inn um dyr hússins sem er efst á skjánum."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Þú þarft að `færa áfram` tvisvar til að standa framan við tréð.",
+          "mc_2_b": "Kubburinn `eyða` heggur niður tréð fyrir framan þig."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Þú getur höggvið niður tré í hvaða röð sem er. Hvaða leið notar fæsta kubba?",
+          "mc_4_b": "Kubburinn `eyða` heggur niður tréð fyrir framan þig."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Smelltu á örina á `setja` kubbnum til að velja hvað þú vilt setja.",
+          "mc_6_b": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.",
+          "mc_6_c": "Þú getur sett fleiri en einn kubb innan í `endurtaka` lykkju."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "`Færa áfram` kubburinn er efst í verkfærakassanum.",
+          "mc_1_b": "Gættu þess að báðir `færa áfram` kubbarnir séu áfastir við `þegar keyrt` kubbinn."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Notaðu `setja` kubbinn fyrst og síðan `færa` kubbinn.",
+          "mc_5_b": "Gættu þess að báðir kubbarnir séu innan í `endurtaka` lykkjunni svo að kóðinn keyri oftar en einu sinni.",
+          "mc_5_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Notaðu `planta jurt` kubb til að gróðursetja jurt á reitnum sem þú stendur á.",
+          "mc_7_b": "Það þarf að fylla báðar dökkbrúnu landræmurnar við vatnið með plöntum.",
+          "mc_7_c": "Þú getur sett fleiri en einn kubb innan í `endurtaka` lykkju."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Notaðu `setja teina` til að setja brautarteina á reitinn þar sem þú stendur.",
+          "mc_13_b": "Notaðu `endurtaka` lykkjur svo kóðinn verði styttri."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "Kubburinn `rýja` virkar á kindina fyrir framan þig. Snýrð þú að kindinni?",
+          "mc_3_b": "Notaðu `snúa` kubb ef þú þarft að breyta í hvaða átt þú horfir.",
+          "mc_3_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Það er búið að setja allan kóða sem þarf til að athuga með hraun og höndla það. Þú þarft bara að bæta við hreyfingu.",
+          "mc_11_b": "Ætti kubburinn `færa áfram` að fara innan í `ef` kubbinn eða koma á eftir honum?"
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Reitirnir með rauðum dílum innihalda roðastein.",
+          "mc_12_b": "Getur þú notað `endurtaka` lykkju til að stytta kóðann?",
+          "mc_12_c": "Notaðu `ef` kubb til að athuga hvort reitur sé hraun og setja þá hleðslustein. "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Járnblokkirnar eru doppóttu reitirnir bak við kyndilinn! Hvernig ætlarðu að ná þangað?",
+          "mc_10_b": "Þegar þú stendur við hraun skaltu nota `setja hleðslustein framfyrir` til að leggja öruggan slóða. Þá getur þú gengið yfir hraunið!",
+          "mc_10_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Snýrðu í rétta átt? Kubburinn `eyða blokk` grefur út blokkina fyrir framan þig.",
+          "mc_9_b": "Svörtu blettirnir á veggnum eru kol! Notaðu `eyða blokk` til að grafa út kolin.",
+          "mc_9_c": "Notaðu `setja kyndil` til að setja kyndil á reitinn þar sem þú stendur."
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "Ertu ekki viss um hvernig á að teikna línu? Tengdu kubba við <xml><block type=\"when_run\"/></xml> kubbinn til að prófa og sjá hvað gerist.",
+          "courseA_artist_loops2_b": "Notaðu kubbinn <xml><block type=\"simple_move_right\"/></xml> til að leysa þessa þraut."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "Rektu þig hægt í gegnum forritið með fingrinum til að sjá hvar það fer úrskeiðis.",
+          "courseA_artist_loops3_b": "Þú vilt sennilega nota svona kubb til að leysa þessa þraut.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum, getur þú breytt tölunni efst í kubbnum.",
+          "courseA_artist_loops4_b": "Þar sem þú getur bara notað einn <xml><block type=\"simple_move_right\"/></xml> kubb, ættirðu að prófa að setja hann í <block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block> lykkjuna."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "Reyndu að nota það sem þú hefur lært um lykkjukubba til að ljúka þessari þraut!",
+          "courseA_artist_loops5_b": "Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum, getur þú breytt tölunni efst í kubbnum.",
+          "courseA_artist_loops5_c": "Þar sem þú getur bara notað einn <xml><block type=\"simple_move_right\"/></xml> kubb, ættirðu að prófa að setja hann í <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjuna."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "Ertu ekki viss um hvernig á að búa til hæðina? Prófaðu hina ýmsu kubba til að sjá hvað þeir gera.",
+          "courseA_artist_loops6_b": "Þú þarft að nota tvo kubba með mismunandi stefnur til að leysa þessa þraut."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa kóðann skref-fyrir-skref á blað og leita að endurtekningum.",
+          "courseA_artist_loops7_b": "Skrifaðu kóðann fyrir eina bylgju fyrst og reyndu svo að endurtaka það til að teikna hinar tvær.",
+          "courseA_artist_loops7_c": "Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> ` lykkju."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "Prófaðu að keyra kóðann til að sjá hvað hefur verið skrifað fyrir þig.",
+          "courseA_artist_loops8_b": "Hvernig myndir þú setja gefna kóðann í lykkju?",
+          "courseA_artist_loops8_c": "Hvað gerir kóðinn? \nHvað er ætlast til að hann geri? \nHvað segir það þér?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "Bættu öðrum kubbi við gefna kóðann til að teikna afganginn af tröppunum.",
+          "courseA_artist_loops9_b": "Kubburinn, sem þú bætir við, á að fara inn í \n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml> lykkjuna.",
+          "courseA_artist_loops9_c": "Ef þú sérð ekki hvar á hafa lykkjuna, er ráð að skrifa kóðann þrep fyrir þrep og leita svo að endurtekningum."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "Svona kubbar: <xml>  <block type=\"simple_move_up_left\"/></xml> láta listamanninn færast á ská!",
+          "courseA_artist_loops_challenge2_b": "Þegar þú klárar eitt tjald, þarftu að `hoppa` upp tvisvar til að komast að því næsta!",
+          "courseA_artist_loops_challenge2_c": "Allir kubbarnir þínir þurfa að vera innan í lykkju til að klára þessa þraut."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Einföld lausn væri að fara tvisvar í Austur og svo taka fjársjóð."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Þú verður að færa áður en þú getur safnað fjársjóði.",
+          "courseA_collector_loops2_b": "Eftir að þú hefur farið á reit með fjársjóði þá notarðu `taka fjársjóð` kubbinn til að taka hann upp.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Prófaðu að nota \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju!",
+          "courseA_collector_loops3_b": "Mundu að þú getur sett fleiri en einn kubb inn í <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju."
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Þú getur stjórnað því hve langt Laurel færist með því að breyta því hve oft lykkjan keyrir.",
+          "courseA_collector_loops4_b": "Ekki gleyma því að Laurel þarf að ganga niður og taka fjársjóðinn þegar hún er búin með <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjuna!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Ef þú kemur ekki strax auga á svarið, gætir þú prófað að teikna á blað til að sjá hvaða örvar þú munt þurfa og leita að endurtekningum.",
+          "courseA_collector_loops5_b": "Prófaðu að kljúfa verkefnið í 2 hluta, fara til hliðar og svo niður.",
+          "courseA_collector_loops5_c": "Þú ættir að byrja á <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkju sem færir Láru í vestur og safnar fjársjóði."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Sérðu ekki hvað er að? Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist.",
+          "courseA_collector_loops6_b": "Stysta lausnin hefur tvær <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjur í röð."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Ef þú sérð ekki hvað á að koma næst, gætirðu prófað að keyra kóðann til að sjá hvar Laurel endar."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Ef þú átt í erfiðleikum með þessa þraut, er ráð að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
+          "courseA_collector_loops8_b": "Prófaðu að skipta þessari þraut í 3 aðskilin verkefni og skrifa lykkjur fyrir hvert.",
+          "courseA_collector_loops8_c": "Mundu að þú getur skrifað kóðann eitt skref í einu og svo keyrt hann til að sjá hvað þarf að gera næst."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Ef þú sérð ekki hvar best væri að nota lykkjur, er ráð að kóða þetta skref-fyrir-skref og sjá hvar kóðinn endurtekur sig. ",
+          "courseA_collector_loops9_b": "Prófaðu að setja 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> lykkjur innan í aðra lykkju svo kóðinn þinn verði styttri!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Prófaðu að breyta tölunum í hverri lykkju ef eitthvað fer úrskeiðis.",
+          "courseA_collector_loops_challenge1_b": "Þú þarft ekki að nota lykkju ef þú ert að gera eitthvað bara einu sinni.",
+          "courseA_collector_loops_challenge1_c": "Þar eru 6 eðalsteinar hægra megin í hellinum þegar þú byrjar, en þú þarft bara að safna 5 sinnum á leið suður. Veistu af hverju?",
+          "courseA_collector_loops_challenge1_d": "Gefna forritið safnar ekki síðustu 2 eðalsteinunum. Prófaðu að bæta þessum kóða við alveg síðast:\n<xml><block type=\"maze_moveEast\">\n<next>\n<block type=\"collector_collect_simplified\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Prófaðu þessa slóð til að finna lausn.",
+          "courseA_collector_loops_challenge2kp_a": "Getur þú notað lykkjur til að leysa þessa þraut?"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Þegar þú ert hjá maís getur þú notað þennan kubb til að tína hann!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "Kóðinn þinn ætti að hafa **fjóra** `fara í vestur` <xml><block type=\"maze_moveWest\"/></xml>\n\n kubba og **fjóra** `tína maís` <xml>\n<block type=\"harvester_corn\"/>\n</xml> kubba. ",
+          "courseA_harvester_loops2_b": "Ef þú átt enn í erfiðleikum, er ráð að segja skrefin upphátt. "
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Svona `endurtaka` kubbur getur bjargað málunum!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
+          "courseA_harvester_loops3_b": "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Ekki hika við að ýta á `Keyra` til að sjá hvað gerist!",
+          "courseA_harvester_loops4_b": "Hvað eru margir reitir með maís? Hve oft er kóðinn þinn endurtekinn?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Ef þú festist er ráð að reyna að skipta þrautinni í það sem gerist á undan horninu og það sem gerist eftir hornið.",
+          "courseA_harvester_loops5_b": "Lausnin mun hafa **eina** `endurtaka`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">6</title>\n</block></xml> lykkju, **einn** `fara suður`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> kubb, og **einn** `fara austur`   <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>kubb.",
+          "courseA_harvester_loops5_c": "Notaðu þessa slóð til að tína allan maísinn!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Þú þarft að nota tvær `endurtaka` lykkjur í röð.",
+          "courseA_harvester_loops5a_b": "Önnur lykkjan mun endurtaka `fara Suður`<xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> og hin mun endurtaka `fara Austur` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Notaðu þessa slóð til að fara í eina átt og svo í aðra."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Smelltu á `Keyra` og sjáðu hvað gerist!",
+          "courseA_harvester_loops5b_b": "Eru lykkjurnar þínar að endurtaka sig nógu oft eða of oft?",
+          "courseA_harvester_loops5b_c": "Farðu í eina átt svo í aðra á þessari slóð."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "Ef þú festist, er ráð að skrifa þrepin á pappír og leita að endurteknum mynstrum.",
+          "courseA_harvester_loops6_b": "Þetta er slóðin sem ætti að fara til að ná öllum maísnum."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Þú munt þurfa tvær `endurtaka` <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>lykkjur í röð!",
+          "courseA_harvester_loops7_b": "Notaðu tvær lykkjur til að fara þessa slóð."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "Skiptu þrautinni í þrjá áfanga. Fyrsti áfanginn nær til fyrstu beygjunnar, næsti til annarrar beygju og síðasti áfangann afganginn af leiðinni.",
+          "courseA_harvester_loops9_b": "Ekki hika við að keyra kóðann eftir hvern áfanga til að sjá hvað gerist!",
+          "courseA_harvester_loops9_c": "Fylgdu þessari slóð til að tína allan maísinn."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "Finnurðu ekki lausn? Prófaðu að skrifa skrefin niður á blað.",
+          "courseA_harvester_seq10_b": "Þú þarft að `fara í austur`og síðan `fara í norður`. Gerðu þetta tvisvar. Ekki gleyma að taka allan maísinn líka!",
+          "courseA_harvester_seq10_c": "Prófaðu þessa slóð til að ná öllum maísnum."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "Notaðu svona kubb til að tína maísinn þegar hirðirinn kemst til hans!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "Notaðu þennan kubb til að tína maísinn þegar hirðirinn finnur hann!\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "Hirðirinn þarf að fara í austur þrisvar sinnum til að ná maísnum. Notaðu þennan kubb:\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "Ekki gleyma að nota <xml><block type=\"harvester_corn\"/></xml> til að tína maísinn!",
+          "courseA_harvester_seq2_b": "Prófaðu að skrifa skrefin á blað til að finna lausnina!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "Mundirðu eftir að nota þennan kubb?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "Segðu skrefin upphátt og gáðu hvort það hjálpar að finna svarið."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "Hve mörg bil eru á milli hirðis og maís? Hve margir kubbar eru nú þegar á vinnusvæðinu?",
+          "courseA_harvester_seq4_b": "Þú þarft fimm `fara austur` kubba og einn `tína maís` kubb:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "Hvaða kubbur færir hirðinn í ranga átt?",
+          "courseA_harvester_seq5_b": "Þú þarft að fjarlægja einn kubb.",
+          "courseA_harvester_seq5_c": "Færðu þennan kubb í endurvinnsluna!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "Ef þú finnur ekki svarið, er ráð að segja skrefin upphátt. Það gæti hjálpað þér að finna rétta slóð."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "Prófaðu að skipta þrautinni í 2 helminga: það sem gerist á undan horninu og svo það sem gerist eftir hornið.",
+          "courseA_harvester_seq7_b": "Er þetta erfitt? Þetta er slóðin sem hirðirinn ætti að fara."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "Lausnin ætti að hafa **4** kubba sem færa og **2** kubba sem tína."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "Keyrðu kóðann nokkrum sinnum til að sjá hvað gerist. Hvar stöðvast hirðirinn?",
+          "courseA_harvester_seq9_b": "Ekki gleyma að tína allan maísinn! Þú munt þurfa **3** kubba sem tína maís.",
+          "courseA_harvester_seq9_c": "Þú ættir að fara þessa slóð til að tína allan maísinn."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "Ef þú átt í erfiðleikum er gott ráð að byrja á að skrifa skrefin á blað.",
+          "courseA_maze_seq10_b": "Þú þarft að fara í 3 mismunandi áttir til að leysa þessa þraut."
+        },
+        "courseA_maze_seq10_dani": {
+          "courseA_maze_seq10_a": "Ef þú átt í erfiðleikum er gott ráð að byrja á að skrifa skrefin á blað.",
+          "courseA_maze_seq10_b": "Þú þarft að fara í þrjár mismunandi áttir til að leysa þessa þraut."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "Ef þú sérð ekki slóðina er gott ráð að nota fingur til að rekja leiðina frá fuglinum til svínsins.",
+          "courseA_maze_seq13_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.",
+          "courseA_maze_seq13_c": "Kubbarnir <xml><block type=\"maze_moveNorth\"/></xml>\n<xml><block type=\"maze_moveEast\"/></xml> hjálpa þér að nálgast svínið."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "Ef fuglinn vill ekki hreyfast þarftu að athuga hvort kubbarnir séu festir á sinn stað undir kubbnum <xml>\n<block type=\"when_run\"/>\n</xml>",
+          "courseA_maze_seq1_b": "Fuglinn þarf að fara í vestur þrisvar sinnum til að ná svíninu. Notaðu þennan kubb:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Prófaðu að skrifa skrefin á blað til að finna lausnina!",
+          "2": "Þú þarft að nota þennan kubb:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5_dani": {
+          "courseA_maze_seq5_a": "Prófaðu að skrifa skrefin á blað til að finna lausnina!",
+          "courseA_maze_seq5_b": "Þú þarft tvo kubba, sem vísa í 2 áttir."
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Segðu skrefin upphátt og gáðu hvort það hjálpar að finna svarið."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "Lokakóðinn þinn ætti að hafa 3 kubba sem færa.",
+          "courseA_maze_seq6_b": "Ef þú festist er ráð að reyna að skipta þrautinni í það sem gerist á undan horninu og það sem gerist eftir hornið."
+        },
+        "courseA_maze_seq6_dani": {
+          "courseA_maze_seq6_a": "Lokakóðinn þinn ætti að hafa 3 kubba sem færa.",
+          "courseA_maze_seq6_b": "Ef þú festist er ráð að reyna að skipta þrautinni í það sem gerist á undan horninu og það sem gerist eftir hornið."
+        },
+        "courseA_maze_seq7_dani": {
+          "courseA_maze_seq7_a": "Þú þarft að bæta við 1 kubbi til að færa fuglinn að svíninu.",
+          "courseA_maze_seq7_b": "Ef þú finnur ekki svarið, ættirðu að prófa að teikna þrautina á blað og nota fingur til að finna réttu hreyfingarnar."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "Ef þetta gengur ekki gætirðu prófað að teikna myndina á blað til að sjá hvernig fuglinn á að hreyfast."
+        },
+        "courseA_maze_seq8_dani": {
+          "courseA_maze_seq8_a": "Ef þetta gengur ekki gætirðu prófað að teikna myndina á blað til að sjá hvernig fuglinn á að hreyfast."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "Sumar slóðir munu leiða til TNT, ef þú ferð of langt."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "Prófaðu að telja reitina með puttanum. Mundu að sleppa reitnum þar sem þú byrjar!"
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "Finndu kubb sem lætur hundinn segja eitthvað.",
+          "courseA_playLab_events2_b": "Þetta er kóðinn sem þú þarft til að ljúka þessari þraut:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">1</title>\n<title name=\"VALUE\">Halló</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "Dragðu fram þennan kubb  <xml><block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block></xml> og festu hann við <xml><block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block></xml>",
+          "courseA_playLab_events3_b": "Mundu að nota vinstri örina til að færa Jorge að flagginu eftir að þú hefur lokið við að skrifa forritið. Þegar flaggið verður grænt hefur þú klárað þetta!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "Hér er atvikskubburinn sem þú þarft að nota til að láta Jorge færast til hægri:\n\n<xml><block type=\"studio_move\">\n\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">2</title>\n</block></xml>",
+          "courseA_playLab_events4_b": "Þetta kóðinn sem þú þarft til að ljúka þessari þraut:\n\n<xml><block type=\"studio_whenArrow\">\n\n<title name=\"VALUE\">right</title>\n<next>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">2</title>\n</block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "Hér eru atvikskubbarnir sem þú þarft að nota til að hreyfa Jorge upp og niður:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nog\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "Veistu að þú getur breytt því hvaða lykill tengist atburðarörinni með því að smella á myndina á kubbnum og velja nýjan lykil?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "Hér er atvikskubburinn sem þú mundir nota til að láta Jorge gera eitthvað þegar þú smellir á hann:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">1</title>\n</block></xml>",
+          "courseA_playLab_events6_b": "Hér er kubburinn sem þú getur notað til að breyta bakgrunninum:\n\n<xml><block type=\"studio_setBackground\">\n\n<title name=\"VALUE\">random</title>\n</block></xml>",
+          "courseA_playLab_events6_c": "Hér er kubburinn sem þú getur notað til að spila hljóð af handahófi:\n\n<xml><block type=\"studio_playSound\">\n\n<title name=\"SOUND\">random</title>\n</block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Notaðu þennan kubb til að stjórna því hvað gerist þegar leikmennirnir rekast á.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n\n<title name=\"SPRITE1\">1</title>\n<title name=\"SPRITE2\">0</title>\n</block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Þú getur látið fugl syngja.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Þú getur látið vélmenni pípa.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Þú getur látið reitt skrímsli urra.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "Ef Scrat gerir ekki það sem þú vilt, skaltu athuga hvort kubbarnir séu ekki örugglega festir saman og smella svo aftur á \"Keyra\".",
+          "2": "Ekki óttast að gera mistök! Prófaðu eitthvað og ef það virkar ekki skaltu bara prófa eitthvað annað!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Kóðinn ætti að líta svona út:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "Ef þú vilt láta lykkjuna endurtaka sig oftar en 4 sinnum, getur þú breytt tölunni efst í kubbnum.",
+          "courseB_artist_loops2_b": "Prófaðu að keyra kóðann fyrst til að sjá hvar listamaðurinn endar."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "Mundu að nota `endurtaka` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> lykkju fyrir betri kóða!",
+          "courseB_artist_loops3_b": "Listamaðurinn þarf að fara í Suður til að teikna þessa línu."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "Með hoppa kubbnum getur þú farið áfram án þessa að teikna línu.",
+          "courseB_artist_loops4_b": "Þú þarft að bæta kubbi innan í `endurtaka` lykkjuna til að leysa þessa þraut.",
+          "courseB_artist_loops4_c": "Ekki gleyma að breyta hversu oft lykkjan á að endurtaka sig."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "Dragðu fram `endurtaka` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> lykkju, og settu svo hina kubbana inn í hana. Hve oft þarf að endurtaka?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Þessi áskorun notar FJÓRAR lykkjur, hverja á eftir annarri!",
+          "courseB_artist_loops7_b": "Taktu eftir að hver lykkja býr til tröppumynstur sem stefnir í aðra átt en hinar.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "Lykkjurnar ættu að gera þetta:\n\n-   Lykkja 1\n    -   Hægri\n    -   Niður\n\n-   Lykkja 2\n    -   Hægri\n    -   Upp\n\n-   Lykkja 3\n    -   Vinstri\n    -   Upp\n\n-   Lykkja 4\n    -   Vinstri\n    -   Niður"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "Hve oft ættir þú að endurtaka mynstrið til að búa til stigann?",
+          "courseB_artist_loops8_b": "Prófaðu að keyra kóðann sem þú fékkst til að sjá hvað hann gerir."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "Mundu að hoppa kubbana má nota til að færast áfram án þess að teikna línu.",
+          "courseB_artist_loops9_b": "Þú vilt fara í Vestur til að leysa þessa þraut.",
+          "courseB_artist_loops9_c": "Sérðu ekki hvar á að setja lykkjuna? Prófaðu að skrifa kóðann skref-fyrir-skref á blað og leita að endurtekningum."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Svona kubbar: <xml>  <block type=\"simple_move_up_right\"/></xml> láta listamanninn færast á ská!",
+          "courseB_artist_loops_challenge1_b": "Þegar hverjum teningi er lokið, áttu að `hoppa` á þann næsta!",
+          "courseB_artist_loops_challenge1_c": "Þú þarft að stundum að `færa` eða `hoppa` yfir sömu línurnar tvisvar. "
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "Þú færð gefinn kóðann til að teikna X. Allt sem þú þarft að gera er að endurtaka X-ið og `hoppa` á næsta stað.",
+          "courseB_artist_loops_challenge2_b": "Þú getur notað `hoppa` kubba til að fara á önnur svæði."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "Ef þú átt erfitt með að sjá hvar á að setja `endurtaka` lykkjurnar, er ráð að skrifa kóðann skref fyrir skref og leita að endurtekningum.",
+          "courseB_collector_loops10_b": "Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "Með kubbnum <xml><block type=\"collector_collect_simplified\"/></xml> getur þú tekið upp fjársjóð sem þú hefur farið á."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "Þú verður að færa áður en þú getur safnað fjársjóði.",
+          "courseB_collector_loops2_b": "Þegar þú ert á reit með fjársjóði, þá þarftu að muna að nota `taka fjársjóð` kubb til að taka hann upp."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Prófaðu að nota <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> kubb til að taka fjársjóðinn.",
+          "courseB_collector_prog3_b": "Mundu að þú getur sett fleiri en einn kubb inn í `endurtaka` lykkju."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "Prófaðu að nota \"skref\" hnappinn til að finna hvar villan er.",
+          "courseB_collector_loops4_b": "Þú getur stjórnað því hve langt Laurel færist með því að breyta því hve oft lykkjan keyrir.",
+          "courseB_collector_loops4_c": "Lára þarf að ganga niður og safna fjársjóðnum eftir að hún er búin með `endurtaka` lykkjuna!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "Notaðu fleiri en eina lykkju til að ljúka verkinu.",
+          "courseB_collector_loops5_b": "Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "Sérðu ekki hvar kóðinnn fer út af sporinu? Notaðu \"skref\" hnappinn til að keyra forritið þitt einn kubb í einu.",
+          "courseB_collector_loops6_b": "Þú getur breytt hversu oft endurtekningarlykkjan keyrir með því að smella á \"3\" og velja annan fjölda endurtekninga.",
+          "courseB_collector_loops6_c": "Þú þarft að nota þrjár mismunandi `endurtaka` lykkjur til að leysa þessa þraut.",
+          "courseB_collector_loops6_d": "Ef þú áttar þig ekki á þessu, er ráð að skipta þrautinni í þrjá hluta."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Ef þú átt erfitt með þessa þraut getur það hjálpað að teikna hana á blað.",
+          "courseB_collector_loops7_b": "Þú þarft að nota 3 mismunandi `endurtaka` lykkjur til að leysa þessa þraut og ekki gleyma síðasta fjársjóðnum!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Ef þú átt erfitt með að sjá hvar á að setja `endurtaka` lykkjurnar, er ráð að skrifa kóðann skref fyrir skref og leita að endurtekningum."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Virðist þetta vera of erfitt?  Brjóttu þetta upp í 3 lítil verkefni svo það virðist auðveldara.  ",
+          "courseB_collector_loops9_b": "Þú þarft að nota 3 `endurtaka` lykkjur í röð til að leysa þessa þraut."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "Byrjaðu á að setja skipanirnar `fara suður` og `taka fjársjóð` í lykkju.\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Farðu í Austur tvisvar á milli slóða.\n\n<xml>\n<block type=\"maze_moveEast\"><next>\n<block type=\"maze_moveEast\"></block></next></block>\n</xml>\n\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. ",
+          "courseB_collector_loops_challenge1_d": "Prófaðu þetta!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Ef eitthvað virkar ekki skaltu villuleita. Ekki gefast upp!",
+          "courseB_collector_loops_challenge2a_b": "Skoðaðu þennan möguleika á að komast í gegnum völundarhúsið. Sérðu mynstur sem mætti endurtaka?",
+          "courseB_collector_loops_challenge2a_c": "Til að safna öllum gimsteinunum verður þú annað hvort að bæta við tveimur <xml> <block type=\"collector_collect\"/></xml> kubbum innan í lykkjunni eða setja kubbinn í sinn eigin `endurtaka` kubb."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Gættu þín á sprungnum ís! Annars dettur Scrat ofan í vatnið!",
+          "courseB_iceage_loops10_b": "Prófaðu að segja þrepin upphátt eða skrifa þau á blað. Eru einhverjar endurtekningar?",
+          "courseB_iceage_loops10_c": "Þetta er löng þraut! Fylgdu þessari slóð."
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "Gættu þín á sprungnum ís! Annars dettur Scrat ofan í!",
+          "courseB_iceage_loops1_b": "Þú þarft að nota þennan kubb:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "Skiptu þrautinni í tvo hluta, fyrst að horninu og svo frá horninu.",
+          "courseB_iceage_loops2_b": "Ef þú finnur ekki lausn er gott ráð að segja upphátt hvað þarf að gera.",
+          "courseB_iceage_loops2_c": "Þessi slóð kemur Scrat til akarnsins."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Notaðu þennan nýja kubb!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "Prófaðu að skrifa niður skrefin sem Scrat þarf að taka til komast til akarnsins. Sérðu mynstur?",
+          "courseB_iceage_loops4_b": "Ekki hika við að keyra kóðann og sjá hvað gerist!",
+          "courseB_iceage_loops4_c": "Þetta er slóðin sem Scrat ætti að fylgja."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "Lokakóðinn ætti að hafa **þrjá** kubba sem færa.",
+          "courseB_iceage_loops6_b": "Þig vantar bara **eina** lykkju í viðbót!",
+          "courseB_iceage_loops6_c": "Svona ætti slóðin að líta út í lokin."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Gott ráð í vandræðum er að skrifa skrefin á blað og reyna að finna endurtekningar.",
+          "courseB_iceage_loops7_b": "Þetta er slóðin sem Scrat ætti að fylgja til akarnsins."
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "Erti með rétta kubba sem færa? Hverju öðru gætir þú breytt?",
+          "courseB_iceage_loops8_b": "Fyrsta lykkjan ætti að endurtaka **3** sinnum, önnur lykkjan **5** sinnum, þriðja lykkjan **4** sinnum og síðasta lykkjan **4** sinnum.",
+          "courseB_iceage_loops8_c": "Notaðu lykkjur til að hjálpa Scrat að fara slóðina."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "Er erfitt? Reyndu að skipta þrautinni í smærri hluta. Ekki hika við að keyra kóðann oft til að prófa það sem þú gerir!",
+          "courseB_iceage_loops9_b": "Lokakóðinn þinn ætti að hafa **4** lykkjur.",
+          "courseB_iceage_loops9_c": "Scrat ætti að fylgja þessari slóð til að komast til akarnsins."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Tengdu kubba við <xml><block type=\"when_run\"/></xml> kubbinn til að láta fuglinn hreyfast!",
+          "courseB_maze_seq1_b": "Dragðu þrjár af þessum <xml><block type=\"maze_moveSouth\"/></xml> örvum fram og tengdu þær við <xml><block type=\"when_run\"/></xml> kubbinn til að koma fuglinum til svínsins."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Prófaðu að bæta við einni skipun í einu þar til þú kemst til akarnsins.",
+          "courseB_maze_seq4_b": "Þú vilt fara í Austur til að leysa þessa þraut."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Ef þú festist, er ráð að teikna slóðina á pappír.",
+          "courseB_maze_seq5_b": "Það eru 2 leiðir til að leysa þessa þraut!",
+          "courseB_maze_seq5_c": "Sérðu ekki hvernig þú kemst til akarnsins? Prófaðu þessa leið."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "Lokakóðinn þinn ætti að hafa þrjá kubba sem færa.",
+          "courseB_maze_seq6_b": "Ef þú festist er ráð að reyna að skipta þrautinni í tvo aðskilda hluta: annan fyrir hliðarhreyfingu, hinn fyrir upp og niður.",
+          "courseB_maze_seq5_c": "Það eru tvær leiðir til að leysa þessa þraut.",
+          "courseB_maze_seq5_d": "Sérðu ekki hvernig þú kemst til akarnsins? Prófaðu þessa leið!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Bættu við 1 kubbi til að færa Scrat til akarnsins.",
+          "courseB_maze_seq7_b": "Prófaðu að keyra kóðann sem þú fékkst og sjá hvar þú endar.",
+          "courseB_maze_seq7_c": "Kemstu ekki til akarnsins? Prófaðu þessa leið!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Prófaðu að bæta við einum kubbi í einu þar til þú leysir þrautina.",
+          "courseB_maze_seq8_b": "Það eru tvær leiðir til að leysa þessa þraut!",
+          "courseB_maze_seq8_c": "Ekki viss um hvaða leið á að fara? Prófaðu þessa!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Prófaðu að skrifa öll þrepin á blað fyrst.",
+          "courseB_maze_seq9_b": "Mundu að þú getur byggt upp kóðann einn kubb í einu og prófað hann um leið.",
+          "courseB_maze_seq9_c": "Það eru tvær leiðir til að leysa þessa þraut.",
+          "courseB_maze_seq9_d": "Gengur þetta ekki? Prófaðu þessa leið!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Það er ekki víst að stysta slóðin virki í þetta sinn.",
+          "courseB_maze_seq_challenge1_b": "Prófaðu að nota kubbinn <xml><block type=\"maze_moveWest\"/></xml> fyrst."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Þú þarft ekki að bæta við eða fjarlægja kubba til að leysa þessa þraut.",
+          "courseB_maze_seq_challenge2_b": "Endurraðaðu kubbunum og farðu eftir miðslóðinni."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "Þetta er kubburinn sem lætur Daisy segja eitthvað:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hæ.</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "Þetta er kubburinn sem þú ættir að nota til að bæta atvikinu við:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
+          "courseB_playlab_events3_b": "Þetta er kubburinn sem lætur Daisy skipta um skap:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Þetta er atvikið sem stjórnar vinstri örinni:\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
+          "courseB_playlab_events4_b": "Þetta er kubburinn sem lætur riddarann fara til vinstri.\n\n<xml>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "Þetta er atvikið sem stjórnar hægri örinni:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "Þetta er kubburinn sem lætur riddarann hlaupa í burtu. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Þú munt þurfa þessa atvikskubba:\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">up</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>",
+          "courseB_playlab_events6_b": "Notaðu fellilistann á grænu `þegar ___ ör` atburðarkubbunum til að velja mismunandi stefnur.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "Náðu til allra flagganna til að ljúka þrautinni!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "Þetta er atvikskubburinn sem þú munt þurfa:\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_b": "Þetta er kubburinn sem þú þarft til að spila hljóð.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_c": "Þetta er kubburinn sem þú þarft til að láta riddarann hverfa:\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "Láttu hin dýrin hreyfast niður þegar þú ýtir á `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">niður</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Breyttu hraða dýranna með því að nota þennan kubb:\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "Hvað munu allir segja þegar keppninni er lokið? Láttu þau tala með þessum atburði:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Húrra!</title>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "Hvert dýr í leiknum ætti að hverfa ef slegið er á það. Það ætti líka að birtast aftur eftir 1-2 sekúndur!",
+          "courseB_playlab_events_challenge2_b": "Notaðu aðra atvikskubba til að láta hin dýrin hverfa!\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "Notaðu aukaskipanir til að spila hljóð eða skora stig þegar smellt er á dýrin!\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">skellur</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "Hrærðu í þessu!\n\nLáttu sum dýrin gefa fleiri stig en önnur.\nNotaðu mismunandi hljóð.\nBreyttu skapi dýranna!"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "Prófaðu að bæta einum kubbi við í einu og keyra forritið til að sjá hvað gerist.",
+          "courseB_starWars_prog1_b": "Þú þarft að fara í Austur til að leysa þessa þraut. Hve langt þarftu að fara?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "Þú getur skipt þessu verkefni í tvo hluta: fyrst að ná einni hrúgu af brotajárni, síðan að finna út hvernig þú kemst frá henni til næstu hrúgu."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Þú þarft að fara í 3 mismunandi áttir til að leysa þessa þraut.",
+          "courseB_starWars_prog3_b": "Mundu að þú getur skrifað kóðann eitt skref í einu og svo keyrt hann til að sjá hvað þarf að gera næst."
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "Mundu að þú getur skrifað kóðann eitt skref í einu og svo keyrt hann til að sjá hvað þarf að gera næst.",
+          "courseB_starWars_prog4_b": "Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "Minnir þetta mynstur ekki á síðustu þraut?",
+          "courseB_starWars_prog5_b": "BB-8 mun hirða brotamálm sem hann fer yfir.",
+          "courseB_starWars_prog5_c": "Prófaðu að teikna tröppumynstur yfir þessa þraut. Mundi það ná öllu brotajárninu?",
+          "courseB_starWars_prog5_da": "Sjáðu hvað gerist ef þú notar sömu lausn og fyrir þrautina með tröppumynstrið:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.",
+          "courseB_starWars_prog6_b": "Prófaðu að nota `endurtaka` kubbinn til að fá styttri kóða.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "Minnir þetta mynstur ekki á síðustu þraut?",
+          "courseB_starWars_prog7_b": "BB-8 mun hirða brotamálm sem hann fer yfir.",
+          "courseB_starWars_prog7_c": "Prófaðu að teikna stóra tröppumynstrið yfir þessa þraut. Mundi það ná öllu brotajárninu?"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "Það er í lagi að fara til baka yfir reiti sem þú hefur áður farið yfir.",
+          "courseB_starWars_prog8_b": "Prófaðu að nota `endurtaka` kubbinn til að sjá hvað gerist með kóðann sem þú setur innan í hann.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.",
+          "courseB_starWars_prog9_b": "Það eru margar leiðir til að leysa þessa þraut.",
+          "courseB_starWars_prog9_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "Kubburinn `stilla leikmann 1 á ??? mynd` er notaður til að bæta leikmanni á sviðið.",
+          "courseE_playLab_scaffold1_b": "Settu `hafa leikmann` kubbinn undir `þegar keyrt` kubbinn til að leikmaðurinn birtist í byrjun forritsins.",
+          "courseE_playLab_scaffold1_c": "Notaðu `hafa bakgrunn` kubb til að búa til bakgrunn sviðsins."
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "Þú ættir að hafa fjóra `þegar ör` atburðarkubba með hreyfingu í tiltekna stefnu undir hverjum þeirra.",
+          "courseE_playLab_scaffold1_c": "Þegar þetta er tilbúið ættir þú að geta hreyft hetjuna þína með örvarlyklunum!"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "Notaðu `skora stig` til að bæta við stigi og `fjarlægja stig` til að draga stig frá."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "Tengdu þennan kubb við `þegar keyrt` kubbinn:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hæ þú</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "Tengdu tvo svona kubba við `þegar keyrt`kubbinn:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hæ!</title>\n</block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Notaðu fellilistann á öðrum `leikmaður ___ segir` kubbnum til að breyta því hver talar."
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "Þú þarft bara að færa Jorge til hægri um 25 díla til að leysa þessa þraut.",
+          "courseC_PlayLab_events3_b": "Er til kubbur í verkfærakassanum sem lítur út fyrir að geta fært leikmann?",
+          "courseC_PlayLab_events3_c": "Tengdu þennan kubb við `þegar keyrt` kubbinn:\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hæ þú</title>\n</block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "Þegar smellt er á \"Keyra\" hnappinn, á Jorge að færast til hægri um **100** díla til að ná til kattarins Olive.",
+          "courseC_PlayLab_events4_a": "Þú þarft að tengja `leikmaður __ segir` kubb við `þegar leikmaður snertir` atvik til að leysa þess þraut."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "Þú þarft að smella á fellilistann á kubbnum `leikmaður segir` til að finna textann \"Hvað er títt?\"",
+          "courseC_PlayLab_events5_b": "Smelltu á Oktavíu þegar þú keyrir forritið til að sjá hvort það virkar!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "Allir grænu `þegar ___ ör` kubbarnir ættu að hafa aðgerð fyrir neðan sig.",
+          "courseC_PlayLab_events6_b": "Notaðu fellilistann á `færa leikmann 1` kubbnum til að breyta því í hvaða átt Waddles hreyfist.",
+          "courseC_PlayLab_events6_c": "Þegar forritið er tilbúið ættir þú að geta fært Waddles í allar áttir með örvarlyklunum!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "Settu bæði `færa leikmann 2 upp 400 díla` kubbinn og `færa leikmann 2 niður 400 díla` kubbinn inn í `endurtaka endalaust` lykkjuna til að leysa þessa þraut. ",
+          "courseC_PlayLab_events7_b": "Það þarf ekki að tengja `Endurtaka endalaust` lykkjuna við neinn atburðarkubb. Hún keyrir alveg sjálfkrafa."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "Þú þarft að tengja kubba við kubbinn `þegar leikmaður snertir` til að láta þetta gerast rétt.",
+          "courseC_PlayLab_events8_b": "Kubbarnir `leikmaður segir` og `spila hljóð` í verkfærakassanum ættu að hjálpa!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "Kubburinn `skora stig` mun hjálpa þér að leysa þessa þraut.",
+          "courseC_PlayLab_events9_b": "Gættu þess að nýji `þegar leikmaður snertir` kubburinn sýni leikmann **1** og leikmann **3**.",
+          "courseC_PlayLab_events9_c": "Þú getur haft fleiri en einn `þegar leikmaður snertir` atburð á vinnusvæðinu á sama tíma, svo þú þarft ekki að eyða þeim fyrsta!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "Notaðu kubbana `hafa bakgrunn` og `hafa leikmann hraðan` til að leysa þessa þraut.",
+          "courseC_PlayLab_eventsA_b": "Þú þarft að draga `þegar keyrt` kubb út á vinnusvæðið til að leysa þessa þraut."
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_Vantar þig hugmyndir?_\n\n**Hver er þar?** Láttu persónurnar birtast í mismunandi myndum völdum af handahófi svo enginn veit hver birtist næst.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea2": "_Vantar þig hugmyndir?_\n\n**Á leið í ævintýri** - Breyttu bakgrunninum og láttu svo persónurnar segja hvar þær eru hverju sinni.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+          "idea3": "_Vantar hugmyndir?_\n\n**Kúluspil** - Láttu eina veruna hreyfast með örvarlyklum (notaðu `þegar upp ör` og `þegar niður ör` kubba) og spilaðu svo hljóð af handahófi þegar hún rekst á aðrar verur á skjánum."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Þú getur notað þennan kubb til að færa leikmenn á nýja staði á leiksvæðinu.\n\n<xml> <block type=\"studio_setSpritePosition\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">12</title>\n</block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Prófaðu að nota `setja leikmann 1 í miðju til vinstri` þegar hann snertir hina leikmennina. Þetta mun endurstilla leikinn svo að spilarinn getur haldið áfram að reyna!",
+          "courseC_PlayLab_events_challenge_c": "Þú vilt kannske líka breyta hraða hinna ýmsu leikmanna til að gera leikinn auðveldari eða erfiðari!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n</block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "Þetta er fyrsti kubburinn sem þú þarft:\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">200</title>\n<title name=\"YPOS\">200</title>\n</block>\n</xml>",
+          "courseC_artist_loops1a_b": "Notaðu þennan kubb til að teikna límmiðann!\n\n<xml>\n<block type=\"sticker\">\n<title name=\"VALUE\">Fugl</title>\n</block>\n</xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "Þetta er fyrsti kubburinn sem þú þarft að nota:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nÞú getur valið vinstri eða hægri og einhvern gráðufjölda."
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "Í lykkjunni þarf að hoppa 200 til hliðar og 200 niður, teikna límmiðann með fuglinum og snúa svo 30 gráður.",
+          "courseC_artist_loops2a_b": "Smelltu á töluna efst í `endurtaka` lykkjunni til að breyta því hve oft hún endurtekur sig."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "Þú þarft að bæta bara einum kubbi í lykkjuna, eftir límmiðann með fuglinum.",
+          "courseC_artist_loops3a_b": "Notaðu fellilistann á `teikna límmiða` kubbnum til að finna leðurblökuna."
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "Notaðu þennan kubb til að hoppa áfram:\n\n<xml>\n<block type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title name=\"VALUE\">100</title>\n</block>\n</xml>\n\nEkki gleyma að segja hve langt!",
+          "courseC_artist_loops4a_b": "Forritið þitt ætti að líta svona út!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "Notaðu þennan kubb til að gera línumynstrið:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n<title name=\"VALUE\">DEFAULT</title>\n</block>\n</xml>",
+          "courseC_artist_loops5b_b": "Til að teikna þetta þarft þú að fara aftur á bak jafnlangt og þú ferð áfram.",
+          "courseC_artist_loops5b_c": "Forritið þitt ætti að líta svona út!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "Til að teikna myndina hér að ofan þarftu að hoppa áfram minna en 75 díla á milli límmiða."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "Hringur hefur 360 gráður. Margfaldaðu gráðurnar sem þú snýrð með hve oft þú endurtekur. Er það jafnt og 360? Prófaðu snúningana sem stungið er upp á til að sjá að þetta virkar!"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "Ef þú notar kubbinn sem lætur mig `fara áfram um 100 díla`, þá mun ég teikna línu sjálfkrafa.",
+          "courseC_artist_prog2_b": "Áttu erfitt með að beygja fyrir hornið? Notaðu kubbinn `snúa til hægri um 90 gráður`."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "Til að búa til þennan glugga þarftu bara að teikna ferning með 100 díla hliðar.\n\n-   færa áfram\n-   snúa\n-   færa áfram\n-   snúa\n-   færa áfram\n-   snúa\n-   færa áfram",
+          "courseC_artist_prog3_b": "Viltu geta búið til styttri kóða? Prófaðu að nota lykkju í þessari þraut."
+        },
+        "courseC_artist_prog4_2021": {
+          "courseC_artist_prog4_a": "Kláraðu eldflaugina með því að teikna þríhyrninginn efst!",
+          "courseC_artist_prog4_b": "Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!",
+          "courseC_artist_prog4_c": "Þessi kóði teiknar þrihyrning:\n\n-   færa áfram\n-   snúa til vinstri 120 gráður\n-   færa áfram\n-   snúa til vinstri 120 gráður\n-   færa áfram"
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "Stilltu hraðasleðann á minnsta hraða svo þú sjáir betur hvaða lína kóðans er ekki að virka.",
+          "courseC_artist_prog5_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.",
+          "courseC_artist_prog5_c": "Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!",
+          "courseC_artist_prog5_d": "Hver snúningur ætti að vera 90 gráður til hægri."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "Listamaðurinn snýr nú þegar í rétta átt til að teikna fyrstu línuna.",
+          "courseC_artist_prog6_b": "Þessi demantur er í raun bara ferningur sem stendur á einu horninu.",
+          "courseC_artist_prog6_c": "Þar sem þessi demantur er líka ferningur þarftu að gæta þess að snúa um 90 gráður á hornunum."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_a": "Hvert horn er annað hvort 45 eða 90 gráður.",
+          "courseC_artist_prog7_b": "Virkar fyrsta þrepið? \nHvað með annað þrepið? \nHvar er villan?",
+          "courseC_artist_prog7_c": "Þú getur notað fellilistann á `snúa` kubbunum til að sjá hvaða horn þú þarft að nota!",
+          "courseC_artist_prog7_d": "Gerðu þetta:\n\n-   færa áfram\n-   snúa til hægri 45 gráður\n-   færa áfram\n-   snúa til hægri 90 gráður\n-   færa áfram\n-   snúa til hægri 45 gráður\n\nEndurtaktu þetta mynstur tvisvar!",
+          "courseC_artist_prog7_e": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "Þú getur teiknað þetta sem rétthyrning með línu í miðjunni eða sem tvo ferninga!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "Eftir að þú teiknar fyrstu línuna þarftu að snúa til vinstri áður en þú teiknar næstu línu.",
+          "courseC_artist_prog_challenge2_b": "Eftir að þú teiknar aðra línuna þarftu að snúa til hægri áður en þú teiknar þriðju línuna."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Notaðu lykkjur svo þú klárir ekki `taka` kubbana!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "Þegar þú ert á reit sem hefur fjársjóð notar þú <xml><block type=\"collector_collect\"/></xml> kubbinn til að taka hann.",
+          "courseC_collector_prog1_b": "Einfaldasta lausnin væri að fara áfram einu sinni og taka svo fjársjóð."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "Þú getur notað fjóra <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> kubba eða notað <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> kubbinn til að stytta forritið.",
+          "courseC_collector_prog2_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "Forritið mun aðeins keyra þá kubba sem eru tengdir við <xml><block type=\"when_run\"/></xml> kubbinn.",
+          "courseC_collector_prog3_b": "Prófaðu að nota \"Þrep\" hnappinn til að keyra kóðann eina línu í einu. Sérðu hvar villan er í kóðanum?",
+          "courseC_collector_prog3_c": "Ef þú átt í erfiðleikum með þessa þraut, er ráð að skrifa hreyfingarnar á blað."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "Ef þú festist, er ráð að skrifa þrepin á pappír.",
+          "courseC_collector_prog4_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.",
+          "courseC_collector_prog4_c": "Prófaðu svona slóð."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"Virkar þetta í fyrsta þrepi?\nVirkar það í öðru þrepi? \nHvar er villan í kóðanum?\"",
+          "courseC_collector_prog5_b": "Ef þú hefur lagað eina villu og forritið vill samt ekki virka, skaltu nota skrefin hér fyrir ofan til að finna fleiri villur.",
+          "courseC_collector_prog5_c": "Ef þú festist, er ráð að skrifa þrepin á pappír.",
+          "courseC_collector_prog5_d": "Fylgdu slóðinni til að safna öllum fjársjóðnum."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Geturðu fundið út hvað er að?  \n\nPrófaðu að nota \"Þrep\" hnappinn til að finna villur með því að keyra forritið eina línu í einu.",
+          "courseC_collector_prog6_b": "Finnurðu ekki lausn? Prófaðu þessa slóð."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "Það er nú þegar fullt af fínum kóða á vinusvæðinu.  Þú þarft ekki að eyða neinu til að leysa þessa þarut.  ",
+          "courseC_collector_prog7_b": "Sérðu ekki kubbinn sem þú þarft til að láta safnarann færast í rétta átt?  Finndu hann í verkfærakassanum.",
+          "courseC_collector_prog7_c": "Er erfitt að sjá hvaða leið á að fara til að safna öllum fjársjóðnum?  Prófaðu þessa slóð!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum."
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "Þú getur notað fleiri en eina `taka` skipunin á hverjum stað.",
+          "courseC_collector_prog_challenge1_b": "Finnurðu ekki leiðina?  Prófaðu þessa slóð til að leysa þrautina!"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "Á kubbnum sem þarf að bæta við stendur `hraði`. ",
+          "courseC_flappy_events2_b": "Tengdu kubbinn `hraði` við kubbinn `þegar keyrt` til að leysa þessa þraut."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "Ef eitthvað er ekki að virka skaltu ganga úr skugga um að kubbarnir þínir séu tengdir við réttu atburðina á vinnusvæðinu."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "Tengdu kubbinn `ljúka leik` við `þegar rekst á jörðina` til að leysa þessa þraut."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "Þú verður að nota kubbinn `skora stig` til að klára þetta borð."
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "Prófaðu að tengja kubbinn `blaka ___` við `þegar smellt` atburðinn."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "Þú getur skipt um bakgrunn með kubbnum `umhverfi`. "
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "Prófaðu að setja kubbinn `umhverfi` undir atburðinn `þegar gegnum hindrun` til að klára þetta borð."
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "Tengdu kubbinn `setja stig á 0` við atburðinn `þegar rekst á hindrun` til að klára þetta borð."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "Eftir að þú hefur fært þig á grasker notar þú <xml><block type=\"harvester_pumpkin\"/></xml> til að taka það.",
+          "courseC_harvester_loops1_b": "Þú getur notað lykkju með kubbnum <xml><block type=\"harvester_pumpkin\"/></xml> til að tína fleiri en eitt grasker af sama reit."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "Ef þú festist, er ráð að skrifa þrepin á pappír og leita að endurteknum mynstrum.",
+          "courseC_harvester_loops2_b": "Þú þarft að nota tvær `endurtaka` lykkjur í röð.",
+          "courseC_harvester_loops2_c": "Önnur lykkjan mun endurtaka skipunina `færa áfram`, hin mun endurtaka skipunina `tína grasker`."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.",
+          "courseC_harvester_loops3_b": "Til að ná fyrstu graskerunum notar þú kóða sem er mjög líkur þeim í síðustu þraut. Í hvaða átt þarftu svo að snúa?",
+          "courseC_harvester_loops3_c": "Ef þú vilt einfalda kóðann getur þú reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "Notaðu nýja kubbinn `tína maís` til að safna maísnum.",
+          "courseC_harvester_loops4_b": "Þú getur notað margar lykkjur í kóðanum, sumar til að tína maís og aðrar til að tína grasker.",
+          "courseC_harvester_loops4_c": "Ef þú vilt einfalda kóðann getur þú reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "Ein leið til að finna lausn er að teikna upp allt forritið og leita svo að endurteknum mynstrum.",
+          "courseC_harvester_loops5_b": "Hefurðu séð svona tröppumynstur í öðrum þrautum? Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "Mundu að þú getur sett fleiri en einn kubb í sömu `endurtaka` lykkju.",
+          "courseC_harvester_loops6_b": "Ekki gleyma að snúa við endann á maísbeðinu."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "Í þessari þraut getur þú tínt maísinn fyrst eða tínt graskerin fyrst.",
+          "courseC_harvester_loops7_b": "Þú verður að nota fleiri en eina `endurtaka` lykkju til að leysa þessa þraut."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "Kannastu við svona tröppumynstur frá fyrri þraut? Hreyfingarnar eru svipaðar, mundu bara að safna uppskeru á leiðinni.",
+          "courseC_harvester_loops8_b": "Ef þú vilt einfalda kóðann enn meira, getur þú reyndar sett eina lykkju innan í aðra! Það er kallað að **falda** lykkju."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "Ekki láta þér detta í hug að reyna þetta án þess að nota lykkjur!",
+          "courseC_harvester_loops_challenge1_b": "Þú getur endurtekið `færa áfram` og `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju horni.",
+          "courseC_harvester_loops_challenge1_c": "Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"harvester_corn\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block></next></block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "Ein lausn á þessu lítur út eins og sikksakk mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona þraut. Ekki gefast upp!",
+          "courseC_harvester_loops_challenge2_b": "Þú getur endurtekið `færa áfram` og `tína kál` eins oft og þú þarft, síðan snúið á hverju horni.",
+          "courseC_harvester_loops_challenge2_c": "Þetta sikksakk mynstur má endurtaka tvisvar til að leysa þrautina með bara 20 kubbum!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "Þetta spíral-mynstur er hægt að kóða með aðeins 18 kubbum!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Virkar allt eftir fyrsta þrepið?\n-   Virkar það enn eftir annað?\n-   Hvar er vandamálið?",
+          "courseC_maze_debugging1_b": "Þig vantar 1 kubb til að leysa þrautina."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "Það er mikið af gagnlegum kóða á vinnusvæðinu.  Ekki bara eyða honum og byrja upp á nýtt!",
+          "courseC_maze_debugging2_b": "-   Virkar allt eftir fyrsta þrepið?\n-   Virkar það enn eftir annað?\n-   Hvar er vandamálið?",
+          "courseC_maze_debugging2_c": "Sérðu ekki hvað er að? Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "Ef þú þarft að eyða kubbi sem er í miðjum kóðanum skaltu fyrst draga alla kubbana á annan stað á vinnusvæðinu.\n\nDragðu svo kubbinn sem þú vilt eyða aftur í verkfærakassann.\n\nSettu svo hina kubbana aftur á sinn stað.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "Sérðu ekki hvað er að? Prófaðu að keyra kóðann nokkrum sinnum til að sjá hvað gerist."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Notaðu \"Þrep\" hnappinn til að fara í gegnum eina skipun í einu. Hjálpar það að finna línuna þar sem vandamálið byrjar?",
+          "courseC_maze_debugging4_b": "Einn snúningurinn er að snúa Scrat í ranga átt. Geturðu séð hver það er?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "Það eru nú þegar margir gagnlegir kubbar á vinnusvæðinu. Ekki eyða þeim öllum!\n\nNotaðu \"Þrep\" hnappinn til að fara í gegnum kóðann og finna hvar vandamálið liggur.",
+          "courseC_maze_debugging5_c": "Þú getur breytt stefnu `snúa til` kubbsins með því að smella á fellilistann.",
+          "courseC_maze_debugging5_b": "Prófaðu að segja upphátt það sem Scrat á að gera. Passar það við kóðann á vinnusvæðinu?  Hvar er villan?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   Hvað er það sem Scrat á að gera?\n-   Hvað gerir Scrat?\n-   Hvað segir það þér?",
+          "courseC_maze_debugging6_b": "Eftir að þú hefur fundið og lagað fyrstu villuna, er ráð að nota sama villuleitarferlið til að finna þá næstu.\n\nEndurtaktu þetta ferli þar til forritið virkar!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   Virkar allt í fyrsta þrepi?\n-   Hvað með annað þrepið?\n-   Hvar liggur vandamálið?",
+          "courseC_maze_debugging7_b": "Ekki gleyma að nota \"Þrep\" hnappinn til að keyra forritið eina línu í einu!",
+          "courseC_maze_debugging7_c": "Eftir að þú finnur og lagar fyrstu villuna, skaltu gæta þess að nota villuleitina aftur til að finna næstu villu.\n\nEndurtaktu villuleitarferlið þar til forritið virkar!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Vinstri eða hægri? Þú ræður!",
+          "courseC_maze_debugging_challenge1_b": "Slóðin sem Scrat þarf að fara er rétthyrningur! Hann þarf að snúa eins í hvert skipti!",
+          "courseC_maze_debugging_challenge1_c": "Ef þú kemst ekki áfram getur þú alltaf byrjað upp á nýtt og fundið aðra lausn!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "Ef þú ert að lenda í festum, ættirðu að villuprófa kóðann. Hvað er það sem virkar ekki?",
+          "courseC_maze_debugging_challenge2_c": "Þú getur farið tvær mismunandi slóðir með því að fara áfram og snúa fjórum sinnum. Ef þú finnur leið til að nota `endurtaka` kubbinn, gætu slóðirnar verið fleiri!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "Hugsaðu þér að þessi slóð sé gerð úr tveimur ólíkum pörtum. Hver þeirra hefur mynstur sem þú getur endurtekið.",
+          "courseC_maze_loops_challenge1_b": "Manstu hvernig á að nota lykkjur til að endurtaka tröppumynstur?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Gættu þess að allir kubbarnir séu alveg fastir saman og smelltu svo aftur á \"Keyra\"."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "Til að nota <xml><block type=\"maze_moveForward\"/></xml> kubb, þarf að draga hann út úr verkfærakassanum og festa hann við <xml><block type=\"when_run\"/></xml> kubbinn.",
+          "courseC_maze_programming2_b": "Gættu þess að allir kubbarnir séu alveg fastir saman og smelltu svo aftur á \"Keyra\"."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "Prófaðu að keyra kóðann fyrst til að sjá hvar hann bilar.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTil að fjarlægja kubb úr miðjum kóðanum verður þú að draga alla kubbana á annan stað á vinnusvæðinu.\n\nDragðu kubbinn sem þú vilt eyða aftur í verkfærakassann.\n\nSettu svo hina kubbana þar sem þeir eiga að vera."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Mundu að þegar þú snýrð ertu að snúa frá sjónarhorni _fuglsins_. Ef þú snýrð til hægri mun fuglinn horfa niður.",
+          "courseC_maze_programming4_b": "Svona er leiðin:\n\n-   færa áfram\n-   snúa í aðra átt\n-   færa áfram\n-   snúa aftur í fyrstu áttina\n-   færa áfram"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Prófaðu að nota \"Þrep\" hnappin til að keyra kóðann línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?",
+          "courseC_maze_programming5_b": "Fuglinn mun þurfa að snúa einu sinni til að ljúka þrautinni. Geturðu séð í hvaða átt?",
+          "courseC_maze_programming5_c": "Lausnin mun innihalda tvo `færa áfram` kubba, snúning og aftur tvo `færa áfram` kubba."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Það eru tvær leiðir til að leysa þessa þraut!",
+          "courseC_maze_programming6_b": "Notaðu fingurinn til að rekja slóð frá fuglinum til svínsins. Hvaða leið fórstu?",
+          "courseC_maze_programming6_c": "Mundu að þú þarft að snúa fyrst vegna þess að fuglinn snýr að vegg í byrjun.",
+          "courseC_maze_programming6_d": "Engin lausn? Kíktu á þessa slóð!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Ekki gleyma að nota \"Þrep\" hnappinn til að keyra einn kubb í einu og leita að villum.",
+          "courseC_maze_programming7_b": "Ef þú átt í erfiðleikum með þessa þraut, er ráð að skrifa hreyfingarnar á blað."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "Ekki gleyma að þú getur notað `Þrep` hnappinn til að fara í gegnum kóðann línu fyrir línu.",
+          "courseC_maze_programming8_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Það eru margar leiðir sem liggja til svínsins. Notaðu fingurinn til að rekja slóð og forritaðu hana svo!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_Ef þú sendir mig aftur á bak, þarftu að passa sérstaklega að ég snúi í rétta átt!_",
+          "courseC_maze_programming_challenge2_b": "Stysta lausnin notar aðeins 5 kubba, en hún notar þennan kubb: \n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_a": "Minnir þetta mynstur ekki á stórar tröppur? Gáðu hvort þú getir notað það sem þú lærðir í fyrri þrautum til að ná öllum snúningunum.",
+          "courseC_starWars_loops10_b": "Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\\\nÞað er kallað **földuð lykkja**.",
+          "courseC_starWars_loops10_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_a": "Þegar BB-8 fer yfir brotamálm tínir hann brotin upp sjálfkrafa.",
+          "courseC_starWars_loops1_b": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina.",
+          "courseC_starWars_loops1_c": "Þú þarft að nota `færa áfram` fimm sinnum til að leysa þessa þraut."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2_a": "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2_a": "Þú getur endurtekið kóða með því að draga fram `endurtaka` lykkju og setja kóðann í hana."
+        },
+        "courseC_starWars_loops4_2021": {
+          "courseC_starWars_loops4_c": "Ef þú smellir á litlu píluna við hliðina á \"vinstri\" á `snúa til` kubbnum, getur þú breytt því í \"hægri\".",
+          "courseC_starWars_loops4_a": "Notaðu tvo `endurtaka` kubba.",
+          "courseC_starWars_loops4_b": "Í hvorri `endurtaka` lykkju verður bara ein skipun: `færa áfram`."
+        },
+        "courseC_starWars_loops4_dani": {
+          "courseC_starWars_loops4_c": "Ef þú smellir á litlu píluna við hliðina á \"vinstri\" á `snúa til` kubbnum, getur þú breytt því í \"hægri\".",
+          "courseC_starWars_loops4_a": "Notaðu tvo `endurtaka` kubba.",
+          "courseC_starWars_loops4_b": "Í hvorri `endurtaka` lykkju verður bara ein skipun: `færa áfram`."
+        },
+        "courseC_starWars_loops5_dani": {
+          "courseC_starWars_loops5_b": "Til að færast niður þarft þú að snúa og svo fara áfram.",
+          "courseC_starWars_loops5_a": "Besta lausnin notar eina `færa niður`skipun og eina lykkju með annarri `færa` skipun."
+        },
+        "courseC_starWars_loops6_2021": {
+          "courseC_starWars_loops6_a": "Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
+          "courseC_starWars_loops6_b": "Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\\\nÞað er kallað **földuð lykkja**."
+        },
+        "courseC_starWars_loops6_dani": {
+          "courseC_starWars_loops6_a": "Prófaðu að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
+          "courseC_starWars_loops6_b": "Viljir þú nota færri kubba getur þú sett eina `endurtaka` lykkju innan í aðra!\\\nÞað er kallað **földuð lykkja**."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_a": "Þetta mynstur virðist flóknara en það er í raun! Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?",
+          "courseC_starWars_loops7_b": "Ef þú átt í erfiðleikum með þraut er ráð að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
+          "courseC_starWars_loops7_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_a": "Þetta mynstur virðist flóknara en það er í raun! Prófaðu fyrst einfalt tröppumynstur. Nær það öllum málminum?",
+          "courseC_starWars_loops7_b": "Ef þú átt í erfiðleikum með þraut er ráð að skrifa hreyfingarnar á blað og leita svo að endurtekningum.",
+          "courseC_starWars_loops7_c": "Ekki óttast að gera mistök! Keyrðu kóðann til að sjá hvað gerist þó þú hafir ekki enn leyst þrautina."
+        },
+        "courseC_starWars_loops8_2021": {
+          "course_starWars_loops8_a": "Reyndu að skipta vandamálinu í minni hluta. Gefðu þér tíma. Þú þarft ekki að leysa þetta í fyrstu tilraun!",
+          "course_starWars_loops8_b": "Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri. Hvernig leystirðu það áður?",
+          "course_starWars_loops8_c": "Kíktu á þessa slóð.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_dani": {
+          "course_starWars_loops8_a": "Reyndu að skipta vandamálinu í minni hluta. Gefðu þér tíma. Þú þarft ekki að leysa þetta í fyrstu tilraun!",
+          "course_starWars_loops8_b": "Fyrri hluta þessarar þrautar mætti leysa með tröppumynstri. Hvernig leystirðu það áður?",
+          "course_starWars_loops8_c": "Kíktu á þessa slóð.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9_2021": {
+          "course_starWars_loops9_b": "Mundu að þú getur sett fleiri en einn kubb inn í `endurtaka` lykkju.",
+          "course_starWars_loops9_c": "Þú þarft ekki að snúa til vinstri til að leysa þessa þraut. Allir snúningar geta verið til hægri.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n-   Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n-   Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum",
+          "courseD_artist_project1_b": "Mundu að `færa áfram` teiknar línu, en `hoppa fram` gerir það ekki."
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_b": "Mundu að `færa` teiknar strik, en `hoppa` gerir það ekki.",
+          "courseD_artist_project1_a": "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n-   Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n-   Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
+        },
+        "courseD_artist_5_2021": {
+          "1": "Ekki gleyma þegar þú notar nýtt form að það form getur haft önnur horn en formið á undan!"
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "Auðveldast er að teikna þetta með því að færa áfram og nota hægri snúninga.",
+          "courseD_artist_nestedLoops1_b": "Þú getur teiknað þennan þríhyrning með tveimur kubbum í `endurtaka` lykkju. Hvaða kubbar eru það?",
+          "courseD_artist_nestedLoops1_c": "Prófaðu að skrifa þrepin á blað og leita að endurtekningum sem gætu farið í lykkjur."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_a": "Þú munt þurfa að teikna alls 6 þríhyrninga. Eftir hvern þríhyrning skaltu snúa um 60 gráður og færa áður en sá næsti er teiknaður.\n\n![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_b": "Ef þú teiknar þennan þríhyrning með lykkju, ætti listamaðurinn að horfa í sömu átt og hann gerði í byrjun. Þá verða 60 gráðu snúningarnir miklu auðveldari.",
+          "courseD_artist_nestedLoops1a_c": "Með `stilla lit` kubbnum getur þú haft liti í kóðanum. Þú þarft ekki að hafa sömu liti og í fyrirmyndinni."
+        },
+        "courseD_artist_nestedLoops2_2021": {
+          "courseD_artist_nestedLoops2_a": "Faldaðu lykkjurnar með því að setja kóðann fyrir þríhyrning innan í aðra `endurtaka` lykkju.",
+          "courseD_artist_nestedLoops2_b": "Mundu að setja `snúa` kubbinn inn í lykkjuna til að listamaðurinn snúi eftir hvern þríhyrning."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Prófaðu að nota `hoppa fram` kubbinn til að komast frá efri brún fernings þangað sem sá næsti á að byrja. \n\nHve langt þarf að hoppa ef ferningarnir eru 20 dílar á hæð og með 20 díla millibili?",
+          "courseD_artist_nestedLoops3_b": "Fljótleg lausn er að nota faldaða lykkju (eina lykkju í annarri). ",
+          "courseD_artist_nestedLoops3_c": "Byrjaðu á því að nota `endurtaka` lykkju til að búa til einn ferning. Endurtaktu þann ferning svo 8 sinnum, með 40 díla hoppi á milli. "
+        },
+        "courseD_artist_nestedLoops4_2021": {
+          "courseD_artist_nestedLoops4_d": "Til að leysa þetta rétt þarftu að færa **áður** en þú snýrð, annars verða hringirnir þínir pínulítið skakkir!",
+          "courseD_artist_nestedLoops4_a": "Svona má teikna hring:\n\n-   Endurtaka 360 sinnum\n-   -   Færa áfram 1 díl\n-   -   Snúa til vinstri 1 gráðu",
+          "courseD_artist_nestedLoops4_b": "Ekki gleyma að hoppa áfram um 50 díla á milli hringa.",
+          "courseD_artist_nestedLoops4_c": "Notaðu faldaða lykkju til að teikna hringana 4 sinnum."
+        },
+        "courseD_artist_nestedLoops5_2021": {
+          "courseD_artist_nestedLoops5_a": "Auðveld lausn er:\n\n-   Endurtaka 4 sinnum\n-   -   Teikna hring\n-   -   Hoppa áfram 50 díla\n-   -   Snúa til hægri 90 gráður",
+          "courseD_artist_nestedLoops5_b": "Búðu til hring með `endurtaka` lykkju sem endurtekur 360 sinnum. Innan lykkjunnar á að færa áfram 1 díl og snúa um 1 gráðu."
+        },
+        "courseD_artist_nestedLoops7_2021": {
+          "courseD_artist_nestedLoops7_a": "Hér þarf að nota faldaðar lykkjur. Fyrst er lykkja sem teiknar ferning. Utan um hana kemur önnur lykkja en hvað á hún að gera?",
+          "courseD_artist_nestedLoops7_b": "Notaðu faldaða lykkju þar sem innri lykkjan er kóðinn fyrir ferning.\n\n-   endurtaktu 6 sinnum\n-   búðu til ferning\n-   hoppaðu áfram um **50 díla**\n-   snúðu um **60 gráður**"
+        },
+        "courseD_artist_nestedLoops8_2021": {
+          "courseD_artist_nestedLoops8_a": "Með 8 sexhyrninga í myndinni þarftu að snúa um **45 gráður** á milli þeirra. Hvers vegna? Vegna þess að 360 gráður (snúningur heilan hring) deilt með 8 (fjölda sexhyrninga) er 45 gráður.",
+          "courseD_artist_nestedLoops8_b": "Ef þú kemst ekki áfram, kíktu þá á síðustu þraut, og breyttu svo því sem er öðruvísi núna.",
+          "courseD_artist_nestedLoops8_c": "Notaðu faldaða lykkju:\n\n-   Endurtaktu 8 sinnum\n-   teiknaðu sexhyrning\n-   hoppaðu áfram 50 díla\n-   snúðu til hægri um 45 gráður"
+        },
+        "courseD_artist_nestedLoops9_2021": {
+          "courseD_artist_nestedLoops9_a": "Byrjaðu á að nota faldaða lykkju eins og þá sem þú hafðir áður, en nú á að teikna ferninga.",
+          "courseD_artist_nestedLoops9_b": "Bættu við faldaðri lykkju neðan við þá sem teiknar ferningana, en láttu þessar lykkjur teikna þríhyrninga.",
+          "courseD_artist_nestedLoops9_c": "Notaðu tvær faldaðar lykkjur;\n\n-   Endurtaktu 8 sinnum\n-   teiknaðu ferning\n-   hoppaðu áfram 50 díla\n-   snúðu til hægri um 45 gráður\n-   Endurtaktu 8 sinnum\n-   teiknaðu þríhyrning\n-   hoppaðu áfram 50 díla\n-   snúðu til hægri um 45 gráður"
+        },
+        "courseD_artist_nestedLoopsFP_2021": {
+          "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nÞessi mynd var gerð með einni faldaðri lykkju sem endurtekur sexhyrning (með 50 díla hliðar) 15 sinnum og notar 48 gráðu snúning.",
+          "courseD_artist_nestedLoopsFP_b": "<img src=\"https://images.code.org/31a85d4e5be5209240195d34b17a177b-image-1478732674613.32.53.png\" width=\"200px\"/>\n\nÞessi mynd var gerð með svipuðum kóða og þú hefur notað áður, en nú með hringum (endurtaka 360: færa áfram 1, snúa eina gráðu).",
+          "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nÞessi mynd var gerð með einni faldaðri lykkju sem endurtekur fimmhyrning (með 50 díla hliðar) 15 sinnum með 48 gráðu snúningi."
+        },
+        "courseD_artist_nestedLoops_challenge1_2021": {
+          "courseD_artist_nestedLoops_challenge1_a": "Byrjaðu á breyta litnum í bláan, og búðu svo til átthyrning með 50 díla hliðar og 45 gráðu vinstri snúningum.",
+          "courseD_artist_nestedLoops_challenge1_b": "Bættu við kóða til breyta litnum í grænan og búðu til þríhyrning með 50 díla hliðar og 120 gráðu vinstri snúningum.",
+          "courseD_artist_nestedLoops_challenge1_c": "Eftir að þú hefur teiknað bæði formin, þarft þú að hoppa áfram um 50 díla áður en þú snýrð 90 gráður til hægri.",
+          "courseD_artist_nestedLoops_challenge1_d": "Settu allan kóðann þinn í lokin inn í `endurtaka 4 sinnum` lykkju."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "Til að teikna reglulegan átthyrning, þarf listamaðurinn að snúa 45 gráður í hvert sinn.",
+          "courseD_artist_nestedLoops_challenge2_b": "Til að teikna reglulegan sexhyrning, þarf listamaðurinn að snúa 60 gráður í hvert sinn."
+        },
+        "courseD_artist_project1_2021": {
+          "courseD_artist_project1_a": "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n-   Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n-   Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum",
+          "courseD_artist_project1_b": "Mundu að `færa áfram` teiknar línu, en `hoppa fram` gerir það ekki."
+        },
+        "courseD_artist_project1a_2021": {
+          "courseD_artist_project1a_a": "Þessi trappa notar 76 gráðu snúning og endurtekur 4 sinnum.\n\n<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\" width=\"200px\" />",
+          "courseD_artist_project1a_b": "Þessi mynstur eru mjög lík tröppumynstrunum í öðrum þrautum, en með öðruvísi horni."
+        },
+        "courseD_artist_project2_2021": {
+          "courseD_artist_project2_a": "Mundu að `færa áfram` teiknar línu, en `hoppa fram` gerir það ekki.",
+          "courseD_artist_project2_b": "Eftir að þú teiknar og færir í fyrsta skipti, getur þú endurtekið kóðann með því að setja lykkju utan um hann."
+        },
+        "courseD_artist_project2a_2021": {
+          "courseD_artist_project2a_a": "Þessi teikning var gerð með því að falda lykkju með 4 tröppum og `snúa hægri 180 gráður` kubbi innan í `endurtaka 2 sinnum` kubbi.\n\n<img src=\"https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project3_2021": {
+          "courseD_artist_project3_a": "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n-   Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n-   Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum",
+          "courseD_artist_project3_b": "Prófaðu faldaðar lykkjur!\n\nNotaðu kóðann sem þú gerðir til að teikna röð forma og faldaðu hann innan í annarri lykkju. Neðst, áður en ytri lykkjan endar, skaltu svo bæta við kubbi sem lætur Elsu snúa við.  \n\n-   Prófaðu 72 gráður ef þú ert að endurtaka ytri lykkjuna 5 sinnum\n-   Prófaðu 60 gráður ef þú ert að endurtaka ytri lykkjuna 6 sinnum"
+        },
+        "courseD_artist_project3a_2021": {
+          "courseD_artist_project3a_a": "Þú getur valið um mismunandi mikla snúninga fyrir formið! Hvað með 18 sinnum með 20 gráðu snúningi á milli?"
+        },
+        "courseD_artist_project4_2021": {
+          "courseD_artist_project4_a": "Hér er snjókornið úr fimmhyrningum með 36 gráðu snúningi og líka snjókorn úr þríhyrningum:\n\n<img src=\"https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png\" width=\"200px\" />\n\nHér eru notaðir sexhyrningar með ferningum:\n\n<img src=\"https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png\" width=\"200px\" />",
+          "courseD_artist_project4_b": "Prófaðu þetta með því að teikna fyrsta snjókornið, snúa og teikna svo annað snjókorn."
+        },
+        "courseD_artist_project4a_2021": {
+          "courseD_artist_project4a_a": "Hér eru tvö mismunandi löng snjókorn, teiknuð hvort á eftir öðru (með 30 gráðu snúningi á milli.)\n\n<img src=\"https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png\" width=\"200px\" />"
+        },
+        "courseD_artist_project5_2021": {
+          "courseD_artist_project4_a": "Raðir með 2 sexhyrningum og 4 þríhyrningum:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseD_bee_conditionals1_predict1_2021": {
+          "courseD_bee_conditionals1_a": "Þú munt þurfa að nota `ef` kubb til að athuga hvort það sé blóm undir skýinu áður en þú reynir að ná í blómasafa."
+        },
+        "courseD_bee_conditionals1_predict1_dani": {
+          "courseD_bee_conditionals1_a": "Þú munt þurfa að nota `ef` kubb til að athuga hvort það sé blóm undir skýinu áður en þú reynir að ná í blómasafa."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "courseD_bee_conditionals2_a": "Stundum er blóm á reit, en stundum ekki.  Ef þú vilt að kóðinn ráði við bæði tilfellin, skaltu gæta þess að nota `ef` setningu.",
+          "courseD_bee_conditionals2_c": "Þú þarft ekki að athuga með býkúpur. Undir skýi eru annað hvort blóm eða ekkert."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "courseD_bee_conditionals2_hintVid1": "Þarftu hjálp við að komast af stað? Kíktu á myndbandið1!",
+          "courseD_bee_conditionals2_a": "Stundum er blóm á reit, en stundum ekki.  Ef þú vilt að kóðinn ráði við bæði tilfellin, skaltu gæta þess að nota `ef` setningu.",
+          "courseD_bee_conditionals2_b": "Þú getur notað `endurtaka` lykkju eða `meðan slóð framundan` til að fara í gegnum þetta völundarhús.",
+          "courseD_bee_conditionals2_c": "Þú þarft ekki að athuga með býkúpur. Undir skýi eru annað hvort blóm eða ekkert.",
+          "courseD_bee_conditionals2_hintVid2": "Þetta myndband getur hjálpað að leysa þessa þraut."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "Gættu þess að nota `ef` setningu til að athuga fyrir hvern reit hvort hann hafi blóm eða ekkert.",
+          "courseD_bee_conditionals3_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_bee_conditionals3_dani": {
+          "courseD_bee_conditionals3_hintVid1": "Þarftu hjálp við að komast af stað? Kíktu á myndbandið1!",
+          "courseD_bee_conditionals3_a": "Gættu þess að nota `ef` setningu til að athuga fyrir hvern reit hvort hann hafi blóm eða ekkert.",
+          "courseD_bee_conditionals3_b": "Þú getur notað `endurtaka` lykkju eða `meðan` lykkju til að láta býfluguna færast áfram. Þú færð að velja!",
+          "courseD_bee_conditionals3_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.",
+          "courseD_bee_conditionals3_hintVid2": "Þetta myndband getur hjálpað að leysa þessa þraut."
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "Þú getur unnið með hvern reit eins og hann væri hulinn skýi, jafnvel þó þú sjáir alla slóðinaþ.",
+          "courseD_bee_conditionals4_b": "Notaðu `ef` setningu innan í lykkjunni til að athuga fyrir hvern reit hvort hann hafi blómasafa. "
+        },
+        "courseD_bee_conditionals4_dani": {
+          "courseD_bee_conditionals4_hintVid1": "Þarftu hjálp við að komast af stað? Kíktu á myndbandið1!",
+          "courseD_bee_conditionals4_a": "Þú getur unnið með hvern reit eins og hann væri hulinn skýi, jafnvel þó þú sjáir alla slóðinaþ.",
+          "courseD_bee_conditionals4_b": "Notaðu `ef` setningu innan í lykkjunni til að athuga fyrir hvern reit hvort hann hafi blómasafa. ",
+          "courseD_bee_conditionals4_c": "Notaðu kubbinn <xml><block type=\"maze_untilBlocked\"/></xml> og í honum `færa áfram` og athuga með blóm. Ef það er blóm, hvað ætti býflugan að gera?",
+          "courseD_bee_conditionals4_hintVid2": "Þetta myndband getur hjálpað að leysa þessa þraut."
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "Ef þú notar `ef við blóm` kubb, getur þú leyst þetta með því að nota faldaða lykkju. Skrifaðu forrit fyrir vinstri og neðri hlið slóðarinnar og endurtaktu það!",
+          "courseD_bee_conditionals5_c": "Til að færa býfluguna niður slóðina þarf að nota `færa áfram`. Þegar hún færist þarf hún að athuga hvort þar sé blóm. `Ef við blóm` á býflugan að `sækja blómasafa`."
+        },
+        "courseD_bee_conditionals5_dani": {
+          "courseD_bee_conditionals5_hintVid1": "Þarftu hjálp við að komast af stað? Kíktu á myndbandið1!",
+          "courseD_bee_conditionals5_a": "Hugsaðu hverja hlið á rétthyrndu slóðinni sem sjálfstæða slóð. Settu `meðan slóð framundan` lykkju innan í `endurtaka` lykkju. Eftir hve mörgum slóðum þarf býflugan að fljúga, ef býflugan þarf að fara hverja slóð sem hefur blóm?",
+          "courseD_bee_conditionals5_c": "Þrjár hliðar rétthyrningsins hafa blóm, svo að kóðinn þarf að `endurtaka 3 sinnum`. Í hverri umferð þarf býflugan að fara eftir slóðinni `meðan slóð framundan`. Til að fara eftir slóðinni þarf býflugan að `færa áfram`. Á slóðinni þarf býflugan að athuga með blóm. Ef þar er blóm, á býflugan að `sækja blómasafa`.",
+          "courseD_bee_conditionals5_b": "Innan í `meðan slóð framundan` kubbi þarft þú að hafa `færa áfram` og athuga með blóm. Hvernig athugar þú með blóm? Hvað gerir þú ef þar er blóm?",
+          "courseD_bee_conditionals5_hintVid2": "Þetta myndband getur hjálpað að leysa þessa þraut."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "Gættu þess að nota `ef` yrðingu til að athuga með býkúpu undir hverju skýi.",
+          "courseD_bee_conditionals6_b": "Í þessu tilfelli þarftu ekki að athuga með blómasafa undir skýjunum.",
+          "courseD_bee_conditionals6_c": "Er til lykkja sem gæti einfaldað kóðann þinn?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**Mundu:** Þessi þraut breytist í hvert sinn sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef/annars`) til að leysa þessa áskorun.",
+          "courseD_bee_conditionals7_b": "Ef ský felur ekki blóm þá hlýtur það að fela býkúpu, svo þú þarft ekki að hafa áhyggjur af tómum reitum."
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**Mundu:** Þessi þraut breytist í hvert sinn sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef/annars`) til að leysa þessa áskorun."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**Mundu:** Þessi þraut breytist í hvert sinn sem hún er keyrð. \n\nÞú þarft að nota skilyrðiskubb (`ef` eða `ef/annars`) til að leysa þessa áskorun.",
+          "courseD_bee_conditionals8_b": "Þessi þraut er snúin því að þú getur ekki athugað hvort reitur sé tómur, hafi blóm eða hafi hunang allt með einu skilyrði.\n\nAthugaðu aðeins með blómasafa og hunang við enda slóðarinnar."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_a": "Getur þú fundið leið sem nær til allra blóma og býkúpa án þess að lenda á tré? Besta slóðin er spírall.",
+          "courseD_bee_conditionals_challenge1_b": "Í þessari þraut gæti hver reitur haft blóm, býkúpu eða ekkert. Það þýðir að þú getur endurtekið `ef/annars` skilyrðið í hverjum reit."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Kubbarnir `ef við blóm` keyra bara ef býflugan er á blómi. Það sama gildir um kóðann innan í `meðan blómasafi > 0`, en munurinn er sá að þessi kóði mun keyra endurtekið þar til enginn blómasafi er eftir.  Prófaðu þetta mynstur:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n\n<title name=\"ARG1\">nectarRemaining</title>\n<title name=\"OP\">&gt;</title>\n<title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n<block type=\"maze_nectar\"/>\n</statement>\n</block></xml>"
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "Virkar þetta ekki? Prófaðu að nota \"Þrep\" skipunina til að sjá hvað hvert þrep gerir.",
+          "courseD_bee_nestedLoops1_b": "Prófaðu að skrifa kóða fyrir eina hlið ferningsins fyrst. Getur þú sett hann í lykkju til að ná öllum blómasafanum?",
+          "courseD_bee_nestedLoops1_c": "Mundu að nota `sækja blómasafa` kubbinn þegar þú ert á reit með blómi."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "Virkar þetta ekki? Prófaðu að nota \"Þrep\" skipunina til að sjá hvað hvert þrep gerir.",
+          "courseD_bee_nestedLoops1_c": "Mundu að nota `sækja blómasafa` kubbinn þegar þú ert á reit með blómi."
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Til að leysa þessa þraut muntu þurfa að falda eina `endurtaka` lykkju inn í aðra lykkju.",
+          "courseD_bee_nestedLoops2_b": "Sérðu ekki hvar á að setja lykkjurnar? Prófaðu að skrifa kóða á blað og leita að endurtekningum.",
+          "courseD_bee_nestedLoops2_c": "Mundu að þú getur sett fleiri en einn kubb inn í lykkju."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "Þú þarft að endurtaka `safna blómasafa` innan í annarri `endurtaka` lykkju sem inniheldur líka `færa áfram` kubb.",
+          "courseD_bee_nestedLoops7_b": "Þú þarft að nota alla þrjá `endurtaka` kubbana sem þú hefur til að leysa þessa þraut.",
+          "courseD_bee_nestedLoops7_c": "Faldaðu endurtekningarnar þrisvar svona:\n\n-   endurtaka 4\n-   -   endurtaka 3\n-   -   -   -   endurtaka 12\n-   -   -   -   sækja blómasafa\n-   -   færa áfram\n-   snúa til hægri"
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "Þú ættir að hafa báða þessa atburði í kóðanum:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "Þú þarft að kasta bolta þegar leikurinn byrjar, þegar þú hittir körfuna og þegar höndin nær ekki boltanum."
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "Þú getur gert körfuboltann eða höndina hraðari með því að setja þá kubba við `þegar keyrt` atburðinn.",
+          "courseD_bounce_events12s_b": "Prófaðu að láta hvert skot gilda 2 stig og breyta merki liðsins í merki liðs í þínum heimabæ!"
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "Þú þarft að bæta kubbnum `færa vinstri` við atburðinn `þegar vinstri ör` til að leikurinn virki rétt:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "Ekki gleyma að ýta á \"Keyra\" og láta hendina fara til körfunnar til að leysa þessa þraut."
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "Þú munt þurfa að kóða tvenns konar `færa` atburði til að þetta virki:\n\n<xml>\n<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n<next>\n<block type=\"bounce_moveLeft\"/>\n</next>\n</block>\n<block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n<next>\n<block type=\"bounce_moveRight\"/>\n</next>\n</block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "Þú þarft ekki að færa höndina til að leysa þessa þraut.",
+          "courseD_bounce_events5s_b": "Gættu þess að þú hafir sett þennan kóða á vinnusvæðið:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "Ertu með atburð sem lítur svona út?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "Ef þú hefur skrifað kóðann rétt þá þarftu ekki að færa höndina til að vinna."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "Þú getur bætt hljóðum við á fleiri stöðum ef þú vilt!"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "Notaðu \"Þrep\" hnappinn til að athuga hvort allt sé í lagi á fyrsta þrepi.\n\nHvað með annað þrep?\n\nHvar liggur vandinn?",
+          "courseD_collector_debugging1_c": "Mundu að nota `safna` kubbinn til að taka upp fjársjóð eftir að þú hefur farið þangað."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "Notaðu \"Þrep\" hnappinn til að athuga hvort allt sé í lagi á fyrsta þrepi.\n\nHvað með annað þrep?\n\nHvar liggur vandinn?",
+          "courseD_collector_debugging2a_c": "Hvað gerist?\n\nHvað á að gerast?\n\nHvað segir það þér?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "Er einhver staður í forritinu þar sem Lára gerir eitthvað sem passar ekki? Hvað gerist ef þú skiptir um þá kubba?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "Reyndu að nota villuleitarferlið nokkrum sinum í röð. \n\nHvað orsakaði fyrsta vandamálið?\n\nÞegar það var leyst var eitthvað fleira að?",
+          "courseD_collector_debugging4_b": "Ef þú átt erfitt með að sjá hvernig hægt er að gera tröppumynstrið, er ráð að rekja það með fingrinum og segja skipanirnar upphátt. \n\nEkki gleyma að segja í hvaða átt á að snúa!"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "Hvað gerir þetta?\n\nHvað á það að gera?\n\nHvað segir það þér?",
+          "courseD_collector_debugging5a_b": "Hvað er afgangs í kóðanum þínum eftir þú hefur safnað fjársjóðunum í fyrstu röðinni?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "Prófaðu að fara í gegnum kóðann með \"Þrep\" hnappnum. Virkar allt á fyrsta þrepi?\n\nHvað með annað þrepið?\n\nÁ hvaða þrepi er vandamálið?",
+          "courseD_collector_debugging6_b": "Allir kubbarnir sem þú þarft virðast vera á vinnusvæðinu. Prófaðu að smella á \"byrja aftur\" ef þú áttar þig ekki á þessu."
+        },
+        "courseD_collector_nested_loops_challenge2_2021": {
+          "courseD_bee_nested_loops_challenge2_a": "Ekki gleyma að þú getur `endurtekið` eina skipun eða fleiri. Þú getur meira að segja endurtekið `endurtaka` kubb!",
+          "courseD_bee_nested_loops_challenge2_b": "Til að ná öllum 4 eðalsteinunum þarf fyrst að nota lykkju til að færast frá miðjunni. Snúa til vinstri eða hægri, síðan nota faldaða lykkju til að fara frá fyrsta fjársjóð að þeim næsta. Ef faldaða lykkjan er endurtekin nógu oft, mun safnarinn færast um _allan_ hellinn!",
+          "courseD_bee_nested_loops_challenge2_c": "Stysta forritið sem nær til allra fjársjóðanna notar aðeins einn `taka` kubb og tvo snúninga.",
+          "courseD_bee_nested_loops_challenge2_d": "\\*Lausn:\\*\\*\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseD_farmer_condLoops1_2021": {
+          "courseD_farmer_condLoops1_a": "Þú þarft að athuga með maís 5 sinnum í `endurtaka` lykkju.",
+          "courseD_farmer_condLoops1_b": "Gættu þess að nota `ef það er maís` kubb annars gætirðu reynt að tína eitthvað sem er ekki þar!"
+        },
+        "courseD_farmer_condLoops2_2021": {
+          "courseD_farmer_condLoops2_a": "Besta leiðin er að falda `ef` setningar með því að setja aðra inn í hina.  ",
+          "courseD_farmer_condLoops2_b": "Í þessari þraut ættirðu að hafa eina `ef/annars` setningu og eina einfalda `ef` setningu.",
+          "courseD_farmer_condLoops2_c": "`ef` setningin þín ætti að vera lík þessu:\n\n-   ef við maís\n-   tína maís\n-   annars\n-   ef við kál\n    \\\\t- tína kál\n\nEf ekkert er, muntu ekki tína neitt!"
+        },
+        "courseD_farmer_condLoops3_2021": {
+          "courseD_farmer_condLoops3_a": "Til að ná öllum hlutunum ættirðu að prófa að falda `ef` setningar þrisvar.\n\nÞað þýðir að þú átt að setja `ef` setningu inn í aðra `ef` setningu og svo setja þær báðar inn í þriðju `ef` setninguna.",
+          "courseD_farmer_condLoops3_b": "Í þessari þraut ættirðu að hafa tvær `ef/annars` setningar og eina einfalda `ef` setningu."
+        },
+        "courseD_farmer_condLoops4_2021": {
+          "grade3_RunningFarm_4courseD_farmer_condLoops4": "Enginn veit hve margir kálhausar vaxa í hverjum reit.\n\nNotaðu `meðan það er kál` lykkju til að halda áfram að tína þar til allt kál hefur verið tínt.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_b": "`Meðan` lykkjan ræður líka við tóma reiti! Þar sem er ekkert kál, mun hún ekki tína neitt og láta kóðann halda áfram.",
+          "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "Þú getur notað annað hvort `meðan slóð framundan` lykkju eða `endurtaka` lykkju til að fara í gegnum alla uppskeruna."
+        },
+        "courseD_farmer_condLoops5_2021": {
+          "courseD_farmer_condLoops5_a": "Nú er ný lykkja: `endurtaka þar til við grasker`. Geturðu séð hvernig hún nýtist í þessari þraut?",
+          "courseD_farmer_condLoops5_b": "Það gætu verið fleiri ein einn af maís eða káli í hverjum reit. Notaðu `meðan` lykkju til að safna öllu!"
+        },
+        "courseD_farmer_condLoops6_2021": {
+          "courseD_farmer_condLoops6_a": "Notaðu `meðan slóð framundan` lykkju eða `ef slóð framundan / annars` kubb til að færa bóndann eftir hverjum legg spíralsins.",
+          "courseD_farmer_condLoops6_b": "Þú þarft aðeins að athuga með maís þar til alveg í lokin þar sem graskerið er."
+        },
+        "courseD_farmer_condLoops7_2021": {
+          "courseD_farmer_condLoops7_a": "Auðveldasta slóðin til að safna öllu er spírall.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)"
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "Í þessari áskorun gæti `Þrep` hnappurinn reynst gagnlegur.",
+          "courseD_farmer_condLoops_challenge1_b": "Venjulega mundir þú bara `tína grasker` ef þú ert við grasker. Hvað annað þarftu að gera ef þú ert við grasker?"
+        },
+        "courseD_farmer_condLoops_challenge2_2021": {
+          "courseD_farmer_condLoops_challenge2_a": "Magn grænmetis í hverjum reit er breytilegt. Notaðu þá `meðan` lykkjur."
+        },
+        "courseD_farmer_while1_2021": {
+          "courseD_farmer_while1_a": "Þú þarft að fara áfram fjórum sinnum til að komast að haugnum. Getur þú notað `endurtaka` lykkju til þess?",
+          "courseD_farmer_while1_b": "Notaðu `fjarlægja 1` kubb þegar þú stendur á moldarhaug til að fjarlægja hann."
+        },
+        "courseD_farmer_while2_2021": {
+          "courseD_farmer_while2_a": "Þú þarft bara að færa þig einu sinni til að komast til holunnar.",
+          "courseD_farmer_while2_b": "Þú þarft að nota `fylla 1` kubbinn sex sinnum. Getur þú notað lykkju til að einfalda þetta?"
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "Með lykkju gætir þú einfaldað þennan kóða.",
+          "courseD_farmer_while3_b": "Þú ættir ekki að þurfa `snúa` kubba til að komast til haugsins."
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_a": "Í stað `endurtaka` lykkju er betra að nota `meðan` lykkju til að halda áfram að moka þar til hrúgan er búin.",
+          "courseD_farmer_conditionals4_b": "Þetta er mjög líkt fyrri þraut en þú þarft að nota öðruvísi lykkju."
+        },
+        "courseD_farmer_while5_2021": {
+          "courseD_farmer_conditionals5a_a": "Prófaðu að nota `meðan` lykkju innan í `endurtaka` lykkju.",
+          "courseD_farmer_conditionals5a_b": "Bóndinn þarf að fara áfram samtals fimm sinnum til að komast út á enda raðarinnar. Hvað annað þarf bóndinn að gera?",
+          "courseD_farmer_conditionals5a_c": "Farðu áfram 5 sinnum. Í hvert sinn sem þú ferð áfram fjarlægir þú mold með því að nota `meðan það er haugur` kubbinn."
+        },
+        "courseD_farmer_while6_2021": {
+          "courseD_farmer_conditionals6_a": "Gættu þess að nota `meðan` lykkjuna til að ákveða hve margar skóflur þarf til að fylla hverja holu.",
+          "courseD_farmer_conditionals6_b": "Taktu eftir að bóndinn þarf að fara áfram og niður nokkrum sinnum í tröppumynstri.",
+          "courseD_farmer_conditionals6_c": "Tröppumynstrið notar eftirfarandi kubba\n\n-   færa áfram\n-   fylla holu\n-   snúa til hægri\n-   færa áfram\n-   fylla holu\n-   snúa til vinstri\n\nHve oft þarft þú að nota þetta tröppumynstur?\n\nGættu þess að þú sért að nota `meðan það er hola` kubbinn til að fylla holuna."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_a": "Með kubbnum `meðan slóð framundan` getur þú haldið áfram jafnvel þó þú vitir ekki hversu margir reitir eru framundan.",
+          "courseD_farmer_conditionals8_b": "Hér gæti það hjálpað að setja `meðan slóð framundan` lykkju inn í endurtekningarlykkju.",
+          "courseD_farmer_conditionals8_c": "Hvað þarft þú að gera við enda hverrar slóðar?"
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "Þú þarft að nota fleiri en eina `meðan` lykkju.",
+          "courseD_farmer_conditionals8_b": "Hver hola er við enda slóðar svo þú notar `meðan slóð framundan` á undan `meðan það er hola`.",
+          "courseD_farmer_conditionals8_c": "Taktu eftir að þú þarft að endurtaka `meðan slóð` og `meðan hola` kóðann sex sinnum."
+        },
+        "courseD_farmer_while_challenge1_2021": {
+          "courseD_farmer_while_challenge1_a": "Hver hola eða haugur er einum reit **til baka** frá enda slóðarinnar.",
+          "courseD_farmer_while_challenge1_b": "Ef þú notar `meðan` lykkju, getur þú sagt bóndanum að fjarlægja haug eða fylla holu, jafnvel þó engin sé. Það þýðir að þú getur forritað hana til að fjarlægja eða fylla án þess að hún færist úr stað.",
+          "courseD_farmer_conditionals8_c": "Það er mögulegt að leysa þetta án þess að nota `endurtaka` lykkjur. Til að gera það þarft þú að nota fjórar `meðan` lykkjur."
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_a": "Þú hefur líklega nú þegar notað lykkju til að búa til sikksakk mynstur. Ef þú manst það algrím, getur þú bætt nokkrum atriðum við það hér.",
+          "courseD_harvester_nested_loops_challenge1_b": "Til að tína meira en einn maís þarftu að nota `tína maís` oftar en einu sinni.",
+          "courseD_harvester_nested_loops_challenge1_c": "Þú munt þurfa að setja litla lykkju innan í aðallykkjuna til að leysa þessa þraut!"
+        },
+        "courseD_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Gættu þín á sprungnum ís! Annars dettur Scrat ofan í vatnið!",
+          "courseB_iceage_loops10_b": "Prófaðu að segja þrepin upphátt eða skrifa þau á blað. Eru einhverjar endurtekningar?",
+          "courseB_iceage_loops10_c": "Þetta er löng þraut! Fylgdu þessari slóð."
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "Gættu þín á sprungnum ís! Annars dettur Scrat ofan í!",
+          "courseD_iceage_loops1_b": "Þú þarft að nota þennan kubb:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "Skiptu þrautinni í tvo hluta, fyrst að horninu og svo frá horninu.",
+          "courseD_iceage_loops2_b": "Ef þú finnur ekki lausn er gott ráð að segja upphátt hvað þarf að gera.",
+          "courseD_iceage_loops2_c": "Þessi slóð kemur Scrat til akarnsins."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Notaðu þennan nýja kubb!\n\n<xml><block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Kóði er endurtekinn með því að nota `endurtaka` lykkju sem inniheldur kubbinn sem þú vilt endurtaka."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "Ekki hika við að keyra kóðann og sjá hvað gerist!",
+          "courseD_iceage_loops4_b": "Prófaðu að skrifa niður skrefin sem Scrat þarf að taka til komast til akarnsins. Sérðu mynstur?",
+          "courseD_iceage_loops4_c": "Þetta er slóðin sem Scrat ætti að fylgja."
+        },
+        "courseD_iceage_loops6_2021": {
+          "courseD_iceage_loops6_a": "Lokakóðinn ætti að hafa **þrjá** `færa áfram` kubba.",
+          "courseD_iceage_loops6_b": "Þig vantar bara **eina** lykkju í viðbót!",
+          "courseD_iceage_loops6_c": "Svona ætti slóðin að líta út í lokin."
+        },
+        "courseD_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "Gott ráð í vandræðum er að skrifa skrefin á blað og reyna að finna endurtekningar.",
+          "courseB_iceage_loops7_b": "Þetta er slóðin sem Scrat ætti að fylgja til akarnsins."
+        },
+        "courseD_iceage_loops8_2021": {
+          "courseD_iceage_loops8_a": "Eru `snúa` kubbarnir réttir? Hverju öðru getur þú breytt?",
+          "courseD_iceage_loops8_b": "Fyrsta lykkjan ætti að endurtaka **3** sinnum, önnur lykkjan **5** sinnum, þriðja lykkjan **4** sinnum og síðasta lykkjan **4** sinnum.",
+          "courseD_iceage_loops8_c": "Notaðu lykkjur til að hjálpa Scrat að fara slóðina."
+        },
+        "courseD_iceage_loops9_2021": {
+          "courseD_iceage_loops9_a": "Er erfitt? Reyndu að skipta þrautinni í smærri hluta. Ekki hika við að keyra kóðann oft til að prófa það sem þú gerir!",
+          "courseD_iceage_loops9_b": "Lokakóðinn þinn ætti að hafa **4** lykkjur.",
+          "courseD_iceage_loops9_c": "Scrat ætti að fylgja þessari slóð til að komast til akarnsins."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "Þú getur snúið til hægri eða vinstri frá sjónarhorni Red. Ef hann horfir til hægri þá mun hægri snúningur láta hann horfa niður.",
+          "courseC_maze_programming4_b": "Fylgdu slóðinni með því að fara áfram og snúa í eina átt, síðan fara áfram aftur áður en þú snýrð í öfuga átt. Farðu áfram einu sinni enn til að ná akarninu."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Prófaðu að nota \"Þrep\" hnappin til að keyra kóðann línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?",
+          "courseC_maze_programming5_b": "Mundu að snúningar eru frá sjónarhorni Red.",
+          "courseC_maze_programming5_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "Til að leysa þessa þraut þarf að setja (falda) eina `endurtaka` lykkju inn í aðra `endurtaka` lykkju.",
+          "courseD_maze_nestedLoops3_b": "Sérðu ekki hvar á að setja lykkjurnar? Prófaðu að skrifa kóðann skref-fyrir-skref á blað og leita að endurtekningum.",
+          "courseD_maze_nestedLoops3_c": "Prófaðu að skrifa kóðann fyrir eina beina slóð ásamt snúningi. Getur þú endurtekið þetta til að komast til sólblómsins?"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "Prófaðu að nota svona slóð.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_b": "Ef það er erfitt að sjá mynstur fyrir lykkju, er ráð að kóða þetta allt í einfaldri röð og sjá hvar endurtekningar eru sem gætu farið í lykkjur.",
+          "courseD_maze_nestedLoops4_c": "Prófaðu að nota eina `endurtaka` lykkju innan í annarri til að stytta kóðann sem þarf."
+        },
+        "courseD_maze_nestedLoops5_2021": {
+          "courseD_maze_nestedLoops5_a": "Ef völundarhúsið inniheldur tröppumynstur gæti hentað að nota faldaða lykkju þar.",
+          "courseD_maze_nestedLoops5_b": "Sérðu ekki hvar á að setja lykkjurnar? Prófaðu að skrifa kóðann skref-fyrir-skref á blað og leita að endurtekningum."
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_a": "Ef þú kemst ekki áleiðis, er ráð að skrifa kóðann á blað án þess að nota lykkjur og leita að endurtekningum.",
+          "courseD_maze_nestedLoops6_b": "Ef þú faldar `endurtaka` lykkjur gæti það hjálpað til að fækka kubbunum.",
+          "courseD_maze_nestedLoops6_c": "Það þarf nota faldaðar `endurtaka` lykkjur tvisvar til að leysa þessa þraut."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Ef fuglinn er ekki að komast til svínsins, þarftu að ganga úr skugga um að allir þrír kubbarnir séu tengdir saman og smella svo aftur á \"Keyra\".",
+          "courseC_maze_programming1_b": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "`Færa áfram` kubbur er notaður með því að draga hann úr verkfærunum út á vinnusvæðið og tengja hann við `þegar keyrt` kubbinn.",
+          "courseC_maze_programming2_b": "Gættu þess að allir 3 kubbarnir séu tengdir innbyrðis og tengdir við `þegar keyrt` kubbinn."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nEf þú vilt eyða kubb sem er á milli annarra kubba er aðferðin þessi: Dragðu alla kubbana fyrir neðan kubbinn út úr kóðanum og á vinnusvæðið til að geyma þá þar.  \n\nSmelltu á kubbinn sem vilt eyða og dragðu hann aftur í verkfærakassann.\n\nDragðu hina kubbana aftur á sinn stað í kóðanum."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Prófaðu að nota \"Þrep\" hnappin til að keyra kóðann línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?",
+          "courseC_maze_programming5_b": "Mundu að snúningar eru frá sjónarhorni fuglsins.",
+          "courseC_maze_programming5_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Prófaðu að nota \"Þrep\" hnappin til að keyra kóðann línu fyrir línu. Geturðu fundið út hvað þú þarft að gera næst?",
+          "courseC_maze_programming5_b": "Mundu að snúningar eru frá sjónarhorni fuglsins.",
+          "courseC_maze_programming5_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_a": "Eru einhverjar kubbaraðir sem þú gætir sett í lykkju til að stytta kóðann?",
+          "courseD_maze_until1_b": "Prófaðu að nota faldaða lykkju til að leysa þessa þraut."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "Hvað gerir kóðinn? \nHvað er ætlast til að hann geri? \nHvað segir það þér?",
+          "courseD_maze_until3_b": "Ein leið til að finna lausn er að skrifa þrepin á blað og leita svo að þrepum sem eru endurtekin.",
+          "courseD_maze_until3_c": "Gætir þú notað tröppumynstur í þessari þraut?",
+          "courseD_maze_until3_d": "Ekki gleyma að nota `endurtaka þar til` kubbinn til að stytta kóðann."
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_a": "Notaðu \"Þrep\" hnappinn til að fara í gegnum kóðann línu fyrir línu.\n\n-   Virkar all í fyrsta þrepi?\n-   Virkar all í öðru þrepi?\n-   Hvar er vandamálið?",
+          "courseD_maze_until4_b": "Gætir þú notað tröppumynstur í þessari þraut?",
+          "courseD_maze_until4_c": "Ekki gleyma að nota `endurtaka þar til` kubbinn til að stytta kóðann."
+        },
+        "courseD_maze_until5_2021": {
+          "courseD_maze_until5_b": "Þú getur notað bara einn `færa áfram` kubb ef þú setur hann inn í `endurtaka þar til sólblóm` kubb."
+        },
+        "courseD_maze_until6_2021": {
+          "courseD_maze_until6_b": "Þú getur notað bara einn `færa áfram` kubb ef þú setur hann inn í `endurtaka þar til sólblóm` kubb."
+        },
+        "courseD_maze_until7_2021": {
+          "courseD_maze_until7_a": "Kóðinn þinn þarf ekki að vera lengri en síðast þó svo að slóðin sé það!",
+          "courseD_maze_until7_b": "Þó að það séu fleiri snúningar nú en í síðustu þraut getur þú nú notað nánast sama kóða vegna `endurtaka þar til` kubbsins!"
+        },
+        "courseD_maze_until9_2021": {
+          "courseD_maze_until8_c": "Mundu að nota `endurtaka þar til` kubbinn til að koma þér til sólblómsins!"
+        },
+        "courseE_artist_functions10_2021": {
+          "courseD_artist_functions10_b": "Þessi teikning er mjög lík þeirri síðustu, en `teikna strik` fallið teiknar nú annað form.",
+          "courseD_artist_functions10_a": "Til þess að þurfa ekki að nota marga `færa áfram` kubba, skaltu búa til `teikna sexhyrning` fall og kalla oft á það.",
+          "courseD_artist_functions10_c": "Geturðu séð hvar þessi teikning gæti notað fall sem héti `röð sexhyrninga`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Hver ferningur hefur 100 díla hliðar. Það þýðir að þú þarft að fara áfram um 175 díla áður en þú teiknar næsta ferning.",
+          "courseE_artist_functions1_b": "Það er í lagi að láta línurnar skarast við gerð gleraugnanna.",
+          "courseE_artist_functions1_c": "Með `endurtaka` lykkju getur þú teiknað ferningana fyrir gleraugnaumgjarðirnar með styttri kóða."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_b": "Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.",
+          "courseD_artist_functions2_c": "Notaðu græna `teikna ferning` kubbinn til að \"kalla á\" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n\n-   Nota fall\n-   Fara áfram 100 + 75 díla\n-   Nota fall"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_b": "Fallið sem þú skrifar ætti ekki að innihalda allt forritið þitt, heldur aðeins þann hluta sem teiknar ferning með 100 díla hliðar.",
+          "courseD_artist_functions2_c": "Notaðu græna `teikna ferning` kubbinn til að \"kalla á\" fallið þitt fyrir neðan `þegar keyrt` kubbinn. Annars mun kóðinn ekki keyra.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_a": "Forritið þitt ætti að:\n\n-   Nota fall\n-   Fara áfram 100 + 75 díla\n-   Nota fall"
+        },
+        "courseE_artist_functions3_dani": {
+          "courseD_artist_functions3_a": "Þú getur leyst þessa þraut með því að bæta við lykkju sem endurtekur byrjunarkóðann 8 sinnum.\n\nEf þú manst ekki hvernig byrjunarkóðinn var getur þú smellt á \"byrja aftur\" hnappinn fyrir ofan vinnusvæðið.",
+          "courseD_artist_functions3_b": "Lykkjan þín ætti að innihalda alla 3 kubbana sem byrjað er með."
+        },
+        "courseE_artist_functions4_dani": {
+          "courseD_artist_functions4_a": "Prófaðu að nota fall!",
+          "courseD_artist_functions4_b": "Dragðu kubbinn fyrir `teikna stjörnu` fallið úr verkfærakassanum til að byrja að smíða fallið. Það ætti að innihalda sama kóða og í síðustu þraut vegna þess að þú ert að teikna sama stjörnulaga mynstrið.",
+          "courseD_artist_functions4_c": "Notaðu græna `teikna stjörnu` kubbinn til að kalla á þetta fall innan úr aðalforritinu þínu. Ekki gleyma að hoppa áfram eftir hverja stjörnu!"
+        },
+        "courseE_artist_functions5_2021": {
+          "courseD_artist_functions5_a": "Ekki gefast upp! Mundu hvað þú hefur verið að læra.",
+          "courseD_artist_functions5_b": "Þú getur kallað á kóðann í falli hvenær sem er, ekki bara innan úr lykkjum!",
+          "courseD_artist_functions5_c": "Byrjaðu á að draga kóðann fyrir stjörnuformið inn í `teikna stjörnu` fallið og notaðu svo þetta fall til að teikna stjörnurnar þrjár!"
+        },
+        "courseE_artist_functions5_dani": {
+          "courseD_artist_functions5_a": "Ekki gefast upp! Mundu hvað þú hefur verið að læra.",
+          "courseD_artist_functions5_b": "Þú getur kallað á kóðann í falli hvenær sem er, ekki bara innan úr lykkjum!",
+          "courseD_artist_functions5_c": "Byrjaðu á að draga kóðann fyrir stjörnuformið inn í `teikna stjörnu` fallið og notaðu svo þetta fall til að teikna stjörnurnar þrjár!"
+        },
+        "courseE_artist_functions7_2021": {
+          "courseD_artist_functions7_a": "Reyndu að búa til fallið fyrst og bæta svo við einum glugga í einu.",
+          "courseD_artist_functions7_b": "Komdu listamanninum frá efri gluggunum til neðri glugganna með því að láta hann snúa til hægri, hoppa 150 díla og snúa aftur til hægri! Nú snýr hann í rétta átt til að ljúka við húsið!"
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_f": "Þú þarft bara einn `færa áfram` kubb en þú þarft þó nokkra `hoppa fram` og/eða `hoppa aftur á bak` kubba!",
+          "courseD_artist_functions8_a": "Byrjaðu á að búa til fall fyrir ferning, og reyndu svo að búa til fall fyrir röð ferninga.\n\nHvernig mundir þú nota `teikna röð ferninga` fall til að búa til þessa mynd?",
+          "courseD_artist_functions8_d": "Þannig býrðu til röð ferninga:\n\n-   endurtaka 3 sinnum\n-   teikna ferning með lengd hliðar **50 díla**\n-   hoppa áfram **100 díla**",
+          "courseD_artist_functions8_b": "Hugsaðu hverja röð í myndinni sem röð af 3 ferningum. Hvað eru margar raðir af ferningum og hvar byrjar þú að teikna hverja röð?\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_c": "Eftir hverja röð af víxluðum ferningum þarf listamaðurinn að hoppa niður og aftur á bak áður en hann teiknar næstu röð.",
+          "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "courseE_artist_functions8b_2021": {
+          "courseD_artist_functions8_f": "Þú þarft aðeins einn `færa áfram` kubb ef þú ert að gera þetta rétt!",
+          "courseD_artist_functions8_a": "Byrjaðu á að búa til fall fyrir ferning og reyndu svo að búa til fall fyrir röð ferninga.",
+          "courseD_artist_functions8_d": "Röð ferninga er gerð þannig:\n\n-   endurtaka 3 sinnum\n-   -   teikna ferning\n        \\-- hoppa áfram **100 díla**"
+        },
+        "courseE_artist_functions8c_2021": {
+          "courseD_artist_functions8_f": "Þetta er auðveldara en það virðist! Þú ættir ekki að þurfa neina `færa` eða `hoppa` kubba hér!",
+          "courseD_artist_functions8_a": "Önnur röðin af ferningum er gerð eins og sú fyrsta en fyrst þarf að snúa um 180 gráður!",
+          "courseD_artist_functions8_c": "Við enda hverrar raðar af ferningum þarf listamaðurinn bara að snúa um 180 gráður áður en hann teiknar næstu röð. Settu þetta allt í endurtekningarlykkju til að vera klár fyrir næstu þraut!"
+        },
+        "courseE_artist_functions9_2021": {
+          "courseD_artist_functions9_e": "Sérðu alla fjóra staðina þar sem fallið `röð þríhyrninga` gæti nýst í þessari teikningu?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_a": "Þessari þraut er hægt að skipta í þrjá hluta:\n\n-   búa til `teikna þríhyrning` fallið\n-   búa til `teikna röð þríhyrninga` fallið\n-   nota `teikna röð þríhyrninga` fjórum sinnum til að ljúka við myndina",
+          "courseD_artist_functions9_b": "Þessi mynd er gerð með því að teikna röð þríhyrninga 4 sinnum og snúa um annað hvort 60 eða 120 gráður án en næsta röð er teiknuð.",
+          "courseD_artist_functions9_c": "Þannig býrðu til röð þríhyrninga:\n\n-   endurtaka 4 sinnum\n-   teikna þríhyrning\n-   hoppa áfram 50 díla",
+          "courseD_artist_functions9_d": "Þannig teiknar þú tígulinn:\n\n-   endurtaka 2 sinnum\n-   teikna röð þríhyrninga\n-   snúa 120 gráður\n-   teikna röð þríhyrninga\n-   snúa 60 gráður"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_a": "Ef þú kallar á fallið einu sinni enn, getur þú búið til þessa sömu hönnun í síðasta horninu. Þú getur líka `hoppað` á aðra staði eða breytt þessu öllu bara eins og þú vilt!",
+          "courseE_artist_functions_challenge1_b": "Þú getur líka notað `hoppa` til að fara á aðra staði eða breytt teikningunni hvernig sem þú vilt!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n  \n\nMeð þessum `hoppa` kubbi getur þú fært uppvakninginn á hvaða díl sem er í grindinni og hvenær sem er. Kubburinn færir hann á tiltekinn díl mælt frá vinstri og tiltekinn díl mælt ofan frá. Staðurinn er því alltaf mældur frá efra vinstra horninu, svo það skiptir ekki máli hvar uppvakningurinn er _áður_ en skipunin er keyrð!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_a": "Verkfærakassinn er með svolítið öðru skipulagi í þetta sinn! Smelltu á hina ýmsu flokka til að kanna hvaða kubba þú ert með.",
+          "courseE_farmer_functions1_b": "Þú þarft aðeins að tína eitt grasker, en gætir þú notað lykkju til að komast þangað?"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_a": "Gættu þess að lesa vel skilgreiningu fallsins. Sérðu hvað það á að gera?",
+          "courseE_farmer_functions1a_b": "Notaðu `endurtaka þar til` kubb til að komast til graskersins!"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions2b_a": "Þú getur notað `endurtaka þar til grasker` til að komast á enda slóðanna tveggja.",
+          "courseE_farmer_functions2b_b": "Það er enginn maís á slóðinni sem tengir svo að þú getur bara farið eftir henni og snúið.",
+          "courseE_farmer_functions2b_c": "Þú munt þurfa tvær aðskildar `endurtaka þar til` lykkjur til að ná allri uppskerunni."
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "courseE_farmer_functions2ba_a": "Notaðu græna `maís og grasker` kubbinn til að kalla á þetta fall."
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "coursee_farmer_functions3c1_2018_a": "Þú þarft að nota `tína á slóð` fallið þrisvar til að leysa þessa þraut.",
+          "coursee_farmer_functions3c1_2018_b": "Hvaða kóða þarftu að bæta við til að beygja fyrir hornin?"
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "courseE_farmer_functions7a1_2018_a": "Búðu til fallið undir flokknum `föll` í verkfærakassanum.",
+          "courseE_farmer_functions7a1_2018_b": "Ekki gleyma að nota fallið eftir að þú hefur búið það til!"
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "courseE_farmer_functions8a1_2018a": "Byrjaðu þessa þraut með því að kóða sama fallið og þú bjóst til í síðustu þraut.",
+          "courseE_farmer_functions8a1_2018b": "Eftir að fallið hefur verið notað einu sinni þarf að snúa einu sinni í viðbót áður en það er notað aftur."
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "courseE_farmer_functions9a1_2018a": "Þú átt að nota sama fall og þú bjóst til í síðustu þrautum.",
+          "courseE_farmer_functions9a1_2018b": "Notaðu sömu þrepin og í síðustu þraut til að leysa fyrri hluta þessarar þrautar.",
+          "courseE_farmer_functions9a1_2018c": "Þú þarft að `snúa` nokkrum sinnum og `færa áfram` til að komast að síðasta kálinu áður en þú kallar aftur á fallið."
+        },
+        "courseE_farmer_ramp11a_2021": {
+          "courseE_farmer_ramp12_a": "Í stað þess að nota `endurtaka` lykkju, sem segir bóndanum hversu oft hún á að tína kál, getur þú nú notað kubbinn `meðan það er kál`.  ",
+          "courseE_farmer_ramp12_b": "Þú þarft aðeins að fara einu sinni áfram til að komast að moldinni."
+        },
+        "courseE_farmer_ramp11b_2021": {
+          "courseE_farmer_ramp11b_a": "Þú getur faldað `meðan` lykkjuna þína innan í `endurtaka` lykkju til að stytta kóðann."
+        },
+        "courseE_farmer_ramp12_forswap_2021": {
+          "courseE_farmer_ramp12_b": "Þú þarft samt enn að nota `endurtaka` lykkju utan um allt til að segja bóndanum hve oft á að fara áfram og ná í kál."
+        },
+        "courseE_farmer_ramp12c_2021": {
+          "courseE_farmer_ramp12b_b": "Þú munt samt þurfa að nota `þar til` lykkju fyrst og síðan nota `meðan` lykkju við kálið."
+        },
+        "courseE_farmer_ramp12d_2021": {
+          "courseE_farmer_ramp12d_b": "Þú munt samt þurfa að setja `þar til` og `meðan` lykkjurnar inn í `endurtaka` lykkju til að leysa þessa þraut!"
+        },
+        "courseE_farmer_ramp12e_2021": {
+          "courseE_farmer_ramp12e_b": "Lausnin fyrir þessa þraut er mjög lík lausninni fyrir síðustu þraut, nema hvað snúningurinn er í hina áttina."
+        },
+        "courseE_farmer_ramp12f_2021": {
+          "courseE_farmer_ramp12f_b": "Notaðu `ef/annars` kubb til að hjálpa bóndanum að ákveða hvort hún eigi að snúa til hægri eða vinstri."
+        },
+        "courseE_farmer_while1_2021": {
+          "courseE_farmer_ramp12G_b": "Notaðu `ef/annars` kubb til að hjálpa bóndanum að ákveða hvort hún eigi að snúa til hægri eða vinstri."
+        },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "Myndin var teiknuð með því að nota \"counter\" breytuna í `stilla alfa` og `counter`/10 sem breidd pensils.",
+          "courseF_artist_for10_b": "Myndin er teiknuð með því að snúa um 61 gráðu.",
+          "courseF_artist_for10_c": "Hérna sérðu hvernig sýnishornið var búið til:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_picker\">\n<title name=\"COLOUR\">#ff0000</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">15</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">175</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">DIVIDE</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">10</title>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"alpha\" inline=\"true\" id=\"alpha\">\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">61</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "Geturðu teiknað eitthvað svona:\n\n![](https://images.code.org/80ae9ab3e449db1ed4e13c86239f7617-image-1475906794954.06.12.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "`Frá` lykkjan mun telja frá 15 til 300 og hoppa um 15.",
+          "courseF_artist_for6_b": "Settu `færa áfram` og `snúa` kubb innan í þessa `frá` lykkju.",
+          "courseF_artist_for6_c": "Það eina sem þú þarft að breyta er gráðufjöldinn í `snúa` kubbnum."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "Pensillinn er mjórri í þessari þraut. Þú þarft að stilla hann á `1` áður en þú byrjar.",
+          "courseF_artist_for7_b": "Taktu eftir að þessi spírall er með hægri snúning en ekki vinstri!",
+          "courseF_artist_for7_c": "`Frá` lykkjan í þessari þraut fer frá 15 til 300 hlaupandi á 2.",
+          "courseF_artist_for7_d": "Þessi mynd er gerð með því að snúa bara um 89 gráður."
+        },
+        "courseF_artist_for8_2021": {
+          "courseF_artist_for8_a": "Haltu öllu öðru óbreyttu í kóðanum, það er aðeins snúningshornið sem þarf að breytast.",
+          "courseF_artist_for8_b": "Ef þú vilt getur þú valið annan lit fyrir spíralinn þinn!"
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Ef þú setur `stilla alfa` kubb innan í `frá` lykkjuna og notar `counter` breytuna til að breyta gegnsæi litarins, getur þú teiknað svona mynd.",
+          "courseF_artist_for9_b": "Kubburinn `stilla alfa` stjórnar gegnsæi lits. Því minni sem talan er, því gegnsærri er liturinn."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_a": "Breidd pennans er 1. Fyrsti ferningurinn hefur 50 díla hliðar og hver ferningur eftir það er 50 dílum breiðari en sá á undan.",
+          "courseF_artist_for_challenge1_b": "Ógegnsæi pensilsins er alltaf `teljari` /2.",
+          "courseF_artist_for_challenge1_c": "Eftir hvern ferning máttu ekki gleyma að hoppa aftur á bak, snúa, hoppa aftur og snúa svo til baka!",
+          "courseF_artist_for_challenge1_d": "\\*Lausn:\\*\\*\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_c": "`Frá` lykkjan fer frá 5 til 250 hlaupandi á 2. ",
+          "courseF_artist_for_challenge2_a": "Litabreytingunni er stjórnað með `stilla lit með rauðu, grænu, bláu` kubbnum. Rautt hefur alltaf gildið 255, grænt er alltaf `teljari` og blátt er alltaf `255 - teljari`.",
+          "courseF_artist_for_challenge2_b": "Kóðinn fyrir þetta er miklu einfaldari en þú gætir haldið. Stilltu litinn innan í `frá` lykkjunni, farðu áfram og snúðu svo.",
+          "courseF_artist_for_challenge2_d": "**Lausn:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">teljari</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">teljari</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">teljari</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "Skemmtu þér við þetta borð! Sjáðu hvaða áhrif litlar breytingar geta haft á kóðann.",
+          "courseF_artist_variables10_b": "Þú getur prófað margs konar hugmyndir og keyrt kóðann mörgum sinnum."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": "Byrjaðu kóðann á kubbnum `stilla lengd`. Settu gildið 150 í breytuna `lengd`.",
+          "courseF_artist_variables7_b": "Þú getur notað `endurtaka` lykkju til að einfalda kóðann fyrir þríhyrninginn.",
+          "courseF_artist_variables7_c": "Þú þarft að snúa til vinstri um 120 gráður til að mynda horn þríhyrningsins."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_b": "Mundu að byrja kóðann fyrir þríhyrninginn á kubbnum `stilla lengd` og byrja með 150 díla.",
+          "courseF_artist_variables8_c": "Gættu þess að nota `endurtaka` lykkjuna til að teikna þríhyrninginn."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_a": "Í þessari þraut þarft þú bara að breyta hve oft lykkjan endurtekur sig."
+        },
+        "courseF_bee_for10_2021": {
+          "courseF_bee_for10_a": "Sérðu einhverja samsvörun milli fjölda reita sem þarf að fara yfir og magns blómasafa sem þarf að safna?",
+          "courseF_bee_for10_b": "Fyrsti blómaklasinn er með samtals **14 blóm**. Til að komast þangað þarf býflugan að fljúga niður **7 reiti** (eða 14 deilt með 2 reiti). Hvað eru mörg blóm í næsta klasa og hvað þarf býflugan að fljúga marga reiti til að komast þangað?",
+          "courseF_bee_for10_c": "Í þrautinni hefur fyrsta blómaröðin **14** blóm, önnur hefur **10** blóm, sú þriðja **6** blóm og sú fjórða **2** blóm.\n\nTaktu eftir að í þessari teikningu eru **7** rauðir reitir, **5** appelsínugulir reitir, **3** grænir reitir og **1** blár reitur. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nHvernig tengjast þessar tölur?",
+          "courseF_bee_for10_d": "Þú þarft að nota tvær endurtekningar og aðra þeirra með reikningskubbi."
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "Hvað er 12 mikið minna en 15? \nHvað er 9 mikið minna en 12?\n\nSérðu reglu í þessu?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Þú þarft að hafa tvo kubba í `endurtaka` lykkjunni til að ná öllum blómasafanum."
+        },
+        "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Einfalt ráð er að vinna með bara eitt blóm í einu og prófa oft.",
+          "courseF_bee_for2_b": "Mundu að fara áfram á milli hverrar endurtekningar svo að þú komist til allra blómanna."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Notaðu `frá` lykkju sem telur frá 1 til 7 með aukningu um 1 til að leysa þessa þraut.",
+          "courseF_bee_for4_b": "Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun og aðra lykkju til að safna blómasafa.",
+          "courseF_bee_for4_c": "Gættu þess að nota breytuna `teljari` innan í innri `endurtaka` lykkjunni til að ná nógu miklum blómasafa!"
+        },
+        "courseF_bee_for5_2021": {
+          "courseF_bee_for5_a": "Í þetta sinn þurfa kubbarnir `færa áfram` og `sækja blómasafa` að vera í aðskildum `endurtaka` lykkjum en innan sömu `frá` lykkju.",
+          "courseF_bee_for5_b": "Notaðu breytuna `teljari` í hverri lykkju svo að býflugan færist mismunandi langt á milli blóma.",
+          "courseF_bee_for5_c": "Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina."
+        },
+        "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Ekki gleyma að nota `teljari` (counter) breytu innan í `endurtaka` lykkjunni.",
+          "courseF_bee_for6_b": "Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun og aðra lykkju til að safna blómasafa.",
+          "courseF_bee_for6_c": "Lykkjan þín ætti að telja **frá 5 til 1**."
+        },
+        "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "`Frá` lykkjan þín þarf að telja frá 1 til 7 með aukningunni 2.",
+          "courseF_bee_for7_b": "Innan í `frá` lykkjunni þarftu að hafa `færa áfram` skipun og aðra lykkju til að safna blómasafa.",
+          "courseF_bee_for7_c": "Mundu að nota breytuna `teljari` í `endurtaka` lykkjunni."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Ef lykkjan þín telur upp á við, þá er aukanum bætt við teljarabreytuna í hverri umferð. \n\nHverju þarft þú að bæta við hverja tölu til að fá næsta magn af blómasafa?",
+          "courseF_bee_for8_b": "Í þessari þraut þarft þú að færast eftir tröppumynstri til að komast til blómanna.",
+          "courseF_bee_for8_c": "Lykkjan þín á að telja _frá 3 til 15_ með einhverjum auka. Hver er hann?"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_a": "Prófaðu að reikna með teljarabreytunni (counter).\n\nHvað þarftu að gera við teljarann við hvert blóm til að fá útkomu sem er magn blómasafans sem þarf að safna?",
+          "courseF_bee_for9_c": "Það gæti leyst þrautina ef hver endurtekning lykkjunnar byrjar á að snúa býflugunni.",
+          "courseF_bee_for9_b": "**Mundu:** Ef lykkjan er að telja upp á við, þá aukninginn lögð við breytuna `teljari` (counter) í hverri umferð."
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "Skoðaðu þennan valkost varðandi hreyfingu:   \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "Prófaðu að nota tvær `frá` lykkjur: Aðra til að klifra upp og ná í blómasafa, hina til að klifra niður og búa til hunang.",
+          "courseF_bee_for_challenge2_c": "Taktu eftir að önnur `frá` lykkjan þarf að innihalda nokkrar venjulegar lykkjur sem endurtaka sig `teljari` sinnum til að búa til stækkandi tröppumynstrið. \n\nHin `frá` lykkjan þarf aðeins eina venjulega lykkju til að búa til `teljari` mikið af hunangi.",
+          "courseF_bee_for_challenge2_d": "\\*Lausn:\\*\\*\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnLeft</title>\n<next>\n<block type=\"controls_repeat_dropdown\">\n<title name=\"TIMES\" config=\"3-10\">3</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "Ef fuglinn er ekki að komast til svínsins, þarftu að gæta þess að allir kubbarnir séu tengdir saman og smella svo aftur á \"Keyra\".",
+          "courseC_maze_programming1_b": "Ekki óttast að gera mistök! Prófaðu eitthvað og ef það virkar ekki skaltu bara prófa eitthvað annað!"
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "Hver `þegar __ ör` atburður þarf að hafa mismunandi `færa leikmann 1` skipun tengda við sig til að leysa þessa þraut. "
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Þú munt þurfa að bæta tveimur kubbum undir `þegar leikmaður 1 snertir leikmann 2` atburðinn.",
+          "iceage_sound_and_points_b": "Þú þarft að nota bæði `skora stig` kubbinn og `spila hljóð` kubbinn til að klára þetta borð."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Þú þarft aðeins að bæta við tveimur kubbum til að koma þessari þraut í rétt horf. ",
+          "iceage_warn_ice_age_b": "Bættu báðum nýju kubbunum neðan við `þegar keyrt` atburðinn til að láta þá gerast strax í upphafi forritsins."
         }
       }
     }
