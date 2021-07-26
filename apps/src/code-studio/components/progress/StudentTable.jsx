@@ -73,7 +73,7 @@ class StudentTable extends React.Component {
                   {!!userLevels?.length && (
                     <ProgressBubble
                       level={userLevels.find(
-                        userLevel => student.id === userLevel.user_id
+                        userLevel => student.id === userLevel.userId
                       )}
                       disabled={true}
                       hideTooltips={true}

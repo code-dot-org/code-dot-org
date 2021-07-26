@@ -103,11 +103,9 @@ class TeacherPanel extends React.Component {
       return;
     }
 
-    let url = `/dashboardapi/section_progress/${
-      sectionData.section.id
-    }/teacher_panel`;
+    let url = `/api/teacher_panel_progress/${sectionData.section.id}`;
     if (isLessonExtras) {
-      url += `?lesson_id=${lessonId}&is_lesson_extras=true`;
+      url += `?script_id=${scriptId}&is_lesson_extras=true&lesson_id=${lessonId}`;
     } else {
       url += `?script_id=${scriptId}&level_id=${levelId}`;
     }
@@ -154,7 +152,7 @@ class TeacherPanel extends React.Component {
         if (currentStudent) {
           if (sectionScriptLevels) {
             currentStudentScriptLevel = sectionScriptLevels.find(
-              level => this.props.getSelectedUserId() === level.user_id
+              level => this.props.getSelectedUserId() === level.userId
             );
           }
         } else {

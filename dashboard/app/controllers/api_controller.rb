@@ -342,22 +342,27 @@ class ApiController < ApplicationController
     }
   end
 
-  # GET /dashboardapi/section_progress/:section_id/teacher_panel
+  # GET /api/teacher_panel_progress/:section_id
   # Get complete details of a particular section for the teacher panel progress
   def teacher_panel_progress
     section = load_section
+    script = load_script(section)
 
-    if params[:script_id] && params[:level_id]
-      level = Level.find(params[:level_id])
-      return {} unless level
-
-      script_level = level.script_levels.find_by_script_id(params[:script_id])
+    if params[:level_id]
+      script_level = script.script_levels.find do |sl|
+        sl.level_ids.include?(params[:level_id].to_i)
+      end
+      return head :bad_request if script_level.nil?
 
       student_progress = section.students.order(:name).map do |student|
-        script_level&.summarize_for_teacher_panel(student, current_user)
+        script_level.summarize_for_teacher_panel(student, current_user)
       end
-    elsif params[:is_lesson_extras]
-      lesson = Lesson.find(params[:lesson_id])
+    elsif params[:is_lesson_extras] && params[:lesson_id]
+      lesson = script.lessons.find do |l|
+        l.id == params[:lesson_id].to_i
+      end
+      return head :bad_request if lesson.nil?
+
       bonus_level_ids = lesson.script_levels.where(bonus: true).map(
         &:level_ids
       ).flatten
@@ -365,9 +370,9 @@ class ApiController < ApplicationController
       student_progress = section.students.order(:name).map do |student|
         ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
       end
+    else
+      return head :bad_request
     end
-
-    # maureen handle errors
 
     render json: student_progress
   end
