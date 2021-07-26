@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-16 23:54:59 UTC",
+    "serialized_at": "2021-07-21 20:26:03 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -7217,7 +7217,7 @@
       "key": "6e55de6c-bd9e-44e3-ac11-523d359f4682",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Editing Google Sheets video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/aiml/2021] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -11066,6 +11066,18 @@
       }
     },
     {
+      "name": "Cleaning Survey Data",
+      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "key": "cleaning_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
       "name": "Create a Survey using Google Forms",
       "url": "https://www.youtube.com/watch?v=ZdakHQ-HIXk",
       "key": "create_a_survey_using_google_forms",
@@ -11794,6 +11806,12 @@
       "seeding_key": {
         "lesson.key": "lesson-22",
         "resource.key": "survey_template_google_form_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "cleaning_survey_data"
       }
     },
     {

@@ -14,11 +14,6 @@ Dashboard::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Use the schema cache dump to avoid forcing every front end to fetch the schema from
-  # the database. (Fetching the schema adds undesirable load and can trigger expensive
-  # recomputations of schema statistics.)
-  config.use_schema_cache_dump = true
-
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.

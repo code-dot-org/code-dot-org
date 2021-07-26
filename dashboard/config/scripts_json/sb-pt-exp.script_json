@@ -6,12 +6,12 @@
     "properties": {
       "is_migrated": true,
       "version_year": "unversioned",
-      "pilot_experiment": "storyboard-pt-B",
+      "pilot_experiment": "storyboard-pt-b",
       "is_course": true
     },
     "new_name": null,
     "family_name": "sb-pt-exp",
-    "serialized_at": "2021-07-16 03:47:21 UTC",
+    "serialized_at": "2021-07-21 12:22:04 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "sb-pt-exp"

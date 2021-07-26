@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-09 19:15:56 UTC",
+    "serialized_at": "2021-07-20 22:21:14 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -3011,50 +3011,38 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "what-is-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Building a Network",
         "resource.key": "csp-unit-2-the-internet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
+        "lesson.key": "DNS and HTTP",
         "resource.key": "csp-unit-2-the-internet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "resource.key": "the-internet-ip-addresses-and-dns-1"
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "layers-of-the-internet-activity-guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "resource.key": "u2l02-the-need-for-addressing"
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "the-internet-http-and-html-1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "the-internet-ip-addresses-and-dns-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Assessment Day",
         "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "resource.key": "teacher-guide-router"
       }
     },
     {
@@ -3077,44 +3065,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "the-internet-ip-addresses-and-dns-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "layers-of-the-internet-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "resource.key": "the-internet-http-and-html-1"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 1",
         "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "resource.key": "internet-dilemmas-2021"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 1",
         "resource.key": "exemplar-internet-dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "resource.key": "internet-dilemmas-2021"
       }
     },
     {
@@ -3138,13 +3102,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
-        "resource.key": "internet-dilemmas-2021"
+        "resource.key": "exemplar-internet-dilemmas"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
-        "resource.key": "exemplar-internet-dilemmas"
+        "resource.key": "internet-dilemmas-2021"
       }
     },
     {
@@ -3161,15 +3125,69 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson.key": "Routers and Redundancy",
         "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "resource.key": "teacher-guide-router"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "the-internet-ip-addresses-and-dns-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "resource.key": "u2l02-the-need-for-addressing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "resource.key": "what-is-the-internet"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp2-2021"
       }
     },
@@ -3182,24 +3200,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_2",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_2",
         "script.name": "csp2-2021"
       }
     }
