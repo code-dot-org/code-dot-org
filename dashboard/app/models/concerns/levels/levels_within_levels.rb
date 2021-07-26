@@ -114,8 +114,6 @@ module Levels
       project_template_level || self
     end
 
-    private
-
     def sanitize_contained_level_names
       contained_level_names = properties["contained_level_names"]
       contained_level_names.try(:delete_if, &:blank?)
