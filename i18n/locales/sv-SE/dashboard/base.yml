@@ -359,6 +359,7 @@ sv:
     for_parents_and_guardians: "För föräldrar och vårdnadshavare"
     link_a_parent_email: "Koppla en e-post adress till förälder / vårdnadshavare till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt. Du kommer också att kunna använda den här e-postadressen för återställning av lösenord."
     parent_guardian_email_label: "Förälder/vårdnadshavares e-postadress"
+    remove_parent_email_label: "Ta bort"
     none: "Ingen"
     only_one_parent_email_supported_warning: "Obs! Vi kan för närvarande endast stödja en e-postadress till förälder / vårdnadshavare per konto."
   user_level:
@@ -556,6 +557,7 @@ sv:
     unplugged_conditionals:
       title: "Villkor"
     widgets:
+      audience: "Ålder 14+"
       cta: "Läs mer"
   landing:
     report_bug: "Rapportera bugg"
@@ -821,6 +823,7 @@ sv:
   cookie_banner:
     accept: 'Jag håller med'
   copy: 'Kopiera'
+  confirm: 'Bekräfta'
   parent_email_banner:
     text: "**Är du förälder eller vårdnadshavare?** Koppla din e-post till det här kontot för att hålla dig uppdaterad om ditt barns framsteg och projekt!"
     link_your_email: "Koppla din e-postadress"

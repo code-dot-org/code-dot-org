@@ -267,6 +267,7 @@ tr:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
     registered: "%{section_name} için kayıt oldunuz."
+    already_exists: 'Zaten %{section_name} bölümüne katıldınız.'
     error:
       signed_in: 'Devam etmeden önce lütfen çıkış yapınız'
       username_not_found: '%{username} kullanıcı adı bulunamadı'
@@ -1081,6 +1082,7 @@ tr:
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
+  confirm: 'onaylayın'
   maker:
     google_oauth:
       login_with_google: 'Google ile Maker App''e giriş'

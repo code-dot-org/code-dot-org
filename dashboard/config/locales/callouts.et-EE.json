@@ -414,6 +414,58 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Kasuta rippmenüüd, et asendada „???“ numbriga"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lisa see plokk oma programmi!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Uus plokk!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Uus plokk!",
+          "new_block_4": "Uus plokk!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "See väike juhend ütleb arvutile, et käivita SUUR kogus koodi sama nimega, mis töölaual."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "See on \"korrata\" tsükkel!  Klõpsake seda töölauale ja lisage kood, mida soovite korduvalt kasutada."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent saab hõljuda üle vee aga mängija ei saa!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Sa ei saa neid plokke ära visata aga sa saad neid muuta!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent saab hõljuda üle laava aga Steve ja Alex ei saa!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Panime sulle alustuseks siia mõned plokid"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Selle koodiga alustatakse majaehitust. Kas oskad selle lõpetada?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Programmi proovimiseks vajuta nuppu „Käivita“"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Tegevuste kordamiseks panne siia plokid"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Selle koodiga otsitakse laavat. Kas oskad lisada käsu edasiliikumiseks?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Kaevanda seda rauda!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Pea meeles, kontrolli, et IGAL pilvel oleks LILL. Sa ei pea üldse meekärgesid kontrollima."
         }
       }
     }

@@ -4,6 +4,6 @@ title: Penyertaan Seluruh Sekolah
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Melibatkan keseluruhan sekolah anda untuk menyertainya
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Maklumat tentang melibatkan keseluruhan sekolah untuk menyertai acara Jam Kod akan dimasukkan ke sini.

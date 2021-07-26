@@ -284,7 +284,7 @@
           "dance_callout_11_b": "Ny blokk!"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Sjå her for \"alle ender\"-blokker"
+          "dance_party_11_5_groups": "Se her for \"alle ender\" blokker"
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Denne vesle instruksjonen fortel datamaskina å køyre den STORE mengda med kode med det same namnet i arbeidsområdet."
@@ -1185,6 +1185,202 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Du kan endre dette nummeret.",
           "courseE_artist_ramp8_2": "Klikk her for å skrive kor mange gongar koden skal bli gjenteke."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Velg type dansar her."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Legg denne blokka til programmet ditt.",
+          "arrow_buttons": "Trykk på piltastane for å kontrollere dansaren din."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Legg denne blokka til programmet ditt!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Legg til ei ny hending i programmet ditt."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Ny blokk!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Ny blokk!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Ny blokk!",
+          "new_block_4": "Ny blokk!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Denne vesle instruksjonen fortel datamaskina å køyre den STORE mengda med kode med det same namnet i arbeidsområdet."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Dette er ei \"løkke\"!  Klikk på arbeidsområdet og legg til koden som du vil køyre igjen og igjen."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan sveve over vatnet, men ikkje spelaren!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikkje kaste desse blokkene, men du kan redigere dei!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan sveve over lava, men ikkje Steve og Alex!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Vi har satt saman nokre blokker her for å hjelpe deg i gong"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Denne koden startar bygginga av huset ditt. Kan du gjere han ferdig?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Trykk \"Køyr\" for å prøve programmet",
+          "craft_drag_block_callout": "Dra ei \"flytt framover\"-blokk og plasser den under den andre blokka"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Gjenta handlingar ved å sette blokker inni her"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Denne koden sjekker om det er lava, kan du legge til ein kommando for å gå framover?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Utvinn dette jernet!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Dette talet seier kor mange av desse blokkene du kan bruke i denne oppgåva."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Dette talet betyr at berre ei av desse blokkene kan bli brukt i det endelege svaret."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Visste du at du kan tegne tilbake og over en linje når du vil?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Dette talet seier kor mange av desse blokkene du kan bruke i denne oppgåva."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Klikk på lyspæra når du treng hjelp!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Dette er ei infomelding"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klikk her for å endre retninga på pil-hendinga."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Dette lar deg velge en \"tilfeldig\" lyd, som betyr at du ikke vet hvilken lyd du får før du hører den!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Det er kun en av disse blokkene i verktøykassa. Hvordan vil du bruke den?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Klikk på lyspæra når du treng hjelp!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Bruk den grøne pila ned for å endre retningar."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Få spelaren til dette flagget for å komme til neste nivå."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Bruk denne blokken når Waddles og Chomp er borti hverandre!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Denne blokka lar deg flytte figurar til ulike delar av speleområdet."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Ser du nokre nye blokker i verktøykassa?  Ta det heilt med ro, vi skal vise deg korleis du bruker dei seinare i nivået."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Du kan bruke flere blokker fra verktøykassa hvis du trenger dem!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Talet fire på gresskaret fortel deg at du kan plukke fire tilgjengelege gresskar."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Desse blokkene er låste og kan ikkje slettast!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.",
+          "courseC_maze_programming3_3": "Desse blokkene er steinar og kan ikkje kastast."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_2": "Desse blokkene er laga av stein og kan ikkje kastast."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Du har kun en av disse blokkene igjen i denne oppgaven."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Du har kun en av disse blokkene igjen i denne oppgaven."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Du treng ikkje bruke fargar for å løyse denne oppgåva. Dersom du ønsker, gjer 'tilfeldig farge'-blokka det lett!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje å sjå etter bikaker i det heile teke."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Hugs, sjekk at KVAR sky har ein BLOM. Du treng ikkje å sjå etter bikaker i det heile teke."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Bruk denne løkka for å samle all nektar (eller honning) frå ein blom (eller bikake)."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Dette er grensen på antall blokker. Den forteller deg hvor mange av disse blokkene du har igjen å bruke."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Etter du har koblet sammen alle blokkene, klikk på \"Kjør\" for å starte programmet."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Dette er verktøykassa. Der vil du finne ekstra blokker for å fullføre oppgavene."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Du kan dra ekstra blokker tilbake til verktøykassa hvis du trenger å kaste dem.",
+          "stone_block_2": "Grå blokker er laga av stein og kan ikkje bli kasta."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "La programmet halde fram ved å leggje til meir kode nedst.",
+          "courseE_artist_functions_challenge1_callout2": "Om du ikkje liker dette designet, endre det til det du har lyst til!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "La programmet halde fram ved å leggje til meir kode nedst.",
+          "courseE_artist_functions_challenge2_callout2": "Om du ikkje liker dette designet, endre det til det du har lyst til!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Verktøykassa er organisert litt annerledes denne gangen! Klikk på de forskjellige kategoriene for å se hvilke blokker du har tilgjengelig."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Denne grønnsaken er ukjent. Den endrer seg hver gang du kjører programmet."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "For-løkka finn du her!"
         }
       }
     }
