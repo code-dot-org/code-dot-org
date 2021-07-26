@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Import `SoundEffects.java` from your **Backpack**.\r\n\r\nWrite your code for your concert project.\r\n\r\nDon't forget to use `pauses()` as needed to put time between displaying images and drawings so that they are in sync with your audio.",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA U3 Concert Project Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-23T16:10:25.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-23 17:18:36 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
