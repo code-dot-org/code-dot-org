@@ -275,7 +275,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_162824) do
 
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
-    t.string "project_version", null: false
+    t.string "project_version"
     t.integer "commenter_id", null: false
     t.text "comment", limit: 16777215
     t.integer "project_owner_id"
