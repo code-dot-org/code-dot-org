@@ -1,2 +1,12 @@
 {
+  "hi-IN": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "प्रत्येक जानवर के लिए कमरे चित्रित करें। ",
+        "courseD_bee_nestedLoops8_2021": "प्रत्येक फूल से सारा मधुरस एकत्र करें और मधु के छत्ते पर शहद बनाएं।",
+        "courseD_bee_nestedLoops9_2021": "सारा शहद बनाएं।",
+        "ramp_artist_loops8_2021": "पैटर्न खोजें और लूप्स का उपयोग करते हुए इस कोड को और छोटा बनाएं।"
+      }
+    }
+  }
 }

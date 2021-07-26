@@ -1,0 +1,34 @@
+name 'CSA U3 Assessment q3'
+height 'auto'
+
+wrong ‘```int j = 1;
+while (j < 11)
+{
+    j += 3;
+    System.out.print(j);
+}```
+’
+right ‘7.0’
+wrong ‘3.04’
+wrong ‘3.04’
+wrong ‘7.04’
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 3 Lesson 4. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Consider the following code segment.
+```
+for (int j = 1; j < 11; j += 3)
+{
+    System.out.print(j);
+}
+```
+Which of the following code segments will produce the same output as the code segment above?
+
+MARKDOWN

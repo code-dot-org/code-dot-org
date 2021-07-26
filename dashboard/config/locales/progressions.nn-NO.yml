@@ -5,6 +5,8 @@ nn:
       Artist Project: Kunstnarprosjekt
       'Artist: Variables': 'Kunstnar: Variablar'
       Binary Numbers: Binære tal
+      Debugging: Feilsøking
+      Design Mode: Utformingsmodus
       Drawing: Teikning
       Events: Hendingar
       For Loops: For-løkker
@@ -18,6 +20,7 @@ nn:
       Project: Prosjekt
       Properties: Eigenskapar
       Reflection: Refleksjon
+      Review: Gjennomgang
       Sprite Lab Project: Sprite-laboratorieprosjekt
       The Harvester: Samler
       Velocity: Fart

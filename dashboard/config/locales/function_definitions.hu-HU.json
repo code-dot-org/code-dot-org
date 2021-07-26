@@ -281,7 +281,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -289,7 +292,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -297,7 +303,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -305,7 +314,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -313,7 +325,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -321,7 +336,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -329,7 +347,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -337,7 +358,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -345,7 +369,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -353,7 +380,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -364,7 +394,10 @@
             "name": "rajzolj bitet"
           },
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -1261,7 +1294,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1269,7 +1305,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1408,7 +1447,10 @@
             "name": "rajzolj bitet"
           },
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1416,7 +1458,10 @@
             "name": "rajzolj bitet"
           },
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1424,7 +1469,10 @@
             "name": "rajzolj bitet"
           },
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1432,12 +1480,18 @@
             "name": "rajzolj bitet"
           },
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1445,7 +1499,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1453,7 +1510,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1461,7 +1521,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1469,7 +1532,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1477,7 +1543,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1485,7 +1554,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1493,7 +1565,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1501,7 +1576,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1509,7 +1587,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1517,7 +1598,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1525,7 +1609,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1533,7 +1620,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1541,7 +1631,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1549,7 +1642,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1557,7 +1653,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1565,7 +1664,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1573,7 +1675,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1581,7 +1686,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1589,7 +1697,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1597,7 +1708,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1605,7 +1719,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1613,7 +1730,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1621,7 +1741,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1629,7 +1752,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1637,7 +1763,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1645,7 +1774,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1653,7 +1785,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1661,7 +1796,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1669,7 +1807,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1677,7 +1818,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1685,7 +1829,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1693,7 +1840,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1701,7 +1851,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1709,7 +1862,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1717,7 +1873,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1725,7 +1884,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1733,7 +1895,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1741,7 +1906,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1749,7 +1917,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -1757,7 +1928,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "rajzolj"
+            "name": "rajzolj",
+            "parameters": {
+              "binary": "bináris"
+            }
           },
           "draw bit": {
             "name": "rajzolj bitet"
@@ -3484,6 +3658,508 @@
         "courseC_artist_prog4_2020": {
           "booster": {
             "name": "gyorsító"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "az én függvényem"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot",
+            "parameters": {
+              "points": "pontok",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "kör rajzolása"
+          },
+          "draw a pinwheel": {
+            "name": "rajzolj szélkereket",
+            "parameters": {
+              "length": "length",
+              "repeat": "ismételd"
+            }
+          },
+          "draw a triangle": {
+            "name": "Rajzolj egy háromszöget",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "rajzolj síkidomot",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "rajzoljon egy házat",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "építs hidat"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "tisztítsd meg az ösvényt"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "javítsd meg a hosszú utat"
+          },
+          "fix short path": {
+            "name": "javítsd meg a rövid utat"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "építs rövid hidat"
+          },
+          "build long bridge": {
+            "name": "építs hosszú hidat"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "függvény 1"
+          },
+          "function 2": {
+            "name": "függvény 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "lehetséges megoldás"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "rajzolj lángot",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "rajzolj tüzet"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "gyorsító"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "draw hexagon": {
+            "name": "rajzolj hatszöget"
+          },
+          "draw line of hexagons": {
+            "name": "rajzolj egy sor hatszöget"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "rajzolj egy csillagot"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "rajzolj ablakot"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          },
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "csinálj valamit"
+          },
+          "draw triangle": {
+            "name": "rajzolj háromszöget"
+          },
+          "draw line of triangles": {
+            "name": "rajzolj vonalat háromszögekből"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "rajzolj hatszöget"
+          },
+          "draw line of hexagons": {
+            "name": "rajzolj egy sor hatszöget"
+          },
+          "staggered squares": {
+            "name": "lépcsős négyzetek"
+          },
+          "draw a line of squares": {
+            "name": "rajzolj egy sor négyzetet"
+          },
+          "draw square": {
+            "name": "rajzolj négyzetet"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "az én tervem"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "az én tervem"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "rajzoljon egy négyzetet"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "rajzolj egy sor sokszöget"
+          },
+          "draw polygon": {
+            "name": "rajzolj sokszöget"
+          },
+          "do something": {
+            "name": "csinálj valamit"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          },
+          "pumpkin square": {
+            "name": "sütőtök négyzet"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "pumpkin square": {
+            "name": "sütőtök négyzet"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get produce": {
+            "name": "termény felszedése"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check for corn": {
+            "name": "kukorica vizsgálata"
+          },
+          "corn rectangle": {
+            "name": "kukorica téglalap"
+          },
+          "lettuce stairs": {
+            "name": "saláta lépcsők"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "felszedni az útról"
+          },
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "terület átvizsgálása kukoricára"
+          },
+          "get all pumpkins": {
+            "name": "gyűjtsd be az összes sütőtököt"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "kerti négyzet"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "játék vége"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "menj és gyűjts nektárt számlálóval"
           }
         }
       }

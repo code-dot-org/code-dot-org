@@ -643,6 +643,7 @@
   dashboard_middle_courses_desc: "Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
   dashboard_high_courses: "Year-long High School Courses"
   dashboard_high_courses_desc: "Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
+  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming."
   dashboard_course_csins: "Computer Science in Science"
   dashboard_course_csins_desc: "Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation."
@@ -977,12 +978,15 @@
   coursed-2020_name: Kurs D (2020)
   coursee-2020_name: Kurs E (2020)
   coursef-2020_name: Kurs F (2020)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Ekspress Kurs (2018)
   pre-express-2018_name: Maktabgacha ekspress kurs (2018)
   express-2019_name: Ekspress Kurs (2019)
   pre-express-2019_name: Maktabgacha ekspress kurs (2019)
   express-2020_name: Ekspress Kurs (2020)
   pre-express-2020_name: Maktabgacha ekspress kurs (2020)
+  express-2021_name: Ekspress Kurs (2020)
+  pre-express-2021_name: Maktabgacha ekspress kurs (2021)
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Tezlashtirilgan kurs"
@@ -1218,6 +1222,12 @@
   coursed-2020_shortdescription_congrats: Talabalar sikllar, shartli operatorlar va hodisalar to'g'risida tushunchalarini rivojlantiradilar. Kodlashdan tashqari talabalar raqamli fuqarolik to'g'risida ma'lumot olishadi.
   coursee-2020_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
   coursef-2020_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+  coursea-2021_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+  courseb-2021_shortdescription_congrats: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+  coursec-2021_shortdescription_congrats: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+  coursed-2021_shortdescription_congrats: Talabalar sikllar, shartli operatorlar va hodisalar to'g'risida tushunchalarini rivojlantiradilar. Kodlashdan tashqari talabalar raqamli fuqarolik to'g'risida ma'lumot olishadi.
+  coursee-2021_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+  coursef-2021_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   khan_longdescription: "Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!"
@@ -1705,6 +1715,8 @@
   footer_support: "Qo‘llab-quvvatlash"
   footer_terms: "Shartlar"
   ai_for_oceans: "AI for Oceans"
+  ai_for_oceans_lesson_plan: "dars rejasi"
+  how_ai_works: "SI (AI) qanday ishlaydi"
   ai_in_partnership_with: "Hamkor:"
   ai_microsoft_thanks: "Biz har bir bolaga 21-asrda informatika va muvaffaqiyatga erishish uchun zarur ko'nikmalarni o'rganish imkoniyatini berishini ta'minlash bo'yicha missiyamiz va ishlarimizni qo'llab-quvvatlaganligi uchun Microsoft-ga minnatdorchilik bildiramiz."
   ai_activity: "Faoliyat"
