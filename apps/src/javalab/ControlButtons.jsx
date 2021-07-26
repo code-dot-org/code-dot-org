@@ -86,6 +86,7 @@ const styles = {
       fontFamily: '"Gotham 5r"',
       padding: '5px 12px',
       margin: '5px 0 5px 5px',
+      justifyContent: 'center',
       ':hover': {
         color: color.white,
         boxShadow: 'none'
