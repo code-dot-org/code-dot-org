@@ -17,7 +17,10 @@ function createApplabStore() {
 }
 
 export default storybook => {
-  allowConsoleWarnings();
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   const storyTable = [];
 
   const storybookStyle = {
