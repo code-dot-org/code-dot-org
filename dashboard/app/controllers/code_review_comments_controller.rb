@@ -58,6 +58,11 @@ class CodeReviewCommentsController < ApplicationController
       storage_app_id: @storage_app_id
     ).order(:created_at)
 
+    # Keep teacher comments private between project owner and teacher.
+    unless @project_owner.student_of?(current_user) || @project_owner == current_user
+      @project_comments = @project_comments.reject {|comment| comment.commenter.teacher?}
+    end
+
     serialized_comments = @project_comments.map {|comment| serialize(comment)}
 
     render json: serialized_comments
