@@ -13,13 +13,13 @@ class CommentOptions extends Component {
   };
 
   commentOptionTypes = {
-    markResolved: {
+    resolve: {
       onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-check',
       text: javalabMsg.resolve(),
       key: 'Resolve'
     },
-    unmarkResolved: {
+    reOpen: {
       onClick: this.props.onResolveStateToggle,
       iconClass: 'fa fa-fw fa-undo',
       text: javalabMsg.reOpen(),
@@ -50,9 +50,9 @@ class CommentOptions extends Component {
     return (
       <div style={styles.commentOptionsContainer}>
         {this.props.isResolved &&
-          this.renderCommentOption(this.commentOptionTypes.unmarkResolved)}
+          this.renderCommentOption(this.commentOptionTypes.reOpen)}
         {!this.props.isResolved &&
-          this.renderCommentOption(this.commentOptionTypes.markResolved)}
+          this.renderCommentOption(this.commentOptionTypes.resolve)}
         {this.renderCommentOption(this.commentOptionTypes.delete)}
       </div>
     );
