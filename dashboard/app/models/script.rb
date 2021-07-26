@@ -1664,7 +1664,8 @@ class Script < ApplicationRecord
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
           is_stable: s.stable?,
-          locales: s.supported_locale_names
+          locales: s.supported_locale_names,
+          locale_codes: s.supported_locales
         }
       end
 
@@ -1841,6 +1842,7 @@ class Script < ApplicationRecord
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
@@ -1848,11 +1850,14 @@ class Script < ApplicationRecord
     info
   end
 
-  def supported_locale_names
+  def supported_locale_codes
     locales = supported_locales || []
-    locales += ['en-US']
-    locales = locales.sort
-    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+    locales += ['en-US'] unless locales.include? 'en-US'
+    locales.sort
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Script.locale_native_name_map[l] || l}.uniq
   end
 
   def self.locale_native_name_map
