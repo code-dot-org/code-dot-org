@@ -17,14 +17,14 @@ export default class CommitDialog extends React.Component {
 
   renderFooter = buttons => {
     let compileStatusContent = '';
-    let commitText = 'Commit';
-    let isDisabled = true;
+    let commitText = i18n.commit();
+    let isCommitButtonDisabled = true;
     let showCompileStatus = false;
     if (this.state.commitNotes) {
-      isDisabled = false;
+      isCommitButtonDisabled = false;
     }
     if (this.state.filesToBackpack.length > 0) {
-      commitText = 'Commit & Save';
+      commitText = i18n.commitAndSave();
       showCompileStatus = true;
     }
     if (showCompileStatus) {
@@ -60,7 +60,7 @@ export default class CommitDialog extends React.Component {
         <FooterButton
           key="cancel"
           type="cancel"
-          text="Cancel"
+          text={i18n.cancel()}
           onClick={this.props.handleClose}
         />
         ,
@@ -68,7 +68,7 @@ export default class CommitDialog extends React.Component {
           id="confirmationButton"
           key="confirm"
           text={commitText}
-          disabled={isDisabled}
+          disabled={isCommitButtonDisabled}
           color="green"
           onClick={() => {
             this.props.handleCommit(
@@ -85,7 +85,7 @@ export default class CommitDialog extends React.Component {
 
   toggleFileToBackpack = filename => {
     let filesToBackpack = [...this.state.filesToBackpack];
-    const fileIdx = filesToBackpack.findIndex(name => name === filename);
+    const fileIdx = filesToBackpack.indexOf(filename);
     if (fileIdx === -1) {
       filesToBackpack.push(filename);
     } else {
