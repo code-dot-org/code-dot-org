@@ -1,0 +1,25 @@
+name 'CSA U2 Assessment q1'
+height 'auto'
+
+wrong ‘`int`’
+wrong ‘`double`’
+wrong ‘`boolean`’
+right ‘`String`’
+wrong ‘`Painter`’
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 2 Lesson 2. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Fill in the blank to complete the following variable declaration statement:
+
+
+```
+___ jerseyNumber = “23”;
+```
+MARKDOWN

@@ -2,6 +2,8 @@ fa:
   data:
     progressions:
       'Artist: Variables': 'هنرمند: متغیرها'
+      Debugging: اشکال‌زدایی
+      Design Mode: حالت طراحی
       Events: رویدادها
       For Loops: حلقه های "برای"
       Free Play: بازی رایگان

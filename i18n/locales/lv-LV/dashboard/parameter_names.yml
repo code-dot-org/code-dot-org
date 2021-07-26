@@ -2,6 +2,7 @@ lv:
   data:
     parameter_names:
       actor: aktieris
+      color: krāsa
       counter: cikla mainīgais
       height: augstums
       honey: medus

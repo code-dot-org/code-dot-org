@@ -1,0 +1,116 @@
+{
+  "de-DE": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "Verhalten"
+        },
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "input/coursef/2021": {
+          "word": "Eingabe"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Maschinelles Lernen"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "Pakete"
+        },
+        "define/coursef/2021": {
+          "word": "Definiere"
+        },
+        "debugging/courseb/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "drop/courseb/2021": {
+          "word": "Fallen lassen"
+        },
+        "programming/courseb/2021": {
+          "word": "Programmierung"
+        },
+        "debugging/coursea/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "drop/coursea/2021": {
+          "word": "Fallen lassen"
+        },
+        "programming/coursea/2021": {
+          "word": "Programmierung"
+        },
+        "debugging/coursec/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Sequencing"
+        },
+        "programming/coursec/2021": {
+          "word": "Programmierung"
+        },
+        "binary/coursec/2021": {
+          "word": "Binärdatei"
+        },
+        "debugging/coursed/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "programming/coursed/2021": {
+          "word": "Programmierung"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Bedingungen"
+        },
+        "debugging/express/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "sequencing/express/2021": {
+          "word": "Sequencing"
+        },
+        "programming/express/2021": {
+          "word": "Programmierung"
+        },
+        "behavior/express/2021": {
+          "word": "Verhalten"
+        },
+        "conditionals/express/2021": {
+          "word": "Bedingungen"
+        },
+        "function/express/2021": {
+          "word": "Funktion"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Definiere"
+        },
+        "drop/pre-express/2021": {
+          "word": "Fallen lassen"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programmierung"
+        },
+        "behavior/coursee/2021": {
+          "word": "Verhalten"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funktion"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Bedingungen"
+        },
+        "define/coursee/2021": {
+          "word": "Definiere"
+        }
+      }
+    }
+  }
+}

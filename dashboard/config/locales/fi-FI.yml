@@ -526,6 +526,7 @@ fi:
       päivityksiä lapsesi edistymisestä ja projekteista. Voit käyttää tätä sähköpostiosoitetta
       myös salasanan palautukseen.
     parent_guardian_email_label: Huoltajan sähköpostiosoite
+    remove_parent_email_label: Poista
     none: Ei mitään
     only_one_parent_email_supported_warning: 'Huomaa: Voimme tällä hetkellä tukea
       vain yhden vanhemman/huoltajan sähköpostiosoitetta oppilasta kohti.'
@@ -1005,7 +1006,9 @@ fi:
       tallentamisen laitteellesi.
     more_information: Katso Code.org -sivuston tietosuojakäytäntö.
     accept: Hyväksyn
+  page_not_found_title: Sivua ei löydy
   copy: Kopioi
+  confirm: Vahvista
   parent_email_banner:
     text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin
       pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"

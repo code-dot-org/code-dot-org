@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-07-02 16:34:24 UTC",
+    "serialized_at": "2021-07-20 22:21:22 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursef-2021"
@@ -9053,50 +9053,176 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "introducing_sprite_lab"
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-ml"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "exploring_apps"
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-societal"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "introducing_sprite_lab_1"
+        "lesson.key": "AI for Oceans",
+        "resource.key": "ai-training"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "exploring_apps_1"
+        "lesson.key": "End of Course Project",
+        "resource.key": "design-process"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "making_sprites"
+        "lesson.key": "End of Course Project",
+        "resource.key": "final-project-design-worksheet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "sprite_lab_documentation"
+        "lesson.key": "End of Course Project",
+        "resource.key": "rubric-csf-final-projects"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "sprites_in_action"
+        "lesson.key": "For Loop Fun",
+        "resource.key": "activity-answer-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "csf-for-loop-fun-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "csf-for-loop-fun-worksheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "flf-assessment-teacher-key"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "lesson-in-action-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "resource.key": "unplugged-video-for-loop-fun"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops in Bee",
+        "resource.key": "course-cf-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "assessment-answer-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "csf-internet-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "csf-ip-address-cards-and-delivery-type-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "get-site-ip-com"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet",
+        "resource.key": "unplugged-video-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in the Maze",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simulating Experiments",
+        "resource.key": "running-simulations"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Virtual Pet",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "text_and_prompts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "teacher_sandbox_level"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_lesson_quiz"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_power_of_words_lesson_quiz_answer_key"
       }
     },
     {
@@ -9119,20 +9245,50 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_lesson_quiz"
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_apps"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "the_power_of_words_lesson_quiz_answer_key"
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "introducing_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "introducing_sprite_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "making_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "sprites_in_action"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "variables_blank_space_stories"
+        "resource.key": "blank_space_stories"
       }
     },
     {
@@ -9144,170 +9300,14 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "blank_space_stories"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "text_and_prompts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "user_input_programs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "mini_project_user_input_programs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "teacher_sandbox_level"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "resource.key": "mini_project_user_input_programs_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Nested Loops in the Maze",
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "unplugged-video-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "flf-assessment-teacher-key"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "lesson-in-action-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "csf-for-loop-fun-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "activity-answer-for-loop-fun"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loop Fun",
-        "resource.key": "csf-for-loop-fun-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops in Bee",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Simulating Experiments",
-        "resource.key": "running-simulations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-ml"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-training"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI for Oceans",
-        "resource.key": "ai-societal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "unplugged-video-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "csf-ip-address-cards-and-delivery-type-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "csf-internet-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "assessment-answer-internet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Internet",
-        "resource.key": "get-site-ip-com"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "design-process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "final-project-design-worksheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "rubric-csf-final-projects"
+        "resource.key": "variables_blank_space_stories"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursef-2021"
       }
     },
@@ -9319,13 +9319,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities_1",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "coursef-2021"
       }
     },
@@ -9343,31 +9361,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursef-2021"
       }
     }
