@@ -84,9 +84,12 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :resolve, CodeReviewComment, project_owner_id: user.id
+      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
       can :destroy, CodeReviewComment do |code_review_comment|
-        code_review_comment.project_owner.student_of?(user)
+        # Teachers can delete comments on their student's projects,
+        # as well as their own comments.
+        code_review_comment.project_owner&.student_of?(user) ||
+          (user.teacher? && user == code_review_comment.commenter)
       end
       can :create, CodeReviewComment do |_, project_owner|
         CodeReviewComment.user_can_review_project?(project_owner, user)
@@ -108,6 +111,31 @@ class Ability
 
       can :list_projects, Section do |section|
         can?(:manage, section) || user.sections_as_student.include?(section)
+      end
+
+      can :view_as_user, ScriptLevel do |script_level, user_to_assume|
+        can_view_as_user = false
+        can_view_as_user = true if user_to_assume.student_of?(user) ||
+          user.project_validator?
+
+        # Only allow a student to view another student's project
+        # only on levels where we have our peer review feature.
+        # For now, that's only Javalab.
+        if script_level&.oldest_active_level&.is_a?(Javalab)
+          reviewable_project = ReviewableProject.find_by(
+            user_id: user_to_assume.id,
+            script_id: script_level.script_id,
+            level_id: script_level.oldest_active_level&.id
+          )
+
+          if reviewable_project &&
+            user != user_to_assume &&
+            (user.sections_as_student & user_to_assume.sections_as_student).any?
+            can_view_as_user = true
+          end
+        end
+
+        can_view_as_user
       end
 
       if user.teacher?
