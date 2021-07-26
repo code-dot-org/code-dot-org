@@ -5,9 +5,8 @@ import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {connect} from 'react-redux';
 
-class CommitDialog extends React.Component {
+export default class CommitDialog extends React.Component {
   state = {
     filesToCommit: [],
     commitNotes: null
@@ -58,27 +57,9 @@ class CommitDialog extends React.Component {
     this.setState({filesToCommit});
   };
 
-  testCommit = () => {
-    console.log('in test commit!');
-    this.props.backpackApi.saveFiles(
-      this.props.sources,
-      this.state.filesToCommit,
-      this.onBackpackFailure,
-      this.onBackpackSuccess
-    );
-  };
-
-  onBackpackFailure = () => {
-    this.setState({commitNotes: 'backpack save failed!'});
-  };
-
-  onBackpackSuccess = () => {
-    this.setState({commitNotes: 'backpack save succeeded!'});
-  };
-
   render() {
     const {filesToCommit, commitNotes} = this.state;
-    const {isOpen, files, handleClose} = this.props;
+    const {isOpen, files, handleClose, handleCommit} = this.props;
 
     return (
       <StylizedBaseDialog
@@ -97,8 +78,7 @@ class CommitDialog extends React.Component {
           />
         }
         renderFooter={this.renderFooter}
-        // handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
-        handleConfirmation={this.testCommit}
+        handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
         handleClose={handleClose}
         footerJustification="space-between"
       />
@@ -111,10 +91,7 @@ CommitDialog.propTypes = {
   files: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClose: PropTypes.func.isRequired,
   handleCommit: PropTypes.func.isRequired,
-  compileStatus: PropTypes.string,
-  // populated by redux
-  backpackApi: PropTypes.object,
-  sources: PropTypes.object
+  compileStatus: PropTypes.string
 };
 
 CommitDialog.defaultProps = {
@@ -211,8 +188,3 @@ const styles = {
     resize: 'none'
   }
 };
-
-export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
-  sources: state.javalab.sources
-}))(CommitDialog);
