@@ -21,10 +21,10 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/level-animations/<version-id>/<filename>
+  # GET /api/v1/animation-library/level_animations/<version-id>/<filename>
   # Retrieve an animation that was uploaded by a levelbuilder (for use in level start_animations)
   #
-  get %r{/api/v1/animation-library/level-animations/([^/]+)/(.+)} do |version_id, animation_name|
+  get %r{/api/v1/animation-library/level_animations/([^/]+)/(.+)} do |version_id, animation_name|
     not_found if version_id.empty? || animation_name.empty?
 
     begin
@@ -41,10 +41,10 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # POST /api/v1/animation-library/level-animations/<filename>
+  # POST /api/v1/animation-library/level_animations/<filename>
   # Create Sprite in Level Animations folder
   #
-  post %r{/api/v1/animation-library/level-animations/(.+)} do |animation_name|
+  post %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
     dont_cache
     if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
