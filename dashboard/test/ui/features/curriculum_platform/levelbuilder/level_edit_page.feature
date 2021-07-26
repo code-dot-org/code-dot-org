@@ -1,5 +1,3 @@
-# skipping because of flaky failures which we have not been able to diagnose.
-@skip
 # We need "press keys" to type into the React form's fields, but that doesn't work on IE.
 @no_ie
 @no_mobile
@@ -14,7 +12,7 @@ Feature: Using the Level Edit Page
     # files are only written in levelbuilder mode, so we have to enter all
     # of the DSL text again.
     And I enter temp level multi dsl text
-    And I click "input[type='submit']" to load a new page
+    Then I click "input[type='submit']" to load a new page
     And I check I am on the temp level show page
     And element "body" contains text "incorrect answer"
     And I delete the temp level
