@@ -1,0 +1,86 @@
+{
+  "hi-IN": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "चर"
+        },
+        "input/coursef/2021": {
+          "word": "इनपुट"
+        },
+        "internet/coursef/2021": {
+          "word": "इंटरनेट"
+        },
+        "packets/coursef/2021": {
+          "word": "पैकेट्स"
+        },
+        "define/coursef/2021": {
+          "word": "परिभाषित करें"
+        },
+        "debugging/courseb/2021": {
+          "word": "डीबगिंग"
+        },
+        "drop/courseb/2021": {
+          "word": "ड्रॉप"
+        },
+        "debugging/coursea/2021": {
+          "word": "डीबगिंग"
+        },
+        "drop/coursea/2021": {
+          "word": "ड्रॉप"
+        },
+        "debugging/coursec/2021": {
+          "word": "डीबगिंग"
+        },
+        "sequencing/coursec/2021": {
+          "word": "अनुक्रमण"
+        },
+        "binary/coursec/2021": {
+          "word": "युग्मक"
+        },
+        "debugging/coursed/2021": {
+          "word": "डीबगिंग"
+        },
+        "conditionals/coursed/2021": {
+          "word": "कंडीशनल्स"
+        },
+        "debugging/express/2021": {
+          "word": "डीबगिंग"
+        },
+        "sequencing/express/2021": {
+          "word": "अनुक्रमण"
+        },
+        "conditionals/express/2021": {
+          "word": "कंडीशनल्स"
+        },
+        "function/express/2021": {
+          "word": "कार्य"
+        },
+        "variable/express/2021": {
+          "word": "चर"
+        },
+        "define/express/2021": {
+          "word": "परिभाषित करें"
+        },
+        "drop/pre-express/2021": {
+          "word": "ड्रॉप"
+        },
+        "debugging/pre-express/2021": {
+          "word": "डीबगिंग"
+        },
+        "copyright/coursee/2021": {
+          "word": "कॉपीराइट"
+        },
+        "function/coursee/2021": {
+          "word": "कार्य"
+        },
+        "conditionals/coursee/2021": {
+          "word": "कंडीशनल्स"
+        },
+        "define/coursee/2021": {
+          "word": "परिभाषित करें"
+        }
+      }
+    }
+  }
+}

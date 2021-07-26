@@ -264,6 +264,7 @@ nn:
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som læraren din'
     registered: "Du har meldt deg på %{section_name}."
+    already_exists: 'Du har allereie blitt med i seksjonen %{section_name}.'
     error:
       signed_in: 'Ver snill å logge ut før du held fram'
       username_not_found: 'Brukarnamnet %{username} fins ikkje'
@@ -466,6 +467,7 @@ nn:
     account_successfully_updated: "Kontoen er oppdatert."
     update_email: "Oppdater"
     parent_guardian_email_label: "Epost til foreldre/føresette"
+    remove_parent_email_label: "Fjern"
     none: "Ingen"
     encrypted: "kryptert"
   user_level:
@@ -1043,3 +1045,4 @@ nn:
   page_not_found_description: "Sida du leiter etter finst ikkje på denne adressa. Sjekk nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår."
   page_not_found_button: "Gå heim"
   copy: 'Kopier'
+  confirm: 'Bekreft'

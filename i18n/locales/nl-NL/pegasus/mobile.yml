@@ -133,6 +133,8 @@
   third_party_desc_10to15_3to12: "Tussen 10 & 15 lessen, gericht op niveaus 3-12"
   third_party_desc_25to40_3to12: "Van 25-40 lessen, bestemd voor niveaus 3-12"
   third_party_desc_20_2to8: "Ongeveer 20 lessen, gericht op niveaus 2-8"
+  third_party_desc_7to22_5to12: "Tussen 7 & 22 lessen, gericht op niveaus 5-12"
+  third_party_desc_20_4to12: "Meer dan 20 lessen, gericht op niveaus 4-12"
   enter_valid_age: "Selecteer een geldige leeftijd"
   enter_valid_email: "Vul een correct email-adres in"
   get_a_certificate_message: "We sturen je een certificaat en informatie hoe je  <a href='/learn/beyond'>Verder dan een Uur Code</a> kunt leren"
@@ -184,6 +186,7 @@
   learn_back_to_minecraft: "Blijf leren met Minecraft"
   hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
   just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
+  just_did_hoc_donor: 'Ik heb zojuist #HourOfCode gedaan - check it out! (Dankjewel %{donor_twitter} voor je steun voor @codeorg)'
   learn_hoc: "Leer een 'Hour of Code'"
   beyond_hoc: "Verder dan een Uur Code"
   what_gender: "Ben je een jongen of een meisje?"
@@ -545,6 +548,7 @@
   dashboard_progress_completed_perfect: "voltooid, perfect"
   dashboard_progress_furthest_level_attempted: "verste niveau geprobeerd"
   dashboard_progress_submitted: "verstuurd"
+  dashboard_progress_pair_programming: "programmeren in Tweetallen"
   dashboard_sections_new_section: "Nieuw onderdeel"
   dashboard_sections_jumbotron_instruction: "Maak nieuwe groepen aan en voeg er studenten aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen, zodat u makkelijker hun vorderingen kunt bijhouden en hun accounts  beheren."
   dashboard_sections_table_section: "Groep"
@@ -562,6 +566,7 @@
   dashboard_sections_print_secrets: "U kan dan een vel printen met kaarten et accmountgegevens van uw individuele leerlingen, die u kunt ronddelen."
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_close: "Afsluiten"
+  dashboard_sections_move_to_section: 'Verplaatsen naar sectie:'
   dashboard_sections_enter_code: 'Voer de sectie code in'
   dashboard_sections_code_placeholder: "6-tekencode (ABCDEF)"
   dashboard_sections_other_section: "Andere leraar"
@@ -588,6 +593,7 @@
   dashboard_students_join_link: "Vertel uw studenten om hun eigen accounts te maken en met hun groep mee te doen op"
   dashboard_students_no_email: "Als uw leerlingen geen e-mailadressen hebben, of als u de accounts voor hen wilt maken, verander dan de geheime type naar <b>woord</b> of <b>afbeelding</b>."
   dashboard_students_print_page: "Print deze pagina"
+  dashboard_students_signin_card: "Bezoek %{join_url} en voer %{section_code} in"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\"> Klik hier</a> voor onze privacy document dat kan worden gedeeld of afgedrukt voor uw studenten."
   dashboard_curriculum_k5_title: "Hulpmiddelen voor basisschooldocenten"
@@ -764,7 +770,7 @@
   course1_name: "Cursus 1"
   course2_name: "Cursus 2"
   course3_name: "Cursus 3"
-  course4_name: "Cursus 4"
+  course4_name: "Les 4"
   accelerated_name: "versnelde cursus"
   20-hour_name: versnelde cursus
   gumball_name: "Gumball"
@@ -830,16 +836,36 @@
   course2_gradelevel: "Leeftijden 6 + (kunnen lezen vereist)"
   course3_gradelevel: "Leeftijden 8 + (na cursus 2)"
   course4_gradelevel: "Leeftijden 10 + (na cursus 3)"
+  coursea_gradelevel: "Leeftijden 4-7"
+  courseb_gradelevel: "Leeftijden 5-8"
+  coursec_gradelevel: "Leeftijden van 6-10"
   coursed_gradelevel: "Rang 8+"
   coursee_gradelevel: "Leeftijden 8-12"
+  coursef_gradelevel: "Leeftijden 9-13"
+  coursea-2017_gradelevel: Leeftijden 4-7
+  courseb-2017_gradelevel: Leeftijden 5-8
+  coursec-2017_gradelevel: Leeftijden van 6-10
   coursed-2017_gradelevel: Rang 8+
   coursee-2017_gradelevel: Leeftijden 8-12
+  coursef-2017_gradelevel: Leeftijden 9-13
+  coursea-2018_gradelevel: Leeftijden 4-7
+  courseb-2018_gradelevel: Leeftijden 5-8
+  coursec-2018_gradelevel: Leeftijden van 6-10
   coursed-2018_gradelevel: Rang 8+
   coursee-2018_gradelevel: Leeftijden 8-12
+  coursef-2018_gradelevel: Leeftijden 9-13
+  coursea-2019_gradelevel: Leeftijden 4-7
+  courseb-2019_gradelevel: Leeftijden 5-8
+  coursec-2019_gradelevel: Leeftijden van 6-10
   coursed-2019_gradelevel: Rang 8+
   coursee-2019_gradelevel: Leeftijden 8-12
+  coursef-2019_gradelevel: Leeftijden 9-13
+  coursea-2020_gradelevel: Leeftijden 4-7
+  courseb-2020_gradelevel: Leeftijden 5-8
+  coursec-2020_gradelevel: Leeftijden van 6-10
   coursed-2020_gradelevel: Rang 8+
   coursee-2020_gradelevel: Leeftijden 8-12
+  coursef-2020_gradelevel: Leeftijden 9-13
   accelerated_gradelevel: "Leeftijden 10 + (na cursus 3)"
   codeorg_platformtext: "Moderne browsers, smartphones, tablets"
   codeintl_platformtext: "Moderne browsers, smartphones, tablets"
@@ -1210,6 +1236,8 @@
   user_header_logout: "Uitloggen"
   user_header_signin: "Aanmelden"
   user_header_create: 'Maak'
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Kunstenaar '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Speel Lab"
   user_header_dance: "Dansfeest"
@@ -1219,7 +1247,11 @@
   user_header_view_my_projects: "Bekijk mijn projecten"
   view_all_sections: "Bekijk alle onderdelen"
   signing_in: "Aan Het Inloggen"
+  sign_in_instruct_website: "Ga naar %{code_org_url}."
+  sign_in_instruct_code: 'Typ hun sectie code: %{section_code}.'
+  sign_in_overview_cards: "Studenten kunnen al deze informatie, waaronder hun geheim(e) %{secret}, in de login kaarten hieronder."
   reset_student_password: "Studenten paswoorden aan het resetten"
+  joining_section_instruct_code: 'Navigeer naar %{code_org_url} en voer de volgende klassectie code in: %{section_code}'
   syncing_students: "Studenten aan het synchroniseren"
   hero_name: 'Minecraft: Heldenreis'
   applab_tile_subtitle: "Maak je eigen app in JavaScript door blokgebaseerd programmeren. Of breng je vaardigheden naar een hoger niveau met tekstgebaseerde programmering. (Alleen in het Engels)"
@@ -1304,6 +1336,7 @@
   footer_donate: "Doneren"
   footer_support: "Help en Gemeenschap"
   footer_terms: "Voorwaarden"
+  ai_for_oceans_lesson_plan: "lesplan"
   ai_microsoft_thanks: "  We danken Microsoft voor het ondersteunen van onze visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica te leren en de vaardigheden om te slagen in de 21e eeuw.  "
   ai_activity: "Activiteit"
   ai_description: "Omschrijving"

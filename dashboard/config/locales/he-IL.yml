@@ -249,6 +249,7 @@ he:
     remove: "(הסר קבוצה)"
     type:
       picture: תמונת סיסמה
+      word: המילה הסודית
       email: דואר אלקטרוני
       google_classroom: כיתת גוגל
       clever: Clever
@@ -256,6 +257,7 @@ he:
     invite_sent: הזמנה נשלחה
     added_teacher: "%{name} נוסף כמורה שלך"
     registered: נרשמת לקבוצה %{section_name}.
+    already_exists: הצטרפת כבר לקבוצה %{section_name}.
     error:
       signed_in: בבקשה תצא לפני שתמשיך
       username_not_found: שם משתמש %{username} לא נמצא
@@ -471,6 +473,7 @@ he:
     account_successfully_updated: חשבון עודכן בהצלחה.
     update_email: עדכון
     parent_guardian_email_label: דוא"ל של הורה/אפוטרופוס
+    remove_parent_email_label: הסר
     none: כלום
     encrypted: מוצפן
   user_level:
@@ -1071,3 +1074,4 @@ he:
     more_information: הצג את מדיניות הפרטיות של Code.org.
     accept: מסכים
   copy: העתק
+  confirm: אשר

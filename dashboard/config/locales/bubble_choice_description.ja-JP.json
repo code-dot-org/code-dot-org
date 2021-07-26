@@ -1,2 +1,13 @@
 {
+  "ja-JP": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "動物たちの部屋をかこう。 ",
+        "courseD_bee_nestedLoops8_2021": "それぞれの花からすべての花のみつを集めてください。\nそしてそれぞれのハチの巣でハチミツを作ってください。\n入れ子のループ（ネスト・ループ）を使うのです。 ",
+        "courseD_bee_nestedLoops9_2021": "ハチミツを作ろう。",
+        "courseF_bee_variables_7a_2021": "今までとは、ちょっとちがうよね。このパズルをクリアするには どうすれば いいかな？",
+        "ramp_artist_loops8_2021": "パターンを見つけて、くり返しを使ってみよう！"
+      }
+    }
+  }
 }

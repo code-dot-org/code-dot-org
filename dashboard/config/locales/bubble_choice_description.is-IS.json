@@ -1,2 +1,13 @@
 {
+  "is-IS": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Teiknaðu bás fyrir hvert dýr. ",
+        "courseD_bee_nestedLoops8_2021": "Safnaðu öllum blómasafanum úr hverju blómi og búðu til hunang í hverju búi. \r\n\r\nNotaðu faldaða lykkju. ",
+        "courseD_bee_nestedLoops9_2021": "Búðu til allt hunangið.",
+        "courseF_bee_variables_7a_2021": "Þessi þraut er aðeins öðruvísi. Hvað þarft þú að gera til að leysa hana?",
+        "ramp_artist_loops8_2021": "Leitaðu að endurtekningu og styttu þennan kóða með því að nota lykkjur."
+      }
+    }
+  }
 }

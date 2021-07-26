@@ -22,7 +22,7 @@ class Policies::InlineAnswer
 
     # Teachers can also put lessons into a readonly mode in which students are
     # able to view the answers
-    user_level = UserLevel.find_by(user: user, level: script_level.level)
+    user_level = UserLevel.find_by(user: user, level: script_level.level, script: script_level.script)
     return true if user_level.try(:readonly_answers)
 
     false

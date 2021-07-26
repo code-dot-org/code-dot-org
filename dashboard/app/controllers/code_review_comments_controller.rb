@@ -3,7 +3,7 @@ class CodeReviewCommentsController < ApplicationController
   before_action :decrypt_channel_id, only: [:create, :project_comments]
 
   check_authorization
-  load_and_authorize_resource :code_review_comment, only: [:resolve, :destroy]
+  load_and_authorize_resource :code_review_comment, only: [:toggle_resolved, :destroy]
 
   # POST /code_review_comments
   def create
@@ -25,10 +25,9 @@ class CodeReviewCommentsController < ApplicationController
     end
   end
 
-  # PATCH /code_review_comments/:id/resolve
-  def resolve
-    @code_review_comment.inspect
-    if @code_review_comment.update(is_resolved: true)
+  # PATCH /code_review_comments/:id/toggle_resolved
+  def toggle_resolved
+    if @code_review_comment.update(is_resolved: params[:is_resolved])
       return head :ok
     else
       return head :bad_request

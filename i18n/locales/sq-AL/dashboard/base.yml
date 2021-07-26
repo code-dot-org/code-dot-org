@@ -254,6 +254,7 @@ sq:
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
       project_gallery: "Projekte"
       educate_hoc: "Ora e Kodimit"
+      stats: "statistikat"
       legal_privacy: "Rregullat e Privatësisë"
       legal_tos: "Kushtet e shërbimit"
     user:
@@ -335,6 +336,7 @@ sq:
     delete_confirm: 'A je i sigurtë që do të fshish llogarinë tënde?'
     update_email: "Përditëso"
     parent_guardian_email_label: "Prindi/ kujdestari email"
+    remove_parent_email_label: "Hiq"
     none: "Asnjë"
   user_level:
     completed: 'E përfunduar'
@@ -519,6 +521,7 @@ sq:
     unplugged_conditionals:
       title: "Kushtet"
     widgets:
+      audience: "Moshat 14+"
       cta: "Mëso si "
   landing:
     report_bug: "Raportoni një problem"
@@ -735,3 +738,4 @@ sq:
   cookie_banner:
     accept: 'Pranoj'
   copy: 'Kopjo'
+  confirm: 'Konfirmo'

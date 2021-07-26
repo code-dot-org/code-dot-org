@@ -7,10 +7,20 @@ km:
         math_category_name: គណិត​វិទ្យា
         other_category_name: ផ្សេងៗ
       name:
+        course1:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         course2:
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
+            Your Digital Footprint:
+              name: Your Digital Footprint
         course3:
           lessons:
             Bounce:
@@ -121,6 +131,12 @@ km:
           lessons:
             Teacher Dashboard:
               name: ផ្ទាំងគ្រប់គ្រងសម្រាប់គ្រូបង្រៀន
+        asUnplugged:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         mc:
           title: Minecraft Hour of Code
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
@@ -167,12 +183,16 @@ km:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
         grade1:
           lessons:
             Events:
               name: ព្រឹត្តិការណ៍
             Loops:
               name: រង្វិល​ជុំ
+            Unspotted Bugs:
+              name: កំហុសដែលមិនបានគ្រោងទុក
         grade3:
           lessons:
             Bounce:
@@ -193,6 +213,10 @@ km:
               name: ការគូររង្វិលជុំដដែលៗ
             Conditionals:
               name: លក្ខខណ្ឌ
+        grade2:
+          lessons:
+            The Big Event:
+              name: ព្រឹត្តិការណ៍ធំ
         k5concepts:
           lessons:
             Conditionals:
@@ -218,25 +242,113 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         basketball:
+          title: បង្កើតហ្គេមបោះបាល់
+          description_short: បង្កើតហ្គេមបោះបាល់
+          description: បង្កើតហ្គេមបោះបាល់
           lessons:
             Bounce:
               name: បាល់​លោត
+          student_description: បង្កើតហ្គេមបោះបាល់
         hoc-encryption:
           lessons:
             Simple Encryption:
               name: ការអ៉ីនគ្រីបធម្មតា
         csd2-2017:
           lessons:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \\\r\n\\\r\nStudents begin by individually identifying appropriate
+                audiences with whom they would be comfortable sharing given pieces
+                of personal information.  They then look at several social media pages
+                to determine what sorts of information people are sharing about themselves
+                or one another.  Last, students reflect on what guidelines they think
+                are appropriate for posting information online.\\\r\n\\\r\nThe ultimate
+                point of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
             Lists:
               name: បញ្ជី
+            Intellectual Property and Images:
+              description_teacher: "Starting with an discussion of their personal
+                opinions on how others should be allowed to use their work, the class
+                explores the purpose and role of copyright for both creators and users
+                of creative content.  They then move on to an activity exploring the
+                various Creative Commons licenses as a solution to the difficulty
+                in dealing with copyright. \\\r\n\\\r\nFinally, with a common understanding
+                of the restrictions of various Creative Commons licenses, students
+                learn how to add images to their web pages using the \\<img> tag."
+            Project - Multi-Page Websites:
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \\\r\n\\\r"
+            Project - Personal Portfolio Website:
+              description_teacher: "Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\\\r"
         csp2-support:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        csd4-2017:
+          lessons:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\\\r"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\\\r"
         flappy-impact-study:
           lessons:
             Flappy Code:
               name: Flappy កូដ
+        coursea-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+        courseb-draft:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            Your Digital Footprint:
+              name: Your Digital Footprint
+        coursec-draft:
+          lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
         coursed-draft:
           lessons:
             Conditionals with Cards:
@@ -331,25 +443,23 @@ km:
                 "តើមានអ្វីកើតឡើង? អ្វីដែលត្រូវបានសន្មត់ថានឹងកើតឡើង? តើវាចង់ប្រាប់អ្នកពីអ្វី?"
             'Persistence & Frustration: Stevie and the Marbles':
               name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
-              description_teacher: "នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ
-                ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។
-                នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថា ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។
-                \ \nមេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ
-                មេផលរ៉ាន់។"
+              description_teacher: |-
+                នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។ នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថាការ ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។\
+                មេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ មេផលរ៉ាន់។
             'Real-life Algorithms: Plant a Seed':
-              description_teacher: "នៅក្នុងមេរៀននេះសិស្សានុសិស្សនឹងបង្ហាញពីគំនិតនៃក្បួនដោះស្រាយត្រឡប់ទៅសកម្មភាពប្រចាំថ្ងៃនិងជីវិតពិតដោយការដាំគ្រាប់ពូជពិតប្រាកដ។
-                \ គោលដៅនៅទីនេះគឺចាប់ផ្តើមកសាងជំនាញក្នុងការបកប្រែស្ថានការណ៍ពិតទៅសេណារីយ៉ូតាមអ៊ិនធើណេតនិងផ្ទុយមកវិញ។\r"
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+              description_teacher: នៅក្នុងមេរៀននេះនិស្សិតនឹងបង្ហាញពីគំនិតនៃក្បួនដោះស្រាយត្រឡប់ទៅសកម្មភាពប្រចាំថ្ងៃនិងជីវិតពិតដោយការដាំគ្រាប់ពូជពិតប្រាកដ។  គោលដៅនៅទីនេះគឺចាប់ផ្តើមកសាងជំនាញក្នុងការបកប្រែស្ថានការណ៍ពិតទៅសេណារីយ៉ូតាមអ៊ិនធើណេតនិងផ្ទុយមកវិញ។
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
-              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
             'Programming: Happy Maps':
               description_teacher: ស្ពានពីក្បួនដោះស្រាយទៅការសរសេរកម្មវិធីអាចជារយៈពេលខ្លីប្រសិនបើសិស្សយល់ពីភាពខុសគ្នារវាងការធ្វើផែនការ​
                 និងការសរសេរអ៊ិនកូដលំដាប់នោះទៅជាភាសាដែលសមរម្យ។  សកម្មភាពនេះនឹងជួយឱ្យសិស្សទទួលបានបទពិសោធន៍ក្នុងការអាននិងសរសេរជាកូដខ្លីៗ។
             Programming in Maze:
-              description_teacher: នៅក្នុងវគ្គល្បែងផ្គុំរូបតាមអនឡាញនេះ,សិស្សានុសិស្សនឹងពង្រឹងការយល់ដឹងអំពីការដោះស្រាយបញ្ហា,
-                កែតម្រូវ និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គហ្គេម Angry
-                Birds សិស្សានុសិស្សនឹងបង្កើតការដោះស្រាយបញ្ហាតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
-                គ្រាប់ផ្ទុះ​ (TNT) ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
+              description_teacher: នៅក្នុងល្បែងផ្គុំរូបតាមអ៊ិនធើណេតស៊េរីនេះនិស្សិតនឹងពង្រឹងការយល់ដឹងអំពីក្បួនដោះស្រាយ,
+                បំបាត់កំហុស និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គពីហ្គេម
+                Angry Birds សិស្សនឹងបង្កើតក្បួនដោះស្រាយតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
+                TNT ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
             Going Places Safely:
               name: ពលរដ្ឋឌីជីថល៖ ធ្វើដំណើរទៅកន្លែងដោយសុវត្ថិភាព
               description_teacher: ដោយសហការជាមួយ [ប្រព័ន្ធផ្សព្វផ្សាយទូទៅ] មេរៀននេះជួយសិស្សឱ្យដឹងថាគេហទំព័រជាច្រើនស្នើសុំព័ត៌មានឯកជននិងពិភាក្សាពីវិធីដោះស្រាយសំណើបែបនោះប្រកបដោយទំនួលខុសត្រូវ។  និស្សិតក៏ដឹងថាពួកគេអាចទៅកន្លែងដែលគួរឱ្យរំភើបតាមអ៊ិនធរណេតប៉ុន្តែពួកគេត្រូវអនុវត្តតាមច្បាប់ជាក់លាក់ដើម្បីរក្សាសុវត្ថិភាព។
@@ -367,7 +477,7 @@ km:
             Events in Play Lab:
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង
                 ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!
-          name: វគ្គសិក្សាA -២០១៧
+          name: វគ្គសិក្សាអា -២០១៧
         courseb-2017:
           title: វគ្គសិក្សា B
           assignment_family_title: វគ្គសិក្សា B
@@ -376,15 +486,17 @@ km:
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
             Your Digital Footprint:
               name: ពលរដ្ឋឌីជីថល៖ ស្នាមជើងឌីជីថលរបស់ខ្ញុំ
             More Programming in Maze:
-              name: ការសរសេរកូដកម្មវិធីនៅក្នុង Maze។
+              name: ការសរសេរកូដកម្មវិធិនៅក្នុងមេសន៍។
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
-          name: វគ្គសិក្សាB-2017
+          name: វគ្គសិក្សាប៊ី-2017
         coursec-2017:
           title: វគ្គសិក្សា C
           assignment_family_title: វគ្គសិក្សា C
@@ -397,7 +509,7 @@ km:
               name: លើសពីការសរសេរកម្មវិធី៖ ខ្សែដៃគោលពីរ
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
-          name: វគ្គសិក្សាC-2017
+          name: វគ្គសិក្សាស៊ី-2017
         coursed-2017:
           title: វគ្គសិក្សា D
           assignment_family_title: វគ្គសិក្សា D
@@ -414,10 +526,10 @@ km:
                 Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន
                 `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ:
                 ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ
-                _ បន្តបន្ទាប់និង _ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
+                \_ បន្តបន្ទាប់និង \_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
                 សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។'
             'Algorithms: Graph Paper Programming':
-              name: 'ការសរសេរកម្មវិធី: កម្មវិធីងក្រដាស់ក្រាហ្វិច'
+              name: 'ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច'
               description_student: នៅក្នុងមេរៀននេះ អ្នកនឹងសរសេរកម្មវិធីធ្វេីឲ្យមិត្តរបស់អ្នកឱ្យគូររូបភាព!
               description_teacher: តាមរយៈ "ការសរសេរកម្មវិធី" ដើម្បីគូររូបសិស្សនឹងចាប់ផ្តើមយល់ពីអ្វីទៅដែលជាការសរសេរកូដ។
                 ថ្នាក់នឹងចាប់ផ្តើមដោយឱ្យសិស្សណែនាំគ្នាទៅនឹងការ៉េពណ៌នៅលើផ្ទាំងក្រាហ្វក្នុងកិច្ចខិតខំប្រឹងប្រែងដើម្បីផលិតរូបភាពដែលមានស្រាប់។
@@ -451,7 +563,7 @@ km:
               description_teacher: |-
                 មុនឈានដល់មេរៀននេះសិស្សគួរតែមានការអនុវត្តច្រើនរួចហើយដោយប្រើរង្វិលជុំម្តងទៀតដូច្នេះវាដល់ពេលត្រូវលាយបញ្ចូលគ្នាហើយ។
 
-                _ ខណៈរង្វិលជុំគឺជារង្វិលជុំដែលបន្តធ្វើពាក្យបញ្ជាម្តងទៀតនៅពេលដែលលក្ខខណ្ឌត្រូវបានបំពេញ។ ខណៈរង្វិលជុំត្រូវបានប្រើនៅពេលអ្នកសរសេរកម្មវិធីមិនដឹងចំនួនដងនៃពាក្យបញ្ជាចាំបាច់ត្រូវធ្វើម្តងទៀតប៉ុន្តែដឹងថាតើលក្ខខណ្ឌអ្វីខ្លះដែលត្រូវការជាការពិតដើម្បីឱ្យរង្វិលជុំបន្តធ្វើម្តងទៀត។ ឧទាហរណ៍សិស្សនឹងធ្វើការដើម្បីបំពេញរន្ធនិងជីកកខ្វក់នៅក្នុងកសិករ។ ពួកគេនឹងមិនដឹងពីទំហំនៃប្រហោងរឺកំពស់នៃភ្នំដែលមានភាពកខ្វក់នោះទេប៉ុន្តែសិស្សនឹងដឹងថាពួកគេចាំបាច់ត្រូវបន្តបំពេញប្រហោងនិងជីកកខ្វក់ដរាបណាដីមិនរាបស្មើ។
+                \_ ខណៈរង្វិលជុំគឺជារង្វិលជុំដែលបន្តធ្វើពាក្យបញ្ជាម្តងទៀតនៅពេលដែលលក្ខខណ្ឌត្រូវបានបំពេញ។ ខណៈរង្វិលជុំត្រូវបានប្រើនៅពេលអ្នកសរសេរកម្មវិធីមិនដឹងចំនួនដងនៃពាក្យបញ្ជាចាំបាច់ត្រូវធ្វើម្តងទៀតប៉ុន្តែដឹងថាតើលក្ខខណ្ឌអ្វីខ្លះដែលត្រូវការជាការពិតដើម្បីឱ្យរង្វិលជុំបន្តធ្វើម្តងទៀត។ ឧទាហរណ៍សិស្សនឹងធ្វើការដើម្បីបំពេញរន្ធនិងជីកកខ្វក់នៅក្នុងកសិករ។ ពួកគេនឹងមិនដឹងពីទំហំនៃប្រហោងរឺកំពស់នៃភ្នំដែលមានភាពកខ្វក់នោះទេប៉ុន្តែសិស្សនឹងដឹងថាពួកគេចាំបាច់ត្រូវបន្តបំពេញប្រហោងនិងជីកកខ្វក់ដរាបណាដីមិនរាបស្មើ។
             Conditionals with Cards:
               name: 'ប្រសិនបើ / ផ្សេងទៀត: លក្ខខណ្ឌជាមួយកាត'
               description_student: វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!
@@ -727,8 +839,9 @@ km:
                 ពួកគេនឹងមានឱកាសនៅក្នុងការបង្កើតជា សិល្បៈនៅក្នុងកម្រិតសេរីមួយ។
             Songwriting with Parameters:
               name: 'អនុគមន៍ ៖ ការនិពន្ធចម្រៀងជាមួយនឹងប៉ារ៉ាម៉ែត្រ '
-              description_student: "អ្នកប្រហែលជាធ្វើអោយលើកក្រោយកាន់តែល្បីបាន ។​\nនៅក្នុងមេរៀននេះអ្នកនឹងរៀនពីអ្វីដែលជាប៉ារ៉ាម៉ែត្រ
-                និងរបៀបដែលប៉ារ៉ាម៉ែត្របង្កើតបទចម្រៀងបានពិរោះរណ្តំ! "
+              description_student: |-
+                អ្នកប្រហែលជាធ្វើអោយលើកក្រោយកាន់តែល្បីបាន ។​
+                នៅក្នុងមេរៀននេះអ្នកនឹងរៀនពីអ្វីដែលជាប៉ារ៉ាម៉ែត្រ និងរបៀបដែលប៉ារ៉ាម៉ែត្របង្កើតបទចម្រៀងបានពិរោះរណ្តំ!
               description_teacher: រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។
                 អនុគមន៍​(ដែលពេលខ្លះត្រូវបានហៅថា នីតិវិធី) គឺជាប្រូក្រាមតូចដែលអ្នកអាចប្រើនៅក្នុងប្រូក្រាមធំ។
                 មេរៀននេះនឹងជួយសិស្សយល់កាន់តែសុីជម្រៅថាតើហេតុអ្វីបានជាការរួមបញ្ចូលគ្នានៃបណ្ដុំកូដអោយទៅជាអនុគមន៍អាចជាការអនុវត្ដមួយដ៏មានប្រយោជន៍
@@ -744,7 +857,7 @@ km:
                 អនុគមន៍ជាមួយនឹងប៉ារ៉ាម៉ែត្រ។
               description_teacher: នៅក្នុងមេរៀននេះ, សិស្សនៅតែបន្តសិក្សាជាមួយអនុគមន៍​មានប៉ារ៉ាម៉ែត្រ​
                 និងអនុគមន៍គ្មានប៉ារ៉ាម៉ែត្រ​។ សិស្សនឹងមានឱកាសក្នុងការបង្កើតគំនូររបស់ពួកគេជាមួយនឹងប៉ារ៉ាម៉ែត្រ​និងគ្មានប៉ារ៉ាម៉ែត្រ​,
-                មុនពេលកែប្រែអនុគមន៍នៅក្នុងកំរិត  free play។
+                មុនពេលកែប្រែអនុគមន៍នៅក្នុងកំរិត  freeplay។
             Functions with Parameters in Bee:
               description_student: អ្នកបានអនុវត្តរួចហើយជាមួយ មុខងារ ​មានប៉ារ៉ាម៉ែត្រ។
                 មេរៀននេះនឹងបន្តការអនុវត្តរបស់អ្នកជាមួយឃ្មុំ!
@@ -763,28 +876,28 @@ km:
                 Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ (programming
                 environment)។ នៅក្នុងផ្នែកនៃគម្រោងនេះ, សិស្សនឹងរៀនអំពីដំណើរការរចនា
                 និង របៀបអនុវត្តវានៅក្នុងគម្រោងផ្ទាល់ខ្លួនរបស់ពួកគេ។ មេរៀននេះណែនាំពីទិដ្ជភាពនៃការសង្ខេបពីដំណាក់កាលទាំង
-                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/)
-                ។
+                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ]
+                \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Build Your Project:
               description_student: ទីបំផុតអ្នកអាចចាប់ផ្តើមកសាងគំរោងរបស់អ្នក!
               description_teacher: ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានបង្កើតឡើងដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើទាំង
                 Play Lab ឬសិល្បករដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ។ ឥឡូវនេះសិស្សនឹងត្រូវបានផ្តល់កន្លែងទំនេរ
                 ផ្ទាល់ខ្លួនដើម្បីបង្កើតគំរោងរបស់ពួកគេជាមួយ Artist រឺ Play Lab ។ នេះនឹងជាចំណែកវែងបំផុតនៃគម្រោង។
                 មេរៀននេះណែនាំពីទិដ្ជភាពនៃដំណាក់កាលទាំង ៥ នៃដំណើរការដែលអាចរកឃើញពីដំណាក់កាលដំបូងនៃដំណើរការគំរោង
-                [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Revise Your Project:
               description_student: ទីក្រុងរ៉ូមមិនត្រូវបានសាងសង់ក្នុងមួយថ្ងៃទេ ហើយគម្រោងរបស់អ្នកក៏មិនគួរចំណាយពេលតែមួយថ្ងៃដូចគ្នា។
                 ចំណាយពេលកែសំរួលគំរោងរបស់អ្នកដើម្បីធ្វើអោយវាប្រសើរបំផុតតាមដែលអាចធ្វើទៅបាន។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Presentation Your Project:
               name: ធ្វើបទបង្ហាញគម្រោងរបស់អ្នក។
             Present Your Project:
               description_student: ពេលវេលាដើម្បីបង្ហាញការងាររបស់អ្នក! នៅទីនេះអ្នកនឹងបង្ហាញគម្រោងដ៏អស្ចារ្យរបស់អ្នកដល់មិត្តភក្តិរបស់អ្នក។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Conditionals in Minecraft:
               name: លក្ខខណ្ឌនៅក្នុង Minecraft
               description_student: ចៀសពីកម្អែភ្នំភ្លើង! នៅទីនេះអ្នកនឹងរៀនអំពីលក្ខខណ្ឌនៅក្នុងពិភព
@@ -856,7 +969,7 @@ km:
             'Programming Unplugged: My Robotic Friends':
               name: មិត្តមនុស្សយន្តរបស់ខ្ញុំ
             'Algorithms: Graph Paper Programming':
-              name: 'ការសរសេរកម្មវិធី: កម្មវិធីងក្រដាស់ក្រាហ្វិច'
+              name: 'ការសរសេរកម្មវិធី: កម្មវិធីក្រដាស់ក្រាហ្វិច'
             'Algorithms: Relay Programming':
               name: ការបំបាត់កំហុស៖ ការសរសេរកម្មវិធីបញ្ជូនបន្ត
             Debugging in Collector:
@@ -890,12 +1003,15 @@ km:
           name: អុិចប្រេស-2017
         pre-express-2017:
           title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
+          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
           lessons:
             'Persistence & Frustration: Stevie and the Marbles':
               name: ការតស៊ូ៖ ស្តាវីនិងគម្រោងធំមួយ
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             Learn to Drag and Drop:
               name: ការតម្រៀបតាមអូសនិងទម្លាក់
             'Online Safety: Your Digital Footprint':
@@ -992,7 +1108,7 @@ km:
             ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'Minecraft\: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
+              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
@@ -1061,34 +1177,73 @@ km:
               name: អនុ​គមន៍
         csd2-2018:
           lessons:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \\\r\n\\\r\nStudents begin by individually identifying appropriate
+                audiences with whom they would be comfortable sharing given pieces
+                of personal information.  They then look at several social media pages
+                to determine what sorts of information people are sharing about themselves
+                or one another.  Last, students reflect on what guidelines they think
+                are appropriate for posting information online.\\\r\n\\\r\nThe ultimate
+                point of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Lists:
               name: បញ្ជី
+            Project - Multi-Page Websites:
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \\\r\n\\\r"
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
+            Project - Personal Portfolio Website:
+              description_teacher: "Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\\\r"
         coursea-2018:
           assignment_family_title: វគ្គសិក្សា A
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lessons:
             'Debugging: Unspotted Bugs':
+              name: កំហុសដែលមិនបានគ្រោងទុក
               description_teacher: មេរៀននេះនឹងណែនាំសិស្សតាមរយៈជំហាននៃការបំបាត់កំហុស។  សិស្សនឹងរៀនពីម៉ាត្រា
                 "តើមានអ្វីកើតឡើង? អ្វីដែលត្រូវបានសន្មត់ថានឹងកើតឡើង? តើវាចង់ប្រាប់អ្នកពីអ្វី?"
             'Persistence & Frustration: Stevie and the Marbles':
-              description_teacher: "នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ
-                ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។
-                នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថា ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។
-                \ \nមេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ
-                មេផលរ៉ាន់។"
+              name: Stevie and the Big Project
+              description_teacher: |-
+                នៅពេលសិស្សជួបប្រទះឧបសគ្គនៅពេលដែលធ្វើការឆ្លើយនឹងសំណួរ ឬធ្វើការទៅលើគម្រោងកិច្ចការណាមួយ, ពួកគេមានការតប់ប្រមល់ក្នុងការងារហើយរបោះចោលការងារពាកណ្តាលទី។ នៅក្នុងមេរៀននេះយើងនឹងពន្យល់ប្រាប់ពួកគេថាការ ភាពតប់ប្រមល់ នេះក៏ជាផ្នែកមួយនែមេរៀនផងដែរ។នៅទីនេះការតប់ប្រមល់ត្រូវបានបង្ហាញជាជំហាននៃដំណើរការច្នៃប្រឌិតជាជាងសញ្ញានៃការបរាជ័យ។\
+                មេរៀននេះអាចបញ្ចប់ទៅដោយប្រើពេលលសិក្សាតែមួយទៅពីរវគ្គសិក្សាតេប៉ុណ្ណោះ។ប្រសិនបើអ្នកមានពេលច្រើនសូមមានអារម្មណ៍ទំនេរក្នុងការគូរអាគារនិងតំរែតំរង់ដំណាក់កាលនៃ មេផលរ៉ាន់។
             'Real-life Algorithms: Plant a Seed':
-              description_teacher: "នៅក្នុងមេរៀននេះសិស្សានុសិស្សនឹងបង្ហាញពីគំនិតនៃក្បួនដោះស្រាយត្រឡប់ទៅសកម្មភាពប្រចាំថ្ងៃនិងជីវិតពិតដោយការដាំគ្រាប់ពូជពិតប្រាកដ។
-                \ គោលដៅនៅទីនេះគឺចាប់ផ្តើមកសាងជំនាញក្នុងការបកប្រែស្ថានការណ៍ពិតទៅសេណារីយ៉ូតាមអ៊ិនធើណេតនិងផ្ទុយមកវិញ។\r"
+              description_teacher: នៅក្នុងមេរៀននេះនិស្សិតនឹងបង្ហាញពីគំនិតនៃក្បួនដោះស្រាយត្រឡប់ទៅសកម្មភាពប្រចាំថ្ងៃនិងជីវិតពិតដោយការដាំគ្រាប់ពូជពិតប្រាកដ។  គោលដៅនៅទីនេះគឺចាប់ផ្តើមកសាងជំនាញក្នុងការបកប្រែស្ថានការណ៍ពិតទៅសេណារីយ៉ូតាមអ៊ិនធើណេតនិងផ្ទុយមកវិញ។
             Learn to Drag and Drop:
-              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
             'Programming: Happy Maps':
               description_teacher: ស្ពានពីក្បួនដោះស្រាយទៅការសរសេរកម្មវិធីអាចជារយៈពេលខ្លីប្រសិនបើសិស្សយល់ពីភាពខុសគ្នារវាងការធ្វើផែនការ​
                 និងការសរសេរអ៊ិនកូដលំដាប់នោះទៅជាភាសាដែលសមរម្យ។  សកម្មភាពនេះនឹងជួយឱ្យសិស្សទទួលបានបទពិសោធន៍ក្នុងការអាននិងសរសេរជាកូដខ្លីៗ។
             Programming in Maze:
-              description_teacher: នៅក្នុងវគ្គល្បែងផ្គុំរូបតាមអនឡាញនេះ,សិស្សានុសិស្សនឹងពង្រឹងការយល់ដឹងអំពីការដោះស្រាយបញ្ហា,
-                កែតម្រូវ និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គហ្គេម Angry
-                Birds សិស្សានុសិស្សនឹងបង្កើតការដោះស្រាយបញ្ហាតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
-                គ្រាប់ផ្ទុះ​ (TNT) ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
+              description_teacher: នៅក្នុងល្បែងផ្គុំរូបតាមអ៊ិនធើណេតស៊េរីនេះនិស្សិតនឹងពង្រឹងការយល់ដឹងអំពីក្បួនដោះស្រាយ,
+                បំបាត់កំហុស និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គពីហ្គេម
+                Angry Birds សិស្សនឹងបង្កើតក្បួនដោះស្រាយតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
+                TNT ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
             Going Places Safely:
               description_teacher: ដោយសហការជាមួយ [ប្រព័ន្ធផ្សព្វផ្សាយទូទៅ] មេរៀននេះជួយសិស្សឱ្យដឹងថាគេហទំព័រជាច្រើនស្នើសុំព័ត៌មានឯកជននិងពិភាក្សាពីវិធីដោះស្រាយសំណើបែបនោះប្រកបដោយទំនួលខុសត្រូវ។  និស្សិតក៏ដឹងថាពួកគេអាចទៅកន្លែងដែលគួរឱ្យរំភើបតាមអ៊ិនធរណេតប៉ុន្តែពួកគេត្រូវអនុវត្តតាមច្បាប់ជាក់លាក់ដើម្បីរក្សាសុវត្ថិភាព។
             'Loops: Happy Loops':
@@ -1105,10 +1260,16 @@ km:
             Events in Play Lab:
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង
                 ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie and the Big Project
         express-2018:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          description_audience: 'អាយុ: ៩- ១៨'
           lessons:
             Debugging in Collector:
               name: បំបាត់កំហុសនៅក្នុងអ្នកប្រមូល
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             Events in Star Wars:
               name: ព្រឹត្តិការណ៍ក្នុងសង្គ្រាមភពផ្កាយ
             Events with Flappy:
@@ -1136,6 +1297,10 @@ km:
         courseb-2018:
           assignment_family_title: វគ្គសិក្សា B
           lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         coursed-2018:
@@ -1152,8 +1317,12 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
         csd6-2018:
           lessons:
+            Designing Screens with Code_:
+              name: ការរចនា​អេក្រង់​ជាមួយ​កូដ\_
             Designing Screens with Code:
               name: ការរចនា​អេក្រង់​ជាមួយ​កូដ
         coursee-2018:
@@ -1359,8 +1528,9 @@ km:
                 សកម្មភាពដដែលៗ និង For  Loops ក្នុងការបង្កើតជាការច្នៃប្រឌិត ។ ជាចុងក្រោយ
                 ពួកគេនឹងមានឱកាសនៅក្នុងការបង្កើតជា សិល្បៈនៅក្នុងកម្រិតសេរីមួយ។
             Songwriting with Parameters:
-              description_student: "អ្នកប្រហែលជាធ្វើអោយលើកក្រោយកាន់តែល្បីបាន ។​\nនៅក្នុងមេរៀននេះអ្នកនឹងរៀនពីអ្វីដែលជាប៉ារ៉ាម៉ែត្រ
-                និងរបៀបដែលប៉ារ៉ាម៉ែត្របង្កើតបទចម្រៀងបានពិរោះរណ្តំ! "
+              description_student: |-
+                អ្នកប្រហែលជាធ្វើអោយលើកក្រោយកាន់តែល្បីបាន ។​
+                នៅក្នុងមេរៀននេះអ្នកនឹងរៀនពីអ្វីដែលជាប៉ារ៉ាម៉ែត្រ និងរបៀបដែលប៉ារ៉ាម៉ែត្របង្កើតបទចម្រៀងបានពិរោះរណ្តំ!
               description_teacher: រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។
                 អនុគមន៍​(ដែលពេលខ្លះត្រូវបានហៅថា នីតិវិធី) គឺជាប្រូក្រាមតូចដែលអ្នកអាចប្រើនៅក្នុងប្រូក្រាមធំ។
                 មេរៀននេះនឹងជួយសិស្សយល់កាន់តែសុីជម្រៅថាតើហេតុអ្វីបានជាការរួមបញ្ចូលគ្នានៃបណ្ដុំកូដអោយទៅជាអនុគមន៍អាចជាការអនុវត្ដមួយដ៏មានប្រយោជន៍
@@ -1371,7 +1541,7 @@ km:
                 អនុគមន៍ជាមួយនឹងប៉ារ៉ាម៉ែត្រ។
               description_teacher: នៅក្នុងមេរៀននេះ, សិស្សនៅតែបន្តសិក្សាជាមួយអនុគមន៍​មានប៉ារ៉ាម៉ែត្រ​
                 និងអនុគមន៍គ្មានប៉ារ៉ាម៉ែត្រ​។ សិស្សនឹងមានឱកាសក្នុងការបង្កើតគំនូររបស់ពួកគេជាមួយនឹងប៉ារ៉ាម៉ែត្រ​និងគ្មានប៉ារ៉ាម៉ែត្រ​,
-                មុនពេលកែប្រែអនុគមន៍នៅក្នុងកំរិត  free play។
+                មុនពេលកែប្រែអនុគមន៍នៅក្នុងកំរិត  freeplay។
             Functions with Parameters in Bee:
               description_student: អ្នកបានអនុវត្តរួចហើយជាមួយ មុខងារ ​មានប៉ារ៉ាម៉ែត្រ។
                 មេរៀននេះនឹងបន្តការអនុវត្តរបស់អ្នកជាមួយឃ្មុំ!
@@ -1390,32 +1560,53 @@ km:
                 Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ (programming
                 environment)។ នៅក្នុងផ្នែកនៃគម្រោងនេះ, សិស្សនឹងរៀនអំពីដំណើរការរចនា
                 និង របៀបអនុវត្តវានៅក្នុងគម្រោងផ្ទាល់ខ្លួនរបស់ពួកគេ។ មេរៀននេះណែនាំពីទិដ្ជភាពនៃការសង្ខេបពីដំណាក់កាលទាំង
-                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/)
-                ។
+                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ]
+                \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Build Your Project:
               description_student: ទីបំផុតអ្នកអាចចាប់ផ្តើមកសាងគំរោងរបស់អ្នក!
               description_teacher: ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានបង្កើតឡើងដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើទាំង
                 Play Lab ឬសិល្បករដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ។ ឥឡូវនេះសិស្សនឹងត្រូវបានផ្តល់កន្លែងទំនេរ
                 ផ្ទាល់ខ្លួនដើម្បីបង្កើតគំរោងរបស់ពួកគេជាមួយ Artist រឺ Play Lab ។ នេះនឹងជាចំណែកវែងបំផុតនៃគម្រោង។
                 មេរៀននេះណែនាំពីទិដ្ជភាពនៃដំណាក់កាលទាំង ៥ នៃដំណើរការដែលអាចរកឃើញពីដំណាក់កាលដំបូងនៃដំណើរការគំរោង
-                [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Revise Your Project:
               description_student: ទីក្រុងរ៉ូមមិនត្រូវបានសាងសង់ក្នុងមួយថ្ងៃទេ ហើយគម្រោងរបស់អ្នកក៏មិនគួរចំណាយពេលតែមួយថ្ងៃដូចគ្នា។
                 ចំណាយពេលកែសំរួលគំរោងរបស់អ្នកដើម្បីធ្វើអោយវាប្រសើរបំផុតតាមដែលអាចធ្វើទៅបាន។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Present Your Project:
               description_student: ពេលវេលាដើម្បីបង្ហាញការងាររបស់អ្នក! នៅទីនេះអ្នកនឹងបង្ហាញគម្រោងដ៏អស្ចារ្យរបស់អ្នកដល់មិត្តភក្តិរបស់អ្នក។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Conditionals with Cards:
               name: ការប្រើលក្ខខណ្ឌជាមួយកាត
         csp1-2018:
           lessons:
             The Internet:
               name: អ៊ីនធឺណិត
+        csd4-2018:
+          lessons:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\\\r"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\\\r"
         csp4-2018:
           lessons:
             Simple Encryption:
@@ -1489,11 +1680,25 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         pre-express-2018:
+          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description_audience: 'អាយុ: ៤-៨'
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: កំហុសដែលមិនបានគ្រោងទុក
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: Stevie and the Big Project
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
             'Programming: Star Wars':
               name: 'ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ '
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
+            'Persistence & Frustration: Stevie and the Big Project':
+              name: Stevie and the Big Project
         fit-test:
           lesson_groups:
             required:
@@ -1584,26 +1789,26 @@ km:
                 Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ (programming
                 environment)។ នៅក្នុងផ្នែកនៃគម្រោងនេះ, សិស្សនឹងរៀនអំពីដំណើរការរចនា
                 និង របៀបអនុវត្តវានៅក្នុងគម្រោងផ្ទាល់ខ្លួនរបស់ពួកគេ។ មេរៀននេះណែនាំពីទិដ្ជភាពនៃការសង្ខេបពីដំណាក់កាលទាំង
-                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/)
-                ។
+                ៥ នៃដំណើរការ ដែលអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ]
+                \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Build Your Project:
               description_student: ទីបំផុតអ្នកអាចចាប់ផ្តើមកសាងគំរោងរបស់អ្នក!
               description_teacher: ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានបង្កើតឡើងដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើទាំង
                 Play Lab ឬសិល្បករដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ។ ឥឡូវនេះសិស្សនឹងត្រូវបានផ្តល់កន្លែងទំនេរ
                 ផ្ទាល់ខ្លួនដើម្បីបង្កើតគំរោងរបស់ពួកគេជាមួយ Artist រឺ Play Lab ។ នេះនឹងជាចំណែកវែងបំផុតនៃគម្រោង។
                 មេរៀននេះណែនាំពីទិដ្ជភាពនៃដំណាក់កាលទាំង ៥ នៃដំណើរការដែលអាចរកឃើញពីដំណាក់កាលដំបូងនៃដំណើរការគំរោង
-                [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Revise Your Project:
               description_student: ទីក្រុងរ៉ូមមិនត្រូវបានសាងសង់ក្នុងមួយថ្ងៃទេ ហើយគម្រោងរបស់អ្នកក៏មិនគួរចំណាយពេលតែមួយថ្ងៃដូចគ្នា។
                 ចំណាយពេលកែសំរួលគំរោងរបស់អ្នកដើម្បីធ្វើអោយវាប្រសើរបំផុតតាមដែលអាចធ្វើទៅបាន។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ឥឡូវគំរោងទាំងនោះត្រូវបានសាងសង់ហើយ, សិស្សត្រូវបានផ្តល់ឱកាសអោយទទួលបានយោបល់ពីមិត្តភក្តិ សិស្ស កែប្រែគំរោងរបស់ពួកគេ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             Present Your Project:
               description_student: ពេលវេលាដើម្បីបង្ហាញការងាររបស់អ្នក! នៅទីនេះអ្នកនឹងបង្ហាញគម្រោងដ៏អស្ចារ្យរបស់អ្នកដល់មិត្តភក្តិរបស់អ្នក។
               description_teacher: |-
                 ក្នុងវគ្គសិក្សាខ្លឺរយៈពេល ៥ មេរៀន, សិស្សនឹងត្រូវបានពង្រឹងសមត្ថភាពដើម្បីកសាងគម្រោងនៃការរចនារបស់ពួកគេផ្ទាល់ដោយប្រើ Play Lab ឬ Artist ដែលជាបរិយាកាសសរសេរកម្មវិធីរបស់ពួកគេ ។
-                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [here] (https://curriculum.code.org/csf/coursef/15/) ។
+                ចុងបញ្ចប់សិស្សនឹងអាចបង្ហាញស្នាដៃដែលបានបញ្ចប់ដល់មិត្តភក្តិរបស់ពួកគេឬចែករំលែកជាមួយមនុស្សជាទីស្រលាញ់របស់ពួកគេដោយប្រើប្រាស់តំណភ្ជាប់  ។ មេរៀននេះណែនាំពីការសង្ខេបពីដំណាក់កាលទាំង ៥ នៃដំណើរការអាចរកឃើញនៅដំណាក់កាលដំបូងនៃដំណើរការគំរោង [នៅទីនេះ] \(<https://curriculum.code.org/csf/coursef/15/>) ។
             The Artist:
               name: វិចិត្រករ
             Nested Loops in the Maze:
@@ -1646,7 +1851,7 @@ km:
                 Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន
                 `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ:
                 ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ
-                _ បន្តបន្ទាប់និង _ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
+                \_ បន្តបន្ទាប់និង \_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
                 សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។'
             Relay Programming:
               description_student: ចងចាំនៅដើមវគ្គសិក្សានៅពេលអ្នកធ្វើគំនូរដោយប្រើកូដ?
@@ -1799,6 +2004,8 @@ km:
             Conditionals in Minecraft:
               name: លក្ខខណ្ឌនៅក្នុង Minecraft
         express-2019:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -1819,6 +2026,7 @@ km:
               name: ការប្រើលក្ខខណ្ឌជាមួយកាត
             Dance Party:
               name: Dance Party
+          name: អុិចប្រេស-2019
         andrea-test:
           lesson_groups:
             required:
@@ -1839,6 +2047,8 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
         coursea-2019:
@@ -1850,10 +2060,10 @@ km:
               display_name: ព្រឹត្តិការណ៍
           lessons:
             Programming in Maze:
-              description_teacher: នៅក្នុងវគ្គល្បែងផ្គុំរូបតាមអនឡាញនេះ,សិស្សានុសិស្សនឹងពង្រឹងការយល់ដឹងអំពីការដោះស្រាយបញ្ហា,
-                កែតម្រូវ និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គហ្គេម Angry
-                Birds សិស្សានុសិស្សនឹងបង្កើតការដោះស្រាយបញ្ហាតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
-                គ្រាប់ផ្ទុះ​ (TNT) ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
+              description_teacher: នៅក្នុងល្បែងផ្គុំរូបតាមអ៊ិនធើណេតស៊េរីនេះនិស្សិតនឹងពង្រឹងការយល់ដឹងអំពីក្បួនដោះស្រាយ,
+                បំបាត់កំហុស និងចំណេះដឹងកុំព្យូទ័រទូទៅ។  លក្ខណៈពិសេសនៃតួអង្គពីហ្គេម
+                Angry Birds សិស្សនឹងបង្កើតក្បួនដោះស្រាយតាមលំដាប់លំដោយដើម្បីយកបក្សីទៅជ្រូកដោយមិនចាំបាច់បុកជញ្ជាំងឬ
+                TNT ។  ល្បែងផ្គុំរូបបំបាត់កំហុសក៏ត្រូវបានលាយបញ្ចូលគ្នានៅក្នុងដំណាក់កាលនេះសម្រាប់ការអនុវត្តបន្ថែមជាមួយនឹងការដោះស្រាយបញ្ហានិងការគិតត្រិះរិះពិចារណា។
             Loops in Artist:
               description_teacher: ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ
                 ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។
@@ -1866,7 +2076,7 @@ km:
               description_teacher: ត្រលប់ទៅរង្វិលជុំសិស្សរៀនគូររូបភាពដោយគូសលំដាប់លំដោយនៃការណែនាំសាមញ្ញ
                 ៗ ។  នៅក្នុង មេរៀនដោត មុន ៗ រង្វិលជុំត្រូវបានប្រើដើម្បីឆ្លងកាត់ផ្ទាំងគំនូរនិងប្រមូលកំណប់។  នៅទីនេះរង្វិលជុំកំពុងបង្កើតលំនាំ។  នៅចុងបញ្ចប់នៃដំណាក់កាលនេះនិស្សិតនឹងត្រូវបានផ្តល់ឱកាសដើម្បីបង្កើតរូបភាពផ្ទាល់ខ្លួនដោយប្រើរង្វិលជុំ។
             Learn to Drag and Drop:
-              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
         courseb-2019:
@@ -1876,23 +2086,75 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
             'Events: The Big Event':
               description_teacher: ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។
         pre-express-2019:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
+          name: ព្រី-អុិចប្រេស-2019
+        removed19:
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: ក្បួនដោះស្រាយជីវិតពិត៖ ដាំគ្រាប់ពូជ
         csd2-2019:
           lessons:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \\\r\n\\\r\nStudents begin by individually identifying appropriate
+                audiences with whom they would be comfortable sharing given pieces
+                of personal information.  They then look at several social media pages
+                to determine what sorts of information people are sharing about themselves
+                or one another.  Last, students reflect on what guidelines they think
+                are appropriate for posting information online.\\\r\n\\\r\nThe ultimate
+                point of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Lists:
               name: បញ្ជី
+            Project - Multi-Page Websites:
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \\\r\n\\\r"
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
+            Project - Personal Portfolio Website:
+              description_teacher: "Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\\\r"
         csd3-2019:
           lessons:
             Variables:
@@ -1905,6 +2167,27 @@ km:
               name: ការរកឃើញការប៉ះទង្គិច
             Functions:
               name: អនុ​គមន៍
+        csd4-2019:
+          lessons:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\\\r"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\\\r"
         csd6-2019:
           lessons:
             Designing Screens with Code:
@@ -2032,8 +2315,48 @@ km:
               display_name: ទិដ្ឋភាពទូទៅ
         csd2-pilot:
           lessons:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \\\r\n\\\r\nStudents begin by individually identifying appropriate
+                audiences with whom they would be comfortable sharing given pieces
+                of personal information.  They then look at several social media pages
+                to determine what sorts of information people are sharing about themselves
+                or one another.  Last, students reflect on what guidelines they think
+                are appropriate for posting information online.\\\r\n\\\r\nThe ultimate
+                point of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
             Lists:
               name: បញ្ជី
+            Project - Multi-Page Websites:
+              description_teacher: "After learning about how to link web pages to
+                one another, students are finally able to publish the website they
+                have been working on.  In this lesson, they link together all the
+                previous pages they have created into one project, create a new page,
+                and add navigation between the pages before publishing the entire
+                site to the Web.  \\\r\n\\\r"
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
+            Project - Personal Portfolio Website:
+              description_teacher: "Students have spent a lot of time throughout the
+                unit working on their Personal Website. In the final couple of days
+                students finalize their websites.  They work with peers to get feedback,
+                put the finishing touches on the websites, review the rubric and reflect
+                on their process. To cap off the unit, they will share their projects
+                and also a overview of the process they took to get to that final
+                design.\\\r"
         csd3-pilot:
           lessons:
             Variables:
@@ -2052,6 +2375,10 @@ km:
               name: លេខចៃដន្យ
             Sprite Properties:
               name: លក្ខណៈសម្បត្តិនៃ sprite
+        maddie-test:
+          lessons:
+            stage 1:
+              name: ដំណាក់កាល 1
         csp3-pilot:
           lesson_groups:
             required:
@@ -2218,6 +2545,27 @@ km:
               display_name: បញ្ជី
             csp_loops:
               display_name: រង្វិល​ជុំ
+        csd4-2020:
+          lessons:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\\\r"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\\\r"
         csd6-2020:
           lessons:
             Designing Screens with Code:
@@ -2251,7 +2599,7 @@ km:
               display_name: ព្រឹត្តិការណ៍
           lessons:
             Learn to Drag and Drop:
-              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
             Ocean Scene with Loops:
@@ -2269,6 +2617,8 @@ km:
             csf_events:
               display_name: ព្រឹត្តិការណ៍
           lessons:
+            Your Digital Footprint:
+              name: Your Digital Footprint
             'Events: The Big Event':
               description_teacher: ព្រឹត្តិការណ៍គឺជាវិធីដ៏ល្អដើម្បីបន្ថែមភាពខុសគ្នាទៅនឹងក្បួនដោះស្រាយដែលបានសរសេរជាហើយ។  ពេលខ្លះអ្នកចង់អោយកម្មវិធីរបស់អ្នកអាចឆ្លើយតបទៅអ្នកប្រើអោយបានច្បាស់នៅពេលអ្នកប្រើចង់អោយវាធ្វើ។  នោះគឺជាអ្វីដែលព្រឹត្តិការណ៍ដែលគេចង់បាន។
         coursec-2020:
@@ -2280,6 +2630,8 @@ km:
           lessons:
             Loops with Rey and BB-8:
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
         coursed-2020:
@@ -2299,7 +2651,7 @@ km:
                 Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន
                 `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ:
                 ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ
-                _ បន្តបន្ទាប់និង _ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
+                \_ បន្តបន្ទាប់និង \_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
                 សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។'
             Relay Programming:
               description_student: ចងចាំនៅដើមវគ្គសិក្សានៅពេលអ្នកធ្វើគំនូរដោយប្រើកូដ?
@@ -2451,6 +2803,8 @@ km:
                 ការបន្ថែម​កម្លាំងពីមនុស្សដទៃទៀតធ្វើឱ្យកិច្ចការទាំងនេះអាចគ្រប់គ្រងបាន។
                 មេរៀននេះនឹងបង្ហាញដល់សិស្សរបស់អ្នកអំពីអត្ថប្រយោជន៍នៃការធ្វើការជាក្រុមនៅក្នុងឧស្សាហកម្មវិទ្យាសាស្ត្រកុំព្យូទ័រ។
         express-2020:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          description_audience: 'អាយុ: ៩- ១៨'
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -2474,6 +2828,9 @@ km:
             Debugging with Scrat:
               name: ការបំបាត់កំហុសជាមួយ Scrat
         pre-express-2020:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description_audience: 'អាយុ: ៤-៨'
           lesson_groups:
             csf_loops:
               display_name: រង្វិល​ជុំ
@@ -2481,7 +2838,7 @@ km:
               display_name: ព្រឹត្តិការណ៍
           lessons:
             Learn to Drag and Drop:
-              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
             Programming with Rey and BB-8:
               name: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
             Ocean Scene with Loops:
@@ -2490,6 +2847,33 @@ km:
             Tell a Story in Play Lab:
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ិនធើណេតនេះនិស្សិតនឹងមានឱកាសរៀនពីរបៀបប្រើព្រឹត្តិការណ៍នានានៅក្នុង
                 ផ្លេ លេប និងអនុវត្តជំនាញសរសេរកូដទាំងអស់ដែលពួកគេបានរៀនបង្កើតហ្គេមមានចលនា។  ដល់ពេលដែលត្រូវច្នៃប្រឌិតហើយបង្កើតរឿងនៅក្នុងបន្ទប់ពិសោធន៍!
+        csd2-virtual:
+          lessons:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking
+                about the actual content that will go into their personal website,
+                this lesson takes a step back from the unit-long project (publication
+                of a personal website) to help students articulate what personal information
+                they choose to share digitally and with whom.  It also reinforces
+                the notion that much of the information that they choose to share
+                digitally falls largely out of their control the moment it is released.
+                \ \\\r\n\\\r\nStudents begin by individually identifying appropriate
+                audiences with whom they would be comfortable sharing given pieces
+                of personal information.  They then look at several social media pages
+                to determine what sorts of information people are sharing about themselves
+                or one another.  Last, students reflect on what guidelines they think
+                are appropriate for posting information online.\\\r\n\\\r\nThe ultimate
+                point of this lesson is not to scare students, but rather to experientially
+                bring students to realizing precisely what level of control they don’t
+                have in releasing information into the web."
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements
+                on the page. Students learn the basic syntax for CSS rule-sets and
+                then explore properties that impact HTML text elements. They work
+                on a HTML page about Guinness World Record holders, adding their own
+                style to the provided page. In the last level, students apply what
+                they have learned about styles for text elements to their personal
+                web page.\\\r\n\\\r"
         csp5-virtual:
           lessons:
             Variables:
@@ -2641,6 +3025,8 @@ km:
             Loops with Rey and BB-8:
               key: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
               name: រង្វិលជុំ ជាមួយ វៃស៍ និង ប៊ីប៊ី-8។
+            'Events: The Big Event':
+              name: ព្រឹត្តិការណ៍ធំ
             'End of Course Project: Create a Play Lab Game':
               description_student: ត្រៀមសម្រាប់ការសរសេរកូដជាច្រើន! ដល់ពេលអ្នកត្រូវចាប់ផ្តើមកសាងគម្រោងរបស់អ្នកហើយ។
           lesson_groups:
@@ -2648,6 +3034,7 @@ km:
               display_name: រង្វិល​ជុំ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+          name: វគ្គសិក្សាស៊ី-2021
         coursed-2021:
           lessons:
             Introduction to Online Puzzles:
@@ -2659,7 +3046,7 @@ km:
                 Code.org ។ វានឹងមានវីដេអូដែលបង្ហាញពីមុខងារមូលដ្ឋាននៃកន្លែងធ្វើការរួមមាន
                 `ប៊ូតុងរត់` `ប៊ូតុងកំណត់ឡើងវិញ` និង `ប៊ូតុងជំហាន`។ បន្ទាប់ពីបានពិភាក្សាផងដែរនៅក្នុងវីដេអូទាំងនេះ:
                 ការអូសប្លុកប្លុក លុបប្លុកប្លុក និងភ្ជាប់ប្លុកប្លុក។ បន្ទាប់មកទៀតនិស្សិតនឹងអនុវត្តជំនាញ
-                _ បន្តបន្ទាប់និង _ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
+                \_ បន្តបន្ទាប់និង \_ ជំនាញបំបាត់កំហុសរបស់ពួកគេក្នុងការស្វែងរក។ ពីទីនោះសិស្សនឹងឃើញល្បែងផ្គុំរូបថ្មីៗដូចជាអ្នកប្រមូល
                 សិល្បករ និងអ្នកប្រមូលផលពេលពួកគេរៀនមូលដ្ឋានគ្រឹះ _loops_ ។'
             Relay Programming:
               description_student: ចងចាំនៅដើមវគ្គសិក្សានៅពេលអ្នកធ្វើគំនូរដោយប្រើកូដ?
@@ -2693,9 +3080,6 @@ km:
               key: ការប្រើលក្ខខណ្ឌជាមួយកាត
               name: ការប្រើលក្ខខណ្ឌជាមួយកាត
               description_student: វាដល់ពេលហើយដើម្បីលេងល្បែងដែលអ្នករកពិន្ទុបានតែក្រោមលក្ខខណ្ឌជាក់លាក់ប៉ុណ្ណោះ!
-              description_teacher: មេរៀននេះបង្ហាញពីរបៀបដែលលក្ខខណ្ឌអាចត្រូវបានប្រើដើម្បីកែកម្មវិធីទៅតាមនឹងព័ត៌មានជាក់លាក់។
-                យើងមិនតែងតែមានព័ត៌មានទាំងអស់ដែលយើងត្រូវការនៅពេលសរសេរកម្មវិធីទេ។ ពេលខ្លះអ្នកនឹងចង់ធ្វើអ្វីផ្សេងនៅក្នុងស្ថានភាពមួយជាងស្ថានភាពផ្សេងទៀតទោះបីអ្នកមិនដឹងថាតើស្ថានភាពអ្វីនឹងក្លាយជាការពិតនៅពេលកូដរបស់អ្នកដំណើរការ។
-                នោះគឺជាកន្លែងដែលមានលក្ខខណ្ឌ។ លក្ខខណ្ឌអនុញ្ញាតឱ្យកុំព្យូទ័រធ្វើការសម្រេចចិត្តដោយផ្អែកលើព័ត៌មានដែលត្រូវនៅពេលណាដែលកូដរបស់អ្នកដំណើរការ។
             Conditionals in Bee:
               description_student: ឥឡូវអ្នកយល់ពីលក្ខខណ្ឌវាដល់ពេលត្រូវសរសេរកម្មវិធីឃ្មុំដើម្បីប្រើវានៅពេលប្រមូលទឹកឃ្មុំនិងទឹកដម។
               description_teacher: រហូតមកដល់ចំណុចនេះសិស្សបានសរសេរកូដដែលប្រតិបត្តិតាមវិធីដូចគ្នារាល់ពេលដែលដំណើរការ
@@ -2753,7 +3137,6 @@ km:
                 AMAZING មួយចំនួនដែលមានរង្វិលជុំនៅខាងចុង។
             Nested Loops in Frozen:
               key: សំបុករង្វិលជុំនៅទឹកកក
-              name: រង្វិលជុំច្រើនជាន់នៅក្នុង Frozen
             'Functions: Songwriting':
               description_student: សម្បីតែ Rockstar ក៏ត្រូវការជំនាញសរសេរកូដដែរ។ មេរៀននេះនឹងបង្រៀនអ្នកអំពីអនុគមន៍ដោយប្រើប្រាស់អត្ថបទចម្រៀងពីចម្រៀង។
               description_teacher: រចនាសម្ព័ន្ធដ៏អស្ចារ្យបំផុតមួយនៅក្នុងពិភពវិទ្យាសាស្ត្រកុំព្យូទ័រគឺអនុគមន៍។
@@ -2826,6 +3209,8 @@ km:
             lessonGroup-9:
               display_name: ដក​ចេញ
         express-2021:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          description_audience: 'អាយុ: ៩- ១៨'
           lessons:
             Dance Party:
               key: Dance Party
@@ -2859,14 +3244,7 @@ km:
               description_student: អនុគមន៍នឹងជួយការងារជាច្រើននៅពេលអ្នកជួយ farmer ជាមួយនឹងការប្រមូលផលរបស់គាត់!
             Functions with Artist:
               description_student: ធ្វើឱ្យគំនូរស្មុគស្មាញកាន់តែងាយស្រួលដោយប្រើអនុគមន៍!
-              description_teacher: សិស្សនឹងត្រូវបានណែនាំឱ្យប្រើអនុគមន៍នៅលើ Code.org។​
-                រូបភាពដ៏អស្ចារ្យនឹងត្រូវបានបង្កើតឡើង និងកែប្រែជាមួយអនុគមន៍នៅក្នុង
-                Artist។​ សម្រាប់លំនាំស្មុគស្មាញបន្ថែមទៀត សិស្សនឹងសិក្សាអំពីអនុគមន៍ច្រើនជាន់ដោយហៅអនុគមន៍មួយនៅក្នុងអនុគមន៍មួយទៀត។
             Variables with Artist:
-              description_teacher: "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ
-                ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ
-                សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
-            Changing Variables with Artist:
               description_teacher: "នៅក្នុងមេរៀននេះ សិស្សនឹងអាចធ្វើការសិក្សាស្វែងយល់កាន់តែស៊ីជម្រៅទាក់ទងនឹងការបង្កើតការឌីសាញដោយប្រើប្រាស់អញ្ញត្តិនៅក្នុងបរិយាកាស​បែបអ្នកសិល្បៈ
                 ។ សិស្សនឹងអាចដឹងពីរបៀបដែលគេអាចប្រើអញ្ញត្តិនៅក្នុងការបង្កើតកូដបានកាន់តែងាយស្រួលនៅក្នុងការសរសេរនិងការអាន។\nបន្ទាប់ពីបានធ្វើការណែនាំនូវល្បែងរូបផ្គុំ
                 សិស្សនឹងអាចធ្វើការបញ្ចប់កម្រិតមូលដ្ឋាន ដើម្បីបង្ហាញនូវអ្វីដែលគេបានរៀននិងធ្វើការបង្កើតឌីសាញរបស់ខ្លួន។ "
@@ -2892,6 +3270,9 @@ km:
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
         pre-express-2021:
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          description_audience: 'អាយុ: ៤-៨'
           lessons:
             Learn to Drag and Drop:
               description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សានុសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
@@ -2915,6 +3296,27 @@ km:
               display_name: អ​ថេរ
             variables:
               display_name: អ​ថេរ
+        csd4-preview-2021:
+          lessons:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs
+                in order to create useful products.  This lesson encourages students
+                to think about how to design for another person by role-playing as
+                someone else using a user profile and reacting as that user to a series
+                of products.  Each student is assigned a user profile describing a
+                person, which they then use to choose appropriate products, critique
+                product design, and suggest improvements to design.\\\r"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help
+                students to better scope their expectations. Because students will
+                eventually be prototyping these apps in App Lab, they will be in better
+                shape if their ideas align with the kinds of apps that are easily
+                prototyped in App Lab. Teams start this scoping by looking through
+                several example apps designed to demonstrate apps that can be created
+                with App Lab. Teams then can chose one (or more) of the apps as a
+                basis for their own. From there, teams have some time to discuss the
+                basic functionality of their app before using 3x5 index cards to develop
+                paper prototypes.\\\r"
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2934,4 +3336,20 @@ km:
               name: អ​ថេរ
             Sprite Lab:
               key: Sprite Lab
-              name: Sprite Lab
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
+              name: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: គ្រូបង្រៀនសហគមន៍
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ប្រភពមេរៀន

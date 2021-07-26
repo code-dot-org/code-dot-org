@@ -1,0 +1,71 @@
+{
+  "es-MX": {
+    "data": {
+      "objectives": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Declare una variable"
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Descubre que Internet puede servir para visitar lugares lejanos y aprender cosas nuevas."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Compara cómo la seguridad en línea es similar a la seguridad en el mundo real."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Explica las normas para viajar con seguridad por Internet."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
+        },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
+        },
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
+          "description": "Convertir un algoritmo en un programa"
+        },
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
+          "description": "Decodificar y ejecutar un programa creado por otra persona"
+        },
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
+          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Construir un programa reorganizando los movimientos secuenciales"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
+        },
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Elegir las prácticas de depuración apropiadas a la hora de resolver problemas"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Secuenciar comandos en un orden lógico."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
+        },
+        "26392005-5f64-4707-b38b-847d1f009a29": {
+          "description": "Identificar y solucionar fallos o errores en las instrucciones secuenciadas"
+        },
+        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Construir un programa reorganizando los movimientos secuenciales"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Crear un programa informático a partir de un conjunto de instrucciones escritas"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Secuenciar comandos en un orden lógico."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Reconocer los problemas o \"errores \" en un programa y desarrollar un plan para resolverlos."
+        }
+      }
+    }
+  }
+}

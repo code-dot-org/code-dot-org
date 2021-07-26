@@ -343,6 +343,8 @@ vi:
         C4_unplugged_binary: Nhị phân
         CSF_a_b_artist_loops: Vòng lặp trong Artist
         CSF_artist_angles: Góc trong Artist
+        CSF_debugging_k1_blocks: Sửa lỗi
+        CSF_debugging_text_blocks: Sửa lỗi
         CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
         CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
         CSF_my_robotic_friends: Bạn bè robot của tôi
@@ -399,12 +401,15 @@ vi:
         csd_pair_programming: Lập trình đôi
         csd_applab_parameters: Hàm và tham số
         csd_problem_solving_process: Quá trình giải quyết vấn đề
+        csd_debugging: Sửa lỗi
+        oceans_machine_learning: Học máy
         hoc_dance_congrats_2019: Bữa Tiệc Khiêu Vũ 2019 - Quẩy lên!
         hoc_dance_warmup_2019: Bữa Tiệc Khiêu Vũ 2019 - Khởi động
         hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
         hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
         hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
         csd_what_computers_are: Máy tính là gì?
+        csf_lots_of_sprites: 'Sprite Lab: Rất nhiều nhân vật'
         playlab_2021: Giới thiệu về Phòng Trò Chơi
         playlab_2021_reader: Giới thiệu về Phòng Trò Chơi
     callout:

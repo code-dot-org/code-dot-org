@@ -10,15 +10,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           MOVE1:
@@ -64,20 +64,20 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
-            '"UNICORN"': ユニコーンだらけ
+            '"UNICORN"': ユニコーン
           MOVE:
             '"next"': "(次へ)"
-            '"prev"': "(戻る)"
+            '"prev"': "(前へ)"
             '"rand"': "(ランダム)"
             MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -95,7 +95,7 @@ ja:
         options:
           MOVE:
             '"next"': "(次へ)"
-            '"prev"': "(戻る)"
+            '"prev"': "(前へ)"
             '"rand"': "(ランダム)"
             MOVES.Roll: ボディロール
             MOVES.ClapHigh: 手を高く上げてたたく
@@ -126,15 +126,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
@@ -150,15 +150,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           MOVE:
@@ -307,15 +307,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           LOCATION:
@@ -335,15 +335,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           FORMAT:
@@ -371,7 +371,7 @@ ja:
             '"DOG"': 犬
             '"DUCK"': アヒル
             '"FROG"': カエル
-            '"MOOSE"': すべてのムース
+            '"MOOSE"': ムース
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
@@ -396,7 +396,7 @@ ja:
           COSTUME:
             '"ALIEN"': エイリアン
             '"BEAR"': クマ
-            '"CAT"': ネコ
+            '"CAT"': ねこ
             '"DOG"': 犬
             '"DUCK"': アヒル
             '"FROG"': カエル
@@ -443,15 +443,15 @@ ja:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': エイリアン
+            '"ALIEN"': すべてのエイリアン
             '"BEAR"': クマ
-            '"CAT"': ネコ
-            '"DOG"': イヌ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
             '"DUCK"': アヒル
             '"FROG"': カエル
             '"MOOSE"': ムース
             '"PINEAPPLE"': パイナップル
-            '"ROBOT"': ロボット
+            '"ROBOT"': すべてのロボット
             '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
@@ -495,8 +495,8 @@ ja:
             '"disco_ball"': ミラーボール
             '"fireworks"': 花火
             '"swirl"': ヒプノ
-            '"kaleidoscope"': カレイドスコープ
-            '"lasers"': レーザーダンスフロア
+            '"kaleidoscope"': 万華鏡
+            '"lasers"': レーザーのダンスフロア
             '"splatter"': 塗料のしぶき
             '"rainbow"': 虹
             '"snowflakes"': 雪
@@ -507,14 +507,14 @@ ja:
             '"disco"': 正方形
             '"stars"': 星
           PALETTE:
-            '"rave"': モノクロ
-            '"cool"': クール
+            '"rave"': 白黒
+            '"cool"': 青
             '"electronic"': エレクトロニクス
             '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
-            '"tropical"': トロピカル
-            '"vintage"': ビンテージ
+            '"tropical"': 熱帯
+            '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
@@ -533,8 +533,8 @@ ja:
             '"flowers"': フラワー
             '"growing_stars"': 成長する星
             '"swirl"': ヒプノ
-            '"kaleidoscope"': カレイドスコープ
-            '"lasers"': レーザーダンスフロア
+            '"kaleidoscope"': 万華鏡
+            '"lasers"': レーザーのダンスフロア
             '"splatter"': 塗料のしぶき
             '"rainbow"': 虹
             '"ripples_random"': ランダムなさざ波
@@ -549,14 +549,14 @@ ja:
             '"stars"': 星
             '"music_wave"': 波
           PALETTE:
-            '"rave"': モノクロ
-            '"cool"': クール
+            '"rave"': 白黒
+            '"cool"': 青
             '"electronic"': エレクトロニクス
             '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
-            '"tropical"': トロピカル
-            '"vintage"': ビンテージ
+            '"tropical"': 熱帯
+            '"vintage"': ヴィンテージ
             '"warm"': 赤
       Dancelab_setDanceSpeed:
         text: "{SPRITE} のダンスの速さを {SPEED} に変更"
@@ -573,15 +573,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           SPEED:
@@ -601,7 +601,7 @@ ja:
             '"music_notes"': 音符
             '"pineapples"': パイナップル
             '"pizzas"': ピザ
-            '"smiling_poop"': 落し物
+            '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
@@ -623,7 +623,7 @@ ja:
             '"paint_drip"': ペイントドリップ
             '"pineapples"': パイナップル
             '"pizzas"': ピザ
-            '"smiling_poop"': 落し物
+            '"smiling_poop"': うんち
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
@@ -647,15 +647,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
@@ -683,15 +683,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
@@ -710,15 +710,15 @@ ja:
           THIS:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintEachInline:
@@ -727,15 +727,15 @@ ja:
           THIS:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
       Dancelab_setTintInline:
@@ -752,15 +752,15 @@ ja:
           THIS:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           VISIBILITY:
@@ -787,15 +787,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
@@ -832,15 +832,15 @@ ja:
           GROUP:
             sprites: すべて
             '"ALIEN"': すべてのエイリアン
-            '"BEAR"': すべてのクマ
+            '"BEAR"': クマ
             '"CAT"': すべてのネコ
             '"DOG"': すべてのイヌ
-            '"DUCK"': すべてのアヒル
-            '"FROG"': すべてのカエル
-            '"MOOSE"': すべてのムース
-            '"PINEAPPLE"': すべてのパイナップル
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': ムース
+            '"PINEAPPLE"': パイナップル
             '"ROBOT"': すべてのロボット
-            '"SHARK"': すべてのサメ
+            '"SHARK"': サメ
             '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           PROPERTY:
@@ -910,7 +910,7 @@ ja:
             '"left"': 左 に
             '"down"': 下 に
             '"right"': 右 に
-            '"space"': スペース
+            '"space"': うちゅう
             '"enter"': 入る
             '"a"': a
             '"b"': b
@@ -961,6 +961,10 @@ ja:
         text: セットアップ
       gamelab_addBehaviorSimple:
         text: スプライト {SPRITE} 開始 {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': 避ける
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -1010,9 +1014,6 @@ ja:
             '"speed"': スピード
       gamelab_getThisSprite:
         text: "{CHOICE} スプライト"
-        options:
-          CHOICE:
-            '"this"': これ
       gamelab_getTime:
         options:
           UNIT:
@@ -1097,13 +1098,6 @@ ja:
             '"z"': z
       gamelab_locationAt:
         text: '場所 x: {X} Y： {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': 北だ
-            '"East"': 東だ
-            '"South"': 南だ
-            '"West"': 西だ
       gamelab_locationMouse:
         text: マウスの位置
       gamelab_locationOf:
@@ -1124,12 +1118,6 @@ ja:
         text: 移動 {SPRITE} {DISTANCE} ピクセルフォワード
       gamelab_moveInDirection:
         text: 移動 {SPRITE} {DISTANCE} ピクセル {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北だ
-            '"East"': 東だ
-            '"South"': 南だ
-            '"West"': 西だ
       gamelab_moveToward:
         text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
       gamelab_newSpritePointer:
@@ -1140,12 +1128,6 @@ ja:
         text: Playsound {SOUND}
       gamelab_pointInDirection:
         text: ポイント {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北だ
-            '"East"': 東だ
-            '"South"': 南だ
-            '"West"': 西だ
       gamelab_printText:
         text: 印刷 {TEXT}
       gamelab_randColor:
@@ -1176,9 +1158,10 @@ ja:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': さばく
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 銀河
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': グリッド
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'キッチン '
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': サイエンスフィクション
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 地下鉄
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
             undefined: なし
@@ -1202,6 +1185,7 @@ ja:
             '"direction"': 動きの方向
             '"speed"': スピード
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} を {SIZE} にセット"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -1342,13 +1326,11 @@ ja:
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupChangePropBy:
         text: 変更 {PROPERTY} の {SELECT} {COSTUME} によって {VAL}
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -1373,7 +1355,6 @@ ja:
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupDisplace:
         text: すべての {COSTUME} ブロック {COSTUME2} 移動から
       Mikelab_groupEdgesDisplace:
@@ -1381,9 +1362,6 @@ ja:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
-          SELECT:
-            '"average"': 平均
-            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -1395,25 +1373,21 @@ ja:
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupRemoveTint:
         text: 色の削除元 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupSetProp:
         text: 設定 {PROPERTY} の {SELECT} {COSTUME} 宛先 {VAL}
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -1425,7 +1399,6 @@ ja:
         options:
           SELECT:
             '"all"': すべて
-            '"this"': これ
       Mikelab_groupWhenClickedOn:
         text: いつ {COSTUME} クリック
       Mikelab_groupWhenXTouchesY:
@@ -1485,6 +1458,8 @@ ja:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: 私のラベルではありません
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: '場所 x: {X} Y： {Y}'
       Mikelab_location_picker:
@@ -1503,6 +1478,8 @@ ja:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'キッチン '
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 地下鉄
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1568,7 +1545,7 @@ ja:
         options:
           KEY:
             '"yes"': はい
-            '"no"': いいえ
+            '"no"': ちがいます
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1580,6 +1557,18 @@ ja:
         text: x 座標の {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
+      PoemBot_setBackgroundEffect:
+        text: 背景エフェクトを {BG_EFFECT} [PALETTE][1] にセット
+        options:
+          BG_EFFECT:
+            '"solid"': 単色
+            '"rainbow"': にじ
+      PoemBot_setForegroundEffect:
+        text: 前景エフェクトを {FG_EFFECT} にセット
+        options:
+          FG_EFFECT:
+            '"rain"': 雨
+            '"bubbles"': 泡
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
@@ -1655,7 +1644,6 @@ ja:
           VAL:
             '0': をオフにします
             '1': に
-            '"toggle"': のトグルを選択します
       binary_drawString:
         text: 文字列を描画する {STR}
       binary_goTo:
@@ -1728,6 +1716,7 @@ ja:
             '"stoneBricks"': 石レンガ
             '"mossyStoneBricks"': 苔石レンガ
             '"crackedStoneBricks"': ひびの入った石レンガ
+            '"chiseledStoneBricks"': 模様入り石レンガ
             '"blueCoralBlock"': 青色のサンゴブロック
             '"pinkCoralBlock"': 桃色のサンゴブロック
             '"magentaCoralBlock"': 赤紫色のサンゴブロック

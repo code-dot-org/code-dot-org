@@ -1,0 +1,116 @@
+{
+  "ar-SA": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "السلوك"
+        },
+        "variable/coursef/2021": {
+          "word": "متغير"
+        },
+        "input/coursef/2021": {
+          "word": "الإدخال"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "التعلم الآلي"
+        },
+        "internet/coursef/2021": {
+          "word": "الإنترنت"
+        },
+        "packets/coursef/2021": {
+          "word": "الحزم"
+        },
+        "define/coursef/2021": {
+          "word": "عرّف"
+        },
+        "debugging/courseb/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "drop/courseb/2021": {
+          "word": "السقوط"
+        },
+        "programming/courseb/2021": {
+          "word": "البرمجة"
+        },
+        "debugging/coursea/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "drop/coursea/2021": {
+          "word": "السقوط"
+        },
+        "programming/coursea/2021": {
+          "word": "البرمجة"
+        },
+        "debugging/coursec/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "sequencing/coursec/2021": {
+          "word": "التجزيء"
+        },
+        "programming/coursec/2021": {
+          "word": "البرمجة"
+        },
+        "binary/coursec/2021": {
+          "word": "ثنائي"
+        },
+        "debugging/coursed/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "programming/coursed/2021": {
+          "word": "البرمجة"
+        },
+        "conditionals/coursed/2021": {
+          "word": "الجمل الشرطية"
+        },
+        "debugging/express/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "sequencing/express/2021": {
+          "word": "التجزيء"
+        },
+        "programming/express/2021": {
+          "word": "البرمجة"
+        },
+        "behavior/express/2021": {
+          "word": "السلوك"
+        },
+        "conditionals/express/2021": {
+          "word": "الجمل الشرطية"
+        },
+        "function/express/2021": {
+          "word": "وظيفة "
+        },
+        "variable/express/2021": {
+          "word": "متغير"
+        },
+        "define/express/2021": {
+          "word": "عرّف"
+        },
+        "drop/pre-express/2021": {
+          "word": "السقوط"
+        },
+        "debugging/pre-express/2021": {
+          "word": "تصحيح الأخطاء"
+        },
+        "programming/pre-express/2021": {
+          "word": "البرمجة"
+        },
+        "behavior/coursee/2021": {
+          "word": "السلوك"
+        },
+        "copyright/coursee/2021": {
+          "word": "حقوق النسخ"
+        },
+        "function/coursee/2021": {
+          "word": "وظيفة "
+        },
+        "conditionals/coursee/2021": {
+          "word": "الجمل الشرطية"
+        },
+        "define/coursee/2021": {
+          "word": "عرّف"
+        }
+      }
+    }
+  }
+}

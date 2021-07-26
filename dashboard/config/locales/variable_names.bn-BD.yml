@@ -3,6 +3,10 @@ bn:
   data:
     variable_names:
       actor: অভিনেতা
+      age: বয়স
+      answer: উত্তর
+      binary: দ্বি-আঙ্কিক
+      color: রং
       counter: গণক
       height: উচ্চতা
       honey: মধু
@@ -16,4 +20,5 @@ bn:
       score: স্কোর
       size: আকার
       speed: গতি
+      width: চওড়া
       x: এক্স

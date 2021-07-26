@@ -1,0 +1,56 @@
+{
+  "mi-NZ": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Taurangi"
+        },
+        "internet/coursef/2021": {
+          "word": "Te Ipurangi"
+        },
+        "define/coursef/2021": {
+          "word": "Whakamahukitia"
+        },
+        "drop/courseb/2021": {
+          "word": "Taka Iho"
+        },
+        "drop/coursea/2021": {
+          "word": "Taka Iho"
+        },
+        "binary/coursec/2021": {
+          "word": "Tāhūrua"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Ngā Here"
+        },
+        "conditionals/express/2021": {
+          "word": "Ngā Here"
+        },
+        "function/express/2021": {
+          "word": "Taumahi"
+        },
+        "variable/express/2021": {
+          "word": "Taurangi"
+        },
+        "define/express/2021": {
+          "word": "Whakamahukitia"
+        },
+        "drop/pre-express/2021": {
+          "word": "Taka Iho"
+        },
+        "copyright/coursee/2021": {
+          "word": "Manatārua"
+        },
+        "function/coursee/2021": {
+          "word": "Taumahi"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Ngā Here"
+        },
+        "define/coursee/2021": {
+          "word": "Whakamahukitia"
+        }
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:26 UTC",
+    "serialized_at": "2021-07-26 16:32:45 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -68,7 +68,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.",
-        "preparation": "* Sticky notes (at least 20 per student)\n* Preview slides\n* Optional: [Article](https://story.californiasunday.com/tech-pipeline-diversity) about software engineering to help prepare for discussion",
+        "preparation": "* Sticky notes (at least 20 per student)\n* Clear space on the wall or the whiteboard for students to work in groups to place sticky notes\n* Print copies of the Software Engineering Characteristics handout (one half sheet per student)",
         "student_overview": "In this lesson, you explore software engineering values and the ways that you practice these values in other aspects of your life. By the end of this lesson, you discover your own software engineering identity!"
       },
       "seeding_key": {
@@ -1322,8 +1322,7 @@
       "key": "d628175e-39ef-435c-982e-a363fe558944",
       "position": 1,
       "properties": {
-        "description": "Welcome to Computer Science A! This year we’re going to learn a lot about computer science and programming. Before we begin, let's hear how you can change the face of computer science.",
-        "duration": "5",
+        "description": "Welcome to Computer Science A! This year we’re going to learn a lot about computer science and programming. To begin, let's hear about how you can change the face of computer science.",
         "name": "Welcome and Inspirational Video",
         "remarks": true
       },
@@ -1336,7 +1335,7 @@
       "key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Change the Face of Computer Science\" video."
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Change the Face of Computer Science video."
       },
       "seeding_key": {
         "activity_section.key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
@@ -1347,9 +1346,9 @@
       "key": "a66ecc6b-8fa7-4e20-9f48-9ffc7aa5d61e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out sticky notes to students, at least 20 sticky notes per student. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out at least 20 sticky notes to each student.",
         "duration": "8",
-        "name": "Design Thinking: Brainstorm"
+        "name": "Design Thinking: Group Brainstorm"
       },
       "seeding_key": {
         "activity_section.key": "a66ecc6b-8fa7-4e20-9f48-9ffc7aa5d61e",
@@ -1357,62 +1356,51 @@
       }
     },
     {
-      "key": "3c4c7c9e-7f29-4cd4-bdf4-5f8ae558e946",
+      "key": "c66a5cf9-8b78-4993-95a5-5b6efcfcecee",
       "position": 2,
       "properties": {
-        "description": "In this class, you won’t just explore software engineering, you will be software engineers.\n\nWe're going to start by using a common design thinking activity we all know as brainstorming to come up with some ideas about software engineering. ",
+        "description": "In this class, you won’t just explore software engineering – you will be software engineers.\n\nWe're going to start by using a common design thinking activity known as a group brainstorm to gather some ideas about software engineering.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "3c4c7c9e-7f29-4cd4-bdf4-5f8ae558e946",
+        "activity_section.key": "c66a5cf9-8b78-4993-95a5-5b6efcfcecee",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "beee5f00-6076-4e55-8e59-19d2a08e6b0f",
+      "key": "e96ab6c2-383c-4ed6-891f-ad71bc003437",
       "position": 3,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student to read the question on the slide to the whole class. Students write as many words/phrases as they can, one per sticky note, about the phrase \"software engineering\". Remind them to keep generating more ideas: there are no wrong answers",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Direct students to write a word or phrase on each sticky note about the phrase \"software engineering\". Remind students to write down as many as they can think of and that there are no wrong answers.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Sometimes it seems like we’re the only ones who feel or think a certain way. This activity, along with the gallery walk, gives students an opportunity to learn what their classmates think, and hopefully realize they are not alone."
+            "markdown": "Students may feel unsure of themselves in a new environment and may choose not to participate. As students write their words or phrases, circulate around the room supporting their beliefs by:\n* Agreeing with statements they have written.\n* Affirming the value of a particular statement.\n* Making connections between statements on different students' desks to help them confirm that they are part of a community of people who are not so different from themselves."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "beee5f00-6076-4e55-8e59-19d2a08e6b0f",
+        "activity_section.key": "e96ab6c2-383c-4ed6-891f-ad71bc003437",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "9721d168-de29-4fdc-a035-f91740126e84",
+      "key": "9c6eca81-5e1d-48ce-98e6-5c569da9fbf4",
       "position": 4,
       "properties": {
-        "description": "Now we’re going to group similar sticky notes. It’s up to you to decide how to group them!",
+        "description": "As you were writing down ideas, you were probably more confident about some than others. To help build a collective understanding about how we view software engineering right now, we are going to create groups of sticky notes. Your goal is to identify themes and similarities that you see when looking at all of your sticky notes together. It’s up to you to decide how to group them! ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "9721d168-de29-4fdc-a035-f91740126e84",
+        "activity_section.key": "9c6eca81-5e1d-48ce-98e6-5c569da9fbf4",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "4adc6008-ceec-4d65-8a05-c6dba421bebf",
+      "key": "905708b2-54ce-4515-8741-3f7e4509d270",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "4adc6008-ceec-4d65-8a05-c6dba421bebf",
-        "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
-      }
-    },
-    {
-      "key": "bedc6269-35d4-43f3-85ff-794f3a67083d",
-      "position": 6,
-      "properties": {
-        "description": "**Do This:** In their group:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students share out their sticky notes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students group similar sticky notes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students stick their sticky notes on the wall, keeping similar notes together.\n",
+        "description": "**Group:** Place students in groups of three or four.\n\n**Do This:** Have students group their sticky notes based on similar themes and display their results to share with their peers. Students should:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the ideas they wrote on their sticky notes in their group.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Group similar words and phrases.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Place their sticky notes on the designated wall space, keeping similar notes together.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1421,60 +1409,60 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bedc6269-35d4-43f3-85ff-794f3a67083d",
+        "activity_section.key": "905708b2-54ce-4515-8741-3f7e4509d270",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "394deff8-b418-4ad7-a2e5-8266cdaf1435",
-      "position": 7,
+      "key": "40cf077d-90c3-477d-894e-0d8b67f123e2",
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students explore other groups' sticky notes with a Gallery Walk. They take notes on what they notice and wonder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to explore their classmates' sticky notes. Students write down what they notice and wonder on a new sticky note.",
         "duration": "13",
         "name": "Design Thinking: Gallery Walk and Discussion",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A Gallery Walk allows students to examine multiple responses that are placed around the room or designated space. Students walk around the classroom to view the responses, giving everyone an opportunity to share out to the whole class and giving voice to students who may be hesitant when asked to verbally share."
+            "markdown": "A Gallery Walk allows students to examine multiple responses that are placed around the room or designated space. Students walk around the classroom to view the responses, giving everyone an opportunity to share their ideas with the class and giving voice to students who may be hesitant when asked to share verbally."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "394deff8-b418-4ad7-a2e5-8266cdaf1435",
+        "activity_section.key": "40cf077d-90c3-477d-894e-0d8b67f123e2",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "c0cdf7b6-c5a5-4361-be8e-2f83291a8ace",
-      "position": 8,
+      "key": "91abf8be-0e83-43b5-882f-431f39cc7434",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:**  Discuss the prompts as a class. Students may have common perceptions of “who” is a software engineer. Encourage them to think of different identities and how they intersect.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Where do we get this perception from? Why? What message does that send to us?\n\n**Discussion Goal:** Through popular culture and the media, everyone has formed images of who is a software engineer and what software engineering looks like. This discussion provides space for students to express openly their previous knowledge and experience.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share their perceptions about who is a software engineer or what they do.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Where do we get our perceptions from?*\n* *Why?*\n* *What message do we get from these?*\n\n**Discussion Goal:** Students share how their perceptions about software engineers are influenced by popular culture and media. Students share examples of how software engineers are presented in movies, TV shows, or on social media.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students bring their own life experiences ([funds of knowledge](https://www.k12.wa.us/student-success/access-opportunity-education/migrant-and-bilingual-education/funds-knowledge-and-home-visits-toolkit/funds-knowledge)) to class, and it’s important to acknowledge that they may already have been exposed to narratives and stories of software engineering."
+            "markdown": "Students bring their own life experiences to class. It’s important to acknowledge how they perceive software engineering and the influences of popular culture and media."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c0cdf7b6-c5a5-4361-be8e-2f83291a8ace",
+        "activity_section.key": "91abf8be-0e83-43b5-882f-431f39cc7434",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "49e1ee1b-e651-435a-8cdd-f256709efe4d",
-      "position": 9,
+      "key": "a8a7755f-9721-4d18-85c6-da9264159671",
+      "position": 8,
       "properties": {
-        "description": "**Do This:** Read out the definition of a software engineer, pausing at the underlined words. Ask a student to read those words out loud. \"Software engineers 'combine their expertise in computer science, engineering, and math to *design*, *develop*, and *test* software for home, school, and business use.'\" Give students thirty seconds to process and think about the definition. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the definition of a software engineer."
       },
       "seeding_key": {
-        "activity_section.key": "49e1ee1b-e651-435a-8cdd-f256709efe4d",
+        "activity_section.key": "a8a7755f-9721-4d18-85c6-da9264159671",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "7ca83497-b97c-45a7-8372-da257a41bf5b",
-      "position": 10,
+      "key": "9018ab29-095f-41f1-9ad5-e51f87586481",
+      "position": 9,
       "properties": {
         "description": "Sometimes it's helpful to hear from an expert about something we may not know much about. Let's listen to some software engineers talk about their work and their values.",
         "duration": "12",
@@ -1482,66 +1470,49 @@
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "7ca83497-b97c-45a7-8372-da257a41bf5b",
+        "activity_section.key": "9018ab29-095f-41f1-9ad5-e51f87586481",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "7d130709-6b97-42ff-9e12-03cc7a6b9776",
+      "key": "c7bea2da-5244-42c8-a28a-ff19436c01d0",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students recall characteristics discussed by the software engineers in the video, such as problem solving, collaboration, creativity, and curiosity. Students share their ideas about why these characteristics are important for software engineering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** When have you shown these characteristics, inside or outside of school? How?\n\n**Discussion Goal:** Students realize they have already displayed many of the characteristics of a software engineer."
+      },
+      "seeding_key": {
+        "activity_section.key": "c7bea2da-5244-42c8-a28a-ff19436c01d0",
+        "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
+      }
+    },
+    {
+      "key": "a01fba1e-4aa5-4780-9255-805d110a2dc7",
       "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show video of software engineers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *From what you have just heard and your own previous computer science experience, what values are important for software engineering?*\n\n**Do This:** Use Think-Pair-Share to conduct the discussion. As students share out values, type them onto the slide.\n\n**Discussion Goal:** This discussion encourages students to share personal experiences with software engineering. As the software engineers will have discussed the values of problem solving, collaboration, creativity, and curiosity, students share experiences related to these values. Students begin making connections to growth mindset values and moving away from misconceptions (\"good at math\", \"born with it\") surrounding software engineering.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Think-Pair-Share gives students time to think on their own before pairing with a classmate to exchange thoughts. Give students enough time to think on their own. If students are hesitant to share out their ideas, you can ask students to share their partner’s ideas."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7d130709-6b97-42ff-9e12-03cc7a6b9776",
-        "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
-      }
-    },
-    {
-      "key": "8fe9d7c4-72c6-4ea1-b914-15e4d8d6313d",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you shown these characteristics, inside or outside of school? How?*\n\n**Discussion Goal:** The goal of this discussion is for students to realize that they have already displayed many of the traits of a software engineer, without realizing it."
-      },
-      "seeding_key": {
-        "activity_section.key": "8fe9d7c4-72c6-4ea1-b914-15e4d8d6313d",
-        "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
-      }
-    },
-    {
-      "key": "dec68dbb-45ed-4df4-9e4f-e46cdad7c9d8",
-      "position": 13,
       "properties": {
         "description": "These characteristics are the most important parts of being a software engineer. Even though you may not realize it yet, you already have the mindset of a software engineer. ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "dec68dbb-45ed-4df4-9e4f-e46cdad7c9d8",
+        "activity_section.key": "a01fba1e-4aa5-4780-9255-805d110a2dc7",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
     {
-      "key": "a4e0abcf-beb4-40cb-b61f-dd52c6bed522",
-      "position": 14,
+      "key": "d91d7ecf-cb6c-49d9-b415-c259a243ffef",
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We will be using call and response this year to help build community and culture. You have shared out examples of how you represent these values, and we’re going to affirm these identities together. We’re going to focus on these four values.\n\nWhen I say, “I am a”, you say “problem solver”\n\n“I am a”\n\nWhen I say “I am”, you say “creative”\n\n“I am”\n\nWhen I say “I am a”, you say “collaborator”\n\n“I am a”\n\nWhen I say “I am a”, you say “learner”\n\n“I am a”\n\nThese four values are what we care about in a software engineer.\n\nWhen I say “I am a”, you say “software engineer”\n\n“I am a” ",
+        "description": "You have shared examples of how you have characteristics of software engineers, and we’re going to affirm our identities as software engineers together. This year, we are going to focus on these four characteristics.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say, “I am a”, you say “problem solver”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am”, you say “creative”\n“I am”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “collaborator”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “learner”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “software engineer”\n“I am a” ",
+        "duration": "2",
         "name": "Call and Response",
-        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "[Call and response](https://crtandthebrain.com/using-call-and-response-to-deepen-thinking-part-i/) helps build ritual and repetition in the classroom. This activity helps students affirm their software engineering identities.\n\nAlthough not everyone will become software engineers for their careers, it is important that all students can visualize that future. Just as students are athletes on the field/court and musicians in the band/orchestra room, students are software engineers in this class."
+            "markdown": "Call and Response helps build community and repetition in the classroom. This activity helps students affirm their software engineering identities.\n\nAlthough not everyone will become software engineers for their careers, it is important that all students can visualize that future. Just as students are athletes on the field/court and musicians in the band/orchestra room, students are software engineers in this class."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a4e0abcf-beb4-40cb-b61f-dd52c6bed522",
+        "activity_section.key": "d91d7ecf-cb6c-49d9-b415-c259a243ffef",
         "lesson_activity.key": "765957a5-fd0e-4e62-87e8-97feb71c6942"
       }
     },
@@ -1549,9 +1520,14 @@
       "key": "16d15350-6abe-4011-8a94-d471b4538e5a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n* On a sticky note, students write which of the software engineering values they are the strongest at and which one they have the most room for growth.\n* Save these sticky notes. Students revisit these in Lesson 15 to reflect on their growth in their software engineering identity.\n",
-        "duration": "5",
-        "name": "Exit Ticket"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Software Engineering Characteristics handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students choose a software engineering characteristic that they feel is their strongest and which one they have the most room for growth.",
+        "name": "Software Engineering Characteristics",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect the Software Engineering Characteristics handouts. Students revisit these in Lesson 15 to reflect on their development of their software engineering identity."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "16d15350-6abe-4011-8a94-d471b4538e5a",
@@ -1567,6 +1543,17 @@
       },
       "seeding_key": {
         "activity_section.key": "4cbed082-ffc1-425a-b091-af8b887c3f80",
+        "lesson_activity.key": "a3797912-ba1a-49d8-8f24-48d3c1c5ad00"
+      }
+    },
+    {
+      "key": "2a424b68-f7e5-4035-984f-50e8d507e125",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a424b68-f7e5-4035-984f-50e8d507e125",
         "lesson_activity.key": "a3797912-ba1a-49d8-8f24-48d3c1c5ad00"
       }
     },
@@ -8097,6 +8084,18 @@
       }
     },
     {
+      "name": "Change the Face of Computer Science",
+      "url": "https://youtu.be/uhcA6K8rWp0",
+      "key": "change_the_face_of_computer_science",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "change_the_face_of_computer_science"
+      }
+    },
+    {
       "name": "Code Review Practice",
       "url": "https://docs.google.com/document/d/1SgyD1rkzI9nPdudVXyem2qjlRwLlmKvfgTOBxXNbHWw/edit#heading=h.q0rmwxki59ku",
       "key": "code_review_practice",
@@ -8248,6 +8247,18 @@
       },
       "seeding_key": {
         "resource.key": "pseudocode_warm_up"
+      }
+    },
+    {
+      "name": "Software Engineering Characteristics",
+      "url": "https://docs.google.com/document/d/1kuEbEQMUyGb6W3Mes8R1gwuL2g5zJYV80Vgy4eH48AI/edit?usp=sharing",
+      "key": "software_engineering_characteristics",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_characteristics"
       }
     },
     {
@@ -8522,6 +8533,18 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "change_the_face_of_computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_characteristics"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -8999,6 +9022,16 @@
   ],
   "vocabularies": [
     {
+      "key": "software_engineer",
+      "word": "Software Engineer",
+      "definition": "A person who designs, develops, and tests software for home, school, and business use",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
       "key": "object",
       "word": "Object",
       "definition": "Created from a class; can know things and do things",
@@ -9210,6 +9243,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "software_engineer"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
