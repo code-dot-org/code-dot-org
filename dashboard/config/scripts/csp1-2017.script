@@ -17,10 +17,10 @@ level 'csp-pre-survey-2017-levelgroup', assessment: true
 lesson_group 'csp1_1', display_name: 'Chapter 1: Representing and Transmitting Information'
 lesson 'Personal Innovations', display_name: 'Personal Innovations', has_lesson_plan: true
 level 'U1L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Computer Science is Changing Everything', progression: 'Computer Science is Changing Everything'
+level 'Computer Science is Changing Everything', progression: 'Computer Science is Changing Everything', named: true
 variants
-  level 'csp_socialBelonging_control', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
   level 'csp_socialBelonging_intervention', experiments: ["rene-belonging-control","rene-belonging-affirmation"], progression: 'Reflection: starting out in computer science'
+  level 'csp_socialBelonging_control', active: true, experiments: ["rene-control-control","rene-control-affirmation"], progression: 'Reflection: starting out in computer science'
 endvariants
 
 lesson 'Sending Binary Messages', display_name: 'Sending Binary Messages', has_lesson_plan: true
@@ -31,8 +31,8 @@ level 'U1L3 Free Response', progression: 'Check Your Understanding', assessment:
 
 lesson 'Sending Binary Messages with the Internet Simulator', display_name: 'Sending Binary Messages with the Internet Simulator', has_lesson_plan: true
 level 'v2 U1L3 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Sending Binary Messages', progression: 'Internet Simulator: Sending Binary Messages'
-level 'The Internet: Wires, Cables, and Wifi', progression: 'The Internet: Wires, Cables, and Wifi'
+level 'Internet Simulator: Sending Binary Messages', progression: 'Internet Simulator: Sending Binary Messages', named: true
+level 'The Internet: Wires, Cables, and Wifi', progression: 'The Internet: Wires, Cables, and Wifi', named: true
 level 'U1L3 Free response reflection question', progression: 'Check Your Understanding', assessment: true
 level 'U1L4 Multiple Choice', progression: 'Check Your Understanding', assessment: true
 level 'U1L3 Multiple Choice', progression: 'Check Your Understanding', assessment: true
@@ -46,19 +46,19 @@ level 'U1L6 Free Response Reflection', progression: 'Check Your Understanding', 
 
 lesson 'Binary Numbers', display_name: 'Binary Numbers', has_lesson_plan: true
 level 'v2 U1L5 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Widget: Binary Odometer', progression: 'Widget: Binary Odometer'
+level 'Widget: Binary Odometer', progression: 'Widget: Binary Odometer', named: true
 level 'U1L7 Free Response Assessment', progression: 'Check Your Understanding', assessment: true
 level 'U1L7 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Sending Numbers', display_name: 'Sending Numbers', has_lesson_plan: true
 level 'v2 U1L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Sending Numbers', progression: 'Internet Simulator: Sending Numbers'
+level 'Internet Simulator: Sending Numbers', progression: 'Internet Simulator: Sending Numbers', named: true
 level 'U1L8 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 level 'U1L8 Multiple Choice', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Encoding and Sending Formatted Text', display_name: 'Encoding and Sending Formatted Text', has_lesson_plan: true
 level 'v2 U1L8 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Sending Text', progression: 'Internet Simulator: Sending Text'
+level 'Internet Simulator: Sending Text', progression: 'Internet Simulator: Sending Text', named: true
 level 'U1L10 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U1L10 Assessment 2', progression: 'Check Your Understanding', assessment: true
 level 'U1L10 Assessment Free Response', progression: 'Check Your Understanding', assessment: true
@@ -73,7 +73,7 @@ level 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2', assessment: true
 lesson_group 'csp1_2', display_name: 'Chapter 2: Inventing the Internet'
 lesson 'The Internet', display_name: 'The Internet', has_lesson_plan: true
 level 'v2 U1 Internet is for Everyone Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'What is the Internet?', progression: 'What is the Internet?'
+level 'What is the Internet?', progression: 'What is the Internet?', named: true
 level 'U2L01 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U2L01 Assessment 2', progression: 'Check Your Understanding', assessment: true
 level 'U2L01 Assessment 3', progression: 'Check Your Understanding', assessment: true
@@ -82,8 +82,8 @@ level 'csp-pulse-check-survey-1-levelgroup-U1Ch2', progression: 'Quick Check-In'
 
 lesson 'The Need for Addressing', display_name: 'The Need for Addressing', has_lesson_plan: true
 level 'v2 U1L9 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Broadcast', progression: 'Internet Simulator: Broadcast'
-level 'The Internet: IP Addresses & DNS', progression: 'The Internet: IP Addresses & DNS'
+level 'Internet Simulator: Broadcast', progression: 'Internet Simulator: Broadcast', named: true
+level 'The Internet: IP Addresses & DNS', progression: 'The Internet: IP Addresses & DNS', named: true
 level 'U2L02 Free Response Reflection', progression: 'Check Your Understanding', assessment: true
 level 'U2L02 Assessment 3', progression: 'Check Your Understanding', assessment: true
 level 'U2L02 Assessment 4', progression: 'Check Your Understanding', assessment: true
@@ -92,7 +92,7 @@ level 'U2L3 Assessment 2', progression: 'Check Your Understanding', assessment: 
 
 lesson 'Routers and Redundancy', display_name: 'Routers and Redundancy', has_lesson_plan: true
 level 'v2 U1L10 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Routers', progression: 'Internet Simulator: Routers'
+level 'Internet Simulator: Routers', progression: 'Internet Simulator: Routers', named: true
 level 'U2L04 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U2L04 Assessment4', progression: 'Check Your Understanding', assessment: true
 level 'U2L04 Assessment5', progression: 'Check Your Understanding', assessment: true
@@ -101,8 +101,8 @@ level 'U2L04 Assessment3', progression: 'Check Your Understanding', assessment: 
 
 lesson 'Packets and Making a Reliable Internet', display_name: 'Packets and Making a Reliable Internet', has_lesson_plan: true
 level 'v2 U1L11 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: Packets', progression: 'Internet Simulator: Packets'
-level 'The Internet: Packets, Routing, and Reliability', progression: 'The Internet: Packets, Routing, and Reliability'
+level 'Internet Simulator: Packets', progression: 'Internet Simulator: Packets', named: true
+level 'The Internet: Packets, Routing, and Reliability', progression: 'The Internet: Packets, Routing, and Reliability', named: true
 level 'U2L05 Reflection 1', progression: 'Check Your Understanding', assessment: true
 level 'U2L05 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U2L05 Assessment 2', progression: 'Check Your Understanding', assessment: true
@@ -110,8 +110,8 @@ level 'U2L3 Assessment', progression: 'Check Your Understanding', assessment: tr
 
 lesson 'The Need for DNS', display_name: 'The Need for DNS', has_lesson_plan: true
 level 'v2 U1L12 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Internet Simulator: DNS', progression: 'Internet Simulator: DNS'
-level 'The Internet: IP Addresses & DNS', progression: 'The Internet: IP Addresses & DNS'
+level 'Internet Simulator: DNS', progression: 'Internet Simulator: DNS', named: true
+level 'The Internet: IP Addresses & DNS', progression: 'The Internet: IP Addresses & DNS', named: true
 level 'U2L09 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U2L09 Assessment2', progression: 'Check Your Understanding', assessment: true
 level 'U2L09 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
@@ -119,7 +119,7 @@ level 'U2L10 Assessment1', progression: 'Check Your Understanding', assessment: 
 
 lesson 'HTTP and Abstraction', display_name: 'HTTP and Abstraction', has_lesson_plan: true
 level 'v2 U1L13 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'The Internet: HTTP and HTML', progression: 'The Internet: HTTP and HTML'
+level 'The Internet: HTTP and HTML', progression: 'The Internet: HTTP and HTML', named: true
 level 'U2L11 Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U2L11 Assessment 2', progression: 'Check Your Understanding', assessment: true
 level 'U2L11 Free Response', progression: 'Check Your Understanding', assessment: true
@@ -129,8 +129,8 @@ level 'v2 U1L14 Student Lesson Introduction', progression: 'Lesson Vocabulary & 
 
 lesson 'Unit 1 Chapter 2 Assessment', display_name: 'Unit 1 Chapter 2 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 1 Ch2 Cumulative Assessment MC Group', assessment: true
 

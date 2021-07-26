@@ -25,23 +25,23 @@ level 'U4L2 - FR Practice AP response about data', progression: 'Check Your Unde
 
 lesson 'Identifying People with Data', display_name: 'Identifying People with Data', has_lesson_plan: true
 level 'Unit 4 Lesson 3 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'U4-AP-Practice-Choose-The-Data-Concern', progression: '(new) AP Practice Response - Identify the Data Concern'
+level 'U4-AP-Practice-Choose-The-Data-Concern', named: true
 level 'U4L3 - FR Identifying people', progression: 'Check Your Understanding', assessment: true
 
 lesson 'The Cost of Free', display_name: 'The Cost of Free', has_lesson_plan: true
 level 'Unit 4 Lesson 4 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Video - The Future of Big Data', progression: 'The Future of Big Data'
-level 'U4-AP-Practice-Justify-the-Score', progression: '(new) AP Practice Response - Justify the Score'
+level 'Video - The Future of Big Data', progression: 'The Future of Big Data', named: true
+level 'U4-AP-Practice-Justify-the-Score', named: true
 level 'U4L4 - MC cost of free', progression: 'Check Your Understanding', assessment: true
 level 'U4L4 - FR cost of free', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Simple Encryption', display_name: 'Simple Encryption', has_lesson_plan: true
 level 'Unit 4 Lesson 5 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Crack a Caesar Cipher', progression: 'Crack a Caesar Cipher'
-level 'Terminology Recap', progression: 'Terminology Recap'
-level 'New Challenge Introduction', progression: 'New Challenge Introduction'
-level 'Crack Random Substitution', progression: 'Crack Random Substitution'
-level 'Technique: Frequency Analysis', progression: 'Technique: Frequency Analysis'
+level 'Crack a Caesar Cipher', progression: 'Crack a Caesar Cipher', named: true
+level 'Terminology Recap', progression: 'Terminology Recap', named: true
+level 'New Challenge Introduction', progression: 'New Challenge Introduction', named: true
+level 'Crack Random Substitution', progression: 'Crack Random Substitution', named: true
+level 'Technique: Frequency Analysis', progression: 'Technique: Frequency Analysis', named: true
 level 'U2L13 Free Response Getting Started', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 Assessment1', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 Assessment3', progression: 'Check Your Understanding', assessment: true
@@ -51,9 +51,9 @@ level 'U2L14 Free Response Wrap Up', progression: 'Check Your Understanding', as
 
 lesson 'Encryption with Keys and Passwords', display_name: 'Encryption with Keys and Passwords', has_lesson_plan: true
 level 'Unit 4 Lesson 6 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'The Vigenere Cipher Widget', progression: 'The Vigenere Cipher Widget'
-level 'How Secure Is Your Password?', progression: 'How Secure Is Your Password?'
-level 'Video - Encryption and Public Keys', progression: 'Encryption and Public Keys'
+level 'The Vigenere Cipher Widget', progression: 'The Vigenere Cipher Widget', named: true
+level 'How Secure Is Your Password?', progression: 'How Secure Is Your Password?', named: true
+level 'Video - Encryption and Public Keys', progression: 'Encryption and Public Keys', named: true
 level 'U2L14 Free Response Getting Started', progression: 'Check Your Understanding', assessment: true
 level 'U2L14 Assessment', progression: 'Check Your Understanding', assessment: true
 level 'U2L14 Free Response Wrap Up', progression: 'Check Your Understanding', assessment: true
@@ -62,12 +62,12 @@ level 'U2L15 Assessment1', progression: 'Check Your Understanding', assessment: 
 
 lesson 'Public Key Crypto', display_name: 'Public Key Crypto', has_lesson_plan: true
 level 'Unit 4 Lesson 7 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Video - Encryption and Public Keys', progression: 'Encryption and Public Keys'
-level 'Cups and Beans Activity', progression: 'Cups and Beans Activity'
-level 'Modulo Clock Instructions', progression: 'Modulo Clock Instructions'
-level 'The Modulo Clock', progression: 'The Modulo Clock'
-level 'Public Key Crypto Widget Instructions', progression: 'Public Key Crypto Widget Instructions'
-level 'Public Key Cryptography Widget', progression: 'Public Key Cryptography Widget'
+level 'Video - Encryption and Public Keys', progression: 'Encryption and Public Keys', named: true
+level 'Cups and Beans Activity', progression: 'Cups and Beans Activity', named: true
+level 'Modulo Clock Instructions', progression: 'Modulo Clock Instructions', named: true
+level 'The Modulo Clock', progression: 'The Modulo Clock', named: true
+level 'Public Key Crypto Widget Instructions', progression: 'Public Key Crypto Widget Instructions', named: true
+level 'Public Key Cryptography Widget', progression: 'Public Key Cryptography Widget', named: true
 level 'U2L18 Free Response Assessment 1', progression: 'Check Your Understanding', assessment: true
 level 'U2L18 Match terms to cups and beans analogy', progression: 'Check Your Understanding', assessment: true
 level 'U2L19 Free Response Getting Started', progression: 'Check Your Understanding', assessment: true
@@ -77,7 +77,7 @@ level 'U2L19 Free Response Wrap Up', progression: 'Check Your Understanding', as
 
 lesson 'Rapid Research - Cybercrime', display_name: 'Rapid Research - Cybercrime', has_lesson_plan: true
 level 'Unit 4 Lesson 8 Introduction', progression: 'Lesson Vocabulary & Resources'
-level 'Video - Cybersecurity and Crime', progression: 'Cybersecurity and Crime'
+level 'Video - Cybersecurity and Crime', progression: 'Cybersecurity and Crime', named: true
 
 lesson 'Practice PT - Big Data and Security Dilemmas', display_name: 'Practice PT - Big Data and Security Dilemmas', has_lesson_plan: true
 level 'Unit 4 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resources'
@@ -85,8 +85,8 @@ level 'Unit 4 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resource
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 lesson 'Unit 4 Chapter 1 Assessment', display_name: 'Unit 4 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_control_4', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
   level 'csp_affirmation_intervention_4', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_control_4', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC', assessment: true
 
