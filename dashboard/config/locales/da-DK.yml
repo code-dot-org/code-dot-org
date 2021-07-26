@@ -392,6 +392,7 @@ da:
       about_contact: Kontakt os
       about_faqs: Ofte stillede spørgsmål
       learn: Lær
+      stats: Statistikker
       help_us: Hjælp os
       teach: Undervis
       about: Om
@@ -810,6 +811,7 @@ da:
     unplugged_conditionals:
       title: Betingelser
     widgets:
+      audience: I alderen 14+
       cta: Lær hvordan
   landing:
     report_bug: Rapporter fejl
@@ -1105,7 +1107,9 @@ da:
   cookie_banner:
     more_information: Se Code.org's privatlivspolitik.
     accept: Jeg er enig
+  page_not_found_title: Siden blev ikke fundet
   copy: Kopier
+  confirm: Bekræft
   parent_email_banner:
     text: "** Er du forælder eller værge? ** Knyt din e-mail til denne konto for at
       holde dig opdateret om dit barns fremskridt og projekter!"

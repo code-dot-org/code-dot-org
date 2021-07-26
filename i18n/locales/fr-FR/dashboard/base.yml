@@ -271,6 +271,7 @@ fr:
     added_teacher: '%{name} ajouté en tant que ton enseignant'
     registered: "Vous vous êtes inscrit à %{section_name}."
     captcha_required: 'Veuillez remplir le CAPTCHA pour rejoindre cette section.'
+    already_exists: 'Tu as déjà rejoint la section %{section_name}.'
     error:
       signed_in: 'Merci de te déconnecter avant de continuer'
       username_not_found: 'Nom d''utilisateur %{username} introuvable'
@@ -1099,4 +1100,6 @@ fr:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique à ce compte afin de rester informé des progrès et des projets de votre enfant !** "
     link_your_email: "Associez votre adresse électronique"
     not_now: "Pas maintenant"
+  behaviors:
+    this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"

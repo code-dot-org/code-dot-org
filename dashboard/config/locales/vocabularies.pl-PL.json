@@ -1,0 +1,306 @@
+{
+  "pl-PL": {
+    "data": {
+      "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "user/coursef/2021": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "behavior/coursef/2021": {
+          "word": "Zachowanie"
+        },
+        "program/coursef/2021": {
+          "word": "Program"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorytm",
+          "definition": "Lista kroków do ukończenia zadania. "
+        },
+        "event/coursef/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "variable/coursef/2021": {
+          "word": "Zmienna"
+        },
+        "input/coursef/2021": {
+          "word": "Wejście"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Uczenie maszynowe"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "Pakiety"
+        },
+        "servers/coursef/2021": {
+          "word": "Serwery"
+        },
+        "url/coursef/2021": {
+          "word": "URL"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kabel"
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Światłowód"
+        },
+        "ip_address/coursef/2021": {
+          "word": "Adres IP"
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi"
+        },
+        "define/coursef/2021": {
+          "word": "Zdefiniuj"
+        },
+        "prepare/coursef/2021": {
+          "word": "Przygotuj"
+        },
+        "reflect/coursef/2021": {
+          "word": "Przemyśl"
+        },
+        "try/coursef/2021": {
+          "word": "Spróbuj"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algorytm"
+        },
+        "bug/courseb/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/courseb/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "click/courseb/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/courseb/2021": {
+          "word": "Przeciągnij"
+        },
+        "drop/courseb/2021": {
+          "word": "Drop"
+        },
+        "program/courseb/2021": {
+          "word": "Program"
+        },
+        "programming/courseb/2021": {
+          "word": "Programowanie"
+        },
+        "event/courseb/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algorytm"
+        },
+        "debugging/coursea/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursea/2021": {
+          "word": "Program"
+        },
+        "click/coursea/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/coursea/2021": {
+          "word": "Przeciągnij"
+        },
+        "drop/coursea/2021": {
+          "word": "Drop"
+        },
+        "bug/coursea/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "programming/coursea/2021": {
+          "word": "Programowanie"
+        },
+        "event/coursea/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algorytm"
+        },
+        "bug/coursec/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursec/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/coursec/2021": {
+          "word": "Program"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Sekwencjonowanie"
+        },
+        "programming/coursec/2021": {
+          "word": "Programowanie"
+        },
+        "event/coursec/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "binary/coursec/2021": {
+          "word": "Binarny"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algorytm"
+        },
+        "program/coursed/2021": {
+          "word": "Program"
+        },
+        "bug/coursed/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/coursed/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "programming/coursed/2021": {
+          "word": "Programowanie"
+        },
+        "event/coursed/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "conditionals/coursed/2021": {
+          "word": "Zdania z warunkami"
+        },
+        "algorithm/express/2021": {
+          "word": "Algorytm"
+        },
+        "bug/express/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/express/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "sequencing/express/2021": {
+          "word": "Sekwencjonowanie"
+        },
+        "program/express/2021": {
+          "word": "Program"
+        },
+        "programming/express/2021": {
+          "word": "Programowanie"
+        },
+        "behavior/express/2021": {
+          "word": "Zachowanie"
+        },
+        "sprite/express/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/express/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "conditionals/express/2021": {
+          "word": "Zdania z warunkami"
+        },
+        "function/express/2021": {
+          "word": "Funkcja"
+        },
+        "variable/express/2021": {
+          "word": "Zmienna"
+        },
+        "define/express/2021": {
+          "word": "Zdefiniuj"
+        },
+        "prepare/express/2021": {
+          "word": "Przygotuj"
+        },
+        "reflect/express/2021": {
+          "word": "Przemyśl"
+        },
+        "try/express/2021": {
+          "word": "Spróbuj"
+        },
+        "click/pre-express/2021": {
+          "word": "Kliknij",
+          "definition": "Wciśnij przycisk myszy"
+        },
+        "drag/pre-express/2021": {
+          "word": "Przeciągnij"
+        },
+        "drop/pre-express/2021": {
+          "word": "Drop"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algorytm"
+        },
+        "bug/pre-express/2021": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/pre-express/2021": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/pre-express/2021": {
+          "word": "Program"
+        },
+        "programming/pre-express/2021": {
+          "word": "Programowanie"
+        },
+        "event/pre-express/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "behavior/coursee/2021": {
+          "word": "Zachowanie"
+        },
+        "sprite/coursee/2021": {
+          "word": "Duszek",
+          "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
+        },
+        "event/coursee/2021": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "copyright/coursee/2021": {
+          "word": "Prawa autorskie"
+        },
+        "function/coursee/2021": {
+          "word": "Funkcja"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Zdania z warunkami"
+        },
+        "define/coursee/2021": {
+          "word": "Zdefiniuj"
+        },
+        "prepare/coursee/2021": {
+          "word": "Przygotuj"
+        },
+        "reflect/coursee/2021": {
+          "word": "Przemyśl"
+        },
+        "try/coursee/2021": {
+          "word": "Spróbuj"
+        }
+      }
+    }
+  }
+}

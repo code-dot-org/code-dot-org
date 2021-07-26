@@ -854,6 +854,8 @@ Dashboard::Application.routes.draw do
 
   get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
 
+  get '/sprites/default_sprites_editor', to: 'sprite_management#default_sprites_editor'
+
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
   get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
@@ -885,9 +887,11 @@ Dashboard::Application.routes.draw do
   end
 
   resources :code_review_comments, only: [:create, :destroy] do
-    patch :resolve, on: :member
+    patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
   end
+
+  get '/backpacks/channel', to: 'backpacks#get_channel'
 
   resources :reviewable_projects, only: [:create, :destroy]
 end

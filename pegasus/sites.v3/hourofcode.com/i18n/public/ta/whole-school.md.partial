@@ -3,8 +3,8 @@ title: முழுப் பள்ளி பங்கேற்பு
 layout: wide
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
-# Get your whole school to participate
+# உங்கள் முழு பள்ளியையும் பங்கேற்கச் செய்யுங்கள்
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+முழு பள்ளிகளையும் மணிநேர குறியீட்டில் பங்கேற்கச் செய்வது குறித்த தகவல்கள் இங்கே செல்லும்.

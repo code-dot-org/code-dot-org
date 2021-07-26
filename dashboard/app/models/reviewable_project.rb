@@ -15,9 +15,9 @@
 #  index_reviewable_projects_on_storage_app_id_and_user_id  (storage_app_id,user_id)
 #
 class ReviewableProject < ApplicationRecord
-  belongs_to :user, class_name: 'User'
-  belongs_to :script
+  belongs_to :user
   belongs_to :level
+  belongs_to :script
 
   def self.user_can_mark_project_reviewable?(project_owner, user)
     project_owner == user

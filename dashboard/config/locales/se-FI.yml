@@ -213,6 +213,7 @@ se:
     public: Almmolaš
     homeschool: Ruovttuskuvla
     after_school: Maŋŋel Skuvlla
+    other: Eará
     state: Fylka
     district: Guovlu
     other_district_not_listed: Eará guovllut mat eai leat listtus bajábeal
@@ -388,6 +389,7 @@ se:
       eval: Evaluere
       flappy: Flappy
       frozen: Jikŋon
+      iceage: Jiekŋaáigi
       makerlab: Ráhkadan Reaidokássa
       minecraft_codebuilder: 'Minecraft: Kode Oktiičatnan'
       minecraft_designer: Minecraft
@@ -917,6 +919,7 @@ se:
       asian: Asiáhtalaš
       hawaiian: Hawaia dahje Jaskkesmeara Sulluid Eamiálbmogat
       american_indian: Amerihka dahje Alaska Eamiálbmogat
+      other: Eará
       opt_out: In hálit muitalit
   zendesk_too_young_message: Šállošit, nuorat geavageaddjit eai sáhte logget sisa
     min doarjjasiidui. Don fertet bláđet <a href="http://support.code.org">support.code.org</a>
@@ -995,6 +998,7 @@ se:
           harassment: Áitagat, neahttahárdin, trakasseren
           offensive: Loavkiduvvon sisdoallu
           infringement: Vuoigatvuođa Rihkkun
+          other: Eará
         detail: Atte nu ollu go vejolaš dárkilis dieđuid sisdoalu birra maid raporteret
         acknowledge: Go dán sisdoalu sáddet sisa, don dohkkehat ahte dát meannuduvvo
           eavttuid vuođul mat leat %{link_start_privacy}Persovdnasuodjaleami%{link_end}

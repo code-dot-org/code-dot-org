@@ -334,6 +334,7 @@ uz:
     invite_sent: Taklif yuborildi
     added_teacher: "%{name} o'qituvchingiz sifatida qo'shildi"
     registered: Siz %{section_name} uchun ro'yxatdan o'tdingiz.
+    already_exists: Siz allaqachon %{section_name} bo‘limiga qo‘shildingiz.
     error:
       signed_in: Davom etishdan oldin, iltimos, tizimdan chiqing
       username_not_found: " %{username} foydalanuvchi topilmadi"
