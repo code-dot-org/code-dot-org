@@ -8,7 +8,7 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {Goal, show, showBackground} from '../redux/animationPicker';
+import {Goal, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
@@ -183,20 +183,11 @@ const customInputTypes = {
       ) {
         buttons = [
           {
-            text: i18n.draw(),
+            text: i18n.costumeMode(),
             action: () => {
               getStore().dispatch(
-                changeInterfaceMode(
-                  P5LabInterfaceMode.ANIMATION,
-                  true /* spritelabDraw */
-                )
+                changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
               );
-            }
-          },
-          {
-            text: i18n.more(),
-            action: () => {
-              getStore().dispatch(show(Goal.NEW_ANIMATION, true));
             }
           }
         ];

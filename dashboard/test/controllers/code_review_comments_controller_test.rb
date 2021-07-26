@@ -31,6 +31,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'student not in same section with project owner cannot comment on project' do
@@ -61,6 +62,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher can create CodeReviewComment for student in their section' do
@@ -76,6 +78,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
+    assert JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher cannot create CodeReviewComment for student not in their section' do
@@ -99,10 +102,25 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_nil code_review_comment.is_resolved
 
     sign_in @project_owner
-    patch :resolve, params: {id: code_review_comment.id}
+    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: true}
 
     assert_response :success
     assert code_review_comment.reload.is_resolved
+  end
+
+  test 'project owner can re-open comments on their project' do
+    code_review_comment = create :code_review_comment,
+      commenter_id: @another_student.id,
+      project_owner_id: @project_owner.id,
+      is_resolved: true
+
+    assert code_review_comment.is_resolved
+
+    sign_in @project_owner
+    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: false}
+
+    assert_response :success
+    refute code_review_comment.reload.is_resolved
   end
 
   test 'someone who is not project owner cannot resolve comments' do
@@ -113,7 +131,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     assert_nil code_review_comment.is_resolved
 
     sign_in @another_student
-    patch :resolve, params: {id: code_review_comment.id}
+    patch :toggle_resolved, params: {id: code_review_comment.id, is_resolved: true}
 
     assert_response :forbidden
   end
