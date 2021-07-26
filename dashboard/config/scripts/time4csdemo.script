@@ -131,24 +131,24 @@ level 'Virtual Pet Freeplay'
 
 lesson_group 'time4cs_c1', display_name: 'Collection 1: The Everglades & its Ecosystems'
 lesson 'Introduction to the Problem', display_name: 'Introduction to the Problem', has_lesson_plan: true
-level 'timeforcs_demo_c1_1', progression: 'Engage'
-level 'timeforcs_demo_c1_2', progression: 'Explore'
-level 'timeforcs_demo_c1_3', progression: 'Explain'
-level 'timeforcs_demo_c1_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c1_5_journal', progression: 'Evaluate'
+level 'timeforcs_demo_c1_1', named: true
+level 'timeforcs_demo_c1_2', named: true
+level 'timeforcs_demo_c1_3', named: true
+level 'timeforcs_demo_c1_4', named: true
+level 'timeforcs_demo_c1_5_journal', named: true
 
 lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'timeforcs_demo_crowdsourcing', progression: 'Crowdsourcing'
 
 lesson 'Everglades Habitats', display_name: 'Everglades Habitats', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Reviewing Projects', display_name: 'Reviewing Projects', has_lesson_plan: true
-level 'timeforcs_demo_c3_1', progression: 'Introduction'
+level 'timeforcs_demo_c3_1', named: true
 level 'timeforcs_demo_spritelab_1', progression: 'Projects'
 level 'timeforcs_demo_spritelab_2', progression: 'Projects'
 level 'timeforcs_demo_spritelab_3', progression: 'Projects'
@@ -158,21 +158,21 @@ level 'timeforcs_demo_c2_1', progression: 'Rubric'
 
 lesson_group 'time4cs_c2', display_name: 'Collection 2: Food Chains (in the Everglades)'
 lesson 'Food Chains', display_name: 'Food Chains', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'timeforcs_demo_conditionals', progression: 'Conditionals'
 
 lesson 'Alligator Holes', display_name: 'Alligator Holes', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Conditionals in Sprite Lab', display_name: 'Conditionals in Sprite Lab', has_lesson_plan: true
 level 'timeforcs_demo_sl_1', progression: 'Engage'
@@ -187,11 +187,11 @@ level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
 lesson_group 'time4cs_c3', display_name: 'Collection 3: Native Species (in the Everglades)'
 lesson 'Invasive Species', display_name: 'Invasive Species', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2019'
@@ -240,11 +240,11 @@ level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
 
 lesson 'I am in Big Trouble', display_name: 'I am in Big Trouble', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Events in Sprite Lab', display_name: 'Events in Sprite Lab', has_lesson_plan: true
 level 'timeforcs_demo_sl_1', progression: 'Engage'
@@ -259,40 +259,40 @@ level 'timeforcs_demo_sl_9', progression: 'Evaluate'
 
 lesson_group 'time4cs_c4', display_name: 'Collection 4: Impact of Invasive Species (on the Everglades)'
 lesson 'Fishy Business', display_name: 'Fishy Business', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Broadcast a Message', display_name: 'Broadcast a Message', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Pythons & Mammals', display_name: 'Pythons & Mammals', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Broadcast in Scratch', display_name: 'Broadcast in Scratch', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson_group 'time4cs_c5', display_name: 'Collection 5: Citizens Take Action'
 lesson 'Current Solutions', display_name: 'Current Solutions', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Functions: Songwriting', display_name: 'Functions: Songwriting', has_lesson_plan: true, unplugged: true
 level 'SongwritingParameters_2019'
@@ -359,11 +359,11 @@ bonus 'courseE_artist_concept_challenge1_2018'
 bonus 'courseE_artist_concept_challenge2_2018'
 
 lesson 'Debate', display_name: 'Debate', has_lesson_plan: true
-level 'timeforcs_demo_c2_1', progression: 'Engage'
-level 'timeforcs_demo_c2_2', progression: 'Explore'
-level 'timeforcs_demo_c2_3', progression: 'Explain'
-level 'timeforcs_demo_c2_4', progression: 'Elaborate/Extend'
-level 'timeforcs_demo_c2_5', progression: 'Evaluate'
+level 'timeforcs_demo_c2_1', named: true
+level 'timeforcs_demo_c2_2', named: true
+level 'timeforcs_demo_c2_3', named: true
+level 'timeforcs_demo_c2_4', named: true
+level 'timeforcs_demo_c2_5', named: true
 
 lesson 'Functions in Sprite Lab', display_name: 'Functions in Sprite Lab', has_lesson_plan: true
 level 'behaviors 1', progression: 'Prediction'

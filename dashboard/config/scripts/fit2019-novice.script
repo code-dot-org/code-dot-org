@@ -5,7 +5,7 @@ published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Novice Reflection Overview', display_name: 'Novice Reflection Overview', has_lesson_plan: false
-level 'welcome-novice-18', progression: 'Welcome Novices Facilitators!'
+level 'welcome-novice-18', named: true
 
 lesson_group 'content', display_name: 'Content'
 lesson 'Day 1', display_name: 'Day 1', has_lesson_plan: false
@@ -28,5 +28,5 @@ level 'recruiting-thursday'
 level 'novice-thursday-2'
 
 lesson 'Wrap Up', display_name: 'Wrap Up', has_lesson_plan: false
-level 'novice-congrats', progression: 'Congrats!'
+level 'novice-congrats', named: true
 
