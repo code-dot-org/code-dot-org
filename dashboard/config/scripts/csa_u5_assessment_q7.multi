@@ -1,27 +1,33 @@
 name 'CSA U5 Assessment q7'
 height 'auto'
 
-wrong ‘7’
-wrong ‘3.04’
-right ‘7.0’
-wrong ‘7.04’
+wrong ‘`letters[1]`’
+wrong ‘`letters[2]`’
+wrong ‘`letters[1:2]`’
+right ‘`letters[1][2]`’
+wrong ‘`letters[1, 2]`’
+
 
 
 
 
 teacher_markdown <<MARKDOWN
-Covered in Unit 1 Lesson 10. 
+Covered in Unit 5 Lesson 1. 
 
 MARKDOWN
 
 markdown <<MARKDOWN
-What will be printed when the following code segment is run? 
+Consider the following code segment:
+
 
 ```
-public class MyClass {
-  public static void main(String[] args){
-    System.out.println("Will this print an int or a double: " + (3.0 + 4));
-  }
-}
+String[][] letters = {{"A", "B", "C"},
+                      {"D", "E", "F”},
+                      {"G", "H", "I"}};
+
+System.out.println(letters[1]);
+
+
 ```
+Which statement is the correct syntax to access element `“F”` from the `letters` array?
 MARKDOWN
