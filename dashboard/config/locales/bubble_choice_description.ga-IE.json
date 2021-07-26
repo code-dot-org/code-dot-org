@@ -1,2 +1,12 @@
 {
+  "ga-IE": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Tarraing seomra do gach ainmhí. ",
+        "courseD_bee_nestedLoops8_2021": "Bailigh an neachtar go léir ó gach bláth agus déan mil ag an gcíor mheala. Úsáid lúb neadaithe. ",
+        "courseD_bee_nestedLoops9_2021": "Déan an mhil go léir.",
+        "courseF_bee_variables_7a_2021": "Tá an dúshlán seo beagáinín difriúil. Cad is gá duit a dhéanamh lena réiteach?"
+      }
+    }
+  }
 }

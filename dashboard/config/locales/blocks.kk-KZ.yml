@@ -126,6 +126,7 @@ kk:
             '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
+            '"enter"': еңгізу
             '"x"': x
       gamelab_atTime:
         options:
@@ -314,6 +315,11 @@ kk:
             '"right"': оңға қарай
             '"w"': Б
             '"s"': О
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': иә
+            '"no"': жоқ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -321,12 +327,20 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': кемпірқосақ
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": түс
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -6,17 +6,26 @@ ja:
       Green: 緑
       Red: 赤
       actor: キャラ
+      age: 年齢
+      answer: 答え
+      binary: ２しんすう
+      birds: 鳥
       cats: すべてのネコ
       color: 色
       counter: カウンタ変数
       dogs: すべてのイヌ
+      energy: エネルギー
       height: 高さ
       honey: ハチミツ
       i: i
       left: 左 に
       length: 長さ
+      level: 'レベル
+
+'
       name: 名前
       nectar: 花のミツ
+      planet: 惑星
       points: ポイント
       random: ランダム に
       repeat: くりかえし

@@ -488,17 +488,23 @@
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "ryba",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
         },
         "courseF_apps_card": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
         },
         "courseF_apps_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
           "f0e5da70d264f312a1658d51c130b101": "Wprowadź swoje imię",
           "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
-          "ae096fbf24d913754b01a1601672bf62": "też!"
+          "ae096fbf24d913754b01a1601672bf62": "też!",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
@@ -506,10 +512,14 @@
           "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:"
         },
         "courseF_apps_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
         },
         "courseF_editable_card": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
         },
         "courseF_editable_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "Hello, jestem X-9! Jak masz na imię?",
@@ -517,10 +527,15 @@
           "13e575be866ecf5ac3dcbf61ab2048d7": "Ile masz lat?",
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Wprowadź swój wiek",
           "ae096fbf24d913754b01a1601672bf62": "też!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
+          "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
         },
         "courseF_editable_madlib": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
@@ -566,6 +581,10 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Jak masz na imię?"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
+          "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
         }
       }
     }

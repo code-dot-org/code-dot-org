@@ -267,6 +267,7 @@ nl:
     invite_sent: 'Uitnodiging verstuurd'
     added_teacher: '%{name} toegevoegd als jouw leraar'
     registered: "Je hebt je aangemeld voor %{section_name}."
+    already_exists: 'Je bent al lid geworden van %{section_name}.'
     error:
       signed_in: 'Log uit voordat je doorgaat'
       username_not_found: 'Gebruikersnaam %{username} niet gevonden'
@@ -908,6 +909,7 @@ nl:
     accept: 'Ik ga akkoord'
   page_not_found_title: "Pagina niet gevonden"
   copy: 'Kopieër'
+  confirm: 'Bevestigen'
   parent_email_banner:
     text: "Bent u een ouder of voogd? Koppel uw e-mailadres aan dit account om op de hoogte te blijven van de voortgang van uw kind en projecten."
     link_your_email: "Koppel uw e-mailadres"
