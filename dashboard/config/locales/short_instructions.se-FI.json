@@ -114,7 +114,18 @@
         "scrat 16": "Áikaniehtti! Áikaniehtti! Áikaniehtti! Geavat \"jus\"-blohka vai beasat dohko unnimus logu blohkaiguin.",
         "scrat 17": "Ok, geahččaletnot dien hárjehallama dihte - dát ii leat nu earálágán, muhto várut seainni!",
         "scrat 18": "\"Jus eará\"-blohkat isket dili, ja čađaha de ovtta ášši DAHJE eará. Jus galggat beassat áikaniehti lusa, geahččal geavahit dan ođđa blohka.",
-        "scrat 20": "Sáhtát go lasihit 3 blohka veahkehan dihte mu čoavdit váddásit labiryntta? Jus barggat riekta, de sáhtán mannat vaikko guđe guvlui moalkás bálgá mielde vaikko man guhkki dat leaš. Doama! Jiekŋa suddá!"
+        "scrat 20": "Sáhtát go lasihit 3 blohka veahkehan dihte mu čoavdit váddásit labiryntta? Jus barggat riekta, de sáhtán mannat vaikko guđe guvlui moalkás bálgá mielde vaikko man guhkki dat leaš. Doama! Jiekŋa suddá!",
+        "CourseD_Dance_2020_01_2021": "Gaikko <xml><block type=\"Dancelab_makeAnonymousDanceSprite\" block-text=\"make a new dancer\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;PINEAPPLE&quot;\">\"CAT\"</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml>-blohka bargosadjái, ja čana dan siskkobeallai <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml>-blohkkii.",
+        "CourseD_Dance_2020_02_2021": "Bija bussái dánsenlihkastagaid go deaddilat boalu.",
+        "CourseD_Dance_2020_03_2021": "Dál lea dánsengilvvohallanáigi! Prográmmere juohke dánsára lihkadit go deattát iešguđetge boalu. Vállje iežat favorihttalihkastaga juohke dánsárii dahje bija nu ahte \"(Sahtedohko)\" dagaha vuordemeahttun lihkastagaid!",
+        "CourseD_Dance_2020_04_2021": "Bija dánsára dánsegoahtit ođđa lihkastaga njealját távtta maŋŋil.",
+        "CourseD_Dance_2020_06_2021": "Bija duogábeal-dánsáriid njunušdánsára birra gii lea gasku.",
+        "CourseD_Dance_2020_07_2021": "Rievdat duogábeal-dánsáriid joavkku sturrodaga.",
+        "CourseD_Dance_2020_08_2021": "Geahččal rievdadit ivnni du dánsáris (dahje olles joavkkus)!",
+        "CourseD_Dance_2020_09_2021": "Leage kreatiiva dáiguin ođđa blohkaiguin!",
+        "CourseD_Dance_2020_bonus1_2021": "Maŋos ja Ovddos (Deaddil “Eanet” detáljaid oažžut)",
+        "CourseD_Dance_2020_bonus3_2021": "Álgot Formašuvnnaid ráhkadit! (Deaddil “Eanet” detáljaid oažžut)",
+        "HOC 2018 Level_12_2021": "Designe iežat čázevuol-birrasa, don dat mearridat!"
       }
     }
   }

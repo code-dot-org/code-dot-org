@@ -1687,13 +1687,13 @@ it:
   tutorial_educoderace_name: Programma il tuo gioco da corsa!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
   tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
-  tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
+  tutorial_codespeakgrandparent_name: Programma con Scratch un biglietto per il nonno
   tutorial_educodekingdom_name: Difendi il regno!
   tutorial_codehsdata_name: Coding with Data Visualizations
-  tutorial_educodecake_name: Bake a Cake With HTML!
+  tutorial_educodecake_name: Cuoci un dolce con il linguaggio HTML
   tutorial_ttsecond_name: Second Team
   tutorial_bsdtrivia_name: Trivia Game Maker
-  tutorial_csfirstdialogue_name: Dialogue
+  tutorial_csfirstdialogue_name: Dialogo
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
   tutorial_itchspace_name: 'iTCHcode: Space Invaders - RokCoder'
@@ -1701,8 +1701,8 @@ it:
   tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Code a Healthy Meal App
   tutorial_itchfish_name: 'iTCHcode: Fish scratch game'
-  tutorial_bsdwebsite_name: My Favorites Website
-  tutorial_codespeaktime_name: Code a Time Capsule in Scratch
+  tutorial_bsdwebsite_name: Il mio sito preferito
+  tutorial_codespeaktime_name: 'Programma una macchina del tempo con Scratch '
   tutorial_itchwebcam_name: 'iTCHcode: Webcam Augmented Reality'
   tutorial_itchball_name: 'iTCHcode: Bouncing Ball'
   tutorial_ttrace_name: Race Condition
@@ -1712,7 +1712,7 @@ it:
   tutorial_codeguppytext_name: Introduction to text based coding
   tutorial_vidcodeplastiche_name: PSA inquinamento da plastica
   tutorial_educativechatbot_name: Build your own chatbot in Python
-  tutorial_educodebasics_name: Learn the Basics!
+  tutorial_educodebasics_name: Impara le basi
   tutorial_codehsdesign_name: Supporting Artists with Code
   tutorial_htmlacademyphp_name: 'Intro to PHP: Create an Online Store from Scratch'
   tutorial_gamefrootdistance_name: 'COVID-19 Simulator: Learn about social distancing
@@ -1729,8 +1729,8 @@ it:
   tutorial_cafarming_name: Old MacDonald hacked a farm. AI, AI drone!
   tutorial_blocksmithyeti_name: Don't Yeet the Yeti
   tutorial_codecapture_name: Learn Programming With JavaScript​ In A Jiffy​
-  tutorial_codehslitter_name: Coding for a Litter-Free Community
-  tutorial_bsdocean_name: Life Below Water
+  tutorial_codehslitter_name: La programmazione per una comunità senza spazzatura
+  tutorial_bsdocean_name: 14 La vita sott'acqua
   tutorial_itchplatformer_name: 'iTCHcode: Scratch 3.0 Platformer Tutorial'
   tutorial_codejika_name: 'CodeJIKA: 5 Minute Website'
   tutorial_gamefrootclicker_name: Learn Variables. Code your own Clicker Game.
@@ -1742,34 +1742,34 @@ it:
   tutorial_kodablebasics_name: 'Coding Basics: Unplugged'
   tutorial_scigirlscc_name: 'SciGirls: Code Creators'
   tutorial_irobotpicture_name: 'Seeing the Whole Picture: Coded Messages'
-  tutorial_kcjmyself_name: Let me introduce myself!
-  tutorial_nearpodalgorithms_name: 'Coding: Algorithms '
+  tutorial_kcjmyself_name: Mi presento
+  tutorial_nearpodalgorithms_name: 'Programmazione: Algoritmi'
   tutorial_kibodrop_name: KIBO Craft and Build Drop Test
   tutorial_ozobotcolor1_name: 'Introduction to Color Codes 01: Line Following'
   tutorial_scigirlspixels_name: 'SciGirls: Passion for Pixels'
-  tutorial_kcjheroines_name: Our Heroines
+  tutorial_kcjheroines_name: Le nostre eroine
   tutorial_ozobotvalue_name: What's My Value?
   tutorial_icodebytes_name: 'A Byte of iCompute: Unplugged'
   tutorial_clfashion2_name: Fashionistas of Data Science - Class 2
-  tutorial_ai4all_name: AI & Drawing
+  tutorial_ai4all_name: Intelligenza artificiale e disegno
   tutorial_cldata_name: Welcome to Data Superpower
   tutorial_spheroinputs_name: Inputs and Outputs Unplugged
-  tutorial_edisoncount_name: Teach Edison to count to 9
+  tutorial_edisoncount_name: Insegna a Edison a contare fino a 9
   tutorial_spheroloops_name: Loops Unplugged
   tutorial_kiboprogram_name: Let's Program Each Other
-  tutorial_hellorubycsin60_name: Computer Science in 60 seconds
+  tutorial_hellorubycsin60_name: Le scienze informatiche in 60 secondi
   tutorial_clfashion1_name: Fashionistas of Data Science - Class 1
   tutorial_irobottraffic_name: 'Traffic Bot: Code Your Own Traffic Signal'
   tutorial_edisonmystery_name: Edison and the mystery line
-  tutorial_microbitseaturtles_name: Saving Sea Turtles
-  tutorial_ozobotknow_name: 'Introduction to Ozobot: Get to Know Evo'
-  tutorial_imagilabs_name: 'Imagine it. Code it. Wear it. '
+  tutorial_microbitseaturtles_name: Salvare le tartarughe marine
+  tutorial_ozobotknow_name: 'Introduzione a Ozobot: conosci Evo'
+  tutorial_imagilabs_name: Immaginalo. Programmalo. Indossalo.
   tutorial_irobotsimulator_name: Simulator Code Break
   tutorial_irobotkind_name: 'Robot Feelings: The Kind Playground'
   tutorial_firiavirtual_name: 'CodeSpace: Virtual Robotics with Python'
-  tutorial_irobotguesscode_name: Guess the Code
+  tutorial_irobotguesscode_name: Indovina il codice
   tutorial_ozobotnouns_name: Picking Out Irregular Plural Nouns
-  tutorial_nasa3d_name: 'Universe in 3D:  modeling and printing cosmic objects'
+  tutorial_nasa3d_name: 'Universo in 3D: progettazione e stampa di oggetti cosmici'
   tutorial_blupants_name: 'BluPants: Learn Coding with Real Robots'
   tutorial_legodance_name: Break Dance
   tutorial_nearpodcoding_name: 'Topic Spark: Coding '
@@ -1778,7 +1778,7 @@ it:
   tutorial_legohopper_name: Hopper Race
   tutorial_catrobatembroidery_name: Ricamo codificato
   tutorial_irobotphone_name: Telephone Drawing
-  tutorial_codeguppydraw_name: Draw with code
+  tutorial_codeguppydraw_name: Disegnare con la programmazione
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: Un racconto di due villaggi di Minecraft
   tutorial_danceparty_shortdescription: Crea un progetto in "Ballando col codice"
@@ -5794,12 +5794,12 @@ it:
   tutorial_toxicodepython_longdescription: Scopri le basi di Python senza parole o
     spiegazioni. Il nostro insegnante silenzioso ti darà diverse serie di sfide che
     ti porteranno a indovinare alcune regole e ad imparare dai tuoi errori.
-  tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
-    a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
-    and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
-    can share with your friends!
+  tutorial_codecombatozaria_longdescription: "Entra nel mondo di Ozaria nel quale
+    diventi l'eroe di un''avventura epica. Devi usare il potere del coding per sconfiggere
+    un'oscurità che si è impadronita del mondo! Lungo la strada, incontrerai personaggi
+    interessanti e viaggerai in terre diverse, esercitando concetti di programmazione
+    come le sequenze, i loop, il debugging e la decomposizione. Alla fine, creerai
+    un gioco che potrai condividere con i tuoi amici!\n\n"
   tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
     relevant intersection of math, environmental science, and computer science. In
     this Hour of Code activity, students will be guided through the construction of
@@ -5808,17 +5808,17 @@ it:
     the world and their hopes for the future. '
   tutorial_codemonkeyspace_longdescription: 'Write real code to help the monkey astronaut
     catch bananas in space! '
-  tutorial_codespeakhappy_longdescription: Learn to program a meditation app that
-    transports you to your 'happy place.'
-  tutorial_grokimage_longdescription: Use the programming language Python to make
-    speedy changes to images. Make fun image editing programs and make your own image
-    filter!
-  tutorial_icomputelearn_longdescription: When you learn to code with iCompute you
-    program your own fantastic interactive stories, games, and animations. Following
-    our creative, fun, activities means that you will develop computational thinking
-    as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_codespeakhappy_longdescription: Impara a creare un'applicazione per la
+    meditazione che ti trasporti nel tuo "posto felice".
+  tutorial_grokimage_longdescription: Usa il linguaggio di programmazione Python per
+    modificare velocemente le immagini. Crea programmi divertenti di editing delle
+    immagini e crea un tuo filtro per le immagini!
+  tutorial_icomputelearn_longdescription: Quando impari a programmare con iCompute
+    crei fantastiche storie interattive, giochi e animazioni. Seguendo le nostre attività
+    creative e divertenti, svilupperai allo stesso tempo il pensiero computazionale
+    e competenze nella programmazione!
+  tutorial_rpstress_longdescription: Usa scratch per creare una palla antistress che
+    puoi stringere!
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -5845,8 +5845,9 @@ it:
   tutorial_scigirlsquest_longdescription: 'In this online coding adventure, youth
     take Subby the submarine through underwater challenges, using code to find various
     items and collect scientific data on the ocean floor. '
-  tutorial_codespeakbreathe_longdescription: Learn to program meditation app that
-    will guide users through a mindful breathing exercise.
+  tutorial_codespeakbreathe_longdescription: Impara a programmare un'applicazione
+    per la meditazione che guidi l'utilizzatore attraverso un esercizio di respirazione
+    consapevole
   tutorial_vidcodeface_longdescription: Use a facetracking library to code your own
     custom face filter, like the ones you use on social media.
   tutorial_educodemaze_longdescription: Design a maze, complete with monsters and

@@ -101,7 +101,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
 
-      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels).each do |user_level|
+      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels, script: script).each do |user_level|
         submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),

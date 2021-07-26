@@ -56,7 +56,9 @@
         "frozen square snowflake": "Can you create a snowflake using the\n“Repeat” block to make a square 10 times, and the “Turn” block to turn 36\ndegrees between each square?",
         "courseD_bee_nestedLoops8_2021": "Collect all of the nectar from each flower\nand make honey at the honeycomb. \\\r\n\\\r\nUse a nested loop. ",
         "courseF_bee2": "Use a `repeat` loop to collect all of the nectar.",
-        "courseF_bee_for_challenge2_2021": "Solve this puzzle with the fewest number of blocks\npossible."
+        "courseF_bee_for_challenge2_2021": "Solve this puzzle with the fewest number of blocks\npossible.",
+        "Overworld Move to Sheep_2021": "Add a second “move forward” command to\nreach the sheep.",
+        "courseD_maze_nestedLoops4_2021": "Get me to the sunflower using the fewest blocks\npossible!  \\\r\n\\\r\nTry using one `repeat` loop inside of another to cut down\non the amount of code you need."
       }
     }
   }

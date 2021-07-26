@@ -206,6 +206,7 @@ lv:
       educate_hoc: "Programmēšanas stunda"
       about_us: "Par mums"
       about_partners: "Partneri"
+      stats: "Statistika"
       legal_privacy: "Privātuma politika"
       legal_tos: "Nosacījumi"
     user:
@@ -276,6 +277,7 @@ lv:
     create_personal_login_under_13_parent_email: 'Vecāka/aizbildņa e-pasta adrese'
     update_email: "Atjaunināt"
     parent_guardian_email_label: "Vecāka/aizbildņa e-pasts"
+    remove_parent_email_label: "Noņemt"
   user_level:
     completed: 'Pabeigts'
     tried: 'Mēģināts'

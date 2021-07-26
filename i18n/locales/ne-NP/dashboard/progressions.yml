@@ -2,6 +2,7 @@ ne:
   data:
     progressions:
       'Artist: Variables': 'Artist: Variables'
+      Debugging: Debugging
       Events: कार्य 
       For Loops: For Loops
       Functions: Functions

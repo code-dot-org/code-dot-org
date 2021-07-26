@@ -36,6 +36,7 @@
   twentyhours_heading: "Provojeni kursin tonë për Hyrje në Shkencat Kompjuterike"
   twentyhours_text: "E përfunduat orën tuaj të parë te kodimit? Tani mësoni më shumë për Shkencen Kompjuterike dhe konceptet e programimit në kursin në vazhdim."
   og_title: 'Çdo fëmijë meriton mundësinë'
+  og_title_soon: "Ora e kodimit po vjen"
   og_description: "Çdo student në çdo shkollë e meriton të ketë mundësinë për të studiuar shkenca kompjuterike. Po ndryshon gjithçka."
   csedweek_og_title: "Ora e kodimit po vjen"
   csedweek_og_description: "Ora e Kodimit është një lëvizje globale që i përfshin dhjetëra miliona studentë në mbi 180 shtete dhe mbi 45 gjuhë. "
@@ -75,6 +76,7 @@
   congratulations: "Urime!"
   congratulations_on_completing_hoc: "Urime që përfunduat një Orë Kodimi"
   congratulations_volunteer: 'Përgëzime: Tani pasiqë keni provuar Orën e Kodimit, <a href="https://code.org/volunteer">regjistrohu të bëhesh vullnetarë në një klasë</a> dhe ndihmo nxënësit të mësojnë një Orë të Kodimit!'
+  congratulations_on_completing_course: "Përgëzime në plotësimin e %{course}"
   congrats_next_tutorials_title: "Më pas provoni këto tutoriale"
   congrats_next_tutorials_desc: "Provoni këto tutoriale 1 orëshe, më të shkurtrat ose provoni <a href=\"%{current_path}/next\">/next\"> tutorialin partner</a>."
   get_a_certificate_of_achievement: "Merr një certifikatë të arritjes"
@@ -280,6 +282,8 @@
   homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
   homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
+  homepage_hero_hoc_is_coming: "Ora e kodimit po vjen"
+  homepage_hero_hoc_is_here: "Ora e kodimit po vjen"
   homepage_slot_text_hoc: "Ora e Kodimit"
   homepage_slot_text_frozen: "Frozen me Anën dhe Elsën"
   homepage_slot_text_teacher: "Dërrasa e zezë "
@@ -414,6 +418,10 @@
   minecraft_adventurer_button: "Fillo"
   minecraft_download_adventurer: "Shkarko versionin offline të Aventurave Minecraft "
   minecraft_subtitle: "Ora e Kodimit Minecraft"
+  minecraft_signup_store_camps: "<a href=\"%{signup_store_camp}\"> Regjistrohu </a> falas në e kampin Orën së Kodimit  në një dyqan Microsoft në Australi, Kanada, Porto Riko ose SH.B.A. Mëso se si të kombinoni kreativitetin tuaj me kodim."
+  minecraft_host_event: "Prit një ngjarje të Orës së Kodimit Minecraft"
+  minecraft_teach_resources: "Burimet e mësuesve dhe plani mësim."
+  minecraft_leader_guide: "Shkarko burime për t'ju ndihmuar të planifikoni dhe të kryesoni një ngjarje."
   sports_og_title: "Nxit vetveten. Çdokush mund të mësoj."
   sports_og_description: "Kampionët dhe medalistët e arit ju enkurajojnë të provoni Orën e Kodit. Kodoni lojrat e juaja sportive."
   sports_title: "Krijo lojën tënde sportive"
@@ -426,6 +434,7 @@
   sports_athlete_Draymond: "Draymond Green, Olimpiku i Medaljes së Arit dhe Kampion i NBA-së, Luftëtarët e Shtetit të Artë"
   sports_athlete_Serena: "Serena Williams, Olimpikja e Medaljes së Artë dhe Kampione Tenisi"
   sports_athlete_Sergio: "Sergio Ramos, Kampion i Kupës Botërore dhe lojtar Futbolli, Real Madrid"
+  watch_inspirational_videos: "Para se të fillosh, shiko një nga këto video frymëzuese"
   video_title_inspire_girl: "Frymëzo një vajzë"
   video_title_draymond_green: "Ora e Kodit me Draymond Green"
   video_title_russell_okung: "Ora e Kodit me Rusell Okung"
@@ -433,6 +442,10 @@
   video_title_marco_belinelli: "Ora e Koditit me Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh në Shkencat Kompjuterike"
   video_1min: "1 minutë"
+  video_2min: "2 minutë"
+  video_5min: "5 minutë"
+  speak_another_language: "Flet një gjuhë tjetër?"
+  help_translate: "Na ndihmo të përkthejmë."
   are_you_teacher: "A jeni një mësues?"
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
@@ -446,7 +459,9 @@
   volunteer_engineer_submission_field_experience_level: "Niveli i eksperiencës"
   volunteer_engineer_submission_field_location: "Lokacioni"
   volunteer_engineer_submission_field_location_placeholder: "Kodi postal, qyteti dhe shteti, ose adresa e rrugës"
+  volunteer_engineer_submission_field_linkedin_placeholder: "http://www.linkedin.com/in/your_name"
   volunteer_engineer_submission_field_facebook: "Facebook profili"
+  volunteer_engineer_submission_field_facebook_placeholder: "https://www.facebook.com/your_name"
   volunteer_engineer_submission_field_description: "Përshkrimi"
   volunteer_engineer_submission_field_description_placeholder: "Përshkrimi i eksperiencës dhe/ose pjesmarrjes. Nëse flitni gjuhë ndryshe nga Anglishtja, sigurojeni duke e cekur këtu."
   volunteer_engineer_submission_header_private: "Informata u mbajt private dhe nuk shpërndahet"
@@ -547,9 +562,11 @@
   dashboard_navigation_section_speakers: "Shkenca Kompjuterike <br/> Folësit"
   dashboard_navigation_all_sections: "Llogaritë dhe Ecuria e Studentit"
   dashboard_navigation_view_progress: "Ecuri"
+  dashboard_navigation_view_assessments: "Vlerësimet"
   dashboard_navigation_add_students: "Shto Studentë"
   dashboard_navigation_manage_students: "Menaxho Studentët"
   dashboard_navigation_lesson_plans_resources: "Planet Mësimore dhe Burimet"
+  dashboard_navigation_view_stats: "statistikat"
   dashboard_navigation_section: 'Seksioni: %{section_name}'
   dashboard_navigation_student: 'Student: %{student_name}'
   dashboard_progress_not_started: "nuk është nisur"
@@ -577,6 +594,7 @@
   dashboard_sections_print_secrets: "Ju mund të printoni një grup letrash që përmbajnë informacione të llogarive të studenteve te tu dhe t'ua shpërndash atyre në menyrë individuale."
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
   dashboard_sections_close: "Mbyll"
+  dashboard_sections_yes_both: "Po, unë dua t'i kopjoj student(ët) që të jenë në këtë seksion DHE në seksionin e ri"
   dashboard_students_add_multiple: 'Shkruaj emrat e studentëve të tu, një për çdo rresht:'
   dashboard_students_new_section: "Ti ke krijuar një seksion të ri! Tani shto studentë duke përdorur butonat lartë <b>Shto studentë</b> dhe <b>Shto studentë të shumëfishtë</b>."
   dashboard_students_name: 'Emri'
@@ -631,6 +649,7 @@
   dashboard_login_none: "Email"
   dashboard_stage: "Fazë"
   dashboard_puzzle: "Enigmë"
+  dashboard_question: "Pyetje"
   dashboard_correctness_correct: "E saktë"
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: "Statistikat nga Ora e Kodimit 2013"
@@ -663,9 +682,12 @@
   carousel_heading_domestic: "Tutorialet vetëm në Anglisht"
   carousel_heading_beginners: "Tutoriale për Fillestarët"
   carousel_heading_javascript: "Tutorialet që mësojnë JavaScript"
+  carousel_heading_beyond_javascript: "Tutorialet që mësojnë JavaScript"
   carousel_heading_unplugged: "Nuk ke pajisje ose internet? Provo shkencën kompjuterike 'unplugged'"
   carousel_heading_devices: "Aplikacione me tutoriale për telefona dhe tableta"
+  carousel_heading_beyond_devices: "Aplikacione me tutoriale për telefona dhe tableta"
   carousel_heading_languages: "Tutoriale në gjuhë të tjera programimi"
+  carousel_heading_beyond_languages: "Tutoriale në gjuhë të tjera programimi"
   carousel_heading_apps_games: "Bëj aplikacionet ose lojrat e tua"
   carousel_heading_university: "Kurse online të universitetit"
   carousel_heading_webpages: "Mëso të bësh faqe interneti"
@@ -714,6 +736,7 @@
   robomindnl_name: "Programo një robot virtual"
   flappy_name: "Bëj një lojë Flappy"
   bitsbox_name: "Bitsbox - bëj një lojë"
+  makeschool_name: "Ndërto një lojë për iPhone në shefletuesin tënd!"
   touchdevelop_name: "TouchDevelop"
   appinventor_name: "AppInventor Ora e Kodimit"
   blockly_name: "Blockly"
@@ -731,6 +754,7 @@
   course4_name: "Kursi 4"
   accelerated_name: "Kurs i Avancuar"
   20-hour_name: Kurs i Avancuar
+  gumball_name: "Bota Mahnitëse e Gumball"
   classicmaze_name: "Labirint Klasik"
   iceage_name: "Epoka e Akullnajave"
   minecraft_name: "Minecraft"
@@ -738,6 +762,7 @@
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
   applab_gradelevel: "Moshat 13 +"
+  applab_shortdescription_congrats: "Laboratori i Aplikacioneve është një mjedis programimi ku ju mund të bëni aplikacione të thjeshta. Dizenjo një aplikacioni, kodo me blloqe ose Javascript për ta bërë funksionale dhe shpërndaje aplikacionin tuaj në sekond"
   codeorg_gradelevel: "Moshat 4-104"
   codeintl_gradelevel: "Moshat 4-104"
   thinkersmithspanish_gradelevel: "Për të gjithë"
@@ -782,21 +807,46 @@
   infinity_gradelevel: "Moshat 4-104"
   artist_gradelevel: "Moshat 8+"
   monstercoding_gradelevel: "Moshat 5-13"
+  allcancode_gradelevel: "Moshat 5-10"
+  csfirst_gradelevel: "Moshat 9-14"
   boxisland_gradelevel: "Shkolla fillore"
+  codesters_gradelevel: "Moshat 12-14"
+  texasinstruments_gradelevel: "Moshat 13-16"
+  teacherled_gradelevel: "Moshat 5+"
   course1_gradelevel: "Moshat 4-6"
   course2_gradelevel: "Moshat 6-18"
   course3_gradelevel: "Moshat 8-18"
   course4_gradelevel: "Moshat 10-18"
+  coursea_gradelevel: "Moshat 4-7"
+  courseb_gradelevel: "Moshat 5-8"
+  coursec_gradelevel: "Moshat 6-10"
   coursed_gradelevel: "Klasat 8+"
   coursee_gradelevel: "Moshat 8-12"
+  coursef_gradelevel: "Moshat 9-13"
+  coursea-2017_gradelevel: Moshat 4-7
+  courseb-2017_gradelevel: Moshat 5-8
+  coursec-2017_gradelevel: Moshat 6-10
   coursed-2017_gradelevel: Klasat 8+
   coursee-2017_gradelevel: Moshat 8-12
+  coursef-2017_gradelevel: Moshat 9-13
+  coursea-2018_gradelevel: Moshat 4-7
+  courseb-2018_gradelevel: Moshat 5-8
+  coursec-2018_gradelevel: Moshat 6-10
   coursed-2018_gradelevel: Klasat 8+
   coursee-2018_gradelevel: Moshat 8-12
+  coursef-2018_gradelevel: Moshat 9-13
+  coursea-2019_gradelevel: Moshat 4-7
+  courseb-2019_gradelevel: Moshat 5-8
+  coursec-2019_gradelevel: Moshat 6-10
   coursed-2019_gradelevel: Klasat 8+
   coursee-2019_gradelevel: Moshat 8-12
+  coursef-2019_gradelevel: Moshat 9-13
+  coursea-2020_gradelevel: Moshat 4-7
+  courseb-2020_gradelevel: Moshat 5-8
+  coursec-2020_gradelevel: Moshat 6-10
   coursed-2020_gradelevel: Klasat 8+
   coursee-2020_gradelevel: Moshat 8-12
+  coursef-2020_gradelevel: Moshat 9-13
   accelerated_gradelevel: "Moshat 10-18"
   codeorg_platformtext: "Browserat e kohës, smartphones, tableta"
   codeintl_platformtext: "Browserat e kohës, smartphones, tableta"
@@ -872,6 +922,7 @@
   robomindnl_shortdescription: "Shkruaj kod për një robot virtual"
   flappy_shortdescription: "Bëj lojën tënde - Flappy Bird, Shark ose Submarine"
   bitsbox_shortdescription: "Kodo një seri aplikacionesh për të luajtur dhe shpërndarë duke përdorur JavaScript."
+  makeschool_shortdescription: "Bëj një lojë për iPhone! Mëso të shkruash kod që t'i mësosh monstrës tuaj lëvizjet e rea!"
   touchdevelop_shortdescription: 'Zgjidh formueset, krijo lojëra dhe mëso të kodosh gjithçka në telefonin tënd. '
   appinventor_shortdescription: "Bëj aplikacionin tënd ! (vetëm në Android)"
   blockly_shortdescription: "Shkarko një dosje ZIP për të mësuar offline"
@@ -914,6 +965,7 @@
   robomindnl_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të shkurtra, filma, quizze dhe ndihma automatike për të ndihmuar me ushtrimet e programimit. '
   flappy_longdescription: "Përdor programimin zhvendos dhe lësho për të bërë lojën tënde Flappy Bird dhe përshtate për tu dukur ndryshe (Flappy Shark, Flappy Santa, çfarëdo qoftë). Shtoni lojën tek telefoni juaj me një klikim."
   bitsbox_longdescription: "Përshtatni tabletën tuaj virtuale, dhe më pas kodoni një seri aplikacionesh për t'i luajtur dhe për t'i të shpërndarë. Me një ecuri të thjeshtë është e mundur që edhe fëmijët e vegjël të programojnë JavaScript, dhe sa më i avancuar je ti aq më shumë do ecësh."
+  makeschool_longdescription: "Mëso të kodosh duke bërë një lojë iPhone duke përdorur një gjuhë programimit të quajtur Swift! Krijo një lojë Pok&eacute;moni dhe shkruaj kod për t'i mësuar përbindëshave të tu lëvizje të reja. Ti do të mësosh si të përdorësh variabla, metoda dhe objekte për të ndihmuar përbindëshin tënd që të fitoj!"
   touchdevelop_longdescription: 'Editori miqsor do t''ju udhëheqë në krijimin e artit të pikselave, zgjidhen e formuesve, ose bërjen e lojës tënde të zogut që kërcenë. '
   appinventor_longdescription: "Duke u argëtuar me video tutoriale të shpejta ju do të ndërtoni tre aplikacione të thjeshta për telefonin ose tabletin tuaj Android. E dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do t'ju bëjë gati për të krijuar aplikacionin e parë tuajin. Imagjino të shpërndash aplikacionin tënd të parë te miqtë tuaj! Këto aktivitete janë përshtatur për tu bërë individualisht dhe për mesuesit që udhëhqin klasa."
   blockly_longdescription: "Keni një kompjuter me aksesim në internet të dobët (ose fare)? Shkarkoni tutorialet Blocky që ishin pararendësit e tutorialeve Code.org - një filë ZIP 3MB mund të shkarkohet në çdo kompjuter"
@@ -937,6 +989,7 @@
   groklearning_beyond_name: "Mëso programimin Python"
   hacketyhack_beyond_name: "Mëso Ruby"
   robomind_beyond_name: "Programo një robot virtual"
+  makeschool_beyond_name: "Ndërto një lojë për iPhone në shefletuesin tënd!"
   appinventor_beyond_name: "AppInventor Ora e Kodimit"
   touchdevelop_beyond_name: "TouchDevelop"
   codehs_beyond_name: "Mëso të Kodosh me Qenin Karel"
@@ -1047,6 +1100,7 @@
   groklearning_beyond_shortdescription: "Hyrje në bazat e programimit python"
   hacketyhack_beyond_shortdescription: "Mëso Ruby nga fillimi"
   robomind_beyond_shortdescription: "Shkruaj kod për një robot virtual"
+  makeschool_beyond_shortdescription: "Mëso të bësh një lojë për iPhone në një orë"
   appinventor_beyond_shortdescription: "Bëj aplikacionin tënd ! (vetëm në Android)"
   touchdevelop_beyond_shortdescription: "Kodo aplikacione për telefona direkt nga telefoni, tableti ose laptopi juaj"
   codehs_beyond_shortdescription: "Mëso programimin në JavaScript me ambiente vizuale argëtuese"
@@ -1083,6 +1137,7 @@
   groklearning_beyond_longdescription: "Një kurs hyrës duke përdorur gjuhën e programimit Python për njerëz pa eksperiencë në programim. Përmbajtja jonë unike përzierë me sfida do të çojnë në kuptimin e plotë të Python-it dhe programimit vetë. Ne kemi mësuar këtë përmbajtje për studentë të moshave të ndryshme dhe me kualifikime të ndryshme dhe jemi të sigurt që do ju përshtatet edhe juve."
   hacketyhack_beyond_longdescription: 'Hackety Hack do të mësojë ty bazat e programimit nga fillimi. Nuk nevojitet asnjë eksperiencë e mëparshme në programim! Me Hackety Hack, ti do të mësosh gjuhën e programimit Ruby. Ruby përdoret për të gjitha llojet e programeve, duke përfshirë aplikacionet në dekstop dhe faqe interneti. [Shënim: kërkohet instalimi në Desktop]'
   robomind_beyond_longdescription: 'Studentët mësojnë bazat e programimit duke kontrolluar robotin e tyre virtual. Kursi online është plot me përmbajtje prezantimesh të shkurtra, filma, kuice dhe udhëzime automatike për të ndihmuar me ushtrimet e programimit. '
+  makeschool_beyond_longdescription: "A di pak ObjectiveC? Mëso të bësh një lojë për iPhone në një orë! Ne do t'ju udhëheqim ju drejt procesit, te kodimit, të testimit, dhe për të luajtur lojën tënde në shfletues dhe më pas shpërndaje atë në Facebook për ta provuar shokët e tu! Nuk kërkohet eksperiencë e mëparshme në zhvillimin e kodit të iPhone. Ti duhet të kesh njohuri se çfarë janë variablat, metodat dhe objektet."
   appinventor_beyond_longdescription: "Duke u argëtuar me video tutoriale të shpejta ju do të ndërtoni tre aplikacione të thjeshta për telefonin ose tabletin tuaj Android. E dizenjuar për fillestarë dhe ekspertë, kjo orë kodimi do t'ju bëjë gati për të krijuar aplikacionin e parë tuajin. Imagjino të shpërndash aplikacionin tënd të parë te miqtë tuaj! Këto aktivitete janë përshtatur për tu bërë individualisht dhe për mesuesit që udhëhqin klasa."
   touchdevelop_beyond_longdescription: "TouchDevelop të lejon ty të krijosh aplikacione në iPad, iPhone, Android, PC, Mac, Windows Phone. Editori jonë miqësor e bën kodimin argëtues edhe në telefonin tënd ose tabletën!"
   codehs_beyond_longdescription: 'Mësoni bazat e programimit me qenin Karel, një hyrje argëtuese, aksesueshme dhe me udhëzime vizuale për të koduar, duke i dhënë komanda kompjuterit njësoj sikur i jep komanda qenit. Ky tutorial është i shkëlqyer nëse udhëhiqet nga një mësues, por mund të vazhdohet edhe vetëm. [Shënim: kerkohet pagesë]'
@@ -1106,12 +1161,14 @@
   processing_beyond_longdescription: "Processing është një gjuhë programimi, mjedis zhvillimi dhe komunitet online. Që nga 2001, Processing ka promovuar software e shkrimit brenda arteve vizule dhe shklrimit vizual brenda teknologjisë. Fillimisht u krijua për të shërbyer si një software sketchbook dhe për të mësuar themelet e programimit kompjuterik brenda një konteksti vizual, Processing evoloi në pajisje zhvillimi për profesionistët. Sot, ka dhejtra e mijëra studentë, artistë, dizenjuesë, kërkues që përdorin Proçesimin për të mësuar dhe prodhuar."
   alice_beyond_longdescription: "Duke përdorur një mjedis programimi inovativ që suporton krijimet e animimeve 3D, Projetki i Alice siguron mjete dhe materiale për të mësuar dhe shpjeguar mendimin kompjuterik, zgjidhjen e problemeve, dhe programimin kompjuterik ndërmjet një spektri moshash dhe nivelesh."
   sphero_beyond_longdescription: "Nëse je edukues ose prind, mësimet SPRK i japin fëmijëve një kurs argëtues në programim robotash ndërsa mprehin njohuritë e tyre në matematikë dhe shkencë."
+  compatibility_hide_this_warning: "Mbaj të fshehtë këtë paralajmërim"
   compatibility_unsupported_browser: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
   compatibility_unsupported_browser_markdown: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
   flappy_shortcode: "përplas flatrat"
   header_courses: "Kurset"
   header_project_gallery: "Projekte"
   header_educate_hoc: "Ora e Kodimit"
+  header_stats: "statistikat"
   header_legal_privacy: "Rregullat e Privatësisë"
   header_legal_tos: "Kushtet e shërbimit"
   user_header_label: "Përshëndetje %{username}"
@@ -1119,6 +1176,9 @@
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
   user_header_signin: "Futu"
+  user_header_create: 'Krijo '
+  user_header_applab: 'Laboratori i Aplikacioneve '
+  user_header_artist: 'Artisti '
   user_header_playlab: "Play Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
@@ -1128,6 +1188,7 @@
   account_sign_up_child_accept_terms: "Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
   hoc_overview_start_tutorial: "Fillo"
   hoc2018_creativity_create: "Krijo"
+  hoc2018_creativity_hoc_coming: "Ora e kodimit po vjen…"
   hoc2018_mc_page_title: "Tutorialet e Orës së Kodimit Minecraft"
   hoc2018_mc_details: "Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+"
   hoc2018_mc_designer_title: "Dizenjuesi i Minecraft"
@@ -1136,9 +1197,12 @@
   hoc2018_mc_adventurer_description: "Përdorni kodin për të marrë Alex apo Steve në një aventurë."
   hoc2018_mc_start: "Fillo"
   hoc2018_mc_download_adventurer: "Shkarko versionin offline të Aventurave Minecraft "
+  hoc2018_mc_watch_videos: "Para se të fillosh, shiko një nga këto video frymëzuese"
   hoc2018_mc_videos_more: "Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke shfaqur modele dhe të famshëm"
   hoc2018_mc_careers_more: "Më shumë <a href='%{careers_url}' target='_blank'>video inspiruese</a>duke shfaqur profesionist në fushat teknologjike"
   hoc2018_mc_video_1min: "1 minutë"
+  hoc2018_mc_video_2min: "2 minutë"
+  hoc2018_mc_video_5min: "5 minutë"
   hoc2018_mc_video_title_sports: "Nxit vetveten. Çdokush mund të mësoj."
   hoc2018_mc_video_title_inspire_girl: "Frymëzo një vajzë"
   hoc2018_mc_homepage_join_us: "Na u bashko!"
@@ -1152,5 +1216,6 @@
   footer_donate: "Dhuro"
   footer_support: "Ndihma dhe Komuniteti"
   footer_terms: "Termat"
+  ai_for_oceans_lesson_plan: "plani mësimor"
   ai_activity: "Aktivizo"
   ai_description: "Përshkrimi"

@@ -1,0 +1,80 @@
+{
+  "ms-MY": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Pemboleh ubah"
+        },
+        "input/coursef/2021": {
+          "word": "Input"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Takrifkan"
+        },
+        "debugging/courseb/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "drop/courseb/2021": {
+          "word": "Gerakan Jatuh"
+        },
+        "debugging/coursea/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "drop/coursea/2021": {
+          "word": "Gerakan Jatuh"
+        },
+        "debugging/coursec/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "sequencing/coursec/2021": {
+          "word": "Penjujukan"
+        },
+        "debugging/coursed/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Bersyarat"
+        },
+        "debugging/express/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "sequencing/express/2021": {
+          "word": "Penjujukan"
+        },
+        "conditionals/express/2021": {
+          "word": "Bersyarat"
+        },
+        "function/express/2021": {
+          "word": "Fungsi"
+        },
+        "variable/express/2021": {
+          "word": "Pemboleh ubah"
+        },
+        "define/express/2021": {
+          "word": "Takrifkan"
+        },
+        "drop/pre-express/2021": {
+          "word": "Gerakan Jatuh"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Penyahpepijatan"
+        },
+        "copyright/coursee/2021": {
+          "word": "Hak Cipta"
+        },
+        "function/coursee/2021": {
+          "word": "Fungsi"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Bersyarat"
+        },
+        "define/coursee/2021": {
+          "word": "Takrifkan"
+        }
+      }
+    }
+  }
+}
