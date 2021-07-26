@@ -78,7 +78,7 @@ docker-compose -f site-compose.yml build
 Sign in to Docker Hub through the command line
 
 ```
-docker login -u codedotorg -p <password from lastpass>
+docker login -u codedotorg -p <access token from lastpass docker hub notes field>
 ```
 
 Upload the image to docker hub (this will automatically push to the :latest tag on the repo configured in the compose file)
