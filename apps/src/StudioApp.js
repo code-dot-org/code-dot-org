@@ -1596,6 +1596,10 @@ StudioApp.prototype.resizeVisualization = function(width, options) {
   visualization.style.margin = '0 auto';
 
   var scale = constrainVisualizationWidth /*newVizWidth*/ / this.nativeVizWidth;
+  if (scale < 0) {
+    // Avoiding inverting.
+    scale = 0;
+  }
   getStore().dispatch(setVisualizationScale(scale));
 
   const cssScale = `scale(${scale})`;
