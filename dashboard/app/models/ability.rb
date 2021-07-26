@@ -97,9 +97,6 @@ class Ability
       can :create, ReviewableProject do |_, project_owner|
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
       end
-      can :reviewable_status, ReviewableProject do |_, project_owner|
-        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
-      end
       can :destroy, ReviewableProject, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
