@@ -56,7 +56,7 @@ export default class CommitDialog extends React.Component {
       >
         {compileStatusContent}
       </div>,
-      <div>
+      <div key="buttons">
         <FooterButton
           key="cancel"
           type="cancel"
@@ -94,7 +94,6 @@ export default class CommitDialog extends React.Component {
 
     return (
       <StylizedBaseDialog
-        style={{...styles.buttons}}
         isOpen={isOpen}
         title={i18n.commitCode()}
         confirmationButtonText={i18n.commit()}
