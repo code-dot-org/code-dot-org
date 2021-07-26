@@ -3,6 +3,10 @@ hy:
   data:
     variable_names:
       actor: դերասան
+      age: տարիք
+      answer: պատասխան
+      binary: երկուական
+      color: գույնը
       counter: counter
       height: բարձրություն
       honey: մեղր

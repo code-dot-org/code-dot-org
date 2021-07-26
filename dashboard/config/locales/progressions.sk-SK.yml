@@ -13,6 +13,7 @@ sk:
       'Artist: Variables': 'Umelec: Premenné'
       Attribution: Uvedenie zdroja
       Basic Conditionals: Základné podmienky
+      Be a Super Digital Citizen: Buď super digitálny občan
       Binary Numbers: Binárne čísla
       Board Input and Output: Vstup a výstup dosky plošných spojov
       Boolean Comparison: Porovnanie pravdivosti
@@ -40,6 +41,7 @@ sk:
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
       Creating a Simulation: Vytvorenie simulácie
+      Customize: Prispôsobiť
       Data Visualization: Vykreslenie údajov
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
       Debugging: Hľadanie a odstraňovanie chýb
@@ -50,10 +52,16 @@ sk:
       Events: Udalosti
       Events and Linking Screens: Udalosti a prepájanie obrazoviek
       Events and Properties: Udalosti a vlastnosti
+      Example Projects: Vzorové projekty
       Example projects: Vzorové projekty
       Expanding Personal Website: Rozšírenie vlastnej webstránky
       Expanding Your Website: Rozšírenie tvojej webstránky
       Experiment with Web Lab: Experimentuj s Web Labom
+      Exploration: Objavovanie
+      'Exploration: For Loops': 'Objavovanie: Cykly for'
+      'Exploration: Sample Apps': 'Objavovanie: Vzorové aplikácie'
+      'Exploration: Sample Programs': 'Objavovanie: Vzorové programy'
+      'Exploration: Sample Project': 'Objavovanie: Vzorový projekt'
       Exploring more CSS: Objavovanie ďalších CSS
       Finish a Screen: Dokonči obrazovku
       Finish the Prototype: Dokonč prototyp
@@ -68,6 +76,7 @@ sk:
       Free Play: Voľná hra
       Functions: Funkcie
       Functions with Parameters: Funkcie s parametrami
+      Headings: Nadpisy
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
       Ice Age Loops: Cykly Doby Ľadovej
@@ -96,6 +105,7 @@ sk:
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou
         blokov'
       Measures: Takty
+      'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
       'Mini-Project: Royal Battle': 'Mini-Projekt: Kráľovský súboj'
@@ -117,10 +127,13 @@ sk:
       Movement with the Counter Pattern: Pohyb pomocou počítacieho vzorca
       Multiframe Animations: Viacsnímkové animácie
       Musical Arrays: Hudobné polia
+      My Online Neighborhood: Moja internetová štvrť
       Nested Loops with the Bee: Vnorené cykly so včelou
       New Shapes: Nové tvary
       Orientation: Orientácia
       Pair Programming: Programovanie v páre
+      Picturing Data: Zobrazenie dát v grafoch
+      Planning: Plánovanie
       Platform Jumper - Background and Variables: Plošinový skokan - Pozadie a premenné
       Platform Jumper - Items: Plošinový skokan - Prvky
       Platform Jumper - Platforms: Plošinový skokan - Plošiny
@@ -129,7 +142,9 @@ sk:
       Playing with Notes: Hranie pomocou nôt
       Post-Course Survey Instructions: Inštrukcie pre vypĺňanie dotazníka po kurze
       Practice: Cvičenie
+      Predict: Predvídať
       Prediction: Predpoklad
+      Problem Solving: Riešenie problémov
       Programming with Events: Programovanie pomocou udalostí
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
@@ -138,6 +153,7 @@ sk:
       Project - Sprites and Interactions: Projekt - "Sprite" objekty a interakcie
       Project Work: Projektová práca
       Properties: Vlastnosti
+      Publishing Your Website: Publikovanie tvojej webstránky
       RGB Exploration: Objavovanie RGB
       Reading Sensors: Čítanie snímačov
       Recovery: Zotavenie
@@ -147,6 +163,7 @@ sk:
       Repeat Blocks with the Artist: Opakujúce sa bloky s umelcom
       Repeat Unit Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
       Repeat Until Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
+      Review: Zrevidovať
       Run a simulation: Spusť simuláciu
       Sample Programs: Vzorové programy
       Screen Design: Dizajn obrazovky
@@ -158,6 +175,8 @@ sk:
       Share Your Message: Zdieľajte správu
       Side Scroller: Posúvačka (side-scroller)
       Simple Circuits: Jednoduché el. obvody
+      Skill Building: Budovanie zručností
+      Skill-Building: Budovanie zručností
       Sliders: Posuvníky
       Smart Bike - Blinkers: Inteligentný bicykel - Smerovky
       Sprite Lab Project: Lab postáv projekt
@@ -182,6 +201,7 @@ sk:
       Vaccines: Vakcíny
       Velocity: Rýchlosť
       Video: Video
+      'Video: For Loops': 'Video: "For-loop" Slučky '
       Warm Up: Úvodná aktivita
       Website Project: Projekt webstránky
       Welcome to Monster Town: Vitajte v mestečku Monster Town

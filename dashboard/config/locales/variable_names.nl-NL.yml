@@ -6,6 +6,9 @@ nl:
       Green: Groen
       Red: Rood
       actor: speler
+      age: leeftijd
+      answer: antwoord
+      binary: binaire
       cats: katten
       color: kleur
       counter: teller
@@ -15,6 +18,7 @@ nl:
       i: i
       left: links
       length: lengte
+      level: niveau
       name: naam
       nectar: nectar
       planet: planeet

@@ -158,6 +158,7 @@ ur:
   teacher:
     panel:
       student: Talib-e-ilm
+      last_updated: 'آخری تازہ کاری:'
   user:
     new_email_hint: "(اثبات کریں کہ آپ اس ای میل ایڈریس سے ای میلز موصول کر سکتے ہیں
       کریں.)"
@@ -203,6 +204,8 @@ ur:
       title: فروزن
     unplugged_conditionals:
       title: شرائط
+    widgets:
+      audience: عمر 14+
   landing:
     help_support: مدد اور معاونت
   dialog:
@@ -223,6 +226,8 @@ ur:
       other: دیگر
     submit: جمع کرائیں
     decline: بند
+  progress:
+    not_started: شروع نہیں کیا
   project:
     projects: پروجیکٹس
     project_gallery: پروجیکٹس

@@ -1,0 +1,403 @@
+{
+  "ro-RO": {
+    "data": {
+      "lessons": {
+        "coursef-2021/Virtual Pet": {
+          "overview": "În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!"
+        },
+        "coursef-2021/lesson-2": {
+          "student_overview": "Hărțuirea („bullying”) nu este niciodată acceptabilă. În această lecție vei învăța ce poți spune și ce nu poți spune online."
+        },
+        "coursef-2021/Variables that Change in Artist": {
+          "overview": "În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.",
+          "student_overview": "În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează."
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "student_overview": " În această lecție, elevii vor învăța ce se întâmplă atunci când introduc o buclă într-o altă buclă."
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "overview": "Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul. ",
+          "student_overview": "Această albină adoră variabilele!"
+        },
+        "coursef-2021/For Loop Fun": {
+          "overview": "Știm deja că buclele ne permit să întreprindem acțiuni în mod repetat, dar acum vom învăța cum să folosim bucle care includ structuri suplimentare încorporate. Cu ajutorul acestor noi structuri, elevii vor scrie cod mai eficient și mai dinamic. ",
+          "student_overview": "Te vei distra la maxim învățând despre buclele `for`!"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "overview": "Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.",
+          "student_overview": "Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!"
+        },
+        "coursef-2021/For Loops in Artist": {
+          "overview": "În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.",
+          "student_overview": "Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea."
+        },
+        "coursef-2021/Simulating Experiments": {
+          "overview": "Prin rularea unei simple simulări în Laboratorul cu sprites, studenții vor vedea cum se poate utiliza computerul pentru a colecta date care identifică tendințe sau modele. După ce rulează simularea de mai multe ori, elevii vor avea ocazia să facă o predicție cu privire la modul în care schimbarea unei variabile din simulare poate afecta rezultatul, iar apoi să testeze ipoteza respectivă.",
+          "student_overview": "Rulează simulări pe computer și experimentează, schimbând variabilele."
+        },
+        "coursef-2021/Internet": {
+          "overview": "Chiar dacă mulți oameni folosesc Internetul zilnic, sunt puțini cei care știu cum funcționează. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS."
+        },
+        "coursef-2021/End of Course Project": {
+          "overview": "În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate! ",
+          "student_overview": "Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!"
+        },
+        "courseb-2021/Digital Trails": {
+          "student_overview": "Află mai multe despre amprenta ta digitală și despre cum poți să fii în siguranță atunci când vizitezi website-uri. "
+        },
+        "courseb-2021/Move It, Move It": {
+          "overview": "În cadrul acestei lecții, elevii se vor pregăti mintal pentru exercițiile de scriere de cod pe care le vor întâlni în acest curs. Lucrând în echipe mici, elevii vor folosi activitățile fizice pentru a-și „programa” colegii de clasă să pășească cu atenție dintr-un loc în altul până la atingerea unui obiectiv.",
+          "student_overview": "Programează-ți colegii de clasă să pășească cu atenție dintr-un loc în altul."
+        },
+        "courseb-2021/Sequencing in Maze": {
+          "student_overview": "Ajută-l pe Red din Angry Birds să ajungă până la porcul obraznic, înaintând pe cărare."
+        },
+        "courseb-2021/Programming in Harvester": {
+          "overview": "Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare. ",
+          "student_overview": "Ajută Culegătorul să strângă verdețurile care cresc pe cărare."
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "overview": "Pe măsură ce începem să scriem programe tot mai lungi și mai interesante, codul nostru conține adesea multe repetiții. În această lecție, elevii vor învăța despre modul în care pot fi folosite buclele pentru a comunica mai ușor instrucțiunile care conțin multe repetiții, analizând modelele repetate ale mișcărilor dintr-un dans.",
+          "student_overview": "În această lecție vom organiza o petrecere dansantă cu bucle „repeat”!"
+        },
+        "courseb-2021/Loops in Harvester": {
+          "overview": "Plecând de la conceptul repetării instrucțiunilor prezentat în „Cum e să ai mintea creață”, în această etapă elevii vor folosi bucle pentru a culege mai eficient porumbul, pe Code.org.",
+          "student_overview": "Ajută Culegătorul să strângă mai mult cu ajutorul buclelor!"
+        },
+        "courseb-2021/Loops in Collector": {
+          "overview": "În această lecție, elevii aprofundează conceptul de bucle. Aici Aventuriera Laurel folosește bucle pentru a strâng comori într-o peșteră. Laurel are la dispoziție un bloc nou, denumit `ia comoara`, care o va ajuta în călătorie.",
+          "student_overview": "Programeaz-o pe Aventuriera Laurel să strângă comorile din peșteră."
+        },
+        "courseb-2021/Loops in Artist": {
+          "overview": "Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția online anterioară, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, elevii folosesc buclele pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.",
+          "student_overview": "Folosește modele și bucle pentru a finaliza imaginile."
+        },
+        "courseb-2021/The Right App": {
+          "overview": "În această lecție elevii învață faptul că informatica poate fi de ajutor în viața reală. Mai întâi, elevii se pun în locul mai multor utilizatori fictivi de smartphone-uri și îi ajută să găsească „aplicația potrivită” care să răspundă nevoilor lor. Apoi, elevii își folosesc empatia și creativitatea pentru a crea propria aplicație pentru smartphone care răspunde nevoilor unui utilizator suplimentar.",
+          "student_overview": "Creează-ți propria aplicație pentru smartphone."
+        },
+        "courseb-2021/Events: The Big Event": {
+          "overview": "Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.",
+          "student_overview": "Mișcă-te și fă zgomot atunci când profesorul apasă butoanele unei telecomenzi uriașe."
+        },
+        "courseb-2021/Events in Play Lab": {
+          "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!",
+          "student_overview": "Folosește evenimentele pentru a crea o poveste sau un joc interactiv."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "student_overview": "Află cum poți naviga în siguranță pe internet."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "overview": "În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.",
+          "student_overview": "Fă clic și glisează obiecte pentru a rezolva puzzle-urile."
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "overview": "În această lecție offline, echipele lucrează împreună pentru a atinge un obiectiv simplu: să ajute „pufoșenia” să ajungă la fructe. Elevii vor scrie instrucțiuni precise în timp ce lucrează pentru a transpune instrucțiunile în simbolurile care le-au fost puse la dispoziție. Dacă apar probleme legate de cod, elevii trebuie să colaboreze pentru a identifica erorile și a găsi soluții.",
+          "purpose": "Tranziția de la algoritmi la programare poate fi scurtă dacă elevii înțeleg diferența dintre planificarea unei secvențe și codificarea secvenței respective în limbajul adecvat. Această activitate îi va ajuta pe elevi să câștige experiență citind și scriind cod prescurtat.",
+          "student_overview": "Scrie instrucțiuni pentru a ajuta Pufoșenia să ajungă la fructe."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "overview": "Cu ajutorul lui Scrat din Epoca de Gheață, elevii vor dezvolta algoritmi secvențiali cu ajutorul cărora o vor ajuta pe veverița simpatică să traverseze labirintul pentru a ajunge la ghinda care se află în partea opusă. Pentru a face acest lucru, elevii vor stivui blocuri de cod în succesiune liniară.",
+          "student_overview": "Programează-l pe Scrat să ajungă la ghindă."
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "student_overview": "Scrie programe pentru a-l ajuta pe Scrat să ajungă la ghindă."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "student_overview": "Ajută-l pe BB-8 să strângă fierul vechi."
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "overview": "În cadrul acestei activități, elevii vor lucra din nou cu Hărțile vesele. De această dată, elevii vor rezolva puzzle-uri mai complexe și cu durată mai lungă cu ajutorul codului, constatând astfel cât de utile sunt structurile care le permit să scrie coduri mai lungi într-un mod mai ușor.",
+          "student_overview": "Ajută Pufoșenia să rezolve probleme mai complicate cu ajutorul buclelor"
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "overview": "Plecând de la conceptul repetării instrucțiunilor prezentat în „Bucle vesele”, în această etapă elevii vor folosi bucle pentru a ajunge mai eficient la ghindă pe Code.org.",
+          "student_overview": "Ajută-l pe Scrat să se deplaseze pe distanțe mai mari cu ajutorul buclelor."
+        },
+        "coursea-2021/Loops in Collector": {
+          "overview": "În această lecție, elevii aprofundează conceptul de bucle. În lecția anterioară, elevii au lucrat cu bucle cu ajutorul cărora s-au deplasat în interiorul unui labirint și au cules porumb. Aici buclele sunt folosite pentru a strânge comori într-o peșteră.",
+          "student_overview": "Ajut-o pe Aventuriera Laurel să strângă comorile din subteran."
+        },
+        "coursea-2021/Ocean Scene with Loops": {
+          "overview": "Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.",
+          "student_overview": "Folosește bucle și modele pentru a finaliza imaginile."
+        },
+        "coursea-2021/Events: The Big Event": {
+          "overview": "Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.",
+          "student_overview": "Mișcă-te și fă zgomot atunci când profesorii apasă butoanele unei telecomenzi uriașe."
+        },
+        "coursea-2021/Events in Play Lab": {
+          "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!",
+          "student_overview": "Creează-ți propriul joc sau propria poveste."
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "student_overview": "În această lecție vei afla mai multe despre comportamentele răutăcioase și despre ce trebuie să faci dacă le întâlnești online."
+        },
+        "coursec-2021/Programming: My Robotic Friends": {
+          "overview": "Folosind un set de simboluri în loc de cod, elevii vor concepe algoritmi prin care transmit instrucțiuni unui „robot” să suprapună pahare folosind pentru aceasta diferite modele. Elevii vor fi pe rând roboți și vor reacționa numai la algoritmul definit de colegii lor. În acest segment, elevii învață legătura care există între simboluri și acțiuni, diferența dintre un algoritm și un program, precum și cât de importantă este depanarea.",
+          "student_overview": "În această lecție vei pretinde că toți colegii tăi sunt roboți și îi vei programa să construiască modele cu ajutorul paharelor suprapuse."
+        },
+        "coursec-2021/Debugging in Maze": {
+          "overview": "Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.",
+          "student_overview": "Identificați problemele din puzzle-uri și puneți-vă în practică aptitudinile de depanare."
+        },
+        "coursec-2021/Programming in Collector": {
+          "student_overview": "Scrie algoritmi pentru a o ajuta pe Aventuriera Laurel să adune o mulțime de pietre prețioase!"
+        },
+        "coursec-2021/Programming in Artist": {
+          "overview": "În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.",
+          "student_overview": "Creați imagini extraordinare programând Artistul."
+        },
+        "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "overview": "Luând activitatea inițială „Prietenii mei, roboții” drept punct de plecare, elevii se confruntă acum cu sarcini mai mari și mai complicate. Pentru a programa „roboții” să finalizeze aceste sarcini mai complexe, elevii trebuie să identifice modele repetate din instrucțiuni care pot fi înlocuite cu o buclă.",
+          "student_overview": "În această lecție îți vei putea „programa” din nou colegii, dar acum vei folosi bucle pentru a rezolva probleme mai mari și mai complicate."
+        },
+        "coursec-2021/Loops in Harvester": {
+          "overview": "Elevii includ în buclă acțiuni noi pentru a-l ajuta pe culegător să strângă mai multe verdețuri care cresc în legături mari.",
+          "student_overview": "Să folosim bucle pentru a-l ajuta pe culegător să strângă verdețuri!"
+        },
+        "coursec-2021/Sticker Art with Loops": {
+          "student_overview": "În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "overview": "Elevii vor afla în curând că evenimentele sunt o modalitate foarte ușoară de a imprima flexibilitate unui algoritm scris anterior. Poate că uneori vă doriți ca programul să răspundă utilizatorului exact atunci când dorește utilizatorul. Cu ajutorul evenimentelor, programul poate fi mai interesant și mai interactiv.",
+          "student_overview": "Joacă un joc distractiv pentru a învăța mai multe despre evenimente. "
+        },
+        "coursec-2021/Build a Flappy Game": {
+          "overview": "În această etapă, elevii își construiesc propriul joc Flappy Bird folosind manipulatoare ale evenimentelor pentru a detecta clicurile mouse-ului și coliziunile cu obiecte. La sfârșitul nivelului, elevii vor putea să-și personalizeze jocul schimbând elementele vizuale sau regulile.",
+          "student_overview": "Construiește-ți propriul joc Flappy Bird așa cum dorești, apoi partajează-l cu prietenii!"
+        },
+        "coursec-2021/Events in Play Lab": {
+          "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!",
+          "student_overview": "A venit momentul să fim creativi și să creăm un joc în Laboratorul de joacă!"
+        },
+        "coursec-2021/Picturing Data": {
+          "overview": "Datele pot fi folosite pentru a-i ajuta pe elevi să înțeleagă lumea care îi înconjoară și pentru a răspunde la întrebări interesante. În această lecție, elevii vor strânge date dintr-un proiect creat în Laboratorul de joacă și le vor vizualiza folosind diferite tipuri de grafice.",
+          "student_overview": "Datele pot fi folosite pentru a-i ajuta pe elevi să înțeleagă lumea care îi înconjoară și pentru a răspunde la întrebări interesante. În această lecție, elevii vor strânge date dintr-un proiect creat în Laboratorul de joacă și le vor vizualiza folosind diferite tipuri de grafice."
+        },
+        "coursec-2021/Binary Bracelets": {
+          "overview": "Limbajul binar este extrem de important în universul computerelor. Majoritatea computerelor din ziua de astăzi stochează informații în format binar. În această lecție se poate demonstra cum puteți să luați un element din viața reală și să-l transformați într-o serie de comenzi de activare și dezactivare.",
+          "student_overview": "Creează-ți propria brățară binară și află cum își amintesc computerele informațiile!"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "overview": "În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate în Laboratorul de joacă! Pentru a ne asigura că acest proces se desfășoară fără probleme, vă punem la dispoziție o structură care poate fi urmărită pas cu pas de elevi, de la planificarea pe hârtie până la etapa de scriere a codului pe site-ul nostru web. În plus, oferim idei utile pentru profesori, care îi vor ajuta să organizeze o prezentare memorabilă! ",
+          "student_overview": "Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul."
+        },
+        "coursed-2021/lesson-5": {
+          "student_overview": "În această lecție vei afla cum sunt protejate informațiile cu ajutorul parolelor, precum și cum să creezi o parolă eficientă."
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "overview": "„Programându-se” unul pe celălalt să deseneze imagini, elevii vor lua contact cu unele dintre conceptele esențiale ale programării, dar într-un mod distractiv și accesibil. La începutul orei, elevii vor utiliza simboluri pentru a-și transmite reciproc instrucțiuni pentru colorarea de pătrate pe hârtie de copiat, încercând să reproducă o imagine. Dacă este timp, lecția se poate încheia cu imagini create chiar de elevi. ",
+          "student_overview": "În această lecție îți vei programa colegul să deseneze imagini!"
+        },
+        "coursed-2021/Introduction to Online Puzzles": {
+          "student_overview": "În cadrul acestei lecții îți vei folosi abilitățile de care vei avea nevoie pentru acest curs."
+        },
+        "coursed-2021/Relay Programming": {
+          "student_overview": "Îți amintești că la începutul cursului ai desenat cu ajutorul codului? În această lecție vei lucra în echipă cu alți colegi pentru a face ceva foarte asemănător!"
+        },
+        "coursed-2021/Debugging in Collector": {
+          "overview": "În această activitate online, elevii își vor pune în practică aptitudinile de depanare în mediul „Colecționar”. Elevii vor putea citi și edita codul pentru a elimina erorile din puzzle-uri cu algoritmi simpli, bucle și bucle imbricate.",
+          "student_overview": "Ai avut vreodată probleme în timp ce scriai cod? În această lecție, vei afla câteva dintre secretele depanării. Depanarea este procesul de identificare și de rezolvare a problemelor care apar în codul tău."
+        },
+        "coursed-2021/Events in Bounce": {
+          "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
+          "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
+        },
+        "coursed-2021/Build a Star Wars Game": {
+          "student_overview": "Lasă Forța să te ghideze și construiește-și propriul joc Războiul Stelelor în această lecție."
+        },
+        "coursed-2021/Dance Party": {
+          "overview": "În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.",
+          "student_overview": "A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă."
+        },
+        "coursed-2021/Loops in Ice Age": {
+          "student_overview": "În această lecție vei folosi blocul repetare pentru a-l ajuta pe Scrat să ajungă la ghindă într-un mod cât mai eficient posibil."
+        },
+        "coursed-2021/Loops in Artist": {
+          "overview": "Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este și un exercițiu de depanare pentru punerea în practică suplimentară a abilităților de rezolvare a problemelor.",
+          "student_overview": "În această lecție vei desena imagini grozave în Artist cu ajutorul buclelor!"
+        },
+        "coursed-2021/Nested Loops in Bee": {
+          "student_overview": "Bucle în interiorul unor bucle care la rândul lor se află în interiorul altor bucle. Ce înseamnă asta? În această lecție vei învăța ce se întâmplă atunci când creezi o buclă imbricată."
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "student_overview": "Este timpul să jucăm un joc în care câștigi puncte numai în anumite condiții!"
+        },
+        "coursed-2021/Conditionals in Bee": {
+          "overview": "Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.",
+          "student_overview": "Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. "
+        },
+        "coursed-2021/While Loops in Farmer": {
+          "overview": "Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.",
+          "student_overview": "Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!"
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "overview": "În această lecție, elevii vor învăța despre buclele `until`. Elevii vor elabora programe în care personajul principal repetă acțiuni până când (`until`) acestea ajung în punctul în care trebuie să se oprească.",
+          "student_overview": "Puteți face lucruri extraordinare atunci când folosiți buclele `until`!"
+        },
+        "coursed-2021/End of Course Project": {
+          "overview": "În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate! ",
+          "student_overview": "Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul."
+        },
+        "express-2021/Debugging with Scrat": {
+          "overview": "Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.",
+          "student_overview": "Identificați problemele din puzzle-uri și puneți-vă în practică aptitudinile de depanare."
+        },
+        "express-2021/Creating Art with Code": {
+          "overview": "În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.",
+          "student_overview": "Creați imagini extraordinare programând Artistul."
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "overview": "În această lecție, elevii vor învăța despre cele două concepte esențiale ale Laboratorului cu sprites: sprites și comportamente. Sprites sunt personaje sau obiecte de pe ecran pe care elevii le pot muta, modifica și manipula. Comportamentele sunt acțiuni pe care sprites le vor întreprinde încontinuu, până când sunt opriți.",
+          "student_overview": "Află cum poți crea și edita sprites."
+        },
+        "express-2021/Virtual Pet with Sprite Lab": {
+          "overview": "În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!"
+        },
+        "express-2021/lesson-1": {
+          "overview": "În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.",
+          "student_overview": "A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă."
+        },
+        "express-2021/Sticker Art with Loops": {
+          "overview": "Elevii vor fi extrem de încântați de desenele incredibile pe care le vor crea, folosind un număr mic de blocuri și de stickere digitale! Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este excelentă pentru crearea de artefacte pentru portofolii sau pentru conferințe cu părinții/profesorii.",
+          "student_overview": "În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!"
+        },
+        "express-2021/Nested Loops in Maze": {
+          "student_overview": "Bucle în interiorul unor bucle care la rândul lor se află în interiorul altor bucle. Ce înseamnă asta? În această lecție vei învăța ce se întâmplă atunci când creezi o buclă imbricată."
+        },
+        "express-2021/If/Else with Bee": {
+          "overview": "Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.",
+          "student_overview": "Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. "
+        },
+        "express-2021/While Loops with the Farmer": {
+          "overview": "Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.",
+          "student_overview": "Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!"
+        },
+        "express-2021/Until Loops in Maze": {
+          "overview": "În această lecție, elevii vor învăța despre buclele `until`. Elevii vor elabora programe în care personajul principal repetă acțiuni până când (`until`) acestea ajung în punctul în care trebuie să se oprească.",
+          "student_overview": "Puteți face lucruri extraordinare atunci când folosiți buclele `until`!"
+        },
+        "express-2021/Harvesting with Conditionals": {
+          "overview": "Elevii vor exersa cu bucle `while`, bucle `until` și condiții `if / else`. Toate aceste blocuri folosesc relații de condiționalitate. Punând în practică toate cele trei elemente, elevii vor învăța să scrie coduri complexe și flexibile.",
+          "student_overview": "Nu este întotdeauna clar când să trebuie să folosim fiecare relație de condiționalitate. Această lecție te va ajuta să decizi ce trebuie să faci."
+        },
+        "express-2021/Functions in Minecraft": {
+          "overview": "În această aventură distractivă și interactivă în Minecraft, elevii vor începe să înțeleagă modul în care funcțiile le sunt utile!",
+          "student_overview": "Știi cum să utilizezi funcțiile pentru a scrie cel mai eficient cod?"
+        },
+        "express-2021/Functions with Artist": {
+          "overview": "Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.",
+          "student_overview": "Realizează desene complexe mai ușor cu ajutorul funcțiilor!"
+        },
+        "express-2021/Functions with Harvester": {
+          "student_overview": "Funcțiile te vor ajuta să nu depui prea mult efort atunci când o ajuți pe fermieră să strângă recolta!"
+        },
+        "express-2021/Variables with Artist": {
+          "overview": "În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.",
+          "student_overview": "În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează."
+        },
+        "express-2021/Changing Variables with Bee": {
+          "overview": "Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul. ",
+          "student_overview": "Această albină adoră variabilele!"
+        },
+        "express-2021/For Loops with Bee": {
+          "overview": "Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.",
+          "student_overview": "Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!"
+        },
+        "express-2021/For Loops with Artist": {
+          "overview": "În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.",
+          "student_overview": "Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea."
+        },
+        "express-2021/End of Course Project": {
+          "overview": "În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate! ",
+          "student_overview": "Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul."
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "overview": "În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.",
+          "student_overview": "Fă clic și glisează obiecte pentru a rezolva puzzle-urile."
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "overview": "Cu ajutorul lui Scrat din Epoca de Gheață, elevii vor dezvolta algoritmi secvențiali cu ajutorul cărora o vor ajuta pe veverița simpatică să traverseze labirintul pentru a ajunge la ghinda care se află în partea opusă. Pentru a face acest lucru, elevii vor stivui blocuri de cod în succesiune liniară.",
+          "student_overview": "Programează-l pe Scrat să ajungă la ghindă."
+        },
+        "pre-express-2021/Programming with Rey and BB-8": {
+          "overview": "În această lecție, elevii își vor folosi noile abilități de programare în moduri mai complicate, pentru a-l ajuta pe BB-8 să ajungă la capătul unui traseu dificil."
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "overview": "Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare. ",
+          "student_overview": "Ajută Culegătorul să strângă verdețurile care cresc pe cărare."
+        },
+        "pre-express-2021/Loops with Scrat": {
+          "student_overview": "Ajută-l pe Scrat să se deplaseze pe distanțe mai mari cu ajutorul buclelor."
+        },
+        "pre-express-2021/Loops with Laurel": {
+          "overview": "În această lecție, elevii aprofundează conceptul de bucle. Aici Aventuriera Laurel folosește bucle pentru a strâng comori într-o peșteră. Laurel are la dispoziție un bloc nou, denumit `ia comoara`, care o va ajuta în călătorie."
+        },
+        "pre-express-2021/Ocean Scene with Loops": {
+          "overview": "Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.",
+          "student_overview": "Folosește bucle și modele pentru a finaliza imaginile."
+        },
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "overview": "Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția online anterioară, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, elevii folosesc buclele pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.",
+          "student_overview": "Folosește modele și bucle pentru a finaliza imaginile."
+        },
+        "pre-express-2021/On the Move with Events": {
+          "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!",
+          "student_overview": "Creează-ți propriul joc sau propria poveste."
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!",
+          "student_overview": "Folosește evenimentele pentru a crea o poveste sau un joc interactiv."
+        },
+        "coursee-2021/Simon Says": {
+          "overview": "În această lecție, elevii vor juca un joc care îi va face să reflecteze la modul în care trebuie să fie transmise comenzile pentru a obține rezultatul corect. Acest lucru îi va ajuta să facă mai ușor tranziția către Laboratorul cu sprites în cursul lecțiilor viitoare.",
+          "student_overview": "Joacă un joc și gândește-te la comenzile necesare pentru a obține rezultatul corect."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "student_overview": "Află cum poți crea și edita sprites."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "student_overview": "Creează un proiect interactiv pe care să-l partajezi cu colegii de clasă."
+        },
+        "coursee-2021/lesson-4": {
+          "student_overview": "Află cum poți fi un exemplu pentru ceilalți atunci când asiști la cyberbullying."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "student_overview": "Internetul este distractiv și interesant, dar este important să fii în siguranță. În această lecție vei învăța care este diferența dintre informațiile care pot fi distribuite în siguranță și informațiile private."
+        },
+        "coursee-2021/About Me": {
+          "student_overview": "Prin crearea unui poster interactiv în Laboratorul cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire la schimbul de date cu caracter personal și de informații private pe internet."
+        },
+        "coursee-2021/Digital Sharing": {
+          "student_overview": "În această lecție vei afla mai multe despre provocările și avantajele drepturilor de proprietate și ale drepturilor de autor. "
+        },
+        "coursee-2021/Nested Loops in Artist": {
+          "overview": "În setul de puzzle-uri de astăzi, elevii vor crea desene complexe folosind Artist. Continuând să exerseze cu buclele imbricate, dar cu obiective noi, elevii vor utiliza buclele mai mult. Acest set de puzzle-uri le oferă și posibilitatea de a-și utiliza creativitatea, deoarece elevii pot să creeze propriile desene la sfârșitul acestei lecții.",
+          "student_overview": "Și mai multe bucle imbricate! De data aceasta vei putea crea niște desene EXTRAORDINARE cu ajutorul buclelor imbricate."
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "overview": "Funcția este una dintre structurile cu adevărat magnifice din universul științei calculatoarelor. Funcțiile (uneori denumite și proceduri apelate) sunt mini-programe pe care le poți folosi repetat într-un program mai mare. Această lecție îi va ajuta pe elevi să înțeleagă intuitiv de ce este utilă combinarea mai multor fragmente de cod în cadrul unei funcții.",
+          "student_overview": "Chiar și starurile rock trebuie să aibă abilități de programare. Această lecție te va învăța lucruri noi despre funcții cu ajutorul versurilor melodiilor."
+        },
+        "coursee-2021/Functions in Minecraft": {
+          "overview": "În această aventură distractivă și interactivă în Minecraft, elevii vor începe să înțeleagă modul în care funcțiile le sunt utile!",
+          "student_overview": "Știi cum să utilizezi funcțiile pentru a scrie cel mai eficient cod?"
+        },
+        "coursee-2021/Functions in Artist": {
+          "overview": "Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.",
+          "student_overview": "Realizează desene complexe mai ușor cu ajutorul funcțiilor!"
+        },
+        "coursee-2021/Functions in Harvester": {
+          "student_overview": "Funcțiile te vor ajuta să nu depui prea mult efort atunci când o ajuți pe fermieră să strângă recolta!"
+        },
+        "coursee-2021/lesson-1": {
+          "overview": "În această lecție, elevii vor învăța despre accesibilitate și despre importanța empatiei prin brainstorming și prin conceperea de soluții accesibile pentru aplicații ipotetice. "
+        },
+        "coursee-2021/End of Course Project": {
+          "student_overview": "Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!"
+        }
+      }
+    }
+  }
+}

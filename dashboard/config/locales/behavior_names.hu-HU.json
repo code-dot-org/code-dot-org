@@ -5,6 +5,377 @@
         "courseF_extras_sim": {
           "wandering 2": "mászkálás 2",
           "wandering 1": "mászkálás 1"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "Virtual Pet 1_2021": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseE_aboutme_1_2021": {
+          "wobbling": "kalimpálva"
+        },
+        "courseF_apps_aquarium": {
+          "wobbling": "kalimpálva",
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_apps_card": {
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_apps_chatbot": {
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_apps_collector": {
+          "fluttering": "csapkodva",
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_apps_madlib": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_apps_pet": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_editable_card": {
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_editable_chatbot": {
+          "driving with arrow keys": "irányítás nyilakkal"
+        },
+        "courseF_editable_madlib": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_choice_conflict": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_choice_conflict2": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_choice_penguin": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_choice_pufferfish": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_conflict": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_freeplay_air": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_freeplay_animals": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_freeplay_aquatic": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_freeplay_blank": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_freeplay_food": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_freeplay_space": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_events_key": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_practice_reorder": {
+          "wobbling": "kalimpálva",
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_review": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_ship": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_stops": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_events_time": {
+          "wobbling": "kalimpálva",
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_place_fruit": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_clouds": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_desert": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_freeplay_air": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_freeplay_animals": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_freeplay_aquatic": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_freeplay_blank": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_freeplay_food": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_freeplay_space": {
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva"
+        },
+        "courseF_sprites_make": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_moreSprites": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_positioning": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_properties": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_sprites_ship": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_answer": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_color": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_conversation": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_events": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_freeplay": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_interview": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_multiprompt": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_choice_title": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_concat": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_events": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_print": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_prompts": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_text_review": {
+          "fluttering": "csapkodva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_card": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_card_finish": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_chatbot": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_chatbot_finish": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_madlib": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "courseF_variables_madlib_finish": {
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "simcustom_2021": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
         }
       }
     }

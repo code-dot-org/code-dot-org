@@ -217,10 +217,6 @@
       courseF_unplugged_songwritingParameters:
         title: Låtskriving med parametere
         desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen. Funksjoner (noen ganger kalt prosedyrer) er mini-programmer som du kan bruke igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig nyttig praksis.  '
-      swipeRightPassThrough:
-        title: Økt med rekrutteringsscenarier
-      swipeRightPassThrough-test123:
-        title: Økt med rekrutteringsscenarier
       courseB_unplugged_MRF_2018:
         title: Mine robotliknende venner
       PlantASeed_2018:

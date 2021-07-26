@@ -2,6 +2,7 @@ lv:
   data:
     progressions:
       'Artist: Variables': 'Izpildītājs: Mainīgie'
+      Debugging: Atkļūdošana
       Drawing: Zīmējums
       Events: Pasākumi
       For Loops: '"par" cikli'
@@ -11,4 +12,5 @@ lv:
       Pair Programming: Pāru Programmēšana
       Velocity: Ātrums
       Video: Video
+      Warm Up: Iesildīšanās
       Wrap-up: Ietīt

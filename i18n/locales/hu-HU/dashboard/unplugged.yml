@@ -219,14 +219,6 @@ hu:
       courseF_unplugged_songwritingParameters:
         title: Dalszerzés paraméterekkel
         desc: 'A számítógép-tudomány egyik legcsodálatosabb szerkezete a függvény. A függvények (más néven eljárások) egy mini programok, amiket használhatsz újra és újra a nagyobb programodban. Ez a lecke segít a diákoknak intuitív módon megérteni, miért hasznos gyakorlat kódrészleteket függvényekké egyesíteni.  '
-      swipeRightPassThrough:
-        title: Toborzási forgatókönyvek munkamenet
-        desc: "# Toborzási forgatókönyvek munkamenet\\r\n\\r\n## Told jobbra a SZÁMTECHEST-t\\r\nEbben a szakaszban Told jobbra a SZÁMTECHEST-t fogunk játszani, amit az MIT fejlesztett ki. A Told jobbra a SZÁMTECHEST esetében egymás érdeklődési köréről olvastok, és megvizsgáljátok azokat a konkrét állításokat, amelyekkel meggyőzheted a társad, hogy beiratkozzon a számítástechnika alapjai tanfolyamra. \\r\n\\r\n### Hogyan kell játszani\\r\nHa a Told jobbra a SZÁMTECHEST játékot játszod, egy sor idézetet fogsz látni, amelyeket bármelyik tanulónak mondhatsz. Húzd jobbra azokat az idézeteket, amelyekről úgy gondolod, hogy hatékonyan meggyőznék a társaidat a tanfolyamra való beiratkozásra, és balra húzd azokat az állításokat, amelyek nem meggyőzőek. A munkamenet során csoportként megvitatjuk a gondolataidat azokról a típusú állításokról, amelyek a leghatékonyabbak ahhoz, hogy valaki beiratkozzon Számtechre, és lehetőséged nyílik megnézni, hogy a többiek miként mozgatták az állításokat. \\r\n\\r\n\\r\nHa az alábbi folytatásra kattintasz, beküldünk a játékba, és továbbadjuk a Code.org e-mail címet, amellyel bejelentkeztél."
-      swipeRightPassThrough-test123:
-        title: Toborzási forgatókönyvek munkamenet
-        desc: "# Toborzási forgatókönyvek munkamenet\\r\n\\r\n## Told jobbra a SZÁMTECHEST-t\\r\nEbben a szakaszban Told jobbra a SZÁMTECHEST-t fogunk játszani, amit az MIT fejlesztett ki. A Told jobbra a SZÁMTECHEST esetében egymás érdeklődési köréről olvastok, és megvizsgáljátok azokat a konkrét állításokat, amelyekkel meggyőzheted a társad, hogy beiratkozzon a számítástechnika alapjai tanfolyamra. \\r\n\\r\n### Hogyan kell játszani\\r\nHa a Told jobbra a SZÁMTECHEST játékot játszod, egy sor idézetet fogsz látni, amelyeket bármelyik tanulónak mondhatsz. Húzd jobbra azokat az idézeteket, amelyekről úgy gondolod, hogy hatékonyan meggyőznék a társaidat a tanfolyamra való beiratkozásra, és balra húzd azokat az állításokat, amelyek nem meggyőzőek. A munkamenet során csoportként megvitatjuk a gondolataidat azokról a típusú állításokról, amelyek a leghatékonyabbak ahhoz, hogy valaki beiratkozzon Számtechre, és lehetőséged nyílik megnézni, hogy a többiek miként mozgatták az állításokat. \\r\n\\r\n\\r\nHa az alábbi folytatásra kattintasz, beküldünk a játékba, és továbbadjuk a Code.org e-mail címet, amellyel bejelentkeztél."
-      brad-repro-bug-000:
-        title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: A robot barátaim
         desc: Tanulj programozni úgy, hogy kódot írsz barátaid számára!
@@ -342,8 +334,6 @@ hu:
       PaperPlanes_2019:
         title: 'Hétköznapi algoritmusok: Papírrepülők'
         desc: Ebben a leckében az algoritmusok mindennapi életünkben való használatáról szól, konkrétan papír repülőgépek segítségével. Ez a lecke nagyobb képet ad a számítógép-tudományról és arra összpontosít, hogyan játszanak alapvető szerepet a számítástechnikában az algoritmusok.
-      test-uid-passthrough:
-        desc: "# Toborzási forgatókönyvek munkamenet\\r\n\\r\n## Told jobbra a SZÁMTECHEST-t\\r\nEbben a szakaszban Told jobbra a SZÁMTECHEST-t fogunk játszani, amit az MIT fejlesztett ki. A Told jobbra a SZÁMTECHEST esetében egymás érdeklődési köréről olvastok, és megvizsgáljátok azokat a konkrét állításokat, amelyekkel meggyőzheted a társad, hogy beiratkozzon a számítástechnika alapjai tanfolyamra. \\r\n\\r\n### Hogyan kell játszani\\r\nHa a Told jobbra a SZÁMTECHEST játékot játszod, egy sor idézetet fogsz látni, amelyeket bármelyik tanulónak mondhatsz. Húzd jobbra azokat az idézeteket, amelyekről úgy gondolod, hogy hatékonyan meggyőznék a társaidat a tanfolyamra való beiratkozásra, és balra húzd azokat az állításokat, amelyek nem meggyőzőek. A munkamenet során csoportként megvitatjuk a gondolataidat azokról a típusú állításokról, amelyek a leghatékonyabbak ahhoz, hogy valaki beiratkozzon Számtechre, és lehetőséged nyílik megnézni, hogy a többiek miként mozgatták az állításokat. \\rr\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">OKButton következő szint</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\"> Katt ide Told jobbra a SZÁMTECHEST játékhoz!</a>\\r\n\\r\n"
       PlantASeed_2019:
         title: 'Valós algoritmusok: Ültess el egy magot!'
         desc: Ebben a leckében az algoritmusok a mindennapi életünkben betöltött szerepét nézzük meg egy mag elvetésének példáján keresztül. A lecke emellett a számítástechnika nagyobb képét nézi, és hogy az algoritmusok ebben hogy játszanak alapvető szerepet.
@@ -381,6 +371,3 @@ hu:
       timeforcs_demo_conditionals:
         title: Feltételek
         desc: 'Hogy a diákok megtanulják a feltételes nyilatkozatok mibenlétét kártyajátékot játszanak és szabályokat hoznak létre, mint például: "Ha húzok egy piros lapot, én kapok egy pontot", és "Ha fekete lapot húzok, te kapsz egy pontot."'
-      TheRightApp_2019:
-        title: A megfelelő alkalmazás
-        desc: "* Manapság mindenki használ számítógépet, különösen okostelefonokat. \\ r\n* Az okostelefonos alkalmazások vagy az „alkalmazások” segítenek az embereknek olyan dolgokban, mint a barátokkal való beszélgetés, zenehallgatás, vásárlás vagy csak az internet felfedezése.\n* Fontos, hogy a programozók megértsék mások igényeit, és az alkalmazásokat nekik tervezzék!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

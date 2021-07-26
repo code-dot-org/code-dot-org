@@ -19,6 +19,7 @@ mn:
       Games/Score: Тоглоом/Оноо
       Groups: Бүлгүүд
       Input: Оролт
+      Location: Байршил
       Locations: Байрлалууд
       Logic: Логик
       Loops: Гогцоонууд
@@ -29,4 +30,5 @@ mn:
       Text: Текст
       Variables: Хувьсагчууд
       'Variables ': 'Хувьсагчууд '
+      'Variables  ': 'Хувьсагчууд  '
       World: Ертөнц
