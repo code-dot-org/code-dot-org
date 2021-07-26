@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 16:32:45 UTC",
+    "serialized_at": "2021-07-26 21:29:14 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -85,7 +85,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Students access the Java Lab to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.\n",
+        "overview": "Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.\n",
         "preparation": "* Create a verified teacher account on Code.org\n* Create a section for your class on Code.org",
         "student_overview": "You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do."
       },
@@ -1561,7 +1561,7 @@
       "key": "bb5dd3d8-4937-4a66-b2a2-c794e488875e",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work and for students to be able to connect to each other on Code.org, all students need to be in the same section of Code Studio. In order for you to see assessments and answer keys that Code.org provides, you also need to be a [\"verified teacher\"](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform).\n\n**Do This:** Ensure you are registered on Code.org with a [“verified” teacher account](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform).\n* Anyone can create a teacher account on Code.org, which means that we need an extra layer of authorization to allow AP CSA teachers to see assessments, answer keys, and any other materials that students should not be able to access. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n* If you have not attended a 5-day workshop, you can apply to become verified by [filling out this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it may take up to 7 business days to become verified as this is a manual process, so we encourage you to fill out this form as soon as you can. You will receive an email once you are verified.\n* If you do not have a ”verified” teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n* You can either...\n  * Go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5) for a video walkthrough of these steps and more on navigating your Code.org account.\n* Or...\n  * Follow these steps to create a section:\n      1. Navigate to My Dashboard\n      2. Click 'New Section' under 'Classroom Sections'\n      3. Choose 'Email Logins'\n            * If logged on through Google you can choose to sync to your Google Classroom.\n      4. Give your section a name, and choose the most appropriate grade level of students in your class\n      5. Set the course to be \"AP CSA\"\n      6. Set the unit to be \"Unit 1: Object-Oriented Programming?\"\n      7. If you're NOT using Google Classroom: Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n\n\n\n\n\n",
+        "description": "All students need to be in the same section of Code Studio for you to see student work and for students to connect to each other. You also need to be a Verified Teacher to access assessments and answer keys.\n\n**Do This:** Ensure you are registered on Code.org with a Verified Teacher account.\n* Anyone can create a teacher account on Code.org, which means that we need an extra layer of authorization to allow AP CSA teachers to see assessments, answer keys, and any other materials that students should not be able to access. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n* If you have not attended a 5-day workshop, you can apply to become verified by [filling out this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it may take up to 7 business days to become verified as this is a manual process, so we encourage you to fill out this form as soon as you can. You will receive an email once you are verified.\n* If you do not have a Verified Teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n* You can either...\n  * Go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5) for a video walkthrough of these steps and more on navigating your Code.org account.\n* Or...\n  * Follow these steps to create a section:\n      1. Navigate to My Dashboard.\n      2. Click \"New Section\" under \"Classroom Sections\".\n      3. Choose \"Email Logins\".\n           * If logging in using Google, you can choose to sync to your Google Classroom.\n      4. Give your section a name, and choose the most appropriate grade level of students in your class.\n      5. Set the course to be \"AP CSA\".\n      6. Set the unit to be \"Unit 1: Object-Oriented Programming\".\n      7. If you're NOT using Google Classroom: Once the section is created, click the name of the section to show the unique \"Join Link\" for your section.",
         "name": "Before Class"
       },
       "seeding_key": {
@@ -1573,7 +1573,7 @@
       "key": "7ff973d2-a750-4662-b810-ddb527ee47f8",
       "position": 1,
       "properties": {
-        "description": "Today we are going to be introduced to the programming language of Java. This is the language that we will be using in CSA. As you go through the lesson, think about what software engineering values (problem solving, collaboration, creativity, and curiosity) you will use today.",
+        "description": "Today we are going to be introduced to the Java programming language. This is the language that we will be using in CSA. As you go through the lesson, think about what software engineering characteristics – problem solving, collaboration, creativity, and curiosity – you will use today. ",
         "name": "What is Java?",
         "remarks": true
       },
@@ -1586,7 +1586,7 @@
       "key": "fb6de4b3-d519-4817-8855-fa3945f7eb1b",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"What is Java\" video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you name some apps or video games that use Java and were shared in the video? What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.\n\n",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were some of the apps or video games that were shared in the video that use Java?*\n* *What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1603,13 +1603,13 @@
       "key": "2ef60748-1492-4396-a549-c80e92230a67",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking on the right side of the slide, you can see what commands in Java look like. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.",
         "progression_name": "TEST ",
         "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "\nIf class time permits, you can ask students to compare the commands of the languages to the left vs. Java on the right.\n\n"
+            "markdown": "If class time permits, you can ask students to compare the commands of the languages to the left to the Java statements on the right."
           }
         ]
       },
@@ -1622,13 +1622,13 @@
       "key": "e049a429-1bd6-484a-b254-31b24f76bf0d",
       "position": 1,
       "properties": {
-        "description": "NOTE: This will take some time so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a personal email account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Google Classroom account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Clever account.\n* Have students navigate to the course on the home page.\n* From the student's homepage, they should see a \"tile\" for CSA. \n* Click 'View Course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to start Lesson 2.\n",
+        "description": "**NOTE:** This will take some time if your students do not already have Code Studio accounts, so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a personal email account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Google Classroom account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Clever account.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students navigate to the course on the Code.org home page. From the Code.org home page, students should see a tile for CSA.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students click \"View Course,\" then choose Unit 1. Direct students to navigate to Lesson 2.\n",
         "duration": "10",
         "name": "Adding Students to Your Section ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "By default, Code.org sorts alphabetically by first name. You may choose to have students enter their names as Last Name, First Name so that they are displayed alphabetically by last name.\n\nYou can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should also see a small green bar at the top of their page that says 'You've successfully joined.’\n"
+            "markdown": "By default, Code.org sorts alphabetically by first name. You may choose to have students enter their names as Last Name, First Name so that they are displayed alphabetically by last name.\n\nYou can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should also see a small green bar at the top of their page that says \"You've successfully joined.\""
           }
         ]
       },
@@ -1641,7 +1641,7 @@
       "key": "6f7bd5a6-5615-4593-969c-7e87c8ef76c7",
       "position": 2,
       "properties": {
-        "description": "Welcome to The Neighborhood, where we can explore solving problems and create beautiful designs using Java. Let’s start with getting familiar with the platform.",
+        "description": "Welcome to The Neighborhood, where we can explore solving problems and create beautiful designs using Java. Let’s start by getting familiar with the Java Lab environment and The Neighborhood tool.",
         "duration": "10",
         "name": "Exploring The Neighborhood",
         "remarks": true
@@ -1652,203 +1652,215 @@
       }
     },
     {
-      "key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
+      "key": "0d067f5a-5038-42e4-9ed7-fbf0d29ea3dd",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to show students where they will explore the Java IDE. Point out the five main sections: instructions, editor, preview, console, and controls. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students look at the starter code in the editor and run the code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Explain the main sections of Java Lab - the Instructions panel, the Editor, the Preview window, the Console window, and the Run and Test buttons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look at the starter code in the editor and run the program.",
         "progression_name": "Exploring The Neighborhood"
       },
       "seeding_key": {
-        "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
+        "activity_section.key": "0d067f5a-5038-42e4-9ed7-fbf0d29ea3dd",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
+      "key": "3bb18019-8702-4e1a-901a-1aee2b523691",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you run the starter code?*\n\n**Discussion Goal:** This is the first opportunity for students to trace code - a skill that they use throughout the course. Students should talk through the code out loud to demonstrate the tracing process. After running the code, students see the `Painter` move across the screen and paint some squares.  \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program?*\n\n**Discussion Goal:** Students talk through the code out loud to explain how the `Painter` moved and painted some squares."
       },
       "seeding_key": {
-        "activity_section.key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
+        "activity_section.key": "3bb18019-8702-4e1a-901a-1aee2b523691",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "6e35c7fe-60d8-462c-af76-e844baba9ca2",
+      "key": "9f306fbd-bdef-416f-a1a6-9d86fc2cb84d",
       "position": 5,
       "properties": {
-        "description": "Based on the starter code, start making modifications to see what you can do. You can change the current color and have the `Painter` paint one or more squares.\n\n",
+        "description": "Make some modifications to the starter code to see what you can do. You can change the current color and have the `Painter` paint one or more squares.\n\nYou may encounter your first errors as you make changes to the starter code, and that's ok! Compare the code that you write to the code that was given to you and check for missing semicolons, spelling errors, or invalid color names. You can also look at the Color Names resource for paint colors to choose.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "6e35c7fe-60d8-462c-af76-e844baba9ca2",
+        "activity_section.key": "9f306fbd-bdef-416f-a1a6-9d86fc2cb84d",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "75ccfe00-592b-4409-9a0b-52dc420f74c2",
+      "key": "715495f6-09e1-4576-817c-ca92554d0b07",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now modify the code to change the paint color and have the `Painter` move one square.\n\n**Discuss:** *What modifications did you make in the editor? How did that change the output when you ran your code?*\n\n**Discussion Goal:** Make sure that students can make modifications and share with classmates the changes they made in the editor.   ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now modify the code to change the paint color and have the `Painter` move one or more squares.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Allow students to share their modifications with the class. You can show some modifications that you have made to the class."
+            "markdown": "Refer students to the Color Names resource for ideas about what color names they can use.\n\nSince this is the first time students write code, they will likely encounter their first error messages as well. Have students compare their modifications to the code that was provided and check that each statement ends with a semicolon, spelling errors, or invalid color names."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "75ccfe00-592b-4409-9a0b-52dc420f74c2",
+        "activity_section.key": "715495f6-09e1-4576-817c-ca92554d0b07",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "dea8cb65-11c3-4ac3-aff0-d9dac8c83638",
+      "key": "cad944cd-119a-44d2-ac46-1cdb629fb880",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Welcome to The Neighborhood\" video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What feature did you use to make modifications to your code? What does compile mean? How does the “run” button compile the code?*\n\n**Discussion Goal:** Students discuss the code editor feature used to make changes to their code. Students define the word compile. Students make the connection of using the “run” button to compile their code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Objects and Classes video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class? What is an object? What Is the relationship between the two?*\n\n**Discussion Goal:** Students summarize the definition of a class and object, based on the video’s definition. Students discuss the ‘instance of’ relationship between a class and object. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What modifications did you make in the editor?*\n* *How did that change the output when you ran your code?*\n\n**Discussion Goal:** Students share the modifications they made, such as changing the color and moving forward. Students share what the `Painter` did as a result of the modifications they made.   ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may also share issues they encountered trying to modify the code. Point out common errors, such as forgetting the semicolon at the end of each statement, putting the color name in quotes, spelling or capitalization errors, and invalid color names. Students may also get a `\"There is no more paint in the painter's bucket\"` error if they did not pick up enough paint from the bucket. Point out the purpose of the `takePaint()` method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cad944cd-119a-44d2-ac46-1cdb629fb880",
+        "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
+      }
+    },
+    {
+      "key": "57104c47-f420-49dd-9271-370ae3d82c57",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Welcome to The Neighborhood video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What feature did you use to make modifications to your code?*\n* *What does compile mean?*\n* *What is the relationship between the Run button and compiling the code?*\n\n**Discussion Goal:** Students discuss using the Editor window to make changes to their code and share what it means to compile. Students make the connection between using the Run button and compiling their code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Objects and Classes video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is a class?*\n* *What is an object?*\n* *What is the relationship between the two?*\n\n**Discussion Goal:** Students recap the definitions of class and object from the video. Students explain the relationship between a class and object as an object being an instance of a class.",
         "duration": "15",
         "name": "Classes and Objects"
       },
       "seeding_key": {
-        "activity_section.key": "dea8cb65-11c3-4ac3-aff0-d9dac8c83638",
+        "activity_section.key": "57104c47-f420-49dd-9271-370ae3d82c57",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "6f9deff1-0714-4306-9ee0-6122956ee7ab",
-      "position": 8,
+      "key": "ed165f83-65f6-4502-8f86-eed948a20fb1",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\nFormally, an object is \"an instance\" of the class. An object can know things and do things. \n\nWhen we say “an instance” we mean that it is a copy of the class with a unique set of information. Without the class, you can not create an object.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When software engineers talk about objects and classes, they say an object is an instance of the class. An object has attributes and behaviors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> An instance of a class means that it is a copy of the class with its own unique set of information. Without the class, you cannot create an object.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "6f9deff1-0714-4306-9ee0-6122956ee7ab",
+        "activity_section.key": "ed165f83-65f6-4502-8f86-eed948a20fb1",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "5fdfdc33-524e-4ab7-ab89-3f984be35aee",
-      "position": 9,
+      "key": "4d7b2824-624c-46cb-b0aa-42db5bc867cb",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What examples could represent a class and object?*\n\n**Discussion Goal:** Students make connections to real-world examples. Students can identify a class and object they could create for future use. When presenting examples, have students explain the relationship between the class and the object. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of the relationship between a class and object?*\n\n**Discussion Goal:** Students share real-world examples of a class and objects that can be created from the class. Students identify attributes and behaviors that would be defined in the class and examples of specific information that would be used to create the object.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Some examples: \n* A t-shirt class that explains how to create unique t-shirt objects. \n* A car class could include red sedans or blue trucks.\n* A notebook class that explains how to create unique notebooks for your different courses.\n* A cookie-cutter class that explains how to make cookie objects that can be unique with different toppings.\n"
+            "markdown": "Some examples: \n* A t-shirt class that outlines how to create unique t-shirt objects. \n* A car class that outlines how to create unique cars for different drivers.\n* A notebook class that outlines how to create unique notebooks for different courses.\n* A cookie-cutter class that outlines how to make cookie objects that can be unique with different toppings."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5fdfdc33-524e-4ab7-ab89-3f984be35aee",
+        "activity_section.key": "4d7b2824-624c-46cb-b0aa-42db5bc867cb",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. \n\n* Walk students through the starter code to identify the class. Have students run the code without the object.\n* Have students create a `Painter` object and run the program again. Make sure students can identify:\n    * The class name\n    * The object name \n",
-        "progression_name": "Investigate the Painter"
-      },
-      "seeding_key": {
-        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
-        "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
-      }
-    },
-    {
-      "key": "a068be3d-7d02-437d-a724-662b208f192d",
+      "key": "13138459-80d1-42f0-aa1b-03a0522411a6",
       "position": 11,
       "properties": {
-        "description": "Remember that you cannot create an object without a class. There is a relationship between the two.  \n\nWhen I say, “No”, you say “class”\n\nWhen I say, “No”, you say “object”\n\n“No” \\_\\_\\_\\_,  repeat, “No” \\_\\_\\_\\_\\_\n\n“No” \\_\\_\\_\\_,  repeat, “No” \\_\\_\\_\\_\\_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window.",
+        "progression_name": "Investigate the Painter",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Deconstruct an error message to help students identify how these can be used to identify the specific error. Identify:\n* The line number\n* The specific message\n\nFor this example, students see the error message `\"cannot find symbol\"` and that the error message is referring to variable `art`. Explain to students that this means Java does not know what the variable `art` is."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13138459-80d1-42f0-aa1b-03a0522411a6",
+        "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
+      }
+    },
+    {
+      "key": "00486900-f8a9-45cf-a730-a3357a55a863",
+      "position": 12,
+      "properties": {
+        "description": "In the starter code, there is a comment to tell you what to do to the code. Comments start with two slashes and do not affect the way the code runs. In Java Lab, you will see comments to tell you what to do and where to write your code to complete the task. They start with the two slashes and the words TO DO, followed by the instruction. You should add your code below the line containing the comment.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "00486900-f8a9-45cf-a730-a3357a55a863",
+        "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
+      }
+    },
+    {
+      "key": "2fd3865f-dced-4e89-89e2-2dea868aa2db",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Return students to Level 2 on Code Studio to create the missing `Painter` object where specified in the starter code and run the code again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution. Have students identify the class name and the object name."
+      },
+      "seeding_key": {
+        "activity_section.key": "2fd3865f-dced-4e89-89e2-2dea868aa2db",
+        "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
+      }
+    },
+    {
+      "key": "e5f08458-b7d0-4522-8609-ed0f23ec921d",
+      "position": 14,
+      "properties": {
+        "description": "You cannot create an object without a class. There is a relationship between the two.  \n\nWhen I say, “No”, you say “class”.\n\nWhen I say, “No”, you say “object”.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, “No” _____\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, “No” _____",
         "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Implement the Call and Response: No Class, No Object to reinforce the relationship between a class and object. \n"
+            "markdown": "Implement the Call and Response: No Class, No Object to reinforce the relationship between a class and object."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a068be3d-7d02-437d-a724-662b208f192d",
+        "activity_section.key": "e5f08458-b7d0-4522-8609-ed0f23ec921d",
         "lesson_activity.key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2"
       }
     },
     {
-      "key": "e9bd1769-fac5-41b4-917c-c9a41c798439",
+      "key": "35abfbbc-983e-49d2-a92d-f60326cbe4d6",
       "position": 1,
       "properties": {
-        "description": "Java is a programming language used to create software, apps, and video games. Let's review some key vocabulary.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Describe an object.*\n* *Describe a class.*\n* *Which of your software engineering characteristics did you use today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students share which software engineering characteristics they used today.",
+        "name": "Classes and Objects"
       },
       "seeding_key": {
-        "activity_section.key": "e9bd1769-fac5-41b4-917c-c9a41c798439",
+        "activity_section.key": "35abfbbc-983e-49d2-a92d-f60326cbe4d6",
         "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
       }
     },
     {
-      "key": "532e4835-4799-46c3-ab2e-84837bd39842",
+      "key": "c22b38b1-eeb6-4e4c-9d11-00887b9565f7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You may not want to read the vocabulary to students, but have it displayed so they can read the class and object definition before class is dismissed."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "532e4835-4799-46c3-ab2e-84837bd39842",
-        "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
-      }
-    },
-    {
-      "key": "2320fb2a-b15a-4f84-b7b3-27c5eceaa726",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe an object. Describe a class. How did you use the following software engineering values today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students look back at the software engineering values to determine which value they identified with today.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Instruct students to share with a partner. If time allows, open the discussion up to the whole class.  "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2320fb2a-b15a-4f84-b7b3-27c5eceaa726",
-        "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
-      }
-    },
-    {
-      "key": "7d38f7e1-a9bc-4d93-81ed-657ec4c80190",
-      "position": 4,
-      "properties": {
-        "description": "Looking ahead, classes and objects will be essential as you continue to build your `Painter` class. \n\n“No” \\_\\_\\_\\_, repeat, “No” \\_\\_\\_\\_\\_\n\n“No” \\_\\_\\_\\_, repeat, “No” \\_\\_\\_\\_\\_",
+        "description": "Looking ahead, classes and objects will be essential as you continue to build your `Painter` class. So remember...\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "7d38f7e1-a9bc-4d93-81ed-657ec4c80190",
+        "activity_section.key": "c22b38b1-eeb6-4e4c-9d11-00887b9565f7",
         "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
       }
     },
     {
-      "key": "0ce751a9-59a2-412a-8f40-3797d1b139b4",
-      "position": 5,
+      "key": "c0b38bbe-e1f2-4d11-b539-663f4fd03acd",
+      "position": 3,
       "properties": {
-        "description": "---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "0ce751a9-59a2-412a-8f40-3797d1b139b4",
+        "activity_section.key": "c0b38bbe-e1f2-4d11-b539-663f4fd03acd",
         "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
       }
     },
     {
       "key": "78af1614-1425-4640-a087-1c3aa1abaab8",
-      "position": 6,
+      "position": 4,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n",
         "name": "Assessment: Check For Understanding",
         "progression_name": "Check For Understanding"
       },
@@ -4945,9 +4957,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L2-L1"
-        ],
         "progression": "Exploring The Neighborhood"
       },
       "named_level": false,
@@ -4959,7 +4968,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b"
+        "activity_section.key": "0d067f5a-5038-42e4-9ed7-fbf0d29ea3dd"
       },
       "level_keys": [
         "CSA U1L2-L1"
@@ -4971,9 +4980,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L2-L2"
-        ],
         "progression": "Investigate the Painter"
       },
       "named_level": false,
@@ -4985,7 +4991,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+        "activity_section.key": "13138459-80d1-42f0-aa1b-03a0522411a6"
       },
       "level_keys": [
         "CSA U1L2-L2"
@@ -6900,7 +6906,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b"
+        "activity_section.key": "0d067f5a-5038-42e4-9ed7-fbf0d29ea3dd"
       }
     },
     {
@@ -6912,7 +6918,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762"
+        "activity_section.key": "13138459-80d1-42f0-aa1b-03a0522411a6"
       }
     },
     {
@@ -8109,6 +8115,18 @@
       }
     },
     {
+      "name": "Color Names",
+      "url": "https://www.w3schools.com/cssref/css_colors.asp",
+      "key": "color_names",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "color_names"
+      }
+    },
+    {
       "name": "Create Your Stamp",
       "url": "https://docs.google.com/document/d/14Dfvbwje3LDMkc83wSBElT-VK3zVu1ImH7RzJab0k9s/edit?usp=sharing",
       "key": "create_your_stamp",
@@ -8842,6 +8860,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "color_names"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
       }
     },
@@ -9034,7 +9058,7 @@
     {
       "key": "object",
       "word": "Object",
-      "definition": "Created from a class; can know things and do things",
+      "definition": "An instance of a class",
       "properties": {
       },
       "seeding_key": {
@@ -9059,6 +9083,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "compile"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "object_oriented_programming",
+      "word": "Object-Oriented Programming",
+      "definition": "An approach to creating and using models of physical or imagined objects",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object_oriented_programming"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that an object can perform",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -9265,6 +9319,24 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "compile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "object_oriented_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "behavior"
       }
     },
     {
