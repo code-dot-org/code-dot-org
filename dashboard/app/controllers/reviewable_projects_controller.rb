@@ -24,6 +24,12 @@ class ReviewableProjectsController < ApplicationController
   end
 
   # GET /reviewable_projects/reviewable_status
+  #
+  # Returns an object describing the reviewable status of the associated student project, containing:
+  #
+  # reviewEnabled (true/false): whether the project has peer review enabled
+  # canMarkReviewable (true/false): whether the current user can mark the project ready/not ready for review
+  # id (int): ID of the reviewable project if peer review is enabled. Not supplied if canMarkReviewable is false
   def reviewable_status
     @reviewable_project = ReviewableProject.where(
       user_id: @project_owner.id,
