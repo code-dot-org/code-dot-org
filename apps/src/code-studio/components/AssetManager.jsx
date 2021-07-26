@@ -44,7 +44,10 @@ function getErrorMessage(status) {
 }
 
 /**
- * A component for managing hosted assets.
+ * A component for managing hosted assets. If utilizing this shared component,
+ * verify the ImagePicker has access to the correct fields in your redux store,
+ * namely level.name and level.isStartMode. Otherwise, the files will not be
+ * saved to S3 or retrieved and displayed.
  */
 export default class AssetManager extends React.Component {
   static propTypes = {
