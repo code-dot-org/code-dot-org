@@ -1391,11 +1391,10 @@ FactoryGirl.define do
   end
 
   factory :reviewable_project do
+    sequence(:storage_app_id)
     association :user, factory: :student
     association :level
     association :script
-
-    storage_app_id 1
   end
 
   factory :teacher_score do
