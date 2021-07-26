@@ -59,7 +59,7 @@ class CodeReviewCommentsController < ApplicationController
 
     # Keep teacher comments private between project owner and teacher.
     unless @project_owner.student_of?(current_user) || @project_owner == current_user
-      @project_comments = @project_comments.reject {|comment| comment.commenter.teacher?}
+      @project_comments = @project_comments.reject {|comment| !!comment.is_from_teacher}
     end
 
     serialized_comments = @project_comments.map {|comment| serialize(comment)}
