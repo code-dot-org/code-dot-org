@@ -8,6 +8,9 @@ export default class SpriteManagementDirectory extends React.Component {
         <h3>
           <a href="/sprites/sprite_upload">Upload New Sprites</a>
         </h3>
+        <h3>
+          <a href="/sprites/default_sprites_editor">Edit Default Sprites</a>
+        </h3>
       </div>
     );
   }
