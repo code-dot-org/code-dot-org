@@ -19,30 +19,34 @@ export default class CommitDialog extends React.Component {
     let compileStatusContent = '';
     let commitText = 'Commit';
     let isDisabled = true;
+    let showCompileStatus = false;
     if (this.state.commitNotes) {
       isDisabled = false;
     }
     if (this.state.filesToBackpack.length > 0) {
       commitText = 'Commit & Save';
+      showCompileStatus = true;
     }
-    switch (this.props.compileStatus) {
-      case CompileStatus.LOADING:
-        compileStatusContent = i18n.compiling();
-        break;
-      case CompileStatus.SUCCESS:
-        compileStatusContent = [
-          <FontAwesome
-            key="icon"
-            icon="check-circle"
-            className="fa-2x"
-            style={styles.iconSuccess}
-          />,
-          <span key="text">{i18n.allFilesCompile()}</span>
-        ];
-        break;
-      case CompileStatus.ERROR:
-        compileStatusContent = i18n.compileFailed();
-        break;
+    if (showCompileStatus) {
+      switch (this.props.compileStatus) {
+        case CompileStatus.LOADING:
+          compileStatusContent = i18n.compiling();
+          break;
+        case CompileStatus.SUCCESS:
+          compileStatusContent = [
+            <FontAwesome
+              key="icon"
+              icon="check-circle"
+              className="fa-2x"
+              style={styles.iconSuccess}
+            />,
+            <span key="text">{i18n.allFilesCompile()}</span>
+          ];
+          break;
+        case CompileStatus.ERROR:
+          compileStatusContent = i18n.compileFailed();
+          break;
+      }
     }
 
     return [
