@@ -43,7 +43,7 @@ export default class BackpackClientApi {
         filename,
         fileContents,
         // onError: retry first failure, then call onError method on second failure
-        () =>
+        _ =>
           this.writeSingleFileToBackpack(
             filename,
             fileContents,
