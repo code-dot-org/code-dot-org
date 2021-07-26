@@ -108,7 +108,7 @@ const styles = {
     fontSize: 15,
     width: 140,
     backgroundColor: color.white,
-    borderColor: color.white,
+    borderColor: color.dark_charcoal,
     color: color.dark_charcoal,
     fontFamily: '"Gotham 5r"',
     padding: '5px 12px',
