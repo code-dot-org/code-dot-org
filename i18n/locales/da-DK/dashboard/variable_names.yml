@@ -5,6 +5,9 @@ da:
       Green: Grøn
       Red: Rød
       actor: spiller
+      age: alder
+      answer: svar
+      binary: binære
       cats: katte
       color: farve
       counter: tæller
@@ -24,5 +27,6 @@ da:
       size: størrelse
       speed: hastighed
       variable: variabel
+      width: bredde
       wizard: troldmand
       x: x

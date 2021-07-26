@@ -1,0 +1,86 @@
+{
+  "ka-GE": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "ცვლადი"
+        },
+        "input/coursef/2021": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "internet/coursef/2021": {
+          "word": "ინტერნეტი"
+        },
+        "define/coursef/2021": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/courseb/2021": {
+          "word": "გამართვა"
+        },
+        "programming/courseb/2021": {
+          "word": "პროგრამირება"
+        },
+        "debugging/coursea/2021": {
+          "word": "გამართვა"
+        },
+        "programming/coursea/2021": {
+          "word": "პროგრამირება"
+        },
+        "debugging/coursec/2021": {
+          "word": "გამართვა"
+        },
+        "programming/coursec/2021": {
+          "word": "პროგრამირება"
+        },
+        "binary/coursec/2021": {
+          "word": "ორობითი"
+        },
+        "debugging/coursed/2021": {
+          "word": "გამართვა"
+        },
+        "programming/coursed/2021": {
+          "word": "პროგრამირება"
+        },
+        "conditionals/coursed/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "debugging/express/2021": {
+          "word": "გამართვა"
+        },
+        "programming/express/2021": {
+          "word": "პროგრამირება"
+        },
+        "conditionals/express/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "function/express/2021": {
+          "word": "ფუნქცია"
+        },
+        "variable/express/2021": {
+          "word": "ცვლადი"
+        },
+        "define/express/2021": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/pre-express/2021": {
+          "word": "გამართვა"
+        },
+        "programming/pre-express/2021": {
+          "word": "პროგრამირება"
+        },
+        "copyright/coursee/2021": {
+          "word": "საავტორო უფლება"
+        },
+        "function/coursee/2021": {
+          "word": "ფუნქცია"
+        },
+        "conditionals/coursee/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "define/coursee/2021": {
+          "word": "განსაზღვრეთ"
+        }
+      }
+    }
+  }
+}

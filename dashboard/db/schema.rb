@@ -274,7 +274,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_193724) do
 
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
-    t.string "project_version", null: false
+    t.string "project_version"
     t.integer "commenter_id", null: false
     t.text "comment", limit: 16777215
     t.integer "project_owner_id"
@@ -1252,7 +1252,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_193724) do
     t.boolean "allow_joining_via_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_pilots_on_name"
+    t.index ["name"], name: "index_pilots_on_name", unique: true
   end
 
   create_table "plc_course_units", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

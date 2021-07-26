@@ -238,6 +238,7 @@ sl:
       about_contact: "Kontaktirajte nas"
       about_faqs: "Pogosta vprašanja"
       learn: "Učenje"
+      stats: "Pokaži statistiko"
       help_us: "Pomagaj nam"
       teach: "Predavaj"
       about: "O programu"
@@ -303,6 +304,7 @@ sl:
       section: 'Razdelek'
       example: 'Primer rešitve'
       example_with_number: 'Primer rešitve %{solution_number}'
+      last_updated: 'Nazadnje posodobljeno:'
       worked_with: 'Delal z'
       update_lock_settings: 'Posodobite nastavitve zaklepanja tukaj.'
   user:
@@ -318,6 +320,7 @@ sl:
     delete_confirm: 'Ali ste prepričani, da želite izbrisati svoj račun?'
     update_email: "Posodobi"
     parent_guardian_email_label: "Elektronska pošta staršev/skrbnikov"
+    remove_parent_email_label: "Odstrani"
   user_level:
     completed: 'Zaključeno'
     tried: 'Poskus'
@@ -486,6 +489,8 @@ sl:
       audience: "Starost 4+"
     unplugged_conditionals:
       title: "Pogoji"
+    widgets:
+      audience: "Starost 14+"
   landing:
     report_bug: "Sporoči napako"
     support: "Pomoč"

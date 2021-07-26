@@ -431,6 +431,8 @@ he:
         C4_unplugged_forloops: בשביל לולאות
         C4_unplugged_parameters: כתיבת שירים
         C4_unplugged_binary: בינארי
+        CSF_debugging_k1_blocks: מציאת טעויות
+        CSF_debugging_text_blocks: מציאת טעויות
         CSF_maze_intro_k1_blocks: מבוא לסטודיו קוד
         CSF_maze_intro_text_blocks: מבוא לסטודיו קוד
         CSF_my_robotic_friends: חברי הרובוטיים
@@ -467,11 +469,14 @@ he:
         hoc_dance_congrats: מסיבת ריקודים - תתחילו לחגוג!
         csd_pair_programming: תכנות בזוגות
         csd_applab_parameters: פונקציות ופרמטרים
+        csd_debugging: מציאת טעויות
         hoc_dance_congrats_2019: מסיבת ריקודים 2019 - תתחילו לחגוג!
         hoc_dance_warmup_2019: מסיבת ריקודים 2019 - חימום
         hoc_dance_events_2019: מסיבת ריקודים - אירועים
         hoc_dance_measures_2019: מסיבת ריקודים - תיבות
         hoc_dance_properties_2019: מסיבת ריקודים - מאפיינים
+        playlab_2021: מבוא למעבדת הצעצועים
+        playlab_2021_reader: מבוא למעבדת הצעצועים
     callout:
       text:
         run: לחצו על "התחל" כדי לנסות את התוכנית שלכם

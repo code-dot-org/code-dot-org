@@ -135,17 +135,17 @@ class AdminSearchControllerTest < ActionController::TestCase
   test 'admin can create pilot' do
     post :create_pilot, params: {
       pilot: {
-        name: 'test-pilot-1',
-        display_name: 'Test Pilot 1',
+        name: 'test-pilot-2',
+        display_name: 'Test Pilot 2',
         allow_joining_via_url: true
       }
     }
     assert_response :redirect
 
-    pilot = Pilot.find_by(name: 'test-pilot-1')
+    pilot = Pilot.find_by(name: 'test-pilot-2')
     assert pilot
-    assert_equal 'test-pilot-1', pilot.name
-    assert_equal 'Test Pilot 1', pilot.display_name
+    assert_equal 'test-pilot-2', pilot.name
+    assert_equal 'Test Pilot 2', pilot.display_name
     assert_equal true, pilot.allow_joining_via_url
   end
 

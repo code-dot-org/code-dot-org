@@ -189,7 +189,11 @@ hu-HU:
   learn_online: Megpróbáljon ki  más online tanfolyamokat
   learn_classes: Találjon helyi osztályokat
   learn_back_to_minecraft: Folytasd a tanulást a Minecrafttal
+  hoc_is_here: Tanuljon meg programozni. És minden megváltozik. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: 'Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg'
+  just_did_course1: Épp most csináltam végig a 1. tanfolyamot - nézd meg! @codeorg
+  just_did_course2: Épp most csináltam végig a 2. tanfolyamot - nézd meg! @codeorg
+  just_did_course3: Épp most csináltam végig a 3. tanfolyamot - nézd meg! @codeorg
   just_did_course4: Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg
   just_did_coursea: Épp most fejeztem be az A tanfolyamot - nézd meg! @codeorg
   just_did_courseb: Épp most fejeztem be a B tanfolyamot - nézd meg! @codeorg
@@ -197,6 +201,8 @@ hu-HU:
   just_did_coursed: Épp most fejeztem be a D tanfolyamot - nézd meg! @codeorg
   just_did_coursee: Épp most fejeztem be az E tanfolyamot - nézd meg! @codeorg
   just_did_coursef: Épp most fejeztem be az F tanfolyamot - nézd meg! @codeorg
+  just_did_hoc_donor: 'Épp csináltam a #HourOfCode-ot - nézd meg! (Köszönjük %{donor_twitter}
+    a @codeorg támogatását)'
   twitter_teach_cs: 10-ből 9 ember szerint már az általános iskolában el kellene kezdeni
     az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   learn_hoc: Ismerd meg a Kódolás Óráját
@@ -349,6 +355,8 @@ hu-HU:
   homepage_header_donors: A Code.org megköszöni a támogatókat
   homepage_donors_seall: Összes megtekintése
   homepage_donors_donate: Adományozz
+  homepage_below_hero_announcement_text: Törődünk az adataid védelmével, és néhány
+    frissítést végezünk az adatvédelmi irányelvünkben, mely május 25-től hatályos.
   homepage_below_hero_announcement_link_text: Tudj meg többet
   contact_form_topic_student: Diák vagyok
   contact_form_topic_parent: Szülő vagyok
@@ -431,6 +439,7 @@ hu-HU:
     túl a Microsoft Store-ban'
   sports_title: Kódold le a saját sportjátékodat
   sports_watch_video: Nézd meg a videót!
+  sports_basketball_title: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
   sports_all_sports_title: Kombinálj össze különböző sportágakat
   sports_athlete_Sarah: Sarah Quita Offringa, szörf bajnok
   sports_athlete_Marcelo: Marcelo, foci bajnok, a Real Madrid és a Brazil Nemzeti
@@ -602,6 +611,7 @@ hu-HU:
   dashboard_k5_courses: 20 órás tanfolyamok alsó tagozatosoknak
   dashboard_middle_courses: 20 órás tanfolyamok felső tagozatosoknak
   dashboard_high_courses: Éves középiskolás tanfolyamok
+  dashboard_course_csina: A számítógépes-tudomány az algebrában
   dashboard_course_csina_desc: A Code.org partner kapcsolatban áll a a Bootstrap-al,
     amely kidolgozott egy tantervet, amely megtanítja az algebrai és geomertiai fogalmakat
     a számítógépes programozásban.
@@ -632,9 +642,11 @@ hu-HU:
   dashboard_navigation_section_speakers: Számítógép-tudomány <br/> vendég előadók
   dashboard_navigation_all_sections: Diákok fiókja és haladása
   dashboard_navigation_view_progress: Előmenetel
+  dashboard_navigation_view_assessments: Felmérők
   dashboard_navigation_add_students: Diákok hozzáadása
   dashboard_navigation_manage_students: Diákok kezelése
   dashboard_navigation_lesson_plans_resources: Tantervi követelmények
+  dashboard_navigation_view_stats: statisztikák
   dashboard_navigation_section: 'Szekció: %{section_name}'
   dashboard_navigation_student: 'Diák: %{student_name}'
   dashboard_progress_not_started: el nem kezdett
@@ -644,6 +656,7 @@ hu-HU:
   dashboard_progress_completed_perfect: elkészült, tökéletes
   dashboard_progress_furthest_level_attempted: a legmagasabb szint megpróbálva
   dashboard_progress_submitted: elküldve
+  dashboard_progress_pair_programming: páros programozás
   dashboard_sections_new_section: Új csoport
   dashboard_sections_jumbotron_instruction: Hozz létre új csoportokat és adj hozzá
     diákokat. Csoportok használatával a diákokat kisebb egységekbe szervezheted, így
@@ -704,6 +717,8 @@ hu-HU:
   dashboard_students_total_lines: Kódsorok
   dashboard_students_share_section: 'Oszd meg a diákjaiddal ennek a szekciónak a belépési
     oldalát:'
+  dashboard_students_share_section_secondary: 'Válaszlehetőségként, oszd meg a diákjaiddal
+    ennek a szekciónak a belépési oldalát:'
   dashboard_students_print_info: Nyomtasd ki a diákjaid belépési adatait tartalmazó
     kártyákat.
   dashboard_students_secret_picture_title: Titkos kép
@@ -724,6 +739,7 @@ hu-HU:
     létrehozni nekik a hozzáféréseket, akkor állítsd a szekció titkosítási típusát
     <b>szó</b> vagy <b>kép</b> típusúra.
   dashboard_students_print_page: Nyomtasd ki ezt az oldalt
+  dashboard_students_signin_card: Látogass el %{join_url} és írd be %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Kattints
     ide</a> az adatkezelési dokumentumhoz, amit kinyomtathatsz a diákoknak, vagy megoszthatsz
@@ -893,13 +909,18 @@ hu-HU:
   course4_name: 4. tanfolyam
   accelerated_name: Gyorsított tanfolyam
   20-hour_name: Gyorsított tanfolyam
+  gumball_name: Gumball csodálatos világa
   classicmaze_name: Hagyományos labirintus
   iceage_name: Jégkorszak
   minecraft_name: Minecraft
   applab_name: App Lab
   gamelab_name: Játék Labor
+  basketball_name: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
   sports_name: Kódold le a saját sportjátékodat
   applab_gradelevel: 13 éves kor felett
+  applab_shortdescription_congrats: Az App Lab egy programozási környezet egyszerű
+    alkalmazásokra. Tervezd meg, kódolj blokkokkal vagy JavaScript-el, hogy működjön,
+    majd oszd meg másodpercek alatt
   codeorg_gradelevel: 4-től 104 éves korig
   codeintl_gradelevel: 4-től 104 éves korig
   khan_gradelevel: Felső tagozattól felfelé
@@ -953,16 +974,36 @@ hu-HU:
   course2_gradelevel: 6-tól 18 éves korig
   course3_gradelevel: 8-tól 18 éves korig
   course4_gradelevel: 10-től 18 éves korig
+  coursea_gradelevel: 4-től 7 éves korig
+  courseb_gradelevel: 5-tól 8 éves korig
+  coursec_gradelevel: 6-tól 10 éves korig
   coursed_gradelevel: 8+ évfolyam
   coursee_gradelevel: 8-tól 12 éves korig
+  coursef_gradelevel: 9-től 13 éves korig
+  coursea-2017_gradelevel: 4-től 7 éves korig
+  courseb-2017_gradelevel: 5-tól 8 éves korig
+  coursec-2017_gradelevel: 6-tól 10 éves korig
   coursed-2017_gradelevel: 8+ évfolyam
   coursee-2017_gradelevel: 8-tól 12 éves korig
+  coursef-2017_gradelevel: 9-től 13 éves korig
+  coursea-2018_gradelevel: 4-től 7 éves korig
+  courseb-2018_gradelevel: 5-tól 8 éves korig
+  coursec-2018_gradelevel: 6-tól 10 éves korig
   coursed-2018_gradelevel: 8+ évfolyam
   coursee-2018_gradelevel: 8-tól 12 éves korig
+  coursef-2018_gradelevel: 9-től 13 éves korig
+  coursea-2019_gradelevel: 4-től 7 éves korig
+  courseb-2019_gradelevel: 5-tól 8 éves korig
+  coursec-2019_gradelevel: 6-tól 10 éves korig
   coursed-2019_gradelevel: 8+ évfolyam
   coursee-2019_gradelevel: 8-tól 12 éves korig
+  coursef-2019_gradelevel: 9-től 13 éves korig
+  coursea-2020_gradelevel: 4-től 7 éves korig
+  courseb-2020_gradelevel: 5-tól 8 éves korig
+  coursec-2020_gradelevel: 6-tól 10 éves korig
   coursed-2020_gradelevel: 8+ évfolyam
   coursee-2020_gradelevel: 8-tól 12 éves korig
+  coursef-2020_gradelevel: 9-től 13 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1204,6 +1245,11 @@ hu-HU:
     egy sor játszható és megosztható appot. Az egyszerű bemutatók lehetővé teszik,
     hogy akár kicsi gyerekek is elkészíthessenek egy igazi JavaScipt programot. Minél
     többet tudsz, annál messzebb juthatsz.
+  makeschool_longdescription: Tanulj meg programozni iPhone játék készítése közben,
+    egy vadonatúj, kezdőknek is egyszerű programozási nyelv, a Swift használatával.
+    Készíts egy Pokemon-szerű akciójátékot és írd meg a kódot, amivel új mozgásokra
+    taníthatod a szörnyedet. Ahhoz hogy a szörnyed nyerhessen, meg kell tanulnod a
+    változók, metódusok és objektumok használatát!
   touchdevelop_longdescription: 'Az érintésbarát szerkesztő végigvezet majd a pixel
     alkotások elkészítésén, a medve puzzle megoldásán , vagy a saját ugrálós-madár
     játék megvalósításán. '
@@ -1563,6 +1609,7 @@ hu-HU:
   sphero_beyond_longdescription: Akár oktató vagy akár szülő, az SPRK órák egy szórakoztató
     gyorstalpalót jelentenek a gyerekeknek a robotok programozásával, a matematikai
     és tudományos képzettségük fejlesztése közben.
+  compatibility_hide_this_warning: Figyelmen kívül hagyom
   flappy_shortcode: csapj
   header_home: Főmenü
   header_my_dashboard: Vezérlőpult
@@ -1593,6 +1640,7 @@ hu-HU:
   header_about_faqs: GYIK
   header_learn: Tanulj
   header_teach: Taníts
+  header_stats: statisztikák
   header_help_us: Támogass minket
   header_about: Rólunk
   header_teacher_community: Tanári közösség
@@ -1617,9 +1665,16 @@ hu-HU:
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Nézd meg az összes projektet...
+  user_header_view_project_gallery: Projekt galéria megtekintése
   user_header_view_my_projects: Projektjeim megtekintése
   view_all_sections: Minden csoport megtekintése
   signing_in: Bejelentkezés
+  sign_in_instruct_website: 'Látogass el: %{code_org_url}.'
+  sign_in_instruct_code: 'Add meg a csoport kódjukat: %{section_code}.'
+  sign_in_overview_cards: A diákok megtalálhatják az összes információt, beleértve
+    a titkosítást %{secret} -et, az alábbi bejelentkezési kártyákon.
+  joining_section_instruct_code: 'Keresse meg a %{code_org_url} nevet, és írja be
+    a szekció kódját: %{section_code}.'
   applab_tile_start_tutorial: Kezdés
   applab_tile_teacher_guide: Oktatói útmutató megtekintése
   aquatic_name: 'Minecraft: Tengeri utazás'
@@ -1697,6 +1752,8 @@ hu-HU:
   hoc2018_mc_minecraft_education: Minecraft oktatás
   hoc2018_mc_continue_learning: Folytasd a tanulást a Minecraft-tal.
   hoc2018_mc_go_to_mc_education: Irány a Minecraft oktatás
+  hoc2018_mc_short_description_shorter: A Minecraft egy vadonatúj programmal tér vissza
+    a Kódolás Órájára.
   hoc2018_mc_journey: Utazás a Minecraft világában kóddal.
   hoc2018_dance_party_main_heading: Táncos buli
   hoc2018_dance_create_your_own_dance_title: Hozd létre saját táncos bulidat
@@ -1719,6 +1776,7 @@ hu-HU:
   hoc2018_dance_amazon_about_future_engineer_button: Tudj meg többet
   hoc2018_dance_measure: Ütem
   hoc2018_dance_measure_colon: 'Ütem:'
+  page_not_found_title: Az oldal nem található
   hoc2018_mc_thank_microsoft: Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk
     és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
     számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.
@@ -1731,6 +1789,7 @@ hu-HU:
   footer_donate: Adományozz
   footer_support: Segítség
   footer_terms: Felhasználási feltételek
+  ai_for_oceans_lesson_plan: óravázlat
   ai_microsoft_thanks: Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk
     és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége
     számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani.

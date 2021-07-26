@@ -8,7 +8,7 @@
     "csa_view_mode": "theater",
     "start_sources": {
       "MyConcert.java": {
-        "text": "import org.code.theater.Theater;\nimport org.code.theater.Stage;\nimport org.code.theater.Instrument;\nimport org.code.media.Color;\n\npublic class MyConcert {\n  public static void main(String[] args) {\n\n\n\n    \n  }\n}",
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\tStage myStage = Theater.stage;\n    \n    Image neighborhood = new Image(\"neighborhood.png\");\n    myStage.drawImage(neighborhood, 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n\n    Image chicken = new Image(\"animal9.png\");\n    myStage.drawImage(chicken, 100, 100, 200, 200, 0);\n\n    myStage.play();\n  }\n}",
         "isVisible": true
       }
     }
@@ -18,6 +18,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-07-12 20:00:33 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 20:53:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 20:53:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-12 20:00:33 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 20:53:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 20:53:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 13:02:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
