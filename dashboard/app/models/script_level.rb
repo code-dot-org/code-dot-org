@@ -514,7 +514,7 @@ class ScriptLevel < ApplicationRecord
       {
         id: lesson_extra_user_level.id.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         status: SharedConstants::LEVEL_STATUS.perfect,
         passed: true
       }.merge!(lesson_extra_user_level.attributes)
@@ -525,7 +525,7 @@ class ScriptLevel < ApplicationRecord
         # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect
       }
@@ -533,7 +533,7 @@ class ScriptLevel < ApplicationRecord
       {
         id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
@@ -577,7 +577,7 @@ class ScriptLevel < ApplicationRecord
       driver: driver,
       navigator: navigator,
       isConceptLevel: level.concept_level?,
-      user_id: student.id,
+      userId: student.id,
       passed: passed,
       status: status,
       levelNumber: position,
@@ -588,8 +588,10 @@ class ScriptLevel < ApplicationRecord
     }
 
     if user_level
-      # note: level.id gets replaced with user_level.id here
-      teacher_panel_summary.merge!(user_level.attributes)
+      teacher_panel_summary.merge(
+        userLevelId: user_level.id,
+        updatedAt: user_level.updated_at
+      )
     end
 
     teacher_panel_summary
