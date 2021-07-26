@@ -3,6 +3,7 @@
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
   "clearConsole": "Clear Console",
+  "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
   "commitCode": "Commit Code",
   "commitNotes": "Commit Notes",

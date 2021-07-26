@@ -52,3 +52,20 @@ export function getPeerReviewStatus(channelId, levelId, scriptId) {
     }
   });
 }
+
+export function resolveCodeReviewComment(commentId, resolvedStatus, token) {
+  return $.ajax({
+    url: `/code_review_comments/${commentId}/toggle_resolved`,
+    type: 'PATCH',
+    headers: {'X-CSRF-Token': token},
+    data: {is_resolved: resolvedStatus}
+  });
+}
+
+export function deleteCodeReviewComment(commentId, token) {
+  return $.ajax({
+    url: `/code_review_comments/${commentId}`,
+    type: 'DELETE',
+    headers: {'X-CSRF-Token': token}
+  });
+}

@@ -7,6 +7,8 @@ import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
+const FLASH_ERROR_TIME_MS = 5000;
+
 export default class ReviewTab extends Component {
   state = {
     reviewCheckboxEnabled: false,
@@ -71,19 +73,52 @@ export default class ReviewTab extends Component {
   };
 
   onCommentDelete = deletedCommentId => {
-    const comments = [...this.state.comments];
-    _.remove(comments, comment => comment.id === deletedCommentId);
+    const {token} = this.state;
 
-    this.setState({comments: comments});
+    codeReviewDataApi
+      .deleteCodeReviewComment(deletedCommentId, token)
+      .done(() => {
+        const comments = [...this.state.comments];
+        _.remove(comments, comment => comment.id === deletedCommentId);
+
+        this.setState({comments: comments});
+      })
+      .fail(() => this.flashErrorOnComment(deletedCommentId));
   };
 
-  onCommentResolveStateToggle = toggledCommentId => {
+  onCommentResolveStateToggle = (resolvedCommentId, newResolvedStatus) => {
+    const {token} = this.state;
+
+    codeReviewDataApi
+      .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus, token)
+      .done(() => {
+        const comments = [...this.state.comments];
+        const resolvedCommentIndex = comments.findIndex(
+          comment => comment.id === resolvedCommentId
+        );
+        comments[resolvedCommentIndex].isResolved = !comments[
+          resolvedCommentIndex
+        ].isResolved;
+
+        this.setState({comments: comments});
+      })
+      .fail(() => this.flashErrorOnComment(resolvedCommentId));
+  };
+
+  flashErrorOnComment = commentId => {
+    this.setCommentErrorStatus(commentId, true);
+    setTimeout(
+      () => this.setCommentErrorStatus(commentId, false),
+      FLASH_ERROR_TIME_MS
+    );
+  };
+
+  setCommentErrorStatus = (commentId, newErrorStatus) => {
     const comments = [...this.state.comments];
     const resolvedCommentIndex = comments.findIndex(
-      comment => comment.id === toggledCommentId
+      comment => comment.id === commentId
     );
-    comments[resolvedCommentIndex].isResolved = !comments[resolvedCommentIndex]
-      .isResolved;
+    comments[resolvedCommentIndex].hasError = newErrorStatus;
 
     this.setState({comments: comments});
   };
@@ -195,7 +230,10 @@ export default class ReviewTab extends Component {
               comment={comment}
               key={`code-review-comment-${comment.id}`}
               onResolveStateToggle={() =>
-                this.onCommentResolveStateToggle(comment.id)
+                this.onCommentResolveStateToggle(
+                  comment.id,
+                  !comment.isResolved
+                )
               }
               onDelete={() => this.onCommentDelete(comment.id)}
             />
