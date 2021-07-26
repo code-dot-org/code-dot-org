@@ -59,7 +59,7 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    localeEnglishName: PropTypes.string
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
@@ -133,7 +133,7 @@ class UnitOverviewHeader extends Component {
     );
     setRecommendedAndSelectedVersions(
       filteredVersions,
-      this.props.localeEnglishName,
+      this.props.localeCode,
       selectedVersion && selectedVersion.year
     );
 
@@ -272,5 +272,5 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
   hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources,
-  localeEnglishName: state.locales.localeEnglishName
+  localeCode: state.locales.localeCode
 }))(UnitOverviewHeader);
