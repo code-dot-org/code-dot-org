@@ -4,6 +4,8 @@ fi:
     course:
       name:
         csp-2017:
+          assignment_family_title: Tietojenkäsittelytieteiden alkeet
+          title: Tietojenkäsittelytieteiden alkeet
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat
             perustavanlaatuisiin tietotekniikan käsitteisiin ja haastaa tutkimaan,
@@ -21,7 +23,33 @@ fi:
             aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla
             mahdollisuuksilla.
           description_short: Opi tietotekniikan peruskäsitteet.
+        csd-2017:
+          assignment_family_title: Tietojenkäsittelytieteiden löydöt
+          title: Tietojenkäsittelytieteiden löydöt
+          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.
+          description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.
+          description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa
+            oppilaiden luoda aitoja esineitä.
+        csd-2018:
+          assignment_family_title: Tietojenkäsittelytieteiden löydöt
+          description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa
+            oppilaiden luoda aitoja esineitä.
+          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.
+          description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.
         csp-2018:
+          assignment_family_title: Tietojenkäsittelytieteiden alkeet
           description_short: Opi tietotekniikan peruskäsitteet.
           description_student: Syksyllä 2016 College Board käynnisti uusimman AP®
             kurssin, AP tietotekniikan periaatteet. Kurssi tutustuttaa opiskelijat
@@ -57,3 +85,14 @@ fi:
             alalle johtajia ja houkutella ja osallistaa niitä, jotka ovat perinteisesti
             aliedustettuina, välttämätömillä tietotekniikan työkaluilla ja monialaisilla
             mahdollisuuksilla.
+        csd-2019:
+          description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa
+            oppilaiden luoda aitoja esineitä.
+          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.
+          description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi,
+            joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa
+            tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua
+            ja hauskanpitoa varten.

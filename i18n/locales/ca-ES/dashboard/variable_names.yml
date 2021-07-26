@@ -2,7 +2,11 @@ ca:
   data:
     variable_names:
       actor: actor
+      age: edat
+      answer: resposta
+      binary: binari
       cats: tots els gats
+      color: color
       counter: comptador
       dogs: tots els gossos
       height: alçcada

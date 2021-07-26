@@ -1,1 +1,13 @@
+---
 fil:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: AP® na mga Prinsipyo ng Computer Science
+        csd-2017:
+          assignment_family_title: Mga Natuklasan sa Computer Science
+        csd-2018:
+          assignment_family_title: Mga Natuklasan sa Computer Science
+        csp-2018:
+          assignment_family_title: AP® na mga Prinsipyo ng Computer Science

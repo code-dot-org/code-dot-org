@@ -264,6 +264,7 @@ pt:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como seu professor'
     registered: "Você já está registrado para %{section_name}."
+    already_exists: 'Você já se juntou à seção %{section_name}.'
     error:
       signed_in: 'Saia antes de prosseguir'
       username_not_found: 'Nome de usuário %{username} não encontrado'
@@ -1063,6 +1064,7 @@ pt:
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
   page_not_found_button: "Volte para a página inicial"
   copy: 'Copiar'
+  confirm: 'Confirmar'
   maker:
     google_oauth:
       login_with_google: 'Login no aplicativo Maker com o Google'
@@ -1076,3 +1078,5 @@ pt:
     text: "**Você é pai ou responsável?** Associe seu e-mail a esta conta para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
     link_your_email: "Associe seu e-mail"
     not_now: "Agora não"
+  behaviors:
+    this_sprite: "este personagem"
