@@ -431,6 +431,7 @@ pt:
     update_email: "Atualizar"
     for_parents_and_guardians: "Para os Pais e Encarregados de Educação"
     parent_guardian_email_label: "Email dos pais ou do encarregado de educação"
+    remove_parent_email_label: "Remover"
     none: "Nenhum"
     encrypted: "encriptado"
   user_level:
@@ -850,3 +851,4 @@ pt:
     accept: 'Concordar'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
   copy: 'Copiar'
+  confirm: 'Confirmar'

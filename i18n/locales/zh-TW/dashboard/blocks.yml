@@ -19,7 +19,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           MOVE1:
             MOVES.Roll: Body Roll
@@ -75,7 +75,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           MOVE:
             '"next"': 下一個
@@ -125,7 +125,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_changePropEachBy:
@@ -143,13 +143,13 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_doMoveEachLR:
@@ -167,7 +167,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           MOVE:
             '"rand"': 隨機
@@ -264,7 +264,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -298,10 +298,6 @@ zh-TW:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
-          OP:
-            '">"': ">"
-            '"<"': "\\<"
-            '"="': "="
       Dancelab_jumpTo:
         text: 角色 {SPRITE} 定位到 {LOCATION}
         options:
@@ -331,7 +327,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           LOCATION:
             "{x: 200, y: 100}": 頂部
@@ -359,7 +355,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           FORMAT:
             '"border"': 邊框
@@ -382,7 +378,7 @@ zh-TW:
           COSTUME:
             '"ALIEN"': 外星人
             '"BEAR"': 熊仔
-            '"CAT"': 小貓
+            '"CAT"': 貓
             '"DOG"': 狗
             '"DUCK"': 鴨子
             '"FROG"': 青蛙
@@ -411,11 +407,11 @@ zh-TW:
           COSTUME:
             '"ALIEN"': 外星人
             '"BEAR"': 熊仔
-            '"CAT"': 小貓
-            '"DOG"': 小狗
+            '"CAT"': 貓
+            '"DOG"': 狗
             '"DUCK"': 鴨子
             '"FROG"': 青蛙
-            '"MOOSE"': 麋鹿
+            '"MOOSE"': 全部麋鹿
             '"PINEAPPLE"': 鳳梨
             '"ROBOT"': 機器人
             '"SHARK"': 鯊魚
@@ -458,16 +454,16 @@ zh-TW:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': 外星人
-            '"BEAR"': 熊仔
-            '"CAT"': 小貓
-            '"DOG"': 小狗
-            '"DUCK"': 鴨子
-            '"FROG"': 青蛙
-            '"MOOSE"': 麋鹿
-            '"PINEAPPLE"': 鳳梨
-            '"ROBOT"': 機器人
-            '"SHARK"': 鯊魚
+            '"ALIEN"': 全部外星人
+            '"BEAR"': 全部熊仔
+            '"CAT"': 全部小貓
+            '"DOG"': 全部小狗
+            '"DUCK"': 全部鴨子
+            '"FROG"': 全部青蛙
+            '"MOOSE"': 全部麋鹿
+            '"PINEAPPLE"': 全部鳳梨
+            '"ROBOT"': 全部機器人
+            '"SHARK"': 全部鯊魚
             '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           LAYOUT:
@@ -504,7 +500,7 @@ zh-TW:
         options:
           EFFECT:
             '"none"': 無
-            '"circles"': 圓形
+            '"circles"': 隧道
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
@@ -520,24 +516,26 @@ zh-TW:
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 正方形
-            '"stars"': 星空
+            '"stars"': 星星
           PALETTE:
-            '"rave"': 黑與白
-            '"cool"': 冷色系
+            '"rave"': 黑白
+            '"cool"': 藍調
             '"electronic"': 電子
             '"iceCream"': 冰淇淋
             '"default"': 光亮
             '"neon"': 霓虹
             '"tropical"': 熱帶
             '"vintage"': 復古
-            '"warm"': 暖色系
+            '"warm"': 紅色
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景效果設為 {PALETTE} {EFFECT}
+        text: |-
+          "設置背景效果
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': 無
             '"rand"': 隨機
-            '"circles"': 圓形
+            '"circles"': 隧道
             '"quads"': 角
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
@@ -559,18 +557,18 @@ zh-TW:
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 正方形
-            '"stars"': 星空
+            '"stars"': 星星
             '"music_wave"': 音浪
           PALETTE:
-            '"rave"': 黑與白
-            '"cool"': 冷色系
+            '"rave"': 黑白
+            '"cool"': 藍調
             '"electronic"': 電子
             '"iceCream"': 冰淇淋
             '"default"': 光亮
             '"neon"': 霓虹
             '"tropical"': 熱帶
             '"vintage"': 復古
-            '"warm"': 暖色系
+            '"warm"': 紅色
       Dancelab_setDanceSpeed:
         text: 角色 {SPRITE} 跳舞速度設為 {SPEED}
         options:
@@ -595,7 +593,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           SPEED:
             '1': 普通
@@ -609,12 +607,12 @@ zh-TW:
           EFFECT:
             '"none"': 無
             '"bubbles"': 氣泡
-            '"confetti"': 紙花
-            '"hearts_red"': 愛心
-            '"music_notes"': 音符
+            '"confetti"': 紙屑
+            '"hearts_red"': 心形
+            '"music_notes"': 音樂音符
             '"pineapples"': 鳳梨
             '"pizzas"': 披蕯
-            '"smiling_poop"': 便便
+            '"smiling_poop"': 船尾
             '"rain"': 雨滴
             '"floating_rainbows"': 彩虹
             '"smile_face"': 笑臉
@@ -629,14 +627,14 @@ zh-TW:
             '"rand"': 隨機
             '"bubbles"': 氣泡
             '"hearts_colorful"': 繽紛愛心
-            '"confetti"': 紙花
+            '"confetti"': 紙屑
             '"emojis"': 表情符號
-            '"hearts_red"': 愛心
-            '"music_notes"': 音符
+            '"hearts_red"': 心形
+            '"music_notes"': 音樂音符
             '"paint_drip"': 液滴油漆
             '"pineapples"': 鳳梨
             '"pizzas"': 披蕯
-            '"smiling_poop"': 便便
+            '"smiling_poop"': 船尾
             '"rain"': 雨滴
             '"floating_rainbows"': 彩虹
             '"smile_face"': 笑臉
@@ -651,7 +649,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
       Dancelab_setPropEach:
@@ -669,13 +667,13 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -686,7 +684,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -705,13 +703,13 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -732,7 +730,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
       Dancelab_setTintEachInline:
         text: 角色 {THIS} 色調設為 {VAL}
@@ -749,7 +747,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
       Dancelab_setTintInline:
         text: 角色 {SPRITE} 色調設為 {VAL}
@@ -774,7 +772,7 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           VISIBILITY:
             'true': 可見
@@ -786,7 +784,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -809,13 +807,13 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"tint"': 色調
@@ -830,7 +828,7 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"direction"': 移動方向
@@ -854,13 +852,13 @@ zh-TW:
             '"PINEAPPLE"': 全部鳳梨
             '"ROBOT"': 全部機器人
             '"SHARK"': 全部鯊魚
-            '"SLOTH"': 全部樹懶
+            '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
           PROPERTY:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': 水平位置
             '"y"': 垂直位置
             '"direction"': 移動方向
@@ -882,7 +880,7 @@ zh-TW:
             '"squiggles"': 蜿曲線段
             '"growing_stars"': 星星
             '"emojis"': 表情符號
-            '"hearts_colorful"': 愛心
+            '"hearts_colorful"': 心形
             '"paint_drio"': 液滴油漆
             '"exploding_stars"': 星爆
             '"row_top"': 上列
@@ -920,10 +918,10 @@ zh-TW:
         options:
           KEY:
             '"up"': 向上
-            '"left"': 向左
+            '"left"': " 向左"
             '"down"': 向下
             '"right"': 向右
-            '"space"': 空白
+            '"space"': 太空
             '"enter"': Enter
             '"a"': a
             '"b"': b
@@ -989,7 +987,7 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1006,6 +1004,8 @@ zh-TW:
         text: 點擊 {SPRITE}
       gamelab_comment:
         text: 註解：{COMMENT}
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE} 個"
       gamelab_createNewSprite:
@@ -1025,7 +1025,7 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1095,9 +1095,9 @@ zh-TW:
           KEY:
             '"up"': 向上
             '"down"': 向下
-            '"left"': 向左
+            '"left"': " 向左"
             '"right"': 向右
-            '"space"': 空白
+            '"space"': 太空
             '"a"': a
             '"b"': b
             '"c"': c
@@ -1250,12 +1250,13 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
             '"speed"': 速度
       gamelab_setProp_dropdown:
+        text: 角色 {SPRITE} {PROPERTY} 設為 {SIZE}
         options:
           PROPERTY:
             '"scale"': 尺寸
@@ -1308,9 +1309,9 @@ zh-TW:
           KEY:
             '"up"': 向上
             '"down"': 向下
-            '"left"': 向左
+            '"left"': " 向左"
             '"right"': 向右
-            '"space"': 空白
+            '"space"': 太空
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1331,9 +1332,9 @@ zh-TW:
           KEY:
             '"up"': 向上
             '"down"': 向下
-            '"left"': 向左
+            '"left"': " 向左"
             '"right"': 向右
-            '"space"': 空白
+            '"space"': 太空
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1371,7 +1372,7 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1406,7 +1407,7 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1424,7 +1425,7 @@ zh-TW:
             '"this"': 這個
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1460,7 +1461,7 @@ zh-TW:
             '"this"': 這個
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1490,7 +1491,7 @@ zh-TW:
             '"this"': 這個
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1560,10 +1561,14 @@ zh-TW:
           DANCE:
             MOVES.ClapHigh: 魚
             MOVES.Clown: 不是我的標籤
+      Mikelab_joinText:
+        text: 角色 {TEXT} 的 {NEXT}
       Mikelab_locationAt:
         text: '座標 x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: 隨機顏色
       Mikelab_removeAllBehaviors:
@@ -1606,7 +1611,7 @@ zh-TW:
         options:
           PROPERTY:
             '"scale"': 尺寸
-            '"rotation"': 方向
+            '"rotation"': 旋轉
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
@@ -1624,6 +1629,11 @@ zh-TW:
           CORNER:
             '"right"': 向右
             '"left"': " 向左"
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': 上方
+            '"below"': 下方
       Mikelab_sprite:
         text: 新增功能 {COSTUME} 雪碧在 {LOCATION}
         options:
@@ -1690,6 +1700,18 @@ zh-TW:
         text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
+      PoemBot_setBackgroundEffect:
+        text: 背景效果設為 {BG_EFFECT} [PALETTE][1]
+        options:
+          BG_EFFECT:
+            '"solid"': 實心
+            '"rainbow"': 彩虹
+      PoemBot_setForegroundEffect:
+        text: 前景效果設為 {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': 下雨
+            '"bubbles"': 氣泡
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:
@@ -1788,9 +1810,9 @@ zh-TW:
           KEY:
             '"up"': 向上
             '"down"': 向下
-            '"left"': 向左
+            '"left"': " 向左"
             '"right"': 向右
-            '"space"': 空白
+            '"space"': 太空
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1801,9 +1823,9 @@ zh-TW:
           {STATEMENT}
         options:
           DIR:
-            "'ahead'": 前面
-            "'right'": 右邊
-            "'left'": 左邊
+            "'ahead'": 在前面
+            "'right'": 往右
+            "'left'": 往左
       craft_ifStandingOn:
         text: |-
           如果站在{TYPE}
@@ -1838,6 +1860,7 @@ zh-TW:
             '"stoneBricks"': 石磚
             '"mossyStoneBricks"': 青苔石磚
             '"crackedStoneBricks"': 裂紋石磚
+            '"chiseledStoneBricks"': 裝飾石磚
             '"blueCoralBlock"': 藍色珊瑚方塊
             '"pinkCoralBlock"': 粉紅色珊瑚方塊
             '"magentaCoralBlock"': 洋紅色珊瑚方塊
@@ -1873,7 +1896,7 @@ zh-TW:
         text: 生成 {ENTITY}
         options:
           ENTITY:
-            '"cod"': 鱈魚
+            '"cod"': cod
             '"dolphin"': 海豚
             '"salmon"': 鮭魚
             '"seaTurtle"': 海龜

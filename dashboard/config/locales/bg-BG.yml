@@ -456,6 +456,7 @@ bg:
       имейли от Code.org освен за възстановяване на парола. Вижте нашата [декларация
       за поверителност](%{privacy_policy_url}) за повече информация.'
     update_email: Актуализиране
+    remove_parent_email_label: Премахване
     none: Без
   user_level:
     completed: Завършено
@@ -710,6 +711,7 @@ bg:
       title: Условия
     widgets:
       title: Джаджи
+      audience: Възраст 14+
       cta: Научете как
   landing:
     report_bug: Доклад за бъгове
@@ -1044,4 +1046,5 @@ bg:
         opt_in_no: Не
   cookie_banner:
     accept: Приемам
+  page_not_found_title: Страницата не е намерена
   copy: Копиране

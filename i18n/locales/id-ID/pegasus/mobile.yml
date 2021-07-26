@@ -981,12 +981,14 @@
   coursed-2020_name: Kursus D (2020)
   coursee-2020_name: Kursus E (2020)
   coursef-2020_name: Kursus F (2020)
+  coursed-2021_name: Kursus D (2021)
   express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
   express-2019_name: Kursus Kilat (2019)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
   express-2020_name: Kursus Kilat (2020)
   pre-express-2020_name: Kursus Kilat Pre-reader(2020)
+  pre-express-2021_name: Kursus ekspres Pre-reader(2021)
   csd2_name: 'Unit 2: Pengembangan Web'
   csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: "Kursus Akselerasi"
@@ -1225,6 +1227,12 @@
   coursed-2020_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
   coursee-2020_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
   coursef-2020_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
+  coursea-2021_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  courseb-2021_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  coursec-2021_shortdescription_congrats: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+  coursed-2021_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+  coursee-2021_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+  coursef-2021_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
   codeorg_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   codeintl_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   thinkersmithspanish_longdescription: "Dengan menggunakan  \"Kosakata Robot/ Vocabulary Robot\" siswa akan mencari&aacute; cara untuk memandu satu sama lain untuk menyelesaikan tugas-tugas tertentu&iacute;  tanpa mendiskusikannya terlebih dahulu. Pelajaran ini&ntilde;  mengajarkan anak-anak hubungan&oacute;  antara simbol dan tindakan, &iacute; serta keterampilan yang sangat berharga dari debugging&oacute;."
@@ -1519,7 +1527,7 @@
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
   user_header_gamelab: "Game Lab"
-  user_header_playlab: "Play Lab/Lab Permainan"
+  user_header_playlab: "Lab Permainan"
   user_header_dance: "Pesta Tari"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
@@ -1725,6 +1733,7 @@
   footer_support: "Bantuan dan komunitas"
   footer_terms: "Ketentuan"
   ai_for_oceans: "AI for Oceans"
+  ai_for_oceans_lesson_plan: "rencana pelajaran"
   ai_in_partnership_with: "Bermitra dengan"
   ai_microsoft_thanks: "Kami berterima kasih kepada Mikrosoft atas dukungan visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar ilmu komputer dan keterampilan untuk sukses di abad ke 21."
   ai_activity: "Kegiatan"

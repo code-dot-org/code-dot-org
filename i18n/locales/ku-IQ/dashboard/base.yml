@@ -277,6 +277,7 @@ ku:
       student: 'قوتابی'
   user:
     parent_guardian_email_label: "پۆستی ئەلیكترۆنی باوان/بەخێوکەر"
+    remove_parent_email_label: "لابدە"
   home:
     student_reg_link: 'قوتابی'
     online: سەرهێڵ
@@ -288,6 +289,7 @@ ku:
     student: 'قوتابی'
     teacher: 'مامۆستا'
   footer:
+    more: 'زیاتر'
     support: 'یارمەتی و کۆمەڵگا'
     support_url: 'http://support.code.org'
     tos_short: 'بڕگەکان'

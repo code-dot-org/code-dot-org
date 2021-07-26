@@ -651,6 +651,8 @@ gl:
         CSF_loops_AB: Bucles
         csd_pair_programming: Programación por parellas
         csd_applab_parameters: Funcións con parámetros
+        playlab_2021: Introdución ao Laboratorio
+        playlab_2021_reader: Introdución ao Laboratorio
     callout:
       text:
         drag_blocks: Arrastre un bloque "avance" e encáixeo por debaixo do outro bloque

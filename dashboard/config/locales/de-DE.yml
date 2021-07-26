@@ -330,6 +330,7 @@ de:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Du hast dich für %{section_name} registriert.
+    already_exists: Sie sind der Lerngruppe %{section_name} schon beigetreten.
     error:
       signed_in: Bitte melde dich ab, bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
@@ -585,6 +586,7 @@ de:
       Laufenden zu bleiben. Sie können diese E-Mail-Adresse auch zur Wiederherstellung
       von Passwörtern verwenden.
     parent_guardian_email_label: Eltern / Erziehungsberechtigten E-Mail-Adresse
+    remove_parent_email_label: Entfernen
     none: Keiner
     only_one_parent_email_supported_warning: 'Hinweis: Zur Zeit können wir nur eine
       E-Mail-Adresse eines Elternteils/Erziehungsberechtigten pro SchülerInnen-Konto
@@ -1405,6 +1407,7 @@ de:
     Sie zurück zu unserer Webseite.
   page_not_found_button: Zurück zur Homepage
   copy: Kopieren
+  confirm: Bestätigen
   maker:
     google_oauth:
       login_with_google: Melde dich in der Maker App mit Google an
@@ -1424,3 +1427,5 @@ de:
       Ihres Kindes auf dem Laufenden zu bleiben!"
     link_your_email: E-Mail-Adresse Verlinken
     not_now: Nicht jetzt
+  behaviors:
+    this_sprite: dieser Sprite
