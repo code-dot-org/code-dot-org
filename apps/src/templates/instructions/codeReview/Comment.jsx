@@ -14,13 +14,16 @@ export default class Comment extends Component {
     onDelete: PropTypes.func.isRequired
   };
 
-  state = {
-    isShowingCommentOptions: false
+  state = {isShowingCommentOptions: false};
+
+  onDelete = () => {
+    this.setState({isShowingCommentOptions: false});
+    this.props.onDelete();
   };
 
-  onDelete = commentId => {
+  onResolve = () => {
     this.setState({isShowingCommentOptions: false});
-    this.props.onDelete(commentId);
+    this.props.onResolveStateToggle();
   };
 
   renderName = () => {
@@ -44,14 +47,18 @@ export default class Comment extends Component {
   renderFormattedTimestamp = timestampString =>
     moment.utc(timestampString).format('M/D/YYYY [at] h:mm A');
 
+  renderErrorMessage = () => {
+    return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
+  };
+
   render() {
     const {
-      id,
       commentText,
       timestampString,
       isFromCurrentUser,
       isFromOlderVersionOfProject,
-      isResolved
+      isResolved,
+      hasError
     } = this.props.comment;
 
     const {isShowingCommentOptions} = this.state;
@@ -104,6 +111,7 @@ export default class Comment extends Component {
         >
           {commentText}
         </div>
+        {hasError && this.renderErrorMessage()}
       </div>
     );
   }
@@ -153,5 +161,11 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between'
   },
-  rightAlignedCommentHeaderSection: {display: 'flex'}
+  rightAlignedCommentHeaderSection: {display: 'flex'},
+  error: {
+    backgroundColor: color.red,
+    color: color.white,
+    margin: '5px 0',
+    padding: '10px 12px'
+  }
 };
