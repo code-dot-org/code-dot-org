@@ -235,6 +235,7 @@ et:
       educate_middle: "Põhikool"
       educate_high: "Gümnaasium"
       educate_hoc: "KoodiTund"
+      stats: "Vaata statistikat"
       teach: "Õpeta"
       about: "Info"
       legal_privacy: "Privaatsuspoliitika"
@@ -306,6 +307,7 @@ et:
       example: 'Näidislahendus'
       example_with_number: 'Näidislahend %{solution_number}'
       submitted_on: 'Esitatud:'
+      last_updated: 'Viimati uuendatud:'
       unsubmit: 'Võta vastus tagasi'
       worked_with: 'Töötas koos'
       update_lock_settings: 'Uuenda lukustatud seadeid siin.'
@@ -326,6 +328,7 @@ et:
     create_personal_login_under_13_parent_email: 'Lapsevanem/hooldaja e-posti aadress'
     update_email: "Uuenda"
     parent_guardian_email_label: "Lapsevanema/hooldaja e-posti aadress"
+    remove_parent_email_label: "Eemalda"
     none: "Mitte ükski"
     encrypted: "krüpteeritud"
   user_level:
@@ -780,4 +783,5 @@ et:
         opt_in_no: 'Ei'
   cookie_banner:
     accept: 'Olen nõus'
+  page_not_found_title: "Lehte ei leitud"
   copy: 'Kopeeri'

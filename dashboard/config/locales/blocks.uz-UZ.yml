@@ -1235,6 +1235,7 @@ uz:
             '"direction"': harakatlanish yo‘nalishi
             '"speed"': tezlik
       gamelab_setProp_dropdown:
+        text: " {SPRITE} {PROPERTY} qiymatini {SIZE} ga o'rnatish"
         options:
           PROPERTY:
             '"scale"': kattalik
@@ -1621,6 +1622,16 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': kamalak
+      PoemBot_setForegroundEffect:
+        text: old plan effektini {FG_EFFECT} o'rnatish
+        options:
+          FG_EFFECT:
+            '"rain"': yomg‘ir
+            '"bubbles"': pufakchalar
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:

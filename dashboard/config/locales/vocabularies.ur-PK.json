@@ -1,0 +1,50 @@
+{
+  "ur-PK": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "متغیر"
+        },
+        "define/coursef/2021": {
+          "word": "واضح کرنا"
+        },
+        "drop/courseb/2021": {
+          "word": "چھوڑیں"
+        },
+        "drop/coursea/2021": {
+          "word": "چھوڑیں"
+        },
+        "conditionals/coursed/2021": {
+          "word": "شرائط"
+        },
+        "conditionals/express/2021": {
+          "word": "شرائط"
+        },
+        "function/express/2021": {
+          "word": "فنکشن"
+        },
+        "variable/express/2021": {
+          "word": "متغیر"
+        },
+        "define/express/2021": {
+          "word": "واضح کرنا"
+        },
+        "drop/pre-express/2021": {
+          "word": "چھوڑیں"
+        },
+        "copyright/coursee/2021": {
+          "word": "کاپی رائٹ"
+        },
+        "function/coursee/2021": {
+          "word": "فنکشن"
+        },
+        "conditionals/coursee/2021": {
+          "word": "شرائط"
+        },
+        "define/coursee/2021": {
+          "word": "واضح کرنا"
+        }
+      }
+    }
+  }
+}

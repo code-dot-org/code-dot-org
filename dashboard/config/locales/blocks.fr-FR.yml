@@ -18,7 +18,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           MOVE1:
             MOVES.Roll: Roulements de hanches
             MOVES.ClapHigh: Tape des mains en l'air
@@ -133,7 +133,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -157,7 +157,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           MOVE:
             '"rand"': "(Aléatoire)"
             MOVES.XBend: Fente
@@ -260,9 +260,7 @@ fr:
             '"measures"': mesures
             '"seconds"': des secondes
       Dancelab_ifDanceIs:
-        text: |-
-          Si {SPRITE} exécute {DANCE}
-          {DO1} {DO2}
+        text: si {SPRITE} exécute {DANCE}{DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Tape des mains en l'air
@@ -278,16 +276,14 @@ fr:
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Dancelab_ifTime:
-        text: |-
-          si {UNIT} est {OP} {N}
-          {DO1} {DO2}
+        text: si {UNIT} est {OP} {N}{DO1} {DO2}
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': des secondes
           OP:
             '">"': ">"
-            '"<"': "\\<"
+            '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} passer à {LOCATION}"
@@ -319,7 +315,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           LOCATION:
             "{x: 200, y: 100}": vers le haut
             "{x: 200, y: 300}": vers le bas
@@ -347,7 +343,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           FORMAT:
             '"border"': frontière
             '"inner"': carré intérieur
@@ -391,23 +387,21 @@ fr:
             "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_makeNewDanceSprite:
-        text: |-
-          faire un nouveau {COSTUME}
-          appelé {NAME} à {LOCATION}
+        text: crée un nouveau {COSTUME}appelé {NAME} à {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Extraterrestre
+            '"ALIEN"': extraterrestre
             '"BEAR"': Ours
-            '"CAT"': Chat
-            '"DOG"': Chien
-            '"DUCK"': Canard
+            '"CAT"': chat
+            '"DOG"': chien
+            '"DUCK"': canard
             '"FROG"': Grenouille
-            '"MOOSE"': élan
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robot
+            '"ROBOT"': robot
             '"SHARK"': Requin
             '"SLOTH"': paresseux
-            '"UNICORN"': Licorne
+            '"UNICORN"': licorne
           LOCATION:
             "{x: 200, y: 100}": vers le haut
             "{x: 200, y: 300}": vers le bas
@@ -420,9 +414,7 @@ fr:
             "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          faire {N} nouveau {COSTUME}
-          dans un {LAYOUT}
+        text: faire un {N} nouveau {COSTUME}dans un {LAYOUT}
         options:
           N:
             '2': '2'
@@ -445,18 +437,18 @@ fr:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Extraterrestres
-            '"BEAR"': Ours
-            '"CAT"': Chats
-            '"DOG"': Chiens
-            '"DUCK"': Canards
-            '"FROG"': Grenouilles
-            '"MOOSE"': élan
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': Robots
-            '"SHARK"': Requins
+            '"ALIEN"': tous les extraterrestres
+            '"BEAR"': tous les ours
+            '"CAT"': tous les chats
+            '"DOG"': tous les chiens
+            '"DUCK"': tous les canards
+            '"FROG"': toutes les grenouilles
+            '"MOOSE"': tous les élans
+            '"PINEAPPLE"': tous les ananas
+            '"ROBOT"': tous les robots
+            '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           LAYOUT:
             '"border"': frontière
             '"inner"': carré intérieur
@@ -487,11 +479,11 @@ fr:
       Dancelab_setBackground:
         text: définir la couleur de fond {COLOR}
       Dancelab_setBackgroundEffect:
-        text: définir l’effet de fond {EFFECT} {PALETTE}
+        text: définir l’effet d'arrière-plan {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Aucun
-            '"circles"': Cercles
+            '"circles"': Tunnel
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
@@ -502,7 +494,7 @@ fr:
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
-            '"text"': Titres de chansons
+            '"text"': Titre de la chanson
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
@@ -510,21 +502,21 @@ fr:
             '"stars"': Étoiles
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Cool
+            '"cool"': Blues
             '"electronic"': Électronique
             '"iceCream"': Crème glacée
             '"default"': Lumière
             '"neon"': Néon
             '"tropical"': Tropical
             '"vintage"': Ancien
-            '"warm"': Chaud
+            '"warm"': Rouges
       Dancelab_setBackgroundEffectWithPalette:
         text: définir l'effet d'arrière-plan{PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
-            '"circles"': Cercles
+            '"circles"': Tunnel
             '"quads"': Angles
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
@@ -540,7 +532,7 @@ fr:
             '"ripples_random"': Ondulations aléatoires
             '"ripples"': Ondulations
             '"snowflakes"': Neige
-            '"text"': Titres de chansons
+            '"text"': Titre de la chanson
             '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
@@ -550,14 +542,14 @@ fr:
             '"music_wave"': Vagues
           PALETTE:
             '"rave"': Noir et blanc
-            '"cool"': Cool
+            '"cool"': Blues
             '"electronic"': Électronique
             '"iceCream"': Crème glacée
             '"default"': Lumière
             '"neon"': Néon
             '"tropical"': Tropical
             '"vintage"': Ancien
-            '"warm"': Chaud
+            '"warm"': Rouges
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
         options:
@@ -583,7 +575,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           SPEED:
             '1': normal
             '2': rapide
@@ -598,10 +590,10 @@ fr:
             '"bubbles"': Bulles
             '"confetti"': Confettis
             '"hearts_red"': Cœurs
-            '"music_notes"': Notes de Musique
+            '"music_notes"': Notes de musique
             '"pineapples"': Ananas
             '"pizzas"': Pizzas
-            '"smiling_poop"': Caca
+            '"smiling_poop"': Crotte
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
             '"smile_face"': Sourires
@@ -619,11 +611,11 @@ fr:
             '"confetti"': Confettis
             '"emojis"': Emojis
             '"hearts_red"': Cœurs
-            '"music_notes"': Notes de Musique
+            '"music_notes"': Notes de musique
             '"paint_drip"': Gouttes de peinture
             '"pineapples"': Ananas
             '"pizzas"': Pizzas
-            '"smiling_poop"': Caca
+            '"smiling_poop"': Crotte
             '"rain"': Pluie
             '"floating_rainbows"': Arc-en-ciel
             '"smile_face"': Sourires
@@ -657,7 +649,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -693,7 +685,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -720,7 +712,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
       Dancelab_setTintEachInline:
         text: définir la teinte de {THIS} à {VAL}
         options:
@@ -737,7 +729,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
       Dancelab_setTintInline:
         text: définir la teinte de {SPRITE} à {VAL}
       Dancelab_setVisible:
@@ -762,7 +754,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           VISIBILITY:
             'true': visible
             'false': invisible
@@ -797,7 +789,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -842,7 +834,7 @@ fr:
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
-            '"UNICORN"': Licornes
+            '"UNICORN"': Toutes les licornes
           PROPERTY:
             '"scale"': taille
             '"width"': largeur
@@ -962,6 +954,10 @@ fr:
         text: 'configurer {SONG} '
       gamelab_addBehaviorSimple:
         text: le lutin {SPRITE} commence à {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': éviter
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -990,6 +986,8 @@ fr:
         text: cliqué {SPRITE}
       gamelab_comment:
         text: 'commentaire : {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: crée un nouveau lutin appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
@@ -1098,6 +1096,7 @@ fr:
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} de {LOCATION}"
         options:
           DIRECTION:
             '"North"': le Nord
@@ -1178,6 +1177,7 @@ fr:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': désert
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grille
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'cuisine '
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arc-en-ciel
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': science-
               fiction
@@ -1205,6 +1205,7 @@ fr:
             '"direction"': direction du mouvement
             '"speed"': vitesse
       gamelab_setProp_dropdown:
+        text: établir {PROPERTY} de {SPRITE} à {SIZE}
         options:
           PROPERTY:
             '"scale"': taille
@@ -1435,7 +1436,7 @@ fr:
       Mikelab_groupWhileClicked:
         text: en cliquant sur {COSTUME}
       Mikelab_groupWhileTouchingAny:
-        text: tant que{COSTUME} touche {COSTUME2}{STATEMENT}
+        text: tandis que{COSTUME} touche {COSTUME2}{STATEMENT}
       Mikelab_hasBehavior:
         text: En ce moment {SPRITE} fait {BEHAVIOR}
       Mikelab_hideFish:
@@ -1445,9 +1446,7 @@ fr:
             object: objet
             fish: poissons
       Mikelab_ifDanceIs:
-        text: |-
-          Si {SPRITE} exécute {DANCE}
-          {DO1} {DO2}
+        text: si {SPRITE} exécute {DANCE}{DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Tape des mains en l'air
@@ -1463,33 +1462,31 @@ fr:
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Mikelab_ifLabel:
-        text: |-
-          si {DANCE}
-          faire {DO1} sinon {DO2}
+        text: si {DANCE}faire {DO1} sinon {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: poissons
             MOVES.Clown: my-label
       Mikelab_ifRecognizeLabel:
-        text: |-
-          si reconnaître l'objet comme {DANCE}
-          faire {DO1} sinon {DO2}
+        text: si reconnaître l'objet comme {DANCE}faire {DO1} sinon {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: poissons
             MOVES.Clown: my-label
       Mikelab_ifRecognizeLabelOnly:
-        text: |-
-          si reconnaître l'objet comme {DANCE}
-          faire {DO1}
+        text: si reconnaître l'objet comme {DANCE}faire {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: poissons
             MOVES.Clown: pas my-label
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: couleur aléatoire
       Mikelab_removeBehaviorSimple:
@@ -1504,6 +1501,7 @@ fr:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ville
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'cuisine '
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1519,6 +1517,10 @@ fr:
           CORNER:
             '"right"': vers la droite
             '"left"': vers la gauche
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': ci-dessous
       Mikelab_sprite:
         text: nouveau {COSTUME} lutin à {LOCATION}
         options:
@@ -1576,6 +1578,18 @@ fr:
         text: coordonnées x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      PoemBot_setBackgroundEffect:
+        text: définir l’effet de fond {BG_EFFECT} [PALETTE][1]
+        options:
+          BG_EFFECT:
+            '"solid"': unie
+            '"rainbow"': arc-en-ciel
+      PoemBot_setForegroundEffect:
+        text: définir l’effet de premier plan {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': pluie
+            '"bubbles"': bulles
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:
@@ -1709,6 +1723,7 @@ fr:
             '"stoneBricks"': briques de pierre
             '"mossyStoneBricks"': briques de pierre moussues
             '"crackedStoneBricks"': briques de pierre craquelées
+            '"chiseledStoneBricks"': briques de pierre décoratives
             '"blueCoralBlock"': bloc de corail bleu
             '"pinkCoralBlock"': bloc de corail rose
             '"magentaCoralBlock"': bloc de corail magenta

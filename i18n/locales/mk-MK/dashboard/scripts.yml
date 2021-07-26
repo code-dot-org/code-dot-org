@@ -1,3 +1,4 @@
+---
 mk:
   data:
     script:
@@ -59,7 +60,7 @@ mk:
             Variables:
               name: Променливи
             'null':
-              name: 'нула'
+              name: нула
         csd6-old:
           lessons:
             Lists:
@@ -97,7 +98,7 @@ mk:
         andrea-test:
           lessons:
             'null':
-              name: 'нула'
+              name: нула
         coursec-2019:
           lesson_groups:
             csf_loops:

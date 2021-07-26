@@ -5,6 +5,8 @@ is:
       Green: Grænn
       Red: Rauður
       actor: leikmaður
+      age: aldur
+      answer: svar
       armlength: armlengd
       binary: tvíund
       bodylength: líkamslengd
@@ -18,6 +20,7 @@ is:
       i: i
       left: vinstri
       length: lengd
+      level: stig
       name: heiti
       nectar: blómasafi
       nectars: blómasafar
@@ -29,6 +32,8 @@ is:
       sides: hliðar
       size: stærð
       speed: hraða
+      startX: startX
+      startY: startY
       variable: breyta
       width: breidd
       wizard: galdrakarl
