@@ -656,7 +656,7 @@
   highlights_constant_athletes_short_heading: Push yourself
 
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
-  footer_trademark_message: 'Hour of Code™ and Hora del Código® are trademarks of Code.org. Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
+  footer_trademark_message: 'Hour of Code™ and Hora del Código® are trademarks of Code.org.'
   footer_built_on_github: 'Built on GitHub from Microsoft'
 
   footer_menu_partners: 'Partners and Advisors'
