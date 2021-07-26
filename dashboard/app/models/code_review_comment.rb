@@ -4,7 +4,7 @@
 #
 #  id               :bigint           not null, primary key
 #  storage_app_id   :integer          not null
-#  project_version  :string(255)      not null
+#  project_version  :string(255)
 #  commenter_id     :integer          not null
 #  comment          :text(16777215)
 #  project_owner_id :integer
@@ -28,8 +28,7 @@ class CodeReviewComment < ApplicationRecord
   validates :comment, presence: true
   validates :project_owner_id, presence: true
 
-  # Note: this should be moved to the reviewable_projects model once it exists
-  # Something like reviewable_project.user_can_review?(potential_reviewer)
+  # To do: move to ReviewableProject model
   def self.user_can_review_project?(project_owner, potential_reviewer)
     project_owner == potential_reviewer ||
       project_owner.student_of?(potential_reviewer) ||
