@@ -7,7 +7,6 @@ import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {reload} from '@cdo/apps/utils';
 
 export default class CommitDialog extends React.Component {
   state = {
@@ -58,7 +57,7 @@ export default class CommitDialog extends React.Component {
           key="cancel"
           type="cancel"
           text="Cancel"
-          onClick={reload}
+          onClick={this.props.handleClose}
         />
         ,
         <FooterButton
