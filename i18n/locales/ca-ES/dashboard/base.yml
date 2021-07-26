@@ -249,6 +249,7 @@ ca:
       about_contact: "Contacta'ns"
       about_faqs: "Preguntes freqüents"
       learn: "Aprèn"
+      stats: "Estadístiques"
       help_us: "Ajuda'ns"
       teach: "Ensenya"
       about: "Quant a"
@@ -276,6 +277,7 @@ ca:
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Laboratori de jocs'
+      iceage: 'Edat de gel'
       infinity: 'Infinit'
       minecraft_adventurer: 'Aventurer Minecraft'
       minecraft_designer: 'Minecraft'
@@ -329,6 +331,7 @@ ca:
     delete_confirm: 'Esteu segur que voleu suprimir el vostre compte?'
     update_email: "Actualitza"
     parent_guardian_email_label: "E-mail del pare/tutor"
+    remove_parent_email_label: "Esborra"
     none: "Cap"
   user_level:
     completed: 'Completat'
@@ -501,6 +504,7 @@ ca:
       title: "Condicionals"
     widgets:
       title: "Ginys"
+      audience: "Edat 14 +"
   landing:
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"
@@ -633,3 +637,4 @@ ca:
   cookie_banner:
     accept: 'D''acord'
   copy: 'Copiar'
+  confirm: 'confirmació'

@@ -1796,6 +1796,379 @@
         },
         "outbreak7": {
           "costumes_callout": "Haz clic para hacer un nuevo disfraz"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Elige el tipo de bailarín aquí..."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Agrega este bloque a tu programa.",
+          "arrow_buttons": "Presiona los botones de flecha para controlar a tu bailarín."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "¡Añade este bloque a tu programa!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Agrega un nuevo evento a tu programa."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "¡Bloque nuevo!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "¡Bloque nuevo!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "¡Bloque nuevo!",
+          "new_block_4": "¡Bloque nuevo!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Haz clic aquí para expandir el bloque.",
+          "pointerlocation": "Arrastra un bloque de asunto aquí."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Haz clic para hacer un nuevo disfraz"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Usa este bloque para dejarte notas a ti o al docente sobre cómo funciona tu código."
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Esta pequeña instrucción le indica a la computadora que ejecute el gran pedazo de código con el mismo nombre en el área de trabajo."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "El Agent puede flotar sobre el agua, ¡pero el jugador no!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "No puedes tirar esos bloques, pero ¡puedes editarlos!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "El Agent puede flotar sobre la lava, ¡pero el jugador no!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Hemos colocado algunos bloques para que empieces."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Este código empezará a construir tu casa. ¿Puedes acabarlo?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Dale a \"Ejecutar\" para probar el programa.",
+          "craft_drag_block_callout": "Arrastra un bloque \"avanzar\" y colócalo debajo del otro bloque"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Coloca bloques aquí para repetir acciones."
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Este código comprobará si hay lava. ¿Puedes añadir un comando para avanzar?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "¡Extrae este hierro!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Este número significa que sólo uno de este tipo de bloque se puede usar en la respuesta final."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "¿Sabias que puedes dibujar sobre una línea cuando lo necesites?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Esta es la caja de herramientas. Es donde encontrarás bloques adicionales para completar tus rompecabezas."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "¡Haz click en la bombilla cuando necesites ayuda!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Esta es una llamada"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Haz click aquí para cambiar la dirección de la flecha del evento."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Esto te permite elegir un sonido \"aleatorio\", lo que significa que ¡no sabes que vas a escuchar!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Luego de conectar todos los bloques, presiona \"Ejecutar\" para comenzar tu programa."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Esta es la caja de herramientas. Es donde encontrarás bloques adicionales para completar tus rompecabezas."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo se utilizará?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "¡Haz click en la bombilla cuando necesites ayuda!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Usa la flecha verde desplegable para cambiar la direccion."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Lleva al actor a esta bandera para pasar al nivel siguiente."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "¡Usa este bloque cuando toquen Waddles y Chomp!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Este bloque te permite mover actores a diferentes partes del espacio del juego."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Este bloque es muy importante para este proyecto. ¡Asegúrate de usarlo!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Añade esto en el medio de tu programa."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Aquí puedes ralentizar tu programa."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en otra lección."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "¡Puedes sacar más bloques de la caja de herramientas si los necesitas!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "El número cuatro en la calabaza te informa que hay cuatro calabazas disponibles para escoger."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "¡Estos bloques están bloqueados y no se pueden eliminar!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Luego de conectar todos los bloques, presiona \"Ejecutar\" para comenzar tu programa."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Esta es la caja de herramientas. Es donde encontrarás bloques adicionales para completar tus rompecabezas."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Puedes arrastrar los bloques adicionales a la caja de herramientas para eliminarlos.",
+          "courseC_maze_programming3_3": "Estos bloques son de piedra y no se pueden eliminar."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Este es tu limite de bloques. Te dice cuántos de estos bloques te quedan por usar."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que quieras!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "¡Este es tu primer súper desafío! Estos están hechos difíciles a propósito y pueden implicar varios intentos.",
+          "courseC_maze_programming7_2": "Estos bloques están hechos de piedra y no se pueden eliminar."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Sólo tienes disponible uno de estos bloques en este rompecabezas."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Sólo tienes disponible uno de estos bloques en este rompecabezas."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "No tienes que usar colores para resolver este desafío correctamente. Si lo deseas, ¡Este bloque \"colores al azar\" lo facilita!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Recuerda, revisa si CADA nube tiene una FLOR. No tienes que revisar las colmenas."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Recuerda, revisa si CADA nube tiene una FLOR. No tienes que revisar las colmenas.",
+          "4_5_Bee_Conditionals_2_2": "¿Necesitas ayuda? ¡Haz click aquí para un VIDEO de ayuda!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Usa este loop para recolectar todo el néctar (o miel) de una flor (o panal)."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Intenta recorrer tu código bloque a bloque."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar un bloque \"mientras camino adelante\" para resolver este desafío."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Este es tu limite de bloques. Te dice cuántos de estos bloques te quedan por usar."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que quieras!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Luego de conectar todos los bloques, presiona \"Ejecutar\" para comenzar tu programa."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Esta es la caja de herramientas. Es donde encontrarás bloques adicionales para completar tus rompecabezas."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Puedes arrastrar los bloques adicionales a la caja de herramientas para eliminarlos.",
+          "stone_block_2": "Los bloques grises están hechos de piedra y no se pueden eliminar."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Estos bloques no incluyen números. ¡Puedes usarlos todas las veces que quieras!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "¡Haz clic aquí!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "Comencemos usando este bloque para ayudar a crear el primer cuadrado."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después de dibujar la primera plaza?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Cuando este bloque verde se ejecuta, todos los códigos en la función se ejecutarán. ¿Qué deberían hacer los artistas después de dibujar la primera plaza?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Tus bloques para crear funciones se han ubicado bajo esta etiqueta en la caja de herramientas."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Mantén este programa funcionando agregando más códigos al final.",
+          "courseE_artist_functions_challenge1_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Mantén este programa funcionando agregando más códigos al final.",
+          "courseE_artist_functions_challenge2_callout2": "Si no te gusta este diseño, ¡cámbialo por el que quieras!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Esta verdura es desconocida. Cambia cada vez que ejecutas el programa."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "¡La caja de herramientas está organizada un poco diferente esta vez! Haz clic en las diferentes categorías para ver qué bloques tienes."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Esta verdura es desconocida. Cambia cada vez que ejecutas el programa."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Esta verdura es desconocida. Cambia cada vez que ejecutas el programa."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_collector": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_apps_pet": {
+          "run_button": "¡Pulsa primero el botón Ejecutar!",
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "La caja de herramientas está en modo de \"categoría\" para hacer más espacio para tu código. Los bulcles \"for\" viven aquí."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "¡Aquí encontrarás el bucle 'for'!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Aquí encontrarás el bucle 'matemáticas'."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "¡Puedes encontrar tus variables aquí!"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Intenta cambiar cuando a mientras."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "¡Nuevos bloques aquí!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Utiliza el nuevo bloque de eventos que se encuentra aquí."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Este bloque está mal ordenado."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Haz clic aquí para ver cómo funciona este comportamiento."
+        },
+        "courseF_events_time": {
+          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Haga clic aquí para abrir la categoría Comportamientos."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Haga clic aquí para abrir la categoría de Sprites."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Haga clic aquí para abrir la categoría de Ubicaciones."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Busca un nuevo bloque aquí."
+        },
+        "courseF_text_answer": {
+          "answered_block": "¡Busca un nuevo bloque aquí!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "¿Ha cambiado de color el fondo cuando has respondido a la pregunta? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "¿Ha terminado? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "¡Busca dos nuevos bloques aquí!",
+          "text_answer_finish": "¿Se ha mostrado una pantalla de título durante 3 segundos? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y pulsa \"Ejecutar\" de nuevo."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "¡Busque nuevos bloques aquí!"
+        },
+        "courseF_text_events": {
+          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+        },
+        "courseF_text_print": {
+          "print_block": "¡Encuentra el bloque de impresión aquí!",
+          "text_print_finish": "¿Se imprimió el mensaje anterior? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia tu código y pulsa \"Ejecutar\" de nuevo."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Encuentra aquí el bloque de avisos."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Después de ajustar todos los bloques juntos, presiona \"Ejecutar\" para iniciar tu programa."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
         }
       }
     }

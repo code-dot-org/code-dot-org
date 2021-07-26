@@ -1,0 +1,35 @@
+{
+  "pl-PL": {
+    "data": {
+      "objectives": {
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Zidentyfikuj duszki w uruchomionym programie komputerowym."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Opracowuj programy reagujące na określone czasowo zdarzenia."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Opracowuj programy reagujące na dane wejściowe użytkownika."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Utwórz interaktywną animację stosując zdarzenia."
+        },
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Zadeklaruj zmienną"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Przypisz wartość zmiennej"
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Utwórz interaktywną animację stosując zdarzenia."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Opracowuj programy reagujące na określone czasowo zdarzenia."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Opracowuj programy reagujące na dane wejściowe użytkownika."
+        }
+      }
+    }
+  }
+}

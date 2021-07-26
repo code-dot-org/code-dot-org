@@ -4,6 +4,8 @@ fi:
     progressions:
       Artist Project: Taiteilija projekti
       'Artist: Variables': 'Taiteilija: muuttujat'
+      Debugging: Virheen etsintä
+      Design Mode: Suunnittelutila
       Drawing: Piirustus
       Events: Tapahtumat
       For Loops: Silmukat
@@ -14,5 +16,6 @@ fi:
       Measures: Tahdit
       Pair Programming: Pariohjelmointi
       Properties: Ominaisuudet
+      Review: Tarkista
       Velocity: Nopeus
       Wrap-up: Yhteenveto

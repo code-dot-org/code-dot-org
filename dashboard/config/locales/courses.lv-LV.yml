@@ -1,1 +1,9 @@
---- {}
+---
+lv:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: AP® Datorzinātņu Principi
+        csp-2018:
+          assignment_family_title: AP® Datorzinātņu Principi

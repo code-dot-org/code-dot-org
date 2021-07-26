@@ -4,6 +4,8 @@ bs:
     progressions:
       'Artist: Variables': 'Umjetnik: Varijable'
       Binary Numbers: Binarni Brojevi
+      Debugging: Otklanjanje pogrešaka
+      Design Mode: Način Dizajniranje
       Drawing: Crtanje
       Events: Događaji
       For Loops: Od-Do-Za Petlje

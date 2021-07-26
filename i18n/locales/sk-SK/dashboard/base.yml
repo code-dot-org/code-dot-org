@@ -282,6 +282,7 @@ sk:
       cant_join_own_section: "Prepáčte, nemôžete sa pridať do vlastnej sekcie."
       provider_managed_section: "Túto triedu spravuje iný poskytovateľ a nie je možné sa k nej pripojiť. Požiadajte prosím vášho školiteľa o pridanie pomocou %{provider} a opätovné synchronizovanie ich triedy."
       restricted_section: "Do sekcie %{section_code} ťa nevieme pridať, pretože je uzamknutá. Kontaktuj prosím svojho učiteľa pre pomoc."
+      full_section: "Do sekcie %{section_code} ťa nebolo možné pridať, pretože je tam prihlásených už %{section_capacity} študentov.  Kontaktuj prosím svojho učiteľa pre pomoc."
     mail:
       student_disassociated:
         subject: "Code.org upozornenie: %{student_name} už nie je Vaším študentom."
