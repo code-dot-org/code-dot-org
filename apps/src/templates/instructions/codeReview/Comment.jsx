@@ -90,11 +90,8 @@ export default class Comment extends Component {
               {isShowingCommentOptions && (
                 <CommentOptions
                   isResolved={isResolved}
-                  onResolveStateToggle={() => {
-                    this.props.onResolveStateToggle(id);
-                    this.setState({isShowingCommentOptions: false});
-                  }}
-                  onDelete={() => this.onDelete(id)}
+                  onResolveStateToggle={() => this.onResolve()}
+                  onDelete={() => this.onDelete()}
                 />
               )}
             </i>
