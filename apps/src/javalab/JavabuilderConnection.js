@@ -2,7 +2,6 @@ import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import {getStore} from '../redux';
 import {setIsRunning} from './javalabRedux';
-const queryString = require('query-string');
 import project from '@cdo/apps/code-studio/initApp/project';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
@@ -40,19 +39,7 @@ export default class JavabuilderConnection {
   }
 
   establishWebsocketConnection(token) {
-    let url = this.javabuilderUrl;
-    const optionsStr = queryString.stringify(this.options);
-    if (window.location.hostname.includes('localhost')) {
-      // We're hitting the local javabuilder server. Just pass the required parameters.
-      // TODO: Enable token decryption on local javabuilder server.
-      url += `?levelId=${this.levelId}&channelId=${this.channelId}`;
-      if (optionsStr) {
-        url += `&${optionsStr}`;
-      }
-    } else {
-      url += `?Authorization=${token}`;
-    }
-
+    const url = `${this.javabuilderUrl}?Authorization=${token}`;
     this.socket = new WebSocket(url);
     this.socket.onopen = this.onOpen.bind(this);
     this.socket.onmessage = this.onMessage.bind(this);
