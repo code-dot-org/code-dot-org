@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:30 UTC",
+    "serialized_at": "2021-07-21 20:25:41 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -7007,7 +7007,7 @@
       "key": "07460e2d-0520-4fc3-9092-9b145ff54295",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Google Sheets Introduction video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n[r view_and_download_survey_data/csd/2021]"
       },
       "seeding_key": {
         "activity_section.key": "07460e2d-0520-4fc3-9092-9b145ff54295",
@@ -7216,7 +7216,7 @@
       "key": "7f4a57cb-7221-40f4-a60a-2026a13bcba2",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Editing Google Sheets video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/csd/2021] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -10996,6 +10996,18 @@
       }
     },
     {
+      "name": "Cleaning Survey Data",
+      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "key": "cleaning_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -11606,6 +11618,18 @@
       }
     },
     {
+      "name": "View and Download Survey Data",
+      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "key": "view_and_download_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
       "name": "Zombie Prediction - Activity Guide",
       "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
       "key": "zombie_prediction_-_activity_guide",
@@ -11975,6 +11999,12 @@
     {
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
         "resource.key": "isaac_s_survey_data_-_student_resource"
       }
     },
@@ -11988,6 +12018,12 @@
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
         "resource.key": "survey_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "view_and_download_survey_data"
       }
     },
     {

@@ -6,97 +6,97 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Cum să planificați evenimentul Hour of Code
 
-### Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Alăturaţi-vă mişcării şi introduceți un grup de elevi la prima lor oră de informatică urmând aceşti paşi. Ora de cod este ușor de rulat - chiar și pentru începători! Dacă ai nevoie de ajutor suplimentar, poți găsi un [voluntar local]({{ urls/volunteer_local }}) care să te ajute să organizezi u eveniment Hour of Code în clasa ta.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### Consultă ghidul nostru de participare [dacă mai ai întrebări]({{ localized_files/participation_guide }}).
 
 ***
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 1. Urmărește acest clip video instructiv <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 2. Explore Activities and Tutorials
+## 2. Explorează activitățile și tutorialele
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Îți punem la dispoziție o gamă variată de [tutoriale distractive, ghidate de cursanți]({{ urls/learn }}), pentru toate grupele de vârstă și nivelurile de experiență. O opțiune populară printre cursanți este să încerce tutoriale pe cont propriu, dar multe dintre evenimente includ planuri de lecție pentru profesori, pentru a ghida discuțiile sau pentru a prelungi activitatea.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Parcurge activitățile și decide din timp dacă vrei să alegi un singur tutorial pentru toți cursanții sau dacă vrei să lași fiecare copil să își aleagă unul.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+## 3. Creează planul pentru ziua respectivă
 
-### Think about your technology needs - computers are optional!
+### Gândește-te la necesarul de echipamente - calculatoarele sunt opționale!
 
-- Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Testați neapărat tutorialele pe calculatoarele sau dispozitivele elevilor pentru a vă asigura că funcționează corespunzător pe browsere cu sunet și video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- Cea mai buna experienta Hour of Code include calculatoare care au conexiune la Internet. Dar nu ai nevoie de un calculator pentru fiecare copil și poți chiar să organizezi Hour of Code fără calculatoare! Pentru [activități offline](/learn), utilizează, în secțiunea Tehnologie necesară pentru ore, filtrul care să afișeze opțiunile „Fără computere sau dispozitive”.
+- Testați neapărat tutorialele pe calculatoarele sau dispozitivele elevilor pentru a vă asigura că funcționează corespunzător pe browsere cu sunet și video. Ai o conexiune cu lățime de bandă redusă? Planifică activitățile în așa fel încât să prezinți videoclipurile întregii clase, pentru a evita astfel ca fiecare student să descarce propriile videoclipuri. Sau folosește tutorialele offline.
 - Oferiti-le casti elevilor din clasa dvs sau spuneti-le sa isi aduca ei propriile casti daca tutorialul pe care l-ati ales merge mai bine cu sunet.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
+- Nu ai suficiente dispozitive? Utilizează [programarea în perechi](https://www.youtube.com/watch?v=vgkahOzFH2Q). Atunci când elevii au un partener, ei se ajută reciproc şi se bazează mai puţin pe profesor. Ei vor vedea, de asemenea, că programarea este socială şi colaborativă.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-### Pick a day and time
+### Alege o zi și o oră
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Oameni din întreaga lume participă la Hour of Code în timpul Săptămânii educației în domeniul științei calculatoarelor (9-13 decembrie), când sunt lansate cele mai recente tutoriale și activități. Dar poți organiza un eveniment Hour of Code în orice zi a anului!
 
-## 4. Promote your Hour of Code
+## 4. Promovează evenimentul Hour of Code
 
-Now that you've planned your event, it's time to start promoting it!
+Acum că ai planificat evenimentul, este timpul să începi să-l promovezi!
 
-### Tell your School and Community
+### Informează școala și comunitatea din care faci parte
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Spune-le și altor profesori despre evenimentul Hour of Code, este posibil ca aceștia să își exprime dorința de a participa! Aceasta este și o ocazie excelentă de a contacta PTSA (asociația părinților, profesorilor și elevilor) din cadrul școlii sau de a transmite informații despre eveniment în buletinele de știri destinate părinților, prin care îi poți anunța că este posibil ca, la întoarcerea acasă, copiii lor să fie dornici să încerce mai multe activități și tutoriale!
 
-### Let Volunteers Know by Registering Your Event
+### Anunță voluntarii prin înregistrarea evenimentului tău.
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Atunci când te [înscrii la evenimentul Hour of Code](/), vei primi comunicări utile prin e-mail cu noutăți și sfaturi pentru organizarea unui eveniment Hour of Code de succes. Tot acesta este modul în care îi poți anunța pe voluntarii locali că școala ta participă la eveniment. Voluntarii sunt o resursă extraordinară și aceștia se pot adresa clasei, discutând despre știința calculatoarelor sau pur și simplu îi pot ajuta pe elevi în cadrul activităților evenimentului Hour of Code.
 
-### Get your Students Excited
+### Entuziasmează-ți cursanții
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Pregătește evenimentul prin distribuirea de [clipuri video inspiraționale](/promote/resources) în care se vorbește despre diverse persoane și moduri creative în care poate fi utilizată știința calculatoarelor. Sau comandă postere pentru clasa ta, care pot fi surse de inspirație pentru cursanți! Cursanții vor fi mai entuziasmați să participe la o activitate atunci când văd că există alte persoane ca și ei care încurajează participarea.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Află mai multe despre postere, clipuri video, autocolante și alte modalități de [promovare a evenimentului tău](/promote/resources#posters) în comunitate.
 
-## 5. Start your Hour of Code Strong
+## 5. Cum să începi evenimentul Hour of Code cu dreptul
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Când ziua evenimentului Hour of Code a sosit, asigură-te că începi evenimentul cu dreptul, folosind unele dintre aceste instrumente și sfaturi.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Invită un [voluntar local]({{ urls/volunteer_local }}) să le vorbească participanților despre posibilitățile științei calculatoarelor. Există mii de voluntari din întreaga lume care sunt pregătiți să te ajute să organizezi evenimentul Hour of Code, fie printr-o vizită, fie prin videochat!
 
 Arată-le un filmulet inspirational:
 
 - Clipul video original de lansare al Code.org, cu Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh. (Sunt disponibile versiuni de [1minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc) și [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Găsește mai multe clipuri video inspiraționale [aici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Nu este nicio problemă dacă sunteți începători în domeniul științei calculatoarelor. Iată câteva idei pentru a prezenta activitatea Hour of Code:
 
 - Explicați modurile în care tehnologia are impact asupra vieților noastre, cu exemple pe care atât băieții cât și fetele le vor înțelege(vorbiți despre salvarea vieților, ajutarea oamenilor, conectarea acestora etc.).
 - Faceti o lista cu lucrurile la care folositi programarea in fiecare zi.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Consultă [această pagină]({{ urls/girls }}) pentru sfaturi cu privire la modul în care le poți convinge pe fete să fie interesate de știința calculatoarelor.
 
 
-## 6. Get Coding!
+## 6. Programați!
 
-Direct students to the activity
+Îndrumă elevii către activitate
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Scrie linkul tutorialului pe tablă. Fă clic pe linkul din secțiunea cu [informații cu privire la tutorialul selectat]({{ urls/learn }}), aflat sub numărul de participanți.
 
-When your students come across difficulties it's okay to respond:
+Atunci când elevii tăi întâmpină dificultăți, este normal să răspunzi:
 
-- “I don’t know. Let’s figure this out together.”
+- „Nu știu. Haideți să rezolvăm asta împreună.”
 - "Tehnologia nu funcţionează întotdeauna în modul în care vrem noi."
 - "Învăţarea programarii este ca învăţarea unei limbi noi; nu veţi fi fluent imediat."
 
-What if a student finishes early?
+Ce se întâmplă dacă un cursant termină mai devreme decât ceilalți?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
+- Cursanții pot urmări toate tutorialele și pot [încerca o altă activitate Hour of Code]({{ urls/learn }}).
 - Sau îi puteți îndemna pe elevii ce au terminat prea devreme să îi ajute pe cei ce întâmpină probleme cu activitatea.
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7. Sărbătoriți împreună succesul elevilor
 
 [col-33]
 
@@ -104,10 +104,10 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [Imprimă certificate]({{ urls/certificates }}) pentru elevi.
+- [Imprimă autocolante cu mesajul „Am participat la Hour of Code!”]({{ urls/promote_stickers }}) pentru cursanții tăi.
 - [Comandați tricouri personalizate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) pentru școala dumneavoastră.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Distribuie fotografii și clipuri video ale evenimentului Hour of Code pe rețelele de socializare. Folosește #HourOfCode și @codeorg pentru ca și noi să le spunem altora despre succesul tău!
 
 ----
 
@@ -118,6 +118,6 @@ What if a student finishes early?
 
 ## Ce urmeaza dupa Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Studiul științei calculatoarelor nu trebuie să se încheie cu evenimentul Hour of Code! Curriculumul nostru este bazat pe web și utilizarea acestuia va fi întotdeauna gratuită. [Află cum](/beyond) poți să aduci ȘC în școala ta și la elevii tăi.
 
 {{ signup_button }}
