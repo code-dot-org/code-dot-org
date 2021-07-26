@@ -76,7 +76,7 @@ export default class CommitDialog extends React.Component {
               this.state.commitNotes,
               this.state.filesToBackpack
             );
-            this.props.handleClose;
+            this.props.handleClose();
           }}
         />
       </div>
