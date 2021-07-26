@@ -219,6 +219,7 @@ bs:
       about_us: "O nama"
       about_donors: "Donatori"
       about_jobs: "Poslovi"
+      stats: "Prikaži Statistiku"
       help_us: "Pomogni nam"
       teach: "Podučavaj"
       legal_privacy: "Pravila Privatnosti"
@@ -244,6 +245,7 @@ bs:
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Sniježno kraljevstvo'
+      iceage: 'Ledeno Doba'
       infinity: 'Beskonačnost'
       playlab: 'Play Lab'
       starwars: 'Zvijezdani ratovi'
@@ -298,6 +300,7 @@ bs:
     enter_new_login_info: 'Unesite svoje nove podatke za prijavu'
     enter_parent_email: "Unesi email adresu od svog roditelja ili staratelja (za obnovu lozinke)"
     update_email: "Osvježi"
+    remove_parent_email_label: "Ukloni"
     none: "Nijedno"
   user_level:
     completed: 'Kompletirano'
@@ -458,6 +461,7 @@ bs:
     unplugged_conditionals:
       title: "Uvjeti"
     widgets:
+      audience: "Uzrast 14+"
       cta: "Nauči kako"
   landing:
     report_bug: "Prijavi Grešku"

@@ -355,6 +355,8 @@ hu:
         C4_unplugged_binary: Bináris
         CSF_collector_k1_blocks: 'A számítógép-tudomány alapjai: A gyűjtő'
         CSF_collector_text_blocks: 'A számítógép-tudomány alapjai: A gyűjtő'
+        CSF_debugging_k1_blocks: Hibakeresés
+        CSF_debugging_text_blocks: Hibakeresés
         CSF_my_robotic_friends: A robot barátaim
         frozen_intro: Bevezetés a Kódolás Órájába
         frozen_loops: Bevezetés a ciklusokba
@@ -417,6 +419,7 @@ hu:
         csd_applab_parameters: Paraméteres függvények
         csd_problem_solving_process: A probléma-megoldási folyamat
         CSF_Spritelab_MakeSprite_v2: Hogyan készítsünk sprite-ot
+        csd_debugging: Hibakeresés
         hoc_dance_congrats_2019: Táncos buli 2019 - Bulizz tovább!
         hoc_dance_warmup_2019: Táncos buli 2019 - Melegíts be
         hoc_dance_events_2019: Táncos buli 2019 - Események

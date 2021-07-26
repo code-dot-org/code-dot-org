@@ -300,6 +300,7 @@ ne:
     delete_confirm: Are you sure you want to delete your account?
     deleted_user: deleted user
     update_email: Update
+    remove_parent_email_label: Remove
   user_level:
     completed: Completed
     tried: Tried
@@ -534,6 +535,7 @@ ne:
     unplugged_conditionals:
       title: Conditionals
     widgets:
+      audience: Ages 14+
       cta: Learn how
   landing:
     report_bug: Report Bug

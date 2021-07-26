@@ -1789,6 +1789,379 @@
         },
         "outbreak7": {
           "costumes_callout": "crwdns2493954:0crwdne2493954:0"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "crwdns2582324:0crwdne2582324:0"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "crwdns2582334:0crwdne2582334:0",
+          "arrow_buttons": "crwdns2582336:0crwdne2582336:0"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "crwdns2582352:0crwdne2582352:0"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "crwdns2582362:0crwdne2582362:0"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "crwdns2582372:0crwdne2582372:0"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "crwdns2582382:0crwdne2582382:0"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "crwdns2582402:0crwdne2582402:0",
+          "new_block_4": "crwdns2582404:0crwdne2582404:0"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "crwdns2576528:0crwdne2576528:0",
+          "pointerlocation": "crwdns2576530:0crwdne2576530:0"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "crwdns2576632:0crwdne2576632:0"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "crwdns2586294:0crwdne2586294:0"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "crwdns2587224:0crwdne2587224:0"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "crwdns2587168:0crwdne2587168:0"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "crwdns2587182:0crwdne2587182:0"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "crwdns2587214:0crwdne2587214:0"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "crwdns2587268:0crwdne2587268:0"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "crwdns2582912:0crwdne2582912:0"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "crwdns2582936:0crwdne2582936:0"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "crwdns2582884:0crwdne2582884:0",
+          "craft_drag_block_callout": "crwdns2582886:0crwdne2582886:0"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "crwdns2582924:0crwdne2582924:0"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "crwdns2582976:0crwdne2582976:0"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "crwdns2582996:0crwdne2582996:0"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "crwdns2582210:0crwdne2582210:0"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "crwdns2582302:0crwdne2582302:0"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "crwdns2577460:0crwdne2577460:0"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "crwdns2577476:0crwdne2577476:0"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "crwdns2577468:0crwdne2577468:0"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "crwdns2585884:0crwdne2585884:0"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "crwdns2585914:0crwdne2585914:0"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "crwdns2585926:0crwdne2585926:0"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "crwdns2577810:0crwdne2577810:0"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "crwdns2577826:0crwdne2577826:0"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "crwdns2576856:0crwdne2576856:0"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "crwdns2585408:0crwdne2585408:0"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "crwdns2586092:0crwdne2586092:0"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "crwdns2586102:0crwdne2586102:0"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "crwdns2586114:0crwdne2586114:0"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "crwdns2585366:0crwdne2585366:0"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "crwdns2585380:0crwdne2585380:0"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "crwdns2585984:0crwdne2585984:0"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "crwdns2585756:0crwdne2585756:0"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "crwdns2577532:0crwdne2577532:0"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "crwdns2586188:0crwdne2586188:0"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "crwdns2579238:0crwdne2579238:0"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "crwdns2579098:0crwdne2579098:0"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "crwdns2579138:0crwdne2579138:0"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "crwdns2582584:0crwdne2582584:0"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "crwdns2582594:0crwdne2582594:0"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "crwdns2586808:0crwdne2586808:0"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "crwdns2580794:0crwdne2580794:0"
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "crwdns2580854:0crwdne2580854:0"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "crwdns2578766:0crwdne2578766:0"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "crwdns2580724:0crwdne2580724:0"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "crwdns2578332:0crwdne2578332:0"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "crwdns2580560:0crwdne2580560:0"
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "crwdns2580570:0crwdne2580570:0"
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "crwdns2580580:0crwdne2580580:0",
+          "courseC_maze_programming3_3": "crwdns2580582:0crwdne2580582:0"
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "crwdns2580592:0crwdne2580592:0"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "crwdns2580604:0crwdne2580604:0"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "crwdns2580626:0crwdne2580626:0",
+          "courseC_maze_programming7_2": "crwdns2580628:0crwdne2580628:0"
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "crwdns2582468:0crwdne2582468:0"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "crwdns2572514:0crwdne2572514:0"
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "crwdns2586918:0crwdne2586918:0"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "crwdns2583042:0crwdne2583042:0"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "crwdns2572612:0crwdne2572612:0",
+          "4_5_Bee_Conditionals_2_2": "crwdns2572614:0crwdne2572614:0"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "crwdns2583146:0crwdne2583146:0"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "crwdns2582668:0crwdne2582668:0"
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "crwdns2583234:0crwdne2583234:0"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "crwdns2579314:0crwdne2579314:0"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "crwdns2579338:0crwdne2579338:0"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "crwdns2579284:0crwdne2579284:0"
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "crwdns2579294:0crwdne2579294:0"
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "crwdns2579302:0crwdne2579302:0",
+          "stone_block_2": "crwdns2579304:0crwdne2579304:0"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "crwdns2579326:0crwdne2579326:0"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "crwdns2586670:0crwdne2586670:0"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "crwdns2572672:0crwdne2572672:0"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "crwdns2587328:0crwdne2587328:0"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "crwdns2572718:0crwdne2572718:0"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "crwdns2587366:0crwdne2587366:0"
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "crwdns2587486:0crwdne2587486:0",
+          "courseE_artist_functions_challenge1_callout2": "crwdns2587488:0crwdne2587488:0"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "crwdns2587500:0crwdne2587500:0",
+          "courseE_artist_functions_challenge2_callout2": "crwdns2587502:0crwdne2587502:0"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "crwdns2587782:0crwdne2587782:0"
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "crwdns2587674:0crwdne2587674:0"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "crwdns2587684:0crwdne2587684:0"
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "crwdns2587698:0crwdne2587698:0"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "crwdns2573082:0crwdne2573082:0",
+          "visualizationResizeBar": "crwdns2573084:0crwdne2573084:0"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "crwdns2572890:0crwdne2572890:0"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "crwdns2572936:0crwdne2572936:0",
+          "visualizationResizeBar": "crwdns2572938:0crwdne2572938:0"
+        },
+        "courseF_apps_collector": {
+          "run_button": "crwdns2573166:0crwdne2573166:0",
+          "visualizationResizeBar": "crwdns2573168:0crwdne2573168:0"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "crwdns2573022:0crwdne2573022:0"
+        },
+        "courseF_apps_pet": {
+          "run_button": "crwdns2572844:0crwdne2572844:0",
+          "visualizationResizeBar": "crwdns2572846:0crwdne2572846:0"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "crwdns2585062:0crwdne2585062:0"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "crwdns2584944:0crwdne2584944:0"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "crwdns2585018:0crwdne2585018:0"
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "crwdns2584840:0crwdne2584840:0"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "crwdns2575430:0crwdne2575430:0"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "crwdns2575476:0crwdne2575476:0"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "crwdns2575536:0crwdne2575536:0"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "crwdns2582096:0crwdne2582096:0"
+        },
+        "courseF_events_conflict": {
+          "stops_block": "crwdns2581854:0crwdne2581854:0"
+        },
+        "courseF_events_key": {
+          "whenKey": "crwdns2581774:0crwdne2581774:0"
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "crwdns2581934:0crwdne2581934:0"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "crwdns2581628:0crwdne2581628:0"
+        },
+        "courseF_events_time": {
+          "events_category": "crwdns2581730:0crwdne2581730:0"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "crwdns2575350:0crwdne2575350:0"
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "crwdns2581430:0crwdne2581430:0"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "crwdns2581288:0crwdne2581288:0"
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "crwdns2581324:0crwdne2581324:0"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "crwdns2581394:0crwdne2581394:0"
+        },
+        "courseF_text_answer": {
+          "answered_block": "crwdns2584362:0crwdne2584362:0"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "crwdns2584684:0crwdne2584684:0"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "crwdns2584444:0crwdne2584444:0"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "crwdns2584640:0crwdne2584640:0",
+          "text_answer_finish": "crwdns2584642:0crwdne2584642:0"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "crwdns2584402:0crwdne2584402:0"
+        },
+        "courseF_text_events": {
+          "events_category": "crwdns2584288:0crwdne2584288:0"
+        },
+        "courseF_text_print": {
+          "print_block": "crwdns2584250:0crwdne2584250:0",
+          "text_print_finish": "crwdns2584252:0crwdne2584252:0"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "crwdns2584324:0crwdne2584324:0"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "crwdns2584144:0crwdne2584144:0"
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "crwdns2576848:0crwdne2576848:0"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "crwdns2580768:0crwdne2580768:0"
         }
       }
     }
