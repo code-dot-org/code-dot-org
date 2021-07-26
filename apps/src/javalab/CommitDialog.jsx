@@ -70,7 +70,14 @@ export default class CommitDialog extends React.Component {
           text={commitText}
           disabled={isDisabled}
           color="green"
-          onClick={() => {}}
+          onClick={() => {
+            this.props.handleCommit(
+              this.state.filesToCommit,
+              this.state.commitNotes,
+              this.state.filesToBackpack
+            );
+            this.props.handleClose;
+          }}
         />
       </div>
     ];
