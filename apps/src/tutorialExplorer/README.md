@@ -1,6 +1,6 @@
 # Tutorial Explorer
 
-**Tutorial Explorer** is the standalone React app that delivers the functionality of https://code.org/learn and https://hourofcode.com/learn, the pages commonly known as "slash learn".  It was built for the fourth annual Hour of Code in 2016, providing the official catalogue of both first- and third-party Hour of Code tutorials in an explorable and filterable interface, and has been used ever since.
+**Tutorial Explorer** is the standalone React app that delivers the functionality of https://code.org/learn and https://hourofcode.com/learn, the pages commonly known as "slash learn".  It was built for the fourth annual **Hour of Code** in 2016, providing the official catalogue of both first- and third-party **Hour of Code** tutorials in an explorable and filterable interface, and has been used ever since.
 
 At the time of writing, the pages have over 190 million pageviews, with over 130 million of them unique.
 
@@ -80,7 +80,7 @@ When a tutorial is started, we open it in a new browser tab.  Since the **Tutori
 
 ## Mobile detection
 
-There is some rudimentary (detection for mobile devices)[https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/apps/src/tutorialExplorer/util.jsx#L108-L132].  If a mobile device is successfully detected, the Android & iOS options are initially checked.
+There is some rudimentary [detection for mobile devices](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/apps/src/tutorialExplorer/util.jsx#L108-L132).  If a mobile device is successfully detected, the Android & iOS options are initially checked.
 
 ## URL parameters
 
@@ -110,7 +110,7 @@ length: 1hour, 1hour-follow, few-hours
 programming_language: blocks, typing, other
 ```
 
-Important note: in order to ensure satisfactory web performance, list these parameters in the order of the above list.  (This will allow each variant to be cached as one.)
+**Important note:** In order to ensure satisfactory web performance, list these parameters in the order of the above list.  (This will allow each variant to be cached as one.)
 
 For example, do not specify: https://hourofcode.com/learn?subject=science&platform=computers
 
