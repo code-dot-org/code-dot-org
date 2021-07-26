@@ -4,7 +4,7 @@
 #
 #  id               :bigint           not null, primary key
 #  storage_app_id   :integer          not null
-#  project_version  :string(255)      not null
+#  project_version  :string(255)
 #  commenter_id     :integer          not null
 #  comment          :text(16777215)
 #  project_owner_id :integer
