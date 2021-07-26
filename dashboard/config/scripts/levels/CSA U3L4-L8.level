@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Your `showCommunity()` method also has a `people` array, which contains `Image` objects representing people in your neighborhood.\r\n\r\nIn `NeighborhoodConcert.java`, use `drawImage()` to show each image in the `people` array each time the sound effect is played by doing the following:\r\n1. Before the `while` loop, declare and initialize a variable named `xPos` to 50 and a variable named `yPos` to 20.\r\n\r\n2. Inside the `while` loop after `playSound()`, call `drawImage()` with the following arguments:\r\n   * Use `people[count % people.length]` to select an `Image` to draw from the array.\r\n   \r\n   * Use `xPos` and `yPos` for the x and y coordinates.\r\n   \r\n   * Set the width to 25, the height to 75, and the rotation to 0.\r\n\r\n3. Inside the `while` loop after `drawImage()`, increment the `yPos` by 100 so the images show next to each other in a row.\r\n\r\n4. To make sure the images don't go off the stage, let's only display the images in rows of 4. This means you need to move the `xPos` down after you have displayed four images. Add an `if` statement to check if `count` is a multiple of 4 (use mod!). If true, add 100 to `xPos` and reset `yPos` back to 20.\r\n\r\n5. Finally, add a `pause()` before the end of the `while` loop so the images show one at a time!",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29233,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-21T18:00:37.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-21T18:00:37.878+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L7\\\"\"],\"cloned_from\":\"CSA U3L4-L7\"},{\"changed_at\":\"2021-07-21 18:10:02 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 18:12:06 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 19:27:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 13:28:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
