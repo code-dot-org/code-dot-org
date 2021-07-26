@@ -91,15 +91,19 @@ const styles = {
         boxShadow: 'none'
       }
     },
-    light: {color: color.cyan},
-    dark: {color: color.lightest_gray},
+    light: {
+      //color: color.white
+    },
+    dark: {
+      //color: color.lightest_gray
+    },
     orange: {
       backgroundColor: color.orange,
       borderColor: color.orange
     },
     white: {
       backgroundColor: color.white,
-      borderColor: color.white,
+      borderColor: color.dark_charcoal,
       color: color.dark_charcoal,
       ':hover': {
         color: color.dark_charcoal,
