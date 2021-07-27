@@ -18,10 +18,7 @@ export default class CommitDialog extends React.Component {
   renderFooter = buttons => {
     let compileStatusContent = '';
     let commitText = i18n.commit();
-    let isCommitButtonDisabled = true;
-    if (this.state.commitNotes) {
-      isCommitButtonDisabled = false;
-    }
+    const isCommitButtonDisabled = !this.state.commitNotes;
     if (this.state.filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
     }
