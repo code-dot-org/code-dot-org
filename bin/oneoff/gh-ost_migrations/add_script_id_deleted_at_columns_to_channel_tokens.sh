@@ -92,4 +92,4 @@ args=(
 #  --execute
 )
 
-./gh-ost "${args[@]}"
+/opt/gh-ost "${args[@]}"
