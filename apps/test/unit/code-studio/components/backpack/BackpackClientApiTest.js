@@ -63,19 +63,21 @@ describe('BackpackClientApi', () => {
       expect(successCallback).to.have.been.calledOnce;
     });
 
-    it('calls error on failure', () => {
-      setSaveResponse(200, 'test.java');
+    it('retries, then calls error on failure', () => {
       setSaveResponse(500, 'test2.java');
       backpackClientApi.saveFiles(
         sampleFileJson,
-        ['test.java', 'test2.java'],
+        ['test2.java'],
         errorCallback,
         successCallback
       );
+      // need to respond twice because we retry failures
       server.respond();
       server.respond();
       expect(errorCallback).to.have.been.calledOnce;
       assert(successCallback.notCalled);
+      // expect 2 calls to attempt to save test2.java
+      expect(server.requests.length).to.equal(2);
     });
   });
 
