@@ -222,8 +222,8 @@ el:
       η εγγραφή σας.
     user_type_button: Ενημέρωση τύπου λογαριασμού
     user_type_label: Τύπος λογαριασμού
-    user_type_teacher: Καθηγητής
     user_type_student: φοιτητής/μαθητής
+    user_type_teacher: Καθηγητής
     field_is_required: απαιτείται
     accept_terms: Πρέπει να συμφωνήσετε να δημιουργήσετε έναν λογαριασμό
     error: Παρουσιάστηκε ένα σφάλμα.
@@ -952,7 +952,7 @@ el:
       email: Ηλεκτρονικό ταχυδρομείο
       school_name: Όνομα σχολείου
       school_country: Χώρα σχολείου
-      colombian_school_name: Όνομα σχολείου
+      colombian_chilean_school_name: Όνομα σχολείου
     form_entries:
       gender:
         male: Αγόρι
