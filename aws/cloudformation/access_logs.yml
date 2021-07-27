@@ -160,7 +160,7 @@ Resources:
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
       ExtendedS3DestinationConfiguration:
         BufferingHints: 
-          IntervalInSeconds: 60
+          IntervalInSeconds: 180
           SizeInMBs: 128
         BucketARN: !GetAtt AccessLogBucket.Arn
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
@@ -172,6 +172,8 @@ Resources:
               Parameters:
                 - {ParameterName: LambdaArn, ParameterValue: !GetAtt AccessLogProcessor.Arn}
                 - {ParameterName: RoleArn, ParameterValue: !GetAtt AccessLogDeliveryRole.Arn}
+                - {ParameterName: BufferIntervalInSeconds, ParameterValue: 180}
+                - {ParameterName: BufferSizeInMBs, ParameterValue: 3}
         DataFormatConversionConfiguration:
           Enabled: true
           InputFormatConfiguration: {Deserializer: {OpenXJsonSerDe: {}}}
@@ -188,6 +190,7 @@ Resources:
       Handler: access_logs.handler
       Runtime: ruby2.7
       MemorySize: 1024
+      Timeout: 60
       Environment:
         Variables:
           DATABASE: !Ref AccessLogDatabase
