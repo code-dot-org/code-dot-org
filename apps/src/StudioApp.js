@@ -2120,6 +2120,11 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
+  this.hasContainedLevels = config.hasContainedLevels;
+
+  if (config.hasContainedLevels) {
+    initializeContainedLevel();
+  }
 };
 
 // Overwritten by applab.

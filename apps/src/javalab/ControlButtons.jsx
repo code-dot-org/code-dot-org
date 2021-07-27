@@ -7,6 +7,7 @@ import JavalabButton from './JavalabButton';
 
 export default function ControlButtons({
   isDarkMode,
+  isDisabled,
   isRunning,
   isTesting,
   toggleRun,
@@ -36,6 +37,7 @@ export default function ControlButtons({
         isHorizontal
         className="noBorder"
         style={buttonStyles}
+        isDisabled={isDisabled}
       />
       <JavalabButton
         text={isTesting ? i18n.stopTests() : i18n.test()}
@@ -44,6 +46,7 @@ export default function ControlButtons({
         isHorizontal
         className="noBorder"
         style={buttonStyles}
+        isDisabled={isDisabled}
       />
     </div>
   );
@@ -54,7 +57,8 @@ ControlButtons.propTypes = {
   isRunning: PropTypes.bool.isRequired,
   isTesting: PropTypes.bool.isRequired,
   toggleRun: PropTypes.func.isRequired,
-  toggleTest: PropTypes.func.isRequired
+  toggleTest: PropTypes.func.isRequired,
+  isDisabled: PropTypes.bool
 };
 
 const styles = {

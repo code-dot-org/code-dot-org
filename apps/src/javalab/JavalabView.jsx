@@ -36,7 +36,8 @@ class JavalabView extends React.Component {
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
     setIsRunning: PropTypes.func,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    awaitingContainedResponse: PropTypes.bool
   };
 
   state = {
@@ -116,7 +117,8 @@ class JavalabView extends React.Component {
       handleVersionHistory,
       isEditingStartSources,
       isRunning,
-      showProjectTemplateWorkspaceIcon
+      showProjectTemplateWorkspaceIcon,
+      awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -187,6 +189,7 @@ class JavalabView extends React.Component {
                     isTesting={isTesting}
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
+                    isDisabled={awaitingContainedResponse}
                   />
                 }
               />
@@ -273,7 +276,8 @@ export default connect(
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon
+      .showProjectTemplateWorkspaceIcon,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

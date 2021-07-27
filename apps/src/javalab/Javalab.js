@@ -24,6 +24,11 @@ import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -231,6 +236,7 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  this.studioApp_.attempts++;
   this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
@@ -246,6 +252,7 @@ Javalab.prototype.onRun = function() {
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
   });
+  postContainedLevelAttempt(this.studioApp_);
 };
 
 // Called by Javalab console to send a message to Javabuilder.
@@ -259,16 +266,23 @@ Javalab.prototype.onContinue = function() {
     this.studioApp_.onContinue();
   };
 
-  this.studioApp_.report({
-    app: 'javalab',
-    level: this.level.id,
-    result: true,
-    testResult: TestResults.ALL_PASS,
-    program: '',
-    onComplete: result => {
-      onReportComplete(result);
-    }
-  });
+  const containedLevelResultsInfo = this.studioApp_.hasContainedLevels
+    ? getContainedLevelResultInfo()
+    : null;
+  if (containedLevelResultsInfo) {
+    runAfterPostContainedLevel(onReportComplete);
+  } else {
+    this.studioApp_.report({
+      app: 'javalab',
+      level: this.level.id,
+      result: true,
+      testResult: TestResults.ALL_PASS,
+      program: '',
+      onComplete: result => {
+        onReportComplete(result);
+      }
+    });
+  }
 };
 
 Javalab.prototype.getCode = function() {
