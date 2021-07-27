@@ -1,5 +1,4 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import i18n from '@cdo/javalab/locale';
 
 const SAVE_RETRY_COUNT = 1;
 
@@ -23,8 +22,9 @@ export default class BackpackClientApi {
 
   saveFiles(filesJson, filenames, onError, onSuccess) {
     if (this.filesToUpload.length > 0) {
-      // save is currently in progress, return an error
-      onError(i18n.backpackSaveInProgress());
+      // save is currently in progress, return an error. Frontend should prevent multiple
+      // button clicks in a row.
+      onError();
     }
     if (filenames.length === 0) {
       // nothing to save
