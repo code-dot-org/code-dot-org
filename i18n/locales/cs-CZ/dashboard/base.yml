@@ -167,8 +167,8 @@ cs:
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
-    user_type_teacher: "Učitel"
     user_type_student: "Student"
+    user_type_teacher: "Učitel"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
     error: "Došlo k chybě."
@@ -965,9 +965,8 @@ cs:
       gender: 'Rod'
       school_name: 'Název školy'
       school_country: 'Země školy'
-      colombian_school_department: 'Školní oddělení '
       colombian_school_municipality: 'Školní městský obvod'
-      colombian_school_name: 'Název školy'
+      colombian_chilean_school_name: 'Název školy'
       ages: 'Jaké jsou věky studentů, které letos učíte?'
       subjects: 'Jaké předměty letos vyučujete?'
       resources: 'Které z následujících vzdělávacích prostředků výuky počítačových věd používáte?'
