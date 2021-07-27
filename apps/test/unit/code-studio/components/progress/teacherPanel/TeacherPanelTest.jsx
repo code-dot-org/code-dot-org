@@ -47,27 +47,25 @@ const sectionScriptLevelData = [
   }
 ];
 
-let ajaxStub;
-beforeEach(() => {
-  ajaxStub = sinon.stub($, 'ajax');
-  ajaxStub.returns({
-    done: successCallback => {
-      successCallback(sectionScriptLevelData);
-      return {fail: () => {}};
-    }
-  });
-});
-
-afterEach(() => {
-  ajaxStub.restore();
-});
-
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
   return shallow(<TeacherPanel {...props} />);
 };
 
 describe('TeacherPanel', () => {
+  beforeEach(() => {
+    sinon.stub($, 'ajax').returns({
+      done: successCallback => {
+        successCallback(sectionScriptLevelData);
+        return {fail: () => {}};
+      }
+    });
+  });
+
+  afterEach(() => {
+    $.ajax.restore();
+  });
+
   describe('on unit page', () => {
     it('initial view as student has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Student});
