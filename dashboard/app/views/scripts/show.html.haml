@@ -12,6 +12,7 @@
                             user_providers: current_user&.providers,
                             is_verified_teacher: current_user&.authorized_teacher?,
                             locale: Script.locale_english_name_map[request.locale],
+                            locale_code: request.locale,
                             course_link: @script.course_link(params[:section_id]),
                             course_title: @script.course_title || I18n.t('view_all_units'),
                             sections: @sections_with_assigned_info}
