@@ -23,6 +23,8 @@
   "newFile": "Nowy plik",
   "noMainMethod": "Błąd: Twój program nie zawiera metody głównej. ",
   "onlyVisibleToYou": "widoczny tylko dla Ciebie",
+  "reOpen": "Otwórz ponownie",
+  "resolve": "Rozwiąż",
   "runtimeError": "Twój kod napotkał wyjątek podczas działania.\n{cause}",
   "twoMainMethods": "Błąd: Twój kod może zawierać tylko jedną metodę główną. Znaleźliśmy co najmniej dwie klasy z metodami głównymi. "
 }
