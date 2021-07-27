@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 21:56:06 UTC",
+    "serialized_at": "2021-07-26 23:58:35 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -523,31 +523,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "K5-21-video-BasicFeatures"
-        ],
-        "progression": "Getting Started"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "K5-21-video-BasicFeatures"
-        ],
-        "lesson.key": "Getting Started",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "K5-21-video-BasicFeatures"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "OPD-K5 GettingStarted1_2021"
         ],
         "progression": "Getting Started"
@@ -567,8 +542,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 4,
+      "chapter": 10,
+      "position": 3,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -592,8 +567,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 5,
+      "chapter": 11,
+      "position": 4,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -614,6 +589,31 @@
       },
       "level_keys": [
         "K5-21-StudentExperience-vid"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "K5-21-video-BasicFeatures"
+        ],
+        "progression": "Getting Started"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K5-21-video-BasicFeatures"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "K5-21-video-BasicFeatures"
       ]
     },
     {
@@ -4082,17 +4082,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "K5-21-video-BasicFeatures",
-        "script_level.level_keys": [
-          "K5-21-video-BasicFeatures"
-        ],
-        "lesson.key": "Getting Started",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "OPD-K5 GettingStarted1_2021",
         "script_level.level_keys": [
           "OPD-K5 GettingStarted1_2021"
@@ -4118,6 +4107,17 @@
         "level.key": "K5-21-StudentExperience-vid",
         "script_level.level_keys": [
           "K5-21-StudentExperience-vid"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "K5-21-video-BasicFeatures",
+        "script_level.level_keys": [
+          "K5-21-video-BasicFeatures"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
