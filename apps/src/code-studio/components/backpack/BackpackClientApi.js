@@ -18,6 +18,28 @@ export default class BackpackClientApi {
     });
   }
 
+  fetchFile(filename, onError, onSuccess) {
+    this.backpackApi.get(this.channelId + '/' + filename, (error, data) => {
+      if (error) {
+        onError(error);
+      } else {
+        console.log(data);
+        onSuccess(data);
+      }
+    });
+  }
+
+  getFileList(onError, onSuccess) {
+    this.backpackApi.get(this.channelId, (error, data) => {
+      if (error) {
+        onError(error);
+      } else {
+        console.log(data);
+        onSuccess(data);
+      }
+    });
+  }
+
   saveFiles(filesJson, filenames, onError, onSuccess) {
     if (filenames.length === 0) {
       // nothing to save
