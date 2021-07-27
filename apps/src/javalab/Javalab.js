@@ -291,15 +291,4 @@ Javalab.prototype.onCommitCode = function() {
   project.autosave();
 };
 
-Javalab.prototype.createBackpackApi = function() {
-  $.ajax({
-    url: '/backpacks/channel',
-    type: 'get'
-  }).done(response => {
-    getStore().dispatch(
-      setBackpackApi(new BackpackClientApi(response.channel))
-    );
-  });
-};
-
 export default Javalab;
