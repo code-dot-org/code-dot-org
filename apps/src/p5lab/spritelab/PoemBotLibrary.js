@@ -81,6 +81,63 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.isVisible = false;
       },
 
+      setPoem(key) {
+        if (key === 'wordsworth') {
+          this.poem = {
+            title: 'I Wandered Lonely as a Cloud',
+            author: 'William Wordsworth',
+            lines: [
+              [{value: 'I wandered lonely as a cloud', type: 'literal'}],
+              [
+                {
+                  value: "That floats on high o'er vales and hills,",
+                  type: 'literal'
+                }
+              ],
+              [{value: 'When all at once I saw a crowd,', type: 'literal'}],
+              [{value: 'A host, of golden daffodils;', type: 'literal'}],
+              [{value: 'Beside the lake, beneath the trees,', type: 'literal'}],
+              [
+                {
+                  value: 'Fluttering and dancing in the breeze.',
+                  type: 'literal'
+                }
+              ]
+            ]
+          };
+        } else if (key === 'dickinson') {
+          this.poem = {
+            title: 'If I can Stop one Heart from Breaking',
+            author: 'Emily Dickinson',
+            lines: [
+              [
+                {
+                  value: 'If I can stop one heart from breaking,',
+                  type: 'literal'
+                }
+              ],
+              [{value: 'I shall not live in vain;', type: 'literal'}],
+              [{value: 'If I can ease one life the aching,', type: 'literal'}],
+              [{value: 'Or cool one pain,', type: 'literal'}],
+              [{value: 'Or help one fainting robin', type: 'literal'}],
+              [{value: 'Unto his nest again,', type: 'literal'}],
+              [{value: 'I shall not live in vain.', type: 'literal'}]
+            ]
+          };
+        } else if (key === 'silverstein') {
+          this.poem = {
+            title: 'Batty',
+            author: 'Shel Silverstein',
+            lines: [
+              [{value: 'The baby bat', type: 'literal'}],
+              [{value: 'Screamed out in fright', type: 'literal'}],
+              [{value: "'Turn on the dark;", type: 'literal'}],
+              [{value: "I'm afraid of the light.'", type: 'literal'}]
+            ]
+          };
+        }
+      },
+
       ...backgroundEffects,
       ...foregroundEffects
     };
@@ -90,6 +147,19 @@ export default class PoemBotLibrary extends CoreLibrary {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  getScaledFontSize(text, desiredSize) {
+    this.p5.push();
+    this.p5.textSize(desiredSize);
+    const fullWidth = this.p5.textWidth(text);
+    const scaledSize = Math.min(
+      desiredSize,
+      (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
+    );
+
+    this.p5.pop();
+    return scaledSize;
+  }
+
   drawPoem() {
     let yCursor = OUTER_MARGIN;
     this.p5.fill('black');
@@ -97,14 +167,14 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.p5.textSize(FONT_SIZE);
     this.p5.textAlign(this.p5.CENTER);
     if (this.poem.title) {
-      this.p5.textSize(FONT_SIZE * 2);
+      this.p5.textSize(this.getScaledFontSize(this.poem.title, FONT_SIZE * 2));
       this.p5.text(this.poem.title, PLAYSPACE_SIZE / 2, yCursor);
       this.p5.textSize(FONT_SIZE);
       yCursor += LINE_HEIGHT;
     }
     if (this.poem.author) {
       yCursor -= LINE_HEIGHT / 2;
-      this.p5.textSize(16);
+      this.p5.textSize(this.getScaledFontSize(this.poem.author, 16));
       this.p5.text(this.poem.author, PLAYSPACE_SIZE / 2, yCursor);
       this.p5.textSize(FONT_SIZE);
       yCursor += LINE_HEIGHT;
@@ -122,16 +192,10 @@ export default class PoemBotLibrary extends CoreLibrary {
     // Concatenate all the text values together so we can compute the length
     // of the printed text
     const fullLine = line.map(textItem => textItem.value).join(' ');
-    let fullWidth = this.p5.textWidth(fullLine);
-    this.p5.textSize(
-      Math.min(
-        FONT_SIZE,
-        (FONT_SIZE * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
-      )
-    );
+    this.p5.textSize(this.getScaledFontSize(fullLine, FONT_SIZE));
 
-    // recompute with scaled textSize
-    fullWidth = this.p5.textWidth(fullLine);
+    // compute line width with scaled textSize
+    let fullWidth = this.p5.textWidth(fullLine);
 
     const start = PLAYSPACE_SIZE / 2 - fullWidth / 2;
     this.p5.textAlign(this.p5.LEFT);
