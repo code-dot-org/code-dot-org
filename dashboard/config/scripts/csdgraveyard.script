@@ -1,7 +1,7 @@
 published_state 'beta'
 
 lesson 'Introduction to Styling with CSS', display_name: 'Introduction to Styling with CSS', has_lesson_plan: false
-level 'Unit 2 Lesson 7 Overview', named: true
+level 'Unit 2 Lesson 7 Overview', progression: 'Lesson Overview'
 level 'CSDU2 - Intro to CSS'
 level 'CSDU2 - Selector and Property'
 level 'CSDU2 - p tags'
@@ -11,11 +11,11 @@ level 'CSDU2 - body tags'
 level 'CSDU2 - text properties'
 level 'CSDU2 - font properties'
 level 'CSDU2 - image properties'
-level 'Stop: Intro to CSS', named: true
+level 'Stop: Intro to CSS', progression: 'Stop: Intro to CSS'
 level 'CSDU2 - About Me Page Styling'
 
 lesson 'External Style Sheets', display_name: 'External Style Sheets', has_lesson_plan: false
-level 'Brand Book Example', named: true
+level 'Brand Book Example', progression: 'Brand Book Example'
 level 'CSDU2 Pick Your Fonts'
 level 'CSDU2 Pick Your Colors'
 level 'CSDU2 - External Style Sheets'

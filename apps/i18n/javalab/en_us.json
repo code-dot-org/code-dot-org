@@ -4,6 +4,7 @@
   "backpackLabel": "Backpack",
   "cancel": "Cancel",
   "clearConsole": "Clear Console",
+  "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
   "commitAndSave": "Commit & Save",
   "commitCode": "Commit Code",
@@ -30,5 +31,6 @@
   "resolve": "Resolve",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
-  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
+  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
+  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now."
 }
