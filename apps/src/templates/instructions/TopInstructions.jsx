@@ -301,7 +301,7 @@ class TopInstructions extends Component {
     this.props.setInstructionsRenderedHeight(newHeight);
 
     if (this.props.onHeightResize) {
-      this.props.onHeightResize();
+      this.props.onHeightResize(newHeight);
     }
   };
 
