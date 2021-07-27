@@ -19,7 +19,6 @@ const style = {
   container: {
     width: styleConstants['content-width'],
     height: '80vh',
-    maxHeight: '360px',
     left: '20px',
     right: '20px'
   },
