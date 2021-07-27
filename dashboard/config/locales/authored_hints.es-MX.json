@@ -10637,7 +10637,7 @@
           "changePropBlock": "También necesitarás este bloque:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_sprites_clouds": {
-          "behavior_list": "Pruebe a utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
+          "behavior_list": "Prueba utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
           "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples preguntas, utilice la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"

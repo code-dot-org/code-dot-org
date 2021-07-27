@@ -477,170 +477,117 @@
         },
         "express-2021/Programming with Angry Birds": {
           "overview": "A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Aprende acerca de las secuencias y los algoritmos con Angry Birds."
         },
         "express-2021/Debugging with Scrat": {
           "overview": "La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Encuentra problemas en los desafíos y practica tus habilidades de depuración."
         },
         "express-2021/Collecting Treasure with Laurel": {
-          "overview": "En esta serie de desafíos, los estudiantes continuarán desarrollando su comprensión de los algoritmos y la depuración. Crearán algoritmos secuenciales para que el nuevo personaje Laurel la Aventurera pueda recoger el tesoro mientras recorre el camino.",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "overview": "En esta serie de desafíos, los estudiantes continuarán desarrollando su comprensión de los algoritmos y la depuración. Crearán algoritmos secuenciales para que el nuevo personaje Laurel la Aventurera pueda recoger el tesoro mientras recorre el camino."
         },
         "express-2021/Creating Art with Code": {
           "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
-          "preparation": "",
           "purpose": "Partiendo de la experiencia previa de los/as estudiantes con la secuenciación, esta lección trabajará para inspirar más creatividad con la programación. El propósito de esta lección es consolidar el conocimiento de la secuenciación mediante la introducción de nuevos bloques y objetivos. En este caso, los/as estudiantes aprenden más sobre los píxeles y ángulos usando los nuevos bloques, mientras practican sus habilidades de secuenciación. Además, los/as estudiantes podrán visualizar nuevas metas, tales como programar al Artista para dibujar un cuadrado.",
           "student_overview": "Programa el Artista para crear imágenes hermosas."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "overview": "En esta lección, los estudiantes aprenderán sobre dos conceptos alojados en el corazón del Laboratorio de sprites: sprites y comportamientos. Los sprites son personajes u objetos en la pantalla que los estudiantes pueden mover, cambiar y manipular. Los comportamientos son acciones que los sprites harán continuamente hasta que se los detenga. ",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Aprende cómo crear y editar sprites."
         },
         "express-2021/lesson-2": {
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas y aprenderán los dos conceptos centrales de Laboratorio de Sprite: los sprites y los comportamientos. ",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "En esta lección escribirás programas y aprenderás sobre los sprites y comportamientos."
         },
         "express-2021/lesson-3": {
           "overview": "En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de \"juego libre\" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. ",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Trabajarás a través de niveles de programación y terminarás con una tarea abierta de \"juego libre\" en la que podrás construir lo que quieras."
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "En esta lección, los estudiantes crearán una Mascota Virtual interactiva que luce y se comporta como ellos desean. Los estudiantes usarán la herramienta \"Disfraces\" del Laboratorio de sprites para personalizar la apariencia de sus mascotas. Luego usarán eventos, comportamientos y otros conceptos que han aprendido para darle vida a sus mascotas.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "En esta lección, los estudiantes crearán una Mascota Virtual interactiva que luce y se comporta como ellos desean. Los estudiantes usarán la herramienta \"Disfraces\" del Laboratorio de sprites para personalizar la apariencia de sus mascotas. Luego usarán eventos, comportamientos y otros conceptos que han aprendido para darle vida a sus mascotas."
         },
         "express-2021/lesson-1": {
           "overview": "En esta lección, los estudiantes programarán su propia fiesta de baile interactiva. Esta actividad requiere el uso de sonido, ya que la herramienta responde a la música.",
-          "preparation": "",
           "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques).",
           "student_overview": "¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva."
         },
         "express-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Usa los bucles para ayudar a BB-8 a atravesar los laberintos! "
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "¡Mira cómo se ilumina el resto de los estudiantes mientras hacen sus propios diseños maravillosos usando un pequeño número de bloques y pegatinas digitales! Esta lección se basa en la comprensión de bucles de lecciones anteriores y da a los/as estudiantes la oportunidad de ser verdaderamente creativos. Esta actividad es fantástica para producir artefactos para carpetas o para reuniones de padres/profesores.",
-          "preparation": "",
           "purpose": "Esta serie destaca el poder de los loops con diseños creativos y personales.  \n\nOfrecido como una secuencia respaldada por el proyecto, esta progresión permitirá a los/as estudiantes construir sobre su propio trabajo y crear artefactos asombrosos.",
           "student_overview": "En esta lección, los bucles hacen que sea sencillo crear imágenes incluso más geniales con Artista."
         },
         "express-2021/Nested Loops in Maze": {
           "overview": "En esta actividad online, los/as estudiantes tendrán la oportunidad de llevar su comprensión de los loops a un nuevo nivel. Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán cómo programar un loop para que esté dentro de otro loop. También se les animará a que descifren cómo cambios pequeños en cualquier loop, afectarán su programa cuando hagan clic en Ejecutar.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Bucles dentro de bucles que están dentro de otros bucles. ¿Qué significa esto? Esta lección te mostrará qué sucede cuando creas un bucle anidado."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Ahora que los estudiantes saben cómo anidar sus bucles, pueden crear muchas cosas hermosas. Esta lección los guiará a través de una serie de ejercicios que los ayudarán a crear sus propias imágenes, listas para incluir en una carpeta, gracias a las excelentes habilidades de patinaje sobre hielo de Anna y Elsa.",
-          "preparation": "",
           "purpose": "En esta serie, los/as estudiantes practicarán anidando loops mientras crean imágenes que estarán emocionados de compartir. \n\nComenzando con algunas instrucciones, los/as estudiantes harán sus propias decisiones en lo que respecta a la creación de diseños para la repetición. Luego las girarán de diferentes maneras para terminar con una obra de arte verdaderamente única.",
           "student_overview": "Anna y Elsa patinan muy bien sobre hielo, pero necesitan de tu ayuda para crear patrones en esa superficie. Utiliza los bucles anidados para crear algo súper GENIAL. "
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "overview": "Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Evita la lava! Aquí empezarás a aprender sobre condicionales en el mundo de Minecraft."
         },
         "express-2021/If/Else with Bee": {
           "overview": "Hasta ahora los/as estudiantes han estado escribiendo código que se ejecuta exactamente del mismo modo cada vez que se ejecuta - confiable, pero no muy flexible. En esta lección, su clase comenzará a codificar con condicionales, permitiéndoles escribir código que funcione de forma diferente dependiendo de las condiciones específicas que el programa encuentre.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Ahora que entiendes los condicionales, es hora de programar Bee para usarlos al recolectar miel y néctar. "
         },
         "express-2021/While Loops with the Farmer": {
           "overview": "Cuando los alumnos lleguen a esta lección, ya deberían tener mucha práctica en el uso de los bucles `repetir`, así que ahora es el momento de mezclar las cosas. \n\nLos bucles \"while\" son bucles que continúan repitiendo comandos mientras se cumple una condición. Los bucles \"while\" se utilizan cuando el programador no sabe el número exacto de veces que los comandos deben ser repetidos, pero sí sabe qué condición debe ser verdadera para que el bucle continúe repitiéndose. Por ejemplo, los alumnos trabajarán para rellenar agujeros y cavar tierra en \"Agricultora\". No sabrán el tamaño de los agujeros o la altura de las montañas de tierra, pero los alumnos sabrán que necesitan seguir llenando los agujeros y cavando la tierra mientras el suelo no sea plano.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Los loops son tan útiles en la codificación. Esta lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Aquí aprenderás sobre condicionales en el mundo de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
           "overview": "En esta lección, los estudiantes aprenderán acerca de los bucles `hasta`. Crearán programas en los cuales el personaje repetirá acciones `hasta` que llegue al punto de detención deseado.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Puedes hacer cosas asombrosas con los bucles `hasta`!"
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Los/as estudiantes practicarán loops `while`, loops `hasta`, y las declaraciones `if / else`. Todos estos bloques usarán condicionales. Al practicar los tres, los/as estudiantes aprenderán a escribir código complejo y flexible.",
-          "preparation": "",
           "purpose": "Practicar el uso de condicionales en diferentes escenarios ayuda a desarrollar la comprensión de un/a estudiante de lo que puede hacer. En la lección anterior, los/as estudiantes sólo usaron condicionales para moverse alrededor de un laberinto. En esta lección, los/as estudiantes usarán condicionales para ayudar al agricultor a saber cuándo cosechar cultivos. Los nuevos patrones surgirán y los estudiantes usarán creatividad y pensamiento lógico para determinar las condiciones en las que el código debe ejecutarse y repetirse.",
           "student_overview": "No siempre está claro cuándo usar cada condicional. Esta lección te ayudará a tener práctica en decidir qué hacer."
         },
         "express-2021/Functions in Minecraft": {
           "overview": "Los estudiantes comenzarán a comprender de qué manera las funciones pueden ser útiles en esta divertida e interactiva aventura de Minecraft.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¿Puedes adivinar cómo usar funciones para el código más eficiente?"
         },
         "express-2021/Functions with Artist": {
           "overview": "Los estudiantes conocerán cómo usar las funciones en Code.org. En Artista, podrán crear y modificar magníficas imágenes con funciones. Para patrones más complicados, los estudiantes aprenderán cómo anidar funciones mediante el llamado a una función desde otra.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Usa las funciones para hacer dibujos complejos más fácilmente!"
         },
         "express-2021/Functions with Harvester": {
           "overview": "Los estudiantes practicaron cómo crear diseños maravillosos en el Artista y recorrer laberintos en la Abeja, pero hoy usarán las funciones para cosechar cultivos en la Granjera. Esta lección les permitirá usar las funciones de nuevas maneras y combinarlas con los bucles `mientras` y las sentencias `si / si no`.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Las funciones te ahorrarán mucho trabajo mientras ayudas a la granjera con su cosecha!"
         },
         "express-2021/lesson-4": {
           "overview": "Los alumnos practicarán con las variables en el Laboratorio de Sprite. Los alumnos trabajarán con la entrada del usuario para establecer los valores de sus variables, y luego imprimirán esos valores junto con otro texto.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "En esta lección practicarás con las variables en el Laboratorio de Sprite."
         },
         "express-2021/Variables with Artist": {
           "overview": "En esta lección, los alumnos explorarán la creación de diseños repetitivos mediante variables en el entorno de Artista. Los alumnos aprenderán cómo usar las variables para que el código sea más fácil de escribir y leer. Luego de los desafíos guiados, los alumnos terminarán en un nivel de juego libre para demostrar lo que han aprendido y crear sus propios diseños.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "En esta lección, harás dibujos usando variables que cambien mientras el programa se ejecuta."
         },
         "express-2021/Changing Variables with Bee": {
           "overview": "Esta lección ayudará a ilustrar cómo las variables pueden hacer que los programas sean más potentes al permitir que los valores cambien mientras el código se está ejecutando. ",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Esta abeja adora las variables."
         },
         "express-2021/For Loops with Bee": {
           "overview": "Esta lección con Abeja se centra en bucles `desde` y usa una variable gradual para solucionar los desafíos más complejos. Los alumnos repasarán bucles de lecciones anteriores y luego abordarán el uso de bucles `desde` para resolver problemas más difíciles de manera más efectiva.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Bzzz, bzzz. ¡En estos desafíos, usarás bucles `desde` para guiar a una abeja hacia el néctar y la miel!"
         },
         "express-2021/For Loops with Artist": {
           "overview": "En esta lección, los alumnos seguirán practicando bucles, esta vez con Artista. Combinarán las ideas de variables, bucles y bucles `desde` para crear diseños complejos y resolver desafíos. Al final, tendrán la oportunidad de crear su propio arte en un nivel de juego libre.",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "Prepárate para crear tu próxima obra maestra. Aquí usarás bucles `desde` para tomar fotos asombrosas."
         },
         "express-2021/End of Course Project": {
           "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
-          "preparation": "",
-          "purpose": "",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
         },
         "pre-express-2021/Learn to Drag and Drop": {

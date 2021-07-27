@@ -12337,7 +12337,7 @@ es-MX:
       courseF_sprites_freeplay:
         description: "¡Es tu turno de crear lo que quieras! ¿Qué tipo de proyecto
           vas a hacer?"
-        display_name: Sprites - Juego Libre
+        display_name: Sprites - Juego libre
       courseF_sprites_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los sprites y los comportamientos!"
@@ -12356,19 +12356,19 @@ es-MX:
 
       courseF_sprites_predict_multi:
         answers:
-        - text: Ambos aviones se moverán un espacio a lo largo de la cuadrícula y
-            luego se detendrán.
-          feedback: No es así. Estos sprites tienen "comportamientos" que siguen funcionando
-            hasta que se les dice que se detengan.
+        - text: Ambos aviones se moverán un espacio en la cuadrícula y luego se detendrán.
+          feedback: No es correcto. Estos sprites tienen "comportamientos" que siguen
+            funcionando hasta que se les dice que se detengan.
         - text: Ambos aviones comenzarán a moverse y no se detendrán.
           correct: true
-          feedback: "¡Correcto! Estos comportamientos le dicen a los aviones que empiecen
-            a moverse y sigan adelante."
-        - text: Un avión se moverá primero y el otro después.
-          feedback: No es correcto. Cada bloque de código en el Laboratorio de Sprite
-            se ejecuta instantáneamente después del siguiente.
+          feedback: "¡Correcto! Estos comportamientos les dicen a los aviones que
+            empiecen a moverse y sigan adelante."
+        - text: Un avión se moverá primero y el otro, después.
+          feedback: No es correcto. Cada bloque de código en el Sprite Lab se ejecuta
+            instantáneamente después del siguiente.
         - text: Los aviones se estrellarán.
-          feedback: Incorrecto. Los aviones no están colocados de forma que se toquen.
+          feedback: No es correcto. Los aviones no están colocados de forma que se
+            toquen.
         questions:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:

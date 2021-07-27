@@ -16386,7 +16386,7 @@ es-MX:
             Virus Simulation for Code Bytes:
               name: Cómo codificar una simulación
             Making Sprites:
-              name: Creación de Sprites
+              name: Creación de sprites
             Sprites in Action:
               name: Sprites en acción
             lesson-3-ci:
@@ -18494,7 +18494,7 @@ es-MX:
               name: Presentamos el Laboratorio de sprites
               description_student: Hablarán del papel que desempeñan las computadoras y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas dan a los usuarios la posibilidad de elegir la forma de utilizarlas.
             lesson-7:
-              name: Creación de Sprites
+              name: Creación de sprites
               description_student: En esta lección escribirás programas y aprenderás sobre los sprites y los comportamientos.
               description_teacher: 'En esta lección de **desarrollo de habilidades**, los estudiantes trabajarán a través de una serie de niveles de programación en la computadora y terminarán con una tarea abierta de "juego libre" en la que podrán crear lo que quieran. Los estudiantes escribirán programas y aprenderán los dos conceptos centrales del Sprite Lab: sprites y comportamientos. '
             lesson-8:
@@ -18691,7 +18691,7 @@ es-MX:
               description_student: "¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su propia fiesta de baile interactiva. Esta actividad requiere el uso de sonido, ya que la herramienta responde a la música.
             lesson-2:
-              name: Creación de Sprites
+              name: Creación de sprites
               description_student: En esta lección escribirás programas y aprenderás sobre sprites y comportamientos.
               description_teacher: 'En esta lección de **desarrollo de habilidades**, los estudiantes trabajarán a través de una serie de niveles de programación en la computadora y terminarán con una tarea abierta de "juego libre" en la que podrán crear lo que quieran. Los estudiantes escribirán programas y aprenderán los dos conceptos centrales del Sprite Lab: sprites y comportamientos. '
             lesson-3:
@@ -18814,7 +18814,7 @@ es-MX:
             lesson-6:
               name: Crear un Juego de Coleccionista
             Making Sprites:
-              name: Creación de Sprites
+              name: Creación de sprites
             Sprites in Action:
               name: Sprites en acción
             variables-in-spritelab:
