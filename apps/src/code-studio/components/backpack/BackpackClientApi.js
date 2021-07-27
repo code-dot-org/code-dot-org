@@ -50,7 +50,9 @@ export default class BackpackClientApi {
       if (error) {
         onError(error);
       } else {
-        onSuccess(data);
+        const filenames = [];
+        data.forEach(fileData => filenames.push(fileData['filename']));
+        onSuccess(filenames);
       }
     });
   }
