@@ -8,7 +8,7 @@ Feature: AI Lab
     And I click selector "#overlay"
     And I click selector ".uitest-ailab-dataset-image"
     And I see the dynamic instructions are showing "selectedDataset" key
-    And I see "#data-card"
+    And I wait to see "#data-card"
     And I click selector "#uitest-continue-button" 
     And I see the dynamic instructions are showing "dataDisplayLabel" key
     And I click selector "#overlay"
