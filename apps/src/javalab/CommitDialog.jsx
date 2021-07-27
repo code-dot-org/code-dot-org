@@ -15,7 +15,7 @@ export default class CommitDialog extends React.Component {
     showCompileStatus: false
   };
 
-  renderFooter = buttons => {
+  renderFooter = () => {
     let compileStatusContent = '';
     let commitText = i18n.commit();
     const isCommitButtonDisabled = !this.state.commitNotes;
@@ -54,21 +54,20 @@ export default class CommitDialog extends React.Component {
           text={commitText}
           disabled={isCommitButtonDisabled}
           color="green"
-          onClick={() => {
-            this.props.handleCommit(
-              this.state.filesToCommit,
-              this.state.commitNotes
-            );
-            this.saveToBackpack(this.state.filesToBackpack);
-          }}
+          onClick={this.commitAndSaveToBackpack}
         />
       </div>
     ];
   };
 
+  commitAndSaveToBackpack = () => {
+    this.props.handleCommit(this.state.filesToCommit, this.state.commitNotes);
+    this.saveToBackpack();
+  };
+
   // This will communicate with the backpack API
-  saveToBackpack = function(filesToBackpack) {
-    // do something here to save the files given
+  saveToBackpack = () => {
+    // do something here to save the files in this.state.filesToBackpack
     // show the error message if the files don't compile
     if (this.props.compileStatus !== CompileStatus.SUCCESS) {
       this.setState({showCompileStatus: true});
