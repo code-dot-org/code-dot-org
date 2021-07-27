@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:08 UTC",
+    "serialized_at": "2021-07-26 23:09:03 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -4068,7 +4068,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint**\n\nCheck over student plans before allowing them to continue on the rest of the levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -5425,7 +5425,13 @@
       "key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\n\n\n**Transition:** Teams log onto Code Studio and begin finalizing their websites."
+        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\n\n\n**Transition:** Teams log onto Code Studio and begin finalizing their websites.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
@@ -9420,6 +9426,18 @@
       }
     },
     {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
+      "key": "extra_code_in_challenge_levels",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
       "name": "Formatting HTML",
       "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
       "key": "formatting_html",
@@ -10504,6 +10522,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "peer-review-personal-website-exemplar-2020"
       }
     },
@@ -10553,6 +10577,12 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "extra_code_in_challenge_levels"
       }
     },
     {
