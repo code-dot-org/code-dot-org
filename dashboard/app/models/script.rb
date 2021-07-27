@@ -1008,7 +1008,7 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1664,7 +1664,8 @@ class Script < ApplicationRecord
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
           is_stable: s.stable?,
-          locales: s.supported_locale_names
+          locales: s.supported_locale_names,
+          locale_codes: s.supported_locales
         }
       end
 
@@ -1781,7 +1782,7 @@ class Script < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
-    published_state || unit_group&.published_state || ScriptConstants::PUBLISHED_STATE.in_development
+    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
   end
 
   # Use the unit group's pilot_experiment if one exists
@@ -1841,6 +1842,7 @@ class Script < ApplicationRecord
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
@@ -1848,11 +1850,14 @@ class Script < ApplicationRecord
     info
   end
 
-  def supported_locale_names
+  def supported_locale_codes
     locales = supported_locales || []
-    locales += ['en-US']
-    locales = locales.sort
-    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+    locales += ['en-US'] unless locales.include? 'en-US'
+    locales.sort
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Script.locale_native_name_map[l] || l}.uniq
   end
 
   def self.locale_native_name_map
