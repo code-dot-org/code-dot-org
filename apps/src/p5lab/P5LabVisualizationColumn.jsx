@@ -38,7 +38,7 @@ class P5LabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
-    onPromptAnswer: PropTypes.func.isRequired,
+    onPromptAnswer: PropTypes.func,
 
     // From redux
     isResponsive: PropTypes.bool.isRequired,
