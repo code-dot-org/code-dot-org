@@ -588,7 +588,7 @@ class ScriptLevel < ApplicationRecord
     }
 
     if user_level
-      teacher_panel_summary.merge(
+      teacher_panel_summary = teacher_panel_summary.merge(
         userLevelId: user_level.id,
         updatedAt: user_level.updated_at
       )

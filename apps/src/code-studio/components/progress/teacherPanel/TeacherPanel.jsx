@@ -1,28 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import TeacherPanelContainer from '../TeacherPanelContainer';
-import SectionSelector from './SectionSelector';
-import ViewAsToggle from './ViewAsToggle';
+import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
+import SectionSelector from '../SectionSelector';
+import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedLessonMapping} from '../../lessonLockRedux';
-import {ViewType} from '../../viewAsRedux';
-import {hasLockableLessons} from '../../progressRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentTable, {studentShape} from './StudentTable';
+import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SelectedStudentInfo} from './SelectedStudentInfo';
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import $ from 'jquery';
-import {setReloadTeacherPanelProgress} from '@cdo/apps/code-studio/progressRedux';
+import {
+  setReloadTeacherPanelProgress,
+  hasLockableLessons
+} from '@cdo/apps/code-studio/progressRedux';
+import queryString from 'query-string';
+import {sectionData, studentShape} from './types';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
-    sectionData: PropTypes.object,
+    sectionData: sectionData,
     unitName: PropTypes.string,
     // pageType describes the current route the user is on. Used only for logging.
     pageType: PropTypes.oneOf([
@@ -54,7 +58,8 @@ class TeacherPanel extends React.Component {
     super(props);
 
     this.state = {
-      sectionScriptLevels: []
+      levelsWithProgress: [],
+      isLoadingLevelsWithProgress: false
     };
   }
 
@@ -63,8 +68,10 @@ class TeacherPanel extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.reloadTeacherPanelProgress) {
-      console.log('reload teacher panel');
+    if (
+      nextProps.reloadTeacherPanelProgress &&
+      !this.state.isLoadingLevelsWithProgress
+    ) {
       this.getSectionData(this.props.onTeacherPanelReloaded);
     }
   }
@@ -72,7 +79,7 @@ class TeacherPanel extends React.Component {
   logToFirehose = (eventName, overrideData = {}) => {
     const sectionId =
       this.props.selectedSection && this.props.selectedSection.id;
-    let data = {
+    const data = {
       section_id: sectionId,
       page_type: this.props.pageType,
       ...overrideData
@@ -103,23 +110,40 @@ class TeacherPanel extends React.Component {
       return;
     }
 
-    let url = `/api/teacher_panel_progress/${sectionData.section.id}`;
+    this.setState({isLoadingLevelsWithProgress: true});
+
+    const baseUrl = `/api/teacher_panel_progress/${sectionData.section.id}`;
+
+    let query;
     if (isLessonExtras) {
-      url += `?script_id=${scriptId}&is_lesson_extras=true&lesson_id=${lessonId}`;
+      query = {
+        lesson_id: lessonId,
+        is_lesson_extras: true,
+        script_id: scriptId
+      };
     } else {
-      url += `?script_id=${scriptId}&level_id=${levelId}`;
+      query = {
+        script_id: scriptId,
+        level_id: levelId
+      };
     }
 
     $.ajax({
-      url: url,
+      url: baseUrl + '?' + queryString.stringify(query),
       method: 'GET'
     })
       .done(data => {
-        this.setState({sectionScriptLevels: data});
+        this.setState({
+          levelsWithProgress: data,
+          isLoadingLevelsWithProgress: false
+        });
         onComplete && onComplete();
       })
-      .fail((jqXhr, status) => {
-        console.log('errror');
+      .fail(err => {
+        console.log(
+          `Failed to update teacher panel (${err.status}) ${err.statusText}`
+        );
+        this.setState({isLoadingLevelsWithProgress: false});
       });
   };
 
@@ -136,22 +160,20 @@ class TeacherPanel extends React.Component {
       unitName
     } = this.props;
 
-    // let currentSectionScriptLevels = null;
     let currentStudent = null;
     let currentStudentScriptLevel = null;
 
-    const {sectionScriptLevels} = this.state;
+    const {levelsWithProgress} = this.state;
 
     if (sectionData) {
-      // currentSectionScriptLevels = sectionData.section_script_levels;
       if (sectionData.section && sectionData.section.students) {
         currentStudent = sectionData.section.students.find(
           student => this.props.getSelectedUserId() === student.id
         );
 
         if (currentStudent) {
-          if (sectionScriptLevels) {
-            currentStudentScriptLevel = sectionScriptLevels.find(
+          if (levelsWithProgress) {
+            currentStudentScriptLevel = levelsWithProgress.find(
               level => this.props.getSelectedUserId() === level.userId
             );
           }
@@ -167,39 +189,46 @@ class TeacherPanel extends React.Component {
 
     const sectionId = selectedSection && selectedSection.id;
 
+    const displaySelectedStudentInfo =
+      viewAs === ViewType.Teacher &&
+      currentStudent &&
+      (students || []).length > 0;
+
+    const displayLevelExamples =
+      viewAs === ViewType.Teacher && sectionData && sectionData.level_examples;
+
+    const displayLockInfo =
+      hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
+
     return (
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle logToFirehose={this.logToFirehose} />
-          {viewAs === ViewType.Teacher &&
-            currentStudent &&
-            (students || []).length > 0 && (
-              <SelectedStudentInfo
-                students={students}
-                selectedStudent={currentStudent}
-                userLevel={currentStudentScriptLevel}
-                onSelectUser={id => this.onSelectUser(id, 'iterator')}
-                getSelectedUserId={this.props.getSelectedUserId}
-              />
-            )}
-          {viewAs === ViewType.Teacher &&
-            sectionData &&
-            sectionData.level_examples && (
-              <div style={styles.exampleSolutions}>
-                {sectionData.level_examples.map((example, index) => (
-                  <Button
-                    __useDeprecatedTag
-                    key={index}
-                    text={i18n.exampleSolution({number: index + 1})}
-                    color="blue"
-                    href={example}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ))}
-              </div>
-            )}
+          {displaySelectedStudentInfo && (
+            <SelectedStudentInfo
+              students={students}
+              selectedStudent={currentStudent}
+              levelWithProgress={currentStudentScriptLevel}
+              onSelectUser={id => this.onSelectUser(id, 'iterator')}
+              getSelectedUserId={this.props.getSelectedUserId}
+            />
+          )}
+          {displayLevelExamples && (
+            <div style={styles.exampleSolutions}>
+              {sectionData.level_examples.map((example, index) => (
+                <Button
+                  __useDeprecatedTag
+                  key={index}
+                  text={i18n.exampleSolution({number: index + 1})}
+                  color="blue"
+                  href={example}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              ))}
+            </div>
+          )}
           {!sectionsAreLoaded && (
             <div style={styles.text}>{i18n.loading()}</div>
           )}
@@ -224,37 +253,33 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          {hasSections &&
-            unitHasLockableLessons &&
-            viewAs === ViewType.Teacher && (
-              <div>
-                <div style={styles.text}>
-                  {i18n.selectSectionInstructions()}
-                </div>
-                {unlockedLessonNames.length > 0 && (
-                  <div>
-                    <div style={styles.text}>
-                      <FontAwesome
-                        icon="exclamation-triangle"
-                        style={styles.exclamation}
-                      />
-                      <div style={styles.dontForget}>{i18n.dontForget()}</div>
-                    </div>
-                    <div style={styles.text}>
-                      {i18n.lockFollowing()}
-                      <ul>
-                        {unlockedLessonNames.map((name, index) => (
-                          <li key={index}>{name}</li>
-                        ))}
-                      </ul>
-                    </div>
+          {displayLockInfo && (
+            <div>
+              <div style={styles.text}>{i18n.selectSectionInstructions()}</div>
+              {unlockedLessonNames.length > 0 && (
+                <div>
+                  <div style={styles.text}>
+                    <FontAwesome
+                      icon="exclamation-triangle"
+                      style={styles.exclamation}
+                    />
+                    <div style={styles.dontForget}>{i18n.dontForget()}</div>
                   </div>
-                )}
-              </div>
-            )}
+                  <div style={styles.text}>
+                    {i18n.lockFollowing()}
+                    <ul>
+                      {unlockedLessonNames.map((name, index) => (
+                        <li key={index}>{name}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              userLevels={sectionScriptLevels}
+              levelsWithProgress={levelsWithProgress}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}
