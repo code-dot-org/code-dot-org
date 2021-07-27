@@ -13,22 +13,22 @@ ne:
   campaign_date_full_year: "डिसेम्बर ४ - १०, २०१७ \n"
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_short: Oct. 1 - Dec. 12
+  latam_campaign_date_full: October 1 - December 12
   latam_campaign_date_year: "२०१७ \n"
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
+  europe_campaign_date_start_short: Oct. 9
+  europe_campaign_date_start_long: October 9
+  europe_campaign_date_short: Oct. 9-24
+  europe_campaign_date_full: October 9-24
   europe_campaign_date_year: "२०१७ \n"
-  europe_campaign_date_full_year: October 10-25, 2020
+  europe_campaign_date_full_year: October 9-24, 2021
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: "२०१७ \n"
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: October 1-31, 2021
   hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,

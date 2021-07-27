@@ -92,7 +92,7 @@ Ebben az évben tegyük ezt még nagyobbá. Arra kérlek, hogy csatlakozz a Kód
 
 Lépj elő. Legyél te egy rendezvény házigazdája. Keress egy helyi iskolát a részvételhez, vagy próbáld ki a Kódolás óráját saját magad - mindenki csak profitálhat az alapok elsajátításából.
 
-Kezdj neki itt: http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ But only a tiny fraction of us are learning **how** technology works. Only 47% o
 
 Itt a lehetőség, hogy megváltoztassuk az oktatás jövőjét [Város/falu neve]-ban/ben.
 
-További részletek a http://hourofcode.com/{{ country }} weboldalon. Segíts, hogy mások is megtudják. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
