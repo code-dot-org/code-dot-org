@@ -32,5 +32,6 @@
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
-  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now."
+  "saving": "Saving...",
+  "backpackSaveError": "We hit an error while saving to the backpack. Try again. If this error continues, contact us at support@code.org."
 }
