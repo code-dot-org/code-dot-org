@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 21:29:14 UTC",
+    "serialized_at": "2021-07-27 16:48:04 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -97,15 +97,14 @@
     },
     {
       "key": "lesson-3",
-      "name": "Using Commands",
+      "name": "Calling Methods",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students implement solutions using action commands to move the `Painter` around The Neighborhood. Students develop computational thinking skills by translating solutions into Java code as they practice duplicating patterns. While solving these problems, students learn the importance of case-sensitivity and semicolons in Java and are exposed to the use of dot notation to call `Painter` commands.\n",
-        "preparation": "* Sticky notes (at least 20 per student)",
-        "student_overview": "Now that you have met the `Painter`, you use action commands in this lesson to move the `Painter` around The Neighborhood. You learn about some of the rules of Java that you need to follow to make the Painter move.\n"
+        "overview": "In this lesson, students implement solutions by calling methods to move the `Painter` around The Neighborhood and work with paint. Students practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.",
+        "student_overview": "Now that you have met the `Painter`, you learn about some of the methods that the `Painter` has to move and work with paint in The Neighborhood. You practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -1873,14 +1872,9 @@
       "key": "d89dbdce-92dd-4b56-b297-666d033198a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Software is a set of specific instructions that enables a computer to perform a task. What are some examples of technologies that give users specific instructions to perform a task?* \n\n**Discussion Goal:** Students give examples of apps and technologies that give users specific instructions to perform a task.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Software is a set of specific instructions that enables a computer to perform a task.\n\nFor example, GPS apps are software designed to give users specific instructions to navigate to a destination.",
         "name": "Instructions for Computers",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students struggle to come up with their examples, start by giving GPS as an example."
-          }
-        ]
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "d89dbdce-92dd-4b56-b297-666d033198a4",
@@ -1891,11 +1885,11 @@
       "key": "f6afd428-9b60-42b7-b333-2dc44e216d62",
       "position": 2,
       "properties": {
-        "description": "**Do This:** \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In their journals or on scrap paper, have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
+        "description": "**Do This:** \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "From this activity, students should realize how clearly and precisely instructions must be given to direct the driver to complete a task.\n\nFor example, give a set of ambiguous instructions, such as **“Go up the street and over two blocks,”** and have students discuss why the instructions would not be sufficient."
+            "markdown": "Students should realize how clearly and precisely instructions must be given to direct the driver to complete a task.\n\nTo demonstrate the importance of clear instructions, give a set of ambiguous instructions, such as “Go up the street and over two blocks,” and have students discuss why the instructions would not be sufficient."
           }
         ]
       },
@@ -1905,79 +1899,111 @@
       }
     },
     {
-      "key": "ecb1123e-d106-463d-a4e4-74b4a77b5573",
+      "key": "4b75ad8d-22d5-41ab-82cc-39888b46edc9",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce The Neighborhood by walking students through slides about the following ideas:\n* The x-axis and y-axis of the grid\n* How to read and find an intersection",
+        "description": "**Do This:** Introduce The Neighborhood by discussing:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The x-axis and y-axis of the grid\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Finding points and the origin on the grid",
         "duration": "5",
         "name": "Understanding the Grid"
       },
       "seeding_key": {
-        "activity_section.key": "ecb1123e-d106-463d-a4e4-74b4a77b5573",
+        "activity_section.key": "4b75ad8d-22d5-41ab-82cc-39888b46edc9",
         "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
       }
     },
     {
-      "key": "6d043043-2eb0-41a9-9681-72f860885638",
+      "key": "2ee77f46-8cfe-4b8f-9135-38c8450eac20",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Introduce students to using and writing commands in Java by walking students through the set of four slides on the following ideas:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Painter` objects navigate The Neighborhood and complete tasks.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We have five action commands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to break down the proper Java syntax to use a command.\nSummarize the syntactical elements of Java.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?\n\n**Discussion Goal:** Students compare the correct syntax to the incorrect syntax. Guide them towards the following: \n* Paint does not have the proper capitalization.\n* Commands are followed by parentheses.\n* Lines need to end with a semicolon.\n",
+        "description": "In Java, we use methods to perform tasks. Methods are written in a class to define the behaviors that objects of that class will be able to do. The `Painter` class has methods that we can use to move around The Neighborhood and work with paint with our `Painter` objects.",
         "duration": "10",
-        "name": "Writing Commands in Java"
+        "name": "Calling Methods in Java",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "6d043043-2eb0-41a9-9681-72f860885638",
+        "activity_section.key": "2ee77f46-8cfe-4b8f-9135-38c8450eac20",
         "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
       }
     },
     {
-      "key": "3f4e4880-2336-495c-ac67-83bc264728f0",
+      "key": "1feece08-4c4b-4182-a78f-a5f83a9d9846",
       "position": 3,
       "properties": {
-        "description": "**Group:** Pair students up at their stations.  \n\n**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The move() command instructs the `Painter` to move forward in the direction that they are facing.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 1 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The turnLeft() command instructs the Painter to turn 90 degrees to the left. The Painter can only face North, South, East, or West.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-3 on Code Studio.\n",
-        "duration": "10",
-        "name": "Movement Commands"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the term \"method\" and explain that methods are used to move the `Painter` and perform tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce methods for the `Painter`."
       },
       "seeding_key": {
-        "activity_section.key": "3f4e4880-2336-495c-ac67-83bc264728f0",
+        "activity_section.key": "1feece08-4c4b-4182-a78f-a5f83a9d9846",
         "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
       }
     },
     {
-      "key": "9945a427-d169-4622-8d5c-37d28e5eba77",
+      "key": "bb9bd333-e179-4522-860f-ec51d7906869",
       "position": 4,
       "properties": {
-        "progression_name": "Movement Commands",
+        "description": "When we want to use a method that is given to us in the `Painter` class, we need to have our `Painter` object call that method.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bb9bd333-e179-4522-860f-ec51d7906869",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "530cb15b-fe45-4575-b46c-e942b4778d4a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to call methods in Java.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "\nStudents will be working independently or in pairs throughout the course in Code Studio. You may choose to establish a signal for students to indicate they are ready for the next level that you use throughout the year. When students complete a level or progression of levels, you could have students indicate they are ready to move on by closing their laptops to 45 degrees, turning off their monitor, or another agreed-upon signal.\n\n"
+            "markdown": "Recall the concepts covered in the previous lesson about objects and classes. Point out that `art` is the name of the object, while `Painter` is the name of the class. Remind students that `art` is an instance of the `Painter` class."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77",
+        "activity_section.key": "530cb15b-fe45-4575-b46c-e942b4778d4a",
         "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
       }
     },
     {
-      "key": "62576f56-a293-4fa5-8c6a-751591e8c48b",
-      "position": 5,
-      "properties": {
-        "description": "**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takePaint()` command instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 4 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paint(String color)` command instructs the Painter to apply one unit of paint from their tray onto the dot they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share with students that they can change the color the Painter paints by adding the name of a color in quotations inside the parentheses.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 5 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `scrapePaint()` command instructs the `Painter` to remove paint off of the dot they are currently standing on.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 6 on Code Studio.\n",
-        "duration": "10",
-        "name": "Painting Commands"
-      },
-      "seeding_key": {
-        "activity_section.key": "62576f56-a293-4fa5-8c6a-751591e8c48b",
-        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
-      }
-    },
-    {
-      "key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
+      "key": "4c888cab-5339-4a81-973a-6fc42fdbc3e6",
       "position": 6,
       "properties": {
-        "progression_name": "Painting Commands",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?*\n\n**Discussion Goal:** Students identify the errors in the incorrect syntax. Students note that the method name does not have the correct capitalization, should be followed by parentheses, and that the statement should end with a semicolon.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What error do you think we would get if we tried to run this line of code?*\n\n**Discussion Goal:** Students recall the errors from the previous lesson and make connections to potential errors resulting from the invalid syntax. Students guess that Java would not know what `Paint` is because of the invalid syntax and not be able to compile."
+      },
+      "seeding_key": {
+        "activity_section.key": "4c888cab-5339-4a81-973a-6fc42fdbc3e6",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "07a4741a-44c8-4595-abc0-e62432e5bc93",
+      "position": 7,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n**Display:** Show the Pair Programming video.\n\n**Do This:** Introduce methods for moving the `Painter` one at a time. After each method is introduced, have students use Pair Programming to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `move()` method instructs the `Painter` to move forward in the direction that they are facing.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 1 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `turnLeft()` method instructs the `Painter` to turn 90 degrees to the left. The `Painter` can only face North, South, East, or West.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-3 on Code Studio.",
+        "duration": "10",
+        "name": "Methods to Move",
+        "progression_name": "Methods to Move",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will be working independently or in pairs throughout the course in Code Studio. You may choose to establish a signal for students to indicate they are ready for the next level that you use throughout the year. When students complete a level or progression of levels, you could have students indicate they are ready to move on by closing their laptops to 45 degrees, turning off their monitor, or another agreed-upon signal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "ad675442-165b-40e9-8553-56c1c89727ef",
+      "position": 8,
+      "properties": {
+        "description": "**Do This:** Introduce painting methods one at a time. After each method is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takePaint()` method instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 4 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paint(String color)` method instructs the `Painter` to apply one unit of paint from their tray onto the point they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share with students that they can change the color the `Painter` paints by adding the name of a color in quotations inside the parentheses. Refer students to the Color Names resource for color names to choose from.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 5 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `scrapePaint()` command instructs the `Painter` to remove paint from the point that they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 6 on Code Studio.",
+        "duration": "10",
+        "name": "Painting Methods",
+        "progression_name": "Painting Methods",
         "tips": [
           {
             "type": "teachingTip",
@@ -1986,7 +2012,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef",
         "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
       }
     },
@@ -1994,8 +2020,8 @@
       "key": "da0e0980-e14f-425d-af6d-a64d79dd51ac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As software engineers, our job is to create solutions to different problems and convert them into instructions for a computer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to show one command at a time. Before moving onto another command, have students share their understanding of the command. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "name": "Review",
+        "description": "As software engineers, our job is to create solutions to different problems and convert them into instructions for a computer.",
+        "name": "Painter Methods",
         "remarks": true
       },
       "seeding_key": {
@@ -2007,7 +2033,7 @@
       "key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
       "position": 2,
       "properties": {
-        "description": "---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Painter` methods. Before moving to the next method, have students share their understanding of the method. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
@@ -4957,6 +4983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1"
+        ],
         "progression": "Exploring The Neighborhood"
       },
       "named_level": false,
@@ -4980,6 +5009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2"
+        ],
         "progression": "Investigate the Painter"
       },
       "named_level": false,
@@ -5029,10 +5061,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L1"
-        ],
-        "progression": "Movement Commands"
+        "progression": "Methods to Move"
       },
       "named_level": false,
       "bonus": false,
@@ -5043,7 +5072,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       },
       "level_keys": [
         "CSA U1L3-L1"
@@ -5055,10 +5084,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L2"
-        ],
-        "progression": "Movement Commands"
+        "progression": "Methods to Move"
       },
       "named_level": false,
       "bonus": false,
@@ -5069,7 +5095,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       },
       "level_keys": [
         "CSA U1L3-L2"
@@ -5081,10 +5107,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L3"
-        ],
-        "progression": "Movement Commands"
+        "progression": "Methods to Move"
       },
       "named_level": false,
       "bonus": false,
@@ -5095,7 +5118,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       },
       "level_keys": [
         "CSA U1L3-L3"
@@ -5107,10 +5130,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L4"
-        ],
-        "progression": "Painting Commands"
+        "progression": "Painting Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5121,7 +5141,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       },
       "level_keys": [
         "CSA U1L3-L4"
@@ -5133,10 +5153,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L5"
-        ],
-        "progression": "Painting Commands"
+        "progression": "Painting Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5147,7 +5164,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       },
       "level_keys": [
         "CSA U1L3-L5"
@@ -5159,10 +5176,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L3-L6"
-        ],
-        "progression": "Painting Commands"
+        "progression": "Painting Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5173,7 +5187,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       },
       "level_keys": [
         "CSA U1L3-L6"
@@ -6872,6 +6886,29 @@
     {
       "chapter": 75,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Practice Levels"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Neighborhood Demos"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      },
+      "level_keys": [
+        "Neighborhood Demos"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6942,7 +6979,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       }
     },
     {
@@ -6954,7 +6991,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       }
     },
     {
@@ -6966,7 +7003,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77"
+        "activity_section.key": "07a4741a-44c8-4595-abc0-e62432e5bc93"
       }
     },
     {
@@ -6978,7 +7015,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       }
     },
     {
@@ -6990,7 +7027,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       }
     },
     {
@@ -7002,7 +7039,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c"
+        "activity_section.key": "ad675442-165b-40e9-8553-56c1c89727ef"
       }
     },
     {
@@ -7778,6 +7815,18 @@
         "level.key": "Neighborhood 13x13 Practice with Barriers",
         "script_level.level_keys": [
           "Neighborhood 13x13 Practice with Barriers"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Neighborhood Demos",
+        "script_level.level_keys": [
+          "Neighborhood Demos"
         ],
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
@@ -8890,6 +8939,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "color_names"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u1l3_extra_practice"
       }
     },
@@ -9118,7 +9173,7 @@
     {
       "key": "syntax",
       "word": "Syntax",
-      "definition": "Rules for how code must be entered in order for our computer to understand",
+      "definition": "Rules for how code must be entered for a computer to understand",
       "properties": {
       },
       "seeding_key": {
@@ -9128,7 +9183,7 @@
     {
       "key": "syntax_error",
       "word": "Syntax Error",
-      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of a given programming language",
+      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of the programming language",
       "properties": {
       },
       "seeding_key": {
@@ -9136,13 +9191,43 @@
       }
     },
     {
-      "key": "command",
-      "word": "Command",
-      "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs.",
+      "key": "method",
+      "word": "Method",
+      "definition": "A named set of instructions to perform a task",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "command"
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "A set of specific instructions that enables a computer to perform a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "key": "case_sensitive",
+      "word": "Case-Sensitive",
+      "definition": "Differentiating between lower and uppercase letters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "case_sensitive"
+      }
+    },
+    {
+      "key": "statement",
+      "word": "Statement",
+      "definition": "Instructions that tell Java what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "statement"
       }
     },
     {
@@ -9268,7 +9353,7 @@
     {
       "key": "method",
       "word": "Method",
-      "definition": "Has a name and organizes calls to other commands; another word for command",
+      "definition": "A named set of instructions to perform a task",
       "properties": {
       },
       "seeding_key": {
@@ -9354,7 +9439,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "command"
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "case_sensitive"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "statement"
       }
     },
     {
@@ -9485,7 +9588,7 @@
     {
       "key": "84454053-a2d0-4e7a-b218-f7efa0f47e03",
       "properties": {
-        "description": "Identify and utilize five action commands for the `Painter`"
+        "description": "Call methods to move the `Painter` and work with paint"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -9495,7 +9598,7 @@
     {
       "key": "94b7941d-038a-4e4b-92bd-186a2cc3f8a9",
       "properties": {
-        "description": "Write commands using proper Java syntax, including case-sensitivity and semicolons"
+        "description": "Use correct Java syntax, including case-sensitivity and semicolons"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
