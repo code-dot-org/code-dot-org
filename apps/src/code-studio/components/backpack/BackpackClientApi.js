@@ -27,7 +27,7 @@ export default class BackpackClientApi {
 
   fetchFile(filename, onError, onSuccess) {
     if (!this.channelId) {
-      onError('no backpack');
+      onError();
     }
     this.backpackApi.fetchWithDataType(
       this.channelId + '/' + filename,
@@ -35,7 +35,6 @@ export default class BackpackClientApi {
         if (error) {
           onError(error);
         } else {
-          console.log(data);
           onSuccess(data);
         }
       },
@@ -45,13 +44,12 @@ export default class BackpackClientApi {
 
   getFileList(onError, onSuccess) {
     if (!this.channelId) {
-      onError('no backpack');
+      onError();
     }
     this.backpackApi.fetch(this.channelId, (error, data) => {
       if (error) {
         onError(error);
       } else {
-        console.log(data);
         onSuccess(data);
       }
     });
