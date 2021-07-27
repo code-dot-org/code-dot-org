@@ -22329,13 +22329,9 @@ en:
 
 '
             lesson-3:
-              name: Using Commands
-              description_student: 'Now that you have met the `Painter`, you use action commands in this lesson to move the `Painter` around The Neighborhood. You learn about some of the rules of Java that you need to follow to make the Painter move.
-
-'
-              description_teacher: 'In this lesson, students implement solutions using action commands to move the `Painter` around The Neighborhood. Students develop computational thinking skills by translating solutions into Java code as they practice duplicating patterns. While solving these problems, students learn the importance of case-sensitivity and semicolons in Java and are exposed to the use of dot notation to call `Painter` commands.
-
-'
+              name: Calling Methods
+              description_student: Now that you have met the `Painter`, you learn about some of the methods that the `Painter` has to move and work with paint in The Neighborhood. You practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
+              description_teacher: In this lesson, students implement solutions by calling methods to move the `Painter` around The Neighborhood and work with paint. Students practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
             lesson-4:
               name: Conditionals and Debugging
               description_student: 'Now that you know how to use action commands, you help the `Painter` make decisions about how to interact with The Neighborhood using information-gathering commands. You also learn about debugging and identify strategies to use throughout the year.
@@ -24608,6 +24604,87 @@ en:
           lesson_groups: {}
           name: dlp21-csp-mod1
           title: CS Principles Deeper Learning Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Module 1
+              description: test
+            lessonGroup-3:
+              display_name: Module 2
+            lessonGroup-4:
+              display_name: Module 3
+            lessonGroup-5:
+              display_name: Module 4
+          name: dlp21-csd
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd-mod1:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csd-mod1
+          title: 2021 CS Discoveries Deeper Learning Module for Workshop 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd-mod2:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csd-mod2
+          title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd-mod3:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csd-mod3
+          title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd-mod4:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csd-mod4
+          title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
           description: ''
