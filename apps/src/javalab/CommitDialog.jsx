@@ -6,42 +6,29 @@ import {CompileStatus} from './constants';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class CommitDialog extends React.Component {
   state = {
     filesToCommit: [],
     filesToBackpack: [],
-    commitNotes: null
+    commitNotes: null,
+    showCompileStatus: false
   };
 
   renderFooter = buttons => {
     let compileStatusContent = '';
     let commitText = i18n.commit();
     let isCommitButtonDisabled = true;
-    let showCompileStatus = false;
     if (this.state.commitNotes) {
       isCommitButtonDisabled = false;
     }
     if (this.state.filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
-      showCompileStatus = true;
     }
-    if (showCompileStatus) {
+    if (this.state.showCompileStatus) {
       switch (this.props.compileStatus) {
         case CompileStatus.LOADING:
           compileStatusContent = i18n.compiling();
-          break;
-        case CompileStatus.SUCCESS:
-          compileStatusContent = [
-            <FontAwesome
-              key="icon"
-              icon="check-circle"
-              className="fa-2x"
-              style={styles.iconSuccess}
-            />,
-            <span key="text">{i18n.allFilesCompile()}</span>
-          ];
           break;
         case CompileStatus.ERROR:
           compileStatusContent = i18n.compileFailed();
@@ -73,14 +60,24 @@ export default class CommitDialog extends React.Component {
           onClick={() => {
             this.props.handleCommit(
               this.state.filesToCommit,
-              this.state.commitNotes,
-              this.state.filesToBackpack
+              this.state.commitNotes
             );
-            this.props.handleClose();
+            this.saveToBackpack(this.state.filesToBackpack);
           }}
         />
       </div>
     ];
+  };
+
+  // This will communicate with the backpack API
+  saveToBackpack = function(filesToBackpack) {
+    // do something here to save the files given
+    // show the error message if the files don't compile
+    if (this.props.compileStatus !== CompileStatus.SUCCESS) {
+      this.setState({showCompileStatus: true});
+    } else {
+      this.props.handleClose();
+    }
   };
 
   toggleFileToBackpack = filename => {
@@ -190,9 +187,6 @@ const styles = {
   bold: {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.dark_charcoal
-  },
-  footerButtons: {
-    all: {backgroundColor: 'green', borderColor: 'green', color: 'green'}
   },
   compileStatus: {
     display: 'flex',
