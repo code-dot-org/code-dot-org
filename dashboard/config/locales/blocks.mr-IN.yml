@@ -342,7 +342,6 @@ mr:
         options:
           COSTUME:
             '"BEAR"': अस्वल
-            '"DOG"': कुत्रा
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
@@ -845,6 +844,8 @@ mr:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -928,6 +929,10 @@ mr:
           DIRECTION:
             '"right"': उजवा
             '"left"': डावा
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_randColor:
         text: कोणताही रंग
       gamelab_randomColor:
@@ -938,22 +943,28 @@ mr:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ग्रिड
+            undefined: कुठलेच नाही
       gamelab_setProp:
+        text: set {SPRITE} {PROPERTY} to {VAL}
         options:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
       gamelab_setProp_dropdown:
+        text: set {SPRITE} {PROPERTY} to {SIZE}
         options:
           PROPERTY:
             '"scale"': आकार
       gamelab_setSizes:
+        text: set {SPRITE} {PROPERTY} to {N}%
         options:
           PROPERTY:
             '"scale"': आकार
             '"width"': रुंदी
             '"height"': उंची
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -984,6 +995,12 @@ mr:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": मासा
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": मासा
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1028,6 +1045,10 @@ mr:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: मासा
       Mikelab_ifDanceIs:
         text: |-
           "if {SPRITE} is doing {DANCE}
@@ -1045,6 +1066,20 @@ mr:
             MOVES.Kick: स्टार
             MOVES.ThisOrThat: हे किंवा ते
             MOVES.Rest: कुठलेच नाही
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: मासा
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: मासा
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: मासा
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_randomColor:
         text: कोणताही रंग
       Mikelab_setProp:
@@ -1067,6 +1102,28 @@ mr:
             "{x: 300, y: 200}": उजवा
       Mikelab_whenKeyPressed:
         text: जेव्हा {KEY} दाबली जाते
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': होय
+            '"no"': नाही
+      Outbreak_beginCongregating:
+        text: राक्षस जमायला सुरुवात होते
+      Outbreak_beginQuarantining:
+        text: राक्षस आजारी पडले की ते क्वारंटाईन व्हायला सुरुवात करतात
+      Outbreak_beginSocialDistancing:
+        text: राक्षस सोशल डिस्टन्सिंग पाळायला सुरुवात करतात
+      Outbreak_beginWandering:
+        text: राक्षस इकडे तिकडे फिरायला सुरुवात करतात
+      Outbreak_beginWearingMasks:
+        text: राक्षस मास्क्स घालायला सुरुवात करतात
+      Outbreak_stopMoving:
+        text: राक्षस हालचाल थांबायला सुरुवात करतात
+      PoemBot_setForegroundEffect:
+        text: अग्रभूमीचा प्रभाव {FG_EFFECT} करा
+        options:
+          FG_EFFECT:
+            '"bubbles"': फुगे
       aalab_layoutSprites:
         options:
           FORMAT:
@@ -1093,3 +1150,31 @@ mr:
             '"w"': w
             '"s"': s
             '"d"': d
+      craft_ifPath:
+        text: |-
+          जर पाथ {DIR}
+          {STATEMENT} असेल तर
+      craft_ifStandingOn:
+        text: |-
+          जर {TYPE}
+          {STATEMENT} वर उभा असेल तर
+      craft_ifStandingOnLimit:
+        text: |-
+          जर {TYPE}
+          {STATEMENT} वर उभा असेल तर
+      craft_placeBlock:
+        text: "{blockType} ठेवा"
+      craft_placePrismarine:
+        text: प्रिझमरीन ठेवा
+      craft_repeatUntilConduit:
+        text: नळीने {STATEMENT} पूर्ण करेपर्यंत रिपीट करा
+      craft_repeatUntilGoal:
+        text: ध्येय {STATEMENT} पूर्ण होईपर्यंत रिपीट करा
+      craft_spawnEntity:
+        text: "{ENTITY} स्पॉन करा"
+      craft_turn:
+        text: "{DIR} वळवा"
+        options:
+          DIR:
+            right: उजवीकडे ↻
+            left: डावीकडे ↺

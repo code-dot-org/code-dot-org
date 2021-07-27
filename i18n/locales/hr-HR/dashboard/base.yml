@@ -217,6 +217,7 @@ hr:
       about_jobs: "Zapošljavanje"
       about_contact: "Kontaktiraj nas"
       about_faqs: "ČPP"
+      stats: "Prikaz statistike"
       about: "O"
       legal_privacy: "Politika privatnosti"
       legal_tos: "Uvjeti korištenja"
@@ -238,6 +239,7 @@ hr:
       frozen: 'Snježno kraljevstvo'
       gamelab: 'Game Lab'
       gamelab_jr: 'Lab igrica (beta)'
+      iceage: 'Ledeno Doba'
       infinity: 'Beskonačnost'
       minecraft_designer: 'Minecraft'
       playlab: 'Laboratorij igara'
@@ -293,6 +295,7 @@ hr:
     delete_text_teacher_note: "Napomena: brisanjem računa neće se izbrisati i račune vaših učenika."
     delete_confirm: 'Jeste li sigurni da želite izbrisati svoj račun?'
     update_email: "Osvježi"
+    remove_parent_email_label: "Obriši"
   user_level:
     completed: 'Završen'
     tried: 'Pokušan'
@@ -418,6 +421,7 @@ hr:
     applab:
       title: 'Laboratorij aplikacija'
       audience: 'Dob 13+'
+      cta: 'Nauči kako'
     hoc:
       title: 'Klasični labirint'
       body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
@@ -441,6 +445,7 @@ hr:
     weblab:
       title: "Web Lab (beta)"
       audience: "Dob 13+"
+      cta: "Nauči kako"
     frozen:
       title: "Snježno kraljevstvo"
     starwars:
@@ -459,6 +464,9 @@ hr:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Uvjeti"
+    widgets:
+      audience: "Dob 14+"
+      cta: "Nauči kako"
   landing:
     report_bug: "Prijavi grešku"
     support: "Zatraži pomoć"

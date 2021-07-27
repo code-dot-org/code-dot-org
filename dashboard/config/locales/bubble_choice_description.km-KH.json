@@ -1,2 +1,12 @@
 {
+  "km-KH": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "គូរបន្ទប់សំរាប់សត្វនឺមួយៗ។ ",
+        "courseD_bee_nestedLoops8_2021": "ប្រមូលទឹកដមពីផ្កានីមួយៗហើយធ្វើទឹកឃ្មុំនៅក្រេបឃ្មុំ។",
+        "courseD_bee_nestedLoops9_2021": "ធ្វើឱ្យទឹកឃ្មុំទាំងអស់។",
+        "ramp_artist_loops8_2021": "រកមើលលំនាំហើយធ្វើឱ្យកូដនេះខ្លីជាងដោយប្រើរង្វិលជុំ (Loop)!"
+      }
+    }
+  }
 }

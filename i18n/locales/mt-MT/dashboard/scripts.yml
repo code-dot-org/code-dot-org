@@ -1,7 +1,11 @@
+---
 mt:
   data:
     script:
       name:
+        20-hour:
+          description: Dan il-kors ta ' 20 siegħa jintroduċi tax-xjenza tal-kompjuter u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f'kull età.
+          student_description: Dan il-kors ta ' 20 siegħa jintroduċi tax-xjenza tal-kompjuter u l-kunċetti tal-ipprogrammar. Il-kors huwa maħsub għal użu fil-klassijiet għall-gradi mil-primarja sas-sekondarja, iżda huwa gost li wieħed jitgħallem f'kull età.
         flappy:
           title: Code ta' Flappy
           description: Tixtieq tibni loghba originali f'inqas minn 10 minuti? Prova il-lezzjoni ta' Flappy Code!

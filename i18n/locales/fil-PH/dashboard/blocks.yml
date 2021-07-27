@@ -499,7 +499,6 @@ fil:
             '"rainbow"': Bahaghari
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
-            '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
@@ -540,7 +539,6 @@ fil:
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
             '"squiggles"': Squiggles
-            '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
@@ -1010,7 +1008,6 @@ fil:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
-            '"this"': ito
             '"other"': iba
       gamelab_getTime:
         options:
@@ -1096,13 +1093,6 @@ fil:
             '"z"': z
       gamelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': Silangan
-            '"South"': South
-            '"West"': West
       gamelab_locationMouse:
         text: Lokasyon ng mouse
       gamelab_locationOf:
@@ -1123,12 +1113,6 @@ fil:
         text: ilipat {SPRITE} {DISTANCE} pixels pasulong
       gamelab_moveInDirection:
         text: ilipat {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': Silangan
-            '"South"': South
-            '"West"': West
       gamelab_moveToward:
         text: ilipat {SPRITE} pixels {DISTANCE} sa {TARGET}
       gamelab_newSpritePointer:
@@ -1139,12 +1123,6 @@ fil:
         text: Ang ... {SOUND}
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': Silangan
-            '"South"': South
-            '"West"': West
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -1176,7 +1154,6 @@ fil:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': kalawakan
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': bahaghari
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SCI-Fi ng
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': mga bituin
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sa ilalim ng tubig
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
@@ -1201,6 +1178,7 @@ fil:
             '"direction"': direksyon ng galaw
             '"speed"': bilis
       gamelab_setProp_dropdown:
+        text: i-set ang {SPRITE} {PROPERTY} to {SIZE}
         options:
           PROPERTY:
             '"scale"': sukat
@@ -1341,13 +1319,11 @@ fil:
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupChangePropBy:
         text: pagbabago {PROPERTY} ng {SELECT} {COSTUME} ng {VAL}
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
           PROPERTY:
             '"scale"': sukat
             '"rotation"': rotation
@@ -1372,7 +1348,6 @@ fil:
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupDisplace:
         text: lahat {COSTUME} block {COSTUME2} mula sa paglipat
       Mikelab_groupEdgesDisplace:
@@ -1380,9 +1355,6 @@ fil:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}ng {PROPERTY}"
         options:
-          SELECT:
-            '"average"': average
-            '"this"': ito
           PROPERTY:
             '"scale"': sukat
             '"rotation"': rotation
@@ -1394,25 +1366,21 @@ fil:
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} tumitigil {BEHAVIOR}"
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupRemoveTint:
         text: tanggalin ang kulay mula sa {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupSetProp:
         text: set {PROPERTY} ng {SELECT} {COSTUME} sa {VAL}
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
           PROPERTY:
             '"scale"': sukat
             '"rotation"': rotation
@@ -1424,7 +1392,6 @@ fil:
         options:
           SELECT:
             '"all"': lahat
-            '"this"': ito
       Mikelab_groupWhenClickedOn:
         text: Kapag {COSTUME} nag-click
       Mikelab_groupWhenXTouchesY:
@@ -1484,6 +1451,8 @@ fil:
           DANCE:
             MOVES.ClapHigh: isda
             MOVES.Clown: hindi ang etiketa ko
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
       Mikelab_location_picker:
@@ -1563,7 +1532,7 @@ fil:
         options:
           KEY:
             '"yes"': oo
-            '"no"': walang
+            '"no"': hindi
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1575,6 +1544,17 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': bahaghari
+      PoemBot_setForegroundEffect:
+        text: itakda ang foreground effect {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': ulan
+            '"bubbles"': bubbles
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:
@@ -1650,7 +1630,6 @@ fil:
           VAL:
             '0': 'off'
             '1': sa
-            '"toggle"': magpalipat-lipat
       binary_drawString:
         text: Gumuhit ng string {STR}
       binary_goTo:
@@ -1687,20 +1666,14 @@ fil:
         options:
           DIR:
             "'ahead'": unahan
-            "'right'": sa tamang
-            "'left'": sa kaliwa
       craft_ifStandingOn:
         text: |-
           kung nakatayo sa {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": Blue coral
-            "'redCoralBlock'": Red coral
             "'sand'": buhangin
-            "'wool_blue'": malalim na tubig
             "'planksOak'": tablang oak
-            "'seaLantern'": dagat parol
       craft_ifStandingOnLimit:
         text: |-
           kung nakatayo sa {TYPE}
@@ -1708,40 +1681,12 @@ fil:
         options:
           TYPE:
             "'sand'": buhangin
-            "'darkPrismarine'": madilim na prismarine
-            "'seaLantern'": dagat parol
       craft_log:
         text: mensaheng log {MESSAGE}
       craft_moveForward:
         text: umabante
       craft_placeBlock:
         text: lugar {blockType}
-        options:
-          blockType:
-            '"strippedOak"': inalisan ng oak
-            '"strippedDarkOak"': inalisan ng maiitim na oak
-            '"stoneBricks"': bato brick
-            '"mossyStoneBricks"': mossy bato brick
-            '"crackedStoneBricks"': basag bato brick
-            '"blueCoralBlock"': Blue coral block
-            '"pinkCoralBlock"': pink coral block
-            '"magentaCoralBlock"': Magenta coral block
-            '"redCoralBlock"': Red coral block
-            '"yellowCoralBlock"': dilaw na coral block
-            '"blueDeadCoralBlock"': Blue patay coral block
-            '"pinkDeadCoralBlock"': pink patay coral block
-            '"magentaDeadCoralBlock"': Magenta patay coral block
-            '"readDeadCoralBlock"': Red Dead coral block
-            '"yellowDeadCoralBlock"': dilaw na patay coral block
-            '"prismarine"': prismarine
-            '"darkPrismarine"': madilim na prismarine
-            '"seaLantern"': dagat parol
-            '"packedIce"': puno ng yelo
-            '"blueIce"': Blue yelo
-            '"blackConcrete"': itim kongkreto
-            '"seaGrass"': dagat damo
-            '"kelp"': kelp
-            '"polishedGranite"': makintab na Granite
       craft_placePrismarine:
         text: lugar prismarine
       craft_placeTorch:
@@ -1758,12 +1703,8 @@ fil:
         text: spawn {ENTITY}
         options:
           ENTITY:
-            '"cod"': COD
             '"dolphin"': dolphin
-            '"salmon"': salmon
-            '"seaTurtle"': dagat pagong
             '"squid"': pusit
-            '"tropicalFish"': tropikal na isda
       craft_turn:
         text: bumaling {DIR}
         options:

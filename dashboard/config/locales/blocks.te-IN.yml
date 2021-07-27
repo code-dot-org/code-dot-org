@@ -112,6 +112,7 @@ te:
             '"x"': సమాంతర పొజిషన్
             '"y"': నిలువు పొజిషన్
       Dancelab_changePropEachBy:
+        text: మార్చండి {GROUP} {PROPERTY} దీనితో {VAL}
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -342,7 +343,6 @@ te:
         options:
           COSTUME:
             '"BEAR"': బేర్
-            '"DOG"': డాగ్
             '"FROG"': ఫ్రాగ్
             '"MOOSE"': మూస్
             '"PINEAPPLE"': పైన్‌ఆపిల్
@@ -586,6 +586,7 @@ te:
             '"y"': నిలువు పొజిషన్
             '"tint"': టింట్
       Dancelab_setPropRandomEach:
+        text: రాండమైజ్ {GROUP} {PROPERTY}
         options:
           GROUP:
             '"ALIEN"': ఏలియన్
@@ -835,6 +836,8 @@ te:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -918,19 +921,26 @@ te:
           DIRECTION:
             '"right"': కుడి
             '"left"': ఎడమ
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': గ్రిడ్
+            undefined: ఏదీ కాదు
       gamelab_setProp:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు
         options:
           PROPERTY:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       gamelab_setProp_dropdown:
+        text: సెట్ చేయండి {SPRITE} {PROPERTY} ని {SIZE} కు
         options:
           PROPERTY:
             '"scale"': సైజు
@@ -940,6 +950,8 @@ te:
             '"scale"': సైజు
             '"width"': వెడల్పు
             '"height"': ఎత్తు
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -970,6 +982,12 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": చేప
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": చేప
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1014,6 +1032,10 @@ te:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: చేప
       Mikelab_ifDanceIs:
         text: |-
           ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
@@ -1031,6 +1053,20 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: చేప
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1051,6 +1087,16 @@ te:
             "{x: 300, y: 200}": కుడి
       Mikelab_whenKeyPressed:
         text: నొక్కినప్పుడు {KEY} కీ
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': అవును
+            '"no"': లేదు
+      PoemBot_setForegroundEffect:
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"bubbles"': బబ్బుల్స్
       aalab_layoutSprites:
         options:
           FORMAT:

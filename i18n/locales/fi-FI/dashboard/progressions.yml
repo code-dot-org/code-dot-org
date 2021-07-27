@@ -3,6 +3,8 @@ fi:
     progressions:
       Artist Project: Taiteilija projekti
       'Artist: Variables': 'Taiteilija: muuttujat'
+      Debugging: Virheen etsintä
+      Design Mode: Suunnittelutila
       Drawing: Piirustus
       Events: Tapahtumat
       For Loops: Silmukat

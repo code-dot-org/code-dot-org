@@ -582,6 +582,7 @@ es:
         csf_lots_of_sprites: 'Laboratorio de Sprite: Muchos Sprites'
         playlab_2021: Introducción al laboratorio de juegos
         playlab_2021_reader: Introducción al laboratorio de juegos
+        csp_defining_calling_functions: Definiendo y Llamando a Funciones
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:31 UTC",
+    "serialized_at": "2021-07-20 22:21:28 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa6-pilot"

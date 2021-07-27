@@ -1,2 +1,13 @@
 {
+  "pt-BR": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Desenhe quartos para cada um dos animais. ",
+        "courseD_bee_nestedLoops8_2021": "Colete todo o néctar de cada flor\ne produza mel na colmeia. \r\n\r\nUse um laço aninhado. ",
+        "courseD_bee_nestedLoops9_2021": "Faça todo o mel.",
+        "courseF_bee_variables_7a_2021": "Este enigma é um pouco diferente. O que você precisa para resolvê-lo?",
+        "ramp_artist_loops8_2021": "Procure por um padrão e deixe esse código menos utilizando laços."
+      }
+    }
+  }
 }

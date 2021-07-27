@@ -2067,3 +2067,281 @@ ur-PK:
 
           (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - سرگرمی گائیڈ ([PDF]]
           (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))
+      CourseF_outbreak_story2:
+        markdown: |-
+          # وباء: ایک سائنسدان کی طرح سوچنا
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          سیمولیشن ایسی چیزوں کے بارے سیکھنے کا بہترین ذریعہ ہیں جن کا حقیقی دنیا میں مشاہدہ کرنا مشکل ہوتا ہے. یہ سائنسدانوں کے ساتھ مسائل حل کرنے اور نئے خیالات کا محفوظ اور اچھے طریقے سے آزمانے میں مدد کرتے ہیں۔ آپ کا سیمولیشن ایک ذریعہ ہے کہ جس سے مانسٹر ٹاؤن میں وائرس کی وباء کے فرضی پھیلاؤ کا مشاہدہ کیا جا سکتا ہے۔
+
+          ## ری سٹ اور ری پلے!
+          جب آپ نے کوڈ خود بھی لکھا ہو لیکن یہ جاننا ناممکن ہے کہ Run کا بٹن دبانے کے بعد کیا ہوگا. یہ مانسٹر بے ترتیب انداز میں ادھر ادھر گھومتے ہیں، یوں آپ کو پتہ نہیں چلتا کہ وائرس تیز یا سست سرایت کرے گا. آپ جب اپنا کوڈ تبدیل کر لیتے ہیں، اپنا سیمولیشن کئی بار ضرور چلائیں. ہر بار چیزیں ایک ہی جیسی نہیں ہوں گی!
+
+          ## ڈاٹا جمع کرنا
+          سیمولیشن چلاتے ہوئے اپنے مشاہدات کو لکھ کر نوٹ کر لیا کریں. آپ بیمار ہونے والے بھوتوں کا شمار کر سکتے ہیں یا ایک ٹائمر کے ذریعے وقت گن سکتے ہیں کہ حال کس تیزی سے تبدیل ہو رہا ہے. مثلا، اگر کسی بھی مانسٹر نے ماسک نہ پہنا ہو تو سب کے بیمار ہونے میں عموما کتنا عرصہ لگتا ہے؟
+
+          ## پیشنگوئیاں کرنا
+          اگر آپ کو اپنے ماڈل کی سمجھ ہے تو آپ اسے پیشنگوئیاں کرنے کے لئے استعمال کر سکتے ہیں. آپ اپنے سیمولیشن کے run ہونے کا طریقہ کار بھی تبدیل کر سکتے ہیں اور اندازہ لگا سکتے ہیں کہ نتیجہ کیسے مختلف ہو گا. مثلا:
+          * اگر بھوتوں کی تعداد موجودہ شمار سے دوگنی ہوتی تو کیا ہوتا؟
+          * اگر یہ سب بھوت یعنی مانسٹر اپنی موجودہ سے ادھی کم رفتار سے چلتے تو کیا ہوتا؟
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## کیا مانسٹر ٹاؤن حقیقی دنیا جیسا ہے؟
+          یہ کہ آپ کا ماڈل صرف محدود حد تک حقیقت کے نزدیک ہو سکتا ہے.
+          * وباء کے لئے آپ کا کمپیوٹر سیمولیشن حقیقی دنیا میں وائرس کے وباء سے کتنا مشابہ ہے؟
+          * ان دونوں میں فرق کے نقاط کیا ہیں؟
+          جب آپ اس سرگرمی کو مکمل کر لیں، اپنے استاد یا اپنے فیملی سے ان سوالات کے بارے میں بات چیت کر لیں!
+
+          ## اپنے ماڈل میں آپ اور کیا شامل کر سکتے ہیں؟
+          آپ نے پہلے ہی مانسٹر ٹاؤن میں وباء کے پھیلاؤ کا ماڈل تیار کر لیا ہے. وہ کونسی چیزیں ہیں جو آپ کا ماڈل نہیں کر سکتا یا دکھا سکتا لیکن آپ کی خواہش ہے کہ وہ ویسا کرے یا دکھائے؟ آگے پڑھنے کے لئےcontinue کا بٹن دبائیں اور ماڈل بنانے کے حوالے سے مزید سیکھتے چلے جائیں:
+          * اپنے سیمولیشن میں بھوتوں کی تعداد بڑھا کر
+          * بھوتوں سے وائرس سے ٹھیک ہونے میں مدد کرنے سے
+          * وائرس سے دوچار ہونے کے امکانات، اس سے حفاطت، ویکسین، اور دیگر!
+
+          آپ دیگر لوگوں کے ساتھ اپنا سیمولیشن ماڈل شریک کر سکتے ہیں، یا یہ اپنا یہ پیغام شریک کر سکتے ہیں کہ اگر ہمارے شہر میں وائرس آ جائے تو ہم دوسروں کو صحتمند رکھنے واسطے کیا کر سکتے ہیں۔
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: ایے
+          correct: true
+        - text: بی
+        - text: سی
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
