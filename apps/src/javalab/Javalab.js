@@ -10,6 +10,7 @@ import javalab, {
   setAllValidation,
   setIsDarkMode,
   appendOutputLog,
+  setBackpackApi,
   setIsStartMode,
   setLevelName
 } from './javalabRedux';
@@ -24,6 +25,7 @@ import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
 import {CsaViewMode} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -203,6 +205,10 @@ Javalab.prototype.init = function(config) {
   // ensure autosave is executed on first run by manually setting
   // projectChanged to true.
   project.projectChanged();
+
+  getStore().dispatch(
+    setBackpackApi(new BackpackClientApi(config.backpackChannel))
+  );
 
   ReactDOM.render(
     <Provider store={getStore()}>
