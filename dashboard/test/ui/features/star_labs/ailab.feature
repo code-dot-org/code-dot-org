@@ -45,6 +45,7 @@ Feature: AI Lab
     And I see "#uitest-model-card-form"
     Then element "#uitest-continue-button" is disabled
     And I press keys "Model Name" for element "#uitest-model-name-input"
+    And I wait until "#uitest-continue-button" is not disabled
     And I click selector "#uitest-continue-button"
     And I see the dynamic instructions are showing "modelSummary" key
     And I see "#statement"
