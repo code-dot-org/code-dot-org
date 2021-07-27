@@ -12,6 +12,8 @@ class ApiControllerTest < ActionController::TestCase
 
     @section = create(:section, user: @teacher, login_type: 'word')
 
+    @script = create(:script)
+
     # some of our tests depend on sorting of students by name, thus we name them ourselves
     @students = []
     7.times do |i|
@@ -36,6 +38,20 @@ class ApiControllerTest < ActionController::TestCase
 
   setup do
     sign_in @teacher
+  end
+
+  private def create_script_with_bonus_levels
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    regular_level = create :maze
+    create :script_level, script: script, levels: [regular_level], lesson: lesson
+
+    bonus_level = create :maze
+    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+
+    [script, lesson, regular_level, bonus_level]
   end
 
   private def create_script_with_lockable_lesson
@@ -1140,6 +1156,70 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, response["script"]["levels_count"]
     assert_equal 1, response["script"]["lessons"][0]["length"]
   end
+
+  test "teacher_panel_progress returns progress when called with script and level" do
+    script, _, regular_level, _ = create_script_with_bonus_levels
+
+    # create progress for student_1 on regular_level
+    create :user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: script.id,
+      level_id: regular_level.id
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+
+    # response is an array with one element for each student
+    # students are sorted by name so @student_1 should be the first result
+    assert_equal @students.length, response.length
+    assert_equal @student_1.id, response[0]["userId"]
+    assert_equal regular_level.id.to_s, response[0]["id"]
+    assert_equal "perfect", response[0]["status"]
+  end
+
+  test "teacher_panel_progress returns progress when called with lesson and is_bonus_lesson" do
+    script, lesson, _, bonus_level = create_script_with_bonus_levels
+
+    # create progress for student_1 on bonus_level
+    create :user_level, user: @student_1, script: script, level: bonus_level, best_result: ActivityConstants::BEST_PASS_RESULT
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: script.id,
+      lesson_id: lesson.id,
+      is_lesson_extras: true
+    }
+
+    assert_response :success
+
+    response = JSON.parse(@response.body)
+
+    # response is an array with one element for each student
+    # students are sorted by name so @student_1 should be the first result
+    assert_equal @students.length, response.length
+    assert_equal @student_1.id, response[0]["userId"]
+    assert_equal bonus_level.id.to_s, response[0]["id"]
+    assert_equal "perfect", response[0]["status"]
+  end
+
+  test "teacher_panel_progress returns error when called by teacher not associated with section" do
+    sign_in @teacher_other
+
+    get :teacher_panel_progress, params: {
+      section_id: @section.id,
+      script_id: @script.id
+    }
+
+    assert_response :forbidden
+  end
+
+  # test "" do
+
+  # end
 
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'

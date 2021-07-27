@@ -512,12 +512,14 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
-        id: lesson_extra_user_level.id.to_s,
+        id: bonus_level_ids.first.to_s,
         bonus: true,
         userId: student.id,
+        passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect,
-        passed: true
-      }.merge!(lesson_extra_user_level.attributes)
+        userLevelId: lesson_extra_user_level.id,
+        updatedAt: lesson_extra_user_level.updated_at
+      }
     elsif bonus_level_ids.count == 0
       {
         # Some lessons have a lesson extras option without any bonus levels. In
@@ -588,10 +590,8 @@ class ScriptLevel < ApplicationRecord
     }
 
     if user_level
-      teacher_panel_summary = teacher_panel_summary.merge(
-        userLevelId: user_level.id,
-        updatedAt: user_level.updated_at
-      )
+      teacher_panel_summary[:userLevelId] = user_level.id
+      teacher_panel_summary[:updatedAt] = user_level.updated_at
     end
 
     teacher_panel_summary
