@@ -13,6 +13,9 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
+const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
+const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 
 const initialState = {
   consoleLogs: [],
@@ -20,7 +23,10 @@ const initialState = {
   isDarkMode: false,
   validation: {},
   renderedEditorHeight: 400,
-  isRunning: false
+  isRunning: false,
+  backpackApi: null,
+  isStartMode: false,
+  levelName: undefined
 };
 
 // Action Creators
@@ -98,6 +104,27 @@ export const removeFile = filename => ({
 export const setIsRunning = isRunning => ({
   type: SET_IS_RUNNING,
   isRunning
+});
+
+export const setBackpackApi = backpackApi => ({
+  type: SET_BACKPACK_API,
+  backpackApi
+});
+
+/**
+ * We should move isStartMode and levelName into a separate level redux file,
+ * or convert this design to one more closely matching redux/applab. When we
+ * do, we can remove the special treatment of Javalab in ImagePicker.jsx that
+ * enables the Asset Manager to run.
+ */
+export const setIsStartMode = isStartMode => ({
+  type: SET_IS_START_MODE,
+  isStartMode
+});
+
+export const setLevelName = levelName => ({
+  type: SET_LEVEL_NAME,
+  levelName
 });
 
 // Selectors
@@ -222,6 +249,24 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isRunning: action.isRunning
+    };
+  }
+  if (action.type === SET_BACKPACK_API) {
+    return {
+      ...state,
+      backpackApi: action.backpackApi
+    };
+  }
+  if (action.type === SET_IS_START_MODE) {
+    return {
+      ...state,
+      isStartMode: action.isStartMode
+    };
+  }
+  if (action.type === SET_LEVEL_NAME) {
+    return {
+      ...state,
+      levelName: action.levelName
     };
   }
   return state;

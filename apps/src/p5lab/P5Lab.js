@@ -759,6 +759,12 @@ P5Lab.prototype.afterInject_ = function(config) {
     Blockly.clearInfiniteLoopTrap();
   }
 
+  if (this.level.blocklyVariables) {
+    Blockly.mainBlockSpace.registerGlobalVariables(
+      this.level.blocklyVariables.split(',').map(varName => varName.trim())
+    );
+  }
+
   // Update p5Wrapper's scale and keep it updated with future resizes:
   this.p5Wrapper.scale = this.calculateVisualizationScale_();
 

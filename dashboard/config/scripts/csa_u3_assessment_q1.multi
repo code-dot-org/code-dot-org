@@ -1,0 +1,33 @@
+name 'CSA U3 Assessment q1'
+height 'auto'
+
+right ‘I only’
+wrong ‘II only’
+wrong ‘I and II only’
+wrong ‘I and III only’
+wrong ‘I, II and III’
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 3 Lesson 6. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Consider an integer array `nums`, which has been properly declared and initialized with one or more integer values. Which of the following code segments counts the number of odd values found in `nums` and stores the count in `oddCount` ?
+
+
+I.
+
+![](https://images.code.org/cd8206e0bb4c7b76335108cf72e7ba7f-image-1626979039620.png)
+
+II. 
+
+![](https://images.code.org/5d3c04996b32cfa9d950828d5c45506d-image-1626979122739.png)
+
+III.
+
+![](https://images.code.org/89f4215f2730e677241024ab668a1032-image-1626979211139.png)
+MARKDOWN

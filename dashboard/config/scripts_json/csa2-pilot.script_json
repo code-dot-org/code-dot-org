@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-25 13:05:48 UTC",
+    "serialized_at": "2021-07-20 22:21:27 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -7055,288 +7055,6 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "defining_attributes_-_classes_foldables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "defining_attributes_-_main_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "_key_defining_attributes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "quiz_quiz_trade"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "_key_u2l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "defining_attributes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
-        "resource.key": "u2l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "_key_u2l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "u2l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "resource.key": "variables_manipulatives"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "_key_writing_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "_key_u2l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "writing_constructors_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "resource.key": "u2l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "_key_construct_an_object_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "_key_u2l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "construct_an_object_cards_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "resource.key": "u2l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_vocabulary_crossword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_exploring_expressions_version_a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_exploring_expressions_version_b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "_key_u2l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "vocabulary_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "exploring_expressions_version_a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "exploring_expressions_version_b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "u2l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_u2l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "_key_diagramming_scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "diagramming_scope"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "resource.key": "u2l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "_key_u2l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "class_hierarchy_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "u2l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "_key_u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "u2l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "_key_u2l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "resource.key": "u2l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "_key_u2l10_extra_practice"
       }
@@ -7361,7 +7079,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-11",
+        "lesson.key": "lesson-10",
         "resource.key": "unit_2_presentation_slides"
       }
     },
@@ -7379,7 +7097,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-12",
+        "lesson.key": "lesson-11",
         "resource.key": "unit_2_presentation_slides"
       }
     },
@@ -7397,20 +7115,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-13",
+        "lesson.key": "lesson-12",
         "resource.key": "unit_2_presentation_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "neighborhood_store_management_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-13",
-        "resource.key": "neighborhood_store_management_project_planning_guide_1"
       }
     },
     {
@@ -7421,7 +7127,19 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-14",
+        "lesson.key": "lesson-13",
+        "resource.key": "neighborhood_store_management_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "neighborhood_store_management_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "resource.key": "unit_2_presentation_slides"
       }
     },
@@ -7429,12 +7147,6 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "_key_college_board_frq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "combo_class_frq_print_out"
       }
     },
     {
@@ -7464,7 +7176,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "combo_class_frq_print_out"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "frq_graphic_organizer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide"
       }
     },
     {
@@ -7476,12 +7200,288 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "frq_scoring_guide"
+        "resource.key": "unit_2_presentation_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "variables_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "construct_an_object_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u2l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_vocabulary_crossword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "class_hierarchy_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u2l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_classes_foldables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "quiz_quiz_trade"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
         "resource.key": "unit_2_presentation_slides"
       }
     }

@@ -39,6 +39,7 @@ const serverProgressResponse = {
         result: -1,
         paired: false,
         time_spent: undefined,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
       '2001': {
@@ -46,6 +47,7 @@ const serverProgressResponse = {
         result: 30,
         paired: true,
         time_spent: 12345,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       }
     },
@@ -55,6 +57,7 @@ const serverProgressResponse = {
         result: 100,
         paired: false,
         time_spent: 6789,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 6789
       }
     }
@@ -80,6 +83,7 @@ const firstServerProgressResponse = {
         result: -1,
         paired: false,
         time_spent: undefined,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       },
       '2001': {
@@ -87,6 +91,7 @@ const firstServerProgressResponse = {
         result: 30,
         paired: true,
         time_spent: 12345,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 12345
       }
     }
@@ -109,6 +114,7 @@ const secondServerProgressResponse = {
         result: 100,
         paired: false,
         time_spent: 6789,
+        teacher_feedback_review_state: undefined,
         last_progress_at: 6789
       }
     }
@@ -140,6 +146,7 @@ const fullExpectedResult = {
           result: -1,
           paired: false,
           timeSpent: undefined,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 12345
         },
         '2001': {
@@ -149,6 +156,7 @@ const fullExpectedResult = {
           result: 30,
           paired: true,
           timeSpent: 12345,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 12345
         }
       },
@@ -160,6 +168,7 @@ const fullExpectedResult = {
           result: 100,
           paired: false,
           timeSpent: 6789,
+          teacherFeedbackReviewState: undefined,
           lastTimestamp: 6789
         }
       }
