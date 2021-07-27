@@ -43,7 +43,7 @@ args=(
   --verbose
 
   # alter statement (mandatory)
-  --alter="ADD `script_id` int, ADD `deleted_at` datetime DEFAULT NULL, DROP INDEX `index_channel_tokens_on_storage_id_and_level_id`, ADD UNIQUE `index_channel_tokens_on_storage_level_script_ids_and_deleted_at` (`storage_id`, `level_id`, `script_id`, `deleted_at`)"
+  --alter="ADD `script_id` int, ADD `deleted_at` datetime DEFAULT NULL, DROP INDEX `index_channel_tokens_on_storage_id_and_level_id`, ADD UNIQUE `index_channel_tokens_unique` (`storage_id`, `level_id`, `script_id`, `deleted_at`)"
 
   # Drop a possibly existing Ghost table (remains from a previous run?) before beginning operation.
   # Default is to panic and abort if such table exists
