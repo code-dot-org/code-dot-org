@@ -14,5 +14,5 @@ level 'csp-pre-survey-levelgroup_2019', assessment: true
 
 lesson_group 'cs_lg', display_name: 'LG GOOD'
 lesson 'Buttons and Events', display_name: 'Buttons and Events', has_lesson_plan: false
-level 'CSP U5L01 SFLP_2019', named: true
+level 'CSP U5L01 SFLP_2019', progression: 'Lesson Overview'
 
