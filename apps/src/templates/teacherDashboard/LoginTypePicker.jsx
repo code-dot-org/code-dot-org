@@ -18,7 +18,7 @@ import styleConstants from '../../styleConstants';
 const style = {
   container: {
     width: styleConstants['content-width'],
-    height: '80vh',
+    height: '360px',
     left: '20px',
     right: '20px'
   },
@@ -78,23 +78,11 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    // Set style of LoginTypePicker container and adjust max height of the scrolling
-    // body of the dialog based on number of LoginCard types available to the user.
-    // const loginTypePickerContainerStyle = hasThirdParty
-    //   ? {
-    //       width: styleConstants['content-width'],
-    //       height: '80vh',
-    //       maxHeight: '500px',
-    //       left: '20px',
-    //       right: '20px'
-    //     }
-    //   : {
-    //       width: styleConstants['content-width'],
-    //       height: '80vh',
-    //       maxHeight: '360px',
-    //       left: '20px',
-    //       right: '20px'
-    //     };
+    // Adjust max height of the LoginTypePicker container if there are >3 LoginType
+    // cards (thus creating the need for a 2nd row in the CardContainer flexbox).
+    if (hasThirdParty) {
+      style.container.height = '500px';
+    }
 
     return (
       <div style={style.container}>
