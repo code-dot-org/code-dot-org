@@ -30107,7 +30107,7 @@ es-MX:
               description_teacher: Aquí, los estudiantes usarán el Laboratorio de
                 sprites para crear tus propios comportamientos personalizados.
             Virtual Pet:
-              key: Mascota Virtual
+              key: Mascota virtual
               name: 'Miniproyecto: Mascota virtual'
               description_student: En esta lección, los estudiantes crearán una Mascota
                 Virtual interactiva que luce y se comporta como ellos desean. Los
@@ -30140,7 +30140,7 @@ es-MX:
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
             lesson-6:
               name: Presentamos el Laboratorio de sprites
-              description_student: Hablarán del papel que desempeñan los ordenadores
+              description_student: Hablarán del papel que desempeñan las computadoras
                 y la tecnología en sus vidas, centrándose en cómo las aplicaciones
                 y las herramientas dan a los usuarios la posibilidad de elegir la
                 forma de utilizarlas.
@@ -30148,22 +30148,23 @@ es-MX:
               name: Creación de Sprites
               description_student: En esta lección escribirás programas y aprenderás
                 sobre los sprites y los comportamientos.
-              description_teacher: 'En esta lección, los alumnos trabajarán a través
-                de una serie de niveles de programación en el ordenador, terminando
-                con una tarea abierta de "juego libre" en la que podrán construir
-                lo que quieran. Los alumnos escribirán programas y aprenderán los
-                dos conceptos centrales de Laboratorio de Sprite: los sprites y los
-                comportamientos. '
+              description_teacher: 'En esta lección de **desarrollo de habilidades**,
+                los estudiantes trabajarán a través de una serie de niveles de programación
+                en la computadora y terminarán con una tarea abierta de "juego libre"
+                en la que podrán crear lo que quieran. Los estudiantes escribirán
+                programas y aprenderán los dos conceptos centrales del Sprite Lab:
+                sprites y comportamientos. '
             lesson-8:
               name: Sprites en acción
               description_student: Trabajarás a través de niveles de programación
                 y terminarás con una tarea abierta de "juego libre" en la que podrás
-                construir lo que quieras.
-              description_teacher: 'En esta lección, los alumnos trabajarán a través
-                de una serie de niveles de programación en el ordenador, terminando
-                con una tarea abierta de "juego libre" en la que podrán construir
-                lo que quieran. Los alumnos escribirán programas que respondan a sucesos
-                cronometrados y a las entradas del usuario. '
+                crear lo que quieras.
+              description_teacher: 'En esta lección de **desarrollo de habilidades**,
+                los estudiantes trabajarán a través de una serie de niveles de programación
+                en la computadora y terminarán con una tarea abierta de "juego libre"
+                en la que podrán crear lo que quieran. Los estudiantes escribirán
+                programas que responden a eventos cronometrados y a las entradas del
+                usuario. '
             lesson-9:
               name: Historias del espacio en blanco
               description_student: 'En esta actividad, utilizarás historias para rellenar
@@ -30513,23 +30514,24 @@ es-MX:
             lesson-2:
               name: Creación de Sprites
               description_student: En esta lección escribirás programas y aprenderás
-                sobre los sprites y comportamientos.
-              description_teacher: 'En esta lección, los alumnos trabajarán a través
-                de una serie de niveles de programación en el ordenador, terminando
-                con una tarea abierta de "juego libre" en la que podrán construir
-                lo que quieran. Los alumnos escribirán programas y aprenderán los
-                dos conceptos centrales de Laboratorio de Sprite: los sprites y los
-                comportamientos. '
+                sobre sprites y comportamientos.
+              description_teacher: 'En esta lección de **desarrollo de habilidades**,
+                los estudiantes trabajarán a través de una serie de niveles de programación
+                en la computadora y terminarán con una tarea abierta de "juego libre"
+                en la que podrán crear lo que quieran. Los estudiantes escribirán
+                programas y aprenderán los dos conceptos centrales del Sprite Lab:
+                sprites y comportamientos. '
             lesson-3:
               name: Sprites en acción
               description_student: Trabajarás a través de niveles de programación
                 y terminarás con una tarea abierta de "juego libre" en la que podrás
-                construir lo que quieras.
-              description_teacher: 'En esta lección, los alumnos trabajarán a través
-                de una serie de niveles de programación en el ordenador, terminando
-                con una tarea abierta de "juego libre" en la que podrán construir
-                lo que quieran. Los alumnos escribirán programas que respondan a sucesos
-                cronometrados y a las entradas del usuario. '
+                crear lo que quieras.
+              description_teacher: 'En esta lección de **desarrollo de habilidades**,
+                los estudiantes trabajarán a través de una serie de niveles de programación
+                en la computadora y terminarán con una tarea abierta de "juego libre"
+                en la que podrán crear lo que quieran. Los estudiantes escribirán
+                programas que responden a eventos cronometrados y a las entradas del
+                usuario. '
             lesson-4:
               name: Texto y Comentarios
               description_student: En esta lección practicarás con las variables en
@@ -31839,8 +31841,6 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
-            lessonGroup-4:
-              display_name: Prueba
           name: csa1-piloto
         csa2-pilot:
           lessons:
@@ -32697,6 +32697,7 @@ es-MX:
                 pueden simular aún más el aprendizaje humano.\\\r\n\\\r\n**Pregunta
                 del día:** ¿En qué se parece el aprendizaje automático al humano?"
             lesson3:
+              name: Patrones en los Datos
               description_student: Los alumnos examinan varias aplicaciones que toman
                 decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo
                 el aprendizaje automático puede ayudar a tomar esta decisión. La primera
@@ -32742,6 +32743,7 @@ es-MX:
                 que resulta cuando hay más datos en juego.\\\r\n\\\r\n**Pregunta del
                 día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
             lesson5:
+              name: Introducción al Laboratorio de Inteligencia Artificial
               description_student: Los alumnos se introducen por primera vez en la
                 herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde
                 seleccionan características para entrenar un modelo que predice una
@@ -32819,6 +32821,7 @@ es-MX:
                 o no en base a los datos.\\\r\n\\\r\n**Pregunta del día:** ¿Cómo aparece
                 el sesgo humano en el aprendizaje automático?"
             lesson8:
+              name: Datos Numéricos en el Laboratorio de Inteligencia Artificial
               description_student: Hasta ahora, los alumnos sólo han creado modelos
                 de aprendizaje automático a partir de datos categóricos; en esta lección,
                 se introduce a los alumnos en los datos numéricos que representan
@@ -33014,8 +33017,342 @@ es-MX:
             lessonGroup-3:
               display_name: Capítulo 2 - Diseñar una aplicación de Aprendizaje Automático
             lessonGroup-4:
-              display_name: Lecciones Extra - Borrar Después
+              display_name: Encuesta
         csd7-2021:
+          lessons:
+            Introduction to Machine Learning:
+              name: Introducción al aprendizaje automático (Machine Learning)
+              description_student: Los alumnos conocen una forma de inteligencia artificial
+                llamada aprendizaje automático y cómo pueden utilizar el Proceso de
+                Resolución de Problemas ayudando a entrenar a un robot para que resuelva
+                problemas. Participan en tres actividades de aprendizaje automático
+                en las que un robot  "A.I. Bot" aprende a detectar patrones en los
+                peces. En el primer nivel, los alumnos entrenan al robot para que
+                detecte "peces" frente a "no peces" y descubren que un mayor número
+                de datos conduce a una mayor precisión. En el segundo nivel, los alumnos
+                entrenan al "I.A. Bot" para que detecte peces de cierto color o con
+                una forma determinada y descubren que el "I.A. Bot" podría estar basando
+                su decisión en factores no previstos. En el último nivel, los alumnos
+                entrenan al "I.A. Bot" para que detecte expresiones y descubren que
+                el "I.A. Bot" puede estar utilizando características no relacionadas
+                para tomar decisiones de una manera que no es justa. La lección termina
+                reafirmando cómo se utiliza el proceso de resolución de problemas
+                en el aprendizaje automático.
+              description_teacher: |-
+                Los alumnos conocen una forma de inteligencia artificial llamada aprendizaje automático y cómo pueden utilizar el Proceso de Resolución de Problemas ayudando a entrenar a un robot para que resuelva problemas. Participan en tres actividades de aprendizaje automático en las que un robot  "A.I. Bot" aprende a detectar patrones en los peces. En el primer nivel, los alumnos entrenan al robot para que detecte "peces" frente a "no peces" y descubren que un mayor número de datos conduce a una mayor precisión. En el segundo nivel, los alumnos entrenan al "I.A. Bot" para que detecte peces de cierto color o con una forma determinada y descubren que el "I.A. Bot" podría estar basando su decisión en factores no previstos. En el último nivel, los alumnos entrenan al "I.A. Bot" para que detecte expresiones y descubren que el "I.A. Bot" puede estar utilizando características no relacionadas para tomar decisiones de una manera que no es justa. La lección termina reafirmando cómo se utiliza el proceso de resolución de problemas en el aprendizaje automático.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar el Proceso de Resolución de Problemas para resolver un problema con el aprendizaje automático?
+            Types of Machine Learning:
+              description_student: Los alumnos primero se plantean cómo crear modelos
+                "mentales" cuando aprenden nuevos conceptos, y cómo éstos pueden ser
+                similares a un modelo de "aprendizaje automático". Participan en una
+                actividad de patrones de colores para simular la construcción de un
+                modelo de aprendizaje automático sin ayuda, similar al de un niño
+                pequeño, como un tipo de aprendizaje no supervisado. A continuación,
+                juegan a un juego llamado "Puerta con Cristal Verde" como ejemplo
+                de aprendizaje supervisado, en el que aprenden qué palabras siguen
+                un determinado patrón para atravesar una puerta en el juego. A lo
+                largo de la lección, los alumnos también conocen los términos característica,
+                etiqueta y formación, que aparecen a lo largo de la unidad. Por último,
+                los alumnos clasifican varios escenarios en aprendizaje "supervisado"
+                o "no supervisado", y luego ven un vídeo sobre cómo las redes neuronales
+                pueden simular aún más el aprendizaje humano.
+              description_teacher: "Los alumnos primero se plantean cómo crear modelos
+                \"mentales\" cuando aprenden nuevos conceptos, y cómo éstos pueden
+                ser similares a un modelo de \"aprendizaje automático\". Participan
+                en una actividad de patrones de colores para simular la construcción
+                de un modelo de aprendizaje automático sin ayuda, similar al de un
+                niño pequeño, como un tipo de aprendizaje no supervisado. A continuación,
+                juegan a un juego llamado \"Puerta con Cristal Verde\" como ejemplo
+                de aprendizaje supervisado, en el que aprenden qué palabras siguen
+                un determinado patrón para atravesar una puerta en el juego. A lo
+                largo de la lección, los alumnos también conocen los términos característica,
+                etiqueta y formación, que aparecen a lo largo de la unidad. Por último,
+                los alumnos clasifican varios escenarios en aprendizaje \"supervisado\"
+                o \"no supervisado\", y luego ven un vídeo sobre cómo las redes neuronales
+                pueden simular aún más el aprendizaje humano.\\\r\n\\\r\n**Pregunta
+                del día:** ¿En qué se parece el aprendizaje automático al humano?"
+            Innovations in AI:
+              name: Innovaciones en Inteligencia Artificial
+            Patterns in Data:
+              name: Patrones en los Datos
+              description_student: Los alumnos examinan varias aplicaciones que toman
+                decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo
+                el aprendizaje automático puede ayudar a tomar esta decisión. La primera
+                aplicación toma decisiones de forma aleatoria, lo que constituye un
+                modelo pobre para ayudar a alguien a decidir qué zapatos ponerse.
+                La segunda aplicación toma decisiones siguiendo un patrón establecido
+                llamado árbol de decisiones, que es mejor pero no responde a sus usuarios.
+                Se guía a los alumnos para que lleguen a la conclusión de que encuestar
+                a sus usuarios puede ayudarles a tomar la mejor decisión buscando
+                patrones en los datos y basando sus decisiones en estos patrones.
+                La lección concluye motivando la necesidad de que un ordenador realice
+                este análisis y busque patrones en grandes cantidades de datos, que
+                será el tema de la siguiente lección.
+              description_teacher: "Los alumnos examinan varias aplicaciones que toman
+                decisiones sobre qué zapatos ponerse, hasta llegar a comprender cómo
+                el aprendizaje automático puede ayudar a tomar esta decisión. La primera
+                aplicación toma decisiones de forma aleatoria, lo que constituye un
+                modelo pobre para ayudar a alguien a decidir qué zapatos ponerse.
+                La segunda aplicación toma decisiones siguiendo un patrón establecido
+                llamado árbol de decisiones, que es mejor pero no responde a sus usuarios.
+                Se guía a los alumnos para que lleguen a la conclusión de que encuestar
+                a sus usuarios puede ayudarles a tomar la mejor decisión buscando
+                patrones en los datos y basando sus decisiones en estos patrones.
+                La lección concluye motivando la necesidad de que un ordenador realice
+                este análisis y busque patrones en grandes cantidades de datos, que
+                será el tema de la siguiente lección.\\\r\n\\\r\n**Pregunta del día:**
+                ¿Qué estrategias utilizan los modelos informáticos para tomar decisiones?"
+            Classification Models:
+              description_student: "**Pregunta del día:** ¿Cómo aprenden los ordenadores
+                a clasificar los datos?"
+              description_teacher: "Los alumnos participan en una actividad desconectada
+                que simula uno de los algoritmos de aprendizaje automático que los
+                ordenadores utilizan para separar los datos en grupos y ayudar a tomar
+                decisiones. Los alumnos tienen que ayudar a un ordenador a clasificar
+                los alimentos como frutas o verduras. Empiezan por representar gráficamente
+                20 frutas diferentes en dos ejes, comparando la \"dulzura\" con la
+                \"facilidad de comer\". Cuando terminan, intentan separar los datos
+                en grupos: un área de frutas y un área de verduras. A continuación,
+                ponemos a prueba su división ofreciéndoles nuevas frutas y verduras
+                para que las clasifiquen, ofreciéndoles a propósito ejemplos que pongan
+                a prueba su clasificación. Al final de la clase, los alumnos reflexionan
+                sobre cómo este proceso les ha ayudado a tomar decisiones y lo difícil
+                que resulta cuando hay más datos en juego.\\\r\n\\\r\n**Pregunta del
+                día:** ¿Cómo aprenden los ordenadores a clasificar los datos?"
+            Introduction to AI Lab:
+              name: Introducción al Laboratorio de Inteligencia Artificial
+              description_student: Los alumnos se introducen por primera vez en la
+                herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde
+                seleccionan características para entrenar un modelo que predice una
+                etiqueta determinada. Los alumnos fingen que han sido contratados
+                por varios restaurantes que quieren hacer recomendaciones a nuevos
+                clientes basándose en los datos de las encuestas que han recogido.
+                Los alumnos recorren cada conjunto de datos, identificando las características
+                de los datos que les gustaría utilizar para sus recomendaciones. Los
+                alumnos también utilizan herramientas de visualización de datos para
+                identificar las características con altas relaciones en los datos,
+                ya que no todas las características pueden ser útiles o predictivas
+                para el entrenamiento de un modelo. Al final de la lección, los alumnos
+                crean un nuevo modelo para un restaurante de su elección y escriben
+                una carta al propietario explicando cómo pueden utilizar su modelo
+                para aumentar su negocio de restauración.
+              description_teacher: |-
+                Los alumnos se introducen por primera vez en la herramienta Laboratorio de Inteligencia Artificial (AI Lab), donde seleccionan características para entrenar un modelo que predice una etiqueta determinada. Los alumnos fingen que han sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en los datos de las encuestas que han recogido. Los alumnos recorren cada conjunto de datos, identificando las características de los datos que les gustaría utilizar para sus recomendaciones. Los alumnos también utilizan herramientas de visualización de datos para identificar las características con altas relaciones en los datos, ya que no todas las características pueden ser útiles o predictivas para el entrenamiento de un modelo. Al final de la lección, los alumnos crean un nuevo modelo para un restaurante de su elección y escriben una carta al propietario explicando cómo pueden utilizar su modelo para aumentar su negocio de restauración.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?
+            Importing Models in App Lab:
+              description_student: 'Los alumnos se inician en la importación de sus
+                modelos en App Lab y en la vinculación de su modelo con sus pantallas.
+                La lección comienza pidiéndoles que prueben una aplicación de preguntas
+                al estilo de "Buzzfeed" que, a lo largo de la lección, recrean: ¿Cuál
+                es tu lugar ideal de vacaciones? Los alumnos comienzan importando
+                el modelo desde App Lab, luego añaden una pantalla que falta en el
+                modo de diseño, después añaden declaraciones "if" para cambiar las
+                pantallas y, finalmente, vinculan todas las pantallas en función del
+                resultado de la predicción. A continuación, pueden elegir otro cuestionario
+                del estilo de "Buzzfeed" para utilizarlo como modelo y diseñar una
+                aplicación, utilizando las habilidades que han aprendido en esta lección.'
+              description_teacher: "Los alumnos se inician en la importación de sus
+                modelos en App Lab y en la vinculación de su modelo con sus pantallas.
+                La lección comienza pidiéndoles que prueben una aplicación de preguntas
+                al estilo de \"Buzzfeed\" que, a lo largo de la lección, recrean:
+                ¿Cuál es tu lugar ideal de vacaciones? Los alumnos comienzan importando
+                el modelo desde App Lab, luego añaden una pantalla que falta en el
+                modo de diseño, después añaden declaraciones \"if\" para cambiar las
+                pantallas y, finalmente, vinculan todas las pantallas en función del
+                resultado de la predicción. A continuación, pueden elegir otro cuestionario
+                del estilo de \"Buzzfeed\" para utilizarlo como modelo y diseñar una
+                aplicación, utilizando las habilidades que han aprendido en esta lección.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo puedo crear una aplicación utilizando el aprendizaje
+                automático?"
+            Model Cards:
+              description_student: En esta lección, los alumnos investigan un modelo
+                en busca de sesgos y se les presenta una Tarjeta de Modelo, que es
+                una forma de representar información importante sobre un modelo entrenado
+                que podría ayudar a descubrir los sesgos. La lección comienza con
+                la investigación por parte de los alumnos de una aplicación de Prioridad
+                Médica, que ayuda a un hospital a decidir cuándo ver a los pacientes
+                en función de sus síntomas. Los alumnos son guiados a través de una
+                actividad para ayudarles a darse cuenta de que la aplicación está
+                sesgada sobre la base de información personal como la edad, la raza
+                y el género. Los alumnos examinan cómo podría ocurrir esto basándose
+                en los datos iniciales utilizados para entrenar el modelo, y luego
+                exploran cómo una tarjeta modelo es una herramienta que puede ayudar
+                a descubrir el posible sesgo. Exploran varios ejemplos de tarjetas
+                modelo, haciendo recomendaciones sobre si el modelo podría estar sesgado
+                o no en base a los datos.
+              description_teacher: "En esta lección, los alumnos investigan un modelo
+                en busca de sesgos y se les presenta una Tarjeta de Modelo, que es
+                una forma de representar información importante sobre un modelo entrenado
+                que podría ayudar a descubrir los sesgos. La lección comienza con
+                la investigación por parte de los alumnos de una aplicación de Prioridad
+                Médica, que ayuda a un hospital a decidir cuándo ver a los pacientes
+                en función de sus síntomas. Los alumnos son guiados a través de una
+                actividad para ayudarles a darse cuenta de que la aplicación está
+                sesgada sobre la base de información personal como la edad, la raza
+                y el género. Los alumnos examinan cómo podría ocurrir esto basándose
+                en los datos iniciales utilizados para entrenar el modelo, y luego
+                exploran cómo una tarjeta modelo es una herramienta que puede ayudar
+                a descubrir el posible sesgo. Exploran varios ejemplos de tarjetas
+                modelo, haciendo recomendaciones sobre si el modelo podría estar sesgado
+                o no en base a los datos.\\\r\n\\\r\n**Pregunta del día:** ¿Cómo aparece
+                el sesgo humano en el aprendizaje automático?"
+            Saving Models in AI Lab:
+              description_student: Los alumnos completan el proceso de entrenamiento
+                y guardado de un modelo, y luego lo importan a "Laboratorio de Aplicaciones".
+                Por primera vez, los alumnos pueden elegir la etiqueta que les gustaría
+                predecir y dedicar tiempo a decidir las características que utilizarán
+                para ayudar a predecir la etiqueta elegida. Los alumnos también guardan
+                su modelo por primera vez y lo importan a "Laboratorio de Aplicaciones",
+                para luego personalizar la aplicación basándose en su modelo.
+              description_teacher: "Los alumnos completan el proceso de entrenamiento
+                y guardado de un modelo, y luego lo importan a \"Laboratorio de Aplicaciones\".
+                Por primera vez, los alumnos pueden elegir la etiqueta que les gustaría
+                predecir y dedicar tiempo a decidir las características que utilizarán
+                para ayudar a predecir la etiqueta elegida. Los alumnos también guardan
+                su modelo por primera vez y lo importan a \"Laboratorio de Aplicaciones\",
+                para luego personalizar la aplicación basándose en su modelo.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo puedo elegir una etiqueta que cree un modelo de aprendizaje
+                automático preciso?"
+            Model Cards in App Lab:
+              description_student: Los alumnos practican la importación de sus modelos
+                en "Laboratorio de Aplicaciones", esta vez incluyendo modelos que
+                tienen datos numéricos y utilizando tarjetas de modelo para ayudar
+                a mejorar la experiencia del usuario al rellenar su formulario. Los
+                alumnos aprenden a ver la tarjeta de modelo dentro de "Laboratorio
+                de Aplicaciones" y la utilizan para añadir más elementos descriptivos
+                a una aplicación. A continuación, se centran en mejorar la experiencia
+                del usuario añadiendo texto informativo para ayudar a guiar a los
+                usuarios a la hora de rellenar el formulario y añadiendo un estilo
+                a su aplicación para mejorar la experiencia del usuario. Al final
+                de la lección, los alumnos habrán aprendido a utilizar un modelo de
+                tarjeta para facilitar la comprensión de la aplicación, así como estrategias
+                de diseño y a crear una interfaz de usuario más atractiva en lugar
+                de una aplicación de una sola pantalla.
+              description_teacher: |-
+                Los alumnos practican la importación de sus modelos en "Laboratorio de Aplicaciones", esta vez incluyendo modelos que tienen datos numéricos y utilizando tarjetas de modelo para ayudar a mejorar la experiencia del usuario al rellenar su formulario. Los alumnos aprenden a ver la tarjeta de modelo dentro de "Laboratorio de Aplicaciones" y la utilizan para añadir más elementos descriptivos a una aplicación. A continuación, se centran en mejorar la experiencia del usuario añadiendo texto informativo para ayudar a guiar a los usuarios a la hora de rellenar el formulario y añadiendo un estilo a su aplicación para mejorar la experiencia del usuario. Al final de la lección, los alumnos habrán aprendido a utilizar un modelo de tarjeta para facilitar la comprensión de la aplicación, así como estrategias de diseño y a crear una interfaz de usuario más atractiva en lugar de una aplicación de una sola pantalla.
+
+                **Pregunta del día:** ¿Cómo puedo mejorar la forma en que un usuario interactúa con una aplicación de aprendizaje automático?
+            Similarity Models:
+              description_student: En esta lección, los alumnos asumen el papel de
+                un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes.
+                Un día se les otorga la responsabilidad de entregar la fórmula de
+                una vacuna a un laboratorio en algún lugar de su localidad. Para ello,
+                deberán utilizar un asistente personal inteligente (API) llamado "Tom"
+                para predecir la ruta más segura hacia el laboratorio, lo que requerirá
+                entrenar a Tom con un algoritmo de regresión.
+              description_teacher: "En esta lección, los alumnos asumen el papel de
+                un alumno de secundaria moderno que sobrevive a una pandemia sin precedentes.
+                Un día se les otorga la responsabilidad de entregar la fórmula de
+                una vacuna a un laboratorio en algún lugar de su localidad. Para ello,
+                deberán utilizar un asistente personal inteligente (API) llamado \"Tom\"
+                para predecir la ruta más segura hacia el laboratorio, lo que requerirá
+                entrenar a Tom con un algoritmo de regresión.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo aprenden los ordenadores a hacer predicciones con
+                datos numéricos?"
+            Numerical Data in AI Lab:
+              name: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+              description_student: Hasta ahora, los alumnos sólo han creado modelos
+                de aprendizaje automático a partir de datos categóricos; en esta lección,
+                se introduce a los alumnos en los datos numéricos que representan
+                un rango de valores. Se presenta a los alumnos un escenario en el
+                que cada característica y etiqueta se representa con datos numéricos,
+                y aprenden a utilizar las nuevas herramientas de visualización de
+                datos de AI Lab para ayudar a encontrar patrones.
+              description_teacher: |-
+                Hasta ahora, los alumnos sólo han creado modelos de aprendizaje automático a partir de datos categóricos; en esta lección, se introduce a los alumnos en los datos numéricos que representan un rango de valores. Se presenta a los alumnos un escenario en el que cada característica y etiqueta se representa con datos numéricos, y aprenden a utilizar las nuevas herramientas de visualización de datos de AI Lab para ayudar a encontrar patrones.
+
+                **Pregunta del día:** ¿Cómo podemos utilizar AI Lab para predecir datos numéricos?
+            Customizing Apps:
+              description_student: Los alumnos exploran cómo personalizar el código
+                de su aplicación para realizar cambios adicionales en el diseño de
+                la misma. Los alumnos comienzan analizando una aplicación de una sola
+                pantalla que está abarrotada de demasiadas funciones. Practican la
+                ampliación de la aplicación a dos pantallas y la actualización del
+                código para utilizar los nuevos elementos del modo de diseño. Después
+                de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor
+                que requiere cambios en el código utilizando los nuevos elementos
+                del modo de diseño. Utilizando los conocimientos de esta lección,
+                los alumnos podrán crear aplicaciones multipantalla en las que las
+                preguntas puedan aparecer en varias pantallas en lugar de en una sola.
+              description_teacher: |-
+                Los alumnos exploran cómo personalizar el código de su aplicación para realizar cambios adicionales en el diseño de la misma. Los alumnos comienzan analizando una aplicación de una sola pantalla que está abarrotada de demasiadas funciones. Practican la ampliación de la aplicación a dos pantallas y la actualización del código para utilizar los nuevos elementos del modo de diseño. Después de esto, los alumnos ayudan a crear una aplicación de Alerta de Conductor que requiere cambios en el código utilizando los nuevos elementos del modo de diseño. Utilizando los conocimientos de esta lección, los alumnos podrán crear aplicaciones multipantalla en las que las preguntas puedan aparecer en varias pantallas en lugar de en una sola.
+
+                **Pregunta del día:** ¿Cómo puedo personalizar el código de una aplicación de aprendizaje automático?
+            AI Code of Ethics:
+              name: Código Ético de la Inteligencia Artificial
+              description_student: En pequeños grupos, los alumnos realizan una investigación
+                a partir de artículos y vídeos que exponen los problemas éticos en
+                un área de la Inteligencia Artificial (IA) de su elección. Después,
+                cada grupo desarrolla al menos un principio orientado a la solución
+                que aborda su área elegida. A continuación, estos principios se reúnen
+                en un recurso (por ejemplo, una presentación de diapositivas, un documento
+                o una página web) para los creadores de Inteligencia Artificial y
+                los legisladores de todo el mundo.
+              description_teacher: En pequeños grupos, los alumnos realizan una investigación
+                a partir de artículos y vídeos que exponen los problemas éticos en
+                un área de la Inteligencia Artificial (IA) de su elección. Después,
+                cada grupo desarrolla al menos un principio orientado a la solución
+                que aborda su área elegida. A continuación, estos principios se reúnen
+                en un recurso (por ejemplo, una presentación de diapositivas, un documento
+                o una página web) para los creadores de Inteligencia Artificial y
+                los legisladores de todo el mundo.
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Miniproyecto: Hacer una Aplicación con Aprendizaje Automático'
+            Issue Statements:
+              name: Planificación de un Proyecto de Aprendizaje Automático
+            Survey Planning:
+              name: Diseño de recolección de datos
+            Survey Data in AI Lab:
+              name: Entrenar el Modelo a partir de Datos Buenos
+            Troubleshooting Models:
+              name: Entrenar el Modelo a partir de Datos Erróneos
+            Creating an App:
+              name: Crear Aplicación
+            Design an AI App:
+              name: Hacer una aplicación de " Inteligencia Artificial para el Bienestar
+                Social".
+              description_student: Para concluir esta unidad, los alumnos desarrollan
+                una aplicación de Inteligencia Artificial que aborda el problema social
+                que han retomado a lo largo de la unidad. Después de ver una aplicación
+                de ejemplo, los alumnos siguen una guía de proyecto para completar
+                esta actividad de varios días. En el primer paso, los alumnos preparan
+                los datos que utilizarán para entrenar su modelo en Laboratorio de
+                Inteligencia Artificial. Después de entrenar, probar y generar una
+                tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones
+                para su desarrollo. Aquí utilizan su modelo para crear una aplicación
+                fácil de usar basada en su maqueta de la lección anterior, "Planificación
+                de la aplicación". Los alumnos realizan una revisión por parte de
+                sus compañeros y hacen las actualizaciones necesarias a sus proyectos
+                antes de preparar una presentación a la clase.
+              description_teacher: "Para concluir esta unidad, los alumnos desarrollan
+                una aplicación de Inteligencia Artificial que aborda el problema social
+                que han retomado a lo largo de la unidad. Después de ver una aplicación
+                de ejemplo, los alumnos siguen una guía de proyecto para completar
+                esta actividad de varios días. En el primer paso, los alumnos preparan
+                los datos que utilizarán para entrenar su modelo en Laboratorio de
+                Inteligencia Artificial. Después de entrenar, probar y generar una
+                tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones
+                para su desarrollo. Aquí utilizan su modelo para crear una aplicación
+                fácil de usar basada en su maqueta de la lección anterior, \"Planificación
+                de la aplicación\". Los alumnos realizan una revisión por parte de
+                sus compañeros y hacen las actualizaciones necesarias a sus proyectos
+                antes de preparar una presentación a la clase.\\\r\n\\\r\n**Pregunta
+                del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas
+                para crear una aplicación de \"Inteligencia Artificial para el Bienestar
+                Social\"?"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1 - Aprendizaje Automático
+              description: |-
+                Introducción al Aprendizaje Automático
+
+                Finaliza con un miniproyecto
+            lessonGroup-3:
+              display_name: Capítulo 2 - Diseñar una aplicación de Aprendizaje Automático
+            lessonGroup-4:
+              display_name: Encuesta
           name: csd7-2021
           title: Inteligencia Artificial y Aprendizaje Automático
         kodea-pd-2021:
@@ -33171,9 +33508,6 @@ es-MX:
               display_name: Ayuda a la Navegación
           name: autodidáctico-pl-csd2-2021
         self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Herramientas
           name: autodidáctico-pl-csd3-2021
         self-paced-pl-csd4-2021:
           name: autodidáctico-pl-csd4-2021
@@ -33549,8 +33883,13 @@ es-MX:
           lessons:
             lesson-1:
               name: Laboratorio de Inteligencia Artificial
+            lesson-3:
+              name: Prueba
           title: Laboratorio de Inteligencia Artificial
         tesspltest:
           lessons:
             lesson-2:
               name: Lección 2
+        dlp21-csp-mod1:
+          title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la
+            Computación
