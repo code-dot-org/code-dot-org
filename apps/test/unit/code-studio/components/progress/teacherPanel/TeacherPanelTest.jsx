@@ -9,21 +9,24 @@ import i18n from '@cdo/locale';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 import sinon from 'sinon';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
 const DEFAULT_PROPS = {
+  onSelectUser: () => {},
+  getSelectedUserId: () => {},
+  sectionData: null,
+  unitName: 'A unit',
+  pageType: pageTypes.level,
   viewAs: ViewType.Student,
   hasSections: false,
   sectionsAreLoaded: false,
+  selectedSection: null,
   unitHasLockableLessons: false,
-  unitAllowsHiddenLessons: false,
   unlockedLessonNames: [],
-  sectionData: null,
-  onSelectUser: () => {},
-  getSelectedUserId: () => {},
   students: null,
   lessonId: 1,
   scriptId: 1,
@@ -102,6 +105,16 @@ describe('TeacherPanel', () => {
   it('hides SectionSelector if sectionsAreLoaded is false', () => {
     const wrapper = setUp({sectionsAreLoaded: false});
     expect(wrapper.find(SectionSelector)).to.have.length(0);
+  });
+
+  it('shows link to teacher dashboard for section if sections are loaded and there is a selected section', () => {
+    const wrapper = setUp({
+      selectedSection: {id: 1, name: 'CSD'},
+      sectionsAreLoaded: true,
+      hasSections: true
+    });
+
+    expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
   });
 
   it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
