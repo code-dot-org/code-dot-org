@@ -65,7 +65,6 @@ class CommitDialog extends React.Component {
     this.saveToBackpack();
   };
 
-  // This will communicate with the backpack API
   saveToBackpack = () => {
     this.setState({
       hasSaveError: false,
@@ -119,7 +118,7 @@ class CommitDialog extends React.Component {
 
   render() {
     const {commitNotes, filesToBackpack} = this.state;
-    const {isOpen, files, handleClose, handleCommit} = this.props;
+    const {isOpen, files} = this.props;
 
     return (
       <StylizedBaseDialog
@@ -138,8 +137,7 @@ class CommitDialog extends React.Component {
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() => handleCommit(commitNotes)}
-        handleClose={handleClose}
+        handleClose={this.clearSaveStateAndClose}
         footerJustification="space-between"
       />
     );
