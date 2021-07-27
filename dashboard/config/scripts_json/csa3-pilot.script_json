@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-23 16:18:48 UTC",
+    "serialized_at": "2021-07-27 20:57:17 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -4919,6 +4919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L1"
+        ],
         "progression": "Vocal Range - Maximum"
       },
       "named_level": false,
@@ -4942,6 +4945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L2"
+        ],
         "progression": "Vocal Range - Minimum"
       },
       "named_level": false,
@@ -4965,6 +4971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L3"
+        ],
         "progression": "Sum and Mean"
       },
       "named_level": false,
@@ -4988,6 +4997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L4"
+        ],
         "progression": "Identifying Properties Algorithms"
       },
       "named_level": false,
@@ -5011,6 +5023,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L5"
+        ],
         "progression": "Identifying Properties Algorithms"
       },
       "named_level": false,
@@ -5034,6 +5049,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5057,6 +5075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L1"
+        ],
         "progression": "Swapping Elements in an Array"
       },
       "named_level": false,
@@ -5080,6 +5101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2"
+        ],
         "progression": "Writing the replaceDuplicates() Method"
       },
       "named_level": false,
@@ -5103,6 +5127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3"
+        ],
         "progression": "Writing the replaceDuplicates() Method"
       },
       "named_level": false,
@@ -5126,6 +5153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4"
+        ],
         "progression": "Writing the find() Method"
       },
       "named_level": false,
@@ -5149,6 +5179,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L5"
+        ],
         "progression": "Writing the find() Method"
       },
       "named_level": false,
@@ -5172,6 +5205,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5195,6 +5231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L1"
+        ],
         "progression": "Nested Loops"
       },
       "named_level": false,
@@ -5218,6 +5257,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L2"
+        ],
         "progression": "Nested Loops"
       },
       "named_level": false,
@@ -5241,6 +5283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L3"
+        ],
         "progression": "Shift and Reverse Algorithms"
       },
       "named_level": false,
@@ -5264,6 +5309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L4"
+        ],
         "progression": "Shift and Reverse Algorithms"
       },
       "named_level": false,
@@ -5287,6 +5335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L5"
+        ],
         "progression": "Shift and Reverse Algorithms"
       },
       "named_level": false,
@@ -5310,6 +5361,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5333,6 +5387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L11-L1"
+        ],
         "progression": "Concert in The Theater Project"
       },
       "named_level": false,
@@ -5356,6 +5413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L1"
+        ],
         "progression": "Concert in The Theater Project"
       },
       "named_level": false,
@@ -5379,6 +5439,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L13-L1"
+        ],
         "progression": "Concert in The Theater Project"
       },
       "named_level": false,
@@ -7461,7 +7524,7 @@
     {
       "key": "algorithm",
       "word": "Algorithm",
-      "definition": "A set of steps to complete a task",
+      "definition": "A set of instructions to solve a problem or accomplish a task",
       "properties": {
       },
       "seeding_key": {

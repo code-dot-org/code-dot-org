@@ -22334,10 +22334,8 @@ en:
               description_teacher: In this lesson, students implement solutions by calling methods to move the `Painter` around The Neighborhood and work with paint. Students practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
             lesson-4:
               name: Conditionals and Debugging
-              description_student: 'Now that you know how to use action commands, you help the `Painter` make decisions about how to interact with The Neighborhood using information-gathering commands. You also learn about debugging and identify strategies to use throughout the year.
-
-'
-              description_teacher: 'In this lesson, students modify programs using three return commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Booleans, conditionals, and return statements are introduced through `if` statements and `Painter` return commands for students to practice using conditional logic in their programs. These concepts are discussed in more detail in future lessons and reinforced throughout the course. Students also develop debugging strategies by identifying syntax and logic errors.'
+              description_student: Now that you know how to call methods, you help the `Painter` make decisions about how to interact with The Neighborhood using methods that give information. You identify syntax and logic errors as well as debugging strategies to use throughout the year.
+              description_teacher: 'Students modify programs using three Boolean methods: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Students use Boolean methods and `if` statements to apply conditional logic in their programs. Students develop debugging strategies by identifying syntax and logic errors in their code.'
             lesson-5:
               name: More with Objects
               description_student: In this lesson, you learn how to make `Painter` objects by specifying where the `Painter` starts, what direction the `Painter` is facing, and the paint color. You also consider what makes "good code" and practice writing efficient code.
@@ -24591,19 +24589,23 @@ en:
             lessonGroup-3:
               display_name: Stage 2
           name: dlp21-csp-mod4
-          title: '2021 CS Principles Deeper Learning Module 4  '
+          title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
           description: overview instructions
         dlp21-csp-mod1:
           lessons:
             lesson-1:
-              name: 'Stage1: Increase Understanding'
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: dlp21-csp-mod1
-          title: CS Principles Deeper Learning Module 1
+          title: CS Principles Deeper Learning Module 1 for Workshop 1
           description_audience: ''
           description_short: ''
           description: ''
@@ -24636,7 +24638,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: dlp21-csd-mod1
-          title: 2021 CS Discoveries Deeper Learning Module for Workshop 1
+          title: 2021 CS Discoveries Deeper Learning Module 1 for Workshop 1
           description_audience: ''
           description_short: ''
           description: ''
@@ -24685,6 +24687,38 @@ en:
           lesson_groups: {}
           name: dlp21-csd-mod4
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csp-mod2:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csp-mod2
+          title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csp-mod3:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csp-mod3
+          title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
           description: ''
