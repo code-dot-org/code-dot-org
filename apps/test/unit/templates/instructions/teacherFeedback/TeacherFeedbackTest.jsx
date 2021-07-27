@@ -17,10 +17,14 @@ const DEFAULT_PROPS = {
   isEditable: true,
   rubric: null,
   visible: true,
-  viewAs: 'Teacher',
+  serverScriptId: 456,
   serverLevelId: 123,
   teacher: 5,
-  latestFeedback: null
+  latestFeedback: null,
+  viewAs: 'Teacher',
+  verifiedTeacher: true,
+  selectedSectionId: '789',
+  updateUserProgress: () => {}
 };
 
 const RUBRIC = {

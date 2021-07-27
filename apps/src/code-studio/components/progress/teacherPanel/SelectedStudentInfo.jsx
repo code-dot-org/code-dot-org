@@ -106,7 +106,8 @@ export default class SelectedStudentInfo extends React.Component {
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
-                {levelWithProgress.status !== LevelStatus.not_tried
+                {levelWithProgress.status !== LevelStatus.not_tried &&
+                levelWithProgress.updatedAt
                   ? new Date(levelWithProgress.updatedAt).toLocaleString()
                   : i18n.notApplicable()}
               </div>
