@@ -49,7 +49,6 @@ end
 def verify_bubble_color(selector, background_color, border_color)
   steps %{
     And I wait until element "#{selector}" is visible
-    And I scroll to "#{selector}"
     And element "#{selector}" has css property "background-color" equal to "#{background_color}"
     And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
   }
