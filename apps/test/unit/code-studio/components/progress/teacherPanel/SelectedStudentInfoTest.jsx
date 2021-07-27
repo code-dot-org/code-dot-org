@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {SelectedStudentInfo} from '@cdo/apps/code-studio/components/progress/SelectedStudentInfo';
+import {expect} from '../../../../../util/reconfiguredChai';
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
@@ -30,6 +30,15 @@ describe('SelectedStudentInfo', () => {
 
     expect(wrapper.contains('Student 1')).to.equal(true);
     expect(wrapper.find('ProgressBubble')).to.have.length(1);
+  });
+
+  // userlevel data is loaded async, make sure component handles missing userLevel data
+  it('displays student name, gracefully handles missing userLevel', () => {
+    const props = {...defaultProps, userLevel: null};
+    const wrapper = shallow(<SelectedStudentInfo {...props} />);
+
+    expect(wrapper.contains('Student 1')).to.equal(true);
+    expect(wrapper.find('ProgressBubble')).to.have.length(0);
   });
 
   it('displays time and unsubmit button if submitted level', () => {
