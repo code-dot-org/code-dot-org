@@ -1,4 +1,4 @@
-# Helper steps for signing in and signing out
+# Helper steps for signing in, signing out and permissions
 
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
@@ -184,4 +184,23 @@ end
 
 And(/^one year passes for user "([^"]*)"$/) do |name|
   pass_time_for_user name, 1.year.ago
+end
+
+def pass_time_for_user(name, amount_of_time)
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.created_at = amount_of_time
+  user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
+  user.save!
+  user.user_school_infos.each do |info|
+    info.last_confirmation_date = amount_of_time
+    info.save!
+  end
+end
+
+And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
+  require_rails_env
+  user = User.find_by_email_or_hashed_email(@users[name][:email])
+  user.permission = UserPermission::AUTHORIZED_TEACHER
+  user.save!
 end
