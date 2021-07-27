@@ -495,28 +495,28 @@
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "¡Hola!"
         },
         "courseF_apps_aquarium": {
-          "f655df68ec33643278de7e69794e8d76": "Acuario Virtual",
+          "f655df68ec33643278de7e69794e8d76": "Acuario virtual",
           "a1a2a07348784279a1e7a6f46dc7e353": "¿Qué vas a añadir?",
           "83e4a96aed96436c621b9809e258b309": "pez",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "criatura ",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "otro",
-          "0d3e73168beb875063ea0f0302fe32bd": "¿Qué peces?",
+          "0d3e73168beb875063ea0f0302fe32bd": "¿Qué pez?",
           "caaf8264ca397dba2d35ef902bbbd953": "¿Qué criatura?",
           "78574118d153534fd0925a2f5ca25e79": "¿Qué cosa?"
         },
         "courseF_apps_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién está de cumpleaños?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién cumple años?",
           "d1210f945885351b13feb9bbb868aeef": "¿Qué edad tendrán?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_apps_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "¡Hola, soy X-9! ¿Cómo te llamas?",
-          "f0e5da70d264f312a1658d51c130b101": "Introduce tu nombre:",
+          "f0e5da70d264f312a1658d51c130b101": "Escribe tu nombre:",
           "13e575be866ecf5ac3dcbf61ab2048d7": "¿Cuántos años tienes?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introduce tu edad:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ¡años también!",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Escribe tu edad:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " también tengo esa edad!",
           "605f302ebc9f7fbacba60b15f551a633": "¿Cuál es tu color favorito?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introduce tu color favorito:",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Escribe tu color favorito:",
           "ae096fbf24d913754b01a1601672bf62": "también!",
           "1f258d88a70309efc1435ef5daa277a0": "¡Gracias por charlar conmigo hoy!"
         },
@@ -527,40 +527,40 @@
           "41f2b2212de0105c2a942ebb4a44e449": "¡El Gran Juego del Coleccionista!"
         },
         "courseF_apps_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Juegos de Fiesta",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia de un Espacio en Blanco",
-          "514b8d5320196898a9ced3efe0d4c802": "Introduce un adjetivo:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introduce un objeto:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introduce una parte del cuerpo:",
-          "e522ee28f39133b45497637539ff429b": "Introduce un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Juegos de fiesta",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia de un espacio en blanco",
+          "514b8d5320196898a9ced3efe0d4c802": "Escribe un adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Escribe un objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Escribe una parte del cuerpo:",
+          "e522ee28f39133b45497637539ff429b": "Escribe un número:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " juegos.",
           "5306eed2fd2c43fe033efd6016c0c38b": "-¡carrera de piernas!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_editable_card": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién está de cumpleaños?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién cumple años?",
           "d1210f945885351b13feb9bbb868aeef": "¿Qué edad tendrán?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_editable_chatbot": {
           "a72e7c5c68af0546e963e510297f5233": "¡Hola, soy X-9! ¿Cómo te llamas?",
-          "f0e5da70d264f312a1658d51c130b101": "Introduce tu nombre:",
+          "f0e5da70d264f312a1658d51c130b101": "Escribe tu nombre:",
           "13e575be866ecf5ac3dcbf61ab2048d7": "¿Cuántos años tienes?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Introduce tu edad:",
-          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ¡años también!",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Escribe tu edad:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " también tengo esa edad!",
           "605f302ebc9f7fbacba60b15f551a633": "¿Cuál es tu color favorito?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Introduce tu color favorito:",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Escribe tu color favorito:",
           "ae096fbf24d913754b01a1601672bf62": "también!",
           "1f258d88a70309efc1435ef5daa277a0": "¡Gracias por charlar conmigo hoy!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_editable_madlib": {
-          "f6175c6f0b0bcfff0256286315f0eb7b": "Juegos de Fiesta",
-          "bf08dd3d1961874f13e77c936aad27e5": "Historia de un Espacio en Blanco",
-          "514b8d5320196898a9ced3efe0d4c802": "Introduce un adjetivo:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Introduce un objeto:",
-          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Introduce una parte del cuerpo:",
-          "e522ee28f39133b45497637539ff429b": "Introduce un número:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Juegos de fiesta",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia de un espacio en blanco",
+          "514b8d5320196898a9ced3efe0d4c802": "Escribe un adjetivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Escribe un objeto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Escribe una parte del cuerpo:",
+          "e522ee28f39133b45497637539ff429b": "Escribe un número:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " juegos.",
           "5306eed2fd2c43fe033efd6016c0c38b": "-¡carrera de piernas!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
@@ -591,7 +591,7 @@
           "34088af1fb721900963462375b3bbe23": "¡el robot!"
         },
         "courseF_text_choice_multiprompt": {
-          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién está de cumpleaños?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "¿Quién cumple años?",
           "d1210f945885351b13feb9bbb868aeef": "¿Qué edad tendrán?"
         },
         "courseF_text_choice_title": {

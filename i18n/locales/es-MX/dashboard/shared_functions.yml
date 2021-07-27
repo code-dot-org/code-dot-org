@@ -6,11 +6,11 @@ es-MX:
       growing: creciente
       jittering: poniéndose nervioso
       moving east: moverse al este
-      moving east and looping: moviéndose hacia el este y haciendo un bucle
+      moving east and looping: moverse hacia el este y hacer un bucle
       moving north: moviéndose al norte
       moving south: moviéndose al sur
       moving west: moviéndose al oeste
-      moving west and looping: moviéndose hacia el oeste y haciendo un bucle
+      moving west and looping: moverse hacia el oeste y hacer un bucle
       moving with arrow keys: moverse con las teclas de flecha
       patrolling: patrullando
       shrinking: encogiendose
@@ -18,4 +18,4 @@ es-MX:
       spinning right: girando a la derecha
       swimming left and right: nadar a izquierda y derecha
       wandering: deambulando
-      wobbling: tambaleándose
+      wobbling: tambalearse

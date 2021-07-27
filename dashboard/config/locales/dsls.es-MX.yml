@@ -12344,11 +12344,11 @@ es-MX:
         display_name: Práctica de Sprites
         teacher_markdown: |+
           # Visión general de los niveles de elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los estudiantes a seleccionar las opciones por sí mismos, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Escena del Desierto|Cambiar tamaño de la fruta.|Animación de un Velero|Un Día de Brisa|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Escena del desierto|Cambiar tamaño de la fruta.|Animación de un velero|Un día de brisa|
           |-|-|-|-|-|
           | ***Tipo*** |**Revisar**|**Review**|**Revisar**|**Revisar**|
           | ***Concepto***|*sprites, locations*|*sprites, propiedades*|*sprites, locations, behaviors*|*comportamientos*|

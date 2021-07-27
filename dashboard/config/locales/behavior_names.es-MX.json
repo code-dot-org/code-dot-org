@@ -1249,9 +1249,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "moviéndose al oeste",
@@ -1281,9 +1281,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "wandering": "deambulando",
@@ -1301,9 +1301,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "CourseF_outbreak1": {
           "recovering": "recuperación",
@@ -1536,9 +1536,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "Virtual Pet 2_2021": {
           "wandering": "deambulando",
@@ -1581,7 +1581,7 @@
           "patrolling2": "patrullando2"
         },
         "courseE_aboutme_1_2021": {
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "wandering": "deambulando",
           "moving east": "moverse al este",
@@ -1659,7 +1659,7 @@
           "moving west": "moviéndose al oeste",
           "moving east": "moverse al este",
           "moving west2": "moviéndose al oeste2",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "spinning left": "girando a la izquierda",
           "spinning right": "girando a la derecha",
           "shrinking": "encogiendose",
@@ -1680,7 +1680,7 @@
           "moving north2": "moviéndose al norte2",
           "jittering2": "poniéndose nervioso2",
           "patrolling2": "patrullando2",
-          "moving with arrow keys2": "moverse con las flechas del teclado",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
           "driving with arrow keys2": "conducir con las flechas del teclado2"
         },
         "courseF_apps_card": {
@@ -1728,7 +1728,7 @@
           "jittering2": "poniéndose nervioso2",
           "moving west2": "moviéndose al oeste2",
           "patrolling2": "patrullando2",
-          "moving with arrow keys2": "moverse con las flechas del teclado",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
           "driving with arrow keys2": "conducir con las flechas del teclado2"
         },
         "courseF_apps_collector": {
@@ -1759,7 +1759,7 @@
           "moving north2": "moviéndose al norte2",
           "jittering2": "poniéndose nervioso2",
           "patrolling2": "patrullando2",
-          "moving with arrow keys2": "moverse con las flechas del teclado",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
           "driving with arrow keys2": "conducir con las flechas del teclado2"
         },
         "courseF_apps_madlib": {
@@ -1777,9 +1777,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_apps_pet": {
           "patrolling": "patrullando",
@@ -1797,9 +1797,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_editable_card": {
           "blocking movement": "bloqueo de movimiento",
@@ -1850,9 +1850,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "patrullando",
@@ -1868,8 +1868,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patrullando",
@@ -1884,12 +1884,12 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -1902,12 +1902,12 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -1920,8 +1920,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_conflict": {
           "patrolling": "patrullando",
@@ -1937,13 +1937,13 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_freeplay_air": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -1954,12 +1954,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_freeplay_animals": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -1970,12 +1970,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_freeplay_aquatic": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -1986,12 +1986,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_freeplay_blank": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2002,12 +2002,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_freeplay_food": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2018,12 +2018,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_freeplay_space": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2034,11 +2034,11 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_events_key": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -2051,15 +2051,15 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_practice_reorder": {
           "moving east": "moverse al este",
           "moving north": "moviéndose al norte",
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -2071,8 +2071,8 @@
           "spinning left": "girando a la izquierda",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_predict": {
           "mystery behavior": "comportamiento misterioso",
@@ -2092,7 +2092,7 @@
         },
         "courseF_events_review": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -2105,12 +2105,12 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_ship": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -2123,8 +2123,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_stops": {
           "moving east": "moverse al este",
@@ -2140,12 +2140,12 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_events_time": {
           "patrolling": "patrullando",
-          "wobbling": "tambaleándose",
+          "wobbling": "tambalearse",
           "moving forward": "avanzando",
           "growing": "creciente",
           "moving west": "moviéndose al oeste",
@@ -2158,8 +2158,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_label_predict": {
           "moving east": "moverse al este",
@@ -2188,9 +2188,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_behaviors": {
           "moving east": "moverse al este",
@@ -2214,9 +2214,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_desert": {
           "moving east": "moverse al este",
@@ -2229,14 +2229,14 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_freeplay_air": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2247,12 +2247,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_freeplay_animals": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2263,12 +2263,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_freeplay_aquatic": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2279,12 +2279,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_freeplay_blank": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2295,12 +2295,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_freeplay_food": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2311,12 +2311,12 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_freeplay_space": {
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
           "moving east": "moverse al este",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
           "moving west": "moviéndose al oeste",
           "wandering": "deambulando",
           "spinning left": "girando a la izquierda",
@@ -2327,7 +2327,7 @@
           "moving north": "moviéndose al norte",
           "jittering": "poniéndose nervioso",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose"
+          "wobbling": "tambalearse"
         },
         "courseF_sprites_make": {
           "moving east": "moverse al este",
@@ -2340,9 +2340,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_moreSprites": {
           "moving east": "moverse al este",
@@ -2355,9 +2355,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_positioning": {
           "moving east": "moverse al este",
@@ -2370,9 +2370,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_predict": {
           "moving east": "moverse al este",
@@ -2401,9 +2401,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_sprites_ship": {
           "moving east": "moverse al este",
@@ -2416,9 +2416,9 @@
           "jittering": "poniéndose nervioso",
           "moving west": "moviéndose al oeste",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_answer": {
           "patrolling": "patrullando",
@@ -2434,8 +2434,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_color": {
           "patrolling": "patrullando",
@@ -2451,8 +2451,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_conversation": {
           "wandering": "deambulando",
@@ -2470,9 +2470,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_events": {
           "wandering": "deambulando",
@@ -2490,9 +2490,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_freeplay": {
           "wandering": "deambulando",
@@ -2510,9 +2510,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_interview": {
           "wandering": "deambulando",
@@ -2530,9 +2530,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "deambulando",
@@ -2550,9 +2550,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_choice_title": {
           "patrolling": "patrullando",
@@ -2568,8 +2568,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_concat": {
           "patrolling": "patrullando",
@@ -2585,8 +2585,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_events": {
           "patrolling": "patrullando",
@@ -2602,8 +2602,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_print": {
           "patrolling": "patrullando",
@@ -2619,8 +2619,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_prompts": {
           "patrolling": "patrullando",
@@ -2636,8 +2636,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_text_review": {
           "patrolling": "patrullando",
@@ -2653,8 +2653,8 @@
           "shrinking": "encogiendose",
           "spinning left": "girando a la izquierda",
           "fluttering": "revolotear",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_card": {
           "wandering": "deambulando",
@@ -2671,9 +2671,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_card_finish": {
           "wandering": "deambulando",
@@ -2690,9 +2690,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_chatbot": {
           "wandering": "deambulando",
@@ -2709,9 +2709,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_chatbot_finish": {
           "wandering": "deambulando",
@@ -2728,9 +2728,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_madlib": {
           "wandering": "deambulando",
@@ -2747,9 +2747,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_madlib_finish": {
           "wandering": "deambulando",
@@ -2766,9 +2766,9 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         },
         "courseF_variables_predict": {
           "moving east": "moverse al este",
@@ -2802,9 +2802,9 @@
           "moving with arrow keys": "moverse con las teclas de flecha",
           "driving with arrow keys": "conducir con las teclas de flecha",
           "fluttering": "revolotear",
-          "wobbling": "tambaleándose",
-          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
-          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         }
       }
     }
