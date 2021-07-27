@@ -26,10 +26,10 @@ export default class BackpackClientApi {
   }
 
   fetchFile(filename, onError, onSuccess) {
-    if (!this.channelId) {
+    if (!this.hasBackpack()) {
       onError();
     }
-    this.backpackApi.fetchWithDataType(
+    this.backpackApi.fetch(
       this.channelId + '/' + filename,
       (error, data) => {
         if (error) {
@@ -43,7 +43,7 @@ export default class BackpackClientApi {
   }
 
   getFileList(onError, onSuccess) {
-    if (!this.channelId) {
+    if (!this.hasBackpack()) {
       onError();
     }
     this.backpackApi.fetch(this.channelId, (error, data) => {

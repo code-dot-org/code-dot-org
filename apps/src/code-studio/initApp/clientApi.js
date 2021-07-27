@@ -120,17 +120,8 @@ var base = {
    * @param {AjaxNodeStyleCallback} callback - Expected result is the requested
    *        collection object.
    */
-  fetch: function(childPath, callback) {
-    this.fetchWithDataType(childPath, callback, 'json');
-  },
-
-  /**
-   * Retrieve a collection.
-   * @param {string} childPath The path underneath api_base_url
-   * @param {AjaxNodeStyleCallback} callback - Expected result is the requested
-   *        collection object.
-   */
-  fetchWithDataType: function(childPath, callback, dataType) {
+  fetch: function(childPath, callback, dataType) {
+    dataType = dataType || 'json';
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'get',
