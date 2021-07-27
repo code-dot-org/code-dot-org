@@ -33,6 +33,7 @@ function JavalabButton({
         ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {icon}
       {text && <div style={textStyle}>{text}</div>}
