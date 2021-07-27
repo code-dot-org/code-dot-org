@@ -16,8 +16,8 @@ level 'andrea-test3', progression: 'Vice President Question'
 
 lesson 'Part 2', display_name: 'Part 2', has_lesson_plan: false
 variants
-  level 'andrea_test1', named: true
-  level 'andrea-test2', named: true
+  level 'andrea_test1'
+  level 'andrea-test2'
 endvariants
 
 lesson 'part 3', display_name: 'part 3', has_lesson_plan: false

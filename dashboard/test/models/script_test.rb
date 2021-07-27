@@ -2161,6 +2161,26 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not Script.modern_elementary_courses_available?("fr-fr")
   end
 
+  test 'supported_locale_codes' do
+    unit = create :script
+    assert_equal ['en-US'], unit.supported_locale_codes
+
+    unit.supported_locales = ['en-US']
+    assert_equal ['en-US'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-FR']
+    assert_equal ['en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-FR', 'ar-SA']
+    assert_equal ['ar-SA', 'en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['en-US', 'fr-FR', 'ar-SA']
+    assert_equal ['ar-SA', 'en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-fr']
+    assert_equal ['en-US', 'fr-fr'], unit.supported_locale_codes
+  end
+
   test 'supported_locale_names' do
     unit = create :script
     assert_equal ['English'], unit.supported_locale_names

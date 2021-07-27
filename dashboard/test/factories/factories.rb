@@ -1387,16 +1387,14 @@ FactoryGirl.define do
     association :project_owner, factory: :student
 
     storage_app_id 1
-    project_version 'a_project_version_string'
     comment 'a comment about your project'
   end
 
   factory :reviewable_project do
+    sequence(:storage_app_id)
     association :user, factory: :student
     association :level
     association :script
-
-    storage_app_id 1
   end
 
   factory :teacher_score do

@@ -10,7 +10,9 @@ import javalab, {
   setAllValidation,
   setIsDarkMode,
   appendOutputLog,
-  setBackpackApi
+  setBackpackApi,
+  setIsStartMode,
+  setLevelName
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -65,10 +67,11 @@ Javalab.prototype.init = function(config) {
   // Sets dark mode based on displayTheme user preference
   this.isDarkMode =
     getDisplayThemeFromString(config.displayTheme) === DisplayTheme.DARK;
-
+  this.isStartMode = !!config.level.editBlocks;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
+  config.usesAssets = true;
 
   // We don't want icons in instructions
   config.skin.staticAvatar = null;
@@ -132,7 +135,7 @@ Javalab.prototype.init = function(config) {
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    isEditingStartSources: !!config.level.editBlocks,
+    isEditingStartSources: this.isStartMode,
     isResponsive: true
   });
 
@@ -185,6 +188,10 @@ Javalab.prototype.init = function(config) {
   ) {
     getStore().dispatch(setAllValidation(validation));
   }
+
+  // Set information about the current Javalab level being displayed.
+  getStore().dispatch(setIsStartMode(this.isStartMode));
+  getStore().dispatch(setLevelName(this.level.name));
 
   // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
