@@ -348,64 +348,6 @@ When /^I press the last button with text "([^"]*)"( to load a new page)?$/ do |n
   end
 end
 
-When /^I (?:open|close) the small footer menu$/ do
-  menu_selector = 'div.small-footer-base button.more-link'
-  steps %{
-    Then I wait until element "#{menu_selector}" is visible
-    And I click selector "#{menu_selector}"
-  }
-end
-
-When /^I press menu item "([^"]*)"$/ do |menu_item_text|
-  menu_item_selector = "ul#more-menu a:contains(#{menu_item_text})"
-  steps %{
-    Then I wait until element "#{menu_item_selector}" is visible
-    And I click selector "#{menu_item_selector}"
-  }
-end
-
-When /^I (?:open|close) the help menu$/ do
-  help_menu_button_selector = '#help-icon'
-  steps %{
-    Then I wait until element "#{help_menu_button_selector}" is visible
-    And I click selector "#{help_menu_button_selector}"
-    Then I wait to see "#help-contents"
-  }
-end
-
-When /^I press help menu item "([^"]*)"$/ do |help_menu_item_id|
-  menu_item_selector = "#help-contents #{help_menu_item_id}"
-  steps %{
-    Then I wait until element "#{menu_item_selector}" is visible
-    And I click selector "#{menu_item_selector}"
-  }
-end
-
-When /^I press the settings cog$/ do
-  cog_selector = '.settings-cog:visible'
-  steps %{
-    Then I wait until element "#{cog_selector}" is visible
-    And I click selector "#{cog_selector}"
-  }
-end
-
-When /^I press the settings cog menu item "([^"]*)"$/ do |item_text|
-  menu_item_selector = ".settings-cog-menu:visible .pop-up-menu-item:contains(#{item_text})"
-  steps %{
-    Then I wait until element "#{menu_item_selector}" is visible
-    And I click selector "#{menu_item_selector}"
-  }
-end
-
-When /^I select the "([^"]*)" small footer item( to load a new page)?$/ do |menu_item_text, load|
-  page_load(load) do
-    steps %{
-      Then I open the small footer menu
-      And I press menu item "#{menu_item_text}"
-    }
-  end
-end
-
 When /^I press the SVG text "([^"]*)"$/ do |name|
   name_selector = "text:contains(#{name})"
   @browser.execute_script("$('" + name_selector + "').simulate('drag', function(){});")
@@ -1010,13 +952,6 @@ And /^I dismiss the teacher panel$/ do
   }
 end
 
-And(/^I give user "([^"]*)" authorized teacher permission$/) do |name|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.permission = UserPermission::AUTHORIZED_TEACHER
-  user.save!
-end
-
 # Call `execute_async_script` on the provided `js` code.
 # Provides a workaround for Appium (mobile) which doesn't support execute_async_script on HTTPS.
 # For Appium, wrap `execute_script` with a polling wait on a window variable that records the result.
@@ -1343,35 +1278,9 @@ And /^I type the saved channel id into element "([^"]*)"/ do |selector|
   }
 end
 
-Then /^I open the Manage Assets dialog$/ do
-  steps <<-STEPS
-    Then I click selector ".settings-cog"
-    And I click selector ".pop-up-menu-item"
-  STEPS
-end
-
-Then /^I open the Manage Libraries dialog$/ do
-  steps <<-STEPS
-    Then I click selector ".settings-cog"
-    And I click selector ".pop-up-menu-item:contains(Manage Libraries)"
-  STEPS
-end
-
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
-end
-
-def pass_time_for_user(name, amount_of_time)
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  user.created_at = amount_of_time
-  user.last_seen_school_info_interstitial = amount_of_time if user.last_seen_school_info_interstitial
-  user.save!
-  user.user_school_infos.each do |info|
-    info.last_confirmation_date = amount_of_time
-    info.save!
-  end
 end
 
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
