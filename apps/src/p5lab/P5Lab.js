@@ -213,10 +213,11 @@ P5Lab.prototype.init = function(config) {
   this.skin = config.skin;
   if (this.isSpritelab) {
     const MEDIA_URL = '/blockly/media/spritelab/';
-    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+    const avatar = config.level.instructionsIcon || 'avatar';
+    this.skin.smallStaticAvatar = `${MEDIA_URL}${avatar}.png`;
+    this.skin.staticAvatar = `${MEDIA_URL}${avatar}.png`;
+    this.skin.winAvatar = `${MEDIA_URL}${avatar}.png`;
+    this.skin.failureAvatar = `${MEDIA_URL}${avatar}.png`;
 
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
