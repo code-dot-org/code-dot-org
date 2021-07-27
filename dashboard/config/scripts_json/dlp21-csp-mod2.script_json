@@ -1,20 +1,20 @@
 {
   "script": {
-    "name": "dlp21-csd-mod1",
+    "name": "dlp21-csp-mod2",
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "professional_learning_course": "2021 CS Discoveries Deeper Learning",
+      "professional_learning_course": "CS Principles Deeper Learning 2021",
       "peer_reviews_to_complete": 6,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 20:15:23 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-07-27 19:45:31 UTC",
+    "published_state": "in_development",
     "seeding_key": {
-      "script.name": "dlp21-csd-mod1"
+      "script.name": "dlp21-csp-mod2"
     }
   },
   "lesson_groups": [
@@ -26,7 +26,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1"
+        "script.name": "dlp21-csp-mod2"
       }
     }
   ],
@@ -43,7 +43,7 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1"
+        "script.name": "dlp21-csp-mod2"
       }
     },
     {
@@ -58,57 +58,57 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1"
+        "script.name": "dlp21-csp-mod2"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "1ae6fea2-d196-4be0-985e-726d4016b1f4",
+      "key": "23101ab9-20ad-4a0c-b546-bcef89ea4169",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "1ae6fea2-d196-4be0-985e-726d4016b1f4",
+        "lesson_activity.key": "23101ab9-20ad-4a0c-b546-bcef89ea4169",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1"
+        "script.name": "dlp21-csp-mod2"
       }
     },
     {
-      "key": "0931119f-a355-4603-b265-6031c7f2f5c7",
+      "key": "9acbd440-4c26-41f9-91f2-72506fb05d51",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "0931119f-a355-4603-b265-6031c7f2f5c7",
+        "lesson_activity.key": "9acbd440-4c26-41f9-91f2-72506fb05d51",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1"
+        "script.name": "dlp21-csp-mod2"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "134ee865-d5b0-4d2e-a762-51716aae6a6d",
+      "key": "92c73673-315f-4643-aad9-8d6d286d4078",
       "position": 1,
       "properties": {
         "progression_name": "Preparation"
       },
       "seeding_key": {
-        "activity_section.key": "134ee865-d5b0-4d2e-a762-51716aae6a6d",
-        "lesson_activity.key": "1ae6fea2-d196-4be0-985e-726d4016b1f4"
+        "activity_section.key": "92c73673-315f-4643-aad9-8d6d286d4078",
+        "lesson_activity.key": "23101ab9-20ad-4a0c-b546-bcef89ea4169"
       }
     },
     {
-      "key": "2698f270-f353-4b55-a233-ad5d7c978945",
+      "key": "46b464ab-5162-4ed2-8f56-e4883a178b35",
       "position": 1,
       "properties": {
         "progression_name": "Prompts"
       },
       "seeding_key": {
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945",
-        "lesson_activity.key": "0931119f-a355-4603-b265-6031c7f2f5c7"
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35",
+        "lesson_activity.key": "9acbd440-4c26-41f9-91f2-72506fb05d51"
       }
     }
   ],
@@ -119,24 +119,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp21-csd-general-prep"
-        ],
         "progression": "Preparation"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dlp21-csd-general-prep"
+          "dlp21-csp-general-prep"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "134ee865-d5b0-4d2e-a762-51716aae6a6d"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "92c73673-315f-4643-aad9-8d6d286d4078"
       },
       "level_keys": [
-        "dlp21-csd-general-prep"
+        "dlp21-csp-general-prep"
       ]
     },
     {
@@ -145,24 +142,21 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp21-csd-mod1-pre"
-        ],
         "progression": "Preparation"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dlp21-csd-mod1-pre"
+          "dlp21-csp-mod2-pre"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "134ee865-d5b0-4d2e-a762-51716aae6a6d"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "92c73673-315f-4643-aad9-8d6d286d4078"
       },
       "level_keys": [
-        "dlp21-csd-mod1-pre"
+        "dlp21-csp-mod2-pre"
       ]
     },
     {
@@ -171,24 +165,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp21-csd-mod1-q1"
-        ],
         "progression": "Prompts"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q1"
+          "dlp21-csp-mod2-q1"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       },
       "level_keys": [
-        "dlp21-csd-mod1-q1"
+        "dlp21-csp-mod2-q1"
       ]
     },
     {
@@ -197,24 +188,21 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp21-csd-mod1-q2"
-        ],
         "progression": "Prompts"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q2"
+          "dlp21-csp-mod2-q2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       },
       "level_keys": [
-        "dlp21-csd-mod1-q2"
+        "dlp21-csp-mod2-q2"
       ]
     },
     {
@@ -223,86 +211,83 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp21-csd-mod1-q3"
-        ],
         "progression": "Prompts"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q3"
+          "dlp21-csp-mod2-q3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       },
       "level_keys": [
-        "dlp21-csd-mod1-q3"
+        "dlp21-csp-mod2-q3"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "dlp21-csd-general-prep",
+        "level.key": "dlp21-csp-general-prep",
         "script_level.level_keys": [
-          "dlp21-csd-general-prep"
+          "dlp21-csp-general-prep"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "134ee865-d5b0-4d2e-a762-51716aae6a6d"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "92c73673-315f-4643-aad9-8d6d286d4078"
       }
     },
     {
       "seeding_key": {
-        "level.key": "dlp21-csd-mod1-pre",
+        "level.key": "dlp21-csp-mod2-pre",
         "script_level.level_keys": [
-          "dlp21-csd-mod1-pre"
+          "dlp21-csp-mod2-pre"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "134ee865-d5b0-4d2e-a762-51716aae6a6d"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "92c73673-315f-4643-aad9-8d6d286d4078"
       }
     },
     {
       "seeding_key": {
-        "level.key": "dlp21-csd-mod1-q1",
+        "level.key": "dlp21-csp-mod2-q1",
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q1"
+          "dlp21-csp-mod2-q1"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       }
     },
     {
       "seeding_key": {
-        "level.key": "dlp21-csd-mod1-q2",
+        "level.key": "dlp21-csp-mod2-q2",
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q2"
+          "dlp21-csp-mod2-q2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       }
     },
     {
       "seeding_key": {
-        "level.key": "dlp21-csd-mod1-q3",
+        "level.key": "dlp21-csp-mod2-q3",
         "script_level.level_keys": [
-          "dlp21-csd-mod1-q3"
+          "dlp21-csp-mod2-q3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
-        "script.name": "dlp21-csd-mod1",
-        "activity_section.key": "2698f270-f353-4b55-a233-ad5d7c978945"
+        "script.name": "dlp21-csp-mod2",
+        "activity_section.key": "46b464ab-5162-4ed2-8f56-e4883a178b35"
       }
     }
   ],
