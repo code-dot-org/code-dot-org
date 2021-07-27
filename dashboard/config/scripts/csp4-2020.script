@@ -49,12 +49,12 @@ level 'U4 L04 Variables Make Project Submit_2020', progression: 'Make the Photo 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
 lesson 'Conditionals Explore', display_name: 'Conditionals Explore', has_lesson_plan: true
 level 'CSP U4L5 SFLP 20-21', progression: 'Lesson Overview'
-level 'U4 L06 Introduction to Conditionals: Boolean Expressions', named: true
+level 'U4 L06 Introduction to Conditionals: Boolean Expressions', progression: 'Conditionals: Boolean Expressions'
 level 'U4 L05 CYU Exit Ticket', progression: 'Check For Understanding', assessment: true
 
 lesson 'Conditionals Investigate', display_name: 'Conditionals Investigate', has_lesson_plan: true
 level 'CSP U4L6 SFLP 20-21', progression: 'Lesson Overview'
-level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements', named: true
+level 'U4L06 Introduction to Conditionals: if Statements', progression: 'If-Statements'
 level 'U4 L06 Lemon Hunter App v1 Code', progression: 'If-Statements'
 level 'U4L06 Introduction to Conditionals: if-else Statements', progression: 'If-Else Statements'
 level 'U4L06 Introduction to Conditionals: if-else-if Statements', progression: 'If-Else Statements'

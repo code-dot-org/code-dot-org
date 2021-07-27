@@ -13,20 +13,20 @@ tts true
 
 lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
 lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages', has_lesson_plan: true
-level 'CSP U3L01 SFLP_2019', named: true
+level 'CSP U3L01 SFLP_2019', progression: 'Lesson Overview'
 level 'U3L01 Assessment1_2019', progression: 'Check Your Understanding', assessment: true
 level 'U3L01 Assessment3_2019', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-4-levelgroup-U3Ch1_2018_2019', progression: 'Quick Check-In', assessment: true
 
 lesson 'The Need for Algorithms', display_name: 'The Need for Algorithms', has_lesson_plan: true
-level 'CSP U3L02 SFLP_2019', named: true
+level 'CSP U3L02 SFLP_2019', progression: 'Lesson Overview'
 
 lesson 'Creativity in Algorithms', display_name: 'Creativity in Algorithms', has_lesson_plan: true
-level 'CSP U3L03 SFLP_2019', named: true
+level 'CSP U3L03 SFLP_2019', progression: 'Lesson Overview'
 
 lesson 'Using Simple Commands', display_name: 'Using Simple Commands', has_lesson_plan: true
-level 'CSP U3L04 SFLP_2019', named: true
-level 'csp_applab_turtle_2019', named: true
+level 'CSP U3L04 SFLP_2019', progression: 'Lesson Overview'
+level 'csp_applab_turtle_2019', progression: 'Video: Turtle Programming'
 level 'U3L2 Using Simple Commands_2019', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right_2019', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid_2019', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'
@@ -36,12 +36,12 @@ level 'csp_U3_square_v_rect_FR_2019', progression: 'Check Your Understanding', a
 level 'U3L02 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Creating Functions', display_name: 'Creating Functions', has_lesson_plan: true
-level 'CSP U3L05 SFLP_2019', named: true
+level 'CSP U3L05 SFLP_2019', progression: 'Lesson Overview'
 level 'csp_applab_functions_2019', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround_2019', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Draw a T using turnAround_2019', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 define turnRight and draw a rectangle_2019', progression: 'Using Functions With Turtle Commands'
-level 'CSP Abstraction in Programming 2_2018_2019', progression: 'Abstraction in Programming', named: true
+level 'CSP Abstraction in Programming 2_2018_2019', progression: 'Abstraction in Programming'
 level 'U3L03 - draw rect function_2019', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 - draw step_2019', progression: 'Using Functions With Turtle Commands'
 level 'U3L03 Three Steps_2019', progression: 'Using Functions With Turtle Commands'
@@ -52,7 +52,7 @@ level 'U3L03 Free Response Wrap Up_2019', progression: 'Check Your Understanding
 level 'csp_U3_plan_code_FR_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design', has_lesson_plan: true
-level 'CSP U3L06 SFLP_2019', named: true
+level 'CSP U3L06 SFLP_2019', progression: 'Lesson Overview'
 level 'U3L04 - snowflake_2019', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions_2019', progression: 'Using Functions with Turtle Commands'
 level 'U3-AP-Practice-FR-design-process_2019', progression: 'AP Practice Response - Design Process', assessment: true
@@ -61,7 +61,7 @@ level 'U3L04 Assessment2_2018_2019', progression: 'Check Your Understanding', as
 level 'U3L04 Free Response Wrap Up_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters', has_lesson_plan: true
-level 'CSP U3L07 SFLP_2019', named: true
+level 'CSP U3L07 SFLP_2019', progression: 'Lesson Overview'
 level 'U3L06 - moveForwardwithParams_2019', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle_2019', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 2 purple square_2019', progression: 'Introduction to Parameters'
@@ -78,7 +78,7 @@ level 'U3L06 Assessment_2019', progression: 'Check Your Understanding', assessme
 level 'csp3_U3_turtle_subgoal_mc_levelgroup_2018_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters', has_lesson_plan: true
-level 'CSP U3L08 SFLP_2019', named: true
+level 'CSP U3L08 SFLP_2019', progression: 'Lesson Overview'
 level 'csp_applab_functions_parameters_2019', progression: 'Functions with Parameters'
 level 'U3L08 - drawSquareWithParam_2019', progression: 'Drawing Shapes With Parameters'
 level 'U3L07 - createTriangleParam_2019', progression: 'Drawing Shapes With Parameters'
@@ -100,7 +100,7 @@ level 'U3L08 Assessment1_2018_2019', progression: 'Check Your Understanding', as
 level 'U3L08 Assessment2_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers', has_lesson_plan: true
-level 'CSP U3L09 SFLP_2019', named: true
+level 'CSP U3L09 SFLP_2019', progression: 'Lesson Overview'
 level 'csp_applab_loops_2019', progression: 'Using Loops'
 level 'U3L07 - introSquare_2019', progression: 'Introduction to Loops'
 level 'U3L07 - randomSquare_2019', progression: 'Introduction to Loops'
@@ -121,7 +121,7 @@ level 'U3L07 Free Response Reflection_2019', progression: 'Check Your Understand
 level 'subgoals_u3_top_down_FR_2019', progression: 'Check Your Understanding', assessment: true
 
 lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene', has_lesson_plan: true
-level 'CSP U3L10 SFLP_2019', named: true
+level 'CSP U3L10 SFLP_2019', progression: 'Lesson Overview'
 level 'U3L08 - individualCode_2019', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018_2019', progression: 'How to Share Code with Teammates'
 level 'U3L08 - digitalScene_2019', progression: 'Challenge: Design Your Digital Scene', assessment: true
