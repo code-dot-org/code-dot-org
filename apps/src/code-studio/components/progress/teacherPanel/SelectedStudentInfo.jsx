@@ -37,18 +37,6 @@ export default class SelectedStudentInfo extends React.Component {
       .fail(err => console.error(err));
   };
 
-  onClearResponse = () => {
-    $.ajax({
-      url: `/user_levels/${this.props.levelWithProgress.userLevelId}`,
-      method: 'DELETE'
-    })
-      .done(data => {
-        // Refresh, so that we no longer have the students response loaded
-        location.reload();
-      })
-      .fail(err => console.error(err));
-  };
-
   nextStudent = () => {
     const currentUserId = this.props.getSelectedUserId();
     const currentStudentIndex = this.props.students.findIndex(

@@ -24,8 +24,8 @@ export const levelWithProgress = PropTypes.shape({
   contained: PropTypes.bool,
   submitLevel: PropTypes.bool,
   paired: PropTypes.bool,
-  driver: PropTypes.object,
-  navigator: PropTypes.object, // maureen test if this is the right shape
+  driver: PropTypes.string,
+  navigator: PropTypes.string,
   isConceptLevel: PropTypes.bool,
   userId: PropTypes.number.isRequired,
   passed: PropTypes.bool.isRequired,
