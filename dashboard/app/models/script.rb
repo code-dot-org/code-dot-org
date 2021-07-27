@@ -1015,7 +1015,7 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1789,7 +1789,7 @@ class Script < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
-    published_state || unit_group&.published_state || ScriptConstants::PUBLISHED_STATE.in_development
+    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
   end
 
   # Use the unit group's pilot_experiment if one exists
