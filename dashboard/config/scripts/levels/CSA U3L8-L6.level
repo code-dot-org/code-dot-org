@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2021-06-29T15:37:37.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
@@ -13,8 +9,16 @@
     "peer_reviewable": "false",
     "optional": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "parent_level_id": 28706
   },
-  "published": true
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-07-23T12:01:50.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-23T12:01:50.242+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L7\\\"\"],\"cloned_from\":\"CSA U3L8-L7\"},{\"changed_at\":\"2021-07-23 12:01:53 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>
