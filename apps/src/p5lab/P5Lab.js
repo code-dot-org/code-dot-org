@@ -514,7 +514,7 @@ P5Lab.prototype.init = function(config) {
             onMount={onMount}
             pauseHandler={this.onPause}
             hidePauseButton={!!this.level.hidePauseButton}
-            onPromptAnswer={this.onPromptAnswer.bind(this)}
+            onPromptAnswer={this.onPromptAnswer?.bind(this)}
           />
         </Provider>,
         document.getElementById(config.containerId)
