@@ -8,6 +8,10 @@ export default class BackpackClientApi {
     this.filesToUpload = [];
   }
 
+  hasBackpack() {
+    return !!this.channelId;
+  }
+
   fetchChannelId(callback) {
     $.ajax({
       url: '/backpacks/channel',
@@ -19,18 +23,28 @@ export default class BackpackClientApi {
   }
 
   fetchFile(filename, onError, onSuccess) {
-    this.backpackApi.get(this.channelId + '/' + filename, (error, data) => {
-      if (error) {
-        onError(error);
-      } else {
-        console.log(data);
-        onSuccess(data);
-      }
-    });
+    if (!this.channelId) {
+      onError('no backpack');
+    }
+    this.backpackApi.fetchWithDataType(
+      this.channelId + '/' + filename,
+      (error, data) => {
+        if (error) {
+          onError(error);
+        } else {
+          console.log(data);
+          onSuccess(data);
+        }
+      },
+      'text'
+    );
   }
 
   getFileList(onError, onSuccess) {
-    this.backpackApi.get(this.channelId, (error, data) => {
+    if (!this.channelId) {
+      onError('no backpack');
+    }
+    this.backpackApi.fetch(this.channelId, (error, data) => {
       if (error) {
         onError(error);
       } else {
