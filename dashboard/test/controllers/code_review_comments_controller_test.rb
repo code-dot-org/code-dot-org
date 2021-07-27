@@ -8,7 +8,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     @project_owner_channel_id = 'encrypted_channel_id'
     @project_owner_storage_id = 123
     @project_storage_app_id = 456
-    @project_version_string = 'special_project_version_string'
 
     @teacher = create :teacher
     @section = create :section, user: @teacher
@@ -26,11 +25,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     sign_in @project_owner
     post :create, params: {
       channel_id: @project_owner_channel_id,
-      project_version: 'a_project_version_string',
       comment: 'a comment'
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'student not in same section with project owner cannot comment on project' do
@@ -39,7 +38,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     sign_in @another_student
     post :create, params: {
       channel_id: @project_owner_channel_id,
-      project_version: 'a_project_version_string',
       comment: 'a comment'
     }
 
@@ -56,11 +54,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     sign_in @another_student
     post :create, params: {
       channel_id: @project_owner_channel_id,
-      project_version: 'a_project_version_string',
       comment: 'a comment'
     }
 
     assert_response :success
+    refute JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher can create CodeReviewComment for student in their section' do
@@ -71,11 +69,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       channel_id: @project_owner_channel_id,
-      project_version: 'a_project_version_string',
       comment: 'a comment'
     }
 
     assert_response :success
+    assert JSON.parse(response.body)['isFromTeacher']
   end
 
   test 'teacher cannot create CodeReviewComment for student not in their section' do
@@ -84,7 +82,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       channel_id: @project_owner_channel_id,
-      project_version: 'a_project_version_string',
       comment: 'a comment'
     }
 
@@ -170,8 +167,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     sign_in @project_owner
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :success
@@ -187,7 +183,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     teacher_comment = create :code_review_comment,
       commenter: @teacher,
       storage_app_id: @project_storage_app_id,
-      project_version: @project_version_string,
       project_owner_id: @project_owner.id
 
     sign_in @project_owner
@@ -208,8 +203,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     sign_in @another_student
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :success
@@ -227,7 +221,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     teacher_comment = create :code_review_comment,
       commenter: @teacher,
       storage_app_id: @project_storage_app_id,
-      project_version: @project_version_string,
       project_owner_id: @project_owner.id
 
     sign_in @another_student
@@ -246,8 +239,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     sign_in @teacher
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :success
@@ -262,13 +254,11 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     create :code_review_comment,
       commenter: @teacher,
       storage_app_id: @project_storage_app_id,
-      project_version: @project_version_string,
       project_owner_id: @project_owner.id
 
     sign_in @teacher
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :success
@@ -281,8 +271,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     sign_in @another_student
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :forbidden
@@ -294,8 +283,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     sign_in @teacher
     get :project_comments, params: {
-      channel_id: @project_owner_channel_id,
-      project_version: @project_version_string
+      channel_id: @project_owner_channel_id
     }
 
     assert_response :forbidden
@@ -320,7 +308,6 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     2.times do
       create :code_review_comment,
         storage_app_id: @project_storage_app_id,
-        project_version: @project_version_string,
         project_owner_id: @project_owner.id
     end
 

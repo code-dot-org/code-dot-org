@@ -13,6 +13,7 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 
@@ -23,6 +24,7 @@ const initialState = {
   validation: {},
   renderedEditorHeight: 400,
   isRunning: false,
+  backpackApi: null,
   isStartMode: false,
   levelName: undefined
 };
@@ -102,6 +104,11 @@ export const removeFile = filename => ({
 export const setIsRunning = isRunning => ({
   type: SET_IS_RUNNING,
   isRunning
+});
+
+export const setBackpackApi = backpackApi => ({
+  type: SET_BACKPACK_API,
+  backpackApi
 });
 
 /**
@@ -242,6 +249,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isRunning: action.isRunning
+    };
+  }
+  if (action.type === SET_BACKPACK_API) {
+    return {
+      ...state,
+      backpackApi: action.backpackApi
     };
   }
   if (action.type === SET_IS_START_MODE) {
