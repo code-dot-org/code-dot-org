@@ -1,16 +1,55 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
-import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
+import {
+  appendOutputLog,
+  setIsDarkMode,
+  setIsRunning,
+  setLeftWidth
+} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
+import {getStore} from '../redux';
+import {setVisualizationScale} from '../redux/layout';
 
 const FOOTER_BUFFER = 10;
+
+function updateLayout(width) {
+  //const width = $('#visualization-container').width();
+  const visualizationColumnHeight = $(window).height() - 110;
+  const visualizationTop = $('#visualization').position().top;
+  const sliderHeight = $('#slider').outerHeight(true) + 30;
+  var constrainVisualizationWidth =
+    visualizationColumnHeight - visualizationTop - sliderHeight;
+
+  var newVizWidth = Math.min(constrainVisualizationWidth, width);
+
+  //var scale = constrainVisualizationWidth / 400 /*this.nativeVizWidth*/;
+  let scale = newVizWidth / 800;
+  if (scale < 0) {
+    // Avoiding inverting.
+    scale = 0;
+  }
+  getStore().dispatch(setVisualizationScale(scale));
+
+  const cssScale = `scale(${scale})`;
+  $('#svgMaze').css('transform', cssScale);
+
+  const cssWidth = width + 'px';
+  const newcssWidth = newVizWidth + 'px';
+  $('#visualization').css({
+    'max-width': cssWidth,
+    'max-height': newcssWidth,
+    height: newcssWidth,
+    left: (width - newVizWidth) / 2 + 'px'
+  });
+}
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -22,7 +61,6 @@ class JavalabView extends React.Component {
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
-    onTopInstructionsHeightResize: PropTypes.func,
     editorColumnHeight: PropTypes.number,
 
     // populated by redux
@@ -35,7 +73,9 @@ class JavalabView extends React.Component {
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
     setIsRunning: PropTypes.func,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    setLeftWidth: PropTypes.func,
+    leftWidth: PropTypes.number
   };
 
   state = {
@@ -46,6 +86,7 @@ class JavalabView extends React.Component {
   componentDidMount() {
     this.props.onMount();
     this.setRightContainerHeight();
+    updateLayout(this.props.leftWidth);
   }
 
   compile = () => {
@@ -98,7 +139,17 @@ class JavalabView extends React.Component {
 
     // This workaround is necessary because <VisualizationResizeBar /> requires
     // an element with ID 'visualization' or it will not resize.
-    return <div id="visualization" style={{margin: '0 auto'}} />;
+    return (
+      <div
+        id="visualization"
+        style={{
+          margin: '0 auto',
+          height: this.props.leftWidth,
+          maxWidth: undefined,
+          maxHeight: undefined
+        }}
+      />
+    );
   };
 
   setRightContainerHeight = () => {
@@ -108,6 +159,13 @@ class JavalabView extends React.Component {
     this.setState({
       rightContainerHeight: topPos
     });
+  };
+
+  handleWidthResize = desiredWidth => {
+    let newWidth = Math.max(100, Math.min(desiredWidth, 600));
+    this.props.setLeftWidth(newWidth);
+
+    updateLayout(newWidth);
   };
 
   render() {
@@ -120,9 +178,9 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
-      onTopInstructionsHeightResize,
       isReadOnlyWorkspace,
-      editorColumnHeight
+      editorColumnHeight,
+      leftWidth
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -147,18 +205,26 @@ class JavalabView extends React.Component {
             <div
               id="visualizationColumn"
               className="responsive"
-              style={styles.instructionsAndPreview}
+              style={{...styles.instructionsAndPreview, maxWidth: leftWidth}}
             >
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
                 displayDocumentationTab
                 displayReviewTab
-                onHeightResize={onTopInstructionsHeightResize}
+                onHeightResize={() => updateLayout(leftWidth)}
               />
               {this.renderVisualization()}
             </div>
-            <VisualizationResizeBar />
+
+            <HeightResizer
+              vertical={true}
+              resizeItemTop={() => 25}
+              position={this.props.leftWidth + 13}
+              onResize={this.handleWidthResize}
+              style={{}}
+            />
+
             <div
               style={{
                 ...styles.editorAndConsole,
@@ -216,7 +282,8 @@ const styles = {
     width: '100%',
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginLeft: 13
   },
   consoleParent: {
     position: 'relative',
@@ -267,11 +334,13 @@ export default connect(
     isRunning: state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
-    editorColumnHeight: state.javalab.editorColumnHeight
+    editorColumnHeight: state.javalab.editorColumnHeight,
+    leftWidth: state.javalab.leftWidth
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
-    setIsRunning: isRunning => dispatch(setIsRunning(isRunning))
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
+    setLeftWidth: width => dispatch(setLeftWidth(width))
   })
 )(UnconnectedJavalabView);
