@@ -28,10 +28,16 @@ class CodeReviewComment < ApplicationRecord
   validates :comment, presence: true
   validates :project_owner_id, presence: true
 
+  before_save :compute_is_from_teacher
+
   # To do: move to ReviewableProject model
   def self.user_can_review_project?(project_owner, potential_reviewer)
     project_owner == potential_reviewer ||
       project_owner.student_of?(potential_reviewer) ||
       (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+  end
+
+  def compute_is_from_teacher
+    self.is_from_teacher = commenter.teacher? ? true : false
   end
 end
