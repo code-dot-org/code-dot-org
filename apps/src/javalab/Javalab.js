@@ -287,7 +287,7 @@ Javalab.prototype.afterClearPuzzle = function() {
   project.autosave();
 };
 
-Javalab.prototype.onCommitCode = function(filesToCommit, commitNotes) {
+Javalab.prototype.onCommitCode = function(commitNotes) {
   project.autosave();
 };
 

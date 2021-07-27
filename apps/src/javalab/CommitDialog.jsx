@@ -9,7 +9,6 @@ import StylizedBaseDialog, {
 
 export default class CommitDialog extends React.Component {
   state = {
-    filesToCommit: [],
     filesToBackpack: [],
     commitNotes: null,
     showCompileStatus: false
@@ -61,7 +60,7 @@ export default class CommitDialog extends React.Component {
   };
 
   commitAndSaveToBackpack = () => {
-    this.props.handleCommit(this.state.filesToCommit, this.state.commitNotes);
+    this.props.handleCommit(this.state.commitNotes);
     this.saveToBackpack();
   };
 
@@ -89,7 +88,7 @@ export default class CommitDialog extends React.Component {
   };
 
   render() {
-    const {filesToCommit, commitNotes, filesToBackpack} = this.state;
+    const {commitNotes, filesToBackpack} = this.state;
     const {isOpen, files, handleClose, handleCommit} = this.props;
 
     return (
@@ -109,9 +108,7 @@ export default class CommitDialog extends React.Component {
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() =>
-          handleCommit(filesToCommit, commitNotes, filesToBackpack)
-        }
+        handleConfirmation={() => handleCommit(commitNotes)}
         handleClose={handleClose}
         footerJustification="space-between"
       />
