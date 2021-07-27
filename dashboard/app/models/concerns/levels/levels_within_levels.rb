@@ -87,12 +87,22 @@ module Levels
     # provide caching
     def contained_levels
       return [] if contained_level_names.blank?
-      return child_levels.contained unless Script.should_cache?
       cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
-      Rails.cache.fetch(cache_key) do
-        levels_child_levels.map do |lcl|
-          Script.cache_find_level(lcl.child_level_id)
+      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+        result = child_levels.contained
+
+        # attempt to use the new parent-child many-to-many table to retrieve the
+        # levels themselves, but if we have a contained_level_names property and
+        # no actual associations, fall back to retrieving the levels directly.
+        # Once the new m2m implementation has been fully deployed, we can remove
+        # this fallback.
+        if result.blank?
+          result = contained_level_names.map do |contained_level_name|
+            Script.cache_find_level(contained_level_name)
+          end
         end
+
+        return result
       end
     end
 
