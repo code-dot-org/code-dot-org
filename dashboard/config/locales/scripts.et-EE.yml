@@ -3341,8 +3341,6 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
-            lessonGroup-4:
-              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -3388,6 +3386,14 @@ et:
           lesson_groups:
             cspSurvey2020:
               display_name: Uuring
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
         kodea-pd-2021:
           lessons:
             Next Steps:
@@ -3419,3 +3425,7 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Test
