@@ -45,6 +45,59 @@ module.exports = {
   levelId: 'ec_simple',
   tests: [
     {
+      description:
+        'ensure API based element creation puts element on active screen',
+      editCode: true,
+      xml:
+        'button("my_button", "my_button_text");' +
+        'image("my_image", "http://code.org/images/logo.png");' +
+        'createCanvas("my_canvas", 320, 450);' +
+        'container("my_container", "<div>FOO</div>");' +
+        'write("<div id=\'my_write\'>FOO</div>");' +
+        'imageUploadButton("my_image_upload", "text");' +
+        'textInput("my_text_input", "text");' +
+        'textLabel("my_text_label", "label");' +
+        'checkbox("my_checkbox", false);' +
+        'radioButton("my_radio_button", false, "group");' +
+        'dropdown("my_dropdown", "option1", "etc");',
+      runBeforeClick: function(assert) {
+        // add a completion on timeout since this is a freeplay level
+        tickWrapper.runOnAppTick(Applab, 2, function() {
+          function idExistsOnScreen1(id) {
+            var element = document.getElementById(id);
+            assert(element);
+            assert.equal(element.parentNode.id, 'screen1');
+          }
+
+          var button = document.getElementById('my_button');
+          assert.equal(button.textContent, 'my_button_text');
+          idExistsOnScreen1('my_button');
+
+          idExistsOnScreen1('my_image');
+          idExistsOnScreen1('my_canvas');
+          idExistsOnScreen1('my_container');
+
+          // write puts contents inside a div (so here we have a div inside a
+          // div inside our screen)
+          var write = document.getElementById('my_write');
+          assert(write);
+          assert.equal(write.parentNode.parentNode.id, 'screen1');
+
+          idExistsOnScreen1('my_image_upload');
+          idExistsOnScreen1('my_text_input');
+          idExistsOnScreen1('my_text_label');
+          idExistsOnScreen1('my_checkbox');
+          idExistsOnScreen1('my_dropdown');
+
+          Applab.onPuzzleComplete();
+        });
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
+    },
+    {
       description: 'add a screen',
       editCode: true,
       timeout: 15000,
@@ -247,59 +300,6 @@ module.exports = {
 
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function() {
-          Applab.onPuzzleComplete();
-        });
-      },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    },
-    {
-      description:
-        'ensure API based element creation puts element on active screen',
-      editCode: true,
-      xml:
-        'button("my_button", "my_button_text");' +
-        'image("my_image", "http://code.org/images/logo.png");' +
-        'createCanvas("my_canvas", 320, 450);' +
-        'container("my_container", "<div>FOO</div>");' +
-        'write("<div id=\'my_write\'>FOO</div>");' +
-        'imageUploadButton("my_image_upload", "text");' +
-        'textInput("my_text_input", "text");' +
-        'textLabel("my_text_label", "label");' +
-        'checkbox("my_checkbox", false);' +
-        'radioButton("my_radio_button", false, "group");' +
-        'dropdown("my_dropdown", "option1", "etc");',
-      runBeforeClick: function(assert) {
-        // add a completion on timeout since this is a freeplay level
-        tickWrapper.runOnAppTick(Applab, 2, function() {
-          function idExistsOnScreen1(id) {
-            var element = document.getElementById(id);
-            assert(element);
-            assert.equal(element.parentNode.id, 'screen1');
-          }
-
-          var button = document.getElementById('my_button');
-          assert.equal(button.textContent, 'my_button_text');
-          idExistsOnScreen1('my_button');
-
-          idExistsOnScreen1('my_image');
-          idExistsOnScreen1('my_canvas');
-          idExistsOnScreen1('my_container');
-
-          // write puts contents inside a div (so here we have a div inside a
-          // div inside our screen)
-          var write = document.getElementById('my_write');
-          assert(write);
-          assert.equal(write.parentNode.parentNode.id, 'screen1');
-
-          idExistsOnScreen1('my_image_upload');
-          idExistsOnScreen1('my_text_input');
-          idExistsOnScreen1('my_text_label');
-          idExistsOnScreen1('my_checkbox');
-          idExistsOnScreen1('my_dropdown');
-
           Applab.onPuzzleComplete();
         });
       },
