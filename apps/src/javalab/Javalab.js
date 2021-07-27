@@ -29,6 +29,7 @@ import {
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -237,6 +238,10 @@ Javalab.prototype.beforeUnload = function(event) {
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
   this.studioApp_.attempts++;
+  if (this.studioApp_.hasContainedLevels) {
+    lockContainedLevelAnswers();
+  }
+
   this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
