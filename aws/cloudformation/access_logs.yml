@@ -369,6 +369,7 @@ Resources:
                   - lambda:GetFunctionConfiguration
                 Resource:
                   - !GetAtt AccessLogProcessor.Arn
+                  - !Sub "${AccessLogProcessor.Arn}:$LATEST"
   AccessLogRedshiftSpectrumRole:
     Type: AWS::IAM::Role
     Properties:
