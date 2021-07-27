@@ -1,69 +1,19 @@
 name 'OPD-K5 GettingStarted2_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Getting Started continued
+# Getting Started
 
-## Step 3:  Access curriculum resources
+## Preview curriculum resources
 
-### Examples of curriculum resources
+Curriculum resources are included in all lesson plans for both you and your students.  All courses do not have the same curriculum resources as some handouts may not be age appriopriate for younger students.  For example, Course A is designed for kindergarten and does not include a student rubric, but does include a project guide.  
 
-Curriculum resources are included in all lesson plans for both you and your students.  All courses do not have the same curriculum resources as some handouts may not be age appriopriate for younger students.  For example, Course A is designed for kindergarten and does not include a student rubric, but does include a project guide.
+**Note:** The curriculum resources below, open in a new window.  Be sure to return to this page to continue with the course.
 
-* <a href="https://studio.code.org/s/coursea-2021/lessons/2" target="blank"> Course A:  example lesson plan</a>
-* <a href="https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview" target="blank"> Course A:  example student project guide</a>
-* <a href="https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview" target="blank"> Course A:  example teacher answer key</a>
-* <a href="https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit" target="blank" > Course A:  example student handout </a>
-* <a href="https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/edit" target="blank" > Course F:  example student rubric </a>
-* <a href="https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview" > Course F:  example teacher slide deck </a>
-
-***
-
-### Navigating to lesson plans
-
-Follow the instructions below to navigate to the Course Overview page, access lesson plans, and preview lessons on the student learning platform.  You may want to add a bookmark to the course(s) you are considering teaching.
-
-##### <a href="https://code.org" target="blank" rel="noopener noreferrer">**1.** Sign-in to Code.org</a>
-
-##### **2. Click on “Course Catalog” link on the top left side.**
-
-![](https://images.code.org/8eb3187e27b819ff92553369cd5f4186-image-1623278415928.png)
-
-
-##### **3. Scroll down to “Full Course Catalog” and click on “Learn More” within the elementary school tile.**
-
-<img src="https://images.code.org/812f07283d5ad58c069de6d0caab4804-image-1623278539695.png" width="650px">
-
-
-##### **4. Scroll down to the courses and choose a course and click on “View Course” to go to the course overview page.**
-
-<img src="https://images.code.org/cfd7b40b091618de9a733895a310d131-image-1623278683614.png" width="650px">
-
-
-
-##### **5. Choose a lesson and click on “View Lesson Plan” on the right side.**
-	
-**Note:** You can also share lessons with students using the "Send to students" button for students to work on lessons outside of the classroom, as well as hide lessons from students using the "Hidden" button to help with pacing lessons with the class.
-    
-<img src="https://images.code.org/296441fe2699af449b772741e5f9aeb8-image-1623279500771.png" width="650px">
-
-***
-
-### Navigating to lessons
-
-* **Clicking on a lesson with levels (shown as circles in the image below) takes you to the student learning platform where students practice programming.**
-
-<img src="https://images.code.org/81d286ea7114b52168a6a7a38e67a48e-image-1623281785518.png" width="650px">
-
-<img src="https://images.code.org/e36c85cdbead6b125ec17a3b9b4849ef-image-1623282316184.png" width="650px">
-
-
-
-* **Clicking on the ">" symbol on the right hand side, reveals the teacher panel where you can:**
-
-	* view the page as a teacher or student,
-    * see an individual students work,
-    * and access an example solution.
-    
-<img src="https://images.code.org/2a65efd2c8ab70770b012987887220d7-image-1623282773353.png" width="650px">
+* <a href="https://studio.code.org/s/coursea-2021/lessons/2" target="blank"> Course A:  example of a lesson plan</a>
+* <a href="https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview" target="blank"> Course A:  example of a student project guide</a>
+* <a href="https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview" target="blank"> Course A:  example of a teacher answer key</a>
+* <a href="https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit" target="blank" > Course A:  example of a student handout </a>
+* <a href="https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/edit" target="blank" > Course F:  example of a student rubric </a>
+* <a href="https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview" > Course F:  example of a teacher slide deck </a>
    
 MARKDOWN
