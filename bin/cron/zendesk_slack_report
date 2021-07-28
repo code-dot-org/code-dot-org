@@ -39,7 +39,7 @@ MONITORING_GROUPS = {
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
-  'pdot' => ['PDOT Amy', 'PDOT Laura', 'PDOT MeganH', 'PDOT Rosie', 'PDOT Tawny'],
+  'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
   'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
   'regional_managers' => ['Outreach'],
@@ -63,7 +63,8 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'pl-team-only' => ['zendesk-pl'],
+  'outreach_honky-tonk' => ['zendesk-outreach'],
+  'pl-team-only' => ['zendesk-pl']
 }
 
 class Zendesk

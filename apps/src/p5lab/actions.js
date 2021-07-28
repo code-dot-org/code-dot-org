@@ -1,7 +1,6 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import {pickNewAnimation, show, Goal} from './redux/animationPicker';
 import {setAllowInstructionsResize} from '../redux/instructions';
 import {P5LabInterfaceMode} from './constants';
 
@@ -24,20 +23,15 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
 /**
  * Change the interface mode between Code Mode and the Animation Tab
  * @param {!P5LabInterfaceMode} interfaceMode
- * @param {boolean} spritelabDraw - If true, opens the animation tab to a new animation
  * @returns {function}
  */
-export function changeInterfaceMode(interfaceMode, spritelabDraw) {
+export function changeInterfaceMode(interfaceMode) {
   return function(dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
       interfaceMode: interfaceMode
     });
-    if (interfaceMode === P5LabInterfaceMode.ANIMATION && spritelabDraw) {
-      dispatch(show(Goal.NEW_ANIMATION));
-      dispatch(pickNewAnimation());
-    }
     dispatch(
       setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
     );

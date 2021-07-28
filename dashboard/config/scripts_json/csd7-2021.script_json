@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:30 UTC",
+    "serialized_at": "2021-07-28 16:52:15 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -4267,7 +4267,7 @@
       "key": "de39a748-817d-4f13-a9e3-a7a2bfb4d765",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n"
       },
       "seeding_key": {
         "activity_section.key": "de39a748-817d-4f13-a9e3-a7a2bfb4d765",
@@ -5035,7 +5035,7 @@
       "key": "009bbc72-e313-4b08-b75b-4ae304927690",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the  to each student.\n[r unplugged_knn_-_activity_guide/aiml/2021]"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r unplugged_knn_-_activity_guide/aiml/2021] activity guide to each student."
       },
       "seeding_key": {
         "activity_section.key": "009bbc72-e313-4b08-b75b-4ae304927690",
@@ -5107,13 +5107,7 @@
       "key": "6181d388-da0e-4493-b38c-b061f0b043f8",
       "position": 7,
       "properties": {
-        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Answer Key:** An answer key to this activity is provided to verified teachers in the links section of the lesson plan"
-          }
-        ]
+        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A."
       },
       "seeding_key": {
         "activity_section.key": "6181d388-da0e-4493-b38c-b061f0b043f8",
@@ -5141,13 +5135,7 @@
       "key": "9a768087-f235-416d-8a11-1ff7a4e6f99d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Formative Assessment**: [have students do this in pairs so they can practice on their own as a formative assessment]"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies."
       },
       "seeding_key": {
         "activity_section.key": "9a768087-f235-416d-8a11-1ff7a4e6f99d",
@@ -5335,7 +5323,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**AI Accuracy in the Real World:** [Story about how AI Accuracy effects things like cancer predictions or life/death situations]"
+            "markdown": "**AI Accuracy in the Real World:** This situation introduces issues involving inaccurate calculations from machine learning models, such as false positives or false negatives. Students may have experience with this when an important email is marked as spam by an email program, or they ignore a phone call from an important person because they don't recognize the number - both of these are examples of false positives, where a piece of data was incorrectly marked as unimportant.\n\nNot all false positives have the same impact on people in the real world. These resources can be helpful in giving examples of how issues of accuracy can have large impacts for people in the real world: \n- [**Medical News and Life Sciences**](https://www.news-medical.net/news/20200512/AI-techniques-in-medical-imaging-may-lead-to-false-positives-and-false-negatives.aspx) - this article explains how artificial intelligence is routinely used to help identify cancer in the medical field to great success, but the risks of a false-positive identification can be devastating.\n- [**Wrongfully Accused by an Algorithm**](https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html) - this article explains how inaccurate facial recognition software was used to wrongfully arrest a man for a crime he didn't commit."
           }
         ]
       },
@@ -5360,7 +5348,7 @@
       "key": "627fd885-aec2-4979-a004-8a1373c3786c",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution\n* [others]"
+        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution"
       },
       "seeding_key": {
         "activity_section.key": "627fd885-aec2-4979-a004-8a1373c3786c",
@@ -7007,7 +6995,7 @@
       "key": "07460e2d-0520-4fc3-9092-9b145ff54295",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Google Sheets Introduction video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  video. This video shoes students how to view data in Google Sheets, save their data as a CSV, and upload to AI Lab.\n[r view_and_download_survey_data/csd/2021]"
       },
       "seeding_key": {
         "activity_section.key": "07460e2d-0520-4fc3-9092-9b145ff54295",
@@ -7216,7 +7204,7 @@
       "key": "7f4a57cb-7221-40f4-a60a-2026a13bcba2",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the Editing Google Sheets video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r cleaning_survey_data/csd/2021] video. This video guides students through how to clean up data in a spreadsheet so it can be used in AI Lab.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -10873,15 +10861,63 @@
       }
     },
     {
+      "name": "[KEY] - Numerical Data in AI Lab",
+      "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+      "key": "_key_-_numerical_data_in_ai_lab",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
       "name": "[KEY] Classification Models",
       "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "_key_classification_models",
       "properties": {
-        "type": "Activity Guide",
+        "type": "Answer Key",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "_key_classification_models"
+      }
+    },
+    {
+      "name": "[KEY] Numerical Accuracy",
+      "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+      "key": "_key_numerical_accuracy",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_numerical_accuracy"
+      }
+    },
+    {
+      "name": "[KEY] Training a Model in AI Lab",
+      "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+      "key": "_key_training_a_model_in_ai_lab",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "name": "[KEY] Zoo Models",
+      "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
+      "key": "_key_zoo_models",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_zoo_models"
       }
     },
     {
@@ -10993,6 +11029,18 @@
       },
       "seeding_key": {
         "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "Cleaning Survey Data",
+      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "key": "cleaning_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_survey_data"
       }
     },
     {
@@ -11340,11 +11388,13 @@
       }
     },
     {
-      "name": "Numerical Accuracy - Activity Guide",
+      "name": "Numerical Accuracy",
       "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
       "key": "numerical_accuracy_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "numerical_accuracy_-_activity_guide"
@@ -11434,6 +11484,18 @@
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
+      "name": "[KEY] Patterns in Data",
+      "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+      "key": "patterns_in_data_3",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "patterns_in_data_3"
       }
     },
     {
@@ -11606,22 +11668,37 @@
       }
     },
     {
-      "name": "Zombie Prediction - Activity Guide",
+      "name": "View and Download Survey Data",
+      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "key": "view_and_download_survey_data",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
+      "name": "Zombie Prediction",
       "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
       "key": "zombie_prediction_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "zombie_prediction_-_activity_guide"
       }
     },
     {
-      "name": "Zombie Prediction - Answer Key",
+      "name": "[KEY] Zombie Prediction",
       "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
       "key": "zombie_prediction_-_answer_key",
       "properties": {
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "zombie_prediction_-_answer_key"
@@ -11795,6 +11872,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
         "resource.key": "introduction_to_ai_lab"
       }
     },
@@ -11891,6 +11974,12 @@
     {
       "seeding_key": {
         "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
         "resource.key": "numerical_data_in_ai_lab"
       }
     },
@@ -11927,7 +12016,19 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns in Data",
+        "resource.key": "patterns_in_data_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
         "resource.key": "shoe_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "_key_zoo_models"
       }
     },
     {
@@ -11946,6 +12047,12 @@
       "seeding_key": {
         "lesson.key": "Saving Models in AI Lab",
         "resource.key": "zoo_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "_key_numerical_accuracy"
       }
     },
     {
@@ -11975,6 +12082,12 @@
     {
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
         "resource.key": "isaac_s_survey_data_-_student_resource"
       }
     },
@@ -11988,6 +12101,12 @@
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
         "resource.key": "survey_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
+        "resource.key": "view_and_download_survey_data"
       }
     },
     {
