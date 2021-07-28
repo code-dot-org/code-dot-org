@@ -33,6 +33,7 @@
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
+  "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now.",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}"
 }
