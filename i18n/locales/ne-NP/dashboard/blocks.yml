@@ -96,6 +96,14 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': देखिने
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': देखिने
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -320,6 +328,11 @@ ne:
             '"a"': क 
             '"s"': द
             '"d"': "घ \n"
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'हो'
+            '"no"': 'होइन'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -327,12 +340,20 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': इन्द्रणी
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": color
       binary_move:
         options:
           DIR:

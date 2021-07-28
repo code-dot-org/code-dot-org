@@ -29,4 +29,5 @@ it:
       Text: Testo
       Variables: Variabili
       'Variables ': 'Variabili '
+      'Variables  ': 'Variabili  '
       World: Ambiente

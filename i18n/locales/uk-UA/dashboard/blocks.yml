@@ -7,17 +7,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           MOVE1:
             MOVES.Roll: Хвиля
             MOVES.ClapHigh: Плескання вгорі
@@ -61,15 +61,15 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
             '"UNICORN"': всі єдинороги
           MOVE:
@@ -121,17 +121,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -145,17 +145,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           MOVE:
             '"rand"': "(Випадковий)"
             MOVES.XBend: Вигин
@@ -302,17 +302,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           LOCATION:
             "{x: 200, y: 100}": вгорі
             "{x: 200, y: 300}": вниз
@@ -330,17 +330,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           FORMAT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
@@ -348,7 +348,7 @@ uk:
             '"circle"': коло
             '"grid"': сітка
             '"top"': верхня шеренга
-            '"row"': ряд
+            '"row"': клас
             '"bottom"': нижня шеренга
             '"left"': ліва колона
             '"column"': колона
@@ -389,18 +389,18 @@ uk:
           з іменем [NAME][1] розмістивши у [LOCATION][2]
         options:
           COSTUME:
-            '"ALIEN"': Прибулець
+            '"ALIEN"': інопланетянин
             '"BEAR"': Ведмідь
-            '"CAT"': Кіт
-            '"DOG"': Собака
-            '"DUCK"': Качка
+            '"CAT"': кіт
+            '"DOG"': пес
+            '"DUCK"': качку
             '"FROG"': Жаба
-            '"MOOSE"': Лось
+            '"MOOSE"': лосі
             '"PINEAPPLE"': Ананас
-            '"ROBOT"': Робот
+            '"ROBOT"': робот
             '"SHARK"': Акула
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдиноріг
+            '"UNICORN"': єдиноріг
           LOCATION:
             "{x: 200, y: 100}": вгорі
             "{x: 200, y: 300}": вниз
@@ -438,18 +438,18 @@ uk:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Прибульці
+            '"ALIEN"': прибульці
             '"BEAR"': Ведмеді
-            '"CAT"': Коти
-            '"DOG"': Собаки
+            '"CAT"': коти
+            '"DOG"': собаки
             '"DUCK"': Качки
             '"FROG"': Жаби
-            '"MOOSE"': Лось
+            '"MOOSE"': лосі
             '"PINEAPPLE"': Ананаси
-            '"ROBOT"': Роботи
+            '"ROBOT"': роботи
             '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           LAYOUT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
@@ -457,7 +457,7 @@ uk:
             '"circle"': коло
             '"grid"': сітка
             '"top"': верхня шеренга
-            '"row"': ряд
+            '"row"': клас
             '"bottom"': нижня шеренга
             '"left"': ліва колона
             '"column"': колона
@@ -571,17 +571,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           SPEED:
             '1': нормальний
             '2': швидко
@@ -646,17 +646,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -682,17 +682,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -709,34 +709,34 @@ uk:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
       Dancelab_setTintEachInline:
         text: встановити для [THIS][0] відтінок у [VAL][1]
         options:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
       Dancelab_setTintInline:
         text: встановити для [SPRITE][0] відтінок [VAL][1]
       Dancelab_setVisible:
@@ -751,17 +751,17 @@ uk:
           THIS:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           VISIBILITY:
             'true': видимий
             'false': невидимий
@@ -786,17 +786,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -831,17 +831,17 @@ uk:
           GROUP:
             sprites: усі
             '"ALIEN"': прибульці
-            '"BEAR"': ведмеді
+            '"BEAR"': Ведмеді
             '"CAT"': коти
             '"DOG"': собаки
-            '"DUCK"': качки
-            '"FROG"': жаби
+            '"DUCK"': Качки
+            '"FROG"': Жаби
             '"MOOSE"': лосі
-            '"PINEAPPLE"': ананаси
+            '"PINEAPPLE"': Ананаси
             '"ROBOT"': роботи
-            '"SHARK"': акули
+            '"SHARK"': Акули
             '"SLOTH"': лінивець
-            '"UNICORN"': Єдинороги
+            '"UNICORN"': всі єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -962,6 +962,9 @@ uk:
         text: спрайт [SPRITE][0] починає [BEHAVIOR][1]
       gamelab_addTarget:
         text: "[SPRITE][0] дістався до цілі [TARGET][1]"
+        options:
+          OPT:
+            '"avoid"': уникати
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
       gamelab_atTime:
@@ -1241,6 +1244,7 @@ uk:
             '"direction"': напрямок руху
             '"speed"': швидкість
       gamelab_setProp_dropdown:
+        text: встановити [SPRITE][0] властивість [PROPERTY][1] у [SIZE][2]
         options:
           PROPERTY:
             '"scale"': розмір
@@ -1584,6 +1588,10 @@ uk:
           CORNER:
             '"right"': праворуч
             '"left"': ліворуч
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': нижче
       Mikelab_sprite:
         text: Новий [COSTUME][0] спрайт на [LOCATION][1]
         options:
@@ -1641,6 +1649,24 @@ uk:
         text: x координата [SPRITE][0]
       Mikelab_yLocationOf:
         text: y координата [SPRITE][0]
+      PoemBot_setBackgroundEffect:
+        text: "встановити ефект тла\n[BG_EFFECT][0] [PALETTE][1]"
+        options:
+          BG_EFFECT:
+            '"solid"': суцільний
+            '"rainbow"': веселка
+      PoemBot_setForegroundEffect:
+        text: встановити ефект переднього плану [FG_EFFECT][0]
+        options:
+          FG_EFFECT:
+            '"rain"': дощ
+            '"bubbles"': бульбашки
+      PoemBot_stringConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      PoemBot_stringValue:
+        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+      PoemBot_textConcat:
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:
@@ -1679,7 +1705,7 @@ uk:
           FORMAT:
             '"grid"': сітка
             '"border"': рамка
-            '"row"': ряд
+            '"row"': клас
             '"random"': випадковий
       aalab_someGraduallyStartIntervention:
         options:
@@ -1837,3 +1863,5 @@ uk:
           DIR:
             right: праворуч ↻
             left: ліворуч ↺
+      validation_validatedBackground:
+        text: встановити фон [IMG][0]

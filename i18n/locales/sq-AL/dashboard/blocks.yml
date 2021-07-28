@@ -1,4 +1,3 @@
----
 sq:
   data:
     blocks:
@@ -75,6 +74,7 @@ sq:
         options:
           FORMAT:
             '"diamond"': diamant
+            '"row"': klasë
             '"random"': zakonshëm
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -104,8 +104,29 @@ sq:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"diamond"': diamant
+            '"row"': klasë
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
@@ -145,6 +166,14 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': e dukshme
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': e dukshme
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -170,6 +199,10 @@ sq:
           STRING:
             '"diamond"': diamant
             '"x"': x
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenKey:
         options:
           KEY:
@@ -178,7 +211,19 @@ sq:
             '"down"': poshtë
             '"right"': djathtas
             '"space"': hapësirë
+            '"enter"': hyr
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': shmang
       gamelab_atTime:
         options:
           UNIT:
@@ -210,6 +255,9 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
       gamelab_keyPressed:
         options:
@@ -222,6 +270,9 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
       gamelab_mirrorSprite:
         options:
@@ -243,6 +294,7 @@ sq:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
+            undefined: asnjë
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -346,6 +398,10 @@ sq:
           CORNER:
             '"right"': djathtas
             '"left"': majtas
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': poshte
       Mikelab_sprite:
         options:
           LOCATION:
@@ -373,6 +429,11 @@ sq:
             '"a"': A
             '"s"': J
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'po'
+            '"no"': 'jo'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -380,15 +441,25 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': ylber
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": ngjyra
       aalab_layoutSprites:
         options:
           FORMAT:
+            '"row"': klasë
             '"random"': zakonshëm
       binary_move:
         options:
@@ -407,8 +478,8 @@ sq:
             '"space"': hapësirë
       craft_ifPath:
         text: |-
-          nëse shtegu {DIR}
-          {STATEMENT}
+          nëse shtegu [DIR][0]
+          [STATEMENT][1]
         options:
           DIR:
             "'ahead'": përpara
@@ -416,8 +487,8 @@ sq:
             "'left'": në të majtë
       craft_ifStandingOn:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": korali blu
@@ -428,8 +499,8 @@ sq:
             "'seaLantern'": fari i detit
       craft_ifStandingOnLimit:
         text: |-
-          nëse je ngritur {TYPE}
-          {STATEMENT}
+          nëse je ngritur [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": rërë
@@ -438,7 +509,7 @@ sq:
       craft_moveForward:
         text: lëviz përpara
       craft_placeBlock:
-        text: vendos {blockType}
+        text: vendos [blockType][0]
         options:
           blockType:
             '"strippedOak"': lis i zhveshur
@@ -446,6 +517,7 @@ sq:
             '"stoneBricks"': tulla guri
             '"mossyStoneBricks"': tulla guri me myshk
             '"crackedStoneBricks"': tulla guri të thyera
+            '"chiseledStoneBricks"': tulla guri zbukuruese
             '"blueCoralBlock"': blloku i koraleve blu
             '"pinkCoralBlock"': blloku i koraleve të kuqe
             '"magentaCoralBlock"': blloku i koraleve të purpurta
@@ -472,13 +544,13 @@ sq:
       craft_repeatUntilConduit:
         text: |-
           përsërite deri sa tubi të mbarojë
-          {STATEMENT}
+          [STATEMENT][0]
       craft_repeatUntilGoal:
         text: |-
           përsërit deri te pikësynimi
-          {STATEMENT}
+          [STATEMENT][0]
       craft_spawnEntity:
-        text: vezë peshku {ENTITY}
+        text: vezë peshku [ENTITY][0]
         options:
           ENTITY:
             '"cod"': merluc
@@ -488,7 +560,7 @@ sq:
             '"squid"': kallamar
             '"tropicalFish"': peshk tropikal
       craft_turn:
-        text: kthehu {DIR}
+        text: kthehu [DIR][0]
         options:
           DIR:
             right: djathtas ↻

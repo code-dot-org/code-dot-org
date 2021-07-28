@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "Look at the documentation for The Theater and find the `SoundLoader.read()` and `playSound(double[] sound)`.\r\n\r\nIn `NeighborhoodConcert.java`, add the following to the `showSleeping()` method:\r\n1. Use `SoundLoader.read()` to read `\"twinkle.wav\"` into a `double` array.\r\n\r\n2. Use `playSound()` to play the array created from the file.\r\n\r\nIn `MyConcert.java`, add a pause and call the `showSleeping()` method after the call to `showDaytime()`.\r\n",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-22T19:16:05.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-22 19:16:53 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 19:22:01 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

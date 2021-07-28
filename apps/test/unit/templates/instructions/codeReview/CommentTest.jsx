@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {Factory} from 'rosie';
 import './CodeReviewTestHelper';
+import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
@@ -74,5 +75,15 @@ describe('Code Review Comment', () => {
   it('hides ellipsis when viewing as code reviewer', () => {
     const wrapper = renderWrapper({}, {viewAsCodeReviewer: true});
     expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(0);
+  });
+
+  it('displays error message when comment has error', () => {
+    const defaultWrapper = renderWrapper();
+    expect(defaultWrapper.text().includes(javalabMsg.commentUpdateError())).to
+      .be.false;
+
+    const errorWrapper = renderWrapper({hasError: true});
+    expect(errorWrapper.text().includes(javalabMsg.commentUpdateError())).to.be
+      .true;
   });
 });

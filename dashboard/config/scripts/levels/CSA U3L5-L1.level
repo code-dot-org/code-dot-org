@@ -1,0 +1,48 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Review the program and try to predict the output. Then run the program to see the results.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29236,
+    "start_sources": {
+      "MyConcert.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    Stage myStage = Theater.stage;\n    \n\tChicken myChicken = new Animal(\"chicken.png\", \"chicken.wav\");\n    myStage.drawImage(myChicken, 200, 200, 100, 150, 30);\n    myChicken.speak();\n\n    myStage.play();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Animal.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Animal {\n\n  private Image animalImage;\n  private String soundFile;\n\n  public Animal(String imageFile, String soundFile) throws FileNotFoundException {\n    this.animalImage = new Image(imageFile);\n    this.soundFile = soundFile;\n  }\n  \n  public Image getImage() {\n    return animalImage;\n  }\n\n  public String getSound() {\n    return soundFile;\n  }\n  \n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am an animal!\");\n    Theater.stage.playSound(soundFile);\n  }\n}",
+        "isVisible": false
+      },
+      "Chicken.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Chicken extends Animal {\n\n  public Chicken(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a chicken!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
+        "isVisible": false
+      },
+      "Sheep.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Sheep extends Animal {\n\n  public Sheep(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a sheep!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
+        "isVisible": false
+      },
+      "Tiger.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Tiger extends Animal {\n\n  public Tiger(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a tiger!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
+        "isVisible": false
+      },
+      "Wolf.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Wolf extends Animal {\n\n  public Wolf(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a wolf!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
+        "isVisible": false
+      },
+      "Zebra.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Zebra extends Animal {\n\n  public Zebra(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a zebra!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
+        "isVisible": false
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-07-21T19:54:59.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-07-21T19:54:59.435+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L8\\\"\"],\"cloned_from\":\"CSA U3L4-L8\"},{\"changed_at\":\"2021-07-21 19:55:37 +0000\",\"changed\":[\"long_instructions\",\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 19:59:46 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 20:04:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 20:54:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 20:55:57 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:09:52 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:12:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:14:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:15:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:20:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:22:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:23:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:23:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:26:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 21:27:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

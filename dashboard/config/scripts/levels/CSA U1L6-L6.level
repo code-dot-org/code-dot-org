@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Initialize a new `Painter` at (0, 0) facing South with 0 units of paint.\r\n\r\nUse `while` loops, `if` statements, and information gathering commands to help the `Painter` navigate to the paint can and collect all the paint.\r\n\r\n![](https://images.code.org/3e5ef575b193a9904d45d4b239aac837-image-1625602077559.png)",
+    "long_instructions": "Initialize a new `Painter` at `(0, 0)` facing South with `0` units of paint.\r\n\r\nUse `while` loops, `if` statements, and information gathering commands to help the `Painter` navigate to the paint can and collect all the paint.\r\n\r\n![](https://images.code.org/3e5ef575b193a9904d45d4b239aac837-image-1625602077559.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -765,6 +765,6 @@
   "created_at": "2021-07-06T19:43:13.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-06 19:59:46 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-06 20:08:13 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:33:22 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-06 19:59:46 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-06 20:08:13 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:33:22 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-23 14:32:14 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

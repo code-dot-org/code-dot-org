@@ -182,6 +182,7 @@ ro:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de asemenea, chiar și informații mai complexe (precum imagini şi culori) în sistem binar.
       courseE_unplugged_diceRace:
+        title: 'Algoritmi din lumea reală: Cursa zarurilor'
         desc: Această lecție indică modul în care noi folosim algoritmi în viața de zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul pentru un joc de zaruri.
       courseE_unplugged_songwritingParameters:
         title: Compoziții muzicale cu parametri
@@ -318,8 +319,6 @@ ro:
       PaperPlanes_2019:
         title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
         desc: Această lecție evidențiază moduri în care folosim algoritmi în viața de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie. De asemenea, această lecție se concentrează pe o imagine de ansamblu despre informatică și rolul esențial pe care îl joacă algoritmii.
-      test-uid-passthrough:
-        title: '[șir gol]'
       PlantASeed_2019:
         title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea, aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul în care algoritmii joacă un rol esențial.
@@ -340,3 +339,6 @@ ro:
       timeforcs_demo_conditionals:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'
+      SP-VPL-CSD-21-CourseNavigation:
+        title: '[șir gol]'
+        desc: '[șir gol]'

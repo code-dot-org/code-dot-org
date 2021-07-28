@@ -10,5 +10,6 @@ export const commentShape = PropTypes.shape({
   isResolved: PropTypes.bool,
   isFromTeacher: PropTypes.bool,
   isFromCurrentUser: PropTypes.bool,
-  isFromOlderVersionOfProject: PropTypes.bool
+  isFromOlderVersionOfProject: PropTypes.bool,
+  hasError: PropTypes.bool
 });

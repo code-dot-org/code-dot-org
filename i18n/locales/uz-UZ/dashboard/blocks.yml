@@ -1234,6 +1234,7 @@ uz:
             '"direction"': harakatlanish yo‘nalishi
             '"speed"': tezlik
       gamelab_setProp_dropdown:
+        text: ' [SPRITE][0] [PROPERTY][1] qiymatini [SIZE][2] ga o''rnatish'
         options:
           PROPERTY:
             '"scale"': kattalik
@@ -1624,6 +1625,16 @@ uz:
         text: '[SPRITE][0] x koordinatasi'
       Mikelab_yLocationOf:
         text: '[SPRITE][0] y koordinatasi'
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': kamalak
+      PoemBot_setForegroundEffect:
+        text: old plan effektini [FG_EFFECT][0] o'rnatish
+        options:
+          FG_EFFECT:
+            '"rain"': yomg‘ir
+            '"bubbles"': pufakchalar
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:
@@ -1818,3 +1829,5 @@ uz:
           DIR:
             right: o‘ngga ↻
             left: chapga ↺
+      validation_validatedBackground:
+        text: orqa fonni [IMG][0] ga o'zgartirish

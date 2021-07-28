@@ -351,6 +351,8 @@ sq:
         C4_unplugged_forloops: Për Ciklet
         C4_unplugged_parameters: Të shkruarit këngë me Parametra
         C4_unplugged_binary: Binare
+        CSF_debugging_k1_blocks: Rregullimi
+        CSF_debugging_text_blocks: Rregullimi
         CSF_my_robotic_friends: Miqtë e mi Robotikë
         frozen_intro: Hyrja e Orës së Kodimit
         frozen_loops: Hyrja tek Ciklet
@@ -393,6 +395,7 @@ sq:
         CSF_loops_AB: cikle 
         csd_pair_programming: Programim në çift
         csd_applab_parameters: Funksionet me parametra
+        csd_debugging: Rregullimi
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
     callout:
