@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:27 UTC",
+    "serialized_at": "2021-07-27 22:48:59 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -7696,7 +7696,7 @@
     {
       "key": "initialize",
       "word": "Initialize",
-      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "definition": "Create a new object with a specific name and starting values for its attributes",
       "properties": {
       },
       "seeding_key": {
@@ -7706,7 +7706,7 @@
     {
       "key": "constructor_signature",
       "word": "Constructor Signature",
-      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
       "properties": {
       },
       "seeding_key": {
@@ -7716,7 +7716,7 @@
     {
       "key": "formal_parameter",
       "word": "Formal Parameter",
-      "definition": "The name of the characteristics in the constructor signature",
+      "definition": "The name of the attribute in the constructor signature",
       "properties": {
       },
       "seeding_key": {
@@ -7726,7 +7726,7 @@
     {
       "key": "actual_parameter",
       "word": "Actual Parameter",
-      "definition": "The value given to a characteristic when initializing an object",
+      "definition": "The value given to an attribute when initializing an object",
       "properties": {
       },
       "seeding_key": {
