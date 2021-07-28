@@ -17,18 +17,12 @@ export default function ControlButtons({
   onContinue,
   renderSettings
 }) {
-  const buttonStyles = {
-    ...styles.button.all,
-    ...(isDarkMode ? styles.button.dark : styles.button.light)
-  };
-
   // Note: The 'noBorder' class is required on the buttons below because there are !important
   // button styles we don't want. This class can be removed when the button:active !important
   // border is removed from common.scss.
   return (
     <div
       style={{
-        ...styles.container,
         backgroundColor: isDarkMode ? color.black : color.white
       }}
     >
@@ -37,20 +31,20 @@ export default function ControlButtons({
         icon={<FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />}
         onClick={toggleRun}
         isHorizontal
-        style={{...buttonStyles, ...styles.button.orange, float: 'left'}}
+        style={{...styles.button.all, ...styles.button.orange, float: 'left'}}
       />
       <JavalabButton
         text={isTesting ? i18n.stopTests() : i18n.test()}
         icon={<FontAwesome icon="flask" className="fa" />}
         onClick={toggleTest}
         isHorizontal
-        style={{...buttonStyles, ...styles.button.white, float: 'left'}}
+        style={{...styles.button.all, ...styles.button.white, float: 'left'}}
       />
       {!isEditingStartSources && (
         <JavalabButton
           text={i18n.finish()}
           onClick={onContinue}
-          style={{...buttonStyles, ...styles.button.blue, float: 'right'}}
+          style={{...styles.button.all, ...styles.button.blue, float: 'right'}}
           isDisabled={isReadOnlyWorkspace}
         />
       )}
@@ -72,11 +66,6 @@ ControlButtons.propTypes = {
 };
 
 const styles = {
-  container: {
-    _display: 'flex',
-    _flexDirection: 'row',
-    _justifyContent: 'space-around'
-  },
   button: {
     all: {
       fontSize: 15,
@@ -91,12 +80,6 @@ const styles = {
         color: color.white,
         boxShadow: 'none'
       }
-    },
-    light: {
-      //color: color.white
-    },
-    dark: {
-      //color: color.lightest_gray
     },
     orange: {
       backgroundColor: color.orange,
