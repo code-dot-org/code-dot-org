@@ -1747,12 +1747,18 @@
     },
     "293": {
         "name": "W-taxi-6",
-        "sheet": "vehicles.png.png",
+        "sheet": "vehicles.png",
         "row": 4,
-        "column": 6
+        "column": 5
     },
     "294": {
         "name": "W-taxi-1",
+        "sheet": "vehicles.png",
+        "row": 4,
+        "column": 6
+    },
+    "295": {
+        "name": "W-taxi-3",
         "sheet": "vehicles.png",
         "row": 4,
         "column": 7
