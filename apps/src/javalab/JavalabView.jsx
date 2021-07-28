@@ -17,39 +17,9 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
 import {getStore} from '../redux';
 import {setVisualizationScale} from '../redux/layout';
+import _ from 'lodash';
 
 const FOOTER_BUFFER = 10;
-
-function updateLayout(width) {
-  //const width = $('#visualization-container').width();
-  const visualizationColumnHeight = $(window).height() - 110;
-  const visualizationTop = $('#visualization').position().top;
-  const sliderHeight = $('#slider').outerHeight(true) + 30;
-  var constrainVisualizationWidth =
-    visualizationColumnHeight - visualizationTop - sliderHeight;
-
-  var newVizWidth = Math.min(constrainVisualizationWidth, width);
-
-  //var scale = constrainVisualizationWidth / 400 /*this.nativeVizWidth*/;
-  let scale = newVizWidth / 800;
-  if (scale < 0) {
-    // Avoiding inverting.
-    scale = 0;
-  }
-  getStore().dispatch(setVisualizationScale(scale));
-
-  const cssScale = `scale(${scale})`;
-  $('#svgMaze').css('transform', cssScale);
-
-  const cssWidth = width + 'px';
-  const newcssWidth = newVizWidth + 'px';
-  $('#visualization').css({
-    'max-width': cssWidth,
-    'max-height': newcssWidth,
-    height: newcssWidth,
-    left: (width - newVizWidth) / 2 + 'px'
-  });
-}
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -62,6 +32,7 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
     editorColumnHeight: PropTypes.number,
+    appType: PropTypes.string,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -75,7 +46,8 @@ class JavalabView extends React.Component {
     setIsRunning: PropTypes.func,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     setLeftWidth: PropTypes.func,
-    leftWidth: PropTypes.number
+    leftWidth: PropTypes.number,
+    topInstructionsHeight: PropTypes.number.isRequired
   };
 
   state = {
@@ -86,8 +58,15 @@ class JavalabView extends React.Component {
   componentDidMount() {
     this.props.onMount();
     this.setRightContainerHeight();
-    updateLayout(this.props.leftWidth);
+    this.updateLayout(this.props.leftWidth);
+    window.addEventListener('resize', () =>
+      this.updateLayoutThrottled(this.props.leftWidth)
+    );
   }
+
+  /*componentWillUnmount() {
+    window.removeEventListener('resize', updateLayoutThrottled);
+  }*/
 
   compile = () => {
     this.props.appendOutputLog('Compiling program...');
@@ -165,8 +144,56 @@ class JavalabView extends React.Component {
     let newWidth = Math.max(100, Math.min(desiredWidth, 600));
     this.props.setLeftWidth(newWidth);
 
-    updateLayout(newWidth);
+    this.updateLayoutThrottled(newWidth);
   };
+
+  updateLayout = width => {
+    //const width = $('#visualization-container').width();
+    const visualizationColumnHeight = $(window).height() - 135;
+    const visualizationTop = this.props.topInstructionsHeight;
+    const sliderHeight = 60;
+    let constrainVisualizationWidth =
+      visualizationColumnHeight - visualizationTop;
+    if (this.props.appType === 'neighborhood') {
+      constrainVisualizationWidth -= sliderHeight;
+    }
+    let newVizWidth = Math.min(constrainVisualizationWidth, width);
+
+    //var scale = constrainVisualizationWidth / 400 /*this.nativeVizWidth*/;
+    let scale = newVizWidth / 800;
+    if (scale < 0) {
+      // Avoiding inverting.
+      scale = 0;
+    }
+    getStore().dispatch(setVisualizationScale(scale));
+
+    const cssScale = `scale(${scale})`;
+
+    if (this.props.appType === 'neighborhood') {
+      $('#svgMaze').css('transform', cssScale);
+    } else if (this.props.appType === 'theater') {
+      $('#theater-container').css('transform', cssScale);
+    }
+
+    const cssWidth = width + 'px';
+    const newcssWidth = newVizWidth + 'px';
+    $('#visualization').css({
+      'max-width': cssWidth,
+      'max-height': newcssWidth,
+      height: newcssWidth,
+      left: (width - newVizWidth) / 2 + 'px'
+    });
+
+    $('#page-small-footer .small-footer-base').css('max-width', width - 13);
+  };
+
+  updateLayoutThrottled = _.throttle(this.updateLayout, 200);
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
+      this.updateLayoutThrottled(this.props.leftWidth);
+    }
+  }
 
   render() {
     const {
@@ -212,22 +239,25 @@ class JavalabView extends React.Component {
                 standalone
                 displayDocumentationTab
                 displayReviewTab
-                onHeightResize={() => updateLayout(leftWidth)}
+                onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
               />
               {this.renderVisualization()}
             </div>
 
-            <HeightResizer
-              vertical={true}
-              resizeItemTop={() => 25}
-              position={this.props.leftWidth + 13}
-              onResize={this.handleWidthResize}
-              style={{}}
-            />
+            {this.props.appType !== 'console' && (
+              <HeightResizer
+                vertical={true}
+                resizeItemTop={() => 10}
+                position={this.props.leftWidth + 13}
+                onResize={this.handleWidthResize}
+              />
+            )}
 
             <div
               style={{
-                ...styles.editorAndConsole,
+                ...(this.props.appType === 'console'
+                  ? styles.editorAndConsoleOnly
+                  : styles.editorAndConsole),
                 color: isDarkMode ? color.white : color.black,
                 height: editorColumnHeight
               }}
@@ -285,6 +315,13 @@ const styles = {
     flexDirection: 'column',
     marginLeft: 13
   },
+  editorAndConsoleOnly: {
+    right: '15px',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
   consoleParent: {
     position: 'relative',
     display: 'flex',
@@ -335,7 +372,8 @@ export default connect(
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
-    leftWidth: state.javalab.leftWidth
+    leftWidth: state.javalab.leftWidth,
+    topInstructionsHeight: state.instructions.renderedHeight
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
