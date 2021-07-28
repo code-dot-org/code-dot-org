@@ -15,38 +15,6 @@ import Button from '../Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 
-const style = {
-  container: {
-    width: styleConstants['content-width'],
-    height: '360px',
-    left: '20px',
-    right: '20px'
-  },
-  scroll: {
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    height: 'calc(80vh - 200px)'
-  },
-  thirdPartyProviderUpsell: {
-    marginBottom: '10px'
-  },
-  footer: {
-    position: 'absolute',
-    width: styleConstants['content-width'],
-    height: '100px',
-    left: 0,
-    bottom: '-65px',
-    padding: '0px 20px 20px 20px',
-    backgroundColor: '#fff',
-    borderRadius: '5px'
-  },
-  emailPolicyNote: {
-    marginBottom: '20px',
-    paddingTop: '20px',
-    borderTop: '1px solid #000'
-  }
-};
-
 /**
  * UI for selecting the login type of a class section:
  * Word, picture, or email logins, or one of several third-party integrations.
@@ -78,11 +46,41 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
-    // Adjust max height of the LoginTypePicker container if there are >3 LoginType
-    // cards (thus creating the need for a 2nd row in the CardContainer flexbox).
-    if (hasThirdParty) {
-      style.container.height = '500px';
-    }
+    // Adjust max height of the LoginTypePicker container based on the number of
+    // LoginType cards (which affects number of rows in the CardContainer flexbox).
+    const containerHeight = hasThirdParty ? '500px' : '360px';
+
+    const style = {
+      container: {
+        width: styleConstants['content-width'],
+        height: containerHeight,
+        left: '20px',
+        right: '20px'
+      },
+      scroll: {
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        height: 'calc(80vh - 200px)'
+      },
+      thirdPartyProviderUpsell: {
+        marginBottom: '10px'
+      },
+      footer: {
+        position: 'absolute',
+        width: styleConstants['content-width'],
+        height: '100px',
+        left: 0,
+        bottom: '-65px',
+        padding: '0px 20px 20px 20px',
+        backgroundColor: '#fff',
+        borderRadius: '5px'
+      },
+      emailPolicyNote: {
+        marginBottom: '20px',
+        paddingTop: '20px',
+        borderTop: '1px solid #000'
+      }
+    };
 
     return (
       <div style={style.container}>
