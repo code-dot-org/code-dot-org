@@ -75,7 +75,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'other users cannot disable review for other student projects' do
-    create :reviewable_project,
+    reviewable_project = create :reviewable_project,
       user_id: @project_owner.id,
       storage_app_id: @project_storage_app_id
 
