@@ -40,7 +40,8 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    hasContainedLevels: PropTypes.bool
   };
 
   constructor(props) {
@@ -139,7 +140,10 @@ export class TeacherFeedback extends Component {
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       dataType: 'json',
-      data: JSON.stringify({teacher_feedback: payload}),
+      data: JSON.stringify({
+        teacher_feedback: payload,
+        is_contained_level: this.props.hasContainedLevels
+      }),
       headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
@@ -353,5 +357,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
   selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
+    state.teacherSections && state.teacherSections.selectedSectionId,
+  hasContainedLevels: state.pageConstants.hasContainedLevels
 }))(TeacherFeedback);

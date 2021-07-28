@@ -54,7 +54,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
     if @teacher_feedback.save
       if @teacher_feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
-        reset_progress_for_keep_working(@teacher_feedback)
+        reset_progress_for_keep_working(@teacher_feedback, params[:is_contained_level])
       end
 
       # reload is called so that the correct created_at date is sent back
@@ -78,10 +78,18 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
 
   private
 
-  def reset_progress_for_keep_working(teacher_feedback)
+  def reset_progress_for_keep_working(teacher_feedback, is_contained_level)
+    level_id = teacher_feedback.level_id
+
+    # for contained level progress is stored on the contained level instead of the level
+    if is_contained_level
+      level = Level.find(level_id)
+      level_id = level.contained_levels.first.id
+    end
+
     UserLevel.update_best_result(
       teacher_feedback.student_id,
-      teacher_feedback.level_id,
+      level_id,
       teacher_feedback.script_id,
       ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING,
       false
