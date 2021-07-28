@@ -2,14 +2,17 @@
   "script": {
     "name": "dlp21-csd-mod1",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "professional_learning_course": "2021 CS Discoveries Deeper Learning",
+      "peer_reviews_to_complete": 6,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 17:22:32 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-07-27 20:15:23 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csd-mod1"
     }
@@ -116,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-general-prep"
+        ],
         "progression": "Preparation"
       },
       "named_level": false,
@@ -139,6 +145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-pre"
+        ],
         "progression": "Preparation"
       },
       "named_level": false,
@@ -162,6 +171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q1"
+        ],
         "progression": "Prompts"
       },
       "named_level": false,
@@ -185,6 +197,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q2"
+        ],
         "progression": "Prompts"
       },
       "named_level": false,
@@ -208,6 +223,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp21-csd-mod1-q3"
+        ],
         "progression": "Prompts"
       },
       "named_level": false,
