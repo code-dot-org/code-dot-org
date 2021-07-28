@@ -3608,6 +3608,14 @@
           lesson_groups:
             cspSurvey2020:
               display_name: Undersøkelse
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Undersøkelse
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Undersøkelse
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:

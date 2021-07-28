@@ -27752,6 +27752,16 @@ id:
           lessons:
             lesson-22:
               name: Merancang Pengumpulan Data
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survei
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Merancang Pengumpulan Data
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survei
         kodea-pd-2021:
           description: Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar
             Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan
@@ -27870,10 +27880,6 @@ id:
           lessons:
             lesson-9:
               name: Komunitas guru
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Tool
         self-paced-pl-csd5-2021:
           lessons:
             lesson-3:
@@ -27929,3 +27935,5 @@ id:
           lessons:
             lesson-2:
               name: Pelajaran ke- 2
+        dlp21-csp-mod1:
+          title: CS Principles Deeper Learning Modul 1

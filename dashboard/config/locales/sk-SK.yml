@@ -209,8 +209,8 @@ sk:
       vášho prihlásenia/registrácie.
     user_type_button: Zmeniť typ účtu
     user_type_label: Typ účtu
-    user_type_teacher: Učiteľ
     user_type_student: Študent
+    user_type_teacher: Učiteľ
     field_is_required: je povinné
     accept_terms: Musíte súhlasiť s vytvorením účtu.
     error: Vyskytla sa chyba.
@@ -1221,9 +1221,8 @@ sk:
       school_city: Mesto
       school_country: Krajina
       colombian_school_city: Mesto
-      colombian_school_department: Oddelenie na škole
       colombian_school_municipality: Okres školy
-      colombian_school_name: Názov školy
+      colombian_chilean_school_name: Názov školy
       ages: Ktoré ročníky vyučujute tento rok?
       subjects: Ktoré predmety vyučujute tento rok?
       resources: Ktoré z nasledovných zdrojov používate pri výučbe informatiky?

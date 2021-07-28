@@ -167,8 +167,8 @@ fil:
     additional_information: "Kailangan namin ng karagdagang impormasyon para maituloy ang pag-sign up sa iyo."
     user_type_button: "I-update ang Uri ng Account"
     user_type_label: "Uri ng Account"
-    user_type_teacher: "Teacher"
     user_type_student: "Estudyante"
+    user_type_teacher: "Teacher"
     field_is_required: "ay kailangan"
     accept_terms: "Kailangan mong sumang-ayon para gumawa ng account"
     error: "May problemang naganap."
@@ -923,7 +923,7 @@ fil:
       school_city: 'Lungsod ng Paaralan'
       school_country: 'Bansa ng Paaralan'
       colombian_school_city: 'Lungsod ng Paaralan'
-      colombian_school_name: 'Pangalan ng Paaralan'
+      colombian_chilean_school_name: 'Pangalan ng Paaralan'
     form_entries:
       gender:
         male: 'Lalaki'

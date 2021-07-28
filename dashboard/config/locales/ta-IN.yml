@@ -58,8 +58,8 @@ ta:
     forgot_password: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
   signup_form:
     age: வயது
-    user_type_teacher: ஆசிரியர்
     user_type_student: மாணவர்
+    user_type_teacher: ஆசிரியர்
     field_is_required: தேவைப்படுகிறது
     email_preference_yes: ஆம்
     email_preference_no: இல்லை

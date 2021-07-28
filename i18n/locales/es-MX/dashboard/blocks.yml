@@ -1037,8 +1037,6 @@ es-MX:
           UNIT:
             '"seconds"': segundos
             '"frames"': marcos
-      gamelab_hideHaiku:
-        text: ocultar haiku
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
       gamelab_ifVarEquals:
@@ -1184,8 +1182,6 @@ es-MX:
             '"East"': Este
             '"South"': Sur
             '"West"': Oeste
-      gamelab_printHaiku:
-        text: mostrar haiku {BREAK} título del poema {TITLE} autor del poema {AUTHOR} linea 1 {LINE1} linea 2 {LINE2} linea 3 {LINE3}
       gamelab_printText:
         text: imprimir {TEXT}
       gamelab_randColor:
@@ -1982,3 +1978,5 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      validation_validatedBackground:
+        text: establecer fondo a {IMG}

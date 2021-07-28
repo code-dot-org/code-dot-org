@@ -107,8 +107,8 @@ lv:
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu
       Tavu pieteikumu.
     user_type_label: Konta tips
-    user_type_teacher: Skolotāja
     user_type_student: Students
+    user_type_teacher: Skolotāja
     field_is_required: ir nepieciešams
     error: Radusies kļūda.
     email_preference_yes: Jā
@@ -530,7 +530,7 @@ lv:
       last_name: Uzvārds
       email: E-pasts
       school_name: Skolas nosaukums
-      colombian_school_name: Skolas nosaukums
+      colombian_chilean_school_name: Skolas nosaukums
     form_entries:
       gender:
         male: Vīrietis
