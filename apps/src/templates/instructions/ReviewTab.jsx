@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
@@ -9,7 +11,10 @@ import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 
 const FLASH_ERROR_TIME_MS = 5000;
 
-export default class ReviewTab extends Component {
+class ReviewTab extends Component {
+  // Populated by redux
+  static propTypes = {viewAsCodeReviewer: PropTypes.bool.isRequired};
+
   state = {
     reviewCheckboxEnabled: false,
     isReadyForReview: false,
@@ -236,6 +241,7 @@ export default class ReviewTab extends Component {
                 )
               }
               onDelete={() => this.onCommentDelete(comment.id)}
+              viewAsCodeReviewer={this.props.viewAsCodeReviewer}
             />
           );
         })}
@@ -249,6 +255,11 @@ export default class ReviewTab extends Component {
     );
   }
 }
+
+export const UnconnectedReviewTab = ReviewTab;
+export default connect(state => ({
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+}))(ReviewTab);
 
 const styles = {
   reviewsContainer: {
