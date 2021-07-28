@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 20:09:22 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-07-28 18:38:59 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csp-mod4"
     }
@@ -120,6 +120,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "dlp21-csp-general-prep"
+        ],
+        "progression": "Preparation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp21-csp-general-prep"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dlp21-csp-mod4",
+        "activity_section.key": "47315f72-64cf-4d96-a5a3-fdf8e3bee898"
+      },
+      "level_keys": [
+        "dlp21-csp-general-prep"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "dlp21-csp-mod4-pre"
         ],
         "progression": "Preparation"
@@ -140,7 +166,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -166,7 +192,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -192,7 +218,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -219,6 +245,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "dlp21-csp-general-prep",
+        "script_level.level_keys": [
+          "dlp21-csp-general-prep"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "dlp21-csp-mod4",
+        "activity_section.key": "47315f72-64cf-4d96-a5a3-fdf8e3bee898"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "dlp21-csp-mod4-pre",

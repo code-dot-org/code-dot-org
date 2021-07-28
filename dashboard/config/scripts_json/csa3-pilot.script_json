@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 20:57:17 UTC",
+    "serialized_at": "2021-07-27 22:49:16 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -7514,7 +7514,7 @@
     {
       "key": "efficiency",
       "word": "Efficiency",
-      "definition": "The amount of time or resources needed to execute an algorithm",
+      "definition": "Getting the best outcome with the least amount of waste",
       "properties": {
       },
       "seeding_key": {
