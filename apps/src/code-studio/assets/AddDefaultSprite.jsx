@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
@@ -71,7 +72,8 @@ export default class AddDefaultSprite extends React.Component {
 
 const styles = {
   assetRow: {
-    borderTop: '1px solid gray',
+    borderTop: '1px solid',
+    borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center'
@@ -80,7 +82,7 @@ const styles = {
     padding: 10
   },
   checkmark: {
-    color: 'lightgreen',
+    color: color.light_green,
     fontSize: 18,
     left: 5,
     lineHeight: '25px',
