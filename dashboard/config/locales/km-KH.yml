@@ -156,8 +156,8 @@ km:
     mismatch_password: ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ
     additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
     user_type_label: ប្រភេទនៃគណនេយ្យ
-    user_type_teacher: គ្រូបង្រៀន
     user_type_student: សិស្ស
+    user_type_teacher: គ្រូបង្រៀន
     field_is_required: ត្រូវការ
     accept_terms: អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ
     error: មានកំហុសមួយ
@@ -474,6 +474,7 @@ km:
     secure: កំណែ​សុវត្ថិភាព
     report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
+    store: ហាង
   reference_area:
     title: ត្រូវការ​ជំនួយ?
     subtitle: មើល​វីដេអូ​និង​គន្លឹះ​ទាំង​នេះ
@@ -583,7 +584,7 @@ km:
       school_city: ទីក្រុងរបស់សាលា
       school_country: សាលាក្នុងប្រទេស
       colombian_school_city: ទីក្រុងរបស់សាលា
-      colombian_school_name: ឈ្មោះរបស់សាលា
+      colombian_chilean_school_name: ឈ្មោះរបស់សាលា
     form_entries:
       gender:
         male: ប្រុស

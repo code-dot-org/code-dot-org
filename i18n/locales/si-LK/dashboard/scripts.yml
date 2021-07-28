@@ -2656,8 +2656,6 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
-            lessonGroup-4:
-              display_name: පරීක්ෂාව
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -2728,3 +2726,7 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: පරීක්ෂාව
