@@ -11,6 +11,7 @@ import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
+  // Populated by redux
   static propTypes = {viewAsCodeReviewer: PropTypes.bool.isRequired};
 
   state = {
