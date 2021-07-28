@@ -106,4 +106,9 @@ export default class JavabuilderConnection {
   sendMessage(message) {
     this.socket.send(message);
   }
+
+  // Closes web socket connection
+  closeConnection() {
+    this.socket.close();
+  }
 }

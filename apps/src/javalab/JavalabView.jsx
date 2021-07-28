@@ -20,6 +20,7 @@ class JavalabView extends React.Component {
     handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
+    onStop: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
@@ -64,15 +65,14 @@ class JavalabView extends React.Component {
     ];
   };
 
-  // This controls the 'run' button state, but stopping program execution is not yet
-  // implemented and will need to be added here.
+  // This controls the 'run' button state
   toggleRun = () => {
     const toggledIsRunning = !this.props.isRunning;
     this.props.setIsRunning(toggledIsRunning);
     if (toggledIsRunning) {
       this.props.onRun();
     } else {
-      // TODO: Stop program execution.
+      this.props.onStop();
     }
   };
 
