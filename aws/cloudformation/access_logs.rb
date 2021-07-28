@@ -1,21 +1,17 @@
 # Transform CloudFront access logs from CSV to JSON.
-# Use RealtimeLogConfig to determine CSV column headers,
+# Use environment variables to determine CSV column headers,
 # and Glue-table schema to determine column formats.
 
 require 'base64'
 require 'csv'
 require 'json'
 require 'aws-sdk-glue'
-require 'aws-sdk-cloudfront'
 
 DATABASE = ENV['DATABASE']
 TABLE = ENV['TABLE']
-CONFIG_ARN = ENV['CONFIG_ARN']
-
-CLOUDFRONT = Aws::CloudFront::Client.new
 
 LOG_FIELDS = ENV['LOG_FIELDS']&.split(',')
-$log_fields = LOG_FIELDS || []
+OLD_LOG_FIELDS = ENV['OLD_LOG_FIELDS']&.split(',')
 
 GLUE = Aws::Glue::Client.new
 COLUMNS = GLUE.get_table(database_name: DATABASE, name: TABLE).
@@ -31,15 +27,17 @@ def handler(event:, context:)
     records: event['records'].map do |record|
       data = Base64.decode64(record['data'])
 
-      tries = 0
+      fields = LOG_FIELDS
       output = begin
-                 CSV.parse_line(data, col_sep: "\t", headers: $log_fields, converters: CONVERTERS).tap do |out|
-                   raise ArgumentError, "Record data doesn't match log fields" if out.headers[-1].nil? || out[-1].nil?
+                 CSV.parse_line(data, col_sep: "\t", headers: fields, converters: CONVERTERS).tap do |out|
+                   if out.headers[-1].nil? || out[-1].nil?
+                     raise ArgumentError, "Record data (#{data.count("\t") + 1}) doesn't match log fields (#{fields.length}"
+                   end
                  end
                rescue ArgumentError
-                 raise if (tries += 1) > 1
-                 # Try again after updating fields from the realtime log config.
-                 $log_fields = CLOUDFRONT.get_realtime_log_config(arn: CONFIG_ARN).realtime_log_config.fields
+                 # Try again using old log fields as CSV column headers.
+                 raise if fields == OLD_LOG_FIELDS
+                 fields = OLD_LOG_FIELDS
                  retry
                end
       {
