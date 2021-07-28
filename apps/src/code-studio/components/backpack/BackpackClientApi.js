@@ -21,9 +21,19 @@ export default class BackpackClientApi {
     });
   }
 
+  /**
+   * Save files to the backpack
+   * @param {String} filesJson json-formatted string of all file sources in the project
+   * Expected format is {"filename1.java": {"text": "{...}"},...}.
+   * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
+   * exist in filesJson.
+   * @param {Function} onError Function to call if any file fails to save
+   * @param {Function} onSuccess Function to call if all files save.
+   */
   saveFiles(filesJson, filenames, onError, onSuccess) {
     if (this.filesToUpload.length > 0) {
-      // save is currently in progress, return an error. Frontend should prevent multiple
+      // save is currently in progress (a previous saveFilesHelper has not gone through its
+      // entire list of files to upload), return an error. Frontend should prevent multiple
       // button clicks in a row.
       onError();
       return;
