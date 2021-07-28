@@ -4,6 +4,7 @@
   "backpackLabel": "Backpack",
   "cancel": "Cancel",
   "clearConsole": "Clear Console",
+  "classNotFound": "Error: one or more of your Java files are missing a class definition.",
   "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
   "commitAndSave": "Commit & Save",
@@ -32,5 +33,6 @@
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
-  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now."
+  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now.",
+  "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}"
 }
