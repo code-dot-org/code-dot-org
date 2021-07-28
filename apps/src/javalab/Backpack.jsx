@@ -5,29 +5,44 @@ import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import JavalabButton from './JavalabButton';
 import javalabMsg from '@cdo/javalab/locale';
-
-const placeholderFiles = [
-  'MyClass.java',
-  'MyPainter.java',
-  'NeighborhoodMain.java'
-];
+import {connect} from 'react-redux';
 
 /**
  * A button that drops down to a set of importable files, and closes itself if
  * you click on the import button, or outside of the dropdown.
  */
-export class Backpack extends Component {
+class Backpack extends Component {
   static propTypes = {
     isDarkMode: PropTypes.bool.isRequired,
-    isDisabled: PropTypes.bool.isRequired
+    isDisabled: PropTypes.bool.isRequired,
+    // populated by redux
+    backpackApi: PropTypes.object.isRequired
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
+    backpackFilenames: [],
+    backpackFilesLoading: false,
+    backpackLoadError: false,
+    selectedFiles: []
   };
 
   expandDropdown = () => {
-    this.setState({dropdownOpen: true});
+    this.setState({
+      dropdownOpen: true,
+      backpackLoadError: false
+    });
+    if (this.props.backpackApi.hasBackpack()) {
+      this.setState({backpackFilesLoading: true});
+      this.props.backpackApi.getFileList(
+        this.onBackpackFileLoadError,
+        this.onBackpackFileLoadSuccess
+      );
+    } else {
+      this.setState({
+        backpackFilenames: []
+      });
+    }
   };
 
   collapseDropdown = () => {
@@ -48,9 +63,41 @@ export class Backpack extends Component {
     }
   };
 
+  onBackpackFileLoadError = () => {
+    console.log('load error!');
+    this.setState({
+      backpackLoadError: true,
+      backpackFilesLoading: false
+    });
+  };
+
+  onBackpackFileLoadSuccess = filenames => {
+    console.log('load success!');
+    this.setState({
+      backpackFilenames: filenames,
+      backpackFilesLoading: false,
+      backpackLoadError: false
+    });
+  };
+
   render() {
     const {isDarkMode, isDisabled} = this.props;
-    const {dropdownOpen} = this.state;
+    const {
+      dropdownOpen,
+      backpackFilenames,
+      backpackFilesLoading,
+      backpackLoadError,
+      selectedFiles
+    } = this.state;
+
+    const showFiles =
+      backpackFilenames.length > 0 &&
+      !backpackFilesLoading &&
+      !backpackLoadError;
+    const showNoFiles =
+      !backpackFilesLoading &&
+      !backpackLoadError &&
+      backpackFilenames.length === 0;
 
     return (
       <div>
@@ -76,32 +123,50 @@ export class Backpack extends Component {
             style={{...styles.dropdown, ...(isDarkMode && styles.dropdownDark)}}
             ref={ref => (this.dropdownList = ref)}
           >
-            {placeholderFiles.map((filename, index) => (
-              <div
-                style={{
-                  ...styles.fileListItem,
-                  ...(isDarkMode && styles.fileListItemDark)
-                }}
-                key={`backpack-file-${index}`}
-              >
-                <input
-                  type="checkbox"
-                  id={`backpack-file-${index}`}
-                  name={filename}
+            {showFiles && (
+              <div>
+                {backpackFilenames.map((filename, index) => (
+                  <div
+                    style={{
+                      ...styles.fileListItem,
+                      ...(isDarkMode && styles.fileListItemDark)
+                    }}
+                    key={`backpack-file-${index}`}
+                  >
+                    <input
+                      type="checkbox"
+                      id={`backpack-file-${index}`}
+                      name={filename}
+                    />
+                    <label
+                      htmlFor={`backpack-file-${index}`}
+                      style={styles.fileListLabel}
+                    >
+                      {filename}
+                    </label>
+                  </div>
+                ))}
+                <JavalabButton
+                  text="Import"
+                  style={styles.importButton}
+                  onClick={this.collapseDropdown}
+                  isDisabled={selectedFiles.length > 0}
                 />
-                <label
-                  htmlFor={`backpack-file-${index}`}
-                  style={styles.fileListLabel}
-                >
-                  {filename}
-                </label>
               </div>
-            ))}
-            <JavalabButton
-              text="Import"
-              style={styles.importButton}
-              onClick={this.collapseDropdown}
-            />
+            )}
+            {backpackFilesLoading && (
+              <span className="fa fa-spin fa-spinner" style={styles.spinner} />
+            )}
+            {backpackLoadError && (
+              <div style={styles.message}>
+                {javalabMsg.backpackListLoadError()}
+              </div>
+            )}
+            {showNoFiles && (
+              <div style={styles.message}>
+                {javalabMsg.emptyBackpackMessage()}
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -109,12 +174,10 @@ export class Backpack extends Component {
   }
 }
 
-export default onClickOutside(Radium(Backpack));
-
 const styles = {
   dropdown: {
     position: 'absolute',
-    top: 30,
+    marginTop: 30,
     backgroundColor: color.lightest_gray,
     color: color.darkest_gray,
     zIndex: 20,
@@ -123,7 +186,8 @@ const styles = {
     borderRadius: 2,
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    minWidth: 150
   },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
@@ -175,5 +239,17 @@ const styles = {
   backpackIcon: {
     height: 15,
     opacity: 1
+  },
+  spinner: {
+    fontSize: 22
+  },
+  message: {
+    fontStyle: 'italic',
+    fontSize: 10,
+    lineHeight: 12
   }
 };
+
+export default connect(state => ({
+  backpackApi: state.javalab.backpackApi
+}))(onClickOutside(Radium(Backpack)));
