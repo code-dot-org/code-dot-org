@@ -78,7 +78,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import getLibrary from './spritelab/libraries/libraryFactory';
+import createLibrary from './spritelab/libraries/libraryFactory';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1085,7 +1085,9 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      this.spritelabLibrary = getLibrary(this.level, this.p5Wrapper.p5);
+      this.spritelabLibrary = createLibrary(this.level, {
+        p5: this.p5Wrapper.p5
+      });
 
       const spritelabCommands = this.spritelabLibrary.commands;
       for (const command in spritelabCommands) {
