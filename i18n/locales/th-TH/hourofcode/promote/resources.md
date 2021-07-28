@@ -92,7 +92,7 @@ title: ทรัพยากร
 
 บอกให้โลกรู้ เป็นเจ้าภาพจัดกิจกรรมดังกล่าว ขอให้โรงเรียนในพื้นที่ร่วมลงทะเบียน หรือลองกิจกรรมชั่วโมงเขียนโค้ดด้วยตัวเอง เพราะทุกคนได้ประโยชน์จากการเรียนพื้นฐานของเรื่องนี้ได้
 
-เริ่มต้นได้ที่ http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ title: ทรัพยากร
 
 นี่คือโอกาสที่จะเปลี่ยนแปลงอนาคตของการศึกษาใน [ชื่อเมือง]
 
-ดูรายละเอียดเพิ่มเติมได้จาก http://hourofcode.com/{{ country }} และช่วยประชาสัมพันธ์ต่อ <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

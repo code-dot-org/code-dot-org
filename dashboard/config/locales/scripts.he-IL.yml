@@ -3830,6 +3830,14 @@ he:
           lesson_groups:
             cspSurvey2020:
               display_name: סקר
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: סקר
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -3842,10 +3850,6 @@ he:
           lessons:
             lesson-9:
               name: קהילת מורים
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: כלים
         csa-videos:
           lesson_groups:
             lessonGroup-3:

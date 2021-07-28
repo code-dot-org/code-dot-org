@@ -2137,6 +2137,7 @@ uz:
             CSP Student Post-Course Survey:
               name: CSP Student Post-Course Survey
         CSDU3-Draft:
+          description_short: Dasturlash (Programming)
           lessons:
             Booleans and Conditionals:
               name: Booleans and Conditionals
@@ -2203,6 +2204,7 @@ uz:
             What to Expect:
               name: What to Expect
         TEMP CSD Unit 3:
+          description_short: Dasturlash (Programming)
           lessons:
             Drawing in Game Lab:
               name: Drawing in Game Lab
@@ -2564,6 +2566,8 @@ uz:
               name: Sikllar Kompyutersiz
             Persistence & Frustration:
               name: Persistence & Frustration
+            Programming:
+              name: Dasturlash (Programming)
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
@@ -2624,6 +2628,8 @@ uz:
               name: More Computer Science
             Persistence & Frustration:
               name: Persistence & Frustration
+            Programming:
+              name: Dasturlash (Programming)
             Programming Unplugged:
               name: Programming Unplugged
             Sequences & Algorithms:
@@ -12105,6 +12111,8 @@ uz:
               name: new stage
             Routers and Redundancy:
               name: Routers and Redundancy
+            Packets:
+              name: Paketlar
             Internet Dilemmas pt 1:
               name: Internet Dilemmalari, 1-qism
             Internet Dilemmas, pt 2:
@@ -14093,6 +14101,8 @@ uz:
               name: new stage
             Routers and Redundancy:
               name: Routers and Redundancy
+            Packets:
+              name: Paketlar
             'Lesson 9: Assessment Day':
               name: Baholash kuni
             CS Principles Post-Course Survey:
@@ -15495,6 +15505,9 @@ uz:
             Routers and Redundancy:
               key: Routers and Redundancy
               name: Routers and Redundancy
+            Packets:
+              key: Paketlar
+              name: Paketlar
             'Lesson 9: Assessment Day':
               key: '9-dars: Baholash kuni'
               name: Baholash kuni
@@ -16779,8 +16792,6 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
-            lessonGroup-4:
-              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -16868,11 +16879,28 @@ uz:
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         aiml-2021:
           lessons:
+            lesson5:
+              name: 6-dars
             lesson14:
               description_student: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
               description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
             lesson-22:
               name: Designing Data Collection
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survey
+        csd7-2021:
+          lessons:
+            Introduction to AI Lab:
+              name: 6-dars
+            AI Code of Ethics:
+              description_student: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+              description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+            Survey Planning:
+              name: Designing Data Collection
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survey
         kodea-pd-2021:
           description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing.
           student_description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing.
@@ -16983,10 +17011,6 @@ uz:
           lessons:
             lesson-9:
               name: O‘qituvchilar jamoasi
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Asboblar
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -17030,6 +17054,8 @@ uz:
           lessons:
             lesson-1:
               name: AI Lab
+            lesson-3:
+              name: Test
           title: AI Lab
         tesspltest:
           lessons:
