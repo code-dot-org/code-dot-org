@@ -91,7 +91,7 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1200;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = 800;
+export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -1526,7 +1526,7 @@ function applyTransformOrigin(element, origin) {
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
-StudioApp.prototype.resizeVisualization = function(width, options) {
+StudioApp.prototype.resizeVisualization = function(width) {
   if ($('#visualizationColumn').hasClass('wireframeShare')) {
     return;
   }
@@ -1539,7 +1539,6 @@ StudioApp.prototype.resizeVisualization = function(width, options) {
     'visualizationResizeBar'
   );
   var visualizationColumn = document.getElementById('visualizationColumn');
-
   if (!visualization || !visualizationResizeBar || !visualizationColumn) {
     // In unit tests, this event may be receieved when the DOM isn't fully
     // configured.  In those cases there's no visualization to resize, so
@@ -1547,32 +1546,11 @@ StudioApp.prototype.resizeVisualization = function(width, options) {
     return;
   }
 
-  // available height is bottom of visualizationColumn - top of visualization
-  // then subtract height of slider
-  // constrain width to this value
-
-  if (width === undefined) {
-    width = $('#visualization-container').width();
-  }
-
-  //const visualizationColumnHeight = $(visualizationColumn).outerHeight(true);
-  const visualizationColumnHeight = $(window).height() - 110;
-  const visualizationTop = $(visualization).position().top;
-  const sliderHeight = $('#slider').outerHeight(true) + 30;
-  var constrainVisualizationWidth =
-    visualizationColumnHeight - visualizationTop - sliderHeight; //100;
-
   var oldVizWidth = $(visualizationColumn).width();
   var newVizWidth = Math.max(
     this.minVisualizationWidth,
     Math.min(this.maxVisualizationWidth, width || oldVizWidth)
   );
-
-  if (newVizWidth < constrainVisualizationWidth) {
-    constrainVisualizationWidth = newVizWidth;
-  }
-
-  $('#visualization-container').width(newVizWidth);
 
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = newVizWidth / this.vizAspectRatio + 'px';
@@ -1589,17 +1567,10 @@ StudioApp.prototype.resizeVisualization = function(width, options) {
   visualizationResizeBar.style.lineHeight = newVizHeightString;
   // Add extra width to visualizationColumn if visualization has a border:
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
+  visualization.style.maxWidth = newVizWidthString;
+  visualization.style.maxHeight = newVizHeightString;
 
-  visualization.style.maxWidth = constrainVisualizationWidth + 'px'; // '100px'; //newVizWidthString;
-  visualization.style.maxHeight = constrainVisualizationWidth + 'px'; // '100px'; // newVizHeightString;
-  visualization.style.height = constrainVisualizationWidth + 'px';
-  visualization.style.margin = '0 auto';
-
-  var scale = constrainVisualizationWidth /*newVizWidth*/ / this.nativeVizWidth;
-  if (scale < 0) {
-    // Avoiding inverting.
-    scale = 0;
-  }
+  var scale = newVizWidth / this.nativeVizWidth;
   getStore().dispatch(setVisualizationScale(scale));
 
   const cssScale = `scale(${scale})`;
@@ -1622,10 +1593,8 @@ StudioApp.prototype.resizeVisualization = function(width, options) {
     smallFooter.style.maxWidth = newVizWidthString;
   }
 
-  if (!options || options.fireResizeEvent) {
-    // Fire resize so blockly and droplet handle this type of resize properly:
-    utils.fireResizeEvent();
-  }
+  // Fire resize so blockly and droplet handle this type of resize properly:
+  utils.fireResizeEvent();
 };
 
 /**

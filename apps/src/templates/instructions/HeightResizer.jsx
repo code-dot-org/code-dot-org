@@ -168,6 +168,7 @@ const styles = {
   },
   ellipsisVertical: {
     width: '100%',
+    height: '100%',
     color: color.lighter_gray,
     fontSize: 24,
     textAlign: 'center',

@@ -7,7 +7,8 @@ import {
   sourceValidationUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight
+  setRenderedHeight,
+  setEditorColumnHeight
 } from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
@@ -54,6 +55,7 @@ class JavalabEditor extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     // populated by redux
     setRenderedHeight: PropTypes.func.isRequired,
+    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -133,8 +135,12 @@ class JavalabEditor extends React.Component {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
 
+    this.handleHeightResize(window.innerHeight);
+    this.props.setEditorColumnHeight(window.innerHeight - 60);
+
     window.addEventListener('resize', () => {
-      this.handleHeightResize(window.innerHeight);
+      this.handleHeightResizeThrottled(window.innerHeight);
+      this.props.setEditorColumnHeight(window.innerHeight - 60);
     });
   }
 
@@ -465,6 +471,8 @@ class JavalabEditor extends React.Component {
     this.props.setRenderedHeight(newHeight);
   };
 
+  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 200);
+
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
     // For now, this is mocked out to successfully compile after a set amount of time.
@@ -635,7 +643,7 @@ class JavalabEditor extends React.Component {
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.getPosition()}
-              onResize={this.handleHeightResize}
+              onResize={this.handleHeightResizeThrottled}
               style={styles.resizer}
             />
           </div>
@@ -766,6 +774,7 @@ export default connect(
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),
-    setRenderedHeight: height => dispatch(setRenderedHeight(height))
+    setRenderedHeight: height => dispatch(setRenderedHeight(height)),
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
   })
 )(Radium(JavalabEditor));
