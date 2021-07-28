@@ -1551,7 +1551,6 @@ StudioApp.prototype.resizeVisualization = function(width) {
     this.minVisualizationWidth,
     Math.min(this.maxVisualizationWidth, width || oldVizWidth)
   );
-
   var newVizWidthString = newVizWidth + 'px';
   var newVizHeightString = newVizWidth / this.vizAspectRatio + 'px';
   var vizSideBorderWidth =
