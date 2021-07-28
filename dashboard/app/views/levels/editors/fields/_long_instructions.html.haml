@@ -15,7 +15,7 @@
 
 - if @level.is_a? GamelabJr
   = f.label :instructions_icon,'Instructions Icon'
-  %p Please refer to #{link_to 'Sprite Lab Static Assets', 'https://github.com/code-dot-org/code-dot-org/tree/staging/apps/static/spritelab'} for available assets, then enter the name of the image to use as the instructions icon for this level.
+  %p Please refer to #{link_to 'Sprite Lab Static Assets', 'https://github.com/code-dot-org/code-dot-org/tree/levelbuilder/apps/static/spritelab'} for available assets, then enter the name of the image to use as the instructions icon for this level.
   = f.text_field :instructions_icon, value: @level.instructions_icon
   %p Preview:
   %img.instructions-icon-preview{style: 'height: 64px;'}
@@ -23,12 +23,8 @@
 :javascript
   $(document).ready(function() {
     function updateIconPreview() {
-      var iconName = $('#level_instructions_icon')[0].value;
-      if (iconName) {
-        $('.instructions-icon-preview').attr('src', 'https://studio.code.org/blockly/media/spritelab/' + iconName + '.png');
-      } else {
-        $('.instructions-icon-preview').attr('src', 'https://studio.code.org/blockly/media/spritelab/avatar.png');
-      }
+      var iconName = $('#level_instructions_icon')[0].value || 'avatar';
+      $('.instructions-icon-preview').attr('src', 'https://studio.code.org/blockly/media/spritelab/' + iconName + '.png');
     }
     $('#level_instructions_icon').change(updateIconPreview);
     updateIconPreview();
