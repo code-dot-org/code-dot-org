@@ -212,9 +212,6 @@ Javalab.prototype.init = function(config) {
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
-
-  // Get things arranged once.
-  //this.studioApp_.resizeVisualization(undefined);
 };
 
 // Ensure project is saved before exiting
