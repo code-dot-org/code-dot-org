@@ -6,6 +6,7 @@ import onClickOutside from 'react-onclickoutside';
 import JavalabButton from './JavalabButton';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
+import {setSource} from './javalabRedux';
 
 /**
  * A button that drops down to a set of importable files, and closes itself if
@@ -15,6 +16,7 @@ class Backpack extends Component {
   static propTypes = {
     isDarkMode: PropTypes.bool.isRequired,
     isDisabled: PropTypes.bool.isRequired,
+    onImport: PropTypes.func.isRequired,
     // populated by redux
     backpackApi: PropTypes.object.isRequired
   };
@@ -45,6 +47,20 @@ class Backpack extends Component {
     }
   };
 
+  handleImport = () => {
+    const {selectedFiles} = this.state;
+    if (selectedFiles.length > 0) {
+      selectedFiles.forEach(filename => {
+        this.props.backpackApi.fetchFile(
+          filename,
+          () => {} /* onError, currently do nothing */,
+          fileContents => this.props.onImport(filename, fileContents)
+        );
+      });
+    }
+    this.collapseDropdown();
+  };
+
   collapseDropdown = () => {
     this.setState({dropdownOpen: false});
   };
@@ -64,7 +80,6 @@ class Backpack extends Component {
   };
 
   onBackpackFileLoadError = () => {
-    console.log('load error!');
     this.setState({
       backpackLoadError: true,
       backpackFilesLoading: false
@@ -72,12 +87,27 @@ class Backpack extends Component {
   };
 
   onBackpackFileLoadSuccess = filenames => {
-    console.log('load success!');
     this.setState({
       backpackFilenames: filenames,
       backpackFilesLoading: false,
       backpackLoadError: false
     });
+  };
+
+  handleFileCheckboxChange = event => {
+    const filename = event.target.name;
+    const filenameIndex = this.state.selectedFiles.indexOf(filename);
+    if (event.target.checked && filenameIndex < 0) {
+      this.setState({
+        selectedFiles: [...this.state.selectedFiles, filename]
+      });
+    } else if (!event.target.checked && filenameIndex >= 0) {
+      const newFileList = [...this.state.selectedFiles];
+      newFileList.splice(filenameIndex, 1);
+      this.setState({
+        selectedFiles: newFileList
+      });
+    }
   };
 
   render() {
@@ -137,6 +167,7 @@ class Backpack extends Component {
                       type="checkbox"
                       id={`backpack-file-${index}`}
                       name={filename}
+                      onChange={this.handleFileCheckboxChange}
                     />
                     <label
                       htmlFor={`backpack-file-${index}`}
@@ -149,8 +180,8 @@ class Backpack extends Component {
                 <JavalabButton
                   text="Import"
                   style={styles.importButton}
-                  onClick={this.collapseDropdown}
-                  isDisabled={selectedFiles.length > 0}
+                  onClick={this.handleImport}
+                  isDisabled={selectedFiles.length === 0}
                 />
               </div>
             )}
@@ -250,6 +281,11 @@ const styles = {
   }
 };
 
-export default connect(state => ({
-  backpackApi: state.javalab.backpackApi
-}))(onClickOutside(Radium(Backpack)));
+export default connect(
+  state => ({
+    backpackApi: state.javalab.backpackApi
+  }),
+  dispatch => ({
+    setSource: (filename, source) => dispatch(setSource(filename, source))
+  })
+)(onClickOutside(Radium(Backpack)));
