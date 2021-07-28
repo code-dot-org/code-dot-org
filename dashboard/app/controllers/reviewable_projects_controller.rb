@@ -2,7 +2,6 @@ class ReviewableProjectsController < ApplicationController
   before_action :authenticate_user!
   before_action :decrypt_channel_id, only: [:create]
 
-  check_authorization
   load_and_authorize_resource only: [:destroy]
 
   # POST /reviewable_projects
@@ -30,6 +29,23 @@ class ReviewableProjectsController < ApplicationController
     else
       return head :bad_request
     end
+  end
+
+  def for_level
+    peer_user_ids = current_user.
+      sections_as_student.
+      map(&:followers).
+      flatten.
+      pluck(:student_user_id).
+      select {|student_user_id| current_user.id != student_user_id}
+
+    peers_ready_for_review = ReviewableProject.where(
+      user_id: peer_user_ids,
+      level_id: params[:level_id],
+      script_id: params[:script_id]
+    ).map(&:user)
+
+    return render json: peers_ready_for_review.pluck(:id, :name)
   end
 
   def decrypt_channel_id
