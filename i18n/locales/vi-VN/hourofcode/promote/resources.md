@@ -92,7 +92,7 @@ This year, let's make it even bigger. I’m asking you to join the Hour of Code 
 
 Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ That’s why our entire school is joining in on the largest learning event in hi
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
@@ -146,13 +146,13 @@ See http://hourofcode.com/{{ country }} for details, and help spread the word. <
 
 Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Tất cả Apple Store trên thế giới đều tổ chức Giờ lập trình. Even President Obama wrote his first line of code as part of the campaign.
 
 Đó là lý do tại sao toàn bộ [X number] học sinh tại [SCHOOL NAME] sẽ tham gia vào sự kiện học tập lớn nhất trong lịch sử: Giờ Lập Trình, trong Tuần lễ Giáo dục về Khoa học Máy tính (ngày 3-9 tháng 12).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+Giờ lập trình, do tổ chức phi lợi nhuận Code.org và hơn 100 tổ chức khác triển khai, là một phong trào toàn cầu với niềm tin rằng học sinh ngày nay đã sẵn sàng học các kỹ năng quan trọng để đạt được thành công trong thế kỷ 21. Please join us.
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 

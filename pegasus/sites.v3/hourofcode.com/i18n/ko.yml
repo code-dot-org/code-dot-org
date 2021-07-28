@@ -9,25 +9,25 @@ ko:
   campaign_date_start_long: 12월 7일
   campaign_date_short: 12월 7일-13일
   campaign_date_full: 12월 7일-13일
-  campaign_date_year: 2020년
-  campaign_date_full_year: 2020년 12월 7일부터 13일
+  campaign_date_year: 2016년
+  campaign_date_full_year: 2016년 12월 5일부터 11일
   latam_campaign_date_start_short: 10월 1일
   latam_campaign_date_start_long: 10월 1일
   latam_campaign_date_short: 10월 1일 ~12월 18일
   latam_campaign_date_full: 10월 1일 ~12월 18일
-  latam_campaign_date_year: 2020년
+  latam_campaign_date_year: 2016년
   latam_campaign_date_full_year: 2020년 10월 1일 ~2020년 12월 18일
   europe_campaign_date_start_short: 10월 10일
   europe_campaign_date_start_long: 10월 10일
   europe_campaign_date_short: 10월 10일~25일
   europe_campaign_date_full: 10월 10일~25일
-  europe_campaign_date_year: 2020년
+  europe_campaign_date_year: 2016년
   europe_campaign_date_full_year: 2020년 10월 10일~25일
   africa_campaign_date_start_short: 10월 1일
   africa_campaign_date_start_long: 10월 1일
   africa_campaign_date_short: 10월 1일~31일
   africa_campaign_date_full: 10월 1일~31일
-  africa_campaign_date_year: 2020년
+  africa_campaign_date_year: 2016년
   africa_campaign_date_full_year: 2020년 10월 1일~31일
   hoc2020_header: 지금 배워서, 보다 밝은 미래를 건설하세요.
   hoc2020_header_with_line_break_markdown: |-

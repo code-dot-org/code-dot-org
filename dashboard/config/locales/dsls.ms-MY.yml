@@ -2188,3 +2188,325 @@ ms-MY:
         display_name: Akhir Projek Kursus
       courseF_EOC_2020:
         display_name: Akhir Projek Kursus
+      CourseF_outbreak_story2:
+        markdown: "# Wabak: Berfikir Seperti Saintis\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang hebat untuk
+          mempelajari perkara-perkara yang sukar diperhatikan di dunia nyata. Ia membantu
+          saintis menyelesaikan masalah dan menguji idea baru dengan selamat dan cekap.
+          Simulasi anda adalah cara untuk menunjukkan bagaimana wabak virus di Bandar
+          Raksasa mungkin berlaku.\n\n## Tetapkan Semula dan Main Semula!\nWalaupun
+          anda menulis kod sendiri, ia mustahil untuk mengetahui dengan tepat apa
+          yang akan berlaku semasa anda menekan jalan. Raksasa berkeliaran secara
+          rawak, jadi anda tidak tahu sekiranya virus itu akan tersebar dengan cepat
+          atau lambat. Setiap kali anda menukar kod anda, pastikan untuk menjalankan
+          simulasi anda lebih dari sekali. Perkara tidak akan berlaku dengan cara
+          yang sama dua kali!\n\n## Mengumpul Data\nCuba tuliskan pemerhatian anda
+          semasa menjalankan simulasi anda. Anda boleh mengira bilangan raksasa yang
+          jatuh sakit atau menggunakan pemasa untuk melihat seberapa cepat perkara
+          itu berlaku. Contohnya, berapa lama biasanya semua raksasa jatuh sakit jika
+          tiada yang mempunyai pelitup? \n\n## Membuat Ramalan\nSekiranya anda memahami
+          model anda, anda boleh menggunakannya untuk membuat ramalan. Anda juga boleh
+          mengubah cara simulasi anda berjalan dan meneka apa yang akan berlaku secara
+          berbeza. Sebagai contoh:\n* Apa yang akan berlaku sekiranya terdapat dua
+          kali ganda raksasa?\n* Apa yang akan berlaku sekiranya raksasa bergerak
+          pada separuh kelajuan?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Adakah Monster Town seperti dunia nyata?\nTerdapat
+          had realistik kepada model. \n* Apakah persamaan simulasi wabak anda dengan
+          wabak virus dunia nyata?\n* Apakah perbezaannya?\nSelepas anda menyelesaikan
+          aktiviti ini, bincangkan soalan-soalan ini dengan guru atau keluarga anda!\n\n##
+          Apa lagi yang boleh dimodel?\nAnda telah mencipta model yang berfungsi untuk
+          wabak di Bandar Raksasa. Apakah perkara yang tidak dapat dilakukan oleh
+          simulasi anda atau anda perkara yang diharapkan? Tekan teruskan untuk terus
+          berjalan dan belajar mencipta lebih banyak model:\n* Menambah bilangan raksasa
+          dalam simulasi\n* Membantu raksasa pulih dari virus\n* Kebarangkalian, imuniti,
+          vaksin, dan banyak lagi!\n\nAnda juga boleh berkongsi model simulasi anda
+          dengan orang lain, atau berkongsi mesej tentang apa yang anda rasa dapat
+          kami lakukan untuk membantu menjaga kesihatan orang lain ketika virus merebak
+          ke bandar. "
+      OPD-K5 CS Courses_dani:
+        markdown: "# Merancang > Langkah permulaan di Code.org\n\n\n## Langkah 1:
+          Pilih kursus\nSemua kursus kami -- daripada prapembaca sehingga peringkat
+          sekolah menengah -- disenaraikan dalam **[katalog kursus](https://studio.code.org/courses)**.
+          Untuk mencari pelajaran Asas CS yang anda telah amalkan, sila pergi ke **[halaman
+          sekolah rendah] kami (https://code.org/educate/curriculum/elementary-school)**
+          dan tatal ke bawah sehingga sampai ke bahagian \"Kursus\". Semua kursus
+          kami tersedia tanpa sebarang kos. Sila bersembang dengan dengan rakan anda
+          di sekolah untuk menentukan sejauh mana kurikulum kursus boleh diintegrasikan
+          dengan pelbagai mata pelajaran.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Langkah 2: Sediakan bahagian kelas anda\nSediakan bahagian kelas untuk melihat
+          kemajuan pelajar anda, cetak kad log masuk untuk pelajar anda, uruskan akaun
+          mereka dan cetak sijil yang boleh mereka bawa pulang apabila mereka menyelesaikan
+          kursus itu. Klik pautan ini untuk **[menonton video pendek](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          yang menunjukkan cara menyediakan kelas sains komputer pertama anda di Code.org.
+          Anda juga boleh mengikuti langkah dalam **[artikel sokongan ini](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Langkah 3: Tetapkan kursus kepada bahagian anda\nKlik pada kursus yang anda
+          sedang mengajar -- anda sepatutnya melihat skrin yang kelihatan seperti
+          di bawah. Kemudian, anda boleh mengklik pada \"Tetapkan Kursus\" dan tetapkan
+          kursus itu kepada satu daripada bahagian anda. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Langkah 4: Mula mengajar! \nSemua yang diperlukan ialah hanya satu pelajaran
+          untuk membawa konsep sains komputer ke dalam kelas anda. Sebaik sahaja anda
+          dapat lihat minat pelajar terhadap CS, lakukan lebih lanjut dengan rancangan
+          pelajaran harian bertujuan membimbing pelajar anda, aktiviti nirplag yang
+          boleh anda lakukan tanpa menggunakan komputer dan forum untuk menyambung
+          kepada guru lain.\n\n\n\n"
+      courseAB_EOC_2021:
+        display_name: Akhir Projek Kursus
+      courseB_EOC_2021:
+        display_name: Akhir Projek Kursus
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_2021:
+        display_name: Akhir Projek Kursus
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_EOC_2021:
+        display_name: Akhir Projek Kursus
+      courseE_EOC_examples_2021:
+        display_name: Akhir Projek Kursus
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_EOC_2021:
+        display_name: Akhir Projek Kursus
+      courseF_EOC_examples_2021:
+        display_name: Akhir Projek Kursus
+      courseF_EOC_samples_2021:
+        display_name: Akhir Projek Kursus
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      express_EOC_2021:
+        display_name: Akhir Projek Kursus
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

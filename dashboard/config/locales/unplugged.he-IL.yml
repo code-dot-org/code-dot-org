@@ -243,8 +243,6 @@ he:
           ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
       PaperPlanes_2019:
         title: 'אלגוריתמים מהחיים: מטוסי נייר'
-      test-uid-passthrough:
-        title: " "
       PlantASeed_2019:
         title: 'אלגוריתמים מהחיים: שתול זרעון'
         desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
@@ -257,3 +255,6 @@ he:
         desc: " "
       timeforcs_demo_conditionals:
         title: תנאים
+      SP-VPL-CSD-21-CourseNavigation:
+        title: " "
+        desc: " "

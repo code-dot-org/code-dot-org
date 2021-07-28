@@ -454,6 +454,68 @@
         },
         "courseA_playLab_events6_2021": {
           "courseA_playLab_events6_1": "Med denne kan du vælge en tilfældig lyd. Så ved du ikke hvad du får, før du hører lyden!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Her vælger du typen af danser."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Føj denne blok til dit program.",
+          "arrow_buttons": "Tryk på piletasterne for at kontrollere din danser."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Føj denne blok til dit program!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Føj en ny begivenhed til dit program."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Ny blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Ny blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Ny blok!",
+          "new_block_4": "Ny blok!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Denne lille instruktion fortæller computeren, at den skal køre et STORT kodestykke med det samme navn i arbejdsområdet."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Dette er et gentagelsesloop!  Træk det ind i arbejdsområdet, og fyld det med den kode, du vil køre igen og igen."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan svæve over vand, men spilleren kan ikke!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Du kan ikke smide disse blokke væk, men du kan redigere dem!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan svæve over lava, men spilleren kan ikke!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Vi har lagt nogle blokke her, som du kan komme i gang med"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Koden vil starte opførelsen af dit hus. Kan du fuldende den?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Tryk på \"Kør\" for at prøve dit program"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Gentag handlinger ved at placere blokke herinde"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Denne kode søger efter lava, kan du tilføje en \"ryk fremad\"-kommando?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Udvind jern!"
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Dette tal fortæller hvor mange af disse blokke du kan bruge i denne opgave."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Klik på TIP! hvis du har brug for hjælp!"
         }
       }
     }

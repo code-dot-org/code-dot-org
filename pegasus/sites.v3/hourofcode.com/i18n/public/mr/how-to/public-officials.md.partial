@@ -6,61 +6,61 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to involve your entire community
+# तुमच्या संपूर्ण समुदायाला कसे सहभागी करून घ्यायचे
 
-### Show your state, district, or city your commitment to computer science
+### तुमच्या राज्याला, जिल्ह्याला किंवा शहराला तुमची संगणक शास्त्राशी असलेली बांधिलकी दाखवा
 
 * * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## तुम्ही तुमच्या अवर ऑफ कोडसाठी निवडून आलेल्या प्रतिनिधीला बोलावणार आहात का?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+त्यांची भेट आणि तुमचा कार्यक्रम चांगला पार पाडण्यासाठी तुम्हाला आवश्यक असलेली सर्व माहिती असलेले [आमचे टूलकीट](/files/elected-official.pdf)पहा!
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+डावीकडून उजवीकडे:*अवर ऑफ कोडमध्ये सहभागी झालेले अर्कान्सास, नॉर्थ कॅरोलिना आणि अॅरिझोनाचे गव्हर्नर्स.* 
 
-## सर्व शाळांचा, तसेच सर्व विद्यार्थ्यांचा सहभाग घ्यावा!
+## सर्व शाळांना सहभागी करून घ्यावे, सर्व विद्यार्थ्यांना शिकायला मिळावे!
 
-### 1. Read our one-pager
+### 1. आमचे एक पानी माहितीपत्रक वाचा
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+[संगणक शास्त्र शिक्षण का महत्त्वाचे आहे]({{ localized_files/hoc_one_pager }}) आणि तुम्ही अवर ऑफ कोडला पाठिंबा देऊन या प्रयत्नाला कशी मदत करू शकता ते पहा.
 
-### 2. Recruit local schools and districts
+### 2. स्थानिक शाळांची आणि जिल्ह्यांची नोंदणी करा
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+[हे ईमेल]({{ promote/sample_emails }}) किंवा [हा सारांश]({{ promote/stats_url }}) आरंभ बिंदू म्हणून वापरा आणि शाळांसाठी तसेच जिल्ह्यांसाठी हे [कसे करावे?]({{ urls/how_to_guide }}) मार्गदर्शक पहा.
 
-### 3. Host an Hour of Code event
+### 3. अवर ऑफ कोड कार्यक्रम होस्ट करा
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+कार्यक्रमाचा नमुना, [माध्यमांपर्यंत पोचण्यासाठी कीट]({{ promote/press_kit_url }}) आणि कार्यक्रमाच्या नियोजनासाठी इतर संसाधने असलेला आमचा [कार्यक्रम कसा करावा मार्गदर्शक ]({{ urls/how_to_events }}) पहा. कार्यक्रम होस्ट करणे आणि सहभाग वाढवणे हा अवर ऑफ कोडच्या प्रचाराचा एक चांगला मार्ग आहे.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. संगणक शास्त्र शिक्षण सप्ताहात ({{ campaign_date/short }}) एखाद्या कार्यक्रमात सहभागी होणे
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+तुमच्या जिल्ह्यातील, शहरातील किंवा राज्यातील सहभागी झालेले [वर्ग आणि शाळा शोधा]({{ urls/events }}).
 
-### 5. Issue a proclamation or resolution
+### 5. एक घोषणा किंवा प्रस्ताव जारी करा
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+राज्यातील आणि स्थानिक विधायकांना वापरता येईल असा संगणक शास्त्र शिक्षण सप्ताहाला आणि त्याच्या ध्येयांना पाठिंबा देणारा हा [नमुना प्रस्ताव]({{ urls/proclamation }}) पहा.
 
-### 6. Draft an op-ed
+### 6. सह-संपादकीय लिहा
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+तुमच्या स्थानिक वृत्तपत्रात तुमचे मत असलेला लेख प्रसिद्ध करण्याचा विचार करा. संगणक शास्त्र शिक्षण सप्ताहाला आणि त्याच्या ध्येयांना पाठिंबा देणारे हे [नमुना सहसंपादकीय ]({{ urls/proclamation }}) पहा.
 
-### 7. Spread the word
+### 7. याचा प्रचार करा
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[अवर ऑफ कोड व्हिडीओ फेसबुकवर शेअर करा](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) आणि [तुमच्या पाठिंब्याबद्दल ट्विटरवर बोला](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). तुम्ही आणि इतर प्रौढ लोक अवर ऑफ कोड करतानाच्या कार्यक्रमाची छायाचित्रे किंवा व्हिडीओ शेअर करा. **#HourOfCode** हा हॅशटॅग करा म्हणजे Code.org (@code.org) ला तो पाहता येईल आणि पाठिंब्याचा प्रचार करता येईल. किंवा फक्त हे नमुना ट्वीट्स वापरा:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *प्रत्येक विद्यार्थ्याला, मग तो मुलगा असो व मुलगी संगणक शास्त्र शिकण्याची संधी मिळाली पाहिजे. एक #HourOfCode सुरू करण्यासाठी आम्हाला सामील व्हा [https://hourofcode.com]({{ urls/home }})*
+- *आज, आम्हाला अवर ऑफ कोड चळवळीत सामील होताना अभिमान वाटत आहे. तुम्हाल पण व्हायचे आहे का? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 
-### 8. Issue a press release
+### 8. एक प्रेस रिलीज जारी करा
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[हा नमुना ]({{ promote/official_press_release }}) मार्गदर्शक म्हणून वापरा.
 
-### 9. Connect locally
+### 9. स्थानिक पातळीवर कनेक्ट करा
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[तुमच्या राज्यातील संगणक शास्त्राच्या शिक्षणाबद्दल अधिक जाणून घ्या]({{ urls/advocacy }}). तिथल्या याचिकेवर स्वाक्षरी करा आणि मग तुम्हाला Code.org च्या स्थानिक, राज्य आणि केंद्रिय पातळीवरील प्रचाराच्या प्रयत्नांची माहिती मिळेल.
 
 {{ signup_button }}

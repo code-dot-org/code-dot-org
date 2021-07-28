@@ -145,8 +145,8 @@ ku:
     additional_information: "زانیاری زیاترمان پێویستە بۆ بەردەوام بوون لە خۆتۆماركردن."
     user_type_button: "جۆری هەژمارەكە نوێبكەرەوە"
     user_type_label: "جۆری هەژمار"
-    user_type_teacher: "مامۆستا"
     user_type_student: "قوتابی"
+    user_type_teacher: "مامۆستا"
     field_is_required: "داواکراوە"
     accept_terms: "پێویستە ڕازیبیت تا هەژمار دروست بكەیت."
     error: "هەڵەیەك ڕوویدا."
@@ -277,6 +277,7 @@ ku:
       student: 'قوتابی'
   user:
     parent_guardian_email_label: "پۆستی ئەلیكترۆنی باوان/بەخێوکەر"
+    remove_parent_email_label: "لابدە"
   home:
     student_reg_link: 'قوتابی'
     online: سەرهێڵ
@@ -288,6 +289,7 @@ ku:
     student: 'قوتابی'
     teacher: 'مامۆستا'
   footer:
+    more: 'زیاتر'
     support: 'یارمەتی و کۆمەڵگا'
     support_url: 'http://support.code.org'
     tos_short: 'بڕگەکان'
@@ -329,7 +331,7 @@ ku:
       email: 'پۆستی ئەلیكترۆنی'
       school_name: 'ناوی قوتابخانە'
       school_country: 'وڵاتی قوتابخانە'
-      colombian_school_name: 'ناوی قوتابخانە'
+      colombian_chilean_school_name: 'ناوی قوتابخانە'
     form_entries:
       gender:
         male: 'نێر'

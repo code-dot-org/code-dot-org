@@ -1,5 +1,18 @@
 {
   "clicked": "rákattintva",
   "clickedSprite": "szereplőre kattintva",
-  "shareGame": "Oszd meg a játékodat:"
+  "newSprite": "új szereplő",
+  "subject": "téma",
+  "object": "tárgy",
+  "errorLoadingAnimation": " Úgy néz ki, hogy problémákba ütköztünk a \"{animationName}\" betöltésével. Győzödjön meg arról, hogy jó az internet kapcsolata és próbálja meg újratölteni az oldalt. Hogyha ez a probléma folytatódik, lehetséges, hogy ez az animáció törött. Ebben az esetben, az animáció letörlésével tudnád folytatni.",
+  "reinfFeedbackMsg": "Befejezted! Nyomd meg a \"Folytatást\" hogy tovább tudj lépni a következő szintre.",
+  "shareGame": "Oszd meg a játékodat:",
+  "spritelabFeedbackCreateFishWithBehavior": "Csinálnod kell legalább egy hal szereplőt és kell neki adnod egy fajta működést",
+  "spritelabFeedbackMoveFishLeftRight": "A hal szereplődnek balra vagy jobbra kéne mozognia. Próbáld meg megváltoztatni a működését.",
+  "spritelabFeedbackChangeBackgroundColor": "Meg kell cserélned a hátteret valami másra, mint fehér üresség.",
+  "spritelabFeedbackCreateTwoSprites": "Pontosan 2 szereplőt kell készítened",
+  "spritelabFeedbackTwoSpritesWithCostumes": "A 2 karakterednek különböző jelmezek kellenek",
+  "spritelabFeedbackUseSpinningBehavior": "A karakterednek el kell kezdenie pörögnie. Próbáld meg megváltoztatni a működését",
+  "spritelabFeedbackPinkAlienBehavior": "A rószaszín űrlény karaktered nem kezdett el működni.",
+  "spritelabFeedbackCreateThreeAliens": "Csinálnod kell egy kék űrlényt, rószaszín űrlényt és egy sárga űrlényt"
 }

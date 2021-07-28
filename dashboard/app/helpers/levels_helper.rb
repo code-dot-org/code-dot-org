@@ -185,6 +185,13 @@ module LevelsHelper
       readonly_view_options if @user
     end
 
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
+    end
+
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
 

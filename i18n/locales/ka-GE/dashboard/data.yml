@@ -460,6 +460,7 @@ ka:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: ციკლები BB-8-სთან ერთად
         CSF_harvester_skinOverview_K-1: მოსავლის ამღები
+        CSF_harvester_loops_K1: ციკლები მკრეფავში
         CSF_scrat_loops_K1: ციკლები გამყინვარების პერიოდში
         CSF_scrat_loops_CF: ციკლები გამყინვარების პერიოდში
         CSF_if_allskins: ბლოკი „თუ“
@@ -480,6 +481,7 @@ ka:
         csd_problem_solving_process: პროებლემების გადაჭრის პროცესი
         CSF_SpriteLab_SpritesInAction_v2: სპრაიტები მოქმედებაში
         csd_debugging: გამართვა
+        csf_follow_the_digital_trail: მიჰყევით ციფრულ ნაკვალევს
         csf_private_and_personal_information: კონფიდენციალური და პირადი ინფორმაცია
         csd_what_computers_are: რა არის კომპიუტერი?
         playlab_2021: თამაშების ლაბი - შესავალი

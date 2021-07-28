@@ -176,7 +176,8 @@ describe('CourseOverview', () => {
           title: '2017',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         },
         {
           name: 'csp-2018',
@@ -184,7 +185,8 @@ describe('CourseOverview', () => {
           title: '2018',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         }
       ];
       const wrapper = shallow(
@@ -212,7 +214,8 @@ describe('CourseOverview', () => {
           title: '2017',
           canViewVersion: false,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         },
         {
           name: 'csp-2018',
@@ -220,7 +223,8 @@ describe('CourseOverview', () => {
           title: '2018',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         }
       ];
       const wrapper = shallow(

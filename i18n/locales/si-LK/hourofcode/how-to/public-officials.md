@@ -4,61 +4,61 @@ title: රාජ්‍ය නිලධාරින් සඳහා උපදෙ�
 
 {{ signup_button }}
 
-# How to involve your entire community
+# ඔබේ සමස්ත ප්‍රජාව සම්බන්ධ කර ගන්නේ කෙසේද 
 
-### Show your state, district, or city your commitment to computer science
+### පරිගණක විද්‍යාව සඳහා ඔබගේ කැපවීම ඔබගේ ප්‍රාන්තය, දිස්ත්‍රික්කය හෝ නගරය පෙන්වන්න
 
 * * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## ඔබ තේරී පත් වූ නිලධාරියෙකු ඔබේ කේත වේලාවේ සත්කාරකත්වය දරනවාද?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+ අපගේ මෙවලම් කට්ටලය බලන්න </ 0> ඔබට ඔවුන්ගේ සංචාරය සහ ඔබේ සිදුවීම විශිෂ්ට කිරීමට අවශ්‍ය සියලු තොරතුරු සමඟ!</p> 
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+වමේ සිට දකුණට: * ආකැන්සාස්, උතුරු කැරොලිනා සහ ඇරිසෝනා හි ආණ්ඩුකාරවරු පැයක කේතයකට සහභාගී වෙති. </ 0></p> 
 
-## Get every school participating, every student learning!
+## සෑම පාසලකටම සහභාගී වන්න, සෑම සිසුවෙකුම ඉගෙන ගන්න!
 
-### 1. Read our one-pager
+### 1. අපගේ එක පිටුව කියවන්න
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+[ පරිගණක විද්‍යා අධ්‍යාපනය වැදගත් වන්නේ ඇයි ]({{localized_files/hoc_one_pager }}) සහ කේත වේලාවට සහය දැක්වීමෙන් ඔබට උත්සාහයට උදව් කළ හැකි ආකාරය බලන්න.
 
-### 2. Recruit local schools and districts
+### 2. ප්‍රාදේශීය පාසල් හා දිස්ත්‍රික්ක බඳවා ගැනීම
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+ආරම්භක ලක්ෂ්‍යයක් ලෙස [ මෙම විද්‍යුත් තැපෑල ](== {Promot/sample_email }}) හෝ <a href="== {Promot / stats_url} " පාසල් සහ දිස්ත්‍රික්ක සඳහා මෙම [ කෙසේද-](== {urls/how_to_guide }}) බලන්න.
 
-### 3. Host an Hour of Code event
+### 3. පැයක කේත සිදුවීමක් සත්කාර කරන්න
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+නියැදි සංදර්ශනයක් සඳහා අපගේ <a href="== {urls/how_to_events }}" සිද්ධිය කෙසේ මඟ පෙන්විය යුතුද යන්න </a> බලන්න,  මාධ්‍ය එළිදැක්වීමේ කට්ටලය < / a>, සහ වෙනත් සිදුවීම් සැලසුම් කිරීමේ සම්පත්. කේතයේ වේලාව ප්‍රවර්ධනය කිරීමට සහ සහභාගීත්වය වැඩි කිරීමට උත්සවයක් සත්කාරකත්වය විශිෂ්ට ක්‍රමයකි.</p> 
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. පරිගණක විද්‍යා අධ්‍යාපන සතිය තුළ ({{ප්‍රචාරණ_දිනය / කෙටි}}) උත්සවයකට සහභාගී වන්න.
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+ඔබේ දිස්ත්‍රික්කයට, නගරයට හෝ ප්‍රාන්තයට සහභාගී වන [ පන්ති කාමර සහ පාසල් සොයා ගන්න ](== {urls/events }}).
 
-### 5. Issue a proclamation or resolution
+### 5. ප්‍රකාශයක් හෝ යෝජනාවක් නිකුත් කරන්න 
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+පරිගණක විද්‍යා අධ්‍යාපන සතියට සහ රාජ්‍ය හා ප්‍රාදේශීය ව්‍යවස්ථාදායකයින්ට භාවිතා කළ හැකි එහි අරමුණු සඳහා සහය දක්වන මෙම [ නියැදි විභේදනය ]({{urls/proclamation }}) බලන්න.
 
-### 6. Draft an op-ed
+### 6. කෙටුම්පත සහ විවෘත සංස්කරණය
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+ඔබේ ප්‍රාදේශීය පුවත්පතේ මතයක් ප්‍රකාශයට පත් කිරීම සලකා බලන්න. පරිගණක විද්‍යා අධ්‍යාපන සතිය සහ එහි අරමුණු සඳහා සහාය වන මෙම [ නියැදිය බලන්න.]({{ promote/op_ed }})
 
-### 7. Spread the word
+### 7. වචනය පැතිරෙන්න
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[ෆේස්බුක් හි පැය පැය වීඩියෝව බෙදා ගන්න ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) සහ [ට්විටර් හි ඔබගේ සහාය ගැන කතා කරන්න](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). සිදුවීම් වල පින්තූර හෝ ඔබ සහ අනෙකුත් වැඩිහිටියන්ගේ පැය කේතයේ වීඩියෝවක් බෙදා ගන්න. ** #HourOfCode ** නම් හැෂ් ටැගය භාවිතා කරන්න, එවිට Code.org (@ code.org) හට එය දැක බලා සහාය ප්‍රවර්ධනය කළ හැකිය. නැතහොත්, මෙම නියැදි ට්වීට් භාවිතා කරන්න:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *සෑම සිසුවෙකුටම, පිරිමි ළමයෙකුට හෝ ගැහැණු ළමයෙකුට පරිගණක විද්‍යාව ඉගෙන ගැනීමට අවස්ථාව තිබිය යුතුය. එක් #HourOfCode [ https://hourofcode.com ](=== urls/home }a>) සමඟ ආරම්භ කිරීමට අප හා එක්වන්න.*
+- *අද අපි පැය කේත ව්‍යාපාරයට සම්බන්ධ වීම ගැන ආඩම්බර වෙමු. ඔබ සිටිනවාද? #HourOfCode [ https://hourofcode.com ]({{ urls/home }})*
 
-### 8. Issue a press release
+### 8. පුවත්පත් නිවේදනයක් නිකුත් කරන්න
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[ මෙම නියැදිය භාවිතා කරන්න ]({{ප්‍රවර්ධනය / නිල_ප්‍රෙස්_ප්‍රකාශනය }ibl) මාර්ගෝපදේශයක් ලෙස.
 
-### 9. Connect locally
+### 9. දේශීයව සම්බන්ධ වන්න
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[ ඔබේ ප්‍රාන්තයේ පරිගණක විද්‍යා අධ්‍යාපනය ගැන තව දැනගන්න ]({{urls/advocacy }a>). පෙත්සම එහි අත්සන් කරන්න, ඔබට Code.org හි ප්‍රාදේශීය, ප්‍රාන්ත සහ ෆෙඩරල් උපදේශන උත්සාහයන් පිළිබඳ යාවත්කාලීන කිරීම් ලැබෙනු ඇත.
 
 {{ signup_button }}

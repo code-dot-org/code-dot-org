@@ -3,6 +3,7 @@ bs:
   data:
     parameter_names:
       actor: lik
+      color: boja
       counter: brojač
       height: visina
       honey: med

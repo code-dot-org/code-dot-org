@@ -1,4 +1,3 @@
----
 my:
   data:
     blocks:
@@ -104,10 +103,16 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: အားလုံး
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_startMappingEach:
         options:
           GROUP:
@@ -120,11 +125,11 @@ my:
         options:
           STRING:
             '"diamond"': စိန်
-            '"x"': "×"
+            '"x"': '×'
       Dancelab_whenKey:
         options:
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -133,18 +138,22 @@ my:
       gamelab_isKeyPressed:
         options:
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
             '"while"': စဉ်တွင်
           KEY:
-            '"x"': "×"
+            '"x"': '×'
       gamelab_randColor:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            undefined: ဘာမှမရှိ
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -212,6 +221,10 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': မိုးရွာသည်
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
