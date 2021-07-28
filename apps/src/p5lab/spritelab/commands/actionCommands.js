@@ -77,6 +77,22 @@ export const commands = {
     sprites.forEach(sprite => this.p5.edges.displace(sprite));
   },
 
+  glideTo(spriteArg, location) {
+    if (!location) {
+      return;
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      // Remove any other glides in progress
+      this.removeBehavior(sprite, {name: 'glide'});
+
+      this.addBehavior(sprite, {
+        func: behaviorCommands.glideFunc.apply(this, [location]),
+        name: 'glide'
+      });
+    });
+  },
+
   isCostumeEqual(spriteArg, costumeName) {
     let sprites = this.getSpriteArray(spriteArg);
     if (sprites.length === 0) {

@@ -36,6 +36,28 @@ export const commands = {
     };
   },
 
+  glideFunc(location) {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      let distance = Math.sqrt(
+        (sprite.x - location.x) ** 2 + (sprite.y - location.y) ** 2
+      );
+      if (distance < sprite.speed) {
+        sprite.x = location.x;
+        sprite.y = location.y;
+        this.removeBehavior(sprite, {name: 'glide'});
+      }
+
+      let angle = Math.atan2(location.y - sprite.y, location.x - sprite.x);
+      if (!isNaN(angle)) {
+        let dy = Math.sin(angle) * sprite.speed;
+        let dx = Math.cos(angle) * sprite.speed;
+        sprite.x += dx;
+        sprite.y += dy;
+      }
+    };
+  },
+
   avoidingTargetsFunc() {
     return spriteArg => {
       const sprite = this.getSpriteArray(spriteArg)[0];
