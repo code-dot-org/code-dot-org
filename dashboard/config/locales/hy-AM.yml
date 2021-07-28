@@ -97,8 +97,8 @@ hy:
     mismatch_password: Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում
     additional_information: Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել
       ստորագրման ձեզ.
-    user_type_teacher: Teacher
     user_type_student: Աշակերտ
+    user_type_teacher: Teacher
     field_is_required: պարտադիր ե
     email_preference_yes: այո
     email_preference_no: ոչ

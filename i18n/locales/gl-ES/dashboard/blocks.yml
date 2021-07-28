@@ -1,4 +1,3 @@
----
 gl:
   data:
     blocks:
@@ -335,8 +334,8 @@ gl:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': si
-            '"no"': non
+            '"yes"': 'si'
+            '"no"': 'non'
       Mikelab_whileKeyPressed:
         options:
           KEY:

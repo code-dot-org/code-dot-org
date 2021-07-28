@@ -61,6 +61,7 @@ class Javalab < Level
   end
 
   def parse_maze
+    return if serialized_maze.blank? && project_template_level&.try(:serialized_maze).present?
     if serialized_maze.nil? && csa_view_mode == 'neighborhood'
       raise ArgumentError.new('neighborhood must have a serialized_maze')
     end
@@ -95,6 +96,10 @@ class Javalab < Level
     self.examples = all_examples
   end
 
+  def get_serialized_maze
+    serialized_maze || project_template_level&.try(:serialized_maze)
+  end
+
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
@@ -106,6 +111,11 @@ class Javalab < Level
         # Don't override existing valid (non-nil/empty) values
         value = JSONValue.value(properties[dashboard].presence)
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
+      end
+
+      if csa_view_mode == 'neighborhood'
+        level_prop['serializedMaze'] = get_serialized_maze
+        level_prop['startDirection'] = start_direction || project_template_level.try(:start_direction)
       end
 
       level_prop['levelId'] = level_num

@@ -167,8 +167,8 @@ hu:
     additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
-    user_type_teacher: "Tanár"
     user_type_student: "Diák"
+    user_type_teacher: "Tanár"
     field_is_required: "szükséges"
     accept_terms: "El kell fogadnod, hogy fiókot hozhass létre"
     error: "Hiba történt"
@@ -818,7 +818,7 @@ hu:
       school_city: 'Iskola városa'
       school_country: 'Iskola országa'
       colombian_school_city: 'Iskola városa'
-      colombian_school_name: 'Iskola neve'
+      colombian_chilean_school_name: 'Iskola neve'
       email_opt_in: 'Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?'
     form_entries:
       gender:

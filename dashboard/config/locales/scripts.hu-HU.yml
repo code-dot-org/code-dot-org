@@ -3972,6 +3972,14 @@ hu:
           lesson_groups:
             cspSurvey2020:
               display_name: Kérdőív
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -3984,10 +3992,6 @@ hu:
           lessons:
             lesson-9:
               name: Tanári közösség
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Eszközök
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:

@@ -5,30 +5,30 @@ ps:
   language: پښتو
   front_title: Join the largest learning event in history, %{campaign_date}
   coming_soon: Coming Soon
-  campaign_date_start_short: Dec. 7
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
-  campaign_date_year: '2020'
-  campaign_date_full_year: December 7-13, 2020
+  campaign_date_start_short: Dec. 6
+  campaign_date_start_long: December 6
+  campaign_date_short: Dec. 6-12
+  campaign_date_full: December 6-12
+  campaign_date_year: '2021'
+  campaign_date_full_year: December 6-12, 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
-  latam_campaign_date_year: '2020'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
-  europe_campaign_date_year: '2020'
-  europe_campaign_date_full_year: October 10-25, 2020
+  latam_campaign_date_short: Oct. 1 - Dec. 12
+  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_year: '2021'
+  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
+  europe_campaign_date_start_short: Oct. 9
+  europe_campaign_date_start_long: October 9
+  europe_campaign_date_short: Oct. 9-24
+  europe_campaign_date_full: October 9-24
+  europe_campaign_date_year: '2021'
+  europe_campaign_date_full_year: October 9-24, 2021
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2020'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_year: '2021'
+  africa_campaign_date_full_year: October 1-31, 2021
   hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
@@ -944,8 +944,6 @@ ps:
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
   footer_trademark_message: Hour of Code™ and Hora del Código® are trademarks of Code.org.
-    Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com,
-    Inc. or its affiliates in the United States and/or other countries.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners and Advisors
   footer_menu_contact: Contact us

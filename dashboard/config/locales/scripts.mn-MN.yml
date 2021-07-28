@@ -24376,10 +24376,6 @@ mn:
             дуусдаг.
         contagion-pilot:
           description_audience: Анги 5
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Test
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -24454,6 +24450,16 @@ mn:
           lessons:
             lesson-22:
               name: Өгөгдөл цуглуулах ажлыг зохион бүтээх
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Өгөгдөл цуглуулах ажлыг зохион бүтээх
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
         kodea-pd-2021:
           description: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү
             үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар
@@ -24592,3 +24598,9 @@ mn:
           lesson_groups:
             lessonGroup-3:
               display_name: Нөөцүүд
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Test
+        dlp21-csp-mod1:
+          title: КШУ-ны нээлтийг гүн гүнзгий сурах модуль 1

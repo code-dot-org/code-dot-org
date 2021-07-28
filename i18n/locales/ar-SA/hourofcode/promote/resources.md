@@ -92,7 +92,7 @@ title: المصادر
 
 ساعد في نشر الحدث، واستضافة أحداث أخرى. اطلب من مدرسة محلية التسجيل. أو جرِّب أنشطة "ساعة من البرمجة" بنفسك - يمكن للجميع الاستفادة من تعلم الأساسيات.
 
-ابدأ الخطوات الأولى على http://hourofcode.com/ {{country}}<br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ But only a tiny fraction of us are learning **how** technology works. Only 47% o
 
 هذه فرصة لتغيير مستقبل التعليم في [اسم المدينة / المنطقة].
 
-يرجى الاطلاع على http://hourofcode.com/ {{ country }} للحصول على المزيد من التفاصيل، والمساعدة في نشر المبادرة.<br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

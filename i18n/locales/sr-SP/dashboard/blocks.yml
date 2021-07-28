@@ -1,4 +1,3 @@
----
 sr:
   data:
     blocks:
@@ -210,7 +209,8 @@ sr:
         text: насумична боја
       Dancelab_setBackgroundEffect:
         options:
-          EFFECT: {}
+          EFFECT:
+            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Насумичан)"
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -245,7 +245,8 @@ sr:
             '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
-          EFFECT: {}
+          EFFECT:
+            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Насумичан)"
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -409,7 +410,7 @@ sr:
           STRING:
             '"diamond"': дијамант
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       Dancelab_whenKey:
         options:
           KEY:
@@ -419,7 +420,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       gamelab_addTarget:
         options:
           OPT:
@@ -456,7 +457,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -469,7 +470,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
-            '"y"': у
+            '"y"': 'у'
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -656,8 +657,8 @@ sr:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': да
-            '"no"': не
+            '"yes"': 'да'
+            '"no"': 'не'
       Mikelab_whileKeyPressed:
         options:
           KEY:

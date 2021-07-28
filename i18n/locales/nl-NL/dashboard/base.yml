@@ -164,8 +164,8 @@ nl:
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
     user_type_button: "Accounttype bijwerken"
     user_type_label: "Accounttype"
-    user_type_teacher: "Leraar"
     user_type_student: "Leerling"
+    user_type_teacher: "Leraar"
     field_is_required: "is vereist"
     accept_terms: "Je moet akkoord gaan om een account aan te maken"
     error: "Er is een fout opgetreden."
@@ -860,7 +860,7 @@ nl:
       school_city: 'School Stad'
       school_country: 'Land van de school'
       colombian_school_city: 'School Stad'
-      colombian_school_name: 'Naam van de school'
+      colombian_chilean_school_name: 'Naam van de school'
     form_entries:
       gender:
         male: 'Man'

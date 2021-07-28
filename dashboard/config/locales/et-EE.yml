@@ -139,8 +139,8 @@ et:
     visit_privacy: Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Konto tüüp
-    user_type_teacher: Õpetaja
     user_type_student: Õpilane
+    user_type_teacher: Õpetaja
     field_is_required: on nõutud
     accept_terms: Pead konto loomiseks nõustuma
     email_preference_yes: Jah
@@ -895,7 +895,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
-      colombian_school_name: Kooli nimi
+      colombian_chilean_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees

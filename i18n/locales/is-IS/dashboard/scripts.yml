@@ -6984,8 +6984,6 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
-            lessonGroup-4:
-              display_name: Próf
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -7056,6 +7054,16 @@ is:
           lessons:
             lesson-22:
               name: Söfnun gagna hönnuð
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Könnun
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Söfnun gagna hönnuð
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Könnun
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -7125,6 +7133,10 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Próf
         tesspltest:
           lessons:
             lesson-2:
