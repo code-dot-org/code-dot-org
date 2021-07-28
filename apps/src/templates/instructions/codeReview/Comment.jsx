@@ -46,7 +46,7 @@ export default class Comment extends Component {
   };
 
   renderFormattedTimestamp = timestampString =>
-    moment.utc(timestampString).format('M/D/YYYY [at] h:mm A');
+    moment(timestampString).format('M/D/YYYY [at] h:mm A');
 
   renderErrorMessage = () => {
     return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
@@ -81,7 +81,7 @@ export default class Comment extends Component {
             </span>
             {isResolved && <i className="fa fa-check" style={styles.check} />}
             {!viewAsCodeReviewer && (
-              <div
+              <i
                 className="fa fa-ellipsis-h"
                 style={styles.ellipsisMenu}
                 onClick={() =>
@@ -97,7 +97,7 @@ export default class Comment extends Component {
                     onDelete={() => this.onDelete()}
                   />
                 )}
-              </div>
+              </i>
             )}
           </span>
         </div>
