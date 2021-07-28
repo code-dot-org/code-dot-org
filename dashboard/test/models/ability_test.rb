@@ -272,6 +272,7 @@ class AbilityTest < ActiveSupport::TestCase
       level_id: javalab_script_level.levels[0].id
 
     assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'student not in same section as student seeking code review cannot view as peer' do
@@ -287,6 +288,7 @@ class AbilityTest < ActiveSupport::TestCase
       level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'student in same section cannot view as peer if peer is not seeking code review' do
@@ -301,6 +303,7 @@ class AbilityTest < ActiveSupport::TestCase
     section.add_student peer_reviewer
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'student cannot view their own work as peer' do
@@ -317,6 +320,7 @@ class AbilityTest < ActiveSupport::TestCase
       level_id: javalab_script_level.levels[0].id
 
     refute Ability.new(project_owner).can? :view_as_user, javalab_script_level, project_owner
+    refute Ability.new(project_owner).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'students cannot view as peer on non-Javalab levels' do
@@ -324,6 +328,7 @@ class AbilityTest < ActiveSupport::TestCase
     student_2 = create :student
 
     refute Ability.new(student_1).can? :view_as_user, @login_required_script_level, student_2
+    refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
   end
 
   test 'workshop admin can update scholarship info' do
