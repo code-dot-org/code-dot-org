@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 class CommitDialog extends React.Component {
   state = {
     filesToBackpack: [],
-    commitNotes: null,
+    commitNotes: '',
     saveInProgress: false,
     hasSaveError: false
   };
@@ -99,7 +99,8 @@ class CommitDialog extends React.Component {
     this.setState({
       hasSaveError: false,
       saveInProgress: false,
-      commitNotes: null
+      commitNotes: '',
+      filesToBackpack: []
     });
     this.props.handleClose();
   };
@@ -173,9 +174,8 @@ function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
         placeholder={i18n.commitNotesPlaceholder()}
         onChange={e => onChangeNotes(e.target.value)}
         style={styles.textarea}
-      >
-        {notes}
-      </textarea>
+        value={notes}
+      />
       <div style={{...styles.bold, ...styles.filesHeader}}>
         {i18n.saveToBackpack()}
       </div>

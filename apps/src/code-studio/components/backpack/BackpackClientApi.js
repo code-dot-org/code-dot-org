@@ -8,6 +8,7 @@ export default class BackpackClientApi {
     this.channelId = channelId;
     this.uploadingFiles = false;
     this.filesToUpload = [];
+    this.fileUploadsFailed = [];
   }
 
   fetchChannelId(callback) {
@@ -25,6 +26,7 @@ export default class BackpackClientApi {
       // save is currently in progress, return an error. Frontend should prevent multiple
       // button clicks in a row.
       onError();
+      return;
     }
     if (filenames.length === 0) {
       // nothing to save
@@ -42,7 +44,8 @@ export default class BackpackClientApi {
   }
 
   saveFilesHelper(filesJson, filenames, onError, onSuccess) {
-    this.filesToUpload = filenames;
+    this.filesToUpload = [...filenames];
+    this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = filesJson[filename].text;
       // write file with SAVE_RETRY_COUNT failure retries
@@ -74,21 +77,31 @@ export default class BackpackClientApi {
             retryCount - 1
           );
         } else {
-          onError(error);
+          // record failure and check if all files are done attempting upload/uploading
+          this.fileUploadsFailed.push(filename);
+          this.onUploadComplete(filename, onError, onSuccess, error);
         }
       } else {
-        this.onSingleUploadSuccess(filename, onSuccess);
+        this.onUploadComplete(filename, onError, onSuccess);
       }
     });
   }
 
-  onSingleUploadSuccess(filename, onOverallSuccess) {
+  // Mark the given file as done uploading/attempting to upload.
+  // Check if all files are done uploading. If they are, call either onSuccess
+  // or onError depending on if we saw any errors.
+  onUploadComplete(filename, onError, onSuccess, error) {
     const filenameIndex = this.filesToUpload.indexOf(filename);
     if (filenameIndex >= 0) {
       this.filesToUpload.splice(filenameIndex, 1);
     }
-    if (this.filesToUpload.length === 0) {
-      onOverallSuccess();
+    if (
+      this.filesToUpload.length === 0 &&
+      this.fileUploadsFailed.length === 0
+    ) {
+      onSuccess();
+    } else if (this.filesToUpload.length === 0) {
+      onError(error);
     }
   }
 }
