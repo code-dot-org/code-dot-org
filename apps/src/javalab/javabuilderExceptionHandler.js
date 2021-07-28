@@ -33,8 +33,11 @@ export function handleException(exceptionDetails, callback) {
     case JavabuilderExceptionType.TWO_MAIN_METHODS:
       error = msg.twoMainMethods();
       break;
+    case JavabuilderExceptionType.CLASS_NOT_FOUND:
+      error = msg.classNotFound();
+      break;
     default:
-      error = exceptionDetails;
+      error = msg.unknownError({type, connectionId});
       break;
   }
   callback(error);
