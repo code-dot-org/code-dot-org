@@ -32,7 +32,7 @@ export default class AddDefaultSprite extends React.Component {
     return (
       <div style={styles.assetRow}>
         <h3>Add a sprite: </h3>
-        <label htmlFor="sprite-path" style={styles.addSpriteLabel}>
+        <label htmlFor="sprite-name" style={styles.addSpriteLabel}>
           Sprite name:
         </label>
         <input
