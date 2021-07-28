@@ -6,6 +6,7 @@ class ResourcesControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
+    File.stubs(:write)
     # We don't want to write to the file system here
     Resource.any_instance.stubs(:serialize_scripts)
   end
