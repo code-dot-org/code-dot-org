@@ -148,8 +148,8 @@ vi:
     additional_information: "Chúng tôi cần một số thông tin bổ sung để tiếp tục đăng ký cho bạn."
     user_type_button: "Cập nhật tài khoản"
     user_type_label: "Kiểu tài khoản"
-    user_type_teacher: "Giáo viên"
     user_type_student: "Học sinh"
+    user_type_teacher: "Giáo viên"
     field_is_required: "là bắt buộc"
     accept_terms: "Bạn phải đồng ý để tạo một tài khoản"
     error: "Đã xảy ra lỗi."
@@ -894,7 +894,7 @@ vi:
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'
       colombian_school_city: 'Thành phố của trường'
-      colombian_school_name: 'Tên trường'
+      colombian_chilean_school_name: 'Tên trường'
     form_entries:
       gender:
         male: 'Nam'

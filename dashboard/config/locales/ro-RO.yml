@@ -216,8 +216,8 @@ ro:
       a te putea înscrie.
     user_type_button: Actualizaţi tipul de contul
     user_type_label: Tipul contului
-    user_type_teacher: Profesor
     user_type_student: Elev
+    user_type_teacher: Profesor
     field_is_required: este necesar
     accept_terms: Trebuie să fii de acord pentru a crea un cont
     error: S-a produs o eroare.
@@ -1248,9 +1248,8 @@ ro:
       school_city: Orașul în care se află școala
       school_country: Țara școlii
       colombian_school_city: Orașul în care se află școala
-      colombian_school_department: Departament Școlar
       colombian_school_municipality: Municipiul Școlar
-      colombian_school_name: Numele școlii
+      colombian_chilean_school_name: Numele școlii
       ages: Care este/sunt vârsta/vârstele pentru care predai acest an?
       subjects: Ce materii predai acest an?
       resources: Care dintre următoarele resurse de educație cibernetică folosești?

@@ -6146,6 +6146,14 @@ th:
           lesson_groups:
             cspSurvey2020:
               display_name: แบบสำรวจ
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:

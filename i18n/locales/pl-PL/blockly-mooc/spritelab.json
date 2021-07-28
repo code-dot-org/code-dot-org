@@ -180,5 +180,8 @@
   "singleSpriteNotClicked": "Upewnij się, że klikasz na duszka i że masz odpowiednie zdarzenia w swoim obszarze roboczym. <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"kiedy\"</title></block></xml>",
   "clickButNoSpeech": "Kliknąłeś na duszka, ale żaden z duszków nic nie powiedział. Dodaj blok „powiedz” do zdarzenia „po kliknięciu”.",
   "secondClickButNoSpeech": "Kliknąłeś więcej niż jednego duszka, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”.",
-  "thirdClickButNoSpeech": "Kliknąłeś więcej niż dwa duszki, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś  powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”."
+  "thirdClickButNoSpeech": "Kliknąłeś więcej niż dwa duszki, ale jedno z Twoich kliknięć nie spowodowało, że duszek coś  powiedział. Dodaj blok „powiedz” pod każdym zdarzeniem „po kliknięciu”.",
+  "changeOrSetSize": "Żaden z twoich duszków nie zmienił rozmiaru.",
+  "changeOrSetCostume": "Żaden z twoich duszków nie zmienił kostiumu.",
+  "changeBackground": "Tło nie zostało zmienione."
 }
