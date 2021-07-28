@@ -12,7 +12,7 @@ class CommentOptions extends Component {
     isResolved: PropTypes.bool.isRequired,
     onResolveStateToggle: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
-    // populate from Redux
+    // Populated by Redux
     viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
 
