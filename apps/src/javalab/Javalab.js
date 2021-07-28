@@ -85,9 +85,6 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
-  /*const onTopInstructionsHeightResize = this.onTopInstructionsHeightResize.bind(
-    this
-  );*/
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     this.miniApp = new Neighborhood();
@@ -217,7 +214,7 @@ Javalab.prototype.init = function(config) {
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
 
   // Get things arranged once.
-  this.studioApp_.resizeVisualization(undefined);
+  //this.studioApp_.resizeVisualization(undefined);
 };
 
 // Ensure project is saved before exiting
@@ -256,12 +253,6 @@ Javalab.prototype.onRun = function() {
 Javalab.prototype.onInputMessage = function(message) {
   this.javabuilderConnection.sendMessage(message);
 };
-
-/*
-Javalab.prototype.onTopInstructionsHeightResize = function() {
-  this.studioApp_.resizeVisualization(undefined);
-};
-*/
 
 // Called by the Javalab app when it wants to go to the next level.
 Javalab.prototype.onContinue = function() {

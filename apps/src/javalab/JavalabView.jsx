@@ -64,10 +64,6 @@ class JavalabView extends React.Component {
     );
   }
 
-  /*componentWillUnmount() {
-    window.removeEventListener('resize', updateLayoutThrottled);
-  }*/
-
   compile = () => {
     this.props.appendOutputLog('Compiling program...');
     this.props.appendOutputLog('Compiled!');
@@ -148,7 +144,6 @@ class JavalabView extends React.Component {
   };
 
   updateLayout = width => {
-    //const width = $('#visualization-container').width();
     const visualizationColumnHeight = $(window).height() - 135;
     const visualizationTop = this.props.topInstructionsHeight;
     const sliderHeight = 60;
@@ -159,7 +154,6 @@ class JavalabView extends React.Component {
     }
     let newVizWidth = Math.min(constrainVisualizationWidth, width);
 
-    //var scale = constrainVisualizationWidth / 400 /*this.nativeVizWidth*/;
     let scale = newVizWidth / 800;
     if (scale < 0) {
       // Avoiding inverting.
@@ -336,8 +330,6 @@ const styles = {
     height: '100%'
   },
   preview: {
-    //backgroundColor: color.light_gray,
-    //height: '200px',
     marginTop: '13px'
   },
   javalab: {
