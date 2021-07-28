@@ -38,6 +38,7 @@ export default function ControlButtons({
         className="noBorder"
         style={buttonStyles}
         isDisabled={isDisabled}
+        id="javalabRun"
       />
       <JavalabButton
         text={isTesting ? i18n.stopTests() : i18n.test()}
@@ -47,6 +48,7 @@ export default function ControlButtons({
         className="noBorder"
         style={buttonStyles}
         isDisabled={isDisabled}
+        id="javalabTest"
       />
     </div>
   );

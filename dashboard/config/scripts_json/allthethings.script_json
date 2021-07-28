@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "lesson_extras_available": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:02 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-07-28 16:57:49 UTC",
+    "published_state": "in_development",
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -3256,8 +3256,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "2-3 Maze 1",
-          "2-3 Maze 4"
+          "2-3 Maze 4",
+          "2-3 Maze 1"
         ],
         "variants": {
           "2-3 Maze 1": {
@@ -3269,16 +3269,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "2-3 Maze 1",
-          "2-3 Maze 4"
+          "2-3 Maze 4",
+          "2-3 Maze 1"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "2-3 Maze 1",
-        "2-3 Maze 4"
+        "2-3 Maze 4",
+        "2-3 Maze 1"
       ]
     },
     {
@@ -3544,8 +3544,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "variants": {
           "csp_socialBelonging_intervention": {
@@ -3560,16 +3560,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "csp_socialBelonging_intervention",
-        "csp_socialBelonging_control"
+        "csp_socialBelonging_control",
+        "csp_socialBelonging_intervention"
       ]
     },
     {
@@ -4434,6 +4434,30 @@
       },
       "level_keys": [
         "csa widget test2"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 6"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 6"
       ]
     }
   ],
@@ -5597,8 +5621,8 @@
       "seeding_key": {
         "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
-          "2-3 Maze 1",
-          "2-3 Maze 4"
+          "2-3 Maze 4",
+          "2-3 Maze 1"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5609,8 +5633,8 @@
       "seeding_key": {
         "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
-          "2-3 Maze 1",
-          "2-3 Maze 4"
+          "2-3 Maze 4",
+          "2-3 Maze 1"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5715,7 +5739,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -5727,7 +5751,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -5811,10 +5835,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention",
+        "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5823,10 +5847,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control",
+        "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -6223,6 +6247,17 @@
         "level.key": "csa widget test2",
         "script_level.level_keys": [
           "csa widget test2"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 6",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 6"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",
