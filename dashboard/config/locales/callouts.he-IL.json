@@ -370,6 +370,72 @@
         "outbreak2": {
           "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
           "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "בחרו כאן את סוג הרקדן."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם.",
+          "arrow_buttons": "לחצו על מקשי החצים כדי לשלוט ברקדן שלכם."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "בלוק חדש!",
+          "new_block_4": "בלוק חדש!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
+          "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "לחצו על \"התחל\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק האם יש לבה. האם תוכלו להוסיף פקודה על מנת לנוע קדימה?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
         }
       }
     }

@@ -2,8 +2,11 @@
   "addAComment": "Add a comment",
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
+  "cancel": "Cancel",
   "clearConsole": "Clear Console",
+  "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
+  "commitAndSave": "Commit & Save",
   "commitCode": "Commit Code",
   "commitNotes": "Commit Notes",
   "commitNotesPlaceholder": "Enter notes about this commit here...",
@@ -24,6 +27,10 @@
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
   "onlyVisibleToYou": "only visible to you",
+  "reOpen": "Re-open",
+  "resolve": "Resolve",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
-  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
+  "saveToBackpack": "Save to Backpack",
+  "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
+  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now."
 }

@@ -105,8 +105,8 @@ kk:
     mismatch_password: "Еңгізілген құпия сөздер сәйкес келмейді"
     additional_information: "Сізді тіркеу үшін бізге қосымша ақпарат керек."
     user_type_label: "Аккаунт Түрі"
-    user_type_teacher: "Мұғалім"
     user_type_student: "Оқушы"
+    user_type_teacher: "Мұғалім"
     field_is_required: "толтырылуы тиіс"
     accept_terms: "Аккаунт құрі үшін келісуіңіз қажет"
     email_preference_yes: "Иә"
@@ -192,6 +192,7 @@ kk:
       sign_in_to_save: 'Прогрессті сақтау үшін тіркеліңіз'
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
+      stats: "Статистика"
       legal_privacy: "Құпиялылық саясаты"
       legal_tos: "Қызмет көрсету шарттары"
     user:
@@ -267,6 +268,7 @@ kk:
     delete_text_teacher_note: "Есте сақтаңыз: өзіңіздің аккаунтыңызды өшіргеніңізбен, оқушыларыңыздың аккаунттары өшпейді."
     delete_confirm: 'Сіз аккаунтыңызды өшіргіңіз келеді ме?'
     update_email: "Өзгерту"
+    remove_parent_email_label: "Өшіру"
   user_level:
     completed: 'Аяқталған'
     tried: 'Байқап көру саны'
@@ -441,6 +443,7 @@ kk:
     unplugged_conditionals:
       title: "Шарттар"
     widgets:
+      audience: "Жас аралығы 14+"
       cta: "Қалай жасауды үйрең"
   landing:
     report_bug: "Қате туралы хабарлау"

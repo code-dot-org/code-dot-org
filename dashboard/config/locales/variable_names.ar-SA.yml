@@ -6,16 +6,21 @@ ar:
       Green: أخضر
       Red: أحمر
       actor: الممثل
+      age: العمر
+      answer: أجب
+      binary: ثنائي
       birds: عصافير
       cats: كل القطط
       color: لون
       counter: العداد
       dogs: كل الكلاب
+      energy: الطاقة
       height: الارتفاع
       honey: العسل
       i: i
       left: اليسار
       length: الطول
+      level: المستوى
       name: اسم
       nectar: رحيق
       planet: كوكب

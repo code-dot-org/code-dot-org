@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-07-02 16:29:00 UTC",
+    "serialized_at": "2021-07-20 22:21:19 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2021"
@@ -7352,254 +7352,50 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Safety in My Online Neighborhood",
-        "resource.key": "safety-in-my-online-neighborhood-lesson-slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Safety in My Online Neighborhood",
-        "resource.key": "safety-in-my-online-neighborhood-my-online-neighborhood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Safety in My Online Neighborhood",
-        "resource.key": "safety-in-my-online-neighborhood-safety-it-rules"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Safety in My Online Neighborhood",
-        "resource.key": "safety-in-my-online-neighborhood-pause-and-think-moment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "wiggles-go_noodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "how_to_make_a_class_section_on_code_org"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: Happy Maps",
-        "resource.key": "unplugged-video-happy-maps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: Happy Maps",
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: Happy Maps",
-        "resource.key": "activity-answer-happy-maps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: Happy Maps",
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: Happy Maps",
-        "resource.key": "feeling_faces_-_emotion_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "20_20_20_rule_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "wiggles_-_gonoodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Ice Age",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Ice Age",
-        "resource.key": "csf_debugging_k1_blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Ice Age",
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "feeling_faces_-_emotion_image_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "happy-map-cards-xl"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "feeling_faces_emotion_image_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Ice Age",
-        "resource.key": "pair-programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "feeling_faces_emotion_image_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "csf_lesson_recommendations"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
+        "lesson.key": "Events in Play Lab",
         "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "feeling_faces_emotion_image_3"
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "csf_lesson_recommendations_1"
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "csf-lesson-recommend"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "unplugged-video-big-event"
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "csf_lesson_recommendations_2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-assessment"
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "feeling_faces_-_emotion_image_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "the_big_event_courses_a_b_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
         "resource.key": "assessment-answer-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "csf-the-big-event-assessment"
       }
     },
     {
@@ -7616,38 +7412,242 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "unplugged-video-big-event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "how_to_make_a_class_section_on_code_org"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "wiggles-go_noodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
         "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
+        "lesson.key": "Loops in Collector",
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "resource.key": "feeling_faces_emotion_image_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "happy-map-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "happy-map-game-pieces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "happy-map-game-pieces-bonus-pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "pair-programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "feeling_faces_emotion_image_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "happy-map-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "happy-map-cards-xl"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "happy-map-game-pieces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Happy Loops",
+        "resource.key": "happy-map-game-pieces-bonus-pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
         "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "csf-lesson-recommend"
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_lesson_recommendations_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "feeling_faces_-_emotion_image_3"
+        "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "feeling_faces_emotion_image_3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "csf_lesson_recommendations_2"
+        "lesson.key": "Programming in Ice Age",
+        "resource.key": "csf_debugging_k1_blocks"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "the_big_event_courses_a_b_"
+        "lesson.key": "Programming in Ice Age",
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "feeling_faces_-_emotion_image_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "activity-answer-happy-maps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "happy-map-cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "happy-map-game-pieces"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: Happy Maps",
+        "resource.key": "unplugged-video-happy-maps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "safety-in-my-online-neighborhood-lesson-slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "safety-in-my-online-neighborhood-my-online-neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "safety-in-my-online-neighborhood-pause-and-think-moment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "safety-in-my-online-neighborhood-safety-it-rules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "20_20_20_rule_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "wiggles_-_gonoodle"
       }
     },
     {
@@ -7666,7 +7666,7 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "2021_change_log",
         "script.name": "coursea-2021"
       }
     },
@@ -7678,13 +7678,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
         "script.name": "coursea-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "coursea-2021"
       }
     },
@@ -7697,24 +7715,6 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "debugging_guide",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide_1",
-        "script.name": "coursea-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2021_change_log",
         "script.name": "coursea-2021"
       }
     },
