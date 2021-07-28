@@ -16,7 +16,9 @@ class CommitDialog extends React.Component {
   };
 
   renderFooter = () => {
-    let statusContent = '';
+    let footerIcon = '';
+    let footerMessageTitle = '';
+    let footerMessageText = '';
     let commitText = i18n.commit();
     const isCommitButtonDisabled =
       !this.state.commitNotes || this.state.saveInProgress;
@@ -26,19 +28,25 @@ class CommitDialog extends React.Component {
 
     // TODO: Add compile status here
     if (this.state.saveInProgress) {
-      statusContent = (
-        <span>
-          <span className="fa fa-spin fa-spinner" style={styles.spinner} />
-          {i18n.saving()}
-        </span>
+      footerIcon = (
+        <span className="fa fa-spin fa-spinner" style={styles.spinner} />
       );
+      footerMessageTitle = i18n.saving();
     } else if (this.state.hasSaveError) {
-      statusContent = i18n.backpackSaveError();
+      footerIcon = (
+        <span className="fa fa-exclamation-circle" style={styles.iconError} />
+      );
+      footerMessageTitle = i18n.backpackSaveErrorTitle();
+      footerMessageText = i18n.backpackSaveErrorMessage();
     }
 
     return [
-      <div key="footer-status" style={{...styles.bold, ...styles.footerStatus}}>
-        {statusContent}
+      <div key="footer-status" style={styles.footerStatus}>
+        <div style={styles.footerIcon}>{footerIcon}</div>
+        <div style={styles.footerMessage}>
+          <div style={styles.footerMessageTitle}>{footerMessageTitle}</div>
+          <div style={styles.footerMessageText}>{footerMessageText}</div>
+        </div>
       </div>,
       <div key="buttons">
         <FooterButton
@@ -243,7 +251,26 @@ const styles = {
     height: 75,
     resize: 'none'
   },
+  iconError: {
+    color: color.light_orange,
+    fontSize: 32
+  },
+  footerMessageTitle: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14
+  },
+  footerMessageText: {
+    fontStyle: 'italic',
+    fontSize: 12
+  },
+  footerMessage: {
+    color: color.dark_charcoal
+  },
   spinner: {
+    color: color.dark_charcoal,
+    fontSize: 28
+  },
+  footerIcon: {
     paddingRight: PADDING
   }
 };

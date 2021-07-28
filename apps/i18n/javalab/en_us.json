@@ -33,5 +33,6 @@
   "saveToBackpack": "Save to Backpack",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
-  "backpackSaveError": "We hit an error while saving to the backpack. Try again. If this error continues, contact us at support@code.org."
+  "backpackSaveErrorTitle": "An error occurred",
+  "backpackSaveErrorMessage": "Please try again"
 }
