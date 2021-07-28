@@ -1,45 +1,44 @@
-import * as coreLibrary from '../coreLibrary';
 import {commands as actionCommands} from './actionCommands';
 
 export const commands = {
-  addBehavior(spriteArg, behavior) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => coreLibrary.addBehavior(sprite, behavior));
+  addBehaviorSimple(spriteArg, behavior) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => this.addBehavior(sprite, behavior));
   },
 
   Behavior(func) {
     return {func: func, name: func.funcName};
   },
 
-  draggableFunc(p5Inst) {
+  draggableFunc() {
     return spriteArg => {
-      let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
-      const allSprites = coreLibrary.getSpriteArray({costume: 'all'});
-      if (p5Inst.mousePressedOver(sprite) && p5Inst.mouseWentDown()) {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      const allSprites = this.getSpriteArray({costume: 'all'});
+      if (this.p5.mousePressedOver(sprite) && this.p5.mouseWentDown()) {
         const topOtherSprite = Math.max(
           ...allSprites
-            .filter(s => s !== sprite && p5Inst.mousePressedOver(s))
+            .filter(s => s !== sprite && this.p5.mousePressedOver(s))
             .map(s => s.depth)
         );
         if (sprite.depth > topOtherSprite) {
           sprite.dragging = true;
-          sprite.xOffset = sprite.x - p5Inst.World.mouseX;
-          sprite.yOffset = sprite.y - p5Inst.World.mouseY;
+          sprite.xOffset = sprite.x - this.p5.World.mouseX;
+          sprite.yOffset = sprite.y - this.p5.World.mouseY;
         }
       }
       if (sprite.dragging) {
-        sprite.x = p5Inst.World.mouseX + sprite.xOffset;
-        sprite.y = p5Inst.World.mouseY + sprite.yOffset;
+        sprite.x = this.p5.World.mouseX + sprite.xOffset;
+        sprite.y = this.p5.World.mouseY + sprite.yOffset;
       }
-      if (p5Inst.mouseWentUp()) {
+      if (this.p5.mouseWentUp()) {
         sprite.dragging = false;
       }
     };
   },
 
-  avoidingTargetsFunc(p5Inst) {
+  avoidingTargetsFunc() {
     return spriteArg => {
-      const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
+      const sprite = this.getSpriteArray(spriteArg)[0];
       const spritePosition = sprite.position;
 
       if (!sprite.targetSet?.avoid) {
@@ -48,7 +47,7 @@ export const commands = {
 
       const range = 100;
       const targetsInRange = sprite.targetSet.avoid
-        .map(x => coreLibrary.getSpriteArray({costume: x}))
+        .map(x => this.getSpriteArray({costume: x}))
         .flat()
         .filter(target => spritePosition.dist(target.position) < range);
 
@@ -63,19 +62,19 @@ export const commands = {
         totalX += target.position.x;
         totalY += target.position.y;
       });
-      const averagePosition = p5Inst.createVector(
+      const averagePosition = this.p5.createVector(
         totalX / targetsInRange.length,
         totalY / targetsInRange.length
       );
 
-      actionCommands.moveToward(spriteArg, -5, averagePosition);
-      actionCommands.edgesDisplace.apply(p5Inst, [spriteArg]);
+      actionCommands.moveToward.apply(this, [spriteArg, -5, averagePosition]);
+      actionCommands.edgesDisplace.apply(this, [spriteArg]);
     };
   },
 
-  followingTargetsFunc(p5Inst) {
+  followingTargetsFunc() {
     return spriteArg => {
-      const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
+      const sprite = this.getSpriteArray(spriteArg)[0];
       const spritePosition = sprite.position;
 
       if (!sprite.targetSet?.follow) {
@@ -83,7 +82,7 @@ export const commands = {
       }
 
       const targets = sprite.targetSet.follow
-        .map(x => coreLibrary.getSpriteArray({costume: x}))
+        .map(x => this.getSpriteArray({costume: x}))
         .flat();
 
       if (targets.length === 0) {
@@ -100,17 +99,21 @@ export const commands = {
           closestTarget = target;
         }
       });
-      actionCommands.moveToward(spriteArg, 5, closestTarget.position);
+      actionCommands.moveToward.apply(this, [
+        spriteArg,
+        5,
+        closestTarget.position
+      ]);
     };
   },
 
   removeAllBehaviors(spriteArg) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => coreLibrary.removeAllBehaviors(sprite));
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => this.removeAllBehaviors(sprite));
   },
 
   removeBehavior(spriteArg, behavior) {
-    let sprites = coreLibrary.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => coreLibrary.removeBehavior(sprite, behavior));
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => this.removeBehavior(sprite, behavior));
   }
 };
