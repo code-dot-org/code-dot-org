@@ -11,7 +11,7 @@ import Button from '@cdo/apps/templates/Button';
 export default class DefaultSpritesEditor extends React.Component {
   state = {
     isLoading: true,
-    defaultList: null, // Dictionary with name as key and sprite object as value
+    defaultList: [], // Array of name/category sprite objects
     pendingChangesCount: 0,
     isUpdating: false,
     errorText: ''
@@ -20,10 +20,10 @@ export default class DefaultSpritesEditor extends React.Component {
   componentDidMount() {
     getDefaultList()
       .then(spriteDefault => {
-        let orderedList = new Map();
-        spriteDefault['default_sprites'].map(sprite =>
-          orderedList.set(sprite.name, sprite)
-        );
+        let orderedList = Array.from(spriteDefault['default_sprites']);
+        // spriteDefault['default_sprites'].map(sprite =>
+        //   orderedList.set(sprite.name, sprite)
+        // );
         this.setState({defaultList: orderedList, isLoading: false});
       })
       .catch(err => {
@@ -37,15 +37,22 @@ export default class DefaultSpritesEditor extends React.Component {
   }
 
   deleteSpriteFromDefaults = spriteName => {
-    let updatedList = new Map(this.state.defaultList);
-    updatedList.delete(spriteName);
+    let updatedList = [...this.state.defaultList];
+    // Find the index at which the sprite should be deleted
+    for (let index = 0; index < updatedList.length; index++) {
+      let sprite = updatedList[index];
+      if (sprite.name === spriteName) {
+        // Item is to be deleted
+        updatedList.splice(index, 1);
+      }
+    }
     this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
   };
 
   addSpriteToDefaults = (spriteName, spriteCategory) => {
-    let updatedList = new Map(this.state.defaultList);
-    updatedList.set(spriteName, {name: spriteName, key: spriteCategory});
+    let updatedList = [...this.state.defaultList];
+    updatedList.push({name: spriteName, key: spriteCategory});
     this.setState({defaultList: updatedList});
     this.incrementPendingChanges();
   };
@@ -53,7 +60,7 @@ export default class DefaultSpritesEditor extends React.Component {
   updateDefaultSprites = () => {
     this.setState({isUpdating: true});
     let jsonList = {};
-    jsonList['default_sprites'] = Array.from(this.state.defaultList.values());
+    jsonList['default_sprites'] = this.state.defaultList;
     updateDefaultList(jsonList)
       .then(() => {
         this.setState({
@@ -69,11 +76,7 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   renderDefaultSprites() {
-    if (!this.state.defaultList) {
-      return;
-    }
-    return Array.from(this.state.defaultList.keys()).map(spriteKey => {
-      let spriteObject = this.state.defaultList.get(spriteKey);
+    return this.state.defaultList.map(spriteObject => {
       return (
         <DefaultSpriteRow
           name={spriteObject.name}
