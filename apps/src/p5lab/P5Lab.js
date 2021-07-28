@@ -78,8 +78,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import CoreLibrary from './spritelab/CoreLibrary';
-import PoemBotLibrary from './spritelab/PoemBotLibrary';
+import getLibrary from './spritelab/libraries/libraryFactory';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1079,17 +1078,13 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      if (this.level.blockPools.includes('PoemBot')) {
-        this.coreLibrary = new PoemBotLibrary(this.p5Wrapper.p5);
-      } else {
-        this.coreLibrary = new CoreLibrary(this.p5Wrapper.p5);
-      }
+      this.spritelabLibrary = getLibrary(this.level, this.p5Wrapper.p5);
 
-      const spritelabCommands = this.coreLibrary.commands;
+      const spritelabCommands = this.spritelabLibrary.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
-          spritelabCommands[command].bind(this.coreLibrary),
+          spritelabCommands[command].bind(this.spritelabLibrary),
           null
         );
       }

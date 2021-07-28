@@ -1,6 +1,6 @@
 import CoreLibrary from './CoreLibrary';
-import {commands as backgroundEffects} from './commands/poembot/backgroundEffects';
-import {commands as foregroundEffects} from './commands/poembot/foregroundEffects';
+import {commands as backgroundEffects} from '../commands/poembot/backgroundEffects';
+import {commands as foregroundEffects} from '../commands/poembot/foregroundEffects';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
