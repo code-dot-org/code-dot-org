@@ -218,33 +218,59 @@ export default class ReviewTab extends Component {
     }
   }
 
+  renderComments(comments, canShowNoCommentsMessage) {
+    if (comments.length === 0 && canShowNoCommentsMessage) {
+      return (
+        <div style={styles.messageText}>
+          {javalabMsg.noCodeReviewComments()}
+        </div>
+      );
+    }
+
+    return comments.map(comment => {
+      return (
+        <Comment
+          comment={comment}
+          key={`code-review-comment-${comment.id}`}
+          onResolveStateToggle={() =>
+            this.onCommentResolveStateToggle(comment.id, !comment.isResolved)
+          }
+          onDelete={() => this.onCommentDelete(comment.id)}
+        />
+      );
+    });
+  }
+
+  renderCommentEditor(forceRecreateEditorKey) {
+    if (!this.state.isReadyForReview) {
+      return (
+        <div style={styles.messageText}>
+          {javalabMsg.disabledPeerReviewMessage()}
+        </div>
+      );
+    }
+
+    return (
+      <CommentEditor
+        onNewCommentSubmit={this.onNewCommentSubmit}
+        key={forceRecreateEditorKey}
+      />
+    );
+  }
+
   render() {
-    const {comments, forceRecreateEditorKey} = this.state;
+    const {comments, forceRecreateEditorKey, isReadyForReview} = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
-        {this.renderReadyForReviewCheckbox()}
-        {comments.map(comment => {
-          return (
-            <Comment
-              comment={comment}
-              key={`code-review-comment-${comment.id}`}
-              onResolveStateToggle={() =>
-                this.onCommentResolveStateToggle(
-                  comment.id,
-                  !comment.isResolved
-                )
-              }
-              onDelete={() => this.onCommentDelete(comment.id)}
-            />
-          );
-        })}
-        {this.state.isReadyForReview && (
-          <CommentEditor
-            onNewCommentSubmit={this.onNewCommentSubmit}
-            key={forceRecreateEditorKey}
-          />
-        )}
+        <div style={styles.reviewHeader}>
+          {this.renderReadyForReviewCheckbox()}
+        </div>
+        <div style={styles.commentsSection}>
+          <div style={styles.messageText}>{javalabMsg.feedbackBeginning()}</div>
+          {this.renderComments(comments, !isReadyForReview)}
+          {this.renderCommentEditor(forceRecreateEditorKey)}
+        </div>
       </div>
     );
   }
@@ -252,7 +278,7 @@ export default class ReviewTab extends Component {
 
 const styles = {
   reviewsContainer: {
-    margin: '10px 5%'
+    margin: '25px 5%'
   },
   label: {
     margin: 0,
@@ -265,12 +291,28 @@ const styles = {
     width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
-    flexDirection: 'column',
-    margin: '10px 0'
+    flexDirection: 'column'
   },
   checkboxErrorMessage: {
     fontStyle: 'italic',
     textAlign: 'end',
     fontSize: '12px'
+  },
+  messageText: {
+    fontSize: '18px',
+    marginBottom: '25px',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    color: '#818181'
+  },
+  reviewHeader: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: '25px'
+  },
+  commentsSection: {
+    display: 'flex',
+    flexDirection: 'column'
   }
 };
