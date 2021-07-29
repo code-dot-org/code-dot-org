@@ -270,7 +270,6 @@ class JavalabView extends React.Component {
                 bottomRow={
                   <ControlButtons
                     isRunning={isRunning}
-                    isDarkMode={isDarkMode}
                     isTesting={isTesting}
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
