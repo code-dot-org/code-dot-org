@@ -4665,3 +4665,7 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
