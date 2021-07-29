@@ -2,6 +2,9 @@
   "addAComment": "Add a comment",
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
+  "backpackListLoadError": "An error occurred loading your backpack. Try again.",
+  "backpackSaveErrorTitle": "An error occurred",
+  "backpackSaveErrorMessage": "Please try again",
   "cancel": "Cancel",
   "clearConsole": "Clear Console",
   "classNotFound": "Error: one or more of your Java files are missing a class definition.",
@@ -18,6 +21,7 @@
   "duplicateProjectFilenameError": "Filename {filename} is already in use in this project. Please choose a different name",
   "duplicateSupportFilenameError": "Filename {filename} is already in use in this level's support code. Please choose a different name",
   "editor": "Editor",
+  "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
   "includeFiles": "Include Files",
@@ -34,11 +38,6 @@
   "saveToBackpack": "Save to Backpack",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
-  "backpackSaveErrorTitle": "An error occurred",
-  "backpackSaveErrorMessage": "Please try again",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
-  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now.",
-  "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
-  "backpackListLoadError": "An error occurred loading your backpack. Try again.",
-  "emptyBackpackMessage": "Files saved to your backpack will appear here."
+  "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}"
 }
