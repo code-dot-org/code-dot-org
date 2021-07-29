@@ -3,1256 +3,499 @@
     "data": {
       "resources": {
         "introducing_sprite_lab/coursef/2021": {
-          "name": "Introdução ao Sprite Lab",
-          "url": ""
+          "name": "Introdução ao Sprite Lab"
         },
         "exploring_apps/coursef/2021": {
-          "name": "Explorando aplicativos",
-          "url": ""
+          "name": "Explorando aplicativos"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Introdução ao Sprite Lab",
-          "url": ""
+          "name": "Introdução ao Sprite Lab"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "Explorando aplicativos",
-          "url": ""
-        },
-        "making_sprites/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Explorando aplicativos"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Sprites em Ação",
-          "url": ""
-        },
-        "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "variables_blank_space_stories/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "blank_space_stories/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "text_and_prompts/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "teacher_sandbox_level/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Sprites em Ação"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Diversão com laços for",
-          "url": ""
+          "name": "Diversão com laços for"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "Folha de avaliação de “Diversão com o laço for”",
-          "url": ""
+          "name": "Folha de avaliação de “Diversão com o laço for”"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Diversão com laços for",
-          "url": ""
+          "name": "Diversão com laços for"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Diversão com laços for",
-          "url": ""
+          "name": "Diversão com laços for"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Diversão com laços for",
-          "url": ""
+          "name": "Diversão com laços for"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Diversão com laços for",
-          "url": ""
+          "name": "Diversão com laços for"
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "running-simulations/coursef/2021": {
-          "name": "Executar simulações",
-          "url": ""
+          "name": "Executar simulações"
         },
         "ai-ml/coursef/2021": {
-          "name": "IA: Aprendizado de máquina",
-          "url": ""
+          "name": "IA: Aprendizado de máquina"
         },
         "ai-training/coursef/2021": {
-          "name": "IA: Dados de treinamento e viés",
-          "url": ""
+          "name": "IA: Dados de treinamento e viés"
         },
         "ai-societal/coursef/2021": {
-          "name": "IA: Impacto na sociedade",
-          "url": ""
+          "name": "IA: Impacto na sociedade"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "A Internet",
-          "url": ""
+          "name": "A Internet"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "Cartões de endereço IP e tipos de entrega",
-          "url": ""
+          "name": "Cartões de endereço IP e tipos de entrega"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet",
-          "url": ""
+          "name": "Internet"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet",
-          "url": ""
-        },
-        "get-site-ip-com/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Internet"
         },
         "design-process/coursef/2021": {
-          "name": "Processo de design",
-          "url": ""
+          "name": "Processo de design"
         },
         "final-project-design-worksheet/coursef/2021": {
-          "name": "Design do projeto final",
-          "url": ""
+          "name": "Design do projeto final"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": ""
-        },
-        "csta_standards_mapping/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Projeto Final em Fundamentos da Ciência da Computação"
         },
         "implementation_guide/coursef/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/coursef/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/coursef/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Fórum do professor",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
-        },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         },
         "mimi-activity/courseb/2021": {
-          "name": "Criando caminhos",
-          "url": ""
+          "name": "Criando caminhos"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "Criando caminhos",
-          "url": ""
+          "name": "Criando caminhos"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "Criando caminhos",
-          "url": ""
+          "name": "Criando caminhos"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "Criando caminhos",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Criando caminhos"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "Rostos sentimentais",
-          "url": ""
-        },
-        "jigsaw/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Rostos sentimentais"
         },
         "class-section-video/courseb/2021": {
-          "name": "Como fazer uma Sessão Classe no Code.org",
-          "url": ""
+          "name": "Como fazer uma Sessão Classe no Code.org"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)",
-          "url": ""
+          "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "Programação em duplas",
-          "url": ""
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "20_20_20_rule/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "Peças do jogo Mapas Divertidos",
-          "url": ""
+          "name": "Peças do jogo Mapas Divertidos"
         },
         "compass-rose/courseb/2021": {
-          "name": "Rosa dos ventos",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Rosa dos ventos"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "Stevie e o Grande Projeto",
-          "url": ""
+          "name": "Stevie e o Grande Projeto"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "Erros Não Reportados",
-          "url": ""
+          "name": "Erros Não Reportados"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "Repetindo",
-          "url": ""
+          "name": "Repetindo"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "Repetindo",
-          "url": ""
+          "name": "Repetindo"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "Repetindo",
-          "url": ""
+          "name": "Repetindo"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "Repetindo",
-          "url": ""
+          "name": "Repetindo"
         },
         "csf-lesson-recommend/courseb/2021": {
-          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação",
-          "url": ""
+          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "the-right-app-scenarios/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "O grande evento (Cursos A e B)",
-          "url": ""
-        },
-        "play_lab_project_planning_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "O grande evento (Cursos A e B)"
         },
         "implementation_guide/courseb/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/courseb/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/courseb/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/courseb/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "Fórum do professor",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "Programação em duplas",
-          "url": ""
-        },
-        "20_20_20_rule/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Como fazer uma Sessão Classe no Code.org",
-          "url": ""
+          "name": "Como fazer uma Sessão Classe no Code.org"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Mapas divertidos",
-          "url": ""
+          "name": "Mapas divertidos"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos",
-          "url": ""
+          "name": "Cartões de Mapas Divertidos"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos",
-          "url": ""
+          "name": "Cartões de Mapas Divertidos"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "Peças do jogo Mapas Divertidos",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Peças do jogo Mapas Divertidos"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)",
-          "url": ""
-        },
-        "20_20_20_rule_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos GG",
-          "url": ""
+          "name": "Cartões de Mapas Divertidos GG"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Pacote de bônus com peças do jogo Mapas Divertidos",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pacote de bônus com peças do jogo Mapas Divertidos"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "Rostos sentimentais",
-          "url": ""
-        },
-        "pair-programming/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Rostos sentimentais"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "O grande evento (Cursos A e B)",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "O grande evento (Cursos A e B)"
         },
         "csf-lesson-recommend/coursea/2021": {
-          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação",
-          "url": ""
-        },
-        "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_project_planning_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "artist_project_planning_guide_1/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação"
         },
         "implementation_guide/coursea/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/coursea/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/coursea/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/coursea/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "Fórum do professor",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Meus amigos robóticos",
-          "url": ""
+          "name": "Meus amigos robóticos"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Meus amigos robóticos",
-          "url": ""
+          "name": "Meus amigos robóticos"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Meus amigos robóticos",
-          "url": ""
+          "name": "Meus amigos robóticos"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Meus amigos robóticos",
-          "url": ""
+          "name": "Meus amigos robóticos"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Meus amigos robóticos",
-          "url": ""
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Meus amigos robóticos"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "Atividade desconectada: Blocos para o labirinto",
-          "url": ""
+          "name": "Atividade desconectada: Blocos para o labirinto"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Programação em duplas",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "csf-lesson-recommend/coursec/2021": {
-          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação",
-          "url": ""
-        },
-        "debugging_guide/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Principais dicas de atividades de Fundamentos da Ciência da Computação"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Introdução ao Artist",
-          "url": ""
+          "name": "Introdução ao Artist"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
-        },
-        "feeling_faces_emotion_image/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "O grande evento",
-          "url": ""
+          "name": "O grande evento"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "O grande evento (Curso C)",
-          "url": ""
+          "name": "O grande evento (Curso C)"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "right-app-scenarios/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "Bits x bytes",
-          "url": ""
+          "name": "Bits x bytes"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Pulseiras binárias",
-          "url": ""
+          "name": "Pulseiras binárias"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Pulseiras binárias",
-          "url": ""
+          "name": "Pulseiras binárias"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Pulseiras binárias",
-          "url": ""
+          "name": "Pulseiras binárias"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Pulseiras binárias",
-          "url": ""
+          "name": "Pulseiras binárias"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Pulseiras binárias",
-          "url": ""
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "play-lab-project-guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pulseiras binárias"
         },
         "implementation_guide/coursec/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/coursec/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide_1/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/coursec/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/coursec/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "Fórum do professor",
-          "url": ""
-        },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Programação em papel quadriculado",
-          "url": ""
+          "name": "Programação em papel quadriculado"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Programação em duplas",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programação por revezamento",
-          "url": ""
+          "name": "Programação por revezamento"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
-        },
-        "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "open-ended_programming_levels/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "open-ended_programming_levels_1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "dance-party-project-guide/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "Festa: Desconectada",
-          "url": ""
-        },
-        "open-ended_programming_levels_2/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Festa: Desconectada"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "Rostos sentimentais",
-          "url": ""
+          "name": "Rostos sentimentais"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Condicionais com cartas",
-          "url": ""
+          "name": "Condicionais com cartas"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Condicionais com cartas",
-          "url": ""
+          "name": "Condicionais com cartas"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Condicionais com cartões - Programa de exemplo",
-          "url": ""
+          "name": "Condicionais com cartões - Programa de exemplo"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Condicionais com cartas",
-          "url": ""
+          "name": "Condicionais com cartas"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Condicionais com cartas",
-          "url": ""
+          "name": "Condicionais com cartas"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Condicionais com cartas",
-          "url": ""
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csta_standards_mapping/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Condicionais com cartas"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/coursed/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/coursed/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "Fórum do professor",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "Atividade desconectada: Blocos para o labirinto",
-          "url": ""
+          "name": "Atividade desconectada: Blocos para o labirinto"
         },
         "pair_programming/express/2021": {
-          "name": "Programação em duplas",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "artist_introduction/express/2021": {
-          "name": "Introdução ao Artist",
-          "url": ""
+          "name": "Introdução ao Artist"
         },
         "turns_angles/express/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "turns_angles_1/express/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
-        },
-        "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
-        },
-        "making_sprites/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         },
         "sprites_in_action/express/2021": {
-          "name": "Sprites em Ação",
-          "url": ""
+          "name": "Sprites em Ação"
         },
         "pause_and_think_online/express/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "dance-party-project-guide/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Lista de reprodução do Spotify (todas as idades)",
-          "url": ""
-        },
-        "open-ended_programming_levels/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "pair_programming_video/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Lista de reprodução do Spotify (todas as idades)"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
-        },
-        "text_and_prompts/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "variables_video/express/2021": {
-          "name": "variáveis",
-          "url": ""
-        },
-        "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "variáveis"
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": ""
-        },
-        "csta_standards_mapping/express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary_1/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Projeto Final em Fundamentos da Ciência da Computação"
         },
         "teacher_forum_1/express/2021": {
-          "name": "Fórum do professor",
-          "url": ""
-        },
-        "debugging_guide/express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Programação em duplas",
-          "url": ""
+          "name": "Programação em duplas"
         },
         "class-section-video/pre-express/2021": {
-          "name": "Como fazer uma Sessão Classe no Code.org",
-          "url": ""
+          "name": "Como fazer uma Sessão Classe no Code.org"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Rostos sentimentais",
-          "url": ""
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Rostos sentimentais"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "csta_standards_mapping/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/pre-express/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "Fórum do professor",
-          "url": ""
-        },
-        "debugging_guide/pre-express/2021": {
-          "name": "",
-          "url": ""
-        },
-        "follow_the_algorithm/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Pare e pense on-line",
-          "url": ""
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Pare e pense on-line"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Ângulos e curvas",
-          "url": ""
+          "name": "Ângulos e curvas"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Composição de músicas com funções",
-          "url": ""
+          "name": "Composição de músicas com funções"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas",
-          "url": ""
+          "name": "Funções desconectadas: escrevendo músicas"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "Blocos desconectados (Cursos C-F)",
-          "url": ""
+          "name": "Blocos desconectados (Cursos C-F)"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Projetando para Acessibilidade",
-          "url": ""
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Projetando para Acessibilidade"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "Projeto Final em Fundamentos da Ciência da Computação",
-          "url": ""
+          "name": "Projeto Final em Fundamentos da Ciência da Computação"
         },
         "design-process/coursee/2021": {
-          "name": "Processo de design",
-          "url": ""
+          "name": "Processo de design"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 maneiras criativas para seus estudantes mostrarem o que sabem",
-          "url": ""
-        },
-        "csta_standards_mapping/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "cross-curricular_extension_activities/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "course_vocabulary/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "72 maneiras criativas para seus estudantes mostrarem o que sabem"
         },
         "implementation_guide/coursee/2021": {
-          "name": "Guia de implementação",
-          "url": ""
-        },
-        "lesson_type_guide/coursee/2021": {
-          "name": "",
-          "url": ""
-        },
-        "debugging_guide/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia de implementação"
         },
         "curriculum_guide_1/coursee/2021": {
-          "name": "Guia para o currículo",
-          "url": ""
-        },
-        "2021_change_log/coursee/2021": {
-          "name": "",
-          "url": ""
+          "name": "Guia para o currículo"
         },
         "teacher_forum_1/coursee/2021": {
-          "name": "Fórum do professor",
-          "url": ""
+          "name": "Fórum do professor"
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Documentação do Sprite Lab",
-          "url": ""
+          "name": "Documentação do Sprite Lab"
         }
       }
     }
