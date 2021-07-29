@@ -690,7 +690,6 @@ class TopInstructions extends Component {
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
-                user={user}
                 visible={tabSelected === TabType.COMMENTS}
                 isEditable={teacherViewingStudentWork}
                 rubric={rubric}
@@ -699,7 +698,8 @@ class TopInstructions extends Component {
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
-                teacher={this.props.user}
+                teacher={user}
+                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (

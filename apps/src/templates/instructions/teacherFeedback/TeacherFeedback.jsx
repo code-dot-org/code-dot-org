@@ -28,7 +28,6 @@ const ErrorType = {
 
 export class TeacherFeedback extends Component {
   static propTypes = {
-    user: PropTypes.number,
     isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
@@ -37,6 +36,7 @@ export class TeacherFeedback extends Component {
     teacher: PropTypes.number,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
+    hasContainedLevels: PropTypes.bool,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
@@ -201,10 +201,15 @@ export class TeacherFeedback extends Component {
   renderCommentAreaHeaderForTeacher() {
     const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
 
+    // We hide this feature for contained levels because contained levels are currently not
+    // editable by students so setting the review state to keepWorking doesn't make sense.
+    const hasEditableReviewState =
+      keepWorkingEnabled && !this.props.hasContainedLevels;
+
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {keepWorkingEnabled && (
+        {hasEditableReviewState && (
           <EditableReviewState
             latestReviewState={this.getLatestReviewState()}
             onReviewStateChange={this.onReviewStateChange}
