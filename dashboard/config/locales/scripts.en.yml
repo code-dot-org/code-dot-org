@@ -22354,14 +22354,12 @@ en:
               description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to the code review process and practice giving and receiving feedback.
             lesson-9:
               name: Inheritance and Methods
-              description_student: By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!
-              description_teacher: Students are introduced to inheritance by deriving a subclass of `Painter` with more commands. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass. In future lessons, students add additional methods and subclasses of `Painter`.
+              description_student: By now, you have noticed that your `Painter` has limited methods for moving around The Neighborhood. You create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!
+              description_teacher: Students are introduced to inheritance by creating a subclass of `Painter` with more methods. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass.
             lesson-10:
               name: More Methods, More Features
-              description_student: In this lesson, you give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You consider edge cases when implementing your new methods.
-              description_teacher: 'In this lesson, students continue to apply the principle of inheritance in their code by further expanding the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. To practice Java syntax and algorithmic thinking, students construct a step-by-step process for implementing each of the methods by hand before coding it in Java. By continuing to write and use new methods, students experience the benefits of reusability.
-
-'
+              description_student: You give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You practice writing new methods by first planning your algorithms and considering situations that may cause errors in your solutions.
+              description_teacher: 'Students expand the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. Students develop algorithmic thinking by writing pseudocode to plan algorithms before writing Java code. Students identify edge cases and implement solutions to prevent errors.'
             lesson-11:
               name: Painting Methods
               description_student: In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.
@@ -24720,3 +24718,35 @@ en:
           description_audience: ''
           description_short: ''
           description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+        dlp21-overview:
+          lessons: {}
+          lesson_groups: {}
+          name: dlp21-overview
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Overview
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csd-overview
+          title: CS Discoveries Deeper Learning Overview
+          description_audience: ''
+          description_short: ''
+          description: Welcome to the 2021 Deeper Learning program for onboarding CS Discoveries facilitators.
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Overview
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: dlp21-csp-overview
+          title: 2021 CS Principles Deeper Learning Overview
+          description_audience: ''
+          description_short: ''
+          description: "###Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
