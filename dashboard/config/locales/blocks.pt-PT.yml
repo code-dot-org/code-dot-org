@@ -1345,3 +1345,5 @@ pt:
           DIR:
             right: direita ↻
             left: esquerda ↺
+      validation_validatedBackground:
+        text: definir fundo para {IMG}
