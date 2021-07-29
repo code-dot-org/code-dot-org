@@ -7141,3 +7141,7 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: prófun
