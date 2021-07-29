@@ -22346,14 +22346,12 @@ en:
               description_teacher: Students are introduced to the `while` loop and additional methods to control the movement of the `Painter` in The Neighborhood. Students combine their knowledge of methods, constructors, and control structures to develop solutions for increasingly complex problems.
             lesson-7:
               name: More with Conditionals
-              description_student: You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. In this lesson, you use `if-else` statements to give the `Painter` an alternative action. You also learn about the `!` (not) operator to help with the decisions the `Painter` makes.
-              description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.
+              description_student: You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. You use a new type of control structure called an `if-else` statement to give the `Painter` actions and alternative actions. You also learn about the `!` (not) operator and how it can be used to help with the decisions the `Painter` makes.
+              description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` methods they have used so far.
             lesson-8:
               name: Introduction to Code Reviews
-              description_student: 'As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!
-
-'
-              description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.
+              description_student: As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. You practice using code reviews to provide feedback and discuss strategies for giving and using feedback.
+              description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to the code review process and practice giving and receiving feedback.
             lesson-9:
               name: Inheritance and Methods
               description_student: By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!
