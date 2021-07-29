@@ -72,7 +72,6 @@ export default class JavabuilderConnection {
         break;
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
-        includeLineBreak = true;
         break;
       case StatusMessageType.EXITED:
         this.onExit();
@@ -149,6 +148,8 @@ export default class JavabuilderConnection {
     this.onOutputMessage(
       'We hit an error connecting to our server. Try again.'
     );
+    // Set isRunning to false
+    getStore().dispatch(setIsRunning(false));
     console.error(`[error] ${error.message}`);
   }
 

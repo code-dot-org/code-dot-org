@@ -2,7 +2,6 @@
   "addAComment": "Add a comment",
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
-  "backpackSaveInProgress": "Error: Save to Backpack is currently in progress, cannot start another Save to Backpack now.",
   "cancel": "Cancel",
   "clearConsole": "Clear Console",
   "classNotFound": "Error: one or more of your Java files are missing a class definition.",
