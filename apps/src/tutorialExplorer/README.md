@@ -4,6 +4,8 @@
 
 At the time of writing, the pages have over 190 million pageviews, with over 130 million of them unique.
 
+![code_learn_screenshot](https://user-images.githubusercontent.com/2205926/127435991-68ff5f7a-d6f8-4dda-9fad-b21e4232ccd1.png)
+
 ## Interface
 
 The host page is responsible for providing the header banner, and then embeds the React app.
