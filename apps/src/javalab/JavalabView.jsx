@@ -47,7 +47,8 @@ class JavalabView extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     setLeftWidth: PropTypes.func,
     leftWidth: PropTypes.number,
-    topInstructionsHeight: PropTypes.number.isRequired
+    topInstructionsHeight: PropTypes.number.isRequired,
+    longInstructions: PropTypes.string
   };
 
   state = {
@@ -112,18 +113,19 @@ class JavalabView extends React.Component {
       );
     }
 
-    // This workaround is necessary because <VisualizationResizeBar /> requires
-    // an element with ID 'visualization' or it will not resize.
     return (
       <div
         id="visualization"
         style={{
-          margin: '0 auto',
-          height: this.props.leftWidth,
+          width: this.props.leftWidth + 13,
+          height: 1,
           maxWidth: undefined,
-          maxHeight: undefined
+          maxHeight: undefined,
+          marginTop: 13
         }}
-      />
+      >
+        &nbsp;
+      </div>
     );
   };
 
@@ -156,7 +158,7 @@ class JavalabView extends React.Component {
 
     let scale = newVizWidth / 800;
     if (scale < 0) {
-      // Avoiding inverting.
+      // Avoid inverting.
       scale = 0;
     }
     getStore().dispatch(setVisualizationScale(scale));
@@ -170,11 +172,11 @@ class JavalabView extends React.Component {
     }
 
     const cssWidth = width + 'px';
-    const newcssWidth = newVizWidth + 'px';
+    const cssWidthContent = newVizWidth + 'px';
     $('#visualization').css({
       'max-width': cssWidth,
-      'max-height': newcssWidth,
-      height: newcssWidth,
+      'max-height': cssWidthContent,
+      height: cssWidthContent,
       left: (width - newVizWidth) / 2 + 'px'
     });
 
@@ -201,7 +203,9 @@ class JavalabView extends React.Component {
       showProjectTemplateWorkspaceIcon,
       isReadOnlyWorkspace,
       editorColumnHeight,
-      leftWidth
+      leftWidth,
+      appType,
+      longInstructions
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -210,6 +214,10 @@ class JavalabView extends React.Component {
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
+
+    // It's possible that a console level without instructions won't have
+    // anything to show on the left side.
+    const leftSideVisible = appType !== 'console' || !!longInstructions;
 
     return (
       <StudioAppWrapper>
@@ -235,10 +243,10 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
               />
-              {this.renderVisualization()}
+              {leftSideVisible && this.renderVisualization()}
             </div>
 
-            {this.props.appType !== 'console' && (
+            {leftSideVisible && (
               <HeightResizer
                 vertical={true}
                 resizeItemTop={() => 10}
@@ -249,9 +257,9 @@ class JavalabView extends React.Component {
 
             <div
               style={{
-                ...(this.props.appType === 'console'
-                  ? styles.editorAndConsoleOnly
-                  : styles.editorAndConsole),
+                ...(leftSideVisible
+                  ? styles.editorAndConsole
+                  : styles.editorAndConsoleOnly),
                 color: isDarkMode ? color.white : color.black,
                 height: editorColumnHeight
               }}
@@ -266,7 +274,10 @@ class JavalabView extends React.Component {
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
-                style={styles.consoleParent}
+                style={{
+                  ...styles.consoleParent,
+                  ...(!leftSideVisible && {paddingBottom: 40})
+                }}
                 bottomRow={
                   <ControlButtons
                     isRunning={isRunning}
@@ -364,7 +375,8 @@ export default connect(
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     leftWidth: state.javalab.leftWidth,
-    topInstructionsHeight: state.instructions.renderedHeight
+    topInstructionsHeight: state.instructions.renderedHeight,
+    longInstructions: state.instructions.longInstructions
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
