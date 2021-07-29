@@ -18,7 +18,7 @@ class Backpack extends Component {
     isDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object.isRequired
+    backpackApi: PropTypes.object
   };
 
   state = {
@@ -281,6 +281,7 @@ const styles = {
   }
 };
 
+export const UnconnectedBackpack = Backpack;
 export default connect(
   state => ({
     backpackApi: state.javalab.backpackApi
@@ -288,4 +289,4 @@ export default connect(
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source))
   })
-)(onClickOutside(Radium(Backpack)));
+)(onClickOutside(Radium(UnconnectedBackpack)));
