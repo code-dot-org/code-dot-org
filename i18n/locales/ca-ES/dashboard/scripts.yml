@@ -2435,3 +2435,7 @@ ca:
               display_name: Unitat 4
             lessonGroup-7:
               display_name: Unitat 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: prova
