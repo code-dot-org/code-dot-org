@@ -1,6 +1,7 @@
 {
   "allFilesCompile": "完成所有檔案了！",
   "backpackLabel": "背包",
+  "cancel": "取消",
   "clearConsole": "清除主控台",
   "commit": "提交",
   "commitCode": "提交程式碼",

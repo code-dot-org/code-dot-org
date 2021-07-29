@@ -1,5 +1,6 @@
 {
   "backpackLabel": "Mochila",
+  "cancel": "Cancelar",
   "clearConsole": "Limpar Console",
   "compilerError": "Não foi possível compilar seu programa.  Procure por erros em seu programa e tente novamente.",
   "console": "Console",
