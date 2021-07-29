@@ -16,9 +16,6 @@ export default function ControlButtons({
   onContinue,
   renderSettings
 }) {
-  // Note: The 'noBorder' class is required on the buttons below because there are !important
-  // button styles we don't want. This class can be removed when the button:active !important
-  // border is removed from common.scss.
   return (
     <div>
       <JavalabButton

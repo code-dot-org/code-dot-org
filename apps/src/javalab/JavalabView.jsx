@@ -113,6 +113,8 @@ class JavalabView extends React.Component {
       );
     }
 
+    // For levels without a visualization, still create a div so that the
+    // updateLayout function can adjust the width of the entire left side.
     return (
       <div
         id="visualization"
