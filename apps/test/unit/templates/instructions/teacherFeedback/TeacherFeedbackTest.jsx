@@ -175,8 +175,7 @@ describe('TeacherFeedback', () => {
 
         const latestFeedback = {
           ...FEEDBACK,
-          review_state: ReviewStates.keepWorking,
-          student_updated_since_feedback: true
+          is_awaiting_teacher_review: true
         };
         const wrapper = setUp({latestFeedback});
 
@@ -355,8 +354,7 @@ describe('TeacherFeedback', () => {
       it('renders ReadOnlyReviewState with expected props - awaiting Review', () => {
         const latestFeedback = {
           ...FEEDBACK,
-          review_state: ReviewStates.keepWorking,
-          student_updated_since_feedback: true
+          is_awaiting_teacher_review: true
         };
         const wrapper = setUp({latestFeedback, ...STUDENT_PROPS});
         const reviewState = wrapper.find(ReadOnlyReviewState);

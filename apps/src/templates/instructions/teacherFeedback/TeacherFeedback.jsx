@@ -189,10 +189,7 @@ export class TeacherFeedback extends Component {
 
   getLatestReviewState() {
     const {latestFeedback} = this.state;
-    const isAwaitingTeacherReview =
-      latestFeedback?.review_state === ReviewStates.keepWorking &&
-      latestFeedback?.student_updated_since_feedback;
-    const reviewState = isAwaitingTeacherReview
+    const reviewState = latestFeedback?.is_awaiting_teacher_review
       ? ReviewStates.awaitingReview
       : latestFeedback?.review_state;
     return reviewState || null;
