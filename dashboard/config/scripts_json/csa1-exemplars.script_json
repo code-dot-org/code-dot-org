@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 16:40:55 UTC",
+    "serialized_at": "2021-07-29 20:14:24 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa1-exemplars"
@@ -2049,7 +2049,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L3 Placeholder"
+          "CSA U1L10-L3 multi Placeholder"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -2057,7 +2057,7 @@
         "activity_section.key": "f4b1373a-7dfc-4c9c-9cda-72bab9dd37d1"
       },
       "level_keys": [
-        "CSA U1L10-L3 Placeholder"
+        "CSA U1L10-L3 multi Placeholder"
       ]
     },
     {
@@ -3122,9 +3122,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L3 Placeholder",
+        "level.key": "CSA U1L10-L3 multi Placeholder",
         "script_level.level_keys": [
-          "CSA U1L10-L3 Placeholder"
+          "CSA U1L10-L3 multi Placeholder"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
