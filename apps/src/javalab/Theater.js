@@ -1,4 +1,7 @@
-import {TheaterSignalType} from './constants';
+import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
+import javalabMsg from '@cdo/javalab/locale';
+import {getStore} from '../redux';
+import {appendOutputLog, appendNewlineToConsoleLog} from './javalabRedux';
 
 export default class Theater {
   constructor() {
@@ -44,5 +47,15 @@ export default class Theater {
 
   getAudioElement() {
     return document.getElementById('theater-audio');
+  }
+
+  onClose() {
+    getStore().dispatch(appendNewlineToConsoleLog());
+    getStore().dispatch(
+      appendOutputLog(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+      )
+    );
+    getStore().dispatch(appendNewlineToConsoleLog());
   }
 }
