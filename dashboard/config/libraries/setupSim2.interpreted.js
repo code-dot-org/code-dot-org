@@ -65,11 +65,11 @@ function setupSim(
     s3sprite.setAnimation(World.s3costume);
     if(s3sprite.height>s3sprite.width){
       scaler=s3sprite.width/s3sprite.height;
-      s3sprite.height=boxHeight*0.375;
+      s3sprite.height=boxHeight*0.75;
       s3sprite.width=s3sprite.height*scaler;
     } else {
       scaler=s3sprite.height/s3sprite.width;
-      s3sprite.width=boxHeight*0.375;
+      s3sprite.width=boxHeight*0.75;
       s3sprite.height=s3sprite.width*scaler;
     }
     drawSprite(s3sprite);
@@ -78,11 +78,11 @@ function setupSim(
     s3sprite2.setAnimation(World.s3costume);
     if(s3sprite2.height>s3sprite2.width){
       scaler=s3sprite2.width/s3sprite2.height;
-      s3sprite2.height=boxHeight*0.375;
+      s3sprite2.height=boxHeight*0.75;
       s3sprite2.width=s3sprite2.height*scaler;
     } else {
       scaler=s3sprite2.height/s3sprite2.width;
-      s3sprite2.width=boxHeight*0.375;
+      s3sprite2.width=boxHeight*0.75;
       s3sprite2.height=s3sprite2.width*scaler;
     }
     drawSprite(s3sprite2);
@@ -91,8 +91,8 @@ function setupSim(
     fill("white");
     textAlign(LEFT, CENTER);
     textSize(boxHeight/2);
-    text(World.sprite1score,box1x+(boxHeight*3/2), box1y+(boxHeight/2));
-    text(World.sprite2score,box2x+(boxHeight*3/2), box2y+(boxHeight/2));
+    text(World.sprite1score,box1x+(boxHeight*1.75), box1y+(boxHeight/2));
+    text(World.sprite2score,box2x+(boxHeight*1.75), box2y+(boxHeight/2));
     pop();
 
   // Wandering behavior at a certain speed, will be added to both s1 and s2 sprites.

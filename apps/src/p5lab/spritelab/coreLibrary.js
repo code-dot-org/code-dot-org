@@ -3,7 +3,6 @@ var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
 var userInputEventCallbacks = {};
-var newSprites = {};
 var totalPauseTime = 0;
 var currentPauseStartTime = 0;
 var numActivePrompts = 0;
@@ -156,11 +155,10 @@ export function addSprite(sprite, name, animation) {
     enforceUniqueSpriteName(name);
     sprite.name = name;
   }
-  if (animation) {
-    // Add to new sprites map so we can fire a "when sprite created" event if needed
-    newSprites[animation] = newSprites[animation] || [];
-    newSprites[animation].push(sprite);
-  }
+
+  // If there are any whenSpriteCreated events, call the callback immediately
+  // so that the event happens during the same draw loop frame.
+  runSpriteCreatedEvents(sprite);
 
   spriteId++;
   return sprite.id;
@@ -242,6 +240,20 @@ export function addEvent(type, args, callback) {
 
 export function clearCollectDataEvents() {
   inputEvents = inputEvents.filter(e => e.type !== 'collectData');
+}
+
+function runSpriteCreatedEvents(newSprite) {
+  const matchingInputEvents = inputEvents.filter(
+    inputEvent =>
+      inputEvent.type === 'whenSpriteCreated' &&
+      (inputEvent.args.name === newSprite.name ||
+        inputEvent.args.costume === newSprite.getAnimationLabel() ||
+        inputEvent.args.costume === 'all')
+  );
+  matchingInputEvents.forEach(inputEvent => {
+    eventLog.push(`spriteCreated: ${newSprite.id}`);
+    inputEvent.callback({newSprite: newSprite.id});
+  });
 }
 
 function atTimeEvent(inputEvent, p5Inst) {
@@ -414,16 +426,6 @@ function whileClickEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
-function whenSpriteCreatedEvent(inputEvent, p5Inst) {
-  let callbackArgList = [];
-  let sprites = newSprites[inputEvent.args.costume] || [];
-  sprites.forEach(sprite => {
-    eventLog.push(`spriteCreated: ${sprite.id}`);
-    callbackArgList.push({newSprite: sprite.id});
-  });
-  return callbackArgList;
-}
-
 function whenAllPromptsAnswered(inputEvent, p5Inst) {
   const previous = inputEvent.previous;
   inputEvent.previous = numActivePrompts;
@@ -465,7 +467,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
     case 'whileclick':
       return whileClickEvent(inputEvent, p5Inst);
     case 'whenSpriteCreated':
-      return whenSpriteCreatedEvent(inputEvent, p5Inst);
+      // This event is handled immediately when the sprite is created. See addSprite()
+      return [];
     case 'whenAllPromptsAnswered':
       return whenAllPromptsAnswered(inputEvent, p5Inst);
   }
@@ -478,9 +481,6 @@ export function runEvents(p5Inst) {
       inputEvent.callback(args);
     });
   });
-
-  // Clear newSprites. Used for whenSpriteCreated events and should be reset every tick.
-  newSprites = {};
 }
 
 export function addBehavior(sprite, behavior) {

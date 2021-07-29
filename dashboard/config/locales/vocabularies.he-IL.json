@@ -1,0 +1,83 @@
+{
+  "he-IL": {
+    "data": {
+      "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "התנהגות"
+        },
+        "variable/coursef/2021": {
+          "word": "משתנה"
+        },
+        "internet/coursef/2021": {
+          "word": "אינטרנט"
+        },
+        "define/coursef/2021": {
+          "word": "הגדר"
+        },
+        "debugging/courseb/2021": {
+          "word": "מציאת טעויות"
+        },
+        "drop/courseb/2021": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/coursea/2021": {
+          "word": "מציאת טעויות"
+        },
+        "drop/coursea/2021": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/coursec/2021": {
+          "word": "מציאת טעויות"
+        },
+        "binary/coursec/2021": {
+          "word": "בינארי"
+        },
+        "debugging/coursed/2021": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/coursed/2021": {
+          "word": "תנאים"
+        },
+        "debugging/express/2021": {
+          "word": "מציאת טעויות"
+        },
+        "behavior/express/2021": {
+          "word": "התנהגות"
+        },
+        "conditionals/express/2021": {
+          "word": "תנאים"
+        },
+        "function/express/2021": {
+          "word": "פונקציה"
+        },
+        "variable/express/2021": {
+          "word": "משתנה"
+        },
+        "define/express/2021": {
+          "word": "הגדר"
+        },
+        "drop/pre-express/2021": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/pre-express/2021": {
+          "word": "מציאת טעויות"
+        },
+        "behavior/coursee/2021": {
+          "word": "התנהגות"
+        },
+        "copyright/coursee/2021": {
+          "word": "זכויות יוצרים"
+        },
+        "function/coursee/2021": {
+          "word": "פונקציה"
+        },
+        "conditionals/coursee/2021": {
+          "word": "תנאים"
+        },
+        "define/coursee/2021": {
+          "word": "הגדר"
+        }
+      }
+    }
+  }
+}

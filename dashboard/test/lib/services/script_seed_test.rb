@@ -1108,6 +1108,7 @@ module Services
         )
         CourseOffering.add_course_offering(script)
       end
+      script.reload
       course_version = script.get_course_version
       assert course_version
 

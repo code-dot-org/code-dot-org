@@ -14950,6 +14950,7 @@ en:
             'Step 2: Demonstrate Understanding':
               name: 'Step 2: Demonstrate Understanding'
           student_description: ''
+          name: dlp19-csp-mod-w4
         csd-pilot:
           title: CSD Pilot Course
           description_audience: ''
@@ -22324,7 +22325,7 @@ en:
             lesson-2:
               name: Classes and Objects
               description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
-              description_teacher: 'Students access the Java Lab to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
+              description_teacher: 'Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
 
 '
             lesson-3:
@@ -22420,7 +22421,9 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: 'Test Lesson #1'
+              name: Practice Lesson
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22428,7 +22431,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Test
+              display_name: Practice Levels
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -23688,15 +23691,15 @@ en:
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
-              name: Overview of CS Discoveries
+              name: Overview of course content
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Tools
+              name: Overview of learning tools
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Implementation Options
+              name: 'Overview of implementation '
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -23711,6 +23714,14 @@ en:
           lessons:
             lesson-1:
               name: Guidance for teaching CS Discoveries
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: CS Practices
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Teaching practices
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -24477,6 +24488,8 @@ en:
               name: AI Lab Resources
               description_student: 
               description_teacher: 
+            lesson-3:
+              name: Test
           lesson_groups: {}
           name: ai-lab
           title: AI Lab
@@ -24518,7 +24531,7 @@ en:
         sb-pt-cont:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - A
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24530,7 +24543,7 @@ en:
         sb-pt-exp:
           lessons:
             lesson-1:
-              name: Story Board
+              name: Story Board - B
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -24548,6 +24561,53 @@ en:
           lesson_groups: {}
           name: dc-standalone
           title: Story Board (DC Standalone)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        storyboard-playtest-control:
+          lessons: {}
+          lesson_groups: {}
+        sb-chardev-v1:
+          lessons:
+            lesson-1:
+              name: Story Board - Character Development
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: sb-chardev-v1
+          title: Story Board Character Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+        dlp21-csp-mod4:
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stage 1
+            lessonGroup-3:
+              display_name: Stage 2
+          name: dlp21-csp-mod4
+          title: '2021 CS Principles Deeper Learning Module 4  '
+          description_audience: ''
+          description_short: ''
+          description: overview instructions
+        dlp21-csp-mod1:
+          lessons:
+            lesson-1:
+              name: 'Stage1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          lesson_groups: {}
+          name: dlp21-csp-mod1
+          title: CS Principles Deeper Learning Module 1
           description_audience: ''
           description_short: ''
           description: ''

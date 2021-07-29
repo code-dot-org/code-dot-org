@@ -114,6 +114,7 @@ describe('UnitOverviewHeader', () => {
         title: '2017',
         isStable: true,
         locales: ['English', 'Italian'],
+        localeCodes: ['en-US', 'it-IT'],
         canViewVersion: true
       },
       {
@@ -122,6 +123,7 @@ describe('UnitOverviewHeader', () => {
         title: '2018',
         isStable: true,
         locales: ['English'],
+        localeCodes: ['en-US'],
         canViewVersion: true
       },
       {
@@ -130,6 +132,7 @@ describe('UnitOverviewHeader', () => {
         title: '2019',
         isStable: false,
         locales: [],
+        localeCodes: [],
         canViewVersion: false
       }
     ];
@@ -138,7 +141,7 @@ describe('UnitOverviewHeader', () => {
         {...defaultProps}
         scriptName="coursea-2018"
         versions={versions}
-        localeEnglishName="Italian"
+        localeCode="it-IT"
       />,
       {disableLifecycleMethods: true}
     );

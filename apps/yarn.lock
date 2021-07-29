@@ -1561,16 +1561,17 @@
     to-fast-properties "^2.0.0"
 
 "@cdo/interpreted@link:../dashboard/config/libraries":
-  version "0.1.0"
+  version "0.0.0"
+  uid ""
 
 "@code-dot-org/artist@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.35":
-  version "3.5.35"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.35.tgz#6afae54e8b4d61e4aa23209639cdbd066881306b"
-  integrity sha512-f+cEBjyMGslVf0qliRm1JJO9MHFswXpLvRklWPYLwlCgjSS9655YlS8e6g1h7UMFHT8uG2c+jlDtRN38r0RPmg==
+"@code-dot-org/blockly@3.5.36":
+  version "3.5.36"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.36.tgz#ee3f4493c3511f5d7719a8848e2511735267246e"
+  integrity sha512-6/Q4FFrBtTY2MScm0gOquL39Ah3wgsXMZG+uGuxC95iO88AXG5t+x7gdCkMNRDYFJA8uE7uAXbKA2CRt/tK7Nw==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -1637,10 +1638,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.38":
-  version "0.0.38"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.38.tgz#5e44f32244a25f69822bf47746142e3457e60abe"
-  integrity sha512-lGAZd1VAMkzs8OdGfzcSCw1VL8+GpNzZK7AgUZ/fEGYffgmAZGMIavLqjSpkJmT+MY/g64YsN8/oo0WySftjlA==
+"@code-dot-org/ml-playground@0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.39.tgz#78de40425f562be700ef98e2e2b8ff75e34f6a05"
+  integrity sha512-A3Lh6z4zk7j00W787CBe+zSbyTdZ5y1JH3V9WOxtHef3173LXGFKmr7wB4jWeomHhktg7pmDpp86EelJuFbK9g==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"

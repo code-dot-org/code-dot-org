@@ -17,6 +17,18 @@
         "courseE_Dogger_2": {
           "drive left": "左に 動かす",
           "drive right": "右に 動かす"
+        },
+        "courseF_events_predict": {
+          "mystery behavior": "ふしぎな動き"
+        },
+        "courseF_label_predict": {
+          "mystery behavior": "ふしぎな動き"
+        },
+        "courseF_sprites_predict": {
+          "mystery behavior": "ふしぎな動き"
+        },
+        "courseF_variables_predict": {
+          "mystery behavior": "ふしぎな動き"
         }
       }
     }

@@ -2,7 +2,11 @@ mi:
   data:
     variable_names:
       actor: kaiwhakaari
+      age: pakeke
+      answer: whakautu
+      binary: tāhūrua
       cats: ngā ngeru
+      color: tae
       counter: pūtatau
       dogs: ngā kurī
       height: teitei

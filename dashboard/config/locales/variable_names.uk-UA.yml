@@ -6,6 +6,9 @@ uk:
       Green: Зелена
       Red: Червона
       actor: персонаж
+      age: вік
+      answer: відповідь
+      binary: двійкова система
       birds: птахи
       cats: коти
       color: колір
@@ -26,6 +29,7 @@ uk:
       sides: сторони
       size: розмір
       speed: швидкість
+      startX: startX
       variable: змінна
       width: ширина
       wizard: чарівник

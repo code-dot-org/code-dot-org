@@ -266,6 +266,7 @@ zh-CN:
     added_teacher: 添加%{name}为你的老师
     registered: 你已经注册了 %{section_name}。
     captcha_required: 请填写验证码加入本小组。
+    already_exists: 你已经加入了小组 %{section_name}
     error:
       signed_in: 请在注销后继续下一步操作。
       username_not_found: 找不到用户名 %{用户名}
