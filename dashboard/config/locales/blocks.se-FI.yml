@@ -1519,3 +1519,5 @@ se:
           DIR:
             right: olgeš ↻
             left: gurut ↺
+      validation_validatedBackground:
+        text: bija duogábeali dása {IMG}
