@@ -37,7 +37,9 @@ class JavalabView extends React.Component {
     isRunning: PropTypes.bool,
     setIsRunning: PropTypes.func,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-    awaitingContainedResponse: PropTypes.bool
+    awaitingContainedResponse: PropTypes.bool,
+    isSubmittable: PropTypes.bool,
+    isSubmitted: PropTypes.bool
   };
 
   state = {
@@ -128,6 +130,17 @@ class JavalabView extends React.Component {
       document.body.style.backgroundColor = color.background_gray;
     }
 
+    let finishButtonText, finishButtonId;
+    if (this.props.isSubmitted) {
+      finishButtonText = i18n.unsubmit();
+      finishButtonId = 'unsubmitButton';
+    } else if (this.props.isSubmittable) {
+      finishButtonText = i18n.submit();
+      finishButtonId = 'submitButton';
+    } else {
+      finishButtonText = i18n.finish();
+      finishButtonId = 'javalabFinish';
+    }
     return (
       <StudioAppWrapper>
         <div
@@ -140,11 +153,11 @@ class JavalabView extends React.Component {
             <JavalabSettings>{this.renderSettings()}</JavalabSettings>
             {!isEditingStartSources && (
               <JavalabButton
-                text={i18n.finish()}
+                text={finishButtonText}
+                id={finishButtonId}
                 onClick={onContinue}
                 style={styles.finish}
                 isDisabled={this.props.disableFinishButton}
-                id="javalabFinish"
               />
             )}
           </div>
@@ -278,7 +291,9 @@ export default connect(
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
-    disableFinishButton: state.javalab.disableFinishButton
+    disableFinishButton: state.javalab.disableFinishButton,
+    isSubmittable: state.pageConstants.isSubmittable,
+    isSubmitted: state.pageConstants.isSubmitted
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
