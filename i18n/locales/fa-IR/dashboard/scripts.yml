@@ -2617,3 +2617,7 @@ fa:
               display_name: واحد 4
             lessonGroup-7:
               display_name: واحد 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: آزمایش
