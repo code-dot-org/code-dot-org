@@ -2751,3 +2751,7 @@ da:
               display_name: Enhed 4
             lessonGroup-7:
               display_name: Enhed 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
