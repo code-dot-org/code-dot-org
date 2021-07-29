@@ -177,7 +177,7 @@ class Backpack extends Component {
                   </div>
                 ))}
                 <JavalabButton
-                  text="Import"
+                  text={javalabMsg.import()}
                   style={styles.importButton}
                   onClick={this.handleImport}
                   isDisabled={selectedFiles.length === 0}
