@@ -16,6 +16,7 @@ const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
+const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 
 const initialState = {
   consoleLogs: [],
@@ -26,7 +27,8 @@ const initialState = {
   isRunning: false,
   backpackApi: null,
   isStartMode: false,
-  levelName: undefined
+  levelName: undefined,
+  disableFinishButton: false
 };
 
 // Action Creators
@@ -126,6 +128,13 @@ export const setLevelName = levelName => ({
   type: SET_LEVEL_NAME,
   levelName
 });
+
+export const setDisableFinishButton = disableFinishButton => {
+  return {
+    type: SET_DISABLE_FINISH_BUTTON,
+    disableFinishButton
+  };
+};
 
 // Selectors
 export const getSources = state => {
@@ -267,6 +276,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       levelName: action.levelName
+    };
+  }
+  if (action.type === SET_DISABLE_FINISH_BUTTON) {
+    return {
+      ...state,
+      disableFinishButton: action.disableFinishButton
     };
   }
   return state;

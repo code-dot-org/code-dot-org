@@ -12,7 +12,8 @@ import javalab, {
   appendOutputLog,
   setBackpackApi,
   setIsStartMode,
-  setLevelName
+  setLevelName,
+  setDisableFinishButton
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -210,6 +211,8 @@ Javalab.prototype.init = function(config) {
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
 
+  getStore().dispatch(setDisableFinishButton(config.readonlyWorkspace));
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -246,6 +249,7 @@ Javalab.prototype.onRun = function() {
   this.studioApp_.attempts++;
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
+    getStore().dispatch(setDisableFinishButton(false));
   }
 
   this.miniApp?.reset?.();
