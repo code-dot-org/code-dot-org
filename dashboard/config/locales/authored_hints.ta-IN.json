@@ -104,20 +104,20 @@
         "outbreak1": {
           "step1": "உங்கள் உருவங்களை உருவாக்க இந்த தொகுதிகளைப் பயன்படுத்தவும்:\n\n[தடுப்பு தடுப்பு] [0]\n\n[தடுப்பு தடுப்பு] [1]\n\nகருவிப்பெட்டியின் \\*\\* ஸ்பிரிட்ஸ் \\*\\* பிரிவில் இந்த தொகுதி காணப்படுகிறது.",
           "step2": "இந்த தொகுதிடன் உருவங்களின் அளவை மாற்றவும்: [தடுப்பு தொகுதி] [0].\n\nஇது கருவிப்பெட்டியின் \\*\\* செயல்கள் \\*\\* பிரிவில் காணப்படுகிறது.",
-          "step3": "எல்லா மனிதர்களும் இதனுடன் அலையத் தொடங்கவும்: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nகருவிப்பெட்டியின் \\*\\* செயல்கள் \\*\\* பிரிவில் இந்த தொகுதி காணப்படுகிறது."
+          "step3": "எல்லா மனிதர்களும் இதனுடன் அலையத் தொடங்கவும்: [blockly block][0].\n\nகருவிப்பெட்டியின் \\*\\* செயல்கள் \\*\\* பிரிவில் இந்த தொகுதி காணப்படுகிறது."
         },
         "outbreak2": {
           "hint1": "நிகழ்வுத் தொகுதியில் `+` பொத்தானைக் கிளிக் செய்க. `மாற்றும் ஆடை` தொகுதியில் உள்ள வெற்று இடத்தை`பொருள்` தொகுதிக்குள் நிரப்பவும்."
         },
         "outbreak3": {
           "hint1": "அரக்கர்களின் முகமூடிகளை வழங்க, ```நிகழ்வைக் கிளிக் செய்யும் போது`` ஆடை மாற்ற``` தொகுதியைப் பயன்படுத்தவும்:",
-          "hint2": "இந்த நிலைக்கான புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint2": "இந்த நிலைக்கான புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n[blockly block][0]"
         },
         "outbreak4": {
-          "challenge": "## கூடுதல் சவாலை எதிர்பார்க்கிறீர்களா?\n\nஅரக்கர்களை வேகமாக அல்லது மெதுவாக நகர்த்தவும் செய்யலாம்.\n\n1.  இந்த தொகுதியில் `திருத்து` என்பதைக் கிளிக் செய்க <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  இந்த தொகுதியில் எண்ணிக்கையை அதிகரிக்கவும் குறைக்கவும்:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\nஅரக்கர்களை மெதுவாக நகர்த்துவதற்கு, `0.5` அல்லது`0.25` போன்ற தசம எண்ணைத் தேர்வுசெய்க. அவற்றை வேகமாக நகர்த்த, 1 ஐ விட அதிகமான எண்ணைத் தேர்வுசெய்க."
+          "challenge": "## கூடுதல் சவாலை எதிர்பார்க்கிறீர்களா?\n\nஅரக்கர்களை வேகமாக அல்லது மெதுவாக நகர்த்தவும் செய்யலாம்.\n\n1.  இந்த தொகுதியில் `திருத்து` என்பதைக் கிளிக் செய்க [blockly block][0] \n2.  இந்த தொகுதியில் எண்ணிக்கையை அதிகரிக்கவும் குறைக்கவும்:\n\n[blockly block][1]\nஅரக்கர்களை மெதுவாக நகர்த்துவதற்கு, `0.5` அல்லது`0.25` போன்ற தசம எண்ணைத் தேர்வுசெய்க. அவற்றை வேகமாக நகர்த்த, 1 ஐ விட அதிகமான எண்ணைத் தேர்வுசெய்க."
         },
         "outbreak5": {
-          "solution2": "உங்கள் புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+          "solution2": "உங்கள் புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n\n[blockly block][0]"
         },
         "outbreak6": {
           "hint2": "மற்ற \"செயல்\" தொகுதிகளை `if Chance` தொகுதியின் உள்ளே நகர்த்த மறக்காதீர்கள்:",
@@ -901,7 +901,7 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "நீங்கள் ஏற்கனவே பயணித்த இடங்களின் தொகுப்பிற்கு திரும்பிச் செல்வது சரி.",
-          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்."
+          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்.\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
@@ -926,7 +926,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
           "courseB_starWars_prog9_b": "இந்த புதிரை தீர்க்க பல வழிகள் உள்ளன.",
-          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்` [தடுக்கப்பட்ட தடுப்பு] [0] வளையத்தை இங்கு உதவ முடியுமா?"
+          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்`  [blockly block] [0] வளையத்தை இங்கு உதவ முடியுமா?"
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "பிபி -8 ஸ்கிராப் மெட்டல் மீது உருளும் போது அவர் அதை தானாக எடுப்பார்.",
@@ -1175,6 +1175,115 @@
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "`மீண்டும்` வளையத்திற்குள் ஒன்றுக்கு மேற்பட்ட தொகுதிகளை வைக்கலாம்.",
           "course_starWars_loops9_c": "இந்த புதிரை தீர்க்க நீங்கள் இடதுபுறம் திரும்பத் தேவையில்லை. உங்கள் திருப்பங்கள் அனைத்தும் வலதுபுறமாக இருக்கலாம்.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "நீங்கள் புதையலுடன் ஒரு சதுரத்திற்கு சென்ற பிறகு, அதைத் எடுக்க இந்த தொகுதியைப் பயன்படுத்தவும்.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "ஒரு எளிய தீர்வு கிழக்கு நோக்கி 2 முறை நகர்ந்து, பின்னர் புதையலைப் பெறுங்கள்."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "எந்தவொரு புதையலையும் சேகரிப்பதற்கு முன்பு நீங்கள் செல்ல வேண்டும்.",
+          "courseA_collector_loops2_b": "நீங்கள் புதையலுடன் ஒரு சதுரத்திற்கு சென்ற பிறகு, அதைத் எடுக்க இந்த தொகுதியைப் பயன்படுத்தவும்.\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "பயன்படுத்த முயற்சிக்கவும்\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nலூப்!",
+          "courseA_collector_loops3_b": "நினைவில் கொள்ளுங்கள், நீங்கள் <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> லூப்பிற்க்குள் 1 க்கும் மேற்பட்ட தொகுதிகளை வைக்கலாம்."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "ஸ்க்ராட் நகர்த்துவதற்கு தொகுதிகளை <xml><block type=\"when_run\"/></xml> block ஐ இணைக்கவும்!",
+          "courseB_maze_seq1_b": "ஸ்க்ராட்டை ஏகோர்னுக்குப் பெற இந்த மூன்று<xml><block type=\"maze_moveSouth\"/></xml> அம்புகளை வெளியே இழுத்து <xml><block type=\"when_run\"/></xml>க்கு இணைக்கவும்."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "நீங்கள் ஏகோர்னுக்கு வரும் வரை ஒரு நேரத்தில் ஒரு வழிமுறையைச் சேர்க்க முயற்சிக்கவும்.",
+          "courseB_maze_seq4_b": "இந்த புதிரைத் தீர்க்க <xml><block type=\"maze_moveEast\"/></xml> blockயைப் பயன்படுத்த விரும்புவீர்கள்."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "நீங்கள் சிக்கிக்கொண்டால், காகிதத்தில் பாதையை வரைய முயற்சிக்கவும்.",
+          "courseB_maze_seq5_b": "இந்த புதிரை தீர்க்க 2 வழிகள் உள்ளன!",
+          "courseB_maze_seq5_c": "ஏகோர்னை எவ்வாறு பெறுவது என்று உறுதியாக தெரியவில்லையா? இந்த பாதையை முயற்சிக்கவும்."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "உங்கள் இறுதி குறியீட்டில் மூன்று இயக்கம் தொகுதிகள் இருக்க வேண்டும்.",
+          "courseB_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை இரண்டு பகுதிகளாக தீர்க்க முயற்சிக்கவும், ஒன்று பக்கவாட்டாக மற்றும் ஒன்று மேல் மற்றும் கீழ்.",
+          "courseB_maze_seq5_c": "இந்த புதிரை தீர்க்க இரண்டு வழிகள் உள்ளன.",
+          "courseB_maze_seq5_d": "ஏகோர்னை எவ்வாறு பெறுவது என்று உறுதியாக தெரியவில்லையா? இந்த பாதையை முயற்சிக்கவும்!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "ஸ்க்ராட்டை ஏகோர்னுக்கு நகர்த்த 1 தொகுதி சேர்க்கவும்.",
+          "courseB_maze_seq7_b": "உங்களுக்கு வழங்கப்பட்ட குறியீட்டை இயக்க முயற்சிக்கவும், நீங்கள் எங்கு முடிகிறீர்கள் என்று பார்க்கவும்.",
+          "courseB_maze_seq7_c": "ஏகோர்னுக்கு வர முடியவில்லையா? இந்த பாதையை முயற்சிக்கவும்!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "புதிரை தீர்க்கும் வரை ஒரு நேரத்தில் ஒரு தொகுதியைச் சேர்க்க முயற்சிக்கவும்.",
+          "courseB_maze_seq8_b": "இந்த புதிரை தீர்க்க ஒன்றுக்கு மேற்பட்ட வழிகள் உள்ளன!",
+          "courseB_maze_seq8_c": "எந்த வழியில் செல்ல வேண்டும் என்று தெரியவில்லையா? இந்த பாதையை முயற்சிக்கவும்!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "முதலில் ஒரு துண்டு காகிதத்தில் அனைத்து படிகளையும் எழுத முயற்சிக்கவும்.",
+          "courseB_maze_seq9_b": "உங்கள் நிரலை ஒரு நேரத்தில் ஒரு தொகுதியாக உருவாக்கி, நீங்கள் உருவாக்கும்போது சோதிக்கவும்.",
+          "courseB_maze_seq9_c": "இந்த புதிரை தீர்க்க இரண்டு வழிகள் உள்ளன.",
+          "courseB_maze_seq9_d": "மாட்டிக்கொண்டதா? இந்த பாதையை முயற்சிக்கவும்!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "குறுகிய பாதை இந்த நேரத்தில் வேலை செய்யாமல் போகலாம்.",
+          "courseB_maze_seq_challenge1_b": "தொடங்க <xml><block type=\"maze_moveWest\"/></xml> block யைப் பயன்படுத்த முயற்சிக்கவும்."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "இந்த புதிரைத் தீர்க்க நீங்கள் தொகுதிகளைச் சேர்க்கவோ நீக்கவோ தேவையில்லை.",
+          "courseB_maze_seq_challenge2_b": "தொகுதிகளை மறுசீரமைத்து, படிக்கட்டு முறை பாதையில் செல்லுங்கள்."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "ஸ்க்ராட் நீங்கள் விரும்பியதைச் செய்யவில்லை எனில், இரண்டு தொகுதிகளும் ஒன்றாகக் கிளிக் செய்யப்பட்டுள்ளன என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்க.",
+          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சிக்கவும்!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "உடைந்த பனிக்கட்டியைப் பாருங்கள்! ஸ்க்ராட் தண்ணீரில் விழும்!",
+          "courseB_iceage_loops10_b": "படிகளை சத்தமாக சொல்ல முயற்சிக்கவும் அல்லது அவற்றை ஒரு காகிதத்தில் எழுதவும் முயற்சிக்கவும். நீங்கள் எந்த வடிவங்களையும் பார்க்கிறீர்களா?",
+          "courseB_iceage_loops10_c": "இது ஒரு நீண்ட புதிர்! இந்த பாதையை பின்பற்றுங்கள்"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "உடைந்த பனிக்கட்டிகளைக் கவனியுங்கள்! ஸ்க்ராட் சரியாக விழும்!",
+          "courseB_iceage_loops1_b": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "இந்த புதிரை இரண்டு துண்டுகளாக உடைக்கவும், ஒன்று மூலையில் முன்பு, மற்றொன்று  மூலையின் பின்பு.",
+          "courseB_iceage_loops2_b": "நீங்கள் சிக்கிக்கொண்டால், படிகளை சத்தமாக சொல்ல முயற்சிக்கவும்.",
+          "courseB_iceage_loops2_c": "ஸ்க்ராட்டை ஏகோர்னுக்குப் பெற இந்த வழியைப் பின்பற்றுங்கள்."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "இந்த புதிய தொகுதியைப் பயன்படுத்துங்கள்!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "குறியீட்டை மீண்டும் செய்ய, `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> லூப்பை வெளியே இழுத்து, பிறகு நீங்கள் விரும்பும் தொகுதியை உள்ளே வைக்கவும்."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_c": "உங்கள் இறுதி பாதை இப்படி இருக்க வேண்டும்."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "நீங்கள் சிக்கிக்கொண்டால், ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும். நீங்கள் ஒரு மாதிரியைக் காண்கிறீர்களா?",
+          "courseB_iceage_loops7_b": "ஏகோர்னைப் பெற ஸ்க்ராட் எடுக்க வேண்டிய பாதை இதுதான்"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "இயக்க தொகுதிகள் சரியானதா? வேறு என்ன மாற்ற முடியும்?",
+          "courseB_iceage_loops8_b": "முதல் வளையம் \\*\\* 3 \\*\\* முறை செய்ய வேண்டும், இரண்டாவது \\*\\* 5 \\*\\* முறை செய்ய வேண்டும், மூன்றாவது லூப் \\*\\* 4 \\*\\* முறை செய்ய வேண்டும், கடைசி லூப் \\*\\* 4 \\*\\* முறை செய்ய வேண்டும்.",
+          "courseB_iceage_loops8_c": "இந்த பாதையை ஸ்க்ராட் பின்பற்ற உதவ சுழல்களைப் பயன்படுத்தவும்."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "சிக்கல் உள்ளதா? இந்த புதிரை சிறிய துண்டுகளாக உடைக்க முயற்சிக்கவும். நீங்கள் குறியீடாக உங்கள் புதிரை இயக்க பயப்பட வேண்டாம்!",
+          "courseB_iceage_loops9_b": "உங்கள் இறுதி குறியீட்டில் \\*\\* 4 \\*\\* சுழல்கள் இருக்க வேண்டும்.",
+          "courseB_iceage_loops9_c": "ஸ்க்ராட் ஏகோர்னைப் பெற இந்த வழியைப் பின்பற்ற வேண்டும்."
         }
       }
     }
