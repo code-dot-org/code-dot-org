@@ -10788,3 +10788,7 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: kiểm thử
