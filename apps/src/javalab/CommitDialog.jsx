@@ -2,49 +2,58 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
-import {CompileStatus} from './constants';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {connect} from 'react-redux';
 
-export default class CommitDialog extends React.Component {
+class CommitDialog extends React.Component {
   state = {
     filesToBackpack: [],
-    commitNotes: null,
-    showCompileStatus: false
+    commitNotes: '',
+    saveInProgress: false,
+    hasSaveError: false
   };
 
   renderFooter = () => {
-    let compileStatusContent = '';
+    let footerIcon = '';
+    let footerMessageTitle = '';
+    let footerMessageText = '';
     let commitText = i18n.commit();
-    const isCommitButtonDisabled = !this.state.commitNotes;
+    const isCommitButtonDisabled =
+      !this.state.commitNotes || this.state.saveInProgress;
     if (this.state.filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
     }
-    if (this.state.showCompileStatus) {
-      switch (this.props.compileStatus) {
-        case CompileStatus.LOADING:
-          compileStatusContent = i18n.compiling();
-          break;
-        case CompileStatus.ERROR:
-          compileStatusContent = i18n.compileFailed();
-          break;
-      }
+
+    // TODO: Add compile status here
+    if (this.state.saveInProgress) {
+      footerIcon = (
+        <span className="fa fa-spin fa-spinner" style={styles.spinner} />
+      );
+      footerMessageTitle = i18n.saving();
+    } else if (this.state.hasSaveError) {
+      footerIcon = (
+        <span className="fa fa-exclamation-circle" style={styles.iconError} />
+      );
+      footerMessageTitle = i18n.backpackSaveErrorTitle();
+      footerMessageText = i18n.backpackSaveErrorMessage();
     }
 
     return [
-      <div
-        key="compile-status"
-        style={{...styles.bold, ...styles.compileStatus}}
-      >
-        {compileStatusContent}
+      <div key="footer-status" style={styles.footerStatus}>
+        <div style={styles.footerIcon}>{footerIcon}</div>
+        <div style={styles.footerMessage}>
+          <div style={styles.footerMessageTitle}>{footerMessageTitle}</div>
+          <div style={styles.footerMessageText}>{footerMessageText}</div>
+        </div>
       </div>,
       <div key="buttons">
         <FooterButton
           key="cancel"
           type="cancel"
           text={i18n.cancel()}
-          onClick={this.props.handleClose}
+          onClick={this.clearSaveStateAndClose}
         />
         ,
         <FooterButton
@@ -64,15 +73,44 @@ export default class CommitDialog extends React.Component {
     this.saveToBackpack();
   };
 
-  // This will communicate with the backpack API
   saveToBackpack = () => {
-    // do something here to save the files in this.state.filesToBackpack
-    // show the error message if the files don't compile
-    if (this.props.compileStatus !== CompileStatus.SUCCESS) {
-      this.setState({showCompileStatus: true});
-    } else {
-      this.props.handleClose();
-    }
+    this.setState({
+      hasSaveError: false,
+      saveInProgress: true
+    });
+
+    // TODO: Compile before saving and show error if compile fails
+    this.props.backpackApi.saveFiles(
+      this.props.sources,
+      this.state.filesToBackpack,
+      this.handleSaveError,
+      this.handleSaveSuccess
+    );
+  };
+
+  handleSaveError = () => {
+    this.setState({
+      hasSaveError: true,
+      saveInProgress: false
+    });
+  };
+
+  handleSaveSuccess = () => {
+    this.setState({
+      hasSaveError: false,
+      saveInProgress: false,
+      commitNotes: '',
+      filesToBackpack: []
+    });
+    this.props.handleClose();
+  };
+
+  clearSaveStateAndClose = () => {
+    this.setState({
+      hasSaveError: false,
+      saveInProgress: false
+    });
+    this.props.handleClose();
   };
 
   toggleFileToBackpack = filename => {
@@ -89,7 +127,7 @@ export default class CommitDialog extends React.Component {
 
   render() {
     const {commitNotes, filesToBackpack} = this.state;
-    const {isOpen, files, handleClose, handleCommit} = this.props;
+    const {isOpen, files} = this.props;
 
     return (
       <StylizedBaseDialog
@@ -108,8 +146,7 @@ export default class CommitDialog extends React.Component {
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() => handleCommit(commitNotes)}
-        handleClose={handleClose}
+        handleClose={this.clearSaveStateAndClose}
         footerJustification="space-between"
       />
     );
@@ -121,11 +158,9 @@ CommitDialog.propTypes = {
   files: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClose: PropTypes.func.isRequired,
   handleCommit: PropTypes.func.isRequired,
-  compileStatus: PropTypes.string
-};
-
-CommitDialog.defaultProps = {
-  compileStatus: CompileStatus.NONE
+  // populated by redux
+  sources: PropTypes.object,
+  backpackApi: PropTypes.object
 };
 
 function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
@@ -139,9 +174,8 @@ function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
         placeholder={i18n.commitNotesPlaceholder()}
         onChange={e => onChangeNotes(e.target.value)}
         style={styles.textarea}
-      >
-        {notes}
-      </textarea>
+        value={notes}
+      />
       <div style={{...styles.bold, ...styles.filesHeader}}>
         {i18n.saveToBackpack()}
       </div>
@@ -181,7 +215,7 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.dark_charcoal
   },
-  compileStatus: {
+  footerStatus: {
     display: 'flex',
     alignItems: 'center'
   },
@@ -216,5 +250,32 @@ const styles = {
     width: '98%',
     height: 75,
     resize: 'none'
+  },
+  iconError: {
+    color: color.light_orange,
+    fontSize: 32
+  },
+  footerMessageTitle: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14
+  },
+  footerMessageText: {
+    fontStyle: 'italic',
+    fontSize: 12
+  },
+  footerMessage: {
+    color: color.dark_charcoal
+  },
+  spinner: {
+    color: color.dark_charcoal,
+    fontSize: 28
+  },
+  footerIcon: {
+    paddingRight: PADDING
   }
 };
+
+export default connect(state => ({
+  sources: state.javalab.sources,
+  backpackApi: state.javalab.backpackApi
+}))(CommitDialog);
