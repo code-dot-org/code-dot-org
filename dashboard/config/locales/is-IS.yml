@@ -212,8 +212,8 @@ is:
       að skrá þig.
     user_type_button: Uppfæra tegund aðgangs
     user_type_label: Tegund aðgangs
-    user_type_teacher: Kennari
     user_type_student: nemandi
+    user_type_teacher: Kennari
     field_is_required: er nauðsynlegt
     accept_terms: Þú verður að samþykkja að stofna aðgang
     error: Villa kom upp.
@@ -1232,9 +1232,8 @@ is:
       school_city: Bær skóla
       school_country: Land skóla
       colombian_school_city: Bær skóla
-      colombian_school_department: Deild skóla
       colombian_school_municipality: Umdæmi skóla
-      colombian_school_name: Nafn skóla
+      colombian_chilean_school_name: Nafn skóla
       ages: Hvaða aldurshóp(um) kennir þú þetta árið?
       subjects: Hvaða fag/fög kennir þú þetta árið?
       resources: Hvaða eftirfarandi tilföng notar þú fyrir tölvunarfræði?

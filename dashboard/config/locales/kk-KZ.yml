@@ -95,8 +95,8 @@ kk:
     mismatch_password: Еңгізілген құпия сөздер сәйкес келмейді
     additional_information: Сізді тіркеу үшін бізге қосымша ақпарат керек.
     user_type_label: Аккаунт Түрі
-    user_type_teacher: Мұғалім
     user_type_student: Оқушы
+    user_type_teacher: Мұғалім
     field_is_required: толтырылуы тиіс
     accept_terms: Аккаунт құрі үшін келісуіңіз қажет
     email_preference_yes: Иә

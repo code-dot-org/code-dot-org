@@ -1140,6 +1140,7 @@ pl:
               name: Następne Kroki
             Planning:
               name: Planowanie
+          name: K5-OnlinePD
         ECSPD2:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -12585,6 +12586,7 @@ pl:
               name: 'Krok 1: Rozwijaj zrozumienie'
             'Step 2: Demonstrate Understanding':
               name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp19-csp-mod-w4
         csd-pilot:
           title: CSD Kurs pilotażowy
           lessons:
@@ -12877,6 +12879,7 @@ pl:
             End of Course projects:
               name: Projekty na koniec kursu
           student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          name: k5-onlinepd-2019
         dance-extras-2019:
           title: Nie przestawaj tańczyć (2019)
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
@@ -15848,6 +15851,7 @@ pl:
             k5_next_steps_1:
               display_name: Następne Kroki
           student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          name: k5-onlinepd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -18701,8 +18705,6 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
-            lessonGroup-4:
-              display_name: Test
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -18818,12 +18820,20 @@ pl:
               description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablice 2D w kolejności wiersz główny i stosują standardowy algorytm, który napisali w Jednostce 3. do oceny danych. Ponownie odwiedzają Teatr, aby rozpocząć tworzenie nowego koncertu, który ma na celu edukowanie The Neighborhood na temat zrównoważonego transportu. Wybierają początkowy obraz powitalny na koncercie i piszą metodę `getPixels()`, która przechowuje piksele z obrazu w tablicy 2D, aby wykorzystać ją na nadchodzących lekcjach do tworzenia efektów graficznych.
             lesson-3:
               name: Trawersowanie tablicy 2D kolumnami
+              description_student: Dane są zorganizowane w wiersze i kolumny. W poprzedniej lekcji trawersowałeś tablicę 2D, aby uzyskać dostęp do elementów i wykonać obliczenia w rzędzie. Dzisiaj dowiesz się, jak przemierzać tablicę 2D w kolejności kolumn. Korzystając z tego algorytmu przechodzenia, tworzysz efekty obrazu, które manipulują pikselami w celu odbicia obrazu w pionie.
+              description_teacher: Uczniowie używają zagnieżdżonych pętli „dla” do przechodzenia przez tablicę 2D w kolejności kolumn. Rozróżniają kolejność względem kolumn i wierszy oraz wyjaśniają, kiedy mogą zastosować jedno podejście zamiast drugiego. Stosują przechodzenie kolumnami, aby obliczyć całkowite zapasy według deserów w ramach projektu Mercury Pastries Food Truck i dalej rozwijać koncert w Teatrze. Uczniowie manipulują pikselami na obrazie za pomocą przechodzenia kolumnami w celu pionowego odzwierciedlenia obrazu i wdrożenia efektu na koncercie.
             lesson-4:
               name: Stosowanie ulepszonych pętli
+              description_student: Dzisiaj poznasz strukturę wykorzystania ulepszonych pętli „dla” do przechodzenia przez tablice 2D. Identyfikujesz podobieństwa i różnice między używaniem rozszerzonej pętli „dla” z tablicami 1D i 2D. Używasz zagnieżdżonej rozszerzonej pętli „dla” do pisania metod modyfikujących wartości kolorów pikseli i tworzenia efektów na obrazach koncertu.
+              description_teacher: Uczniowie poznają strukturę ulepszonych pętli „dla” do przechodzenia tablice 2D. Identyfikują podobieństwa i różnice między używaniem ulepszonych pętli „dla” z tablicami 1D i 2D. Używają zagnieżdżonych, ulepszonych pętli „dla”, aby napisać metody modyfikowania wartości kolorów pikseli i tworzenia efektów na obrazach podczas koncertu.
             lesson-5:
               name: Ocena tablic 2D
+              description_student: Burmistrz poprosił Project Mercury Pastries Food Truck o przygotowanie deserów na nadchodzącym koncercie. Aby pomóc właścicielowi, wdrażasz nowe algorytmy przygotowujące do wydarzenia. Eksplorujesz wykonywanie instrukcji `zwróć` wewnątrz pętli w porównaniu do poza pętlą. Piszesz nowe standardowe algorytmy, aby sprawdzić, czy wartości są podzielne równomiernie przez inną liczbę całkowitą i znaleźć liczbę elementów, które spełniają określone kryteria.
+              description_teacher: Uczniowie badają efekt wykonania instrukcji `zwróć` wewnątrz pętli w porównaniu z wykonaniem poza pętlą. Piszą nowe standardowe algorytmy, aby sprawdzić, czy wartości są równomiernie podzielne przez inną liczbę całkowitą i znaleźć liczbę elementów spełniających określone kryteria. Rozwiązują problemy w ramach projektu Mercury Pastries Food Truck, wdrażając te algorytmy.
             lesson-6:
               name: Stosowanie standardowych algorytmów
+              description_student: Standardowe algorytmy, które napisałeś w Jednostce 3, działają również z tablicami 2D i mogą tworzyć efekty wizualne na obrazach. W tej lekcji będziesz rozwijać swój koncert w Teatrze, pisząc metodę `grayscale()`. Znajdź minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i użyj tej wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczestniczysz w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat nowych metod i postępów.
+              description_teacher: Uczniowie stosują standardowe algorytmy, które napisali w Jednostce 3, do tablic 2D, aby tworzyć efekty wizualne na obrazach. Kontynuują opracowywanie koncertu w Teatrze, pisząc metodę `grayscale()`, która znajduje średnią wartości RGB piksela na obrazie i ustawia piksel na tę średnią wartość. Uczniowie znajdują minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i używają tych wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczniowie uczestniczą w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat swoich nowych metod i postępów.
             lesson-7:
               name: Odwracanie elementów
             lesson-8:
@@ -19065,6 +19075,8 @@ pl:
               description_teacher: "Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym. \n\n**Pytanie dnia:** Jak możemy wykorzystać proces rozwiązywania problemów do rozwiązania problemu związanego z uczeniem maszynowym? "
             lesson4:
               description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
+            lesson5:
+              name: Lekcja 6
             lesson9:
               name: KNN bez komputera
               description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
@@ -19094,6 +19106,8 @@ pl:
               name: Projektowanie zbierania danych
             lesson-23:
               name: Model treningowy na podstawie dobrych danych
+            lesson-1:
+              name: Ankieta po jednostce
           name: aiml-2021
           title: Moduł AI i uczenia maszynowego
           lesson_groups:
@@ -19103,9 +19117,69 @@ pl:
                 Wprowadzenie do uczenia maszynowego
 
                 Kończy się mini projektem
+              big_questions: |-
+                -   W jaki sposób uczenie maszynowe znajduje wzorce w danych, aby podejmować decyzje?
+                    – Jak możemy uniknąć stronniczości podczas trenowania modelu uczenia maszynowego?
+                -   Jak można wykorzystać uczenie maszynowe do rozwiązywania problemów w naszej społeczności?
             lessonGroup-3:
               display_name: Rozdział 2 - Projekt aplikacji uczenia maszynowego
+              big_questions: "-   Jak można wykorzystać uczenie maszynowe do rozwiązywania problemów w naszej społeczności?"
+              description: Ten rozdział przygotowuje uczniów do bycia specjalistą uczenia maszynowego, aby tworzyć aplikacje, która rozwiązuje problem w ich społeczności. Podążają wraz z fikcyjną grupą uczniów, gdy definiują problem, opracowują ankietę do zbierania danych, analizują swoje dane w AI Lab, tworzą kartę modelu i tworzą aplikację, która rozwiąże ich problem. Następnie, w końcowym projekcie, uczniowie powtarzają te same kroki z problemem, na którym im zależy w swojej społeczności.
+            lessonGroup-4:
+              display_name: Ankieta
         csd7-2021:
+          lessons:
+            Introduction to Machine Learning:
+              name: Wprowadzenie do uczenia maszynowego
+              description_student: Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym.
+              description_teacher: "Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym. \n\n**Pytanie dnia:** Jak możemy wykorzystać proces rozwiązywania problemów do rozwiązania problemu związanego z uczeniem maszynowym? "
+            Innovations in AI:
+              name: Innowacje w AI
+            Classification Models:
+              description_student: "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
+            Introduction to AI Lab:
+              name: Lekcja 6
+            Similarity Models:
+              name: KNN bez komputera
+              description_student: Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji.
+              description_teacher: "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\\r\n\\\\r\n**Pytanie dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? "
+            AI Code of Ethics:
+              name: Kodeks etyczny AI
+            'Mini-Project: Make a Machine Learning App':
+              name: 'Mini-Projekt: Utwórz aplikację z uczeniem maszynowym'
+            Issue Statements:
+              name: Zaplanuj aplikację uczenia maszynowego
+            Survey Planning:
+              name: Projektowanie zbierania danych
+            Survey Data in AI Lab:
+              name: Model treningowy na podstawie dobrych danych
+            Troubleshooting Models:
+              name: Model treningowy na podstawie złych danych
+            Creating an App:
+              name: Utwórz aplikację
+            Design an AI App:
+              name: Utwórz aplikację „AI dla dobra społecznego”
+            lesson-1:
+              name: Ankieta po jednostce
+            Post-Unit Survey:
+              name: Ankieta po jednostce
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1 - Uczenie maszynowe
+              big_questions: |-
+                -   W jaki sposób uczenie maszynowe znajduje wzorce w danych, aby podejmować decyzje?
+                    – Jak możemy uniknąć stronniczości podczas trenowania modelu uczenia maszynowego?
+                -   Jak można wykorzystać uczenie maszynowe do rozwiązywania problemów w naszej społeczności?
+              description: |-
+                Wprowadzenie do uczenia maszynowego
+
+                Kończy się mini projektem
+            lessonGroup-3:
+              display_name: Rozdział 2 - Projekt aplikacji uczenia maszynowego
+              big_questions: "-   Jak można wykorzystać uczenie maszynowe do rozwiązywania problemów w naszej społeczności?"
+              description: Ten rozdział przygotowuje uczniów do bycia specjalistą uczenia maszynowego, aby tworzyć aplikacje, która rozwiązuje problem w ich społeczności. Podążają wraz z fikcyjną grupą uczniów, gdy definiują problem, opracowują ankietę do zbierania danych, analizują swoje dane w AI Lab, tworzą kartę modelu i tworzą aplikację, która rozwiąże ich problem. Następnie, w końcowym projekcie, uczniowie powtarzają te same kroki z problemem, na którym im zależy w swojej społeczności.
+            lessonGroup-4:
+              display_name: Ankieta
           name: csd7-2021
           title: AI i uczenie maszynowe
         kodea-pd-2021:
@@ -19241,13 +19315,17 @@ pl:
           name: self-paced-pl-csd2-2021
         self-paced-pl-csd3-2021:
           lessons:
-            lesson-2:
-              name: Narzędzia
+            lesson-3:
+              name: Przegląd realizacji
           name: self-paced-pl-csd3-2021
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
               name: Wskazówki dotyczące nauczania Informatycznych Odkryć
+            lesson-2:
+              name: Praktyki informatyczne
+            lesson-3:
+              name: Praktyki nauczania
           lesson_groups:
             lessonGroup-2:
               display_name: Wskazówki dotyczące nauczania Informatycznych Odkryć
@@ -19497,6 +19575,10 @@ pl:
           lessons:
             lesson-1:
               name: AI Lab
+            lesson-2:
+              name: Zasoby AI Lab
+            lesson-3:
+              name: Test
           name: ai-lab
           title: AI Lab
         poster-experiment:
@@ -19513,3 +19595,36 @@ pl:
         tesspl2:
           name: tesspl2
           title: Tess PL 2
+        sb-pt-cont:
+          lessons:
+            lesson-1:
+              name: Story Board - A
+          name: sb-pt-cont
+          title: Story Board (playtest control)
+        sb-pt-exp:
+          lessons:
+            lesson-1:
+              name: Story Board - B
+          name: sb-pt-exp
+          title: Story Board (playtest experiment)
+        dc-standalone:
+          name: dc-standalone
+          title: Story Board (DC Standalone)
+        sb-chardev-v1:
+          lessons:
+            lesson-1:
+              name: Story Board - Character Development
+          name: sb-chardev-v1
+          title: Story Board Character Development
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etap 1
+            lessonGroup-3:
+              display_name: Etap 2
+          name: dlp21-csp-mod4
+          title: '2021 Zasady informatyki Głębokie uczenie Moduł 4  '
+          description: ogólne instrukcje
+        dlp21-csp-mod1:
+          name: dlp21-csp-mod1
+          title: Zasady informatyki Głębokie uczenie Moduł 1

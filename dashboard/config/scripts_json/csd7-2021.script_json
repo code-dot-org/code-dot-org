@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-21 20:25:41 UTC",
+    "serialized_at": "2021-07-29 16:47:51 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -2020,8 +2020,21 @@
       }
     },
     {
-      "key": "1c3edfdb-7f19-4a9e-ac61-3e57dbaeddf0",
+      "key": "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4",
       "position": 1,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit on AI and Machine Learning. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4",
+        "lesson_activity.key": "dbda3944-701f-4885-9581-dfb5c9fe8a2d"
+      }
+    },
+    {
+      "key": "1c3edfdb-7f19-4a9e-ac61-3e57dbaeddf0",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
         "name": "Journal"
@@ -4267,7 +4280,7 @@
       "key": "de39a748-817d-4f13-a9e3-a7a2bfb4d765",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** Biased data favors some things and de-prioritizes or excludes others\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r ai-training/aiml/2021] video\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- **Bias:** When a decision favors some things and de-prioritizes or excludes others\n"
       },
       "seeding_key": {
         "activity_section.key": "de39a748-817d-4f13-a9e3-a7a2bfb4d765",
@@ -5035,7 +5048,7 @@
       "key": "009bbc72-e313-4b08-b75b-4ae304927690",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the  to each student.\n[r unplugged_knn_-_activity_guide/aiml/2021]"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r unplugged_knn_-_activity_guide/aiml/2021] activity guide to each student."
       },
       "seeding_key": {
         "activity_section.key": "009bbc72-e313-4b08-b75b-4ae304927690",
@@ -5107,13 +5120,7 @@
       "key": "6181d388-da0e-4493-b38c-b061f0b043f8",
       "position": 7,
       "properties": {
-        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Answer Key:** An answer key to this activity is provided to verified teachers in the links section of the lesson plan"
-          }
-        ]
+        "description": "**Model:** Help students track how similar each row of the table is similar to Location A. This involves counting each time a cell from Location A matches a cell in the table. For example, if the only thing both locations have in common is that they are indoors, then we would write a 1 for the similarities with Location A. Or, if both locations are indoors, loud, and have sidewalks: then we would write a 3 for the similarities with Location A."
       },
       "seeding_key": {
         "activity_section.key": "6181d388-da0e-4493-b38c-b061f0b043f8",
@@ -5141,13 +5148,7 @@
       "key": "9a768087-f235-416d-8a11-1ff7a4e6f99d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Formative Assessment**: [have students do this in pairs so they can practice on their own as a formative assessment]"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the next page of the activity guide, students are given two new locations to predict the number of zombies. They will repeat this same process for these locations: determine the three most similar locations, then find the average to predict the number of zombies."
       },
       "seeding_key": {
         "activity_section.key": "9a768087-f235-416d-8a11-1ff7a4e6f99d",
@@ -5335,7 +5336,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**AI Accuracy in the Real World:** [Story about how AI Accuracy effects things like cancer predictions or life/death situations]"
+            "markdown": "**AI Accuracy in the Real World:** This situation introduces issues involving inaccurate calculations from machine learning models, such as false positives or false negatives. Students may have experience with this when an important email is marked as spam by an email program, or they ignore a phone call from an important person because they don't recognize the number - both of these are examples of false positives, where a piece of data was incorrectly marked as unimportant.\n\nNot all false positives have the same impact on people in the real world. These resources can be helpful in giving examples of how issues of accuracy can have large impacts for people in the real world: \n- [**Medical News and Life Sciences**](https://www.news-medical.net/news/20200512/AI-techniques-in-medical-imaging-may-lead-to-false-positives-and-false-negatives.aspx) - this article explains how artificial intelligence is routinely used to help identify cancer in the medical field to great success, but the risks of a false-positive identification can be devastating.\n- [**Wrongfully Accused by an Algorithm**](https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html) - this article explains how inaccurate facial recognition software was used to wrongfully arrest a man for a crime he didn't commit."
           }
         ]
       },
@@ -5360,7 +5361,7 @@
       "key": "627fd885-aec2-4979-a004-8a1373c3786c",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution\n* [others]"
+        "description": "**Discussion Goal:** Students may call on examples from the news such as:\n\n* Medical diagnosis, such as cancer detection\n* Facial recognition for criminal prosecution"
       },
       "seeding_key": {
         "activity_section.key": "627fd885-aec2-4979-a004-8a1373c3786c",
@@ -6217,7 +6218,7 @@
       "key": "489ed446-aa78-47e3-b9f2-30bc9164d6c3",
       "position": 2,
       "properties": {
-        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey. Some questions are the same as the pre-survey at the start of the unit, which can show student growth or changes in student attitudes towards computer science.",
         "name": "Reflection",
         "progression_name": "Reflection"
       },
@@ -8163,6 +8164,29 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check-In Survey"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd7-2021",
+        "activity_section.key": "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4"
+      },
+      "level_keys": [
+        "aiml-intro-pulse-survey_2021"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8188,7 +8212,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8214,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8240,7 +8264,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8266,7 +8290,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8292,7 +8316,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8318,7 +8342,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8344,7 +8368,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8370,7 +8394,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8396,7 +8420,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8422,7 +8446,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8448,7 +8472,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8474,7 +8498,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8500,7 +8524,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8526,7 +8550,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8552,7 +8576,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -8578,7 +8602,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8604,7 +8628,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8630,7 +8654,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8656,7 +8680,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8682,7 +8706,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8708,7 +8732,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8734,7 +8758,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8760,7 +8784,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8786,7 +8810,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8812,7 +8836,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8838,7 +8862,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8864,7 +8888,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8890,7 +8914,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8916,7 +8940,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8942,7 +8966,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8968,7 +8992,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8994,7 +9018,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -9020,7 +9044,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -9046,7 +9070,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -9072,7 +9096,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -9098,7 +9122,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9124,7 +9148,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9150,7 +9174,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9176,7 +9200,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9202,7 +9226,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9228,7 +9252,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9254,7 +9278,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -9280,7 +9304,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -9306,7 +9330,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -9332,7 +9356,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -9358,7 +9382,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 6,
       "assessment": true,
@@ -9384,7 +9408,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9410,7 +9434,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9436,7 +9460,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9462,21 +9486,18 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
-        ],
         "progression": "Reflection"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+          "aiml-ch1-pulse-survey_2021"
         ],
         "lesson.key": "Mini-Project: Make a Machine Learning App",
         "lesson_group.key": "lessonGroup-2",
@@ -9484,11 +9505,11 @@
         "activity_section.key": "489ed446-aa78-47e3-b9f2-30bc9164d6c3"
       },
       "level_keys": [
-        "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+        "aiml-ch1-pulse-survey_2021"
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9514,7 +9535,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9540,7 +9561,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9566,7 +9587,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9592,7 +9613,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9618,7 +9639,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9644,7 +9665,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9670,7 +9691,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9696,7 +9717,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9722,7 +9743,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9748,7 +9769,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9774,7 +9795,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9800,7 +9821,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9826,7 +9847,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9852,7 +9873,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -9878,7 +9899,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9904,7 +9925,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9930,7 +9951,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -9956,7 +9977,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -10016,6 +10037,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2021",
         "activity_section.key": "1ce2130f-e735-4060-811f-b8c87e6f74b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aiml-intro-pulse-survey_2021",
+        "script_level.level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
+        "lesson.key": "Introduction to Machine Learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd7-2021",
+        "activity_section.key": "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4"
       }
     },
     {
@@ -10620,9 +10653,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aiml-pulse-check-survey-1-levelgroup Ch1_2021",
+        "level.key": "aiml-ch1-pulse-survey_2021",
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch1_2021"
+          "aiml-ch1-pulse-survey_2021"
         ],
         "lesson.key": "Mini-Project: Make a Machine Learning App",
         "lesson_group.key": "lessonGroup-2",
@@ -10873,15 +10906,63 @@
       }
     },
     {
+      "name": "[KEY] - Numerical Data in AI Lab",
+      "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
+      "key": "_key_-_numerical_data_in_ai_lab",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
       "name": "[KEY] Classification Models",
       "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "_key_classification_models",
       "properties": {
-        "type": "Activity Guide",
+        "type": "Answer Key",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "_key_classification_models"
+      }
+    },
+    {
+      "name": "[KEY] Numerical Accuracy",
+      "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
+      "key": "_key_numerical_accuracy",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_numerical_accuracy"
+      }
+    },
+    {
+      "name": "[KEY] Training a Model in AI Lab",
+      "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+      "key": "_key_training_a_model_in_ai_lab",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "name": "[KEY] Zoo Models",
+      "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
+      "key": "_key_zoo_models",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_zoo_models"
       }
     },
     {
@@ -11352,11 +11433,13 @@
       }
     },
     {
-      "name": "Numerical Accuracy - Activity Guide",
+      "name": "Numerical Accuracy",
       "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
       "key": "numerical_accuracy_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "numerical_accuracy_-_activity_guide"
@@ -11446,6 +11529,18 @@
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_1"
+      }
+    },
+    {
+      "name": "[KEY] Patterns in Data",
+      "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
+      "key": "patterns_in_data_3",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "patterns_in_data_3"
       }
     },
     {
@@ -11630,22 +11725,25 @@
       }
     },
     {
-      "name": "Zombie Prediction - Activity Guide",
+      "name": "Zombie Prediction",
       "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
       "key": "zombie_prediction_-_activity_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide",
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "zombie_prediction_-_activity_guide"
       }
     },
     {
-      "name": "Zombie Prediction - Answer Key",
+      "name": "[KEY] Zombie Prediction",
       "url": "https://docs.google.com/document/d/1R2NzYw-wTtx05wdHMKBESh3XchqQnILHKM_wXGl1vow/edit",
       "key": "zombie_prediction_-_answer_key",
       "properties": {
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "zombie_prediction_-_answer_key"
@@ -11819,6 +11917,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
         "resource.key": "introduction_to_ai_lab"
       }
     },
@@ -11915,6 +12019,12 @@
     {
       "seeding_key": {
         "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "_key_-_numerical_data_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
         "resource.key": "numerical_data_in_ai_lab"
       }
     },
@@ -11951,7 +12061,19 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns in Data",
+        "resource.key": "patterns_in_data_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
         "resource.key": "shoe_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "_key_zoo_models"
       }
     },
     {
@@ -11970,6 +12092,12 @@
       "seeding_key": {
         "lesson.key": "Saving Models in AI Lab",
         "resource.key": "zoo_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "resource.key": "_key_numerical_accuracy"
       }
     },
     {

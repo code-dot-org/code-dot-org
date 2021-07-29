@@ -1761,6 +1761,10 @@ it:
               name: Disegnare in Sviluppo Giochi
         CSF_Secret_Sample:
           description_audience: Da 8 anni in su (dopo il Corso 2)
+        ECSPD1:
+          lessons:
+            Wrap Up:
+              name: Conclusione
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -3012,6 +3016,7 @@ it:
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla programmazione di un progetto di propria ideazione usando sia il Laboratorio che l'Artista come ambiente di programmazione. In questa parte del progetto, gli studenti apprenderanno il processo di progettazione e come implementarlo nei propri progetti. La guida alle lezioni per tutte e quattro le fasi del processo può essere trovata nella prima fase di questo processo del progetto [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Realizza il tuo progetto
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora agli studenti verrà dato il proprio spazio per creare il loro progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga del percorso di creazione. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Revise Your Project:
               name: Riesamina il tuo progetto
@@ -3027,20 +3032,26 @@ it:
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
               name: 'Cittadinanza Digitale: Dati Personali'
+              description_student: Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati.
               description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             'Functions: Songwriting':
               name: 'Funzioni: Composizione di Canzoni'
+              description_student: In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni.
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Artist:
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             Functions in Bee:
               name: Funzioni con l'Ape
               description_student: Non usare troppi blocchi di codice per raccogliere il nettare ed il miele. Usa le funzioni!
               description_teacher: In questa seconda lezione sulle funzioni, gli studenti percorreranno percorsi complessi, raccoglieranno molto nettare e produrranno molto miele.
+            Functions in Farmer:
+              description_student: Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!
             Determine the Concept:
               name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
@@ -3200,6 +3211,10 @@ it:
             Nested Loops with Frozen:
               name: Cicli annidati con Frozen
           student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+        csdnovice:
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -3214,6 +3229,9 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csp1-dlp:
           lesson_groups:
             required:
@@ -4467,15 +4485,19 @@ it:
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+              description_student: Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati.
               description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             'Functions: Songwriting':
               name: Composizione di canzoni
+              description_student: In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni.
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Artist:
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             Functions in Bee:
               description_student: Non usare troppi blocchi di codice per raccogliere il nettare ed il miele. Usa le funzioni!
@@ -4499,6 +4521,7 @@ it:
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla programmazione di un progetto di propria ideazione usando sia il Laboratorio che l'Artista come ambiente di programmazione. In questa parte del progetto, gli studenti apprenderanno il processo di progettazione e come implementarlo nei propri progetti. La guida alle lezioni per tutte e quattro le fasi del processo può essere trovata nella prima fase di questo processo del progetto [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Realizza il tuo progetto
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora agli studenti verrà dato il proprio spazio per creare il loro progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga del percorso di creazione. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Present Your Project:
               name: Presenta il tuo progetto
@@ -4959,24 +4982,36 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         pre-express-2018:
           title: Corso Rapido pre-scolare (2018)
           assignment_family_title: Corso rapido pre-scolare
@@ -5151,6 +5186,7 @@ it:
               name: Istruzioni Condizionali con la Contadina
             Functions in Minecraft:
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
               description_teacher: Gli alunni inizieranno a capire come le funzioni possono essere utili in questa divertente e interattiva avventura di Minecraft!
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
@@ -5164,9 +5200,11 @@ it:
               description_student: Non dimenticare di metterci tutta la tua creatività! In questi esercizi realizzerai fantastici disegni usando le variabili.
             Variables that Change in Bee:
               name: Modifica delle variabili con l'ape
+              description_student: Quest'ape ama le variabili!
               description_teacher: Questa lezione aiuterà a illustrare come le variabili possono rendere i programmi più potenti consentendo ai valori di cambiare mentre il codice è in esecuzione.
             Variables that Change in Artist:
               name: Modifica delle Variabili con l'Artista
+              description_student: In questa lezione realizzerai dei disegni usando le variabili che modificano il loro valore durante l'esecuzione del programma.
               description_teacher: In questa lezione, gli alunni sperimenteranno la creazione di progetti ripetitivi utilizzando le variabili nell'ambiente dell'Artista. Gli alunni impareranno come sfruttare le variabili per rendere il codice più compatto e comprensibile. Al termine della lezione, dopo gli esercizi guidati, gli alunni potranno mostrare ciò che hanno imparato, creando i propri progetti.
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
@@ -5214,14 +5252,17 @@ it:
             Events with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Loops with the Artist:
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
             Sprite Lab Behaviors:
               name: Comportamenti del Laboratorio dei personaggi
             Virtual Pet:
+              name: Un animale domestico virtuale con il Laboratorio dei personaggi
               description_student: In questa lezione, gli alunni creeranno un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni useranno lo strumento "Costumi" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzeranno quindi eventi, comportamenti e altri concetti che hanno imparato per dare al loro animale domestico una vita propria!
               description_teacher: In questa lezione, gli alunni creeranno un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni useranno lo strumento "Costumi" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzeranno quindi eventi, comportamenti e altri concetti che hanno imparato per dare al loro animale domestico una vita propria!
             End of Course Project:
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Internet:
@@ -5291,6 +5332,7 @@ it:
               description_teacher: Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività funge anche da esercizio di debug per una pratica extra di risoluzione dei problemi.
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
+              description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? Questa lezione ti insegnerà cosa succede quando crei un ciclo annidato.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Nested Loops in Artist:
               name: Cicli annidati con l'artista
@@ -5325,6 +5367,7 @@ it:
               description_teacher: Questa serie di esercizi online consentirà agli alunni di imparare a creare immagini basante sul concetto binario di accensione e spegnimento (ON e OFF).
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             Dance Party:
               name: Ballando col codice
@@ -5377,22 +5420,28 @@ it:
               description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+              description_student: Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati.
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             'Functions: Songwriting':
               name: Composizione di canzoni
+              description_student: In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni.
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Minecraft:
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
               description_teacher: Gli alunni inizieranno a capire come le funzioni possono essere utili in questa divertente e interattiva avventura di Minecraft!
             Functions in Harvester:
               name: Funzioni con la contadina
+              description_student: Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!
               description_teacher: Gli alunni si sono esercitati nella creazione di progetti fantastici nell'ambiente dell'Artista e pilotando l'Ape nei suoi labirinti, mentre oggi useranno le funzioni per far raccogliere le colture alla Contadina. Questa lezione spingerà gli alunni ad usare le funzioni in modi ancora nuovi, combinandole con i cicli `mentre` e le istruzioni `se/altrimenti`.
             Copyright and Creativity:
               name: Diritti d'Autore e Creatività
             Functions in Artist:
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
             Determine the Concept:
               name: Fissare i concetti
               description_teacher: Questa lezione riunisce i concetti delle lezioni precedenti e offre agli studenti la possibilità di riflettere in modo critico su come risolvere ciascun problema, ma senza suggerire quale concetto applicare. Gli studenti ripasseranno algoritmi di base, debugging, cicli `ripeti ... volte`, istruzioni condizionali, cicli `mentre` e funzioni.
@@ -5408,6 +5457,7 @@ it:
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla programmazione di un progetto di propria ideazione usando sia il Laboratorio che l'Artista come ambiente di programmazione. In questa parte del progetto, gli studenti apprenderanno il processo di progettazione e come implementarlo nei propri progetti. La guida alle lezioni per tutte e quattro le fasi del processo può essere trovata nella prima fase di questo processo del progetto [here](https://curriculum.code.org/csf/coursee/12/).
             Build Your Project:
               name: Realizza il tuo progetto
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
               description_teacher: Nel corso delle quattro lezioni, gli studenti si dedicheranno alla realizzazione di un progetto di loro ideazione, usando come ambienti di programmazione sia il Laboratorio che l'Artista. Ora agli studenti verrà dato il proprio spazio per creare il loro progetto con l'Artista o il Laboratorio. Questa sarà la fase più lunga del percorso di creazione. La guida alle lezioni che descrive tutte e quattro le fasi del processo si trova all'inizio del percorso, [here](https://curriculum.code.org/csf-18/coursee/23/).
             Present Your Project:
               name: Presenta il tuo progetto
@@ -5436,9 +5486,11 @@ it:
             Sequencing in the Maze:
               description_student: In questa lezione imparerai a scrivere i tuoi primi programmi!
             Programming and Loops with the Artist:
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
             End of Course Project:
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             Conditionals in Minecraft:
               name: Istruzioni Condizionali con Minecraft
             Digital Sharing:
@@ -5564,6 +5616,8 @@ it:
               name: Internet
             Crowdsourcing:
               name: Intelligenza collettiva
+            Virtual Pet with Sprite Lab:
+              name: Un animale domestico virtuale con il Laboratorio dei personaggi
             Build A Project:
               name: Progetto di fine corso
             Dance Party:
@@ -5631,14 +5685,17 @@ it:
               description_teacher: Usando i personaggi del gioco Angry Birds, gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto, all'altro lato dove si trova un maialino. A tal fine, metteranno insieme i blocchi di codice in una sequenza lineare, facendoli muovere dritti, girare a sinistra o girare a destra.
             Debugging in Maze:
               name: Correzione di errori nel labirinto
+              description_student: Cerca gli errori negli esercizi mettendo in pratica le tue capacità di debugging.
               description_teacher: L'attività di ricerca e correzione degli errori (debugging) è un elemento essenziale nell'apprendimento della programmazione. In questa lezione gli alunni incontreranno esercizi che sono stati risolti in modo errato. Dovranno quindi esaminare il codice esistente per identificare gli errori, come cicli errati, blocchi mancanti, blocchi in eccesso e blocchi fuori posto.
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della vita reale: aeroplani di carta'
             Programming in Collector:
               name: Programmare con la collezionista
+              description_student: Scrivi algoritmi per aiutare Laura l'avventuriera a raccogliere tanti diamanti!
               description_teacher: In questa serie di esercizi, gli alunni continueranno a sviluppare la loro comprensione degli algoritmi e del debugging. Con un nuovo personaggio, Laura l'avventuriera, gli alunni creeranno algoritmi sequenziali per guidare Laura a raccogliere diamanti mentre segue un percorso.
             Programming in Artist:
               name: Programmare con l'artista
+              description_student: Crea splendide immagini programmando l'artista.
               description_teacher: In questa lezione gli alunni prenderanno il controllo di un'artista per fargli completare dei disegni sullo schermo. Attraverso i vari esercizi della lezione gli alunni creeranno immagini di complessità crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel` e `gira a destra di 90 gradi`.
             'Loops: Getting Loopy':
               name: 'Cicli: Diventare Ripetitivi'
@@ -5650,26 +5707,32 @@ it:
               name: Cicli con l'artista
             Loops in Harvester:
               name: Cicli con la contadina
+              description_student: Usiamo i cicli per aiutare la contadina a raccogliere le sue verdure!
             'Events: The Big Event':
               name: Il grande evento
+              description_student: Fai un gioco divertente per conoscere gli eventi.
               description_teacher: Gli alunni impareranno presto che gli eventi sono un ottimo strumento per aggiungere varietà ad un algoritmo predeterminato. A volte vuoi che il tuo programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Ecco a cosa servono gli eventi.
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
+              description_student: Costruisci il tuo personale gioco Flappy Bird e poi condividilo con i tuoi amici!
               description_teacher: In questa lezione speciale, gli alunni potranno creare il proprio gioco Flappy Bird sfruttando i gestori di eventi per rilevare i clic del mouse e le collisioni degli oggetti. Alla fine della lezione, gli alunni saranno in grado di personalizzare il loro gioco modificando grafica o regole.
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
               description_student: In questa lezione imparerai cosa fare se qualche situazione online ti fa arrabbiare, intristire o spaventare.
             Events in Play Lab:
               name: Giocare con gli eventi
+              description_student: È il momento di essere creativi e creare un gioco nel Laboratorio!
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
               description_teacher: Questa lezione è stata originariamente creata per l'Ora del codice, insieme al team di Minecraft. Gli alunni avranno la possibilità di mettere in pratica le idee che hanno imparato fino a questo punto, oltre a vedere in anteprima le istruzioni condizionali!
             Binary Bracelets:
               name: Braccialetti binari
+              description_student: Crea il tuo braccialetto binario personale e impara in che modo i computer ricordano le informazioni!
               description_teacher: Il codice binario è fondamentale nel mondo dei computer. La maggior parte dei computer oggi memorizza tutti i dati in forma binaria. Questa lezione aiuta a dimostrare come sia possibile tradurre qualsiasi grandezza fisica in una serie di opzioni di tipologia acceso/spento (ON/OFF).
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
               description_teacher: Utilizzando una serie di simboli al posto dei blocchi di codice, gli alunni progetteranno algoritmi per ordinare a un "robot" di accatastare bicchieri seguendo diversi schemi. Gli studenti parteciperanno a turno come robot, rispondendo solo all'algoritmo definito dai loro compagni. In questa lezione si insegna agli alunni la relazione tra simboli e azioni, la differenza tra algoritmo e programma e la preziosa capacità di correzione degli errori (debugging).
@@ -5680,6 +5743,7 @@ it:
               name: Password Potenti
             Sticker Art with Loops:
               name: Cicli con l'artista
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         csp-mid-survey:
@@ -5786,6 +5850,7 @@ it:
               name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con la collezionista
+              description_teacher: In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco "Prendi diamanti" per aiutarla nel suo viaggio.
             Loops in Artist:
               name: Disegnare giardini con i cicli
               description_teacher: Continuando a lavorare sui cicli, gli alunni imparano a disegnare immagini eseguendo cicli di semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere diamanti. Qui, gli alunni useranno i cicli per creare degli schemi grafici. Alla fine di questa lezione, gli alunni avranno l'opportunità di creare le proprie immagini usando i cicli.
@@ -5797,6 +5862,7 @@ it:
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
+              description_student: In questa lezione animeremo una festa con dei balli realizzati sfruttando i cicli!
               description_teacher: Quando iniziamo a scrivere programmi più lunghi ed interessanti, il codice rischia di contenere molte ripetizioni. In questa lezione gli alunni impareranno come utilizzare i cicli per comunicare più facilmente delle istruzioni che contengono molte ripetizioni. L'attività si baserà sugli schemi ripetuti di un ballo.
             The Right App:
               name: L'App Giusta
@@ -6416,6 +6482,9 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csd-test-saving-state:
           lessons:
             What is a Computer?:
@@ -6426,6 +6495,9 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Wrap Up:
+              name: Conclusione
         csd1-pilot:
           lesson_groups:
             cspSurvey:
@@ -6609,6 +6681,8 @@ it:
           lessons:
             Routers and Redundancy:
               name: Router e Ridondanza
+            Packets:
+              name: Pacchetto
             The Need for Addressing:
               name: La Necessità dell'Indirizzamento
         peru-2019:
@@ -7093,11 +7167,13 @@ it:
               description_teacher: Gli alunni applicheranno i concetti di programmazione che hanno appreso all'ambiente della Contadina. Ora, invece di portare semplicemente il personaggio a un obiettivo, gli alunni devono raccogliere il mais usando un nuovo blocco. Gli alunni continueranno a sviluppare capacità di algoritmo sequenziale e inizieranno a utilizzare il processo di debug.
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
+              description_student: In questa lezione animeremo una festa con dei balli realizzati sfruttando i cicli!
               description_teacher: Quando iniziamo a scrivere programmi più lunghi ed interessanti, il codice rischia di contenere molte ripetizioni. In questa lezione gli alunni impareranno come utilizzare i cicli per comunicare più facilmente delle istruzioni che contengono molte ripetizioni. L'attività si baserà sugli schemi ripetuti di un ballo.
             Loops in Harvester:
               name: Cicli con la contadina
             Loops in Collector:
               name: Cicli con la collezionista
+              description_teacher: In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco "Prendi diamanti" per aiutarla nel suo viaggio.
             Loops in Artist:
               name: Disegnare giardini con i cicli
               description_teacher: Continuando a lavorare sui cicli, gli alunni imparano a disegnare immagini eseguendo cicli di semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere diamanti. Qui, gli alunni useranno i cicli per creare degli schemi grafici. Alla fine di questa lezione, gli alunni avranno l'opportunità di creare le proprie immagini usando i cicli.
@@ -7143,15 +7219,19 @@ it:
               description_teacher: Usando i personaggi del gioco Angry Birds, gli alunni svilupperanno algoritmi sequenziali per spostare un uccellino da un lato di un labirinto, all'altro lato dove si trova un maialino. A tal fine, metteranno insieme i blocchi di codice in una sequenza lineare, facendoli muovere dritti, girare a sinistra o girare a destra.
             Debugging in Maze:
               name: Correzione di errori nel labirinto
+              description_student: Cerca gli errori negli esercizi mettendo in pratica le tue capacità di debugging.
               description_teacher: L'attività di ricerca e correzione degli errori (debugging) è un elemento essenziale nell'apprendimento della programmazione. In questa lezione gli alunni incontreranno esercizi che sono stati risolti in modo errato. Dovranno quindi esaminare il codice esistente per identificare gli errori, come cicli errati, blocchi mancanti, blocchi in eccesso e blocchi fuori posto.
             Programming in Collector:
               name: Programmare con la collezionista
+              description_student: Scrivi algoritmi per aiutare Laura l'avventuriera a raccogliere tanti diamanti!
               description_teacher: In questa serie di esercizi, gli alunni continueranno a sviluppare la loro comprensione degli algoritmi e del debugging. Con un nuovo personaggio, Laura l'avventuriera, gli alunni creeranno algoritmi sequenziali per guidare Laura a raccogliere diamanti mentre segue un percorso.
             Programming in Artist:
               name: Programmare con l'artista
+              description_student: Crea splendide immagini programmando l'artista.
               description_teacher: In questa lezione gli alunni prenderanno il controllo di un'artista per fargli completare dei disegni sullo schermo. Attraverso i vari esercizi della lezione gli alunni creeranno immagini di complessità crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel` e `gira a destra di 90 gradi`.
             Binary Bracelets:
               name: Braccialetti binari
+              description_student: Crea il tuo braccialetto binario personale e impara in che modo i computer ricordano le informazioni!
               description_teacher: Il codice binario è fondamentale nel mondo dei computer. La maggior parte dei computer oggi memorizza tutti i dati in forma binaria. Questa lezione aiuta a dimostrare come sia possibile tradurre qualsiasi grandezza fisica in una serie di opzioni di tipologia acceso/spento (ON/OFF).
             'Loops: My Loopy Robotic Friends':
               name: I miei ciclici amici robotici (per i più piccoli)
@@ -7162,23 +7242,29 @@ it:
               description_teacher: Basandosi sul concetto di ripetere le istruzioni, introdotto nella precedente lezione tradizionale "Diventare ripetitivi," questa lezione permetterà agli alunni di utilizzare i cicli per aiutare BB-8 ad attraversare un labirinto in modo più efficiente.
             Loops in Harvester:
               name: Cicli con la contadina
+              description_student: Usiamo i cicli per aiutare la contadina a raccogliere le sue verdure!
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
               description_teacher: Questa lezione è stata originariamente creata per l'Ora del codice, insieme al team di Minecraft. Gli alunni avranno la possibilità di mettere in pratica le idee che hanno imparato fino a questo punto, oltre a vedere in anteprima le istruzioni condizionali!
             Sticker Art with Loops:
               name: Cicli con l'artista
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
             'Events: The Big Event':
               name: Il grande evento
+              description_student: Fai un gioco divertente per conoscere gli eventi.
               description_teacher: Gli alunni impareranno presto che gli eventi sono un ottimo strumento per aggiungere varietà ad un algoritmo predeterminato. A volte vuoi che il tuo programma sia in grado di rispondere all'utente esattamente quando l'utente lo desidera. Ecco a cosa servono gli eventi.
             Build a Flappy Game:
               name: Realizzare un gioco Flappy
+              description_student: Costruisci il tuo personale gioco Flappy Bird e poi condividilo con i tuoi amici!
               description_teacher: In questa lezione speciale, gli alunni potranno creare il proprio gioco Flappy Bird sfruttando i gestori di eventi per rilevare i clic del mouse e le collisioni degli oggetti. Alla fine della lezione, gli alunni saranno in grado di personalizzare il loro gioco modificando grafica o regole.
             Events in Play Lab:
               name: Giocare con gli eventi
+              description_student: È il momento di essere creativi e creare un gioco nel Laboratorio!
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursed-2020:
           title: Corso D (2020)
@@ -7221,6 +7307,7 @@ it:
               description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
             Build a Star Wars Game:
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             Loops in Ice Age:
               name: Cicli con l'Era glaciale
@@ -7230,6 +7317,7 @@ it:
               description_teacher: Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività funge anche da esercizio di debug per una pratica extra di risoluzione dei problemi.
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
+              description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? Questa lezione ti insegnerà cosa succede quando crei un ciclo annidato.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Conditionals with Cards:
               name: Istruzioni condizionali con le carte da gioco
@@ -7261,6 +7349,7 @@ it:
               description_teacher: In questa lezione, gli studenti programmeranno la propria festa da ballo interattiva. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.
             End of Course Project:
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
           student_description: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursee-2020:
           title: Corso E (2020)
@@ -7286,6 +7375,7 @@ it:
             Sequencing in the Maze:
               description_student: In questa lezione imparerai a scrivere i tuoi primi programmi!
             Programming and Loops with the Artist:
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
@@ -7301,6 +7391,7 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+              description_student: Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati.
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
@@ -7315,17 +7406,22 @@ it:
               description_teacher: Ora che gli alunni hanno imparato a stratificare i cicli, sono in grado di creare cose fantastiche. Questa lezione li guiderà attraverso una serie di esercizi in cui creeranno delle immagini da collezionare, basati sulle eccezionali abilità di pattinaggio sul ghiaccio di Anna ed Elsa!
             'Functions: Songwriting':
               name: Composizione di canzoni
+              description_student: In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni.
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Minecraft:
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
               description_teacher: Gli alunni inizieranno a capire come le funzioni possono essere utili in questa divertente e interattiva avventura di Minecraft!
             Functions in Harvester:
               name: Funzioni con la contadina
+              description_student: Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!
               description_teacher: Gli alunni si sono esercitati nella creazione di progetti fantastici nell'ambiente dell'Artista e pilotando l'Ape nei suoi labirinti, mentre oggi useranno le funzioni per far raccogliere le colture alla Contadina. Questa lezione spingerà gli alunni ad usare le funzioni in modi ancora nuovi, combinandole con i cicli `mentre` e le istruzioni `se/altrimenti`.
             Functions in Artist:
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
             End of Course Project:
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             Digital Sharing:
               name: Condivisione digitale
               description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
@@ -7351,10 +7447,12 @@ it:
           lessons:
             Functions in Minecraft:
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
               description_teacher: Gli alunni inizieranno a capire come le funzioni possono essere utili in questa divertente e interattiva avventura di Minecraft!
             Events with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Loops with the Artist:
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
               description_teacher: Guarda i volti degli alunni illuminarsi mentre realizzano i loro splendidi disegni utilizzando un piccolo numero di blocchi e adesivi digitali! Questa lezione si fonda sulla comprensione dei cicli introdotti nelle lezioni precedenti e offre agli alunni la possibilità di essere veramente creativi.  Questa attività è ideale per produrre artefatti, magari da presentare durante gli incontri con i genitori.
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
@@ -7369,9 +7467,11 @@ it:
               description_student: Non dimenticare di metterci tutta la tua creatività! In questi esercizi realizzerai fantastici disegni usando le variabili.
             Variables that Change in Bee:
               name: Modifica delle variabili con l'ape
+              description_student: Quest'ape ama le variabili!
               description_teacher: Questa lezione aiuterà a illustrare come le variabili possono rendere i programmi più potenti consentendo ai valori di cambiare mentre il codice è in esecuzione.
             Variables that Change in Artist:
               name: Modifica delle Variabili con l'Artista
+              description_student: In questa lezione realizzerai dei disegni usando le variabili che modificano il loro valore durante l'esecuzione del programma.
               description_teacher: In questa lezione, gli alunni sperimenteranno la creazione di progetti ripetitivi utilizzando le variabili nell'ambiente dell'Artista. Gli alunni impareranno come sfruttare le variabili per rendere il codice più compatto e comprensibile. Al termine della lezione, dopo gli esercizi guidati, gli alunni potranno mostrare ciò che hanno imparato, creando i propri progetti.
             For Loop Fun:
               name: Divertiti usando i cicli con contatore
@@ -7390,6 +7490,7 @@ it:
               description_student: Ti sei mai chiesto come viaggiano i dati su Internet? Non è mica magia! In questa lezione imparerai le basi del funzionamento di Internet.
               description_teacher: Anche se molte persone usano Internet ogni giorno, non molti sanno come funziona. In questa lezione, gli studenti faranno finta di navigare in Internet, imparando a conoscere connessioni, URL, indirizzi IP e DNS.
             Virtual Pet:
+              name: Un animale domestico virtuale con il Laboratorio dei personaggi
               description_student: In questa lezione, gli alunni creeranno un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni useranno lo strumento "Costumi" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzeranno quindi eventi, comportamenti e altri concetti che hanno imparato per dare al loro animale domestico una vita propria!
               description_teacher: In questa lezione, gli alunni creeranno un animale domestico virtuale interattivo che appare e si comporta come desiderano. Gli alunni useranno lo strumento "Costumi" del Laboratorio dei personaggi per personalizzare l'aspetto del loro animale domestico. Utilizzeranno quindi eventi, comportamenti e altri concetti che hanno imparato per dare al loro animale domestico una vita propria!
             The Power of Words:
@@ -7404,6 +7505,7 @@ it:
               description_teacher: Questa lezione è un contributo del gruppo Copyright e Creatività (www.copyrightandcreativity.org) e serve per aiutare gli studenti a comprendere le sfide e i vantaggi del rispetto della proprietà intellettuale (copyright), in particolare in ambiento digitale. Gli studenti dovrebbero essere incoraggiati a rispettare i diritti degli artisti come parte integrante dell'etica di un buon cittadino digitale.
             End of Course Project:
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
               description_student: 'Riepilogo del tutorial: i primi studenti classificano gli oggetti come "pesce" o "non pesce" per tentare di rimuovere la spazzatura dall''oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all''acqua. Nella seconda parte dell''attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli.'
@@ -7472,6 +7574,8 @@ it:
               name: Cicli con contatore con l'artista
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
+            Virtual Pet with Sprite Lab:
+              name: Un animale domestico virtuale con il Laboratorio dei personaggi
             End of Course Project:
               name: Progetto di fine corso
             Programming with Angry Birds:
@@ -7540,6 +7644,7 @@ it:
               name: Cicli con l'Era glaciale
             Loops in Collector:
               name: Cicli con il Collezionista
+              description_teacher: In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco "Prendi diamanti" per aiutarla nel suo viaggio.
             Ocean Scene with Loops:
               name: Al mare con i cicli
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.
@@ -7586,6 +7691,8 @@ it:
               name: La Necessità dell'Indirizzamento
             Routers and Redundancy:
               name: Router e Ridondanza
+            Packets:
+              name: Pacchetto
         csp3-2020:
           lesson_groups:
             cspSurvey2020:
@@ -8001,6 +8108,9 @@ it:
             Routers and Redundancy:
               key: Router e Ridondanza
               name: Router e Ridondanza
+            Packets:
+              key: Pacchetto
+              name: Pacchetto
           lesson_groups:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
@@ -8127,6 +8237,7 @@ it:
             'Loops: Getting Loopy':
               key: 'Cicli: Diventare Ripetitivi'
               name: Diventare ripetitivi
+              description_student: In questa lezione animeremo una festa con dei balli realizzati sfruttando i cicli!
             Loops in Harvester:
               key: Cicli con la contadina
               name: Cicli con la contadina
@@ -8176,15 +8287,19 @@ it:
             Debugging in Maze:
               key: Correzione di errori nel labirinto
               name: Correzione di errori nel labirinto
+              description_student: Cerca gli errori negli esercizi mettendo in pratica le tue capacità di debugging.
             Programming in Collector:
               key: Programmare la collezionista
               name: Programmare con la collezionista
+              description_student: Scrivi algoritmi per aiutare Laura l'avventuriera a raccogliere tanti diamanti!
             Programming in Artist:
               key: Programmare l'artista
               name: Programmare con l'artista
+              description_student: Crea splendide immagini programmando l'artista.
             Binary Bracelets:
               key: Braccialetti binari
               name: Braccialetti binari
+              description_student: Crea il tuo braccialetto binario personale e impara in che modo i computer ricordano le informazioni!
             'Loops: My Loopy Robotic Friends':
               key: I miei ciclici amici robotici
               name: I miei ciclici amici robotici (per i più piccoli)
@@ -8194,23 +8309,29 @@ it:
             Loops in Harvester:
               key: Cicli con la contadina
               name: Cicli con la contadina
+              description_student: Usiamo i cicli per aiutare la contadina a raccogliere le sue verdure!
             Looking Ahead:
               key: Uno sguardo in avanti
               name: Uno sguardo avanti con Minecraft
               description_teacher: Questa lezione è stata originariamente creata per l'Ora del codice, insieme al team di Minecraft. Gli alunni avranno la possibilità di mettere in pratica le idee che hanno imparato fino a questo punto, oltre a vedere in anteprima le istruzioni condizionali!
             Sticker Art with Loops:
               key: Cicli con l'artista
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
             'Events: The Big Event':
               key: Il grande evento
               name: Il grande evento
+              description_student: Fai un gioco divertente per conoscere gli eventi.
             Build a Flappy Game:
               key: Realizzare un gioco Flappy
               name: Realizzare un gioco Flappy
+              description_student: Costruisci il tuo personale gioco Flappy Bird e poi condividilo con i tuoi amici!
             Events in Play Lab:
               key: 'Laboratorio: Eventi'
+              description_student: È il momento di essere creativi e creare un gioco nel Laboratorio!
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
           lesson_groups:
             csf_digcit:
               display_name: Cittadinanza digitale
@@ -8254,6 +8375,7 @@ it:
             Build a Star Wars Game:
               key: Realizza un gioco con Star Wars
               name: Realizza un gioco con Star Wars
+              description_student: Senti la Forza mentre costruisci il tuo gioco di Star Wars in questa lezione.
               description_teacher: In questa lezione, gli studenti metteranno in pratica l'uso degli eventi per creare un gioco che potranno poi condividere online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno guidati attraverso gli eventi, infine avranno un loro spazio per creare il loro gioco.
             Dance Party:
               key: Ballando col codice
@@ -8299,6 +8421,7 @@ it:
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
             lesson-6:
               name: Uno sguardo avanti con Minecraft
             lesson-1:
@@ -8341,6 +8464,7 @@ it:
             Private and Personal Information:
               key: Cittadinanza digitale - Dati personali e altri dati
               name: Cittadinanza digitale - Dati personali e altri dati
+              description_student: Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati.
             Digital Sharing:
               key: Condivisione digitale
               name: Condivisione digitale
@@ -8358,20 +8482,25 @@ it:
             'Functions: Songwriting':
               key: 'Funzioni: Composizione di Canzoni'
               name: Composizione di canzoni
+              description_student: In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni.
               description_teacher: Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.
             Functions in Minecraft:
               key: Funzioni con Minecraft
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
             Functions in Harvester:
               key: Funzioni con la Contadina
               name: Funzioni con la contadina
+              description_student: Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!
             Functions in Artist:
               key: Funzioni con l'artista
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
           lesson_groups:
             ramp_up:
               display_name: Cicli annidati
@@ -8396,6 +8525,7 @@ it:
             Functions in Minecraft:
               key: Funzioni con Minecraft
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
               description_teacher: Gli alunni inizieranno a capire come le funzioni possono essere utili in questa divertente e interattiva avventura di Minecraft!
             Events with Sprite Lab:
               key: Eventi con il Laboratorio dei personaggi
@@ -8420,6 +8550,9 @@ it:
               description_student: Non dimenticare di metterci tutta la tua creatività! In questi esercizi realizzerai fantastici disegni usando le variabili.
             Variables that Change in Bee:
               name: Modifica delle variabili con l'ape
+              description_student: Quest'ape ama le variabili!
+            Variables that Change in Artist:
+              description_student: In questa lezione realizzerai dei disegni usando le variabili che modificano il loro valore durante l'esecuzione del programma.
             AI for Oceans:
               key: L'Intelligenza Artificiale per il mare
               name: L'Intelligenza Artificiale per il mare
@@ -8447,6 +8580,7 @@ it:
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+              description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
             lesson-8:
@@ -8490,20 +8624,24 @@ it:
             Debugging with Scrat:
               key: Debugging con Scrat
               name: Correzione di errori nel labirinto
+              description_student: Cerca gli errori negli esercizi mettendo in pratica le tue capacità di debugging.
             Collecting Treasure with Laurel:
               key: Programmare con la collezionista
               name: Programmare con la collezionista
             Creating Art with Code:
               key: Programmare con l'artista
               name: Programmare con l'artista
+              description_student: Crea splendide immagini programmando l'artista.
             Loops with Rey and BB-8:
               key: Cicli con Rey e BB-8
               name: Cicli con Rey e BB-8
             Sticker Art with Loops:
               key: Cicli con l'artista
+              description_student: In questa lezione i cicli permettono all'artista di realizzare immagini ancora più interessanti!
             Nested Loops in Maze:
               key: Cicli annidati nel labirinto
               name: Cicli annidati nel labirinto
+              description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? Questa lezione ti insegnerà cosa succede quando crei un ciclo annidato.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             Snowflakes with Anna and Elsa:
               key: Cicli annidati con Frozen
@@ -8533,21 +8671,27 @@ it:
             Functions in Minecraft:
               key: Funzioni con Minecraft
               name: Funzioni con Minecraft
+              description_student: Riuscite a capire come utilizzare le funzioni per il codice più efficiente?
             Functions with Harvester:
               key: Funzioni con la contadina
               name: Funzioni con la contadina
+              description_student: Le funzioni ti faranno risparmiare un sacco di tempo, mentre aiuterai la contadina con il suo raccolto!
             Functions with Artist:
               key: Funzioni con l'artista
               name: Funzioni con l'artista
+              description_student: Crea disegni complessi più facilmente con le funzioni!
               description_teacher: Gli studenti saranno introdotti all'uso delle funzioni su Code.org. Nell'ambiente dell'Artista verranno create e modificate figure magnifiche sfruttando la potenza delle funzioni. Per schemi più complessi, gli studenti impareranno ad usare le funzioni annidate, richiamando una funzione dall'interno di un'altra.
             Variables with Artist:
               key: Variabili con l'Artista
+              description_student: In questa lezione realizzerai dei disegni usando le variabili che modificano il loro valore durante l'esecuzione del programma.
             Changing Variables with Bee:
               key: Modifica delle variabili con l'ape
               name: Modifica delle variabili con l'ape
+              description_student: Quest'ape ama le variabili!
             Changing Variables with Artist:
               key: Modifica delle Variabili con l'Artista
               name: Modifica delle Variabili con l'Artista
+              description_student: In questa lezione realizzerai dei disegni usando le variabili che modificano il loro valore durante l'esecuzione del programma.
             For Loops with Bee:
               key: Cicli con Contatore con l'Ape
               name: Cicli con Contatore con l'Ape
@@ -8561,9 +8705,13 @@ it:
             Alien Dance Party:
               key: Discoteca Aliena
               name: Discoteca Aliena
+            Virtual Pet with Sprite Lab:
+              key: Un animale domestico virtuale con il Laboratorio dei personaggi
+              name: Un animale domestico virtuale con il Laboratorio dei personaggi
             End of Course Project:
               key: Progetto di fine corso
               name: Progetto di fine corso
+              description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
             lesson-1:
               name: Ballando col codice
             lesson-3:
@@ -8615,6 +8763,7 @@ it:
             Loops with Laurel:
               key: Cicli con la collezionista
               name: Cicli con la collezionista
+              description_teacher: In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco "Prendi diamanti" per aiutarla nel suo viaggio.
             Ocean Scene with Loops:
               key: Al mare con i cicli
               name: Al mare con i cicli
@@ -8700,8 +8849,6 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
-            lessonGroup-4:
-              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -8782,8 +8929,22 @@ it:
               display_name: Sondaggio
         aiml-2021:
           lessons:
+            lesson5:
+              name: Lezione 6
             lesson-22:
               name: Progettare la Raccolta dei Dati
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sondaggio
+        csd7-2021:
+          lessons:
+            Introduction to AI Lab:
+              name: Lezione 6
+            Survey Planning:
+              name: Progettare la Raccolta dei Dati
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sondaggio
         kodea-pd-2021:
           description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           student_description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
@@ -8826,10 +8987,6 @@ it:
           lessons:
             lesson-9:
               name: Teacher community
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Strumenti
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -8870,6 +9027,8 @@ it:
           lessons:
             lesson-1:
               name: Laboratorio di Intelligenza Artificiale
+            lesson-3:
+              name: Test
           title: Laboratorio di Intelligenza Artificiale
         tesspltest:
           lessons:

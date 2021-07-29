@@ -20,6 +20,10 @@ CROWDIN_PROJECTS = {
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+  },
+  "codeorg-restricted": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml")
   }
 }
 
@@ -257,10 +261,13 @@ class I18nScriptUtils
     base = Pathname.new(level_content_directory)
     relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
     relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+    script_name = File.basename(script_i18n_name, '.*')
+    error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
     Honeybadger.notify(
       error_class: 'Destination directory for script is attempting to change',
-      error_message: "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+      error_message: error_message
     )
+    puts error_message
     return true
   end
 end

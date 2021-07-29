@@ -235,21 +235,21 @@ bonus 'courseE_playLab_challenge1_2018'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: false
-level 'courseF_video_csMatters_2018', named: true
-level 'Geometric Sun_2018', named: true
-level 'Robot Doodle_2018', named: true
-level 'Alien Defender_2018', named: true
-level 'Find the Wizard_2018', named: true
+level 'courseF_video_csMatters_2018', progression: 'Video: CS Matters'
+level 'Geometric Sun_2018', progression: 'Geometric Sun'
+level 'Robot Doodle_2018', progression: 'Robot Doodle'
+level 'Alien Defender_2018', progression: 'Alien Defender'
+level 'Find the Wizard_2018', progression: 'Find the Wizard_2018'
 
 lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: false
-level 'Begin planning your project_2018', named: true
+level 'Begin planning your project_2018', progression: 'Begin planning your project_2018'
 
 lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: false
-level 'Course E: Play Lab Project_2018', named: true
-level 'Course E: Artist Project_2018', named: true
+level 'Course E: Play Lab Project_2018', progression: 'Course E: Play Lab Project_2018'
+level 'Course E: Artist Project_2018', progression: 'Course E Artist Project'
 
 lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: false
-level 'Prepare for your presentation_2018', named: true
+level 'Prepare for your presentation_2018', progression: 'Prepare for your presentation_2018'
 
 lesson_group 'extra_course_content', display_name: 'Extra Course Content'
 lesson 'Internet', display_name: 'Internet', has_lesson_plan: false, unplugged: true

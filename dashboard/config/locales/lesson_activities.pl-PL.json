@@ -41,6 +41,21 @@
         "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
           "name": "Możliwości międzyprzedmiotowe"
         },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": ""
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": ""
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": ""
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": ""
+        },
+        "86dafe20-4778-4665-94eb-cf837951259b": {
+          "name": "Wersja rozszerzona"
+        },
         "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737": {
           "name": "Rozgrzewka"
         },
@@ -119,11 +134,17 @@
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Ocena"
         },
+        "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
+          "name": "Wersja rozszerzona"
+        },
         "22f02104-4519-48dd-aa08-c532f9e080c9": {
           "name": "Możliwości międzyprzedmiotowe"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Rozgrzewka"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Główna aktywność"
@@ -149,6 +170,9 @@
         "7e800d16-2b68-4b95-9071-327a7a9ce611": {
           "name": "Zakończenie"
         },
+        "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
+          "name": "Wersja rozszerzona"
+        },
         "9fc4791f-a664-44db-9185-6162b40db705": {
           "name": "Rozgrzewka"
         },
@@ -167,6 +191,9 @@
         "3f386349-319f-49fa-a87b-4de41f39f1d4": {
           "name": "Zakończenie"
         },
+        "5e959966-cfc9-4300-a563-9427222987c8": {
+          "name": "Wersja rozszerzona"
+        },
         "d9d579ea-18fb-4735-90ea-c04c59ba1a71": {
           "name": "Rozgrzewka"
         },
@@ -179,11 +206,38 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Ocena"
         },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Dzień 1 - Badaj pomysły na projekt"
+        },
         "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
           "name": "Dzień 2 - Proces projektowania"
         },
+        "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
+          "name": "Dzień 3 - Zbuduj swój projekt"
+        },
         "459d00f2-e296-4205-bca6-eab8d4599354": {
           "name": "Dzień 4 - Zweryfikuj swój projekt"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Dzień 5 i 6 - Zaprezentuj swój projekt"
+        },
+        "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
+          "name": "Wersja rozszerzona"
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": ""
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": ""
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": ""
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": ""
+        },
+        "add79bbe-c639-4e83-9191-993c430f08e9": {
+          "name": "Wersja rozszerzona"
         },
         "e4cb9683-b230-44f6-9e23-48bd955d1aa4": {
           "name": "Rozgrzewka"
@@ -194,8 +248,14 @@
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
           "name": "Podsumowanie"
         },
+        "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
+          "name": "Wersja rozszerzona"
+        },
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Rozgrzewka"
+        },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Główna aktywność"
@@ -203,17 +263,29 @@
         "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
           "name": "Zakończenie"
         },
+        "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
+          "name": "Wersja rozszerzona"
+        },
         "e030be21-480d-40a2-8f97-574492b54aa2": {
           "name": "Możliwości międzyprzedmiotowe"
         },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Rozgrzewka"
         },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Podgląd łamigłówek online jako klasa"
+        },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Główna aktywność"
         },
         "8a245dd2-d857-40ab-8120-ef2bd8777377": {
           "name": "Zakończenie"
+        },
+        "25e921a3-616c-4b8d-accb-c360ef37c266": {
+          "name": "Wersja rozszerzona"
         },
         "a9428abc-3bd7-4e69-a4fc-34672f65bca9": {
           "name": "Rozgrzewka"
@@ -236,14 +308,23 @@
         "ee775447-c327-4e95-a523-663a02856cad": {
           "name": "Podsumowanie"
         },
+        "4a617b6e-9d56-472c-8a50-31052d127232": {
+          "name": "Wersja rozszerzona"
+        },
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Rozgrzewka"
+        },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Główna aktywność"
         },
         "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
           "name": "Zakończenie"
+        },
+        "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
+          "name": "Wersja rozszerzona"
         },
         "3ffb2700-4b4c-4deb-a009-856be4b850da": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -253,6 +334,9 @@
         },
         "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
           "name": "Główna aktywność"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": "Zakończenie"
         },
         "352bcbca-fe70-41d4-8d38-7cfed390e991": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -290,17 +374,26 @@
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Ocena"
         },
+        "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
+          "name": "Wersja rozszerzona"
+        },
         "e524c263-6ebc-47c9-9d43-3b738a99574b": {
           "name": "Możliwości międzyprzedmiotowe"
         },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Rozgrzewka"
         },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
+        },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Główna aktywność"
         },
         "61306f7a-d493-40e5-a6ed-68d2b0e97624": {
           "name": "Zakończenie"
+        },
+        "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
+          "name": "Wersja rozszerzona"
         },
         "f9683417-64ad-4bc3-b152-bf0e90b35c41": {
           "name": "Rozgrzewka"
@@ -311,6 +404,21 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Zakończenie"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": ""
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": ""
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": ""
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": ""
+        },
+        "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
+          "name": "Wersja rozszerzona"
+        },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Rozgrzewka"
         },
@@ -319,6 +427,9 @@
         },
         "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
           "name": "Zakończenie"
+        },
+        "9ef71984-8749-46e9-ada3-889815c8f1b9": {
+          "name": "Wersja rozszerzona"
         },
         "620c06c7-711d-459f-9f67-af3d142eb29c": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -332,14 +443,23 @@
         "3290a55e-fedd-4672-8b81-dfac2115a13b": {
           "name": "Zakończenie"
         },
+        "0915a618-f1c1-47be-b8fb-80664fa62e50": {
+          "name": "Wersja rozszerzona"
+        },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Rozgrzewka"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Główna aktywność"
         },
         "3f38c955-4e54-4c3b-a446-92f78ed8c109": {
           "name": "Zakończenie"
+        },
+        "519099ff-6a78-427c-91d6-4ef9a2cba286": {
+          "name": "Wersja rozszerzona"
         },
         "ad255314-ba48-44b7-a6b8-1f0cc1e24157": {
           "name": "Rozgrzewka"
@@ -349,6 +469,9 @@
         },
         "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
           "name": "Zakończenie"
+        },
+        "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
+          "name": "Wersja rozszerzona"
         },
         "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -371,11 +494,23 @@
         "bf1be38a-3e18-4158-8364-0de3124ff833": {
           "name": "Zakończenie"
         },
+        "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
+          "name": "Wersja rozszerzona"
+        },
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Rozgrzewka"
         },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
+        },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Główna aktywność"
+        },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": "Zakończenie"
+        },
+        "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
+          "name": "Wersja rozszerzona"
         },
         "92c5197c-d135-4891-9504-ba1393dd8ca6": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -410,14 +545,23 @@
         "10660ca3-5263-479f-a685-3e067185468a": {
           "name": "Zakończenie"
         },
+        "32810ead-80cc-47b1-863f-ea8d023aaa94": {
+          "name": "Wersja rozszerzona"
+        },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Rozgrzewka"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": ""
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Główna aktywność"
         },
         "75370025-0071-498b-8e43-3e57a3ce5a78": {
           "name": "Zakończenie"
+        },
+        "98f951f7-63b2-4d62-82c9-d472b3505b68": {
+          "name": "Wersja rozszerzona"
         },
         "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c": {
           "name": "Rozgrzewka"
@@ -427,6 +571,21 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Zakończenie"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": ""
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": ""
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": ""
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": ""
+        },
+        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
+          "name": "Wersja rozszerzona"
         },
         "9d9055c3-143a-452e-9703-ef90cd9a9469": {
           "name": "Poziomy"
@@ -443,11 +602,20 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Rozgrzewka"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Działanie uzupełniające -  oprogramowanie"
+        },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Podgląd łamigłówek online jako klasa"
+        },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Główna aktywność"
         },
         "d582f103-5fb1-4236-80df-100080cc01b9": {
           "name": "Zakończenie"
+        },
+        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
+          "name": "Wersja rozszerzona"
         },
         "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -461,8 +629,14 @@
         "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
           "name": "Zakończenie"
         },
+        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
+          "name": "Wersja rozszerzona"
+        },
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Rozgrzewka"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": ""
         },
         "e0fe20d3-be99-4212-83f8-21599085fcad": {
           "name": "Główna aktywność"
@@ -479,6 +653,9 @@
         "5f64e89f-e102-47ee-b219-5e637db83913": {
           "name": "Zakończenie"
         },
+        "27034f13-f0bf-41c0-a198-385c740be6ab": {
+          "name": "Wersja rozszerzona"
+        },
         "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
           "name": "Możliwości międzyprzedmiotowe"
         },
@@ -491,14 +668,23 @@
         "899be5b5-0668-4472-909d-46a1e44e98e2": {
           "name": "Zakończenie"
         },
+        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
+          "name": "Wersja rozszerzona"
+        },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Rozgrzewka"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Główna aktywność"
         },
         "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
           "name": "Zakończenie"
+        },
+        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
+          "name": "Wersja rozszerzona"
         },
         "8d168c1a-0b80-4cff-8626-1f03a8ba046c": {
           "name": "Rozgrzewka"
@@ -508,6 +694,9 @@
         },
         "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
           "name": "Zakończenie"
+        },
+        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
+          "name": "Wersja rozszerzona"
         },
         "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -533,14 +722,23 @@
         "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
           "name": "Zakończenie"
         },
+        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
+          "name": "Wersja rozszerzona"
+        },
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Rozgrzewka"
+        },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Główna aktywność"
         },
         "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
           "name": "Zakończenie"
+        },
+        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
+          "name": "Wersja rozszerzona"
         },
         "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -554,6 +752,9 @@
         "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
           "name": "Zakończenie"
         },
+        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
+          "name": "Wersja rozszerzona"
+        },
         "300fccda-4810-433a-bbc6-14ceee1a1b5f": {
           "name": "Rozgrzewka"
         },
@@ -566,11 +767,17 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Rozgrzewka"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": ""
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Zakończenie"
         },
         "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
           "name": "Ocena"
+        },
+        "af629d31-87ab-476d-a2d3-6da008802f3c": {
+          "name": "Wersja rozszerzona"
         },
         "617a65b9-bbea-4e3e-ae4b-cbb106b09af0": {
           "name": "Rozgrzewka"
@@ -580,6 +787,21 @@
         },
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Zakończenie"
+        },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": ""
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": ""
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": ""
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": ""
+        },
+        "e735098e-abab-465e-949c-a7e92e771b84": {
+          "name": "Wersja rozszerzona"
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Poziomy"
@@ -593,8 +815,17 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Zakończenie"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Sprawdzian opcjonalny"
+        },
+        "c401b0f4-97af-418d-b58b-a58493c7570c": {
+          "name": "Wersja rozszerzona"
+        },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Rozgrzewka"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Zajęcia uzupełniające -  Programowanie"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Główna aktywność"
@@ -611,8 +842,14 @@
         "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
           "name": "Zakończenie"
         },
+        "da433c13-5e0a-48fe-a697-d2288e831912": {
+          "name": "Wersja rozszerzona"
+        },
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Rozgrzewka"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": ""
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Główna aktywność"
@@ -629,6 +866,9 @@
         "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
           "name": "Zakończenie"
         },
+        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
+          "name": "Wersja rozszerzona"
+        },
         "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
           "name": "Możliwości międzyprzedmiotowe"
         },
@@ -641,6 +881,12 @@
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Zakończenie"
         },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": "Pierwsze kroki (5 minut)"
+        },
+        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
+          "name": "Zajęcia (30-45 minut)"
+        },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Zakończenie"
         },
@@ -649,6 +895,12 @@
         },
         "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
           "name": "Główna aktywność"
+        },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": "Zakończenie"
+        },
+        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
+          "name": "Wersja rozszerzona"
         },
         "46464e07-b5ac-4ca4-84b2-3b43873360da": {
           "name": "Rozgrzewka"
@@ -668,6 +920,9 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Zakończenie"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Rozgrzewka"
+        },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Główna aktywność"
         },
@@ -676,6 +931,9 @@
         },
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Ocena"
+        },
+        "22ad368d-3a00-4720-a21a-72985c642b8d": {
+          "name": "Wersja rozszerzona"
         },
         "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -689,6 +947,9 @@
         "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
           "name": "Zakończenie"
         },
+        "f72b0518-8373-4e23-9798-b4973072e86e": {
+          "name": "Wersja rozszerzona"
+        },
         "e9ce9579-635c-4885-a9fd-6c260ae09dd4": {
           "name": "Rozgrzewka"
         },
@@ -697,6 +958,9 @@
         },
         "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
           "name": "Zakończenie"
+        },
+        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
+          "name": "Wersja rozszerzona"
         },
         "e2c8f30f-bc96-4c09-8765-e5986e61d230": {
           "name": "Rozgrzewka"
@@ -734,6 +998,9 @@
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Zakończenie"
         },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Wersja rozszerzona"
+        },
         "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
           "name": "Możliwości międzyprzedmiotowe"
         },
@@ -746,8 +1013,14 @@
         "4a54982d-83d3-4040-b499-46d8dc535774": {
           "name": "Zakończenie"
         },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Wersja rozszerzona"
+        },
         "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
           "name": "Rozgrzewka"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Zajęcia uzupełniające"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Główna aktywność"
@@ -763,6 +1036,9 @@
         },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Zakończenie"
+        },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Wersja rozszerzona"
         },
         "4366b898-b885-48ea-90a8-0316aa3c153f": {
           "name": "Możliwości międzyprzedmiotowe"
@@ -809,6 +1085,9 @@
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Rozgrzewka"
         },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Zajęcia (30-45 minut)"
+        },
         "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
           "name": "Zakończenie"
         },
@@ -820,6 +1099,9 @@
         },
         "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
           "name": "Zakończenie"
+        },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Wersja rozszerzona"
         },
         "e1b92a7f-657f-4825-aa00-576f89e67200": {
           "name": "Rozgrzewka"
@@ -860,6 +1142,9 @@
         "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
           "name": "Zakończenie"
         },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Wersja rozszerzona"
+        },
         "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
           "name": "Rozgrzewka"
         },
@@ -868,6 +1153,9 @@
         },
         "00f7b6d4-a585-4d87-ba85-2c780734b876": {
           "name": "Zakończenie"
+        },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Wersja rozszerzona"
         },
         "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
           "name": "Rozgrzewka"
@@ -886,6 +1174,9 @@
         },
         "6b43b84e-bffc-427b-8b1f-983968a21f29": {
           "name": "Zakończenie"
+        },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Wersja rozszerzona"
         },
         "4b6c37da-c087-41f8-94bd-6eddba55804d": {
           "name": "Rozgrzewka"
@@ -922,6 +1213,9 @@
         },
         "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
           "name": "Zakończenie"
+        },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Wersja rozszerzona"
         },
         "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
           "name": "Rozgrzewka"
@@ -995,8 +1289,14 @@
         "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
           "name": "Zakończenie"
         },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Wersja rozszerzona"
+        },
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Rozgrzewka"
+        },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Podgląd łamigłówek online jako klasa"
         },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Główna aktywność"
@@ -1004,11 +1304,20 @@
         "514be718-37b6-4bca-9bea-138eac8ae77c": {
           "name": "Zakończenie"
         },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Wersja rozszerzona"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Rozgrzewka: Podgląd programowania w labiryncie"
+        },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Główna aktywność"
         },
         "0396f06e-4a9e-443d-859c-dc77fa229769": {
           "name": "Zakończenie"
+        },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Wersja rozszerzona"
         },
         "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
           "name": "Rozgrzewka"
@@ -1034,11 +1343,23 @@
         "0a77a438-3684-4874-b963-e5a75723888a": {
           "name": "Główna aktywność"
         },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": "Zakończenie"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Wersja rozszerzona"
+        },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Rozgrzewka"
         },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Fundament online: Podejrzyj pętle w \"Kolekcjonerze\""
+        },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Główna aktywność"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": "Zakończenie"
         },
         "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
           "name": "Rozgrzewka"
@@ -1067,6 +1388,9 @@
         "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
           "name": "Zakończenie"
         },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Wersja rozszerzona"
+        },
         "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
           "name": "Rozgrzewka"
         },
@@ -1075,6 +1399,9 @@
         },
         "291b174a-b478-463d-aff6-af66feda095a": {
           "name": "Zakończenie"
+        },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Wersja rozszerzona"
         },
         "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
           "name": "Rozgrzewka"
@@ -1087,6 +1414,9 @@
         },
         "d7c5d028-ebdb-4366-9856-f36f780cd472": {
           "name": "Rozgrzewka"
+        },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Zajęcia uzupełniające"
         },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Główna aktywność"
@@ -1103,6 +1433,36 @@
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Zakończenie"
         },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": ""
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": ""
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": ""
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": ""
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Wersja rozszerzona"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": ""
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": ""
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": ""
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": ""
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Wersja rozszerzona"
+        },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Poziomy"
         },
@@ -1118,11 +1478,17 @@
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Możliwości międzyprzedmiotowe"
         },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Rozgrzewka (opcjonalnie)"
+        },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Główna aktywność"
         },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Podsumowanie"
+        },
+        "27b493bd-61be-4305-b021-8b40d59ee55a": {
+          "name": "Wersja rozszerzona"
         },
         "1014e6a8-473d-46e2-a448-ca92a6697405": {
           "name": "Rozgrzewka"
@@ -1144,6 +1510,9 @@
         },
         "aa8015a6-3a2c-401c-a8ff-4d0116ee1358": {
           "name": "Zakończenie"
+        },
+        "6354e763-cca6-4b98-b56e-16609de67f85": {
+          "name": "Wersja rozszerzona"
         },
         "02d69cfa-0438-4f7e-ad96-91985effa0dc": {
           "name": "Rozgrzewka"
@@ -1169,11 +1538,17 @@
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Ocena"
         },
+        "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
+          "name": "Wersja rozszerzona"
+        },
         "6c35971f-0c71-44c4-b6d7-9380216625a5": {
           "name": "Możliwości międzyprzedmiotowe"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Rozgrzewka"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Zajęcia uzupełniające - Wybierz jedne"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Główna aktywność"
@@ -1190,6 +1565,9 @@
         "6254961e-5863-4a98-8d8f-7ef4565c1f8f": {
           "name": "Zakończenie"
         },
+        "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
+          "name": "Wersja rozszerzona"
+        },
         "da87c8ba-9486-43e4-9dde-e6eac223396e": {
           "name": "Rozgrzewka"
         },
@@ -1199,6 +1577,9 @@
         "dc47da0d-484b-481e-bfaf-17f9de229688": {
           "name": "Zakończenie"
         },
+        "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
+          "name": "Wersja rozszerzona"
+        },
         "82c8173b-040e-41ec-b6ca-f1369b308268": {
           "name": "Rozgrzewka"
         },
@@ -1207,6 +1588,9 @@
         },
         "b320db90-d678-4814-9003-f7569a443c19": {
           "name": "Zakończenie"
+        },
+        "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
+          "name": "Wersja rozszerzona"
         },
         "eb0992db-a3cc-4724-a525-6a0c1d88c700": {
           "name": "Rozgrzewka"
@@ -1231,6 +1615,15 @@
         },
         "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
           "name": "Dzień 2 - Proces projektowania"
+        },
+        "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
+          "name": "Dzień 3 - Zbuduj swój projekt"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Dzień 4 i 5 - Zaprezentuj swój projekt"
+        },
+        "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
+          "name": "Wersja rozszerzona"
         }
       }
     }

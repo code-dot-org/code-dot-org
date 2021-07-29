@@ -6935,6 +6935,16 @@ se:
           lessons:
             lesson-22:
               name: Designe Data Čoakkaldaga
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Designe Data Čoakkaldaga
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         kodea-pd-2021:
           lessons:
             Getting Started:

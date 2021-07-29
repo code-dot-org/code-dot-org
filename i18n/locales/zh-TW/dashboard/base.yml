@@ -168,8 +168,8 @@ zh-TW:
     additional_information: "我們還需要一些其他資訊來完成你的註冊。"
     user_type_button: "更新帳戶類型"
     user_type_label: "帳戶類型"
-    user_type_teacher: "教師"
     user_type_student: "學生"
+    user_type_teacher: "教師"
     field_is_required: "必填"
     accept_terms: "你必須同意才能建立帳戶。"
     error: "發生錯誤。"
@@ -579,6 +579,7 @@ zh-TW:
     make_my_own_app: '製作自己的 app'
     how_it_works: '它是如何運作的（檢視程式碼）'
     try_hour_of_code: '試試「一小時玩程式」！'
+    store: '商店'
   reference_area:
     title: '需要幫忙？'
     subtitle: '看看這些影片和提示'
@@ -989,9 +990,8 @@ zh-TW:
       school_city: '學校所在城市'
       school_country: '學校所屬國家'
       colombian_school_city: '學校所在城市'
-      colombian_school_department: '學校系所'
       colombian_school_municipality: '學校當局'
-      colombian_school_name: '學校名稱'
+      colombian_chilean_school_name: '學校名稱'
       ages: '你今年教授的學生的年齡？'
       subjects: '你今年教授的科目？'
       resources: '你使用哪些資源來教授計算機科學？'

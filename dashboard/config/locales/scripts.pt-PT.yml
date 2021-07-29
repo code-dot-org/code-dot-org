@@ -3867,8 +3867,6 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
-            lessonGroup-4:
-              display_name: Teste
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -3917,6 +3915,14 @@ pt:
           lesson_groups:
             cspSurvey2020:
               display_name: Inquérito
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Inquérito
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Inquérito
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -3925,10 +3931,6 @@ pt:
             Next Steps:
               key: Próximos Passos
               name: Próximos Passos
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Ferramentas
         self-paced-pl-csd6-2021:
           lessons:
             lesson-3:
@@ -3959,3 +3961,7 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Teste
