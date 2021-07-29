@@ -13,7 +13,6 @@
 version: "3"
 services:
   site:
-    build: ./dockerfiles
     image: codedotorg/code-dot-org
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
