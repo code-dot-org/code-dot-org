@@ -3,35 +3,33 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {CompileStatus} from './constants';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import StylizedBaseDialog, {
+  FooterButton
+} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 
 export default class CommitDialog extends React.Component {
   state = {
-    filesToCommit: [],
-    commitNotes: null
+    filesToBackpack: [],
+    commitNotes: null,
+    showCompileStatus: false
   };
 
-  renderFooter = buttons => {
+  renderFooter = () => {
     let compileStatusContent = '';
-    switch (this.props.compileStatus) {
-      case CompileStatus.LOADING:
-        compileStatusContent = i18n.compiling();
-        break;
-      case CompileStatus.SUCCESS:
-        compileStatusContent = [
-          <FontAwesome
-            key="icon"
-            icon="check-circle"
-            className="fa-2x"
-            style={styles.iconSuccess}
-          />,
-          <span key="text">{i18n.allFilesCompile()}</span>
-        ];
-        break;
-      case CompileStatus.ERROR:
-        compileStatusContent = i18n.compileFailed();
-        break;
+    let commitText = i18n.commit();
+    const isCommitButtonDisabled = !this.state.commitNotes;
+    if (this.state.filesToBackpack.length > 0) {
+      commitText = i18n.commitAndSave();
+    }
+    if (this.state.showCompileStatus) {
+      switch (this.props.compileStatus) {
+        case CompileStatus.LOADING:
+          compileStatusContent = i18n.compiling();
+          break;
+        case CompileStatus.ERROR:
+          compileStatusContent = i18n.compileFailed();
+          break;
+      }
     }
 
     return [
@@ -41,24 +39,56 @@ export default class CommitDialog extends React.Component {
       >
         {compileStatusContent}
       </div>,
-      <div key="buttons">{buttons}</div>
+      <div key="buttons">
+        <FooterButton
+          key="cancel"
+          type="cancel"
+          text={i18n.cancel()}
+          onClick={this.props.handleClose}
+        />
+        ,
+        <FooterButton
+          id="confirmationButton"
+          key="confirm"
+          text={commitText}
+          disabled={isCommitButtonDisabled}
+          color="green"
+          onClick={this.commitAndSaveToBackpack}
+        />
+      </div>
     ];
   };
 
-  toggleFileToCommit = filename => {
-    let filesToCommit = [...this.state.filesToCommit];
-    const fileIdx = filesToCommit.findIndex(name => name === filename);
-    if (fileIdx === -1) {
-      filesToCommit.push(filename);
+  commitAndSaveToBackpack = () => {
+    this.props.handleCommit(this.state.commitNotes);
+    this.saveToBackpack();
+  };
+
+  // This will communicate with the backpack API
+  saveToBackpack = () => {
+    // do something here to save the files in this.state.filesToBackpack
+    // show the error message if the files don't compile
+    if (this.props.compileStatus !== CompileStatus.SUCCESS) {
+      this.setState({showCompileStatus: true});
     } else {
-      filesToCommit.splice(fileIdx, 1);
+      this.props.handleClose();
+    }
+  };
+
+  toggleFileToBackpack = filename => {
+    let filesToBackpack = [...this.state.filesToBackpack];
+    const fileIdx = filesToBackpack.indexOf(filename);
+    if (fileIdx === -1) {
+      filesToBackpack.push(filename);
+    } else {
+      filesToBackpack.splice(fileIdx, 1);
     }
 
-    this.setState({filesToCommit});
+    this.setState({filesToBackpack});
   };
 
   render() {
-    const {filesToCommit, commitNotes} = this.state;
+    const {commitNotes, filesToBackpack} = this.state;
     const {isOpen, files, handleClose, handleCommit} = this.props;
 
     return (
@@ -70,15 +100,15 @@ export default class CommitDialog extends React.Component {
           <CommitDialogBody
             files={files.map(name => ({
               name,
-              commit: filesToCommit.includes(name)
+              commit: filesToBackpack.includes(name)
             }))}
             notes={commitNotes}
-            onToggleFile={this.toggleFileToCommit}
+            onToggleFile={this.toggleFileToBackpack}
             onChangeNotes={commitNotes => this.setState({commitNotes})}
           />
         }
         renderFooter={this.renderFooter}
-        handleConfirmation={() => handleCommit(filesToCommit, commitNotes)}
+        handleConfirmation={() => handleCommit(commitNotes)}
         handleClose={handleClose}
         footerJustification="space-between"
       />
@@ -101,8 +131,19 @@ CommitDialog.defaultProps = {
 function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
   return (
     <div>
+      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
+        {i18n.commitNotes()}
+      </label>
+      <textarea
+        id="commit-notes"
+        placeholder={i18n.commitNotesPlaceholder()}
+        onChange={e => onChangeNotes(e.target.value)}
+        style={styles.textarea}
+      >
+        {notes}
+      </textarea>
       <div style={{...styles.bold, ...styles.filesHeader}}>
-        {i18n.includeFiles()}
+        {i18n.saveToBackpack()}
       </div>
       {files.map(file => (
         <div key={file.name} style={styles.fileRow}>
@@ -118,17 +159,6 @@ function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
           />
         </div>
       ))}
-      <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
-        {i18n.commitNotes()}
-      </label>
-      <textarea
-        id="commit-notes"
-        placeholder={i18n.commitNotesPlaceholder()}
-        onChange={e => onChangeNotes(e.target.value)}
-        style={styles.textarea}
-      >
-        {notes}
-      </textarea>
     </div>
   );
 }

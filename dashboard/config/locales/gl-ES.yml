@@ -154,8 +154,8 @@ gl:
       de creacción da conta.
     user_type_button: Actualizar tipo de conta
     user_type_label: Tipo de conta
-    user_type_teacher: Profesor
     user_type_student: Estudante
+    user_type_teacher: Profesor
     field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
@@ -774,7 +774,7 @@ gl:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
-      colombian_school_name: Nome da escola
+      colombian_chilean_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino

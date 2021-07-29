@@ -184,8 +184,8 @@ ko:
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
     user_type_button: 계정 유형 업데이트
     user_type_label: 계정 유형
-    user_type_teacher: 선생님
     user_type_student: student
+    user_type_teacher: 선생님
     field_is_required: 이(가) 필요합니다.
     accept_terms: 계정 만들기에 동의해야 합니다.
     error: 오류가 발생하였습니다.
@@ -1102,9 +1102,8 @@ ko:
       school_city: 학교 도시
       school_country: 학교 국가
       colombian_school_city: 학교 도시
-      colombian_school_department: 학교 부서
       colombian_school_municipality: 학교 도시
-      colombian_school_name: 학교 이름
+      colombian_chilean_school_name: 학교 이름
       ages: 올해 몇 세 아동을 가르치세요?
       subjects: 올해 어느 과목을 가르치세요?
       resources: 다음 CS 교육 리소스 중 어느 것을 사용하세요?

@@ -94,7 +94,7 @@ Malala, Stephen Curry, Shakira 등의 사진이 들어 있는 새 포스터가 �
 
 널리 알리고, 이벤트를 주최하고 지역 학교에 가입하도록 요청하세요. 또는 직접 아워오브코드를 해보세요 -- 기초를 배움으로써 누구나 유익함을 얻을 수 있습니다.
 
-http://hourofcode.com/{{ country }}에서 시작하세요. <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -134,7 +134,7 @@ http://hourofcode.com/{{ country }}에서 시작하세요. <br />
 
 [타운/도시명]에서 교육의 미래를 바꿀 기회입니다.
 
-자세한 내용은 http://hourofcode.com/{{ country }}을 참조하고 입소문이 나도록 도와주세요. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

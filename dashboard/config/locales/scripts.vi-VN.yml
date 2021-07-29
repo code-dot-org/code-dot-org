@@ -13476,6 +13476,16 @@ vi:
           lessons:
             lesson-22:
               name: Bộ sưu tập Thiết kế dữ liệu
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Bộ sưu tập Thiết kế dữ liệu
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         kodea-pd-2021:
           lessons:
             Getting Started:

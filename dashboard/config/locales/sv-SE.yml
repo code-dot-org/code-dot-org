@@ -141,8 +141,8 @@ sv:
       dig.
     user_type_button: Uppdatera kontotyp
     user_type_label: Kontotyp
-    user_type_teacher: Lärare
     user_type_student: Student
+    user_type_teacher: Lärare
     field_is_required: krävs
     accept_terms: Du måste godkänna för att skapa ett konto
     email_preference_question: Får vi skicka e-post till dig med nyheter om våra kurser,
@@ -931,7 +931,7 @@ sv:
       email: E-post
       school_name: Skolnamn
       school_country: Skolans land
-      colombian_school_name: Skolnamn
+      colombian_chilean_school_name: Skolnamn
     form_entries:
       gender:
         male: Man

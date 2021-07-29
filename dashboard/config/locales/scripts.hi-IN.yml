@@ -2315,6 +2315,7 @@ hi:
             CSP Student Post-Course Survey:
               name: CSP छात्रों का कोर्स के बाद का सर्वेक्षण
         CSDU3-Draft:
+          description_short: प्रोग्रामिंग
           lessons:
             Booleans and Conditionals:
               name: बूलियन्स और सापेक्ष
@@ -2385,6 +2386,7 @@ hi:
             What to Expect:
               name: क्या अपेक्षा की जाए
         TEMP CSD Unit 3:
+          description_short: प्रोग्रामिंग
           lessons:
             Drawing in Game Lab:
               name: गेम लैब में चित्रित करना
@@ -2754,6 +2756,8 @@ hi:
               name: लूप्स अनप्लग्ड
             Persistence & Frustration:
               name: दृढ़ता और निराशा
+            Programming:
+              name: प्रोग्रामिंग
             Programming Unplugged:
               name: प्रोग्रामिंग अनप्लग्ड
             Sequences & Algorithms:
@@ -2818,6 +2822,8 @@ hi:
               name: और कंप्यूटर साइंस
             Persistence & Frustration:
               name: दृढ़ता और निराशा
+            Programming:
+              name: प्रोग्रामिंग
             Programming Unplugged:
               name: प्रोग्रामिंग अनप्लग्ड
             Sequences & Algorithms:
@@ -25232,6 +25238,16 @@ hi:
           lessons:
             lesson-22:
               name: डेटा संकलन डिज़ाइन करना
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सर्वेक्षण
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: डेटा संकलन डिज़ाइन करना
+          lesson_groups:
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -25359,3 +25375,5 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: संसाधन
+        dlp21-csp-mod1:
+          title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
