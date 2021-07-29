@@ -471,7 +471,7 @@ class JavalabEditor extends React.Component {
     this.props.setRenderedHeight(newHeight);
   };
 
-  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 200);
+  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 100);
 
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
