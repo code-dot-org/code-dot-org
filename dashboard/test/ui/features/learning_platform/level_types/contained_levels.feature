@@ -11,7 +11,7 @@ Scenario: Applab with free response contained level
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
-  hen I press keys "This is my answer" for element ".response"
+  Then I press keys "This is my answer" for element ".response"
   And I see no difference for "answer entered"
   Then I press "runButton"
   And I see no difference for "level run"
