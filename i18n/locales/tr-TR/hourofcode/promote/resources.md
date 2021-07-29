@@ -92,7 +92,7 @@ Bu yıl daha da büyütelim. Hour of Code {{ campaign_date/year }} etkinliğine 
 
 Organizasyondan bahsedin. Bir etkinlik düzenleyin. Yerel okullardan kaydolmalarını isteyin. Veya Hour of Code'u kendiniz deneyin. Herkes temelleri öğrenerek kendine fayda sağlayabilir.
 
-http://hourofcode.com/{{ country }} adresinden başlayın<br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ Bu nedenle tüm okulumuz Bilgisayar Bilimi Eğitim Haftası boyunca ({{ campaign
 
 Bu, [SEMT/ŞEHİR ADI] sınırları içindeki eğitimin geleceğini değiştirmek için bir şans.
 
-Detaylar için http://hourofcode.com/{{ country }} adresini ziyaret edin ve organizasyonu yaymamıza yardım edin.<br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

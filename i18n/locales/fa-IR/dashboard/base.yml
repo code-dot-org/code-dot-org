@@ -114,8 +114,8 @@ fa:
     mismatch_password: "دو کلمه عبور واردشده یکی نیستند"
     additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
     user_type_label: "نوع حساب کاربری"
-    user_type_teacher: "دبیر"
     user_type_student: "دانش آموز"
+    user_type_teacher: "دبیر"
     field_is_required: "%s لازم است"
     error: "خطایی رخ داد."
     email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
@@ -642,7 +642,7 @@ fa:
       last_name: 'نام خانوادگی'
       email: 'ایمیل'
       school_name: 'نام مدرسه'
-      colombian_school_name: 'نام مدرسه'
+      colombian_chilean_school_name: 'نام مدرسه'
     form_entries:
       gender:
         male: 'مرد'

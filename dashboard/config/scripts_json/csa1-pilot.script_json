@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 16:48:04 UTC",
+    "serialized_at": "2021-07-28 22:34:00 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -120,9 +120,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students modify programs using three return commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Booleans, conditionals, and return statements are introduced through `if` statements and `Painter` return commands for students to practice using conditional logic in their programs. These concepts are discussed in more detail in future lessons and reinforced throughout the course. Students also develop debugging strategies by identifying syntax and logic errors.",
-        "preparation": "* Create a debugging wall for your class. You can designate a physical space in your classroom or make a digital version using slides or an interactive whiteboard.\n* If using a physical debugging wall, prepare 3-5 sticky notes for each pair of students\n",
-        "student_overview": "Now that you know how to use action commands, you help the `Painter` make decisions about how to interact with The Neighborhood using information-gathering commands. You also learn about debugging and identify strategies to use throughout the year.\n"
+        "overview": "Students modify programs using three Boolean methods: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Students use Boolean methods and `if` statements to apply conditional logic in their programs. Students develop debugging strategies by identifying syntax and logic errors in their code.",
+        "preparation": "* Create a Debugging Wall by either designating a physical space in your classroom or making a digital version using a presentation program or an interactive whiteboard.\n* If using a physical Debugging Wall, gather 1-2 sticky notes for each pair of students.",
+        "student_overview": "Now that you know how to call methods, you help the `Painter` make decisions about how to interact with The Neighborhood using methods that give information. You identify syntax and logic errors as well as debugging strategies to use throughout the year."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -138,8 +138,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "The relationship between classes and objects is reinforced as students create their own objects. Students are introduced to creating objects both with and without parameters. Students begin to consider what makes 'good code' and practice writing efficient solutions.",
-        "preparation": "If using, print a copy of the Parameterized Constructors Guided Notes for each student.",
+        "overview": "The relationship between classes and objects is reinforced as students create their own objects. Students are introduced to creating objects both with and without parameters. Students begin to consider what makes \"good code\" and practice writing efficient solutions.",
+        "preparation": "* Print copies of the Parameterized Constructors Guided Notes (one for each student) (optional)",
         "student_overview": "In this lesson, you learn how to make `Painter` objects by specifying where the `Painter` starts, what direction the `Painter` is facing, and the paint color. You also consider what makes \"good code\" and practice writing efficient code."
       },
       "seeding_key": {
@@ -156,9 +156,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "Students have learned a lot in their first week! In this lesson, students are introduced to the `while` loop and additional methods to control the movement of the `Painter` in The Neighborhood. Students combine their knowledge of methods, constructors, and control structures to develop solutions for increasingly complex puzzles",
-        "preparation": "* Print a copy of Vocabulary Draw Activity Guide, which includes rules and slips for each group of students\n(Optional) Cut out the strips for the vocabulary game before class\n* Prepare necessary materials for each group: blank paper or a whiteboard and marker for each group, pair of scissors if not pre-cutting vocabulary strips\n* Have sticky notes available for all students\n",
-        "student_overview": "You have practiced moving the `Painter` and using conditionals to help the `Painter` make decisions about interacting with The Neighborhood. What if you could have the `Painter` repeat commands? In this lesson, you learn to use a `while` loop with some new commands to move the `Painter` around The Neighborhood."
+        "overview": "Students are introduced to the `while` loop and additional methods to control the movement of the `Painter` in The Neighborhood. Students combine their knowledge of methods, constructors, and control structures to develop solutions for increasingly complex problems.",
+        "preparation": "* Print copies of the Vocabulary Draw handout (one per group of students)\n* Cut out the Vocabulary Draw strips (optional)\n* Gather a pair of scissors for each group of students if not preparing the Vocabulary Draw strips before class\n* Gather blank paper or a whiteboard, marker for each group of students",
+        "student_overview": "You have practiced moving the `Painter` and using conditionals to help the `Painter` make decisions about interacting with The Neighborhood. What if you could have the `Painter` repeat commands? You use a `while` loop and new methods to navigate the `Painter` around The Neighborhood."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -638,7 +638,7 @@
       "key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -652,7 +652,7 @@
       "key": "03fbb47e-cb3b-4375-ac85-85b04d13fb3a",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2057,14 +2057,8 @@
       "key": "62b20439-8e72-482f-ae6c-b65aba049d53",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students should notice several syntax errors in this code that will prevent the code from running. Use the word “syntax” to refer back to prior learning from Lesson 3. Ask students to identify each error and what strategies they used to help them find errors.",
-        "name": "Debugging: Predict",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Involve multiple voices in the conversation by asking different students to give one error each. To avoid putting single students on the spot, call on pairs and allow the pair to choose who shares out."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students notice several syntax errors in this code that will prevent the code from running. Students identify each error and what strategies they used to help them find errors.",
+        "name": "Identifying Bugs"
       },
       "seeding_key": {
         "activity_section.key": "62b20439-8e72-482f-ae6c-b65aba049d53",
@@ -2075,7 +2069,7 @@
       "key": "e31974ac-b8d4-4765-9cd6-f76d12652ee1",
       "position": 2,
       "properties": {
-        "description": "As we work through the activities today, you’ll likely encounter bugs of your own. While you work, use your journal to make note of any bugs you encounter and the strategies you used to debug your code. We’ll talk about debugging in more detail later. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> These errors you saw in that code segment are also referred to as bugs.\n\nAs we work through the activities today, you’ll likely encounter bugs of your own. While you work, make note of any bugs you encounter and the strategies you use to fix your code.",
         "remarks": true
       },
       "seeding_key": {
@@ -2084,147 +2078,150 @@
       }
     },
     {
-      "key": "963e87ad-f513-4f33-932d-234733611167",
+      "key": "a32f7cfe-5ef5-4332-b0d8-b9257fb5fd11",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review that yesterday’s commands told our `Painter` to do something.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss that today’s commands will give our `Painter` information in the form of `true` or `false`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight the three information gathering commands they’ll work with today.\n* Show the \"Conditionals\" video. This video covers the basic concept of a conditional, as well as outlines the structure of an `if` statement, which students will be using today.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to review the structure of the basic `if` statement on the slide. Draw special attention to the fact that the code inside the `if` statement will only run if the command inside the `if( )` returns as `true`. Highlight that each of our information gathering commands will give us a piece of information, a Boolean that is either `true` or `false`. The `if` statement allows us to do something with that piece of information.",
-        "duration": "6",
-        "name": "Introduction to New Commands"
+        "description": "Yesterday, we worked with five methods to have the `Painter` move and work with paint in The Neighborhood. When we called these methods, we told our `Painter` objects to do something.\n\nToday, we will work with three new methods that give our `Painter` objects information in the form of either `true` or `false`, or Boolean values.",
+        "duration": "10",
+        "name": "Introduction to New Methods"
       },
       "seeding_key": {
-        "activity_section.key": "963e87ad-f513-4f33-932d-234733611167",
+        "activity_section.key": "a32f7cfe-5ef5-4332-b0d8-b9257fb5fd11",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "585f1a7e-f40a-4526-831e-f19c14b7ff85",
+      "key": "c9700c23-1966-4b44-be83-5335c09afe65",
       "position": 2,
       "properties": {
-        "description": "Let’s review the three commands we’ll be working with today in more detail.",
-        "duration": "10",
-        "name": "Information Gathering Commans",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the new methods and explain that the methods are named to sound like yes/no questions."
       },
       "seeding_key": {
-        "activity_section.key": "585f1a7e-f40a-4526-831e-f19c14b7ff85",
+        "activity_section.key": "c9700c23-1966-4b44-be83-5335c09afe65",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "26a0e83b-c1bd-4583-a08c-632539e36ab7",
+      "key": "990b3d69-cda7-4a15-b19d-3544f2176b8c",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Showcase the `isOnPaint()` command. Highlight a scenario where a `Painter` may need to check if they are on paint before they scrape paint -- maybe they want to create a mural by removing paint, or they need to clean up The Neighborhood.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the `isOnBucket()` command.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "\nWhile it is tempting to go into details about conditionals, Booleans, and return types, the goal here is to provide a basic introduction to these concepts. Keep the conversation around this slide about the basic if statement displayed, rather than going into too much detail.\n\n"
-          }
-        ]
+        "description": "Since these methods give us information about whether or not the `Painter` is on paint or on a paint bucket or can move, we can use these methods with `if` statements so the `Painter` can make decisions about what actions to take. Let's take a look at how `if` statements work.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "26a0e83b-c1bd-4583-a08c-632539e36ab7",
+        "activity_section.key": "990b3d69-cda7-4a15-b19d-3544f2176b8c",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
+      "key": "282f7114-ba13-4ff5-8150-7616c9829cdc",
       "position": 4,
       "properties": {
-        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio. Remind them that they should use an if statement in each level in addition to the appropriate information gathering command. \n",
-        "progression_name": "Information Gathering Commands"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditionals video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the structure of an `if` statement."
       },
       "seeding_key": {
-        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
+        "activity_section.key": "282f7114-ba13-4ff5-8150-7616c9829cdc",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "549747e6-ed66-41cf-b266-d6e7f01e7873",
+      "key": "ea6cfc2e-aa59-49b5-80bf-3a8324948784",
       "position": 5,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Pair programming allows students to work with a partner to create a program. One student is the Driver, or the one using the computer. The other student is the Navigator, or the one guiding the Driver on what to code. [This pair programming video](https://www.youtube.com/watch?v=q7d_JtyCq1A&t=1s) provides tips for implementing this strategy.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels."
-          }
-        ]
+        "description": "`if` statements, or conditional statements, are a key component of algorithms.\n\nAn algorithm is a set of instructions to solve a problem or accomplish a task.  We're going to practice writing algorithms to help the `Painter` navigate The Neighborhood.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "549747e6-ed66-41cf-b266-d6e7f01e7873",
+        "activity_section.key": "ea6cfc2e-aa59-49b5-80bf-3a8324948784",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "be0906d5-5ad3-42f3-b39b-0c17855a375d",
+      "key": "a8736aa6-e165-463b-a618-7e4c29dfef85",
       "position": 6,
       "properties": {
-        "description": "In addition to `Painter`s, buckets, and paint, The Neighborhood also has walls, known as barriers. Our `Painter`, like any human, cannot walk through these barriers, so we need a way to check our surroundings.",
+        "description": "Let’s review the three methods we’ll be working with today in more detail.",
+        "duration": "10",
+        "name": "Methods That Return",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "be0906d5-5ad3-42f3-b39b-0c17855a375d",
+        "activity_section.key": "a8736aa6-e165-463b-a618-7e4c29dfef85",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "f5edb606-9830-4a63-8e0a-de634970596c",
+      "key": "cd301d4d-fdfe-4ab3-933c-45f7e3a558cf",
       "position": 7,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open The Neighborhood and run code on Level 3 to show a `Painter` trying to turn into a barrier. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that the `canMove()` command helps our `Painter` to know whether there is a barrier in front of them (i.e. - they can move!).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Continuing to work in their pairs, instruct students to complete Level 3 on Code Studio.\n",
-        "progression_name": "Information Gathering Commands"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5edb606-9830-4a63-8e0a-de634970596c",
-        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
-      }
-    },
-    {
-      "key": "99e5ac2d-ccd2-4109-b365-d5721fbbd798",
-      "position": 8,
-      "properties": {
+        "description": "**Do This:** Introduce the `isOnPaint()` and `isOnBucket()` methods.\n* The `isOnPaint()` method gives a `true` value if there is paint on the point that the `Painter` is currently standing on, and `false` otherwise.\n* The `isOnBucket()` method gives a `true` value if there is a paint bucket on the point that the `Painter` is currently standing on, and `false` otherwise.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+            "markdown": "While it is tempting to go in detail about conditionals, Booleans, and return types, the goal here is to provide a basic introduction to these concepts. Focus the conversation around the basic structure of an `if` statement rather than going into too much detail."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "99e5ac2d-ccd2-4109-b365-d5721fbbd798",
+        "activity_section.key": "cd301d4d-fdfe-4ab3-933c-45f7e3a558cf",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "4608dfa8-4e64-4405-a19b-fa98a094a55b",
-      "position": 9,
+      "key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f",
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think back to the warm-up and your experience so far today with our new commands. What errors have you run into? What are some strategies you’ve used to identify bugs? How have you fixed them?*\n\n**Discussion Goal:** Students should share out both bugs they’ve encountered and ways that they’ve debugged their code. The goal of this discussion is to highlight that everyone has encountered bugs and that they’re a normal part of being a software engineer. ",
-        "duration": "9",
-        "name": "Debugging Wall"
+        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio using Pair Programming. Remind them that they should use an `if` statement in each level in addition to the appropriate Boolean method. ",
+        "progression_name": "Boolean Methods"
       },
       "seeding_key": {
-        "activity_section.key": "4608dfa8-4e64-4405-a19b-fa98a094a55b",
+        "activity_section.key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "11aa59de-1845-484d-8ab9-71d3b33578f1",
-      "position": 10,
+      "key": "d05b92dc-5267-479c-bf21-d28c3af1bbaa",
+      "position": 9,
       "properties": {
-        "description": "Having bugs in your program is a normal part of being a software engineer - even professional software engineers daily discover bugs in their code! Even though bugs can be frustrating, they also can always be found and fixed. Throughout this semester, we’ll have a classroom debugging wall where you can share bugs you’ve encountered and the ways that you’ve fixed them. We’re going to start our wall today.",
+        "description": "Since our `Painter`, like any human, cannot walk through the barriers we encounter in The Neighborhood, we need a way to check our surroundings.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "11aa59de-1845-484d-8ab9-71d3b33578f1",
+        "activity_section.key": "d05b92dc-5267-479c-bf21-d28c3af1bbaa",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "8a8b4e7a-cec7-4c79-a4e0-bba36abb0977",
+      "key": "0525161e-82cf-4658-b588-c374fe247db4",
+      "position": 10,
+      "properties": {
+        "description": "**Do This:** Introduce the `canMove()` method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove()` method gives a `true` value if there is not a barrier in the point directly in front of the `Painter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove(String direction)` method gives a `true` value if there is not a barrier in the direction specified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue to use Pair Programming to complete Level 3 on Code Studio.",
+        "progression_name": "Checking for Barriers"
+      },
+      "seeding_key": {
+        "activity_section.key": "0525161e-82cf-4658-b588-c374fe247db4",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "837e217f-5177-42bb-9c01-bf165d52d00c",
       "position": 11,
       "properties": {
-        "description": "**Distribute:** Give each student pair three to five sticky notes.\n\n**Do This:** \n* Have students write out one or two different bugs they’ve encountered and the strategy they used to debug. Each sticky note should include both the bug and the strategy/solution. If you are using a digital debugging wall, share the link with students and ensure that sharing settings are set so that students can edit the document.\n* Direct students to add their sticky notes to the classroom Debugging Wall and to take a moment to read over other bugs and solutions.\n",
+        "description": "You probably ran into some bugs writing your code, and that's ok! Having bugs in your program is a normal part of being a software engineer - even professional software engineers discover bugs in their code every day. Even though bugs can be frustrating, they also can always be found and fixed.\n\nThroughout this course, we will have a classroom Debugging Wall where you can share the strategies you used to fix your errors. We’re going to start our Debugging Wall today.",
+        "duration": "15",
+        "name": "Debugging Strategies",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "837e217f-5177-42bb-9c01-bf165d52d00c",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "a09b77f4-acc6-4374-aacf-6d4d1edd9307",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term debugging.\n\n**Distribute:** Give each pair of students one to two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Debugging Wall. Have students think about a bug they encountered today and write down a strategy they used to fix the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to add their sticky notes to the Debugging Wall under the appropriate category and take a moment to read over other strategies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2233,47 +2230,48 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8a8b4e7a-cec7-4c79-a4e0-bba36abb0977",
+        "activity_section.key": "a09b77f4-acc6-4374-aacf-6d4d1edd9307",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "69313d6d-eb7b-4742-8eae-33990a61c67c",
-      "position": 12,
+      "key": "7570e54c-365a-4446-9c32-1e19d094ce26",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now that we know we have some strategies to debug, we’re going to practice in The Neighborhood. There are two primary types of errors we’ll focus on debugging today: syntax errors and logic errors.",
+        "description": "Now that we know we have some strategies to debug, we’re going to practice in The Neighborhood. There are two primary types of errors we’ll focus on debugging today: syntax errors and logic errors.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "69313d6d-eb7b-4742-8eae-33990a61c67c",
+        "activity_section.key": "7570e54c-365a-4446-9c32-1e19d094ce26",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
     {
-      "key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
-      "position": 13,
-      "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to give an example of a logic error they may have encountered.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pair students and instruct them to complete the Debugging Challenge Choice Level 4 on Code Studio. There are two options for them to choose from, and each contains both logic and syntax errors.\n",
-        "progression_name": "Debugging Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
-        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
-      }
-    },
-    {
-      "key": "2bde556a-e203-4ecd-80c8-0216db7d86c1",
+      "key": "3ae1bd30-b76c-4c81-a900-2509edbccec5",
       "position": 14,
       "properties": {
+        "description": "**Do This:** Introduce syntax and logic errors.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to describe an example of a logic error they may have encountered.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 4 on Code Studio using Pair Programming. There are two options for them to choose from, and each contains both logic and syntax errors.",
+        "progression_name": "Debugging Challenge",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "With choice levels, students may choose to complete one or both challenges. If students finish their first challenge early, encourage them to try the second."
+            "markdown": "On Choice Levels, students can choose to complete one or more challenges. If students finish their first challenge early, encourage them to try another one."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2bde556a-e203-4ecd-80c8-0216db7d86c1",
+        "activity_section.key": "3ae1bd30-b76c-4c81-a900-2509edbccec5",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "c0fd5582-a19e-412a-af97-0bae2a86c705",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think back to the warm-up and your experience today with our new methods. What errors did you run into?*\n* *What are some strategies you used to identify bugs?*\n* *How did you fix them?*\n\n**Discussion Goal:** Students share bugs they encountered and ways that they debugged their code. Students should realize that everyone encounters bugs when writing code and that debugging is a normal part of software engineering."
+      },
+      "seeding_key": {
+        "activity_section.key": "c0fd5582-a19e-412a-af97-0bae2a86c705",
         "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
       }
     },
@@ -2281,7 +2279,8 @@
       "key": "7bffb895-ac72-4c57-b754-6f801d98dbc9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?",
+        "name": "Closing the Loops",
         "tips": [
           {
             "type": "teachingTip",
@@ -2298,7 +2297,7 @@
       "key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
@@ -2309,7 +2308,7 @@
       "key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check For Understanding",
         "progression_name": "Check For Understanding"
       },
@@ -2322,9 +2321,8 @@
       "key": "d37c089c-aa3b-4657-83d9-09b8ce847745",
       "position": 1,
       "properties": {
-        "description": "So far, we’ve talked about a class as a blueprint or a template for creating an object. Many different objects can be created from a single class definition. \n\nBut if there’s no class?\n\n\"No\" ______, \n\nRight - no object! Today it’s going to be important for us to leverage that relationship. We will be using the blueprint of a class to create objects.\n",
-        "duration": "5",
-        "name": "Class - Objects Review",
+        "description": "So far, we’ve talked about a class as a blueprint or a template for creating an object. Many different objects can be created from a single class definition. \n\nBut if there’s no class?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"No\" ______, \n\nRight - no object! Today it’s going to be important for us to leverage that relationship. We will be using the blueprint of a class to create objects.\n",
+        "name": "Classes and Objects Review",
         "remarks": true
       },
       "seeding_key": {
@@ -2333,19 +2331,19 @@
       }
     },
     {
-      "key": "5ef3f2a6-40a3-4df8-8ded-b8ecd80cb33c",
+      "key": "7ac9f14f-64a8-4370-b202-ca11bd32f252",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Use the diagram to explain the outline of the Superhero class. Highlight:\n  * The class name is at the top and is capitalized.\n  * The items in the section below are the characteristics of the Superhero class.\n  * When we create an object, we give it a name and specific values or \"settings\" for each characteristic. \n* Direct students to complete the task on the slide independently. They should select a specific value for each characteristic listed on the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the connection between your object and the Superhero class? What are some features of this relationship that are visible in your diagram?*\n\n**Discussion Goal:** Keep an ear out for:\n* The vocabulary “instance of”\n* The object has the same characteristic as the class\n* All characteristics have been given a value\n\nThis discussion helps prepare students to make connections between classes and objects and the fact that not all instances of an object have the exact same attributes. This will appear later in the lesson when students are creating objects with parameters. There is no need for students to share with the whole class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the diagram used to outline the `Superhero` class and explain:\n* The class name is at the top and is capitalized.\n* The items in the section below are the attributes of the `Superhero` class.\n* To create an object, give it a name and specific values for each attribute. \n\n**Do This:** Direct students to complete the task independently. Students select specific values for each attribute listed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the connection between your object and the `Superhero` class?*\n* *What are some features of this relationship that are visible in your diagram?*\n\n**Discussion Goal:** Students note that the objects have the same attributes as the class and are given specific values. Students should refer to their objects as instances of the `Superhero` class.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This slide visualizes a class in a style similar to a [UML class diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-uml/). The goal is NOT to introduce UML but to offer the visual so that it will be familiar when they create their own classes in the future.\n\nYou may hear students identify characteristics that they *don't* want, i.e., “My superhero doesn’t have a cape.\" If it comes up, this is a great place to foreshadow future lessons without going into detail with a response along the lines of, “That’s a really interesting concept, and we’ll address it later in this course! For now, you can write ‘none’ next to capeColor.”\n"
+            "markdown": "The diagram used to outline the `Superhero` class is similar to UML class diagrams used in software engineering to visualize the structure of a class and relationships between multiple classes. The goal is NOT to introduce UML but to offer the visual so that it will be familiar when they create their own classes in the future.\n\nYou may hear students identify characteristics that they don't want (i.e., “My superhero doesn’t have a cape.\") for their `Superhero` object. If it comes up, this is a great place to foreshadow future lessons without going into detail by saying something like, *“That’s a really interesting concept, and we’ll address it later in this course! For now, you can write `\"none\"` next to `capeColor`.”*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "5ef3f2a6-40a3-4df8-8ded-b8ecd80cb33c",
+        "activity_section.key": "7ac9f14f-64a8-4370-b202-ca11bd32f252",
         "lesson_activity.key": "20315198-b4d8-45b6-9135-39b4085a3b92"
       }
     },
@@ -2353,8 +2351,8 @@
       "key": "5e04ea07-3d7b-45df-ba47-5bca6bd44af4",
       "position": 1,
       "properties": {
-        "description": "Today we’re going to focus on creating new objects from the `Painter` class. ",
-        "duration": "7",
+        "description": "Today we’re going to focus on creating new objects from the `Painter` class.",
+        "duration": "10",
         "name": "No-Argument Constructors and Objects",
         "remarks": true
       },
@@ -2364,171 +2362,123 @@
       }
     },
     {
-      "key": "a0da48d6-a320-4ef4-bb89-7b0f17129d51",
+      "key": "9e7bd284-1e8d-4c0a-a28a-2b758c5f5616",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating Objects video. \n\n**Discuss: **  \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the slide with the self-check question. After giving students a minute to consider the question on their own, ask a student to share their answer either with a partner or as a whole group. Click through the animation to highlight the correct answer.\n    * *Which of the following will correctly initialize a Painter object?* \n\n      a. *Painter jes = Painter;*\n\n      b. *Painter jes = new Painter();*\n\n      c. *Painter jes = Painter ();*\n\n      d. *Jes = new painter();*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the correct solution (b) and take a moment to synthesize the information in the video by reviewing the anatomy of the initialization statement.\n\n**Discussion Goal:** This self-check gives students an opportunity to confirm that they remember the constructor syntax before moving on. If they chose a different answer, they have a chance to address their misconception rather than re-learning this information in the future.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating Objects video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question. Give students a minute to consider the question on their own, then ask students to share their answer either with a partner or as a whole group. Click through the animated slide to display the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the solution.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "You may choose to use this as an additional check for understanding by either:\n* Calling on students to identify each component of the statement as a whole class.\n* Directing students to diagram the statement in their journals or on a piece of paper before moving through the slide animation.\n"
+            "markdown": "You may choose to use this as an additional check for understanding by either:\n* Calling on students to identify each component of the statement as a whole class.\n* Directing students to diagram the statement on a piece of paper before clicking through the animated slide."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a0da48d6-a320-4ef4-bb89-7b0f17129d51",
+        "activity_section.key": "9e7bd284-1e8d-4c0a-a28a-2b758c5f5616",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "a08784fa-1792-4619-8898-fa5e01837cb3",
+      "key": "9cef0694-e12c-439d-ac02-46affb1bc3ba",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Transition students to The Neighborhood and instruct them to complete Levels 1 and 2 on Code Studio individually or in pairs.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio individually or using Pair Programming.",
         "progression_name": "No-Argument Constructors"
       },
       "seeding_key": {
-        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3",
+        "activity_section.key": "9cef0694-e12c-439d-ac02-46affb1bc3ba",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "86eeb69e-2051-4faa-a437-39d24e4bc1ba",
+      "key": "b7256ca7-b138-481d-bd16-6f1b8af30fa6",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "86eeb69e-2051-4faa-a437-39d24e4bc1ba",
-        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
-      }
-    },
-    {
-      "key": "b34928fd-5e9b-45c1-9350-897521cf862c",
-      "position": 5,
-      "properties": {
-        "description": "Earlier today, you each created unique Superhero objects with their own characteristics based on the class diagram I showed you. We can do this same thing with our code to make Painters with different starting characteristics.",
-        "duration": "13",
+        "description": "Earlier today, you each created unique `Superhero` objects with their own attributes based on the class diagram I showed you. We can do the same thing with our code to make `Painter` objects with different starting attributes.",
+        "duration": "15",
         "name": "Parameterized Constructors",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "b34928fd-5e9b-45c1-9350-897521cf862c",
+        "activity_section.key": "b7256ca7-b138-481d-bd16-6f1b8af30fa6",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "772cb9e7-b9b1-4003-8941-41683287b7b8",
-      "position": 6,
+      "key": "9a0c6577-d486-4aa8-b33a-1b58fdd65def",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Parameterized Constructors video to the class. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Parameterized Constructors video. ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This video has a lot of vocabulary. Use the optional activity guide as a tool to help students organize this information."
+            "markdown": "This video has a lot of vocabulary. Use the optional Parameterized Constructors Guided Notes to help students organize this information."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "772cb9e7-b9b1-4003-8941-41683287b7b8",
+        "activity_section.key": "9a0c6577-d486-4aa8-b33a-1b58fdd65def",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88",
-      "position": 7,
+      "key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d",
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 through 6 on Code Studio. If students finish early, encourage them to try multiple puzzles in the Level 5 choice group or to help their peers debug. It is important to begin the next part of the activity together for a class discussion.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 5 on Code Studio. If students finish early, encourage them to try multiple challenges on Level 4 or to help their peers debug.",
         "progression_name": "Parameterized Constructors"
       },
       "seeding_key": {
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88",
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "67a66bf6-f52e-4ee9-b6f6-1a4e3e667b54",
-      "position": 8,
+      "key": "4f321b99-559e-45d6-af94-70f6f5c39adf",
+      "position": 7,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "All four puzzles include paint buckets to pick up, but the most efficient solutions will ignore them and initialize the Painter with the correct amount of paint.\n\nThe fourth puzzle has the potential to take a lot of time - there is not an easy solution. If students are going down a rabbit hole, ground them in this lesson's objectives around creating objects and invite them to continue making their code more efficient on their own time if they’re excited to do so.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "67a66bf6-f52e-4ee9-b6f6-1a4e3e667b54",
-        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
-      }
-    },
-    {
-      "key": "767fddae-af42-4313-b765-0ee3a38e5210",
-      "position": 9,
-      "properties": {
-        "description": "There are a lot of different ways you could have solved the puzzles on Level 5. As you learn new content in this course, your goal should not just be to write code but to be a software engineer who writes code well.",
+        "description": "There are a lot of different ways you could have solved the puzzles on Level 4. As you learn new content in this course, your goal should not just be to write code but to be a software engineer who writes code well. ",
         "duration": "10",
         "name": "Efficient Solutions",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "767fddae-af42-4313-b765-0ee3a38e5210",
+        "activity_section.key": "4f321b99-559e-45d6-af94-70f6f5c39adf",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "478d4313-87ae-49bd-9444-9ff2052bf06a",
-      "position": 10,
+      "key": "331a0d35-b259-4387-b45b-155ae8c5f40c",
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We could use a no-argument constructor to replicate this design. Why might we choose to use the parameterized version?*\n\n**Discussion Goal:** This open-ended question gives students the opportunity to think critically about why they might use specific coding structures so that they are more confident in their choices when writing their own code in the future. \n\nListen for the following statements and encourage students to think more deeply:\n* We could start in the top right.\n    * *Why would this be valuable?*\n* It would be faster.\n    * *What makes it faster?*\n    * *How do we define ‘fast’ when writing code?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We could use a no-argument constructor to initialize a `Painter` object and then create this design. Why might we choose to use the parameterized constructor?*\n \n**Discussion Goal:** Students realize that the parameterized constructor allows them to initialize a `Painter` object at the specific location and with the amount of paint they need. Students share that they can write less code to create the design than if they had to start at the origin."
       },
       "seeding_key": {
-        "activity_section.key": "478d4313-87ae-49bd-9444-9ff2052bf06a",
+        "activity_section.key": "331a0d35-b259-4387-b45b-155ae8c5f40c",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "82abacbd-3ead-45f2-afea-d908c2185d8a",
-      "position": 11,
+      "key": "c4935fe4-b8c5-4621-858f-aa9d2656184e",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> One of the elements of writing ‘good code’ is writing ‘efficient code.' Today, we’re going to define efficiency as “getting the best outcome with the least amount of waste.\" We will do this by reducing unnecessary code or writing our solutions with fewer lines of code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> One of the elements of writing \"good code\" is writing \"efficient\" code. Today, we’re going to define efficiency as getting the best outcome with the least amount of waste. We will do this by reducing unnecessary code or writing our solutions with fewer lines of code.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "82abacbd-3ead-45f2-afea-d908c2185d8a",
+        "activity_section.key": "c4935fe4-b8c5-4621-858f-aa9d2656184e",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
     {
-      "key": "edc423bf-01a5-4697-b68c-ed5e045ae33f",
-      "position": 12,
+      "key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5",
+      "position": 10,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instruct students to choose a puzzle and complete it as efficiently as possible. Pair them with a neighbor to brainstorm possibilities and share solutions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before moving on to the wrap up, have students share their best solutions with the class through a class Gallery Walk.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to Level 6 on Code Studio. Students should choose a challenge and complete it as efficiently as possible. Have students share their solutions with a partner and brainstorm additional solutions.",
         "progression_name": "Efficient Solutions"
       },
       "seeding_key": {
-        "activity_section.key": "edc423bf-01a5-4697-b68c-ed5e045ae33f",
-        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
-      }
-    },
-    {
-      "key": "74e39e0c-7e77-446a-a756-19b9f99d115e",
-      "position": 13,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "74e39e0c-7e77-446a-a756-19b9f99d115e",
+        "activity_section.key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5",
         "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
       }
     },
@@ -2536,9 +2486,8 @@
       "key": "242ecbec-c9d5-49aa-b4b7-8062c26ab815",
       "position": 1,
       "properties": {
-        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are many ways to write code to solve a single problem. As software engineers, why might we value efficient code?\n* When might we want to use a no-argument constructor? When might we want to use the parameterized version? \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>\nDiscussion Goal: \nHighlight the value of spending the time to write good code rather than writing the first thing that solves a problem. Help students solidify why they might use the two different types of constructors they learned about today.\nNo-argument constructors are useful when all of the default values are exactly what you need (no need to respecify).\nParameterized versions allow you to specify unique starting attributes so the object can do something that the no-argument cannot (in the case of walls in The Neighborhood) or can allow you to write more efficient code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students copy the code segment into their journal or onto a sheet of paper and then annotate it with the given symbols.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n",
-        "duration": "10",
-        "name": "Synthesis"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *There are many ways to write code to solve a single problem. As software engineers, why might we value efficient code?*\n\n**Discussion Goal:** Students realize the value of spending the time to write good code rather than writing the first thing that solves a problem. Students note the differences between the no-argument constructor and parameterized constructor and make connections with how the parameterized constructor can be used to create more efficient code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students copy the code segment and then annotate it with the given symbols.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "The Importance of Efficiency"
       },
       "seeding_key": {
         "activity_section.key": "242ecbec-c9d5-49aa-b4b7-8062c26ab815",
@@ -2549,7 +2498,7 @@
       "key": "3d2272ff-3e29-499f-aa35-b5859d96a92c",
       "position": 2,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** In what situations might we want to use a no-argument constructor, and in what type of cases do we want to use the parameterized version? \n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check For Understanding",
         "progression_name": "Check for Understanding"
       },
@@ -2576,11 +2525,11 @@
       "key": "71031814-4c77-4818-9eb7-c6bc8ae62953",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give each group a copy of the Vocabulary Draw Activity Guide, which includes the rules, vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are passing out Activity Guides, students should cut out their set of vocabulary strips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess. ",
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Vocabulary Draw handout which includes the rules, a vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are distributing the handout, students should cut out their set of vocabulary strips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Running the Game:\n* To save time in class, you can choose to cut out sets of the vocabulary strips for each group.\n* Alternatively, you can choose to play this review game as a whole class. Group students into four different teams, and rotate which team provides the artist. Play following the rules, but award the slip to the team that guesses the word rather than an individual. Pause as needed to review the terms.\n"
+            "markdown": "Alternatively, you can choose to play this review game as a whole class. Group students into four different teams, and rotate which team provides the artist. Play following the rules, but award the slip to the team that guesses the word rather than an individual. Pause as needed to review the terms."
           }
         ]
       },
@@ -2593,7 +2542,7 @@
       "key": "14bb3844-50e4-4faf-a18c-bdd39fea9592",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which words were most difficult to remember from last week? What additional clarity do you need?*\n\n**Discussion Goal:** This discussion aims to provide additional clarification around any words that students are struggling with. Make a note of any commonalities, and continue to use these vocabulary terms throughout instruction. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which words were most difficult to remember?*\n* *What additional clarity do you need?*\n\n**Discussion Goal:** Students share any terms that they struggled with or need clarification.",
         "duration": "2",
         "name": "Debrief"
       },
@@ -2603,128 +2552,96 @@
       }
     },
     {
-      "key": "580b9077-890f-41b5-9790-4600380fc845",
+      "key": "85dfdb3e-a124-47dc-bd6f-fa4b814e9e3e",
       "position": 1,
       "properties": {
-        "description": "Last week, we learned about using our information gathering commands with a structure called an `if` statement, which allowed us to run a piece of code **if** the information gathering command returned as `true`. But what if we wanted to run the code **as long as** it was true?",
-        "duration": "7",
-        "name": "Introducing While Loops",
+        "description": "So far in this class, we have learned about using Boolean methods with a structure called an `if` statement, which allowed us to run a piece of code if the method gave a `true` value. But what if we wanted to run the code as long as it gave a `true` value?",
+        "duration": "10",
+        "name": "Introducing while Loops",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "580b9077-890f-41b5-9790-4600380fc845",
+        "activity_section.key": "85dfdb3e-a124-47dc-bd6f-fa4b814e9e3e",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "7afcf9db-910a-4d5e-ade8-9a8eeedb9b5b",
+      "key": "be5aceff-ae21-4a7e-bd3f-fe3fbce607ac",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Use the slides to guide students through a `while` loop.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the repetitive code on the screen. Ask students: Why might we want to reduce repetition?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A `while` loop can simplify repetitive code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through the flowchart on the screen: while our information gathering command is `true`, the code in the `while` loop runs over and over until it is no longer `true`. Then move on to the example on the next slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to illustrate that the `Painter` will continue to move forward as long as `canMove()` returns `true`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n**Discussion Goal:** Students should identify a few benefits of using `while` loops:\n* Reduces redundancy, which in turn leads to fewer opportunities for syntax or logic errors.\n* Makes our code more efficient. Remind students of the vocabulary word 'efficiency' from the previous class.\n  * Efficiency: getting the best outcome with the least amount of waste\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the repetitive code and display the prompt.\n*Suppose we wanted to move our `Painter` from `(0,0)` to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the purpose and syntax for a `while` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the flow of a `while` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that the `Painter` continues to move forward as long as `canMove()` gives a `true` value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n**Discussion Goal:** Students identify benefits of using a `while` loop, including that it reduces redundancy and makes code more efficient."
       },
       "seeding_key": {
-        "activity_section.key": "7afcf9db-910a-4d5e-ade8-9a8eeedb9b5b",
+        "activity_section.key": "be5aceff-ae21-4a7e-bd3f-fe3fbce607ac",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "33ac2cc2-db5b-4cda-a0b0-03182735b77c",
+      "key": "e7bc3c59-01de-43be-8626-a28e21293764",
       "position": 3,
       "properties": {
-        "description": "Last week, we learned three information gathering commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Each of these commands return either `true` or `false` to our `Painter`, who can then use that information to make a decision. Today, we’ll learn five additional information gathering commands and practice using them with our `while` loop.",
+        "description": "We have learned several methods to get information about the `Painter` and The Neighborhood: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Each of these methods give either a `true` or `false` value to the `Painter`, who can then use that information to make a decision. Today, we’ll learn five additional Boolean methods and practice using them with a `while` loop.",
         "duration": "10",
-        "name": "New Commands and Practicing with While Loops",
+        "name": "New Methods and Practice",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "33ac2cc2-db5b-4cda-a0b0-03182735b77c",
+        "activity_section.key": "e7bc3c59-01de-43be-8626-a28e21293764",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "7d4dd409-6595-40bc-87b1-804844146f51",
+      "key": "7d30af72-389e-48b5-821c-ba9180b48ecf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slides to walk through the five new commands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `hasPaint()` - this command returns a Boolean value true if the Painter has paint in their tray\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()` - this command returns a Boolean value true if the Painter is facing North\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingEast()` - this command returns a Boolean value true if the Painter is facing East\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingWest()` - this command returns a Boolean value true if the Painter is facing West\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingSouth()` - this command returns a Boolean value true if the Painter is facing South\n\n**Group:** Group students into pairs. \n\n**Do This:** Direct students to the lesson on Code Studio. Instruct students to complete the first three levels. Remind them that they should use at least one `while` loop in each level in addition to the appropriate information gathering commands.",
-        "progression_name": "while Loops with New Information Gathering Commands"
-      },
-      "seeding_key": {
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51",
-        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
-      }
-    },
-    {
-      "key": "742b915f-ea50-42ba-a39f-ad794986db54",
-      "position": 5,
-      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the `hasPaint()` method.\n\n**Do This:** Click through the animated slides to introduce the methods to check if the `Painter` is facing a specific direction.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingEast()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingWest()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingSouth()`\n\n**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
+        "progression_name": "while Loops with New Boolean Methods",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While not likely, it is possible that a student may create an infinite loop. While an infinite loop will be introduced in more detail for the whole class in coming lessons, the following questions may help the student debug their code:\n* Describe what is happening. What did you expect to happen?\n* Walk me through your code: what does each line cause the `Painter` to do?\n* Infinite loops happen because the condition never changes to `false`. What can we do to make sure our condition does change to `false`?\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+            "markdown": "It is possible that a student may create an infinite loop, or a loop where the condition never becomes `false`. While an infinite loop will be introduced in more detail in upcoming lessons, the following questions may help the student debug their code:\n* *Describe what is happening. What did you expect to happen?*\n* *Walk me through your code. What does each line cause the `Painter` to do?*\n* *Infinite loops happen because the condition never becomes `false`. What can we do to make sure our condition does become `false`?*"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "742b915f-ea50-42ba-a39f-ad794986db54",
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "366325a1-e98d-4556-b46f-8d01732cd589",
-      "position": 6,
+      "key": "43b898eb-e7f2-40c2-82e0-8157b4a55843",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have pairs match up with another pair and talk about their experience: *What went well? What would you do differently next time?*\n\n**Discussion Goal:** Use this discussion to allow students to process their experience working with while loops before moving on to using a wider range of commands and structures."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What went well?*\n* *What would you do differently next time?*\n\n**Discussion Goal:** Students share their experiences in solving the problems and may even share bugs they encountered as they wrote their code. Students share strategies to use for future problems involving `while` loops."
       },
       "seeding_key": {
-        "activity_section.key": "366325a1-e98d-4556-b46f-8d01732cd589",
+        "activity_section.key": "43b898eb-e7f2-40c2-82e0-8157b4a55843",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "91eea5ac-41cc-4b0b-a61b-6a272cc3ff8b",
-      "position": 7,
+      "key": "2cb23a10-3e23-4583-9858-7959d8ef6080",
+      "position": 6,
       "properties": {
-        "description": "Over the last six days, we’ve accumulated quite a few tools in our `Painter`’s toolbox. Now, you’re going to have the chance to use all of the commands, constructors, and control structures to solve more complex puzzles. When we say control structures, we’re referring to `while` loops and `if` statements that allow us more control over what our Painter does",
-        "duration": "13",
+        "description": "We have a lot of tools in our `Painter`’s toolbox! Now, you’re going to have the chance to use all of the methods, constructors, and control structures to solve more complex challenges.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When we say control structures, we’re referring to the `while` loops and `if` statements that give us more control over what the `Painter` does. Control structures affect the flow of a program using conditional statements or loops.",
+        "duration": "10",
         "name": "Using Your Toolbox",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "91eea5ac-41cc-4b0b-a61b-6a272cc3ff8b",
+        "activity_section.key": "2cb23a10-3e23-4583-9858-7959d8ef6080",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
     {
-      "key": "f522356e-cead-4967-9917-92f415fd7cc8",
-      "position": 8,
+      "key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with all commands, constructors, and control structures. Leave this up for students to reference throughout their work on these levels.\n\n**Do This:** Instruct students to complete the next five levels. Level 4 is a check for understanding to summarize and remind students of the vocabulary already in their toolbox before they begin practicing with code. Level 8 is a choice level. There are three options for them to choose from. If students finish early, encourage them to complete a second (or third!) level.",
-        "progression_name": "Using Our Toolbox",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Because students are applying what they’ve learned in these four levels, it’s suggested that students work independently. However, these lessons can be scaffolded by allowing students to work in pairs or providing the Painter Toolbox Reference Sheet for any student who needs it."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the methods, constructors, and control structures. Leave this up for students to reference throughout their work on these levels.",
+        "progression_name": "Using Your Toolbox"
       },
       "seeding_key": {
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8",
-        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
-      }
-    },
-    {
-      "key": "afa79071-fa52-4575-86f5-d35c584a6355",
-      "position": 9,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "afa79071-fa52-4575-86f5-d35c584a6355",
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf",
         "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
       }
     },
@@ -2732,7 +2649,8 @@
       "key": "5c7dc049-6e09-490f-920f-f9ee2872d72f",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down any bugs they encountered, plus the strategy they used to debug, on a sticky note. Have students add their sticky notes to the class debugging wall. If time permits, students should read over other students’ sticky notes.\n"
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider any bugs they encountered and write down a strategy they used to fix the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the Debugging Wall. If time permits, students should read over other strategies that are posted on the wall.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Debugging Wall"
       },
       "seeding_key": {
         "activity_section.key": "5c7dc049-6e09-490f-920f-f9ee2872d72f",
@@ -2740,21 +2658,10 @@
       }
     },
     {
-      "key": "b811ebf7-f13d-4936-91ca-3bc552346bb1",
+      "key": "d5e5ffed-b969-48e1-aa58-1911a87a74bd",
       "position": 2,
       "properties": {
-        "description": "---\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "b811ebf7-f13d-4936-91ca-3bc552346bb1",
-        "lesson_activity.key": "abb43144-c74a-40d4-8ae0-749adbd757a1"
-      }
-    },
-    {
-      "key": "d5e5ffed-b969-48e1-aa58-1911a87a74bd",
-      "position": 3,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n\n**Question:** How are `while` loops and `if` statements similar? How are they different?\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check For Understanding",
         "progression_name": "Check for Understanding"
       },
@@ -5061,6 +4968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L1"
+        ],
         "progression": "Methods to Move"
       },
       "named_level": false,
@@ -5084,6 +4994,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L2"
+        ],
         "progression": "Methods to Move"
       },
       "named_level": false,
@@ -5107,6 +5020,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L3"
+        ],
         "progression": "Methods to Move"
       },
       "named_level": false,
@@ -5130,6 +5046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L4"
+        ],
         "progression": "Painting Methods"
       },
       "named_level": false,
@@ -5153,6 +5072,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5"
+        ],
         "progression": "Painting Methods"
       },
       "named_level": false,
@@ -5176,6 +5098,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6"
+        ],
         "progression": "Painting Methods"
       },
       "named_level": false,
@@ -5228,7 +5153,7 @@
         "level_keys": [
           "CSA U1L4-L1"
         ],
-        "progression": "Information Gathering Commands"
+        "progression": "Boolean Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5239,7 +5164,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d"
+        "activity_section.key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f"
       },
       "level_keys": [
         "CSA U1L4-L1"
@@ -5254,7 +5179,7 @@
         "level_keys": [
           "CSA U1L4-L2"
         ],
-        "progression": "Information Gathering Commands"
+        "progression": "Boolean Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5265,7 +5190,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d"
+        "activity_section.key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f"
       },
       "level_keys": [
         "CSA U1L4-L2"
@@ -5280,7 +5205,7 @@
         "level_keys": [
           "CSA U1L4-L3"
         ],
-        "progression": "Information Gathering Commands"
+        "progression": "Checking for Barriers"
       },
       "named_level": false,
       "bonus": false,
@@ -5291,7 +5216,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f5edb606-9830-4a63-8e0a-de634970596c"
+        "activity_section.key": "0525161e-82cf-4658-b588-c374fe247db4"
       },
       "level_keys": [
         "CSA U1L4-L3"
@@ -5317,7 +5242,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b"
+        "activity_section.key": "3ae1bd30-b76c-4c81-a900-2509edbccec5"
       },
       "level_keys": [
         "CSA U1L4-L4"
@@ -5355,36 +5280,33 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L1"
-        ],
         "progression": "No-Argument Constructors"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L1"
+          "CSA U1L5-L1 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3"
+        "activity_section.key": "9cef0694-e12c-439d-ac02-46affb1bc3ba"
       },
       "level_keys": [
-        "CSA U1L5-L1"
+        "CSA U1L5-L1 2"
       ]
     },
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSA U1L5-L2"
         ],
-        "progression": "No-Argument Constructors"
+        "progression": "Parameterized Constructors"
       },
       "named_level": false,
       "bonus": false,
@@ -5395,7 +5317,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
         "CSA U1L5-L2"
@@ -5404,141 +5326,103 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L3"
-        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L3"
+          "CSA U1L5-L3 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L3"
+        "CSA U1L5-L3 2"
       ]
     },
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L4"
-        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L4"
+          "CSA U1L5-L4-2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L4"
+        "CSA U1L5-L4-2"
       ]
     },
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L5"
-        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L5"
+          "CSA U1L5-L5 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L5"
+        "CSA U1L5-L5 2"
       ]
     },
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L5-L6"
-        ],
-        "progression": "Parameterized Constructors"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L5-L6"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
-      },
-      "level_keys": [
-        "CSA U1L5-L6"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L7"
-        ],
         "progression": "Efficient Solutions"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L7"
+          "CSA U1L5-L6 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "edc423bf-01a5-4697-b68c-ed5e045ae33f"
+        "activity_section.key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5"
       },
       "level_keys": [
-        "CSA U1L5-L7"
+        "CSA U1L5-L6 2"
       ]
     },
     {
-      "chapter": 23,
-      "position": 8,
+      "chapter": 22,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U1L5-L8"
+          "CSA U1L5-L7"
         ],
         "progression": "Check for Understanding"
       },
@@ -5546,7 +5430,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L8"
+          "CSA U1L5-L7"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5554,11 +5438,11 @@
         "activity_section.key": "3d2272ff-3e29-499f-aa35-b5859d96a92c"
       },
       "level_keys": [
-        "CSA U1L5-L8"
+        "CSA U1L5-L7"
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5566,7 +5450,7 @@
         "level_keys": [
           "CSA U1L6-L1"
         ],
-        "progression": "while Loops with New Information Gathering Commands"
+        "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5577,14 +5461,14 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       },
       "level_keys": [
         "CSA U1L6-L1"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5592,7 +5476,7 @@
         "level_keys": [
           "CSA U1L6-L2"
         ],
-        "progression": "while Loops with New Information Gathering Commands"
+        "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5603,14 +5487,14 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       },
       "level_keys": [
         "CSA U1L6-L2"
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5618,7 +5502,7 @@
         "level_keys": [
           "CSA U1L6-L3"
         ],
-        "progression": "while Loops with New Information Gathering Commands"
+        "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
       "bonus": false,
@@ -5629,14 +5513,14 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       },
       "level_keys": [
         "CSA U1L6-L3"
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5644,7 +5528,7 @@
         "level_keys": [
           "CSA U1L6-L4"
         ],
-        "progression": "Using Our Toolbox"
+        "progression": "Using Your Toolbox"
       },
       "named_level": false,
       "bonus": false,
@@ -5655,124 +5539,66 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       },
       "level_keys": [
         "CSA U1L6-L4"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L6-L5"
-        ],
-        "progression": "Using Our Toolbox"
+        "progression": "Using Your Toolbox"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L6-L5"
+          "CSA U1L6-L5 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       },
       "level_keys": [
-        "CSA U1L6-L5"
+        "CSA U1L6-L5 2"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L6-L6"
-        ],
-        "progression": "Using Our Toolbox"
+        "progression": "Using Your Toolbox"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L6-L6"
+          "CSA U1L6-L6 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       },
       "level_keys": [
-        "CSA U1L6-L6"
+        "CSA U1L6-L6 2"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L6-L7"
-        ],
-        "progression": "Using Our Toolbox"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L6-L7"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
-      },
-      "level_keys": [
-        "CSA U1L6-L7"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 8,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L6-L8"
-        ],
-        "progression": "Using Our Toolbox"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L6-L8"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
-      },
-      "level_keys": [
-        "CSA U1L6-L8"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U1L6-L9"
+          "CSA U1L6-L7"
         ],
         "progression": "Check for Understanding"
       },
@@ -5780,7 +5606,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L6-L9"
+          "CSA U1L6-L7"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -5788,11 +5614,11 @@
         "activity_section.key": "d5e5ffed-b969-48e1-aa58-1911a87a74bd"
       },
       "level_keys": [
-        "CSA U1L6-L9"
+        "CSA U1L6-L7"
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5818,7 +5644,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5844,7 +5670,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5870,7 +5696,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5896,7 +5722,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5922,7 +5748,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5948,7 +5774,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5974,7 +5800,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6000,7 +5826,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -6026,7 +5852,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6052,7 +5878,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6078,7 +5904,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6104,7 +5930,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6130,7 +5956,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6156,7 +5982,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6182,7 +6008,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6208,7 +6034,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6234,7 +6060,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6260,7 +6086,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -6286,7 +6112,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -6312,7 +6138,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6338,7 +6164,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6364,7 +6190,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6390,7 +6216,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6416,7 +6242,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6442,7 +6268,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6468,7 +6294,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6494,7 +6320,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6520,7 +6346,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6546,7 +6372,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6572,7 +6398,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6598,7 +6424,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6624,7 +6450,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -6650,7 +6476,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6676,7 +6502,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6702,7 +6528,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6728,7 +6554,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6754,7 +6580,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6780,7 +6606,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6806,7 +6632,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6832,7 +6658,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6858,7 +6684,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6884,11 +6710,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neighborhood Demos"
+        ],
         "progression": "Neighborhood Practice Levels"
       },
       "named_level": false,
@@ -6907,7 +6736,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7063,7 +6892,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d"
+        "activity_section.key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f"
       }
     },
     {
@@ -7075,7 +6904,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d"
+        "activity_section.key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f"
       }
     },
     {
@@ -7087,7 +6916,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f5edb606-9830-4a63-8e0a-de634970596c"
+        "activity_section.key": "0525161e-82cf-4658-b588-c374fe247db4"
       }
     },
     {
@@ -7099,7 +6928,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b"
+        "activity_section.key": "3ae1bd30-b76c-4c81-a900-2509edbccec5"
       }
     },
     {
@@ -7116,14 +6945,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L1",
+        "level.key": "CSA U1L5-L1 2",
         "script_level.level_keys": [
-          "CSA U1L5-L1"
+          "CSA U1L5-L1 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3"
+        "activity_section.key": "9cef0694-e12c-439d-ac02-46affb1bc3ba"
       }
     },
     {
@@ -7135,55 +6964,55 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L3",
+        "level.key": "CSA U1L5-L3 2",
         "script_level.level_keys": [
-          "CSA U1L5-L3"
+          "CSA U1L5-L3 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L4",
+        "level.key": "CSA U1L5-L4-2",
         "script_level.level_keys": [
-          "CSA U1L5-L4"
+          "CSA U1L5-L4-2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L5",
+        "level.key": "CSA U1L5-L5 2",
         "script_level.level_keys": [
-          "CSA U1L5-L5"
+          "CSA U1L5-L5 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L6",
+        "level.key": "CSA U1L5-L6 2",
         "script_level.level_keys": [
-          "CSA U1L5-L6"
+          "CSA U1L5-L6 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88"
+        "activity_section.key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5"
       }
     },
     {
@@ -7191,18 +7020,6 @@
         "level.key": "CSA U1L5-L7",
         "script_level.level_keys": [
           "CSA U1L5-L7"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "edc423bf-01a5-4697-b68c-ed5e045ae33f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L5-L8",
-        "script_level.level_keys": [
-          "CSA U1L5-L8"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -7219,7 +7036,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       }
     },
     {
@@ -7231,7 +7048,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       }
     },
     {
@@ -7243,7 +7060,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51"
+        "activity_section.key": "7d30af72-389e-48b5-821c-ba9180b48ecf"
       }
     },
     {
@@ -7255,31 +7072,31 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L6-L5",
+        "level.key": "CSA U1L6-L5 2",
         "script_level.level_keys": [
-          "CSA U1L6-L5"
+          "CSA U1L6-L5 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L6-L6",
+        "level.key": "CSA U1L6-L6 2",
         "script_level.level_keys": [
-          "CSA U1L6-L6"
+          "CSA U1L6-L6 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
+        "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       }
     },
     {
@@ -7287,30 +7104,6 @@
         "level.key": "CSA U1L6-L7",
         "script_level.level_keys": [
           "CSA U1L6-L7"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L6-L8",
-        "script_level.level_keys": [
-          "CSA U1L6-L8"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L6-L9",
-        "script_level.level_keys": [
-          "CSA U1L6-L9"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -9263,11 +9056,31 @@
     {
       "key": "logic_error",
       "word": "Logic Error",
-      "definition": "When code runs, but does not do what we expect it to do",
+      "definition": "When the code runs but does not do what was expected",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A set of instructions to solve a problem or accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "An error in the code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
       }
     },
     {
@@ -9283,7 +9096,7 @@
     {
       "key": "initialize",
       "word": "Initialize",
-      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "definition": "Create a new object with a specific name and starting values for its attributes",
       "properties": {
       },
       "seeding_key": {
@@ -9293,7 +9106,7 @@
     {
       "key": "constructor_signature",
       "word": "Constructor Signature",
-      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
       "properties": {
       },
       "seeding_key": {
@@ -9303,7 +9116,7 @@
     {
       "key": "formal_parameter",
       "word": "Formal Parameter",
-      "definition": "The name of the characteristics in the constructor signature",
+      "definition": "The name of the attribute in the constructor signature",
       "properties": {
       },
       "seeding_key": {
@@ -9313,7 +9126,7 @@
     {
       "key": "actual_parameter",
       "word": "Actual Parameter",
-      "definition": "The value given to a characteristic when initializing an object",
+      "definition": "The value given to an attribute when initializing an object",
       "properties": {
       },
       "seeding_key": {
@@ -9323,11 +9136,21 @@
     {
       "key": "efficiency",
       "word": "Efficiency",
-      "definition": "The amount of time or resources needed to execute an algorithm",
+      "definition": "Getting the best outcome with the least amount of waste",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "control_structure",
+      "word": "Control Structure",
+      "definition": "Affects the flow of a program using conditional statements or loops",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "control_structure"
       }
     },
     {
@@ -9486,6 +9309,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "constructor"
       }
@@ -9518,6 +9353,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "control_structure"
       }
     },
     {
@@ -9608,7 +9449,7 @@
     {
       "key": "e866019f-d96d-4cc2-bb30-91e1fb41fbc0",
       "properties": {
-        "description": "Identify and utilize three return commands for the `Painter`"
+        "description": "Call `Painter` methods that give a Boolean value"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -9618,7 +9459,7 @@
     {
       "key": "07f5ccf8-ab2a-4612-acb1-36022e8acc99",
       "properties": {
-        "description": "Construct an `if` statement using `Painter`’s return methods"
+        "description": "Construct an `if` statement using the `Painter`’s Boolean methods"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -9638,7 +9479,7 @@
     {
       "key": "38a86851-cc62-4531-8fed-5e632df03afb",
       "properties": {
-        "description": "Identify three strategies they can use to debug code"
+        "description": "Identify strategies to debug code"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -9688,7 +9529,7 @@
     {
       "key": "cb063d59-0308-4947-b118-21c5f14a42ba",
       "properties": {
-        "description": "Identify and utilize five new methods for the `Painter`"
+        "description": "Call `Painter` methods to navigate The Neighborhood"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -9698,7 +9539,7 @@
     {
       "key": "275b5c08-cd0c-4d5c-a84b-eacc54dca7e9",
       "properties": {
-        "description": "Use a `while` loop with the `Painter`’s non-void methods"
+        "description": "Use a `while` loop with the `Painter`’s Boolean methods"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",

@@ -3145,6 +3145,14 @@ el:
           lesson_groups:
             cspSurvey2020:
               display_name: Έρευνα
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:

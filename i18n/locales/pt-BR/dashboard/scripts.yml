@@ -17213,8 +17213,6 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
-            lessonGroup-4:
-              display_name: Teste
         csa2-pilot:
           lessons:
             lesson-15:
@@ -17318,6 +17316,16 @@ pt:
           lessons:
             lesson-22:
               name: Projetando a coleta de dados
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Projetando a coleta de dados
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Questionário
         kodea-pd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado.
@@ -17430,10 +17438,6 @@ pt:
           lessons:
             lesson-9:
               name: Comunidade de professores
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Ferramentas
         self-paced-pl-csd5-2021:
           lessons:
             lesson-3:
@@ -17487,7 +17491,13 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Teste
         tesspltest:
           lessons:
             lesson-2:
               name: Lição 2
+        dlp21-csp-mod1:
+          title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1

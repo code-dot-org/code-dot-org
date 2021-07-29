@@ -14,11 +14,12 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 23:32:02 UTC",
+    "serialized_at": "2021-07-27 22:48:24 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd3-2021"

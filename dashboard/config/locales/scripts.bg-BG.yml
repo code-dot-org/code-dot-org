@@ -4241,6 +4241,14 @@ bg:
           lesson_groups:
             cspSurvey2020:
               display_name: Проучване
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
