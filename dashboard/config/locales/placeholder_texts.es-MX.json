@@ -580,14 +580,14 @@
         },
         "courseF_text_choice_events": {
           "c529a06c3f8518b63ff6dfac482b335c": "Nombra este planeta:",
-          "44506356d48394cd903b579df9de9117": "¡Terrícola!",
+          "44506356d48394cd903b579df9de9117": ", terrícola!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mi pregunta"
         },
         "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Ponle nombre al robot.",
+          "5bd698afd23bccde289bb0b4aa72a518": "Nombra al robot.",
           "34088af1fb721900963462375b3bbe23": "¡el robot!"
         },
         "courseF_text_choice_multiprompt": {
