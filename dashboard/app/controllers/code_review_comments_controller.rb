@@ -3,7 +3,7 @@ class CodeReviewCommentsController < ApplicationController
   before_action :decrypt_channel_id, only: [:create, :project_comments]
 
   check_authorization
-  load_and_authorize_resource :code_review_comment, only: [:resolve, :destroy]
+  load_and_authorize_resource :code_review_comment, only: [:toggle_resolved, :destroy]
 
   # POST /code_review_comments
   def create
@@ -14,18 +14,20 @@ class CodeReviewCommentsController < ApplicationController
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
+    # We wait to authorize until this point because we need to know
+    # who owns the project that the comment is associated with.
     authorize! :create, @code_review_comment, @project_owner
+
     if @code_review_comment.save
-      return render json: @code_review_comment
+      return render json: serialize(@code_review_comment)
     else
       return head :bad_request
     end
   end
 
-  # PATCH /code_review_comments/:id/resolve
-  def resolve
-    @code_review_comment.inspect
-    if @code_review_comment.update(is_resolved: true)
+  # PATCH /code_review_comments/:id/toggle_resolved
+  def toggle_resolved
+    if @code_review_comment.update(is_resolved: params[:is_resolved])
       return head :ok
     else
       return head :bad_request
@@ -45,12 +47,21 @@ class CodeReviewCommentsController < ApplicationController
   def project_comments
     authorize! :project_comments, CodeReviewComment.new, @project_owner
 
-    @project_comments = CodeReviewComment.where(
-      storage_app_id: @storage_app_id,
-      project_version: params[:project_version]
-    )
+    # Setting custom header here allows us to access the csrf-token and manually use for create
+    headers['csrf-token'] = form_authenticity_token
 
-    render json: @project_comments
+    @project_comments = CodeReviewComment.where(
+      storage_app_id: @storage_app_id
+    ).order(:created_at)
+
+    # Keep teacher comments private between project owner and teacher.
+    unless @project_owner.student_of?(current_user) || @project_owner == current_user
+      @project_comments = @project_comments.reject {|comment| !!comment.is_from_teacher}
+    end
+
+    serialized_comments = @project_comments.map {|comment| serialize(comment)}
+
+    render json: serialized_comments
   end
 
   private
@@ -64,9 +75,24 @@ class CodeReviewCommentsController < ApplicationController
   # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
-      :project_version,
       :comment,
       :is_resolved
     )
+  end
+
+  def serialize(comment)
+    # once comments associated with project versions is implemented,
+    # we should calculate isFromOlderVersionOfProject there.
+    {
+      id: comment.id,
+      name: comment.commenter&.name,
+      commentText: comment.comment,
+      projectVersion: comment.project_version,
+      timestampString: comment.created_at,
+      isResolved: !!comment.is_resolved,
+      isFromTeacher: !!comment.is_from_teacher,
+      isFromCurrentUser: !!(comment.commenter == current_user),
+      isFromOlderVersionOfProject: false
+    }
   end
 end

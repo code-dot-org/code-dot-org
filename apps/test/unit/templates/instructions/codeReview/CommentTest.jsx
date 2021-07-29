@@ -1,25 +1,24 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
+import {Factory} from 'rosie';
+import './CodeReviewTestHelper';
+import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 
-const DEFAULT_COMMENT = {
-  id: 1,
-  name: 'Charlie Brown',
-  commentText:
-    "Don't worry about the world coming to an end today. It's already tomorrow in Australia.",
-  timestampString: '2021/01/01 at 9:30 AM',
-  isResolved: false,
-  isFromTeacher: false,
-  isFromCurrentUser: false,
-  isFromOlderVersionOfProject: false
-};
+const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 
 describe('Code Review Comment', () => {
   const renderWrapper = (overrideProps = {}) => {
     const combinedComment = {...DEFAULT_COMMENT, ...overrideProps};
-    return shallow(<Comment comment={combinedComment} />);
+    return shallow(
+      <Comment
+        comment={combinedComment}
+        onResolveStateToggle={() => {}}
+        onDelete={() => {}}
+      />
+    );
   };
 
   const renderAndCheckBackgroundColor = (
@@ -54,8 +53,19 @@ describe('Code Review Comment', () => {
       isFromOlderVersionOfProject: true
     });
   });
+
   it('displays green check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
     expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
+  });
+
+  it('displays error message when comment has error', () => {
+    const defaultWrapper = renderWrapper();
+    expect(defaultWrapper.text().includes(javalabMsg.commentUpdateError())).to
+      .be.false;
+
+    const errorWrapper = renderWrapper({hasError: true});
+    expect(errorWrapper.text().includes(javalabMsg.commentUpdateError())).to.be
+      .true;
   });
 });

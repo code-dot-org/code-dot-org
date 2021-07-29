@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-07-09 18:52:49 UTC",
+    "family_name": "poembot",
+    "serialized_at": "2021-07-20 22:21:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poembot"

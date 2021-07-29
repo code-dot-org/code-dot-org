@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: ආබාධිත සිසුන්ට කේත වේලාව සඳහා සහාය වීම
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# ආබාධිත සිසුන්ට කේත වේලාව සඳහා සහාය වීම
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+පරිගණක විද්‍යා අධ්‍යාපන සතිය තුළ ඕනෑම කෙනෙකුට පැයක කේතයක් උත්සාහ කළ හැකිය. බොහෝ විට, ඔටිසම්, ලිංගාශ්‍රිත රෝග හෝ වෙනත් ඉගෙනුම් වෙනස්කම් ඇති සිසුන් වැඩසටහන්කරණයට ප්‍රිය කරන බව පෙනේ. එය උත්සාහ කිරීමට ඔබේ පන්ති කාමරයේ සිටින සියලුම සිසුන් දිරිමත් කරන්න! ඔබේ පන්ති කාමරය සඳහා අත්දැකීම් සැකසීමේදී, සම්පුර්ණ කිරීමට වඩා සහභාගීත්වයට ප්‍රතිලාභ ලබා දෙන්න. පැයක් තුළ කොපමණ ප්‍රහේලිකා හෝ අභියෝගයන් සම්පූර්ණ වුවද ඔබට සෑම කෙනෙකුටම සහතිකයක් ලබා දිය හැකිය. යුගල වැඩසටහන්කරණය සහයෝගීතාව ඉගැන්වීමට තවත් හොඳ ක්‍රමයක් වන අතර ගැටලු විසඳීම සඳහා සිසුන් එකට වැඩ කරයි.
 
-## Fit a variety of needs with unplugged and online tutorials
+## ඉවත් නොකළ සහ මාර්ගගත නිබන්ධන සමඟ විවිධ අවශ්‍යතා සපුරාලන්න
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+ඔබගේ පන්තියේ සිටින සෑම කෙනෙකුටම නිවැරදි ක්‍රියාකාරකමක් සොයාගැනීමේදී, පරිගණක අවශ්‍ය නොවන මාර්ගගත සහ “ඉවත් නොකළ” විකල්ප සලකා බලන්න. ඉවත් නොකළ ක්‍රියාකාරකම් මඟින් පරිගණක විද්‍යා සංකල්ප සමඟ සම්බන්ධ වීමට සිසුන්ට ඉඩ ලබා දේ. ඉසව්ව සිසුන්ගේ ක්‍රියාවන් පාලනය කිරීම සඳහා ගුරුවරුන් පාලනය කරන අතර, එක් එක් ශිෂ්‍යයාගේ හැකියාවන්ට අනුව අන්තර්ගතය සකස් කර ගැනීමට මෙය හොඳ අවස්ථාවක් සපයයි.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+වෙනත් සිසුන් සඳහා, පරිගණකයේ ඇති නවාතැන්, තෝරා නොගත් තේරීමකට වඩා හොඳින් සහභාගී වීමට ඉඩ සලසයි. නිදසුනක් වශයෙන්, බිහිරි හෝ ඇසීමට අපහසු සිසුන්ට සබැඳි නිබන්ධන සඳහා සම්පූර්ණයෙන්ම සහභාගී විය හැකිය.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+වඩාත්ම ඇතුළත් තේරීම ඔබට ප්‍රවේශ විය හැකි පරිගණක විද්‍යාගාරයක් හෝ ලැප්ටොප් පරිගණකයක් තිබේද යන්න මත රඳා පවතී.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+නිදසුනක් වශයෙන්, ඔබේ සිසුන්ට සංචලතාව හෝ දක්ෂතාවය අඩු වී තිබේද? ඔබේ පාසලේ සියලුම සිසුන්ට තාක්‍ෂණයට ප්‍රවේශය තිබේ නම්, ඔබේ සිසුන් සාමාන්‍යයෙන් ලබා ගත හැකි පරිගණක සමඟ භාවිතා කරන නවාතැන් මොනවාදැයි ඔබේ සිසුන්ගෙන් හෝ තාක්ෂණික ගුරුවරයාගෙන් විමසන්න.
 
-## Sensory Impairments
+## සංවේදක දුර්වලතා 
 
-### Students who are blind or low vision
+### අන්ධ හෝ අඩු පෙනුමක් ඇති සිසුන් 
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+තිර කියවනය භාවිතා කරන සිසුන් සඳහා, ආරම්භකයින් සඳහා කෝරම් නිබන්ධනය හෝ සුවපහසු සිසුන් සඳහා වූ ගණපූරණ නිබන්ධනය ආරම්භ කිරීමට හොඳ ස්ථානයකි. ගණපූරණය ආරම්භ වූයේ පරිවර්තන භාෂාවක් ලෙස වන අතර එය තිර පරිශීලකයින්ට ප්‍රවේශ විය හැකි පරිදි නිර්මාණය කර ඇත. අවසානයේදී, එය ඕනෑම පරිශීලකයෙකු සඳහා නිර්මාණය කරන ලද පොදු අරමුණු ක්‍රමලේඛන භාෂාවක් බවට පත්විය. ඔබේ මුළු පන්ති කාමරය සමඟම ඔබට මෙම පැය කේත නිබන්ධන භාවිතා කළ හැකිය. තවද, ඔබට පැයක කේතයකින් ඔබ්බට යාමට අවශ්‍ය නම්, ගණපූරණයෙහි කණ්ඩායමට අමතර මෙවලම් සහ විෂයමාලා ඇත.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+ඔබේ ශිෂ්‍යයා තාක්ෂණ පංතිවල වෙනත් නවාතැන් භාවිතා කරන්නේ නම්, ඔබට ඒවා පැය කේතයට උදව් කිරීමට භාවිතා කළ හැකිය. මේවාට විශාල මොනිටර, මෘදුකාංග තිර විශාලනය, ඒවායේ මෙහෙයුම් පද්ධතියේ ඉහළ ප්‍රතිවිරුද්ධ සැකසුම්, ශබ්ද පාලනය සහ තවත් දේ ඇතුළත් විය හැකිය.
 
-### Students who are deaf or hard of hearing
+### බිහිරි හෝ ඇසීමට අපහසු සිසුන්
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+Code.org නිබන්ධන සියල්ලම නිර්මාණය කර ඇත්තේ ශබ්දය සමඟ හෝ නැතිව භාවිතා කිරීමටය. සියලුම වීඩියෝ වල ශීර්ෂ පාඨ ඇත. සමහර සිසුන්ට හෙඩ්ෆෝන් ඉහළ පරිමාවකට සකසා ගැනීමෙන් ප්‍රයෝජන ගත හැකිය.
 
 ## Learn more
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+පරිගණක විද්‍යා අධ්‍යාපනය සහ විශේෂ අවශ්‍යතා සහිත සිසුන් පිළිබඳ වැඩිදුර දැන ගැනීම සඳහා අපි මෙම මාර්ගගත පොත නිර්දේශ කරමු.

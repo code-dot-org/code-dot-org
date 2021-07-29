@@ -1,6 +1,9 @@
 login_required true
 has_verified_resources true
+family_name 'csd-post-survey'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson_group 'csd_survey', display_name: 'Post-Course Survey'
 lesson 'CSD post-course survey', display_name: 'CSD post-course survey', has_lesson_plan: false

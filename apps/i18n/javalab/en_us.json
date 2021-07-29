@@ -3,6 +3,7 @@
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
   "clearConsole": "Clear Console",
+  "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
   "commitCode": "Commit Code",
   "commitNotes": "Commit Notes",
@@ -24,6 +25,8 @@
   "newFile": "New File",
   "noMainMethod": "Error: your program does not contain a main method.",
   "onlyVisibleToYou": "only visible to you",
+  "reOpen": "Re-open",
+  "resolve": "Resolve",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods."
 }

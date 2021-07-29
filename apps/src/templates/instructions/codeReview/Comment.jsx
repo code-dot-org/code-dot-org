@@ -1,16 +1,29 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
+import CommentOptions from './CommentOptions';
 
 export default class Comment extends Component {
   static propTypes = {
-    comment: commentShape.isRequired
+    comment: commentShape.isRequired,
+    onResolveStateToggle: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired
   };
 
-  state = {
-    showEllipsisMenu: false
+  state = {isShowingCommentOptions: false};
+
+  onDelete = () => {
+    this.setState({isShowingCommentOptions: false});
+    this.props.onDelete();
+  };
+
+  onResolve = () => {
+    this.setState({isShowingCommentOptions: false});
+    this.props.onResolveStateToggle();
   };
 
   renderName = () => {
@@ -31,14 +44,24 @@ export default class Comment extends Component {
     );
   };
 
+  renderFormattedTimestamp = timestampString =>
+    moment.utc(timestampString).format('M/D/YYYY [at] h:mm A');
+
+  renderErrorMessage = () => {
+    return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
+  };
+
   render() {
     const {
       commentText,
       timestampString,
-      isResolved,
       isFromCurrentUser,
-      isFromOlderVersionOfProject
+      isFromOlderVersionOfProject,
+      isResolved,
+      hasError
     } = this.props.comment;
+
+    const {isShowingCommentOptions} = this.state;
 
     return (
       <div
@@ -50,18 +73,29 @@ export default class Comment extends Component {
       >
         <div style={styles.commentHeaderContainer}>
           {this.renderName()}
-          <span
-            className="fa fa-ellipsis-h"
-            style={styles.ellipsisMenu}
-            onClick={() =>
-              this.setState({showEllipsisMenu: !this.state.showEllipsisMenu})
-            }
-          />
-          {isResolved && <span className="fa fa-check" style={styles.check} />}
-          <span style={styles.timestamp}>{timestampString}</span>
-          {this.state.showEllipsisMenu && (
-            <div>Placeholder for ellipsis menu</div>
-          )}
+          <span style={styles.rightAlignedCommentHeaderSection}>
+            <span style={styles.timestamp}>
+              {this.renderFormattedTimestamp(timestampString)}
+            </span>
+            {isResolved && <i className="fa fa-check" style={styles.check} />}
+            <i
+              className="fa fa-ellipsis-h"
+              style={styles.ellipsisMenu}
+              onClick={() =>
+                this.setState({
+                  isShowingCommentOptions: !isShowingCommentOptions
+                })
+              }
+            >
+              {isShowingCommentOptions && (
+                <CommentOptions
+                  isResolved={isResolved}
+                  onResolveStateToggle={() => this.onResolve()}
+                  onDelete={() => this.onDelete()}
+                />
+              )}
+            </i>
+          </span>
         </div>
         <div
           id={'code-review-comment-body'}
@@ -74,13 +108,13 @@ export default class Comment extends Component {
         >
           {commentText}
         </div>
+        {hasError && this.renderErrorMessage()}
       </div>
     );
   }
 }
 
 const sharedIconStyles = {
-  float: 'right',
   fontSize: '24px',
   lineHeight: '18px',
   margin: '0 0 0 5px'
@@ -107,7 +141,7 @@ const styles = {
     padding: '10px 12px'
   },
   commentContainer: {
-    margin: '0 0 25px 0'
+    marginBottom: '25px'
   },
   currentUserComment: {
     backgroundColor: color.lightest_cyan
@@ -116,10 +150,19 @@ const styles = {
   olderVersionCommentBackgroundColor: {backgroundColor: color.background_gray},
   timestamp: {
     fontStyle: 'italic',
-    float: 'right',
     margin: '0 5px'
   },
   commentHeaderContainer: {
-    margin: '0 0 5px 0'
+    marginBottom: '5px',
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  rightAlignedCommentHeaderSection: {display: 'flex'},
+  error: {
+    backgroundColor: color.red,
+    color: color.white,
+    margin: '5px 0',
+    padding: '10px 12px'
   }
 };

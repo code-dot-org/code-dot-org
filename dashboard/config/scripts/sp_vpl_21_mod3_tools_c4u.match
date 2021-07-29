@@ -2,10 +2,10 @@ name 'SP-VPL-21-mod3-Tools-c4u'
 title 'Check for understanding'
 description 'Match the question with the appropriate tool.'
 height'85'
-question 'Web Lab question'
+question 'I am looking for a tool that my students can use to make web pages using HTML and CSS.'
 answer 'Web Lab'
 
-question 'Game Lab question'
+question 'I have students in my class that are ready to program using text and students who need block-based programming. I would like to use a tool where students can learn fundamental programming concepts while being given the freedom to create their own games using either text or blocks.'
 answer 'Game Lab'
 
 question 'App Lab question'
