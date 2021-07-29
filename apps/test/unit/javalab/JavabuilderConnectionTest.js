@@ -43,5 +43,14 @@ describe('JavabuilderConnection', () => {
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
     });
+
+    it('closes web socket on closeConnection', () => {
+      const mySocket = new window.WebSocket('ws://example.com');
+      const socketSpy = sinon.spy(window, 'mySocket');
+      const javabuilderConnection = new JavabuilderConnection();
+      javabuilderConnection.socket = mySocket;
+      javabuilderConnection.closeConnection();
+      expect(socketSpy.CLOSED === true);
+    });
   });
 });
