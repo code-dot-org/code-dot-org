@@ -72,8 +72,9 @@ export default class Neighborhood {
       const signal = this.signals[this.nextSignalIndex];
       if (signal.value === NeighborhoodSignalType.DONE) {
         // we are done processing commands and can stop checking for signals.
-        // Set isRunning to false and return
+        // Set isRunning to false, add a blank line to the console, and return
         getStore().dispatch(setIsRunning(false));
+        getStore().dispatch(appendNewlineToConsoleLog());
         return;
       }
       const timeForSignal =
