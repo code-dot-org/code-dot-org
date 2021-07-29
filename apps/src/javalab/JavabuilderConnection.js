@@ -1,8 +1,13 @@
-import {WebSocketMessageType} from './constants';
+import {
+  WebSocketMessageType,
+  StatusMessageType,
+  STATUS_MESSAGE_PREFIX
+} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import {getStore} from '../redux';
-import {setIsRunning} from './javalabRedux';
+import {setIsRunning, appendNewlineToConsoleLog} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
+import javalabMsg from '@cdo/javalab/locale';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -48,13 +53,47 @@ export default class JavabuilderConnection {
   }
 
   onOpen() {
-    this.onOutputMessage('Compiling...');
     this.miniApp?.onCompile?.();
+  }
+
+  onStatusMessage(messageKey) {
+    let message;
+    let includeLineBreak = false;
+    switch (messageKey) {
+      case StatusMessageType.COMPILING:
+        message = javalabMsg.compiling();
+        break;
+      case StatusMessageType.COMPILATION_SUCCESSFUL:
+        message = javalabMsg.compilationSuccess();
+        break;
+      case StatusMessageType.RUNNING:
+        message = javalabMsg.running();
+        includeLineBreak = true;
+        break;
+      case StatusMessageType.GENERATING_RESULTS:
+        message = javalabMsg.generatingResults();
+        includeLineBreak = true;
+        break;
+      case StatusMessageType.EXITED:
+        this.onExit();
+        break;
+      default:
+        break;
+    }
+    if (message) {
+      this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    }
+    if (includeLineBreak) {
+      getStore().dispatch(appendNewlineToConsoleLog());
+    }
   }
 
   onMessage(event) {
     const data = JSON.parse(event.data);
     switch (data.type) {
+      case WebSocketMessageType.STATUS:
+        this.onStatusMessage(data.value);
+        break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
         break;
@@ -84,12 +123,23 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
+  }
+
+  onExit() {
     if (this.miniApp) {
       // miniApp on close should handle setting isRunning state as it
       // may not align with actual program execution. If mini app does
       // not have on close we won't toggle back automatically.
+      // We also pass onOutputMessage so the mini app can send its own custom
+      // done message.
       this.miniApp.onClose?.();
     } else {
+      // add blank line and program exited message to console logs
+      getStore().dispatch(appendNewlineToConsoleLog());
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+      );
+      getStore().dispatch(appendNewlineToConsoleLog());
       // Set isRunning to false
       getStore().dispatch(setIsRunning(false));
     }

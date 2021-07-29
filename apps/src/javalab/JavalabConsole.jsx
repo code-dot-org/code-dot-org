@@ -65,12 +65,20 @@ class JavalabConsole extends React.Component {
 
   displayConsoleLogs() {
     return this.props.consoleLogs.map((log, i) => {
-      return (
-        <div key={`log-${i}`} style={styles.lineWrapper}>
-          {log.type === 'input' && <InputPrompt />}
-          {log.text}
-        </div>
-      );
+      if (log.type === 'newline') {
+        return (
+          <p key={`log-${i}`} style={styles.log}>
+            <br />
+          </p>
+        );
+      } else {
+        return (
+          <p key={`log-${i}`} style={{...styles.lineWrapper, ...styles.log}}>
+            {log.type === 'input' && <InputPrompt />}
+            {log.text}
+          </p>
+        );
+      }
     });
   }
 
@@ -206,5 +214,9 @@ const styles = {
     textAlign: 'center',
     lineHeight: '30px',
     width: '100%'
+  },
+  log: {
+    padding: 0,
+    margin: 0
   }
 };

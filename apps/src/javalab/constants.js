@@ -11,7 +11,8 @@ export const WebSocketMessageType = {
   THEATER: 'THEATER',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
-  DEBUG: 'DEBUG'
+  DEBUG: 'DEBUG',
+  STATUS: 'STATUS'
 };
 
 export const JavabuilderExceptionType = {
@@ -59,4 +60,14 @@ export const TheaterSignalType = {
   VISUAL: 'VISUAL'
 };
 
+export const StatusMessageType = {
+  COMPILING: 'COMPILING',
+  COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
+  RUNNING: 'RUNNING',
+  GENERATING_RESULTS: 'GENERATING_RESULTS',
+  EXITED: 'EXITED'
+};
+
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
+
+export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
