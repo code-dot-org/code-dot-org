@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 18:58:23 UTC",
+    "serialized_at": "2021-07-29 20:16:01 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -4632,7 +4632,7 @@
       "key": "9d3608f9-e461-4e9c-8325-6e5444bd7230",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Describe the structure of an FRQ. You should identify:\n* There are always four FRQs on the AP CSA Exam, each of which focuses on one skill.\n* FRQs are graded with Scoring Guidelines (a rubric).\n* FRQ questions are completed on paper, so students write code by hand.\n* If a student’s handwriting is illegible, they will not get points for the FRQ.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of an FRQ.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4649,8 +4649,8 @@
       "key": "f310894c-1a3e-4535-888a-90a01166613c",
       "position": 1,
       "properties": {
-        "description": "**Group:** Pair students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  Distribute a copy of the U1L19 Activity Guide to each pair.\n\n**Do This:** Describe the structure of today’s activity while moving through the slides. There are three parts:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning - annotate the FRQ.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"Around the World\" - code implementation and review. Students move around the classroom, write one code segment per location, and get signatures from their peers on correctly implemented code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection - after all signatures are collected, students pick up the Scoring Guidelines, check their code and reflect on the process. \n",
-        "duration": "2",
+        "description": "**Group:** Pair students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the U1L19 Activity Guide to each pair.\n\n**Do This:** Describe the structure of today’s activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning - annotate the FRQ\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"Around the World\" - code implementation and review\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection - pick up the Scoring Guidelines, check their code and reflect on the process",
+        "duration": "3",
         "name": "Activity Setup"
       },
       "seeding_key": {
@@ -4662,15 +4662,9 @@
       "key": "76c0596b-9384-4069-9295-206890f905fd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page, “Planning (annotate).” Students annotate the question at the bottom of the page based on the annotation guide on the slide (also repeated in the Activity Guide).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight pink or underline? Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students may have questions about the prompt. This discussion allows students to understand the prompt better before continuing the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight blue or star? Which parts did you highlight orange or box? How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students may be unsure about where to begin with the problem. This task and discussion help provide a structure for working with FRQs in the future.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to the first page of the activity guide. Students annotate the question at the bottom of the page based on the annotation guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share questions they have about the FRQ.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight blue or star? Which parts did you highlight orange or box? How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify pieces of the FRQ they will need to develop their solution.",
         "duration": "5",
-        "name": "FRQ Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "\nFuture FRQ Day lessons will implement a three-part close reading that includes annotation.  More about this format is available in the [CSA FRQ Close Reading](https://docs.google.com/document/d/1gqiKLoq95DwC8-hgr7gy7scG0lutLFZiLq3OKbbDxvI/edit) document.\n\n"
-          }
-        ]
+        "name": "FRQ Planning"
       },
       "seeding_key": {
         "activity_section.key": "76c0596b-9384-4069-9295-206890f905fd",
@@ -4681,7 +4675,7 @@
       "key": "2e7b772f-3534-41ab-8623-4cb86e4c25b7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show video that explains the next activity, “Around the World.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in pairs during this activity:\n1. Students find a station. (Students do not need to go in order.)\n2. Students follow instructions at the station. There is an added page in the Activity Guide for stations B and C where students can write down pseudocode before writing their answers on the \"FRQ Written Response\" page. \n3. Students find another group who has completed the same station and explain their solution to that group.\n\n       a. If the second group agrees that the code segment was written correctly, they sign off on it on the guide. \n       \n    b. If they believe something was not written correctly, the pair revises their work and asks the peer group to review it again.\n\n4. Pairs repeat steps two and three, completing the entire Class in their Activity Guide. \n5. Once pairs have all three signatures, they bring their Activity Guide to the teacher to get a copy of the Scoring Guidelines (rubric). They then evaluate their work using the Scoring Guidelines and complete the reflection on the Activity Guide's last page.\n\n**Note:** If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Around the World video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with a partner.\n1. Students find a station. (Students do not need to go in order.)\n2. Students follow instructions at the station. There is an added page in the Activity Guide for stations B and C where students can write down pseudocode before writing their answers on the \"FRQ Written Response\" page. \n3. Students find another group who has completed the same station and explain their solution to that group.\n\n       a. If the second group agrees that the code segment was written correctly, they sign off on it on the guide. \n       \n    b. If they believe something was not written correctly, the pair revises their work and asks the peer group to review it again.\n\n4. Pairs repeat steps two and three, completing the entire Class in their Activity Guide. \n5. Once pairs have all three signatures, they bring their Activity Guide to the teacher to get a copy of the Scoring Guidelines (rubric). They then evaluate their work using the Scoring Guidelines and complete the reflection on the Activity Guide's last page.\n\n**Note:** If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.",
         "duration": "22",
         "name": "Around the World & Reflection",
         "tips": [
@@ -4700,7 +4694,7 @@
       "key": "44672786-256b-4f8c-a178-88f782556160",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to their seats and display a solution on the screen. Ask student questions about particular parts of the solution or Scoring Guidelines and help resolve any misconceptions in these areas.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss a potential solution.",
         "duration": "5",
         "name": "Solution"
       },
@@ -4713,22 +4707,11 @@
       "key": "7c4b2792-4edd-4893-be09-39a6e3a58d38",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What were you confident about? What would you like to practice?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Help students process FRQ format questions as a whole, not the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations. Today's lesson is the first time they have tried to complete an FRQ — they will get better at it with time and practice!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What were you confident about? What would you like to practice?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Help students process FRQ format questions as a whole, not the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations. Today's lesson is the first time they have tried to complete an FRQ — they will get better at it with time and practice!",
         "name": "Closing the Loop"
       },
       "seeding_key": {
         "activity_section.key": "7c4b2792-4edd-4893-be09-39a6e3a58d38",
-        "lesson_activity.key": "26c176ce-480b-47cb-9931-e66e1d10014d"
-      }
-    },
-    {
-      "key": "cdce7eae-0926-4afc-a2dc-e3bb399451df",
-      "position": 2,
-      "properties": {
-        "description": "Closing The Loop is a strategy to help students synthesize the day’s material and provide a formative assessment for the teacher. Additional prompts to help metacognitive reflection:\n* *What strategies for coding and debugging did you use to complete your FRQ?*\n* *How did your mindset affect how you approached your work?*\n* *What were some helpful ways you saw members of the class communicating their learning?*\n* *How are you progressing as a learner?*\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "cdce7eae-0926-4afc-a2dc-e3bb399451df",
         "lesson_activity.key": "26c176ce-480b-47cb-9931-e66e1d10014d"
       }
     },
@@ -6008,7 +5991,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L3"
+          "CSA U1L10-L3 multi"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -6016,7 +5999,7 @@
         "activity_section.key": "211d75e7-bc69-4958-aa2f-4b2609fb01fa"
       },
       "level_keys": [
-        "CSA U1L10-L3"
+        "CSA U1L10-L3 multi"
       ]
     },
     {
@@ -7242,9 +7225,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L3",
+        "level.key": "CSA U1L10-L3 multi",
         "script_level.level_keys": [
-          "CSA U1L10-L3"
+          "CSA U1L10-L3 multi"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
