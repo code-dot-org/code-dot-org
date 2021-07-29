@@ -1067,8 +1067,6 @@ pl:
           UNIT:
             '"seconds"': sekundy
             '"frames"': ramki
-      gamelab_hideHaiku:
-        text: ukryj haiku
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
       gamelab_ifVarEquals:
@@ -1214,9 +1212,6 @@ pl:
             '"East"': Wschód
             '"South"': Południe
             '"West"': Zachód
-      gamelab_printHaiku:
-        text: pokaż haiku {BREAK} tytuł wiersza {TITLE} autora wiersza {AUTHOR} linię
-          1 {LINE1} linię 2 {LINE2} linię 3 {LINE3}
       gamelab_printText:
         text: drukuj {TEXT}
       gamelab_randColor:
@@ -1266,6 +1261,7 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
               i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice
@@ -1694,6 +1690,7 @@ pl:
               parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
               i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice
@@ -1836,7 +1833,7 @@ pl:
           BG_EFFECT:
             '"---"': "---"
             '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"dickinson"': Jeśli mogę zatrzymać jedno serce przed złamaniem
+            '"silverstein"': Batty
       PoemBot_setTitle:
         text: ustaw tytuł wiersza {TITLE}
       PoemBot_showPoem:
@@ -2184,3 +2181,7 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      validation_validatedBackground:
+        text: ustaw tło na {IMG}
+      validation_validatedSound:
+        text: PLAYSound {SOUND}
