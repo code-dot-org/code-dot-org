@@ -6847,3 +6847,7 @@ ru:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: тест
