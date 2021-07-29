@@ -166,8 +166,8 @@ uk:
     additional_information: "Нам потрібна додаткова інформація, щоб продовжити реєстрацію."
     user_type_button: "Оновлення типу облікового запису"
     user_type_label: "Тип облікового запису"
-    user_type_teacher: "Вчитель"
     user_type_student: "Учень"
+    user_type_teacher: "Вчитель"
     field_is_required: "необхідне"
     accept_terms: "Потрібно погодитись, щоб створити обліковий запис"
     error: "Виникла помилка."
@@ -963,9 +963,8 @@ uk:
       gender: 'Гендерна приналежність'
       school_name: 'Назва школи'
       school_country: 'Країна твоєї школи'
-      colombian_school_department: 'Навчальний відділ'
       colombian_school_municipality: 'Навчальний муніципалітет'
-      colombian_school_name: 'Назва школи'
+      colombian_chilean_school_name: 'Назва школи'
       ages: 'Які віку ви навчали в цьому році?'
       subjects: 'Яким предметам ви навчали в цьому році?'
       resources: 'Який з наступних освітніх ресурсів CS ви використовуєте?'

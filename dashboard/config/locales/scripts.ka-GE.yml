@@ -9712,6 +9712,14 @@ ka:
           lesson_groups:
             cspSurvey2020:
               display_name: გამოკითხვა
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: გამოკითხვა
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: გამოკითხვა
         kodea-pd-2021:
           lessons:
             Getting Started:

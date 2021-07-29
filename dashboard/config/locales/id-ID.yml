@@ -211,8 +211,8 @@ id:
       pendaftaran Anda.
     user_type_button: Perbarui Jenis Akun
     user_type_label: Jenis Akun
-    user_type_teacher: Guru
     user_type_student: siswa
+    user_type_teacher: Guru
     field_is_required: diperlukan
     accept_terms: Anda harus setuju untuk membuat akun.
     error: Sebuah kesalahan terjadi.
@@ -1227,7 +1227,7 @@ id:
       school_city: Kota sekolah
       school_country: Negara Sekolah
       colombian_school_city: Kota sekolah
-      colombian_school_name: Nama Sekolah
+      colombian_chilean_school_name: Nama Sekolah
       ages: Umur berapa yang Anda ajar tahun ini?
       subjects: Mata pelajaran apa yang Anda ajarkan tahun ini?
       resources: Manakah dari materi pembelajaran pendidikan CS berikut yang Anda

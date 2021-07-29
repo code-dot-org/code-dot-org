@@ -441,12 +441,12 @@ end
 
 def localize_markdown_content
   markdown_files_to_localize = %w[
-    international/about.md.partial
-    educate/curriculum/csf-transition-guide.md
     ai.md.partial
     athome.md.partial
     break.md.partial
     csforgood.md
+    curriculum/unplugged.md.partial
+    educate/curriculum/csf-transition-guide.md
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
     hourofcode/frozen.md.partial
@@ -456,6 +456,7 @@ def localize_markdown_content
     hourofcode/playlab.md.partial
     hourofcode/starwars.md.partial
     hourofcode/unplugged-conditionals-with-cards.md.partial
+    international/about.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)

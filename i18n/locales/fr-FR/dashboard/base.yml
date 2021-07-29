@@ -167,8 +167,8 @@ fr:
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
-    user_type_teacher: "Professeur"
     user_type_student: "Élève"
+    user_type_teacher: "Professeur"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter pour créer un compte"
     error: "Une erreur est survenue."
@@ -986,7 +986,7 @@ fr:
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
       colombian_school_city: 'Ville de l’École'
-      colombian_school_name: 'Nom de l''école'
+      colombian_chilean_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'

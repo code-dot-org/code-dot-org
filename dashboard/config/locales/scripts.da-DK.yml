@@ -2739,10 +2739,6 @@ da:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Værktøjer
         csa-videos:
           lesson_groups:
             lessonGroup-2:

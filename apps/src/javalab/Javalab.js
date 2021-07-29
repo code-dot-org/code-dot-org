@@ -136,6 +136,7 @@ Javalab.prototype.init = function(config) {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
+    isCodeReviewing: !!config.isCodeReviewing,
     isResponsive: true
   });
 
@@ -287,7 +288,7 @@ Javalab.prototype.afterClearPuzzle = function() {
   project.autosave();
 };
 
-Javalab.prototype.onCommitCode = function() {
+Javalab.prototype.onCommitCode = function(commitNotes) {
   project.autosave();
 };
 

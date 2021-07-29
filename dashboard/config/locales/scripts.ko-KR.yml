@@ -22577,6 +22577,27 @@ ko:
                 (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
             lesson-22:
               name: 데이터 수집 설계
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 설문조사
+        csd7-2021:
+          lessons:
+            Introduction to Machine Learning:
+              name: 머신 러닝 소개
+            AI Code of Ethics:
+              description_student: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
+                기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
+                원칙을 발전시킵니다. 그러한 원칙은 그 다음 AI 창작자와 입법가를 위해 학급 차원의 “우리의  AI 윤리강령” 리소스
+                (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
+              description_teacher: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한
+                기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심
+                원칙을 발전시킵니다. 그러한 원칙은 그 다음 AI 창작자와 입법가를 위해 학급 차원의 “우리의  AI 윤리강령” 리소스
+                (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
+            Survey Planning:
+              name: 데이터 수집 설계
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 설문조사
         kodea-pd-2021:
           description: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를 사용해 컴퓨터
             과학을 가르치는 방법을 배우세요.
@@ -22699,10 +22720,6 @@ ko:
           lessons:
             lesson-9:
               name: 선생님 커뮤니티
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: 툴
         self-paced-pl-csd5-2021:
           lessons:
             lesson-3:
@@ -22759,3 +22776,5 @@ ko:
             lesson-1:
               name: AI 랩
           title: AI 랩
+        dlp21-csp-mod1:
+          title: CS 원리 심화 학습 모듈 1

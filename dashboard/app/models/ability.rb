@@ -114,9 +114,13 @@ class Ability
       end
 
       can :view_as_user, ScriptLevel do |script_level, user_to_assume|
-        can_view_as_user = false
-        can_view_as_user = true if user_to_assume.student_of?(user) ||
+        can?(:view_as_user_for_code_review, script_level, user_to_assume) ||
+          user_to_assume.student_of?(user) ||
           user.project_validator?
+      end
+
+      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume|
+        can_view_as_user_for_code_review = false
 
         # Only allow a student to view another student's project
         # only on levels where we have our peer review feature.
@@ -131,11 +135,11 @@ class Ability
           if reviewable_project &&
             user != user_to_assume &&
             (user.sections_as_student & user_to_assume.sections_as_student).any?
-            can_view_as_user = true
+            can_view_as_user_for_code_review = true
           end
         end
 
-        can_view_as_user
+        can_view_as_user_for_code_review
       end
 
       if user.teacher?

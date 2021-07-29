@@ -3308,8 +3308,6 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
-            lessonGroup-4:
-              display_name: Yoxla
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -3352,6 +3350,14 @@ az:
           lesson_groups:
             cspSurvey2020:
               display_name: Sorğu
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sorğu
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Sorğu
         kodea-pd-2021:
           lessons:
             Computer Science Fundamentals:
@@ -3364,10 +3370,6 @@ az:
           lessons:
             lesson-9:
               name: Müəllimlərin icması
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Alətlər
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3384,3 +3386,7 @@ az:
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Yoxla

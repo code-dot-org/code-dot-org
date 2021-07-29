@@ -195,8 +195,8 @@ az:
       ehtiyacımız var.
     user_type_button: Hesab növünü yeniləyin
     user_type_label: Hesab növü
-    user_type_teacher: Müəllim
     user_type_student: şagird
+    user_type_teacher: Müəllim
     field_is_required: zəruridir
     accept_terms: Hesabı yaratmaq üçün razılaşmalısınız.
     error: Xəta baş verdi.
@@ -626,6 +626,7 @@ az:
     built_on_code_studio: Code Studio-da inşa edilmişdir
     make_my_own_app: Öz tətbiqimi hazırla
     how_it_works: Necə işləyir (Kodu göstər)
+    store: Mağaza
   reference_area:
     title: Kömək lazımdır?
     subtitle: Bu videolara və məsləhətlərə baxın
@@ -913,7 +914,7 @@ az:
     form_labels:
       email: E-poçt
       school_name: Məktəbin adı
-      colombian_school_name: Məktəbin adı
+      colombian_chilean_school_name: Məktəbin adı
     form_entries:
       gender:
         male: Kişi
