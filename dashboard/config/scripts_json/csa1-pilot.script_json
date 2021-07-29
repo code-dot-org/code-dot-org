@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 21:25:14 UTC",
+    "serialized_at": "2021-07-28 22:34:00 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -5293,7 +5293,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L1"
+          "CSA U1L5-L1 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5301,7 +5301,7 @@
         "activity_section.key": "9cef0694-e12c-439d-ac02-46affb1bc3ba"
       },
       "level_keys": [
-        "CSA U1L5-L1"
+        "CSA U1L5-L1 2"
       ]
     },
     {
@@ -5310,6 +5310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -5339,7 +5342,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L3"
+          "CSA U1L5-L3 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5347,7 +5350,7 @@
         "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L3"
+        "CSA U1L5-L3 2"
       ]
     },
     {
@@ -5362,7 +5365,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L4"
+          "CSA U1L5-L4-2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5370,7 +5373,7 @@
         "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L4"
+        "CSA U1L5-L4-2"
       ]
     },
     {
@@ -5385,7 +5388,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L5"
+          "CSA U1L5-L5 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5393,7 +5396,7 @@
         "activity_section.key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d"
       },
       "level_keys": [
-        "CSA U1L5-L5"
+        "CSA U1L5-L5 2"
       ]
     },
     {
@@ -5408,7 +5411,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L6"
+          "CSA U1L5-L6 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -5416,7 +5419,7 @@
         "activity_section.key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5"
       },
       "level_keys": [
-        "CSA U1L5-L6"
+        "CSA U1L5-L6 2"
       ]
     },
     {
@@ -5425,6 +5428,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -5448,6 +5454,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1"
+        ],
         "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
@@ -5471,6 +5480,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2"
+        ],
         "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
@@ -5494,6 +5506,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3"
+        ],
         "progression": "while Loops with New Boolean Methods"
       },
       "named_level": false,
@@ -5517,6 +5532,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4"
+        ],
         "progression": "Using Your Toolbox"
       },
       "named_level": false,
@@ -5546,7 +5564,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L6-L5"
+          "CSA U1L6-L5 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -5554,7 +5572,7 @@
         "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       },
       "level_keys": [
-        "CSA U1L6-L5"
+        "CSA U1L6-L5 2"
       ]
     },
     {
@@ -5569,7 +5587,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L6-L6"
+          "CSA U1L6-L6 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -5577,7 +5595,7 @@
         "activity_section.key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf"
       },
       "level_keys": [
-        "CSA U1L6-L6"
+        "CSA U1L6-L6 2"
       ]
     },
     {
@@ -5586,6 +5604,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -6910,9 +6931,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L1",
+        "level.key": "CSA U1L5-L1 2",
         "script_level.level_keys": [
-          "CSA U1L5-L1"
+          "CSA U1L5-L1 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -6934,9 +6955,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L3",
+        "level.key": "CSA U1L5-L3 2",
         "script_level.level_keys": [
-          "CSA U1L5-L3"
+          "CSA U1L5-L3 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -6946,9 +6967,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L4",
+        "level.key": "CSA U1L5-L4-2",
         "script_level.level_keys": [
-          "CSA U1L5-L4"
+          "CSA U1L5-L4-2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -6958,9 +6979,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L5",
+        "level.key": "CSA U1L5-L5 2",
         "script_level.level_keys": [
-          "CSA U1L5-L5"
+          "CSA U1L5-L5 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -6970,9 +6991,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L6",
+        "level.key": "CSA U1L5-L6 2",
         "script_level.level_keys": [
-          "CSA U1L5-L6"
+          "CSA U1L5-L6 2"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
@@ -7042,9 +7063,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L6-L5",
+        "level.key": "CSA U1L6-L5 2",
         "script_level.level_keys": [
-          "CSA U1L6-L5"
+          "CSA U1L6-L5 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
@@ -7054,9 +7075,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L6-L6",
+        "level.key": "CSA U1L6-L6 2",
         "script_level.level_keys": [
-          "CSA U1L6-L6"
+          "CSA U1L6-L6 2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
