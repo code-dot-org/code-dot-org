@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-23 17:21:21 UTC",
+    "serialized_at": "2021-07-29 19:58:59 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -256,6 +256,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView"
+        ],
         "progression": "Explore the student view"
       },
       "named_level": false,
@@ -305,6 +308,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection"
+        ],
         "progression": "Set-up a class section"
       },
       "named_level": false,
