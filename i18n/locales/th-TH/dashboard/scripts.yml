@@ -6175,3 +6175,7 @@ th:
               display_name: หน่วยที่ 4
             lessonGroup-7:
               display_name: หน่วยที่ 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: ทดสอบ
