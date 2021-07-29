@@ -28,7 +28,7 @@ class JavalabView extends React.Component {
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -143,7 +143,8 @@ class JavalabView extends React.Component {
                 text={i18n.finish()}
                 onClick={onContinue}
                 style={styles.finish}
-                isDisabled={this.props.isReadOnlyWorkspace}
+                isDisabled={this.props.disableFinishButton}
+                id="javalabFinish"
               />
             )}
           </div>
@@ -270,14 +271,14 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
+    disableFinishButton: state.javalab.disableFinishButton
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
