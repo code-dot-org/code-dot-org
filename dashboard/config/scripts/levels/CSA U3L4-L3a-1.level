@@ -7,17 +7,15 @@
     "project_template_level_name": "CSA Neighborhood Concert Template",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "parent_level_id": 29220,
-    "encrypted_examples": [
-
-    ],
-    "display_name": "While to For"
+    "parent_level_id": 29222,
+    "display_name": "While to For",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYT9+7Oi+MNQygDmcty\n05/y9lQhOvFE3ayr6QuJSptSVNUDe+k/1cG6ln93TYqnC3xOHAYt+gT06r00\n/Eaoe+04\n"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-21T15:07:50.000Z",
+  "created_at": "2021-07-29T14:13:51.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-21T15:07:50.097+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L2\\\"\"],\"cloned_from\":\"CSA U3L4-L2\"},{\"changed_at\":\"2021-07-21 15:15:28 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 16:31:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-21 16:58:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-29T14:13:51.181+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3a\\\"\"],\"cloned_from\":\"CSA U3L4-L3a\"},{\"changed_at\":\"2021-07-29 14:14:13 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:19:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
