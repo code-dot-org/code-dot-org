@@ -418,12 +418,11 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
       id: create(:applab).id,
-    }, body: URI.escape(
+    }, body:
       {
         start_html: '<h1>foo</h1>',
         start_blocks: 'console.log("hello world");',
       }.to_json
-    )
 
     assert_response :success
     level = assigns(:level)
@@ -434,12 +433,11 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML with special characters" do
     post :update_properties, params: {
       id: create(:applab).id,
-    }, body: URI.escape(
+    }, body:
       {
         start_html: '<h1>Final Grade: 90%</h1><h2>student@code.org</h2>',
         start_blocks: 'console.log(4 % 2 == 0);',
       }.to_json
-    )
 
     assert_response :success
     level = assigns(:level)

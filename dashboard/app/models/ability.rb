@@ -84,9 +84,12 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
-      can :resolve, CodeReviewComment, project_owner_id: user.id
+      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
       can :destroy, CodeReviewComment do |code_review_comment|
-        code_review_comment.project_owner.student_of?(user)
+        # Teachers can delete comments on their student's projects,
+        # as well as their own comments.
+        code_review_comment.project_owner&.student_of?(user) ||
+          (user.teacher? && user == code_review_comment.commenter)
       end
       can :create, CodeReviewComment do |_, project_owner|
         CodeReviewComment.user_can_review_project?(project_owner, user)

@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-07-20 22:21:12 UTC",
+    "serialized_at": "2021-07-26 22:17:38 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2021"
@@ -10250,6 +10250,18 @@
       }
     },
     {
+      "name": "CSD Unit 6 - Physical Computing",
+      "url": "https://docs.google.com/presentation/d/1kP-ZflfE6KTH8DC71qVEnptEs_m4eirbgyYpHRammkE/copy",
+      "key": "csd_unit_6_-_physical_computing",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
       "name": "Date and Change Events",
       "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
       "key": "date_and_change_events",
@@ -10400,18 +10412,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q",
-      "key": "make-a-game-exemplars",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "make-a-game-exemplars"
-      }
-    },
-    {
       "name": "Make a Game",
       "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit",
       "key": "make-game-guide",
@@ -10425,16 +10425,40 @@
       }
     },
     {
+      "name": "Make a Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view",
+      "key": "make_a_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game_-_student_checklist"
+      }
+    },
+    {
       "name": "Make a Game",
-      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/edit",
-      "key": "make_a_game",
+      "url": "https://docs.google.com/document/d/1FcvT4qD9obqusSkeC0OHYGjKVg5lQ26qgpV62aUB528/view",
+      "key": "make_a_game_1",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "make_a_game"
+        "resource.key": "make_a_game_1"
+      }
+    },
+    {
+      "name": "Make a Game Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view",
+      "key": "make_a_game_sample_marked_rubrics",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game_sample_marked_rubrics"
       }
     },
     {
@@ -10597,18 +10621,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
-      "key": "sample_marked_rubrics_2_2",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_2"
-      }
-    },
-    {
       "name": "Sample Marked Rubrics",
       "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
       "key": "sample_marked_rubrics_4",
@@ -10666,6 +10678,12 @@
     {
       "seeding_key": {
         "lesson.key": "Accelerometer",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
         "resource.key": "the_accelerometer"
       }
     },
@@ -10685,6 +10703,12 @@
       "seeding_key": {
         "lesson.key": "Analog Input",
         "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10714,7 +10738,19 @@
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
         "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10768,7 +10804,19 @@
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10791,6 +10839,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Getting Properties",
         "resource.key": "taking_input_with_getproperty"
       }
@@ -10799,6 +10859,12 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "resource.key": "computing-innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10816,7 +10882,19 @@
     {
       "seeding_key": {
         "lesson.key": "Input Unplugged",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input Unplugged",
         "resource.key": "input-and-events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10840,7 +10918,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
-        "resource.key": "make-a-game-exemplars"
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10852,19 +10930,31 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
-        "resource.key": "make_a_game"
+        "resource.key": "make_a_game_-_student_checklist"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
-        "resource.key": "sample_marked_rubrics_2_2"
+        "resource.key": "make_a_game_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game_sample_marked_rubrics"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10912,6 +11002,12 @@
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
         "resource.key": "how_computers_word_hardware_software"
       }
     },
@@ -10919,6 +11015,12 @@
       "seeding_key": {
         "lesson.key": "The Program Design Process",
         "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {

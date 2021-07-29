@@ -22325,7 +22325,7 @@ en:
             lesson-2:
               name: Classes and Objects
               description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
-              description_teacher: 'Students access the Java Lab to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
+              description_teacher: 'Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
 
 '
             lesson-3:
@@ -24488,6 +24488,8 @@ en:
               name: AI Lab Resources
               description_student: 
               description_teacher: 
+            lesson-3:
+              name: Test
           lesson_groups: {}
           name: ai-lab
           title: AI Lab
@@ -24578,7 +24580,15 @@ en:
           description_short: ''
           description: ''
         dlp21-csp-mod4:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Stage 1: Increase Understanding'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Stage 1
@@ -24589,3 +24599,15 @@ en:
           description_audience: ''
           description_short: ''
           description: overview instructions
+        dlp21-csp-mod1:
+          lessons:
+            lesson-1:
+              name: 'Stage1: Increase Understanding'
+            lesson-2:
+              name: 'Stage 2: Demonstrate Understanding'
+          lesson_groups: {}
+          name: dlp21-csp-mod1
+          title: CS Principles Deeper Learning Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
