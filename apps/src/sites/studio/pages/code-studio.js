@@ -129,3 +129,29 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 initSigninState(userType);
 initResponsive();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+
+function hasNetwork(online) {
+  if (online) {
+    console.log('online');
+  } else {
+    console.log('offline');
+  }
+}
+
+window.addEventListener('load', function() {
+  hasNetwork(navigator.onLine);
+
+  window.addEventListener('online', function() {
+    // Set hasNetwork to online when they change to online.
+    hasNetwork(true);
+  });
+
+  window.addEventListener('offline', function() {
+    // Set hasNetwork to offline when they change to offline.
+    hasNetwork(false);
+  });
+});
