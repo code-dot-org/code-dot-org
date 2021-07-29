@@ -42,6 +42,11 @@ const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 var baseConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
+    fallback: {
+      stream: require.resolve('web-streams-polyfill'),
+      path: require.resolve('path-browserify'),
+      crypto: false
+    },
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
@@ -127,7 +132,10 @@ var baseConfig = {
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
-          {loader: 'sass-loader', options: {includePaths: [scssIncludePath]}}
+          {
+            loader: 'sass-loader',
+            options: {sassOptions: {includePaths: [scssIncludePath]}}
+          }
         ]
       },
       {test: /\.interpreted.js$/, loader: 'raw-loader'},
