@@ -131,12 +131,8 @@ class TeacherFeedback < ApplicationRecord
     return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
   end
 
-  def student_updated_since_feedback?
-    user_level.present? && user_level.updated_at > created_at
-  end
-
   # TODO: update to use camelcase
-  def summarize
+  def summarize(is_latest = false)
     {
       id: id,
       student_id: student_id,
@@ -150,7 +146,7 @@ class TeacherFeedback < ApplicationRecord
       student_last_updated: user_level&.updated_at,
       seen_on_feedback_page_at: seen_on_feedback_page_at,
       student_first_visited_at: student_first_visited_at,
-      student_updated_since_feedback: student_updated_since_feedback?
+      is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
     }
   end
 
@@ -170,5 +166,18 @@ class TeacherFeedback < ApplicationRecord
 
     self.student_last_visited_at = now
     save
+  end
+
+  private
+
+  def awaiting_teacher_review?(is_latest = false)
+    # only the latest feedback can be awaiting a teacher review
+    return false unless is_latest
+
+    return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
+  end
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
   end
 end
