@@ -20,6 +20,10 @@ CROWDIN_PROJECTS = {
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+  },
+  "codeorg-restricted": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml")
   }
 }
 
