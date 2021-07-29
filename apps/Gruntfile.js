@@ -12,7 +12,7 @@ var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 var sass = require('node-sass');
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var ManifestPlugin = require('webpack-manifest-plugin');
+var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
 module.exports = function(grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -968,8 +968,8 @@ describe('entry tests', () => {
         }),
         // The [contenthash] placeholder generates a 32-character hash when
         // used within the copy plugin.
-        new CopyPlugin(
-          [
+        new CopyPlugin({
+          patterns: [
             // Always include unhashed locale files in the package, since unit
             // tests rely on these in both minified and unminified environments.
             // The order of these rules is important to ensure that the hashed
@@ -997,20 +997,23 @@ describe('entry tests', () => {
             {
               context: 'build/minifiable-lib/',
               from: minify ? `**/*.min.js` : '**/*.js',
-              to: minify
-                ? '[path]/[name]wp[contenthash].[ext]'
-                : '[path]/[name].[ext]',
+              to({context, absoluteFilename}) {
+                return minify
+                  ? '[path]/[name]wp[contenthash].js'
+                  : '[path]/[name].js';
+              },
               toType: 'template',
-              ignore: minify ? [] : ['*.min.js'],
-              transformPath: targetPath => targetPath.replace(/\.min/, '')
+              globOptions: {
+                ignore: minify ? [] : ['*.min.js']
+              }
             }
           ].filter(entry => !!entry)
-        ),
+        }),
         // Unit tests require certain unminified files to have been built.
         new UnminifiedWebpackPlugin({
           include: [/^webpack-runtime/, /^applab-api/, /^gamelab-api/]
         }),
-        new ManifestPlugin({
+        new WebpackManifestPlugin({
           basePath: 'js/',
           map: file => {
             if (minify) {

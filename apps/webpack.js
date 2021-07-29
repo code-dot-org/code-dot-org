@@ -121,7 +121,7 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
       {
         test: /\.scss$/,
         use: [
@@ -145,7 +145,15 @@ var baseConfig = {
         // this file when asset digests are turned off, it will return a
         // 404 because it thinks the hash is a digest and it won't
         // be able to find the file without the hash. :( :(
-        loader: 'url-loader?limit=1024&name=[name]wp[hash].[ext]'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1024,
+              name: '[name]wp[contenthash].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.jsx?$/,
@@ -156,7 +164,7 @@ var baseConfig = {
         ].concat(toTranspileWithinNodeModules),
         exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
         loader: 'babel-loader',
-        query: {
+        options: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
@@ -187,7 +195,7 @@ if (envConstants.COVERAGE) {
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')
     ],
-    query: {
+    options: {
       cacheDirectory: true,
       compact: false,
       esModules: true
@@ -195,7 +203,7 @@ if (envConstants.COVERAGE) {
   });
 }
 
-var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
+var devtool = process.env.DEV ? 'inline-cheap-source-map' : 'inline-source-map';
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
@@ -218,7 +226,7 @@ var storybookConfig = _.extend({}, baseConfig, {
       ),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     }),
-    new webpack.IgnorePlugin(/^serialport$/)
+    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
   ]
 });
 
@@ -356,7 +364,7 @@ function create(options) {
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,
     externals: externals,
-    optimization: optimization,
+    optimization: {chunkIds: 'total-size', moduleIds: 'size', ...optimization},
     mode: mode,
     plugins: [
       new webpack.DefinePlugin({
@@ -367,8 +375,7 @@ function create(options) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin(/^serialport$/),
-      new webpack.optimize.OccurrenceOrderPlugin(true)
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
