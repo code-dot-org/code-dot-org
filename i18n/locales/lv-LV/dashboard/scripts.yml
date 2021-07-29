@@ -2348,3 +2348,7 @@ lv:
               display_name: 4.  nodaļa
             lessonGroup-7:
               display_name: 5.  nodaļa
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: pārbaude
