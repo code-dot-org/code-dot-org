@@ -2989,3 +2989,7 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
