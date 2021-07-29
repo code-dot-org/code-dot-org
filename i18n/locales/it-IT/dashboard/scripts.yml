@@ -9034,3 +9034,7 @@ it:
           lessons:
             lesson-2:
               name: Lezione 2
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
