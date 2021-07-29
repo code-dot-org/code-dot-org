@@ -60,7 +60,6 @@ export default class Neighborhood {
           `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
         )
       );
-      getStore().dispatch(appendNewlineToConsoleLog());
     }
   }
 
