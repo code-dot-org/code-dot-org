@@ -27012,3 +27012,14 @@ fr:
               name: Leçon 2
         dlp21-csp-mod1:
           title: CS Principles Apprentissage Approfondi Module 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Module 1
+              description: test
+            lessonGroup-3:
+              display_name: Module 2
+            lessonGroup-4:
+              display_name: Module 3
+            lessonGroup-5:
+              display_name: Module 4
