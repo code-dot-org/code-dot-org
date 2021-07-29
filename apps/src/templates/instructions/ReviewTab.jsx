@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
+import color from '@cdo/apps/util/color';
 import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -314,7 +315,7 @@ const styles = {
     marginBottom: '25px',
     textAlign: 'center',
     fontStyle: 'italic',
-    color: '#818181'
+    color: color.light_gray
   },
   reviewHeader: {
     display: 'flex',
