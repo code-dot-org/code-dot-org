@@ -19126,11 +19126,11 @@ es:
               description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan el código de inicio y realizan modificaciones sencillas para lograr diferentes resultados con un objeto `Pintor` y practican la creación de un objeto `Pintor` para identificar la relación entre una clase y un objeto.  '
             lesson-3:
               name: Utilización de comandos
-              description_student: 'Ahora que has conocido al `Pintor`, en esta lección utilizarás los comandos de acción para mover el `Pintor` por El Barrio. Aprenderás algunas de las reglas de Java que debes seguir para que el Pintor se mueva.  '
-              description_teacher: 'En esta lección, los alumnos aplican soluciones utilizando comandos de acción para mover al " Pintor " por El Barrio. Los alumnos desarrollan sus habilidades de pensamiento computacional traduciendo las soluciones en código Java mientras practican la duplicación de patrones. Mientras resuelven estos problemas, los alumnos aprenden la importancia de distinguir entre mayúsculas y minúsculas y del punto y coma en Java, y se les expone al uso de la notación de puntos para llamar a los comandos del "Pintor".  '
+              description_student: Ahora que has conocido al `Pintor`, en esta lección utilizarás los comandos de acción para mover el `Pintor` por El Barrio. Aprenderás algunas de las reglas de Java que debes seguir para que el Pintor se mueva.
+              description_teacher: En esta lección, los alumnos aplican soluciones utilizando comandos de acción para mover al " Pintor " por El Barrio. Los alumnos desarrollan sus habilidades de pensamiento computacional traduciendo las soluciones en código Java mientras practican la duplicación de patrones. Mientras resuelven estos problemas, los alumnos aprenden la importancia de distinguir entre mayúsculas y minúsculas y del punto y coma en Java, y se les expone al uso de la notación de puntos para llamar a los comandos del "Pintor".
             lesson-4:
               name: Condicionales y Depuración
-              description_student: 'Ahora que sabes cómo utilizar los comandos de acción, ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El Barrio utilizando comandos de recopilación de información. También aprendes a depurar e identificar estrategias para usar a lo largo del año.  '
+              description_student: Ahora que sabes cómo utilizar los comandos de acción, ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El Barrio utilizando comandos de recopilación de información. También aprendes a depurar e identificar estrategias para usar a lo largo del año.
               description_teacher: 'En esta lección, los alumnos modifican programas utilizando tres comandos de retorno: `isOnPaint()`, `isOnBucket()` y `canMove()`. Los booleanos, los condicionales y las sentencias de retorno se introducen a través de las sentencias `if` y los comandos de retorno del `Pintor` para que los alumnos practiquen el uso de la lógica condicional en sus programas. Estos conceptos se discuten con más detalle en futuras lecciones y se refuerzan a lo largo del curso. Los alumnos también desarrollan estrategias de depuración mediante la identificación de errores sintácticos y lógicos.'
             lesson-5:
               name: Más con Objetos
@@ -20337,3 +20337,14 @@ es:
               name: Lección 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Módulo 1
+              description: prueba
+            lessonGroup-3:
+              display_name: Módulo 2
+            lessonGroup-4:
+              display_name: Módulo 3
+            lessonGroup-5:
+              display_name: Módulo 4
