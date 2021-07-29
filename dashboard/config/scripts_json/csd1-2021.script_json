@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:46:53 UTC",
+    "serialized_at": "2021-07-29 16:29:14 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd1-2021"
@@ -1162,7 +1162,7 @@
       "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
       "position": 1,
       "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
+        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [How to Administer a Locked Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) support article provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
         "tips": [
           {
             "type": "teachingTip",
