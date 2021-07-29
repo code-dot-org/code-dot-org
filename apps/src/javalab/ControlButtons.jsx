@@ -7,7 +7,6 @@ import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
 
 export default function ControlButtons({
-  isDarkMode,
   isRunning,
   isTesting,
   toggleRun,
@@ -21,11 +20,7 @@ export default function ControlButtons({
   // button styles we don't want. This class can be removed when the button:active !important
   // border is removed from common.scss.
   return (
-    <div
-      style={{
-        backgroundColor: isDarkMode ? color.black : color.white
-      }}
-    >
+    <div>
       <JavalabButton
         text={isRunning ? i18n.stop() : i18n.runProgram()}
         icon={<FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />}
@@ -54,7 +49,6 @@ export default function ControlButtons({
 }
 
 ControlButtons.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,
   isRunning: PropTypes.bool.isRequired,
   isTesting: PropTypes.bool.isRequired,
   toggleRun: PropTypes.func.isRequired,
