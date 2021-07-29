@@ -259,7 +259,7 @@ Javalab.prototype.onRun = function() {
 
 // Called by the Javalab app when it wants to stop student code execution
 Javalab.prototype.onStop = function() {
-  this.JavabuilderConnection.closeConnection();
+  this.javabuilderConnection.closeConnection();
 };
 
 // Called by Javalab console to send a message to Javabuilder.
