@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 17:36:51 UTC",
+    "serialized_at": "2021-07-28 21:25:14 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -174,9 +174,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.",
-        "preparation": "* Review the Painter Says Resource\n* Have Painter Toolbox Resource available\n* Have sticky notes available for students",
-        "student_overview": "You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. In this lesson, you use `if-else` statements to give the `Painter` an alternative action. You also learn about the `!` (not) operator to help with the decisions the `Painter` makes."
+        "overview": "Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` methods they have used so far.",
+        "preparation": "* Gather two sticky notes for each student",
+        "student_overview": "You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. You use a new type of control structure called an `if-else` statement to give the `Painter` actions and alternative actions. You also learn about the `!` (not) operator and how it can be used to help with the decisions the `Painter` makes."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -192,9 +192,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.",
-        "purpose": "* Confirm that students are grouped in Code Studio (A tutorial document is available here.)\n* Seat students based on their review groups.\n",
-        "student_overview": "As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!\n"
+        "overview": "In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to the code review process and practice giving and receiving feedback.",
+        "preparation": "* Choose several Gots and Needs sticky notes from the previous lesson's wrapup\n* Print copies of the Code Review Practice activity guide (one per review group)\n* Confirm that students are grouped in Code Studio\n* Seat students based on their review groups",
+        "student_overview": "As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. You practice using code reviews to provide feedback and discuss strategies for giving and using feedback."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -764,7 +764,7 @@
       "key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -2674,8 +2674,7 @@
       "key": "062d08c8-ffdd-444d-9928-f77b16d09947",
       "position": 1,
       "properties": {
-        "description": "In Lesson 4, you learned how to use an if statement to control the `Painter`. Let's practice using conditional statements by playing The Neighborhood's version of Simon Says called “Painter Says.\" I want you to imagine that you are the object, `Painter`, and based on my commands, you respond.\n\nFirst, I need you to stay seated. I will call out a series of conditional statements using **IF** and **ELSE**. For example, if I say, “Painter says, **IF** you have on a blue shirt, stand up, **ELSE** stay seated,” you would stand up ONLY if you have on a blue shirt. Otherwise, you would stay seated.",
-        "duration": "10",
+        "description": "In Lesson 4, you learned how to use an `if` statement to control the `Painter`. Let's practice using conditional statements by playing The Neighborhood's version of Simon Says called “Painter Says.\" I want you to imagine that each of you are instances of the `Painter` class. Based on my commands, you respond.\n\nFirst, I need you to stay seated. I will call out a series of conditional statements using **IF** and **ELSE**. For example, if I say, “Painter says, **IF** you have on a blue shirt, stand up, **ELSE** stay seated,” you would stand up ONLY if you have on a blue shirt. Otherwise, you would stay seated.",
         "name": "Painter Says",
         "remarks": true
       },
@@ -2685,19 +2684,19 @@
       }
     },
     {
-      "key": "54ee69a4-5022-4f7f-a968-8d3fb4c4c925",
+      "key": "a74c2d34-d79f-489a-be2f-58da8a41294c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the Painter Says Reference Guide, lead the activity to practice conditionals. If time permits, have every student write their own conditional on a sticky note.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the Painter Says reference, lead the activity to practice conditionals. If time permits, have students take turns giving commands to the class.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "* You should play this game as a whole class.\n* Students should be able to make the connection of decision-making by using IF and ELSE, so emphasize those words.\n* Read the conditional statements slowly and clearly.\n* Reset students to regular sitting positions between each conditional statement.\n"
+            "markdown": "To facilitate the gameplay:\n* Emphasize the words IF and ELSE to demonstrate that these are keywords used to make decisions in code.\n* Read the conditional statements slowly and clearly.\n* Reset students to regular sitting positions between each conditional statement."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "54ee69a4-5022-4f7f-a968-8d3fb4c4c925",
+        "activity_section.key": "a74c2d34-d79f-489a-be2f-58da8a41294c",
         "lesson_activity.key": "6c2f9edf-4890-4422-acf6-c2cbb2800180"
       }
     },
@@ -2705,9 +2704,9 @@
       "key": "463d6012-ba1d-47ea-85c9-5533c37344e9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When programming, it is necessary to establish when something is `true` or `false`. In an earlier lesson, we defined this as a Boolean value. We will look at scenarios where if the Boolean value for the command is `true`, you will see the output, else if the value is `false` you will see the alternative output.\n\nWe can use the `Painter`'s information gathering commands to determine if something is `true` or `false`.",
-        "duration": "10",
-        "name": "Introducing `if-else` Statements",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When programming, it is necessary to establish when something is true or false. In an earlier lesson, we defined `true` and `false` as Boolean values. We will look at some scenarios where you will see the output if the Boolean method gives a `true` value, else if the method gives a `false` value, you will see an alternative output.\n\nWe can use the `Painter`'s Boolean methods to determine if something is `true` or `false`.",
+        "duration": "15",
+        "name": "Introducing if-else Statements",
         "remarks": true
       },
       "seeding_key": {
@@ -2716,73 +2715,51 @@
       }
     },
     {
-      "key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc",
+      "key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Walk through the following slides with your students. Review the different scenarios:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `canMove()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `isOnBucket()`\n*  <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the `if-else` video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the advantages of using `if-else statements` vs. just using `if` statements?*\n\n**Discussion Goal:** Students explain the benefits of using an `if-else` statement. Students should be able to identify that an `if-else` statement:\n* Gives a two-way selection based on the Boolean condition (`true`/`false`).\n* Creates an additional option that executes (runs) if the `if` statement is `false`.\n\n**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the `if` statement structure looking at the flowchart.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the structure of how to write an `if` statement in Java.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `if-else` statement structure looking at the flowchart.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the structure of how to write an `if-else` statement in Java.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On this slide, exit out of presentation mode and ask the students to guide you in dragging and dropping program code to create the program outlined on the slide. Answer:\n    * Answer\n```\nif (art.facingNorth()) {\n          art.move();\n} else {\n          art.turnLeft();\n}\n```\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Direct students to the lesson on Code Studio. \n* Instruct students to complete the first three levels. Remind students they must include an `else` statement in each level. Highlight why it is beneficial to provide our `Painter` with a decision while navigating through The Neighborhood.\n",
-        "progression_name": "if-else with Information Gathering Commands",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students of the levels' goal to use basic `if-else` statements to provide the `Painter` a decision. Based on the class's comfortability with conditionals and Booleans, you can have students work in pairs. "
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the if-else Statements video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the advantages of using `if-else` statements vs. just using `if` statements?*\n\n**Discussion Goal:** Students explain the benefits of using an `if-else` statement. Students identify that an `if-else` statement provides two alternate actions based on the Boolean value.\n\nDo This: Introduce the syntax and functionality of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the flow of an `if` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax of an `if` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the flow of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the syntax of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students indicate the correct order for the program code segments to create the program described.\n\nAnswer:\n```\nif (art.facingNorth()) {\n   art.move();\n} else {\n   art.turnLeft();\n}\n```\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
+        "progression_name": "Navigating Using if-else"
       },
       "seeding_key": {
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc",
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79",
         "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
       }
     },
     {
-      "key": "8fc9757e-3507-468a-b50d-2f6096a42791",
+      "key": "f1d9ee0e-d205-45e1-9287-37b67b3d0fd6",
       "position": 3,
       "properties": {
+        "description": "**Do This:** Introduce the `!` (not) operator.\n* Review Boolean values and their opposites.\n* Introduce the `!` (not) operator to negate Boolean values. \n* Discuss `!` (not) using the `canMove()` method.\n* Discuss the syntax and functionality of the `!` (not) operator.",
+        "duration": "15",
+        "name": "The ! (not) Operator",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+            "markdown": "Ensure students understand that when they see the `!` (not) symbol, it reverses the associated Boolean value. Remind students that when applied to a value, the `!` (not) operator turns `true` to `false` and `false` to `true`. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8fc9757e-3507-468a-b50d-2f6096a42791",
+        "activity_section.key": "f1d9ee0e-d205-45e1-9287-37b67b3d0fd6",
         "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
       }
     },
     {
-      "key": "760871fe-2af7-4aba-ae49-03c9c1571078",
+      "key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Read out the statement to your students, pausing at the bold words. Instruct students to yell out bold words collectively.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Again, read out the statements and have students read out loud the bold words. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss ! (not) using the `canMove()` command.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students how to use `!` (not) in a Java code segment.",
-        "duration": "10",
-        "name": "The `!` (not) Operator",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "As you walk through the slides, you might want to ask the following prompting questions to students.\n* What symbol represents the word “not”?\n* How does the `!` (not) logical operator work?\n\nThe goal is to ensure students understand when they see the `!` (not) symbol, it reverses the logic. Remind students that when applied to a value, the `!` (not) operator turns `true` to `false` and `false` to `true`. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "760871fe-2af7-4aba-ae49-03c9c1571078",
-        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
-      }
-    },
-    {
-      "key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Explain the use of `!` (not) to a partner. When would you use it in a conditional statement?*\n\n**Discussion Goal:** Students talk to a partner about the use of `!` (not). Students understand when to use a `!` (not) in a conditional statement. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students back to Code Studio to complete Levels 4-6. On Level 6, students can choose to complete any of the choice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Painter's Toolbox for students to reference as they work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Explain the use of `!` (not) to a partner. When would you use it in a conditional statement?*\n\n**Discussion Goal:** Students explain their understanding of the use of `!` (not). Students discuss when to use a `!` (not) in a conditional statement. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Painter's Toolbox for students to reference as they work.",
         "progression_name": "Logical Operator ! (not)",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As students work on the levels, you can help them, but encourage them to figure things out for themselves. \n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+            "markdown": "Encourage students to work independently as much as possible. If students get stuck, have them first attempt the following before helping them:\n* Refer to the Debugging Wall for strategies.\n* Write the steps they want the `Painter` to take in a numbered list on scratch paper before writing the code.\n* Ask a partner or neighbor for help."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf",
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1",
         "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
       }
     },
@@ -2790,8 +2767,7 @@
       "key": "20d4bf23-7f1a-46d7-ab86-38d98d149110",
       "position": 1,
       "properties": {
-        "description": "We learned two new concepts in class today.  As we move forward, we can use conditional statements and logical operators to improve our `Painter`'s navigation of The Neighborhood. Please write down at least one *got*: something you learned in this lesson, and one *need*: something you want to know more about or have a question about.",
-        "duration": "5",
+        "description": "We learned two new concepts in class today.  As we move forward, we can use conditional statements and logical operators to improve our `Painter`'s navigation of The Neighborhood.\n\nPlease write down at least one *got*: something you learned in this lesson, and one *need*: something you want to know more about or have a question about.",
         "name": "Gots and Needs",
         "remarks": true
       },
@@ -2815,7 +2791,8 @@
       "key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
       "position": 1,
       "properties": {
-        "description": "So far, we’ve focused on writing new code, but that’s only a fraction of a software engineer's job in industry. In reality, engineers spend a lot of time reading and working with other people’s code. ",
+        "description": "At the end of class yesterday, you wrote down a got, something you learned in the lesson, and a need, something you want to know more about or have a question about.\n\nLet's take a couple of minutes to review what you learned and go over some of your questions.",
+        "name": "Bad Code",
         "remarks": true
       },
       "seeding_key": {
@@ -2824,165 +2801,194 @@
       }
     },
     {
-      "key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+      "key": "f371aebf-a5d9-46ca-ab7d-9b378eae3892",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Lead students in a discussion about the visualization by clicking through the animation on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the visualization and give students a moment to process it independently.\n  * *What surprises you about this visualization? What do you want to know more about?*\n  * *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They then identify how to minimize time spent on bad code to foreshadow the value of code reviews. Answers to the second question may include:\n* Spend more time planning/designing\n* Review your own code\n* Have someone else review the code\n* Test the code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video. This video presents the value of code reviews and working together. It also normalizes the fact that everyone has bugs and code that code reviews can improve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In your own words, describe what a reviewer gains from a code review. How about the code author?\n\n**Discussion Goal:** This discussion is designed to help students think about both the benefits of a code review and the different roles involved in a code review."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the got sticky notes, then read the need sticky notes. Clarify any misconceptions and answer the questions as you read each sticky note."
       },
       "seeding_key": {
-        "activity_section.key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+        "activity_section.key": "f371aebf-a5d9-46ca-ab7d-9b378eae3892",
         "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
       }
     },
     {
-      "key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+      "key": "cec73303-eac8-434e-990a-7efebf79782d",
       "position": 3,
       "properties": {
-        "description": "Throughout this course, we are going to use code reviews as a tool for improving our coding and collaboration skills. The people you are sitting with today are your review group - you will be reviewing one another’s code and revising your code based on your peers' feedback. Today we’re going to practice this process.",
+        "description": "So far, we’ve focused on writing new code, but that’s actually only a fraction of a software engineer's job. In reality, software engineers spend a lot of time reading and working with other people’s code. ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+        "activity_section.key": "cec73303-eac8-434e-990a-7efebf79782d",
         "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
       }
     },
     {
-      "key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk students through the four steps of the code review process that we will be using this year. Note that the video has already discussed this information - the slide is here for reference and reinforcement."
-      },
-      "seeding_key": {
-        "activity_section.key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
-        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
-      }
-    },
-    {
-      "key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
-      "position": 2,
-      "properties": {
-        "description": "When software engineers commit code, they leave a short message about the current version. This process helps the engineer while programming and for anyone else who reads through the code in the future.",
-        "duration": "7",
-        "name": "Committing Code",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
-        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
-      }
-    },
-    {
-      "key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
-      "position": 3,
-      "properties": {
-        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of committing code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce possible scenarios for when to commit code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through how to commit using Code Studio. Highlight the fact that committing code is similar to hitting ‘save’ on a file or a game, but in addition to creating a checkpoint to come back to, software engineers leave short messages to help identify what makes one version different from another.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the purpose of commenting code. Make sure to touch on:\n  * Software engineers leave additional supports called comments both for themselves and for reviewers.\n  * Comments can include what they expect a code segment to do or describe how it works.\n  * Comments are indicated by // for a single-line comment or /* and */ for multi-line comments. These symbols are indicators to the computer that the text on these lines is for humans only. The computer will NOT read it as coded instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
-        "progression_name": "The Code Review Cycle",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Consider using the animation delay on the first slide of this sequence to let students think about when they might choose to commit or ‘save’ their code and ask them to share hypotheses.  \n\nNote that the code on Level 1 is pulled directly from the previous lesson. If students did not complete the level, they could leave comments to outline their code before committing it.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
-        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
-      }
-    },
-    {
-      "key": "ccef128d-659e-479f-856b-e6fa3c341352",
+      "key": "e62504c7-fa38-4db3-b998-bbe74850e02a",
       "position": 4,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the visual and prompts.\n* *What surprises you about this visualization? What do you want to know more about?*\n* *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They identify how to minimize time spent on bad code and suggest strategies such as spending time planning and reviewing and testing code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In your own words, describe what a reviewer gains from a code review. How about the code author?*\n\n**Discussion Goal:** Students identify the benefits of a code review and the different roles involved in a code review."
       },
       "seeding_key": {
-        "activity_section.key": "ccef128d-659e-479f-856b-e6fa3c341352",
-        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+        "activity_section.key": "e62504c7-fa38-4db3-b998-bbe74850e02a",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
       }
     },
     {
-      "key": "10a09b13-49a7-4ef6-abf6-4e6f8189a83b",
+      "key": "f0c4e055-9d2e-4da1-b4d1-0b774d9a5399",
       "position": 5,
       "properties": {
-        "description": "\nAfter several commits, a developer may be ready to share their code with others to get feedback about the program. ",
-        "duration": "5",
-        "name": "Review Request",
+        "description": "Throughout this course, we are going to use code reviews as a tool for improving our coding and collaboration skills. The people you are sitting with today are your review group - you will be reviewing each other's code and revising your code based on the feedback you receive. Today we’re going to practice this process.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "10a09b13-49a7-4ef6-abf6-4e6f8189a83b",
-        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+        "activity_section.key": "f0c4e055-9d2e-4da1-b4d1-0b774d9a5399",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
       }
     },
     {
-      "key": "78b0fadd-aa0d-45c9-b8f9-4b119e2bdbe0",
-      "position": 6,
+      "key": "e46e7546-9029-4ad0-82ef-4dabb8b764d4",
+      "position": 1,
       "properties": {
-        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of feedback requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback, focusing on the importance of writing a clear and specific message about what they are asking the reviewer to look for. Highlight the fact that this is often called a pull request in industry.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return students to Code Studio and walk them through writing a message to their group and requesting feedback.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the steps of the code review process.",
+        "duration": "10",
+        "name": "Committing Code",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A pull request is a little bigger than the process described here. For a more technical overview, check out: https://www.atlassian.com/git/tutorials/making-a-pull-request."
+            "markdown": "If an author commits work, requests feedback on it, and then continues working, the reviewer will only see the commit BEFORE the request."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "78b0fadd-aa0d-45c9-b8f9-4b119e2bdbe0",
+        "activity_section.key": "e46e7546-9029-4ad0-82ef-4dabb8b764d4",
         "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "075b4bb4-3b1a-4730-a61b-c26fc1787b7b",
+      "key": "efbb9442-ef29-4a58-8bdb-cc95bcf0646c",
+      "position": 2,
+      "properties": {
+        "description": "When software engineers commit code, they leave a short message about the current version of their program. This process helps the software engineer keep track of the progress of their program, and it is also helpful for anyone else who reads through the code in the future.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "efbb9442-ef29-4a58-8bdb-cc95bcf0646c",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "368829e3-daea-484a-abf1-c6d8a169ce40",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce when to commit code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to commit code on Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Committing code is similar to saving a file or a game. In addition to creating a checkpoint to return to, software engineers leave short messages to help identify what makes one version different from another."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "368829e3-daea-484a-abf1-c6d8a169ce40",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "bc5b2c9b-4ea9-4309-91bc-b9a55e575971",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of commenting code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
+        "progression_name": "The Code Review Cycle"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc5b2c9b-4ea9-4309-91bc-b9a55e575971",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "c73839d7-a008-4fe4-b3ed-c09973808b07",
+      "position": 5,
+      "properties": {
+        "description": "After several commits, a developer may be ready to share their code with others to get feedback.",
+        "duration": "5",
+        "name": "Review Requests",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c73839d7-a008-4fe4-b3ed-c09973808b07",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "fad4bcb9-0ae9-4516-8419-ac9461cc9995",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Introduce review requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students write a message to their group and request feedback."
+      },
+      "seeding_key": {
+        "activity_section.key": "fad4bcb9-0ae9-4516-8419-ac9461cc9995",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "d7d0d734-3dee-47b7-a3ae-808487ab780b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The next step of the code review is to review the author’s program actively. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it.",
-        "duration": "14",
+        "description": "The next step of the code review is to review the author’s program. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it.",
+        "duration": "15",
         "name": "Writing Good Feedback",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "075b4bb4-3b1a-4730-a61b-c26fc1787b7b",
+        "activity_section.key": "d7d0d734-3dee-47b7-a3ae-808487ab780b",
         "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "f2f82814-3e7a-49df-b377-8b188570b512",
+      "key": "46e87755-691e-4e96-a588-88a99674ef64",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Use the slides to give an overview of writing comments.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews - by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share ART - a mnemonic to help them craft their feedback statements.\n  * Ask questions\n  * Raise flags about confusing code\n  * Tag awesome code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice Activity Guide to each review group. Students are not working directly in the guide at the beginning of this activity, but having the document allows them to see the entire code segment while working with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** This activity gradually releases students to writing comments independently using the following steps:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click to display three sample feedback statements to the students asking each time whether they are valuable comments. Students should expand on their answers, explaining why or why not. If not, can they think of a better way of phrasing the information?\n  * Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n  * Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n  * Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a whole class, students share additional feedback that they may leave for the code on the screen and how that feedback is valuable to the developer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition to working in pairs, writing additional comments for the developer on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students review one member of their review group’s work in Code Studio, returning to Level 1.\n",
+        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "f2f82814-3e7a-49df-b377-8b188570b512",
+        "activity_section.key": "46e87755-691e-4e96-a588-88a99674ef64",
         "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "6b87bb46-5a1c-42ed-8da2-a745ab9d3c85",
+      "key": "d90b044d-d256-485d-a366-26ed70932c63",
       "position": 9,
       "properties": {
-        "description": "**Do This:** Review the next three slides to discuss the process of returning feedback and the nature of code review as a process:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of returning feedback. Address both:\n  * How to return feedback on Code Studio.\n  * Before returning feedback, students should get in the habit of re-reading their review and doing a quick self-check: Are the notes true, necessary, and kind?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Returning feedback is not the end of the process!\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that code review is a process and often occurs as a cycle. Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer.\n",
-        "duration": "4",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss returning feedback to the author.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that code reviews are an iterative process.",
+        "duration": "5",
         "name": "Returning Feedback",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students to use the agreed-upon signal to indicate that they have completed the level."
+            "markdown": "Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6b87bb46-5a1c-42ed-8da2-a745ab9d3c85",
+        "activity_section.key": "d90b044d-d256-485d-a366-26ed70932c63",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "66a9afa2-a045-448a-9a9d-70011314ae41",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer."
+      },
+      "seeding_key": {
+        "activity_section.key": "66a9afa2-a045-448a-9a9d-70011314ae41",
         "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
@@ -2990,7 +2996,8 @@
       "key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
       "position": 1,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students think about how they interact with feedback and write a short note to their group about the types of feedback they find most helpful.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review key vocabulary from the lesson.\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students a short note to their review group about the types of feedback they find most helpful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Good Feedback"
       },
       "seeding_key": {
         "activity_section.key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
@@ -3001,7 +3008,7 @@
       "key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
       "position": 2,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What does ART stand for, and how can it be used to improve code reviews?\n\n**Question:** Look at the code segment on the right. Write two pieces of feedback for this author.\n",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check For Understanding",
         "progression_name": "Check for Understanding"
       },
@@ -5602,10 +5609,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L1"
-        ],
-        "progression": "if-else with Information Gathering Commands"
+        "progression": "Navigating Using if-else"
       },
       "named_level": false,
       "bonus": false,
@@ -5616,7 +5620,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       },
       "level_keys": [
         "CSA U1L7-L1"
@@ -5628,10 +5632,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L2"
-        ],
-        "progression": "if-else with Information Gathering Commands"
+        "progression": "Navigating Using if-else"
       },
       "named_level": false,
       "bonus": false,
@@ -5642,7 +5643,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       },
       "level_keys": [
         "CSA U1L7-L2"
@@ -5654,10 +5655,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L3"
-        ],
-        "progression": "if-else with Information Gathering Commands"
+        "progression": "Navigating Using if-else"
       },
       "named_level": false,
       "bonus": false,
@@ -5668,7 +5666,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       },
       "level_keys": [
         "CSA U1L7-L3"
@@ -5680,9 +5678,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L4"
-        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5694,7 +5689,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       },
       "level_keys": [
         "CSA U1L7-L4"
@@ -5706,9 +5701,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L5"
-        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5720,7 +5712,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       },
       "level_keys": [
         "CSA U1L7-L5"
@@ -5732,9 +5724,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L7-L6"
-        ],
         "progression": "Logical Operator ! (not)"
       },
       "named_level": false,
@@ -5746,7 +5735,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       },
       "level_keys": [
         "CSA U1L7-L6"
@@ -5758,9 +5747,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L8-L1"
-        ],
         "progression": "The Code Review Cycle"
       },
       "named_level": false,
@@ -5772,7 +5758,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d"
+        "activity_section.key": "bc5b2c9b-4ea9-4309-91bc-b9a55e575971"
       },
       "level_keys": [
         "CSA U1L8-L1"
@@ -7099,7 +7085,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       }
     },
     {
@@ -7111,7 +7097,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       }
     },
     {
@@ -7123,7 +7109,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc"
+        "activity_section.key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79"
       }
     },
     {
@@ -7135,7 +7121,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       }
     },
     {
@@ -7147,7 +7133,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       }
     },
     {
@@ -7159,7 +7145,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf"
+        "activity_section.key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1"
       }
     },
     {
@@ -7171,7 +7157,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
-        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d"
+        "activity_section.key": "bc5b2c9b-4ea9-4309-91bc-b9a55e575971"
       }
     },
     {
@@ -9528,7 +9514,7 @@
     {
       "key": "4356b4ea-ad37-4b57-915e-9c3c12ccbcd6",
       "properties": {
-        "description": "Construct an `if-else` statement using the `Painter`'s information gathering commands"
+        "description": "Construct an `if-else` statement using the `Painter`'s Boolean methods"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -9548,7 +9534,7 @@
     {
       "key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc",
       "properties": {
-        "description": "Summarize the values of code reviews"
+        "description": "Explain the code review process"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -9558,7 +9544,7 @@
     {
       "key": "435e5ddc-9b18-481b-a531-0d4965d2d279",
       "properties": {
-        "description": "Use ART when reviewing sample code"
+        "description": "Use ART to structure feedback when reviewing sample code"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
