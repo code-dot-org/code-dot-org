@@ -33,18 +33,15 @@ class Backpack extends Component {
     this.setState({
       dropdownOpen: true,
       backpackLoadError: false,
-      selectedFiles: []
+      selectedFiles: [],
+      backpackFilenames: []
     });
     if (this.props.backpackApi.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
       this.props.backpackApi.getFileList(
-        this.onBackpackFileLoadError,
-        this.onBackpackFileLoadSuccess
+        this.onFileListLoadError,
+        this.onFileListLoadSuccess
       );
-    } else {
-      this.setState({
-        backpackFilenames: []
-      });
     }
   };
 
@@ -55,7 +52,8 @@ class Backpack extends Component {
         this.props.backpackApi.fetchFile(
           filename,
           () => {} /* onError, currently do nothing */,
-          fileContents => this.props.onImport(filename, fileContents)
+          fileContents =>
+            this.props.onImport(filename, fileContents) /* onSuccess */
         );
       });
     }
@@ -80,14 +78,14 @@ class Backpack extends Component {
     }
   };
 
-  onBackpackFileLoadError = () => {
+  onFileListLoadError = () => {
     this.setState({
       backpackLoadError: true,
       backpackFilesLoading: false
     });
   };
 
-  onBackpackFileLoadSuccess = filenames => {
+  onFileListLoadSuccess = filenames => {
     this.setState({
       backpackFilenames: filenames,
       backpackFilesLoading: false,
