@@ -32,7 +32,8 @@ class Backpack extends Component {
   expandDropdown = () => {
     this.setState({
       dropdownOpen: true,
-      backpackLoadError: false
+      backpackLoadError: false,
+      selectedFiles: []
     });
     if (this.props.backpackApi.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
@@ -277,7 +278,8 @@ const styles = {
   message: {
     fontStyle: 'italic',
     fontSize: 10,
-    lineHeight: 12
+    lineHeight: '12px',
+    padding: 10
   }
 };
 

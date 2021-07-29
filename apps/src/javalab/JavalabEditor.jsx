@@ -414,9 +414,10 @@ class JavalabEditor extends React.Component {
 
   onImportFile(filename, fileContents) {
     const {fileMetadata} = this.state;
-    // either overwrite or create a new file
+    // If filename already exists in sources, replace file contents.
+    // Otherwise, create a new file.
     if (Object.keys(this.props.sources).includes(filename)) {
-      // overwrite contents of that editor
+      // find editor for filename and overwrite contents of that editor
       let editorKey = null;
       for (const key in fileMetadata) {
         if (fileMetadata[key] === filename) {
@@ -429,6 +430,7 @@ class JavalabEditor extends React.Component {
       });
       this.props.setSource(filename, fileContents);
     } else {
+      // create new file
       this.onCreateFile(filename, fileContents);
     }
     projectChanged();
