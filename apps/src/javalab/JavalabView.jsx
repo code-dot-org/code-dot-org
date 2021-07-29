@@ -181,7 +181,7 @@ class JavalabView extends React.Component {
     $('#page-small-footer .small-footer-base').css('max-width', width - 13);
   };
 
-  updateLayoutThrottled = _.throttle(this.updateLayout, 200);
+  updateLayoutThrottled = _.throttle(this.updateLayout, 100);
 
   componentDidUpdate(prevProps) {
     if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
