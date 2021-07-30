@@ -5,6 +5,7 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import AddDefaultSprite from '@cdo/apps/code-studio/assets/AddDefaultSprite';
 import Button from '@cdo/apps/templates/Button';
 
 export default class DefaultSpritesEditor extends React.Component {
@@ -30,11 +31,24 @@ export default class DefaultSpritesEditor extends React.Component {
       });
   }
 
+  incrementPendingChanges = () => {
+    this.setState(state => ({
+      pendingChangesCount: state.pendingChangesCount + 1
+    }));
+  };
+
   deleteSpriteFromDefaults = spriteName => {
     let updatedList = {...this.state.defaultList};
     delete updatedList[spriteName];
-    let changes = this.state.pendingChangesCount + 1;
-    this.setState({defaultList: updatedList, pendingChangesCount: changes});
+    this.setState({defaultList: updatedList});
+    this.incrementPendingChanges();
+  };
+
+  addSpriteToDefaults = (spriteName, spriteCategory) => {
+    let updatedList = {...this.state.defaultList};
+    updatedList[spriteName] = {name: spriteName, key: spriteCategory};
+    this.setState({defaultList: updatedList});
+    this.incrementPendingChanges();
   };
 
   updateDefaultSprites = () => {
@@ -106,6 +120,7 @@ export default class DefaultSpritesEditor extends React.Component {
           clicked.
         </p>
         {this.renderUploadButton()}
+        <AddDefaultSprite onAdd={this.addSpriteToDefaults} />
         {isLoading && <Spinner />}
         {this.renderDefaultSprites()}
         {this.renderUploadButton()}

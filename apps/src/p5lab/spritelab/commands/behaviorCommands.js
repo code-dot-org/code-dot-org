@@ -112,7 +112,7 @@ export const commands = {
     sprites.forEach(sprite => this.removeAllBehaviors(sprite));
   },
 
-  removeBehavior(spriteArg, behavior) {
+  removeBehaviorSimple(spriteArg, behavior) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.removeBehavior(sprite, behavior));
   }
