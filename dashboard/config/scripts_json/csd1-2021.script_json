@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 16:29:14 UTC",
+    "serialized_at": "2021-07-30 15:10:26 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd1-2021"
@@ -1129,7 +1129,13 @@
       "key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
@@ -5578,8 +5584,8 @@
       }
     },
     {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "name": "Code.org How-to Videos",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how-to-videos",
       "properties": {
         "audience": "Teacher"
