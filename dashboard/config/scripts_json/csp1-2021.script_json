@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:13 UTC",
+    "serialized_at": "2021-07-30 15:08:59 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -975,7 +975,13 @@
       "key": "26116c13-31d4-4fbd-93aa-2fe0214f3290",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to connect to each other on tools like the Internet Simulator, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to connect to each other on tools like the Internet Simulator, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos_1/csp/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "26116c13-31d4-4fbd-93aa-2fe0214f3290",
@@ -1007,19 +1013,8 @@
       }
     },
     {
-      "key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
-      "position": 4,
-      "properties": {
-        "description": "*"
-      },
-      "seeding_key": {
-        "activity_section.key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
-        "lesson_activity.key": "4f715f57-8664-46ac-aa62-26655d5db2d3"
-      }
-    },
-    {
       "key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
       },
@@ -1030,7 +1025,7 @@
     },
     {
       "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
         "tips": [
@@ -1101,7 +1096,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students need help coming up with ideas, share these tips:\r\n\r\n* This doesn’t have to be a subject in school - it very well might not be.  \r\n\r\n \t* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\r\n\r\n"
+            "markdown": "If students need help coming up with ideas, share these tips:\n\n* This doesn’t have to be a subject in school - it very well might not be.  \n\n * As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\n\n"
           }
         ]
       },
@@ -5560,17 +5555,6 @@
       }
     },
     {
-      "name": "Code Studio Teacher Dashboard Video Tutorial",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be",
-      "key": "code-studio-teacher-dashboard-video-tutorial",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
-      }
-    },
-    {
       "name": "Copyright in Practice",
       "url": "https://youtu.be/ITASCSxnBqw",
       "key": "copyright_in_practice",
@@ -5705,7 +5689,7 @@
     },
     {
       "name": "How to videos",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how_to_videos_1",
       "properties": {
         "type": "Video",
@@ -6183,12 +6167,6 @@
       "seeding_key": {
         "lesson.key": "Representing Text",
         "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
       }
     },
     {

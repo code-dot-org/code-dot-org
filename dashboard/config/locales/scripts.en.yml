@@ -22372,20 +22372,16 @@ en:
               description_teacher: 'Students apply their knowledge of methods and classes to write a new type of `Painter`, the `SprayPainter`, from scratch. To do this they will write a new method with parameters: `sprayPaint(String color1, String color2)`. Students use the `SprayPainter` class to create an abstract mural.'
             lesson-13:
               name: StampPainter
-              description_student: You now have a `PainterPlus` and a `SprayPainter` that can be used to create artwork in The Neighborhood. In this lesson, you learn about pixel art and explore the opportunities of using technology in art and design. You develop a new type of `Painter` called the `StampPainter` that can paint custom shapes.
-              description_teacher: In this lesson, students continue to apply the principle of inheritance in their code by implementing the `StampPainter` class -- an extension of the `PainterPlus` class that paints customized shapes and images. This lesson serves as reinforcement to the previous lesson on inheritance. Students continue to practice deriving a new class based on an existing class, only adding new methods.
+              description_student: You now have a `PainterPlus` and a `SprayPainter` that can be used to create artwork in The Neighborhood. You develop a new type of `Painter` called the `StampPainter` that can paint custom shapes and patterns.
+              description_teacher: Students extend the `PainterPlus` class to develop the `StampPainter` class to paint customized shapes and patterns.
             lesson-14:
               name: Edge Cases
-              description_student: In this lesson, you expand your software engineering skills to perform test-driven development. You explore new edge cases in The Neighborhood and make decisions about how you solve these problems. You discover that there is not always a single correct answer to solving problems – sometimes you have to make your own decisions about how you choose to handle edge cases!
-              description_teacher: Before, students were given the starting Neighborhood; now, students design their own Neighborhood. The focus of the lesson is answering questions that do not have a single correct answer. Students discover the trade-offs in design decisions and practice justifying their decisions.
+              description_student: You expand your software engineering skills to perform test-driven development. You explore new edge cases in The Neighborhood and make decisions about how you solve these problems. You discover that there is not always a single correct answer to solving problems – sometimes you have to make your own decisions about how you choose to handle edge cases!
+              description_teacher: Students practice test-driven development and explore edge cases in The Neighborhood. Students make decisions about how to solve problems and realize that there are often multiple available solutions.
             lesson-15:
               name: Software Engineering Wrap Up
-              description_student: 'You have learned a lot about being a software engineer! You revisit the core values of software engineering and reflect on how you used these throughout the unit. You also explore open source code and discover how much you now know about programming and software engineering.
-
-'
-              description_teacher: 'In this lesson, students examine open-source code and connect real-world applications and the concepts they have learned in this unit. Students review the core values of software engineering and reflect on how they used them. Through discovery, students affirm the core values of software engineering.
-
-'
+              description_student: You have learned a lot about being a software engineer! You revisit characteristics of software engineers and reflect on how you demonstrate these characteristics throughout the unit. You also explore open source code and discover how much you now know about programming and software engineering.
+              description_teacher: Students examine open source code and make connections between real-world applications and the concepts they have learned in this unit. Students review characteristics of software engineers and reflect on how they demonstrate these characteristics while planning and implementing solutions.
             lesson-16:
               name: Asphalt Art Project - Day 1
               description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
@@ -23653,13 +23649,13 @@ en:
 
                 * Locate and use course lesson plans and teacher resources.
 
-                **Suggested time:** 20 minutes
+                **Suggested time:** 25 minutes
             lesson-2:
               name: Lesson Plan Structure
             lesson-8:
               name: Navigating support
               description_student: 
-              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
             lesson-9:
               name: Teacher Community
             lesson-10:
@@ -23719,7 +23715,7 @@ en:
           title: 'Module 4: Guidance for Teaching CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will approach teaching the course. \n\n**You will:**\n* Objective 1\n* Objective 2\n* \n\n**Suggested Time:** 1 hour"
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Consider the role of the teacher in a CS Discoveries classroom.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom. \n\n**Suggested Time:** 1 hour"
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:

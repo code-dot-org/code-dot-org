@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-07-27 22:50:25 UTC",
+    "serialized_at": "2021-07-30 15:36:52 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2021"
@@ -10132,6 +10132,18 @@
       }
     },
     {
+      "name": "Circuit Playground",
+      "url": "https://code.org/circuitplayground",
+      "key": "circuit_playground_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground_1"
+      }
+    },
+    {
       "name": "How Computers Work: Circuits & Logic",
       "url": "https://youtu.be/ZoqMiFKspAA",
       "key": "circuits-logic-video",
@@ -11065,6 +11077,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "circuit_playground_1",
         "script.name": "csd6-2021"
       }
     },
