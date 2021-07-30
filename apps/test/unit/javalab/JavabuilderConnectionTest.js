@@ -43,14 +43,43 @@ describe('JavabuilderConnection', () => {
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
     });
+  });
 
+  describe('sendMessage', () => {
+    it('errors when called on a connection with no socket', () => {
+      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      sinon.stub(console, 'error');
+      javabuilderConnection.sendMessage('');
+      expect(console.error).to.have.been.calledOnce;
+      expect(console.error.getCall(0).args[0]).to.contain(
+        '[error] The connection has closed.'
+      );
+      console.error.restore();
+    });
+  });
+
+  describe('onClose', () => {
     it('closes web socket on closeConnection', () => {
-      const mySocket = new window.WebSocket('ws://example.com');
-      const socketSpy = sinon.spy(window, 'mySocket');
-      const javabuilderConnection = new JavabuilderConnection();
-      javabuilderConnection.socket = mySocket;
+      const closeStub = sinon.stub();
+      sinon.stub(window, 'WebSocket').returns({
+        close: closeStub
+      });
+      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      javabuilderConnection.establishWebsocketConnection('fake-token');
       javabuilderConnection.closeConnection();
-      expect(socketSpy.CLOSED === true);
+      expect(closeStub).to.have.been.calledOnce;
+      window.WebSocket.restore();
+    });
+
+    it('errors on a close without a socket', () => {
+      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      sinon.stub(console, 'error');
+      javabuilderConnection.closeConnection();
+      expect(console.error).to.have.been.calledOnce;
+      expect(console.error.getCall(0).args[0]).to.contain(
+        '[error] There is no web socket connection.'
+      );
+      console.error.restore();
     });
   });
 });
