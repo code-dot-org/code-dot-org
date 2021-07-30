@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:31 UTC",
+    "serialized_at": "2021-07-29 19:52:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -347,6 +347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP"
+        ],
         "progression": "The problem solving process"
       },
       "named_level": false,
@@ -370,6 +373,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-vid"
+        ],
         "progression": "The problem solving process"
       },
       "named_level": false,
@@ -393,6 +399,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-cont"
+        ],
         "progression": "The problem solving process"
       },
       "named_level": false,

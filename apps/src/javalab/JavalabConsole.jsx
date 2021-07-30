@@ -175,7 +175,8 @@ const styles = {
   console: {
     flexGrow: 2,
     overflowY: 'auto',
-    padding: 5
+    padding: 5,
+    fontFamily: 'monospace'
   },
   logs: {
     lineHeight: 'normal',
@@ -196,7 +197,8 @@ const styles = {
     marginBottom: 0,
     boxShadow: 'none',
     border: 'none',
-    padding: 0
+    padding: 0,
+    fontFamily: 'monospace'
   },
   spacer: {
     width: 8
