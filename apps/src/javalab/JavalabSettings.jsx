@@ -102,7 +102,7 @@ export default onClickOutside(Radium(JavalabSettings));
 const styles = {
   main: {
     display: 'inline-block',
-    float: 'right'
+    float: 'left'
   },
   button: {
     fontSize: 15,

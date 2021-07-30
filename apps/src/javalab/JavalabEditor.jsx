@@ -136,11 +136,11 @@ class JavalabEditor extends React.Component {
     });
 
     this.handleHeightResize(window.innerHeight);
-    this.props.setEditorColumnHeight(window.innerHeight - 60);
+    this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
 
     window.addEventListener('resize', () => {
       this.handleHeightResizeThrottled(window.innerHeight);
-      this.props.setEditorColumnHeight(window.innerHeight - 60);
+      this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
     });
   }
 
@@ -471,7 +471,7 @@ class JavalabEditor extends React.Component {
     this.props.setRenderedHeight(newHeight);
   };
 
-  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 100);
+  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 33);
 
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
@@ -539,7 +539,6 @@ class JavalabEditor extends React.Component {
               isDisabled={isReadOnlyWorkspace}
             />
           </PaneSection>
-
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
