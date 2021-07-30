@@ -3,6 +3,6 @@ display_name 'The Efficient Painter'
 description 'Help the Painter paint The Neighborhood as efficiently as possible!'
 
 sublevels
-level 'CSA U1L5-L6a Exemplar'
-level 'CSA U1L5-L6b Exemplar'
-level 'CSA U1L5-L6c Exemplar'
+level 'CSA U1L5-L6a-1 Exemplar'
+level 'CSA U1L5-L6b-1 Exemplar'
+level 'CSA U1L5-L6c-1 Exemplar'
