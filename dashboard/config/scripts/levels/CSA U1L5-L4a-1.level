@@ -2,22 +2,21 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Initialize a new `Painter` and paint the design shown below as efficiently as you can.\r\n\r\n![](https://images.code.org/67c188077bcda0aef77b63b1ad96edb5-image-1625588941705.png)",
+    "long_instructions": "Create a new `Painter` using the parameterized constructor to navigate around The Neighborhood as shown below.\r\n\r\nSyntax for creating a new `Painter`:\r\n```\r\nClassName painterName = new ClassName(int x, int y, String direction, int paint);\r\n```\r\n\r\n![](https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
-    "display_name": "Efficient Line Painting",
     "serialized_maze": [
       [
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 82
+          "assetId": 47
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 1
         },
         {
           "tileType": 1,
@@ -54,7 +53,12 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 2
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 3
         },
         {
           "tileType": 1,
@@ -64,27 +68,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 10
+          "assetId": 49
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 8
+          "assetId": 286
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 6
+          "assetId": 286
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "assetId": 50
         },
         {
           "tileType": 1,
@@ -96,7 +95,12 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 4
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 5
         },
         {
           "tileType": 1,
@@ -106,18 +110,30 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 11
+          "assetId": 285
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 9
+          "assetId": 48
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 7
+          "assetId": 48
         },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
         {
           "tileType": 1,
           "value": 0,
@@ -127,6 +143,31 @@
           "tileType": 1,
           "value": 0,
           "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -138,7 +179,12 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 47
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 1
         },
         {
           "tileType": 1,
@@ -146,29 +192,24 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 285
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 48
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 48
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -180,49 +221,12 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 2
         },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 5,
-          "assetId": 303
-        }
-      ],
-      [
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 3
         },
         {
           "tileType": 1,
@@ -230,29 +234,24 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 285
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 48
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 48
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -264,17 +263,12 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 83
+          "assetId": 4
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "assetId": 5
         },
         {
           "tileType": 1,
@@ -284,17 +278,22 @@
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 10
+          "assetId": 52
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 8
+          "assetId": 283
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 6
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 51
         },
         {
           "tileType": 1,
@@ -304,9 +303,19 @@
       ],
       [
         {
-          "tileType": 0,
+          "tileType": 1,
           "value": 0,
-          "assetId": 84
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -324,19 +333,9 @@
           "assetId": 0
         },
         {
-          "tileType": 0,
+          "tileType": 1,
           "value": 0,
-          "assetId": 11
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 9
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 7
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -347,20 +346,21 @@
     ],
     "start_sources": {
       "MyNeighborhood.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // To Do: Initialize a new Painter.\n\n\n    // To Do: Write your code to draw the line.\n\n\n  }\n}",
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // To Do: Initialize a new Painter using the parameterized constructor.\n\n\n    // To Do: Write your code to navigate the Painter around The Neighborhood.\n\n\n    \n  }\n}",
         "isVisible": true
       }
     },
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRVud3PBE2ZSr9eEum487pAhfQMb/qV8ZaBWh\npFXGSzMl\n",
-    "parent_level_id": 28824,
-    "bubble_choice_description": "Paint the line as efficiently as you can.",
-    "thumbnail_url": "https://images.code.org/67c188077bcda0aef77b63b1ad96edb5-image-1625588941705.png"
+    "display_name": "Navigate The Neighborhood",
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRZYYLDv/fTC94S4YQ/jgsm2igUdUQFgDFTPx\nu35na3z2\n",
+    "parent_level_id": 29352,
+    "bubble_choice_description": "Create a new Painter using the parameterized constructor to navigate around The Neighborhood.",
+    "thumbnail_url": "https://images.code.org/183a09b74272aa8f106ed8d7b3dfa857-image-1625243313217.png"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-27T23:03:18.000Z",
+  "created_at": "2021-07-30T13:50:11.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-27T23:03:18.637+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L7a\\\"\"],\"cloned_from\":\"CSA U1L5-L7a\"},{\"changed_at\":\"2021-07-27 23:03:43 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:48:59 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:54:57 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-30T13:50:11.079+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4a\\\"\"],\"cloned_from\":\"CSA U1L5-L4a\"},{\"changed_at\":\"2021-07-30 13:50:19 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:23:42 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:25:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

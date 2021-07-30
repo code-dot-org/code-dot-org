@@ -295,8 +295,8 @@
         },
         {
           "tileType": 1,
-          "value": 10,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -536,15 +536,15 @@
     },
     "display_name": "Navigate Inside a Wall",
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRWcRqFNmjXAjIm5l8A76EvRZFKOlahhDqzVz+HQ+ztCw34q4SjL6FfUh4P\nBTE9aad4\n",
-    "parent_level_id": 28798,
+    "parent_level_id": 29353,
     "bubble_choice_description": "Create a new Painter using the parameterized constructor and paint the mural inside the wall.",
     "thumbnail_url": "https://images.code.org/9c6982c71d25231249c169d31ea57b56-image-1625247661978.png"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-27T22:58:43.000Z",
+  "created_at": "2021-07-30T13:50:57.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-27T22:58:43.281+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L5b\\\"\"],\"cloned_from\":\"CSA U1L5-L5b\"},{\"changed_at\":\"2021-07-27 22:59:13 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:46:24 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:54:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-30T13:50:57.940+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4b\\\"\"],\"cloned_from\":\"CSA U1L5-L4b\"},{\"changed_at\":\"2021-07-30 13:51:00 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:27:13 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:27:47 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
