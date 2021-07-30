@@ -39,8 +39,8 @@ tg:
   signup_form:
     submit: 'Худро ба қайд гиред'
     teacher: 'Шумо муаллим ҳастед?'
-    user_type_teacher: "Муаллим"
     user_type_student: "Донишҷӯ"
+    user_type_teacher: "Муаллим"
   school_info:
     other: 'Дигар'
   signin_form:

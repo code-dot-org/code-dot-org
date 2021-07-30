@@ -92,7 +92,7 @@ Tahun ini, mari kita lakukan secara besar-besaran. Saya meminta anda menyertai J
 
 Sebarkan berita. Anjurkan acara. Minta sekolah tempatan untuk mendaftarkan diri. Atau cuba lakukan Jam Kod anda sendiri—semua individu boleh mendapat manfaat daripada mempelajari asasnya.
 
-Memulakan di http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ Itu menjadi antara sebab seluruh sekolah kita menyertai acara pembelajaran terbe
 
 Ini ialah peluang untuk mengubah masa depan pendidikan di [TOWN/CITY NAME].
 
-Lihat http://hourofcode.com/{{ country }} untuk maklumat lanjut dan bantu menyebarkan berita. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

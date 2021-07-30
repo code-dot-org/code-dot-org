@@ -70,6 +70,10 @@ $(document).ready(() => {
       return false;
     }
 
+    // Optimizely-related code for new sign-up user-type buttons (start)
+    optimizelyCountUserTypeSelection(getUserType());
+    // Optimizely-related code for new sign-up user-type buttons (end)
+
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
     if (getUserType() === 'teacher') {
@@ -140,8 +144,14 @@ $(document).ready(() => {
     }
   }
   // Keep if sign-up user type experiment favors variant (end)
-  // Keep if sign-up user type experiment favors original (just the below function))
 
+  // Optimizely-related code for new sign-up user-type buttons
+  function optimizelyCountUserTypeSelection(userType) {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({type: 'event', eventName: userType});
+  }
+
+  // Keep if sign-up user type experiment favors original (just func. below)
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);

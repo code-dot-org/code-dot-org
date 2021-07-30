@@ -20510,6 +20510,16 @@ fil:
           lessons:
             lesson-22:
               name: Pagdidisenyo ng Koleksyon ng mga Datos
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Pagdidisenyo ng Koleksyon ng mga Datos
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         kodea-pd-2021:
           lessons:
             Getting Started:
