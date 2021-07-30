@@ -1,12 +1,12 @@
 import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
-import {getStore} from '../redux';
-import {appendOutputLog, appendNewlineToConsoleLog} from './javalabRedux';
 
 export default class Theater {
-  constructor() {
+  constructor(onOutputMessage, onNewlineMessage) {
     this.canvas = null;
     this.context = null;
+    this.onOutputMessage = onOutputMessage;
+    this.onNewlineMessage = onNewlineMessage;
   }
 
   handleSignal(data) {
@@ -50,12 +50,10 @@ export default class Theater {
   }
 
   onClose() {
-    getStore().dispatch(appendNewlineToConsoleLog());
-    getStore().dispatch(
-      appendOutputLog(
-        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
-      )
+    this.onNewlineMessage();
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
-    getStore().dispatch(appendNewlineToConsoleLog());
+    this.onNewlineMessage();
   }
 }
