@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 22:40:10 UTC",
+    "serialized_at": "2021-07-29 20:14:24 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa1-exemplars"
@@ -1247,6 +1247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1 2"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1294,6 +1297,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3 2"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1316,6 +1322,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4-2"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1338,6 +1347,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5 2"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1360,6 +1372,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L6 2"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1507,6 +1522,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L5 2 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1529,6 +1547,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L6 2 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -2001,15 +2022,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L10-L2 Placeholder"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L2 Placeholder"
+          "CSA U1L10-L2 Exemplar"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -2017,7 +2035,7 @@
         "activity_section.key": "f4b1373a-7dfc-4c9c-9cda-72bab9dd37d1"
       },
       "level_keys": [
-        "CSA U1L10-L2 Placeholder"
+        "CSA U1L10-L2 Exemplar"
       ]
     },
     {
@@ -2026,9 +2044,28 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L10-L4 Placeholder"
-        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L10-L3 multi Placeholder"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "f4b1373a-7dfc-4c9c-9cda-72bab9dd37d1"
+      },
+      "level_keys": [
+        "CSA U1L10-L3 multi Placeholder"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
       },
       "named_level": false,
       "bonus": false,
@@ -2046,20 +2083,17 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L10-L3 Placeholder"
-        ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L3 Placeholder"
+          "CSA U1L10-L5 Placeholder"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -2067,11 +2101,11 @@
         "activity_section.key": "f4b1373a-7dfc-4c9c-9cda-72bab9dd37d1"
       },
       "level_keys": [
-        "CSA U1L10-L3 Placeholder"
+        "CSA U1L10-L5 Placeholder"
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2096,7 +2130,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2121,7 +2155,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2146,7 +2180,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2171,7 +2205,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2196,7 +2230,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2221,7 +2255,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2246,7 +2280,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2271,7 +2305,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2296,7 +2330,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2321,7 +2355,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2346,7 +2380,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2371,7 +2405,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2396,7 +2430,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2421,7 +2455,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2446,7 +2480,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2471,7 +2505,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2496,7 +2530,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3076,9 +3110,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L2 Placeholder",
+        "level.key": "CSA U1L10-L2 Exemplar",
         "script_level.level_keys": [
-          "CSA U1L10-L2 Placeholder"
+          "CSA U1L10-L2 Exemplar"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-exemplars",
+        "activity_section.key": "f4b1373a-7dfc-4c9c-9cda-72bab9dd37d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L10-L3 multi Placeholder",
+        "script_level.level_keys": [
+          "CSA U1L10-L3 multi Placeholder"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -3100,9 +3146,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L3 Placeholder",
+        "level.key": "CSA U1L10-L5 Placeholder",
         "script_level.level_keys": [
-          "CSA U1L10-L3 Placeholder"
+          "CSA U1L10-L5 Placeholder"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",

@@ -193,3 +193,58 @@ Then /^the project gallery contains ([\d]+) view more (?:link|links)$/ do |expec
   actual_num = @browser.execute_script("return $('.viewMoreLink').length;")
   expect(actual_num).to eq(expected_num.to_i)
 end
+
+last_shared_url = nil
+Then /^I save the share URL$/ do
+  wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
+  last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
+end
+
+When /^I open the share dialog$/ do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    steps <<-STEPS
+      When I click selector ".project_share"
+      And I wait to see a dialog titled "Share your project"
+    STEPS
+  end
+end
+
+When /^I navigate to the shared version of my project$/ do
+  steps <<-STEPS
+    When I open the share dialog
+    And I navigate to the share URL
+  STEPS
+end
+
+Then /^I navigate to the share URL$/ do
+  steps <<-STEPS
+    Then I save the share URL
+    And I navigate to the last shared URL
+  STEPS
+end
+
+Then /^I navigate to the last shared URL$/ do
+  @browser.navigate.to last_shared_url
+  wait_for_jquery
+end
+
+Then /^I navigate to the last shared URL with a queryparam$/ do
+  @browser.navigate.to last_shared_url + '?testid=99999999'
+  wait_for_jquery
+end
+
+Then /^I enter the last shared URL into input "(.*)"$/ do |selector|
+  @browser.execute_script("document.querySelector('#{selector}').value = \"#{last_shared_url}\"")
+end
+
+Then /^I wait until initial thumbnail capture is complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialCaptureComplete();')
+  end
+end
+
+Then /^I wait for initial project save to complete$/ do
+  wait_until do
+    @browser.execute_script('return dashboard.project.__TestInterface.isInitialSaveComplete();')
+  end
+end
