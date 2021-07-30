@@ -304,6 +304,7 @@ class CourseEditor extends Component {
               this.setState({publishedState})
             }
             preventCourseVersionChange={this.props.preventCourseVersionChange}
+            isCourse
           />
         </CollapsibleEditorSection>
 

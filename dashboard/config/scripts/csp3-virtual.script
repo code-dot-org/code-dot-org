@@ -2,12 +2,15 @@ login_required true
 hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
+family_name 'csp3-virtual'
+version_year 'unversioned'
 published_state 'preview'
 project_sharing true
+is_course true
 
 lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
 lesson 'Using Simple Commands', display_name: 'Using Simple Commands', has_lesson_plan: false
-level 'csp_applab_turtle_virtual', named: true
+level 'csp_applab_turtle_virtual', progression: 'Video: Turtle Programming'
 level 'U3L2 Using Simple Commands_virtual', progression: 'Using Simple Turtle Commands'
 level 'U3L2_TurtleSquare_right_virtual', progression: 'Using Simple Turtle Commands'
 level 'U3L2_Turtle3by3Grid_virtual', progression: 'Challenge: Draw a 3x3 Grid Using Turtle Commands'

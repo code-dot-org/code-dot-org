@@ -1,1 +1,18 @@
-{}
+{
+  "backpackLabel": "Mochila",
+  "clearConsole": "Limpar Console",
+  "compilerError": "Não foi possível compilar seu programa.  Procure por erros em seu programa e tente novamente.",
+  "console": "Console",
+  "duplicateProjectFilenameError": "O nome do arquivo {filename} já está em uso neste projeto.  Escolha um nome diferente",
+  "duplicateSupportFilenameError": "O nome do arquivo {filename} já está em uso no código de suporte deste nível.  Escolha um nome diferente",
+  "editor": "Editor",
+  "illegalMethodAccess": "Você tentou acessar um método que está bloqueado por nossa política de segurança.\n {cause}",
+  "internalCompilerException": "Opa.  Encontramos um erro do nosso lado ao compilar seu programa.  Tente executá-lo novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",
+  "internalException": "Opa.  Encontramos um erro do nosso lado.  Tente executar seu programa novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",
+  "internalRuntimeException": "Opa.  Encontramos um erro da nossa parte ao executar seu programa.  Tente executá-lo novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",
+  "javaExtensionMissing": "Nome de arquivo inválido.  Os nomes dos arquivos devem terminar em '.java'.",
+  "newFile": "Novo Arquivo",
+  "noMainMethod": "Erro: seu programa não contém um método principal.",
+  "runtimeError": "Seu código apresentou uma exceção enquanto estava em execução.\n{cause}",
+  "twoMainMethods": "Erro: Seu código só pode ter um método principal.  Encontramos pelo menos duas classes com métodos principais."
+}

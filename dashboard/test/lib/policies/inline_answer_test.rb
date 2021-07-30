@@ -33,7 +33,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
 
   test 'visible? returns true for all kinds of users if the lesson is in readonly mode for that user' do
     script_level = create(:script_level)
-    create(:user_level, user: @student, level: script_level.level, submitted: true, readonly_answers: true)
+    create(:user_level, user: @student, level: script_level.level, script: script_level.script, submitted: true, readonly_answers: true)
     assert Policies::InlineAnswer.visible?(@student, script_level)
   end
 end
