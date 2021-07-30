@@ -4,20 +4,28 @@ import {
   STATUS_MESSAGE_PREFIX
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
-import {getStore} from '../redux';
-import {setIsRunning, appendNewlineToConsoleLog} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(javabuilderUrl, onMessage, miniApp, serverLevelId, options) {
+  constructor(
+    javabuilderUrl,
+    onMessage,
+    miniApp,
+    serverLevelId,
+    options,
+    onNewlineMessage,
+    setIsRunning
+  ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
     this.options = options;
+    this.onNewlineMessage = onNewlineMessage;
+    this.setIsRunning = setIsRunning;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -83,7 +91,7 @@ export default class JavabuilderConnection {
       this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
     }
     if (includeLineBreak) {
-      getStore().dispatch(appendNewlineToConsoleLog());
+      this.onNewlineMessage();
     }
   }
 
@@ -102,11 +110,13 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
+        this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
           this.onOutputMessage('--- Localhost debugging message ---');
           this.onOutputMessage(data.value);
+          this.onNewlineMessage();
         }
         break;
       default:
@@ -129,18 +139,16 @@ export default class JavabuilderConnection {
       // miniApp on close should handle setting isRunning state as it
       // may not align with actual program execution. If mini app does
       // not have on close we won't toggle back automatically.
-      // We also pass onOutputMessage so the mini app can send its own custom
-      // done message.
       this.miniApp.onClose?.();
     } else {
       // add blank line and program exited message to console logs
-      getStore().dispatch(appendNewlineToConsoleLog());
+      this.onNewlineMessage();
       this.onOutputMessage(
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
       );
-      getStore().dispatch(appendNewlineToConsoleLog());
+      this.onNewlineMessage();
       // Set isRunning to false
-      getStore().dispatch(setIsRunning(false));
+      this.setIsRunning(false);
     }
   }
 
@@ -149,7 +157,7 @@ export default class JavabuilderConnection {
       'We hit an error connecting to our server. Try again.'
     );
     // Set isRunning to false
-    getStore().dispatch(setIsRunning(false));
+    this.setIsRunning(false);
     console.error(`[error] ${error.message}`);
   }
 

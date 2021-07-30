@@ -2,12 +2,6 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
 import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from './constants';
-import {getStore} from '../redux';
-import {
-  setIsRunning,
-  appendNewlineToConsoleLog,
-  appendOutputLog
-} from './javalabRedux';
 const timeoutList = require('@cdo/apps/lib/util/timeoutList');
 import javalabMsg from '@cdo/javalab/locale';
 
@@ -17,10 +11,13 @@ const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
-  constructor() {
+  constructor(onOutputMessage, onNewlineMessage, setIsRunning) {
     this.controller = null;
     this.numRows = null;
     this.seenFirstSignal = false;
+    this.onOutputMessage = onOutputMessage;
+    this.onNewlineMessage = onNewlineMessage;
+    this.setIsRunning = setIsRunning;
   }
 
   afterInject(level, skin, config, studioApp) {
@@ -55,10 +52,8 @@ export default class Neighborhood {
     // if this is the first signal, send a starting painter message
     if (!this.seenFirstSignal) {
       this.seenFirstSignal = true;
-      getStore().dispatch(
-        appendOutputLog(
-          `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
-        )
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
       );
     }
   }
@@ -72,8 +67,8 @@ export default class Neighborhood {
       if (signal.value === NeighborhoodSignalType.DONE) {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
-        getStore().dispatch(setIsRunning(false));
-        getStore().dispatch(appendNewlineToConsoleLog());
+        this.setIsRunning(false);
+        this.onNewlineMessage();
         return;
       }
       const timeForSignal =
