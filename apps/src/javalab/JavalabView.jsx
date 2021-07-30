@@ -15,9 +15,8 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
-import {getStore} from '../redux';
-import {setVisualizationScale} from '../redux/layout';
 import {CsaViewMode} from './constants';
+import styleConstants from '../styleConstants';
 import _ from 'lodash';
 
 const FOOTER_BUFFER = 10;
@@ -121,7 +120,7 @@ class JavalabView extends React.Component {
         id="visualization"
         style={{
           ...styles.visualizationPlaceholder,
-          width: this.props.leftWidth + 13
+          width: this.props.leftWidth + styleConstants['resize-bar-width']
         }}
       >
         &nbsp;
@@ -145,42 +144,66 @@ class JavalabView extends React.Component {
     this.updateLayoutThrottled(newWidth);
   };
 
-  updateLayout = width => {
-    const visualizationColumnHeight = window.innerHeight - 135;
-    const visualizationTop = this.props.topInstructionsHeight;
+  updateLayout = availableWidth => {
+    // We scale the visualization to take up as much space as it can, both
+    // vertically and horizontally.  Its width is constrained by the width
+    // of the left side, which the user can adjust by dragging a resizer, and
+    // which is passed into this function as availableWidth.
+    // Its height is constrained by how much of the window is available.  We
+    // start with the entire height of the window, subtract the space used by
+    // the instructions (which includes their header and horizontal resizer),
+    // subtract the space used by misc existing elements (which includes the
+    // page header, gaps between areas, the "preview" header, and the small
+    // footer at the bottom), and subtract the space used by the speed slider
+    // if it's shown.
+    // The visualization is a square, so the width it's rendered at will be
+    // constrained by both the available width and height.
+    const miscExistingElementsHeight = 135;
     const sliderHeight = 60;
-    let constrainVisualizationWidth =
-      visualizationColumnHeight - visualizationTop;
-    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
-      constrainVisualizationWidth -= sliderHeight;
-    }
-    let newVizWidth = Math.min(constrainVisualizationWidth, width);
 
-    let scale = newVizWidth / 800;
+    // The original visualization is rendered at 800x800.
+    const originalVisualizationWidth = 800;
+
+    // Determine the available height.
+    let availableHeight =
+      window.innerHeight -
+      this.props.topInstructionsHeight -
+      miscExistingElementsHeight;
+    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
+      availableHeight -= sliderHeight;
+    }
+
+    // Use the biggest available size.
+    let newVisualizationWidth = Math.min(availableHeight, availableWidth);
+
+    // Scale the visualization.
+    let scale = newVisualizationWidth / originalVisualizationWidth;
     if (scale < 0) {
       // Avoid inverting.
       scale = 0;
     }
-    getStore().dispatch(setVisualizationScale(scale));
-
-    const cssScale = `scale(${scale})`;
-
+    const scaleCss = `scale(${scale})`;
     if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
-      $('#svgMaze').css('transform', cssScale);
+      $('#svgMaze').css('transform', scaleCss);
     } else if (this.props.viewMode === CsaViewMode.THEATER) {
-      $('#theater-container').css('transform', cssScale);
+      $('#theater-container').css('transform', scaleCss);
     }
 
-    const cssWidth = width + 'px';
-    const cssWidthContent = newVizWidth + 'px';
+    // Size the visualization div (which will actually set the rendered
+    // width of the left side of the screen, since this div determines its
+    // size) and center the visualization inside of it.
     $('#visualization').css({
-      'max-width': cssWidth,
-      'max-height': cssWidthContent,
-      height: cssWidthContent,
-      left: (width - newVizWidth) / 2 + 'px'
+      'max-width': availableWidth,
+      'max-height': newVisualizationWidth,
+      height: newVisualizationWidth,
+      left: (availableWidth - newVisualizationWidth) / 2
     });
 
-    $('#page-small-footer .small-footer-base').css('max-width', width - 13);
+    // Also adjust the width of the small footer at the bottom.
+    $('#page-small-footer .small-footer-base').css(
+      'max-width',
+      availableWidth - styleConstants['resize-bar-width']
+    );
   };
 
   updateLayoutThrottled = _.throttle(this.updateLayout, 33);
@@ -251,7 +274,9 @@ class JavalabView extends React.Component {
               <HeightResizer
                 vertical={true}
                 resizeItemTop={() => 10}
-                position={this.props.leftWidth + 13}
+                position={
+                  this.props.leftWidth + styleConstants['resize-bar-width']
+                }
                 onResize={this.handleWidthResize}
               />
             )}
@@ -318,7 +343,7 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 13
+    marginLeft: styleConstants['resize-bar-width']
   },
   editorAndConsoleOnly: {
     right: '15px',
@@ -344,10 +369,10 @@ const styles = {
     height: 1,
     maxWidth: undefined,
     maxHeight: undefined,
-    marginTop: 13
+    marginTop: styleConstants['resize-bar-width']
   },
   preview: {
-    marginTop: '13px'
+    marginTop: styleConstants['resize-bar-width']
   },
   javalab: {
     display: 'flex',
