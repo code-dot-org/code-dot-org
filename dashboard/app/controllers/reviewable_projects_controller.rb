@@ -59,6 +59,23 @@ class ReviewableProjectsController < ApplicationController
     end
   end
 
+  def for_level
+    peer_user_ids = current_user.
+      sections_as_student.
+      map(&:followers).
+      flatten.
+      pluck(:student_user_id).
+      select {|student_user_id| current_user.id != student_user_id}
+
+    peers_ready_for_review = ReviewableProject.where(
+      user_id: peer_user_ids,
+      level_id: params[:level_id],
+      script_id: params[:script_id]
+    ).map(&:user)
+
+    return render json: peers_ready_for_review.pluck(:id, :name)
+  end
+
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
     @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])

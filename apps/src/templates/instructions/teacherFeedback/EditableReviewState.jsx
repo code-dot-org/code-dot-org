@@ -66,7 +66,12 @@ class EditableReviewState extends Component {
 
   render() {
     return (
-      <div style={styles.keepWorking}>
+      <div
+        style={styles.keepWorking}
+        data-tip
+        data-place="bottom"
+        data-for="keep-working-tooltip"
+      >
         <input
           id="keep-working"
           ref={ref => (this.checkbox = ref)}
@@ -74,19 +79,17 @@ class EditableReviewState extends Component {
           style={styles.checkbox}
           onChange={this.onCheckboxChange}
         />
-        <div data-tip data-place="bottom" data-for="keep-working-tooltip">
-          <label htmlFor="keep-working" style={styles.label}>
-            <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.props.latestReviewState === ReviewStates.awaitingReview && (
-              <span style={styles.awaitingReviewText}>
-                {i18n.waitingForTeacherReviewLabel()}
-              </span>
-            )}
-          </label>
-          <ReactTooltip id="keep-working-tooltip" role="tooltip" effect="solid">
-            <div style={styles.tooltipContent}>{this.getTooltipText()}</div>
-          </ReactTooltip>
-        </div>
+        <label htmlFor="keep-working" style={styles.label}>
+          <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
+          {this.props.latestReviewState === ReviewStates.awaitingReview && (
+            <span style={styles.awaitingReviewText}>
+              {i18n.waitingForTeacherReviewLabel()}
+            </span>
+          )}
+        </label>
+        <ReactTooltip id="keep-working-tooltip" role="tooltip" effect="solid">
+          <div style={styles.tooltipContent}>{this.getTooltipText()}</div>
+        </ReactTooltip>
       </div>
     );
   }
