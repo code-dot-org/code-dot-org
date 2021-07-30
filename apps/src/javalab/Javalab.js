@@ -197,13 +197,6 @@ Javalab.prototype.init = function(config) {
   // projectChanged to true.
   project.projectChanged();
 
-  let appType = 'console';
-  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    appType = 'neighborhood';
-  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
-    appType = 'theater';
-  }
-
   getStore().dispatch(
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
@@ -218,7 +211,7 @@ Javalab.prototype.init = function(config) {
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
-        appType={appType}
+        viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
       />
     </Provider>,
     document.getElementById(config.containerId)

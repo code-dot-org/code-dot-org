@@ -17,6 +17,7 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
 import {getStore} from '../redux';
 import {setVisualizationScale} from '../redux/layout';
+import {CsaViewMode} from './constants';
 import _ from 'lodash';
 
 const FOOTER_BUFFER = 10;
@@ -32,7 +33,7 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
     editorColumnHeight: PropTypes.number,
-    appType: PropTypes.string,
+    viewMode: PropTypes.string.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -119,11 +120,8 @@ class JavalabView extends React.Component {
       <div
         id="visualization"
         style={{
-          width: this.props.leftWidth + 13,
-          height: 1,
-          maxWidth: undefined,
-          maxHeight: undefined,
-          marginTop: 13
+          ...styles.visualizationPlaceholder,
+          width: this.props.leftWidth + 13
         }}
       >
         &nbsp;
@@ -148,12 +146,12 @@ class JavalabView extends React.Component {
   };
 
   updateLayout = width => {
-    const visualizationColumnHeight = $(window).height() - 135;
+    const visualizationColumnHeight = window.innerHeight - 135;
     const visualizationTop = this.props.topInstructionsHeight;
     const sliderHeight = 60;
     let constrainVisualizationWidth =
       visualizationColumnHeight - visualizationTop;
-    if (this.props.appType === 'neighborhood') {
+    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
       constrainVisualizationWidth -= sliderHeight;
     }
     let newVizWidth = Math.min(constrainVisualizationWidth, width);
@@ -167,9 +165,9 @@ class JavalabView extends React.Component {
 
     const cssScale = `scale(${scale})`;
 
-    if (this.props.appType === 'neighborhood') {
+    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
       $('#svgMaze').css('transform', cssScale);
-    } else if (this.props.appType === 'theater') {
+    } else if (this.props.viewMode === CsaViewMode.THEATER) {
       $('#theater-container').css('transform', cssScale);
     }
 
@@ -185,7 +183,7 @@ class JavalabView extends React.Component {
     $('#page-small-footer .small-footer-base').css('max-width', width - 13);
   };
 
-  updateLayoutThrottled = _.throttle(this.updateLayout, 100);
+  updateLayoutThrottled = _.throttle(this.updateLayout, 33);
 
   componentDidUpdate(prevProps) {
     if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
@@ -206,7 +204,7 @@ class JavalabView extends React.Component {
       isReadOnlyWorkspace,
       editorColumnHeight,
       leftWidth,
-      appType,
+      viewMode,
       longInstructions
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
@@ -219,7 +217,8 @@ class JavalabView extends React.Component {
 
     // It's possible that a console level without instructions won't have
     // anything to show on the left side.
-    const leftSideVisible = appType !== 'console' || !!longInstructions;
+    const leftSideVisible =
+      viewMode !== CsaViewMode.CONSOLE || !!longInstructions;
 
     return (
       <StudioAppWrapper>
@@ -340,6 +339,12 @@ const styles = {
     display: 'flex',
     flexGrow: '1',
     height: '100%'
+  },
+  visualizationPlaceholder: {
+    height: 1,
+    maxWidth: undefined,
+    maxHeight: undefined,
+    marginTop: 13
   },
   preview: {
     marginTop: '13px'

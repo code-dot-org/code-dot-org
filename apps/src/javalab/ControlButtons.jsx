@@ -18,29 +18,35 @@ export default function ControlButtons({
 }) {
   return (
     <div>
-      <JavalabButton
-        text={isRunning ? i18n.stop() : i18n.runProgram()}
-        icon={<FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />}
-        onClick={toggleRun}
-        isHorizontal
-        style={{...styles.button.all, ...styles.button.orange, float: 'left'}}
-      />
-      <JavalabButton
-        text={isTesting ? i18n.stopTests() : i18n.test()}
-        icon={<FontAwesome icon="flask" className="fa" />}
-        onClick={toggleTest}
-        isHorizontal
-        style={{...styles.button.all, ...styles.button.white, float: 'left'}}
-      />
-      {!isEditingStartSources && (
+      <div style={styles.leftButtons}>
         <JavalabButton
-          text={i18n.finish()}
-          onClick={onContinue}
-          style={{...styles.button.all, ...styles.button.blue, float: 'right'}}
-          isDisabled={isReadOnlyWorkspace}
+          text={isRunning ? i18n.stop() : i18n.runProgram()}
+          icon={
+            <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />
+          }
+          onClick={toggleRun}
+          isHorizontal
+          style={{...styles.button.all, ...styles.button.orange}}
         />
-      )}
-      <JavalabSettings>{renderSettings()}</JavalabSettings>
+        <JavalabButton
+          text={isTesting ? i18n.stopTests() : i18n.test()}
+          icon={<FontAwesome icon="flask" className="fa" />}
+          onClick={toggleTest}
+          isHorizontal
+          style={{...styles.button.all, ...styles.button.white}}
+        />
+      </div>
+      <div style={styles.rightButtons}>
+        <JavalabSettings>{renderSettings()}</JavalabSettings>
+        {!isEditingStartSources && (
+          <JavalabButton
+            text={i18n.finish()}
+            onClick={onContinue}
+            style={{...styles.button.all, ...styles.button.blue}}
+            isDisabled={isReadOnlyWorkspace}
+          />
+        )}
+      </div>
     </div>
   );
 }
@@ -57,8 +63,15 @@ ControlButtons.propTypes = {
 };
 
 const styles = {
+  leftButtons: {
+    float: 'left'
+  },
+  rightButtons: {
+    float: 'right'
+  },
   button: {
     all: {
+      float: 'left',
       fontSize: 15,
       width: 140,
       backgroundColor: color.orange,
