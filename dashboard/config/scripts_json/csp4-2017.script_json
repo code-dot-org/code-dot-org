@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSP",
       "family_name": "csp4",
@@ -38,8 +39,8 @@
     },
     "new_name": "csp4-2017",
     "family_name": "csp4",
-    "serialized_at": "2021-06-17 22:28:19 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:28 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2017"
     }
@@ -489,9 +490,10 @@
       "properties": {
         "level_keys": [
           "U4-AP-Practice-Choose-The-Data-Concern"
-        ]
+        ],
+        "progression": "(new) AP Practice Response - Identify the Data Concern"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,7 +568,7 @@
         ],
         "progression": "The Future of Big Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -588,9 +590,10 @@
       "properties": {
         "level_keys": [
           "U4-AP-Practice-Justify-the-Score"
-        ]
+        ],
+        "progression": "(new) AP Practice Response - Justify the Score"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -690,7 +693,7 @@
         ],
         "progression": "Crack a Caesar Cipher"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -715,7 +718,7 @@
         ],
         "progression": "Terminology Recap"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -740,7 +743,7 @@
         ],
         "progression": "New Challenge Introduction"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -765,7 +768,7 @@
         ],
         "progression": "Crack Random Substitution"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -790,7 +793,7 @@
         ],
         "progression": "Technique: Frequency Analysis"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -990,7 +993,7 @@
         ],
         "progression": "The Vigenere Cipher Widget"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1015,7 +1018,7 @@
         ],
         "progression": "How Secure Is Your Password?"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1040,7 +1043,7 @@
         ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1215,7 +1218,7 @@
         ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1240,7 +1243,7 @@
         ],
         "progression": "Cups and Beans Activity"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1265,7 +1268,7 @@
         ],
         "progression": "Modulo Clock Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1290,7 +1293,7 @@
         ],
         "progression": "The Modulo Clock"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1315,7 +1318,7 @@
         ],
         "progression": "Public Key Crypto Widget Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1340,7 +1343,7 @@
         ],
         "progression": "Public Key Cryptography Widget"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1540,7 +1543,7 @@
         ],
         "progression": "Cybersecurity and Crime"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
