@@ -105,7 +105,7 @@ export default class JavabuilderConnection {
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
     if (!this.socket) {
-      console.error(`[error] The connection has closed.`);
+      // Do nothing
     } else {
       this.socket.send(message);
     }
@@ -114,7 +114,7 @@ export default class JavabuilderConnection {
   // Closes web socket connection
   closeConnection() {
     if (!this.socket) {
-      console.error(`[error] There is no web socket connection.`);
+      // Do nothing - there is no socket to close
     } else {
       this.socket.close();
     }
