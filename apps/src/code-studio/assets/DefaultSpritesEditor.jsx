@@ -61,6 +61,34 @@ export default class DefaultSpritesEditor extends React.Component {
     this.incrementPendingChanges();
   };
 
+  reorderSpriteByOne = (moveForward, spriteName) => {
+    let updatedList = [...this.state.defaultList];
+    let originalIndex = 0;
+    // Find index
+    for (let index = 0; index < updatedList.length; index++) {
+      if (updatedList[index].name === spriteName) {
+        originalIndex = index;
+      }
+    }
+
+    let itemToMove = updatedList.splice(originalIndex, 1)[0];
+
+    if (moveForward) {
+      // No action to move the first element forward
+      if (originalIndex > 0) {
+        updatedList.splice(originalIndex - 1, 0, itemToMove);
+      }
+    } else {
+      // No action to move the last element back
+      if (originalIndex < updatedList.length) {
+        updatedList.splice(originalIndex + 1, 0, itemToMove);
+      }
+    }
+
+    this.setState({defaultList: updatedList});
+    this.incrementPendingChanges();
+  };
+
   updateDefaultSprites = () => {
     this.setState({isUpdating: true});
     let jsonList = {};
@@ -86,6 +114,7 @@ export default class DefaultSpritesEditor extends React.Component {
           name={spriteObject.name}
           keyValue={spriteObject.key}
           onDelete={this.deleteSpriteFromDefaults}
+          onMove={this.reorderSpriteByOne}
           key={spriteObject.name}
         />
       );
