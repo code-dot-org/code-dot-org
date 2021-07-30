@@ -23,7 +23,8 @@ export const JavabuilderExceptionType = {
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
-  TWO_MAIN_METHODS: 'TWO_MAIN_METHODS'
+  TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
+  CLASS_NOT_FOUND: 'CLASS_NOT_FOUND'
 };
 
 export const NeighborhoodSignalType = {
@@ -49,6 +50,13 @@ export const NeighborhoodSignalType = {
   SHOW_BUCKETS: 'SHOW_BUCKETS',
   // We will not receive any more commands
   DONE: 'DONE'
+};
+
+export const TheaterSignalType = {
+  AUDIO_URL: 'AUDIO_URL',
+  VISUAL_URL: 'VISUAL_URL',
+  AUDIO: 'AUDIO',
+  VISUAL: 'VISUAL'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');

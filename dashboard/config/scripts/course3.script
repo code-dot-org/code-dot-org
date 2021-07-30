@@ -3,9 +3,12 @@ lesson_extras_available true
 curriculum_path 'https://code.org/curriculum/course3/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'course3'
+version_year 'unversioned'
 published_state 'preview'
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Computational Thinking', display_name: 'Computational Thinking', has_lesson_plan: true, unplugged: true
 level 'ComputationalThinking'

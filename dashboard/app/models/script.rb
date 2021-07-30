@@ -12,7 +12,7 @@
 #  properties      :text(65535)
 #  new_name        :string(255)
 #  family_name     :string(255)
-#  published_state :string(255)      default("in_development"), not null
+#  published_state :string(255)      default("in_development")
 #
 # Indexes
 #
@@ -109,7 +109,7 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless pilot_experiment.blank?
+    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless get_pilot_experiment.blank?
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -563,7 +563,7 @@ class Script < ApplicationRecord
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name) if unit_name
+      return Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) if unit_name
     end
 
     locale_str = locale&.to_s
@@ -769,9 +769,11 @@ class Script < ApplicationRecord
   end
 
   def self.units_with_standards
+    # Find scripts that have a version_year where that version_year isn't 'unversioned',
+    # which is a placeholder for assignable scripts that aren't updated after creation.
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
-      where("properties -> '$.version_year' >= '2019'").
+      where("properties -> '$.version_year' >= '2019' and properties -> '$.version_year' < '#{CourseVersion::UNVERSIONED}'").
       map {|unit| [unit.title_for_display, unit.name]}
   end
 
@@ -1006,7 +1008,7 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: unit_data[:published_state].nil? || new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1423,15 +1425,15 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def stable?
-    published_state == SharedConstants::PUBLISHED_STATE.stable
+    get_published_state == SharedConstants::PUBLISHED_STATE.stable
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    get_published_state == SharedConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1476,7 +1478,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
-      publishedState: published_state,
+      publishedState: get_published_state,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1502,7 +1504,7 @@ class Script < ApplicationRecord
       versions: summarize_versions(user),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
-      pilot_experiment: pilot_experiment,
+      pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
       show_assign_button: assignable_for_user?(user),
       project_sharing: project_sharing,
@@ -1662,7 +1664,8 @@ class Script < ApplicationRecord
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
           is_stable: s.stable?,
-          locales: s.supported_locale_names
+          locales: s.supported_locale_names,
+          locale_codes: s.supported_locales
         }
       end
 
@@ -1776,6 +1779,17 @@ class Script < ApplicationRecord
     course_version || unit_group&.course_version
   end
 
+  # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
+  # If both are null, the script is in_development
+  def get_published_state
+    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
+  end
+
+  # Use the unit group's pilot_experiment if one exists
+  def get_pilot_experiment
+    pilot_experiment || unit_group&.pilot_experiment
+  end
+
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
   def course_link(section_id = nil)
@@ -1828,6 +1842,7 @@ class Script < ApplicationRecord
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
+    info[:supported_locale_codes] = supported_locale_codes
     info[:lesson_extras_available] = lesson_extras_available
     if has_standards_associations?
       info[:standards] = standards
@@ -1835,11 +1850,14 @@ class Script < ApplicationRecord
     info
   end
 
-  def supported_locale_names
+  def supported_locale_codes
     locales = supported_locales || []
-    locales += ['en-US']
-    locales = locales.sort
-    locales.map {|l| Script.locale_native_name_map[l] || l}.uniq
+    locales += ['en-US'] unless locales.include? 'en-US'
+    locales.sort
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Script.locale_native_name_map[l] || l}.uniq
   end
 
   def self.locale_native_name_map
@@ -1925,7 +1943,7 @@ class Script < ApplicationRecord
   end
 
   def pilot?
-    !!pilot_experiment
+    !!get_pilot_experiment
   end
 
   def has_pilot_access?(user = nil)
@@ -1945,8 +1963,7 @@ class Script < ApplicationRecord
 
   # Whether this particular user has the pilot experiment enabled.
   def has_pilot_experiment?(user)
-    return false unless pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    user.has_pilot_experiment?(get_pilot_experiment)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
@@ -1960,8 +1977,7 @@ class Script < ApplicationRecord
   # If a user is in the editor experiment of this unit, that indicates that
   # they are a platformization partner who owns this unit.
   def has_editor_experiment?(user)
-    return false unless editor_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
+    user.has_pilot_experiment?(editor_experiment)
   end
 
   def self.get_version_year_options

@@ -1,73 +1,73 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Panduan Cara Melakukan Jam Kod untuk Acara Maya
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Petua untuk acara Jam Kod maya
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Anda tidak perlu bersemuka untuk berjaya menjalankan Jam Kod!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Walaupun Jam Kod secara tradisional diadakan di dalam kelas di seluruh dunia, anda tidak perlu bersemuka untuk mengecapi keseronokan! Anda masih boleh menganjurkan Jam Kod berinteraktif dan memberikan inspirasi untuk pelajar dari jauh dengan menggunakan beberapa saranan ini.  Sila lihat pada [panduan untuk acara maya]({{ localized_files/participation_guide_virtual }}) kami sekiranya anda masih mempunyai soalan.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Anda mungkin berada berasingan, tetapi anda masih boleh bermula bersama
+Walaupun anda merancang untuk pelajar menyelesaikan aktiviti mereka secara berasingan, kami menyarankan anda memulakan acara dengan pelancaran maya secara dalam talian bertujuan membuatkan peserta teruja. Terdapat beberapa cara menarik untuk memulakan acara anda: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Menjemput penceramah undangan</b>: Ribuan sukarelawan daripada pelbagai latar belakang menunggu untuk mendengar ceramah daripada anda! Gunakan sahaja <a href="https://code.org/volunteer/local">peta sukarelawan</a> kami untuk mencari mereka. Dengan Jam Kod maya, anda tidak dihadkan dengan jaraknya, oleh itu jika perlu, pertimbangkan mencari lokasi di luar poskod anda bagi sukarelawan yang menawarkan untuk membantu dari jauh. Sebaik sahaja anda telah berhubung dengan sukarelawan, anda boleh memberikan rujukan <a href="http://hourofcode.com/us/how-to/volunteers">Panduan Cara Sukarelawan Jam Kod</a> sebagai panduan untuk menentukan topik yang berpotensi, soalan perbincangan dan banyak lagi.</li> 
+<li><b>Tunjukkan video yang memberikan inspirasi</b>: Pilihan lain yang boleh dipercayai untuk memulakan acara anda, ialah dengan menunjukkan kepada peserta satu daripada banyak <a href="http://hourofcode.com/us/promote/resources#videos">video inspirasi</a>. Banyak video berdurasi kurang daripada 5 minit dan menampilkan inspirasi dan dorongan daripada selebriti yang akan dikenali oleh pelajar anda.</li> 
+<li><b>Bincangkan sains komputer untuk kebaikan</b>: Ubah acara Jam Kod anda menjadi pemahaman yang lebih mendalam mengenai sains komputer dengan mempertimbangkan kesan teknologi kepada kehidupan harian kita. Tanya pelajar soalan bimbingan dan ubah permulaan acara anda menjadi perbincangan berinteraktif. Untuk idea mengenai cara memulakan perbualan, sila lihat <a href="https://code.org/csforgood#prompts">soalan perbincangan</a> ini.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Perkara yang perlu disediakan lebih awal
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Tentukan platform persidangan video anda
+Kemungkinan anda sudah biasa dengan platform seperti Cisco Webex, Google Meet, Microsoft Teams, Skype, atau Zoom sekarang ini. Apa sahaja alat yang anda berikan keutamaan, kami hanya menggalakkan anda membiasakan diri, menguji kemampuannya dan melihat kembali sepintas lalu agenda Jam Kod sebelum tarikh acara anda.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Rancang cara pelajar akan menyertainya
+**Aktiviti Jam Kod Pandu Diri**<br> Kami menyarankan bahawa selepas pelancaran, anda membenarkan pelajar meninggalkan persidangan video supaya mereka boleh menjalankan <a href="https://hourofcode.com/us/learn">Aktiviti Jam Kod</a> sendiri dan bukannya tinggal bersama. Perkara ini akan membolehkan pelajar melibatkan diri di dalam projek mereka sendiri dan memperoleh pemahaman yang lebih kuat mengenai konsep CS. Ini juga akan mengurangkan gangguan dan halangan mempunyai tetingkap persidangan video yang terbuka.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Pelaksanaan ini juga mungkin bermanfaat kepada anda bagi menentukan 1-3 pilihan tutorial untuk mereka memilih dengan lebih awal. Ini membolehkan anda memilih aktiviti yang paling sesuai dengan tahap gred mereka. Tambahan pula, jika pelajar mempunyai soalan yang memerlukan bantuan anda, anda akan menjadi lebih bersedia untuk membantu sekiranya anda sudah biasa dengan tutorial yang sedang mereka lakukan.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Jika kelas anda dijangka melakukan aktivitinya sebaik sahaja selepas pelancaran, anda mungkin membuat pertimbangan untuk memastikan supaya bilik persidangan maya, platform sembang, atau kaedah komunikasi yang lain dibuka supaya ia dapat berhubung semula dengan anda bersama soalan yang diperlukan.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Bersama melakukan aktiviti Jam Kod dalam talian**<br> Jika anda lebih suka memastikan peserta anda berada dalam panggilan video yang sama sepanjang acara anda, sila ambil perhatian bahawa mereka perlu dua tetingkap yang terbuka pada sepanjang masa - satu untuk platform persidangan video dan satu lagi untuk pelajar melakukan aktiviti mereka.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Bersama ibu bapa**<br> Bagi pelajar yang berada pada Gred 4 dan ke bawah, sila pertimbangkan untuk menggalakkan ibu bapa mereka menganjurkan Jam Kod di rumah. Anda boleh menyokongnya dengan beberapa tutorial yang disarankan serta <a href="https://hourofcode.com/us/how-to/parents">Panduan Cara Untuk Ibu Bapa</a> yang berguna ini.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Mendaftar sebagai sukarelawan
+Anda boleh mencari sukarelawan yang sesuai mengikut keperluan anda dengan mengunjungi <a href="https://code.org/volunteer/local">peta sukarelawan</a> kami. Ramai yang boleh didapati untuk penyertaan jarak jauh dan lebih bersedia untuk bercakap tentang pengalaman mereka di dalam sains komputer, sejauh mana teknologi memberikan kesan kepada peranan mereka, atau hanya membantu anda menjawab soalan pelajar. Sebaik sahaja anda menemui sukarelawan, pastikan anda mengadakan mesyuarat dengan mereka lebih awal lagi untuk membincangkan tentang peranan mereka untuk acara itu, menyelesaikan keperluan teknikal dan menetapkan logistik penyertaan dalam talian.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. Bekalan keraian
+Lihat di bawah untuk memperoleh idea bagi meraikan Jam Kod maya anda. Sesetengahnya mungkin meminta anda membuat persiapan lebih awal seperti mewujudkan <a href="https://code.org/certificates">sijil</a> tamat untuk semua peserta anda.
 
 ---
 
-## Celebrate together
+## Raikan bersama
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Serupa sepertimana anda memulakan acara, mari kita berhimpun untuk meraikannya nanti! Berikut ialah beberapa idea untuk menjadikan sambutan maya anda berinteraktif dan istimewa:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Benarkan pelajar berkongsi projek mereka yang sudah disiapkan dengan kelas lain. Jika platform persidangan anda membenarkannya, anda boleh menggalakkan pelajar mengambil syot layar projek mereka dan tetapkannya sebagai latar belakang maya mereka!
+- Bincangkan mengenai pembelajaran: Apakah yang telah mereka pelajari tentang sains komputer atau teknologi? Apakah yang mereka lakukan apabila mengalami masalah, bagaimanakah mereka menyelesaikannya?
+- <a href="https://code.org/certificates">Cipta dan kongsikan sijil</a> untuk peserta anda
+- Kongsikan foto dan video acara Jam Kod maya di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Akhir sekali, jika anda tidak memulakan acara tersebut dengan <a href="https://code.org/volunteer/local">penceramah undangan</a>, <a href="https://hourofcode.com/us/promote/resources#">video inspirasi</a>, atau <a href="https://code.org/csforgood#prompts">soalan perbincangan</a>, ini juga menjadi peluang terbaik untuk menggabungkan satu daripada banyak pengalaman.
 
 {{ signup_button }}

@@ -80,9 +80,6 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
-    # will be true if the user is in any unarchived section where tts autoplay is enabled
-    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
-
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -107,6 +104,9 @@ class ScriptLevelsController < ApplicationController
       redirect_to new_path
       return
     end
+
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
     configure_caching(@script)
 
@@ -399,11 +399,13 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    user = User.find(params[:user_id])
+    user_to_view = User.find(params[:user_id])
+    if can?(:view_as_user, @script_level, user_to_view)
+      @user = user_to_view
 
-    # TODO: This should use cancan/authorize.
-    if user.student_of?(current_user) || current_user.project_validator?
-      @user = user
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+        view_options(is_code_reviewing: true)
+      end
     end
   end
 
