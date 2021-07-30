@@ -45,19 +45,6 @@ describe('JavabuilderConnection', () => {
     });
   });
 
-  describe('sendMessage', () => {
-    it('errors when called on a connection with no socket', () => {
-      const javabuilderConnection = new JavabuilderConnection(null, () => {});
-      sinon.stub(console, 'error');
-      javabuilderConnection.sendMessage('');
-      expect(console.error).to.have.been.calledOnce;
-      expect(console.error.getCall(0).args[0]).to.contain(
-        '[error] The connection has closed.'
-      );
-      console.error.restore();
-    });
-  });
-
   describe('onClose', () => {
     it('closes web socket on closeConnection', () => {
       const closeStub = sinon.stub();
@@ -69,17 +56,6 @@ describe('JavabuilderConnection', () => {
       javabuilderConnection.closeConnection();
       expect(closeStub).to.have.been.calledOnce;
       window.WebSocket.restore();
-    });
-
-    it('errors on a close without a socket', () => {
-      const javabuilderConnection = new JavabuilderConnection(null, () => {});
-      sinon.stub(console, 'error');
-      javabuilderConnection.closeConnection();
-      expect(console.error).to.have.been.calledOnce;
-      expect(console.error.getCall(0).args[0]).to.contain(
-        '[error] There is no web socket connection.'
-      );
-      console.error.restore();
     });
   });
 });
