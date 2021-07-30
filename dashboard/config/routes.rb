@@ -887,7 +887,13 @@ Dashboard::Application.routes.draw do
   end
 
   resources :code_review_comments, only: [:create, :destroy] do
-    patch :resolve, on: :member
+    patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
   end
+
+  get '/backpacks/channel', to: 'backpacks#get_channel'
+
+  resources :reviewable_projects, only: [:create, :destroy]
+  get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
+  get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 end

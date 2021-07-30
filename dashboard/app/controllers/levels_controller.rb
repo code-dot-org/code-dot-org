@@ -159,8 +159,9 @@ class LevelsController < ApplicationController
   # GET /levels/:id/get_serialized_maze
   # Get the serialized_maze for the level, if it exists.
   def get_serialized_maze
-    return head :no_content unless @level.properties['serialized_maze'].presence && @level.serialized_maze
-    render json: @level.serialized_maze
+    serialized_maze = @level.try(:get_serialized_maze)
+    return head :no_content unless serialized_maze
+    render json: serialized_maze
   end
 
   # GET /levels/:id/edit_blocks/:type
@@ -227,7 +228,7 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    changes = JSON.parse(URI.unescape(request.body.read))
+    changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.properties[key] = value
     end

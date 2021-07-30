@@ -1500,6 +1500,34 @@ class UserTest < ActiveSupport::TestCase
     assert old_password != student.encrypted_password
   end
 
+  test 'send localized password reset email for student' do
+    test_locale = :"te-ST"
+    translated_subject = 'subject in te-ST'
+    translated_hello = 'hello in te-ST'
+    custom_i18n = {
+      devise: {
+        mailer: {
+          reset_password_instructions: {
+            subject: translated_subject,
+            hello: translated_hello
+          }
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    email = 'email@email.xx'
+    create :student, password: 'current_password', email: email
+
+    assert User.send_reset_password_instructions(email: email)
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [email], mail.to
+    assert_equal translated_subject, mail.subject
+    assert mail.body.to_s =~ /#{translated_hello}/
+  end
+
   test 'send reset password for student with parent email' do
     email = 'email@email.xx'
     student = create :student, password: 'oldone', email: email, parent_email: email
@@ -3662,6 +3690,10 @@ class UserTest < ActiveSupport::TestCase
       create :unit_group_unit, position: 1, unit_group: @unit_group, script: @script
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script2
       create :unit_group_unit, position: 2, unit_group: @unit_group, script: @script3
+      @unit_group.reload
+      @script.reload
+      @script2.reload
+      @script3.reload
     end
 
     def put_student_in_section(student, teacher, script, unit_group=nil)

@@ -332,8 +332,7 @@ const styles = {
   header: {
     display: 'flex',
     alignItems: 'center',
-    marginTop: 8,
-    marginBottom: 8
+    paddingBottom: 8
   },
   h1: {
     color: color.charcoal,
@@ -343,7 +342,7 @@ const styles = {
     fontWeight: 'normal'
   },
   commentAndFooter: {
-    margin: '8px 16px 8px 16px'
+    padding: '8px 16px'
   }
 };
 
