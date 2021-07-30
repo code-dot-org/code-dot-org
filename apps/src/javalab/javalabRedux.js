@@ -12,6 +12,7 @@ const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
+const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
@@ -26,6 +27,7 @@ const initialState = {
   validation: {},
   renderedEditorHeight: 400,
   leftWidth: 400,
+  rightWidth: 400,
   isRunning: false,
   editorColumnHeight: 600,
   backpackApi: null,
@@ -165,6 +167,11 @@ export const setLeftWidth = width => ({
   width
 });
 
+export const setRightWidth = width => ({
+  type: RIGHT_WIDTH_UPDATED,
+  width
+});
+
 export const setEditorColumnHeight = editorColumnHeight => ({
   type: EDITOR_COLUMN_HEIGHT,
   editorColumnHeight
@@ -263,6 +270,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       leftWidth: action.width
+    };
+  }
+  if (action.type === RIGHT_WIDTH_UPDATED) {
+    return {
+      ...state,
+      rightWidth: action.width
     };
   }
   if (action.type === SET_IS_RUNNING) {
