@@ -7,16 +7,21 @@ export default class Theater {
     this.context = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.signalsReceived = 0;
+    this.audioResponse = null;
+    this.visualResponse = null;
   }
 
   handleSignal(data) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
-        this.getAudioElement().src = data.detail.url;
+        this.audioResponse = data.detail.url;
+        this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
-        this.getImgElement().src = data.detail.url;
+        this.visualResponse = data.detail.url;
+        this.startPlayback();
         break;
       }
       default:
@@ -24,7 +29,18 @@ export default class Theater {
     }
   }
 
+  startPlayback() {
+    this.signalsReceived++;
+    // We expect exactly 2 responses from Javabuilder. One for audio and one for video.
+    // Wait for both before starting playback.
+    if (this.signalsReceived > 1) {
+      this.getAudioElement().src = this.audioResponse;
+      this.getImgElement().src = this.visualResponse;
+    }
+  }
+
   reset() {
+    this.signalsReceived = 0;
     this.getImgElement().src = '';
     this.getAudioElement().src = '';
   }
