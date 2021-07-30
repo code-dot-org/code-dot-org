@@ -75,7 +75,6 @@ class EditSectionForm extends Component {
     hiddenLessonState: PropTypes.object.isRequired,
     assignedUnitName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    localeEnglishName: PropTypes.string,
     localeCode: PropTypes.string,
     showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
@@ -167,9 +166,8 @@ class EditSectionForm extends Component {
       lessonExtrasAvailable,
       textToSpeechUnitIds,
       assignedUnitName,
-      localeEnglishName,
-      isNewSection,
       localeCode,
+      isNewSection,
       showLockSectionField // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
@@ -239,7 +237,7 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            localeEnglishName={localeEnglishName}
+            localeCode={localeCode}
             isNewSection={isNewSection}
           />
           {lessonExtrasAvailable(section.scriptId) && (
@@ -403,7 +401,7 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  localeEnglishName,
+  localeCode,
   isNewSection
 }) => (
   <div>
@@ -417,7 +415,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      localeEnglishName={localeEnglishName}
+      localeCode={localeCode}
       isNewSection={isNewSection}
     />
   </div>
@@ -428,7 +426,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  localeEnglishName: PropTypes.string,
+  localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -580,7 +578,6 @@ let defaultPropsFromState = state => ({
   lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedUnitName: assignedUnitName(state),
-  localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,
 
   // DCDO Flag - show/hide Lock Section field

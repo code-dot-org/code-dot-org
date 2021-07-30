@@ -31,10 +31,11 @@ export default class DefaultSpritesEditor extends React.Component {
       });
   }
 
-  incrementPendingChanges() {
-    let changes = this.state.pendingChangesCount + 1;
-    this.setState({pendingChangesCount: changes});
-  }
+  incrementPendingChanges = () => {
+    this.setState(state => ({
+      pendingChangesCount: state.pendingChangesCount + 1
+    }));
+  };
 
   deleteSpriteFromDefaults = spriteName => {
     let updatedList = [...this.state.defaultList];

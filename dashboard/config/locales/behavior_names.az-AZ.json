@@ -444,7 +444,8 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "mystery": "sirr"
         },
         "Virtual Pet 1_2020": {
           "wandering": "gəzən",
@@ -454,7 +455,8 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "mystery": "sirr"
         },
         "Virtual Pet 2": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -574,7 +576,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 1_2020": {
           "wandering": "gəzən",
@@ -584,7 +587,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 2": {
           "wandering": "gəzən",
@@ -594,7 +598,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 2_2020": {
           "wandering": "gəzən",
@@ -604,7 +609,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 3": {
           "wandering": "gəzən",
@@ -614,7 +620,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "zooming east": "şərqə yaxınlaşma",
+          "driving east": "şərqə doğru hərəkət"
         },
         "behaviors 3_2020": {
           "wandering": "gəzən",
@@ -624,7 +632,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "zooming east": "şərqə yaxınlaşma",
+          "driving east": "şərqə doğru hərəkət"
         },
         "behaviors 3a": {
           "wandering": "gəzən",
@@ -634,7 +644,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "zooming east": "şərqə yaxınlaşma",
+          "driving east": "şərqə doğru hərəkət"
         },
         "behaviors 3a_2020": {
           "wandering": "gəzən",
@@ -644,7 +656,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "zooming east": "şərqə yaxınlaşma",
+          "driving east": "şərqə doğru hərəkət"
         },
         "behaviors 4": {
           "wandering": "gəzən",
@@ -654,7 +668,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 4_2020": {
           "wandering": "gəzən",
@@ -664,7 +679,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 6": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -674,7 +690,9 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "rolling": "yuvarlanma",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 6_2020": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -684,7 +702,9 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "rolling": "yuvarlanma",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 7": {
           "moving north": "şimala hərəkət",
@@ -694,7 +714,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "rolling": "yuvarlanma",
+          "running east": "şərqə qaçmaq"
         },
         "behaviors 7_2020": {
           "moving north": "şimala hərəkət",
@@ -704,7 +726,9 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "rolling": "yuvarlanma",
+          "running east": "şərqə qaçmaq"
         },
         "courseE_Dogger_2": {
           "wandering": "gəzən",
@@ -962,7 +986,9 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "patrolling": "patrul",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
         },
         "courseF_apps_card": {
           "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
@@ -973,7 +999,8 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "blocking movement": "hərəkətin bloklaması"
         },
         "courseF_apps_chatbot": {
           "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
@@ -984,7 +1011,10 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "blocking movement": "hərəkətin bloklaması",
+          "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
         },
         "courseF_apps_collector": {
           "wandering": "gəzən",
@@ -994,7 +1024,10 @@
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "patrolling": "patrul",
-          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "flying west and looping": "Qərb və loop üçün uçuş",
+          "moving with arrow keys2": "işarə düymələri2 ilə hərəkət edin",
+          "driving with arrow keys2": "işarə düymələri2 ilə hərəkət edin"
         },
         "courseF_apps_madlib": {
           "wandering": "gəzən",
@@ -1033,7 +1066,8 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "blocking movement": "hərəkətin bloklaması"
         },
         "courseF_editable_chatbot": {
           "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
@@ -1044,7 +1078,8 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "blocking movement": "hərəkətin bloklaması"
         },
         "courseF_editable_madlib": {
           "wandering": "gəzən",
@@ -1070,7 +1105,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patrul",
@@ -1081,7 +1117,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patrul",
@@ -1094,7 +1131,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patrul",
@@ -1107,7 +1145,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_conflict": {
           "patrolling": "patrul",
@@ -1119,7 +1158,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
@@ -1204,7 +1244,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_practice_reorder": {
           "moving east": "şərqə doğru hərəkət",
@@ -1218,7 +1259,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_predict": {
           "wandering": "gəzən",
@@ -1228,7 +1270,8 @@
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
           "moving west": "qərbə doğru hərəkət",
           "patrolling": "patrul",
-          "moving east": "şərqə doğru hərəkət"
+          "moving east": "şərqə doğru hərəkət",
+          "running east": "şərqə qaçmaq"
         },
         "courseF_events_review": {
           "patrolling": "patrul",
@@ -1241,7 +1284,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_ship": {
           "patrolling": "patrul",
@@ -1254,7 +1298,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_stops": {
           "moving east": "şərqə doğru hərəkət",
@@ -1266,7 +1311,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_events_time": {
           "patrolling": "patrul",
@@ -1279,7 +1325,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_label_predict": {
           "moving east": "şərqə doğru hərəkət",
@@ -1289,7 +1336,8 @@
           "moving south": "cənuba hərəkət",
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "running east": "şərqə qaçmaq"
         },
         "courseF_place_fruit": {
           "moving east": "şərqə doğru hərəkət",
@@ -1445,7 +1493,8 @@
           "moving south": "cənuba hərəkət",
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "running east": "şərqə qaçmaq"
         },
         "courseF_sprites_properties": {
           "moving east": "şərqə doğru hərəkət",
@@ -1479,7 +1528,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_choice_color": {
           "patrolling": "patrul",
@@ -1491,7 +1541,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_choice_conversation": {
           "wandering": "gəzən",
@@ -1573,7 +1624,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_concat": {
           "patrolling": "patrul",
@@ -1585,7 +1637,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_events": {
           "patrolling": "patrul",
@@ -1597,7 +1650,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_print": {
           "patrolling": "patrul",
@@ -1609,7 +1663,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_prompts": {
           "patrolling": "patrul",
@@ -1621,7 +1676,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_text_review": {
           "patrolling": "patrul",
@@ -1633,7 +1689,8 @@
           "wandering": "gəzən",
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
-          "moving east and looping": "şərqə doğru döngə hərəkəti"
+          "moving east and looping": "şərqə doğru döngə hərəkəti",
+          "moving forward": "irəli hərəkət"
         },
         "courseF_variables_card": {
           "wandering": "gəzən",
@@ -1727,7 +1784,8 @@
           "moving south": "cənuba hərəkət",
           "moving north": "şimala hərəkət",
           "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
-          "patrolling": "patrul"
+          "patrolling": "patrul",
+          "running east": "şərqə qaçmaq"
         },
         "simcustom_2021": {
           "wandering": "gəzən",
@@ -1742,6 +1800,212 @@
           "wobbling": "titrəmə(titrəmək)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
           "moving east and looping": "şərqə doğru döngə hərəkəti"
+        },
+        "CourseE_Project_SpriteLab_2021": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving west": "qərbə doğru hərəkət",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "patrolling": "patrul",
+          "moving south": "cənuba hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "wandering": "gəzən",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving west": "qərbə doğru hərəkət",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "patrolling": "patrul",
+          "moving south": "cənuba hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "wandering": "gəzən",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
+        },
+        "Dance Party 2_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Dance Party 3_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Dance Party 4_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Dance Party 5_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Dance Party 6_2021": {
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Dance Party 7_2021": {
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Fish Tank 2-validated_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Fish Tank 3-validated_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Fish Tank 4-validated_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Fish Tank 5-validated_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "Fish Tank 6-validated_2021": {
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "patrolling": "patrul",
+          "wandering": "gəzən",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving east": "şərqə doğru hərəkət",
+          "moving north": "şimala hərəkət",
+          "moving south": "cənuba hərəkət",
+          "moving west": "qərbə doğru hərəkət"
+        },
+        "behaviors free play": {
+          "spinning and growing": "fırlanma və böyümək"
+        },
+        "behaviors free play_2020": {
+          "spinning and growing": "fırlanma və böyümək"
+        },
+        "courseE_aboutme_1_2021": {
+          "wobbling": "titrəmə(titrəmək)",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
+        },
+        "courseE_aboutme_2_2021": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
+        },
+        "courseE_aboutme_3_2021": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
+        },
+        "courseE_aboutme_4_2021": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
+        },
+        "courseE_aboutme_5_2021": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul"
         }
       }
     }

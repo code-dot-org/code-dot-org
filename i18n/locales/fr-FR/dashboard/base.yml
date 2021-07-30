@@ -167,8 +167,8 @@ fr:
     additional_information: "Nous avons besoin de quelques informations supplémentaires pour continuer l’inscription."
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
-    user_type_teacher: "Professeur"
     user_type_student: "Élève"
+    user_type_teacher: "Professeur"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter pour créer un compte"
     error: "Une erreur est survenue."
@@ -271,6 +271,7 @@ fr:
     added_teacher: '%{name} ajouté en tant que ton enseignant'
     registered: "Vous vous êtes inscrit à %{section_name}."
     captcha_required: 'Veuillez remplir le CAPTCHA pour rejoindre cette section.'
+    already_exists: 'Tu as déjà rejoint la section %{section_name}.'
     error:
       signed_in: 'Merci de te déconnecter avant de continuer'
       username_not_found: 'Nom d''utilisateur %{username} introuvable'
@@ -985,7 +986,7 @@ fr:
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'
       colombian_school_city: 'Ville de l’École'
-      colombian_school_name: 'Nom de l''école'
+      colombian_chilean_school_name: 'Nom de l''école'
       ages: 'Quelle est la tranche d''âge de vos étudiants, cette année ?'
       subjects: 'Quelle(s) matière(s) enseignez-vous, cette année ?'
       resources: 'Parmi les ressources d’éducation en informatique suivantes, lesquelles utilisez-vous ?'
@@ -1099,4 +1100,6 @@ fr:
     text: "**Êtes-vous un parent ou un tuteur ?** Associez votre adresse électronique à ce compte afin de rester informé des progrès et des projets de votre enfant !** "
     link_your_email: "Associez votre adresse électronique"
     not_now: "Pas maintenant"
+  behaviors:
+    this_sprite: "ce sprite"
   unit_prefix: "Unité %{n}"

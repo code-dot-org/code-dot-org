@@ -173,10 +173,10 @@
           "Infinity_repeat_callout": "Plasează blocuri de mutare în interior aici"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Când eşti gata, apasă \"Rulează\" pentru a încerca programul."
+          "craft2_run_button_callout": "Când ești gata, apasă „Rulează” pentru a testa programul."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Apasă \"Rulează\" pentru a începe mişcarea."
+          "MC_HOC_2016_New_Walk_callout2": "Apasă „Rulează” pentru a începe să te deplasezi."
         },
         "NEW Course 4 Artist Functions 3": {
           "NEW_Course_4_Artist_Functions_3_1": "Apasă aici pentru a edita funcţia nouă astfel încât să creze un pătrat."
@@ -316,6 +316,54 @@
         },
         "outbreak7": {
           "costumes_callout": "Fă clic pentru a face un nou costum"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Adaugă acest bloc la programul tău.",
+          "arrow_buttons": "Apasă butoanele cu săgeată pentru a-l controla pe dansator."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Adăugați un nou eveniment în program."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Bloc nou!",
+          "new_block_4": "Bloc nou!"
+        },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Apasă aici pentru a expanda blocul.",
+          "pointerlocation": "Trage aici un bloc de subiect."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Fă clic pentru a face un nou costum"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Extrage acest fier!"
         }
       }
     }

@@ -205,8 +205,8 @@ ar:
     additional_information: نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع.
     user_type_button: تحديث نوع الحساب
     user_type_label: نوع الحساب
-    user_type_teacher: المدرس
     user_type_student: طالب
+    user_type_teacher: المدرس
     field_is_required: مطلوب
     accept_terms: يجب عليك الموافقة على إنشاء حساب
     error: حدث خطأ.
@@ -312,6 +312,7 @@ ar:
     invite_sent: تم إرسال الدعوة
     added_teacher: "%{name} تم اضافتك كمعلم"
     registered: لقد قمت بتسجيل %{section_name}.
+    already_exists: لقد انضممت بالفعل إلى قسم %{section_name}.
     error:
       signed_in: من فضلك قم بتسجيل الخروج قبل المتابعة
       username_not_found: اسم المستخدم %{username} غير موجود
@@ -548,6 +549,7 @@ ar:
       للبقاء على اطلاع دائم بتقدم طفلك ومشاريعه. ستتمكن أيضًا من استخدام عنوان البريد
       الإلكتروني هذا لاسترداد كلمة المرور.
     parent_guardian_email_label: بريد الوالد/الوصي
+    remove_parent_email_label: حذف
     none: لا شيء
     only_one_parent_email_supported_warning: 'ملاحظة: نحن فقط قادرون على دعم عنوان
       بريد إلكتروني واحد من الوالدين / ولي الأمر لكل حساب تابع للطالب في الوقت الحالي.'
@@ -1187,7 +1189,7 @@ ar:
       school_city: مدينة المدرسة
       school_country: بلد المدرسة
       colombian_school_city: مدينة المدرسة
-      colombian_school_name: اسم المدرسة
+      colombian_chilean_school_name: اسم المدرسة
       ages: ما العمر/الأعمار التي تدرِّس لها هذا العام؟
       subjects: ما المادة/المواد الدراسية التي تدرِّسها هذا العام؟
       resources: أي من المصادر التالية تستخدمها لتعليم علم الحاسوب ؟
@@ -1323,6 +1325,7 @@ ar:
     من عنوان الشبكة وأعد التقديم. أو، ارجع إلى صفحتنا الرئيسية.
   page_not_found_button: ارجع إلى صفحتنا الرئيسية
   copy: نسخ
+  confirm: تأكيد
   maker:
     google_oauth:
       login_with_google: سجّل دخولك على Maker App بحساب Google
