@@ -8,6 +8,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
       "script_announcements": [
         {
@@ -89,8 +90,8 @@
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-06-17 22:29:50 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:49 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csppostap-2018"
     }
@@ -420,9 +421,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L07 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,9 +471,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L10 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -496,7 +499,7 @@
         ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +524,7 @@
         ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -568,9 +571,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L11 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -595,7 +599,7 @@
         ],
         "progression": "Downloading the Data Set"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -620,7 +624,7 @@
         ],
         "progression": "Making a Scatter Plot"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +649,7 @@
         ],
         "progression": "Making a Line Chart"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -670,7 +674,7 @@
         ],
         "progression": "Making a Bar Chart"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -695,7 +699,7 @@
         ],
         "progression": "Editing Chart Appearance"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,9 +771,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L12 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -816,9 +821,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L13 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -843,7 +849,7 @@
         ],
         "progression": "Getting to Know Your Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -868,7 +874,7 @@
         ],
         "progression": "Cleaning Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -893,7 +899,7 @@
         ],
         "progression": "Categorizing Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,9 +971,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L14 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -992,7 +999,7 @@
         ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1017,7 +1024,7 @@
         ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1089,9 +1096,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L15 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
