@@ -21,8 +21,13 @@ import createResourcesReducer, {
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('ActivitySectionCard', () => {
+  // Warnings allowed due to usage of deprecated componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps,
     store,
     setTargetActivitySection,
