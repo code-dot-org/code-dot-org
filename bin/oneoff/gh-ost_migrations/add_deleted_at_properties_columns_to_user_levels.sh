@@ -43,7 +43,7 @@ args=(
   --verbose
 
   # alter statement (mandatory)
-  --alter="ADD deleted_at datetime, ADD properties text, ADD UNIQUE  index_user_levels_unique  (`user_id`, `script_id`, `level_id`, `deleted_at`) , DROP INDEX index_user_levels_on_user_id_and_level_id_and_script_id"
+  --alter="ADD deleted_at datetime, ADD properties text, ADD UNIQUE  index_user_levels_unique  (user_id, script_id, level_id, deleted_at) , DROP INDEX index_user_levels_on_user_id_and_level_id_and_script_id"
 
   # Drop a possibly existing Ghost table (remains from a previous run?) before beginning operation.
   # Default is to panic and abort if such table exists
