@@ -6,10 +6,10 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   setup_all do
     @project_owner = create :student
     @project_owner_channel_id = 'encrypted_channel_id'
-    @project_level_id = 'level_id'
-    @project_script_id = 'script_id'
-    @project_owner_storage_id = 123
-    @project_storage_app_id = 456
+    @project_level_id = 12
+    @project_script_id = 34
+    @project_owner_storage_id = 56
+    @project_storage_app_id = 78
 
     @teacher = create :teacher
     @section = create :section, user: @teacher
@@ -176,6 +176,32 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
       assert_response :forbidden
     end
+  end
+
+  test 'student in same section project available for review gets project metadata' do
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    sign_in @another_student
+    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
+
+    assert_equal [[@project_owner.id, @project_owner.name]], JSON.parse(response.body)
+  end
+
+  test 'student does not get projects available for review if project available but not in same section' do
+    student = create :student
+
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    sign_in student
+    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
+
+    assert_equal [], JSON.parse(response.body)
   end
 
   def stub_storage_apps_calls
