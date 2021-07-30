@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 01:13:38 UTC",
+    "serialized_at": "2021-07-30 19:24:57 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -46,7 +46,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "CS Practices",
+      "name": "CS practices for students",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
