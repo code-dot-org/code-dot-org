@@ -9,7 +9,8 @@ import {
   appendOutputLog,
   setIsDarkMode,
   setIsRunning,
-  setLeftWidth
+  setLeftWidth,
+  setRightWidth
 } from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
@@ -46,7 +47,9 @@ class JavalabView extends React.Component {
     setIsRunning: PropTypes.func,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     setLeftWidth: PropTypes.func,
+    setRightWidth: PropTypes.func,
     leftWidth: PropTypes.number,
+    rightWidth: PropTypes.number,
     topInstructionsHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string
   };
@@ -204,6 +207,15 @@ class JavalabView extends React.Component {
       'max-width',
       availableWidth - styleConstants['resize-bar-width']
     );
+
+    // The right width can also change at this point, since it takes up the
+    // remaining space.
+    const newRightWidth =
+      window.innerWidth -
+      this.props.leftWidth -
+      20 -
+      styleConstants['resize-bar-width'];
+    this.props.setRightWidth(newRightWidth);
   };
 
   updateLayoutThrottled = _.throttle(this.updateLayout, 33);
@@ -227,6 +239,7 @@ class JavalabView extends React.Component {
       isReadOnlyWorkspace,
       editorColumnHeight,
       leftWidth,
+      rightWidth,
       viewMode,
       longInstructions
     } = this.props;
@@ -287,7 +300,8 @@ class JavalabView extends React.Component {
                   ? styles.editorAndConsole
                   : styles.editorAndConsoleOnly),
                 color: isDarkMode ? color.white : color.black,
-                height: editorColumnHeight
+                height: editorColumnHeight,
+                width: rightWidth
               }}
               className="editor-column"
             >
@@ -407,6 +421,7 @@ export default connect(
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     leftWidth: state.javalab.leftWidth,
+    rightWidth: state.javalab.rightWidth,
     topInstructionsHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions
   }),
@@ -414,6 +429,7 @@ export default connect(
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setLeftWidth: width => dispatch(setLeftWidth(width))
+    setLeftWidth: width => dispatch(setLeftWidth(width)),
+    setRightWidth: width => dispatch(setRightWidth(width))
   })
 )(UnconnectedJavalabView);
