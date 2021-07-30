@@ -36,6 +36,7 @@
         "weblab"
       ],
       "version_year": "2018",
+      "is_stable": true,
       "project_sharing": true,
       "script_announcements": [
         {
@@ -63,8 +64,8 @@
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2021-06-17 22:29:30 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:39 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2018"
     }
@@ -484,9 +485,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L01 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,9 +510,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Entertainment_2018"
-        ]
+        ],
+        "progression": "Exploring CS in Entertainment"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,9 +635,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L02 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,9 +660,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Plotting Shapes Shape Lab_2018"
-        ]
+        ],
+        "progression": "Drawing Shapes"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,9 +685,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L03 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,9 +710,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 rect_2018"
-        ]
+        ],
+        "progression": "Introduction to Game Lab"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -728,9 +735,10 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 1_2018"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -752,9 +760,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Drawing Squares to Corners_2018"
-        ]
+        ],
+        "progression": "Using the Grid"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,9 +785,10 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 2_2018"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -900,9 +910,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 plotting shapes map_2018"
-        ]
+        ],
+        "progression": "Plotting Shapes in Game Lab"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1023,9 +1034,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L04 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,9 +1084,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 shape size map_2018"
-        ]
+        ],
+        "progression": "Shapes and Parameters"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1246,9 +1259,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Random Number Map Level_2018"
-        ]
+        ],
+        "progression": "Random Numbers"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1344,9 +1358,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L05 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1368,9 +1383,10 @@
       "properties": {
         "level_keys": [
           "Introduction to Variables - Part 1_2018"
-        ]
+        ],
+        "progression": "Introduction to Variables"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1417,9 +1433,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Variables Map_2018"
-        ]
+        ],
+        "progression": "Variables"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1516,9 +1533,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 naming map_2018"
-        ]
+        ],
+        "progression": "Naming Variables"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1662,9 +1680,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L06 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1686,9 +1705,10 @@
       "properties": {
         "level_keys": [
           "CSD: Sprites in Game Lab_2018"
-        ]
+        ],
+        "progression": "Video: Introduction to Sprites"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1710,9 +1730,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Sprites Map_2018"
-        ]
+        ],
+        "progression": "Creating Sprites"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1809,9 +1830,10 @@
       "properties": {
         "level_keys": [
           "CSD: Animation Tab_2018"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1833,9 +1855,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Animation Tab Map_2018"
-        ]
+        ],
+        "progression": "The Animation Tab"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2007,9 +2030,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Scene Example_2018"
-        ]
+        ],
+        "progression": "Sprite Scenes"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2154,9 +2178,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L07 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2178,9 +2203,10 @@
       "properties": {
         "level_keys": [
           "CSD: Introduction to the Draw Loop_2018"
-        ]
+        ],
+        "progression": "Video: Introduction to the Draw Loop"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2227,9 +2253,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 The Draw Loop Map_2018"
-        ]
+        ],
+        "progression": "The Draw Loop"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2326,9 +2353,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Sprite Properties Map_2018"
-        ]
+        ],
+        "progression": "Sprite Properties"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2474,9 +2502,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L08 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2498,9 +2527,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L09 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2522,9 +2552,10 @@
       "properties": {
         "level_keys": [
           "CSD: Animating Sprite Movement_2018"
-        ]
+        ],
+        "progression": "Video: Sprite Movement"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2546,9 +2577,10 @@
       "properties": {
         "level_keys": [
           "CSD Counter Pattern Map_2018"
-        ]
+        ],
+        "progression": "The Counter Pattern"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2695,9 +2727,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Watchers Map_2018"
-        ]
+        ],
+        "progression": "Debugging with Watchers"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2941,9 +2974,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L10 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2965,9 +2999,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L11 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3014,9 +3049,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Booleans Video_2018"
-        ]
+        ],
+        "progression": "Video: Booleans"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3038,9 +3074,10 @@
       "properties": {
         "level_keys": [
           "CSD Booleans Map_2018"
-        ]
+        ],
+        "progression": "Booleans and Comparison Operators"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3162,9 +3199,10 @@
       "properties": {
         "level_keys": [
           "csd U3 conditional statements video"
-        ]
+        ],
+        "progression": "Video: \"If/Else\" Statements"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3186,9 +3224,10 @@
       "properties": {
         "level_keys": [
           "CSD If Statements Map_2018"
-        ]
+        ],
+        "progression": "If Statements"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3309,9 +3348,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L12 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3483,9 +3523,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Animation Edit Map_2018"
-        ]
+        ],
+        "progression": "Editing Images"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3580,9 +3621,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L13 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3654,9 +3696,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Conditionals Video_2018"
-        ]
+        ],
+        "progression": "Video: Conditionals"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3678,9 +3721,10 @@
       "properties": {
         "level_keys": [
           "CSD If Else Map_2018"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3925,9 +3969,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L14 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3949,9 +3994,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Interactive Card Exemplar_2018"
-        ]
+        ],
+        "progression": "Interactive Card"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3973,9 +4019,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Card Examples_2018"
-        ]
+        ],
+        "progression": "Making an Interactive Card"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4147,9 +4194,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L15 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4171,9 +4219,10 @@
       "properties": {
         "level_keys": [
           "CSD: Sprite Velocity_2018"
-        ]
+        ],
+        "progression": "Video: Velocity"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4195,9 +4244,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 velocity map_2018"
-        ]
+        ],
+        "progression": "Sprite Velocity"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4493,9 +4543,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L16 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4517,9 +4568,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions car intro_2018"
-        ]
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4541,9 +4593,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions build isTouching_2018"
-        ]
+        ],
+        "progression": "Collision Detection"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4740,9 +4793,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 istouching map_2018"
-        ]
+        ],
+        "progression": "Collision Detection Review"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4788,9 +4842,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L17 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4812,9 +4867,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_2018"
-        ]
+        ],
+        "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5111,9 +5167,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 acceleration map_2018"
-        ]
+        ],
+        "progression": "Velocity and the Counter Pattern Review"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5159,9 +5216,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L18 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5183,9 +5241,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions predict set velocity code_2018"
-        ]
+        ],
+        "progression": "Sprite Interactions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5557,9 +5616,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 interactions map_2018"
-        ]
+        ],
+        "progression": "Sprite Interactions Review"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5605,9 +5665,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L19 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5879,9 +5940,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 functions review_2018"
-        ]
+        ],
+        "progression": "Functions Review"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5927,9 +5989,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L20 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5951,9 +6014,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti Play Defender_2018"
-        ]
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5975,9 +6039,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6349,9 +6414,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L21 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6373,9 +6439,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample1_2018"
-        ]
+        ],
+        "progression": "Sample Platform Jumper Game"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6397,9 +6464,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform intro_2018"
-        ]
+        ],
+        "progression": "Build a Platform Jumper"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6771,9 +6839,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample2_2018"
-        ]
+        ],
+        "progression": "Plane Jumper"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6795,9 +6864,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample3_2018"
-        ]
+        ],
+        "progression": "Bunny Jumper"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6819,9 +6889,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform challenge_2018"
-        ]
+        ],
+        "progression": "Improve Your Game"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6843,9 +6914,10 @@
       "properties": {
         "level_keys": [
           "CSD U3L22 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6867,9 +6939,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 game intro_2018"
-        ]
+        ],
+        "progression": "Design Your Game"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7116,9 +7189,10 @@
       "properties": {
         "level_keys": [
           "CSD U3 finishing touches_2018"
-        ]
+        ],
+        "progression": "Project - Finishing Touches"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

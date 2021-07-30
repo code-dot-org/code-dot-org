@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSP",
       "family_name": "csp2",
@@ -38,8 +39,8 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-06-17 22:28:17 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:26 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2017"
     }
@@ -497,7 +498,7 @@
         ],
         "progression": "Text Compression"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +523,7 @@
         ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -722,7 +723,7 @@
         ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -822,7 +823,7 @@
         ],
         "progression": "Images, Pixels, and RGB"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -972,7 +973,7 @@
         ],
         "progression": "Favicon Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -997,7 +998,7 @@
         ],
         "progression": "Widget: Color Pixelation"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1396,7 +1397,7 @@
         ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1421,7 +1422,7 @@
         ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1496,7 +1497,7 @@
         ],
         "progression": "Downloading the Data Set"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1521,7 +1522,7 @@
         ],
         "progression": "Making a Scatter Plot"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1546,7 +1547,7 @@
         ],
         "progression": "Making a Line Chart"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1571,7 +1572,7 @@
         ],
         "progression": "Making a Bar Chart"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1596,7 +1597,7 @@
         ],
         "progression": "Editing Chart Appearance"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1746,7 +1747,7 @@
         ],
         "progression": "Getting to Know Your Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1771,7 +1772,7 @@
         ],
         "progression": "Cleaning Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1796,7 +1797,7 @@
         ],
         "progression": "Categorizing Data"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1896,7 +1897,7 @@
         ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1921,7 +1922,7 @@
         ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
