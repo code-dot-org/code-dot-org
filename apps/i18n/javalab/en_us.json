@@ -21,7 +21,7 @@
   "editor": "Editor",
   "enablePeerReview": "Enable Peer Review",
   "errorMediaImageLoadError": "There was an error loading the image.",
-  "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please please contact us at support@code.org, and be sure to include the URL to this page in your message.",
+  "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please contact us at support@code.org, and be sure to include the URL to this page in your message.",
   "errorNeighborhoodInvalidDirection": "The direction provided is not a recognized. Supported directions are \"north\", \"south\", \"east\", and \"west\".",
   "errorNeighborhoodGetSquareFailed": "The square specified isn't on the grid.",
   "errorNeighborhoodInvalidColor": "The provided color name is not recognized. Refer to the documentation to see what color names are supprted.",
