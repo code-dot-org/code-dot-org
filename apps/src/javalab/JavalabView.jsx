@@ -210,15 +210,23 @@ class JavalabView extends React.Component {
 
     // The right width can also change at this point, since it takes up the
     // remaining space.
-    const newRightWidth =
-      window.innerWidth -
-      this.props.leftWidth -
-      20 -
-      styleConstants['resize-bar-width'];
+    const actualLeftWidth = this.isLeftSideVisible()
+      ? this.props.leftWidth + styleConstants['resize-bar-width']
+      : 0;
+    const newRightWidth = window.innerWidth - actualLeftWidth - 20;
     this.props.setRightWidth(newRightWidth);
   };
 
   updateLayoutThrottled = _.throttle(this.updateLayout, 33);
+
+  isLeftSideVisible = () => {
+    // It's possible that a console level without instructions won't have
+    // anything to show on the left side.
+    return (
+      this.props.viewMode !== CsaViewMode.CONSOLE ||
+      !!this.props.longInstructions
+    );
+  };
 
   componentDidUpdate(prevProps) {
     if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
@@ -239,9 +247,7 @@ class JavalabView extends React.Component {
       isReadOnlyWorkspace,
       editorColumnHeight,
       leftWidth,
-      rightWidth,
-      viewMode,
-      longInstructions
+      rightWidth
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -250,11 +256,6 @@ class JavalabView extends React.Component {
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
-
-    // It's possible that a console level without instructions won't have
-    // anything to show on the left side.
-    const leftSideVisible =
-      viewMode !== CsaViewMode.CONSOLE || !!longInstructions;
 
     return (
       <StudioAppWrapper>
@@ -280,10 +281,10 @@ class JavalabView extends React.Component {
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
               />
-              {leftSideVisible && this.renderVisualization()}
+              {this.isLeftSideVisible() && this.renderVisualization()}
             </div>
 
-            {leftSideVisible && (
+            {this.isLeftSideVisible() && (
               <HeightResizer
                 vertical={true}
                 resizeItemTop={() => 10}
@@ -296,7 +297,7 @@ class JavalabView extends React.Component {
 
             <div
               style={{
-                ...(leftSideVisible
+                ...(this.isLeftSideVisible()
                   ? styles.editorAndConsole
                   : styles.editorAndConsoleOnly),
                 color: isDarkMode ? color.white : color.black,
@@ -316,7 +317,7 @@ class JavalabView extends React.Component {
                 onInputMessage={onInputMessage}
                 style={{
                   ...styles.consoleParent,
-                  ...(!leftSideVisible && {paddingBottom: 40})
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
                 }}
                 bottomRow={
                   <ControlButtons
