@@ -91,63 +91,83 @@
   );
 }
 
-.careers__benefits-container {
-  min-height: 100px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.careers__benefits-tile-container {
-  margin: 4px;
-  max-width: 380px;
-  float: left;
-  height: 80px;
+.careers__benefits {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.careers__benefit {
+  box-sizing: border-box;
+  display: flex;
+  width: 50%;
+  margin: 6px 0;
+}
+
+.careers__benefit__title {
+  color: #ffffff;
+  font-size: 18px;
   width: 100%;
+  padding: 18px;
+  display: flex;
+  align-items: center;
 }
 
-.careers__benefits-tile {
-  color: white;
-  font-weight: 900;
-  font-size: 17px;
-  width: 100%;
-  height: 80px;
-  padding: 19px;
+.careers__benefit:nth-child(odd) {
+  padding-right: 12px;
 }
 
-.careers__benefits-decorator {
-  color: white;
-  float: left;
-  width: 80px;
-  height: 80px;
-  padding: 15px;
-  position: relative;
+.careers__benefit:nth-child(odd) .careers__benefit__title {
+  margin-right: 12px;
 }
 
-.careers__benefits-icon {
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.careers__benefit:nth-child(even) .careers__benefit__title {
+  margin-left: 12px;
+  text-align: right;
 }
 
-.careers__benefits-left {
-  margin-right: 8px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(243, 243, 243, 0) 100%
-  );
+.careers__benefit__icon {
+  min-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
 
-.careers__benefits-right {
-  margin-left: 8px;
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0.25) 0%,
-    rgba(243, 243, 243, 0) 100%
-  );
+.careers__benefit__icon img {
+  width: 58px;
+}
+
+.careers__benefit--teal {
+  background: linear-gradient(90deg,#4FABBA,#79C8D1);
+}
+
+.careers__benefit__icon.careers__benefit--teal {
+  background: #4FABBA;
+}
+
+.careers__benefit--green {
+  background: linear-gradient(90deg,#BABE41,#AAAC48);
+}
+
+.careers__benefit__icon.careers__benefit--green {
+  background: #BABE41;
+}
+
+.careers__benefit--orange {
+  background: linear-gradient(90deg,#E19444,#F1A73B);
+}
+
+.careers__benefit__icon.careers__benefit--orange {
+  background: #F1A73B;
+}
+
+.careers__benefit--purple {
+  background: linear-gradient(90deg,#7665A0,#5F5988);
+}
+
+.careers__benefit__icon.careers__benefit--purple {
+  background: #7665A0;
 }
 
 .careers__teal {
