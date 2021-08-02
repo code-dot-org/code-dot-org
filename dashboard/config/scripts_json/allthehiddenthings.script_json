@@ -7,8 +7,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:24 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-07-30 20:27:30 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "allthehiddenthings"
     }

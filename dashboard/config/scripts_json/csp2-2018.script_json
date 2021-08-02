@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Are you signed up for the AP exam?",
@@ -56,8 +57,8 @@
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2021-06-17 22:29:47 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:45 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2018"
     }
@@ -210,9 +211,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,9 +311,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L02 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -336,7 +339,7 @@
         ],
         "progression": "Text Compression"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +364,7 @@
         ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,9 +486,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +564,7 @@
         ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,9 +636,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L04 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -659,7 +664,7 @@
         ],
         "progression": "Images, Pixels, and RGB"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -809,7 +814,7 @@
         ],
         "progression": "Favicon Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -834,7 +839,7 @@
         ],
         "progression": "Widget: Color Pixelation"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -906,9 +911,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L05 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1005,9 +1011,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L06 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
