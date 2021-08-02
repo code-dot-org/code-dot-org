@@ -168,14 +168,14 @@ class TeacherFeedback < ApplicationRecord
     save
   end
 
-  private
-
   def awaiting_teacher_review?(is_latest = false)
     # only the latest feedback can be awaiting a teacher review
     return false unless is_latest
 
     return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
   end
+
+  private
 
   def student_updated_since_feedback?
     user_level.present? && user_level.updated_at > created_at
