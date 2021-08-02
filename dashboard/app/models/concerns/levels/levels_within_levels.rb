@@ -112,12 +112,20 @@ module Levels
       end
     end
 
-    # Project template levels are used to persist use progress
-    # across multiple levels, using a single level name as the
-    # storage key for that user.
+    # Project template levels are used to persist use progress across multiple
+    # levels, using a single level name as the storage key for that user.
     def project_template_level
       return nil if try(:project_template_level_name).nil?
-      child_levels.project_template.first
+      cache_key = "LevelsWithinLevels/project_template/#{project_template_level_name}"
+      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+        # attempt to use the new parent-child many-to-many table to retrieve
+        # the level, but if we have a project_template_level_name property and
+        # no actual association, fall back to retrieving the level directly.
+        # Once the new m2m implementation has been fully deployed, we can
+        # remove this fallback.
+        return (child_levels.project_template.first ||
+                Level.find_by_key(project_template_level_name))
+      end
     end
 
     def host_level
