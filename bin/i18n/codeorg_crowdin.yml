@@ -32,6 +32,7 @@ files: [
   # hourofcode content is handled by the hourofcode-specific sync
   "ignore" : [
     "/source/hourofcode/**",
+    "/source/dashboard/restricted.yml"
   ],
 
   #

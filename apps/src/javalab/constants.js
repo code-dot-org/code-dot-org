@@ -23,7 +23,8 @@ export const JavabuilderExceptionType = {
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
-  TWO_MAIN_METHODS: 'TWO_MAIN_METHODS'
+  TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
+  CLASS_NOT_FOUND: 'CLASS_NOT_FOUND'
 };
 
 export const NeighborhoodSignalType = {
@@ -51,11 +52,33 @@ export const NeighborhoodSignalType = {
   DONE: 'DONE'
 };
 
+export const NeighborhoodExceptionType = makeEnum(
+  'INVALID_GRID',
+  'INVALID_DIRECTION',
+  'GET_SQUARE_FAILED',
+  'INVALID_COLOR',
+  'INVALID_LOCATION',
+  'INVALID_MOVE',
+  'INVALID_PAINT_LOCATION'
+);
+
 export const TheaterSignalType = {
   AUDIO_URL: 'AUDIO_URL',
   VISUAL_URL: 'VISUAL_URL',
   AUDIO: 'AUDIO',
   VISUAL: 'VISUAL'
 };
+
+export const SoundExceptionType = makeEnum(
+  'INVALID_AUDIO_FILE_FORMAT',
+  'MISSING_AUDIO_DATA'
+);
+
+export const MediaExceptionType = makeEnum('IMAGE_LOAD_ERROR');
+
+export const TheaterExceptionType = makeEnum(
+  'DUPLICATE_PLAY_COMMAND',
+  'INVALID_SHAPE'
+);
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
