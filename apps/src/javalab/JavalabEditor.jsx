@@ -135,11 +135,11 @@ class JavalabEditor extends React.Component {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
 
-    this.handleHeightResize(window.innerHeight);
+    this.handleHeightResize(this.props.height);
     this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
 
     window.addEventListener('resize', () => {
-      this.handleHeightResizeThrottled(window.innerHeight);
+      this.handleHeightResizeThrottled(this.props.height);
       this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
     });
   }
