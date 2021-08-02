@@ -141,7 +141,7 @@ title: Risorse
     </p>
     
     <p>
-      Per iniziare leggi l'introduzione all'Ora del Codice sul sito italiano <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">Programma il Futuro</a> <br />
+      Get started at http://hourofcode.com/{{ country_language }} <br />
     </p>
     
     <hr />
@@ -223,7 +223,7 @@ title: Risorse
     </p>
     
     <p>
-      Andata alla pagina <a href="http://programmailfuturo.it">programmailfuturo.it</a> per i dettagli e contribuire a diffondere la notizia. <br />
+      See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
     </p>
     
     <hr />

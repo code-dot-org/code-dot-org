@@ -5,12 +5,13 @@
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:33 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:30 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp-post-survey-2020"
     }

@@ -11,8 +11,12 @@ const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const SET_ALL_VALIDATION = 'javalab/SET_ALL_VALIDATION';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
+const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
+const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
+const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 
@@ -22,7 +26,11 @@ const initialState = {
   isDarkMode: false,
   validation: {},
   renderedEditorHeight: 400,
+  leftWidth: 400,
+  rightWidth: 400,
   isRunning: false,
+  editorColumnHeight: 600,
+  backpackApi: null,
   isStartMode: false,
   levelName: undefined
 };
@@ -36,6 +44,11 @@ export const appendInputLog = input => ({
 export const appendOutputLog = output => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'output', text: output}
+});
+
+export const appendNewlineToConsoleLog = () => ({
+  type: APPEND_CONSOLE_LOG,
+  log: {type: 'newline'}
 });
 
 export const clearConsoleLogs = () => ({
@@ -104,6 +117,11 @@ export const setIsRunning = isRunning => ({
   isRunning
 });
 
+export const setBackpackApi = backpackApi => ({
+  type: SET_BACKPACK_API,
+  backpackApi
+});
+
 /**
  * We should move isStartMode and levelName into a separate level redux file,
  * or convert this design to one more closely matching redux/applab. When we
@@ -147,6 +165,21 @@ export const getValidation = state => {
 export const setRenderedHeight = height => ({
   type: EDITOR_HEIGHT_UPDATED,
   height
+});
+
+export const setLeftWidth = width => ({
+  type: LEFT_WIDTH_UPDATED,
+  width
+});
+
+export const setRightWidth = width => ({
+  type: RIGHT_WIDTH_UPDATED,
+  width
+});
+
+export const setEditorColumnHeight = editorColumnHeight => ({
+  type: EDITOR_COLUMN_HEIGHT,
+  editorColumnHeight
 });
 
 // Reducer
@@ -238,10 +271,34 @@ export default function reducer(state = initialState, action) {
       renderedEditorHeight: action.height
     };
   }
+  if (action.type === LEFT_WIDTH_UPDATED) {
+    return {
+      ...state,
+      leftWidth: action.width
+    };
+  }
+  if (action.type === RIGHT_WIDTH_UPDATED) {
+    return {
+      ...state,
+      rightWidth: action.width
+    };
+  }
   if (action.type === SET_IS_RUNNING) {
     return {
       ...state,
       isRunning: action.isRunning
+    };
+  }
+  if (action.type === EDITOR_COLUMN_HEIGHT) {
+    return {
+      ...state,
+      editorColumnHeight: action.editorColumnHeight
+    };
+  }
+  if (action.type === SET_BACKPACK_API) {
+    return {
+      ...state,
+      backpackApi: action.backpackApi
     };
   }
   if (action.type === SET_IS_START_MODE) {

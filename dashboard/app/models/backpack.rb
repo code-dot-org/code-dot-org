@@ -10,7 +10,8 @@
 #
 # Indexes
 #
-#  index_backpacks_on_user_id  (user_id)
+#  index_backpacks_on_storage_app_id  (storage_app_id) UNIQUE
+#  index_backpacks_on_user_id         (user_id) UNIQUE
 #
 class Backpack < ApplicationRecord
   belongs_to :user
@@ -28,6 +29,6 @@ class Backpack < ApplicationRecord
   end
 
   def channel
-    storage_encrypt_channel_id(get_storage_id, storage_app_id)
+    storage_encrypt_channel_id(storage_id_for_user_id(user_id), storage_app_id)
   end
 end

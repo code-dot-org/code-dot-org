@@ -138,8 +138,8 @@ ja:
     additional_information: サインアップを続けるために、私たちはさらにいくつかの情報が必要です。
     user_type_button: アカウントタイプを更新
     user_type_label: アカウントの種類
-    user_type_teacher: 先生
     user_type_student: 生徒
+    user_type_teacher: 先生
     field_is_required: が必要です
     accept_terms: アカウントを作成することに、同意が必要です。
     error: エラーが発生しました。
@@ -956,7 +956,7 @@ ja:
       school_city: 学校の市町村名
       school_country: 学校のある国
       colombian_school_city: 学校の市町村名
-      colombian_school_name: 学校名
+      colombian_chilean_school_name: 学校名
     form_entries:
       gender:
         male: 男性

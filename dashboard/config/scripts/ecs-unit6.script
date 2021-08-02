@@ -35,12 +35,12 @@ level 'ECSPD3-u6 ideas for culminating projects'
 lesson 'Unit 6 Challenge', display_name: 'Unit 6 Challenge', has_lesson_plan: false
 level 'ECSPD3-u6 challenge details'
 level 'ECSPD3-u6 list of challenges'
-level 'ECS Unit 6 Challenge Selection', named: true
+level 'ECS Unit 6 Challenge Selection', progression: 'ECS Unit 6 Challenge Selection'
 level 'ECSPD3-u6 do the challenge'
 level 'CSPPD3-u2 create your extension'
 level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
-level 'ECS Unit 6 Challenge Submission', named: true
+level 'ECS Unit 6 Challenge Submission', progression: 'ECS Unit 6 Challenge Submission'
 
 lesson 'Close & Next Steps', display_name: 'Close & Next Steps', has_lesson_plan: false
 level 'ECSPD Challenge Reflection'

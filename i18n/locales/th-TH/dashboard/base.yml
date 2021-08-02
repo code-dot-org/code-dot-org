@@ -129,8 +129,8 @@ th:
     student_consent: "ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ Code.org ได้"
     additional_information: "เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ"
     user_type_label: "ประเภทบัญชี"
-    user_type_teacher: "ครู"
     user_type_student: "นักเรียน"
+    user_type_teacher: "ครู"
     field_is_required: "จำเป็น"
     accept_terms: "คุณต้อง ยอมรับ เพื่อสร้างบัญชี"
     email_preference_yes: "ใช่"
@@ -589,7 +589,7 @@ th:
       email: 'อีเมล'
       school_name: 'ชื่อโรงเรียน'
       school_country: 'ประเทศของโรงเรียน'
-      colombian_school_name: 'ชื่อโรงเรียน'
+      colombian_chilean_school_name: 'ชื่อโรงเรียน'
     form_entries:
       gender:
         male: 'ชาย'

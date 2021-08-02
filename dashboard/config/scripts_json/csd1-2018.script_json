@@ -27,6 +27,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
       "family_name": "csd1",
@@ -34,8 +35,8 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2021-06-17 22:29:45 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:43 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2018"
     }
@@ -254,9 +255,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L01 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,9 +280,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L02 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -302,9 +305,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L03 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -326,9 +330,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L04 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,9 +355,10 @@
       "properties": {
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2018"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,9 +380,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L05 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -398,9 +405,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L06 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,9 +430,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L07 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -446,9 +455,10 @@
       "properties": {
         "level_keys": [
           "CSD U1L09 TFMD_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

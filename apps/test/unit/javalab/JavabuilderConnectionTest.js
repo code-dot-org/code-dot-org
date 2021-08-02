@@ -1,16 +1,34 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
-import {WebSocketMessageType} from '@cdo/apps/javalab/constants';
+import {
+  WebSocketMessageType,
+  StatusMessageType,
+  STATUS_MESSAGE_PREFIX
+} from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('JavabuilderConnection', () => {
+  let onOutputMessage, handleException, connection;
+
   beforeEach(() => {
     sinon.stub(project, 'getCurrentId');
+    onOutputMessage = sinon.stub();
+    handleException = sinon.stub(ExceptionHandler, 'handleException');
+    connection = new JavabuilderConnection(
+      null,
+      onOutputMessage,
+      null,
+      null,
+      null,
+      sinon.stub(),
+      sinon.stub()
+    );
   });
 
   afterEach(() => {
+    ExceptionHandler.handleException.restore();
     project.getCurrentId.restore();
   });
 
@@ -23,9 +41,6 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data)
       };
-      const onOutputMessage = sinon.stub();
-      const handleException = sinon.stub(ExceptionHandler, 'handleException');
-      const connection = new JavabuilderConnection(null, onOutputMessage);
       connection.onMessage(event);
       expect(handleException).to.have.been.calledWith(data, onOutputMessage);
     });
@@ -38,10 +53,22 @@ describe('JavabuilderConnection', () => {
       const event = {
         data: JSON.stringify(data)
       };
-      const onOutputMessage = sinon.stub();
-      const connection = new JavabuilderConnection(null, onOutputMessage);
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
+    });
+
+    it('appends [JAVALAB] to status messages', () => {
+      const data = {
+        type: WebSocketMessageType.STATUS,
+        value: StatusMessageType.COMPILING
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      connection.onMessage(event);
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} Compiling...`
+      );
     });
   });
 });

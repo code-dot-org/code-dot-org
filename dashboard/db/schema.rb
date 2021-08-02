@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_21_233403) do
+ActiveRecord::Schema.define(version: 2021_07_29_161058) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -117,7 +117,8 @@ ActiveRecord::Schema.define(version: 2021_07_21_233403) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_backpacks_on_user_id"
+    t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
+    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
 
   create_table "blocks", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -241,8 +242,10 @@ ActiveRecord::Schema.define(version: 2021_07_21_233403) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "storage_id", null: false
+    t.integer "script_id"
+    t.datetime "deleted_at"
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id"
-    t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true
+    t.index ["storage_id", "level_id", "script_id", "deleted_at"], name: "index_channel_tokens_unique", unique: true
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id"
   end
 
@@ -1412,7 +1415,7 @@ ActiveRecord::Schema.define(version: 2021_07_21_233403) do
     t.integer "script_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_app_id", "user_id"], name: "index_reviewable_projects_on_storage_app_id_and_user_id"
+    t.index ["user_id", "script_id", "level_id", "storage_app_id"], name: "index_reviewable_projects_on_user_script_level_storage_app"
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

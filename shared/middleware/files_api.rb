@@ -275,7 +275,11 @@ class FilesApi < Sinatra::Base
     end
 
     return body_string unless parsed_json.key?('source')
-    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    source_json = parsed_json['source']
+    if source_json.is_a?(Hash)
+      source_json = source_json.to_s
+    end
+    blockly_xml = Nokogiri::XML(source_json)
     return body_string unless blockly_xml.errors.empty?
 
     # first, remove all comment blocks by replacing them with the next block in

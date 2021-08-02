@@ -5518,8 +5518,6 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
-            lessonGroup-4:
-              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -5580,6 +5578,14 @@ nl:
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
+              display_name: Vragenlijst
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
               display_name: Vragenlijst
         kodea-pd-2021:
           lessons:
@@ -5666,10 +5672,6 @@ nl:
           lessons:
             lesson-9:
               name: Leraar gemeenschap
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Hulpmiddelen
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5696,6 +5698,10 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Test
         tesspltest:
           lessons:
             lesson-2:

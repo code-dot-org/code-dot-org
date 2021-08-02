@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:09 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:16 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -4860,7 +4861,13 @@
       "key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
       "position": 5,
       "properties": {
-        "progression_name": "Make an Interactive Card"
+        "progression_name": "Make an Interactive Card",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4b3c39d2-a62c-43c3-b5ae-048ef270624a",
@@ -6785,7 +6792,13 @@
       "position": 4,
       "properties": {
         "description": "**Transition:** Students are now ready to program their games on Code Studio. These levels provide some guidance on how students may go about implementing their project guide. None of the steps are significantly different from what students have seen from the previous two lessons. If they wish, students can work in a different order than the one suggested in these levels.",
-        "name": "Try - Write Code\r"
+        "name": "Try - Write Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels_1/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "686b638e-1a29-49cc-8711-191165d251b9",
@@ -16121,6 +16134,18 @@
       }
     },
     {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+      "key": "extra_code_in_challenge_levels_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels_1"
+      }
+    },
+    {
       "name": "Flyer Game",
       "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
       "key": "flyer-game",
@@ -17008,6 +17033,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
+        "resource.key": "extra_code_in_challenge_levels_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game"
       }
     },
@@ -17051,6 +17082,12 @@
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "extra_code_in_challenge_levels_1"
       }
     },
     {

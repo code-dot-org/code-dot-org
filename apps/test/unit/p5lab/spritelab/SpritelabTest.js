@@ -225,7 +225,7 @@ describe('SpriteLab', () => {
         it('does not dispatch event when animations do not change', () => {
           // Dispatch an action so the subscriber gets called
           store.dispatch(setIsRunning(true));
-          expect(eventSpy).not.to.have.beenCalled;
+          expect(eventSpy).not.to.have.been.called;
         });
       });
     });
