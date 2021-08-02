@@ -233,6 +233,8 @@ module TextToSpeech
     # if this level is contained in another level, updating it should also
     # trigger updates in its parents, since their content is likely at least
     # partially based on this
-    parent_levels.contained.each(&:tts_update)
+    parent_levels.contained.each do |containing_level|
+      containing_level.tts_upload_to_s3(containing_level.tts_long_instructions_text, context)
+    end
   end
 end
