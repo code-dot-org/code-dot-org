@@ -1,5 +1,5 @@
 module Services
-  class DeprecatedLevelLoader
+  module DeprecatedLevelLoader
     FILEPATH = File.expand_path("#{Rails.root}/config/deprecated_levels/blockly_levels.json")
 
     def self.load_blockly_levels
