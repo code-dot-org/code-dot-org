@@ -38,14 +38,15 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit5/{LESSON}",
       "curriculum_umbrella": "CSP",
+      "is_stable": true,
       "family_name": "csp5",
       "tts": true,
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-06-17 22:30:17 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:02 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp5-2019"
     }
@@ -450,9 +451,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L01 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1024,9 +1026,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L02 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1398,9 +1401,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L03 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,9 +1526,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L04 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2196,9 +2201,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L05 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2769,9 +2775,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L06 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3143,9 +3150,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L07 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3242,9 +3250,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L08 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3691,9 +3700,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L09 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4090,9 +4100,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L10 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4788,9 +4799,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L11 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5337,9 +5349,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L12 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5636,9 +5649,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L13 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6410,9 +6424,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L14 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6708,9 +6723,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L15 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7082,9 +7098,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L16 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7281,9 +7298,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L17 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

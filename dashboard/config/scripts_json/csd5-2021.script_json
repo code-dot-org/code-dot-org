@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:49:42 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:19 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2021"
     }
