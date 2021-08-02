@@ -1,16 +1,33 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
-import _ from 'lodash';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
+import PeerSelectDropdown from './codeReview/PeerSelectDropdown';
 
 const FLASH_ERROR_TIME_MS = 5000;
+
+const TEST_PEER_REVIEW_DATA = [
+  {
+    id: 1,
+    name: 'Student 1'
+  },
+  {
+    id: 2,
+    name: 'Student 2'
+  },
+  {
+    id: 3,
+    name: 'Student 3'
+  }
+];
 
 class ReviewTab extends Component {
   // Populated by redux
@@ -24,7 +41,25 @@ class ReviewTab extends Component {
     errorSavingReviewableProject: false,
     comments: [],
     token: '',
-    forceRecreateEditorKey: 0
+    forceRecreateEditorKey: 0,
+
+    // TODO: Placeholder - retrieve reviewable peers from backend
+    peers: TEST_PEER_REVIEW_DATA,
+    viewingPeerName: ''
+  };
+
+  // TODO: Should cause an update to props.viewAsCodeReviewer and load peer comments
+  onSelectPeer = peer => {
+    this.setState({
+      viewingPeerName: peer.name
+    });
+  };
+
+  // TODO: Should cause an update to props.viewAsCodeReviewer and load owner comments
+  onClickBackToProject = () => {
+    this.setState({
+      viewingPeerName: ''
+    });
   };
 
   componentDidMount() {
@@ -130,19 +165,21 @@ class ReviewTab extends Component {
   };
 
   renderReadyForReviewCheckbox() {
+    const {
+      reviewCheckboxEnabled,
+      token,
+      isReadyForReview,
+      loadingReviewableState
+    } = this.state;
+
     if (
-      !this.state.reviewCheckboxEnabled ||
-      !this.state.token ||
-      this.state.token.length === 0
+      this.props.viewAsCodeReviewer ||
+      !reviewCheckboxEnabled ||
+      !token ||
+      token.length === 0
     ) {
       return null;
     }
-
-    const {
-      isReadyForReview,
-      errorSavingReviewableProject,
-      loadingReviewableState
-    } = this.state;
 
     return (
       <div style={styles.checkboxContainer}>
@@ -161,11 +198,6 @@ class ReviewTab extends Component {
           )}
           {javalabMsg.enablePeerReview()}
         </label>
-        {errorSavingReviewableProject && (
-          <div style={styles.checkboxErrorMessage}>
-            {javalabMsg.togglePeerReviewError()}
-          </div>
-        )}
       </div>
     );
   }
@@ -265,16 +297,61 @@ class ReviewTab extends Component {
     );
   }
 
+  renderPeerDropdown(peers, onSelectPeer) {
+    return (
+      <PeerSelectDropdown
+        text={javalabMsg.reviewClassmateProject()}
+        peers={peers}
+        onSelectPeer={onSelectPeer}
+      />
+    );
+  }
+
+  renderBackToMyProject(onClickBackToProject) {
+    return (
+      <Button
+        text={javalabMsg.returnToMyProject()}
+        color={Button.ButtonColor.white}
+        icon={'caret-left'}
+        size={Button.ButtonSize.default}
+        iconStyle={styles.backToProjectIcon}
+        onClick={onClickBackToProject}
+        style={styles.backToProjectButton}
+      />
+    );
+  }
+
   render() {
-    const {comments, forceRecreateEditorKey, isReadyForReview} = this.state;
+    const {
+      comments,
+      forceRecreateEditorKey,
+      isReadyForReview,
+      errorSavingReviewableProject,
+      peers,
+      viewingPeerName
+    } = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
         <div style={styles.reviewHeader}>
+          {this.props.viewAsCodeReviewer
+            ? this.renderBackToMyProject(this.onClickBackToProject)
+            : this.renderPeerDropdown(peers, this.onSelectPeer)}
           {this.renderReadyForReviewCheckbox()}
         </div>
+        {errorSavingReviewableProject && (
+          <div style={styles.peerReviewErrorMessage}>
+            {javalabMsg.togglePeerReviewError()}
+          </div>
+        )}
         <div style={styles.commentsSection}>
-          <div style={styles.messageText}>{javalabMsg.feedbackBeginning()}</div>
+          <div style={styles.messageText}>
+            {this.props.viewAsCodeReviewer && viewingPeerName
+              ? javalabMsg.feedbackBeginningPeer({
+                  peerName: viewingPeerName
+                })
+              : javalabMsg.feedbackBeginning()}
+          </div>
           {this.renderComments(comments, !isReadyForReview)}
           {this.renderCommentEditor(forceRecreateEditorKey)}
         </div>
@@ -300,15 +377,16 @@ const styles = {
   },
   checkbox: {margin: '0 7px 0 0'},
   checkboxContainer: {
-    width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flexGrow: 1
   },
-  checkboxErrorMessage: {
+  peerReviewErrorMessage: {
     fontStyle: 'italic',
-    textAlign: 'end',
-    fontSize: '12px'
+    textAlign: 'center',
+    fontSize: '12px',
+    marginBottom: '25px'
   },
   messageText: {
     fontSize: '18px',
@@ -321,10 +399,22 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: '25px'
+    marginBottom: '25px',
+    flexWrap: 'wrap'
   },
   commentsSection: {
     display: 'flex',
     flexDirection: 'column'
+  },
+  backToProjectIcon: {
+    // The back to project icon is styled to be the same size and placement
+    // as the dropdown icon (see Dropdown.js)
+    fontSize: 24,
+    position: 'relative',
+    top: 3
+  },
+  backToProjectButton: {
+    margin: 0,
+    paddingTop: 0
   }
 };

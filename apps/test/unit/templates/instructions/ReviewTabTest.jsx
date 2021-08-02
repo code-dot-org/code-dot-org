@@ -15,6 +15,8 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import PeerSelectDropdown from '@cdo/apps/templates/instructions/codeReview/PeerSelectDropdown';
+import Button from '@cdo/apps/templates/Button';
 
 describe('Code Review Tab', () => {
   const token = 'token';
@@ -247,6 +249,18 @@ describe('Code Review Tab', () => {
     });
 
     expect(wrapper.find(CommentEditor).length).to.equal(0);
+  });
+
+  it('shows the peer select dropdown if viewing own project', () => {
+    server.respond();
+    expect(wrapper.find(PeerSelectDropdown).length).to.equal(1);
+  });
+
+  it('shows back to my project button if viewing peer project', () => {
+    server.respond();
+    wrapper = shallow(<ReviewTab viewAsCodeReviewer={true} />);
+    expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
+    expect(wrapper.find(Button).length).to.equal(1);
   });
 
   function stubReviewableStatusProjectServerCall(reviewableStatus) {
