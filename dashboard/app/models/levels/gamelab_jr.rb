@@ -34,6 +34,7 @@ class GamelabJr < Gamelab
     mini_toolbox
     hide_pause_button
     blockly_variables
+    instructions_icon
   )
 
   def shared_blocks

@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:11 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:19 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -5796,19 +5797,6 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1bMJUjEZI8CHUvMltLVC3HUpbtEC7ScGpwSd_RjDGO4g/edit",
-      "key": "create-a-representation-1-2",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "create-a-representation-1-2"
-      }
-    },
-    {
-      "name": "Create a Representation",
       "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
       "key": "create-a-representation-exemplar-2019",
       "properties": {
@@ -5817,6 +5805,43 @@
       },
       "seeding_key": {
         "resource.key": "create-a-representation-exemplar-2019"
+      }
+    },
+    {
+      "name": "Create a Representation",
+      "url": "https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/edit",
+      "key": "create_a_representation",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "create_a_representation"
+      }
+    },
+    {
+      "name": "Create a Representation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view",
+      "key": "create_a_representation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "create_a_representation_-_student_checklist"
+      }
+    },
+    {
+      "name": "Create a Representation Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
+      "key": "create_a_representation_marked_rubrics",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_representation_marked_rubrics"
       }
     },
     {
@@ -6280,30 +6305,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubric 1",
-      "url": "https://docs.google.com/document/d/1m00JmDi7nQhplCaQuGcLcy4Wr12NASBHnuRNw0ka11A/edit",
-      "key": "sample_marked_rubric",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubric"
-      }
-    },
-    {
-      "name": "Sample Marked Rubric 2",
-      "url": "https://docs.google.com/document/d/1CKiIik6T8Y-hk23FkP3Hh9nsLfGtJN2jD8uGXSA6-aA/edit",
-      "key": "sample_marked_rubric_2",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubric_2"
-      }
-    },
-    {
       "name": "Sample Marked Rubrics",
       "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
       "key": "sample_marked_rubrics_3",
@@ -6741,31 +6742,31 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Create a Representation",
-        "resource.key": "create-a-representation-1-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Create a Representation",
         "resource.key": "create-a-representation-exemplar-2019"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Create a Representation",
+        "resource.key": "create_a_representation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "resource.key": "create_a_representation_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "resource.key": "create_a_representation_marked_rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
         "resource.key": "encode-a-thing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Create a Representation",
-        "resource.key": "sample_marked_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Create a Representation",
-        "resource.key": "sample_marked_rubric_2"
       }
     },
     {

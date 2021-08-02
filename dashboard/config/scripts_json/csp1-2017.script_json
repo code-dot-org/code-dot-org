@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSP",
       "family_name": "csp1",
@@ -38,8 +39,8 @@
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2021-06-17 22:28:17 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:26 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2017"
     }
@@ -421,7 +422,7 @@
         ],
         "progression": "Computer Science is Changing Everything"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -614,7 +615,7 @@
         ],
         "progression": "Internet Simulator: Sending Binary Messages"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -639,7 +640,7 @@
         ],
         "progression": "The Internet: Wires, Cables, and Wifi"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -889,7 +890,7 @@
         ],
         "progression": "Widget: Binary Odometer"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -989,7 +990,7 @@
         ],
         "progression": "Internet Simulator: Sending Numbers"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1089,7 +1090,7 @@
         ],
         "progression": "Internet Simulator: Sending Text"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1338,7 +1339,7 @@
         ],
         "progression": "What is the Internet?"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1513,7 +1514,7 @@
         ],
         "progression": "Internet Simulator: Broadcast"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1538,7 +1539,7 @@
         ],
         "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1713,7 +1714,7 @@
         ],
         "progression": "Internet Simulator: Routers"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1888,7 +1889,7 @@
         ],
         "progression": "Internet Simulator: Packets"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1913,7 +1914,7 @@
         ],
         "progression": "The Internet: Packets, Routing, and Reliability"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2063,7 +2064,7 @@
         ],
         "progression": "Internet Simulator: DNS"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2088,7 +2089,7 @@
         ],
         "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2238,7 +2239,7 @@
         ],
         "progression": "The Internet: HTTP and HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

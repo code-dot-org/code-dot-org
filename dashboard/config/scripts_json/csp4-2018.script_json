@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
@@ -70,8 +71,8 @@
     },
     "new_name": null,
     "family_name": "csp4",
-    "serialized_at": "2021-06-17 22:29:47 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:45 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2018"
     }
@@ -311,9 +312,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,9 +412,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L08 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -534,9 +537,10 @@
       "properties": {
         "level_keys": [
           "CSP U2L09 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -633,9 +637,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L02 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -732,9 +737,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -805,9 +811,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L04 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -829,9 +836,10 @@
       "properties": {
         "level_keys": [
           "U4-AP-Practice-Justify-the-Score_2018"
-        ]
+        ],
+        "progression": "AP Practice Response - Justify the Score"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -903,9 +911,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L05 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -930,7 +939,7 @@
         ],
         "progression": "Crack a Caesar Cipher"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -955,7 +964,7 @@
         ],
         "progression": "Terminology Recap"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -980,7 +989,7 @@
         ],
         "progression": "New Challenge Introduction"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1005,7 +1014,7 @@
         ],
         "progression": "Crack Random Substitution"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1030,7 +1039,7 @@
         ],
         "progression": "Technique: Frequency Analysis"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1202,9 +1211,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L06 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1229,7 +1239,7 @@
         ],
         "progression": "The Vigenere Cipher Widget"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1254,7 +1264,7 @@
         ],
         "progression": "How Secure Is Your Password?"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1279,7 +1289,7 @@
         ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1426,9 +1436,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L07 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1453,7 +1464,7 @@
         ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1478,7 +1489,7 @@
         ],
         "progression": "Cups and Beans Activity"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1503,7 +1514,7 @@
         ],
         "progression": "Modulo Clock Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1528,7 +1539,7 @@
         ],
         "progression": "The Modulo Clock"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1553,7 +1564,7 @@
         ],
         "progression": "Public Key Crypto Widget Instructions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1578,7 +1589,7 @@
         ],
         "progression": "Public Key Cryptography Widget"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1750,9 +1761,10 @@
       "properties": {
         "level_keys": [
           "CSP U4L08 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1777,7 +1789,7 @@
         ],
         "progression": "Cybersecurity and Crime"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

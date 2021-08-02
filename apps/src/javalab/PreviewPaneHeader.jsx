@@ -6,7 +6,6 @@ import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -17,6 +16,7 @@ export default function PreviewPaneHeader({
 }) {
   return (
     <PaneHeader hasFocus>
+      {/* Commenting out the button for now since collapsing is not functional.
       <PaneButton
         headerHasFocus
         icon={<CollapserIcon isCollapsed={isCollapsed} />}
@@ -26,6 +26,7 @@ export default function PreviewPaneHeader({
         style={styles.transparent}
         leftJustified
       />
+      */}
       {showPreviewTitle && (
         <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
       )}

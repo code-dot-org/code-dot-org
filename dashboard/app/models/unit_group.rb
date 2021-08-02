@@ -335,7 +335,7 @@ class UnitGroup < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil)
+  def summarize(user = nil, for_edit: false)
     {
       name: name,
       id: id,
@@ -363,7 +363,7 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      prevent_course_version_change: prevent_course_version_change?,
+      prevent_course_version_change: for_edit && prevent_course_version_change?,
       course_path: link
     }
   end
