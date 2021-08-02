@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 18:38:59 UTC",
+    "serialized_at": "2021-08-02 18:21:17 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csp-mod4"
