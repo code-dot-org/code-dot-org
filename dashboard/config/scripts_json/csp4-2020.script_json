@@ -21,6 +21,7 @@
           "https://curriculum.code.org/csp-20/unit4/standards/"
         ]
       ],
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "",
@@ -70,8 +71,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:31 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:06 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2020"
     }
@@ -1120,9 +1121,10 @@
       "properties": {
         "level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions"
-        ]
+        ],
+        "progression": "Conditionals: Boolean Expressions"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1199,7 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
