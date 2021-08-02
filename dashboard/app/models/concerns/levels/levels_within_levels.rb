@@ -8,6 +8,7 @@
 module Levels
   module LevelsWithinLevels
     extend ActiveSupport::Concern
+
     included do
       # Because this parent-child relationship comes in different flavors, we
       # also want to provide some scopes to make interacting with subsets of
@@ -38,6 +39,32 @@ module Levels
         -> {extending ByKindExtension},
         through: :levels_child_levels,
         inverse_of: :parent_levels
+
+      before_validation :sanitize_contained_level_names
+      after_save :setup_contained_levels
+    end
+
+    class_methods do
+      # Helper method for level cloning, called by `clone_with_suffix`; given a
+      # level, create clones of all its children. Returns a hash of all
+      # parameters on that level that need to be updated in response.
+      def clone_child_levels(parent_level, new_suffix, editor_experiment: nil)
+        update_params = {}
+        parent_level.levels_child_levels.each do |parent_levels_child_level|
+          child_level = parent_levels_child_level.child_level
+          cloned_child_level = child_level.
+            clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+          parent_levels_child_level.child_level = cloned_child_level
+          parent_levels_child_level.save!
+        end
+
+        unless parent_level.child_levels.contained.empty?
+          update_params[:contained_level_names] =
+            parent_level.child_levels.contained.map(&:name)
+        end
+
+        return update_params
+      end
     end
 
     # Returns all child levels of this level, which could include contained
@@ -54,6 +81,55 @@ module Levels
       child_descendant_levels = my_child_levels.
         map(&:all_descendant_levels).flatten
       my_child_levels + child_descendant_levels
+    end
+
+    # Helper method for retrieving contained levels; primarily exists to
+    # provide caching
+    def contained_levels
+      return [] if contained_level_names.blank?
+      cache_key = "LevelsWithinLevels/contained/#{contained_level_names&.join('/')}"
+      Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+        result = child_levels.contained
+
+        # attempt to use the new parent-child many-to-many table to retrieve the
+        # levels themselves, but if we have a contained_level_names property and
+        # no actual associations, fall back to retrieving the levels directly.
+        # Once the new m2m implementation has been fully deployed, we can remove
+        # this fallback.
+        if result.blank?
+          result = contained_level_names.map do |contained_level_name|
+            Script.cache_find_level(contained_level_name)
+          end
+        end
+
+        return result
+      end
+    end
+
+    def sanitize_contained_level_names
+      contained_level_names = properties["contained_level_names"]
+      contained_level_names.try(:delete_if, &:blank?)
+      contained_level_names = nil unless contained_level_names.try(:present?)
+      properties["contained_level_names"] = contained_level_names
+    end
+
+    # Create ParentLevelsChildLevel many-to-many relationships based on the
+    # contents of this level's `contained_level_names` property.
+    def setup_contained_levels
+      # if our existing contained levels already match the given names, do
+      # nothing
+      return if child_levels.contained.map(&:name) == contained_level_names
+
+      # otherwise, update contained levels to match
+      levels_child_levels.contained.destroy_all
+      Level.where(name: contained_level_names).each do |contained_level|
+        ParentLevelsChildLevel.create!(
+          child_level: contained_level,
+          kind: ParentLevelsChildLevel::CONTAINED,
+          parent_level: self,
+          position: contained_level_names.index(contained_level.name)
+        )
+      end
     end
   end
 end
