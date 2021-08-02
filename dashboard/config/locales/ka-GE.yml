@@ -152,8 +152,8 @@ ka:
     additional_information: რეგისტრაციის გასაგრძელებლად გვჭირდება დამატებითი ინფორმაცია.
     user_type_button: ანგარიშის ტიპის განახლება
     user_type_label: ანგარიშის ტიპი
-    user_type_teacher: მასწავლებელი
     user_type_student: მოსწავლე
+    user_type_teacher: მასწავლებელი
     field_is_required: სავალდებულოა
     accept_terms: ანგარიშის შესაქმნელად უნდა დაეთანხმოთ
     error: მოხდა შეცდომა.
@@ -1082,7 +1082,7 @@ ka:
       school_city: სკოლის ქალაქი
       school_country: სკოლის ქვეყანა
       colombian_school_city: სკოლის ქალაქი
-      colombian_school_name: სკოლის სახელი
+      colombian_chilean_school_name: სკოლის სახელი
       workshop_organizer: სემინარის ორგანიზატორი
       workshop_facilitator: სემინარის თანაშემწე
       workshop_course: სემინარის კურსი

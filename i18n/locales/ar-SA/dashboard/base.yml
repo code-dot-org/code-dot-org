@@ -164,8 +164,8 @@ ar:
     additional_information: "نحتاج للمزيد من المعلومات لمواصلة تسجيلك في الموقع."
     user_type_button: "تحديث نوع الحساب"
     user_type_label: "نوع الحساب"
-    user_type_teacher: "المدرس"
     user_type_student: "طالب"
+    user_type_teacher: "المدرس"
     field_is_required: "مطلوب"
     accept_terms: "يجب عليك الموافقة على إنشاء حساب"
     error: "حدث خطأ."
@@ -967,7 +967,7 @@ ar:
       school_city: 'مدينة المدرسة'
       school_country: 'بلد المدرسة'
       colombian_school_city: 'مدينة المدرسة'
-      colombian_school_name: 'اسم المدرسة'
+      colombian_chilean_school_name: 'اسم المدرسة'
       ages: 'ما العمر/الأعمار التي تدرِّس لها هذا العام؟'
       subjects: 'ما المادة/المواد الدراسية التي تدرِّسها هذا العام؟'
       resources: 'أي من المصادر التالية تستخدمها لتعليم علم الحاسوب ؟'

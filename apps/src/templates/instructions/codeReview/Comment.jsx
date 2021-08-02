@@ -11,7 +11,8 @@ export default class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
     onResolveStateToggle: PropTypes.func.isRequired,
-    onDelete: PropTypes.func.isRequired
+    onDelete: PropTypes.func.isRequired,
+    viewAsCodeReviewer: PropTypes.bool.isRequired
   };
 
   state = {isShowingCommentOptions: false};
@@ -45,7 +46,7 @@ export default class Comment extends Component {
   };
 
   renderFormattedTimestamp = timestampString =>
-    moment.utc(timestampString).format('M/D/YYYY [at] h:mm A');
+    moment(timestampString).format('M/D/YYYY [at] h:mm A');
 
   renderErrorMessage = () => {
     return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
@@ -60,6 +61,7 @@ export default class Comment extends Component {
       isResolved,
       hasError
     } = this.props.comment;
+    const {viewAsCodeReviewer} = this.props;
 
     const {isShowingCommentOptions} = this.state;
 
@@ -78,23 +80,25 @@ export default class Comment extends Component {
               {this.renderFormattedTimestamp(timestampString)}
             </span>
             {isResolved && <i className="fa fa-check" style={styles.check} />}
-            <i
-              className="fa fa-ellipsis-h"
-              style={styles.ellipsisMenu}
-              onClick={() =>
-                this.setState({
-                  isShowingCommentOptions: !isShowingCommentOptions
-                })
-              }
-            >
-              {isShowingCommentOptions && (
-                <CommentOptions
-                  isResolved={isResolved}
-                  onResolveStateToggle={() => this.onResolve()}
-                  onDelete={() => this.onDelete()}
-                />
-              )}
-            </i>
+            {!viewAsCodeReviewer && (
+              <i
+                className="fa fa-ellipsis-h"
+                style={styles.ellipsisMenu}
+                onClick={() =>
+                  this.setState({
+                    isShowingCommentOptions: !isShowingCommentOptions
+                  })
+                }
+              >
+                {isShowingCommentOptions && (
+                  <CommentOptions
+                    isResolved={isResolved}
+                    onResolveStateToggle={() => this.onResolve()}
+                    onDelete={() => this.onDelete()}
+                  />
+                )}
+              </i>
+            )}
           </span>
         </div>
         <div

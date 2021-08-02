@@ -200,8 +200,8 @@ pt:
       de inscrição.
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
-    user_type_teacher: Professor
     user_type_student: Estudante
+    user_type_teacher: Professor
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.
     error: Ocorreu um erro.
@@ -1221,7 +1221,7 @@ pt:
       school_city: Cidade da Escola
       school_country: País da Escola
       colombian_school_city: Cidade da Escola
-      colombian_school_name: Nome da escola
+      colombian_chilean_school_name: Nome da escola
       ages: Qual idade(s) você ensina este ano?
       subjects: Qual(is) disciplina(s) você ensina este ano?
       resources: Quais dos seguintes recursos de educação de Ciência da Computação

@@ -12,6 +12,7 @@ module ViewOptionsHelper
     :autoplay_video,
     :channel,
     :readonly_workspace,
+    :is_code_reviewing,
     :is_external_project_level,
     :is_legacy_share,
     :legacy_share_style,
@@ -38,7 +39,8 @@ module ViewOptionsHelper
     :azure_speech_service_voices,
     :authenticity_token,
     :useGoogleBlockly,
-    :disallowed_html_tags
+    :disallowed_html_tags,
+    :backpack_channel
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

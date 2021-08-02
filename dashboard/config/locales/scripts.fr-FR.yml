@@ -5053,9 +5053,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Les Fonctions avec Paramètres : L''Écriture Musicale avec des
                 Paramètres'
@@ -7444,9 +7444,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Conditionals and Functions in Bee:
@@ -7760,16 +7760,16 @@ fr:
                 de leurs variables, puis auront l'opportunité de créer leur propre
                 mini-projet avec des variables.
             For Loop Fun:
-              name: 'Les Boucles For : la Boucle Fun'
+              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
               description_student: Vous allez avoir beaucoup de plaisir à découvrir
-                les boucles `for` !
+                les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de
                 faire des choses encore et encore, mais maintenant nous allons apprendre
                 à utiliser des boucles qui ont des structures supplémentaires intégrées.
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -7779,9 +7779,9 @@ fr:
                 en utilisant des boucles for pour résoudre, plus efficacement, des
                 problèmes compliqués.
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
-                Ici, tu utiliseras des boucles `for` pour faire des images à couper
+                Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de pratiquer
                 les boucles, cette fois avec l'Artiste. Les élèves résoudront des
@@ -8438,9 +8438,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -8478,7 +8478,7 @@ fr:
             'Variables: Envelope Variables':
               name: 'Les Variables : Variables Enveloppe'
             'For Loops: For Loop Fun':
-              name: 'Les Boucles For : la Boucle Fun'
+              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Building a Foundation:
@@ -8862,11 +8862,11 @@ fr:
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             'For Loops: For Loop Fun':
-              name: 'Les Boucles For : la Boucle Fun'
+              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             'Functions: Songwriting with Parameters':
               name: 'Les Fonctions : L''Écriture Musicale avec des Paramètres'
             Functions in Bee:
@@ -9015,9 +9015,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -9543,9 +9543,9 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             Songwriting with Parameters:
               name: La composition de chansons avec des paramètres
             Functions in Bee:
@@ -10519,9 +10519,9 @@ fr:
             Variables in Play Lab:
               name: Les Variables dans le Labo du Jeu
             'For Loops: For Loop Fun':
-              name: 'Les Boucles For : la Boucle Fun'
+              name: 'Les Boucles Pour : S''amuser avec la Boucle Pour'
             For Loops in Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             'Functions: Songwriting with Parameters':
@@ -11353,14 +11353,14 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir
-                les boucles `for` !
+                les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de
                 faire des choses encore et encore, mais maintenant nous allons apprendre
                 à utiliser des boucles qui ont des structures supplémentaires intégrées.
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -11372,7 +11372,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
-                Ici, tu utiliseras des boucles `for` pour faire des images à couper
+                Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de pratiquer
                 les boucles, cette fois avec l'Artiste. Les élèves résoudront des
@@ -13793,14 +13793,14 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir
-                les boucles `for` !
+                les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de
                 faire des choses encore et encore, mais maintenant nous allons apprendre
                 à utiliser des boucles qui ont des structures supplémentaires intégrées.
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -13811,7 +13811,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
-                Ici, tu utiliseras des boucles `for` pour faire des images à couper
+                Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer
                 sur les boucles, cette fois avec l'Artiste. Les élèves résoudront
@@ -14714,7 +14714,7 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
             For Loops in Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
             Learning Sprites with Sprite Lab:
@@ -22570,14 +22570,14 @@ fr:
             For Loop Fun:
               name: Jouer avec les Boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir
-                les boucles `for` !
+                les boucles `pour` !
               description_teacher: 'Nous savons que les boucles nous permettent de
                 faire des choses encore et encore, mais maintenant nous allons apprendre
                 à utiliser des boucles qui ont des structures supplémentaires intégrées.
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique. '
             For Loops in Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -22588,7 +22588,7 @@ fr:
             For Loops in Artist:
               name: Les Boucles For avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
-                Ici, tu utiliseras des boucles `for` pour faire des images à couper
+                Ici, tu utiliseras des boucles `pour` pour faire des images à couper
                 le souffle.
               description_teacher: Dans cette leçon, les élèves continuent de s'entrainer
                 sur les boucles, cette fois avec l'Artiste. Les élèves résoudront
@@ -22751,9 +22751,9 @@ fr:
             Functions in Artist:
               name: Les Fonctions dans Artist
             For Loops in Bee:
-              name: Les Boucles For dans l'Abeille
+              name: Les Boucles Pour dans l'Abeille
             For Loops in Artist:
-              name: Les Boucles For dans l'Artiste
+              name: Les Boucles Pour dans l'Artiste
             Learning Sprites with Sprite Lab:
               name: Découvrir les Lutins avec le Labo des Lutins
             Alien Dance Party with Sprite Lab:
@@ -22795,7 +22795,7 @@ fr:
             Changing Variables with Artist:
               name: Modifier des Variables avec l'Artiste
             For Loops with Bee:
-              name: Les Boucles For avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
             For Loops with Artist:
               name: Les Boucles For avec l'Artiste
             Swimming Fish in Sprite Lab:
@@ -25515,8 +25515,8 @@ fr:
                 Ces nouvelles structures permettront aux élèves de créer du code plus
                 puissant et plus dynamique.
             For Loops in Bee:
-              key: Les Boucles For dans l'Abeille
-              name: Les Boucles For avec l'Abeille
+              key: Les Boucles Pour dans l'Abeille
+              name: Les Boucles Pour avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -25525,7 +25525,7 @@ fr:
                 revoir les boucles des leçons précédentes, puis seront initiés aux
                 boucles `for` afin de résoudre, plus efficacement, des problèmes compliqués.
             For Loops in Artist:
-              key: Les Boucles For dans l'Artiste
+              key: Les Boucles Pour dans l'Artiste
               name: Les Boucles For avec l'Artiste
               description_student: Prépare-toi à réaliser ton prochain chef-d'œuvre.
                 Ici, tu utiliseras des boucles `for` pour faire des images à couper
@@ -25793,8 +25793,8 @@ fr:
               description_student: Dans cette leçon, tu vas faire des dessins en utilisant
                 des variables qui changent au fur et à mesure que le programme s'exécute.
             For Loops with Bee:
-              key: Les Boucles For avec l'Abeille
-              name: Les Boucles For avec l'Abeille
+              key: Les Boucles Pour avec l'Abeille
+              name: Les Boucles Pour avec l'Abeille
               description_student: Buzz buzz. Dans ces énigmes, tu guideras une abeille
                 vers le nectar et le miel en utilisant des boucles "for" !
               description_teacher: Avec l'Abeille, cette leçon se concentre sur les
@@ -26836,6 +26836,16 @@ fr:
           lessons:
             lesson-22:
               name: Concevoir la Collecte de Données
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Enquête
+        csd7-2021:
+          lessons:
+            Survey Planning:
+              name: Concevoir la Collecte de Données
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Enquête
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -26945,10 +26955,6 @@ fr:
           lessons:
             lesson-9:
               name: Communauté des Enseignants
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Outils
         self-paced-pl-csd5-2021:
           lessons:
             lesson-3:
@@ -27004,3 +27010,5 @@ fr:
           lessons:
             lesson-2:
               name: Leçon 2
+        dlp21-csp-mod1:
+          title: CS Principles Apprentissage Approfondi Module 1

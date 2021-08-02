@@ -402,6 +402,10 @@ class ScriptLevelsController < ApplicationController
     user_to_view = User.find(params[:user_id])
     if can?(:view_as_user, @script_level, user_to_view)
       @user = user_to_view
+
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+        view_options(is_code_reviewing: true)
+      end
     end
   end
 

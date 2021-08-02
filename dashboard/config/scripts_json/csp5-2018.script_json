@@ -35,6 +35,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
@@ -75,8 +76,8 @@
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-06-17 22:29:49 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:48 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp5-2018"
     }
@@ -481,9 +482,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1055,9 +1057,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L02 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1429,9 +1432,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1553,9 +1557,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L04 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2227,9 +2232,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L05 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2800,9 +2806,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L06 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3174,9 +3181,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L07 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3273,9 +3281,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L08 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3722,9 +3731,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L09 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4121,9 +4131,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L10 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4148,7 +4159,7 @@
         ],
         "progression": "Color Sleuth - Planning the App"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4173,7 +4184,7 @@
         ],
         "progression": "How Set Property Works"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4248,7 +4259,7 @@
         ],
         "progression": "How to Pick a Random Button"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4298,7 +4309,7 @@
         ],
         "progression": "How to Make a Random Color"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4398,7 +4409,7 @@
         ],
         "progression": "Activating Buttons"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4498,7 +4509,7 @@
         ],
         "progression": "How to Switch Player Turns"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4573,7 +4584,7 @@
         ],
         "progression": "Updating the Score"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4648,7 +4659,7 @@
         ],
         "progression": "Color Sleuth - How Does It End?"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4673,7 +4684,7 @@
         ],
         "progression": "Project: Color Sleuth"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4698,7 +4709,7 @@
         ],
         "progression": "Color Sleuth - Epilogue"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4819,9 +4830,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L11 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5368,9 +5380,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L12 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5667,9 +5680,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L13 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6441,9 +6455,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L14 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6739,9 +6754,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L15 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7113,9 +7129,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L16 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7312,9 +7329,10 @@
       "properties": {
         "level_keys": [
           "CSP U5L17 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7789,7 +7807,7 @@
         ],
         "progression": "Project: Canvas Painter"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

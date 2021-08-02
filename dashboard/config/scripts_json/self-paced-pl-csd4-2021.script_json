@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-20 22:21:31 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-07-30 20:28:31 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
     }
@@ -46,7 +46,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "CS Practices",
+      "name": "CS practices for students",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -329,6 +329,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
         "progression": "Using resources"
       },
       "named_level": false,
