@@ -37,7 +37,7 @@ class JavalabView extends React.Component {
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -245,7 +245,7 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
-      isReadOnlyWorkspace,
+      disableFinishButton,
       editorColumnHeight,
       leftWidth,
       rightWidth,
@@ -317,7 +317,6 @@ class JavalabView extends React.Component {
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
-                isDisabled={awaitingContainedResponse}
                 style={{
                   ...styles.consoleParent,
                   ...(!this.isLeftSideVisible() && {paddingBottom: 40})
@@ -329,7 +328,8 @@ class JavalabView extends React.Component {
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
-                    isReadOnlyWorkspace={isReadOnlyWorkspace}
+                    disableFinishButton={disableFinishButton}
+                    disableRunButtons={awaitingContainedResponse}
                     onContinue={onContinue}
                     renderSettings={this.renderSettings}
                   />
@@ -416,7 +416,7 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    disableFinishButton: state.javalab.disableFinishButton,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
