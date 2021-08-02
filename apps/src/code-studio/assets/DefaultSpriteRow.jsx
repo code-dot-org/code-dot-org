@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 
 export default function DefaultSpriteRow(props) {
   let {name, keyValue, onDelete} = props;
@@ -28,7 +29,8 @@ DefaultSpriteRow.propTypes = {
 
 const styles = {
   assetRow: {
-    borderTop: '1px solid gray',
+    borderTop: '1px solid',
+    borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center'

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:48:59 UTC",
+    "serialized_at": "2021-07-30 20:28:28 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -7886,7 +7886,7 @@
     {
       "key": "inheritance",
       "word": "Inheritance",
-      "definition": "A object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
+      "definition": "An object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
       "properties": {
       },
       "seeding_key": {
