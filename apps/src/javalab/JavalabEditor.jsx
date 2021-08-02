@@ -91,6 +91,7 @@ class JavalabEditor extends React.Component {
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
     this.updateFileType = this.updateFileType.bind(this);
+    this.onImportFile = this.onImportFile.bind(this);
     this._codeMirrors = {};
 
     // Used to manage dark and light mode configuration.
@@ -340,7 +341,8 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  onCreateFile(filename) {
+  onCreateFile(filename, fileContents) {
+    fileContents = fileContents || '';
     if (Object.keys(this.props.sources).includes(filename)) {
       this.setState({
         newFileError: this.duplicateFileError(filename)
@@ -360,7 +362,7 @@ class JavalabEditor extends React.Component {
     newTabs.push(newTabKey);
 
     // add new file to sources
-    this.props.setSource(filename, '');
+    this.props.setSource(filename, fileContents);
     projectChanged();
 
     // add new tab and set it as the active tab
@@ -418,6 +420,30 @@ class JavalabEditor extends React.Component {
       openDialog: null,
       fileToDelete: null
     });
+  }
+
+  onImportFile(filename, fileContents) {
+    const {fileMetadata} = this.state;
+    // If filename already exists in sources, replace file contents.
+    // Otherwise, create a new file.
+    if (Object.keys(this.props.sources).includes(filename)) {
+      // find editor for filename and overwrite contents of that editor
+      let editorKey = null;
+      for (const key in fileMetadata) {
+        if (fileMetadata[key] === filename) {
+          editorKey = key;
+        }
+      }
+      const editor = this.editors[editorKey];
+      editor.dispatch({
+        changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
+      });
+      this.props.setSource(filename, fileContents);
+    } else {
+      // create new file
+      this.onCreateFile(filename, fileContents);
+    }
+    projectChanged();
   }
 
   duplicateFileError(filename) {
@@ -537,6 +563,7 @@ class JavalabEditor extends React.Component {
               id={'javalab-editor-backpack'}
               isDarkMode={isDarkMode}
               isDisabled={isReadOnlyWorkspace}
+              onImport={this.onImportFile}
             />
           </PaneSection>
           <PaneButton
