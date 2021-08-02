@@ -26,7 +26,10 @@ class NeighborhoodVisualizationColumn extends React.Component {
       : ICON_PATH + 'icons.png';
 
     return (
-      <div>
+      <div
+        id="neighbourhood-visualization-column"
+        style={{textAlign: 'center'}}
+      >
         <PreviewPaneHeader
           isCollapsed={isCollapsed}
           isFullscreen={isFullscreen}

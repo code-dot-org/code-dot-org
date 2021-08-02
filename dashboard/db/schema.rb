@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_22_162824) do
+ActiveRecord::Schema.define(version: 2021_07_28_222333) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1413,7 +1413,7 @@ ActiveRecord::Schema.define(version: 2021_07_22_162824) do
     t.integer "script_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_app_id", "user_id"], name: "index_reviewable_projects_on_storage_app_id_and_user_id"
+    t.index ["user_id", "script_id", "level_id", "storage_app_id"], name: "index_reviewable_projects_on_user_script_level_storage_app"
   end
 
   create_table "school_districts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
