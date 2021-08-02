@@ -38,14 +38,15 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}",
       "curriculum_umbrella": "CSP",
+      "is_stable": true,
       "family_name": "csp3",
       "tts": true,
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csp3",
-    "serialized_at": "2021-06-17 22:30:15 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:59 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp3-2019"
     }
@@ -285,9 +286,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L01 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -384,9 +386,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L02 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -408,9 +411,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L03 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -432,9 +436,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L04 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -456,9 +461,10 @@
       "properties": {
         "level_keys": [
           "csp_applab_turtle_2019"
-        ]
+        ],
+        "progression": "Video: Turtle Programming"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,9 +661,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L05 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -782,7 +789,7 @@
         ],
         "progression": "Abstraction in Programming"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1004,9 +1011,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L06 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1178,9 +1186,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L07 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1552,9 +1561,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L08 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2051,9 +2061,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L09 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2525,9 +2536,10 @@
       "properties": {
         "level_keys": [
           "CSP U3L10 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
