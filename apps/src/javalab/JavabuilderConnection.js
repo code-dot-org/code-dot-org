@@ -104,18 +104,14 @@ export default class JavabuilderConnection {
 
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
-    if (!this.socket) {
-      // Do nothing
-    } else {
+    if (this.socket) {
       this.socket.send(message);
     }
   }
 
   // Closes web socket connection
   closeConnection() {
-    if (!this.socket) {
-      // Do nothing - there is no socket to close
-    } else {
+    if (this.socket) {
       this.socket.close();
     }
   }
