@@ -121,8 +121,8 @@ sl:
     data_collection_us: "Razumem, da je Code.org neprofitno spletno mesto iz ZDA in da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji državi."
     visit_privacy: 'Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.'
     additional_information: "Potrebujemo nekaj dodatnih informacij za uspešno prijavo."
-    user_type_teacher: "Učitelj/ica"
     user_type_student: "Učenec"
+    user_type_teacher: "Učitelj/ica"
     field_is_required: "se zahtevan(o)"
     accept_terms: "Moraš se strinjati, če želiš ustvariti račun"
     error: "Prišlo je do napake."
@@ -620,7 +620,7 @@ sl:
     form_labels:
       email: 'Elektronska pošta'
       school_name: 'Ime šole'
-      colombian_school_name: 'Ime šole'
+      colombian_chilean_school_name: 'Ime šole'
     form_entries:
       gender:
         male: 'Moški'

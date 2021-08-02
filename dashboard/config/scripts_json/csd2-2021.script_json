@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-26 23:09:03 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:15 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1843,7 +1844,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using the Tool:**\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab. Later, any teacher feedback will appear in the same area\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Using the Tool:** This level contains a new tab, \"Rubric\", that gives guidance on how student work can be evaluated and lets you leave feedback. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Rubric\" tab. Later, any teacher feedback will appear in the same area. [Click Here](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) to learn more about giving feedback to students\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
           }
         ]
       },

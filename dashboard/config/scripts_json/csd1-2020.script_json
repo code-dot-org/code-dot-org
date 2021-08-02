@@ -28,12 +28,13 @@
           "https://curriculum.code.org/csd-20/unit1/standards/"
         ]
       ],
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:33 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:08 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2020"
     }

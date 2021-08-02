@@ -6,10 +6,10 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   setup_all do
     @project_owner = create :student
     @project_owner_channel_id = 'encrypted_channel_id'
-    @project_level_id = 'level_id'
-    @project_script_id = 'script_id'
-    @project_owner_storage_id = 123
-    @project_storage_app_id = 456
+    @project_level_id = 12
+    @project_script_id = 34
+    @project_owner_storage_id = 56
+    @project_storage_app_id = 78
 
     @teacher = create :teacher
     @section = create :section, user: @teacher
@@ -63,6 +63,97 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'reviewable_status returns correct status for student when own project is not reviewable' do
+    stub_storage_apps_calls
+
+    sign_in @project_owner
+
+    get :reviewable_status, params: {
+      channel_id: @project_owner_channel_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+    }
+
+    assert_response :success
+
+    status = JSON.parse(@response.body)
+
+    assert_not status['reviewEnabled']
+    assert status['canMarkReviewable']
+  end
+
+  test 'reviewable_status returns correct status for student when own project is reviewable' do
+    stub_storage_apps_calls
+
+    sign_in @project_owner
+
+    reviewable_project = create :reviewable_project,
+      user_id: @project_owner.id,
+      storage_app_id: @project_storage_app_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    get :reviewable_status, params: {
+      channel_id: @project_owner_channel_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+    }
+
+    assert_response :success
+
+    status = JSON.parse(@response.body)
+
+    assert status['reviewEnabled']
+    assert status['canMarkReviewable']
+    assert_equal reviewable_project.id, status['id']
+  end
+
+  test 'reviewable_status returns correct status for other user when student project is not reviewable' do
+    stub_storage_apps_calls
+
+    sign_in @another_student
+
+    get :reviewable_status, params: {
+      channel_id: @project_owner_channel_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+    }
+
+    assert_response :success
+
+    status = JSON.parse(@response.body)
+
+    assert_not status['reviewEnabled']
+    assert_not status['canMarkReviewable']
+    assert_nil status['id']
+  end
+
+  test 'reviewable_status returns correct status for other user when student project is reviewable' do
+    stub_storage_apps_calls
+
+    sign_in @another_student
+
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      storage_app_id: @project_storage_app_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    get :reviewable_status, params: {
+      channel_id: @project_owner_channel_id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+    }
+
+    assert_response :success
+
+    status = JSON.parse(@response.body)
+
+    assert status['reviewEnabled']
+    assert_not status['canMarkReviewable']
+    assert_nil status['id']
+  end
+
   test 'students can disable review for their own projects' do
     reviewable_project = create :reviewable_project,
       user_id: @project_owner.id,
@@ -85,6 +176,32 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
       assert_response :forbidden
     end
+  end
+
+  test 'student in same section project available for review gets project metadata' do
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    sign_in @another_student
+    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
+
+    assert_equal [[@project_owner.id, @project_owner.name]], JSON.parse(response.body)
+  end
+
+  test 'student does not get projects available for review if project available but not in same section' do
+    student = create :student
+
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      level_id: @project_level_id,
+      script_id: @project_script_id
+
+    sign_in student
+    get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
+
+    assert_equal [], JSON.parse(response.body)
   end
 
   def stub_storage_apps_calls

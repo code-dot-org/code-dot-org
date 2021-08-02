@@ -21,6 +21,7 @@
           "https://curriculum.code.org/csp-20/unit10/standards/"
         ]
       ],
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "",
@@ -63,8 +64,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:51 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:14 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp10-2020"
     }

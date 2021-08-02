@@ -42,12 +42,13 @@
       ],
       "lesson_extras_available": true,
       "hideable_lessons": true,
+      "is_stable": true,
       "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-23 23:39:44 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:10 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd6-2020"
     }
@@ -377,9 +378,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L01 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,9 +403,10 @@
       "properties": {
         "level_keys": [
           "CSDU6 Innovation_2018_2019_2020"
-        ]
+        ],
+        "progression": "Innovation Research"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,9 +428,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L02 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,9 +628,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 emotion machine example_2020"
-        ]
+        ],
+        "progression": "Emotion Machine Example"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -748,9 +753,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L03 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -772,9 +778,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 hardware software video_2020"
-        ]
+        ],
+        "progression": "Hardware and Software"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1071,9 +1078,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L04 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1145,9 +1153,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L05 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1418,9 +1427,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L06 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1791,9 +1801,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L07 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1815,9 +1826,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 sensor experiment embedded_2020"
-        ]
+        ],
+        "progression": "Sensor Experiment"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2113,9 +2125,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L08 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2137,9 +2150,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 emoji race demo_2020"
-        ]
+        ],
+        "progression": "Sample Program"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2161,9 +2175,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 tugowar stop_2018_2019_2020"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2435,9 +2450,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 tugowar final_2020"
-        ]
+        ],
+        "progression": "Make it Your Own"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2459,9 +2475,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L09 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2483,9 +2500,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 tugowar demo_2020"
-        ]
+        ],
+        "progression": "Demo - Bug Grab"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2507,9 +2525,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 game project stop_2018_2019_2020"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2706,9 +2725,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L10 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2730,9 +2750,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 arrays video_2020"
-        ]
+        ],
+        "progression": "Video: Introduction to Arrays"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2879,9 +2900,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 array multi_2018_2019_2020"
-        ]
+        ],
+        "progression": "Using Arrays"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3103,9 +3125,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L11 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3450,9 +3473,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L12 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3524,9 +3548,10 @@
       "properties": {
         "level_keys": [
           "CSD: For Loop_2020"
-        ]
+        ],
+        "progression": "Video: For Loops"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3648,9 +3673,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 for loop map_2020"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3772,9 +3798,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L13 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4021,9 +4048,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L14 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4070,9 +4098,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 functions paramters video_2020"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4444,9 +4473,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L15 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4468,9 +4498,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 circuit logic video_2020"
-        ]
+        ],
+        "progression": "Circuits and Logic"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4767,9 +4798,10 @@
       "properties": {
         "level_keys": [
           "CSD U6L16 TFMD_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4791,9 +4823,10 @@
       "properties": {
         "level_keys": [
           "CSD U6 final intro_2018_2019_2020"
-        ]
+        ],
+        "progression": "Design Your Prototype"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

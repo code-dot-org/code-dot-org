@@ -8,15 +8,13 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "parent_level_id": 29258,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tN7auHkLS870w3RdKAg\nly3NRzgR2yIiFUYoWyCIuzYgaYi/H/i0+SS8tKXBqoSUq2s=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-22T19:21:36.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-22T19:21:36.014+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4\\\"\"],\"cloned_from\":\"CSA U3L7-L4\"},{\"changed_at\":\"2021-07-22 20:04:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 20:29:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 21:15:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 21:29:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-22T19:21:36.014+00:00\",\"changed\":[\"cloned from \\\"CSA U3L7-L4\\\"\"],\"cloned_from\":\"CSA U3L7-L4\"},{\"changed_at\":\"2021-07-22 20:04:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 20:29:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 21:15:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 21:29:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:36:25 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

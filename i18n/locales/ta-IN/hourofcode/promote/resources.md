@@ -92,7 +92,7 @@ title: வள ஆதாரங்கள்
 
 வார்த்தையை வெளியேற்றுங்கள். ஒரு நிகழ்வை நடத்துங்கள். பதிவு செய்ய உள்ளூர் பள்ளியைக் கேளுங்கள். அல்லது மணிநேர குறியீட்டை நீங்களே முயற்சிக்கவும் - எல்லோரும் அடிப்படைகளை கற்றுக்கொள்வதன் மூலம் பயனடையலாம்.
 
-Http://hourofcode.com/ இல் தொடங்கவும்{{ country }}<br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ Http://hourofcode.com/ இல் தொடங்கவும்{{ country }}<br 
 
 [TOWN / CITY NAME] இல் கல்வியின் எதிர்காலத்தை மாற்ற இது ஒரு வாய்ப்பு.
 
-விவரங்களுக்கு http://hourofcode.com/ {{ country }} ஐப் பார்க்கவும், மேலும் இதைப் பரப்பவும் உதவுங்கள்.<br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

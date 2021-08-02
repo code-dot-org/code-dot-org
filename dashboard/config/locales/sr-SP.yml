@@ -140,8 +140,8 @@ sr:
       да наставимо са процесом регистрације.
     user_type_button: Ажурирајте тип налога
     user_type_label: Врста налога
-    user_type_teacher: Учитељ
     user_type_student: студент
+    user_type_teacher: Учитељ
     field_is_required: је обавезан
     accept_terms: Морате се сложити да бисте креирали свој налог
     error: Дошло је до грешке.
@@ -493,7 +493,7 @@ sr:
     form_labels:
       email: Електронска пошта
       school_name: Име школе
-      colombian_school_name: Име школе
+      colombian_chilean_school_name: Име школе
     form_entries:
       gender:
         male: Мушко

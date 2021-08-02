@@ -1,9 +1,12 @@
 name 'SP-VPL-21-mod2-progress-c4u'
 title 'Check for understanding'
 description ''
-question 'Which student needs to revisit and continue working on levels within Lesson 3?'
-wrong 'Student A'
-right 'Student B'
+question 'Which level is best used to assess student understanding of the lesson objectives??'
+wrong 'Level 3'
+wrong 'Level 4'
+wrong 'Level 8'
+right 'Level 9'
+
 
 markdown <<MARKDOWN
 ![](https://images.code.org/c92e6cd9ee2669a069e72e67b919af2e-image-1625773034493.36.58 PM.png)
