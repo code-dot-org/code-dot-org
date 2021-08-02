@@ -163,6 +163,15 @@ export default class JavabuilderConnection {
 
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
-    this.socket.send(message);
+    if (this.socket) {
+      this.socket.send(message);
+    }
+  }
+
+  // Closes web socket connection
+  closeConnection() {
+    if (this.socket) {
+      this.socket.close();
+    }
   }
 }
