@@ -181,8 +181,8 @@ level 'Sample CSP Assessment', assessment: true
 
 lesson 'Swapped Levels', display_name: 'Swapped Levels', has_lesson_plan: false
 variants
-  level '2-3 Maze 4'
   level '2-3 Maze 1', active: false
+  level '2-3 Maze 4'
 endvariants
 variants
   level '2-3 Maze 2', active: false
@@ -217,8 +217,8 @@ variants
   level '4-5 Maze 6', active: false
 endvariants
 variants
-  level 'csp_socialBelonging_control'
   level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
+  level 'csp_socialBelonging_control'
 endvariants
 
 lesson 'Anonymous student survey', display_name: 'Anonymous student survey', has_lesson_plan: false
