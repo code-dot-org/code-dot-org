@@ -89,6 +89,7 @@ Javalab.prototype.init = function(config) {
   config.getCode = this.getCode.bind(this);
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
+  const onStop = this.onStop.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
@@ -213,6 +214,7 @@ Javalab.prototype.init = function(config) {
       <JavalabView
         onMount={onMount}
         onRun={onRun}
+        onStop={onStop}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
@@ -259,6 +261,11 @@ Javalab.prototype.onRun = function() {
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
   });
+};
+
+// Called by the Javalab app when it wants to stop student code execution
+Javalab.prototype.onStop = function() {
+  this.javabuilderConnection.closeConnection();
 };
 
 // Called by Javalab console to send a message to Javabuilder.

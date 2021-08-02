@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:22 UTC",
+    "serialized_at": "2021-08-02 15:22:27 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -160,7 +160,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
-        "preparation": "\r\n* Print copies of the Flippy Do Pro, 1 per group\r\n* Scissors",
+        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true

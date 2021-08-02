@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:27 UTC",
+    "serialized_at": "2021-08-02 14:22:29 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -5136,6 +5136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1-v2"
+        ],
         "progression": "No-Argument Constructors"
       },
       "named_level": false,
@@ -5211,6 +5214,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4-v2"
+        ],
         "progression": "Parameterized Constructors"
       },
       "named_level": false,
@@ -6404,6 +6410,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L15-L1"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -8905,7 +8914,7 @@
     {
       "key": "boolean",
       "word": "Boolean",
-      "definition": "A data type that can either be true or false",
+      "definition": "A data type that can either be `true` or `false`",
       "properties": {
       },
       "seeding_key": {

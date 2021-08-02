@@ -27,7 +27,8 @@ const DEFAULT_PROPS = {
   hidden: false,
   isMinecraft: false,
   isBlockly: false,
-  isRtl: false
+  isRtl: false,
+  displayReviewTab: false
 };
 
 describe('TopInstructions', () => {
@@ -102,6 +103,18 @@ describe('TopInstructions', () => {
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.true;
+      });
+
+      it('passes displayFeedback = false to TopInstructionsHeader if displayReviewTab = true and there is no rubric', () => {
+        const props = {...DEFAULT_PROPS, displayReviewTab: true};
+        const wrapper = shallow(<TopInstructions {...props} />);
+
+        wrapper.setState({
+          teacherViewingStudentWork: true
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
       });
     });
 

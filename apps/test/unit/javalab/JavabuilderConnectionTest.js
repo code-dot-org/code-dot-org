@@ -71,4 +71,18 @@ describe('JavabuilderConnection', () => {
       );
     });
   });
+
+  describe('onClose', () => {
+    it('closes web socket on closeConnection', () => {
+      const closeStub = sinon.stub();
+      sinon.stub(window, 'WebSocket').returns({
+        close: closeStub
+      });
+      const javabuilderConnection = new JavabuilderConnection(null, () => {});
+      javabuilderConnection.establishWebsocketConnection('fake-token');
+      javabuilderConnection.closeConnection();
+      expect(closeStub).to.have.been.calledOnce;
+      window.WebSocket.restore();
+    });
+  });
 });
