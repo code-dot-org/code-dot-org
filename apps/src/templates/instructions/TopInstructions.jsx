@@ -104,7 +104,8 @@ class TopInstructions extends Component {
     displayReviewTab: PropTypes.bool,
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
-    standalone: PropTypes.bool
+    standalone: PropTypes.bool,
+    onHeightResize: PropTypes.func
   };
 
   static defaultProps = {
@@ -298,6 +299,10 @@ class TopInstructions extends Component {
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
+
+    if (this.props.onHeightResize) {
+      this.props.onHeightResize(newHeight);
+    }
   };
 
   refForSelectedTab = () => {
@@ -595,8 +600,13 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
+    // If we're displaying the review tab the teacher can leave feedback in that tab
+    // so we hide the teacher feedback tab if there's no rubric to avoid confusion about
+    // where the teacher should leave feedback
     const displayFeedback =
-      !!rubric || teacherViewingStudentWork || studentHasFeedback;
+      !!rubric ||
+      (!displayReviewTab && teacherViewingStudentWork) ||
+      studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =

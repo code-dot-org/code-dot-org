@@ -12,13 +12,14 @@ import javalab, {
   appendOutputLog,
   setBackpackApi,
   setIsStartMode,
-  setLevelName
+  setLevelName,
+  appendNewlineToConsoleLog,
+  setIsRunning
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
-import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
@@ -31,7 +32,7 @@ import BackpackClientApi from '../code-studio/components/backpack/BackpackClient
  * On small mobile devices, when in portrait orientation, we show an overlay
  * image telling the user to rotate their device to landscape mode.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 900;
 
 /**
  * An instantiable Javalab class
@@ -88,26 +89,28 @@ Javalab.prototype.init = function(config) {
   config.getCode = this.getCode.bind(this);
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
+  const onStop = this.onStop.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    this.miniApp = new Neighborhood();
+    this.miniApp = new Neighborhood(
+      this.onOutputMessage,
+      this.onNewlineMessage,
+      this.setIsRunning
+    );
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
     this.visualization = <NeighborhoodVisualizationColumn />;
   } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
-    this.miniApp = new Theater();
+    this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
     this.visualization = <TheaterVisualizationColumn />;
   }
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
-    window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
-      this.studioApp_.resizeVisualization(e.detail);
-    });
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
@@ -128,6 +131,7 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+
     config.afterInject?.();
   };
 
@@ -210,11 +214,13 @@ Javalab.prototype.init = function(config) {
       <JavalabView
         onMount={onMount}
         onRun={onRun}
+        onStop={onStop}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
+        viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -245,14 +251,21 @@ Javalab.prototype.onRun = function() {
   }
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
-    message => getStore().dispatch(appendOutputLog(message)),
+    this.onOutputMessage,
     this.miniApp,
     getStore().getState().pageConstants.serverLevelId,
-    options
+    options,
+    this.onNewlineMessage,
+    this.setIsRunning
   );
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
   });
+};
+
+// Called by the Javalab app when it wants to stop student code execution
+Javalab.prototype.onStop = function() {
+  this.javabuilderConnection.closeConnection();
 };
 
 // Called by Javalab console to send a message to Javabuilder.
@@ -290,6 +303,18 @@ Javalab.prototype.afterClearPuzzle = function() {
 
 Javalab.prototype.onCommitCode = function(commitNotes) {
   project.autosave();
+};
+
+Javalab.prototype.onOutputMessage = function(message) {
+  getStore().dispatch(appendOutputLog(message));
+};
+
+Javalab.prototype.onNewlineMessage = function() {
+  getStore().dispatch(appendNewlineToConsoleLog());
+};
+
+Javalab.prototype.setIsRunning = function(isRunning) {
+  getStore().dispatch(setIsRunning(isRunning));
 };
 
 export default Javalab;
