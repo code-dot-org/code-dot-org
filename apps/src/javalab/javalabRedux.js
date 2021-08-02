@@ -48,6 +48,11 @@ export const appendOutputLog = output => ({
   log: {type: 'output', text: output}
 });
 
+export const appendNewlineToConsoleLog = () => ({
+  type: APPEND_CONSOLE_LOG,
+  log: {type: 'newline'}
+});
+
 export const clearConsoleLogs = () => ({
   type: CLEAR_CONSOLE_LOGS
 });
