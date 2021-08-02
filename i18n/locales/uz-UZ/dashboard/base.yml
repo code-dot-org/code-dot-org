@@ -167,8 +167,8 @@ uz:
     additional_information: "Ro'yxatdan o'tishni davom ettirish uchun bizga qo'shimcha ma'lumot kerak."
     user_type_button: "Hisob turini yangilash"
     user_type_label: "Hisob (Akkaunt) Turi"
-    user_type_teacher: "O'qituvchi"
     user_type_student: "O‘quvchi"
+    user_type_teacher: "O'qituvchi"
     field_is_required: "talab etiladi"
     accept_terms: "Hisob qaydnomasini yaratishga rozilik bildirishingiz kerak."
     error: "Xatolik yuz berdi."
@@ -982,9 +982,8 @@ uz:
       school_city: 'Maktab shahri'
       school_country: 'Maktab davlati'
       colombian_school_city: 'Maktab shahri'
-      colombian_school_department: 'Maktab bo''limi'
       colombian_school_municipality: 'Maktab munitsipaliteti'
-      colombian_school_name: 'Maktab nomi'
+      colombian_chilean_school_name: 'Maktab nomi'
       ages: 'Bu yil qaysi yosh(lar) ni o''qitasiz?'
       subjects: 'Bu yil qaysi fan(lar)ni o''qitasiz?'
       resources: 'Quyidagi CS (informatika) ta''lim manbalaridan qaysi birini ishlatasiz?'

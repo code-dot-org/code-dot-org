@@ -5789,6 +5789,14 @@ uk:
           lesson_groups:
             cspSurvey2020:
               display_name: Опитування
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опитування
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Опитування
         kodea-pd-2021:
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного
             онлайнового курсу основ інформатики від Code.org, який можна проходити
@@ -5888,10 +5896,6 @@ uk:
           lesson_groups:
             lessonGroup-2:
               display_name: Ласкаво просимо
-        self-paced-pl-csd3-2021:
-          lessons:
-            lesson-2:
-              name: Інструменти
         self-paced-pl-csd6-2021:
           lessons:
             lesson-3:

@@ -9355,8 +9355,6 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
-            lessonGroup-4:
-              display_name: Test
         csa2-pilot:
           lessons:
             new lesson:
@@ -9529,3 +9527,7 @@ cs:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: Test

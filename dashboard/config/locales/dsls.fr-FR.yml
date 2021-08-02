@@ -3739,14 +3739,14 @@ fr-FR:
 '
       courseF_markdown_algorithms_end:
         content1: Page du Manuel du Test Markdown
-        markdown: "# * * Tu viens d'apprendre les « algorithmes » !**   ### **Un algorithme
-          est une simple liste d'étapes à suivre pour accomplir une tâche**. Ce qui
-          est amusant, avec les algorithmes, c'est que tu décides ce qui se passe,
-          étape par étape.  ### Lorsque tu écris un algorithme pour une machine, on
-          appelle cela un **programme**.  --- ##**Vocabulaire à Connaître**   * ###
-          **Algorithme** - Une liste d'étapes pour accomplir une tâche   * ### **Programme**
-          - Un algorithme qui a été codé en quelque chose qui peut être exécuté par
-          une machine\n"
+        markdown: "# * * Tu viens d'apprendre les « algorithmes » !**   \n\n### **Un
+          algorithme est une simple liste d'étapes à suivre pour accomplir une tâche**.
+          Ce qui est amusant, avec les algorithmes, c'est que tu décides ce qui se
+          passe, étape par étape.  \n\n### Lorsque tu écris un algorithme pour une
+          machine, on appelle cela un **programme**.  \n\n--- \n\n##**Vocabulaire
+          à Connaître**   \n\n* ### **Algorithme** - Une liste d'étapes pour accomplir
+          une tâche   \n\n* ### **Programme** - Un algorithme qui a été codé en quelque
+          chose qui peut être exécuté par une machine\n"
       courseF_markdown_algorithms_intro:
         content1: Page du Manuel du Test Markdown
         markdown: "# **Dans cette leçon...**   # # # As-tu déjà voulu dire à quelqu'un
@@ -3880,43 +3880,43 @@ fr-FR:
           pourrait servir ? Réfléchissons !\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)\n"
       courseF_markdown_variables_end:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
           une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
           pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
-          de la variable comme espace réservé où tu veux dans ton programme ! ---##
-          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
-          élément d'information qui peut changer\n"
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_end_2019:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
           une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
           pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
-          de la variable comme espace réservé où tu veux dans ton programme ! ---##
-          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
-          élément d'information qui peut changer\n"
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_end_2019_2020:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Tu viens d'apprendre les « variables » !**### Pour utiliser
+        markdown: "# **Tu viens d'apprendre les « variables » !**\n\n### Pour utiliser
           une variable, il faut lui attribuer un nom et une valeur. Le nom ne change
           pas, mais la valeur peut changer. De cette façon, tu peux utiliser le nom
-          de la variable comme espace réservé où tu veux dans ton programme ! ---##
-          **Vocabulaire à Connaître**### **Variable** - Un espace réservé pour un
-          élément d'information qui peut changer\n"
+          de la variable comme espace réservé où tu veux dans ton programme ! \n\n---\n\n##
+          **Vocabulaire à Connaître**\n\n### **Variable** - Un espace réservé pour
+          un élément d'information qui peut changer\n"
       courseF_markdown_variables_intro:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+        markdown: "# **Dans cette leçon...**   \n\n### *Les variables* sont des espaces
           réservés pour les informations qui peuvent changer.  Avoir un espace réservé
           permet d'écrire un programme, même si on ne connaît toutes les valeurs que
           plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
       courseF_markdown_variables_intro_2019:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+        markdown: "# **Dans cette leçon...**   \n\n### *Les variables* sont des espaces
           réservés pour les informations qui peuvent changer.  Avoir un espace réservé
           permet d'écrire un programme, même si on ne connaît toutes les valeurs que
           plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
       courseF_markdown_variables_intro_2019_2020:
         content1: Page du Manuel du Test Markdown
-        markdown: "# **Dans cette leçon...**   ### Les *variables* sont des espaces
+        markdown: "# **Dans cette leçon...**   \n\n### *Les variables* sont des espaces
           réservés pour les informations qui peuvent changer.  Avoir un espace réservé
           permet d'écrire un programme, même si on ne connaît toutes les valeurs que
           plus tard !\n\n\n---\n\n## **Blocs à Connaître** \n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n"
