@@ -1,6 +1,5 @@
 hideable_lessons true
 lesson_extras_available true
-published_state 'beta'
 
 lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 skin 'jigsaw'

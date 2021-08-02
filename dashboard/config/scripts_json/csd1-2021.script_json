@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:46:53 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:14 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -1129,7 +1129,13 @@
       "key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
@@ -1162,7 +1168,7 @@
       "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
       "position": 1,
       "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
+        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [How to Administer a Locked Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) support article provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5578,8 +5584,8 @@
       }
     },
     {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "name": "Code.org How-to Videos",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how-to-videos",
       "properties": {
         "audience": "Teacher"

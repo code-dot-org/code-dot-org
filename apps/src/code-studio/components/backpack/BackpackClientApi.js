@@ -1,5 +1,4 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import i18n from '@cdo/javalab/locale';
 
 const SAVE_RETRY_COUNT = 1;
 
@@ -9,6 +8,11 @@ export default class BackpackClientApi {
     this.channelId = channelId;
     this.uploadingFiles = false;
     this.filesToUpload = [];
+    this.fileUploadsFailed = [];
+  }
+
+  hasBackpack() {
+    return !!this.channelId;
   }
 
   fetchChannelId(callback) {
@@ -21,10 +25,54 @@ export default class BackpackClientApi {
     });
   }
 
+  fetchFile(filename, onError, onSuccess) {
+    if (!this.hasBackpack()) {
+      onError();
+    }
+    this.backpackApi.fetch(
+      this.channelId + '/' + filename,
+      (error, data) => {
+        if (error) {
+          onError(error);
+        } else {
+          onSuccess(data);
+        }
+      },
+      'text'
+    );
+  }
+
+  getFileList(onError, onSuccess) {
+    if (!this.hasBackpack()) {
+      onError();
+    }
+    this.backpackApi.fetch(this.channelId, (error, data) => {
+      if (error) {
+        onError(error);
+      } else {
+        const filenames = [];
+        data.forEach(fileData => filenames.push(fileData['filename']));
+        onSuccess(filenames);
+      }
+    });
+  }
+
+  /**
+   * Save files to the backpack
+   * @param {String} filesJson json-formatted string of all file sources in the project
+   * Expected format is {"filename1.java": {"text": "{...}"},...}.
+   * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
+   * exist in filesJson.
+   * @param {Function} onError Function to call if any file fails to save
+   * @param {Function} onSuccess Function to call if all files save.
+   */
   saveFiles(filesJson, filenames, onError, onSuccess) {
     if (this.filesToUpload.length > 0) {
-      // save is currently in progress, return an error
-      onError(i18n.backpackSaveInProgress());
+      // save is currently in progress (a previous saveFilesHelper has not gone through its
+      // entire list of files to upload), return an error. Frontend should prevent multiple
+      // button clicks in a row.
+      onError();
+      return;
     }
     if (filenames.length === 0) {
       // nothing to save
@@ -42,7 +90,8 @@ export default class BackpackClientApi {
   }
 
   saveFilesHelper(filesJson, filenames, onError, onSuccess) {
-    this.filesToUpload = filenames;
+    this.filesToUpload = [...filenames];
+    this.fileUploadsFailed = [];
     filenames.forEach(filename => {
       const fileContents = filesJson[filename].text;
       // write file with SAVE_RETRY_COUNT failure retries
@@ -74,21 +123,31 @@ export default class BackpackClientApi {
             retryCount - 1
           );
         } else {
-          onError(error);
+          // record failure and check if all files are done attempting upload/uploading
+          this.fileUploadsFailed.push(filename);
+          this.onUploadComplete(filename, onError, onSuccess, error);
         }
       } else {
-        this.onSingleUploadSuccess(filename, onSuccess);
+        this.onUploadComplete(filename, onError, onSuccess);
       }
     });
   }
 
-  onSingleUploadSuccess(filename, onOverallSuccess) {
+  // Mark the given file as done uploading/attempting to upload.
+  // Check if all files are done uploading. If they are, call either onSuccess
+  // or onError depending on if we saw any errors.
+  onUploadComplete(filename, onError, onSuccess, error) {
     const filenameIndex = this.filesToUpload.indexOf(filename);
     if (filenameIndex >= 0) {
       this.filesToUpload.splice(filenameIndex, 1);
     }
-    if (this.filesToUpload.length === 0) {
-      onOverallSuccess();
+    if (
+      this.filesToUpload.length === 0 &&
+      this.fileUploadsFailed.length === 0
+    ) {
+      onSuccess();
+    } else if (this.filesToUpload.length === 0) {
+      onError(error);
     }
   }
 }
