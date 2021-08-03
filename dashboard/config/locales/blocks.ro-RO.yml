@@ -1790,3 +1790,5 @@ ro:
           DIR:
             right: dreapta ↻
             left: stânga ↺
+      validation_validatedBackground:
+        text: setează fundalul cu {IMG}

@@ -21,8 +21,6 @@ ro:
     mailer:
       confirmation_instructions:
         subject: Instrucţiuni de confirmare Code.org
-      reset_password_instructions:
-        subject: Instrucțiuni de resetare a parolei Code.org
       unlock_instructions:
         subject: Instrucţiuni de deblocare
     omniauth_callbacks:
