@@ -842,7 +842,7 @@ Then(/^I set slider speed to medium/) do
 end
 
 Then(/^I set slider speed to fast/) do
-  @browser.execute_script("__TestInterface.setSpeedSliderValue(1.0)")
+  @browser.execute_script("__TestInterface.setSpeedSliderValue(0.3)")
 end
 
 Then(/^I slow down execution speed$/) do
