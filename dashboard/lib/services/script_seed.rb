@@ -260,7 +260,6 @@ module Services
       # reassess the pattern being used here.
       imported_script = Script.find_by!(name: script_to_import.name)
       imported_script.run_callbacks(:save)
-      imported_script.run_callbacks(:create)
       return imported_script
     end
 
