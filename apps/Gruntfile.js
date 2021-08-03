@@ -824,10 +824,7 @@ describe('entry tests', () => {
           new TerserPlugin({
             // Excludes these from minification to avoid breaking functionality,
             // but still adds .min to the output filename suffix.
-            exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
-            cache: true,
-            parallel: true,
-            sourceMap: envConstants.DEBUG_MINIFIED
+            exclude: [/\/blockly.js$/, /\/brambleHost.js$/]
           })
         ],
 
@@ -854,105 +851,6 @@ describe('entry tests', () => {
         },
         splitChunks: {
           chunks: 'all'
-          // // Override the default limit of 3 concurrent downloads on page load,
-          // // which only makes sense for HTTP 1.1 servers. HTTP 2 performance has
-          // // been observed to degrade only with > 200 simultaneous downloads.
-          // maxInitialRequests: 100,
-          // cacheGroups: {
-          //   // Pull any module shared by 2+ appsEntries into the "common" chunk.
-          //   common: {
-          //     name: 'common',
-          //     minChunks: 2,
-          //     chunks: chunk => {
-          //       return _.keys(appsEntries).includes(chunk.name);
-          //     }
-          //   },
-          //   // Pull any module shared by 2+ codeStudioEntries into the
-          //   // "code-studio-common" chunk.
-          //   'code-studio-common': {
-          //     name: 'code-studio-common',
-          //     minChunks: 2,
-          //     chunks: chunk => {
-          //       const chunkNames = Object.keys(codeStudioEntries);
-          //       return chunkNames.includes(chunk.name);
-          //     },
-          //     priority: 10
-          //   },
-          //   // With just the cacheGroups listed above, we end up with many
-          //   // duplicate modules between the "common" and "code-studio-common"
-          //   // chunks. The next cache group eliminates some of this duplication
-          //   // by pulling more modules from "common" into "code-studio-common".
-          //   //
-          //   // The use of minChunks provides a guarantee that we don't
-          //   // unnecessarily move things into "code-studio-common" which are
-          //   // needed only by appsEntries. This avoids increasing the download
-          //   // size for code studio pages which include code-studio-common.js
-          //   // but not common.js.
-          //   //
-          //   // There is no converse guarantee that this strategy will eliminate
-          //   // all duplication between "common" and "code-studio-common".
-          //   // However, at the time of this writing, bundle analysis indicates
-          //   // that is currently effective in eliminating any duplication.
-          //   //
-          //   // In the future, we want to move toward asynchronous imports, which
-          //   // allow webpack to manage bundle splitting and sharing behind the
-          //   // scenes. Once we adopt this approach, the need for predefined
-          //   // cacheGroups will go away.
-          //   //
-          //   // For more information see: https://webpack.js.org/guides/code-splitting/
-          //   'code-studio-multi': {
-          //     name: 'code-studio-common',
-          //     minChunks: Object.keys(appsEntries).length + 1,
-          //     chunks: chunk => {
-          //       const chunkNames = Object.keys(codeStudioEntries).concat(
-          //         Object.keys(appsEntries)
-          //       );
-          //       return chunkNames.includes(chunk.name);
-          //     },
-          //     priority: 20
-          //   },
-          //   defaultVendors: {
-          //     name: 'vendors',
-          //     priority: 30,
-          //     chunks: chunk => {
-          //       // all 'initial' chunks except otherEntries
-          //       const chunkNames = _.concat(
-          //         Object.keys(codeStudioEntries),
-          //         Object.keys(appsEntries),
-          //         Object.keys(pegasusEntries),
-          //         Object.keys(professionalDevelopmentEntries),
-          //         Object.keys(internalEntries),
-          //         Object.keys(sharedEntries)
-          //       );
-          //       return chunkNames.includes(chunk.name);
-          //     },
-          //     test(module) {
-          //       return [
-          //         '@babel/polyfill',
-          //         'immutable',
-          //         'lodash',
-          //         'moment',
-          //         'pepjs',
-          //         'radium',
-          //         'react',
-          //         'react-dom',
-          //         'wgxpath'
-          //       ].some(libName =>
-          //         new RegExp(`/apps/node_modules/${libName}/`).test(
-          //           module.resource
-          //         )
-          //       );
-          //     }
-          //   },
-          //   p5lab: {
-          //     name: 'p5-dependencies',
-          //     priority: 10,
-          //     minChunks: 2,
-          //     chunks: chunk =>
-          //       ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-          //     test: module => /p5/.test(module.resource)
-          //   }
-          // }
         }
       },
       plugins: [
