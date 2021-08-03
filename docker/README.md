@@ -69,10 +69,8 @@ The Docker Compose files use a bind-mount to make the entire code-dot-org source
 
 Make sure everything works locally using the instructions above.
 
-Build a full image to your local machine
-
 ```
-docker-compose -f site-compose.yml build
+cd docker/dockerfiles
 ```
 
 Sign in to Docker Hub through the command line
@@ -81,8 +79,20 @@ Sign in to Docker Hub through the command line
 docker login -u codedotorg -p <access token from lastpass docker hub notes field>
 ```
 
-Upload the image to docker hub (this will automatically push to the :latest tag on the repo configured in the compose file)
+Build a full image to your local machine
 
 ```
-docker-compose -f site-compose.yml push
+docker build .
+```
+
+Tag the new image with an incremented version number. You can get the image id from the end of the build log or from `docker image list`.
+
+```
+docker tag <image_id> codedotorg/code-dot-org:<version>
+```
+
+Upload the image to docker hub (supply the version used in the previous step)
+
+```
+docker push codedotorg/code-dot-org:<version>
 ```
