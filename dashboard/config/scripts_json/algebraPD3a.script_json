@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:07 UTC",
+    "serialized_at": "2021-08-03 22:46:51 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algebraPD3a"
@@ -107,7 +107,6 @@
           "PDAlg Updates Tweaks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -131,7 +130,6 @@
           "PDAlg Updates Space"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -155,7 +153,6 @@
           "PDAlg Updates Errors"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -179,7 +176,6 @@
           "PDAlg Updates Cond"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -203,7 +199,6 @@
           "PDAlg Big Game"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -227,7 +222,6 @@
           "PDAlg Big Game Remix"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -251,7 +245,6 @@
           "PDAlg Big Game History"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,7 +268,6 @@
           "PDAlg Projects"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +291,6 @@
           "PDAlg Design Recipe Updates"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,7 +314,6 @@
           "PDAlg Design Recipe Examples"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,7 +337,6 @@
           "PDAlg Design Recipe Required"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -371,7 +360,6 @@
           "PDAlg Design Recipe Delete"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -395,7 +383,6 @@
           "PDAlg Prep a Lesson"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +406,6 @@
           "PDAlg Prep on Paper"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -443,7 +429,6 @@
           "PDAlg Prep Sandbox"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -467,7 +452,6 @@
           "Lesson Prep Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

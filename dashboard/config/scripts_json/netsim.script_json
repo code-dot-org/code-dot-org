@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:50 UTC",
+    "serialized_at": "2021-08-03 22:46:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "netsim"
@@ -195,7 +195,6 @@
           "Internet Simulator Setup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +218,6 @@
           "Internet Simulator Setup 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +241,6 @@
           "Internet Simulator Setup 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +264,6 @@
           "NetSim Standalone SendAB"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +287,6 @@
           "NetSim Standalone Sending Numbers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +310,6 @@
           "NetSim Standalone Sending Numbers Ascii"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +333,6 @@
           "NetSim Standalone Broadcast"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -363,7 +356,6 @@
           "NetSim Standalone Classroom Routers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +379,6 @@
           "NetSim Standalone Packets TCP"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +402,6 @@
           "NetSim Standalone Manual DNS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +425,6 @@
           "NetSim Standalone Automatic DNS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +448,6 @@
           "NetSim Standalone Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

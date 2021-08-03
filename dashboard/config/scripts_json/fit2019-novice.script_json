@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:22 UTC",
+    "serialized_at": "2021-08-03 22:47:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "fit2019-novice"
@@ -148,9 +148,9 @@
       "properties": {
         "level_keys": [
           "welcome-novice-18"
-        ]
+        ],
+        "progression": "Welcome Novices Facilitators!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -174,7 +174,6 @@
           "novice-monday-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -198,7 +197,6 @@
           "novice-monday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -222,7 +220,6 @@
           "novice-tuesday-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +243,6 @@
           "instructional-strategy-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -270,7 +266,6 @@
           "novice-tuesday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +289,6 @@
           "novice-wednesday-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -318,7 +312,6 @@
           "getting-buy-in-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,7 +335,6 @@
           "novice-wednesday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,7 +358,6 @@
           "novice-thursday-1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,7 +381,6 @@
           "recruiting-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,7 +404,6 @@
           "novice-thursday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,9 +425,9 @@
       "properties": {
         "level_keys": [
           "novice-congrats"
-        ]
+        ],
+        "progression": "Congrats!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
