@@ -168,8 +168,12 @@ class TeacherFeedback < ApplicationRecord
     save
   end
 
+  # When a teacher updates their feedback on a level, a new feedback record is created.
+  # Only the latest feedback from the teacher is considered up-to-date and displayed for the
+  # student on the level. We store other feedbacks to keep track of historical feedback given,
+  # which is displayed on the /feedback page. Only the up-to-date feedback (latest feedback record)
+  # can be awaiting review since it's the only relevant feedback to the student.
   def awaiting_teacher_review?(is_latest = false)
-    # only the latest feedback can be awaiting a teacher review
     return false unless is_latest
 
     return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
