@@ -1,5 +1,8 @@
 class AddPropertiesAndDeletedAtToUserLevels < ActiveRecord::Migration[5.2]
   def change
+    # This change will be implemented on production using the MySQL gh-ost tool.
+    return if Rails.env.production?
+
     # Several changes here:
     # 1) Add deleted_at column to support paranoia gem
     # 2) Add deleted_at to the unique index
