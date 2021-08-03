@@ -535,16 +535,16 @@
       }
     },
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRW9dm8m5wf5rfMj+M4RqgTDaFkjvyq5P0Ru3qQ21wYu31jQznCIMFOWzOi\nzDhsQjn5\n",
-    "parent_level_id": 28844,
+    "parent_level_id": 29380,
     "display_name": "Stop the Taxi",
     "bubble_choice_description": "Paint a design using any structures and methods in your toolkit.",
     "thumbnail_url": "https://images.code.org/4109409a4c8103ab8b26184295410f3b-image-1625603052827.png"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-28T12:52:08.000Z",
+  "created_at": "2021-08-03T13:59:15.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-28T12:52:08.137+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L7\\\"\"],\"cloned_from\":\"CSA U1L6-L7\"},{\"changed_at\":\"2021-07-28 12:52:12 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 13:10:15 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 17:58:02 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 18:03:29 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 18:11:43 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-03T13:59:15.531+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L5c\\\"\"],\"cloned_from\":\"CSA U1L6-L5c\"},{\"changed_at\":\"2021-08-03 13:59:18 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 14:18:15 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

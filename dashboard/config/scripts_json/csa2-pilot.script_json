@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 22:11:22 UTC",
+    "serialized_at": "2021-08-03 13:17:40 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -2941,6 +2941,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students trace the code to predict the output. Give students enough time to solve independently then quietly share with a neighbor. Ask students to share with the class before clicking through the slide animation to review the solution. Discuss any questions they may have.",
+        "name": "Predict the Output",
         "tips": [
           {
             "type": "teachingTip",
@@ -3005,7 +3006,7 @@
       "key": "d8d66b6e-0f2e-47d3-acda-d104059ae049",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Demonstrate adding a mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On the outside of the `Shape` class foldable, write `public void setOutline(String s)` under Methods. This method can change the value stored in the `outline` instance variable.\n\n**Do This:** Demonstrate calling the mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On a sticky note, write `myTriangle.setOutline(\"squiggly\")`. Place this sticky note in the Code section of the Main Method to call this method from the `Shape` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open the foldable to find the `outline` instance variable. Cross out the previous `outline` value and replace it with `\"squiggly\"`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fold the `\"squiggly\"` sticky note and close the foldable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities between the foldable activity for accessors and mutators? What are the differences?*\n\n**Discussion Goal:** Students note the parallels between the foldable activity for accessors and mutators. Both methods start on the outside since these are `public`. Both open the foldable because the methods have access to the class’s instance variables. However, only the accessor foldable placed a sticky note on the outside when it returned a value, while only the mutator foldable changes a sticky note inside."
+        "description": "**Do This:** Demonstrate adding a mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On the outside of the `Shape` class foldable, write `public void setOutline(String s)` under Methods. This method can change the value stored in the `outline` instance variable.\n\n**Do This:** Demonstrate calling the mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On a sticky note, write `myTriangle.setOutline(\"squiggly\")`. Place this sticky note in the Code section of the Main Method to call this method from the `Shape` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open the foldable to find the `outline` instance variable. Cross out the previous `outline` value and replace it with `\"squiggly\"`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fold the `\"squiggly\"` sticky note and close the foldable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the similarities between the foldable activity for accessors and mutators?* \n* *What are the differences?*\n\n**Discussion Goal:** Students note the parallels between the foldable activity for accessors and mutators. Both methods start on the outside since these are `public`. Both open the foldable because the methods have access to the class’s instance variables. However, only the accessor foldable placed a sticky note on the outside when it returned a value, while only the mutator foldable changes a sticky note inside."
       },
       "seeding_key": {
         "activity_section.key": "d8d66b6e-0f2e-47d3-acda-d104059ae049",
@@ -3195,7 +3196,7 @@
       "key": "13e0eca1-df37-4f0d-bb33-7996c7615a8d",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on Level 4."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on Level 6."
       },
       "seeding_key": {
         "activity_section.key": "13e0eca1-df37-4f0d-bb33-7996c7615a8d",
@@ -3207,6 +3208,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** After receiving feedback during the peer review, they reflect in the form of Glows, Grows, and Want-to-Knows.",
+        "name": "Glows, Grows, Want-to-Knows",
         "tips": [
           {
             "type": "teachingTip",
@@ -3278,7 +3280,7 @@
       "key": "091850e5-62ec-41eb-a95e-420d71fcd784",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which categories were difficult to sort methods into? What additional clarity do you need?*\n\n**Discussion Goal:** Students share terms and categories that they struggled with and ask questions to obtain clarification.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which categories were difficult to sort methods into?*\n* *What additional clarity do you need?*\n\n**Discussion Goal:** Students share terms and categories that they struggled with and ask questions to obtain clarification.",
         "duration": "2",
         "name": "Debrief"
       },
@@ -3340,7 +3342,7 @@
       "key": "09934b3e-ed14-4526-9868-35def8da3554",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about the output of this program? Why did this happen?*\n\n**Discussion Goal:** Students identify a pattern in the output and recognize the numbers at the end are unique for each object and each student. They cannot predict the numbers based on the attributes of the object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The `toString` Method video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information would we want `Dessert`’s `toString()` to return?*\n\n**Discussion Goal:** Students outline a solution to override the `Object toString()` method within `Dessert`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the output of this program?*\n* *Why did this happen?*\n\n**Discussion Goal:** Students identify a pattern in the output and recognize the numbers at the end are unique for each object and each student. They cannot predict the numbers based on the attributes of the object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The `toString` Method video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information would we want `Dessert`’s `toString()` to return?*\n\n**Discussion Goal:** Students outline a solution to override the `Object toString()` method within `Dessert`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3438,10 +3440,22 @@
       }
     },
     {
+      "key": "c07b1c73-7790-41b6-8e60-1051f4ca5c70",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the alternate approach to Level 5. Instead of calling `toString()` of the `Dessert`, when an object is concatenated with a `String`, the object’s `toString()` is implicitly called."
+      },
+      "seeding_key": {
+        "activity_section.key": "c07b1c73-7790-41b6-8e60-1051f4ca5c70",
+        "lesson_activity.key": "a8761e12-d0c6-4737-90e7-87ec376136fb"
+      }
+    },
+    {
       "key": "51366ab8-0c29-4dc5-8fd5-3c940a1f6540",
       "position": 1,
       "properties": {
         "description": "Over the next week, you will Show What You Know! Like in the last unit, we will begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Project Introduction",
         "remarks": true
       },
       "seeding_key": {
@@ -8034,7 +8048,7 @@
     {
       "key": "escape_sequence",
       "word": "Escape Sequence",
-      "definition": "Starts with a \\ to indicate how to display a String",
+      "definition": "Starts with a `\\` to indicate how to display a `String`",
       "properties": {
       },
       "seeding_key": {
@@ -8655,7 +8669,7 @@
     {
       "key": "ce755713-21b0-4abe-80e3-da76bf8fba55",
       "properties": {
-        "description": "Describe the relationship between print methods, Object, and toString() "
+        "description": "Describe the relationship between print methods, `Object`, and `toString()` "
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -8665,7 +8679,7 @@
     {
       "key": "da3838d1-fa9c-4e87-a928-6f4852701e25",
       "properties": {
-        "description": "Write toString() methods"
+        "description": "Write `toString()` methods"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
