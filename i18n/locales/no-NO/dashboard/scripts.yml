@@ -3658,3 +3658,15 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Oversikt
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Oversikt
