@@ -14,10 +14,11 @@ export function getManifest(appType, locale = 'en_us') {
 }
 
 // Returns the list of default sprites in SpriteLab in English
-export function getDefaultList() {
-  return fetch(`/api/v1/animation-library/default-spritelab`).then(response =>
-    response.json()
-  );
+export function getDefaultList(production) {
+  let environment = production ? 'production' : 'environment';
+  return fetch(
+    `/api/v1/animation-library/default-spritelab/${environment}`
+  ).then(response => response.json());
 }
 
 /* Returns the list of default sprites in SpriteLab in English

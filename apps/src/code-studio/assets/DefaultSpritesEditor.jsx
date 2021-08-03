@@ -18,7 +18,7 @@ export default class DefaultSpritesEditor extends React.Component {
   };
 
   componentDidMount() {
-    getDefaultList()
+    getDefaultList(false /*production*/)
       .then(spriteDefault => {
         let spriteList = {};
         spriteDefault['default_sprites'].map(

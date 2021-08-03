@@ -6,6 +6,7 @@ require 'cdo/aws/s3'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
+ANIMATION_DEFAULT_MANIFEST_PRODUCTION = 'animation-manifests/manifests/defaults.json'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
@@ -112,13 +113,14 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/animation-library/default-spritelab/
+  # GET /api/v1/animation-library/default-spritelab/<environment>
   #
   # Retrieve the default sprite list from S3
-  get %r{/api/v1/animation-library/default-spritelab} do
+  get %r{/api/v1/animation-library/default-spritelab/(production|levelbuilder)} do |environment|
+    environment_path = (environment == 'production') ? ANIMATION_DEFAULT_MANIFEST_PRODUCTION : ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object(ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER).
+      object(environment_path).
       get
     content_type 'application/json'
     cache_for 3600
