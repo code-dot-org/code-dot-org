@@ -112,7 +112,7 @@ Resources:
 <%=  component 'ami', ami: (ami = commit[0..4]),
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
-  subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
+  subnets: subnets(frontend_azs),
   frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
@@ -515,7 +515,9 @@ Resources:
 <%=  component 'alarms'%>
 <% end -%>
 <% if database-%>
-<%=  component 'database'%>
+<%=  component 'database',
+       backup_az: azs(NITRO_ZONES)[1]
+%>
 <% end -%>
   ChefConfig:
     Type: AWS::SecretsManager::Secret

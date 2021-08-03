@@ -104,9 +104,12 @@ cat <<JSON > $FIRST_BOOT
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
     "redis_read_ports": "${GeocoderGroup.ReadEndPoint.Ports}",
 <% end -%>
-<% if database -%>
-    "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.Endpoint.Address}:${AuroraCluster.Endpoint.Port}/",
-    "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@${AuroraCluster.ReadEndpoint.Address}:${AuroraCluster.Endpoint.Port}/",
+<% if database 
+     db_writer = frontend_azs.each_with_index.map{|az, i| "${DBProxy#{i == 0 ? '' : az}.Endpoint},"}.join
+     db_reader = frontend_azs.map{|az, i| "${DBProxy#{az}ReadOnly.Endpoint},"}.join
+-%>
+    "db_writer": "mysql://$DB_USERNAME:$DB_PASSWORD@<%=db_writer%>:${AuroraCluster.Endpoint.Port}/",
+    "db_reader": "mysql://$DB_USERNAME:$DB_PASSWORD@<%=db_reader%>:${AuroraCluster.Endpoint.Port}/",
     "db_cluster_id": "${AuroraCluster}",
 <% end -%>
 <% unless cdn_enabled -%>
@@ -119,11 +122,6 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
-<% if database -%>
-  "cdo-mysql": {
-    "rds_proxy": "${DBProxy.Endpoint}"
-  },
-<% end -%>
 <% if CDO.chef_local_mode -%>
   "omnibus_updater": {
     "version": "$CHEF_VERSION"

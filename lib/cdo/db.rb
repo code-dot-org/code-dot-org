@@ -3,6 +3,23 @@ require 'sequel/connection_pool/threaded'
 require 'cdo/cache'
 require pegasus_dir 'data/static_models'
 require 'dynamic_config/gatekeeper'
+require 'mysql2'
+require 'cdo/tcp_helper'
+
+# MySQL Client extension for connecting to low-latency,
+# local-subnet RDS Proxy endpoints:
+# If a MySQL URL contains a comma-delimited host component,
+# resolve IP addresses from all hosts, select IPs in the local subnet,
+# and use the fastest-responding address as the client host.
+module RDSProxyHandler
+  def initialize(opts = {})
+    if (hosts = (opts[:host] || opts[:hostname]).to_s).include?(',')
+      opts[:host] = Cdo::TCPHelper.fastest_in_subnet(*hosts.split(','), port: opts[:port])
+    end
+    super
+  end
+end
+Mysql2::Client.prepend RDSProxyHandler
 
 # Connects to database.  Uses the Sequel connection_validator:
 #   http://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/connection_validator_rb.html

@@ -38,7 +38,7 @@ module Cdo::CloudFormation
     # number of seconds to configure as Time To Live for DNS record
     DNS_TTL = 60
 
-    attr_reader :daemon
+    attr_reader :daemon, :frontend_azs
 
     # Struct providing arbitrary configuration options used by the template.
     # @return [OpenStruct]
@@ -70,6 +70,9 @@ module Cdo::CloudFormation
       @daemon = rack_env?(:adhoc) && !frontends ?
                   'WebServer' :
                   'Daemon'
+      @frontend_azs = frontends ?
+               azs(NITRO_ZONES) :
+               [azs(NITRO_ZONES)[0]]
 
       log_resource_filter.push 'FrontendLaunchConfig', 'ASGCount'
       tags.push(key: 'environment', value: rack_env)

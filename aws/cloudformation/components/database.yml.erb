@@ -43,17 +43,19 @@
       Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
 <% secret; end -%>
 
+<% az_pairs = frontend_azs.each_with_index.map {|az, i| [az, azs.length == 1 ? backup_az : azs[i + 1 % azs.length]]} -%>
   DBProxy:
     Type: AWS::RDS::DBProxy
     Properties:
       DBProxyName: !Ref AWS::StackName
       EngineFamily: MYSQL
+      IdleClientTimeout: 14400
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
 <% db_secrets.each do |secret| -%>
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
 <%end -%>
-      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSubnetIds: <%=subnets(az_pairs.first).to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   DBProxyRole:
     Type: AWS::IAM::Role
@@ -76,3 +78,19 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+        MaxIdleConnectionsPercent: 0
+        SessionPinningFilters: [EXCLUDE_VARIABLE_SETS]
+<% # AZs use separate DBProxyEndpoints to ensure each AZ subnet has a local endpoint.
+  az_pairs.product(['ReadOnly', nil]).each do |(az, az2), ro|
+  # ReadWrite endpoint for the first AZ is already created as the default endpoint.
+  next if az == frontend_azs.first && ro.nil?
+-%>
+  DBProxy<%="#{az}#{ro}"%>:
+    Type: AWS::RDS::DBProxyEndpoint
+    Properties:
+      DBProxyEndpointName: !Sub "${DBProxy}-<%="#{az}#{ro&.prepend('-')}"%>"
+      DBProxyName: !Ref DBProxy
+      TargetRole: <%=ro ? 'READ_ONLY' : 'READ_WRITE'%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+      VpcSubnetIds: <%=subnets([az, az2]).to_json %>
+<% end -%>
