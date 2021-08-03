@@ -29,6 +29,8 @@
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   include SharedConstants
   include Levels::LevelsWithinLevels
 
