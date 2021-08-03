@@ -64,9 +64,9 @@ module Levels
             parent_level.child_levels.contained.map(&:name)
         end
 
-        if parent_level.project_template_level.present?
+        if parent_level.child_levels.project_template.present?
           update_params[:project_template_level_name] =
-            parent_level.project_template_level.name
+            parent_level.child_levels.project_template.first.name
         end
 
         return update_params
