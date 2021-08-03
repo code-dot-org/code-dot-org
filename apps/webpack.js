@@ -159,7 +159,7 @@ var baseConfig = {
             loader: 'url-loader',
             options: {
               limit: 1024,
-              name: '[name]wp[contenthash].[ext]'
+              name: '[name]wp[contenthash][ext]'
             }
           }
         ]
@@ -303,7 +303,8 @@ var karmaConfig = _.extend({}, baseConfig, {
         'kits',
         'maker',
         'StubChromeSerialPort.js'
-      )
+      ),
+      serialport: false
     })
   }),
   externals: {
