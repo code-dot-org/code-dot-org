@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-07-06 22:26:08 UTC",
+    "serialized_at": "2021-08-03 22:46:46 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "text-compression"
@@ -60,9 +60,9 @@
       "properties": {
         "level_keys": [
           "Text Compression"
-        ]
+        ],
+        "progression": "Text Compression"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,9 +84,9 @@
       "properties": {
         "level_keys": [
           "Widget: Text Compression"
-        ]
+        ],
+        "progression": "Widget: Text Compression"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

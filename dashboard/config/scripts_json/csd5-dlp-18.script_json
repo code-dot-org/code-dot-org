@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:51 UTC",
+    "serialized_at": "2021-08-03 22:47:34 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd5-dlp-18"
@@ -92,7 +92,6 @@
         ],
         "progression": "Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -117,7 +116,6 @@
         ],
         "progression": "Deadlines and Payment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -142,7 +140,6 @@
         ],
         "progression": "Resource Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -167,7 +164,6 @@
         ],
         "progression": "Guidelines For Peer Review"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +187,6 @@
           "csd5dlp-q1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -215,7 +210,6 @@
           "csd5dlp-q2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -239,7 +233,6 @@
           "csd5dlp-q3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

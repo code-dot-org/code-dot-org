@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:03 UTC",
+    "serialized_at": "2021-08-03 22:46:50 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspfacilitator"
@@ -152,7 +152,6 @@
           "CSPfac intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +175,6 @@
           "a bit about pixels"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +198,6 @@
           "Pixelation - Lesson 14 - Make the Letter A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +221,6 @@
           "Pixelation - Lesson 14 - Fix bit offset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,7 +244,6 @@
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -272,7 +267,6 @@
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +290,6 @@
           "U1L13 Text Compression"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -320,7 +313,6 @@
           "U1L4 NetSim SendAB"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +336,6 @@
           "U1L8 NetSim numbers no decimal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -368,7 +359,6 @@
           "U2L5 NetSim Classroom Internet"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +382,6 @@
           "U2L7 NetSim Need for Packets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +405,6 @@
           "U2L10 NetSim Automatic DNS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +428,6 @@
           "U3L2 Using Simple Commands"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +451,6 @@
           "U3L03 Define and use turnAround"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -488,7 +474,6 @@
           "U3L07 - Starry Night Starter Code"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +497,6 @@
           "U3L08 - Enchantment Under the Sea"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +520,6 @@
           "U3L13 - Turtle move with button"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +543,6 @@
           "U3L16 - use images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +566,6 @@
           "broadcast lesson plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +589,6 @@
           "U2L2 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,7 +612,6 @@
           "U2L2 NetSim Hub Mode"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +635,6 @@
           "U2L02 Free Response Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,7 +658,6 @@
           "U2L02 Assessment2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,7 +681,6 @@
           "text compression lesson plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -728,7 +704,6 @@
           "U1L13 Student Lesson Summary"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -752,7 +727,6 @@
           "U1L13 Text Compression"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,7 +750,6 @@
           "U1L13 Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -800,7 +773,6 @@
           "U1L13 Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +796,6 @@
           "U1L13 Reflection Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -848,7 +819,6 @@
           "U1L13 Reflection 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -872,7 +842,6 @@
           "U1L13 Reflection 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

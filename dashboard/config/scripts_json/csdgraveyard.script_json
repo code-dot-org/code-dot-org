@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:42 UTC",
+    "serialized_at": "2021-08-03 22:47:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csdgraveyard"
@@ -73,9 +73,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 7 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +99,6 @@
           "CSDU2 - Intro to CSS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +122,6 @@
           "CSDU2 - Selector and Property"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +145,6 @@
           "CSDU2 - p tags"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +168,6 @@
           "CSDU2 - head body"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +191,6 @@
           "CSDU2 - title element in head"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +214,6 @@
           "CSDU2 - body tags"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +237,6 @@
           "CSDU2 - text properties"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +260,6 @@
           "CSDU2 - font properties"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +283,6 @@
           "CSDU2 - image properties"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -313,9 +304,9 @@
       "properties": {
         "level_keys": [
           "Stop: Intro to CSS"
-        ]
+        ],
+        "progression": "Stop: Intro to CSS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +330,6 @@
           "CSDU2 - About Me Page Styling"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,9 +351,9 @@
       "properties": {
         "level_keys": [
           "Brand Book Example"
-        ]
+        ],
+        "progression": "Brand Book Example"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +377,6 @@
           "CSDU2 Pick Your Fonts"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +400,6 @@
           "CSDU2 Pick Your Colors"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +423,6 @@
           "CSDU2 - External Style Sheets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +446,6 @@
           "CSDU2 - Link Tag"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +469,6 @@
           "CSDU2 - Using Your Font"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -507,7 +492,6 @@
           "CSDU2 - Developing Brand Style"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -531,7 +515,6 @@
           "CSDU2 - Separate Content and Style"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +538,6 @@
           "CSDU2 - PW - Divs to break up the page"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,7 +561,6 @@
           "CSDU2 - PW - External Style Sheets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -603,7 +584,6 @@
           "CSDU2 - PW - Consistent Personal Site Style"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -627,7 +607,6 @@
           "CSDU2 Make Your Logo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -651,7 +630,6 @@
           "CSDU2 - PW - Image as A Link"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +653,6 @@
           "CSDU2 - PW - Favicon"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +676,6 @@
           "CSDU2 - PW - ESS Final touches"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

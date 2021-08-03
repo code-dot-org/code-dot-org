@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:22 UTC",
+    "serialized_at": "2021-08-03 22:47:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd-bugs"
@@ -75,7 +75,6 @@
           "gamelab bug declare sprite in loop"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +98,6 @@
           "gamelab bug text behind sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +121,6 @@
           "gamelab bug infinity mouse 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +144,6 @@
           "gamelab bug infinity mouse 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +167,6 @@
           "gamelab bug not a function"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +190,6 @@
           "gamelab bug declare sprite in loop"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +213,6 @@
           "gamelab bug declare sprite in loop 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +236,6 @@
           "gamelab bug declare sprite in loop 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +259,6 @@
           "gamelab bug declare sprite in loop 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +282,6 @@
           "gamelab bug declare sprite in loop 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +305,6 @@
           "gamelab bug declare sprite in loop 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +328,6 @@
           "gamelab bug declare sprite in loop 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -363,7 +351,6 @@
           "gamelab bug declare sprite in loop 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +374,6 @@
           "gamelab bug declare sprite in loop 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

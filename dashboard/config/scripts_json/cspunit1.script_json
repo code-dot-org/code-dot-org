@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:51 UTC",
+    "serialized_at": "2021-08-03 22:46:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit1"
@@ -301,7 +301,6 @@
           "U1L1 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -325,7 +324,6 @@
           "U1L1 Innovation - Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +347,6 @@
           "U1L1 - FR computer science word association"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -373,7 +370,6 @@
           "U1L2 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +393,6 @@
           "U1L2 Multiple Choice Assessment Question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -421,7 +416,6 @@
           "U1L2 Free response assessment question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -445,7 +439,6 @@
           "U1L2 Free response reflection question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,7 +462,6 @@
           "U1L3 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -493,7 +485,6 @@
           "U1L3 Free response reflection question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -517,7 +508,6 @@
           "U1L3 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,7 +531,6 @@
           "U1L3 Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -565,7 +554,6 @@
           "U1L4 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -589,7 +577,6 @@
           "U1L4 NetSim SendAB"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -613,7 +600,6 @@
           "U1L4 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -637,7 +623,6 @@
           "U1L4 Free Response Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -661,7 +646,6 @@
           "U1L5 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -685,7 +669,6 @@
           "U1L5 How the Internet Works - Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -709,7 +692,6 @@
           "U1L5 Matching Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -733,7 +715,6 @@
           "U1L6 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -757,7 +738,6 @@
           "U1L6 Assessment multiple choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -781,7 +761,6 @@
           "U1L6 Free Response Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -805,7 +784,6 @@
           "U1L7 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -829,7 +807,6 @@
           "Odometer"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -853,7 +830,6 @@
           "U1L7 Free Response Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -877,7 +853,6 @@
           "U1L7 Free Response Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -901,7 +876,6 @@
           "U1L8 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -925,7 +899,6 @@
           "U1L8 NetSim numbers with decimal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +922,6 @@
           "U1L8 Free Response Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -973,7 +945,6 @@
           "U1L8 Free Response2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -997,7 +968,6 @@
           "U1L8 Multiple Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1021,7 +991,6 @@
           "U1L9 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1045,7 +1014,6 @@
           "U1L9 Free Response Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1069,7 +1037,6 @@
           "U1L10 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1093,7 +1060,6 @@
           "U1L10 NetSim numbers with decimal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1117,7 +1083,6 @@
           "U1L10 Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1141,7 +1106,6 @@
           "U1L10 Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1165,7 +1129,6 @@
           "U1L10 Assessment Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1189,7 +1152,6 @@
           "U1L11 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1213,7 +1175,6 @@
           "U1L11 NetSim numbers with Ascii"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1237,7 +1198,6 @@
           "U1L11 Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1261,7 +1221,6 @@
           "U1L11 Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1285,7 +1244,6 @@
           "U1L11 Reflection Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1309,7 +1267,6 @@
           "U1L11 Collaboration Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1333,7 +1290,6 @@
           "U1L12 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1357,7 +1313,6 @@
           "U1L12 Reflection Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1381,7 +1336,6 @@
           "U1L13 Student Lesson Summary"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1405,7 +1359,6 @@
           "U1L13 Text Compression"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1429,7 +1382,6 @@
           "U1L13 - Assess Text Compression reverse process"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1453,7 +1405,6 @@
           "U1L13 Assess Text Compression amount"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1477,7 +1428,6 @@
           "U1L13 Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1501,7 +1451,6 @@
           "U1L13 Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1525,7 +1474,6 @@
           "U1L14 Student Lesson Summary"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1549,7 +1497,6 @@
           "Pixelation - Lesson 14 - Make the Letter A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1573,7 +1520,6 @@
           "Pixelation - Lesson 14 - Fix bit offset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1597,7 +1543,6 @@
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1621,7 +1566,6 @@
           "U1L14 Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1645,7 +1589,6 @@
           "U1L14 - Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1669,7 +1612,6 @@
           "U1L15 Student Lesson Summary"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1693,7 +1635,6 @@
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1717,7 +1658,6 @@
           "Pixelation - Lesson 15 - Color Shades"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1741,7 +1681,6 @@
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1765,7 +1704,6 @@
           "Pixelation Flappy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1789,7 +1727,6 @@
           "Pixelation Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1813,7 +1750,6 @@
           "Pixelation - Lesson 15 - Favicon Instructions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1837,7 +1773,6 @@
           "Pixelation - Lesson 15 - Color Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1861,7 +1796,6 @@
           "a bit about pixels"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1885,7 +1819,6 @@
           "U1L16 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1909,7 +1842,6 @@
           "U1L16 - Matching File Compression Types"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1933,7 +1865,6 @@
           "U1L17 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

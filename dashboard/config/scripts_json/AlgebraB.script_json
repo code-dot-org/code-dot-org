@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "algebrab",
-    "serialized_at": "2021-07-06 22:25:45 UTC",
+    "serialized_at": "2021-08-03 22:46:55 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "AlgebraB"
@@ -219,7 +219,6 @@
           "VideoGamesCoordinatePlanes"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +242,6 @@
           "Ninjacat Demo B"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +265,6 @@
           "Coordinates Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +288,6 @@
           "Big Game Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +311,6 @@
           "Big Game Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +334,6 @@
           "Big Game Vars 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -363,7 +357,6 @@
           "Big Game Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +380,6 @@
           "Big Game Animation 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +403,6 @@
           "Big Game Animation 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +426,6 @@
           "Big Game Animation 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +449,6 @@
           "Big Game Animation 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +472,6 @@
           "Booleans"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -507,7 +495,6 @@
           "Eval Booleans 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -531,7 +518,6 @@
           "Eval Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +541,6 @@
           "Eval Booleans 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,7 +564,6 @@
           "Eval Booleans 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -603,7 +587,6 @@
           "Eval Booleans 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -627,7 +610,6 @@
           "Eval Booleans 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -651,7 +633,6 @@
           "Blocks to Bools 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +656,6 @@
           "Blocks to Bools 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +679,6 @@
           "Blocks to Bools 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -723,7 +702,6 @@
           "Eval Booleans Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -747,7 +725,6 @@
           "Sam the Butterfly 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -771,7 +748,6 @@
           "Sam the Butterfly 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -795,7 +771,6 @@
           "Sam the Butterfly 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -819,7 +794,6 @@
           "Sam the Butterfly 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -843,7 +817,6 @@
           "Sam the Butterfly 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -867,7 +840,6 @@
           "Big Game Booleans 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -891,7 +863,6 @@
           "Big Game Booleans 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -915,7 +886,6 @@
           "Big Game Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -939,7 +909,6 @@
           "Big Game Booleans 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -963,7 +932,6 @@
           "Big Game Booleans 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -987,7 +955,6 @@
           "ConditionalsPiecewiseFunctions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1011,7 +978,6 @@
           "Luigi's Pizza 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1035,7 +1001,6 @@
           "Luigi's Pizza 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1059,7 +1024,6 @@
           "Luigi's Pizza 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1083,7 +1047,6 @@
           "Luigi's Pizza 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1107,7 +1070,6 @@
           "Eval Cond 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1131,7 +1093,6 @@
           "Eval Cond 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1155,7 +1116,6 @@
           "Big Game Player 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1179,7 +1139,6 @@
           "Big Game Player 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1203,7 +1162,6 @@
           "CollisionDetection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1227,7 +1185,6 @@
           "Big Game Collision 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1251,7 +1208,6 @@
           "Big Game Collision 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1275,7 +1231,6 @@
           "Big Game Collision 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1299,7 +1254,6 @@
           "Big Game Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
