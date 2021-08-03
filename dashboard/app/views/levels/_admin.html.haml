@@ -85,14 +85,27 @@
       - @level.levels_parent_levels.each do |levels_parent_level|
         %li
           %p
-            = "#{levels_parent_level.kind.inspect} in "
             = link_to levels_parent_level.parent_level.name, levels_parent_level.parent_level
-            = "(position #{levels_parent_level.position})" if levels_parent_level.position.present?
-      %li
-        %p{style: 'width: 400px;'}
-          %small
-            %strong NOTE:
-            This list includes contained levels, project template levels, and sublevels (both BubbleChoice and LevelGroup). Other methods of embedding levels inside other levels are not yet supported.
+            = " (#{levels_parent_level.kind.inspect}"
+            = " at position #{levels_parent_level.position}" if levels_parent_level.position.present?
+            = ")"
+
+    This level has #{@level.levels_child_levels.count} other levels in it:
+    %ul
+      - @level.levels_child_levels.each do |levels_child_level|
+        %li
+          %p
+            = link_to levels_child_level.child_level.name, levels_child_level.child_level
+            = " (#{levels_child_level.kind.inspect}"
+            = " at position #{levels_child_level.position}" if levels_child_level.position.present?
+            = ")"
+
+    %p{style: 'max-width: 400px;'}
+      %small
+        %strong NOTE:
+        "Other levels" includes contained levels, project template levels,
+        and sublevels (both BubbleChoice and LevelGroup). Other methods of
+        embedding levels inside other levels are not yet supported.
 
     .project_admin
     - if current_user.project_validator? && params[:channel_id]
