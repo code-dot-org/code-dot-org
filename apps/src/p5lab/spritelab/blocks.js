@@ -609,6 +609,7 @@ export default {
           block.setHSV(136, 0.84, 0.8);
           block.parameterNames_ = [i18n.thisSprite()];
           block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
+          block.setUserVisible(false);
         },
         overrides: {
           getVars(category) {
