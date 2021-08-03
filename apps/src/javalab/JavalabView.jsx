@@ -332,7 +332,7 @@ class JavalabView extends React.Component {
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
                     disableRunButtons={awaitingContainedResponse}
-                    onContinue={onContinue}
+                    onContinue={() => onContinue(this.props.isSubmittable)}
                     renderSettings={this.renderSettings}
                     isSubmittable={this.props.isSubmittable}
                     isSubmitted={this.props.isSubmitted}

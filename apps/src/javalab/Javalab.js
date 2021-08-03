@@ -317,6 +317,7 @@ Javalab.prototype.onContinue = function(submit) {
       result: true,
       testResult: TestResults.ALL_PASS,
       program: '',
+      submitted: submit,
       onComplete: result => {
         onComplete(result);
       }
