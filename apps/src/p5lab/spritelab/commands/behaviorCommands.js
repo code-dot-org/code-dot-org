@@ -36,24 +36,30 @@ export const commands = {
     };
   },
 
-  glideFunc(location) {
+  glideFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
-      let distance = Math.sqrt(
-        (sprite.x - location.x) ** 2 + (sprite.y - location.y) ** 2
-      );
-      if (distance < sprite.speed) {
-        sprite.x = location.x;
-        sprite.y = location.y;
-        this.removeBehavior(sprite, {name: 'glide'});
-      }
-
-      let angle = Math.atan2(location.y - sprite.y, location.x - sprite.x);
-      if (!isNaN(angle)) {
-        let dy = Math.sin(angle) * sprite.speed;
-        let dx = Math.cos(angle) * sprite.speed;
-        sprite.x += dx;
-        sprite.y += dy;
+      if (sprite.glideTargets?.length > 0) {
+        let currentTarget = sprite.glideTargets[0];
+        let distance = Math.sqrt(
+          (sprite.x - currentTarget.x) ** 2 + (sprite.y - currentTarget.y) ** 2
+        );
+        if (distance < sprite.speed) {
+          sprite.x = currentTarget.x;
+          sprite.y = currentTarget.y;
+          sprite.glideTargets.shift();
+        } else {
+          let angle = Math.atan2(
+            currentTarget.y - sprite.y,
+            currentTarget.x - sprite.x
+          );
+          if (!isNaN(angle)) {
+            let dy = Math.sin(angle) * sprite.speed;
+            let dx = Math.cos(angle) * sprite.speed;
+            sprite.x += dx;
+            sprite.y += dy;
+          }
+        }
       }
     };
   },
