@@ -1328,15 +1328,15 @@
     },
     "display_name": "Navigate The Neighborhood",
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRW9dm8m5wf5rfMj+M4RqgTDRT7EYygqFx0PfHnIiSqGtMooQKBzE2MKeyD\nh+wRlxmS\n",
-    "parent_level_id": 28845,
+    "parent_level_id": 29384,
     "bubble_choice_description": "Navigate The Neighborhood to paint a path to the bodega.",
     "thumbnail_url": "https://images.code.org/0b6885a9e0dde2261eae226af31757ce-image-1625604126407.png"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-28T12:55:04.000Z",
+  "created_at": "2021-08-03T14:19:35.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-28T12:55:04.845+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L8a\\\"\"],\"cloned_from\":\"CSA U1L6-L8a\"},{\"changed_at\":\"2021-07-28 12:55:09 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 13:08:33 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 18:06:06 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-03T14:19:35.963+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L6a\\\"\"],\"cloned_from\":\"CSA U1L6-L6a\"},{\"changed_at\":\"2021-08-03 14:19:38 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 14:23:43 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
