@@ -351,16 +351,16 @@
       }
     },
     "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYvoeTb+/Zzs+EtVdP0\nzpRW9dm8m5wf5rfMj+M4RqgTDXldU3zg/Es605M71IciI6LQjjruo5E/ytlm\nqXIyaFQZ\n",
-    "parent_level_id": 28842,
+    "parent_level_id": 29377,
     "display_name": "Get Around the Barrier",
     "bubble_choice_description": "Navigate around the barrier to paint the design.",
     "thumbnail_url": "https://images.code.org/37f75068e5142a7759c6864ad3215d9f-image-1625601420587.png"
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-07-28T12:50:42.000Z",
+  "created_at": "2021-08-03T13:58:37.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-28T12:50:42.787+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L5\\\"\"],\"cloned_from\":\"CSA U1L6-L5\"},{\"changed_at\":\"2021-07-28 12:50:53 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 13:09:40 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 17:47:22 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 17:53:17 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 18:03:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-03T13:58:37.665+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L5a\\\"\"],\"cloned_from\":\"CSA U1L6-L5a\"},{\"changed_at\":\"2021-08-03 13:58:40 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 14:17:51 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
