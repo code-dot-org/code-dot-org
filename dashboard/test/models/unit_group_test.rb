@@ -257,6 +257,29 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "set published state to nil for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      unit2.reload
+      assert_nil unit1.published_state
+
+      unit1.update!(published_state: SharedConstants::PUBLISHED_STATE.preview)
+      unit2.update!(published_state: SharedConstants::PUBLISHED_STATE.preview)
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit1.reload
+      unit2.reload
+      assert_equal SharedConstants::PUBLISHED_STATE.preview, unit1.published_state
+      assert_nil unit2.published_state
+    end
+
     test "cannot remove UnitGroupUnits that cannot change course version" do
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
