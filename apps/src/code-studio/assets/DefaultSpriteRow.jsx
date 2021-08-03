@@ -16,14 +16,14 @@ export default function DefaultSpriteRow(props) {
       />
       <Button
         color={Button.ButtonColor.gray}
-        onClick={() => onMove(true, name)}
+        onClick={() => onMove(true /*moveForward*/, name)}
         size={Button.ButtonSize.narrow}
         icon="arrow-up"
         iconClassName="fa-arrow-up"
       />
       <Button
         color={Button.ButtonColor.gray}
-        onClick={() => onMove(false, name)}
+        onClick={() => onMove(false /*moveForward*/, name)}
         size={Button.ButtonSize.narrow}
         icon="arrow-down"
         iconClassName="fa-arrow-down"

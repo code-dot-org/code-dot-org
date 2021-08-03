@@ -21,9 +21,6 @@ export default class DefaultSpritesEditor extends React.Component {
     getDefaultList()
       .then(spriteDefault => {
         let orderedList = Array.from(spriteDefault['default_sprites']);
-        // spriteDefault['default_sprites'].map(sprite =>
-        //   orderedList.set(sprite.name, sprite)
-        // );
         this.setState({defaultList: orderedList, isLoading: false});
       })
       .catch(err => {
@@ -64,7 +61,7 @@ export default class DefaultSpritesEditor extends React.Component {
 
   reorderSpriteByOne = (moveForward, spriteName) => {
     let updatedList = [...this.state.defaultList];
-    let originalIndex = 0;
+    let originalIndex = -1;
     // Find index
     for (let index = 0; index < updatedList.length; index++) {
       if (updatedList[index].name === spriteName) {
@@ -72,22 +69,25 @@ export default class DefaultSpritesEditor extends React.Component {
       }
     }
 
-    let itemToMove = updatedList.splice(originalIndex, 1)[0];
+    // If the original index is less than 0, take no action
+    if (originalIndex >= 0) {
+      let itemToMove = updatedList.splice(originalIndex, 1)[0];
 
-    if (moveForward) {
-      // No action to move the first element forward
-      if (originalIndex > 0) {
-        updatedList.splice(originalIndex - 1, 0, itemToMove);
+      if (moveForward) {
+        // No action to move the first element forward
+        if (originalIndex > 0) {
+          updatedList.splice(originalIndex - 1, 0, itemToMove);
+        }
+      } else {
+        // No action to move the last element back
+        if (originalIndex < updatedList.length) {
+          updatedList.splice(originalIndex + 1, 0, itemToMove);
+        }
       }
-    } else {
-      // No action to move the last element back
-      if (originalIndex < updatedList.length) {
-        updatedList.splice(originalIndex + 1, 0, itemToMove);
-      }
+
+      this.setState({defaultList: updatedList});
+      this.incrementPendingChanges();
     }
-
-    this.setState({defaultList: updatedList});
-    this.incrementPendingChanges();
   };
 
   updateDefaultSprites = () => {
