@@ -1,5 +1,5 @@
 // We support IE 11+
-export function isUnsupportedIE() {
+function isUnsupportedIE() {
   var isIE = navigator.userAgent.indexOf('MSIE') !== -1;
   var IEVersion = navigator.appVersion.indexOf('Trident/');
   var IEBelow8 = isIE && IEVersion < 8;

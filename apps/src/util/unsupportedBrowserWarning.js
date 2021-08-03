@@ -1,7 +1,6 @@
 /* global appOptions */
 import {
   isUnsupportedBrowser,
-  isUnsupportedIE,
   isIE11,
   isMobileDevice,
   isStorageAvailable
@@ -12,9 +11,7 @@ export var checkForUnsupportedBrowsersOnLoad = function() {
   $(document).ready(function() {
     let textDivId = null;
 
-    if (isUnsupportedIE() || isIE11()) {
-      textDivId = '#ie-unsupported-browser';
-    } else if (isUnsupportedBrowser()) {
+    if (isUnsupportedBrowser() || isIE11()) {
       textDivId = '#unsupported-browser';
     } else if (typeof appOptions !== 'undefined') {
       if (isMobileDevice()) {
