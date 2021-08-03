@@ -299,7 +299,9 @@ P5Lab.prototype.init = function(config) {
 
   config.shareWarningInfo = {
     hasDataAPIs: function() {
-      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+      return this.hasDataStoreAPIs(
+        this.studioApp_.getCode(true /* opt_showHidden */)
+      );
     }.bind(this),
     onWarningsComplete: function() {
       if (config.share) {
@@ -1145,7 +1147,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     code += this.level.customHelperLibrary + '\n';
   }
   const userCodeStartOffset = code.length;
-  code += this.studioApp_.getCode();
+  code += this.studioApp_.getCode(true /* opt_showHidden */);
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,
