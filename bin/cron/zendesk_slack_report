@@ -50,6 +50,7 @@ MONITORING_GROUPS = {
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
   'Account' => '360086130792',
+  'CSA Engineering' => '360217870791',
   'CSD' => '83142177',
   'CSF' => '278602768',
   'CSP' => '45749787',
