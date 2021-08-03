@@ -277,7 +277,7 @@ class JavalabView extends React.Component {
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
-                displayDocumentationTab
+                displayDocumentationTab={false}
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
               />
