@@ -419,6 +419,74 @@ describe('Java Lab Editor Test', () => {
       });
     });
 
+    describe('Import File', () => {
+      it('can overwrite an existing file', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        const oldText = 'hello';
+        const newText = 'hello world';
+
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {
+              text: oldText,
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          orderedTabKeys: ['file-0', 'file-1'],
+          lastTabKeyIndex: 1,
+          fileMetadata: {
+            'file-0': 'Class1.java',
+            'file-1': 'Class2.java'
+          },
+          activeTabKey: 'file-0'
+        });
+        javalabEditor.onImportFile('Class1.java', newText);
+        expect(store.getState().javalab.sources['Class1.java'].text).to.equal(
+          newText
+        );
+        expect(javalabEditor.state.orderedTabKeys.length).to.equal(2);
+      });
+
+      it('can create a new file', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {
+              text: '',
+              isVisible: true,
+              isValidation: false
+            },
+            'Class2.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          orderedTabKeys: ['file-0', 'file-1'],
+          lastTabKeyIndex: 1,
+          fileMetadata: {
+            'file-0': 'Class1.java',
+            'file-1': 'Class2.java'
+          },
+          activeTabKey: 'file-0'
+        });
+        javalabEditor.onImportFile('Class3.java', 'hello');
+        expect(store.getState().javalab.sources['Class3.java'].text).to.equal(
+          'hello'
+        );
+        expect(javalabEditor.state.orderedTabKeys.length).to.equal(3);
+      });
+    });
+
     it('is editable', () => {
       const editor = createWrapper();
       const javalabCodeMirrors = editor.find('JavalabEditor').instance()

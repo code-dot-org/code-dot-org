@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
       "family_name": "csd2",
@@ -39,8 +40,8 @@
     },
     "new_name": "csd2-2017",
     "family_name": "csd2",
-    "serialized_at": "2021-06-17 22:28:33 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:27:33 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2017"
     }
@@ -325,9 +326,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L1 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,9 +351,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Top Websites"
-        ]
+        ],
+        "progression": "Top Websites"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -373,9 +376,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L2 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,9 +401,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Expression Exemplars"
-        ]
+        ],
+        "progression": "Exemplar Personal Websites"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -421,9 +426,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L3 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -470,9 +476,10 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 1"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,9 +501,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Inspector Warm Up"
-        ]
+        ],
+        "progression": "Explore HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -518,9 +526,10 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 2"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -542,9 +551,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 HTML Tags Map"
-        ]
+        ],
+        "progression": "HTML Tags"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,9 +651,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L4 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,9 +676,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Pair Programming Video"
-        ]
+        ],
+        "progression": "Pair Programming"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -789,9 +801,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Headers map"
-        ]
+        ],
+        "progression": "Headings in HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -813,9 +826,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 PSP Programming"
-        ]
+        ],
+        "progression": "Problem Solving Process for Programming"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -887,9 +901,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L5 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -911,9 +926,10 @@
       "properties": {
         "level_keys": [
           "Social Sleuth"
-        ]
+        ],
+        "progression": "Social Sleuth"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -935,9 +951,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L6 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1059,9 +1076,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 lists map"
-        ]
+        ],
+        "progression": "Lists in HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1133,9 +1151,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L7 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1157,9 +1176,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 images map"
-        ]
+        ],
+        "progression": "Images in HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1256,9 +1276,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 CC Search Map"
-        ]
+        ],
+        "progression": "Creative Commons Search"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1330,9 +1351,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Lesson 6 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1479,9 +1501,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 formatting map"
-        ]
+        ],
+        "progression": "Formatting HTML"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1528,9 +1551,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Lesson 9 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1552,9 +1576,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 a tag map"
-        ]
+        ],
+        "progression": "Hyperlinks"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1626,9 +1651,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 project guide"
-        ]
+        ],
+        "progression": "Project Guide"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1825,9 +1851,10 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 7 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1849,9 +1876,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 CSS explore CSS"
-        ]
+        ],
+        "progression": "Exploration: Adding Style"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1873,9 +1901,10 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS"
-        ]
+        ],
+        "progression": "Video: Intro to CSS"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,9 +1976,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Style Sheet Map"
-        ]
+        ],
+        "progression": "CSS and Style Sheets"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2071,9 +2101,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Text Properties Map"
-        ]
+        ],
+        "progression": "CSS Text Properties"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2095,9 +2126,10 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS Part 2"
-        ]
+        ],
+        "progression": "Video: Intro to CSS Part 2"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2169,9 +2201,10 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 8 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2243,9 +2276,10 @@
       "properties": {
         "level_keys": [
           "CSS U2 Body Map"
-        ]
+        ],
+        "progression": "The Body Element"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2417,9 +2451,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 Layout Properties Map"
-        ]
+        ],
+        "progression": "Layout Properties"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2466,9 +2501,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 L12 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2490,9 +2526,10 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 10 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2514,9 +2551,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 RGB intro"
-        ]
+        ],
+        "progression": "RGB Widget"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2638,9 +2676,10 @@
       "properties": {
         "level_keys": [
           "CSD U2 CSS Classes Map"
-        ]
+        ],
+        "progression": "CSS Classes"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2762,9 +2801,10 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 16 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2786,9 +2826,10 @@
       "properties": {
         "level_keys": [
           "Final Personal Website"
-        ]
+        ],
+        "progression": "Final Personal Website"
       },
-      "named_level": true,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

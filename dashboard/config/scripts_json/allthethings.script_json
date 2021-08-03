@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "lesson_extras_available": true
+      "lesson_extras_available": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 16:57:49 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-08-02 23:35:43 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -3256,8 +3256,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "2-3 Maze 4",
-          "2-3 Maze 1"
+          "2-3 Maze 1",
+          "2-3 Maze 4"
         ],
         "variants": {
           "2-3 Maze 1": {
@@ -3269,16 +3269,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "2-3 Maze 4",
-          "2-3 Maze 1"
+          "2-3 Maze 1",
+          "2-3 Maze 4"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "2-3 Maze 4",
-        "2-3 Maze 1"
+        "2-3 Maze 1",
+        "2-3 Maze 4"
       ]
     },
     {
@@ -3544,8 +3544,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "variants": {
           "csp_socialBelonging_intervention": {
@@ -3560,16 +3560,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "csp_socialBelonging_control",
-        "csp_socialBelonging_intervention"
+        "csp_socialBelonging_intervention",
+        "csp_socialBelonging_control"
       ]
     },
     {
@@ -5621,8 +5621,8 @@
       "seeding_key": {
         "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
-          "2-3 Maze 4",
-          "2-3 Maze 1"
+          "2-3 Maze 1",
+          "2-3 Maze 4"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5633,8 +5633,8 @@
       "seeding_key": {
         "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
-          "2-3 Maze 4",
-          "2-3 Maze 1"
+          "2-3 Maze 1",
+          "2-3 Maze 4"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5739,7 +5739,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -5751,7 +5751,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -5835,10 +5835,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control",
+        "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5847,10 +5847,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention",
+        "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
