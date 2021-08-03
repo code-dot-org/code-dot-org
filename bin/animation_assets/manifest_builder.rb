@@ -442,7 +442,7 @@ The animation has been skipped.
   end
 
   def generate_spritelab_manifest_filename(locale = nil)
-    filename = locale ? `spritelabCostumeLibrary.#{locale}.json` : 'spritelabCostumeLibrary.json'
+    filename = locale ? "spritelabCostumeLibrary.#{locale}.json" : 'spritelabCostumeLibrary.json'
     SPRITELAB_MANIFEST_PATH + filename
   end
 
