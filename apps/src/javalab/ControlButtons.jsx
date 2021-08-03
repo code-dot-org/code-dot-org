@@ -29,6 +29,7 @@ export default function ControlButtons({
           isHorizontal
           style={{...styles.button.all, ...styles.button.orange}}
           isDisabled={disableRunButtons}
+          id="javalabRun"
         />
         <JavalabButton
           text={isTesting ? i18n.stopTests() : i18n.test()}
@@ -47,6 +48,7 @@ export default function ControlButtons({
             onClick={onContinue}
             style={{...styles.button.all, ...styles.button.blue}}
             isDisabled={disableFinishButton}
+            id="javalabFinish"
           />
         )}
       </div>
