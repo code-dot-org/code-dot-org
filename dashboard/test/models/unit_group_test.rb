@@ -241,7 +241,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
-    test "add CourseScripts" do
+    test "add UnitGroupUnits" do
       unit_group = create :unit_group
 
       create(:script, name: 'unit1')
@@ -257,7 +257,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
-    test "cannot remove CourseScripts that cannot change course version" do
+    test "cannot remove UnitGroupUnits that cannot change course version" do
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
 
@@ -280,7 +280,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 2, unit_group.default_unit_group_units.length
     end
 
-    test "cannot add CourseScripts that cannot change course version" do
+    test "cannot add UnitGroupUnits that cannot change course version" do
       course_version1 = create :course_version
       unit_group1 = create :unit_group, course_version: course_version1
       course_version2 = create :course_version
@@ -306,7 +306,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group1.default_unit_group_units.length
     end
 
-    test "remove CourseScripts" do
+    test "remove UnitGroupUnits" do
       unit_group = create :unit_group
 
       create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
