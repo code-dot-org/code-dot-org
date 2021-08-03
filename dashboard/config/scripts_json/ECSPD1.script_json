@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:23 UTC",
+    "serialized_at": "2021-08-03 22:46:57 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ECSPD1"
@@ -122,7 +122,6 @@
           "PDECS Welcome Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +145,6 @@
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -170,7 +168,6 @@
           "ECSPD1 professional learning program phases"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +191,6 @@
           "ECS Matching Program Commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -218,7 +214,6 @@
           "ECSPD1 cs is about"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,7 +237,6 @@
           "ECSPD1 dikjstra"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +260,6 @@
           "ECSPD1 equity in cs education"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -290,7 +283,6 @@
           "ECSPD1 background reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +306,6 @@
           "ECSPD1 curriculum design"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -338,7 +329,6 @@
           "ECSPD1 unit overviews"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -362,7 +352,6 @@
           "ECSPD1 Matching Unit Descriptions and Numbers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -386,7 +375,6 @@
           "ECSPD1 unit 1 overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,7 +398,6 @@
           "ECSPD1 unit 2 overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -434,7 +421,6 @@
           "ECSPD1 curriculum connections"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -458,7 +444,6 @@
           "ECSPD1 computational thinker"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -482,7 +467,6 @@
           "ECSPD1 unifying themes"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -506,7 +490,6 @@
           "ECS PD1 classroom culture"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -530,7 +513,6 @@
           "ECSPD1 your role"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +536,6 @@
           "ECSPD1 student centered learning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -578,7 +559,6 @@
           "ECSPD1 Forum"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -602,7 +582,6 @@
           "ECSPD1 post survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -626,7 +605,6 @@
           "ECSPD1 congratulations end"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
