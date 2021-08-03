@@ -36,11 +36,11 @@ export class TeacherFeedback extends Component {
     teacher: PropTypes.number,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
-    hasContainedLevels: PropTypes.bool,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    canHaveFeedbackReviewState: PropTypes.bool
   };
 
   constructor(props) {
@@ -198,10 +198,8 @@ export class TeacherFeedback extends Component {
   renderCommentAreaHeaderForTeacher() {
     const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
 
-    // We hide this feature for contained levels because contained levels are currently not
-    // editable by students so setting the review state to keepWorking doesn't make sense.
     const hasEditableReviewState =
-      keepWorkingEnabled && !this.props.hasContainedLevels;
+      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
 
     return (
       <div style={styles.header}>
@@ -354,5 +352,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
   selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
+    state.teacherSections && state.teacherSections.selectedSectionId,
+  canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
 }))(TeacherFeedback);
