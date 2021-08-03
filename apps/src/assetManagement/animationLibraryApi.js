@@ -1,3 +1,6 @@
+import spriteManifest from '@cdo/apps/p5lab/spritelab/spriteCostumeLibrary.json';
+import {createUuid} from '@cdo/apps/utils';
+
 export const UploadType = {
   SPRITE: 'Sprite',
   METADATA: 'Metadata'
@@ -44,6 +47,58 @@ export function updateDefaultList(listData) {
     .catch(err => {
       return Promise.reject(err);
     });
+}
+
+/* Regenerates the animation JSON list of the sprites in SpriteLab
+ */
+export function regenerateDefaultJSON() {
+  getDefaultList().then(json => {
+    let orderedKeys = [];
+    let propsByKey = {};
+    let parsed = spriteManifest;
+    let animations = parsed['metadata'];
+    for (let sprite of json.default_sprites) {
+      let animation_metadata = animations[sprite.key];
+      let props = {};
+      props['name'] = sprite.name;
+      props['sourceUrl'] = `https://studio.code.org${
+        animation_metadata['sourceUrl']
+      }`;
+      props['frameSize'] = animation_metadata['frameSize'];
+      props['frameCount'] = animation_metadata['frameCount'];
+      props['looping'] = animation_metadata['looping'];
+      props['frameDelay'] = animation_metadata['frameDelay'];
+      props['version'] = animation_metadata['version'];
+      props['categories'] = animation_metadata['categories'];
+      let key = createUuid();
+      orderedKeys.push(key);
+      propsByKey[key] = props;
+    }
+    let data = JSON.stringify({
+      orderedKeys: orderedKeys,
+      propsByKey: propsByKey
+    });
+    return fetch(`/api/v1/animation-library/default-spritelab-json`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: data
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(
+            `Default Sprite JSON Upload Error(${response.status}: ${
+              response.statusText
+            })`
+          );
+        }
+        return Promise.resolve();
+      })
+      .catch(err => {
+        return Promise.reject(err);
+      });
+  });
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success
