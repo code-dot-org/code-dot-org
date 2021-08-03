@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 21:46:53 UTC",
+    "serialized_at": "2021-08-02 22:19:13 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -9828,7 +9828,7 @@
       }
     },
     {
-      "name": "Practices Reflection (2020)",
+      "name": "Practices Reflection",
       "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view",
       "key": "practices-reflection-l21-exemplar-2020",
       "properties": {
