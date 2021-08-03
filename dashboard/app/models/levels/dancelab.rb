@@ -16,12 +16,14 @@
 #  published             :boolean          default(FALSE), not null
 #  notes                 :text(65535)
 #  audit_log             :text(65535)
+#  deleted_at            :datetime
 #
 # Indexes
 #
-#  index_levels_on_game_id    (game_id)
-#  index_levels_on_level_num  (level_num)
-#  index_levels_on_name       (name)
+#  index_levels_on_deleted_at  (deleted_at)
+#  index_levels_on_game_id     (game_id)
+#  index_levels_on_level_num   (level_num)
+#  index_levels_on_name        (name)
 #
 
 class Dancelab < GamelabJr

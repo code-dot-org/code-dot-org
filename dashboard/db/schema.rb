@@ -699,6 +699,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_205147) do
     t.boolean "published", default: false, null: false
     t.text "notes"
     t.text "audit_log"
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_levels_on_deleted_at"
     t.index ["game_id"], name: "index_levels_on_game_id"
     t.index ["level_num"], name: "index_levels_on_level_num"
     t.index ["name"], name: "index_levels_on_name"
