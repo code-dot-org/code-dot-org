@@ -22,7 +22,6 @@ const panelList = [
 // Is a panel ready to be visited?  This determines whether a visible
 // nav button is enabled or disabled.
 export function isPanelEnabled(state, panelId) {
-
   if (panelId === "dataDisplayLabel") {
     if (!isDataUploaded(state)) {
       return false;
@@ -113,8 +112,10 @@ export function uniqLabelFeaturesSelected(state) {
 }
 
 function resultsAvailable(state) {
-  return state.accuracyCheckExamples.length !== 0 ||
-  !didSaveSucceed(state) || !isSaveInProgress(state);
+  if (state.accuracyCheckExamples.length === 0) {
+    return false;
+  }
+  return !didSaveSucceed(state) || !isSaveInProgress(state);
 }
 
 function isSaveInProgress(state) {
