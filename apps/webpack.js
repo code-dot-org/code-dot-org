@@ -45,6 +45,7 @@ var baseConfig = {
     fallback: {
       stream: require.resolve('web-streams-polyfill'),
       path: require.resolve('path-browserify'),
+      timers: require.resolve('timers-browserify'),
       crypto: false
     },
     alias: {

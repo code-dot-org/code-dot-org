@@ -269,6 +269,7 @@
     "snack-build": "0.0.1",
     "snack-sdk": "2.3.6",
     "survey-react": "1.7.4",
+    "timers-browserify": "^2.0.12",
     "wgxpath": "^1.2.0",
     "whatwg-fetch": "^2.0.3"
   }
