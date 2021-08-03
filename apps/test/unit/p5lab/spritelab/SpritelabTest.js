@@ -75,6 +75,7 @@ describe('SpriteLab', () => {
         instance.onP5Setup = sinon.spy();
         instance.onIsDebuggingSpritesChange = sinon.spy();
         instance.onStepSpeedChange = sinon.spy();
+        instance.level = {};
 
         muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
       });

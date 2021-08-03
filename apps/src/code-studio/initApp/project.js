@@ -19,6 +19,8 @@ const NUM_ERRORS_BEFORE_WARNING = 3;
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
+let projectSaveInProgress = false;
+let projectChangedWhileSaveInProgress = false;
 
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
@@ -777,6 +779,9 @@ var projects = (module.exports = {
   },
   projectChanged() {
     hasProjectChanged = true;
+    if (projectSaveInProgress) {
+      projectChangedWhileSaveInProgress = true;
+    }
   },
   hasOwnerChangedProject() {
     return this.isOwner() && hasProjectChanged;
@@ -1454,6 +1459,10 @@ var projects = (module.exports = {
       return;
     }
 
+    // set project save in progress flag before fetching sources.
+    // If we get a change while the save is in progress, we don't
+    // want to mark hasProjectChanged to false.
+    projectSaveInProgress = true;
     this.getUpdatedSourceAndHtml_(newSources => {
       if (newSources.error) {
         header.showProjectSaveError();
@@ -1462,13 +1471,21 @@ var projects = (module.exports = {
       }
 
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
         return;
       }
 
       this.saveSourceAndHtml_(newSources, () => {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
       });
     });
