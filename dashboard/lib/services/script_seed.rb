@@ -783,7 +783,6 @@ module Services
         :activity_section_position,
         :assessment,
         :properties,
-        :named_level,
         :bonus,
         :seeding_key,
         :level_keys
@@ -796,10 +795,6 @@ module Services
       def properties
         # sort properties hash by key
         object.properties.sort.to_h
-      end
-
-      def named_level
-        !!object.named_level
       end
 
       def bonus
