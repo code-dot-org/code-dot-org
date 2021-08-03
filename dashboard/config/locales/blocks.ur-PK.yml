@@ -1598,3 +1598,5 @@ ur:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      validation_validatedBackground:
+        text: پس منظر کو {IMG} پر سیٹ کریں

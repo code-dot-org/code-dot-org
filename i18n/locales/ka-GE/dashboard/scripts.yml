@@ -8778,3 +8778,15 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: ტესტი
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: მიმოხილვა
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: მიმოხილვა
