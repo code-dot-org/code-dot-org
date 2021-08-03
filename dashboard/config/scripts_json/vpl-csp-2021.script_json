@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 22:28:03 UTC",
+    "serialized_at": "2021-08-03 22:48:05 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csp-2021"
@@ -94,7 +94,6 @@
         ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -119,7 +118,6 @@
         ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -144,7 +142,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -169,7 +166,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +190,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +214,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +238,6 @@
         ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -269,7 +262,6 @@
         ],
         "progression": "Module 1 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +286,6 @@
         ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +310,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +334,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +358,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,7 +382,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +406,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -444,7 +430,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,7 +454,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,7 +478,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +502,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -544,7 +526,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +550,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +574,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -619,7 +598,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -644,7 +622,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -669,7 +646,6 @@
         ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -694,7 +670,6 @@
         ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -719,7 +694,6 @@
         ],
         "progression": "Module 2 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

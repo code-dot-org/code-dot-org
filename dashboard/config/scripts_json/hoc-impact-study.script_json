@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:41 UTC",
+    "serialized_at": "2021-08-03 22:47:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "hoc-impact-study"
@@ -90,7 +90,6 @@
           "HOC pre-survey 2016 levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -114,7 +113,6 @@
           "blockly:Maze:2_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -138,7 +136,6 @@
           "blockly:Maze:2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -162,7 +159,6 @@
           "blockly:Maze:2_2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -186,7 +182,6 @@
           "blockly:Maze:2_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -210,7 +205,6 @@
           "blockly:Maze:2_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -234,7 +228,6 @@
           "blockly:Maze:2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -258,7 +251,6 @@
           "blockly:Maze:2_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -282,7 +274,6 @@
           "blockly:Maze:2_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -306,7 +297,6 @@
           "blockly:Maze:2_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -330,7 +320,6 @@
           "blockly:Maze:2_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -354,7 +343,6 @@
           "blockly:Maze:2_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -378,7 +366,6 @@
           "blockly:Maze:2_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -402,7 +389,6 @@
           "blockly:Maze:2_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -426,7 +412,6 @@
           "blockly:Maze:2_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -450,7 +435,6 @@
           "blockly:Maze:2_14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +458,6 @@
           "blockly:Maze:2_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +481,6 @@
           "blockly:Maze:2_16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +504,6 @@
           "blockly:Maze:2_17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -546,7 +527,6 @@
           "blockly:Maze:2_18"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -570,7 +550,6 @@
           "blockly:Maze:2_19"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +573,6 @@
           "HOC post-survey 2016 levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

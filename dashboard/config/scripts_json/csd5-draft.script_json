@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:06 UTC",
+    "serialized_at": "2021-08-03 22:47:15 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd5-draft"
@@ -281,9 +281,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representation Matters"
-        ]
+        ],
+        "progression": "Unit 5 Lesson 1 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,9 +305,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Patterns and Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,9 +329,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP ASCII and Binary Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,9 +353,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Images"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -380,7 +380,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,7 +404,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -430,7 +428,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -455,7 +452,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -480,7 +476,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -502,9 +497,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 1"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -529,7 +524,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +548,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,7 +572,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -604,7 +596,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -629,7 +620,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -654,7 +644,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -676,9 +665,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Representing Numbers Part 2"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -700,9 +689,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Combining Representations"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -727,7 +716,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -752,7 +740,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -774,9 +761,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Create a Representation"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -801,7 +788,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -823,9 +809,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Problem Solving and Data"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -847,9 +833,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Problem Solving with Big Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +860,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +884,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +908,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -946,9 +929,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Interpreting Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -973,7 +956,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -998,7 +980,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1023,7 +1004,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1045,9 +1025,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Making Decisions with Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1069,9 +1049,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 L13 SFLP Interpreting Data"
-        ]
+        ],
+        "progression": "Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1096,7 +1076,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1121,7 +1100,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1146,7 +1124,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1168,9 +1145,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Automating Data Decisions"
-        ]
+        ],
+        "progression": "Level Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1192,9 +1169,9 @@
       "properties": {
         "level_keys": [
           "CSD-U5-SFLP Solve a Data Problem"
-        ]
+        ],
+        "progression": "Level Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1219,7 +1196,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
