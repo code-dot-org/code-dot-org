@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:27 UTC",
+    "serialized_at": "2021-08-03 22:46:59 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ecs-unit3"
@@ -137,7 +137,6 @@
           "ECS Phase 3 Unit3 Welcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -161,7 +160,6 @@
           "ECS Phase 3 Unit 3 Overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +183,6 @@
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -209,7 +206,6 @@
           "PLC- check your progress"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +229,6 @@
           "ECSPD Unit 3 Outline"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +252,6 @@
           "ECSPD P3 Plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +275,6 @@
           "ECSPD Unit3 Connections"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,7 +298,6 @@
           "ECSPD Unit 3 Lesson Overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +321,6 @@
           "Forum-ECSPD-Unit 3-Teaching Practice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +344,6 @@
           "ECSPD Unit 3 Expertise"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +367,6 @@
           "ECSPD Phase 3 - Unit 3 - Teaching Practice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +390,6 @@
           "ECSPD jsfiddle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +413,6 @@
           "ECSPD Unit 3 Strategy Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +436,6 @@
           "ECSPD strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -473,7 +459,6 @@
           "ECSPD Unit 3 Stage 6 Overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +482,6 @@
           "ECSPD U3 D 1-2 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +505,6 @@
           "ECSPD U3 D 3-4 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +528,6 @@
           "ECSPD U3 D 5 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +551,6 @@
           "ECSPD U3 D 6-7 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -593,7 +574,6 @@
           "ECSPD U3 D 8-10 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +597,6 @@
           "ECSPD U3 D 11-13 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +620,6 @@
           "ECSPD U3 D 14 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +643,6 @@
           "ECSPD U3 D 15-16 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -689,7 +666,6 @@
           "ECSPD U3 D 17-19 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -713,7 +689,6 @@
           "ECSPD U3 D 20-21 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -737,7 +712,6 @@
           "ECSPD U3 D 22-25 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +735,6 @@
           "ECSPD-unit2 What is the Challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -785,7 +758,6 @@
           "ECSPD U3 Challenges"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -807,9 +779,9 @@
       "properties": {
         "level_keys": [
           "ECS Unit 3 Challenge Selection"
-        ]
+        ],
+        "progression": "ECS Unit 3 Challenge Selection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -833,7 +805,6 @@
           "ECSD3-u5 do the challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -857,7 +828,6 @@
           "CSPPD3-u2 create your extension"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +851,6 @@
           "CSPPD3-u2 reflect on challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -905,7 +874,6 @@
           "CSPPD3-u2 expectations"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -927,9 +895,9 @@
       "properties": {
         "level_keys": [
           "ECS Unit 3 Challenge Submission"
-        ]
+        ],
+        "progression": "ECS Unit 3 Challenge Submission"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -953,7 +921,6 @@
           "ECSPD Challenge Reflection"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:54 UTC",
+    "serialized_at": "2021-08-03 22:47:58 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "virtual-holding-place"
@@ -195,7 +195,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,7 +219,6 @@
         ],
         "progression": "Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,9 +240,9 @@
       "properties": {
         "level_keys": [
           "CSD: Sprite Velocity_virtual"
-        ]
+        ],
+        "progression": "Video: Velocity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -269,7 +267,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +291,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +315,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +339,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +363,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,7 +387,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +411,6 @@
         ],
         "progression": "Velocity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -444,7 +435,6 @@
         ],
         "progression": "Side Scroller"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,7 +459,6 @@
         ],
         "progression": "Side Scroller"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,7 +483,6 @@
         ],
         "progression": "Side Scroller"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +507,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,9 +528,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions car intro_virtual"
-        ]
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -565,9 +552,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions build isTouching_virtual"
-        ]
+        ],
+        "progression": "Collision Detection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -592,7 +579,6 @@
         ],
         "progression": "isTouching"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +603,6 @@
         ],
         "progression": "isTouching"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -642,7 +627,6 @@
         ],
         "progression": "isTouching"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -667,7 +651,6 @@
         ],
         "progression": "isTouching"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -692,7 +675,6 @@
         ],
         "progression": "isTouching"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -717,7 +699,6 @@
         ],
         "progression": "Collisions in Games"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -742,7 +723,6 @@
         ],
         "progression": "Collisions in Games"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,7 +747,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -789,9 +768,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Complex Movement counter prediction gamelab_virtual"
-        ]
+        ],
+        "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -816,7 +795,6 @@
         ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +819,6 @@
         ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -866,7 +843,6 @@
         ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -891,7 +867,6 @@
         ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -916,7 +891,6 @@
         ],
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -941,7 +915,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -966,7 +939,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -991,7 +963,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1016,7 +987,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1041,7 +1011,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1066,7 +1035,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1091,7 +1059,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1113,9 +1080,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 collisions predict set velocity code_virtual"
-        ]
+        ],
+        "progression": "Sprite Interactions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1140,7 +1107,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1165,7 +1131,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1190,7 +1155,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1215,7 +1179,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1240,7 +1203,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1265,7 +1227,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1290,7 +1251,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1315,7 +1275,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1340,7 +1299,6 @@
         ],
         "progression": "Collisions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1365,7 +1323,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1390,7 +1347,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1415,7 +1371,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1440,7 +1395,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1465,7 +1419,6 @@
         ],
         "progression": "Flyer Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1490,7 +1443,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1512,9 +1464,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 function video_virtual"
-        ]
+        ],
+        "progression": "Video: Functions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1539,7 +1491,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1564,7 +1515,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1589,7 +1539,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1614,7 +1563,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1639,7 +1587,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1664,7 +1611,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1689,7 +1635,6 @@
         ],
         "progression": "Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1714,7 +1659,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1739,7 +1683,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1764,7 +1707,6 @@
         ],
         "progression": "Collector Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1786,9 +1728,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 functions review_virtual"
-        ]
+        ],
+        "progression": "Functions Review"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1813,7 +1755,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1835,9 +1776,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti Play Defender_virtual"
-        ]
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1859,9 +1800,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1886,7 +1827,6 @@
         ],
         "progression": "Multiframe Animations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1911,7 +1851,6 @@
         ],
         "progression": "Multiframe Animations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1936,7 +1875,6 @@
         ],
         "progression": "Multiframe Animations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1961,7 +1899,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1986,7 +1923,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2011,7 +1947,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2036,7 +1971,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2061,7 +1995,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2086,7 +2019,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2111,7 +2043,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2136,7 +2067,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2161,7 +2091,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2186,7 +2115,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2211,7 +2139,6 @@
         ],
         "progression": "Cake Defender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2233,9 +2160,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample1_virtual"
-        ]
+        ],
+        "progression": "Sample Platform Jumper Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2257,9 +2184,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform intro_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Build a Platform Jumper"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2284,7 +2211,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2309,7 +2235,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2334,7 +2259,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2359,7 +2283,6 @@
         ],
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2384,7 +2307,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2409,7 +2331,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2434,7 +2355,6 @@
         ],
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2459,7 +2379,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2484,7 +2403,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2509,7 +2427,6 @@
         ],
         "progression": "Platform Jumper - Items"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2534,7 +2451,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2559,7 +2475,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2584,7 +2499,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2609,7 +2523,6 @@
         ],
         "progression": "Platform Jumper - Player"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2631,9 +2544,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample2_virtual"
-        ]
+        ],
+        "progression": "Plane Jumper"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2655,9 +2568,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample3_virtual"
-        ]
+        ],
+        "progression": "Bunny Jumper"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2681,7 +2594,6 @@
           "CSD U3 platform challenge_virtual"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2703,9 +2615,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 game intro_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Design Your Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2730,7 +2642,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2755,7 +2666,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2780,7 +2690,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2805,7 +2714,6 @@
         ],
         "progression": "Project - Background and Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2830,7 +2738,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2855,7 +2762,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2880,7 +2786,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2905,7 +2810,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2930,7 +2834,6 @@
         ],
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2952,9 +2855,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 finishing touches_virtual"
-        ]
+        ],
+        "progression": "Project - Finishing Touches"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
