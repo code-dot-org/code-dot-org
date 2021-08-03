@@ -161,7 +161,7 @@ module Levels
     def setup_project_template_level
       # if we already have a project template level which matches the specified
       # name, do nothing.
-      return if project_template_level&.name == project_template_level_name
+      return if child_levels.project_template.first&.name == project_template_level_name
 
       # otherwise, update project template level to match
       levels_child_levels.project_template.destroy_all
