@@ -184,8 +184,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     );
   };
 
-  blocklyWrapper.getWorkspaceCode = function() {
-    const code = Blockly.Generator.blockSpaceToCode('JavaScript', null, false);
+  blocklyWrapper.getWorkspaceCode = function(opt_showHidden) {
+    const code = Blockly.Generator.blockSpaceToCode(
+      'JavaScript',
+      null,
+      !!opt_showHidden
+    );
     return strip(code);
   };
 
