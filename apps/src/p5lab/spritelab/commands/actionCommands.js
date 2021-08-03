@@ -83,11 +83,12 @@ export const commands = {
     }
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
-      // Remove any other glides in progress
-      this.removeBehavior(sprite, {name: 'glide'});
-
+      if (!sprite.glideTargets) {
+        sprite.glideTargets = [];
+      }
+      sprite.glideTargets.push(location);
       this.addBehavior(sprite, {
-        func: behaviorCommands.glideFunc.apply(this, [location]),
+        func: behaviorCommands.glideFunc.apply(this),
         name: 'glide'
       });
     });
