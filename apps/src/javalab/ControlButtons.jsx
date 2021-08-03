@@ -20,10 +20,10 @@ export default function ControlButtons({
   isSubmitted
 }) {
   let finishButtonText, finishButtonId;
-  if (this.props.isSubmitted) {
+  if (isSubmitted) {
     finishButtonText = i18n.unsubmit();
     finishButtonId = 'unsubmitButton';
-  } else if (this.props.isSubmittable) {
+  } else if (isSubmittable) {
     finishButtonText = i18n.submit();
     finishButtonId = 'submitButton';
   } else {
