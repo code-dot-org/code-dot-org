@@ -7,7 +7,6 @@ announcements [{"notice"=>"Are you signed up for the AP exam?", "details"=>"Now'
 new_name 'csd1-2017'
 family_name 'csd1'
 version_year '2017'
-published_state 'stable'
 project_sharing true
 curriculum_umbrella 'CSD'
 

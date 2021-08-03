@@ -1,17 +1,24 @@
+import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
-import JavalabSettings from './JavalabSettings';
-import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
+import {
+  appendOutputLog,
+  setIsDarkMode,
+  setIsRunning,
+  setLeftWidth,
+  setRightWidth
+} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
-import JavalabButton from './JavalabButton';
+import {CsaViewMode} from './constants';
+import styleConstants from '../styleConstants';
+import _ from 'lodash';
 
 const FOOTER_BUFFER = 10;
 
@@ -20,15 +27,18 @@ class JavalabView extends React.Component {
     handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
+    onStop: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
+    editorColumnHeight: PropTypes.number,
+    viewMode: PropTypes.string.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    disableFinishButton: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -37,6 +47,12 @@ class JavalabView extends React.Component {
     isRunning: PropTypes.bool,
     setIsRunning: PropTypes.func,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    setLeftWidth: PropTypes.func,
+    setRightWidth: PropTypes.func,
+    leftWidth: PropTypes.number,
+    rightWidth: PropTypes.number,
+    topInstructionsHeight: PropTypes.number.isRequired,
+    longInstructions: PropTypes.string,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool
@@ -50,6 +66,10 @@ class JavalabView extends React.Component {
   componentDidMount() {
     this.props.onMount();
     this.setRightContainerHeight();
+    this.updateLayout(this.props.leftWidth);
+    window.addEventListener('resize', () =>
+      this.updateLayoutThrottled(this.props.leftWidth)
+    );
   }
 
   compile = () => {
@@ -67,15 +87,14 @@ class JavalabView extends React.Component {
     ];
   };
 
-  // This controls the 'run' button state, but stopping program execution is not yet
-  // implemented and will need to be added here.
+  // This controls the 'run' button state
   toggleRun = () => {
     const toggledIsRunning = !this.props.isRunning;
     this.props.setIsRunning(toggledIsRunning);
     if (toggledIsRunning) {
       this.props.onRun();
     } else {
-      // TODO: Stop program execution.
+      this.props.onStop();
     }
   };
 
@@ -93,12 +112,26 @@ class JavalabView extends React.Component {
   renderVisualization = () => {
     const {visualization} = this.props;
     if (visualization) {
-      return <div style={styles.preview}>{visualization}</div>;
+      return (
+        <div id="visualization-container" style={styles.preview}>
+          {visualization}
+        </div>
+      );
     }
 
-    // This workaround is necessary because <VisualizationResizeBar /> requires
-    // an element with ID 'visualization' or it will not resize.
-    return <div id="visualization" />;
+    // For levels without a visualization, still create a div so that the
+    // updateLayout function can adjust the width of the entire left side.
+    return (
+      <div
+        id="visualization"
+        style={{
+          ...styles.visualizationPlaceholder,
+          width: this.props.leftWidth + styleConstants['resize-bar-width']
+        }}
+      >
+        &nbsp;
+      </div>
+    );
   };
 
   setRightContainerHeight = () => {
@@ -110,6 +143,100 @@ class JavalabView extends React.Component {
     });
   };
 
+  handleWidthResize = desiredWidth => {
+    let newWidth = Math.max(100, Math.min(desiredWidth, 600));
+    this.props.setLeftWidth(newWidth);
+
+    this.updateLayoutThrottled(newWidth);
+  };
+
+  updateLayout = availableWidth => {
+    // We scale the visualization to take up as much space as it can, both
+    // vertically and horizontally.  Its width is constrained by the width
+    // of the left side, which the user can adjust by dragging a resizer, and
+    // which is passed into this function as availableWidth.
+    // Its height is constrained by how much of the window is available.  We
+    // start with the entire height of the window, subtract the space used by
+    // the instructions (which includes their header and horizontal resizer),
+    // subtract the space used by misc existing elements (which includes the
+    // page header, gaps between areas, the "preview" header, and the small
+    // footer at the bottom), and subtract the space used by the speed slider
+    // if it's shown.
+    // The visualization is a square, so the width it's rendered at will be
+    // constrained by both the available width and height.
+    const miscExistingElementsHeight = 135;
+    const sliderHeight = 60;
+
+    // The original visualization is rendered at 800x800.
+    const originalVisualizationWidth = 800;
+
+    // Determine the available height.
+    let availableHeight =
+      window.innerHeight -
+      this.props.topInstructionsHeight -
+      miscExistingElementsHeight;
+    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
+      availableHeight -= sliderHeight;
+    }
+
+    // Use the biggest available size.
+    let newVisualizationWidth = Math.min(availableHeight, availableWidth);
+
+    // Scale the visualization.
+    let scale = newVisualizationWidth / originalVisualizationWidth;
+    if (scale < 0) {
+      // Avoid inverting.
+      scale = 0;
+    }
+    const scaleCss = `scale(${scale})`;
+    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
+      $('#svgMaze').css('transform', scaleCss);
+    } else if (this.props.viewMode === CsaViewMode.THEATER) {
+      $('#theater-container').css('transform', scaleCss);
+    }
+
+    // Size the visualization div (which will actually set the rendered
+    // width of the left side of the screen, since this div determines its
+    // size) and center the visualization inside of it.
+    $('#visualization').css({
+      'max-width': availableWidth,
+      'max-height': newVisualizationWidth,
+      height: newVisualizationWidth,
+      left: (availableWidth - newVisualizationWidth) / 2
+    });
+
+    // Also adjust the width of the small footer at the bottom.
+    $('#page-small-footer .small-footer-base').css(
+      'max-width',
+      availableWidth - styleConstants['resize-bar-width']
+    );
+
+    // The right width can also change at this point, since it takes up the
+    // remaining space.
+    const actualLeftWidth = this.isLeftSideVisible()
+      ? this.props.leftWidth + styleConstants['resize-bar-width']
+      : 0;
+    const newRightWidth = window.innerWidth - actualLeftWidth - 20;
+    this.props.setRightWidth(newRightWidth);
+  };
+
+  updateLayoutThrottled = _.throttle(this.updateLayout, 33);
+
+  isLeftSideVisible = () => {
+    // It's possible that a console level without instructions won't have
+    // anything to show on the left side.
+    return (
+      this.props.viewMode !== CsaViewMode.CONSOLE ||
+      !!this.props.longInstructions
+    );
+  };
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
+      this.updateLayoutThrottled(this.props.leftWidth);
+    }
+  }
+
   render() {
     const {
       isDarkMode,
@@ -120,6 +247,10 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
+      disableFinishButton,
+      editorColumnHeight,
+      leftWidth,
+      rightWidth,
       awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
@@ -130,17 +261,6 @@ class JavalabView extends React.Component {
       document.body.style.backgroundColor = color.background_gray;
     }
 
-    let finishButtonText, finishButtonId;
-    if (this.props.isSubmitted) {
-      finishButtonText = i18n.unsubmit();
-      finishButtonId = 'unsubmitButton';
-    } else if (this.props.isSubmittable) {
-      finishButtonText = i18n.submit();
-      finishButtonId = 'submitButton';
-    } else {
-      finishButtonText = i18n.finish();
-      finishButtonId = 'javalabFinish';
-    }
     return (
       <StudioAppWrapper>
         <div
@@ -149,18 +269,6 @@ class JavalabView extends React.Component {
             ...{height: rightContainerHeight}
           }}
         >
-          <div style={styles.buttons}>
-            <JavalabSettings>{this.renderSettings()}</JavalabSettings>
-            {!isEditingStartSources && (
-              <JavalabButton
-                text={finishButtonText}
-                id={finishButtonId}
-                onClick={onContinue}
-                style={styles.finish}
-                isDisabled={this.props.disableFinishButton}
-              />
-            )}
-          </div>
           <div
             ref={ref => (this.editorAndVisualization = ref)}
             style={styles.editorAndVisualization}
@@ -168,21 +276,37 @@ class JavalabView extends React.Component {
             <div
               id="visualizationColumn"
               className="responsive"
-              style={styles.instructionsAndPreview}
+              style={{...styles.instructionsAndPreview, maxWidth: leftWidth}}
             >
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
                 displayDocumentationTab
                 displayReviewTab
+                onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
               />
-              {this.renderVisualization()}
+              {this.isLeftSideVisible() && this.renderVisualization()}
             </div>
-            <VisualizationResizeBar />
+
+            {this.isLeftSideVisible() && (
+              <HeightResizer
+                vertical={true}
+                resizeItemTop={() => 10}
+                position={
+                  this.props.leftWidth + styleConstants['resize-bar-width']
+                }
+                onResize={this.handleWidthResize}
+              />
+            )}
+
             <div
               style={{
-                ...styles.editorAndConsole,
-                color: isDarkMode ? color.white : color.black
+                ...(this.isLeftSideVisible()
+                  ? styles.editorAndConsole
+                  : styles.editorAndConsoleOnly),
+                color: isDarkMode ? color.white : color.black,
+                height: editorColumnHeight,
+                width: rightWidth
               }}
               className="editor-column"
             >
@@ -195,15 +319,23 @@ class JavalabView extends React.Component {
               />
               <JavalabConsole
                 onInputMessage={onInputMessage}
-                style={styles.consoleParent}
-                leftColumn={
+                style={{
+                  ...styles.consoleParent,
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
+                }}
+                bottomRow={
                   <ControlButtons
                     isRunning={isRunning}
-                    isDarkMode={isDarkMode}
                     isTesting={isTesting}
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
-                    isDisabled={awaitingContainedResponse}
+                    isEditingStartSources={isEditingStartSources}
+                    disableFinishButton={disableFinishButton}
+                    disableRunButtons={awaitingContainedResponse}
+                    onContinue={onContinue}
+                    renderSettings={this.renderSettings}
+                    isSubmittable={this.props.isSubmittable}
+                    isSubmitted={this.props.isSubmitted}
                   />
                 }
               />
@@ -232,6 +364,14 @@ const styles = {
     width: '100%',
     height: '100%',
     display: 'flex',
+    flexDirection: 'column',
+    marginLeft: styleConstants['resize-bar-width']
+  },
+  editorAndConsoleOnly: {
+    right: '15px',
+    width: '100%',
+    height: '100%',
+    display: 'flex',
     flexDirection: 'column'
   },
   consoleParent: {
@@ -247,10 +387,14 @@ const styles = {
     flexGrow: '1',
     height: '100%'
   },
+  visualizationPlaceholder: {
+    height: 1,
+    maxWidth: undefined,
+    maxHeight: undefined,
+    marginTop: styleConstants['resize-bar-width']
+  },
   preview: {
-    backgroundColor: color.light_gray,
-    height: '200px',
-    marginTop: '13px'
+    marginTop: styleConstants['resize-bar-width']
   },
   javalab: {
     display: 'flex',
@@ -266,14 +410,6 @@ const styles = {
     width: '100%',
     margin: '10px 0',
     overflowY: 'hidden'
-  },
-  finish: {
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-    fontFamily: '"Gotham 5r"',
-    fontSize: '15px',
-    padding: '1px 8px',
-    margin: '5px 0 5px 5px'
   }
 };
 
@@ -290,6 +426,11 @@ export default connect(
     isRunning: state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
+    editorColumnHeight: state.javalab.editorColumnHeight,
+    leftWidth: state.javalab.leftWidth,
+    rightWidth: state.javalab.rightWidth,
+    topInstructionsHeight: state.instructions.renderedHeight,
+    longInstructions: state.instructions.longInstructions,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     disableFinishButton: state.javalab.disableFinishButton,
     isSubmittable: state.pageConstants.isSubmittable,
@@ -298,6 +439,8 @@ export default connect(
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
-    setIsRunning: isRunning => dispatch(setIsRunning(isRunning))
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
+    setLeftWidth: width => dispatch(setLeftWidth(width)),
+    setRightWidth: width => dispatch(setRightWidth(width))
   })
 )(UnconnectedJavalabView);

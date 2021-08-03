@@ -1,18 +1,31 @@
-import {WebSocketMessageType} from './constants';
+import {
+  WebSocketMessageType,
+  StatusMessageType,
+  STATUS_MESSAGE_PREFIX
+} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
-import {getStore} from '../redux';
-import {setIsRunning} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
+import javalabMsg from '@cdo/javalab/locale';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(javabuilderUrl, onMessage, miniApp, serverLevelId, options) {
+  constructor(
+    javabuilderUrl,
+    onMessage,
+    miniApp,
+    serverLevelId,
+    options,
+    onNewlineMessage,
+    setIsRunning
+  ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
     this.options = options;
+    this.onNewlineMessage = onNewlineMessage;
+    this.setIsRunning = setIsRunning;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -48,13 +61,46 @@ export default class JavabuilderConnection {
   }
 
   onOpen() {
-    this.onOutputMessage('Compiling...');
     this.miniApp?.onCompile?.();
+  }
+
+  onStatusMessage(messageKey) {
+    let message;
+    let includeLineBreak = false;
+    switch (messageKey) {
+      case StatusMessageType.COMPILING:
+        message = javalabMsg.compiling();
+        break;
+      case StatusMessageType.COMPILATION_SUCCESSFUL:
+        message = javalabMsg.compilationSuccess();
+        break;
+      case StatusMessageType.RUNNING:
+        message = javalabMsg.running();
+        includeLineBreak = true;
+        break;
+      case StatusMessageType.GENERATING_RESULTS:
+        message = javalabMsg.generatingResults();
+        break;
+      case StatusMessageType.EXITED:
+        this.onExit();
+        break;
+      default:
+        break;
+    }
+    if (message) {
+      this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    }
+    if (includeLineBreak) {
+      this.onNewlineMessage();
+    }
   }
 
   onMessage(event) {
     const data = JSON.parse(event.data);
     switch (data.type) {
+      case WebSocketMessageType.STATUS:
+        this.onStatusMessage(data.value);
+        break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
         break;
@@ -64,11 +110,13 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
+        this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
           this.onOutputMessage('--- Localhost debugging message ---');
           this.onOutputMessage(data.value);
+          this.onNewlineMessage();
         }
         break;
       default:
@@ -84,14 +132,23 @@ export default class JavabuilderConnection {
       // event.code is usually 1006 in this case
       console.log(`[close] Connection died. code=${event.code}`);
     }
+  }
+
+  onExit() {
     if (this.miniApp) {
       // miniApp on close should handle setting isRunning state as it
       // may not align with actual program execution. If mini app does
       // not have on close we won't toggle back automatically.
       this.miniApp.onClose?.();
     } else {
+      // add blank line and program exited message to console logs
+      this.onNewlineMessage();
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+      );
+      this.onNewlineMessage();
       // Set isRunning to false
-      getStore().dispatch(setIsRunning(false));
+      this.setIsRunning(false);
     }
   }
 
@@ -99,11 +156,22 @@ export default class JavabuilderConnection {
     this.onOutputMessage(
       'We hit an error connecting to our server. Try again.'
     );
+    // Set isRunning to false
+    this.setIsRunning(false);
     console.error(`[error] ${error.message}`);
   }
 
   // Send a message across the websocket connection to Javabuilder
   sendMessage(message) {
-    this.socket.send(message);
+    if (this.socket) {
+      this.socket.send(message);
+    }
+  }
+
+  // Closes web socket connection
+  closeConnection() {
+    if (this.socket) {
+      this.socket.close();
+    }
   }
 }

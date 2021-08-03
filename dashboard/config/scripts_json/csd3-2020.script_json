@@ -33,12 +33,13 @@
           "https://curriculum.code.org/csd-20/unit3/code/"
         ]
       ],
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:37 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:12 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2020"
     }

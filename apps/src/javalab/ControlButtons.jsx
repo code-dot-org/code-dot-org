@@ -4,82 +4,133 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
+import JavalabSettings from './JavalabSettings';
 
 export default function ControlButtons({
-  isDarkMode,
-  isDisabled,
   isRunning,
   isTesting,
   toggleRun,
-  toggleTest
+  toggleTest,
+  isEditingStartSources,
+  disableFinishButton,
+  onContinue,
+  renderSettings,
+  disableRunButtons,
+  isSubmittable,
+  isSubmitted
 }) {
-  const buttonStyles = {
-    ...styles.button.all,
-    ...(isDarkMode ? styles.button.dark : styles.button.light)
-  };
+  let finishButtonText, finishButtonId;
+  if (this.props.isSubmitted) {
+    finishButtonText = i18n.unsubmit();
+    finishButtonId = 'unsubmitButton';
+  } else if (this.props.isSubmittable) {
+    finishButtonText = i18n.submit();
+    finishButtonId = 'submitButton';
+  } else {
+    finishButtonText = i18n.finish();
+    finishButtonId = 'javalabFinish';
+  }
 
-  // Note: The 'noBorder' class is required on the buttons below because there are !important
-  // button styles we don't want. This class can be removed when the button:active !important
-  // border is removed from common.scss.
   return (
-    <div
-      style={{
-        ...styles.container,
-        backgroundColor: isDarkMode ? color.black : color.white
-      }}
-    >
-      <JavalabButton
-        text={isRunning ? i18n.stop() : i18n.runProgram()}
-        icon={
-          <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa-2x" />
-        }
-        onClick={toggleRun}
-        isHorizontal
-        className="noBorder"
-        style={buttonStyles}
-        isDisabled={isDisabled}
-        id="javalabRun"
-      />
-      <JavalabButton
-        text={isTesting ? i18n.stopTests() : i18n.test()}
-        icon={<FontAwesome icon="flask" className="fa-2x" />}
-        onClick={toggleTest}
-        isHorizontal
-        className="noBorder"
-        style={buttonStyles}
-        isDisabled={isDisabled}
-        id="javalabTest"
-      />
+    <div>
+      <div style={styles.leftButtons}>
+        <JavalabButton
+          text={isRunning ? i18n.stop() : i18n.runProgram()}
+          icon={
+            <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />
+          }
+          onClick={toggleRun}
+          isHorizontal
+          style={{...styles.button.all, ...styles.button.orange}}
+          isDisabled={disableRunButtons}
+          id="javalabRun"
+        />
+        <JavalabButton
+          text={isTesting ? i18n.stopTests() : i18n.test()}
+          icon={<FontAwesome icon="flask" className="fa" />}
+          onClick={toggleTest}
+          isHorizontal
+          style={{...styles.button.all, ...styles.button.white}}
+          isDisabled={disableRunButtons}
+        />
+      </div>
+      <div style={styles.rightButtons}>
+        <JavalabSettings>{renderSettings()}</JavalabSettings>
+        {!isEditingStartSources && (
+          <JavalabButton
+            text={finishButtonText}
+            onClick={onContinue}
+            style={{...styles.button.all, ...styles.button.blue}}
+            isDisabled={disableFinishButton}
+            id={finishButtonId}
+          />
+        )}
+      </div>
     </div>
   );
 }
 
 ControlButtons.propTypes = {
-  isDarkMode: PropTypes.bool.isRequired,
   isRunning: PropTypes.bool.isRequired,
   isTesting: PropTypes.bool.isRequired,
   toggleRun: PropTypes.func.isRequired,
   toggleTest: PropTypes.func.isRequired,
-  isDisabled: PropTypes.bool
+  isEditingStartSources: PropTypes.bool,
+  disableFinishButton: PropTypes.bool,
+  onContinue: PropTypes.func.isRequired,
+  renderSettings: PropTypes.func.isRequired,
+  disableRunButtons: PropTypes.bool,
+  isSubmittable: PropTypes.bool,
+  isSubmitted: PropTypes.bool
 };
 
 const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around'
+  leftButtons: {
+    float: 'left'
+  },
+  rightButtons: {
+    float: 'right'
   },
   button: {
     all: {
-      fontSize: 16,
+      float: 'left',
+      fontSize: 15,
       width: 140,
-      backgroundColor: 'transparent',
+      backgroundColor: color.orange,
+      borderColor: color.orange,
+      fontFamily: '"Gotham 5r"',
+      padding: '5px 12px',
+      margin: '5px 0 5px 5px',
+      justifyContent: 'center',
       ':hover': {
-        color: color.orange,
+        color: color.white,
         boxShadow: 'none'
       }
     },
-    light: {color: color.cyan},
-    dark: {color: color.lightest_gray}
+    orange: {
+      backgroundColor: color.orange,
+      borderColor: color.orange
+    },
+    white: {
+      backgroundColor: color.white,
+      borderColor: color.dark_charcoal,
+      color: color.dark_charcoal,
+      ':hover': {
+        color: color.dark_charcoal,
+        boxShadow: 'none'
+      }
+    },
+    blue: {
+      backgroundColor: color.default_blue,
+      borderColor: color.default_blue
+    }
+  },
+  finish: {
+    backgroundColor: color.orange,
+    borderColor: color.orange,
+    fontFamily: '"Gotham 5r"',
+    fontSize: '15px',
+    padding: '1px 8px',
+    margin: '5px 0 5px 5px'
   }
 };
