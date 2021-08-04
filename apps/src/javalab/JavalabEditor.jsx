@@ -142,6 +142,12 @@ class JavalabEditor extends React.Component {
       this.handleHeightResizeThrottled(this.props.height);
       this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
     });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => {
+        this.handleHeightResizeThrottled(this.props.height);
+        this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
+      });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
