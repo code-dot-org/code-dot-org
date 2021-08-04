@@ -303,8 +303,6 @@ StudioApp.prototype.init = function(config) {
   }
   this.config = config;
 
-  this.hasContainedLevels = config.hasContainedLevels;
-
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -549,8 +547,6 @@ StudioApp.prototype.init = function(config) {
   if (config.legacyShareStyle && config.hideSource) {
     this.setupLegacyShareView();
   }
-
-  initializeContainedLevel();
 
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
@@ -2120,6 +2116,9 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
+  this.hasContainedLevels = config.hasContainedLevels;
+
+  initializeContainedLevel();
 };
 
 // Overwritten by applab.
