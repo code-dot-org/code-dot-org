@@ -20,6 +20,7 @@ export default function ControlButtons({
     <div>
       <div style={styles.leftButtons}>
         <JavalabButton
+          id="runButton"
           text={isRunning ? i18n.stop() : i18n.runProgram()}
           icon={
             <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />
