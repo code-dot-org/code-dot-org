@@ -271,6 +271,21 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "हे लोखंड खणून काढा!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "जेव्हा तुम्हाला हिंट हवी असेल तेव्हा लाईटबल्बवर क्लिक करा!  "
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "खजिना गोळा करण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "ही संख्या तुम्हाला यातील किती ब्लॉक्स तुम्ही या कोड्यात वापरू शकता, ते सांगते."
         }
       }
     }

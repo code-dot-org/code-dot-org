@@ -1677,3 +1677,5 @@ ru:
           DIR:
             right: направо ↻
             left: налево ↺
+      validation_validatedBackground:
+        text: установить фон для {IMG}

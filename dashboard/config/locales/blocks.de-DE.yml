@@ -1876,3 +1876,5 @@ de:
           DIR:
             right: rechts ↻
             left: links ↺
+      validation_validatedBackground:
+        text: setze Hintergund auf {IMG}
