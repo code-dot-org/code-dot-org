@@ -21,7 +21,7 @@ const DEFAULT_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   latestFeedback: null,
-  hasContainedLevels: false
+  canHaveFeedbackReviewState: true
 };
 
 const RUBRIC = {
@@ -137,14 +137,17 @@ describe('TeacherFeedback', () => {
         expect(confirmButton.props().text).to.equal('Update');
       });
 
-      it('does not render EditableReviewState if part of the experiment and has hasContainedLevels', () => {
+      it('does not render EditableReviewState if part of the experiment and has not canHaveFeedbackReviewState', () => {
         sinon.stub(experiments, 'isEnabled').returns(true);
 
         const latestFeedback = {
           ...FEEDBACK,
           review_state: ReviewStates.completed
         };
-        const wrapper = setUp({latestFeedback, hasContainedLevels: true});
+        const wrapper = setUp({
+          latestFeedback,
+          canHaveFeedbackReviewState: false
+        });
 
         const keepWorkingComponent = wrapper.find(EditableReviewState);
         expect(keepWorkingComponent).to.have.length(0);
