@@ -887,6 +887,7 @@ Dashboard::Application.routes.draw do
   # GraphQL routes
   post "/graphql", to: "graphql#execute"
   if Rails.env.development?
+    match '/graphql', to: 'graphql#options', via: [:options]
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
 end
