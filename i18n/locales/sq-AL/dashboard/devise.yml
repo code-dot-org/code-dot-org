@@ -18,8 +18,6 @@ sq:
     mailer:
       confirmation_instructions:
         subject: "Udhëzimet e konfirmimit të Code.org"
-      reset_password_instructions:
-        subject: "Udhëzimet e rivendosjes së fjalëkalimit në Code.org"
       unlock_instructions:
         subject: "Zhblloko Udhëzimet"
     omniauth_callbacks:

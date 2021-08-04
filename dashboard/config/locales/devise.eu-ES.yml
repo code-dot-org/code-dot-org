@@ -20,8 +20,6 @@ eu:
     mailer:
       confirmation_instructions:
         subject: Code.org baieztapen jarraibideak
-      reset_password_instructions:
-        subject: Code.org pasahitza berrezartzeko jarraibideak
       unlock_instructions:
         subject: Desblokeatzeko argibideak
     omniauth_callbacks:

@@ -18,8 +18,6 @@ sv:
     mailer:
       confirmation_instructions:
         subject: "Instruktioner för bekräftelse av e-postadress"
-      reset_password_instructions:
-        subject: "Instruktioner för att återställa lösenord"
       unlock_instructions:
         subject: "Instruktioner för att låsa upp"
     omniauth_callbacks:

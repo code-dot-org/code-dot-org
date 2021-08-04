@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:48:24 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 16:28:10 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -16544,7 +16544,7 @@
       }
     },
     {
-      "name": "Shapes and Parameters - (Map Level)",
+      "name": "Shapes and Parameters",
       "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
       "key": "shapes_and_parameters_-_map_level",
       "properties": {

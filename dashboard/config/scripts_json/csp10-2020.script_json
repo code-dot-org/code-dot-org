@@ -21,6 +21,7 @@
           "https://curriculum.code.org/csp-20/unit10/standards/"
         ]
       ],
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "",
@@ -63,8 +64,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:51 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:57 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp10-2020"
     }
@@ -340,7 +341,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -365,7 +365,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,7 +389,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -415,7 +413,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +437,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +461,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -490,7 +485,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -515,7 +509,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -540,7 +533,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -565,7 +557,6 @@
         ],
         "progression": "Keylogging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -590,7 +581,6 @@
         ],
         "progression": "Phishing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -615,7 +605,6 @@
         ],
         "progression": "Malware"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -640,7 +629,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +653,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -690,7 +677,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -715,7 +701,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -740,7 +725,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -765,7 +749,6 @@
         ],
         "progression": "Encryption Widgets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -790,7 +773,6 @@
         ],
         "progression": "Encryption Widgets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -815,7 +797,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -840,7 +821,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -865,7 +845,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -890,7 +869,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -915,7 +893,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -940,7 +917,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,7 +941,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -990,7 +965,6 @@
         ],
         "progression": "Unit 10 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1015,7 +989,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

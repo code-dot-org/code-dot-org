@@ -2,25 +2,15 @@
   "zh-TW": {
     "data": {
       "vocabularies": {
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "behavior/coursef/2021": {
-          "word": "行為",
-          "definition": ""
+          "word": "行為"
         },
         "program/coursef/2021": {
           "word": "程式",
           "definition": "編碼為可以由電腦運行的演算法。"
         },
         "algorithm/coursef/2021": {
-          "word": "演算法（Algorithm）",
-          "definition": ""
+          "word": "演算法（Algorithm）"
         },
         "event/coursef/2021": {
           "word": "事件（Event）",
@@ -30,13 +20,8 @@
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "輸入",
-          "definition": ""
+          "word": "輸入"
         },
         "loop/coursef/2021": {
           "word": "迴圈",
@@ -49,10 +34,6 @@
         "for_loop/coursef/2021": {
           "word": "計數/計次迴圈（For Loop）",
           "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "機器學習",
@@ -302,10 +283,6 @@
           "word": "條件判斷（Conditionals）",
           "definition": " 僅可在某些條件下執行的陳述句。"
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "條件（Condition）",
           "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
@@ -313,10 +290,6 @@
         "while_loop/coursed/2021": {
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "演算法（Algorithm）",
@@ -343,20 +316,14 @@
           "definition": "製作程式的藝術。"
         },
         "behavior/express/2021": {
-          "word": "行為",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "行為"
         },
         "event/express/2021": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
         "code/express/2021": {
-          "word": "代碼",
-          "definition": ""
+          "word": "代碼"
         },
         "loop/express/2021": {
           "word": "迴圈",
@@ -382,10 +349,6 @@
           "word": "「當」迴圈（While Loop）",
           "definition": "符合某個條件時會繼續重複的迴圈。"
         },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "function/express/2021": {
           "word": "函式",
           "definition": "你可輕鬆不斷呼叫的程式碼。"
@@ -393,10 +356,6 @@
         "variable/express/2021": {
           "word": "變數",
           "definition": "放置可變更資訊的佔位符。"
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "計數/計次迴圈（For Loop）",
@@ -471,24 +430,14 @@
           "definition": "導致某些事情發生的操作。"
         },
         "behavior/coursee/2021": {
-          "word": "行為",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "行為"
         },
         "event/coursee/2021": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
         "copyright/coursee/2021": {
-          "word": "版權所有",
-          "definition": ""
+          "word": "版權所有"
         },
         "loop/coursee/2021": {
           "word": "迴圈",

@@ -3451,3 +3451,15 @@ az:
           lessons:
             lesson-3:
               name: Yoxla
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: yoxla
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Yekun
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Yekun

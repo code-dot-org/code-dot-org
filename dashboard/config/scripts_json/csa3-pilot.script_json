@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:49:16 UTC",
+    "serialized_at": "2021-08-04 17:05:22 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -3832,7 +3832,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3858,7 +3857,6 @@
         ],
         "progression": "Investigating Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3884,7 +3882,6 @@
         ],
         "progression": "Arrays in The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3910,7 +3907,6 @@
         ],
         "progression": "Arrays in The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3929,14 +3925,13 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L2-L4"
         ],
         "progression": "Arrays in The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3962,7 +3957,6 @@
         ],
         "progression": "Arrays in The Theater"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3988,7 +3982,6 @@
         ],
         "progression": "Arrays in The Theater"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4014,7 +4007,6 @@
         ],
         "progression": "Arrays in The Theater"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4040,7 +4032,6 @@
         ],
         "progression": "Solving Problems with Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4066,7 +4057,6 @@
         ],
         "progression": "Introducing Your Community"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4092,7 +4082,6 @@
         ],
         "progression": "Introducing Your Community"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4118,7 +4107,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4144,7 +4132,6 @@
         ],
         "progression": "The Neighborhood: for Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4170,7 +4157,6 @@
         ],
         "progression": "The Neighborhood: for Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4196,7 +4182,6 @@
         ],
         "progression": "The Neighborhood: for Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4222,7 +4207,6 @@
         ],
         "progression": "The Neighborhood: More for Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4248,7 +4232,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4274,7 +4257,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4300,7 +4282,6 @@
         ],
         "progression": "while Loop Edge Cases"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4326,7 +4307,6 @@
         ],
         "progression": "Rectangles and Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4352,7 +4332,6 @@
         ],
         "progression": "while to for to while"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4378,7 +4357,6 @@
         ],
         "progression": "while to for to while"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4404,7 +4382,6 @@
         ],
         "progression": "while Loops with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4430,7 +4407,6 @@
         ],
         "progression": "while Loops with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4456,7 +4432,6 @@
         ],
         "progression": "The People in Your Community"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4482,7 +4457,6 @@
         ],
         "progression": "The People in Your Community"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4508,7 +4482,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4534,7 +4507,6 @@
         ],
         "progression": "Animal is-a Chicken?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4560,7 +4532,6 @@
         ],
         "progression": "Array of Animals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4586,7 +4557,6 @@
         ],
         "progression": "Animals in The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4612,7 +4582,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4638,7 +4607,6 @@
         ],
         "progression": "Write an Enhanced for Loop"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4664,7 +4632,6 @@
         ],
         "progression": "Write an Enhanced for Loop"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4690,7 +4657,6 @@
         ],
         "progression": "Refactoring Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4716,7 +4682,6 @@
         ],
         "progression": "Refactoring Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4742,7 +4707,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4768,7 +4732,6 @@
         ],
         "progression": "Create a Static Variable"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4794,7 +4757,6 @@
         ],
         "progression": "Create a Static Variable"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4820,7 +4782,6 @@
         ],
         "progression": "Volume Constants"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4846,7 +4807,6 @@
         ],
         "progression": "Volume Constants"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4872,7 +4832,6 @@
         ],
         "progression": "Volume Constants"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4898,7 +4857,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4924,7 +4882,6 @@
         ],
         "progression": "Vocal Range - Maximum"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4950,7 +4907,6 @@
         ],
         "progression": "Vocal Range - Minimum"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4976,7 +4932,6 @@
         ],
         "progression": "Sum and Mean"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5002,7 +4957,6 @@
         ],
         "progression": "Identifying Properties Algorithms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5028,7 +4982,6 @@
         ],
         "progression": "Identifying Properties Algorithms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5054,7 +5007,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5080,7 +5032,6 @@
         ],
         "progression": "Swapping Elements in an Array"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5106,7 +5057,6 @@
         ],
         "progression": "Writing the replaceDuplicates() Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5132,7 +5082,6 @@
         ],
         "progression": "Writing the replaceDuplicates() Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5158,7 +5107,6 @@
         ],
         "progression": "Writing the find() Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5184,7 +5132,6 @@
         ],
         "progression": "Writing the find() Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5210,7 +5157,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5236,7 +5182,6 @@
         ],
         "progression": "Nested Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5262,7 +5207,6 @@
         ],
         "progression": "Nested Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5288,7 +5232,6 @@
         ],
         "progression": "Shift and Reverse Algorithms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5314,7 +5257,6 @@
         ],
         "progression": "Shift and Reverse Algorithms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5340,7 +5282,6 @@
         ],
         "progression": "Shift and Reverse Algorithms"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5366,7 +5307,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5392,7 +5332,6 @@
         ],
         "progression": "Concert in The Theater Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5418,7 +5357,6 @@
         ],
         "progression": "Concert in The Theater Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5444,7 +5382,6 @@
         ],
         "progression": "Concert in The Theater Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

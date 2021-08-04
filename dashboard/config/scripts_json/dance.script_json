@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "dance",
-    "serialized_at": "2021-07-06 22:26:03 UTC",
+    "serialized_at": "2021-08-03 22:47:36 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance"
@@ -64,7 +64,6 @@
           "Dance_Party_01"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -88,7 +87,6 @@
           "Dance_Party_02"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -112,7 +110,6 @@
           "Dance_Party_03"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -136,7 +133,6 @@
           "Dance_Party_04"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -160,7 +156,6 @@
           "Dance_Party_05"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -184,7 +179,6 @@
           "Dance_Party_06"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -208,7 +202,6 @@
           "Dance_Party_08"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -232,7 +225,6 @@
           "Dance_Party_09"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -256,7 +248,6 @@
           "Dance_Party_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -280,7 +271,6 @@
           "Dance_Party_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +294,6 @@
           "Dance_Party_11b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -328,7 +317,6 @@
           "Dance_Party_11_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +340,6 @@
           "Dance_Party_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

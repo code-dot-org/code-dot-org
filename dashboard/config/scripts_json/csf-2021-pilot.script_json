@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:26 UTC",
+    "serialized_at": "2021-08-03 22:48:03 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
@@ -169,7 +169,6 @@
         ],
         "progression": "Video: Introducing Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +193,6 @@
         ],
         "progression": "Exploration: Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +217,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +241,6 @@
         ],
         "progression": "Video: How to Make a Sprite"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -269,7 +265,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +289,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +313,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +337,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +361,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,7 +385,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +409,6 @@
         ],
         "progression": "Free Play: Make a Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -444,7 +433,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,7 +457,6 @@
         ],
         "progression": "Video: Sprites in Action"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,7 +481,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +505,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -544,7 +529,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +553,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +577,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -619,7 +601,6 @@
         ],
         "progression": "Free Play: Make an Interactive Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -644,7 +625,6 @@
         ],
         "progression": "Video: Variables in Envelopes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -669,7 +649,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -694,7 +673,6 @@
         ],
         "progression": "Video: Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -719,7 +697,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -744,7 +721,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -769,7 +745,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -794,7 +769,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -819,7 +793,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -844,7 +817,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -869,7 +841,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -894,7 +865,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -919,7 +889,6 @@
         ],
         "progression": "Exploration: Sample Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -944,7 +913,6 @@
         ],
         "progression": "Planning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -969,7 +937,6 @@
         ],
         "progression": "Mini-Project: User Input Programs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
