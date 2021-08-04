@@ -427,7 +427,7 @@ class UnitGroup < ApplicationRecord
     # @return [Array<Script>]
     default_unit_group_units.map do |ugu|
       select_unit_group_unit(user, ugu).script
-    end
+    end.compact
   end
 
   # Return an alternate unit group unit associated with the specified default
