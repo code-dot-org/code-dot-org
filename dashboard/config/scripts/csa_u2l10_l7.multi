@@ -5,7 +5,7 @@ markdown <<MARKDOWN
 How do the escape sequences in the following code segment format the printed output?
 
 ```
-String specialItem = "Today: October 22\nwe will be serving \”dinosaur\” cookies."; 
+String specialItem = "Today: October 22\\nwe will be serving \\”dinosaur\\” cookies."; 
 System.out.println(specialItem);
 ```
 

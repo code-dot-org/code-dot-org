@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:09 UTC",
+    "serialized_at": "2021-08-03 22:47:16 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp3-a"
@@ -62,7 +62,6 @@
           "subgoal v2 U3L04 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -86,7 +85,6 @@
           "subgoal U3L2 Using Simple Commands"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -110,7 +108,6 @@
           "subgoal U3 L4 introducing subgoal labels"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -134,7 +131,6 @@
           "subgoalU3L2_TurtleSquare_right"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

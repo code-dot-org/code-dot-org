@@ -1,0 +1,21 @@
+name 'SP-VPL_21-mod4-CSD-MakeAPlan-Assessment'
+title 'Make a plan: Assessment'
+content1 '**Role of the Teacher:** Provide students with feedback in order to promote continuous growth'
+
+
+
+
+markdown <<MARKDOWN
+## Make a plan for how you will assess student learning while teaching CS Discoveries. 
+
+#### Consider the following when making your plan:
+
+* What does my school require of me regarding assessment of student learning? 
+* What tools are available within the curriculum to support me in assessing student learning? 
+* How will I incorporate formative assessment throughout each lesson?
+* What will I use for summative assessment? 
+
+
+
+
+MARKDOWN
