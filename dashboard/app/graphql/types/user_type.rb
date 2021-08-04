@@ -5,7 +5,7 @@ module Types
     field :username, String, null: false
     field :email, String, null: true
     field :name, String, null: false
-    field :gender, String, null: false
+    field :gender, String, null: true
     field :user_type, String, null: false
     field :secret_words, String, null: true
     field :total_lines, Integer, null: false
