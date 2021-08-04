@@ -11,8 +11,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
      ```
      ruby --version  # --> ruby 2.5.0
-     node --version  # --> v8.15.0
-     yarn --version  # --> 1.16.0
+     node --version  # --> v14.17.1
+     yarn --version  # --> 1.22.10
      ```
 1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, 
 1. `gem install bundler -v 1.17.3`
@@ -138,8 +138,8 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
     1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node and yarn
-    1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
-    1. `npm install -g yarn@1.16.0`.
+    1. `nvm install 14.17.1 && nvm alias default 14.17.1` this command should make this version the default version and print something like: `Creating default alias: default -> 14.17.1 (-> v14.17.1)`
+    1. `npm install -g yarn@1.22.10`.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
 1. Install OpenSSL:
     1. `brew install openssl`
@@ -176,7 +176,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v8.15.0 && nvm alias default 8.15.0` Install nodejs v8.15.0  
+    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
@@ -192,7 +192,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. Install yarn
     1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
     1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. `sudo apt-get update && sudo apt-get install yarn=1.16.0-1`
+    1. `sudo apt-get update && sudo apt-get install yarn=1.22.10`
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
