@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "csp-create",
-    "serialized_at": "2021-07-30 20:28:02 UTC",
+    "serialized_at": "2021-08-03 22:47:45 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp-create-2019"
@@ -144,7 +144,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -169,7 +168,6 @@
         ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +192,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +216,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +240,6 @@
         ],
         "progression": "Create PT - Complete the Task"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -268,7 +263,6 @@
           "csp-post-survey-intro-2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -292,7 +286,6 @@
           "csp-post-survey-levelgroup-2019.2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -51,7 +51,7 @@
     },
     "new_name": "csd1-2017",
     "family_name": "csd1",
-    "serialized_at": "2021-07-30 20:27:33 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2017"
@@ -264,7 +264,6 @@
           "csd-pre-survey-2017-levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -289,7 +288,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +312,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +336,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -364,7 +360,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -389,7 +384,6 @@
         ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,7 +408,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -439,7 +432,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +456,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -489,7 +480,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -514,7 +504,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -539,7 +528,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

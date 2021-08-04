@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "course4",
-    "serialized_at": "2021-07-06 22:25:58 UTC",
+    "serialized_at": "2021-08-03 22:46:42 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "course4"
@@ -388,7 +388,6 @@
           "TangramAlgorithms"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -412,7 +411,6 @@
           "Course 4 Maze 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,7 +434,6 @@
           "Course 4 Maze 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -460,7 +457,6 @@
           "Course 4 Maze 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -484,7 +480,6 @@
           "Course 4 Maze 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,7 +503,6 @@
           "Course 4 Bee Loops 5 NEW"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -532,7 +526,6 @@
           "Course 4 Bee Loops 5a NEW"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -556,7 +549,6 @@
           "Course 4 Bee 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -580,7 +572,6 @@
           "Course 4 Bee 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -604,7 +595,6 @@
           "Course 4 Bee 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -628,7 +618,6 @@
           "course4_harvester_nested_loops_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -652,7 +641,6 @@
           "course4_collector_nested_loops_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -676,7 +664,6 @@
           "Course 4 Artist 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -700,7 +687,6 @@
           "Course 4 Artist 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -724,7 +710,6 @@
           "Course 4 Artist 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -748,7 +733,6 @@
           "Course 4 Artist 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -772,7 +756,6 @@
           "Course 4 Artist 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -796,7 +779,6 @@
           "Course 4 Artist 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -820,7 +802,6 @@
           "Course 4 Artist 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -844,7 +825,6 @@
           "Course 4 Artist 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -868,7 +848,6 @@
           "Course 4 Artist 8a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -892,7 +871,6 @@
           "Course 4 Artist 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -916,7 +894,6 @@
           "Course 4 Artist 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -940,7 +917,6 @@
           "Course 4 Artist 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -964,7 +940,6 @@
           "Course 4 Artist 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -988,7 +963,6 @@
           "Course 4 Artist 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1012,7 +986,6 @@
           "EnvelopeVariables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1036,7 +1009,6 @@
           "MadGlibs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1060,7 +1032,6 @@
           "Course 4 Artist Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1084,7 +1055,6 @@
           "Course 4 Artist Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1108,7 +1078,6 @@
           "NEW Course 4 Artist Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1132,7 +1101,6 @@
           "NEW Course 4 Artist Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1156,7 +1124,6 @@
           "NEW Course 4 Artist Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1180,7 +1147,6 @@
           "Course 4 Artist Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1204,7 +1170,6 @@
           "Course 4 Artist Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1228,7 +1193,6 @@
           "Course 4 Artist Vars 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1252,7 +1216,6 @@
           "NEW Course 4 Artist Vars 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1276,7 +1239,6 @@
           "Course 4 Artist Vars 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1300,7 +1262,6 @@
           "Course 4 Artist Vars 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1324,7 +1285,6 @@
           "Course 4 Artist Vars 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1348,7 +1308,6 @@
           "Course 4 Artist Vars 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1372,7 +1331,6 @@
           "Course 4 Artist Vars 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1396,7 +1354,6 @@
           "Course 4 Artist Inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1420,7 +1377,6 @@
           "Course 4 Artist 20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1444,7 +1400,6 @@
           "course4_artist_variables_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1468,7 +1423,6 @@
           "Course 4 Play Lab Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1492,7 +1446,6 @@
           "Course 4 Play Lab Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1516,7 +1469,6 @@
           "Course 4 Play Lab Vars 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1540,7 +1492,6 @@
           "Course 4 Play Lab Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1564,7 +1515,6 @@
           "Course 4 Play Lab Vars 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1588,7 +1538,6 @@
           "Course 4 Play Lab Vars 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1612,7 +1561,6 @@
           "Course 4 Play Lab Vars 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1636,7 +1584,6 @@
           "Course 4 Play Lab Vars 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1660,7 +1607,6 @@
           "course4_playlab_variables_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1684,7 +1630,6 @@
           "ForLoopFun"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1708,7 +1653,6 @@
           "NEW Course 4 Bee For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1732,7 +1676,6 @@
           "NEW Course 4 Bee For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1756,7 +1699,6 @@
           "NEW Course 4 Bee For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1780,7 +1722,6 @@
           "NEW Course 4 Bee For Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1804,7 +1745,6 @@
           "NEW Course 4 Bee For Loops 4 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1828,7 +1768,6 @@
           "NEW Course 4 Bee For Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1852,7 +1791,6 @@
           "NEW Course 4 Bee For Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1876,7 +1814,6 @@
           "NEW Course 4 Bee For Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1900,7 +1837,6 @@
           "NEW Course 4 Bee For Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1924,7 +1860,6 @@
           "NEW Course 4 Bee For Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1948,7 +1883,6 @@
           "NEW Course 4 Bee For Loops 10a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1972,7 +1906,6 @@
           "course4_bee_for_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1996,7 +1929,6 @@
           "Course 4 Artist For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2020,7 +1952,6 @@
           "Course 4 Artist For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2044,7 +1975,6 @@
           "Course 4 Artist For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2068,7 +1998,6 @@
           "Course 4 Artist For Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2092,7 +2021,6 @@
           "Course 4 Artist For Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2116,7 +2044,6 @@
           "Course 4 Artist For Loops 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2140,7 +2067,6 @@
           "Course 4 Artist For Loops 6a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2164,7 +2090,6 @@
           "Course 4 Artist For Loops 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2188,7 +2113,6 @@
           "Course 4 Artist For Loops 11a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2212,7 +2136,6 @@
           "Course 4 Artist For Loops Challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2236,7 +2159,6 @@
           "Course 4 Artist For Loops inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2260,7 +2182,6 @@
           "Course 4 Artist For Loops 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2284,7 +2205,6 @@
           "Course 4 Play Labs For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2308,7 +2228,6 @@
           "Course 4 Play Labs For Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2332,7 +2251,6 @@
           "Course 4 Play Labs For Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2356,7 +2274,6 @@
           "Course 4 Playlab For Loops 4b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2380,7 +2297,6 @@
           "Course 4 Playlab For Loops 5b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2404,7 +2320,6 @@
           "Course 4 Playlab For Loops 6b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2428,7 +2343,6 @@
           "Course 4 Playlab For Loop Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2452,7 +2366,6 @@
           "NEW Course 4 Artist Functions 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2476,7 +2389,6 @@
           "NEW Course 4 Artist Functions 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2500,7 +2412,6 @@
           "NEW Course 4 Artist Functions 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2524,7 +2435,6 @@
           "NEW Course 4 Artist Functions 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2548,7 +2458,6 @@
           "NEW Course 4 Artist Functions 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2572,7 +2481,6 @@
           "NEW Course 4 Artist Functions 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2596,7 +2504,6 @@
           "NEW Course 4 Artist Functions 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2620,7 +2527,6 @@
           "NEW Course 4 Artist Functions 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2644,7 +2550,6 @@
           "NEW Course 4 Artist Functions 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2668,7 +2573,6 @@
           "NEW Course 4 Artist Functions 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2692,7 +2596,6 @@
           "Course 4 Artist Functions challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2716,7 +2619,6 @@
           "Course 4 Artist Functions Inspiration"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2740,7 +2642,6 @@
           "NEW Course 4 Artist Functions 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2764,7 +2665,6 @@
           "course4_artist_concept_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2788,7 +2688,6 @@
           "course4_artist_functions_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2812,7 +2711,6 @@
           "SongwritingWithParameters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2836,7 +2734,6 @@
           "NEW Course 4 Artist Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2860,7 +2757,6 @@
           "NEW Course 4 Artist Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2884,7 +2780,6 @@
           "NEW Course 4 Artist Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2908,7 +2803,6 @@
           "NEW Course 4 Artist Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2932,7 +2826,6 @@
           "NEW Course 4 Artist Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2956,7 +2849,6 @@
           "NEW Course 4 Artist Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2980,7 +2872,6 @@
           "NEW Course 4 Artist Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3004,7 +2895,6 @@
           "NEW Course 4 Artist Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3028,7 +2918,6 @@
           "NEW Course 4 Artist Params 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3052,7 +2941,6 @@
           "NEW Course 4 Artist Params 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3076,7 +2964,6 @@
           "NEW Course 4 Artist Params 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3100,7 +2987,6 @@
           "NEW Course 4 Artist Params 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3124,7 +3010,6 @@
           "NEW Course 4 Artist Params 12a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3148,7 +3033,6 @@
           "NEW Course 4 Artist Params 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3172,7 +3056,6 @@
           "NEW Course 4 Artist Params 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3196,7 +3079,6 @@
           "NEW Course 4 Artist Params inspire"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3220,7 +3102,6 @@
           "NEW Course 4 Artist Params 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3244,7 +3125,6 @@
           "course4_artist_fwp_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3268,7 +3148,6 @@
           "Course 4 Play Lab Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3292,7 +3171,6 @@
           "Course 4 Play Lab Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3316,7 +3194,6 @@
           "Course 4 Play Lab Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3340,7 +3217,6 @@
           "Course 4 Play Lab Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3364,7 +3240,6 @@
           "Course 4 Play Lab Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3388,7 +3263,6 @@
           "Course 4 Play Lab Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3412,7 +3286,6 @@
           "Course 4 Play Lab Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3436,7 +3309,6 @@
           "Course 4 Play Lab Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3460,7 +3332,6 @@
           "Course 4 Play Lab Params 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3484,7 +3355,6 @@
           "Course 4 Play Lab Params 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3508,7 +3378,6 @@
           "NEW Course 4 Play Lab Params 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3532,7 +3401,6 @@
           "Course 4 Bee Params 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3556,7 +3424,6 @@
           "Course 4 Bee Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3580,7 +3447,6 @@
           "Course 4 Bee Params 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3604,7 +3470,6 @@
           "Course 4 Bee Params 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3628,7 +3493,6 @@
           "Course 4 Bee Params 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3652,7 +3516,6 @@
           "Course 4 Bee Params 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3676,7 +3539,6 @@
           "Course 4 Bee Params 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3700,7 +3562,6 @@
           "Course 4 Bee Params 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3724,7 +3585,6 @@
           "course4_bee_fwp_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3748,7 +3608,6 @@
           "course4_bee_fwp_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3772,7 +3631,6 @@
           "BinaryImages"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3796,7 +3654,6 @@
           "Course 4 Artist Binary pre1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3820,7 +3677,6 @@
           "Course 4 Artist Binary 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3844,7 +3700,6 @@
           "Course 4 Artist Binary 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3868,7 +3723,6 @@
           "Course 4 Artist Binary 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3892,7 +3746,6 @@
           "Course 4 Artist Binary 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3916,7 +3769,6 @@
           "Course 4 Artist Binary 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3940,7 +3792,6 @@
           "Course 4 Artist Binary 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3964,7 +3815,6 @@
           "Course 4 Artist Binary 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3988,7 +3838,6 @@
           "Course 4 Artist Binary Free Play 2a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4012,7 +3861,6 @@
           "Course 4 Artist Binary Free Play 2b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4036,7 +3884,6 @@
           "Course 4 Artist Binary Free Play 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4060,7 +3907,6 @@
           "course4_artist_binary_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4084,7 +3930,6 @@
           "course4_artist_binary_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4108,7 +3953,6 @@
           "Course 4 SCV 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4132,7 +3976,6 @@
           "Course 4 SCV 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4156,7 +3999,6 @@
           "Course 4 SCV 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4180,7 +4022,6 @@
           "Course 4 SCV 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4204,7 +4045,6 @@
           "Course 4 SCV 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4228,7 +4068,6 @@
           "Course 4 SCV 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4252,7 +4091,6 @@
           "Course 4 SCFL 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4276,7 +4114,6 @@
           "Course 4 SCFL 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4300,7 +4137,6 @@
           "Course 4 SCFL 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4324,7 +4160,6 @@
           "Course 4 SCFL 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4348,7 +4183,6 @@
           "Course 4 SCFL 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4372,7 +4206,6 @@
           "Course 4 SCFL 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4396,7 +4229,6 @@
           "Course 4 SCFL 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4420,7 +4252,6 @@
           "Course 4 SCFL 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4444,7 +4275,6 @@
           "Course 4 SCF 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4468,7 +4298,6 @@
           "Course 4 SCF 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4492,7 +4321,6 @@
           "Course 4 SCF 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4516,7 +4344,6 @@
           "Course 4 SCF 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4540,7 +4367,6 @@
           "Course 4 SCF 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4564,7 +4390,6 @@
           "Course 4 EC 1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4588,7 +4413,6 @@
           "Course 4 EC 1b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4612,7 +4436,6 @@
           "Course 4 EC 2a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4636,7 +4459,6 @@
           "Course 4 EC 2c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4660,7 +4482,6 @@
           "Course 4 EC 2b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 23:35:43 UTC",
+    "serialized_at": "2021-08-03 22:46:49 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "allthethings"
@@ -738,7 +738,6 @@
           "blockly:Jigsaw:3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -762,7 +761,6 @@
           "k-1 maze 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -786,7 +784,6 @@
           "K-1 Maze Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -810,7 +807,6 @@
           "2-3 Maze 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -834,7 +830,6 @@
           "4-5 Maze 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -858,7 +853,6 @@
           "4-5 Maze Conditionals 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -883,7 +877,6 @@
           "courseC_maze_programming3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -907,7 +900,6 @@
           "allthethings-anigif-instructions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -931,7 +923,6 @@
           "K-1 Artist1 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -955,7 +946,6 @@
           "2-3 Artist 1 new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -979,7 +969,6 @@
           "2-3 Artist Functions 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1003,7 +992,6 @@
           "NEW Course 4 Artist Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1027,7 +1015,6 @@
           "NEW Course 4 Artist Functions 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1051,7 +1038,6 @@
           "Auto Open Function Editor"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1061,6 @@
           "Angle Helper Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1099,7 +1084,6 @@
           "allthethings-artist-project-backed"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1123,7 +1107,6 @@
           "Artist Autorun Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1147,7 +1130,6 @@
           "K-1 Bee 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1171,7 +1153,6 @@
           "blockly:CustomMaze:wordsearch_k_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1195,7 +1176,6 @@
           "2-3 Bee Loops 2A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1219,7 +1199,6 @@
           "2-3 Bee Conditionals 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1243,7 +1222,6 @@
           "Bee Recommended Blocks test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1267,7 +1245,6 @@
           "blockly:Studio:k1_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1291,7 +1268,6 @@
           "blockly:Studio:c2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1315,7 +1291,6 @@
           "Course 4 Play Labs For Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1339,7 +1314,6 @@
           "Course 4 Play Lab Params 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1363,7 +1337,6 @@
           "allthethings-playlab-project-backed"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1387,7 +1360,6 @@
           "Allthethings Encrypted Play Lab Level"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1411,7 +1383,6 @@
           "4-5 While Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1435,7 +1406,6 @@
           "Farmer for Authored Hint testing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1459,7 +1429,6 @@
           "Farmer for TTS testing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1483,7 +1452,6 @@
           "flappy_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1507,7 +1475,6 @@
           "bounce_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1531,7 +1498,6 @@
           "K-1 Happy Maps Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1555,7 +1521,6 @@
           "Multi Horizontal Scroll Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1579,7 +1544,6 @@
           "Submittable Multi"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1603,7 +1567,6 @@
           "test questionless single multi"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1627,7 +1590,6 @@
           "Choose 2 Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1651,7 +1613,6 @@
           "K-1 Maze Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1675,7 +1636,6 @@
           "Blocks to Math 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1699,7 +1659,6 @@
           "PDK5 Strategies O"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1723,7 +1682,6 @@
           "Calc Circles of Eval .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1747,7 +1705,6 @@
           "Eval Strings Images .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1771,7 +1728,6 @@
           "Eval Contracts F"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1795,7 +1751,6 @@
           "Eval Contracts A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1819,7 +1774,6 @@
           "Calc Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1843,7 +1797,6 @@
           "Big Game Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1867,7 +1820,6 @@
           "Eval Define Funcs 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1891,7 +1843,6 @@
           "Eval Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1915,7 +1866,6 @@
           "Sam the Butterfly 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1939,7 +1889,6 @@
           "Luigi's Pizza 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1963,7 +1912,6 @@
           "Eval Define Funcs Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1987,7 +1935,6 @@
           "U1L4 NetSim SendAB"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2011,7 +1958,6 @@
           "U2L5 NetSim Classroom Internet"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2035,7 +1981,6 @@
           "U2L7 NetSim Need for Packets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2059,7 +2004,6 @@
           "U2L10 NetSim Automatic DNS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2083,7 +2027,6 @@
           "NetSim_Superuser"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2107,7 +2050,6 @@
           "Odometer"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2131,7 +2073,6 @@
           "U1L13 Text Compression"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2155,7 +2096,6 @@
           "AllTheThings: Pixelation - Lesson 14 - Make the Letter A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2179,7 +2119,6 @@
           "AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2203,7 +2142,6 @@
           "AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2227,7 +2165,6 @@
           "Pixelation - AllTheThings 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2251,7 +2188,6 @@
           "Pixelation - AllTheThings 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2275,7 +2211,6 @@
           "U3L2 Using Simple Commands"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2299,7 +2234,6 @@
           "U3L03 Define and use turnAround"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2323,7 +2257,6 @@
           "U3L07 - Starry Night Starter Code"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2347,7 +2280,6 @@
           "U3L08 - Enchantment Under the Sea"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2371,7 +2303,6 @@
           "AllTheThings Applab - Turtle move with button"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2395,7 +2326,6 @@
           "U3L16 - use images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2419,7 +2349,6 @@
           "Applab test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2443,7 +2372,6 @@
           "allthethings data blocks test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2467,7 +2395,6 @@
           "allthethings design mode elements"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2491,7 +2418,6 @@
           "allthethings_template_backed1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2515,7 +2441,6 @@
           "allthethings_template_backed2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2539,7 +2464,6 @@
           "allthethings_moviebot"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2563,7 +2487,6 @@
           "Applab allthethings onRecordEvent"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2587,7 +2510,6 @@
           "Embedded Video Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2611,7 +2533,6 @@
           "Test Applab Predictive"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2635,7 +2556,6 @@
           "allthethings level dataTables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2659,7 +2579,6 @@
           "Applab allthethings goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2683,7 +2602,6 @@
           "Applab AllTheThings ResourcesTab MapReference"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2707,7 +2625,6 @@
           "Applab AllTheThings ResourcesTab ReferenceLinks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2731,7 +2648,6 @@
           "Applab AllTheThings ResourcesTab AllResources"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2755,7 +2671,6 @@
           "AllTheThings Applab DesignModeDefault"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2779,7 +2694,6 @@
           "Applab allthethings Widget Mode"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2803,7 +2717,6 @@
           "Gamelab AllTheThings With No Animation Tab"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2827,7 +2740,6 @@
           "Gamelab AllTheThings With Prepopulated Animation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2851,7 +2763,6 @@
           "Gamelab AllTheThings Embed Level"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2875,7 +2786,6 @@
           "PDK5 Intro C"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2899,7 +2809,6 @@
           "PDK5 Foundations F"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2923,7 +2832,6 @@
           "Test External Markdown"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2947,7 +2855,6 @@
           "Test embedded Blockly in instructions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2971,7 +2878,6 @@
           "Test embedded K1 Blockly in instructions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2995,7 +2901,6 @@
           "Resizing Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3019,7 +2924,6 @@
           "K-1 Maze 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3043,7 +2947,6 @@
           "Test longassessment levelgroup split new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3067,7 +2970,6 @@
           "blockly:StudioEC:js_hoc2015_event_two_items"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3091,7 +2993,6 @@
           "blockly:Studio:hoc2015_blockly_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3115,7 +3016,6 @@
           "Overworld Chop Tree - allthethings"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3139,7 +3039,6 @@
           "MC Agent Freeplay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3163,7 +3062,6 @@
           "Craft Aquatic - allthethings"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3187,7 +3085,6 @@
           "PS U3 Assessment1 new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3211,7 +3108,6 @@
           "Sample Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3235,7 +3131,6 @@
           "Sample CSP Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3265,7 +3160,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3297,7 +3191,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3329,7 +3222,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3361,7 +3253,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3393,7 +3284,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3425,7 +3315,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3457,7 +3346,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3489,7 +3377,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3521,7 +3408,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3556,7 +3442,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3582,7 +3467,6 @@
           "Test anonymous student survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3606,7 +3490,6 @@
           "CSP pre-assessment survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3630,7 +3513,6 @@
           "AllTheThings Modulo Clock"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3654,7 +3536,6 @@
           "AllTheThings Public Key Cryptography"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3678,7 +3559,6 @@
           "Web Lab 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3702,7 +3582,6 @@
           "Test longassessment levelgroup new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3726,7 +3605,6 @@
           "AllTheThings_StandaloneVideo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3750,7 +3628,6 @@
           "allthethings_curriculum_reference"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3774,7 +3651,6 @@
           "allthethings_map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3798,7 +3674,6 @@
           "allthethings_fish_tank"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3822,7 +3697,6 @@
           "AllTheThings sprite lab with video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3846,7 +3720,6 @@
           "allthethings HOC Dance 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3870,7 +3743,6 @@
           "allthethings HOC Dance 10 Measures"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3894,7 +3766,6 @@
           "allthethings-mini-rubric"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3918,7 +3789,6 @@
           "allthethings-mini-rubric-weblab"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3942,7 +3812,6 @@
           "allthethings-mini-rubric-gamelab"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3966,7 +3835,6 @@
           "Pluralsight LevelGroup Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3990,7 +3858,6 @@
           "allthethings_external_displayed_as_unplugged"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4014,7 +3881,6 @@
           "allthethings_external_not_displayed_as_unplugged"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4038,7 +3904,6 @@
           "allthethings_bubble_choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4062,7 +3927,6 @@
           "contained_single_multi"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4086,7 +3950,6 @@
           "Test GameLab Predictive"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4110,7 +3973,6 @@
           "PS predictive Applab level test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4134,7 +3996,6 @@
           "contained_applab_choose2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4158,7 +4019,6 @@
           "contained_csf_multi2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4182,7 +4042,6 @@
           "contained_csf_free_response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4206,7 +4065,6 @@
           "Test GameLab Submittable Free Response"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4230,7 +4088,6 @@
           "Video - The Future of Big Data"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4254,7 +4111,6 @@
           "allthethings HOC ML Fish 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4278,7 +4134,6 @@
           "allthethings AI Lab 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4302,7 +4157,6 @@
           "AppLab AI Enabled"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4326,7 +4180,6 @@
           "Allthethings Java Lab 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4350,7 +4203,6 @@
           "Allthethings Java Lab 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4374,7 +4226,6 @@
           "Allthethings Java Lab 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4398,7 +4249,6 @@
           "Allthethings Java Lab 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4422,7 +4272,6 @@
           "csa widget test2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
