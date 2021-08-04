@@ -1,21 +1,22 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
+import {strip} from './utils';
 import styleConstants from '@cdo/apps/styleConstants';
-import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
-import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
-import initializeCdoConstants from '@cdo/apps/blocklyAddons/cdoConstants';
-import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
-import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
-import FunctionEditor from '@cdo/apps/blocklyAddons/functionEditor';
-import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
-import CdoMetricsManager from '@cdo/apps/blocklyAddons/cdoMetricsManager';
-import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
-import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
-import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
-import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
-import initializeVariables from '@cdo/apps/blocklyAddons/cdoVariables';
-import CdoVariableMap from '@cdo/apps/blocklyAddons/cdoVariableMap';
-import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
-import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
+import CdoBlockDragger from './addons/cdoBlockDragger';
+import CdoBlockSvg from './addons/cdoBlockSvg';
+import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import FunctionEditor from './addons/functionEditor';
+import CdoInput from './addons/cdoInput';
+import CdoMetricsManager from './addons/cdoMetricsManager';
+import CdoPathObject from './addons/cdoPathObject';
+import CdoTheme from './addons/cdoTheme';
+import initializeTouch from './addons/cdoTouch';
+import CdoTrashcan from './addons/cdoTrashcan';
+import initializeVariables from './addons/cdoVariables';
+import CdoVariableMap from './addons/cdoVariableMap';
+import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
+import initializeBlocklyXml from './addons/cdoXml';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -63,9 +64,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.clearInfiniteLoopTrap = function() {}; // TODO
   blocklyWrapper.getInfiniteLoopTrap = function() {}; // TODO
   blocklyWrapper.loopHighlight = function() {}; // TODO
-  blocklyWrapper.getWorkspaceCode = function() {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
-  };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_LEFT');
@@ -209,7 +207,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.getWorkspaceCode = function() {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+    const code = Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+    return strip(code);
   };
 
   // TODO - used for spritelab behavior blocks
@@ -259,6 +258,44 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.setAttribute('width', bbox.width + bbox.x);
       return workspace;
     }
+  };
+
+  blocklyWrapper.Generator.blocksToCode = function(
+    name,
+    blocks,
+    opt_showHidden
+  ) {
+    var code = [];
+    var generator = blocklyWrapper.getGenerator();
+    generator.init(blocklyWrapper.mainBlockSpace);
+    for (var x = 0; x < blocks.length; x++) {
+      var block = blocks[x];
+      var line = generator.blockToCode(block, opt_showHidden);
+      if (line instanceof Array) {
+        // Value blocks return tuples of code and operator order.
+        // Top-level blocks don't care about operator order.
+        line = line[0];
+      }
+      if (line) {
+        if (block.outputConnection && generator.scrubNakedValue) {
+          // This block is a naked value.  Ask the language's code generator if
+          // it wants to append a semicolon, or something.
+          line = generator.scrubNakedValue(line);
+        }
+
+        if (block.isUnused()) {
+          line = '/*\n' + line + '*/\n';
+        }
+        code.push(line);
+      }
+    }
+    code = code.join('\n'); // Blank line between each section.
+    code = generator.finish(code);
+    // Final scrubbing of whitespace.
+    code = code.replace(/^\s+\n/, '');
+    code = code.replace(/\n\s+$/, '\n');
+    code = code.replace(/[ \t]+\n/g, '\n');
+    return code;
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here

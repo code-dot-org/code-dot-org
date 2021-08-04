@@ -29,6 +29,10 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return true;
   }
 
+  isUnused() {
+    return false; // TODO
+  }
+
   setCanDisconnectFromParent(canDisconnect) {
     this.canDisconnectFromParent_ = canDisconnect;
   }

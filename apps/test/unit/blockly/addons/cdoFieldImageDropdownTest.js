@@ -1,4 +1,4 @@
-import {__TestInterface} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
+import {__TestInterface} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('CdoFieldImageDropdown', () => {

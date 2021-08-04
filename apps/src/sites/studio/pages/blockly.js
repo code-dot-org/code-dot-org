@@ -11,6 +11,6 @@
 import 'pepjs';
 
 import CDOBlockly from '@code-dot-org/blockly';
-import initializeCdoBlocklyWrapper from './cdoBlocklyWrapper';
+import initializeCdoBlocklyWrapper from '@cdo/apps/blockly/cdoBlocklyWrapper';
 
 window.Blockly = initializeCdoBlocklyWrapper(CDOBlockly);
