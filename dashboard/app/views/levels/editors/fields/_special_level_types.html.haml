@@ -42,7 +42,7 @@
         =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-and-Using-Templates', target: '_blank'
       = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
 
-  - if @level.is_a?(Blockly)
+  - if (@level.is_a?(Blockly) || @level.is_a?(Javalab))
     .field
       = f.label :contained_level_names, 'Contained Level Names'
       %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)

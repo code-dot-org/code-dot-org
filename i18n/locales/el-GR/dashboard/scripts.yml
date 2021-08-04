@@ -3170,3 +3170,15 @@ el:
               display_name: Μονάδα 4
             lessonGroup-7:
               display_name: Μονάδα 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: δοκιμή
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Επισκόπηση
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Επισκόπηση

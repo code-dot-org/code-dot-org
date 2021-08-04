@@ -1868,3 +1868,5 @@ uk:
           DIR:
             right: праворуч ↻
             left: ліворуч ↺
+      validation_validatedBackground:
+        text: встановити фон {IMG}

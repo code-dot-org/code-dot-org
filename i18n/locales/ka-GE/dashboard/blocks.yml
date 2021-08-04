@@ -1,3 +1,4 @@
+---
 ka:
   data:
     blocks:
@@ -731,8 +732,8 @@ ka:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'დიახ'
-            '"no"': 'არა'
+            '"yes"': დიახ
+            '"no"': არა
       Mikelab_whileKeyPressed:
         options:
           KEY:
