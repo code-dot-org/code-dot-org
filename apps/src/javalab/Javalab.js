@@ -14,7 +14,8 @@ import javalab, {
   setIsStartMode,
   setLevelName,
   appendNewlineToConsoleLog,
-  setIsRunning
+  setIsRunning,
+  setDisableFinishButton
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -27,6 +28,12 @@ import Theater from './Theater';
 import {CsaViewMode} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel
+} from '../containedLevels';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -209,6 +216,8 @@ Javalab.prototype.init = function(config) {
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
 
+  getStore().dispatch(setDisableFinishButton(config.readonlyWorkspace));
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -244,6 +253,12 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  this.studioApp_.attempts++;
+  if (this.studioApp_.hasContainedLevels) {
+    lockContainedLevelAnswers();
+    getStore().dispatch(setDisableFinishButton(false));
+  }
+
   this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
@@ -261,6 +276,7 @@ Javalab.prototype.onRun = function() {
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
   });
+  postContainedLevelAttempt(this.studioApp_);
 };
 
 // Called by the Javalab app when it wants to stop student code execution
@@ -279,16 +295,23 @@ Javalab.prototype.onContinue = function() {
     this.studioApp_.onContinue();
   };
 
-  this.studioApp_.report({
-    app: 'javalab',
-    level: this.level.id,
-    result: true,
-    testResult: TestResults.ALL_PASS,
-    program: '',
-    onComplete: result => {
-      onReportComplete(result);
-    }
-  });
+  const containedLevelResultsInfo = this.studioApp_.hasContainedLevels
+    ? getContainedLevelResultInfo()
+    : null;
+  if (containedLevelResultsInfo) {
+    runAfterPostContainedLevel(onReportComplete);
+  } else {
+    this.studioApp_.report({
+      app: 'javalab',
+      level: this.level.id,
+      result: true,
+      testResult: TestResults.ALL_PASS,
+      program: '',
+      onComplete: result => {
+        onReportComplete(result);
+      }
+    });
+  }
 };
 
 Javalab.prototype.getCode = function() {

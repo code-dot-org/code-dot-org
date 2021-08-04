@@ -4284,6 +4284,30 @@
       "level_keys": [
         "csa widget test2"
       ]
+    },
+    {
+      "chapter": 152,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab 6"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab 6"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6072,6 +6096,17 @@
         "level.key": "csa widget test2",
         "script_level.level_keys": [
           "csa widget test2"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab 6",
+        "script_level.level_keys": [
+          "Allthethings Java Lab 6"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",
