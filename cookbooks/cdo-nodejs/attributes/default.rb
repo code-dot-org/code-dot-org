@@ -1,2 +1,2 @@
 default['cdo-nodejs']['version'] = '14.x'
-default['cdo-nodejs']['yarn_version'] = '1.22.10'
+default['cdo-nodejs']['yarn_version'] = '1.22.5-1'
