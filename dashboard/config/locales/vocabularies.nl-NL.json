@@ -2,533 +2,104 @@
   "nl-NL": {
     "data": {
       "vocabularies": {
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "behavior/coursef/2021": {
-          "word": "Gedrag",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Gedrag"
         },
         "variable/coursef/2021": {
-          "word": "Variabele",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabele"
         },
         "input/coursef/2021": {
-          "word": "Invoer",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Invoer"
         },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": ""
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "Paketten",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Paketten"
         },
         "define/coursef/2021": {
-          "word": "Definiëren",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Definiëren"
         },
         "debugging/courseb/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "drop/courseb/2021": {
-          "word": "Naar de grond",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Naar de grond"
         },
         "programming/courseb/2021": {
-          "word": "Programmeren",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programmeren"
         },
         "debugging/coursea/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "drop/coursea/2021": {
-          "word": "Naar de grond",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Naar de grond"
         },
         "programming/coursea/2021": {
-          "word": "Programmeren",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programmeren"
         },
         "debugging/coursec/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "programming/coursec/2021": {
-          "word": "Programmeren",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programmeren"
         },
         "binary/coursec/2021": {
-          "word": "Binaire",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Binaire"
         },
         "debugging/coursed/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "programming/coursed/2021": {
-          "word": "Programmeren",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programmeren"
         },
         "conditionals/coursed/2021": {
-          "word": "Voorwaardelijke instructies",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Voorwaardelijke instructies"
         },
         "debugging/express/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "programming/express/2021": {
-          "word": "Programmeren",
-          "definition": ""
+          "word": "Programmeren"
         },
         "behavior/express/2021": {
-          "word": "Gedrag",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Gedrag"
         },
         "conditionals/express/2021": {
-          "word": "Voorwaardelijke instructies",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Voorwaardelijke instructies"
         },
         "function/express/2021": {
-          "word": "Functie",
-          "definition": ""
+          "word": "Functie"
         },
         "variable/express/2021": {
-          "word": "Variabele",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Variabele"
         },
         "define/express/2021": {
-          "word": "Definiëren",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Definiëren"
         },
         "drop/pre-express/2021": {
-          "word": "Naar de grond",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Naar de grond"
         },
         "debugging/pre-express/2021": {
-          "word": "Foutopsporing",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Foutopsporing"
         },
         "programming/pre-express/2021": {
-          "word": "Programmeren",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Programmeren"
         },
         "behavior/coursee/2021": {
-          "word": "Gedrag",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Gedrag"
         },
         "copyright/coursee/2021": {
-          "word": "Copyright",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Copyright"
         },
         "function/coursee/2021": {
-          "word": "Functie",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Functie"
         },
         "conditionals/coursee/2021": {
-          "word": "Voorwaardelijke instructies",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Voorwaardelijke instructies"
         },
         "define/coursee/2021": {
-          "word": "Definiëren",
-          "definition": ""
-        },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Definiëren"
         }
       }
     }

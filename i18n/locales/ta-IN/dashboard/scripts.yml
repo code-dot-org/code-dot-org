@@ -1901,3 +1901,15 @@ ta:
               name: பொருள் தரவை மாற்றியமைத்தல்
             lesson-10:
               name: பொருள் தகவலைக் காண்பித்தல்
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: சோதனை
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: கண்ணோட்டம்
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: கண்ணோட்டம்

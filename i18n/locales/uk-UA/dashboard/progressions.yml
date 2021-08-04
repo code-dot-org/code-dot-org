@@ -4,25 +4,41 @@ uk:
       Accelerometer Events: Події акселерометра
       Adding Images: Додавання зображень
       Adding Screens: Додавання екранів
+      Alien Defender: Чужорідний захисник
+      Analog Sensors: Аналогові датчики
       Animate Your Scene: Анімація вашої сцени
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       'Artist: Variables': 'Художник: змінні'
       Attribution: Присвоєння
+      Back and Forth: Назад і вперед
       Basic Conditionals: Основні умовні умови
+      Bass, Mid, and Treble: Баси, середні та високі частоти
       Binary Numbers: Двійкові Числа
       Board Input and Output: Вхід і вивід дошки
       Boolean Comparison: Логічне порівняння
+      Booleans and Comparison Operators: Булеві та оператори порівняння
       Build a Screen: Створення екрана
       Building an App: Створення програми
+      Buttons and Switch: Кнопки та перемикач
       CS Discoveries Post-Course Survey: Опитування після курсу Відкриття інформатики
       CS Discoveries Post-course Survey: CS відкриття після курсу опитування
+      CSS Classes: Класи CSS
+      CSS Text Properties: Властивості тексту CSS
+      CSS and Style Sheets: CSS та таблиці стилів
       Cake Defender: Торт захисник
       Challenge: Виклик
       Challenge Levels: Завдання рівнів
+      'Challenge: Add More Inputs': 'Виклик: Додати більше входів'
+      'Challenge: Checking for Multiple Conditions': 'Виклик: Перевірка кількох умов'
+      'Challenge: Draw an Image': 'Виклик: намалюйте зображення'
+      'Challenge: Extend Your Scene': 'Виклик: розширюйте свою сцену'
+      'Challenge: Making Sense of Sensors': 'Виклик: створення сенсорів'
       Challenges: Проблемні питання
       Change: Змінити
+      Changing Screens: Зміна екранів
       Checking for a Winner: Перевірка переможця
+      Circuits and Logic: Схеми та логіка
       Code Your Own Flappy Game: Код вашої власної гри flappy
       Collector Game: Колектор ігри
       Collisions: Зіткнення
@@ -30,16 +46,24 @@ uk:
       Color LEDs: Кольорові LEDи
       Combining Projects: Об'єднання проектів
       'Conditionals: If Statements': 'Умовні умови: Якщо заяви'
+      Course E Artist Project: Курс E Виконавець проекту
+      Course F Artist Project: Курс F Виконавчий проект
       Create Your Own Animation: Створіть власну анімацію
       Create a Story: Створити історію
       Create your project: Створити ваш проект
+      Creating Sprites: Створення Sprites
       Creating a Simulation: Створення симуляції
+      Dance Crews: Танцювальні команди
       Data Visualization: Візуалізація даних
       De-bugging with the Step Button: Де-багінг за допомогою кнопки кроку
       Debugging: Налагодження
+      Debugging with Watchers: Налагодження з спостерігачами
       Debugging with the Step Button: Налагодження за допомогою кнопки кроку
       Demo Apps: Демо додаток
       Design Mode: Режим проектування
+      Drawing Shapes: Малювання фігур
+      Editing Images: Редагування зображень
+      End of Course Projects: Кінець курсових проектів
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
@@ -47,6 +71,7 @@ uk:
       Expanding Personal Website: Розширення особистого веб-сайту
       Expanding Your Website: Розширення вашого веб-сайту
       Experiment with Web Lab: Експеримент з Web Lab
+      Explore HTML: Досліджуйте HTML
       Exploring more CSS: Вивчення більш CSS
       Finish a Screen: Завершення екрана
       Finish the Prototype: Закінчити прототип
@@ -54,27 +79,43 @@ uk:
       For Loops: Цикли For
       For Loops and Color LEDs: Для циклів і кольорових LEDів
       For Loops and Repeat Blocks: Для циклів і повторюваних блоків
+      Formatting HTML: Форматування HTML
       Free Play: Вільна гра
       Functions: Функції
       Functions with Parameters: Функції з параметрами
+      Get In Formation: Шикуймося
+      HTML Tags: HTML Теги
+      Hardware and Software: Обладнання та програмне забезпечення
+      Headings in HTML: Заголовки в HTML
       How to Create a Simple Function: Як створити просту функцію
       How to Make a Sprite: Як зробити спрайт
+      Hyperlinks: Гіперпосилання
       Ice Age Loops: Ice Age Петлі
       Images and Sounds: Зображення та звуки
+      Importing Screens: Імпортування екранів
+      Improve Your Game: Поліпшити вашу гру
       Input Examples: Приклади вводу
       Input with If-Else: Введення за допомогою if-Else
+      Inspiration!: Натхнення!
+      Interactive Card: Інтерактивна картка
+      Intro to Design Mode: Введення в Режим дизайну
       Intro to For Loops: Вступ до циклів
       Intro to Sprites: Вступ до спрайтів
       Intro to Variables: Вступ до змінних
       Introducing Sprite Lab: Представляємо Лабораторію спрайтів
       Introduction to Arrays: Вступ до масивів
+      Introduction to Game Lab: Введення в Ігрову Лаб
       Iteration and Parameters: Ітерація та параметри
       LED Apps: LED додатки
+      Layout Properties: Властивості макета
       Layout with CSS: Макет з CSS
+      Lesson Overview: Огляд уроку
       Light Show: Світлове шоу
       Lists: Списки
+      Lists in HTML: Списки в HTML
       Loops with the Artist: Петлі з художником
       Make it Interactive: Зробити це Інтерактивним
+      Make it Your Own: Зробіть це своїм власним
       Making Scenes: Створення сцен
       Making Songs: Створення пісень
       Making Sounds: Створення звуків
@@ -94,6 +135,9 @@ uk:
       'Mini-project: Jorge the Dog': 'Міні-проект: Хорхе Собака'
       'Mini-project: Sticker Design': 'Міні-проект: Дизайн наклейки'
       Modify simulation variables: Змінити змінні моделювання
+      Modifying Arrays: Змінення та створення масивів
+      Modifying and Creating Arrays: Змінення та створення масивів
+      More Buttons: Більше кнопок
       More Input: Більше вхідних даних
       More Monsters: Більше монстрів
       More Parameters: Інші параметри
@@ -104,6 +148,7 @@ uk:
       My Online Neighborhood: Моє Інтернет-сусідство
       New Shapes: Нові фігури
       Orientation: Орієнтація
+      Overview: Огляд
       Pair Programming: Парне програмування
       Planning: Планування
       Playing with Notes: Відтворення з нотатками
@@ -116,13 +161,16 @@ uk:
       Project - Sprites and Interactions: Проект - Спрайти та взаємодії
       Project Work: Робота над проектом
       Properties: Властивості
+      Quarter Notes: Четвертні ноти
       RGB Exploration: Дослідження RGB
       Reading Sensors: Датчики читання
       Recovery: Одужання
       Repeat Blocks: Повторювати блоки
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
+      Revise Sprite Lab Project: Переглянути проект Sprite Lab
       Run a simulation: Запустити симуляцію
+      Sample Game: Приклад гри
       Sample Programs: Зразки програм
       Screen Design: Дизайн екрана
       Sensor Events: Сенсорні події
@@ -132,17 +180,25 @@ uk:
       Side Scroller: Прокрутка збоку
       Simple Circuits: Прості схеми
       Sliders: Слайдери
+      Speed it Up, Slow it Down: Пришвидшення та сповільнення
       Star Chaser: Зірка Chaser
       Stopping the Outbreak with Masks: Припинення спалаху за допомогою масок
+      Text Compression: Стиснення тексту
+      The Animation Tab: Анімація
       The Collector: Колекціонер
+      The Counter Pattern: Лічильник шаблону
       The Harvester: Лісоруб
+      Tour of Design Mode: Тур по дизайну режиму
       User Interface: Інтерфейс користувача
       Using HTML Tags: Використання тегів HTML
       Using the Repeat Block: Використання блоку повторів
       Vaccines: Вакцини
+      Variables: Змінні
       Velocity: Швидкість
+      'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
       Warm Up: Розминка
       Website Project: Проект сайту
       Welcome to Monster Town: Ласкаво просимо до Монстро-міста
+      Where'd They Go?: Куди вони поділися?
       Wrap-up: Підведення підсумків
       Your Personal Website: Ваш Власний Вебсайт

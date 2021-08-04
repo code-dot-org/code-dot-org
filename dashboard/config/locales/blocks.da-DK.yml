@@ -1697,3 +1697,5 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      validation_validatedBackground:
+        text: sæt baggrund til {IMG}
