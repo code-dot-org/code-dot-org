@@ -1,5 +1,5 @@
 - unit_group = local_assigns[:unit_group]
-- course_editor_data = {course_summary: unit_group.summarize,
+- course_editor_data = {course_summary: unit_group.summarize(for_edit: true),
                         script_names: Script.all.map(&:name),
                         course_families: UnitGroup.family_names,
                         version_year_options: UnitGroup.get_version_year_options}

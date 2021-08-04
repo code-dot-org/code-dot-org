@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-30 15:38:44 UTC",
+    "serialized_at": "2021-08-03 22:48:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "pl-playground"
@@ -166,7 +166,6 @@
         ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +190,6 @@
         ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -216,7 +214,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +238,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +262,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +286,6 @@
         ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +310,6 @@
         ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -341,7 +334,6 @@
         ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,7 +358,6 @@
         ],
         "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -391,7 +382,6 @@
         ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +406,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -441,7 +430,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -466,7 +454,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -491,7 +478,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -516,7 +502,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,7 +526,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,7 +550,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -591,7 +574,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -616,7 +598,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +622,6 @@
         ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -666,7 +646,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -691,7 +670,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -716,7 +694,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -741,7 +718,6 @@
         ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -766,7 +742,6 @@
         ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -791,7 +766,6 @@
         ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -816,7 +790,6 @@
         ],
         "progression": "Module 2 Asynchronous Wrap Up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +814,6 @@
         ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -866,7 +838,6 @@
         ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -891,7 +862,6 @@
         ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -916,7 +886,6 @@
         ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -941,7 +910,6 @@
         ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -966,7 +934,6 @@
         ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -991,7 +958,6 @@
         ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1016,7 +982,6 @@
         ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1041,7 +1006,6 @@
         ],
         "progression": "Module 3 Asynchronous Wrap-Up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1066,7 +1030,6 @@
         ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1091,7 +1054,6 @@
         ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1116,7 +1078,6 @@
         ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1141,7 +1102,6 @@
         ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1166,7 +1126,6 @@
         ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1191,7 +1150,6 @@
         ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1216,7 +1174,6 @@
         ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1241,7 +1198,6 @@
         ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1266,7 +1222,6 @@
         ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1291,7 +1246,6 @@
         ],
         "progression": "Module 4 Asynchronous Wrap-Up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1316,7 +1270,6 @@
         ],
         "progression": "Module 5 overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1341,7 +1294,6 @@
         ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1366,7 +1318,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1391,7 +1342,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1416,7 +1366,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1441,7 +1390,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1466,7 +1414,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1491,7 +1438,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1516,7 +1462,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1541,7 +1486,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1566,7 +1510,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1591,7 +1534,6 @@
         ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1616,7 +1558,6 @@
         ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1641,7 +1582,6 @@
         ],
         "progression": "Module 5 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1666,7 +1606,6 @@
         ],
         "progression": "Module 6 overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1691,7 +1630,6 @@
         ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1716,7 +1654,6 @@
         ],
         "progression": "Digging into the Create PT Survival Guide (~40 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1741,7 +1678,6 @@
         ],
         "progression": "Role of the teacher during the Create PT (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1766,7 +1702,6 @@
         ],
         "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1791,7 +1726,6 @@
         ],
         "progression": "Module 7 overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1816,7 +1750,6 @@
         ],
         "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1841,7 +1774,6 @@
         ],
         "progression": "Using the Google Trends tool (~20 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1866,7 +1798,6 @@
         ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1891,7 +1822,6 @@
         ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1916,7 +1846,6 @@
         ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1941,7 +1870,6 @@
         ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1966,7 +1894,6 @@
         ],
         "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1991,7 +1918,6 @@
         ],
         "progression": "Module 8 overview (~5 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2016,7 +1942,6 @@
         ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2041,7 +1966,6 @@
         ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2066,7 +1990,6 @@
         ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2091,7 +2014,6 @@
         ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2116,7 +2038,6 @@
         ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2141,7 +2062,6 @@
         ],
         "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:21 UTC",
+    "serialized_at": "2021-08-03 22:47:20 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "applab-intro-staging"
@@ -167,7 +167,6 @@
         ],
         "progression": "Welcome to App Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -192,7 +191,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +215,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,7 +239,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +263,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -292,7 +287,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -317,7 +311,6 @@
         ],
         "progression": "Build Your Adventure!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,7 +335,6 @@
         ],
         "progression": "Build Your Adventure!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -367,7 +359,6 @@
         ],
         "progression": "Go Further!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +383,6 @@
         ],
         "progression": "Skill Building - Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +407,6 @@
         ],
         "progression": "Welcome to App Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +431,6 @@
         ],
         "progression": "Welcome to App Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -467,7 +455,6 @@
         ],
         "progression": "Welcome to App Lab!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -492,7 +479,6 @@
         ],
         "progression": "Design your Start Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -517,7 +503,6 @@
         ],
         "progression": "Design your Start Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -542,7 +527,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -567,7 +551,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -592,7 +575,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +599,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -642,7 +623,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -667,7 +647,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -692,7 +671,6 @@
         ],
         "progression": "Screens and Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -717,7 +695,6 @@
         ],
         "progression": "Go Further - Images and Sound"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -742,7 +719,6 @@
         ],
         "progression": "Go Further - Images and Sound"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,7 +743,6 @@
         ],
         "progression": "Finish and Share"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -792,7 +767,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -817,7 +791,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -842,7 +815,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -867,7 +839,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -892,7 +863,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -917,7 +887,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -942,7 +911,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -967,7 +935,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -992,7 +959,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1017,7 +983,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1042,7 +1007,6 @@
         ],
         "progression": "Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1067,7 +1031,6 @@
         ],
         "progression": "Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1092,7 +1055,6 @@
         ],
         "progression": "Create and Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1117,7 +1079,6 @@
         ],
         "progression": "Welcome"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1142,7 +1103,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1167,7 +1127,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1192,7 +1151,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1217,7 +1175,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1242,7 +1199,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1267,7 +1223,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1292,7 +1247,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1317,7 +1271,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1342,7 +1295,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1367,7 +1319,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1392,7 +1343,6 @@
         ],
         "progression": "Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1417,7 +1367,6 @@
         ],
         "progression": "Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1442,7 +1391,6 @@
         ],
         "progression": "Create and Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1467,7 +1415,6 @@
         ],
         "progression": "Create and Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1492,7 +1439,6 @@
         ],
         "progression": "Sneak Peak of What Comes Next"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1517,7 +1463,6 @@
         ],
         "progression": "Sneak Peak of What Comes Next"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1542,7 +1487,6 @@
         ],
         "progression": "Welcome"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1567,7 +1511,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1592,7 +1535,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1617,7 +1559,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1642,7 +1583,6 @@
         ],
         "progression": "Colors and Size"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1667,7 +1607,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1692,7 +1631,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1717,7 +1655,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1742,7 +1679,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1767,7 +1703,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1792,7 +1727,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1817,7 +1751,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1842,7 +1775,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1867,7 +1799,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1892,7 +1823,6 @@
         ],
         "progression": "Share and Keep Going"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1917,7 +1847,6 @@
         ],
         "progression": "Share and Keep Going"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1942,7 +1871,6 @@
         ],
         "progression": "Share and Keep Going"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1967,7 +1895,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1992,7 +1919,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2017,7 +1943,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2042,7 +1967,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2067,7 +1991,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2092,7 +2015,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2117,7 +2039,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2142,7 +2063,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2167,7 +2087,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2192,7 +2111,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2217,7 +2135,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2242,7 +2159,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2267,7 +2183,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2292,7 +2207,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2317,7 +2231,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2342,7 +2255,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2367,7 +2279,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2392,7 +2303,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2417,7 +2327,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2442,7 +2351,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2467,7 +2375,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2492,7 +2399,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,7 +2423,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2542,7 +2447,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2567,7 +2471,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2592,7 +2495,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2617,7 +2519,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2642,7 +2543,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2667,7 +2567,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2692,7 +2591,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2717,7 +2615,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2742,7 +2639,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2767,7 +2663,6 @@
         ],
         "progression": "Create Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2792,7 +2687,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2817,7 +2711,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2842,7 +2735,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2867,7 +2759,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2892,7 +2783,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2917,7 +2807,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2942,7 +2831,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2967,7 +2855,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2992,7 +2879,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3017,7 +2903,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3042,7 +2927,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3067,7 +2951,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3092,7 +2975,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3117,7 +2999,6 @@
         ],
         "progression": "Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3142,7 +3023,6 @@
         ],
         "progression": "Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

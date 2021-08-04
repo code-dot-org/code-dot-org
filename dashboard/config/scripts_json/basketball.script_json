@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "basketball",
-    "serialized_at": "2021-07-06 22:25:47 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "basketball"
@@ -63,7 +63,6 @@
           "bounce_1_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -87,7 +86,6 @@
           "bounce_2_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -111,7 +109,6 @@
           "bounce_5_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -135,7 +132,6 @@
           "bounce_6_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -159,7 +155,6 @@
           "bounce_7_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +178,6 @@
           "bounce_10_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,7 +201,6 @@
           "bounce_11_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,7 +224,6 @@
           "bounce_12_basketball"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

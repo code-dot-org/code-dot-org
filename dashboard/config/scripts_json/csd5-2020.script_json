@@ -28,12 +28,13 @@
           "https://curriculum.code.org/csd-20/unit5/standards/"
         ]
       ],
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:34 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:50 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2020"
     }
@@ -348,9 +349,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L01 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,9 +373,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L02 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,9 +397,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L03 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,9 +421,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L04 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -447,7 +448,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -472,7 +472,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +496,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +520,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +544,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,9 +565,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L05 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -596,7 +592,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -621,7 +616,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -646,7 +640,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -671,7 +664,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -696,7 +688,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -721,7 +712,6 @@
         ],
         "progression": "Binary Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -743,9 +733,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 binary video_2020"
-        ]
+        ],
+        "progression": "Binary and Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,9 +757,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L06 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -794,7 +784,6 @@
         ],
         "progression": "Keeping Data Secret"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -819,7 +808,6 @@
         ],
         "progression": "Keeping Data Secret"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,9 +829,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L07 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -868,7 +856,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -893,7 +880,6 @@
         ],
         "progression": "Combining Representations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -915,9 +901,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L08 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -942,7 +928,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -964,9 +949,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L09 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -988,9 +973,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L10 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1015,7 +1000,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1040,7 +1024,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1065,7 +1048,6 @@
         ],
         "progression": "Problem Solving"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1087,9 +1069,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L11 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1114,7 +1096,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1139,7 +1120,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1164,7 +1144,6 @@
         ],
         "progression": "Data Visualization"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1186,9 +1165,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L12 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1210,9 +1189,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L13 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1234,9 +1213,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 crosstab warmup_2018_2019_2020"
-        ]
+        ],
+        "progression": "Cake Survey"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1258,9 +1237,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L14 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1282,9 +1261,9 @@
       "properties": {
         "level_keys": [
           "CSD U5L15 autoSFLP_2020"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1306,9 +1285,9 @@
       "properties": {
         "level_keys": [
           "csd u5 recommender sample_2020"
-        ]
+        ],
+        "progression": "Sample App"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1333,7 +1312,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1357,7 +1335,6 @@
           "CSD U5 test_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1381,7 +1358,6 @@
           "csd-post-survey-intro-2019_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1405,7 +1381,6 @@
           "csd-post-survey-levelgroup_2019_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

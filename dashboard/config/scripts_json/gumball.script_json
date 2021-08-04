@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": "gumball",
-    "serialized_at": "2021-07-06 22:26:04 UTC",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "gumball"
@@ -62,7 +62,6 @@
           "blockly:Studio:gumball_hello1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -86,7 +85,6 @@
           "blockly:Studio:gumball_hello2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -110,7 +108,6 @@
           "blockly:Studio:gumball_move_to_flag"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -134,7 +131,6 @@
           "blockly:Studio:gumball_move_to_actor"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -158,7 +154,6 @@
           "blockly:Studio:gumball_repeat"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -182,7 +177,6 @@
           "blockly:Studio:gumball_click_hello"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -206,7 +200,6 @@
           "blockly:Studio:gumball_move_events"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -230,7 +223,6 @@
           "blockly:Studio:gumball_sound_and_points"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +246,6 @@
           "blockly:Studio:gumball_warn_food_fight"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,7 +269,6 @@
           "blockly:Studio:gumball_join_food_fight"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -302,7 +292,6 @@
           "blockly:Studio:gumball_free_play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
