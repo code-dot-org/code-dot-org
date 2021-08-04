@@ -66,6 +66,11 @@ class JavalabView extends React.Component {
     window.addEventListener('resize', () =>
       this.updateLayoutThrottled(this.props.leftWidth)
     );
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () =>
+        this.updateLayoutThrottled(this.props.leftWidth)
+      );
+    }
   }
 
   compile = () => {
