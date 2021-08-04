@@ -1,8 +1,9 @@
+---
 el:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "[GROUP][0] εναλλαγή κάθε [N][1] μέτρα \nμεταξύ [MOVE1][2] και [MOVE2][3]"
+        text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
           GROUP:
             sprites: όλα
@@ -43,20 +44,20 @@ el:
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
       Dancelab_atTimestamp:
-        text: μετά από [TIMESTAMP][0] [UNIT][1]
+        text: μετά από {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
       Dancelab_changeColorBy:
-        text: άλλαξε του [COLOR][0] την [METHOD][1] κατά [AMOUNT][2]
+        text: άλλαξε του {COLOR} την {METHOD} κατά {AMOUNT}
         options:
           METHOD:
             '"hue"': απόχρωση
             '"saturation"': ένταση
             '"brightness"': φωτεινότητα
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] κάντε [MOVE][1] [DIR][2] για πάντα"
+        text: "{GROUP} κάντε {MOVE} {DIR} για πάντα"
         options:
           GROUP:
             sprites: όλα
@@ -88,7 +89,7 @@ el:
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] κάνε [MOVE][1] [DIR][2] για πάντα"
+        text: "{SPRITE} κάνε {MOVE} {DIR} για πάντα"
         options:
           MOVE:
             '"next"': "(Επόμενο)"
@@ -106,7 +107,7 @@ el:
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
       Dancelab_changePropBy:
-        text: αλλαγή [SPRITE][0] [PROPERTY][1] με [VAL][2]
+        text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -116,7 +117,7 @@ el:
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
       Dancelab_changePropEachBy:
-        text: αλλαγή [GROUP][0] [PROPERTY][1] από [VAL][2]
+        text: αλλαγή {GROUP} {PROPERTY} από {VAL}
         options:
           GROUP:
             sprites: όλα
@@ -140,7 +141,7 @@ el:
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] κάντε [MOVE][1] [DIR][2] μία φορά"
+        text: "{GROUP} κάντε {MOVE} {DIR} μία φορά"
         options:
           GROUP:
             sprites: όλα
@@ -182,7 +183,7 @@ el:
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] κάνε [MOVE][1] [DIR][2] μία φορά"
+        text: "{SPRITE} κάνε {MOVE} {DIR} μία φορά"
         options:
           MOVE:
             '"rand"': "(Τυχαίο)"
@@ -212,32 +213,32 @@ el:
       Dancelab_everyMeasuresRange:
         text: 'επαναλάβετε κάθε [Ν] [0] μέτρα μετά [START] [1] '
       Dancelab_everySeconds:
-        text: 'κάθε [N][0] [UNIT][1] '
+        text: 'κάθε {N} {UNIT} '
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
       Dancelab_everySecondsRange:
-        text: 'κάθε [N][0] [UNIT][1] από [START][2] να [STOP][3] '
+        text: 'κάθε {N} {UNIT} από {START} να {STOP} '
         options:
           UNIT:
             measures: Μέτρα
             seconds: Δευτερόλεπτα
       Dancelab_everyVerseChorus:
-        text: 'κάθε [UNIT][0] '
+        text: 'κάθε {UNIT} '
         options:
           UNIT:
             '"verse"': στροφή
             '"chorus"': ρεφρέν
       Dancelab_getEnergy:
-        text: πάρε [RANGE][0]
+        text: πάρε {RANGE}
         options:
           RANGE:
             '"low"': μπάσα
             '"mid"': μεσαία
             '"high"': πρίμα
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -248,15 +249,15 @@ el:
             '"y"': κάθετη θέση
             '"tint"': απόχρωση
       Dancelab_getTime:
-        text: τρέχον χρόνος σε [UNIT][0]
+        text: τρέχον χρόνος σε {UNIT}
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
       Dancelab_ifDanceIs:
         text: |-
-          αν [SPRITE][0] κάνει [DANCE][1]
-          [DO1][2] [DO2][3]
+          αν {SPRITE} κάνει {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Παλαμάκια Ψηλά
@@ -272,14 +273,14 @@ el:
             MOVES.Rest: Κανένα
       Dancelab_ifTime:
         text: |-
-          αν [UNIT][0] είναι [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          αν {UNIT} είναι {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': μέτρα
             '"seconds"': δευτερόλεπτα
       Dancelab_jumpTo:
-        text: "[SPRITE][0] πήγαινε στο [LOCATION][1]"
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -293,7 +294,7 @@ el:
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
       Dancelab_jumpToEach:
-        text: άλμα [GROUP][0] προς το [LOCATION][1]
+        text: άλμα {GROUP} προς το {LOCATION}
         options:
           GROUP:
             sprites: όλα
@@ -321,7 +322,7 @@ el:
             "{x: 300, y: 300}": κάτω δεξιά
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": τυχαίο
       Dancelab_layoutSprites:
-        text: διάταξη [GROUP][0] ως [FORMAT][1]
+        text: διάταξη {GROUP} ως {FORMAT}
         options:
           GROUP:
             sprites: όλα
@@ -353,7 +354,7 @@ el:
             '"plus"': συν
             '"random"': τυχαίο
       Dancelab_makeAnonymousDanceSprite:
-        text: φτιάξει ένα καινούριο [COSTUME][0] σε [LOCATION][1]
+        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -381,8 +382,8 @@ el:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
       Dancelab_makeNewDanceSprite:
         text: |-
-          φτιάξε ένα νέο [COSTUME][0]
-          που ονομάζεται [NAME][1] στο [LOCATION][2]
+          φτιάξε ένα νέο {COSTUME}
+          που ονομάζεται {NAME} στο {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': εξωγήινος
@@ -410,8 +411,8 @@ el:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": τυχαίο
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          φτιάξε [N][0] νέα [COSTUME][1]
-          σε διάταξη [LAYOUT][2]
+          φτιάξε {N} νέα {COSTUME}
+          σε διάταξη {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -462,9 +463,9 @@ el:
             '"plus"': συν
             '"random"': τυχαίο
       Dancelab_mixColors:
-        text: ανακάτεψε [COLOR1][0] και [COLOR2][1]
+        text: ανακάτεψε {COLOR1} και {COLOR2}
       Dancelab_nMeasures:
-        text: "[N][0] μέτρα"
+        text: "{N} μέτρα"
       Dancelab_onPointerDown:
         text: με τον δείκτη του ποντικιού προς τα κάτω
       Dancelab_onPointerDrag:
@@ -474,14 +475,12 @@ el:
       Dancelab_randomColor:
         text: τυχαίο χρώμα
       Dancelab_setBackground:
-        text: όρισε χρώμα παρασκηνίου σε [COLOR][0]
+        text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Dancelab_setBackgroundEffect:
-        text: |-
-          όρισε παρασκήνιο σε [EFFECT][0] [PALETTE][1]
+        text: όρισε παρασκήνιο σε {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Κανένα
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Τυχαίο)"
             '"circles"': Σήραγγα
             '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
@@ -510,8 +509,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setBackgroundEffectWithPalette:
-        text: |-
-          ορισμός εφέ φόντου [EFFECT][0] [PALETTE][1]
+        text: ορισμός εφέ φόντου {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -551,7 +549,7 @@ el:
             '"vintage"': Βίντατζ
             '"warm"': Κόκκινα
       Dancelab_setDanceSpeed:
-        text: άλλαξε του [SPRITE][0] την ταχύτητα χορού σε [SPEED][1]
+        text: άλλαξε του {SPRITE} την ταχύτητα χορού σε {SPEED}
         options:
           SPEED:
             '1': κανονικό
@@ -560,7 +558,7 @@ el:
             '0.5': αργή
             '0.25': πολύ αργή
       Dancelab_setDanceSpeedEach:
-        text: όρισε για [GROUP][0] την ταχύτητα χορού σε [SPEED][1]
+        text: όρισε για {GROUP} την ταχύτητα χορού σε {SPEED}
         options:
           GROUP:
             sprites: όλα
@@ -583,11 +581,10 @@ el:
             '0.5': αργή
             '0.25': πολύ αργή
       Dancelab_setForegroundEffect:
-        text: όρισε προσκήνιο σε [EFFECT][0]
+        text: όρισε προσκήνιο σε {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Τυχαίο)"
             '"bubbles"': Μπουρμπουλήθρες
             '"confetti"': Κομφετί
             '"hearts_red"': Καρδιές
@@ -602,7 +599,7 @@ el:
             '"color_lights"': Φώτα σκηνής
             '"raining_tacos"': Τάκο
       Dancelab_setForegroundEffectExtended:
-        text: όρισε προσκήνιο σε [EFFECT][0]
+        text: όρισε προσκήνιο σε {EFFECT}
         options:
           EFFECT:
             '"none"': Κανένα
@@ -625,7 +622,7 @@ el:
             '"exploding_stars"': Οδοντωτός σύνδεσμος
             '"raining_tacos"': Τάκο
       Dancelab_setProp:
-        text: 'όρισε του [SPRITE][0] το [PROPERTY][1] σε [VAL][2] '
+        text: 'όρισε του {SPRITE} το {PROPERTY} σε {VAL} '
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -635,7 +632,7 @@ el:
             '"x"': οριζόντια θέση
             '"y"': κάθετη θέση
       Dancelab_setPropEach:
-        text: όρισε για [GROUP][0] το [PROPERTY][1] σε [VAL][2]
+        text: όρισε για {GROUP} το {PROPERTY} σε {VAL}
         options:
           GROUP:
             sprites: όλα
@@ -660,7 +657,7 @@ el:
             '"y"': κάθετη θέση
             '"tint"': απόχρωση
       Dancelab_setPropRandom:
-        text: κάνε τυχαίο του [SPRITE][0] το [PROPERTY][1]
+        text: κάνε τυχαίο του {SPRITE} το {PROPERTY}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -671,7 +668,7 @@ el:
             '"y"': κάθετη θέση
             '"tint"': απόχρωση
       Dancelab_setPropRandomEach:
-        text: τυχαία επιλογή [GROUP][0] [PROPERTY][1]
+        text: τυχαία επιλογή {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: όλα
@@ -696,9 +693,9 @@ el:
             '"y"': κάθετη θέση
             '"tint"': απόχρωση
       Dancelab_setTint:
-        text: όρισε του [SPRITE][0] την απόχρωση σε [VAL][1]
+        text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setTintEach:
-        text: όρισε [THIS][0] απόχρωση σε [VAL][1]
+        text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:
             sprites: όλα
@@ -715,7 +712,7 @@ el:
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
       Dancelab_setTintEachInline:
-        text: όρισε [THIS][0] απόχρωση σε [VAL][1]
+        text: όρισε {THIS} απόχρωση σε {VAL}
         options:
           THIS:
             sprites: όλα
@@ -732,15 +729,15 @@ el:
             '"SLOTH"': βραδύποδες
             '"UNICORN"': μονόκεροι
       Dancelab_setTintInline:
-        text: όρισε του [SPRITE][0] την απόχρωση σε [VAL][1]
+        text: όρισε του {SPRITE} την απόχρωση σε {VAL}
       Dancelab_setVisible:
-        text: όρισε του [SPRITE][0] την ορατότητα σε [VISIBILITY][1]
+        text: όρισε του {SPRITE} την ορατότητα σε {VISIBILITY}
         options:
           VISIBILITY:
             'true': ορατό
             'false': αόρατο
       Dancelab_setVisibleEach:
-        text: όρισε του [THIS][0] την ορατότητα σε [VISIBILITY][1]
+        text: όρισε του {THIS} την ορατότητα σε {VISIBILITY}
         options:
           THIS:
             sprites: όλα
@@ -760,7 +757,7 @@ el:
             'true': ορατό
             'false': αόρατο
       Dancelab_startMapping:
-        text: "[SPRITE][0] αλλάζει το [PROPERTY][1] ακολουθώντας τα [RANGE][2]"
+        text: "{SPRITE} αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -775,7 +772,7 @@ el:
             '"mid"': μεσαία
             '"treble"': πρίμα
       Dancelab_startMappingEach:
-        text: "[GROUP][0] έναρξη [PROPERTY][1] μετά το [RANGE][2]"
+        text: "{GROUP} έναρξη {PROPERTY} μετά το {RANGE}"
         options:
           GROUP:
             sprites: όλα
@@ -804,7 +801,7 @@ el:
             '"mid"': μεσαία
             '"treble"': πρίμα
       Dancelab_stopMapping:
-        text: "[SPRITE][0] σταματάει να αλλάζει το [PROPERTY][1] ακολουθώντας τα [RANGE][2]"
+        text: "{SPRITE} σταματάει να αλλάζει το {PROPERTY} ακολουθώντας τα {RANGE}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -820,7 +817,7 @@ el:
             '"mid"': μεσαία
             '"treble"': πρίμα
       Dancelab_stopMappingEach:
-        text: "[GROUP][0] στάσεις [PROPERTY][1] μετά το [RANGE][2]"
+        text: "{GROUP} στάσεις {PROPERTY} μετά το {RANGE}"
         options:
           GROUP:
             sprites: όλα
@@ -896,7 +893,7 @@ el:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: όταν πατηθεί το [KEY][0]
+        text: όταν πατηθεί το {KEY}
         options:
           KEY:
             '"up"': επάνω
@@ -918,7 +915,7 @@ el:
             '"k"': κ
             '"l"': λ
             '"m"': μ
-            '"n"': 'ν'
+            '"n"': ν
             '"o"': ο
             '"p"': π
             '"q"': q
@@ -942,7 +939,7 @@ el:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: όταν τα [RANGE][0] κορυφώνονται
+        text: όταν τα {RANGE} κορυφώνονται
         options:
           RANGE:
             '0': μπάσα
@@ -953,19 +950,19 @@ el:
       Dancelab_whenSetup2:
         text: αρχικοποίηση
       gamelab_addBehaviorSimple:
-        text: χαρακτήρας [SPRITE][0] ξεκινάει [BEHAVIOR][1]
+        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       gamelab_addTarget:
         options:
           OPT:
             '"avoid"': Απόφυγε
       gamelab_allSpritesWithAnimation:
-        text: "aalab όλοι [ANIMATION][0]"
+        text: aalab όλοι {ANIMATION}
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': δευτερόλεπτα
       gamelab_changePropBy:
-        text: αλλαγή [SPRITE][0] [PROPERTY][1] με [VAL][2]
+        text: αλλαγή {SPRITE} {PROPERTY} με {VAL}
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -975,29 +972,29 @@ el:
             '"direction"': κατεύθυνση κίνησης
             '"speed"': ταχύτητα
       gamelab_checkTouching:
-        text: "[CONDITION][0] [SPRITE1][1] Πινελιές [SPRITE2][2]"
+        text: "{CONDITION} {SPRITE1} Πινελιές {SPRITE2}"
         options:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
       gamelab_clickedOn:
-        text: όταν [SPRITE][0] πατηθεί
+        text: όταν {SPRITE} πατηθεί
       gamelab_clickedSpritePointer:
-        text: "έγινε κλικ στο [SPRITE][0]"
+        text: έγινε κλικ στο {SPRITE}
       gamelab_comment:
-        text: 'σχόλιο: [COMMENT][0]'
+        text: 'σχόλιο: {COMMENT}'
       gamelab_costumeImage:
-        text: "[COSTUME][0]"
+        text: "{COSTUME}"
       gamelab_createNewSprite:
-        text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται [NAME][0] \n με κοστούμι [COSTUME][1] \n σε [LOCATION][2]"
+        text: "φτιάξε καινούριο χαρακτήρα\n που ονομάζεται {NAME} \n με κοστούμι {COSTUME} \n σε {LOCATION}"
       gamelab_destroy:
-        text: αφαίρεσε [THIS][0]
+        text: αφαίρεσε {THIS}
       gamelab_draggable:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
-        text: τουβλάκι ακμών [SPRITE][0] από το να κινηθεί
+        text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1008,7 +1005,7 @@ el:
             '"tint"': απόχρωση
             '"speed"': ταχύτητα
       gamelab_getThisSprite:
-        text: "[CHOICE][0] χαρακτήρας"
+        text: "{CHOICE} χαρακτήρας"
         options:
           CHOICE:
             '"this"': αυτό
@@ -1039,7 +1036,7 @@ el:
             '"k"': κ
             '"l"': λ
             '"m"': μ
-            '"n"': 'ν'
+            '"n"': ν
             '"o"': ο
             '"p"': π
             '"q"': q
@@ -1053,13 +1050,13 @@ el:
             '"y"': 'y'
             '"z"': ζ
       gamelab_isTouchingEdges:
-        text: "[SPRITE][0] αγγίζει τις άκρες"
+        text: "{SPRITE} αγγίζει τις άκρες"
       gamelab_isTouchingSprite:
-        text: "[SPRITE][0] αγγίζει [TARGET][1]"
+        text: "{SPRITE} αγγίζει {TARGET}"
       gamelab_jumpTo:
-        text: "[SPRITE][0] πήγαινε στο [LOCATION][1]"
+        text: "{SPRITE} πήγαινε στο {LOCATION}"
       gamelab_keyPressed:
-        text: "[CONDITION][0] [KEY][1] Πιέζεται"
+        text: "{CONDITION} {KEY} Πιέζεται"
         options:
           CONDITION:
             '"when"': όταν
@@ -1083,7 +1080,7 @@ el:
             '"k"': κ
             '"l"': λ
             '"m"': μ
-            '"n"': 'ν'
+            '"n"': ν
             '"o"': ο
             '"p"': π
             '"q"': q
@@ -1097,9 +1094,9 @@ el:
             '"y"': 'y'
             '"z"': ζ
       gamelab_locationAt:
-        text: 'θέση x: [X][0] y: [Y][1]'
+        text: 'θέση x: {X} y: {Y}'
       gamelab_locationModifier:
-        text: "[DISTANCE][0] pixels [DIRECTION][1] από [LOCATION][2]"
+        text: "{DISTANCE} pixels {DIRECTION} από {LOCATION}"
         options:
           DIRECTION:
             '"North"': Βοράς
@@ -1109,13 +1106,13 @@ el:
       gamelab_locationMouse:
         text: θέση ποντικιού
       gamelab_locationOf:
-        text: θέση από [SPRITE][0]
+        text: θέση από {SPRITE}
       gamelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: δημιουργία νέων [ANIMATION_NAME][0] Σπράιτ σε [LOCATION][1]
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_mirrorSprite:
-        text: "[SPRITE][0] γύρνα προς [DIRECTION][1]"
+        text: "{SPRITE} γύρνα προς {DIRECTION}"
         options:
           DIRECTION:
             '"right"': δεξιά
@@ -1123,9 +1120,9 @@ el:
       gamelab_mouseLocation:
         text: θέση ποντικιού
       gamelab_moveForward:
-        text: κινήσου [SPRITE][0] [DISTANCE][1] pixels προς τα μπρος
+        text: κινήσου {SPRITE} {DISTANCE} pixels προς τα μπρος
       gamelab_moveInDirection:
-        text: κινήσου [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
+        text: κινήσου {SPRITE} {DISTANCE} pixels {DIRECTION}
         options:
           DIRECTION:
             '"North"': Βοράς
@@ -1133,15 +1130,15 @@ el:
             '"South"': Νότος
             '"West"': Δυτικά
       gamelab_moveToward:
-        text: κινήσου [SPRITE][0] απόσταση [DISTANCE][1] προς [TARGET][2]
+        text: κινήσου {SPRITE} απόσταση {DISTANCE} προς {TARGET}
       gamelab_newSpritePointer:
-        text: "έγινε κλικ στο [SPRITE][0]"
+        text: έγινε κλικ στο {SPRITE}
       gamelab_objectSpritePointer:
-        text: "έγινε κλικ στο [SPRITE][0]"
+        text: έγινε κλικ στο {SPRITE}
       gamelab_playSound:
-        text: παίξεΉχο [SOUND][0]
+        text: παίξεΉχο {SOUND}
       gamelab_pointInDirection:
-        text: στρίψε το [SPRITE][0] [DIRECTION][1]
+        text: στρίψε το {SPRITE} {DIRECTION}
         options:
           DIRECTION:
             '"North"': Βοράς
@@ -1149,7 +1146,7 @@ el:
             '"South"': Νότος
             '"West"': Δυτικά
       gamelab_printText:
-        text: εκτύπωσε [TEXT][0]
+        text: εκτύπωσε {TEXT}
       gamelab_randColor:
         text: τυχαίο χρώμα
       gamelab_randomColor:
@@ -1157,19 +1154,19 @@ el:
       gamelab_randomLocation:
         text: τυχαία θέση
       gamelab_removeAllBehaviors:
-        text: "[SPRITE][0] σταματάει τα πάντα"
+        text: "{SPRITE} σταματάει τα πάντα"
       gamelab_removeBehaviorSimple:
-        text: χαρακτήρας [SPRITE][0] σταματάει [BEHAVIOR][1]
+        text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
       gamelab_removeTint:
-        text: αφαίρεσε το χρώμα από [THIS][0]
+        text: αφαίρεσε το χρώμα από {THIS}
       gamelab_repeatForever:
         text: επαναλάμβανε για πάντα
       gamelab_setAnimation:
-        text: άλλαξε [THIS][0] κοστούμι σε [ANIMATION][1]
+        text: άλλαξε {THIS} κοστούμι σε {ANIMATION}
       gamelab_setBackground:
-        text: όρισε χρώμα παρασκηνίου σε [COLOR][0]
+        text: όρισε χρώμα παρασκηνίου σε {COLOR}
       gamelab_setBackgroundImage:
-        text: Ορισμός φόντου σε [IMG][0]
+        text: Ορισμός φόντου σε {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': σπηλιά
@@ -1184,7 +1181,7 @@ el:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': χειμώνας
             undefined: Καμία
       gamelab_setBackgroundImageAs:
-        text: Ορισμός φόντου σε [IMG][0]
+        text: Ορισμός φόντου σε {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1193,7 +1190,7 @@ el:
             '75': μεσαία
             '100': large
       gamelab_setProp:
-        text: '΄όρισε [SPRITE][0] [PROPERTY][1] σε [VAL][2]'
+        text: "΄όρισε {SPRITE} {PROPERTY} σε {VAL}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1203,7 +1200,7 @@ el:
             '"direction"': κατεύθυνση κίνησης
             '"speed"': ταχύτητα
       gamelab_setProp_dropdown:
-        text: '΄όρισε [SPRITE][0] [PROPERTY][1] σε [SIZE][2]'
+        text: "΄όρισε {SPRITE} {PROPERTY} σε {SIZE}"
         options:
           PROPERTY:
             '"scale"': μέγεθος
@@ -1220,26 +1217,26 @@ el:
             '"width"': πλάτος
             '"height"': ύψος
       gamelab_setTint:
-        text: άλλαξε το χρώμα του [THIS][0] σε [COLOR][1]
+        text: άλλαξε το χρώμα του {THIS} σε {COLOR}
       gamelab_setupSim:
         text: |-
           προσομοίωση ρύθμισης με
-          [SPRITE1N][0][SPRITE1COSTUME][1]Ταχύτητα[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME][4]Ταχύτητα[SPRITE2SPEED][5]
+          {SPRITE1N}{SPRITE1COSTUME}Ταχύτητα{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Ταχύτητα{SPRITE2SPEED}
           Συλλογή
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: δείξε οθόνη τίτλων [BREAK][0] τίτλος [TITLE][1] κείμενο [SUBTITLE][2]
+        text: δείξε οθόνη τίτλων {BREAK} τίτλος {TITLE} κείμενο {SUBTITLE}
       gamelab_spriteClicked:
-        text: "[CONDITION][0] [SPRITE][1] πατιέται"
+        text: "{CONDITION} {SPRITE} πατιέται"
         options:
           CONDITION:
             '"when"': όταν
             '"while"': όσο
       gamelab_subjectSpritePointer:
-        text: "έγινε κλικ στο [SPRITE][0]"
+        text: έγινε κλικ στο {SPRITE}
       gamelab_turn:
-        text: '[SPRITE][0] στρίψε [DIRECTION][1] [N][2] μοίρες'
+        text: "{SPRITE} στρίψε {DIRECTION} {N} μοίρες"
         options:
           DIRECTION:
             '"right"': δεξιά
@@ -1247,7 +1244,7 @@ el:
       gamelab_whenDownArrow:
         text: όταν πατηθεί το κάτω βέλος
       gamelab_whenKey:
-        text: όταν πατηθεί το [KEY][0]
+        text: όταν πατηθεί το {KEY}
         options:
           KEY:
             '"up"': επάνω
@@ -1264,13 +1261,13 @@ el:
       gamelab_whenRightArrow:
         text: όταν πατηθεί το δεξί βέλος
       gamelab_whenTouching:
-        text: όταν [SPRITE1][0] αγγίζει [SPRITE2][1]
+        text: όταν {SPRITE1} αγγίζει {SPRITE2}
       gamelab_whenUpArrow:
         text: όταν πατηθεί το πάνω βέλος
       gamelab_whileDownArrow:
         text: όσο πατιέται το κάτω βέλος
       gamelab_whileKey:
-        text: όσο [KEY][0] πατιέται
+        text: όσο {KEY} πατιέται
         options:
           KEY:
             '"up"': επάνω
@@ -1287,17 +1284,17 @@ el:
       gamelab_whileRightArrow:
         text: όσο πατιέται το δεξί βέλος
       gamelab_whileTouching:
-        text: όσο [SPRITE1][0] αγγίζει [SPRITE2][1]
+        text: όσο {SPRITE1} αγγίζει {SPRITE2}
       gamelab_whileUpArrow:
         text: όσο το πάνω βέλος είναι πατημένο
       gamelab_xLocationOf:
-        text: x συντεταγμένη του [SPRITE][0]
+        text: x συντεταγμένη του {SPRITE}
       gamelab_yLocationOf:
-        text: y συντεταγμένη του [SPRITE][0]
+        text: y συντεταγμένη του {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: χαρακτήρας [SPRITE][0] ξεκινάει [BEHAVIOR][1]
+        text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:
-        text: 'Προσθήκη δεδομένων εκπαίδευσης: [NAME][0],[LOCATION][1]'
+        text: 'Προσθήκη δεδομένων εκπαίδευσης: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": αντικείμενο
@@ -1308,7 +1305,7 @@ el:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": η ετικέτα μου
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": δεν είναι η ετικέτα μου
       Mikelab_allSpritesWithAnimation:
-        text: "aalab όλοι [ANIMATION][0]"
+        text: aalab όλοι {ANIMATION}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1340,13 +1337,13 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupChangeAnim:
-        text: άλλαξε [SELECT][0] [COSTUME][1] σε [COSTUME2][2]
+        text: άλλαξε {SELECT} {COSTUME} σε {COSTUME2}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupChangePropBy:
-        text: άλλαξε [PROPERTY][0] του [SELECT][1] [COSTUME][2] κατά [VAL][3]
+        text: άλλαξε {PROPERTY} του {SELECT} {COSTUME} κατά {VAL}
         options:
           SELECT:
             '"all"': όλα
@@ -1358,7 +1355,7 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupCreateNewSprite:
-        text: φτιάξει ένα καινούριο [COSTUME][0] σε [LOCATION][1]
+        text: φτιάξει ένα καινούριο {COSTUME} σε {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -1371,17 +1368,17 @@ el:
             "{x: 100, y: 300}": κάτω - αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
       Mikelab_groupDestroy:
-        text: αφαίρεσε [SELECT][0] [COSTUME][1]
+        text: αφαίρεσε {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupDisplace:
-        text: όλα [COSTUME][0] τουβλάκια [COSTUME2][1] από το να κουνηθούν
+        text: όλα {COSTUME} τουβλάκια {COSTUME2} από το να κουνηθούν
       Mikelab_groupEdgesDisplace:
-        text: τουβλάκι άκμών [COSTUME][0] από το να κουνηθεί
+        text: τουβλάκι άκμών {COSTUME} από το να κουνηθεί
       Mikelab_groupGetProp:
-        text: "[SELECT][0] [COSTUME][1] [PROPERTY][2]"
+        text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
           SELECT:
             '"average"': μέσος όρος
@@ -1393,25 +1390,25 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupRemoveAllBehaviors:
-        text: σταμάτα [SELECT][0] [COSTUME][1] συμπεριφορές
+        text: σταμάτα {SELECT} {COSTUME} συμπεριφορές
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupRemoveBehaviorSimple:
-        text: "[SELECT][0] [COSTUME][1] σταματάει [BEHAVIOR][2]"
+        text: "{SELECT} {COSTUME} σταματάει {BEHAVIOR}"
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupRemoveTint:
-        text: αφαίρεσε χρώμα από [SELECT][0] [COSTUME][1]
+        text: αφαίρεσε χρώμα από {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupSetProp:
-        text: όρισε [PROPERTY][0] του [SELECT][1] [COSTUME][2] σε [VAL][3]
+        text: όρισε {PROPERTY} του {SELECT} {COSTUME} σε {VAL}
         options:
           SELECT:
             '"all"': όλα
@@ -1423,33 +1420,33 @@ el:
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
       Mikelab_groupSetTint:
-        text: άλλαξε χρώμα του [SELECT][0] [COSTUME][1] σε [COLOR][2]
+        text: άλλαξε χρώμα του {SELECT} {COSTUME} σε {COLOR}
         options:
           SELECT:
             '"all"': όλα
             '"this"': αυτό
       Mikelab_groupWhenClickedOn:
-        text: όταν [COSTUME][0] πατηθεί
+        text: όταν {COSTUME} πατηθεί
       Mikelab_groupWhenXTouchesY:
-        text: όταν [COSTUME][0] αγγίζει [COSTUME2][1]
+        text: όταν {COSTUME} αγγίζει {COSTUME2}
       Mikelab_groupWhileClicked:
-        text: όσο πατάς πάνω σε [COSTUME][0]
+        text: όσο πατάς πάνω σε {COSTUME}
       Mikelab_groupWhileTouchingAny:
         text: |-
-          όσο [COSTUME][0] αγγίζει [COSTUME2][1]
-          [STATEMENT][2]
+          όσο {COSTUME} αγγίζει {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
-        text: "[SPRITE][0] αυτή τη στιγμή κάνει [BEHAVIOR][1]"
+        text: "{SPRITE} αυτή τη στιγμή κάνει {BEHAVIOR}"
       Mikelab_hideFish:
-        text: Αφαίρεση [TRASH][0]
+        text: Αφαίρεση {TRASH}
         options:
           TRASH:
             object: αντικείμενο
             fish: ψάρι
       Mikelab_ifDanceIs:
         text: |-
-          αν [SPRITE][0] κάνει [DANCE][1]
-          [DO1][2] [DO2][3]
+          αν {SPRITE} κάνει {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Παλαμάκια Ψηλά
@@ -1465,40 +1462,40 @@ el:
             MOVES.Rest: Κανένα
       Mikelab_ifLabel:
         text: |-
-          Εάν [DANCE][0]
-          Κάνουμε [DO1][1] Άλλο [DO2][2]
+          Εάν {DANCE}
+          Κάνουμε {DO1} Άλλο {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: η ετικέτα μου
       Mikelab_ifRecognizeLabel:
         text: |-
-          Εάν αναγνωρίζετε το αντικείμενο ως [DANCE][0]
-          Κάνουμε [DO1][1] Άλλο [DO2][2]
+          Εάν αναγνωρίζετε το αντικείμενο ως {DANCE}
+          Κάνουμε {DO1} Άλλο {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: η ετικέτα μου
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          Εάν αναγνωρίζετε το αντικείμενο ως [DANCE][0]
-          Κάνουμε [DO1][1]
+          Εάν αναγνωρίζετε το αντικείμενο ως {DANCE}
+          Κάνουμε {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: ψάρι
             MOVES.Clown: δεν είναι η ετικέτα μου
       Mikelab_joinText:
-        text: "[TEXT][0] [NEXT][1]"
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
-        text: 'θέση x: [X][0] y: [Y][1]'
+        text: 'θέση x: {X} y: {Y}'
       Mikelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       Mikelab_poemTextJoin:
-        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: τυχαίο χρώμα
       Mikelab_removeBehaviorSimple:
-        text: χαρακτήρας [SPRITE][0] σταματάει [BEHAVIOR][1]
+        text: χαρακτήρας {SPRITE} σταματάει {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: επαναλάμβανε για πάντα
       Mikelab_sendBad:
@@ -1520,10 +1517,10 @@ el:
       Mikelab_setupSim:
         text: |-
           προσομοίωση ρύθμισης με
-          [SPRITE1N][0][SPRITE1COSTUME][1]Ταχύτητα[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME][4]Ταχύτητα[SPRITE2SPEED][5]
+          {SPRITE1N}{SPRITE1COSTUME}Ταχύτητα{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Ταχύτητα{SPRITE2SPEED}
           Συλλογή
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1534,7 +1531,7 @@ el:
           PREPOSITION:
             '"below"': που ακολουθεί
       Mikelab_sprite:
-        text: καινούριο [COSTUME][0] χαρακτήρα σε [LOCATION][1]
+        text: καινούριο {COSTUME} χαρακτήρα σε {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": πάνω
@@ -1547,9 +1544,9 @@ el:
             "{x: 100, y: 300}": κάτω - αριστερά
             "{x: 300, y: 300}": κάτω δεξιά
       Mikelab_whenClickedOn:
-        text: όταν [SPRITE][0] πατηθεί
+        text: όταν {SPRITE} πατηθεί
       Mikelab_whenKeyPressed:
-        text: όταν πατηθεί το [KEY][0]
+        text: όταν πατηθεί το {KEY}
         options:
           KEY:
             '"up"': επάνω βέλος
@@ -1574,11 +1571,11 @@ el:
       Mikelab_whenMouseClicked:
         text: όταν πατηθεί το ποντίκι
       Mikelab_whenYesNoClicked:
-        text: όταν πατήσατε [KEY][0]
+        text: όταν πατήσατε {KEY}
         options:
           KEY:
-            '"yes"': 'ναι'
-            '"no"': 'όχι'
+            '"yes"': ναι
+            '"no"': όχι
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1587,17 +1584,17 @@ el:
             '"left"': αριστερό βέλος
             '"right"': δεξί βέλος
       Mikelab_xLocationOf:
-        text: x συντεταγμένη του [SPRITE][0]
+        text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
-        text: y συντεταγμένη του [SPRITE][0]
+        text: y συντεταγμένη του {SPRITE}
       PoemBot_setBackgroundEffect:
-        text: όρισε παρασκήνιο σε [BG_EFFECT][0] [PALETTE][1]
+        text: όρισε παρασκήνιο σε {BG_EFFECT} [PALETTE][1]
         options:
           BG_EFFECT:
             '"solid"': συμπαγής
             '"rainbow"': ουράνιο τόξο
       PoemBot_setForegroundEffect:
-        text: όρισε προσκήνιο σε [FG_EFFECT][0]
+        text: όρισε προσκήνιο σε {FG_EFFECT}
         options:
           FG_EFFECT:
             '"rain"': βροχή
@@ -1609,29 +1606,29 @@ el:
       RyanLab_turnRight:
         text: στρίψε δεξιά
       SpriteLab2Beta_spriteSay:
-        text: χαρακτήρας [SPRITE][0] λέει [TEXT][1] για [SECONDS][2] δευτερόλεπτα
+        text: χαρακτήρας {SPRITE} λέει {TEXT} για {SECONDS} δευτερόλεπτα
       Vector_createSpriteWith:
         text: |-
           δημιούργησε χαρακτήρα
-          κάνε [STATEMENT][0]
+          κάνε {STATEMENT}
       Vector_log:
-        text: μήνυμα καταγραφής [MESSAGE][0]
+        text: μήνυμα καταγραφής {MESSAGE}
       Vector_positionCenter:
         text: κέντρο
       Vector_push:
-        text: όρισε ταχύτητα [VECTOR][0]
+        text: όρισε ταχύτητα {VECTOR}
       Vector_randomLocation:
         text: τυχαία θέση
       Vector_setColor:
-        text: όρισε χρώμα σε [COLOR][0]
+        text: όρισε χρώμα σε {COLOR}
       Vector_setSize:
-        text: όρισε πλάτος [WIDTH][0] ύψος [HEIGHT][1]
+        text: όρισε πλάτος {WIDTH} ύψος {HEIGHT}
       Vector_teleportTo:
-        text: όρισε θέση [POSITION][0]
+        text: όρισε θέση {POSITION}
       Vector_vectorNorth:
         text: βοράς
       Vector_where:
-        text: κάθε χαρακτήρας όπου [PROPERTY][0] είναι [VALUE][1] κάνε [STATEMENT][2]
+        text: κάθε χαρακτήρας όπου {PROPERTY} είναι {VALUE} κάνε {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": χρώμα
@@ -1657,37 +1654,28 @@ el:
             '0.5': half of
             '0.25': few
       binary_drawBin:
-        text: ζωγράφισε δυαδικό [BIN][0]
+        text: ζωγράφισε δυαδικό {BIN}
       binary_drawBinScreen:
-        text: |-
-          ζωγράφισε οθόνη 
-          [B1][0] 
-          [B2][1] 
-          [B3][2] 
-          [B4][3] 
-          [B5][4] 
-          [B6][5] 
-          [B7][6] 
-          [B8][7]
+        text: "ζωγράφισε οθόνη \n{B1} \n{B2} \n{B3} \n{B4} \n{B5} \n{B6} \n{B7} \n{B8}"
       binary_drawDec:
-        text: ζωγράφισε δεκαδικό [DEC][0]
+        text: ζωγράφισε δεκαδικό {DEC}
       binary_drawPixelHere:
-        text: όρισε pixel [VAL][0]
+        text: όρισε pixel {VAL}
         options:
           VAL:
-            '0': 'σβηστό'
-            '1': 'ανοιχτό'
+            '0': σβηστό
+            '1': ανοιχτό
             '"toggle"': εναλλαγή
       binary_drawString:
-        text: ζωγράφισε συμβολοσειρά [STR][0]
+        text: ζωγράφισε συμβολοσειρά {STR}
       binary_goTo:
-        text: πήδα σε [LOC][0]
+        text: πήδα σε {LOC}
       binary_goToHome:
         text: πήδα πάνω αριστερά
       binary_gridSize:
-        text: όρισε μέγεθος πλέγματος [SIZE][0]
+        text: όρισε μέγεθος πλέγματος {SIZE}
       binary_move:
-        text: κινήσου [DIR][0]
+        text: κινήσου {DIR}
         options:
           DIR:
             '"up"': επάνω
@@ -1695,7 +1683,7 @@ el:
             '"left"': αριστερά
             '"right"': δεξιά
       binary_whenKey:
-        text: όταν πατηθεί το [KEY][0]
+        text: όταν πατηθεί το {KEY}
         options:
           KEY:
             '"up"': επάνω
@@ -1709,8 +1697,8 @@ el:
             '"d"': β
       craft_ifPath:
         text: |-
-          αν διαδρομή [ΚΑΤ][0]
-          [ΕΝΤΟΛΗ][1]
+          αν διαδρομή {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": μπροστά
@@ -1718,8 +1706,8 @@ el:
             "'left'": προς τα αριστερά
       craft_ifStandingOn:
         text: |-
-          αν στέκεται πάνω σε [TYPE][0]
-          [STATEMENT][1]
+          αν στέκεται πάνω σε {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": μπλε κοράλλι
@@ -1730,19 +1718,19 @@ el:
             "'seaLantern'": θαλάσσιο φανάρι
       craft_ifStandingOnLimit:
         text: |-
-          αν στέκεται πάνω σε [TYPE][0]
-          [STATEMENT][1]
+          αν στέκεται πάνω σε {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": άμμος
             "'darkPrismarine'": σκούρο θαλάσσιο πρίσμα
             "'seaLantern'": θαλάσσιο φανάρι
       craft_log:
-        text: μήνυμα καταγραφής [MESSAGE][0]
+        text: μήνυμα καταγραφής {MESSAGE}
       craft_moveForward:
         text: προχώρησε μπροστά
       craft_placeBlock:
-        text: Τοποθετήστε [τύποςΜπλοκ][0]
+        text: Τοποθετήστε {blockType}
         options:
           blockType:
             '"strippedOak"': αποφλοιωμένη βελανιδιά
@@ -1777,13 +1765,13 @@ el:
       craft_repeatUntilConduit:
         text: |-
           επαναλάβετε μέχρις ότου ολοκληρωθεί ο αγωγός μετάδοσης
-          [ΔΗΛΩΣΗ][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           επαναλάβετε μέχρι τον στόχο
-          [ΔΗΛΩΣΗ][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: Φύτεψε [ΟΝΤΟΤΗΤΑ][0]
+        text: Φύτεψε {ENTITY}
         options:
           ENTITY:
             '"cod"': βακαλάος
@@ -1793,10 +1781,10 @@ el:
             '"squid"': καλαμάρι
             '"tropicalFish"': τροπικό ψάρι
       craft_turn:
-        text: στρίψε [ΚΑΤ][0]
+        text: στρίψε {DIR}
         options:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
       validation_validatedBackground:
-        text: Ορισμός φόντου σε [IMG][0]
+        text: Ορισμός φόντου σε {IMG}

@@ -2,25 +2,12 @@
   "hi-IN": {
     "data": {
       "vocabularies": {
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "program/coursef/2021": {
           "word": "प्रोग्राम",
           "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
         },
         "algorithm/coursef/2021": {
-          "word": "कलन विधि",
-          "definition": ""
+          "word": "कलन विधि"
         },
         "event/coursef/2021": {
           "word": "इवेंट ",
@@ -30,13 +17,8 @@
           "word": "चर",
           "definition": "जानकारी के भाग के लिए प्लेसहोल्डर, जिसे बदला जा सकता है।"
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "इनपुट",
-          "definition": ""
+          "word": "इनपुट"
         },
         "loop/coursef/2021": {
           "word": "लूप",
@@ -49,14 +31,6 @@
         "for_loop/coursef/2021": {
           "word": "फॉर लूप",
           "definition": "लूप्स, जिनकी पूर्वनिर्धारित शुरुआत, अंत और बढ़त होती है (चरण अंतराल)।"
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -302,10 +276,6 @@
           "word": "कंडीशनल्स",
           "definition": "वे कथन, जो केवल निश्चित शर्तों के अंतर्गत ही चलाए जा सकते हैं।"
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "शर्तें",
           "definition": "क्रिया को अनुमति देने से पहले यह देखने के लिए प्रोग्राम कुछ जांचें करता है कि यह सही है या नहीं।"
@@ -313,10 +283,6 @@
         "while_loop/coursed/2021": {
           "word": "व्हाइल लूप",
           "definition": "एक लूप, जिसे किसी स्थिति के सही होने बार लगातार दोहराया जाता है।"
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "कलन विधि",
@@ -342,21 +308,12 @@
           "word": "प्रोग्रामिंग",
           "definition": "प्रोग्राम तैयार करने की कला।"
         },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "event/express/2021": {
           "word": "इवेंट ",
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
         },
         "code/express/2021": {
-          "word": "कोड",
-          "definition": ""
+          "word": "कोड"
         },
         "loop/express/2021": {
           "word": "लूप",
@@ -382,10 +339,6 @@
           "word": "व्हाइल लूप",
           "definition": "एक लूप, जिसे किसी स्थिति के सही होने बार लगातार दोहराया जाता है।"
         },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "function/express/2021": {
           "word": "कार्य",
           "definition": "कोड का भाग, जिसे आप आसानी से बार-बार कह सकते हैं।"
@@ -393,10 +346,6 @@
         "variable/express/2021": {
           "word": "चर",
           "definition": "जानकारी के भाग के लिए प्लेसहोल्डर, जिसे बदला जा सकता है।"
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "फॉर लूप",
@@ -470,25 +419,12 @@
           "word": "इवेंट ",
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
         },
-        "behavior/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
         "event/coursee/2021": {
           "word": "इवेंट ",
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
         },
         "copyright/coursee/2021": {
-          "word": "कॉपीराइट",
-          "definition": ""
+          "word": "कॉपीराइट"
         },
         "loop/coursee/2021": {
           "word": "लूप",

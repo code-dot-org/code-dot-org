@@ -1766,3 +1766,5 @@ th:
           DIR:
             right: ไปทางขวา ↻
             left: ไปทางซ้าย ↺
+      validation_validatedBackground:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}

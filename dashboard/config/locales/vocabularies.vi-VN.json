@@ -2,533 +2,107 @@
   "vi-VN": {
     "data": {
       "vocabularies": {
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "behavior/coursef/2021": {
-          "word": "Hành vi",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Hành vi"
         },
         "variable/coursef/2021": {
-          "word": "Biến",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Biến"
         },
         "machine_learning/coursef/2021": {
-          "word": "Học máy",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Học máy"
         },
         "internet/coursef/2021": {
-          "word": "internet",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "internet"
         },
         "define/coursef/2021": {
-          "word": "Định nghĩa",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Định nghĩa"
         },
         "debugging/courseb/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "drop/courseb/2021": {
-          "word": "Thả",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Thả"
         },
         "programming/courseb/2021": {
-          "word": "Lập trình",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lập trình"
         },
         "debugging/coursea/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "drop/coursea/2021": {
-          "word": "Thả",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Thả"
         },
         "programming/coursea/2021": {
-          "word": "Lập trình",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lập trình"
         },
         "debugging/coursec/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "sequencing/coursec/2021": {
-          "word": "Chuỗi tuần tự",
-          "definition": ""
+          "word": "Chuỗi tuần tự"
         },
         "programming/coursec/2021": {
-          "word": "Lập trình",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lập trình"
         },
         "binary/coursec/2021": {
-          "word": "Nhị phân",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Nhị phân"
         },
         "debugging/coursed/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "programming/coursed/2021": {
-          "word": "Lập trình",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lập trình"
         },
         "conditionals/coursed/2021": {
-          "word": "Điều kiện",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Điều kiện"
         },
         "debugging/express/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "sequencing/express/2021": {
-          "word": "Chuỗi tuần tự",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Chuỗi tuần tự"
         },
         "programming/express/2021": {
-          "word": "Lập trình",
-          "definition": ""
+          "word": "Lập trình"
         },
         "behavior/express/2021": {
-          "word": "Hành vi",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Hành vi"
         },
         "conditionals/express/2021": {
-          "word": "Điều kiện",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Điều kiện"
         },
         "function/express/2021": {
-          "word": "Hàm",
-          "definition": ""
+          "word": "Hàm"
         },
         "variable/express/2021": {
-          "word": "Biến",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Biến"
         },
         "define/express/2021": {
-          "word": "Định nghĩa",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Định nghĩa"
         },
         "drop/pre-express/2021": {
-          "word": "Thả",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Thả"
         },
         "debugging/pre-express/2021": {
-          "word": "Sửa lỗi",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sửa lỗi"
         },
         "programming/pre-express/2021": {
-          "word": "Lập trình",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lập trình"
         },
         "behavior/coursee/2021": {
-          "word": "Hành vi",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Hành vi"
         },
         "copyright/coursee/2021": {
-          "word": "Bản quyền",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Bản quyền"
         },
         "function/coursee/2021": {
-          "word": "Hàm",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Hàm"
         },
         "conditionals/coursee/2021": {
-          "word": "Điều kiện",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Điều kiện"
         },
         "define/coursee/2021": {
-          "word": "Định nghĩa",
-          "definition": ""
-        },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Định nghĩa"
         }
       }
     }

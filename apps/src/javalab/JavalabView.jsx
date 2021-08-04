@@ -29,6 +29,7 @@ class JavalabView extends React.Component {
     handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
+    onStop: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
@@ -39,7 +40,7 @@ class JavalabView extends React.Component {
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -56,7 +57,8 @@ class JavalabView extends React.Component {
     instructionsExplicitHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    setInstructionsMaxHeightAvailable: PropTypes.func
+    setInstructionsMaxHeightAvailable: PropTypes.func,
+    awaitingContainedResponse: PropTypes.bool
   };
 
   state = {
@@ -93,15 +95,14 @@ class JavalabView extends React.Component {
     ];
   };
 
-  // This controls the 'run' button state, but stopping program execution is not yet
-  // implemented and will need to be added here.
+  // This controls the 'run' button state
   toggleRun = () => {
     const toggledIsRunning = !this.props.isRunning;
     this.props.setIsRunning(toggledIsRunning);
     if (toggledIsRunning) {
       this.props.onRun();
     } else {
-      // TODO: Stop program execution.
+      this.props.onStop();
     }
   };
 
@@ -277,11 +278,12 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
-      isReadOnlyWorkspace,
+      disableFinishButton,
       editorColumnHeight,
       leftWidth,
       rightWidth,
-      instructionsExplicitHeight
+      instructionsExplicitHeight,
+      awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -311,7 +313,7 @@ class JavalabView extends React.Component {
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
-                displayDocumentationTab
+                displayDocumentationTab={false}
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
                 explicitHeight={instructionsExplicitHeight}
@@ -361,7 +363,8 @@ class JavalabView extends React.Component {
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
-                    isReadOnlyWorkspace={isReadOnlyWorkspace}
+                    disableFinishButton={disableFinishButton}
+                    disableRunButtons={awaitingContainedResponse}
                     onContinue={onContinue}
                     renderSettings={this.renderSettings}
                   />
@@ -448,7 +451,7 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    disableFinishButton: state.javalab.disableFinishButton,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
@@ -460,7 +463,8 @@ export default connect(
     rightWidth: state.javalab.rightWidth,
     instructionsExplicitHeight: state.javalab.instructionsExplicitHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
-    longInstructions: state.instructions.longInstructions
+    longInstructions: state.instructions.longInstructions,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

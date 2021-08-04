@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:59 UTC",
+    "serialized_at": "2021-08-03 22:46:48 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "Testing"
@@ -60,7 +60,6 @@
           "K-1 Maze 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "2-3 Maze 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

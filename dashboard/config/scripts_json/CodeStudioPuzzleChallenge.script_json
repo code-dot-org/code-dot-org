@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:51 UTC",
+    "serialized_at": "2021-08-03 22:46:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "CodeStudioPuzzleChallenge"
@@ -60,7 +60,6 @@
           "Code Studio Puzzle Challenge 5 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "Code Studio Puzzle Challenge 6 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +106,6 @@
           "Code Studio Puzzle Challenge 7 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +129,6 @@
           "Code Studio Puzzle Challenge 10 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +152,6 @@
           "Code Studio Puzzle Challenge 10b - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +175,6 @@
           "Code Studio Puzzle Challenge 8 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +198,6 @@
           "Code Studio Puzzle Challenge 9 - Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +221,6 @@
           "Code Studio Puzzle Challenge 1 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +244,6 @@
           "Code Studio Puzzle Challenge 2 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +267,6 @@
           "Code Studio Puzzle Challenge 3 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +290,6 @@
           "Code Studio Puzzle Challenge 4 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +313,6 @@
           "Code Studio Puzzle Challenge Var - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +336,6 @@
           "Code Studio Puzzle Challenge 11 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +359,6 @@
           "Code Studio Puzzle Challenge 12 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +382,6 @@
           "Code Studio Puzzle Challenge 13 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +405,6 @@
           "Code Studio Puzzle Challenge 14 - Artist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

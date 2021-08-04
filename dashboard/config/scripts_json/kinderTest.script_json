@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:26 UTC",
+    "serialized_at": "2021-08-03 22:46:59 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "kinderTest"
@@ -75,7 +75,6 @@
           "grade4_bee_conditionals_ifvid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +98,6 @@
           "grade4_bee_conditionals_quantum1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +121,6 @@
           "grade4_bee_conditionals_quantum2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +144,6 @@
           "grade4_bee_conditionals_new1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +167,6 @@
           "grade4_bee_conditionals_new2a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +190,6 @@
           "grade4_bee_conditionals_new2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +213,6 @@
           "grade4_bee_conditionals_quantum3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +236,6 @@
           "grade4_bee_conditionals_ifelsevid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +259,6 @@
           "grade4_bee_conditionals_quantum4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +282,6 @@
           "grade4_bee_conditionals_quantum5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +305,6 @@
           "grade4_bee_conditionals_new3a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +328,6 @@
           "grade4_bee_conditionals_new3b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -363,7 +351,6 @@
           "grade4_bee_conditionals_new3c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +374,6 @@
           "KTest1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +397,6 @@
           "KTest2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +420,6 @@
           "testArtistForTestK"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +443,6 @@
           "testBeeFarmer"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +466,6 @@
           "testPlaylabLevel"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

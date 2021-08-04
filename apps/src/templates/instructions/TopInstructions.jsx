@@ -604,8 +604,13 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
+    // If we're displaying the review tab the teacher can leave feedback in that tab
+    // so we hide the teacher feedback tab if there's no rubric to avoid confusion about
+    // where the teacher should leave feedback
     const displayFeedback =
-      !!rubric || teacherViewingStudentWork || studentHasFeedback;
+      !!rubric ||
+      (!displayReviewTab && teacherViewingStudentWork) ||
+      studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =

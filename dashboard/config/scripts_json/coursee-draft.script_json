@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:39 UTC",
+    "serialized_at": "2021-08-03 22:47:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "coursee-draft"
@@ -330,7 +330,6 @@
           "DiceRace"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -354,7 +353,6 @@
           "courseE_video_ramp1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -378,7 +376,6 @@
           "courseE_maze_ramp1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -402,7 +399,6 @@
           "courseE_maze_ramp2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -426,7 +422,6 @@
           "courseE_maze_ramp3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -450,7 +445,6 @@
           "courseE_maze_ramp4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +468,6 @@
           "courseE_maze_ramp5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +491,6 @@
           "courseE_maze_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +514,6 @@
           "courseCDEF_video_AngryBirdLoops"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -546,7 +537,6 @@
           "courseE_maze_ramp6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -570,7 +560,6 @@
           "courseE_maze_ramp7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +583,6 @@
           "courseE_artist_ramp8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -618,7 +606,6 @@
           "courseC_video_angles"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -642,7 +629,6 @@
           "courseE_artist_ramp9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -666,7 +652,6 @@
           "courseE_artist_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -690,7 +675,6 @@
           "courseD_video_nestedLoopsArtist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -714,7 +698,6 @@
           "courseE_artist_ramp10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -738,7 +721,6 @@
           "courseE_farmer_ramp11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -762,7 +744,6 @@
           "courseE_maze_ramp13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -786,7 +767,6 @@
           "courseE_external_ramp14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -810,7 +790,6 @@
           "courseD_video_whileIntro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -834,7 +813,6 @@
           "courseE_farmer_ramp11a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -858,7 +836,6 @@
           "courseE_farmer_ramp12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -882,7 +859,6 @@
           "courseE_farmer_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -906,7 +882,6 @@
           "courseE_video_ifElse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -930,7 +905,6 @@
           "courseE_farmer_ramp12a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -954,7 +928,6 @@
           "courseE_farmer_ramp13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -978,7 +951,6 @@
           "courseE_bee_ramp14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1002,7 +974,6 @@
           "courseE_farmer_predict2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1026,7 +997,6 @@
           "courseD_video_repeatUntil"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1050,7 +1020,6 @@
           "courseE_farmer_ramp15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1074,7 +1043,6 @@
           "courseE_farmer_ramp16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1098,7 +1066,6 @@
           "courseE_bee_ramp17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1122,7 +1089,6 @@
           "coursee-privateandpersonalinformation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1146,7 +1112,6 @@
           "blockly:Studio:hoc2015_blockly_7_no_video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1170,7 +1135,6 @@
           "blockly:Studio:hoc2015_blockly_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1194,7 +1158,6 @@
           "blockly:Studio:hoc2015_blockly_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1218,7 +1181,6 @@
           "blockly:Studio:hoc2015_blockly_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1242,7 +1204,6 @@
           "blockly:Studio:hoc2015_blockly_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1266,7 +1227,6 @@
           "blockly:Studio:hoc2015_blockly_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1290,7 +1250,6 @@
           "blockly:Studio:hoc2015_blockly_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1314,7 +1273,6 @@
           "blockly:Studio:hoc2015_blockly_14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1338,7 +1296,6 @@
           "blockly:Studio:hoc2015_blockly_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1362,7 +1319,6 @@
           "SongwritingParameters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1386,7 +1342,6 @@
           "courseE_artist_functions1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1410,7 +1365,6 @@
           "courseE_video_functionsArtist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1434,7 +1388,6 @@
           "courseE_artist_functions_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1458,7 +1411,6 @@
           "courseE_artist_functions2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1482,7 +1434,6 @@
           "courseE_artist_functions3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1506,7 +1457,6 @@
           "courseE_artist_functions4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1530,7 +1480,6 @@
           "courseE_artist_functions5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1554,7 +1503,6 @@
           "courseE_artist_functions6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1578,7 +1526,6 @@
           "courseE_artist_functions7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1603,7 +1550,6 @@
           "courseE_artist_functions8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1627,7 +1573,6 @@
           "courseE_artist_functions9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1651,7 +1596,6 @@
           "courseE_artist_functions10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1675,7 +1619,6 @@
           "courseE_artist_functions_predict2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1699,7 +1642,6 @@
           "courseE_bee_functions1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1723,7 +1665,6 @@
           "courseE_video_functionsBee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1747,7 +1688,6 @@
           "courseE_bee_functions2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1771,7 +1711,6 @@
           "courseE_bee_functions3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1795,7 +1734,6 @@
           "courseE_bee_functions4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1819,7 +1757,6 @@
           "courseE_bee_functions5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1843,7 +1780,6 @@
           "courseE_video_createFunctions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1867,7 +1803,6 @@
           "courseE_bee_functions6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1891,7 +1826,6 @@
           "courseE_bee_functions7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1916,7 +1850,6 @@
           "courseE_bee_functions8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1940,7 +1873,6 @@
           "courseE_bee_functions9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1964,7 +1896,6 @@
           "courseE_bee_functions10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1988,7 +1919,6 @@
           "courseE_bee_functions11_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2012,7 +1942,6 @@
           "courseE_farmer_functions1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2036,7 +1965,6 @@
           "courseE_farmer_functions1a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2060,7 +1988,6 @@
           "courseE_farmer_functions2b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2084,7 +2011,6 @@
           "courseE_farmer_functions3c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2108,7 +2034,6 @@
           "courseE_farmer_functions4b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2132,7 +2057,6 @@
           "courseE_farmer_functions5c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2156,7 +2080,6 @@
           "courseE_farmer_functions6c"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2180,7 +2103,6 @@
           "courseE_video_createFunctions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2204,7 +2126,6 @@
           "courseE_farmer_functions7b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2229,7 +2150,6 @@
           "courseE_farmer_functions8b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2253,7 +2173,6 @@
           "courseE_farmer_functions9b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2277,7 +2196,6 @@
           "courseE_farmer_functions10b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2301,7 +2219,6 @@
           "courseE_farmer_functions11_predict"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2325,7 +2242,6 @@
           "courseE_bee_concept1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2349,7 +2265,6 @@
           "courseE_farmer_concept1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2373,7 +2288,6 @@
           "courseE_bee_concept2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2397,7 +2311,6 @@
           "courseE_bee_concept3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2421,7 +2334,6 @@
           "courseE_artist_concept1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2445,7 +2357,6 @@
           "courseE_bee_concept4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2469,7 +2380,6 @@
           "courseE_farmer_concept2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2493,7 +2403,6 @@
           "courseE_bee_concept5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,7 +2426,6 @@
           "courseE_farmer_concept3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2541,7 +2449,6 @@
           "courseE_artist_concept4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2565,7 +2472,6 @@
           "courseE_playLab_scaffold1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2589,7 +2495,6 @@
           "courseE_playLab_scaffold2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2613,7 +2518,6 @@
           "courseE_playLab_scaffold3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2637,7 +2541,6 @@
           "courseE_playLab_scaffold4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2661,7 +2564,6 @@
           "courseE_playLab_scaffold5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2685,7 +2587,6 @@
           "courseE_playLab_scaffold6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2707,9 +2608,9 @@
       "properties": {
         "level_keys": [
           "courseF_video_csMatters"
-        ]
+        ],
+        "progression": "End of Course Projects"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2731,9 +2632,9 @@
       "properties": {
         "level_keys": [
           "Geometric Sun"
-        ]
+        ],
+        "progression": "Geometric Sun"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2755,9 +2656,9 @@
       "properties": {
         "level_keys": [
           "Robot Doodle"
-        ]
+        ],
+        "progression": "Robot Doodle"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2779,9 +2680,9 @@
       "properties": {
         "level_keys": [
           "Alien Defender"
-        ]
+        ],
+        "progression": "Alien Defender"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2803,9 +2704,9 @@
       "properties": {
         "level_keys": [
           "Find the Wizard"
-        ]
+        ],
+        "progression": "Find the Wizard"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2827,9 +2728,9 @@
       "properties": {
         "level_keys": [
           "Begin planning your project"
-        ]
+        ],
+        "progression": "Begin planning your project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2851,9 +2752,9 @@
       "properties": {
         "level_keys": [
           "Course E: Play Lab Project"
-        ]
+        ],
+        "progression": "Course E: Play Lab Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2875,9 +2776,9 @@
       "properties": {
         "level_keys": [
           "Course E: Artist Project"
-        ]
+        ],
+        "progression": "Course E Artist Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2899,9 +2800,9 @@
       "properties": {
         "level_keys": [
           "Prepare for your presentation"
-        ]
+        ],
+        "progression": "Prepare for your presentation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2925,7 +2826,6 @@
           "Internet"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2949,7 +2849,6 @@
           "Crowdsourcing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

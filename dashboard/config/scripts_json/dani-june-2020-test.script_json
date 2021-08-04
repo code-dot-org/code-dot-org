@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:59 UTC",
+    "serialized_at": "2021-08-03 22:48:00 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dani-june-2020-test"
@@ -142,7 +142,6 @@
           "CSD U3L12 TFMD_virtual_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -166,7 +165,6 @@
           "CSD U3 dancing alien_virtual_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -190,7 +188,6 @@
           "csp-pre-survey-levelgroup_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,9 +209,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L01 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
