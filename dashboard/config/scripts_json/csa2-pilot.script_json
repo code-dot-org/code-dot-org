@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 13:17:40 UTC",
+    "serialized_at": "2021-08-04 16:55:50 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -1944,7 +1944,7 @@
       "key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.\n\n**Discussion Goal:** Students demonstrate confidence working with all arithmetic operators before moving on. Students might feel a little uncomfortable with the modulus (mod) operator, but they will practice using it more in later lessons.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4170,7 +4170,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4196,7 +4195,6 @@
         ],
         "progression": "Creating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4222,7 +4220,6 @@
         ],
         "progression": "Updating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4248,7 +4245,6 @@
         ],
         "progression": "Updating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4274,7 +4270,6 @@
         ],
         "progression": "Storing User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4300,7 +4295,6 @@
         ],
         "progression": "Storing User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4326,7 +4320,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4352,7 +4345,6 @@
         ],
         "progression": "Writing the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4378,7 +4370,6 @@
         ],
         "progression": "Writing the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4404,7 +4395,6 @@
         ],
         "progression": "Creating a Dessert Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4430,7 +4420,6 @@
         ],
         "progression": "Creating a Dessert Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4456,7 +4445,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4482,7 +4470,6 @@
         ],
         "progression": "Constructor Overloading"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4508,7 +4495,6 @@
         ],
         "progression": "Multiple Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4534,7 +4520,6 @@
         ],
         "progression": "Multiple Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4560,7 +4545,6 @@
         ],
         "progression": "Constructor Overloading with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4586,7 +4570,6 @@
         ],
         "progression": "Constructor Overloading with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4612,7 +4595,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4638,7 +4620,6 @@
         ],
         "progression": "Expressions Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4664,7 +4645,6 @@
         ],
         "progression": "Evaluating Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4690,7 +4670,6 @@
         ],
         "progression": "Evaluating Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4716,7 +4695,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4742,7 +4720,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4768,7 +4745,6 @@
         ],
         "progression": "Debugging Errors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4794,7 +4770,6 @@
         ],
         "progression": "Scope Error"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4820,7 +4795,6 @@
         ],
         "progression": "Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4846,7 +4820,6 @@
         ],
         "progression": "Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4872,7 +4845,6 @@
         ],
         "progression": "Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4898,7 +4870,6 @@
         ],
         "progression": "Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4924,7 +4895,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4950,7 +4920,6 @@
         ],
         "progression": "Writing a FoodTruck Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4976,7 +4945,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5002,7 +4970,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5028,7 +4995,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5054,7 +5020,6 @@
         ],
         "progression": "Creating Dessert Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5080,7 +5045,6 @@
         ],
         "progression": "Creating Dessert Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5106,7 +5070,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5132,7 +5095,6 @@
         ],
         "progression": "Dessert Class Accessor Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5158,7 +5120,6 @@
         ],
         "progression": "Printing Dessert Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5184,7 +5145,6 @@
         ],
         "progression": "Printing Dessert Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5210,7 +5170,6 @@
         ],
         "progression": "Accessor Methods for the Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5236,7 +5195,6 @@
         ],
         "progression": "The Owner's Inventory"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5262,7 +5220,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5288,7 +5245,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5314,7 +5270,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5340,7 +5295,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5366,7 +5320,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5392,7 +5345,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5418,7 +5370,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5444,7 +5395,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5470,7 +5420,6 @@
         ],
         "progression": "Printing an Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5496,7 +5445,6 @@
         ],
         "progression": "Overriding toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5522,7 +5470,6 @@
         ],
         "progression": "Formatting toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5548,7 +5495,6 @@
         ],
         "progression": "Formatting toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5574,7 +5520,6 @@
         ],
         "progression": "FoodTruck toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5600,7 +5545,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5626,7 +5570,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5652,7 +5595,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5678,7 +5620,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5704,7 +5645,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
