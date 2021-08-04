@@ -13,6 +13,7 @@ import {
   setRightWidth,
   setInstructionsExplicitHeight
 } from './javalabRedux';
+import {setInstructionsMaxHeightAvailable} from '../redux/instructions';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
@@ -54,7 +55,8 @@ class JavalabView extends React.Component {
     rightWidth: PropTypes.number,
     instructionsExplicitHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
-    longInstructions: PropTypes.string
+    longInstructions: PropTypes.string,
+    setInstructionsMaxHeightAvailable: PropTypes.func
   };
 
   state = {
@@ -216,9 +218,20 @@ class JavalabView extends React.Component {
       availableWidth - styleConstants['resize-bar-width']
     );
 
-    // If there is no visualization, make the instructions explicitly full
-    // height.
-    if (!this.props.visualization) {
+    if (this.props.visualization) {
+      // If there is a visualization, ensure that the instructions don't extend beyond
+      // the bottom of the window.  In particular, we want the horizontal resizer to still
+      // be visible, along with a peek at the visualization area.
+      const miscElementsExistingHeightVisualization = 150;
+      const minimumInstructionsHeight = 100;
+      this.props.setInstructionsMaxHeightAvailable(
+        Math.max(
+          window.innerHeight - miscElementsExistingHeightVisualization,
+          minimumInstructionsHeight
+        )
+      );
+    } else {
+      // If there is no visualization, make the instructions explicitly full height.
       const miscElementsExistingHeightNoVisualization = 105;
       this.props.setInstructionsExplicitHeight(
         window.innerHeight - miscElementsExistingHeightNoVisualization
@@ -456,6 +469,8 @@ export default connect(
     setLeftWidth: width => dispatch(setLeftWidth(width)),
     setRightWidth: width => dispatch(setRightWidth(width)),
     setInstructionsExplicitHeight: height =>
-      dispatch(setInstructionsExplicitHeight(height))
+      dispatch(setInstructionsExplicitHeight(height)),
+    setInstructionsMaxHeightAvailable: height =>
+      dispatch(setInstructionsMaxHeightAvailable(height))
   })
 )(UnconnectedJavalabView);
