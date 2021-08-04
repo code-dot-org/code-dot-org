@@ -90,7 +90,7 @@
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-07-30 20:27:49 UTC",
+    "serialized_at": "2021-08-03 22:47:34 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csppostap-2018"
@@ -424,7 +424,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +448,6 @@
         ],
         "progression": "Quick Check-In"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +472,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +496,6 @@
         ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +520,6 @@
         ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +544,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +568,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,7 +592,6 @@
         ],
         "progression": "Downloading the Data Set"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +616,6 @@
         ],
         "progression": "Making a Scatter Plot"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +640,6 @@
         ],
         "progression": "Making a Line Chart"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -674,7 +664,6 @@
         ],
         "progression": "Making a Bar Chart"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +688,6 @@
         ],
         "progression": "Editing Chart Appearance"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -724,7 +712,6 @@
         ],
         "progression": "Making Data Visualizations - Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -749,7 +736,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -774,7 +760,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +784,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +808,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +832,6 @@
         ],
         "progression": "Getting to Know Your Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +856,6 @@
         ],
         "progression": "Cleaning Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +880,6 @@
         ],
         "progression": "Categorizing Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +904,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +928,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,7 +952,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,7 +976,6 @@
         ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1024,7 +1000,6 @@
         ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1024,6 @@
         ],
         "progression": "Making Pivot Tables Part 3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1074,7 +1048,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1099,7 +1072,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1140,7 +1112,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1166,7 +1137,6 @@
           "CSP Unit 2 Ch2 Cumulative Assessment MC_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1190,7 +1160,6 @@
           "U4L02 Student Lesson Introduction Video_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1214,7 +1183,6 @@
           "U4 - Objects - eventParameter_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1238,7 +1206,6 @@
           "U4 - Objects - dotNotation_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1262,7 +1229,6 @@
           "U4 - Objects - createDotNotation_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1286,7 +1252,6 @@
           "U4 - Objects - arraysOfObjects_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1310,7 +1275,6 @@
           "U4 - Objects - accessingPropertiesInArray_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1334,7 +1298,6 @@
           "U4 - Objects - exemplarContactsApp_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1358,7 +1321,6 @@
           "U4 - Objects - readStarterCode_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1382,7 +1344,6 @@
           "U4 - Objects - createContactsData_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1406,7 +1367,6 @@
           "U4 - Objects - showContact1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1430,7 +1390,6 @@
           "U4 - Objects - showContact2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1454,7 +1413,6 @@
           "U4 - Objects - showContact3_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1478,7 +1436,6 @@
           "U4 - Objects - pullValues_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1502,7 +1459,6 @@
           "U4 - Objects - createContactObject_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1526,7 +1482,6 @@
           "U4 - Objects - resetIndexAndShow_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1550,7 +1505,6 @@
           "U4 - Objects - showSampleImage_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1574,7 +1528,6 @@
           "U4L03 Student Lesson Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1598,7 +1551,6 @@
           "U4 - CreateRecord - 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1622,7 +1574,6 @@
           "U4 - CreateRecord - 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1646,7 +1597,6 @@
           "U4 - CreateRecord - 2.5_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1670,7 +1620,6 @@
           "U4 - CreateRecord - 3_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1694,7 +1643,6 @@
           "U4 - CreateRecord - 4_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1718,7 +1666,6 @@
           "U4 - CreateRecord - 5_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1742,7 +1689,6 @@
           "U4 - Edit Data Table by Hand_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1766,7 +1712,6 @@
           "U4 - debug column names are case sensitive_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1790,7 +1735,6 @@
           "U4 - Add Row By Hand_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1814,7 +1758,6 @@
           "U4 - add createRecord to contacts App_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1838,7 +1781,6 @@
           "U4 - fix contacts by hand in data table_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1862,7 +1804,6 @@
           "U4 - last stage test adding contcts_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1886,7 +1827,6 @@
           "U4L04 Student Lesson Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1910,7 +1850,6 @@
           "U4 - Read Record - 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1934,7 +1873,6 @@
           "U4 - Read Record - 1.2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1958,7 +1896,6 @@
           "U4 - Read Record - 1.3_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1982,7 +1919,6 @@
           "U4 - Read Record - 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2006,7 +1942,6 @@
           "U4 - Read Record - 3_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2030,7 +1965,6 @@
           "U4 - Read Record - 4.1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2054,7 +1988,6 @@
           "U4 - Read Record - 5_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2078,7 +2011,6 @@
           "U4 - ReadRecords - Contacts App 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2102,7 +2034,6 @@
           "U4 - Read Record - Local vs Remote Data External_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2126,7 +2057,6 @@
           "U4 - ReadRecords - Contacts App 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2150,7 +2080,6 @@
           "U4 - ReadRecords - Contacts App 3_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2174,7 +2103,6 @@
           "U6 - deleteRecord - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2198,7 +2126,6 @@
           "U4 - Unique Ids Explanation_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2222,7 +2149,6 @@
           "U4 - deleteRecords 0_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2246,7 +2172,6 @@
           "U4 - deleteRecords 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2270,7 +2195,6 @@
           "U4 - deleteRecords 2 delete object_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2294,7 +2218,6 @@
           "U4 - ReadRecords - Contacts App 4_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2318,7 +2241,6 @@
           "U4 - ReadRecords - Contacts App 5 make delete work_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2342,7 +2264,6 @@
           "U6 - updateRecord - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2366,7 +2287,6 @@
           "U6 - updateRecord - Default Block_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2390,7 +2310,6 @@
           "U6 - updateRecord - Callback Success Parameter_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2414,7 +2333,6 @@
           "U6 - updateRecord - Update Nonexistent Record_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2438,7 +2356,6 @@
           "U6 - updateRecord - Contacts - Edit UI_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2462,7 +2379,6 @@
           "U6 - updateRecord - Contacts - Edit event handler_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2486,7 +2402,6 @@
           "U6 - updateRecord - Contacts - Save edited contact_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2510,7 +2425,6 @@
           "U6 - ImportExport - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2534,7 +2448,6 @@
           "U4 - Charts - Import Data 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2558,7 +2471,6 @@
           "U4 - Charts - Import Data 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2582,7 +2494,6 @@
           "U4 - Charts - Remixing Apps with Data_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2606,7 +2517,6 @@
           "U4 - Charts - Export Data_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2630,7 +2540,6 @@
           "U6 - Charts - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2654,7 +2563,6 @@
           "U4 - Charts - drawChartFromRecords 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2678,7 +2586,6 @@
           "U4 - Charts - Scatter Chart_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2702,7 +2609,6 @@
           "U4 - Charts - Line Chart 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2726,7 +2632,6 @@
           "U4 - Charts - Line Chart 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2750,7 +2655,6 @@
           "U4 - Charts - drawChartFromRecords Options 1_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2774,7 +2678,6 @@
           "U4 - Charts - drawChartFromRecords Options 2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2798,7 +2701,6 @@
           "U6 - Sample Apps - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2822,7 +2724,6 @@
           "U6 - Sample Apps - User Login_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2846,7 +2747,6 @@
           "U6 - Sample Apps - Class Survey_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2870,7 +2770,6 @@
           "U6 - Sample Apps - Clicker Game_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2894,7 +2793,6 @@
           "U6 - Sample Apps - Flashcards_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2918,7 +2816,6 @@
           "U6 - Final Project - Student Introduction_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2942,7 +2839,6 @@
           "U6 - Final Project - Project Level_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2967,7 +2863,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

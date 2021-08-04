@@ -6,21 +6,27 @@ uz:
       Accelerometer Events: Akselerometr hodisalari
       Adding Images: Rasm qo'shish
       Adding Screens: Ekran qo'shish
+      Alien Defender: O'zga sayyoralik himoyachisi
       Animate Your Scene: Sahnani jonlantiring
       Artist Intro with JR Hildebrand: JR Hildebrand bilan Rassomga muqaddima
       Artist Intro with JR Hildebrande: R Hildebrand bilan Rassomga muqaddima
       Artist Project: Rassom loyihasi
       'Artist: Variables': 'Rassom: O''zgaruvchilar'
       Attribution: Atributlar
+      Back and Forth: Oldinga va orqaga
       Basic Conditionals: Shartli bayonorlar asoslari
+      Bass, Mid, and Treble: Bas, O'rta va Uchlik
       Board Events: Board Events
       Board Input and Output: Kirish va chiqish
       Boolean Comparison: Mantiqiy solishtirish
       Build a Screen: Ekran qurish
       Building an App: Ilova yaratis
+      'Bunny ': Bunny quyon
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: Informatika kashfiyotlari kursidan keyingi
         so'rovnoma
+      CSS Text Properties: CSS matn xususiyatlari
+      CSS and Style Sheets: CSS va stillar
       Cake Defender: Tort himoyachisi
       Challenge: Chaqiriq (Challenge)
       Challenge Levels: Chaqiriq bosqichlari
@@ -38,17 +44,25 @@ uz:
       'Conditionals: If Statements': 'Shartli bayonotlar: If bayonoti'
       'Conditionals: If and If/Else Statements': 'Shartli bayonotlar: If va If/Else
         bayonoti'
+      Course E Artist Project: Kurs E. Rassom loyihasi
+      Course E Sprite Lab Project: Kurs E. Sprite Lab loyihasi
+      Course F Artist Project: Kurs F. Rassom loyihasi
+      Course F Sprite Lab Project: Kurs F. Sprite Lab loyihasi
       Create Your Own Animation: O'z animatsiyangizni yarating
       Create a Story: Hikoya yarating
       Create your project: Loyihangizni yarating
       Creating a Simulation: Simulyatsiya yaratish
+      Creative Commons Search: Creative Commons Qidiruv
+      Dance Crews: Raqs jamoalari
       Data Visualization: Ma'lumotlar Vizualizatsiyasi
       De-bugging with the Step Button: Step tugmasi bilan De-bugging
       Debugging: Nosozliklarni bartaraf etish (Debugging)
       Debugging with the Step Button: Step tugmasi bilan De-bugging
       Demo Apps: Demo ilovalar
       Design Mode: Design Mode
+      Dogger Example: Dogger misoli
       Drawing: Rasm chizish
+      End of Course Projects: Kurs yakuni loyihalari
       Events: Hodisalar
       Events and Linking Screens: Hodisalar va bog'langan ekranlar
       Events and Properties: Hodisalar va xususiyatlar
@@ -70,14 +84,20 @@ uz:
       For Loops and Repeat Blocks: For sikllari va Repeat bloki
       Functions: Funksiyalar
       Functions with Parameters: Funksiyalar (parameterlari bilan)
+      Geometric Sun: Geometrik Quyosh
+      Get In Formation: Formatsiyaga kirish
+      Getters and Setters: Getters and Setters
       Getting Properties: Getting Properties
       Headings: Headings
       How to Create a Simple Function: Oddiy funksiya qanday yasaladi
       How to Make a Sprite: Sprite qanday qilinadi
+      Hyperlinks: Giperhavolalar
       Ice Age Loops: Muzlik asri bilan sikllar
       Images and Sounds: Rasmlar va tovushlar
+      Images in HTML: HTMLda rasmlar
       Input Examples: Kiritishga misollar
       Input with If-Else: If-Else bilan kiritishlar
+      Inspiration!: Ruhlanish!
       Intro to For Loops: For sikliga kirish
       Intro to Sprites: Spraytlarga kirish
       Intro to Variables: O'zgaruvchilarda kirish
@@ -116,6 +136,7 @@ uz:
       'Mini-project: Jorge the Dog': 'Mini-loyiha: Jorge the Dog'
       'Mini-project: Sticker Design': 'Mini-loyiha: Sticker Design'
       Modify simulation variables: Simulyatsiya o'zgaruvchilarini sozlash
+      More Buttons: Ko'proq tugmalar
       More Input: Ko'proq kiritish
       More Monsters: Ko'proq monstrlar
       More Parameters: Ko'proq parametrlar
@@ -127,6 +148,7 @@ uz:
       Nested Loops with the Bee: Asalari bilan ichma-ich sikllar
       New Shapes: Yangi shakllar
       Orientation: Orientatsiya
+      Overview: Overview
       Pair Programming: Juftlikda dasturlash
       Picturing Data: Ma'lumotlarni tasvirlash
       Planning: Planning
@@ -147,6 +169,7 @@ uz:
       Project - Sprites and Interactions: Loyiha - Spraytlar va interfaollik
       Project Work: Loyiha ishi
       Properties: Xususiyatlar
+      Quarter Notes: Chorak notalar
       RGB Exploration: RGB bilan tanishish
       Reading Sensors: Sensorlarni o'qish
       Recovery: Tiklash
@@ -158,6 +181,9 @@ uz:
       Repeat Until Statements: Repeat Until bayonoti
       Representing Images: Representing Images
       Review: Sharh
+      Revise Artist Project: '"Rassom" loyihasini qayta ko''rib chiqish'
+      Revise Sprite Lab Project: Sprite Lab loyihasini qayta ko'rib chiqish
+      Robot Doodle: Robot Doodle
       Run a simulation: Simulyatorni ishga tushurish
       Sample Programs: Dastur shabloni
       Screen Design: Ekran dizayni
@@ -172,13 +198,18 @@ uz:
       Skill Building: Malaka orttirish
       Sliders: Slayderlar
       Smart Bike - Blinkers: Smart Bike - Blinkers
+      Speed it Up, Slow it Down: Tezlashtiring, sekinlashtiring
+      Sprite Lab Example Project: Sprite Lab namuna uchun loyiha
       Sprite Lab Project: Sprite Lab loyihasi
+      Sprite Properties: Sprait hususiyatlari
       Sprites and the Draw Loop: Spraytlar va Draw sikli
       Star Chaser: Yulduzli poyga
       Stopping the Outbreak with Masks: Niqoblar bilan epidemiyani to'xtatish
       Styling Text: Matn stilini sozlash
       Styling with Classes: Klasslar bilan stil berish
       Styling your Website: Veb-saytingizga stil berish
+      Text Compression: Matnni Zichlash
+      The Animation Tab: Animatsiya yorlig‘i
       The Artist in Code Studio: '"Code Studio"da Rassom'
       The Buzzer: Buzzer
       The Collector: Kollektor
@@ -192,11 +223,16 @@ uz:
       Using the Repeat Block: Takrorlash blokidan foydalanish
       Using the Switch: Switch-dan foydalanish
       Vaccines: Vaksinalar
+      Variables: O‘zgaruvchilar
       Velocity: Tezlik
       Video: Video
+      'Video: CS Matters': 'Video: Kompyuter fanlari muhim'
+      'Video: What Makes a Computer, a Computer?': 'Video: Kompyuter kompyuter boʻlishi
+        uchun nima kerak?'
       Warm Up: Qizdirish
       Website Project: Veb-sayt loyihasi
       Welcome to Monster Town: Monster Town-ga xush kelibsiz!
+      Where'd They Go?: Ular qayga boradi?
       While Loops with the Farmer: While Loops with the Farmer
       Wrap-up: Yakun
       Your Personal Website: O'z shaxsiy veb-saytingiz

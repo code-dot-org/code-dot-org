@@ -294,7 +294,7 @@ namespace :seed do
   end
 
   timed_task deprecated_blockly_levels: :environment do
-    DeprecatedLevelLoader.load_blockly_levels
+    Services::DeprecatedLevelLoader.load_blockly_levels
   end
 
   # Seeds the data in callouts

@@ -1,3 +1,4 @@
+---
 lt:
   data:
     blocks:
@@ -403,8 +404,8 @@ lt:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'taip'
-            '"no"': 'ne'
+            '"yes"': taip
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:

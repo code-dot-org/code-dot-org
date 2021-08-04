@@ -767,9 +767,9 @@ StudioApp.prototype.scaleLegacyShare = function() {
   }
 };
 
-StudioApp.prototype.getCode = function() {
+StudioApp.prototype.getCode = function(opt_showHidden) {
   if (!this.editCode) {
-    return Blockly.getWorkspaceCode();
+    return Blockly.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;

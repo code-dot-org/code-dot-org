@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:13 UTC",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "CSPPD3-Unit3-pt2"
@@ -92,7 +92,6 @@
           "CSPPD3-u3 challenge overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +115,6 @@
           "CSPPD3-u3 what is a challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +138,6 @@
           "CSPPD3-u3 completing the challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,7 +161,6 @@
           "CSPPD3-u3 list of challenges"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,7 +184,6 @@
           "CSPPD3-u2 expectations"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +207,6 @@
           "CSPPD3-u3 pick a challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +230,6 @@
           "CSPPD3-u3 complete the challenge overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +253,6 @@
           "CSPPD3-u3 do the challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -284,7 +276,6 @@
           "CSPPD3-u2 create your extension"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -308,7 +299,6 @@
           "CSPPD3-u2 reflect on challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +322,6 @@
           "CSPPD3-u3 share out overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +345,6 @@
           "CSPPD3-u3 post to forum"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -380,7 +368,6 @@
           "CSPPD3-u3 submit forum link"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +391,6 @@
           "CSPPD3-u2 final progress check"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -428,7 +414,6 @@
           "CSPPD3-u3 post survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

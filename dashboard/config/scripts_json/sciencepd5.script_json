@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:43 UTC",
+    "serialized_at": "2021-08-03 22:47:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "sciencepd5"
@@ -121,7 +121,6 @@
           "sciPD3OLP33 intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -145,7 +144,6 @@
           "sciPD2 timeline"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -169,7 +167,6 @@
           "PD check your progress"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -193,7 +190,6 @@
           "sciPD33 earth1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -217,7 +213,6 @@
           "sciPD33 earth2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +236,6 @@
           "challenges sample 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -265,7 +259,6 @@
           "challenges sample 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -289,7 +282,6 @@
           "challenges sample 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -313,7 +305,6 @@
           "challenges sample 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -337,7 +328,6 @@
           "challenges sample 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,7 +351,6 @@
           "sciPD33 thanks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -385,7 +374,6 @@
           "sciPD33 end"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

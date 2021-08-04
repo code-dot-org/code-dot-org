@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:43 UTC",
+    "serialized_at": "2021-08-03 22:47:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp6-support"

@@ -3,24 +3,17 @@
     "data": {
       "vocabularies": {
         "sprite/coursef/2021": {
-          "word": "Sprite",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Sprite"
         },
         "behavior/coursef/2021": {
-          "word": "Comportamiento",
-          "definition": ""
+          "word": "Comportamiento"
         },
         "program/coursef/2021": {
           "word": "Programa",
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmo",
-          "definition": ""
+          "word": "Algoritmo"
         },
         "event/coursef/2021": {
           "word": "Evento",
@@ -30,13 +23,8 @@
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "Entrada",
-          "definition": ""
+          "word": "Entrada"
         },
         "loop/coursef/2021": {
           "word": "Bucle",
@@ -49,10 +37,6 @@
         "for_loop/coursef/2021": {
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Aprendizaje automático",
@@ -302,10 +286,6 @@
           "word": "Condicionales",
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "Condición",
           "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
@@ -313,10 +293,6 @@
         "while_loop/coursed/2021": {
           "word": "Bucles mientras",
           "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
@@ -460,24 +436,17 @@
           "definition": "una acción que hace que algo suceda."
         },
         "behavior/coursee/2021": {
-          "word": "Comportamiento",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Comportamiento"
         },
         "sprite/coursee/2021": {
-          "word": "Sprite",
-          "definition": ""
+          "word": "Sprite"
         },
         "event/coursee/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
         "copyright/coursee/2021": {
-          "word": "Derechos de autor",
-          "definition": ""
+          "word": "Derechos de autor"
         },
         "loop/coursee/2021": {
           "word": "Bucle",

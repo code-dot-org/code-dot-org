@@ -1835,3 +1835,5 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      validation_validatedBackground:
+        text: definir plano de fundo para {IMG}

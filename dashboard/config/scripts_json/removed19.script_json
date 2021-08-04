@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:08 UTC",
+    "serialized_at": "2021-08-03 22:47:41 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "removed19"
@@ -91,7 +91,6 @@
           "courseB_video_Unspotted_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -115,7 +114,6 @@
           "courseA_video_Stevie_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -139,7 +137,6 @@
           "PlantASeed_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
