@@ -3,13 +3,15 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-export default class DeleteConfirmationDialog extends Component {
+export default class JavalabDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
-    filename: PropTypes.string
+    handleConfirm: PropTypes.func,
+    message: PropTypes.string,
+    confirmButtonText: PropTypes.string,
+    closeButtonText: PropTypes.string
   };
 
   render() {
@@ -18,7 +20,9 @@ export default class DeleteConfirmationDialog extends Component {
       handleClose,
       handleConfirm,
       isDarkMode,
-      filename
+      message,
+      confirmButtonText,
+      closeButtonText
     } = this.props;
     return (
       <BaseDialog
@@ -37,28 +41,32 @@ export default class DeleteConfirmationDialog extends Component {
             ...(isDarkMode && styles.darkDialog)
           }}
         >
-          <div>{`Are you sure you want to delete ${filename}?`}</div>
+          <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
-            <button
-              type="button"
-              style={{
-                ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
-              }}
-              onClick={handleConfirm}
-            >
-              Delete
-            </button>
-            <button
-              type="button"
-              style={{
-                ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightCancel)
-              }}
-              onClick={handleClose}
-            >
-              Cancel
-            </button>
+            {confirmButtonText && (
+              <button
+                type="button"
+                style={{
+                  ...styles.button,
+                  ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
+                }}
+                onClick={handleConfirm}
+              >
+                {confirmButtonText}
+              </button>
+            )}
+            {closeButtonText && (
+              <button
+                type="button"
+                style={{
+                  ...styles.button,
+                  ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+                }}
+                onClick={handleClose}
+              >
+                {closeButtonText}
+              </button>
+            )}
           </div>
         </div>
       </BaseDialog>
@@ -101,5 +109,9 @@ const styles = {
   lightCancel: {
     backgroundColor: color.light_gray,
     color: color.black
+  },
+  message: {
+    whiteSpace: 'normal',
+    lineHeight: '18px'
   }
 };
