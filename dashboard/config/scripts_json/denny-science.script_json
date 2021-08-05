@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:24 UTC",
+    "serialized_at": "2021-08-03 22:47:47 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "denny-science"
@@ -76,7 +76,6 @@
           "CSD mini design mode video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -100,7 +99,6 @@
           "Design Mode Map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -124,7 +122,6 @@
           "Science earthquake 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -148,7 +145,6 @@
           "Science earthquake text"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -172,7 +168,6 @@
           "Science earthquake images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -196,7 +191,6 @@
           "Science earthquake reflect"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,7 +214,6 @@
           "Science change screen map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +237,6 @@
           "Science board event map"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -268,7 +260,6 @@
           "Science Circuit Playground Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -292,7 +283,6 @@
           "Science event demo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +306,6 @@
           "Science event accel"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -340,7 +329,6 @@
           "Science event test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

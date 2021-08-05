@@ -1774,3 +1774,5 @@ he:
           DIR:
             right: ימינה
             left: שמאלה
+      validation_validatedBackground:
+        text: להגדיר רקע ל {IMG}

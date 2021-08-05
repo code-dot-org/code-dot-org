@@ -20,8 +20,6 @@ et:
     mailer:
       confirmation_instructions:
         subject: Code.org-i kinnitamise juhised
-      reset_password_instructions:
-        subject: Code.org-i parooli lähtestusjuhised
       unlock_instructions:
         subject: Lahtilukustamise juhised
     omniauth_callbacks:

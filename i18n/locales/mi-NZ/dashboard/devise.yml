@@ -18,8 +18,6 @@ mi:
     mailer:
       confirmation_instructions:
         subject: "Ngā tohutohu whakaū nā Code.org"
-      reset_password_instructions:
-        subject: "Ngā tohutohu tautuhi kupuhipa anō nā Code.org"
       unlock_instructions:
         subject: "Wetea ngā Tohutohu"
     omniauth_callbacks:

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:27 UTC",
+    "serialized_at": "2021-08-03 22:48:03 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "contagion-pilot"
@@ -129,7 +129,6 @@
         ],
         "progression": "How Things Spread"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -154,7 +153,6 @@
         ],
         "progression": "Welcome to Monster Town"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -179,7 +177,6 @@
         ],
         "progression": "Creating a Simulation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +201,6 @@
         ],
         "progression": "Programming Our Rules"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -229,7 +225,6 @@
         ],
         "progression": "Data Tracking: Model 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +249,6 @@
         ],
         "progression": "STOP!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +273,6 @@
         ],
         "progression": "Slowing the Contagion with Masks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +297,6 @@
         ],
         "progression": "Sometimes, but Not Always"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +321,6 @@
         ],
         "progression": "Thinking Like a Scientist"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -354,7 +345,6 @@
         ],
         "progression": "90% Chance"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -379,7 +369,6 @@
         ],
         "progression": "Model 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +393,6 @@
         ],
         "progression": "STOP!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,7 +417,6 @@
         ],
         "progression": "Model 3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -454,7 +441,6 @@
         ],
         "progression": "STOP AGAIN!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -479,7 +465,6 @@
         ],
         "progression": "Vaccines"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -504,7 +489,6 @@
         ],
         "progression": "Telling a Data Story"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

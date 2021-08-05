@@ -12,9 +12,10 @@ export default function ControlButtons({
   toggleRun,
   toggleTest,
   isEditingStartSources,
-  isReadOnlyWorkspace,
+  disableFinishButton,
   onContinue,
-  renderSettings
+  renderSettings,
+  disableRunButtons
 }) {
   return (
     <div>
@@ -28,6 +29,8 @@ export default function ControlButtons({
           onClick={toggleRun}
           isHorizontal
           style={{...styles.button.all, ...styles.button.orange}}
+          isDisabled={disableRunButtons}
+          id="javalabRun"
         />
         <JavalabButton
           text={isTesting ? i18n.stopTests() : i18n.test()}
@@ -35,6 +38,7 @@ export default function ControlButtons({
           onClick={toggleTest}
           isHorizontal
           style={{...styles.button.all, ...styles.button.white}}
+          isDisabled={disableRunButtons}
         />
       </div>
       <div style={styles.rightButtons}>
@@ -44,7 +48,8 @@ export default function ControlButtons({
             text={i18n.finish()}
             onClick={onContinue}
             style={{...styles.button.all, ...styles.button.blue}}
-            isDisabled={isReadOnlyWorkspace}
+            isDisabled={disableFinishButton}
+            id="javalabFinish"
           />
         )}
       </div>
@@ -58,9 +63,10 @@ ControlButtons.propTypes = {
   toggleRun: PropTypes.func.isRequired,
   toggleTest: PropTypes.func.isRequired,
   isEditingStartSources: PropTypes.bool,
-  isReadOnlyWorkspace: PropTypes.bool.isRequired,
+  disableFinishButton: PropTypes.bool,
   onContinue: PropTypes.func.isRequired,
-  renderSettings: PropTypes.func.isRequired
+  renderSettings: PropTypes.func.isRequired,
+  disableRunButtons: PropTypes.bool
 };
 
 const styles = {
