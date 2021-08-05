@@ -23,6 +23,11 @@
   - if @header['state-facts']
     %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
 
+  -# used for full-width banner
+  - if page_banner = @header['page_banner']
+    %div
+      =view page_banner
+
   %div{:class=>containerClass}
 
     -if @header['theme'] == 'responsive'
