@@ -14,6 +14,7 @@ function JavalabButton({
   style,
   onClick,
   isHorizontal,
+  id,
   isDisabled = false
 }) {
   let textStyle = {};
@@ -27,6 +28,7 @@ function JavalabButton({
     <button
       id={id}
       type="button"
+      id={id}
       className={className}
       style={{
         ...styles.button,
@@ -35,6 +37,7 @@ function JavalabButton({
         ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {icon}
       {text && <div style={textStyle}>{text}</div>}
@@ -52,7 +55,8 @@ JavalabButton.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func.isRequired,
   isHorizontal: PropTypes.bool,
-  isDisabled: PropTypes.bool
+  isDisabled: PropTypes.bool,
+  id: PropTypes.string
 };
 
 JavalabButton.defaultProps = {

@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:41 UTC",
+    "serialized_at": "2021-08-03 22:46:40 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "step"
@@ -60,7 +60,6 @@
           "blockly:MazeStep:2_1_step"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "blockly:MazeStep:2_2_step"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +106,6 @@
           "blockly:MazeStep:2_17_step"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +129,6 @@
           "blockly:MazeStep:karel_1_9_step"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +152,6 @@
           "blockly:MazeStep:karel_2_9_step"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +175,6 @@
           "blockly:MazeStep:karel_bee_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
