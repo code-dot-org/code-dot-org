@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
 // text to be vertically stacked.
 function JavalabButton({
+  id,
   icon,
   text,
   className,
@@ -24,6 +25,7 @@ function JavalabButton({
 
   return (
     <button
+      id={id}
       type="button"
       className={className}
       style={{
@@ -43,6 +45,7 @@ function JavalabButton({
 export default Radium(JavalabButton);
 
 JavalabButton.propTypes = {
+  id: PropTypes.string,
   icon: PropTypes.node,
   text: PropTypes.string,
   className: PropTypes.string,
@@ -53,7 +56,8 @@ JavalabButton.propTypes = {
 };
 
 JavalabButton.defaultProps = {
-  isHorizontal: false
+  isHorizontal: false,
+  id: ''
 };
 
 const styles = {
