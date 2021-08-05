@@ -24,11 +24,23 @@ describe('InstructionsDialogWrapper', () => {
     expect(wrapper).to.be.empty;
   });
 
-  it('does not call showInstructionsDialog on first render', () => {
-    wrapper = mount(
-      <InstructionsDialogWrapper isOpen={true} showInstructionsDialog={spy} />
-    );
-    expect(spy).not.to.have.been.called;
+  describe('componentDidMount', () => {
+    it('calls showInstructionsDialog if isOpen', () => {
+      wrapper = mount(
+        <InstructionsDialogWrapper isOpen={true} showInstructionsDialog={spy} />
+      );
+      expect(spy).to.have.been.calledOnce;
+    });
+
+    it('does not call showInstructionsDialog if !isOpen', () => {
+      wrapper = mount(
+        <InstructionsDialogWrapper
+          isOpen={false}
+          showInstructionsDialog={spy}
+        />
+      );
+      expect(spy).not.to.have.been.called;
+    });
   });
 
   it('calls showInstructionsDialog every time props change to open', () => {
