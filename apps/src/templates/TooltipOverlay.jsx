@@ -106,7 +106,7 @@ export default class TooltipOverlay extends React.Component {
       const rectY = bubbleCoordinates.rectY + indexYOffset;
       const textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
       return (
-        <g key={index}>
+        <svg key={index}>
           <rect
             x={rectX}
             y={rectY}
@@ -119,7 +119,7 @@ export default class TooltipOverlay extends React.Component {
           <text x={textX} y={textY} style={styles.text}>
             {string}
           </text>
-        </g>
+        </svg>
       );
     });
   }
