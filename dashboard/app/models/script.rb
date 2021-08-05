@@ -72,8 +72,12 @@ class Script < ApplicationRecord
             :callouts
           ]
         },
+        :lesson_groups,
         {
-          lessons: [{script_levels: [:levels]}]
+          lessons: [
+            :lesson_activities,
+            {script_levels: [:levels]}
+          ]
         },
         :unit_group_units
       ]
