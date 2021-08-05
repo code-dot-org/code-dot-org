@@ -73,13 +73,20 @@ class Script < ApplicationRecord
           ]
         },
         :lesson_groups,
+        :resources,
+        :student_resources,
         {
           lessons: [
             :lesson_activities,
             {script_levels: [:levels]}
           ]
         },
-        :unit_group_units
+        {
+          unit_group_units: {
+            unit_group: :course_version
+          }
+        },
+        :course_version
       ]
     )
   end
