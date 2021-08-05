@@ -617,7 +617,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.course_cache_to_cache
-    Rails.cache.write(COURSE_CACHE_KEY, course_cache_from_db)
+    Rails.cache.write(COURSE_CACHE_KEY, (@@course_cache = course_cache_from_db))
   end
 
   def self.course_cache
