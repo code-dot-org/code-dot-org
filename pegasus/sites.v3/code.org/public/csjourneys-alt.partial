@@ -2,6 +2,7 @@
 title: CS Journeys - Explore the many worlds of computer science
 video_player: true
 theme: responsive
+page_banner: csjourneys_header_banner
 social:
   "og:title": "CS Journeys - Explore the many worlds of computer science"
   "twitter:title": "CS Journeys - Explore the many worlds of computer science"
@@ -16,10 +17,7 @@ social:
 
 <a id="top"></a>
 
-<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:500px; max-width:100%; margin-top:35px">
-<h1 style="margin-top:25px">Explore the wide world of computer science with your students</h1>
-
-<p>The most memorable school experiences are frequently not in lessons, but associated with an eye-opening field trip or a special guest speaker. Connecting what students are learning to the real world not only enables them to better understand and recall concepts but also excites and inspires them to continue learning.</p>
+<p style="margin-top:30px">The most memorable school experiences are frequently not in lessons, but associated with an eye-opening field trip or a special guest speaker. Connecting what students are learning to the real world not only enables them to better understand and recall concepts but also excites and inspires them to continue learning.</p>
 <p>Code.org has created easy-to-use resources designed to help you to excite, encourage, and empower your students to continue their CS journeys in and beyond your class:</p>
 <br>
 <div class="col-33" style="padding-bottom:15px; text-align:left">
