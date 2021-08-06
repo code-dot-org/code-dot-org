@@ -242,7 +242,7 @@ class JsDebugger extends React.Component {
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.isOpen && !nextProps.isOpen) {
       this.slideShut();
     } else if (!this.props.isOpen && nextProps.isOpen) {
