@@ -69,3 +69,15 @@ export function deleteCodeReviewComment(commentId, token) {
     headers: {'X-CSRF-Token': token}
   });
 }
+
+export function getReviewablePeers(channelId, levelId, scriptId) {
+  return $.ajax({
+    url: `/reviewable_projects/for_level`,
+    type: 'GET',
+    data: {
+      channel_id: channelId,
+      level_id: levelId,
+      script_id: scriptId
+    }
+  });
+}

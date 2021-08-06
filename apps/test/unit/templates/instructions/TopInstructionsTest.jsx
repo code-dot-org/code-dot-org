@@ -1,7 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import {
+  UnconnectedTopInstructions as TopInstructions,
+  TabType
+} from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 
 const DEFAULT_PROPS = {
@@ -61,6 +64,14 @@ describe('TopInstructions', () => {
       />
     );
     expect(wrapper.find('div')).to.have.lengthOf(1);
+  });
+
+  it('displays initial selected tab if supplied', () => {
+    const wrapper = shallow(
+      <TopInstructions {...DEFAULT_PROPS} initialSelectedTab={TabType.REVIEW} />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.REVIEW);
   });
 
   describe('viewing the Feedback Tab', () => {
