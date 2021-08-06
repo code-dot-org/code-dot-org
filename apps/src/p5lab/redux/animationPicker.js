@@ -136,6 +136,7 @@ export function handleUploadComplete(result) {
     study: 'animation-library',
     study_group: 'control-2020',
     event: 'upload',
+    data_string: this.props.spriteLab ? 'spritelab' : 'gamelab',
     data_json: JSON.stringify({
       size: result.size
     })
@@ -236,6 +237,7 @@ export function pickLibraryAnimation(animation) {
     study: 'sprite-use',
     study_group: 'before-update-v2',
     event: 'select-sprite',
+    data_string: this.props.spriteLab ? 'spritelab' : 'gamelab',
     data_json: JSON.stringify({
       name: animation.name,
       sourceUrl: animation.sourceUrl
