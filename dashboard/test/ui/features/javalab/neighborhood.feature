@@ -8,7 +8,7 @@ Scenario: Paint Glomming Shapes
   And I wait for the page to fully load
   Then I press "runButton"
   And I wait for 20 seconds
-  And I see no difference
+  And I see no difference for "paint glomming"
   Then I close my eyes
 
 #Scenario: Stop Button Closes Connection
