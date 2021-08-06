@@ -207,6 +207,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
+        unit.update!(published_state: nil)
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -421,11 +422,15 @@ class UnitGroup < ApplicationRecord
   # If a user has an experiment enabled corresponding to an alternate unit in
   # this course, use the alternate unit in place of the default unit with
   # the same position.
+  # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
     # @return [Array<Script>]
-    default_unit_group_units.map do |ugu|
+    units = default_unit_group_units.map do |ugu|
       select_unit_group_unit(user, ugu).script
+    end
+    units.compact.reject do |unit|
+      unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
   end
 

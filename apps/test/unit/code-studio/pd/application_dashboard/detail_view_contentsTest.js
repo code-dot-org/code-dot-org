@@ -9,8 +9,11 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
+import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {
+  allowConsoleWarnings();
+
   // We aren't testing any of the responses of the workshop selector control, so just
   // have a fake server to handle calls and suppress warnings
   sinon.fakeServer.create();
