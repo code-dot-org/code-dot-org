@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-04 17:05:22 UTC",
+    "serialized_at": "2021-08-05 18:11:05 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -4350,7 +4350,7 @@
       "chapter": 22,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L4-L4"
@@ -4425,67 +4425,14 @@
       "chapter": 25,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L4-L7"
-        ],
-        "progression": "The People in Your Community"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L4-L7"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
-      },
-      "level_keys": [
-        "CSA U3L4-L7"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L4-L8"
-        ],
-        "progression": "The People in Your Community"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L4-L8"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
-      },
-      "level_keys": [
-        "CSA U3L4-L8"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 9,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U3L4-L9"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L4-L9"
+          "CSA U3L4-L7-2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
@@ -4493,11 +4440,11 @@
         "activity_section.key": "84d81b94-95f6-47a1-bfe1-d49715a85563"
       },
       "level_keys": [
-        "CSA U3L4-L9"
+        "CSA U3L4-L7-2"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4522,7 +4469,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4547,7 +4494,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4572,7 +4519,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4597,10 +4544,10 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L6-L1"
@@ -4622,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4647,7 +4594,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4672,10 +4619,10 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L6-L4"
@@ -4697,7 +4644,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4722,7 +4669,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4747,7 +4694,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4772,7 +4719,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4797,7 +4744,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4822,7 +4769,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4847,7 +4794,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4872,7 +4819,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4897,7 +4844,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4922,7 +4869,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4947,7 +4894,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4972,7 +4919,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4997,7 +4944,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5022,7 +4969,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5047,7 +4994,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5072,7 +5019,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5097,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5122,7 +5069,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5147,7 +5094,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5172,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5197,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5222,7 +5169,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5247,7 +5194,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5272,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5297,7 +5244,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5322,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5347,7 +5294,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5372,7 +5319,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5688,33 +5635,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L4-L7",
+        "level.key": "CSA U3L4-L7-2",
         "script_level.level_keys": [
-          "CSA U3L4-L7"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L4-L8",
-        "script_level.level_keys": [
-          "CSA U3L4-L8"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L4-L9",
-        "script_level.level_keys": [
-          "CSA U3L4-L9"
+          "CSA U3L4-L7-2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
