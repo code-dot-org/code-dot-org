@@ -1,11 +1,14 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import SectionProjectsList from './SectionProjectsList';
 import {gql, useQuery} from '@apollo/client';
+import {
+  GetProjects,
+  GetProjectsVariables
+} from '@cdo/apps/graphql/types/GetProjects';
 
 export const GET_PROJECTS = gql`
-  query GetSectionStats($sectionId: ID!) {
+  query GetProjects($sectionId: ID!) {
     section(id: $sectionId) {
       id
       students {
@@ -23,10 +26,16 @@ export const GET_PROJECTS = gql`
   }
 `;
 
-const SectionProjectsListWithData = ({sectionId, studioUrlPrefix}) => {
-  const {data, loading, error} = useQuery(GET_PROJECTS, {
-    variables: {sectionId: sectionId}
-  });
+const SectionProjectsListWithData = ({
+  sectionId,
+  studioUrlPrefix
+}: SectionProjectsListProps) => {
+  const {data, loading, error} = useQuery<GetProjects, GetProjectsVariables>(
+    GET_PROJECTS,
+    {
+      variables: {sectionId: sectionId}
+    }
+  );
 
   if (loading) {
     return <Spinner />;
@@ -51,9 +60,9 @@ const SectionProjectsListWithData = ({sectionId, studioUrlPrefix}) => {
   );
 };
 
-SectionProjectsListWithData.propTypes = {
-  studioUrlPrefix: PropTypes.string,
-  sectionId: PropTypes.number
-};
+interface SectionProjectsListProps {
+  studioUrlPrefix?: string;
+  sectionId?: string;
+}
 
 export default SectionProjectsListWithData;
