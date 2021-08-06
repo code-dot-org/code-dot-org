@@ -63,7 +63,6 @@ class Blockly < Level
     definition_highlight
     definition_collapse
     disable_examples
-    project_template_level_name
     hide_share_and_remix
     is_project_level
     code_functions
