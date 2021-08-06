@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csd-post-survey",
-    "serialized_at": "2021-07-06 22:25:58 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csd-post-survey"
@@ -66,7 +66,6 @@
         ],
         "progression": "CS Discoveries Post-course Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
