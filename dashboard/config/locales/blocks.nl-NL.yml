@@ -1754,3 +1754,5 @@ nl:
           DIR:
             right: rechtsom ↻
             left: linksom ↺
+      validation_validatedBackground:
+        text: set achtergrond naar {IMG}

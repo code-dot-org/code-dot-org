@@ -2582,3 +2582,15 @@ hr:
               display_name: Cjelina 4
             lessonGroup-7:
               display_name: Cjelina 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: provjera
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Pregled
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Pregled

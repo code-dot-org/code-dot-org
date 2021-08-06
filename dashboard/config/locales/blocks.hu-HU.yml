@@ -1860,3 +1860,5 @@ hu:
           DIR:
             right: jobbra ↻
             left: balra ↺
+      validation_validatedBackground:
+        text: háttér beállítása {IMG}

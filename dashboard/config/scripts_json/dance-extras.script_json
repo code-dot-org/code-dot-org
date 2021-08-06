@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "dance-extras",
-    "serialized_at": "2021-07-06 22:26:03 UTC",
+    "serialized_at": "2021-08-03 22:47:36 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-extras"
@@ -61,9 +61,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_intro"
-        ]
+        ],
+        "progression": "Keep On Dancing!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -85,9 +85,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_layout"
-        ]
+        ],
+        "progression": "Get In Formation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -109,9 +109,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_visible"
-        ]
+        ],
+        "progression": "Where'd They Go?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -133,9 +133,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_battle"
-        ]
+        ],
+        "progression": "Dance Crews"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -157,9 +157,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_every_beat"
-        ]
+        ],
+        "progression": "Quarter Notes"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -181,9 +181,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_on_beat"
-        ]
+        ],
+        "progression": "Bass, Mid, and Treble"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -205,9 +205,9 @@
       "properties": {
         "level_keys": [
           "Dance_Party_extras_speed"
-        ]
+        ],
+        "progression": "Speed it Up, Slow it Down"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
