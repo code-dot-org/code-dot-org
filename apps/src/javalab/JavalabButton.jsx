@@ -14,7 +14,6 @@ function JavalabButton({
   style,
   onClick,
   isHorizontal,
-  id,
   isDisabled = false
 }) {
   let textStyle = {};
@@ -28,7 +27,6 @@ function JavalabButton({
     <button
       id={id}
       type="button"
-      id={id}
       className={className}
       style={{
         ...styles.button,
@@ -48,7 +46,6 @@ function JavalabButton({
 export default Radium(JavalabButton);
 
 JavalabButton.propTypes = {
-  id: PropTypes.string,
   icon: PropTypes.node,
   text: PropTypes.string,
   className: PropTypes.string,
