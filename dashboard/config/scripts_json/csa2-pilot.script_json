@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-04 16:55:50 UTC",
+    "serialized_at": "2021-08-06 14:55:35 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -9166,13 +9166,6 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.2"
       }
     },
     {
