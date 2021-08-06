@@ -192,6 +192,7 @@ class ReviewTab extends Component {
 
     if (
       this.props.viewAsCodeReviewer ||
+      this.props.viewAs === ViewType.Teacher ||
       !reviewCheckboxEnabled ||
       !token ||
       token.length === 0
@@ -343,6 +344,8 @@ class ReviewTab extends Component {
   }
 
   render() {
+    const {viewAsCodeReviewer, viewAs} = this.props;
+
     const {
       comments,
       forceRecreateEditorKey,
@@ -356,9 +359,9 @@ class ReviewTab extends Component {
     return (
       <div style={styles.reviewsContainer}>
         <div style={styles.reviewHeader}>
-          {this.props.viewAs !== ViewType.Teacher &&
+          {viewAs !== ViewType.Teacher &&
             !errorLoadingReviewblePeers &&
-            (this.props.viewAsCodeReviewer
+            (viewAsCodeReviewer
               ? this.renderBackToMyProject(this.onClickBackToProject)
               : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
           {this.renderReadyForReviewCheckbox()}
@@ -370,7 +373,7 @@ class ReviewTab extends Component {
         )}
         <div style={styles.commentsSection}>
           <div style={styles.messageText}>
-            {this.props.viewAsCodeReviewer
+            {viewAsCodeReviewer || viewAs === ViewType.Teacher
               ? javalabMsg.feedbackBeginningPeer({
                   peerName: projectOwnerName
                 })
@@ -378,7 +381,7 @@ class ReviewTab extends Component {
           </div>
           {this.renderComments(
             comments,
-            !isReadyForReview && this.props.viewAs !== ViewType.Teacher
+            !isReadyForReview && viewAs !== ViewType.Teacher
           )}
           {this.renderCommentEditor(forceRecreateEditorKey)}
         </div>
