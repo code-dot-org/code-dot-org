@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "To develop the next scene, add the following to your `showSky()` method in `NeighborhoodConcert.java`:\r\n\r\n1. Use `SoundLoader.read()` to create a `double` array from the `\"birds.wav\"` file.\r\n\r\n2. Play the `double` array of samples.\r\n\r\n3. Traverse the `birds` array and draw each bird image on the stage.\r\n\r\n   * Initialize variables for the `x` and `y` coordinates and change them inside your loop so they display in different places.\r\n   \r\n   * Add a `pause()` in the loop so the birds display one at a time.\r\n\r\nIn `MyConcert.java`, add a `pause()` and call your `showSky()` method after the call to `showLake()`.",
+    "long_instructions": "To develop the next scene, add the following to your `showSky()` method in `NeighborhoodConcert.java`:\r\n\r\n1. Use `SoundLoader.read()` to create a `double` array called `birdSounds` from the `\"birds.wav\"` file.\r\n\r\n2. Play the `double` array of samples.\r\n\r\n3. Traverse the `birds` array and draw each bird image on the stage.\r\n\r\n   * Initialize variables for the x and y coordinates and change them inside your loop so the birds display in different places.\r\n   \r\n   * Use `myStage.pause()` in the loop to pause for `0.5` seconds so the birds display one at a time.\r\n\r\nIn `MyConcert.java`, test your `showSky()` method by commenting the call to `playConcert()` and adding the following:\r\n```\r\n// myConcert.playConcert();\r\n\r\nmyConcert.showSky();\r\nmyStage.play();\r\n```\r\n\r\nWhen you know it works, test your whole concert by uncommenting the call to `playConcert()` and deleting the calls to `showSky()` and `play()`!",
     "mini_rubric": "false",
     "project_template_level_name": "CSA Neighborhood Concert Template",
     "hide_share_and_remix": "false",
@@ -15,6 +15,6 @@
   "created_at": "2021-07-23T13:58:38.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-23T13:58:38.538+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L3\\\"\"],\"cloned_from\":\"CSA U3L9-L3\"},{\"changed_at\":\"2021-07-23 14:21:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:46:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-23T13:58:38.538+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L3\\\"\"],\"cloned_from\":\"CSA U3L9-L3\"},{\"changed_at\":\"2021-07-23 14:21:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:46:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 20:46:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
