@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:13 UTC",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit4"
@@ -256,7 +256,6 @@
           "U4L01 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -280,7 +279,6 @@
           "U4L02v2 - Finding Trends"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +302,6 @@
           "U4L03v2 - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -328,7 +325,6 @@
           "U4L04v2 - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +348,6 @@
           "GoodBadVisualizations_v1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -376,7 +371,6 @@
           "GoodBadVisualizations_v2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -400,7 +394,6 @@
           "U4 - Making Data Visualizations - Student Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +417,6 @@
           "U4 - Making Data Visualizations - Getting Started"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -448,7 +440,6 @@
           "U4 - Making Data Visualizations - Scatter Plot"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -472,7 +463,6 @@
           "U4 - Making Data Visualizations - Line Chart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -496,7 +486,6 @@
           "U4 - Making Data Visualizations - Bar Chart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -520,7 +509,6 @@
           "U4 - Making Data Visualizations - Edit Chart Appearance"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -544,7 +532,6 @@
           "U4 - Making Data Visualizations - Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -568,7 +555,6 @@
           "U4L06v2 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -592,7 +578,6 @@
           "U4L16 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -616,7 +601,6 @@
           "U4 - Cleaning Data - Activity Guide"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -640,7 +624,6 @@
           "U4 Cleaning Data Activity Guide Pt2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -664,7 +647,6 @@
           "U4 Cleaning Data Activity Guide Pt3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -688,7 +670,6 @@
           "U4L08v2 Student Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -712,7 +693,6 @@
           "U4L08v2 Making Pivot Tables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -736,7 +716,6 @@
           "U4L08v2 Making Pivot Tables Part 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -760,7 +739,6 @@
           "U4L08v2 Making Pivot Tables Part 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -784,7 +762,6 @@
           "U4L09 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -808,7 +785,6 @@
           "U4L10 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -832,7 +808,6 @@
           "U4L11 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -854,9 +829,9 @@
       "properties": {
         "level_keys": [
           "Video - Data and Medicine"
-        ]
+        ],
+        "progression": "Video - Data and Medicine"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -878,9 +853,9 @@
       "properties": {
         "level_keys": [
           "Video - CS is Changing Everything"
-        ]
+        ],
+        "progression": "Video - CS is Changing Everything"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -904,7 +879,6 @@
           "U4L12 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -928,7 +902,6 @@
           "U4L13 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -952,7 +925,6 @@
           "U4 - Privacy Abandoned - Hot On Your Trail Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -976,7 +948,6 @@
           "U4L14 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:54 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "spritelab-simple"
@@ -90,7 +90,6 @@
           "Fish Tank 1-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -114,7 +113,6 @@
           "Fish Tank 2-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -138,7 +136,6 @@
           "Fish Tank 3-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -162,7 +159,6 @@
           "Fish Tank 4-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -186,7 +182,6 @@
           "Fish Tank 5-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -210,7 +205,6 @@
           "Fish Tank 6-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -234,7 +228,6 @@
           "Fish Tank 7-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -258,7 +251,6 @@
           "Dance Party 1-validated_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -282,7 +274,6 @@
           "Dance Party 2_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -306,7 +297,6 @@
           "Dance Party 3_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -330,7 +320,6 @@
           "Dance Party 4_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -354,7 +343,6 @@
           "Dance Party 5_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -378,7 +366,6 @@
           "Dance Party 6_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -402,7 +389,6 @@
           "Dance Party 7_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -426,7 +412,6 @@
           "Dance Party Freeplay_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -450,7 +435,6 @@
           "Virtual Pet 1_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +458,6 @@
           "Virtual Pet 2_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +481,6 @@
           "Virtual Pet 3_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +504,6 @@
           "Virtual Pet 4_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -546,7 +527,6 @@
           "Virtual Pet 5_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -570,7 +550,6 @@
           "Virtual Pet 6_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +573,6 @@
           "Virtual Pet Freeplay_simple"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

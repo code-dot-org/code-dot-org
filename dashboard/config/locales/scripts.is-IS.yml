@@ -7916,3 +7916,15 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: prófun
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Yfirlit
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Yfirlit

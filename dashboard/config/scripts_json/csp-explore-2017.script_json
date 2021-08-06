@@ -22,6 +22,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "project_sharing": true,
       "curriculum_umbrella": "CSP",
       "family_name": "csp-explore",
@@ -29,8 +30,8 @@
     },
     "new_name": "csp-explore-2017",
     "family_name": "csp-explore",
-    "serialized_at": "2021-06-17 22:29:54 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp-explore-2017"
     }
@@ -141,7 +142,6 @@
         ],
         "progression": "Explore PT - Review the Task"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -166,7 +166,6 @@
         ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +190,6 @@
         ],
         "progression": "Explore PT - Make a Plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -216,7 +214,6 @@
         ],
         "progression": "Explore PT - Complete the Task"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +238,6 @@
         ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +262,6 @@
         ],
         "progression": "Participate in a longitudinal study!"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

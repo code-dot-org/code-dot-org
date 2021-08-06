@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-21 00:36:23 UTC",
+    "serialized_at": "2021-08-03 22:47:47 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp19-csp-mod-w4"
@@ -107,7 +107,6 @@
         ],
         "progression": "Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
         ],
         "progression": "Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -157,7 +155,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -182,7 +179,6 @@
         ],
         "progression": "Evaluation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,7 +203,6 @@
         ],
         "progression": "Due Dates"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,7 +226,6 @@
           "dlp19-csp-prework-mod4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -255,7 +249,6 @@
           "dlp19-csp-mod4-q1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +272,6 @@
           "dlp19-csp-mod4-q2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -303,7 +295,6 @@
           "dlp19-csp-mod4-q3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

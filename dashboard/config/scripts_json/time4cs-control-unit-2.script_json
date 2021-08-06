@@ -10,8 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:27 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-08-03 22:47:48 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-2"
     }
@@ -250,7 +250,6 @@
           "Crowdsourcing-Unplugged"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -274,7 +273,6 @@
           "ConditionalsWithCards-Unplugged"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +297,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +321,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +345,6 @@
         ],
         "progression": "Nested Loops with the Bee"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +369,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +393,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +417,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +441,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +465,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +489,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,7 +514,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -550,7 +538,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,7 +562,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -600,7 +586,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +609,6 @@
           "courseD_harvester_nested_loops_challenge1_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -648,7 +632,6 @@
           "courseD_collector_nested_loops_challenge2_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -673,7 +656,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -698,7 +680,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -723,7 +704,6 @@
         ],
         "progression": "Video"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -748,7 +728,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -773,7 +752,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -798,7 +776,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -823,7 +800,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -848,7 +824,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -873,7 +848,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +873,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +897,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +921,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,7 +945,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -998,7 +968,6 @@
           "courseD_artist_nestedLoops_challenge1_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1022,7 +991,6 @@
           "courseD_artist_nestedLoops_challenge2_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1015,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,7 +1039,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1097,7 +1063,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1122,7 +1087,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1147,7 +1111,6 @@
         ],
         "progression": "Mini-Project: Snowflake #1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1172,7 +1135,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1159,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1222,7 +1183,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1247,7 +1207,6 @@
         ],
         "progression": "Mini-Project: Snowflake #2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1271,7 +1230,6 @@
           "Songwriting-Unplugged"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1296,7 +1254,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1321,7 +1278,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1346,7 +1302,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1371,7 +1326,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1396,7 +1350,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1421,7 +1374,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1446,7 +1398,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1471,7 +1422,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1496,7 +1446,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1521,7 +1470,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1546,7 +1494,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1571,7 +1518,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1596,7 +1542,6 @@
         ],
         "progression": "The Harvester"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1621,7 +1566,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1646,7 +1590,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1671,7 +1614,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1696,7 +1638,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1721,7 +1662,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1746,7 +1686,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1771,7 +1710,6 @@
         ],
         "progression": "How to Create a Simple Function"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1796,7 +1734,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1821,7 +1758,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1846,7 +1782,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1872,7 +1807,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1897,7 +1831,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1922,7 +1855,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1879,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1972,7 +1903,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1997,7 +1927,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2022,7 +1951,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2047,7 +1975,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2072,7 +1999,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2023,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2047,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2147,7 +2071,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2173,7 +2096,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2198,7 +2120,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2223,7 +2144,6 @@
         ],
         "progression": "Prediction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2248,7 +2168,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2272,7 +2191,6 @@
           "courseE_artist_functions_challenge1_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2296,7 +2214,6 @@
           "courseE_artist_functions_challenge2_2019"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2321,7 +2238,6 @@
         ],
         "progression": "Example Projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2346,7 +2262,6 @@
         ],
         "progression": "Sprite Lab Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2371,7 +2286,6 @@
         ],
         "progression": "Artist Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -6,10 +6,6 @@
           "word": "Personaggio",
           "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."
         },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "behavior/coursef/2021": {
           "word": "Comportamento",
           "definition": "Un'azione che un personaggio esegue continuamente finché non gli viene detto di fermarsi."
@@ -19,8 +15,7 @@
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmo",
-          "definition": ""
+          "word": "Algoritmo"
         },
         "event/coursef/2021": {
           "word": "Evento",
@@ -30,13 +25,8 @@
           "word": "Variabile",
           "definition": "Un nome per un valore che può cambiare."
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "Input",
-          "definition": ""
+          "word": "Input"
         },
         "loop/coursef/2021": {
           "word": "Ciclo",
@@ -49,10 +39,6 @@
         "for_loop/coursef/2021": {
           "word": "Cicli con contatore",
           "definition": "Un’istruzione di ripetizione (ciclo) basata su una variabile contatore, caratterizzata da un valore iniziale, un valore finale ed un “passo” (la quantità di cui viene incrementata o decrementata ad ogni ripetizione)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
@@ -302,10 +288,6 @@
           "word": "Istruzioni condizionali",
           "definition": "Dichiarazioni che funzionano solo a determinate condizioni."
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "Condizione",
           "definition": "Una situazione che un programma controlla per decidere se permettere o meno una certa azione."
@@ -355,8 +337,7 @@
           "definition": "Un'azione che fa accadere qualcosa."
         },
         "code/express/2021": {
-          "word": "programmare (to code)",
-          "definition": ""
+          "word": "programmare (to code)"
         },
         "loop/express/2021": {
           "word": "Ciclo",
@@ -393,10 +374,6 @@
         "variable/express/2021": {
           "word": "Variabile",
           "definition": "Un nome per un valore che può cambiare."
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "Cicli con contatore",
@@ -473,10 +450,6 @@
         "behavior/coursee/2021": {
           "word": "Comportamento",
           "definition": "Un'azione che un personaggio esegue continuamente finché non gli viene detto di fermarsi."
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
         },
         "sprite/coursee/2021": {
           "word": "Personaggio",

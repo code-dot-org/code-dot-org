@@ -30,13 +30,14 @@
       "curriculum_path": "https://curriculum.code.org/csd-19/unit1/{LESSON}",
       "project_sharing": true,
       "curriculum_umbrella": "CSD",
+      "is_stable": true,
       "family_name": "csd1",
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2021-06-17 22:30:03 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:39 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2019"
     }
@@ -248,7 +249,6 @@
           "csd-pre-survey-levelgroup_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -270,9 +270,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L01 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,9 +294,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L02 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -318,9 +318,9 @@
       "properties": {
         "level_keys": [
           "CSD Problem Solving Process Video"
-        ]
+        ],
+        "progression": "Video: Problem Solving Process"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,9 +342,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L03 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,9 +366,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L04 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,9 +390,9 @@
       "properties": {
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2019"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,9 +414,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L05 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -438,9 +438,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L06 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -462,9 +462,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L07 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -486,9 +486,9 @@
       "properties": {
         "level_keys": [
           "CSD U1L09 TFMD_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -513,7 +513,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +536,6 @@
           "CSD U1 Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

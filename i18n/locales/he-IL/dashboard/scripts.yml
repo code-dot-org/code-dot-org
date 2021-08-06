@@ -4536,4 +4536,44 @@ he:
           lessons:
             lesson-1: {}
             lesson-2: {}
-        dlp21-csp-mod1: {}
+        dlp21-csp-mod1:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: בדיקה
+        dlp21-csd-mod1:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod2:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod3:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod4:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csp-mod2:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csp-mod3:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-overview: {}
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: סקירה
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: סקירה

@@ -1,3 +1,4 @@
+---
 hr:
   data:
     blocks:
@@ -446,8 +447,8 @@ hr:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'da'
-            '"no"': 'ne'
+            '"yes"': da
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:

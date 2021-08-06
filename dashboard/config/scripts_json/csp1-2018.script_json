@@ -31,6 +31,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Are you signed up for the AP exam?",
@@ -56,8 +57,8 @@
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2021-06-17 22:29:45 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:30 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2018"
     }
@@ -374,7 +375,6 @@
           "csp-pre-survey-2017-levelgroup_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,9 +396,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -423,7 +423,6 @@
         ],
         "progression": "Computer Science is Changing Everything"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -454,7 +453,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -478,9 +476,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L02 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -505,7 +503,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -530,7 +527,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +551,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -580,7 +575,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -602,9 +596,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -629,7 +623,6 @@
         ],
         "progression": "Internet Simulator: Sending Binary Messages"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -654,7 +647,6 @@
         ],
         "progression": "The Internet: Wires, Cables, and Wifi"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -679,7 +671,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,7 +695,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -729,7 +719,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -754,7 +743,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,9 +764,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L04 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -803,7 +791,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -828,7 +815,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,9 +836,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L05 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -877,7 +863,6 @@
         ],
         "progression": "Widget: Binary Odometer"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,7 +887,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -927,7 +911,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,9 +932,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L06 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -976,7 +959,6 @@
         ],
         "progression": "Internet Simulator: Sending Numbers"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1001,7 +983,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1026,7 +1007,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1048,9 +1028,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L07 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1055,6 @@
         ],
         "progression": "Internet Simulator: Sending Text"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1100,7 +1079,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1125,7 +1103,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1150,7 +1127,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1175,7 +1151,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1200,7 +1175,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1224,7 +1198,6 @@
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1246,9 +1219,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L08 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1273,7 +1246,6 @@
         ],
         "progression": "What is the Internet?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1298,7 +1270,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1323,7 +1294,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1348,7 +1318,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1373,7 +1342,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1398,7 +1366,6 @@
         ],
         "progression": "Quick Check-In"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1420,9 +1387,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L09 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1447,7 +1414,6 @@
         ],
         "progression": "Internet Simulator: Broadcast"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1472,7 +1438,6 @@
         ],
         "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1497,7 +1462,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,7 +1486,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1547,7 +1510,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1572,7 +1534,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1597,7 +1558,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1619,9 +1579,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L10 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1646,7 +1606,6 @@
         ],
         "progression": "Internet Simulator: Routers"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1671,7 +1630,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1696,7 +1654,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1721,7 +1678,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1746,7 +1702,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1771,7 +1726,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1793,9 +1747,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L11 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1820,7 +1774,6 @@
         ],
         "progression": "Internet Simulator: Packets"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1845,7 +1798,6 @@
         ],
         "progression": "The Internet: Packets, Routing, and Reliability"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1870,7 +1822,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1895,7 +1846,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1920,7 +1870,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1945,7 +1894,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1967,9 +1915,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L12 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1994,7 +1942,6 @@
         ],
         "progression": "Internet Simulator: DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2019,7 +1966,6 @@
         ],
         "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2044,7 +1990,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2069,7 +2014,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2094,7 +2038,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2119,7 +2062,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2141,9 +2083,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L13 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2168,7 +2110,6 @@
         ],
         "progression": "The Internet: HTTP and HTML"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2193,7 +2134,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2218,7 +2158,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2243,7 +2182,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2265,9 +2203,9 @@
       "properties": {
         "level_keys": [
           "CSP U1L14 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2291,7 +2229,6 @@
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group_2018"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

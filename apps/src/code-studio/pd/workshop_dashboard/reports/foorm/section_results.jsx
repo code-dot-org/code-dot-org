@@ -68,13 +68,15 @@ export default class SectionResults extends React.Component {
             }
 
             return _.compact(
-              Object.keys(surveyQuestions).map(questionId => {
-                return this.renderQuestionResults(
-                  surveyQuestions,
-                  questionId,
-                  surveyId
-                );
-              })
+              Object.keys(surveyQuestions).map(questionId => (
+                <div key={questionId}>
+                  {this.renderQuestionResults(
+                    surveyQuestions,
+                    questionId,
+                    surveyId
+                  )}
+                </div>
+              ))
             );
           })
         )}
