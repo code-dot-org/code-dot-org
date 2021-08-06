@@ -70,24 +70,26 @@ export default class DefaultSpritesEditor extends React.Component {
     }
 
     // If the original index is less than 0, take no action
-    if (originalIndex >= 0) {
-      let itemToMove = updatedList.splice(originalIndex, 1)[0];
-
-      if (moveForward) {
-        // No action to move the first element forward
-        if (originalIndex > 0) {
-          updatedList.splice(originalIndex - 1, 0, itemToMove);
-        }
-      } else {
-        // No action to move the last element back
-        if (originalIndex < updatedList.length) {
-          updatedList.splice(originalIndex + 1, 0, itemToMove);
-        }
-      }
-
-      this.setState({defaultList: updatedList});
-      this.incrementPendingChanges();
+    if (originalIndex < 0) {
+      return;
     }
+
+    let itemToMove = updatedList.splice(originalIndex, 1)[0];
+
+    if (moveForward) {
+      // No action to move the first element forward
+      if (originalIndex > 0) {
+        updatedList.splice(originalIndex - 1, 0, itemToMove);
+      }
+    } else {
+      // No action to move the last element back
+      if (originalIndex < updatedList.length) {
+        updatedList.splice(originalIndex + 1, 0, itemToMove);
+      }
+    }
+
+    this.setState({defaultList: updatedList});
+    this.incrementPendingChanges();
   };
 
   updateDefaultSprites = () => {
