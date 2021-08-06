@@ -26,6 +26,7 @@ class CourseCard extends Component {
         <img
           src={require('@cdo/static/small_purple_icons.png')}
           style={styles.image}
+          alt=""
         />
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
