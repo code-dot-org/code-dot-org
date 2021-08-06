@@ -347,6 +347,14 @@ class UnitEditor extends React.Component {
       });
   };
 
+  toggleHiddenCourseUnit = () => {
+    const publishedState =
+      this.state.publishedState === PublishedState.in_development
+        ? null
+        : PublishedState.in_development;
+    this.setState({publishedState});
+  };
+
   render() {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
@@ -611,10 +619,31 @@ class UnitEditor extends React.Component {
                 </HelpTip>
               </label>
               {this.props.hasCourse && (
-                <p>
-                  This unit is part of a course. Go to the course edit page to
-                  publish the course and its units.
-                </p>
+                <div>
+                  <p>
+                    This unit is part of a course. Go to the course edit page to
+                    publish the course and its units.
+                  </p>
+                  <label>
+                    Hide this unit within this course
+                    <input
+                      type="checkbox"
+                      checked={
+                        this.state.publishedState ===
+                        PublishedState.in_development
+                      }
+                      style={styles.checkbox}
+                      onChange={this.toggleHiddenCourseUnit}
+                    />
+                    <HelpTip>
+                      <p>
+                        Whether to hide this unit from the list of units in its
+                        course, as viewed on the course overview page, the edit
+                        section dialog, and the teacher dashboard.
+                      </p>
+                    </HelpTip>
+                  </label>
+                </div>
               )}
               {!this.props.hasCourse && (
                 <div>
