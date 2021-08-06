@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-04 17:37:56 UTC",
+    "serialized_at": "2021-08-06 15:39:52 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd4-2021"
@@ -8020,7 +8020,7 @@
     },
     {
       "name": "User Centered Design (Try & Reflect)",
-      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
+      "url": "https://docs.google.com/document/d/1H_eXRckFRPnYGBoheT8DEauzwzc58Kp1XUOVCwtYZ_U/edit",
       "key": "user_centered_design_try_reflect_",
       "properties": {
         "type": "Exemplar",

@@ -11,7 +11,7 @@
         "isVisible": true
       },
       "StoryConcert.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class StoryConcert {\n  private Stage myStage = Theater.stage;\t// where images and drawings are displayed\n\n  // TO DO: Add any additional instance variables you need for your concert.\n\n\n  // TO DO: Complete the StoryConcert constructor for your concert.\n  public StoryConcert() throws FileNotFoundException {\n\n\n    \n  }\n\n  // TO DO: Create the visual scene of your concert.\n  public void showScene() throws FileNotFoundException {\n\n\n    \n  }\n\n  // TO DO: Create the soundtrack for your concert.\n  public void playSoundtrack() throws FileNotFoundException {\n    \n  }\n}",
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class StoryConcert {\n  private Stage myStage = Theater.stage;\t// where images and drawings are displayed\n\n  // TO DO: Add any additional instance variables you need for your concert (OPTIONAL).\n\n\n  // TO DO: Create the visual scene of your concert.\n  public void showScene() throws FileNotFoundException {\n\n\n    \n  }\n\n  // TO DO: Create the soundtrack for your concert.\n  public void playSoundtrack() throws FileNotFoundException {\n    \n  }\n}",
         "isVisible": true
       }
     }
@@ -21,6 +21,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-07-23 16:32:36 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-23 17:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-23 16:32:36 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-23 17:17:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-06 14:32:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
