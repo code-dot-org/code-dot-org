@@ -13,8 +13,10 @@ import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
-  // Populated by redux
-  static propTypes = {viewAsCodeReviewer: PropTypes.bool.isRequired};
+  static propTypes = {
+    // Populated by redux
+    viewAsCodeReviewer: PropTypes.bool.isRequired
+  };
 
   state = {
     reviewCheckboxEnabled: false,
@@ -34,31 +36,35 @@ class ReviewTab extends Component {
       serverScriptId
     } = getStore().getState().pageConstants;
 
-    codeReviewDataApi
-      .getCodeReviewCommentsForProject(channelId)
-      .done((data, _, request) => {
-        this.setState({
-          comments: data,
-          token: request.getResponseHeader('csrf-token')
+    // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
+    // do not make API calls that require a channelId
+    if (channelId) {
+      codeReviewDataApi
+        .getCodeReviewCommentsForProject(channelId)
+        .done((data, _, request) => {
+          this.setState({
+            comments: data,
+            token: request.getResponseHeader('csrf-token')
+          });
         });
-      });
 
-    codeReviewDataApi
-      .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
-      .done(data => {
-        const id = (data && data.id) || null;
-        this.setState({
-          reviewCheckboxEnabled: data.canMarkReviewable,
-          isReadyForReview: data.reviewEnabled,
-          reviewableProjectId: id
+      codeReviewDataApi
+        .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
+        .done(data => {
+          const id = (data && data.id) || null;
+          this.setState({
+            reviewCheckboxEnabled: data.canMarkReviewable,
+            isReadyForReview: data.reviewEnabled,
+            reviewableProjectId: id
+          });
+        })
+        .fail(() => {
+          this.setState({
+            reviewCheckboxEnabled: false,
+            isReadyForReview: false
+          });
         });
-      })
-      .fail(() => {
-        this.setState({
-          reviewCheckboxEnabled: false,
-          isReadyForReview: false
-        });
-      });
+    }
   }
 
   onNewCommentSubmit = commentText => {
@@ -268,18 +274,33 @@ class ReviewTab extends Component {
   render() {
     const {comments, forceRecreateEditorKey, isReadyForReview} = this.state;
 
-    return (
-      <div style={styles.reviewsContainer}>
-        <div style={styles.reviewHeader}>
-          {this.renderReadyForReviewCheckbox()}
+    // channelId is not available on projects where the student has not edited the starter code.
+    // comments cannot be made on projects in this tate.
+    const {projectOwnerHasEditedCode} = !!getStore().getState().pageConstants
+      .channelId;
+
+    if (projectOwnerHasEditedCode) {
+      return (
+        <div style={styles.reviewsContainer}>
+          <div style={styles.reviewHeader}>
+            {this.renderReadyForReviewCheckbox()}
+          </div>
+          <div style={styles.commentsSection}>
+            <div style={styles.messageText}>
+              {javalabMsg.feedbackBeginning()}
+            </div>
+            {this.renderComments(comments, !isReadyForReview)}
+            {this.renderCommentEditor(forceRecreateEditorKey)}
+          </div>
         </div>
-        <div style={styles.commentsSection}>
-          <div style={styles.messageText}>{javalabMsg.feedbackBeginning()}</div>
-          {this.renderComments(comments, !isReadyForReview)}
-          {this.renderCommentEditor(forceRecreateEditorKey)}
+      );
+    } else {
+      return (
+        <div style={{...styles.reviewsContainer, ...styles.messageText}}>
+          {javalabMsg.noCodeReviewUntilStudentEditsCode()}
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
