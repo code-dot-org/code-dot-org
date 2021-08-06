@@ -453,7 +453,7 @@ namespace :seed do
     end
 
     puts 'Cache mismatch, running full ui test seed'
-    Rake::Task['seed:ui_test'].invoke
+    RakeUtils.rake_stream_output 'seed:ui_test'
     File.write(HASH_FILE, current_hash)
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
