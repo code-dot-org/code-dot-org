@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 14:13:42 UTC",
+    "serialized_at": "2021-08-03 13:45:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa1-exemplars"
@@ -1247,6 +1247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1-v2 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1269,6 +1272,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1291,6 +1297,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3 Placeholder"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1313,6 +1322,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1335,6 +1347,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5 2 Placeholder"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1357,6 +1372,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L6 2 Exemplar"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -1379,6 +1397,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L7 Placeholder"
+        ]
       },
       "named_level": false,
       "bonus": false,

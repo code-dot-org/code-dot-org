@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:48 UTC",
+    "serialized_at": "2021-08-03 22:47:07 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd3-old"
@@ -315,9 +315,9 @@
       "properties": {
         "level_keys": [
           "CSD-U3-SFLP Simple Drawing"
-        ]
+        ],
+        "progression": "U3L01 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,9 +339,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 1"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -365,7 +365,6 @@
           "U3 - Simple Drawing - Rectangle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -389,7 +388,6 @@
           "U3 - Simple Drawing - Rectangle Width and Height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -413,7 +411,6 @@
           "U3 - Simple Drawing - X and Y values"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -437,7 +434,6 @@
           "U3 - Simple Drawing - Order of Blocks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,9 +455,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 2"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -485,7 +481,6 @@
           "U3 - Simple Drawing - Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -509,7 +504,6 @@
           "U3 - Simple Drawing - Oval"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -533,7 +527,6 @@
           "U3 - Simple Drawing - Simple Shape Drawing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -557,7 +550,6 @@
           "U3 - Simple Drawing - Ellipse and No Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -581,7 +573,6 @@
           "U3 - Simple Drawing - Stroke and Stroke Weight"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -605,7 +596,6 @@
           "U3 - Simple Drawing - No Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -629,7 +619,6 @@
           "U3 - Simple Drawing - Comments"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -653,7 +642,6 @@
           "U3 - Simple Drawing - Road Rects and Color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -677,7 +665,6 @@
           "U3 - Simple Drawing - Road Ellipse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -701,7 +688,6 @@
           "U3 - Simple Drawing - regular polygon"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -725,7 +711,6 @@
           "U3 - Simple Drawing - text"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -747,9 +732,9 @@
       "properties": {
         "level_keys": [
           "U3 - Simple Drawing - Plan Personal Drawing"
-        ]
+        ],
+        "progression": "Stop: Plan Your Drawing"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -773,7 +758,6 @@
           "U3 - Simple Drawing - Personal Drawing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -795,9 +779,9 @@
       "properties": {
         "level_keys": [
           "CSD-U3-SFLP Draw Loop"
-        ]
+        ],
+        "progression": "U3L02 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -821,7 +805,6 @@
           "CSD U3 Random Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -845,7 +828,6 @@
           "CSD U3 Random Choice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -869,7 +851,6 @@
           "CSD U3 Random Min Max"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -893,7 +874,6 @@
           "CSD U3 Random Width Height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -917,7 +897,6 @@
           "CSD U3 Random Color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -939,9 +918,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Draw Loop Stop"
-        ]
+        ],
+        "progression": "Stop and Discuss"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,7 +944,6 @@
           "CSD U3 Draw Loop Discuss"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -989,7 +967,6 @@
           "CSD U3 Draw Loop Experiment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1011,9 +988,9 @@
       "properties": {
         "level_keys": [
           "CSD: Introduction to the Draw Loop"
-        ]
+        ],
+        "progression": "Video: Introduction to the Draw Loop"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1037,7 +1014,6 @@
           "CSD U3 Background Discuss"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1061,7 +1037,6 @@
           "CSD U3 Background Experiment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1085,7 +1060,6 @@
           "CSD U3 Random Animation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1109,7 +1083,6 @@
           "CSD U3 Frame Rate"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1133,7 +1106,6 @@
           "CSD U3 Simple Drawing - Background"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1157,7 +1129,6 @@
           "CSD U3 Simple Drawing - Animation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1181,7 +1152,6 @@
           "CSD U3 Simple Drawing - Animation 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1205,7 +1175,6 @@
           "CSD U3 Simple Drawing - Personal Animation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1227,9 +1196,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Variables2 SFLP"
-        ]
+        ],
+        "progression": "CSD U3 Variables2 SFLP"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1251,9 +1220,9 @@
       "properties": {
         "level_keys": [
           "CSD-U3-SFLP Variables"
-        ]
+        ],
+        "progression": "CSD-U3-SFLP Variables"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1275,9 +1244,9 @@
       "properties": {
         "level_keys": [
           "CSD Variables Video 1"
-        ]
+        ],
+        "progression": "CSD Variables Video 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1301,7 +1270,6 @@
           "CSD U3 Variables make a square"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1325,7 +1293,6 @@
           "CSD U3 Variables make a big square"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1349,7 +1316,6 @@
           "CSD U3 Variables naming rules"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1373,7 +1339,6 @@
           "CSD U3 Variables random assignment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1395,9 +1360,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Variables STOP misconceptions prediction"
-        ]
+        ],
+        "progression": "Stop: Variables Prediction"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1421,7 +1386,6 @@
           "U3 Variables misconceptions try it"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1445,7 +1409,6 @@
           "CSD U3 Counters explaining counters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1469,7 +1432,6 @@
           "CSD U3 Counters counter square movement"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1493,7 +1455,6 @@
           "CSD U3 Counters counter subtraction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1517,7 +1478,6 @@
           "CSD U3 Counters counter colors"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1541,7 +1501,6 @@
           "CSD U3 Counters counters expressions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1565,7 +1524,6 @@
           "CSD U3 Counters watchers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1589,7 +1547,6 @@
           "CSD U3 Counters counters sunset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1611,9 +1568,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Counters match outputs"
-        ]
+        ],
+        "progression": "CSD U3 Counters match outputs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1635,9 +1592,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Sunset with Counters"
-        ]
+        ],
+        "progression": "Challenge: Sunset with Counters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1659,9 +1616,9 @@
       "properties": {
         "level_keys": [
           "CSD-U3-SFLP Sprites and Mod"
-        ]
+        ],
+        "progression": "CSD-U3-SFLP Sprites and Mod"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1685,7 +1642,6 @@
           "CSD U3 Sprites motivation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1707,9 +1663,9 @@
       "properties": {
         "level_keys": [
           "CSD: Sprites in Game Lab"
-        ]
+        ],
+        "progression": "Video: Introduction to Sprites"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1733,7 +1689,6 @@
           "CSD U3 Sprites intro sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1757,7 +1712,6 @@
           "CSD U3 Sprites setting properties"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1781,7 +1735,6 @@
           "CSD U3 Sprites debug dot notation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1805,7 +1758,6 @@
           "CSD U3 Sprites shapeColor"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1829,7 +1781,6 @@
           "CSD U3 Sprites width height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1853,7 +1804,6 @@
           "CSD U3 Sprites sprites vs rects"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1877,7 +1827,6 @@
           "CSD U3 Sprites make your own sprite"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1899,9 +1848,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Sprites STOP sprites and variables"
-        ]
+        ],
+        "progression": "CSD U3 Sprites STOP sprites and variables"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1925,7 +1874,6 @@
           "CSD U3 Sprites createSprite params"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,9 +1895,9 @@
       "properties": {
         "level_keys": [
           "CSD: Animating Sprite Movement"
-        ]
+        ],
+        "progression": "Video: Sprite Movement"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1973,7 +1921,6 @@
           "CSD U3 Sprites animating with sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1997,7 +1944,6 @@
           "CSD U3 Sprites debug watchers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2021,7 +1967,6 @@
           "CSD U3 Sprites debug background"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2045,7 +1990,6 @@
           "CSD U3 Sprites race create sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2069,7 +2013,6 @@
           "CSD U3 Sprites race movement"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2093,7 +2036,6 @@
           "CSD U3 Sprites race random"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2117,7 +2059,6 @@
           "CSD U3 Sprites race finish"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2139,9 +2080,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 SFLP Sprites and Images"
-        ]
+        ],
+        "progression": "CSD U3 SFLP Sprites and Images"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2163,9 +2104,9 @@
       "properties": {
         "level_keys": [
           "CSD: Animation Tab"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2189,7 +2130,6 @@
           "CSD U3 - images - first sprite with image"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2213,7 +2153,6 @@
           "CSD U3 - images - changing scene"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2237,7 +2176,6 @@
           "CSD U3 - images - race images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2261,7 +2199,6 @@
           "U3 - Sprites and Mod - Sprite Rotation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2285,7 +2222,6 @@
           "U3 - image - Rotation Random Amount"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2309,7 +2245,6 @@
           "CSD U3 - images - random movement"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2333,7 +2268,6 @@
           "U3 - Sprites and Mod - Rotation Direction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2357,7 +2291,6 @@
           "U3 - Sprites and Mod - Mouse X and Y"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2381,7 +2314,6 @@
           "U3 - Sprites and Mod - Rand Around Mouse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2405,7 +2337,6 @@
           "CSD U3 - images - setAnimation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2429,7 +2360,6 @@
           "CSD U3 - images - scale"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2453,7 +2383,6 @@
           "CSD U3 - images - kiteFlying"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2475,9 +2404,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - images - pick your final work"
-        ]
+        ],
+        "progression": "CSD: Pick Your Sprite Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2501,7 +2430,6 @@
           "U3 - image - wheel free play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2525,7 +2453,6 @@
           "CSD U3 - images - fish free play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2549,7 +2476,6 @@
           "U3 - images - gears free play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2573,7 +2499,6 @@
           "U3 - images - bee free play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2597,7 +2522,6 @@
           "CSD U3 - images - kite free play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2619,9 +2543,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Booleans - 1"
-        ]
+        ],
+        "progression": "Booleans and Conditionals Unplugged"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2643,9 +2567,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 SFLP Conditionals"
-        ]
+        ],
+        "progression": "CSD U3 SFLP Conditionals"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2669,7 +2593,6 @@
           "CSD U3 Boolean Predict"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2691,9 +2614,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Booleans Video"
-        ]
+        ],
+        "progression": "Video: Booleans"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2717,7 +2640,6 @@
           "CSD U3 Boolean Modify"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2741,7 +2663,6 @@
           "CSD U3 - conditionals - Matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2765,7 +2686,6 @@
           "CSD U3 - conditionals - transition"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2789,7 +2709,6 @@
           "CSD U3 - conditionals - transition 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2813,7 +2732,6 @@
           "CSD U3 - conditionals - first conditional"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2837,7 +2755,6 @@
           "CSD U3 - conditionals - first conditional 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2859,9 +2776,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 -conditionals - stop booleans"
-        ]
+        ],
+        "progression": "CSD U3 -conditionals - stop booleans"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2885,7 +2802,6 @@
           "CSD U3 Keypress Boolean"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2909,7 +2825,6 @@
           "CSD U3 UP_ARROW"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2933,7 +2848,6 @@
           "CSD U3 - images - fish with arrows"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2957,7 +2871,6 @@
           "CSD U3 - conditionals - arrows and gears"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2981,7 +2894,6 @@
           "CSD U3 Direction Arrows"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3005,7 +2917,6 @@
           "CSD U3 Direction Animations"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3027,9 +2938,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - complex conditionals - SFLP"
-        ]
+        ],
+        "progression": "CSD U3 - complex conditionals - SFLP"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3051,9 +2962,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Conditionals Video"
-        ]
+        ],
+        "progression": "Video: Conditionals"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3077,7 +2988,6 @@
           "CSD U3 Else"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3101,7 +3011,6 @@
           "CSD U3 If Else"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3125,7 +3034,6 @@
           "CSD U3 Keypress Watchers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3149,7 +3057,6 @@
           "CSD U3 Keypress Matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3173,7 +3080,6 @@
           "CSD U3 - complex - mouse down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3197,7 +3103,6 @@
           "CSD U3 - complex - key up and down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3221,7 +3126,6 @@
           "CSD U3 - complex - mouse move"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3243,9 +3147,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Compound Nested Stop"
-        ]
+        ],
+        "progression": "CSD U3 Compound Nested Stop"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3269,7 +3173,6 @@
           "CSD U3 Compound Nested Challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3293,7 +3196,6 @@
           "CSD U3 - complex - nested conditional"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3317,7 +3219,6 @@
           "CSD U3 - complex - compound conditionals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3341,7 +3242,6 @@
           "CSD U3 Conditional Predict"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3365,7 +3265,6 @@
           "CSD U3 Conditional Project"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3387,9 +3286,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 SFLP Card Project"
-        ]
+        ],
+        "progression": "CSD U3 SFLP Card Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3411,9 +3310,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Interactive Card Exemplar"
-        ]
+        ],
+        "progression": "CSD U3 Interactive Card Exemplar"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3437,7 +3336,6 @@
           "CSD U3 Interactive Card Background"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3461,7 +3359,6 @@
           "CSD U3 Interactive Card Sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3485,7 +3382,6 @@
           "CSD U3 Interactive Card User Input"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3509,7 +3405,6 @@
           "CSD U3 Interactive Card Other Conditionals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3533,7 +3428,6 @@
           "CSD U3 Interactive Card Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3555,9 +3449,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 SFLP Velocity"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3579,9 +3473,9 @@
       "properties": {
         "level_keys": [
           "CSD: Sprite Velocity"
-        ]
+        ],
+        "progression": "Video: Velocity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3605,7 +3499,6 @@
           "CSD U3 abstraction velocityX"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3629,7 +3522,6 @@
           "CSD U3 abstraction velocityY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3653,7 +3545,6 @@
           "CSD U3 abstraction rotation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3677,7 +3568,6 @@
           "CSD U3 abstraction rotation control"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3701,7 +3591,6 @@
           "CSD U3 abstraction velocityY control"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3725,7 +3614,6 @@
           "CSD U3 abstraction velocityX if-statements"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3749,7 +3637,6 @@
           "CSD U3 abstraction velocityX control"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3773,7 +3660,6 @@
           "CSD U3 abstraction jump"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3797,7 +3683,6 @@
           "CSD U3 abstraction tumbleweed"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3821,7 +3706,6 @@
           "CSD U3 abstraction looping"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3843,9 +3727,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Collision Detection"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3869,7 +3753,6 @@
           "CSD U3 collisions car intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3893,7 +3776,6 @@
           "CSD U3 collisions build isTouching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3917,7 +3799,6 @@
           "CSD U3 collisions isTouching intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3941,7 +3822,6 @@
           "CSD U3 collisions egg"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3965,7 +3845,6 @@
           "CSD U3 collisions egg2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3989,7 +3868,6 @@
           "CSD U3 collisions horse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4013,7 +3891,6 @@
           "CSD U3 collisions debug isTouching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4037,7 +3914,6 @@
           "CSD U3 collisions scoreboard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4061,7 +3937,6 @@
           "CSD U3 collisions sidescroll2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4083,9 +3958,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 complex sprite movement SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4109,7 +3984,6 @@
           "CSD U3 Complex Movement counter prediction gamelab"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4133,7 +4007,6 @@
           "CSD U3 abstraction accelerateX"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4157,7 +4030,6 @@
           "CSD U3 abstraction accelerateY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4181,7 +4053,6 @@
           "CSD U3 abstraction accelerateY up"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4205,7 +4076,6 @@
           "CSD U3 abstraction decelerateX"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4229,7 +4099,6 @@
           "CSD U3 abstraction decelerateY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4253,7 +4122,6 @@
           "CSD U3 abstraction jumping"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4277,7 +4145,6 @@
           "CSD U3 abstraction left right counter"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4301,7 +4168,6 @@
           "CSD U3 abstraction left right counter 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4325,7 +4191,6 @@
           "CSD U3 abstraction add coin"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4349,7 +4214,6 @@
           "CSD U3 abstraction reset coin"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4373,7 +4237,6 @@
           "CSD U3 abstraction make it your own"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4395,9 +4258,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Collisions SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4421,7 +4284,6 @@
           "CSD U3 collisions predict set velocity code"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4445,7 +4307,6 @@
           "CSD U3 collisions displace x"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4469,7 +4330,6 @@
           "CSD U3 collisions displace y"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4493,7 +4353,6 @@
           "CSD U3 collisions displace intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4517,7 +4376,6 @@
           "CSD U3 collisions try blocks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4541,7 +4399,6 @@
           "CSD U3 collisions types"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4565,7 +4422,6 @@
           "CSD U3 collisions turtle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4589,7 +4445,6 @@
           "CSD U3 collisions debug"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4613,7 +4468,6 @@
           "CSD U3 collisions setCollider"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4637,7 +4491,6 @@
           "CSD U3 collisions bounciness"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4661,7 +4514,6 @@
           "CSD U3 collisions flyman add obstacles"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4685,7 +4537,6 @@
           "CSD U3 collisions flyman bounceOff"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4709,7 +4560,6 @@
           "CSD U3 collisions flyman displace coin"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4733,7 +4583,6 @@
           "CSD U3 collisions flyman change colliders"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4757,7 +4606,6 @@
           "CSD U3 collisions flyman make it your own"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4779,9 +4627,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Functions SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4805,7 +4653,6 @@
           "CSD U3 Functions Call Function"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4829,7 +4676,6 @@
           "CSD U3 Functions Order Functions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4853,7 +4699,6 @@
           "CSD U3 Functions Prediction Order of Create"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4877,7 +4722,6 @@
           "CSD U3 Functions Call Draw Loop"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4901,7 +4745,6 @@
           "CSD U3 Functions Reset Sprite"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4925,7 +4768,6 @@
           "CSD U3 Functions Randomize Sprite"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4949,7 +4791,6 @@
           "CSD U3 Functions Create Function"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4973,7 +4814,6 @@
           "CSD U3 Functions Write Reset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4997,7 +4837,6 @@
           "CSD U3 Functions Add IsTouching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5021,7 +4860,6 @@
           "CSD U3 Functions Add Change Background"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5043,9 +4881,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Functions Introduction"
-        ]
+        ],
+        "progression": "CSD U3 Functions Introduction"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5067,9 +4905,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Defender SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5091,9 +4929,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti Play Defender"
-        ]
+        ],
+        "progression": "Sample Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5115,9 +4953,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 AnimationsMulti STOP project guide"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5141,7 +4979,6 @@
           "CSD U3 AnimationsMulti introducing multiframe"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5165,7 +5002,6 @@
           "CSD U3 AnimationsMulti slow down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5189,7 +5025,6 @@
           "CSD U3 AnimationsMulti mirror animation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5213,7 +5048,6 @@
           "CSD U3 AnimationsMulti defender animate cake enemies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5237,7 +5071,6 @@
           "CSD U3 AnimationsMulti defender enemies move"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5261,7 +5094,6 @@
           "CSD U3 AnimationsMulti defender enemies touch cake"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5285,7 +5117,6 @@
           "CSD U3 AnimationsMulti defender enemies touch cake sprite2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5309,7 +5140,6 @@
           "CSD U3 AnimationsMulti defender create set enemies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5333,7 +5163,6 @@
           "CSD U3 AnimationsMulti defender move player"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5357,7 +5186,6 @@
           "CSD U3 AnimationsMulti defender move up down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5381,7 +5209,6 @@
           "CSD U3 AnimationsMulti defender animate player"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5405,7 +5232,6 @@
           "CSD U3 AnimationsMulti defender displace enemies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5429,7 +5255,6 @@
           "CSD U3 AnimationsMulti defender touch water"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5453,7 +5278,6 @@
           "CSD U3 AnimationsMulti defender make it your own"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5475,9 +5299,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Using the Game Design Process SLFP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5499,9 +5323,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 platform sample1"
-        ]
+        ],
+        "progression": "Sample Platform Jumper Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5525,7 +5349,6 @@
           "CSD U3 platform intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5549,7 +5372,6 @@
           "CSD U3 platform background1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5573,7 +5395,6 @@
           "CSD U3 platform variable1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5597,7 +5418,6 @@
           "CSD U3 platform background2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5621,7 +5441,6 @@
           "CSD U3 platform scoreboard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5645,7 +5464,6 @@
           "CSD U3 platform platform1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5669,7 +5487,6 @@
           "CSD U3 platform platform2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5693,7 +5510,6 @@
           "CSD U3 platform platform3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5717,7 +5533,6 @@
           "CSD U3 platform items1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5741,7 +5556,6 @@
           "CSD U3 platform items2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5765,7 +5579,6 @@
           "CSD U3 platform items3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5789,7 +5602,6 @@
           "CSD U3 platform player1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5813,7 +5625,6 @@
           "CSD U3 platform player2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5837,7 +5648,6 @@
           "CSD U3 platform player3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5861,7 +5671,6 @@
           "CSD U3 platform player4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5885,7 +5694,6 @@
           "CSD U3 platform sample2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5909,7 +5717,6 @@
           "CSD U3 platform sample3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5933,7 +5740,6 @@
           "CSD U3 platform challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5955,9 +5761,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Project Build a Game SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5979,9 +5785,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 game intro"
-        ]
+        ],
+        "progression": "Design Your Game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6005,7 +5811,6 @@
           "CSD U3 game variables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6029,7 +5834,6 @@
           "CSD U3 game backgrounds"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6053,7 +5857,6 @@
           "CSD U3 game display boards"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6077,7 +5880,6 @@
           "CSD U3 game choose background"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6101,7 +5903,6 @@
           "CSD U3 game animations"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6125,7 +5926,6 @@
           "CSD U3 game create sprites"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6149,7 +5949,6 @@
           "CSD U3 game sprite movement"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6173,7 +5972,6 @@
           "CSD U3 game user controls"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6197,7 +5995,6 @@
           "CSD U3 game interactions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6221,7 +6018,6 @@
           "CSD U3 finishing touches"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
