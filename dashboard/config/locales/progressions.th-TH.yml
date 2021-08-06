@@ -4,7 +4,10 @@ th:
     progressions:
       Artist Project: โปรเจ็กต์ศิลปิน
       'Artist: Variables': 'ศิลปิน: ตัวแปร'
+      Back and Forth: เดินหน้าถอยหลัง
+      Bass, Mid, and Treble: เสียงต่ำ เสียงกลาง เสียงสูง
       Code Your Own Flappy Game: เขียนโค้ดเกมนกน้อยตะลุยโลกกว้างของคุณเอง
+      Dance Crews: ประชันนักเต้น
       Debugging: การแก้ไขจุดบกพร่อง
       Design Mode: สถานะการออกแบบ
       Designing for Accessibility: การออกแบบสำหรับการช่วยการเข้าถึง
@@ -13,18 +16,28 @@ th:
       For Loops: การวนรอบ
       Free Play: เล่นฟรี
       Functions: ฟังก์ชัน
+      Functions Review: ทบทวนฟังก์ชั่น
       Functions with Parameters: ฟังก์ชันกับพารามิเตอร์
+      Get In Formation: จัดรูปแบบกลุ่มนักเต้น
       Lesson Extras: บทเรียนเพิ่มเติม
       Lists: รายการ
       Measures: ห้องดนตรี
+      More Buttons: ปุ่มมากกว่านี้
+      Overview: ภาพรวม
       Pair Programming: การจับคู่เพื่อเขียนโปรแกรม
       Programming with Rey and BB-8: การเขียนโปรแกรมกับเรย์และบีบี-8
       Project: โปรเจกต์
       Properties: คุณสมบัติ
+      Quarter Notes: โน๊ตหนึ่งจังหวะ
       Recovery: การรักษาตัว
       Review: ตรวจสอบ
+      Speed it Up, Slow it Down: เร่งจังหวะขึ้น ลดความเร็วลง
       Stopping the Outbreak with Masks: หยุดการระบาดด้วยหน้ากากอนามัย
+      Text Compression: การบีบอัดข้อความ
       The Harvester: เกษตรกรผู้เก็บเกี่ยว
+      Variables: ตัวแปร
+      'Video: What Makes a Computer, a Computer?': 'วีดีโอ: อะไรทำให้คอมพิวเตอร์เป็นคอมพิวเตอร์ได้?'
       Warm Up: อุ่นเครื่อง
+      Where'd They Go?: พวกเขาหายไปไหนกัน
       While Loops with the Farmer: ลูปขณะที่ (while loops) กับเกมเกษตรกร
       Wrap-up: Wrap-up

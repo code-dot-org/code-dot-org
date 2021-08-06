@@ -1414,3 +1414,5 @@ ku:
           DIR:
             right: بۆ لای ڕاست ↻
             left: بۆ لای چەپ ↺
+      validation_validatedBackground:
+        text: پاشبنەما دابنێ {IMG}

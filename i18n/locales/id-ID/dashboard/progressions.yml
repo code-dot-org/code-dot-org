@@ -1,59 +1,118 @@
 id:
   data:
     progressions:
+      Alien Defender: Pembela Alien
+      Arrays: Array
       Artist Project: Proyek artis
       'Artist: Variables': 'Artis: Variabel-Variabel'
+      Back and Forth: Maju mundur
+      Bass, Mid, and Treble: Bas, Mid, dan Treble
       Binary Numbers: Bilangan Biner
+      Binary and Data: Binary dan Data
       Board Events: Event Papan
+      'Bunny ': 'Kelinci'
       CS Discoveries Post-Course Survey: Survei Pascakursus CS Discoveries
+      CSS Classes: Kelas CSS
+      CSS Text Properties: Property Teks Css
+      CSS and Style Sheets: Css dan pengatur tampilan
       Challenge: Tantangan
+      Collision Detection: Deteksi tumbukan
       Collisions: Tumbukan
       Combining Representations: Menggabungkan Representasi
+      Course E Artist Project: Kursus E Proyek Artis
+      Course E Sprite Lab Project: Kursus E Proyek Sprite Lab
+      Course F Artist Project: Proyek Artis Kursus F
+      Course F Sprite Lab Project: Proyek Sprite Lab Kursus F
+      Creative Commons Search: Karya kreatif
+      Dance Crews: Kru Tari
       Debugging: Debugging
       Design Mode: Mode desain
+      Designing Screens with Code: Perancangan Layar dengan Kode
       Designing for Accessibility: Mendesain untuk Aksesibilitas
+      Dogger Example: Contoh Dogger
       Drawing: Menggambar
+      End of Course Projects: Proyek Akhir Kursus
+      Event Types: Jenis Event
       Events: kegiatan
       Example Projects: Proyek-Proyek Contoh
       Exploration: Eksplorasi
+      'Exploration: Adding Style': 'Eksplorasi: Penambahan Gaya'
+      Explore HTML: Eksplorasi HTML
+      Final Personal Website: Situs Pribadi
       For Loops: For Loop
+      Formatting HTML: Format HTML
       Free Play: Permainan Gratis
       Functions: fungsi
       Functions with Parameters: Fungsi dengan parameter
+      Geometric Sun: Matahari Geometris
+      Get In Formation: Masuk formasi
+      Getters and Setters: Penghasil dan Pengatur
       Getting Properties: Mendapatkan Properti
+      HTML Tags: Tag HTML
       Headings: Tajuk
+      Headings in HTML: Heading dalam HTML
       How to Make a Sprite: Bagaimana Membuat Sprite
+      Hyperlinks: Tautan
+      Images in HTML: Gambar dalam HTML
+      Inspiration!: Inspirasi!
       Introducing Sprite Lab: Memperkenalkan Sprite Lab
       Introduction to Arrays: Pengenalan Array
       Keeping Data Secret: Menjaga Kerahasiaan Data
       Keyboard Input: Input Keyboard
+      Layout Properties: Layout property
       Lesson Extras: Pelajaran tambahan
       Linking Pages: Menautkan Halaman
       Linking Screens: Menautkan Layar
       Lists: List
+      Lists in HTML: List dalam HTML
       Loops with the Artist: Loop dengan Artis
+      Making Music: Membuat musik
       Measures: Langkah
       'Mini-Project: About Me': 'Tentang Saya dengan Sprite Lab'
+      More Buttons: Lebih banyak tombol
+      Multi-Screen Apps: Aplikasi Multilayar
       My Online Neighborhood: Tetangga Online Saya
+      Overview: Tinjauan
       Pair Programming: Pemrograman berpasangan
       Picturing Data: Penggambaran Data
       Planning: Perencanaan
+      Polling Events: Event Angket
       Programming with Rey and BB-8: Pemrograman dengan Rey dan BB-8
       Project: Proyek
       Properties: Properti
       Publishing Your Website: Sedang diterbitkan situs web
+      Quarter Notes: Not Seperempat
+      RGB Widget: RGB Widget
       Reflection: Bayangan
       Representing Images: Merepresentasikan Gambar
       Review: Tinjauan
+      Revise Artist Project: Revisi Proyek Artis
+      Revise Sprite Lab Project: Revisi Proyek Sprite Lab
+      Robot Doodle: Gambar Robot
       Sample Programs: Program-Program Contoh
       Skill Building: Pembangunan Keterampilan
+      Speed it Up, Slow it Down: Percepat, Perlambat
+      Sprite Lab Example Project: Proyek Contoh Sprite Lab
       Sprite Lab Project: Proyek Sprite Lab
       Stopping the Outbreak with Masks: Menghentikan Wabah dengan Masker
+      Text Compression: kompresi Teks
+      The Animation Tab: Tab Animasi
+      The Body Element: Badan Elemen
+      The Draw Loop: Draw Loop
       The Harvester: Si Pemanen
       Using the Repeat Block: Menggunakan Blok Repeat
+      Variables: variabel
       Velocity: Percepatan
       Video: Video
+      'Video: CS Matters': 'Video: Masalah CS'
+      'Video: Intro to CSS': 'Video: Pendahuluan untuk CSS'
+      'Video: Intro to CSS Part 2': 'Video: Pendahuluan untuk CSS Bagian 2'
+      'Video: Intro to Web Lab - Part 1': 'Video: Pendahuluan Web Lab - Bagian 1'
+      'Video: Intro to Web Lab - Part 2': 'Pendahuluan Web Lab - Bagian 2'
+      'Video: Problem Solving Process': 'Video: proses pemecahan masalah'
+      'Video: What Makes a Computer, a Computer?': 'Apa yang menbuat sebuah komputer, sebuah komputer?'
       Warm Up: Pemanasan
+      Where'd They Go?: Kemana mereka pergi?
       While Loops with the Farmer: While Loop dengan Petani
       Wrap-up: Penutupan
       Your Personal Website: Website pribadi anda

@@ -1,8 +1,6 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "class-schedule-survey",
-    "/courses": "class-schedule-survey"
+    "/projects": "home-learning-2020"
   },
 
   "banners": {

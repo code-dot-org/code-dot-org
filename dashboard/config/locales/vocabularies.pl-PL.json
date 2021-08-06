@@ -30,13 +30,8 @@
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "Wejście",
-          "definition": ""
+          "word": "Wejście"
         },
         "loop/coursef/2021": {
           "word": "Pętla",
@@ -49,10 +44,6 @@
         "for_loop/coursef/2021": {
           "word": "Pętla \"dla\" (for)",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Uczenie maszynowe",
@@ -302,10 +293,6 @@
           "word": "Zdania z warunkami",
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "Warunek",
           "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
@@ -355,8 +342,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/express/2021": {
-          "word": "kodować",
-          "definition": ""
+          "word": "kodować"
         },
         "loop/express/2021": {
           "word": "Pętla",
@@ -393,10 +379,6 @@
         "variable/express/2021": {
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "Pętla \"dla\" (for)",
@@ -473,10 +455,6 @@
         "behavior/coursee/2021": {
           "word": "Zachowanie",
           "definition": "Czynność, którą duszek wykonuje nieustannie do momentu, gdy powie mu się, by przestał."
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
         },
         "sprite/coursee/2021": {
           "word": "Duszek",

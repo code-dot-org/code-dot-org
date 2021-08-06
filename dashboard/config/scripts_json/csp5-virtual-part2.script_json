@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:58 UTC",
+    "serialized_at": "2021-08-03 22:48:00 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp5-virtual-part2"
@@ -226,7 +226,6 @@
           "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,9 +247,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L11 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,7 +274,6 @@
         ],
         "progression": "Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +298,6 @@
         ],
         "progression": "Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -325,7 +322,6 @@
         ],
         "progression": "Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,7 +346,6 @@
         ],
         "progression": "Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +370,6 @@
         ],
         "progression": "Updating Variables in Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -400,7 +394,6 @@
         ],
         "progression": "Updating Variables in Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +418,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -450,7 +442,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -475,7 +466,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -500,7 +490,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,7 +514,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -550,7 +538,6 @@
         ],
         "progression": "Other Uses of Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,7 +562,6 @@
         ],
         "progression": "New Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -600,7 +586,6 @@
         ],
         "progression": "New Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +610,6 @@
         ],
         "progression": "New Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -650,7 +634,6 @@
         ],
         "progression": "Loops Continued"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +658,6 @@
         ],
         "progression": "Loops Continued"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -700,7 +682,6 @@
         ],
         "progression": "Loops Continued"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -725,7 +706,6 @@
         ],
         "progression": "Loops Continued"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -750,7 +730,6 @@
         ],
         "progression": "Loops Continued"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -775,7 +754,6 @@
         ],
         "progression": "Quick Check-In"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -797,9 +775,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L12 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +802,6 @@
         ],
         "progression": "Make a Hypothesis"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +826,6 @@
         ],
         "progression": "Introduction to Simulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +850,6 @@
         ],
         "progression": "Introduction to Simulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +874,6 @@
         ],
         "progression": "Introduction to Simulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +898,6 @@
         ],
         "progression": "Introduction to Simulations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +922,6 @@
         ],
         "progression": "Update your Hypothesis - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,7 +946,6 @@
         ],
         "progression": "Simulation Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,7 +970,6 @@
         ],
         "progression": "Simulation Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1024,7 +994,6 @@
         ],
         "progression": "Simulation Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1018,6 @@
         ],
         "progression": "Update your Hypothesis - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1074,7 +1042,6 @@
         ],
         "progression": "Experiment With Simulation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1096,9 +1063,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L13 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1123,7 +1090,6 @@
         ],
         "progression": "Introduction to Lists - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1148,7 +1114,6 @@
         ],
         "progression": "List Basics"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1173,7 +1138,6 @@
         ],
         "progression": "List Basics"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1198,7 +1162,6 @@
         ],
         "progression": "Introduction to Lists - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1223,7 +1186,6 @@
         ],
         "progression": "List Basics"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1248,7 +1210,6 @@
         ],
         "progression": "List Basics"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1273,7 +1234,6 @@
         ],
         "progression": "Introduction to Lists - Part 3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1298,7 +1258,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1323,7 +1282,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1348,7 +1306,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1373,7 +1330,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1398,7 +1354,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1423,7 +1378,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1448,7 +1402,6 @@
         ],
         "progression": "Updating and Assigning Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1473,7 +1426,6 @@
         ],
         "progression": "Introduction to Lists - Part 4"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1498,7 +1450,6 @@
         ],
         "progression": "Length and Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1523,7 +1474,6 @@
         ],
         "progression": "Length and Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1548,7 +1498,6 @@
         ],
         "progression": "Length and Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1573,7 +1522,6 @@
         ],
         "progression": "\"My Favorite Things\" Demo App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1598,7 +1546,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1623,7 +1570,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1648,7 +1594,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1673,7 +1618,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1698,7 +1642,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1723,7 +1666,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1748,7 +1690,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1773,7 +1714,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1798,7 +1738,6 @@
         ],
         "progression": "Using Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1823,7 +1762,6 @@
         ],
         "progression": "Array Reflection Questions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1848,7 +1786,6 @@
         ],
         "progression": "Array Reflection Questions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1870,9 +1807,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L14 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1897,7 +1834,6 @@
         ],
         "progression": "My Favorite Things Demonstration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1922,7 +1858,6 @@
         ],
         "progression": "Key Event"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1882,6 @@
         ],
         "progression": "Key Event"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1972,7 +1906,6 @@
         ],
         "progression": "Key Event"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1997,7 +1930,6 @@
         ],
         "progression": "Key Event"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2022,7 +1954,6 @@
         ],
         "progression": "Key Event"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2047,7 +1978,6 @@
         ],
         "progression": "Functions in Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2072,7 +2002,6 @@
         ],
         "progression": "Adding Images Using URLs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2026,6 @@
         ],
         "progression": "Project: Image Scroller"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2050,6 @@
         ],
         "progression": "My Favorite Things Reflection Question"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2146,7 +2073,6 @@
           "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2168,9 +2094,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L15 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2195,7 +2121,6 @@
         ],
         "progression": "Processing Lists with Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2220,7 +2145,6 @@
         ],
         "progression": "Introduction to for Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2245,7 +2169,6 @@
         ],
         "progression": "Printing an Array"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2270,7 +2193,6 @@
         ],
         "progression": "Math and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2295,7 +2217,6 @@
         ],
         "progression": "Math and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2320,7 +2241,6 @@
         ],
         "progression": "Booleans, if Statements, and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2345,7 +2265,6 @@
         ],
         "progression": "Booleans, if Statements, and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2370,7 +2289,6 @@
         ],
         "progression": "Booleans, if Statements, and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2395,7 +2313,6 @@
         ],
         "progression": "Booleans, if Statements, and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2420,7 +2337,6 @@
         ],
         "progression": "Booleans, if Statements, and Arrays"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2445,7 +2361,6 @@
         ],
         "progression": "Arrays and Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2470,7 +2385,6 @@
         ],
         "progression": "Arrays and Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2495,7 +2409,6 @@
         ],
         "progression": "Arrays and Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2520,7 +2433,6 @@
         ],
         "progression": "Arrays and Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2542,9 +2454,9 @@
       "properties": {
         "level_keys": [
           "CSP U5L16 SFLP_virtual"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2569,7 +2481,6 @@
         ],
         "progression": "The Return Command"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2594,7 +2505,6 @@
         ],
         "progression": "Using minVal"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2619,7 +2529,6 @@
         ],
         "progression": "Writing and Debugging maxVal"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2644,7 +2553,6 @@
         ],
         "progression": "Writing and Debugging maxVal"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2669,7 +2577,6 @@
         ],
         "progression": "Writing and Debugging maxVal"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2694,7 +2601,6 @@
         ],
         "progression": "Return Values in Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2719,7 +2625,6 @@
         ],
         "progression": "Return Values in Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2744,7 +2649,6 @@
         ],
         "progression": "Canvas Painter Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2769,7 +2673,6 @@
         ],
         "progression": "Canvas Painter Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2794,7 +2697,6 @@
         ],
         "progression": "Canvas Painter Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2819,7 +2721,6 @@
         ],
         "progression": "Events in Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2844,7 +2745,6 @@
         ],
         "progression": "Events in Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2869,7 +2769,6 @@
         ],
         "progression": "Events in Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2894,7 +2793,6 @@
         ],
         "progression": "Events in Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2919,7 +2817,6 @@
         ],
         "progression": "Events in Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2944,7 +2841,6 @@
         ],
         "progression": "Storing Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2969,7 +2865,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2994,7 +2889,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3019,7 +2913,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3044,7 +2937,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3069,7 +2961,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3094,7 +2985,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3119,7 +3009,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3144,7 +3033,6 @@
         ],
         "progression": "Adding More Features to Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3169,7 +3057,6 @@
         ],
         "progression": "Using Stored Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3194,7 +3081,6 @@
         ],
         "progression": "Project: Canvas Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3218,7 +3104,6 @@
           "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3242,7 +3127,6 @@
           "CSP Cumulative Assess A_2018_2019_virtual"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

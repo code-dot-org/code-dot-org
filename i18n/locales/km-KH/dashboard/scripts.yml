@@ -2660,3 +2660,15 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: ប្រភពមេរៀន
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: សាក​ល្បង
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: ទិដ្ឋភាពទូទៅ
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: ទិដ្ឋភាពទូទៅ

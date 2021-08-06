@@ -247,7 +247,20 @@ module Services
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
       Script.import! [script_to_import], on_duplicate_key_update: get_columns(Script)
-      Script.find_by!(name: script_to_import.name)
+
+      # activerecord-import doesn't trigger callbacks for imported models, and
+      # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
+      # so we invoke it manually.
+      #
+      # see https://github.com/zdennis/activerecord-import#callbacks
+      #
+      # Note that we use activerecord-import extensively in the script seeding
+      # process, so we may end up needing to manually invoke these callbacks
+      # for more models than just Script, in which case we should probably
+      # reassess the pattern being used here.
+      imported_script = Script.find_by!(name: script_to_import.name)
+      imported_script.run_callbacks(:save)
+      return imported_script
     end
 
     def self.import_lesson_groups(lesson_groups_data, seed_context)
@@ -769,7 +782,6 @@ module Services
         :activity_section_position,
         :assessment,
         :properties,
-        :named_level,
         :bonus,
         :seeding_key,
         :level_keys
@@ -782,10 +794,6 @@ module Services
       def properties
         # sort properties hash by key
         object.properties.sort.to_h
-      end
-
-      def named_level
-        !!object.named_level
       end
 
       def bonus

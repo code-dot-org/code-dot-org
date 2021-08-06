@@ -1,3 +1,4 @@
+---
 et:
   data:
     blocks:
@@ -41,20 +42,20 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
       Dancelab_atTimestamp:
-        text: pärast [TIMESTAMP][0] [UNIT][1]
+        text: pärast {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
       Dancelab_changeColorBy:
-        text: muuda [COLOR][0] [METHOD][1] [AMOUNT][2]
+        text: muuda {COLOR} {METHOD} {AMOUNT}
         options:
           METHOD:
             '"hue"': värvitoon
             '"saturation"': küllastus
             '"brightness"': heledus
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] [MOVE][1] [DIR][2] tee igavesti"
+        text: "{GROUP} {MOVE} {DIR} tee igavesti"
         options:
           GROUP:
             sprites: kõik
@@ -85,7 +86,7 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] tee [MOVE][1] [DIR][2] igavesti"
+        text: "{SPRITE} tee {MOVE} {DIR} igavesti"
         options:
           MOVE:
             '"next"': "(Järgmine)"
@@ -104,7 +105,7 @@ et:
             MOVES.Thriller: Thriller
             MOVES.Rest: Mitte ükski
       Dancelab_changePropBy:
-        text: muuda [SPRITE][0] [PROPERTY][1] [VAL][2] võrra
+        text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
           PROPERTY:
             '"scale"': suurus
@@ -114,7 +115,7 @@ et:
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
       Dancelab_changePropEachBy:
-        text: muuda [GROUP][0] [PROPERTY][1] [VAL][2] võrra
+        text: muuda {GROUP} {PROPERTY} {VAL} võrra
         options:
           GROUP:
             sprites: kõik
@@ -137,7 +138,7 @@ et:
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] tee [MOVE][1] [DIR][2] üks kord"
+        text: "{GROUP} tee {MOVE} {DIR} üks kord"
         options:
           GROUP:
             sprites: kõik
@@ -166,7 +167,7 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] tee [MOVE][1] [DIR][2] üks kord"
+        text: "{SPRITE} tee {MOVE} {DIR} üks kord"
         options:
           MOVE:
             '"rand"': "(Juhuslik)"
@@ -182,32 +183,32 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
       Dancelab_everySeconds:
-        text: 'iga [N][0] [UNIT][1] '
+        text: 'iga {N} {UNIT} '
         options:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
       Dancelab_everySecondsRange:
-        text: 'iga [N][0] [UNIT][1] alates [START][2] kuni [STOP][3] '
+        text: 'iga {N} {UNIT} alates {START} kuni {STOP} '
         options:
           UNIT:
             measures: Ühikud
             seconds: Sekundid
       Dancelab_everyVerseChorus:
-        text: 'iga [UNIT][0] '
+        text: 'iga {UNIT} '
         options:
           UNIT:
             '"verse"': salm
             '"chorus"': refrään
       Dancelab_getEnergy:
-        text: saa [RANGE][0]
+        text: saa {RANGE}
         options:
           RANGE:
             '"low"': bass
             '"mid"': keskel
             '"high"': kõrged helid
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': suurus
@@ -218,15 +219,15 @@ et:
             '"y"': vertikaalne asend
             '"tint"': toon
       Dancelab_getTime:
-        text: aeg käesolevas peatükis [UNIT][0]
+        text: aeg käesolevas peatükis {UNIT}
         options:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
       Dancelab_ifDanceIs:
         text: |-
-          kui [SPRITE][0] teeb [DANCE][1]
-          [DO1][2] [DO2][3]
+          kui {SPRITE} teeb {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Kõrge plaks
@@ -242,14 +243,14 @@ et:
             MOVES.Rest: Mitte ükski
       Dancelab_ifTime:
         text: |-
-          kui [UNIT][0] on [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          kui {UNIT} on {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
       Dancelab_jumpTo:
-        text: "[SPRITE][0] hüppavad [LOCATION][1]"
+        text: "{SPRITE} hüppavad {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": üleval
@@ -289,7 +290,7 @@ et:
             "{x: 300, y: 300}": all paremal
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": juhuslik
       Dancelab_layoutSprites:
-        text: paigutus [GROUP][0] nagu [FORMAT][1]
+        text: paigutus {GROUP} nagu {FORMAT}
         options:
           GROUP:
             sprites: kõik
@@ -342,8 +343,8 @@ et:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
       Dancelab_makeNewDanceSprite:
         text: |-
-          tee uus [COSTUME][0]
-          mille nimi on [NAME][1] ekraani [LOCATION][2]
+          tee uus {COSTUME}
+          mille nimi on {NAME} ekraani {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': tulnukas
@@ -370,8 +371,8 @@ et:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": juhuslik
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          tee [N][0] uus [COSTUME][1]
-          erkraani [LAYOUT][2]
+          tee {N} uus {COSTUME}
+          erkraani {LAYOUT}
         options:
           COSTUME:
             '"ALIEN"': kõik tulnukad
@@ -397,9 +398,9 @@ et:
             '"plus"': pluss
             '"random"': juhuslik
       Dancelab_mixColors:
-        text: segad [COLOR1][0] ja [COLOR2][1]
+        text: segad {COLOR1} ja {COLOR2}
       Dancelab_nMeasures:
-        text: "[N][0] ühikud"
+        text: "{N} ühikud"
       Dancelab_onPointerDown:
         text: kui kursor on suunatud alla
       Dancelab_onPointerDrag:
@@ -409,15 +410,14 @@ et:
       Dancelab_randomColor:
         text: juhuslik värv
       Dancelab_setBackground:
-        text: määra taustavärv [COLOR][0]
+        text: määra taustavärv {COLOR}
       Dancelab_setBackgroundEffect:
         text: |-
           määra taustaefekt
-          [EFFECT][0] [PALETTE][1]
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Mitte ükski
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Juhuslik)"
             '"color_cycle"': Värvid
             '"diamonds"': Teemantid
             '"swirl"': Hypno
@@ -429,7 +429,7 @@ et:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           määra taustaefekt
-          [EFFECT][0] [PALETTE][1]
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
@@ -443,7 +443,7 @@ et:
             '"spiral"': Spiraal
             '"disco"': Ruudud
       Dancelab_setDanceSpeed:
-        text: sea [SPEED][0] tantsu kiirus [SPRITE][1]
+        text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
           SPEED:
             '1': tavaline
@@ -452,7 +452,7 @@ et:
             '0.5': aeglane
             '0.25': väga aeglane
       Dancelab_setDanceSpeedEach:
-        text: sea [GROUP][0] tantsu kiirus [SPEED][1]
+        text: sea {GROUP} tantsu kiirus {SPEED}
         options:
           GROUP:
             sprites: kõik
@@ -474,18 +474,17 @@ et:
             '0.5': aeglane
             '0.25': väga aeglane
       Dancelab_setForegroundEffect:
-        text: määra esiplaani efekt [EFFECT][0]
+        text: määra esiplaani efekt {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Juhuslik)"
             '"bubbles"': Mullid
             '"pineapples"': Ananassid
             '"rain"': Vihm
             '"spotlight"': Punktvalgus
             '"raining_tacos"': Tacod
       Dancelab_setForegroundEffectExtended:
-        text: määra esiplaani efekt [EFFECT][0]
+        text: määra esiplaani efekt {EFFECT}
         options:
           EFFECT:
             '"none"': Mitte ükski
@@ -496,7 +495,7 @@ et:
             '"spotlight"': Punktvalgus
             '"raining_tacos"': Tacod
       Dancelab_setProp:
-        text: 'muuda [SPRITE][0] [PROPERTY][1] [VAL][2] '
+        text: 'muuda {SPRITE} {PROPERTY} {VAL} '
         options:
           PROPERTY:
             '"scale"': suurus
@@ -506,7 +505,7 @@ et:
             '"x"': horisontaalne asend
             '"y"': vertikaalne asend
       Dancelab_setPropEach:
-        text: muuda [GROUP][0] [PROPERTY][1] [VAL][2]
+        text: muuda {GROUP} {PROPERTY} {VAL}
         options:
           GROUP:
             sprites: kõik
@@ -530,7 +529,7 @@ et:
             '"y"': vertikaalne asend
             '"tint"': toon
       Dancelab_setPropRandom:
-        text: juhusliku valiku alusel [SPRITE][0] [PROPERTY][1]
+        text: juhusliku valiku alusel {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': suurus
@@ -541,7 +540,7 @@ et:
             '"y"': vertikaalne asend
             '"tint"': toon
       Dancelab_setPropRandomEach:
-        text: juhusliku valiku alusel [GROUP][0] [PROPERTY][1]
+        text: juhusliku valiku alusel {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: kõik
@@ -565,9 +564,9 @@ et:
             '"y"': vertikaalne asend
             '"tint"': toon
       Dancelab_setTint:
-        text: määra [SPRITE][0] toon [VAL][1]
+        text: määra {SPRITE} toon {VAL}
       Dancelab_setTintEach:
-        text: määra [THIS][0] toon [VAL][1]
+        text: määra {THIS} toon {VAL}
         options:
           THIS:
             sprites: kõik
@@ -583,7 +582,7 @@ et:
             '"SHARK"': haid
             '"UNICORN"': ükssarvikud
       Dancelab_setTintEachInline:
-        text: määra [THIS][0] toon [VAL][1]
+        text: määra {THIS} toon {VAL}
         options:
           THIS:
             sprites: kõik
@@ -599,15 +598,15 @@ et:
             '"SHARK"': haid
             '"UNICORN"': ükssarvikud
       Dancelab_setTintInline:
-        text: määra [SPRITE][0] toon [VAL][1]
+        text: määra {SPRITE} toon {VAL}
       Dancelab_setVisible:
-        text: määra [SPRITE][0] nähtavus [VISIBILITY][1]
+        text: määra {SPRITE} nähtavus {VISIBILITY}
         options:
           VISIBILITY:
             'true': nähtav
             'false': nähtamatu
       Dancelab_setVisibleEach:
-        text: määra [THIS][0] nähtavus [VISIBILITY][1]
+        text: määra {THIS} nähtavus {VISIBILITY}
         options:
           THIS:
             sprites: kõik
@@ -626,7 +625,7 @@ et:
             'true': nähtav
             'false': nähtamatu
       Dancelab_startMapping:
-        text: "[SPRITE][0] hakkab [PROPERTY][1] järgnema [RANGE][2]"
+        text: "{SPRITE} hakkab {PROPERTY} järgnema {RANGE}"
         options:
           PROPERTY:
             '"scale"': suurus
@@ -668,7 +667,7 @@ et:
             '"mid"': keskel
             '"treble"': kõrged helid
       Dancelab_stopMapping:
-        text: "[SPRITE][0] lõpetab [PROPERTY][1] järgnemise [RANGE][2]"
+        text: "{SPRITE} lõpetab {PROPERTY} järgnemise {RANGE}"
         options:
           PROPERTY:
             '"scale"': suurus
@@ -723,7 +722,7 @@ et:
             '"x"': x
             '"z"': z
       Dancelab_whenKey:
-        text: kui vajutad [KEY][0]
+        text: kui vajutad {KEY}
         options:
           KEY:
             '"up"': üles
@@ -751,7 +750,7 @@ et:
             '"x"': x
             '"z"': z
       Dancelab_whenPeak:
-        text: kui [RANGE][0] tipneb
+        text: kui {RANGE} tipneb
         options:
           RANGE:
             '0': bass
@@ -766,7 +765,7 @@ et:
           UNIT:
             '"seconds"': sekundit
       gamelab_changePropBy:
-        text: muuda [SPRITE][0] [PROPERTY][1] [VAL][2] võrra
+        text: muuda {SPRITE} {PROPERTY} {VAL} võrra
         options:
           PROPERTY:
             '"scale"': suurus
@@ -781,9 +780,9 @@ et:
             '"when"': kui
             '"while"': tingimusel
       gamelab_clickedSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': suurus
@@ -824,7 +823,7 @@ et:
             '"x"': x
             '"z"': z
       gamelab_jumpTo:
-        text: "[SPRITE][0] hüppavad [LOCATION][1]"
+        text: "{SPRITE} hüppavad {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -860,9 +859,9 @@ et:
             '"right"': paremale
             '"left"': vasakule
       gamelab_newSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_randColor:
         text: juhuslik värv
       gamelab_randomColor:
@@ -870,7 +869,7 @@ et:
       gamelab_repeatForever:
         text: korda igavesti
       gamelab_setBackground:
-        text: määra taustavärv [COLOR][0]
+        text: määra taustavärv {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -890,7 +889,7 @@ et:
             '75': keskmine
             '100': large
       gamelab_setProp:
-        text: muuda [SPRITE][0] [PROPERTY][1] [VAL][2]
+        text: muuda {SPRITE} {PROPERTY} {VAL}
         options:
           PROPERTY:
             '"scale"': suurus
@@ -900,7 +899,7 @@ et:
             '"direction"': liikumise suund
             '"speed"': kiirus
       gamelab_setProp_dropdown:
-        text: muuda [SPRITE][0] [PROPERTY][1] [SIZE][2]
+        text: muuda {SPRITE} {PROPERTY} {SIZE}
         options:
           PROPERTY:
             '"scale"': suurus
@@ -910,7 +909,7 @@ et:
             '75': keskmine
             '100': large
       gamelab_setSizes:
-        text: muuda [SPRITE][0] [PROPERTY][1] [N][2]%
+        text: muuda {SPRITE} {PROPERTY} {N}%
         options:
           PROPERTY:
             '"scale"': suurus
@@ -922,14 +921,14 @@ et:
             '"when"': kui
             '"while"': tingimusel
       gamelab_subjectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
             '"right"': paremale
             '"left"': vasakule
       gamelab_whenKey:
-        text: kui vajutad [KEY][0]
+        text: kui vajutad {KEY}
         options:
           KEY:
             '"up"': üles
@@ -1047,8 +1046,8 @@ et:
             '"all"': kõik
       Mikelab_ifDanceIs:
         text: |-
-          kui [SPRITE][0] teeb [DANCE][1]
-          [DO1][2] [DO2][3]
+          kui {SPRITE} teeb {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Kõrge plaks
@@ -1063,7 +1062,7 @@ et:
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
       Mikelab_joinText:
-        text: "[TEXT][0] [NEXT][1]"
+        text: "{TEXT} {NEXT}"
       Mikelab_randomColor:
         text: juhuslik värv
       Mikelab_repeatUntilComplete:
@@ -1098,7 +1097,7 @@ et:
             "{x: 100, y: 300}": keskel vasakul
             "{x: 300, y: 300}": all paremal
       Mikelab_whenKeyPressed:
-        text: kui vajutad [KEY][0]
+        text: kui vajutad {KEY}
         options:
           KEY:
             '"up"': nool üles
@@ -1123,8 +1122,8 @@ et:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'jah'
-            '"no"': 'ei'
+            '"yes"': jah
+            '"no"': ei
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1133,13 +1132,15 @@ et:
             '"left"': nool vasakule
             '"right"': nool paremale
       PoemBot_setBackgroundEffect:
-        text: "määra taustaefekt\n[BG_EFFECT][0] [PALETTE][1]"
+        text: |-
+          määra taustaefekt
+          {BG_EFFECT} [PALETTE][1]
         options:
           BG_EFFECT:
             '"solid"': ühtlane
             '"rainbow"': vikerkaar
       PoemBot_setForegroundEffect:
-        text: määra esiplaani efekt [FG_EFFECT][0]
+        text: määra esiplaani efekt {FG_EFFECT}
         options:
           FG_EFFECT:
             '"rain"': vihm
@@ -1185,7 +1186,7 @@ et:
             '"left"': vasakule
             '"right"': paremale
       binary_whenKey:
-        text: kui vajutad [KEY][0]
+        text: kui vajutad {KEY}
         options:
           KEY:
             '"up"': üles
@@ -1199,8 +1200,8 @@ et:
             '"d"': d
       craft_ifPath:
         text: |-
-          kui rada [DIR][0]
-          [STATEMENT][1]
+          kui rada {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": ees
@@ -1208,8 +1209,8 @@ et:
             "'left'": vasakule
       craft_ifStandingOn:
         text: |-
-          kui seisad [TYPE][0]
-          [STATEMENT][1]
+          kui seisad {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": sinine korall
@@ -1220,8 +1221,8 @@ et:
             "'seaLantern'": merelatern
       craft_ifStandingOnLimit:
         text: |-
-          kui seisad [TYPE][0]
-          [STATEMENT][1]
+          kui seisad {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": liiv
@@ -1230,7 +1231,7 @@ et:
       craft_moveForward:
         text: liigu edasi
       craft_placeBlock:
-        text: paiguta [blockType][0]
+        text: paiguta {blockType}
         options:
           blockType:
             '"strippedOak"': kooritud tamm
@@ -1265,13 +1266,13 @@ et:
       craft_repeatUntilConduit:
         text: |-
           korda kuni kanal valmis
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           korda kuni eemärgini
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: loo [ENTITY][0]
+        text: loo {ENTITY}
         options:
           ENTITY:
             '"cod"': tursk
@@ -1281,7 +1282,7 @@ et:
             '"squid"': kalmaar
             '"tropicalFish"': troopiline kala
       craft_turn:
-        text: keera [DIR][0]
+        text: keera {DIR}
         options:
           DIR:
             right: paremale ↻

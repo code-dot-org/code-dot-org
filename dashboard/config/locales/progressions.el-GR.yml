@@ -3,21 +3,47 @@ el:
   data:
     progressions:
       'Artist: Variables': 'Καλλιτέχνης: Μεταβλητές'
+      Back and Forth: Μπρος-πίσω
+      Bass, Mid, and Treble: Μπάσα, Μεσαία, και Πρίμα
       Challenge: Εξάσκηση
+      'Challenge: Draw an Image': 'Εξάσκηση: Σχεδιασμός εικόνας'
+      Dance Crews: Ομάδες Χορού
       Debugging: Εντοπισμός σφαλμάτων
       Design Mode: Κατάσταση Σχεδίασης
       Drawing: Σχεδίαση
       Events: Συμβάντα
+      'Exploration: Adding Style': 'Εξερεύνηση: Προσθήκη Στυλ'
+      Explore HTML: Εξερεύνηση γλώσσας HTML
       For Loops: Βρόχοι Για
       Free Play: Ελεύθερο παιχνίδι
       Functions: Συναρτήσεις
       Functions with Parameters: Συναρτήσεις με παραμέτρους
+      Get In Formation: Μπείτε σε Σχηματισμό
+      Headings in HTML: Κεφαλίδες στο HTML
+      Hyperlinks: Υπερσύνδεσμοι
+      Introduction to Game Lab: Εισαγωγή στο Εργαστήριο Παιχνιδιού
+      Layout Properties: Ιδιότητες Διάταξης
       Lists: Λίστες
+      Lists in HTML: Δημιουργία Λίστας στο HTML
       Measures: Μέτρα
+      More Buttons: Περισσότερα κουμπιά
+      Naming Variables: Ορίζοντας Μεταβλητές
+      Overview: Επισκόπηση
       Pair Programming: Προγραμματισμός κατά ζεύγη
       Project: Έργο
       Properties: Ιδιότητες
+      Quarter Notes: Τέταρτα Νότας
+      Random Numbers: Τυχαίοι αριθμοί
+      Speed it Up, Slow it Down: Πιο γρήγορα, Πιο αργά
+      Sprite Properties: Ιδιότητες Χαρακτήρα
       Stopping the Outbreak with Masks: Σταματώντας την έξαρση με Μάσκες
+      Text Compression: Συμπίεση κειμένου
+      The Animation Tab: Η Καρτέλα Κίνησης
       The Harvester: Ο Θεριστής
+      Variables: Μεταβλητές
       Velocity: Ταχύτητα
+      'Video: Drawing in Game Lab - Part 1': 'Βίντεο: Σχεδίαση στο Εργαστήριο Παιχνιδιού-Μέρος
+        1'
+      'Video: Problem Solving Process': 'Βίντεο: Διαδικασία Επίλυσης Προβλημάτων'
+      Where'd They Go?: Πού θα πήγαιναν;
       Wrap-up: συνοψίζω

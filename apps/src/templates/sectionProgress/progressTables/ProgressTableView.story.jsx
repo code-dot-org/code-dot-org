@@ -5,6 +5,7 @@ import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTable
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {createStore} from '../sectionProgressTestHelpers';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
 /**
  * The variety of stories here can be useful during development, but add
@@ -41,6 +42,10 @@ const TableWrapper = connect(state => ({
 }))(_TableWrapper);
 
 function buildSmallStories() {
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   return [
     {
       name: `Small section, small script`,

@@ -1398,3 +1398,11 @@ mr:
             Conditionals:
               key: कंडीशनल्स
               name: कंडीशनल्स
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: आढावा
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: आढावा

@@ -976,8 +976,6 @@ tr:
           UNIT:
             '"seconds"': saniye
             '"frames"': çerçeveler
-      gamelab_hideHaiku:
-        text: haiku'yu sakla
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
       gamelab_ifVarEquals:
@@ -1101,9 +1099,6 @@ tr:
             '"East"': Doğu
             '"South"': Güney
             '"West"': Batı
-      gamelab_printHaiku:
-        text: haiku {BREAK} başlık {TITLE} yazar {AUTHOR} satır 1 {LINE1} satır 2
-          {LINE2} satır 3 {LINE3} göster
       gamelab_printText:
         text: yazdırma {TEXT}
       gamelab_randColor:
@@ -1770,3 +1765,5 @@ tr:
           DIR:
             right: sağa ↻
             left: sola ↺
+      validation_validatedBackground:
+        text: arka planı {IMG} olarak ayarlayın
