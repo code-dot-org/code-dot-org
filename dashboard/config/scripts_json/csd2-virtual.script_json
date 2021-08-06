@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:04 UTC",
+    "serialized_at": "2021-08-03 22:48:02 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd2-virtual"
@@ -255,9 +255,9 @@
       "properties": {
         "level_keys": [
           "CSD Web Sample Pages_2020_virtual"
-        ]
+        ],
+        "progression": "Sample Personal Web Pages"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -282,7 +282,6 @@
         ],
         "progression": "Experiment with Web Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,9 +303,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 1_virtual"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -328,9 +327,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 Inspector Warm Up_virtual"
-        ]
+        ],
+        "progression": "Explore HTML"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,9 +351,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 2_virtual"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -379,7 +378,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +402,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,7 +426,6 @@
         ],
         "progression": "Video: Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -454,7 +450,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -479,7 +474,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -504,7 +498,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -529,7 +522,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +546,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,7 +570,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -604,7 +594,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -626,9 +615,9 @@
       "properties": {
         "level_keys": [
           "CSD Web Headings challenge_2020_virtual"
-        ]
+        ],
+        "progression": "HTML Headings"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -650,9 +639,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 CSS explore CSS_virtual"
-        ]
+        ],
+        "progression": "Exploration: Adding Style"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -674,9 +663,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS_virtual"
-        ]
+        ],
+        "progression": "Video: Intro to CSS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -701,7 +690,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -726,7 +714,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -751,7 +738,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -773,9 +759,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS Part 2_virtual"
-        ]
+        ],
+        "progression": "Video: Intro to CSS Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -800,7 +786,6 @@
         ],
         "progression": "Styling your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -825,7 +810,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,7 +834,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -875,7 +858,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -900,7 +882,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -925,7 +906,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -950,7 +930,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -975,7 +954,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1000,7 +978,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1025,7 +1002,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1050,7 +1026,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1050,6 @@
         ],
         "progression": "Adding Images Challenges"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1097,9 +1071,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Exemplar Personal Websites"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1124,7 +1098,6 @@
         ],
         "progression": "Exploring more CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1149,7 +1122,6 @@
         ],
         "progression": "Exploring more CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1174,7 +1146,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1199,7 +1170,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1224,7 +1194,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1249,7 +1218,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1274,7 +1242,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1299,7 +1266,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1321,9 +1287,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 project guide_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Project Guide"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1348,7 +1314,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1373,7 +1338,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1398,7 +1362,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1423,7 +1386,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1445,9 +1407,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 publish video_virtual"
-        ]
+        ],
+        "progression": "Publishing Your Website"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1472,7 +1434,6 @@
         ],
         "progression": "Publishing Your Website"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1494,9 +1455,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
-        ]
+        ],
+        "progression": "Top Websites"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1521,7 +1482,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1546,7 +1506,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1571,7 +1530,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1596,7 +1554,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1618,9 +1575,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 RGB intro_virtual"
-        ]
+        ],
+        "progression": "RGB Widget"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1645,7 +1602,6 @@
         ],
         "progression": "Exploring Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1670,7 +1626,6 @@
         ],
         "progression": "Links and Navigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1695,7 +1650,6 @@
         ],
         "progression": "Links and Navigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1720,7 +1674,6 @@
         ],
         "progression": "Links and Navigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1745,7 +1698,6 @@
         ],
         "progression": "Adding Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1770,7 +1722,6 @@
         ],
         "progression": "Adding Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1795,7 +1746,6 @@
         ],
         "progression": "Challenge: External Links"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1820,7 +1770,6 @@
         ],
         "progression": "Upload Your Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1845,7 +1794,6 @@
         ],
         "progression": "Create Your Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1870,7 +1818,6 @@
         ],
         "progression": "Add Content"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1895,7 +1842,6 @@
         ],
         "progression": "Add Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1920,7 +1866,6 @@
         ],
         "progression": "Check Your Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1942,9 +1887,9 @@
       "properties": {
         "level_keys": [
           "CSD Web incorporate feedback_virtual"
-        ]
+        ],
+        "progression": "Final Personal Website"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

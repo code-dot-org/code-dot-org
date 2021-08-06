@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:27 UTC",
+    "serialized_at": "2021-08-03 22:48:03 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "contagion-guided-practice"
@@ -128,7 +128,6 @@
         ],
         "progression": "Lesson 2: Bridging Activity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -153,7 +152,6 @@
         ],
         "progression": "Lesson 4: Collecting Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -178,7 +176,6 @@
         ],
         "progression": "Lesson 3: Dice Roll"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

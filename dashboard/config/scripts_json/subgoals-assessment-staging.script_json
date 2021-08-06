@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:18 UTC",
+    "serialized_at": "2021-08-03 22:47:19 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "subgoals-assessment-staging"
@@ -135,7 +135,6 @@
           "csp_U3_square_v_rect_FR"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -159,7 +158,6 @@
           "csp_U3_plan_code_FR"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +181,6 @@
           "csp_U3_turtle_subgoal_q1_mc"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,7 +204,6 @@
           "csp_U3_turtle_subgoal_q2_mc"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,7 +227,6 @@
           "csp_U3_turtle_subgoal_q3_mc"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -255,7 +250,6 @@
           "csp_U3_subgoal_q4_mc"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +273,6 @@
           "subgoals_U3_turtle_prediction_FR"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -303,7 +296,6 @@
           "subgoals_u3_top_down_FR"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -328,7 +320,6 @@
         ],
         "progression": "Some app lab progression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +344,6 @@
         ],
         "progression": "Some app lab progression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -378,7 +368,6 @@
         ],
         "progression": "Check for understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -403,7 +392,6 @@
         ],
         "progression": "Check for understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -428,7 +416,6 @@
         ],
         "progression": "Check for understanding (diff between 3 and 4)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,7 +440,6 @@
         ],
         "progression": "Some app lab progression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -478,7 +464,6 @@
         ],
         "progression": "Some app lab progression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -503,7 +488,6 @@
         ],
         "progression": "Some app lab progression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -527,7 +511,6 @@
           "subgoal_assessments_levelgroup_test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -552,7 +535,6 @@
         ],
         "progression": "Lesson 5.6 - (new) Abstraction in Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -577,7 +559,6 @@
         ],
         "progression": "Lesson 8.8 - (new) What is a comment?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -602,7 +583,6 @@
         ],
         "progression": "Lesson 8.9 - How to add comments - Review for instructions and starting code"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

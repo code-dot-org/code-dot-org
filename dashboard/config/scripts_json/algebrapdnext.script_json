@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:31 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algebrapdnext"
@@ -137,7 +137,6 @@
           "PDAlg P2 Welcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -161,7 +160,6 @@
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +183,6 @@
           "PDAlg Cirlces of Eval"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -209,7 +206,6 @@
           "PDAlg block match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +229,6 @@
           "PDAlg Puzzle Tips"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +252,6 @@
           "PDAlg Puzzles Pre"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +275,6 @@
           "PDAlg DR 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,7 +298,6 @@
           "PDAlg DR Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +321,6 @@
           "PDAlg DR Text 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +344,6 @@
           "PDAlg DR Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +367,6 @@
           "PDAlg DR Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +390,6 @@
           "PDAlg Design Recipe Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +413,6 @@
           "Eval Design Recipe 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +436,6 @@
           "Eval Design Recipe 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -473,7 +459,6 @@
           "Calc Design Recipe 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +482,6 @@
           "Eval Design Recipe Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +505,6 @@
           "PDAlg Dashboard 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +528,6 @@
           "PDAlg Dashboard 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +551,6 @@
           "PDAlg Dashboard 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -593,7 +574,6 @@
           "PDAlg Teacher Plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +597,6 @@
           "PDAlg Prep a Lesson"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +620,6 @@
           "PDAlg Prep on Paper"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +643,6 @@
           "PDAlg Prep Sandbox"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -689,7 +666,6 @@
           "Lesson Prep Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

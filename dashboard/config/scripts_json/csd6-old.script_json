@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:26 UTC",
+    "serialized_at": "2021-08-03 22:47:23 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd6-old"
@@ -287,9 +287,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 Innovation"
-        ]
+        ],
+        "progression": "Innovation Research"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +314,6 @@
         ],
         "progression": "Input Examples"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +338,6 @@
         ],
         "progression": "Input Examples"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -361,9 +359,9 @@
       "properties": {
         "level_keys": [
           "CSD U6L03 Overview"
-        ]
+        ],
+        "progression": "CSD U6L03 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -385,9 +383,9 @@
       "properties": {
         "level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
-        ]
+        ],
+        "progression": "Review: Design Mode, IDs, and Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -409,9 +407,9 @@
       "properties": {
         "level_keys": [
           "CSD: Review Events"
-        ]
+        ],
+        "progression": "Review: Event-driven Programming"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,9 +431,9 @@
       "properties": {
         "level_keys": [
           "CSD: Creating Variables In App Lab"
-        ]
+        ],
+        "progression": "Variables in App Lab"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,9 +455,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - UI and Inputs - event type testing"
-        ]
+        ],
+        "progression": "Event Testing"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -481,9 +479,9 @@
       "properties": {
         "level_keys": [
           "CSD - Getters and Setters"
-        ]
+        ],
+        "progression": "Getters and Setters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,7 +506,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -533,7 +530,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -558,7 +554,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,7 +578,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +602,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -633,7 +626,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -658,7 +650,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,9 +671,9 @@
       "properties": {
         "level_keys": [
           "CSD: getText vs getNumber"
-        ]
+        ],
+        "progression": "getText vs getNumber"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,9 +695,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - UI and Inputs - getNumber"
-        ]
+        ],
+        "progression": "getNumber"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -728,9 +719,9 @@
       "properties": {
         "level_keys": [
           "CSD: setProperty"
-        ]
+        ],
+        "progression": "setProperty"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -755,7 +746,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -780,7 +770,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -805,7 +794,6 @@
         ],
         "progression": "UI Element Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -827,9 +815,9 @@
       "properties": {
         "level_keys": [
           "Stop: Review Getters and Setters"
-        ]
+        ],
+        "progression": "Stop: Review Getters and Setters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -851,9 +839,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Input and UI"
-        ]
+        ],
+        "progression": "Challenge: Input and UI"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -875,9 +863,9 @@
       "properties": {
         "level_keys": [
           "CSD LEDs Map"
-        ]
+        ],
+        "progression": "Circuit Playground: LEDs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,7 +890,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -927,7 +914,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -952,7 +938,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -977,7 +962,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1002,7 +986,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1027,7 +1010,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,9 +1031,9 @@
       "properties": {
         "level_keys": [
           "CSD Buzzer Map"
-        ]
+        ],
+        "progression": "Circuit Playground: Buzzer"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1076,7 +1058,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1101,7 +1082,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1126,7 +1106,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1148,9 +1127,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Buzzer and LED"
-        ]
+        ],
+        "progression": "Challenge: Buzzer and LED"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1172,9 +1151,9 @@
       "properties": {
         "level_keys": [
           "CSD: Introduction to Lists - Part 1"
-        ]
+        ],
+        "progression": "Introduction to Lists - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1196,9 +1175,9 @@
       "properties": {
         "level_keys": [
           "CSD: Lists"
-        ]
+        ],
+        "progression": "Lists"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1223,7 +1202,6 @@
         ],
         "progression": "Introduction to Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1248,7 +1226,6 @@
         ],
         "progression": "Introduction to Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1270,9 +1247,9 @@
       "properties": {
         "level_keys": [
           "CSD: Introduction to Lists - Part 2"
-        ]
+        ],
+        "progression": "Introduction to Lists - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1294,9 +1271,9 @@
       "properties": {
         "level_keys": [
           "CSD: Accessing List Items"
-        ]
+        ],
+        "progression": "Accessing List Items"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1321,7 +1298,6 @@
         ],
         "progression": "Using List Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1346,7 +1322,6 @@
         ],
         "progression": "Using List Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1371,7 +1346,6 @@
         ],
         "progression": "Using List Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1396,7 +1370,6 @@
         ],
         "progression": "Using List Indexes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1418,9 +1391,9 @@
       "properties": {
         "level_keys": [
           "CSD Introduction to Lists - Length"
-        ]
+        ],
+        "progression": "Introduction to Lists - Length"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1442,9 +1415,9 @@
       "properties": {
         "level_keys": [
           "CSD: List Length"
-        ]
+        ],
+        "progression": "List Length"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1469,7 +1442,6 @@
         ],
         "progression": "Understanding List Length"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1494,7 +1466,6 @@
         ],
         "progression": "Understanding List Length"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1519,7 +1490,6 @@
         ],
         "progression": "Understanding List Length"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1541,9 +1511,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Random Button Colors"
-        ]
+        ],
+        "progression": "Challenge: Random Button Colors"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1565,9 +1535,9 @@
       "properties": {
         "level_keys": [
           "CSD colorLed Map"
-        ]
+        ],
+        "progression": "Circuit Playground: Color LEDs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1592,7 +1562,6 @@
         ],
         "progression": "Using Color LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1617,7 +1586,6 @@
         ],
         "progression": "Using Color LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1642,7 +1610,6 @@
         ],
         "progression": "Using Color LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1667,7 +1634,6 @@
         ],
         "progression": "Using Color LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1692,7 +1658,6 @@
         ],
         "progression": "Using Color LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1714,9 +1679,9 @@
       "properties": {
         "level_keys": [
           "CSD - Functions Review"
-        ]
+        ],
+        "progression": "Functions Review"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1741,7 +1706,6 @@
         ],
         "progression": "Light Patterns"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1766,7 +1730,6 @@
         ],
         "progression": "Light Patterns"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1788,9 +1751,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Lights Picker"
-        ]
+        ],
+        "progression": "Challenge: Lights Picker"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1812,9 +1775,9 @@
       "properties": {
         "level_keys": [
           "CSD: For Loops"
-        ]
+        ],
+        "progression": "CSD: For Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1836,9 +1799,9 @@
       "properties": {
         "level_keys": [
           "CSD: For Loop"
-        ]
+        ],
+        "progression": "CSD: For Loop"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1863,7 +1826,6 @@
         ],
         "progression": "Introduction to For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1888,7 +1850,6 @@
         ],
         "progression": "Introduction to For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1913,7 +1874,6 @@
         ],
         "progression": "Introduction to For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1938,7 +1898,6 @@
         ],
         "progression": "Introduction to For Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1960,9 +1919,9 @@
       "properties": {
         "level_keys": [
           "CSD: Lists with For Loops"
-        ]
+        ],
+        "progression": "CSD: Lists with For Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1987,7 +1946,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2012,7 +1970,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2037,7 +1994,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2062,7 +2018,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2087,7 +2042,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2112,7 +2066,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2137,7 +2090,6 @@
         ],
         "progression": "Looping Over Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2159,9 +2111,9 @@
       "properties": {
         "level_keys": [
           "Stop: Check with Teacher"
-        ]
+        ],
+        "progression": "Stop: Check with Teacher"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2186,7 +2138,6 @@
         ],
         "progression": "For Loops and LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2211,7 +2162,6 @@
         ],
         "progression": "For Loops and LEDs"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2233,9 +2183,9 @@
       "properties": {
         "level_keys": [
           "CSD U6 - timed Loop predict for"
-        ]
+        ],
+        "progression": "CSD U6 - timed Loop predict for"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2257,9 +2207,9 @@
       "properties": {
         "level_keys": [
           "CSD Timed Loop Map"
-        ]
+        ],
+        "progression": "Timed Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2284,7 +2234,6 @@
         ],
         "progression": "Introduction to Timed Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2309,7 +2258,6 @@
         ],
         "progression": "Introduction to Timed Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2334,7 +2282,6 @@
         ],
         "progression": "Introduction to Timed Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2359,7 +2306,6 @@
         ],
         "progression": "Introduction to Timed Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2381,9 +2327,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - timed loop stop board"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2408,7 +2354,6 @@
         ],
         "progression": "Timed Loops and the Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2433,7 +2378,6 @@
         ],
         "progression": "Timed Loops and the Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2458,7 +2402,6 @@
         ],
         "progression": "Timed Loops and the Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2480,9 +2423,9 @@
       "properties": {
         "level_keys": [
           "CSD Timed For Loop Map"
-        ]
+        ],
+        "progression": "Timed For Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2507,7 +2450,6 @@
         ],
         "progression": "Timed Loops and Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2532,7 +2474,6 @@
         ],
         "progression": "Timed Loops and Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2557,7 +2498,6 @@
         ],
         "progression": "Timed Loops and Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2579,9 +2519,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - timed loop challenge"
-        ]
+        ],
+        "progression": "Challenge: Get Loopy"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2603,9 +2543,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - ch 1 exemplar LEDs"
-        ]
+        ],
+        "progression": "Color LEDs Example"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2630,7 +2570,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2655,7 +2594,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2680,7 +2618,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2705,7 +2642,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2730,7 +2666,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2755,7 +2690,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2777,9 +2711,9 @@
       "properties": {
         "level_keys": [
           "CSD onBoardEvent Map"
-        ]
+        ],
+        "progression": "Responding to Board Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2804,7 +2738,6 @@
         ],
         "progression": "Board Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2829,7 +2762,6 @@
         ],
         "progression": "Board Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2851,9 +2783,9 @@
       "properties": {
         "level_keys": [
           "CSD Board Buttons Map"
-        ]
+        ],
+        "progression": "Buttons and Switch"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2878,7 +2810,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2903,7 +2834,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2928,7 +2858,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2953,7 +2882,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2975,9 +2903,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - button check for understanding"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3002,7 +2930,6 @@
         ],
         "progression": "Using the Switch"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3027,7 +2954,6 @@
         ],
         "progression": "Using the Switch"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3052,7 +2978,6 @@
         ],
         "progression": "Tug o War Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3077,7 +3002,6 @@
         ],
         "progression": "Tug o War Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3102,7 +3026,6 @@
         ],
         "progression": "Tug o War game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3124,9 +3047,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensors experiment"
-        ]
+        ],
+        "progression": "Sensor Experiment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3148,9 +3071,9 @@
       "properties": {
         "level_keys": [
           "CSD Board Sensors Map"
-        ]
+        ],
+        "progression": "Analog Sensors"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3175,7 +3098,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3200,7 +3122,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3225,7 +3146,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3250,7 +3170,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3272,9 +3191,9 @@
       "properties": {
         "level_keys": [
           "CSD Set Scale Map"
-        ]
+        ],
+        "progression": "Changing Sensor Scale"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3299,7 +3218,6 @@
         ],
         "progression": "Displaying Sensor Values"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3324,7 +3242,6 @@
         ],
         "progression": "Displaying Sensor Values"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3346,9 +3263,9 @@
       "properties": {
         "level_keys": [
           "CSD Polling Events Map"
-        ]
+        ],
+        "progression": "Polling Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3373,7 +3290,6 @@
         ],
         "progression": "Displaying Sensor Values"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3398,7 +3314,6 @@
         ],
         "progression": "Displaying Sensor Values"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3420,9 +3335,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensors challenge"
-        ]
+        ],
+        "progression": "Challenge: Making Sense of Sensors"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3444,9 +3359,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensor theremin demo"
-        ]
+        ],
+        "progression": "Light Theremin Demo"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3471,7 +3386,6 @@
         ],
         "progression": "Light Theremin Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3496,7 +3410,6 @@
         ],
         "progression": "Light Theremin Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3521,7 +3434,6 @@
         ],
         "progression": "Light Theremin Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3543,9 +3455,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensor vu meter demo"
-        ]
+        ],
+        "progression": "VU Meter Demo"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3570,7 +3482,6 @@
         ],
         "progression": "VU Meter Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3595,7 +3506,6 @@
         ],
         "progression": "VU Meter Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3620,7 +3530,6 @@
         ],
         "progression": "VU Meter Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3642,9 +3551,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensor love tester demo"
-        ]
+        ],
+        "progression": "Love Tester Demo"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3669,7 +3578,6 @@
         ],
         "progression": "Love Tester Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3694,7 +3602,6 @@
         ],
         "progression": "Love Tester Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3719,7 +3626,6 @@
         ],
         "progression": "Love Tester Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3741,9 +3647,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensor projects challenge"
-        ]
+        ],
+        "progression": "Challenge: Project Iteration"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3768,7 +3674,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3793,7 +3698,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3818,7 +3722,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3843,7 +3746,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3868,7 +3770,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3893,7 +3794,6 @@
         ],
         "progression": "Project Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3918,7 +3818,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

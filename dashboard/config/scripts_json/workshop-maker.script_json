@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:45 UTC",
+    "serialized_at": "2021-08-03 22:47:06 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "workshop-maker"
@@ -103,9 +103,9 @@
       "properties": {
         "level_keys": [
           "CSD Review: Design Mode, IDs, and Events"
-        ]
+        ],
+        "progression": "Review: Design Mode, IDs, and Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -127,9 +127,9 @@
       "properties": {
         "level_keys": [
           "CSD: Review Events"
-        ]
+        ],
+        "progression": "Review: Event-driven Programming"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -151,9 +151,9 @@
       "properties": {
         "level_keys": [
           "CSD - Getters and Setters"
-        ]
+        ],
+        "progression": "Getters and Setters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -178,7 +178,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -203,7 +202,6 @@
         ],
         "progression": "Using Getters and Setters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -225,9 +223,9 @@
       "properties": {
         "level_keys": [
           "Circuit Playground Map: LEDS"
-        ]
+        ],
+        "progression": "Circuit Playground: LEDs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +250,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +274,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -302,7 +298,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -327,7 +322,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +346,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +370,6 @@
         ],
         "progression": "Using the LED"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,9 +391,9 @@
       "properties": {
         "level_keys": [
           "Circuit Playground Map: Buzzer"
-        ]
+        ],
+        "progression": "Circuit Playground: Buzzer"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -426,7 +418,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -451,7 +442,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -476,7 +466,6 @@
         ],
         "progression": "Using the Buzzer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,9 +487,9 @@
       "properties": {
         "level_keys": [
           "Challenge: Buzzer and LED"
-        ]
+        ],
+        "progression": "Challenge: Buzzer and LED"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,9 +511,9 @@
       "properties": {
         "level_keys": [
           "CSD Map: onBoardEvent"
-        ]
+        ],
+        "progression": "Responding to Board Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +538,6 @@
         ],
         "progression": "Board Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +562,6 @@
         ],
         "progression": "Board Events"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -596,9 +583,9 @@
       "properties": {
         "level_keys": [
           "CSD Map: Board Buttons"
-        ]
+        ],
+        "progression": "Buttons and Switch"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -623,7 +610,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -648,7 +634,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -673,7 +658,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -698,7 +682,6 @@
         ],
         "progression": "Using the Buttons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -723,7 +706,6 @@
         ],
         "progression": "Tug o War Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -748,7 +730,6 @@
         ],
         "progression": "Tug o War Game"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -773,7 +754,6 @@
         ],
         "progression": "Tug o War game"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -795,9 +775,9 @@
       "properties": {
         "level_keys": [
           "CSDU6 - sensors experiment"
-        ]
+        ],
+        "progression": "Sensor Experiment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -819,9 +799,9 @@
       "properties": {
         "level_keys": [
           "CSD Map: Board Sensors"
-        ]
+        ],
+        "progression": "Analog Sensors"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -846,7 +826,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -871,7 +850,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -896,7 +874,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -921,7 +898,6 @@
         ],
         "progression": "Using Sensors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -943,9 +919,9 @@
       "properties": {
         "level_keys": [
           "CSD Map: Polling Events"
-        ]
+        ],
+        "progression": "Polling Events"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -970,7 +946,6 @@
         ],
         "progression": "Displaying Sensor Values"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -994,7 +969,6 @@
           "CSDU6 light sensor alarm"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1016,9 +990,9 @@
       "properties": {
         "level_keys": [
           "maker workshop final"
-        ]
+        ],
+        "progression": "Challenge: Explore!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

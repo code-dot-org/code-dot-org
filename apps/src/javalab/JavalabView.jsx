@@ -42,7 +42,7 @@ class JavalabView extends React.Component {
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    disableFinishButton: PropTypes.bool,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
     setIsDarkMode: PropTypes.func,
@@ -56,7 +56,8 @@ class JavalabView extends React.Component {
     leftWidth: PropTypes.number,
     rightWidth: PropTypes.number,
     topInstructionsHeight: PropTypes.number.isRequired,
-    longInstructions: PropTypes.string
+    longInstructions: PropTypes.string,
+    awaitingContainedResponse: PropTypes.bool
   };
 
   state = {
@@ -248,10 +249,11 @@ class JavalabView extends React.Component {
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
-      isReadOnlyWorkspace,
+      disableFinishButton,
       editorColumnHeight,
       leftWidth,
-      rightWidth
+      rightWidth,
+      awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -281,7 +283,7 @@ class JavalabView extends React.Component {
               <TopInstructions
                 mainStyle={styles.instructions}
                 standalone
-                displayDocumentationTab
+                displayDocumentationTab={false}
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
                 initialSelectedTab={
@@ -335,7 +337,8 @@ class JavalabView extends React.Component {
                     toggleRun={this.toggleRun}
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
-                    isReadOnlyWorkspace={isReadOnlyWorkspace}
+                    disableFinishButton={disableFinishButton}
+                    disableRunButtons={awaitingContainedResponse}
                     onContinue={onContinue}
                     renderSettings={this.renderSettings}
                   />
@@ -422,7 +425,7 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    disableFinishButton: state.javalab.disableFinishButton,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
@@ -433,7 +436,8 @@ export default connect(
     leftWidth: state.javalab.leftWidth,
     rightWidth: state.javalab.rightWidth,
     topInstructionsHeight: state.instructions.renderedHeight,
-    longInstructions: state.instructions.longInstructions
+    longInstructions: state.instructions.longInstructions,
+    awaitingContainedResponse: state.runState.awaitingContainedResponse
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
