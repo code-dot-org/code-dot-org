@@ -298,7 +298,7 @@ class Backpack extends Component {
         />
         <JavalabDialog
           isOpen={openDialog === Dialog.IMPORT_ERROR}
-          handleClose={() => this.setState({openDialog: null})}
+          handleConfirm={() => this.setState({openDialog: null})}
           message={
             overwriteFileList.length > 1
               ? javalabMsg.fileImportErrorMultiple({
@@ -309,7 +309,7 @@ class Backpack extends Component {
                 })
           }
           isDarkMode={isDarkMode}
-          closeButtonText={msg.dialogOK()}
+          confirmButtonText={msg.dialogOK()}
         />
       </div>
     );

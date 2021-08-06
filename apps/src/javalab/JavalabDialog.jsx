@@ -6,9 +6,9 @@ import color from '@cdo/apps/util/color';
 export default class JavalabDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func,
+    handleClose: PropTypes.func,
     message: PropTypes.string,
     confirmButtonText: PropTypes.string,
     closeButtonText: PropTypes.string
@@ -35,26 +35,9 @@ export default class JavalabDialog extends Component {
         useUpdatedStyles
         hideCloseButton
       >
-        <div
-          style={{
-            ...styles.dialogContent,
-            ...(isDarkMode && styles.darkDialog)
-          }}
-        >
+        <div style={isDarkMode ? styles.darkDialog : {}}>
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
-            {confirmButtonText && (
-              <button
-                type="button"
-                style={{
-                  ...styles.button,
-                  ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
-                }}
-                onClick={handleConfirm}
-              >
-                {confirmButtonText}
-              </button>
-            )}
             {closeButtonText && (
               <button
                 type="button"
@@ -65,6 +48,18 @@ export default class JavalabDialog extends Component {
                 onClick={handleClose}
               >
                 {closeButtonText}
+              </button>
+            )}
+            {confirmButtonText && (
+              <button
+                type="button"
+                style={{
+                  ...styles.button,
+                  ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
+                }}
+                onClick={handleConfirm}
+              >
+                {confirmButtonText}
               </button>
             )}
           </div>
@@ -85,33 +80,30 @@ const styles = {
     backgroundColor: color.dark_slate_gray,
     color: color.white
   },
-  dialogContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
   buttons: {
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'flex-end'
   },
   button: {
-    width: 100,
     textAlign: 'center',
-    padding: 6
+    padding: '5px 16px 5px 16px',
+    fontSize: 14
   },
   darkButton: {
     backgroundColor: color.darkest_gray,
     color: 'white'
   },
   lightConfirm: {
-    backgroundColor: color.cyan,
+    backgroundColor: color.orange,
     color: color.white
   },
   lightCancel: {
-    backgroundColor: color.light_gray,
+    backgroundColor: color.lightest_gray,
     color: color.black
   },
   message: {
     whiteSpace: 'normal',
-    lineHeight: '18px'
+    lineHeight: '18px',
+    padding: 12
   }
 };
