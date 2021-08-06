@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:49:42 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-05 17:52:03 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -4706,7 +4706,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4732,7 +4731,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4758,7 +4756,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4784,7 +4781,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4810,7 +4806,6 @@
         ],
         "progression": "Representing Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4836,7 +4831,6 @@
         ],
         "progression": "Binary Number Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4862,7 +4856,6 @@
         ],
         "progression": "Binary and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4888,7 +4881,6 @@
         ],
         "progression": "8-Bit Binary Number Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4914,7 +4906,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4940,7 +4931,6 @@
         ],
         "progression": "Pizza Party Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4966,7 +4956,6 @@
         ],
         "progression": "Video: Netflix and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4992,7 +4981,6 @@
         ],
         "progression": "Video: Waze and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5018,7 +5006,6 @@
         ],
         "progression": "Video: Amazon and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5044,7 +5031,6 @@
         ],
         "progression": "Video: What is Machine Learning?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5070,7 +5056,6 @@
         ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5096,7 +5081,6 @@
         ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5122,7 +5106,6 @@
         ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5148,7 +5131,6 @@
         ],
         "progression": "Video: Training Data and Bias"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5174,7 +5156,6 @@
         ],
         "progression": "AI for Oceans: Types of Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5200,7 +5181,6 @@
         ],
         "progression": "AI for Oceans: Types of Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5226,7 +5206,6 @@
         ],
         "progression": "Video: Impact on Society"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5252,7 +5231,6 @@
         ],
         "progression": "Sample App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5278,7 +5256,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5303,7 +5280,6 @@
           "CSD U5 test_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5328,7 +5304,6 @@
           "CSD survey_placeholder_levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5695,10 +5670,9 @@
     },
     {
       "name": "Animal Shapes",
-      "url": "https://docs.google.com/document/d/1Ljb64Eb31y5HkZayQvI0u0uLSuTkVtkXnh1jBiGCU18/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1C4ibYExm68IWA-1q_RujlEMZhxwwjCKIaH7UT-fMvy8/edit",
       "key": "animal-shapes",
       "properties": {
-        "type": "Manipulative",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -5755,6 +5729,18 @@
       },
       "seeding_key": {
         "resource.key": "ascii-to-binary-table"
+      }
+    },
+    {
+      "name": "ASCII Challenges",
+      "url": "https://docs.google.com/document/d/1IieRj27MGJZSHF4I7CNIt6O3IlzCCMNmqYmYDF3_TPs/edit",
+      "key": "ascii_challenges",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ascii_challenges"
       }
     },
     {
@@ -5918,10 +5904,9 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/edit#",
       "key": "encode-a-thing",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -6091,6 +6076,18 @@
       },
       "seeding_key": {
         "resource.key": "meals-data-resource-2019"
+      }
+    },
+    {
+      "name": "Medical Records",
+      "url": "https://docs.google.com/document/d/1Aqr9MX62EHxTSHzkdWEvdQcS2QC2hd0LSqrZHgr5pu8/edit",
+      "key": "medical_records",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "medical_records"
       }
     },
     {
@@ -6282,7 +6279,7 @@
     },
     {
       "name": "Representing Numbers",
-      "url": "https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/edit",
+      "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
       "key": "representing-numbers-exemplar-2019",
       "properties": {
         "type": "Exemplar",
@@ -6358,14 +6355,14 @@
     },
     {
       "name": "Structuring Data",
-      "url": "https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/edit",
-      "key": "structuring-data-exemplar-2019",
+      "url": "https://docs.google.com/document/d/1lKk4xwVAwst0t5dLICDg64HVaJGVaJm5Ldzix2Ydock/edit",
+      "key": "structuring_data",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "structuring-data-exemplar-2019"
+        "resource.key": "structuring_data"
       }
     },
     {
@@ -6502,6 +6499,12 @@
     {
       "seeding_key": {
         "lesson.key": "ASCII and Binary Representation",
+        "resource.key": "ascii_challenges"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ASCII and Binary Representation",
         "resource.key": "unit-5-data-society"
       }
     },
@@ -6611,6 +6614,12 @@
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
         "resource.key": "keeping-data-secret-exemplar-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "resource.key": "medical_records"
       }
     },
     {
@@ -6910,7 +6919,7 @@
     {
       "seeding_key": {
         "lesson.key": "Structuring Data",
-        "resource.key": "structuring-data-exemplar-2019"
+        "resource.key": "structuring_data"
       }
     },
     {

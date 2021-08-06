@@ -27,6 +27,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "Are you signed up for the AP exam?",
@@ -50,8 +51,8 @@
     },
     "new_name": "csd1-2017",
     "family_name": "csd1",
-    "serialized_at": "2021-06-17 22:28:32 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2017"
     }
@@ -263,7 +264,6 @@
           "csd-pre-survey-2017-levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -285,9 +285,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 1 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,9 +309,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 2 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -333,9 +333,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 3 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -357,9 +357,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 4 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,9 +381,9 @@
       "properties": {
         "level_keys": [
           "CSD What Makes a Computer a Computer Video"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,9 +405,9 @@
       "properties": {
         "level_keys": [
           "CSD U1 Lesson 5 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,9 +429,9 @@
       "properties": {
         "level_keys": [
           "CSD U1 Lesson 6 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,9 +453,9 @@
       "properties": {
         "level_keys": [
           "CSD U1 Lesson 7 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,9 +477,9 @@
       "properties": {
         "level_keys": [
           "CSD U1 Lesson 8 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -501,9 +501,9 @@
       "properties": {
         "level_keys": [
           "CSD U1 Lesson 9 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -528,7 +528,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

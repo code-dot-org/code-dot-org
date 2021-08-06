@@ -22,6 +22,7 @@
       "has_verified_resources": true,
       "has_lesson_plan": true,
       "version_year": "2018",
+      "is_stable": true,
       "exclude_csf_column_in_legend": true,
       "script_announcements": [
         {
@@ -62,8 +63,8 @@
     },
     "new_name": null,
     "family_name": "csp-explore",
-    "serialized_at": "2021-06-17 22:29:46 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:32 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp-explore-2018"
     }
@@ -171,9 +172,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -198,7 +199,6 @@
         ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,9 +220,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL02 SFLP_2018"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,9 +244,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +271,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

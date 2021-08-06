@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-27 22:47:34 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-02 22:19:13 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1844,7 +1844,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using the Tool:**\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab. Later, any teacher feedback will appear in the same area\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Using the Tool:** This level contains a new tab, \"Rubric\", that gives guidance on how student work can be evaluated and lets you leave feedback. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Rubric\" tab. Later, any teacher feedback will appear in the same area. [Click Here](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) to learn more about giving feedback to students\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
           }
         ]
       },
@@ -9236,18 +9236,6 @@
       }
     },
     {
-      "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
-      "key": "body_styling",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "body_styling"
-      }
-    },
-    {
       "name": "Classes",
       "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
       "key": "classes",
@@ -9628,18 +9616,6 @@
       }
     },
     {
-      "name": "Layout Properties",
-      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
-      "key": "layout_properties",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "layout_properties"
-      }
-    },
-    {
       "name": "Licensing Your Work",
       "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
       "key": "licensing-your-work-2020",
@@ -9852,7 +9828,7 @@
       }
     },
     {
-      "name": "Practices Reflection (2020)",
+      "name": "Practices Reflection",
       "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view",
       "key": "practices-reflection-l21-exemplar-2020",
       "properties": {
@@ -10637,12 +10613,6 @@
     {
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body_styling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
@@ -10650,12 +10620,6 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "resource.key": "layout-properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout_properties"
       }
     },
     {

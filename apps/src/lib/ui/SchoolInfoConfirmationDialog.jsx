@@ -97,7 +97,7 @@ class SchoolInfoConfirmationDialog extends Component {
 
   renderInitialContent = () => {
     const {schoolName} = this.state;
-    const isRTL = getStore().getState().isRtl;
+    const isRTL = getStore().getState()?.isRtl;
     return (
       <Body>
         <div style={styles.body}>

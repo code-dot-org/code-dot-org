@@ -407,6 +407,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'blockly level in custom unit' do
+    game = Game.find_by_name('Studio')
+    create :level, name: 'blockly', game: game, level_num: 100
     unit_data, _ = ScriptDSL.parse(
       "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )

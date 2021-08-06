@@ -28,12 +28,13 @@
           "https://curriculum.code.org/csd-20/unit1/standards/"
         ]
       ],
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:33 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:50 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2020"
     }
@@ -333,7 +334,6 @@
           "csd-pre-survey-levelgroup_2019_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -358,7 +358,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -383,7 +382,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -408,7 +406,6 @@
         ],
         "progression": "Video: Problem Solving Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,7 +430,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -458,7 +454,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +478,6 @@
         ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,7 +502,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -533,7 +526,6 @@
         ],
         "progression": "App: Pet Chooser"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -558,7 +550,6 @@
         ],
         "progression": "App: Story Creator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -583,7 +574,6 @@
         ],
         "progression": "App: Improved Pet Chooser"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +598,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -633,7 +622,6 @@
         ],
         "progression": "App: Is It Your Birthday?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -658,7 +646,6 @@
         ],
         "progression": "App: National Park Quiz"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -683,7 +670,6 @@
         ],
         "progression": "App: How Many Countries..."
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -708,7 +694,6 @@
         ],
         "progression": "App: My Famous Birthday"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -733,7 +718,6 @@
         ],
         "progression": "App: Stamp Notebook"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -758,7 +742,6 @@
         ],
         "progression": "App: The Fastest Finger"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -783,7 +766,6 @@
         ],
         "progression": "App: Guess the Number"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -808,7 +790,6 @@
         ],
         "progression": "App: Where Should I Live?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -833,7 +814,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -858,7 +838,6 @@
         ],
         "progression": "App: Outfit Picker"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -883,7 +862,6 @@
         ],
         "progression": "App: Friend Finder"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -908,7 +886,6 @@
         ],
         "progression": "App: Kids Movie Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -933,7 +910,6 @@
         ],
         "progression": "Video: IOSP Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -958,7 +934,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -983,7 +958,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,7 +981,6 @@
           "CSD U1 Test_2020"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1032,7 +1005,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1057,7 +1029,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1082,7 +1053,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1107,7 +1077,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1132,7 +1101,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

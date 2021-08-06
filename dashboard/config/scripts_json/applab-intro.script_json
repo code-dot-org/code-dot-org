@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2021-07-06 22:25:47 UTC",
+    "serialized_at": "2021-08-03 22:47:15 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "applab-intro"
@@ -66,7 +66,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -91,7 +90,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +114,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -141,7 +138,6 @@
         ],
         "progression": "Setting Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -166,7 +162,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -191,7 +186,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -216,7 +210,6 @@
         ],
         "progression": "Make it Interactive"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +234,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +258,6 @@
         ],
         "progression": "Images and Sounds"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +282,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +306,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -341,7 +330,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,7 +354,6 @@
         ],
         "progression": "Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -391,7 +378,6 @@
         ],
         "progression": "Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +402,6 @@
         ],
         "progression": "Share Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

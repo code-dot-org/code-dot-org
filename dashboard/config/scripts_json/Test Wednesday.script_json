@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:53 UTC",
+    "serialized_at": "2021-08-03 22:46:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "Test Wednesday"
@@ -60,7 +60,6 @@
           "PDK5 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
