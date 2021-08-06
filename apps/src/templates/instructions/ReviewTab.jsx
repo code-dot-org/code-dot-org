@@ -7,31 +7,23 @@ import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
+import {currentLocation, navigateToHref} from '@cdo/apps/utils';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import * as codeReviewDataApi from './codeReview/codeReviewDataApi';
 import PeerSelectDropdown from './codeReview/PeerSelectDropdown';
 
-const FLASH_ERROR_TIME_MS = 5000;
+export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
-const TEST_PEER_REVIEW_DATA = [
-  {
-    id: 1,
-    name: 'Student 1'
-  },
-  {
-    id: 2,
-    name: 'Student 2'
-  },
-  {
-    id: 3,
-    name: 'Student 3'
-  }
-];
+const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
   // Populated by redux
-  static propTypes = {viewAsCodeReviewer: PropTypes.bool.isRequired};
+  static propTypes = {
+    viewAsCodeReviewer: PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.keys(ViewType))
+  };
 
   state = {
     reviewCheckboxEnabled: false,
@@ -39,28 +31,32 @@ class ReviewTab extends Component {
     reviewableProjectId: '',
     loadingReviewableState: false,
     errorSavingReviewableProject: false,
+    errorLoadingReviewblePeers: false,
     comments: [],
     token: '',
     forceRecreateEditorKey: 0,
-
-    // TODO: Placeholder - retrieve reviewable peers from backend
-    peers: TEST_PEER_REVIEW_DATA,
-    viewingPeerName: ''
+    reviewablePeers: [],
+    projectOwnerName: ''
   };
 
-  // TODO: Should cause an update to props.viewAsCodeReviewer and load peer comments
   onSelectPeer = peer => {
-    this.setState({
-      viewingPeerName: peer.name
-    });
+    if (!peer.id) {
+      return;
+    }
+
+    navigateToHref(
+      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
+    );
   };
 
-  // TODO: Should cause an update to props.viewAsCodeReviewer and load owner comments
   onClickBackToProject = () => {
-    this.setState({
-      viewingPeerName: ''
-    });
+    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
   };
+
+  generateLevelUrlWithCodeReviewParam = () =>
+    currentLocation().origin +
+    currentLocation().pathname +
+    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
     const {
@@ -85,6 +81,7 @@ class ReviewTab extends Component {
         this.setState({
           reviewCheckboxEnabled: data.canMarkReviewable,
           isReadyForReview: data.reviewEnabled,
+          projectOwnerName: data.name,
           reviewableProjectId: id
         });
       })
@@ -94,6 +91,27 @@ class ReviewTab extends Component {
           isReadyForReview: false
         });
       });
+
+    if (
+      !this.props.viewAsCodeReviewer &&
+      this.props.viewAs !== ViewType.Teacher
+    ) {
+      codeReviewDataApi
+        .getReviewablePeers(channelId, serverLevelId, serverScriptId)
+        .done(data => {
+          this.setState({
+            reviewablePeers: _.chain(data)
+              .filter(peerEntry => peerEntry && peerEntry.length === 2)
+              .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
+              .value()
+          });
+        })
+        .fail(() => {
+          this.setState({
+            errorLoadingReviewblePeers: true
+          });
+        });
+    }
   }
 
   onNewCommentSubmit = commentText => {
@@ -281,7 +299,10 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
-    if (!this.state.isReadyForReview) {
+    if (
+      !this.state.isReadyForReview &&
+      this.props.viewAs !== ViewType.Teacher
+    ) {
       return (
         <div style={styles.messageText}>
           {javalabMsg.disabledPeerReviewMessage()}
@@ -297,11 +318,11 @@ class ReviewTab extends Component {
     );
   }
 
-  renderPeerDropdown(peers, onSelectPeer) {
+  renderPeerDropdown(reviewablePeers, onSelectPeer) {
     return (
       <PeerSelectDropdown
         text={javalabMsg.reviewClassmateProject()}
-        peers={peers}
+        peers={reviewablePeers}
         onSelectPeer={onSelectPeer}
       />
     );
@@ -327,16 +348,19 @@ class ReviewTab extends Component {
       forceRecreateEditorKey,
       isReadyForReview,
       errorSavingReviewableProject,
-      peers,
-      viewingPeerName
+      errorLoadingReviewblePeers,
+      reviewablePeers,
+      projectOwnerName
     } = this.state;
 
     return (
       <div style={styles.reviewsContainer}>
         <div style={styles.reviewHeader}>
-          {this.props.viewAsCodeReviewer
-            ? this.renderBackToMyProject(this.onClickBackToProject)
-            : this.renderPeerDropdown(peers, this.onSelectPeer)}
+          {this.props.viewAs !== ViewType.Teacher &&
+            !errorLoadingReviewblePeers &&
+            (this.props.viewAsCodeReviewer
+              ? this.renderBackToMyProject(this.onClickBackToProject)
+              : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
           {this.renderReadyForReviewCheckbox()}
         </div>
         {errorSavingReviewableProject && (
@@ -346,13 +370,16 @@ class ReviewTab extends Component {
         )}
         <div style={styles.commentsSection}>
           <div style={styles.messageText}>
-            {this.props.viewAsCodeReviewer && viewingPeerName
+            {this.props.viewAsCodeReviewer
               ? javalabMsg.feedbackBeginningPeer({
-                  peerName: viewingPeerName
+                  peerName: projectOwnerName
                 })
               : javalabMsg.feedbackBeginning()}
           </div>
-          {this.renderComments(comments, !isReadyForReview)}
+          {this.renderComments(
+            comments,
+            !isReadyForReview && this.props.viewAs !== ViewType.Teacher
+          )}
           {this.renderCommentEditor(forceRecreateEditorKey)}
         </div>
       </div>
@@ -362,7 +389,8 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
+  viewAs: state.viewAs
 }))(ReviewTab);
 
 const styles = {

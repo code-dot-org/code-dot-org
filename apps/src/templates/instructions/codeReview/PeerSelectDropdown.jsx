@@ -11,19 +11,21 @@ export default class PeerSelectDropdown extends Component {
   };
 
   render() {
+    const {text, peers, onSelectPeer} = this.props;
     return (
       <div style={styles.container}>
-        <DropdownButton text={this.props.text} color={Button.ButtonColor.white}>
-          {this.props.peers.map(peer => (
-            <a
-              key={peer.id}
-              onClick={() => {
-                this.props.onSelectPeer(peer);
-              }}
-            >
-              {peer.name}
-            </a>
-          ))}
+        <DropdownButton text={text} color={Button.ButtonColor.white}>
+          {peers &&
+            peers.map(peer => (
+              <a
+                key={peer.id}
+                onClick={() => {
+                  onSelectPeer(peer);
+                }}
+              >
+                {peer.name}
+              </a>
+            ))}
         </DropdownButton>
       </div>
     );

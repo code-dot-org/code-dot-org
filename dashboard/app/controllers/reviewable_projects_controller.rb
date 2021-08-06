@@ -30,6 +30,7 @@ class ReviewableProjectsController < ApplicationController
   # reviewEnabled (true/false): whether the project has peer review enabled
   # canMarkReviewable (true/false): whether the current user can mark the project ready/not ready for review
   # id (int): ID of the reviewable project if peer review is enabled. Not supplied if canMarkReviewable is false
+  # name (string): Name of the project owner
   def reviewable_status
     @reviewable_project = ReviewableProject.where(
       user_id: @project_owner.id,
@@ -40,7 +41,8 @@ class ReviewableProjectsController < ApplicationController
 
     status = {
       reviewEnabled: !@reviewable_project.nil?,
-      canMarkReviewable: ReviewableProject.user_can_mark_project_reviewable?(@project_owner, current_user)
+      canMarkReviewable: ReviewableProject.user_can_mark_project_reviewable?(@project_owner, current_user),
+      name: @project_owner.short_name
     }
 
     if status[:canMarkReviewable] && status[:reviewEnabled]
