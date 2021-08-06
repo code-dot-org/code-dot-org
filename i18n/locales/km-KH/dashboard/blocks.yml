@@ -1,3 +1,4 @@
+---
 km:
   data:
     blocks:
@@ -504,8 +505,8 @@ km:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'យល់ព្រម'
-            '"no"': 'ទេ'
+            '"yes"': យល់ព្រម
+            '"no"': ទេ
       Mikelab_whileKeyPressed:
         options:
           KEY:

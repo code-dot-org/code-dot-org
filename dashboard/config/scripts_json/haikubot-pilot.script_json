@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:32 UTC",
+    "serialized_at": "2021-08-03 22:48:04 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "haikubot-pilot"
@@ -124,7 +124,6 @@
         ],
         "progression": "Video: Making Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -149,7 +148,6 @@
         ],
         "progression": "Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -174,7 +172,6 @@
         ],
         "progression": "Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -199,7 +196,6 @@
         ],
         "progression": "Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +220,6 @@
         ],
         "progression": "Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -249,7 +244,6 @@
         ],
         "progression": "Sprites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -274,7 +268,6 @@
         ],
         "progression": "Video: Storing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +292,6 @@
         ],
         "progression": "Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +316,6 @@
         ],
         "progression": "Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +340,6 @@
         ],
         "progression": "Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +364,6 @@
         ],
         "progression": "Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +388,6 @@
         ],
         "progression": "Text and Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +412,6 @@
         ],
         "progression": "Poem Bot Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +436,6 @@
         ],
         "progression": "Poem Bot Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +460,6 @@
         ],
         "progression": "Poem Bot Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +484,6 @@
         ],
         "progression": "Video: Prompt with Choices"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +508,6 @@
         ],
         "progression": "Code Your Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +532,6 @@
         ],
         "progression": "Code Your Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +556,6 @@
         ],
         "progression": "Code Your Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,7 +580,6 @@
         ],
         "progression": "Code Your Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +604,6 @@
         ],
         "progression": "Video: Finish your Haiku"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +628,6 @@
         ],
         "progression": "Finish your Haiku"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -674,7 +652,6 @@
         ],
         "progression": "Customize Your Program"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +676,6 @@
         ],
         "progression": "Poem Bot Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -1822,3 +1822,5 @@ cs:
           DIR:
             right: vpravo ↻
             left: vlevo ↺
+      validation_validatedBackground:
+        text: nastav pozadí na {IMG}
