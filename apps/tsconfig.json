@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/ts",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "lib": ["es2019"],  // for Array.flat
+
+    "esModuleInterop": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"]
+}
+

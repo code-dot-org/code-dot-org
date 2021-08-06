@@ -40,8 +40,9 @@ const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
 
 // Our base config, on which other configs are derived
 var baseConfig = {
+  stats: 'minimal',
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
@@ -160,6 +161,14 @@ var baseConfig = {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
           compact: false
         }
+      },
+      {
+        test: /\.tsx?$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'test')
+        ],
+        loader: 'ts-loader'
       }
     ],
     noParse: [/html2canvas/]

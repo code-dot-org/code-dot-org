@@ -37,8 +37,7 @@ import currentUser, {
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
-import {gql} from '@apollo/client';
-import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
+import {ApolloClient, ApolloProvider, InMemoryCache, gql} from '@apollo/client';
 import {manageStudentsTypePolicies} from '@cdo/apps/templates/manageStudents/manageStudentsClient';
 
 const script = document.querySelector('script[data-dashboard]');
@@ -72,7 +71,7 @@ export const client = new ApolloClient({
 client
   .query({
     query: gql`
-      query GetLevelProgress {
+      query GetLevelProgressTest {
         user(id: 2) {
           id
           name
