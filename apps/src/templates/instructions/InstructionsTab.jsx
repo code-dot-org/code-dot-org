@@ -57,9 +57,12 @@ const styles = {
     marginRight: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingBottom: 6,
+    paddingBottom: 4,
     fontWeight: 'bold',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   },
   tabRtl: {
     marginLeft: 5,

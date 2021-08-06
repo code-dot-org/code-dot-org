@@ -37,7 +37,10 @@ const styles = {
     }
   },
   helpTabs: {
-    paddingTop: 6
+    paddingTop: 6,
+    width: '100%',
+    boxSizing: 'border-box',
+    display: 'flex'
   },
   helpTabsLtr: {
     float: 'left',
