@@ -49,41 +49,42 @@ export function updateDefaultList(listData) {
     });
 }
 
-/* Regenerates the animation JSON list of the sprites in SpriteLab
- */
-export function regenerateDefaultJSON() {
+// Regenerates the metadata for the default list of sprites in SpriteLab
+export function regenerateDefaultSpriteMetadata() {
   getDefaultList().then(json => {
     let orderedKeys = [];
     let propsByKey = {};
-    let parsed = spriteManifest;
-    let animations = parsed['metadata'];
+    const animations = spriteManifest['metadata'];
     for (let sprite of json.default_sprites) {
-      let animation_metadata = animations[sprite.key];
-      let props = {};
-      props['name'] = sprite.name;
-      props['sourceUrl'] = `https://studio.code.org${
-        animation_metadata['sourceUrl']
-      }`;
-      props['frameSize'] = animation_metadata['frameSize'];
-      props['frameCount'] = animation_metadata['frameCount'];
-      props['looping'] = animation_metadata['looping'];
-      props['frameDelay'] = animation_metadata['frameDelay'];
-      props['version'] = animation_metadata['version'];
-      props['categories'] = animation_metadata['categories'];
-      let key = createUuid();
+      const {
+        sourceUrl,
+        frameSize,
+        frameCount,
+        looping,
+        frameDelay,
+        version,
+        categories
+      } = animations[sprite.key];
+      const props = {
+        name: sprite.name,
+        sourceUrl: `https://studio.code.org${sourceUrl}`,
+        frameSize,
+        frameCount,
+        looping,
+        frameDelay,
+        version,
+        categories
+      };
+      const key = createUuid();
       orderedKeys.push(key);
       propsByKey[key] = props;
     }
-    let data = JSON.stringify({
-      orderedKeys: orderedKeys,
-      propsByKey: propsByKey
-    });
-    return fetch(`/api/v1/animation-library/default-spritelab-json`, {
+    return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
-      body: data
+      body: JSON.stringify({orderedKeys, propsByKey})
     })
       .then(response => {
         if (!response.ok) {

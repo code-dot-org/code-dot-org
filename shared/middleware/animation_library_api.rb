@@ -145,10 +145,10 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
-  # POST /api/v1/animation-library/default-spritelab-json/
+  # POST /api/v1/animation-library/default-spritelab-metadata
   #
   # Update default sprite JSON in S3
-  post %r{/api/v1/animation-library/default-spritelab-json} do
+  post %r{/api/v1/animation-library/default-spritelab-metadata} do
     dont_cache
     if request.content_type == 'application/json'
       body = request.body.string
