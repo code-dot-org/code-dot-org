@@ -47,13 +47,37 @@ social:
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Tuesday, September 28th at 1 pm EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, September 29th at 10 am EDT</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a former semi-pro soccer player combined his love for sports and his interest in artificial intelligence into a career using data to help athletes and teams improve their performance.</p>
 <p><b>About the speaker</b>:
 <br>
 <strong>Patrick Lucey</strong> serves as Chief Scientist at Stats PERFORM. Previously, Patrick was at Disney Research, where he conducted research into automatic sports broadcasting. His main research interests are in artificial intelligence and interactive machine learning in sporting domains. For more background, please check out Patrick’s <a href="https://patricklucey.com/index.html" target="_blank">personal page</a>.
 </p>
+
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" rel="noopener noreferrer" target="_blank"></noscript>
+<!-- You can customize this button any way you like -->
+<button id="eventbrite-widget-modal-trigger-163522164195" type="button">Register my class</button>
+<noscript></a>Register on Eventbrite</noscript>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '163522164195',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-163522164195',
+        onOrderComplete: exampleCallback
+    });
+</script>
+
+
 <button>Register</button>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
