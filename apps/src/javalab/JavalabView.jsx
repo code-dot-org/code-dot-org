@@ -13,7 +13,7 @@ import {
   setRightWidth,
   setInstructionsExplicitHeight
 } from './javalabRedux';
-import {setInstructionsMaxHeightAvailable} from '../redux/instructions';
+import {setInstructionsSpecificMaxHeight} from '../redux/instructions';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
@@ -57,7 +57,7 @@ class JavalabView extends React.Component {
     instructionsExplicitHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    setInstructionsMaxHeightAvailable: PropTypes.func,
+    setInstructionsSpecificMaxHeight: PropTypes.func,
     awaitingContainedResponse: PropTypes.bool
   };
 
@@ -225,7 +225,7 @@ class JavalabView extends React.Component {
       // be visible, along with a peek at the visualization area.
       const miscElementsExistingHeightVisualization = 150;
       const minimumInstructionsHeight = 100;
-      this.props.setInstructionsMaxHeightAvailable(
+      this.props.setInstructionsSpecificMaxHeight(
         Math.max(
           window.innerHeight - miscElementsExistingHeightVisualization,
           minimumInstructionsHeight
@@ -474,7 +474,7 @@ export default connect(
     setRightWidth: width => dispatch(setRightWidth(width)),
     setInstructionsExplicitHeight: height =>
       dispatch(setInstructionsExplicitHeight(height)),
-    setInstructionsMaxHeightAvailable: height =>
-      dispatch(setInstructionsMaxHeightAvailable(height))
+    setInstructionsSpecificMaxHeight: height =>
+      dispatch(setInstructionsSpecificMaxHeight(height))
   })
 )(UnconnectedJavalabView);
