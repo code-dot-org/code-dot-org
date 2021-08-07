@@ -226,7 +226,6 @@
         ],
         "progression": "Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +251,6 @@
         ],
         "progression": "Lead Learner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,7 +276,6 @@
         ],
         "progression": "Lead Learner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +301,6 @@
         ],
         "progression": "Lead Learner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -327,7 +323,6 @@
       "properties": {
         "progression": "Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +348,6 @@
         ],
         "progression": "Pair programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -379,7 +373,6 @@
         ],
         "progression": "Pair programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,7 +398,6 @@
         ],
         "progression": "Pair programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -431,7 +423,6 @@
         ],
         "progression": "Using resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -457,7 +448,6 @@
         ],
         "progression": "Using resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +473,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -509,7 +498,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -535,7 +523,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +548,6 @@
         ],
         "progression": "Differentiation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -587,7 +573,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -613,7 +598,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -639,7 +623,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -228,7 +228,6 @@
       "properties": {
         "progression": "Overview of navigating the Code.org learning platform"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +253,6 @@
         ],
         "progression": "Tour the Code.org learning platform"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +275,6 @@
       "properties": {
         "progression": "Tour the Code.org learning platform"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -303,7 +300,6 @@
         ],
         "progression": "Explore the student view"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +325,6 @@
         ],
         "progression": "Explore the student view"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -355,7 +350,6 @@
         ],
         "progression": "Set-up a class section"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,7 +375,6 @@
         ],
         "progression": "Set-up a class section"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -407,7 +400,6 @@
         ],
         "progression": "Set-up a class section"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,7 +425,6 @@
         ],
         "progression": "Track student progress and provide feedback"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +450,6 @@
         ],
         "progression": "Track student progress and provide feedback"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -485,7 +475,6 @@
         ],
         "progression": "Track student progress and provide feedback"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -511,7 +500,6 @@
         ],
         "progression": "Explore course lesson plans"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +525,6 @@
         ],
         "progression": "Explore course lesson plans"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -563,7 +550,6 @@
         ],
         "progression": "Explore course lesson plans"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -589,7 +575,6 @@
         ],
         "progression": "Explore course lesson plans"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -615,7 +600,6 @@
         ],
         "progression": "Explore additional teacher resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +625,6 @@
         ],
         "progression": "Explore additional teacher resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -664,7 +647,6 @@
       "properties": {
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -690,7 +672,6 @@
         ],
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -716,7 +697,6 @@
         ],
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -742,7 +722,6 @@
         ],
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -768,7 +747,6 @@
         ],
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -794,7 +772,6 @@
         ],
         "progression": "Additional support for teachers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -817,7 +794,6 @@
       "properties": {
         "progression": "Wrap Up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

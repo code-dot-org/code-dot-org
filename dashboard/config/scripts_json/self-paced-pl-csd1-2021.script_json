@@ -121,7 +121,6 @@
           "SP-VPL-21-mod1-welcome-vid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +145,6 @@
           "SP-VPL-21-mod1-CSisFoundational"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +169,6 @@
           "SP-VPL-CSD-21-Navigation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
