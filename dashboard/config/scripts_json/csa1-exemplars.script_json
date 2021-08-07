@@ -867,7 +867,6 @@
         ],
         "progression": "Exploring the Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -893,7 +892,6 @@
         ],
         "progression": "Investigate the Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -919,7 +917,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -945,7 +942,6 @@
         ],
         "progression": "Movement Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -971,7 +967,6 @@
         ],
         "progression": "Movement Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -997,7 +992,6 @@
         ],
         "progression": "Movement Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1023,7 +1017,6 @@
         ],
         "progression": "Painting Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1042,6 @@
         ],
         "progression": "Painting Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1067,6 @@
         ],
         "progression": "Painting Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1101,7 +1092,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1126,7 +1116,6 @@
           "CSA U1L4-L1 - exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1151,7 +1140,6 @@
           "CSA U1L4-L2 - exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1176,7 +1164,6 @@
           "CSA U1L4-L3 - exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1201,7 +1188,6 @@
           "CSA U1L4-L4 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1226,7 +1212,6 @@
           "CSA U1L4-L5 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1251,7 +1236,6 @@
           "CSA U1L5-L1-v2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1276,7 +1260,6 @@
           "CSA U1L5-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1301,7 +1284,6 @@
           "CSA U1L5-L3 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1326,7 +1308,6 @@
           "CSA U1L5-L4 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1351,7 +1332,6 @@
           "CSA U1L5-L5 2 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1376,7 +1356,6 @@
           "CSA U1L5-L6 2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1401,7 +1380,6 @@
           "CSA U1L5-L7 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1426,7 +1404,6 @@
           "CSA U1L6-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1451,7 +1428,6 @@
           "CSA U1L6-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1476,7 +1452,6 @@
           "CSA U1L6-L3 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1501,7 +1476,6 @@
           "CSA U1L6-L4 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1526,7 +1500,6 @@
           "CSA U1L6-L5 2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1551,7 +1524,6 @@
           "CSA U1L6-L6 2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1576,7 +1548,6 @@
           "CSA U1L6-L7 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1601,7 +1572,6 @@
           "CSA U1L7-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1626,7 +1596,6 @@
           "CSA U1L7-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1651,7 +1620,6 @@
           "CSA U1L7-L3 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1676,7 +1644,6 @@
           "CSA U1L7-L4 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1701,7 +1668,6 @@
           "CSA U1L7-L5 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1726,7 +1692,6 @@
           "CSA U1L7-L6 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1751,7 +1716,6 @@
           "CSA U1L8-L1 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1776,7 +1740,6 @@
           "CSA U1L8-L2 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1801,7 +1764,6 @@
           "CSA U1L8-L3 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1826,7 +1788,6 @@
           "CSA U1L9-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1851,7 +1812,6 @@
           "CSA U1L9-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1876,7 +1836,6 @@
           "CSA U1L9-L3 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1901,7 +1860,6 @@
           "CSA U1L9-L4 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1926,7 +1884,6 @@
           "CSA U1L9-L5 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1951,7 +1908,6 @@
           "CSA U1L9-L6 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1976,7 +1932,6 @@
           "CSA U1L9-L7 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2001,7 +1956,6 @@
           "CSA U1L10-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2026,7 +1980,6 @@
           "CSA U1L10-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2051,7 +2004,6 @@
           "CSA U1L10-L3 multi Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2076,7 +2028,6 @@
           "CSA U1L10-L4 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2101,7 +2052,6 @@
           "CSA U1L10-L5 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2126,7 +2076,6 @@
           "CSA U1L11-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2151,7 +2100,6 @@
           "CSA U1L11-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2176,7 +2124,6 @@
           "CSA U1L11-L3 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2201,7 +2148,6 @@
           "CSA U1L11-L4 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2226,7 +2172,6 @@
           "CSA U1L11-L5 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2251,7 +2196,6 @@
           "CSA U1L11-L6 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2276,7 +2220,6 @@
           "CSA U1L12-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2301,7 +2244,6 @@
           "CSA U1L12-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2326,7 +2268,6 @@
           "CSA U1L12-L3 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2351,7 +2292,6 @@
           "CSA U1L13-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2376,7 +2316,6 @@
           "CSA U1L13-L2 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2401,7 +2340,6 @@
           "CSA U1L13-L3 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2426,7 +2364,6 @@
           "CSA U1L13-L4 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2451,7 +2388,6 @@
           "CSA U1L14-L1 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2476,7 +2412,6 @@
           "CSA U1L15-L1 Placeholder"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2501,7 +2436,6 @@
           "CSA U1L16-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2526,7 +2460,6 @@
           "CSA U1L17-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2551,7 +2484,6 @@
           "CSA U1L18-L1 Exemplar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

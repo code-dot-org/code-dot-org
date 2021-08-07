@@ -4751,7 +4751,6 @@
         ],
         "progression": "Exploring The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4777,7 +4776,6 @@
         ],
         "progression": "Investigate the Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4803,7 +4801,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4829,7 +4826,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4855,7 +4851,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4881,7 +4876,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4907,7 +4901,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4933,7 +4926,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4959,7 +4951,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4985,7 +4976,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5011,7 +5001,6 @@
         ],
         "progression": "Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5037,7 +5026,6 @@
         ],
         "progression": "Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5063,7 +5051,6 @@
         ],
         "progression": "Checking for Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5089,7 +5076,6 @@
         ],
         "progression": "Debugging Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5115,7 +5101,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5141,7 +5126,6 @@
         ],
         "progression": "No-Argument Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5167,7 +5151,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5193,7 +5176,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5219,7 +5201,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5245,7 +5226,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5271,7 +5251,6 @@
         ],
         "progression": "Efficient Solutions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5297,7 +5276,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5323,7 +5301,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5349,7 +5326,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5375,7 +5351,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5401,7 +5376,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5427,7 +5401,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5453,7 +5426,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5479,7 +5451,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5505,7 +5476,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5531,7 +5501,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5557,7 +5526,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5583,7 +5551,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5609,7 +5576,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5635,7 +5601,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5661,7 +5626,6 @@
         ],
         "progression": "The Code Review Cycle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5687,7 +5651,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5713,7 +5676,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5739,7 +5701,6 @@
         ],
         "progression": "Painter: Turning and Turning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5765,7 +5726,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5791,7 +5751,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5817,7 +5776,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5843,7 +5801,6 @@
         ],
         "progression": "PainterPlus: turnRight()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5869,7 +5826,6 @@
         ],
         "progression": "Bug: Calling a Subclass's Method on a Superclass Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5895,7 +5851,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5921,7 +5876,6 @@
         ],
         "progression": "Using PainterPlus Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5947,7 +5901,6 @@
         ],
         "progression": "PainterPlus Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5973,7 +5926,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5999,7 +5951,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6025,7 +5976,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6051,7 +6001,6 @@
         ],
         "progression": "Writing Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6077,7 +6026,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6103,7 +6051,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6129,7 +6076,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6155,7 +6101,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6181,7 +6126,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6207,7 +6151,6 @@
         ],
         "progression": "Writing the SprayPainter Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6233,7 +6176,6 @@
         ],
         "progression": "SprayPainter Mural"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6259,7 +6201,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6285,7 +6226,6 @@
         ],
         "progression": "Create StampPainter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6311,7 +6251,6 @@
         ],
         "progression": "Create Your Stamp Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6337,7 +6276,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6363,7 +6301,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6389,7 +6326,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6414,7 +6350,6 @@
           "CSA U1L15-L1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6440,7 +6375,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6466,7 +6400,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6492,7 +6425,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6518,7 +6450,6 @@
         ],
         "progression": "Neighborhood Practice Levels"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6544,7 +6475,6 @@
         ],
         "progression": "Neighborhood Practice Levels"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6570,7 +6500,6 @@
         ],
         "progression": "Neighborhood Practice Levels"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6596,7 +6525,6 @@
         ],
         "progression": "Neighborhood Practice Levels"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6622,7 +6550,6 @@
         ],
         "progression": "Neighborhood Practice Levels"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6648,7 +6575,6 @@
         ],
         "progression": "Console Practice Level"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

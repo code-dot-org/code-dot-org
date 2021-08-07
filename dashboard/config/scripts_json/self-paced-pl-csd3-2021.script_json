@@ -196,7 +196,6 @@
       "properties": {
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -222,7 +221,6 @@
         ],
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -245,7 +243,6 @@
       "properties": {
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +268,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +293,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,7 +318,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +343,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +368,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +393,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -427,7 +418,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,7 +443,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -476,7 +465,6 @@
       "properties": {
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -502,7 +490,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -528,7 +515,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +540,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -580,7 +565,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -606,7 +590,6 @@
         ],
         "progression": "Wrap up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -629,7 +612,6 @@
       "properties": {
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,7 +637,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +662,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -707,7 +687,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
