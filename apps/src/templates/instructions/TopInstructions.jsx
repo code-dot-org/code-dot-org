@@ -108,7 +108,10 @@ class TopInstructions extends Component {
     onHeightResize: PropTypes.func,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
-    explicitHeight: PropTypes.number
+    explicitHeight: PropTypes.number,
+    // Use this if the caller wants to set a specific height that the instructions can be
+    // resized up to, rather than limiting them to the rendered height of the contents.
+    specificMaxHeight: PropTypes.number
   };
 
   static defaultProps = {
@@ -807,10 +810,12 @@ export default connect(
     isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
-    maxHeight: Math.min(
-      state.instructions.maxAvailableHeight,
-      state.instructions.maxNeededHeight
-    ),
+    maxHeight:
+      state.instructions.specificMaxHeight ||
+      Math.min(
+        state.instructions.maxAvailableHeight,
+        state.instructions.maxNeededHeight
+      ),
     longInstructions: state.instructions.longInstructions,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,
