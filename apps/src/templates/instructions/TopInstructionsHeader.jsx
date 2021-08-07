@@ -12,7 +12,10 @@ import styleConstants from '../../styleConstants';
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text
+    color: color.default_text,
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between'
   },
   audioRTL: {
     wrapper: {
@@ -33,7 +36,7 @@ const styles = {
   },
   audioLTR: {
     wrapper: {
-      float: 'right'
+      order: 5
     }
   },
   helpTabs: {
