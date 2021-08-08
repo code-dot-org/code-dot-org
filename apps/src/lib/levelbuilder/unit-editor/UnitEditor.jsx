@@ -639,7 +639,9 @@ class UnitEditor extends React.Component {
                       <p>
                         Whether to hide this unit from the list of units in its
                         course, as viewed on the course overview page, the edit
-                        section dialog, and the teacher dashboard.
+                        section dialog, and the teacher dashboard, as well as
+                        when navigating directly to the unit by its url. Hidden
+                        units will still be visible to levelbuilders.
                       </p>
                     </HelpTip>
                   </label>
