@@ -43,7 +43,8 @@ var baseConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
     fallback: {
-      stream: require.resolve('web-streams-polyfill'),
+      buffer: require.resolve('buffer'),
+      stream: require.resolve('stream-browserify'),
       path: require.resolve('path-browserify'),
       timers: require.resolve('timers-browserify'),
       crypto: false
@@ -323,7 +324,11 @@ var karmaConfig = _.extend({}, baseConfig, {
     bindings: true
   },
   plugins: [
-    new webpack.ProvidePlugin({React: 'react'}),
+    new webpack.ProvidePlugin({
+      React: 'react',
+      Buffer: ['buffer', 'Buffer'],
+      process: require.resolve('process/browser')
+    }),
     new webpack.DefinePlugin({
       IN_UNIT_TEST: JSON.stringify(true),
       IN_STORYBOOK: JSON.stringify(false),
