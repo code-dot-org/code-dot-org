@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 01:40:49 UTC",
+    "serialized_at": "2021-08-03 15:50:23 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -46,7 +46,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Student CS practices",
+      "name": "Learning CS Discoveries",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -137,8 +137,19 @@
       }
     },
     {
-      "key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85",
+      "key": "7a74c756-d607-4d85-bca9-da6079041f30",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85",
+      "position": 2,
       "properties": {
         "progression_name": "Pair programming"
       },
@@ -149,7 +160,7 @@
     },
     {
       "key": "18e168f9-d7c5-442b-a310-620512864bec",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Using resources"
       },
@@ -160,7 +171,7 @@
     },
     {
       "key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Debugging"
       },
@@ -236,6 +247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
         "progression": "Lead Learner"
       },
       "named_level": false,
@@ -259,6 +273,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
         "progression": "Lead Learner"
       },
       "named_level": false,
@@ -308,6 +325,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-Learning"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "SP-VPL-21-mod4-PairProgramming"
         ],
@@ -329,8 +369,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 2,
+      "chapter": 7,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -355,8 +395,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 3,
+      "chapter": 8,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -381,8 +421,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 4,
+      "chapter": 9,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -407,8 +447,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 5,
+      "chapter": 10,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -433,8 +473,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 6,
+      "chapter": 11,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -459,8 +499,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 7,
+      "chapter": 12,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -485,8 +525,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 8,
+      "chapter": 13,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -511,7 +551,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -537,7 +577,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -563,11 +603,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment"
+        ],
         "progression": "Assessment"
       },
       "named_level": false,
@@ -586,11 +629,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment"
+        ],
         "progression": "Assessment"
       },
       "named_level": false,
@@ -656,6 +702,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd4-2021",
         "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-Learning",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30"
       }
     },
     {

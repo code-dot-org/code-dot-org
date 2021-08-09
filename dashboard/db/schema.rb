@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_29_161058) do
+ActiveRecord::Schema.define(version: 2021_08_03_222704) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1813,7 +1813,9 @@ ActiveRecord::Schema.define(version: 2021_07_29_161058) do
     t.boolean "readonly_answers"
     t.datetime "unlocked_at"
     t.integer "time_spent"
-    t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
+    t.datetime "deleted_at"
+    t.text "properties"
+    t.index ["user_id", "script_id", "level_id", "deleted_at"], name: "index_user_levels_unique", unique: true
   end
 
   create_table "user_ml_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

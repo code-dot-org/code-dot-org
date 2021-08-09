@@ -12,7 +12,7 @@
         "isVisible": true
       },
       "Dessert.java": {
-        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public String getFlavor() {\n    return flavor;\n  }\n\n  public int getQuantity() {\n    return quantity;\n  }\n\n  public double getPrice() {\n    return price;\n  }\n\n  public void setFlavor(String newFlavor) {\n    flavor = newFlavor;\n  }\n\n  public void setQuantity(int newQty) {\n    quantity = newQty;\n  }\n\n  public void setPrice(double newPrice) {\n    price = newPrice;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
+        "text": "public class Dessert {\n  private String flavor;\n  private int quantity;\n  private double price;\n\n  public Dessert(String flavor, int quantity, double price) {\n    this.flavor = flavor;\n    this.quantity = quantity;\n    this.price = price;\n  }\n\n  public String getFlavor() {\n    return flavor;\n  }\n\n  public int getQuantity() {\n    return quantity;\n  }\n\n  public double getPrice() {\n    return price;\n  }\n\n  public void setFlavor(String newFlavor) {\n    flavor = newFlavor;\n  }\n\n  public void setQuantity(int newQuantity) {\n    quantity = newQuantity;\n  }\n\n  public void setPrice(double newPrice) {\n    price = newPrice;\n  }\n\n  public void printInfo() {\n    System.out.println(\"Flavor = \" + flavor + \" Quantity = \" + quantity + \" Price = \" + price);\n  }\n}",
         "isVisible": true
       }
     }
@@ -22,6 +22,6 @@
   "level_num": "custom",
   "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-06-23 14:56:31 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-23 14:56:31 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 13:26:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

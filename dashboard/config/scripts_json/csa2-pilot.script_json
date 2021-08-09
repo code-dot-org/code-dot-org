@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 18:18:52 UTC",
+    "serialized_at": "2021-08-04 16:55:50 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -290,7 +290,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "Students complete a Free Response Question (FRQ) in this lesson. They annotate a College Board FRQ as a class, then write code to answer an FRQ.\n\nThe goals of this lesson are:\n* Practice reading a College Board FRQ\n* Practice handwriting an FRQ\n* Serve as a summative assessment of the content from Unit 2\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it helps students develop strategies for approaching these questions. ",
-        "preparation": "* Print out and post the Combo Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
+        "preparation": "* Print out and post the Combo Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of College Board FRQ (one per student)\n* Print copies of FRQ Graphic Organizer (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
         "student_overview": "Today you complete a Free Response Question (FRQ). You do this by first looking and annotating an FRQ with peers, then handwriting code to solve a problem, following up with scoring your solution with a partner. "
       },
       "seeding_key": {
@@ -590,7 +590,7 @@
       "key": "bf1d9aa8-f8b5-4346-8155-e3da566225fc",
       "position": 2,
       "properties": {
-        "duration": 37,
+        "duration": 36,
         "name": "Activity"
       },
       "seeding_key": {
@@ -604,7 +604,7 @@
       "key": "4a3675eb-5202-4072-8fd0-d3ed659d6c6b",
       "position": 3,
       "properties": {
-        "duration": 4,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1944,7 +1944,7 @@
       "key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.\n\n**Discussion Goal:** Students demonstrate confidence working with all arithmetic operators before moving on. Students might feel a little uncomfortable with the modulus (mod) operator, but they will practice using it more in later lessons.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2055,11 +2055,11 @@
       "key": "48cc5b2d-3e64-4401-b98e-43dde606f986",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What arguments would not make sense to pass to this `Dessert` constructor? Why would these arguments not make sense?*\n\n**Discussion Goal:** Students realize that they could pass in values that don’t make sense but still compile. For example, they could pass in a negative `int` for the `newQty` parameter. Even though Java will compile and run this code, it doesn’t make sense to have a negative quantity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What arguments would not make sense to pass to this `Dessert` constructor?* \n* *Why would these arguments not make sense?*\n\n**Discussion Goal:** Students realize that they could pass in values that don’t make sense but still compile. For example, they could pass in a negative `int` for the `newQuantity` parameter. Even though Java will compile and run this code, it doesn’t make sense to have a negative quantity.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may suggest arguments that will cause the program to not compile. For example, they may try to pass in a `String` for the `newQty` parameter. Guide students toward examples that would compile but don't make sense in this scenario. For example, you could ask:\n* *Can you think of arguments that Java would compile but we know don’t make sense?*\n* *Think about desserts in the real world. What are values that don't make sense?*"
+            "markdown": "Students may suggest arguments that will cause the program to not compile. For example, they may try to pass in a `String` for the `newQuantity` parameter. Guide students toward examples that would compile but don't make sense in this scenario. For example, you could ask:\n* *Can you think of arguments that Java would compile but we know don’t make sense?*\n* *Think about desserts in the real world. What are values that don't make sense?*"
           }
         ]
       },
@@ -2084,7 +2084,7 @@
       "key": "f220e8ba-ade4-43e7-8f8d-978072999f94",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Click through the animated slide to discuss the following prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *How could we check for values that don't make sense, like a negative value for `newQty`?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What could we do to prevent the negative value from being used for `newQty`?*\n\n**Discussion Goal:** Students remember that they can use an `if` statement to check if something is true. They can set the instance variable `quantity` to a different value that makes sense within the `if` statement.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How could we check for values that don't make sense, like a negative value for `newQuantity`?*\n* *What could we do to prevent the negative value from being used for `newQuantity`?*\n\n**Discussion Goal:** Students remember that they can use an `if` statement to check if something is true. They can set the instance variable `quantity` to a different value that makes sense within the `if` statement.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2113,7 +2113,7 @@
       "key": "e4aa75b6-3f1f-4a48-a930-9483cd865ba3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students a possible solution to handle negative values for quantity. Connect the code to student responses from the previous discussion by pointing out how the instance variable `quantity` is set to 1 within the `if` statement when `newQty` is negative.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students a possible solution to handle negative values for quantity. Connect the code to student responses from the previous discussion by pointing out how the instance variable `quantity` is set to 1 within the `if` statement when `newQuantity` is negative.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2144,7 +2144,7 @@
       "key": "4b71ad62-38d6-4405-9195-f0a72bb44029",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQty`, then correct the code to use `quantity`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students run the code to identify the error resulting from using `newQuantity`, then correct the code to use `quantity`.",
         "progression_name": "Debugging Errors"
       },
       "seeding_key": {
@@ -2156,11 +2156,11 @@
       "key": "b3f129e7-89fb-4ab9-b3b4-6d0fda440aa9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did this change fix the error?*\n\n**Discussion Goal:** Students note that changing the variables fixed the error. Using `newQty` caused the error while using `quantity` did not cause an error.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did this change fix the error?*\n\n**Discussion Goal:** Students note that changing the variables fixed the error. Using `newQuantity` caused the error while using `quantity` did not cause an error.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Guide students to notice that `newQty` is a local variable declared within the constructor, while `quantity` is an instance variable. Although students have not learned the term scope yet, they may share ideas about where a variable can be used."
+            "markdown": "Guide students to notice that `newQuantity` is a local variable declared within the constructor, while `quantity` is an instance variable. Although students have not learned the term scope yet, they may share ideas about where a variable can be used."
           }
         ]
       },
@@ -2173,7 +2173,7 @@
       "key": "46cc8c29-8174-46d1-b5fc-e5b729d331a0",
       "position": 10,
       "properties": {
-        "description": "**Discuss:** Click through the animated slide to introduce scope and discuss the prompt.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think scope means?*\n\n**Discussion Goal:** Students guess that scope refers to where a variable can be used. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a parameter can only be used within the constructor or method that is defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Will this code compile? Why or why not?*\n\n**Discussion Goal:** Students have not seen this type of scope error. Students make predictions and justify their answers.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to introduce scope and discuss the prompt.\n* *What do you think scope means?*\n\n**Discussion Goal:** Students guess that scope refers to where a variable can be used. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a parameter can only be used within the constructor or method that is defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Will this code compile? Why or why not?*\n\n**Discussion Goal:** Students have not seen this type of scope error. Students make predictions and justify their answers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2219,7 +2219,7 @@
       "key": "f47dec05-1655-402c-a5c5-3637443d1611",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to explain that a local variable can only be used in the constructor or method after it was defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall that describes the bugs encountered with scope and strategies to debug them. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Click through the animated slide to explain that a local variable can only be used in the constructor or method after it was defined.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to debug scope errors. "
       },
       "seeding_key": {
         "activity_section.key": "f47dec05-1655-402c-a5c5-3637443d1611",
@@ -2274,7 +2274,7 @@
       "key": "55922e61-76aa-4994-a246-0a55a504032e",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share the output of the code segment and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain to students why `quantity = 0`.\n\n**Discuss:** Use Think-Pair-Share to discuss the prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *The updated code sets the instance variable to the parameter. What changed?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why did this change fix the code?*\n\n**Discussion Goal:** Students notice that line 11 changed. The code on the right uses the `this` keyword to refer to instance variables. Students predict that `this` keyword fixes the error.\n\n**Discuss:** Click through the animated slide after discussing the prompt to show the definition.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What do you think `this` means?*\n\n**Discussion Goal:** Students guess that `this` is used to reference instance variables.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain that to refer to the instance variable when there is a local variable with the same name, use the `this` keyword.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the open-source example of the `this` keyword. Explain that some software engineers use the `this` keyword so they don’t have to rename variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the `Dessert` class, predict the output of the code segment.*\n\n**Do This:** Click through the animated slide to show the code side by side.\n\n**Discussion Goal:** Students have just been introduced to the `this` keyword but have not had as much experience running code using it. Students make predictions rather than determine the correct answer.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the code?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students share the output of the code segment and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain to students why `quantity = 0`.\n\n**Discuss:** Have students respond to the following prompts.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *The updated code sets the instance variable to the parameter. What changed?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why did this change fix the code?*\n\n**Discussion Goal:** Students notice that line 11 changed. The code on the right uses the `this` keyword to refer to instance variables. Students predict that `this` keyword fixes the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think `this` means?*\n\n**Discussion Goal:** Students guess that `this` is used to reference instance variables.\n\n**Do This:** Click through the animated slide to display the definition.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain that to refer to the instance variable when there is a local variable with the same name, use the `this` keyword.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the open-source example of the `this` keyword. Explain that some software engineers use the `this` keyword so they don’t have to rename variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the `Dessert` class, predict the output of the code segment.*\n\n**Do This:** Click through the animated slide to show the code side by side.\n\n**Discussion Goal:** Students have just been introduced to the `this` keyword but have not had as much experience running code using it. Students make predictions rather than determine the correct answer.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2303,7 +2303,7 @@
       "key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the code? Why do you think this happened?*\n\n**Discussion Goal:** Students share out the output and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the code?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students share out the output and provide their best guesses as to why. Note that `quantity = 0` even though the intent was for it to be set to 1."
       },
       "seeding_key": {
         "activity_section.key": "7b3d0b23-1e1e-4c42-af58-840418f0926c",
@@ -2337,7 +2337,7 @@
       "key": "ae41a93a-6af5-4723-957e-d5d70327c955",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing bugs encountered and strategies to debug."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to debug scope errors."
       },
       "seeding_key": {
         "activity_section.key": "ae41a93a-6af5-4723-957e-d5d70327c955",
@@ -2361,12 +2361,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Scope video.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This video provides a summary of the concepts covered in this lesson. This helps students recap and process the concepts and terminology discussed before actively reflecting on the lesson in the Closing the Loop discussion."
-          }
-        ]
+        "name": "Closing the Loop"
       },
       "seeding_key": {
         "activity_section.key": "9407896a-db1b-4e7a-aeb6-17a4b8175c93",
@@ -2377,7 +2372,7 @@
       "key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "0abf4008-3e2b-411c-accc-a4eba5864a67",
@@ -2456,7 +2451,7 @@
       "key": "6b432813-8b3c-4c9b-ae1d-d5747a99b85d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review inheritance by prompting students to recall the definition.\n* **Discuss:** *What is inheritance?*\n* **Do This:** Click through the animated slide to reveal the definition.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through an example of inheritance using the `StampPainter`, `SprayPainter`, and `PainterPlus` classes. \n\n**Do This:** Talk through how to use `super()` to initialize inherited instance variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Subclasses cannot initialize inherited private instance variables.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize inherited private instance variables using `super()`, which calls the superclass constructor. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain that Java automatically calls `super()` if the subclass does not include it as the first line of the subclass constructor.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is inheritance?*\n\n**Do This:** Click through the animated slide to reveal the definition.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through an example of inheritance using the `StampPainter`, `SprayPainter`, and `PainterPlus` classes. \n\n**Do This:** Talk through how to use `super()` to initialize inherited instance variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Subclasses cannot initialize inherited private instance variables.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize inherited private instance variables using `super()`, which calls the superclass constructor. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain that Java automatically calls `super()` if the subclass does not include it as the first line of the subclass constructor.",
         "duration": "7",
         "name": "Using super() for Initialization",
         "tips": [
@@ -2475,7 +2470,7 @@
       "key": "ac7e8413-7e30-4f58-bfa4-84fde1492c09",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the DRY principle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Does the code on the next slide follow the DRY principle? Where are there redundancies?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Car` and `Truck` classes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Vehicle`, `Car`, and `Truck` classes\n\n**Discussion Goal:** Students discuss how to refactor the code using inheritance, where the superclass contains the repeated attributes and methods from which Car and Truck can inherit.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the DRY principle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Does the code on the next slide follow the DRY principle? Where are there redundancies?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Car` and `Truck` classes\n* Click through the animation to reveal the solution.\n\n**Discussion Goal:** Students points out where they see redundancies between the two classes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Using inheritance, how can we refactor the code to follow the DRY principle?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Car` and `Truck` classes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** `Vehicle`, `Car`, and `Truck` classes\n\n**Discussion Goal:** Students discuss how to refactor the code using inheritance, where the superclass contains the repeated attributes and methods from which `Car` and `Truck` can inherit.",
         "duration": "10",
         "name": "The DRY Principle"
       },
@@ -2561,7 +2556,7 @@
       "position": 11,
       "properties": {
         "description": "Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code! Also, consider the questions on the next slide.",
-        "duration": "8",
+        "duration": "7",
         "name": "Code Review",
         "remarks": true
       },
@@ -2585,7 +2580,7 @@
       "key": "dc1b866d-484a-4e9c-880e-ce4b91bf5444",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students write responses to the Three W’s in their notes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Constructors video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Three W's.",
         "name": "Three W's",
         "tips": [
           {
@@ -2681,7 +2676,7 @@
       "key": "a390e1e3-f430-4687-bf8f-5559932a4019",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Classes can have methods to perform behaviors. These are often `public` so that other classes can call these behaviors. What we need to get the value in an instance variable is called an accessor method. An accessor method is `public`, allowing it to get the value stored in the instance variable and give it to the outside class asking for this information. Let's add an accessor method to our foldable.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Classes can have methods to perform behaviors. These are often `public` so that other classes can call these behaviors. Accessor methods allow us to get the values stored in an object’s instance variables. An accessor method is `public`, allowing it to get the value stored in the instance variable and give it to the outside class asking for this information. Let's add an accessor method to our foldable.",
         "remarks": true
       },
       "seeding_key": {
@@ -2792,7 +2787,7 @@
       "key": "d9c98f81-e2b0-454d-850b-dec683c669bc",
       "position": 11,
       "properties": {
-        "description": "We can call an accessor method inside of `System.out.print` to print the stored value inside the instance variable. As software engineers, it is helpful to know the current state of our objects by viewing the values in the instance variables when we are debugging our programs.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We can call an accessor method inside of `System.out.print` to print the stored value inside the instance variable. As software engineers, it is helpful to know the current state of our objects by viewing the values in the instance variables when we are debugging our programs.",
         "remarks": true
       },
       "seeding_key": {
@@ -2842,19 +2837,8 @@
       }
     },
     {
-      "key": "ac911641-ae83-4be7-a0af-22076c90771e",
-      "position": 15,
-      "properties": {
-        "description": "**Do This:** Click through the animated slide to define state."
-      },
-      "seeding_key": {
-        "activity_section.key": "ac911641-ae83-4be7-a0af-22076c90771e",
-        "lesson_activity.key": "d3a89cf9-b7f6-4907-90a6-412829e6ba63"
-      }
-    },
-    {
       "key": "44029fa8-06e1-4cfd-9fbf-802e10d74479",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to modify the code on Level 2 on Code Studio to change the `System.out.print` to `System.out.println` and concatenate text with the calls to the accessor methods to label the data. Have students proceed to Level 3 to complete the Check for Understanding.",
         "progression_name": "Printing Dessert Information"
@@ -2866,9 +2850,9 @@
     },
     {
       "key": "bd75f89c-39f2-46da-b399-ec623c54b003",
-      "position": 17,
+      "position": 16,
       "properties": {
-        "description": "When we extended the `Painter` class, we only needed to write code for the new methods we wanted to add. The new classes were also able to do everything that the parent class could do. The subclasses we created yesterday only need accessor methods for their additional attributes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When we extended the `Painter` class, we only needed to write code for the new methods we wanted to add. The new classes were also able to do everything that the parent class could do. The subclasses we created yesterday only need accessor methods for their additional attributes.",
         "duration": "5",
         "name": "Subclass Accessor Methods",
         "remarks": true
@@ -2880,7 +2864,7 @@
     },
     {
       "key": "d7d1ad52-06f8-4508-b348-713b77becec5",
-      "position": 18,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to write accessor methods for the `Cake` class, create a `Cake` object, and print the values of its instance variables.",
         "progression_name": "Accessor Methods for the Subclasses"
@@ -2892,7 +2876,7 @@
     },
     {
       "key": "712f036c-8a04-4df9-949a-7cdc52edd96f",
-      "position": 19,
+      "position": 18,
       "properties": {
         "description": "We have been calling our accessor methods to print information about our objects to the console. Since accessor methods return values, we can also store the value returned in a variable or use it within an expression.",
         "duration": "10",
@@ -2906,7 +2890,7 @@
     },
     {
       "key": "068e13fb-44b8-4ef2-9ed2-1856193c36b4",
-      "position": 20,
+      "position": 19,
       "properties": {
         "description": "**Do This:** Demonstrate calling accessor methods and storing the result in a variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The owner wants to know how much all of the cakes in her inventory are worth. This problem can be solved by multiplying the number of cakes times the price of each cake. Accessor methods can get those values to do this calculation.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First, get the number of cakes in her inventory and store it in a variable called `numCakes`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Then get the price of each cake and store it in a variable called `cakePrice`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Finally, calculate the total and print out the result.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Accessor methods can also be called within the expression to perform this calculation."
       },
@@ -2917,7 +2901,7 @@
     },
     {
       "key": "6df31124-45be-4359-be9f-e924b776172a",
-      "position": 21,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write accessor methods for their other Dessert subclass and create an object of this subclass. Students use the accessor methods in all of their classes to solve the given problem.",
         "progression_name": "The Owner's Inventory"
@@ -2957,6 +2941,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students trace the code to predict the output. Give students enough time to solve independently then quietly share with a neighbor. Ask students to share with the class before clicking through the slide animation to review the solution. Discuss any questions they may have.",
+        "name": "Predict the Output",
         "tips": [
           {
             "type": "teachingTip",
@@ -3021,7 +3006,7 @@
       "key": "d8d66b6e-0f2e-47d3-acda-d104059ae049",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Demonstrate adding a mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On the outside of the `Shape` class foldable, write `public void setOutline(String s)` under Methods. This method can change the value stored in the `outline` instance variable.\n\n**Do This:** Demonstrate calling the mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On a sticky note, write `myTriangle.setOutline(\"squiggly\")`. Place this sticky note in the Code section of the Main Method to call this method from the `Shape` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open the foldable to find the `outline` instance variable. Cross out the previous `outline` value and replace it with `\"squiggly\"`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fold the `\"squiggly\"` sticky note and close the foldable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities between the foldable activity for accessors and mutators? What are the differences?*\n\n**Discussion Goal:** Students note the parallels between the foldable activity for accessors and mutators. Both methods start on the outside since these are `public`. Both open the foldable because the methods have access to the class’s instance variables. However, only the accessor foldable placed a sticky note on the outside when it returned a value, while only the mutator foldable changes a sticky note inside."
+        "description": "**Do This:** Demonstrate adding a mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On the outside of the `Shape` class foldable, write `public void setOutline(String s)` under Methods. This method can change the value stored in the `outline` instance variable.\n\n**Do This:** Demonstrate calling the mutator method for the `outline` instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On a sticky note, write `myTriangle.setOutline(\"squiggly\")`. Place this sticky note in the Code section of the Main Method to call this method from the `Shape` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open the foldable to find the `outline` instance variable. Cross out the previous `outline` value and replace it with `\"squiggly\"`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fold the `\"squiggly\"` sticky note and close the foldable.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the similarities between the foldable activity for accessors and mutators?* \n* *What are the differences?*\n\n**Discussion Goal:** Students note the parallels between the foldable activity for accessors and mutators. Both methods start on the outside since these are `public`. Both open the foldable because the methods have access to the class’s instance variables. However, only the accessor foldable placed a sticky note on the outside when it returned a value, while only the mutator foldable changes a sticky note inside."
       },
       "seeding_key": {
         "activity_section.key": "d8d66b6e-0f2e-47d3-acda-d104059ae049",
@@ -3211,7 +3196,7 @@
       "key": "13e0eca1-df37-4f0d-bb33-7996c7615a8d",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on Level 4."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on Level 6."
       },
       "seeding_key": {
         "activity_section.key": "13e0eca1-df37-4f0d-bb33-7996c7615a8d",
@@ -3223,6 +3208,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** After receiving feedback during the peer review, they reflect in the form of Glows, Grows, and Want-to-Knows.",
+        "name": "Glows, Grows, Want-to-Knows",
         "tips": [
           {
             "type": "teachingTip",
@@ -3294,7 +3280,7 @@
       "key": "091850e5-62ec-41eb-a95e-420d71fcd784",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which categories were difficult to sort methods into? What additional clarity do you need?*\n\n**Discussion Goal:** Students share terms and categories that they struggled with and ask questions to obtain clarification.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which categories were difficult to sort methods into?*\n* *What additional clarity do you need?*\n\n**Discussion Goal:** Students share terms and categories that they struggled with and ask questions to obtain clarification.",
         "duration": "2",
         "name": "Debrief"
       },
@@ -3356,7 +3342,7 @@
       "key": "09934b3e-ed14-4526-9868-35def8da3554",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about the output of this program? Why did this happen?*\n\n**Discussion Goal:** Students identify a pattern in the output and recognize the numbers at the end are unique for each object and each student. They cannot predict the numbers based on the attributes of the object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The `toString` Method video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information would we want `Dessert`’s `toString()` to return?*\n\n**Discussion Goal:** Students outline a solution to override the `Object toString()` method within `Dessert`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the output of this program?*\n* *Why did this happen?*\n\n**Discussion Goal:** Students identify a pattern in the output and recognize the numbers at the end are unique for each object and each student. They cannot predict the numbers based on the attributes of the object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show The `toString` Method video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information would we want `Dessert`’s `toString()` to return?*\n\n**Discussion Goal:** Students outline a solution to override the `Object toString()` method within `Dessert`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3454,10 +3440,22 @@
       }
     },
     {
+      "key": "c07b1c73-7790-41b6-8e60-1051f4ca5c70",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the alternate approach to Level 5. Instead of calling `toString()` of the `Dessert`, when an object is concatenated with a `String`, the object’s `toString()` is implicitly called."
+      },
+      "seeding_key": {
+        "activity_section.key": "c07b1c73-7790-41b6-8e60-1051f4ca5c70",
+        "lesson_activity.key": "a8761e12-d0c6-4737-90e7-87ec376136fb"
+      }
+    },
+    {
       "key": "51366ab8-0c29-4dc5-8fd5-3c940a1f6540",
       "position": 1,
       "properties": {
         "description": "Over the next week, you will Show What You Know! Like in the last unit, we will begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Project Introduction",
         "remarks": true
       },
       "seeding_key": {
@@ -3546,7 +3544,7 @@
       "key": "cc119c53-03b3-441e-a551-157dd1376dc3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder? How might this UML relate to your project?*\n\n**Discussion Goal:** Students should highlight how the UML diagram organizes information. Points to bring out include:\n* Each super or subclass has a box divided into three sections. The top section has the class name, the following section includes class attributes, and the bottom section includes class methods.\n* \\+ signs designate public attributes and methods, while - signs designate private attributes and methods.\n* Subclasses are documented in their own boxes, and we show an inheritance relationship by drawing an open arrow from the subclass to the superclass.\n* Students realize they could use a UML to plan out their Neighborhood Store Management Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice?* \n* *What do you wonder?* \n* *How might this UML relate to your project?*\n\n**Discussion Goal:** Students should highlight how the UML diagram organizes information. Points to bring out include:\n* Each super or subclass has a box divided into three sections. The top section has the class name, the following section includes class attributes, and the bottom section includes class methods.\n* \\+ signs designate public attributes and methods, while - signs designate private attributes and methods.\n* Subclasses are documented in their own boxes, and we show an inheritance relationship by drawing an open arrow from the subclass to the superclass.\n* Students realize they could use a UML to plan out their Neighborhood Store Management Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3712,6 +3710,8 @@
       "position": 1,
       "properties": {
         "description": "Today you will continue to develop your Neighborhood Store Management program. Yesterday, we created our superclass, and today, you will individually write a subclass that extends the superclass. If you’re in a group of two, each person will write a subclass. Review the Project Planning Guide to make sure you meet the project requirements.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking a moment to do code reviews after about 15 minutes of development work.",
+        "duration": "15",
+        "name": "Subclass Development",
         "remarks": true
       },
       "seeding_key": {
@@ -3728,7 +3728,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Depending on your class size, you may have students working on this project individually or in a group of three. If students are working individually, they should only be responsible for one subclass. Similarly, groups of three would be responsible for three subclasses - one per student."
+            "markdown": "Depending on your class size, you may have students working on this project individually or in a group of three. If students are working individually, they should only be responsible for one subclass. Similarly, groups of three would be responsible for three subclasses - one per student.\n\nStudents will need to share their superclass code with their partner to copy and paste into their individual Java Lab workspace."
           }
         ]
       },
@@ -4082,7 +4082,7 @@
       "key": "096cb6de-bf7f-4015-88d0-15b90d432c16",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Menu` superclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getName` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getPrice` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Combo` superclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getName()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getPrice()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
         "duration": "8",
         "name": "FRQ Scoring",
         "tips": [
@@ -4101,7 +4101,7 @@
       "key": "6372dfec-5764-4861-9b35-2bbbd06dd076",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give one index card to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of the Three W’s.\n* *What FRQ area did you complete today?*\n* *So what? (relevance, importance, usefulness)*\n* *Now what? (Can we predict where we are going?)*\n\n**Discussion Goal:** This discussion helps students process the methods, control structures, and class design of this FRQ. Students should discuss the relevance and predict what’s next. Take a moment to celebrate their successes and validate their frustrations.",
+        "description": "**Distribute:** Give one index card to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of the Three W’s.\n* *What FRQ area did you complete today?*\n* *So what? (relevance, importance, usefulness)*\n* *Now what? (Can we predict where we are going?)*\n\n**Discussion Goal:** This discussion helps students process the methods, control structures, and class design of this FRQ. Students should discuss the relevance and predict what’s next. Take a moment to celebrate their successes and validate their frustrations.",
         "name": "Three W's",
         "tips": [
           {
@@ -4119,7 +4119,7 @@
       "key": "62345b32-b7d7-4b68-be69-729a733115f8",
       "position": 1,
       "properties": {
-        "description": "Congratulations, you have made it to the end of Unit 2! You learned a lot about designing and developing objects to help the Project Mercury Pastries food truck owner keep track of her desserts inventory. Today, you will complete an assessment to put your skills to the test.",
+        "description": "Congratulations, you have made it to the end of Unit 2! You learned a lot about designing and developing objects to help the Project Mercury Pastries food truck owner keep track of their desserts inventory. Today, you will complete an assessment to put your skills to the test.",
         "name": "Unit 2 Assessment",
         "remarks": true
       },
@@ -4132,13 +4132,7 @@
       "key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys). Allow five minutes for students to log in to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Topic Questions and Personal Progress Checks**\n\nFor more information, see the Code.org CSA Topic Coverage."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
       },
       "seeding_key": {
         "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
@@ -4176,7 +4170,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4202,7 +4195,6 @@
         ],
         "progression": "Creating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4228,7 +4220,6 @@
         ],
         "progression": "Updating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4254,7 +4245,6 @@
         ],
         "progression": "Updating Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4280,7 +4270,6 @@
         ],
         "progression": "Storing User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4306,7 +4295,6 @@
         ],
         "progression": "Storing User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4332,7 +4320,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4358,7 +4345,6 @@
         ],
         "progression": "Writing the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4384,7 +4370,6 @@
         ],
         "progression": "Writing the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4410,7 +4395,6 @@
         ],
         "progression": "Creating a Dessert Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4436,7 +4420,6 @@
         ],
         "progression": "Creating a Dessert Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4462,7 +4445,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4488,7 +4470,6 @@
         ],
         "progression": "Constructor Overloading"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4514,7 +4495,6 @@
         ],
         "progression": "Multiple Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4540,7 +4520,6 @@
         ],
         "progression": "Multiple Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4566,7 +4545,6 @@
         ],
         "progression": "Constructor Overloading with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4592,7 +4570,6 @@
         ],
         "progression": "Constructor Overloading with Scanner"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4618,7 +4595,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4644,7 +4620,6 @@
         ],
         "progression": "Expressions Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4670,7 +4645,6 @@
         ],
         "progression": "Evaluating Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4696,7 +4670,6 @@
         ],
         "progression": "Evaluating Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4722,7 +4695,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4748,7 +4720,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4774,7 +4745,6 @@
         ],
         "progression": "Debugging Errors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4800,7 +4770,6 @@
         ],
         "progression": "Scope Error"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4826,7 +4795,6 @@
         ],
         "progression": "Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4852,7 +4820,6 @@
         ],
         "progression": "Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4878,7 +4845,6 @@
         ],
         "progression": "Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4897,14 +4863,13 @@
       "chapter": 29,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U2L6-L6"
         ],
         "progression": "Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4923,14 +4888,13 @@
       "chapter": 30,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U2L6-L7"
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4956,7 +4920,6 @@
         ],
         "progression": "Writing a FoodTruck Constructor"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4982,7 +4945,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5008,7 +4970,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5034,7 +4995,6 @@
         ],
         "progression": "Extending the Dessert Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5060,7 +5020,6 @@
         ],
         "progression": "Creating Dessert Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5086,7 +5045,6 @@
         ],
         "progression": "Creating Dessert Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5112,7 +5070,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5138,7 +5095,6 @@
         ],
         "progression": "Dessert Class Accessor Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5164,7 +5120,6 @@
         ],
         "progression": "Printing Dessert Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5183,14 +5138,13 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U2L8-L3"
         ],
         "progression": "Printing Dessert Information"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5216,7 +5170,6 @@
         ],
         "progression": "Accessor Methods for the Subclasses"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5242,7 +5195,6 @@
         ],
         "progression": "The Owner's Inventory"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5261,14 +5213,13 @@
       "chapter": 43,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U2L8-L6"
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5294,7 +5245,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5320,7 +5270,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5346,7 +5295,6 @@
         ],
         "progression": "Dessert Class Mutator Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5372,7 +5320,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5398,7 +5345,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5424,7 +5370,6 @@
         ],
         "progression": "Mutator Methods for the Subclass"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5450,7 +5395,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5476,7 +5420,6 @@
         ],
         "progression": "Printing an Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5502,7 +5445,6 @@
         ],
         "progression": "Overriding toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5528,7 +5470,6 @@
         ],
         "progression": "Formatting toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5554,7 +5495,6 @@
         ],
         "progression": "Formatting toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5580,7 +5520,6 @@
         ],
         "progression": "FoodTruck toString()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5606,7 +5545,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5632,7 +5570,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5658,7 +5595,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5684,7 +5620,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5710,7 +5645,6 @@
         ],
         "progression": "Store Management Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6534,18 +6468,6 @@
       }
     },
     {
-      "name": "[KEY] FRQ Graphic Organizer",
-      "url": "https://docs.google.com/document/d/1wnSXd6bkEkyDHL5xB9IRPlxO3pf8Ufj6SJDNeF4sMhs/edit?usp=sharing",
-      "key": "_key_frq_graphic_organizer_1",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "_key_frq_graphic_organizer_1"
-      }
-    },
-    {
       "name": "[KEY] FRQ Writing",
       "url": "https://docs.google.com/document/d/1S957n2yvo3Z8313gD0q9od2y4skpT47VDqnolLZVXEA/edit?usp=sharing",
       "key": "_key_frq_writing",
@@ -7199,12 +7121,6 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "_key_frq_graphic_organizer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-14",
-        "resource.key": "_key_frq_graphic_organizer_1"
       }
     },
     {
@@ -8030,6 +7946,16 @@
       }
     },
     {
+      "key": "return_by_value",
+      "word": "Return By Value",
+      "definition": "A copy of the value is given to where the method is called",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return_by_value"
+      }
+    },
+    {
       "key": "mutator_method",
       "word": "Mutator Method",
       "definition": "Changes the value stored in an instance variable",
@@ -8062,7 +7988,7 @@
     {
       "key": "escape_sequence",
       "word": "Escape Sequence",
-      "definition": "Starts with a \\ to indicate how to display a String",
+      "definition": "Starts with a `\\` to indicate how to display a `String`",
       "properties": {
       },
       "seeding_key": {
@@ -8363,6 +8289,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "vocabulary.key": "state"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "return_by_value"
       }
     },
     {
@@ -8677,7 +8609,7 @@
     {
       "key": "ce755713-21b0-4abe-80e3-da76bf8fba55",
       "properties": {
-        "description": "Describe the relationship between print methods, Object, and toString() "
+        "description": "Describe the relationship between print methods, `Object`, and `toString()` "
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -8687,7 +8619,7 @@
     {
       "key": "da3838d1-fa9c-4e87-a928-6f4852701e25",
       "properties": {
-        "description": "Write toString() methods"
+        "description": "Write `toString()` methods"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
