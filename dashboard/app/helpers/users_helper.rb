@@ -246,13 +246,9 @@ module UsersHelper
         level_for_progress = level.get_level_for_progress(user, script)
         ul = user_levels_by_level.try(:[], level_for_progress.id)
 
-        # For contained levels, progress is stored with the contained level id but feedback is stored with
-        # the level id, which is why we need a different level id to get feedback for contained levels.
-        level_id_for_feedback = level.contained_levels.any? ? level.id : level_for_progress.id
-
-        feedback = teacher_feedback_by_level.try(:[], level_id_for_feedback)
+        feedback = teacher_feedback_by_level.try(:[], level_for_progress.id)
         level_progress = get_level_progress(
-          user.id, ul, feedback, sl, paired_user_levels, include_timestamp
+          user.id, ul, feedback&.review_state, sl, paired_user_levels, include_timestamp
         )
 
         if level.is_a?(BubbleChoice) # we have a parent level
@@ -289,7 +285,7 @@ module UsersHelper
   private def get_level_progress(
     user_id,
     user_level,
-    feedback,
+    feedback_review_state,
     script_level,
     paired_user_levels,
     include_timestamp
@@ -301,10 +297,10 @@ module UsersHelper
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
-      elsif feedback.present?
+      elsif feedback_review_state.present?
         return {
           status: LEVEL_STATUS.not_tried,
-          teacher_feedback_review_state: feedback.review_state
+          teacher_feedback_review_state: feedback_review_state
         }
       else
         return nil
@@ -318,7 +314,7 @@ module UsersHelper
       paired: (paired_user_levels.include? user_level.id) || nil,
       last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
       time_spent: user_level.time_spent&.to_i,
-      teacher_feedback_review_state: feedback&.review_state
+      teacher_feedback_review_state: feedback_review_state
     }.compact
   end
 
@@ -339,7 +335,7 @@ module UsersHelper
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
       feedback = teacher_feedback_by_level.try(:[], sublevel.id)
-      sublevel_progress = get_level_progress(user.id, ul, feedback, script_level, paired_user_levels, include_timestamp)
+      sublevel_progress = get_level_progress(user.id, ul, feedback&.review_state, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress
 
       progress[sublevel.id] = sublevel_progress
