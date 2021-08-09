@@ -745,7 +745,7 @@ tr:
         c_and_c_great_to_create: Oluşturmak ve Adil Oynamak Mükemmel
         c_and_c_digital_sharing: Dijital Paylaşım
         teaching_csf_how_it_works: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Ders
-          Nasıl İşler'
+          Nasıl İşlenir'
         elem_pd_2: İlkokul Bilgisayar Bilimi - Kişisel Gelişim videosu 2/2
         what_is_cs: Bilgisayar bilimi nedir?
         repeat_block: Tekrarla Bloğunun kullanılması
@@ -815,6 +815,8 @@ tr:
           Düşünme'
         codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile
           Donanım'
+        playlab_2021: Oyun laboratuarı için giriş
+        playlab_2021_reader: Oyun laboratuarı için giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

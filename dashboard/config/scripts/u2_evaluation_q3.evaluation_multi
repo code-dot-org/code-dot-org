@@ -1,5 +1,5 @@
 name 'U2 evaluation q3'
 question ‘How comfortable are you with the idea of abstraction?’ 
-answer ‘I am pretty comfortable with abstraction’, weight: -1, stage_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
-answer ‘I am still getting comfortable, but I have some sense of its role in Computer Science’, weight: 2, stage_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
-answer ‘HELP— I am really struggling with the idea of abstraction’ , weight: 6, stage_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+answer ‘I am pretty comfortable with abstraction’, weight: -1, lesson_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+answer ‘I am still getting comfortable, but I have some sense of its role in Computer Science’, weight: 2, lesson_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'
+answer ‘HELP— I am really struggling with the idea of abstraction’ , weight: 6, lesson_name: 'Lessons 5 - 6: Compression Formats and Developing your own Encoding Scheme'

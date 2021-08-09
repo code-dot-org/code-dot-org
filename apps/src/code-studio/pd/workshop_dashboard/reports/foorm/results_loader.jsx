@@ -4,6 +4,10 @@ import $ from 'jquery';
 import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
+import SubmissionsDownloadForm from './submissions_download_form';
+import {Button} from 'react-bootstrap';
+import {PermissionPropType, WorkshopAdmin} from '../../permission';
+import {connect} from 'react-redux';
 
 const styles = {
   errorContainer: {
@@ -15,6 +19,9 @@ const styles = {
     padding: 20,
     maxWidth: 550,
     marginTop: 20
+  },
+  csvExportButton: {
+    float: 'right'
   }
 };
 
@@ -22,7 +29,8 @@ export class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired
-    })
+    }),
+    permission: PermissionPropType.isRequired
   };
 
   state = {loading: true, hasErrors: false};
@@ -49,9 +57,7 @@ export class ResultsLoader extends React.Component {
           thisWorkshop: data['this_workshop'],
           workshopTabs: Object.keys(data['this_workshop']),
           courseName: data['course_name'],
-          // TODO: add rollup data once it's sent by the backend
           workshopRollups: data['workshop_rollups']
-          // facilitatorRollups: data['facilitator_rollups']
         });
       })
       .error(() => {
@@ -83,7 +89,23 @@ export class ResultsLoader extends React.Component {
     } else if (hasErrors) {
       return this.renderErrors();
     } else {
-      return <Results {...data} />;
+      return (
+        <div>
+          {this.props.permission.has(WorkshopAdmin) && (
+            <SubmissionsDownloadForm
+              workshopId={this.props.params['workshopId']}
+              style={styles.csvExportButton}
+            >
+              <Button>Export Survey Results</Button>
+            </SubmissionsDownloadForm>
+          )}
+          <Results {...data} />
+        </div>
+      );
     }
   }
 }
+
+export default connect(state => ({
+  permission: state.workshopDashboard.permission
+}))(ResultsLoader);

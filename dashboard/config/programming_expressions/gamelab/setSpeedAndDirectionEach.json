@@ -1,0 +1,13 @@
+{
+  "func": "setSpeedAndDirectionEach",
+  "category": "Groups",
+  "paletteParams": [
+    "speed",
+    "angle"
+  ],
+  "params": [
+    "1",
+    "90"
+  ],
+  "modeOptionName": "*.setSpeedAndDirectionEach"
+}

@@ -23,12 +23,16 @@ sk-SK:
   csedweek_banner_teachers_text: 'Učíte informatiku? Pozrite sa aj na naše ďalšie
     materiály '
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
+  try_hoc_num_served: "<h1>Skús</h1><h2>Hodinu Kódu</h2><h3>%{num} účastníkov</h3>"
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Aby každý študent na každej škole dostal možnosť študovať informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
     spolu s # ďalšími.'
+  petition_sign_message_num: Ak súhlasíš, zapíš sa a pridaj k nášmu mailing listu
+    spolu s %{num} ďalšími.
   petition_join_others: 'Pridaj sa k # iným'
+  petition_join_others_num: Pridaj sa k %{num} iným
   name: Meno
   email: E-mail
   zipcode: PSČ (ak si v USA) alebo krajina
@@ -58,6 +62,7 @@ sk-SK:
   hoc2014_support: Podporte nás &#x25BE;
   hoc2014_whatishoc: Čo je to Hodina Kódu?
   csedweek_map_header: "# CSEdWeek / aktivity Hodiny Kódu na celkom svete"
+  csedweek_map_header_num: "%{num} CSEdWeek / aktivity Hodiny Kódu na celkom svete"
   csedweek_map_signup: Zaregistrujte Vašu udalosť
   csedweek_map_search_placeholder: Vyhľadať Hour of Code udalosti
   csedweek_map_search_search: Hľadať
@@ -319,7 +324,7 @@ sk-SK:
   studiobar_teacher_title: Pripravené pre učitelov
   studiobar_teacher_body: Predstavte Code.org vašej triede
   studiobar_frozen_title: Hodina Kódu
-  studiobar_frozen_body: Vytvor zázračnú zimnú krajinu s Annou a Elsou
+  studiobar_frozen_body: Vytvor zimnú krajinu zázrakov s Annou Elsou
   studiobar_donate_title: Prispejte
   studiobar_donate_body: Za každý darovaný dolár sa naučí jedno dieťa
   studiobar_shop_title: Obchod
@@ -526,8 +531,8 @@ sk-SK:
   minecraft_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   minecraft_designer_button: Spustiť
-  minecraft_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na cestu
-    za dobrodružstvom.
+  minecraft_adventurer_description: Pomocou kódu vezmi Alex alebo Steva na cestu za
+    dobrodružstvom.
   minecraft_adventurer_button: Spustiť
   minecraft_no_internet: Nemáš internet?
   minecraft_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
@@ -814,6 +819,7 @@ sk-SK:
     ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
     na školenie pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a>
     s code.org.
+  dashboard_course_csina: Informatika v algebre
   dashboard_course_csina_desc: Code.org spolupracuje s Bootstrap na rozvoji učebných
     osnov, ktoré učia algebrické a geometrické pojmy cez počítačové programovanie.
   dashboard_course_csins: Inforamtika vo vede
@@ -864,7 +870,7 @@ sk-SK:
   dashboard_navigation_view_progress: Pokrok
   dashboard_navigation_view_text_responses: Textové odpovede
   dashboard_navigation_view_assessments: Hodnotenia
-  dashboard_navigation_view_assessments_surveys: Hodnotenia/Prieskumy
+  dashboard_navigation_view_assessments_surveys: Hodnotenia/dotazníky
   dashboard_navigation_add_students: Pridať študentov
   dashboard_navigation_manage_students: Správa študentov
   dashboard_navigation_lesson_plans_resources: Plány hodín
@@ -1229,12 +1235,14 @@ sk-SK:
   coursed-2020_name: Kurz D (2019)
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
+  coursed-2021_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
   pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
   pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
+  pre-express-2021_name: Zrýchlený kurz pre predškolákov (2021)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
@@ -1250,6 +1258,7 @@ sk-SK:
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (Bloky)
   hoc-encryption_name: Jednoduché šifrovanie
+  text-compression_name: Kompresia textu
   applab_name: App Lab
   gamelab_name: Game Lab
   basketball_name: Vytvor basketbalový zápas
@@ -1335,6 +1344,12 @@ sk-SK:
   coursed-2019_gradelevel: Vek 7-11
   coursee-2019_gradelevel: Vek 8-12
   coursef-2019_gradelevel: Vek 9-13
+  coursea-2020_gradelevel: Vek 4-7
+  courseb-2020_gradelevel: Vek 5-8
+  coursec-2020_gradelevel: Vek 6-10
+  coursed-2020_gradelevel: Vek 7-11
+  coursee-2020_gradelevel: Vek 8-12
+  coursef-2020_gradelevel: Vek 9-13
   accelerated_gradelevel: Vek 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
@@ -1509,6 +1524,38 @@ sk-SK:
     D a potom pokračuj s funkciami.
   coursef-2019_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy
     informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+  coursea-2020_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  courseb-2020_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  coursec-2020_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami
+    a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky
+    riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si
+    vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2020_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených
+    cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
+    programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2020_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
+    podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+    nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  courseb-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  coursec-2021_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami
+    a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky
+    riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si
+    vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2021_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených
+    cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
+    programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
+    podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+    nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
     blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ
     sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry
@@ -1993,6 +2040,10 @@ sk-SK:
     partnermi.
   hoc_overview_partner_activities_link: Zobraziť aktivity
   hoc_overview_start_tutorial: Spustiť
+  hoc_overview_more_resources: Ďalšie zdroje informácií o tom, ako sa pripojiť ku
+    vzdialenej učebni nájdete v našej príručke zdieľania [virtuálnej Hodiny kódu](https://hourofcode.com/us/how-to/virtual).
+    Pre študentov s obmedzenými alebo žiadnymi technologickými možnosťami alebo pripojením
+    zdieľajte tento balík [aktivít nezapojenej Hodiny kódu](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Zobraziť príručku pre učiteľa
   hoc2018_creativity: kreativita
   hoc2018_creativity_create: Vytvoriť
@@ -2027,8 +2078,8 @@ sk-SK:
   hoc2018_mc_designer_description: Naprogramuj zvieratá a iné postavy a vytvor svoju
     vlastnú verziu hry Minecraft.
   hoc2018_mc_adventurer_title: Minecraft Objavovateľ
-  hoc2018_mc_adventurer_description: Použi kód, aby si zobral Alex alebo Steva na
-    cestu za dobrodružstvom.
+  hoc2018_mc_adventurer_description: Pomocou kódu vezmi Alex alebo Steva na cestu
+    za dobrodružstvom.
   hoc2018_mc_start: Spustiť
   hoc2018_mc_no_internet: Nemáš internet?
   hoc2018_mc_download_adventurer: Stiahni si offline verziu Minecraft Objavovateľa.
@@ -2145,3 +2196,16 @@ sk-SK:
   page_not_found_button: Späť na domovskú stránku
   hoc2018_mc_with_microsoft: V spolupráci s
   page_not_available_button: Späť na domovskú stránku
+  footer_powered_by_aws: Poháňaný službami Amazon Web Services
+  codebytes_skinny_banner_english_only: Len v anglickom jazyku
+  footer_privacy_policy: Zásady ochrany súkromia
+  footer_about: O nás
+  footer_partners: Partneri
+  footer_donate: Prispejte
+  footer_support: Podpora
+  footer_terms: Podmienky
+  ai_for_oceans: AI pomáha oceánom
+  ai_for_oceans_lesson_plan: učebný plán
+  ai_in_partnership_with: V spolupráci s
+  ai_activity: Aktivita
+  ai_description: Popis

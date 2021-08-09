@@ -1,0 +1,10 @@
+name 'OPD-K5 sprite lab video_2021'
+title 'Sprite Lab Video'
+description 'description here'
+markdown <<MARKDOWN
+# Introducing Sprite Lab
+
+Watch this video for an introduction to Sprite Lab!  
+
+<a href="https://www.youtube.com/watch?v=l0B0gDuHHC8" target="blank" rel="noopener noreferrer">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image-1571775211459.12.36 PM.png)</a>
+MARKDOWN

@@ -13,6 +13,8 @@
     "name_suffix": "_2020"
   },
   "published": true,
-  "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?"
+  "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

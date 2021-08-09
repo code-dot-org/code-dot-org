@@ -18,6 +18,7 @@ ar:
       Games/Score: "ألعاب/نقطة\n"
       Groups: "مجموعات\n"
       Input: الإدخال
+      Location: الموقع
       Locations: مواقع
       Logic: المنطق
       Loops: الحلقات
@@ -28,4 +29,5 @@ ar:
       Text: النص
       Variables: المتغيرات
       'Variables ': "المتغيرات\n"
+      'Variables  ': 'المتغيرات  '
       World: العالم

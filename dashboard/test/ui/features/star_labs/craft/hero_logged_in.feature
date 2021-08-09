@@ -2,7 +2,7 @@ Feature: Minecraft hero logged in
 
   @as_student
   Scenario: Signed in finish dialog
-    Given I am on "http://studio.code.org/s/hero/stage/1/puzzle/12?noautoplay=true"
+    Given I am on "http://studio.code.org/s/hero/lessons/1/levels/12?noautoplay=true"
     And I wait for the page to fully load
     And I wait until the Minecraft game is loaded
     And I press "runButton"

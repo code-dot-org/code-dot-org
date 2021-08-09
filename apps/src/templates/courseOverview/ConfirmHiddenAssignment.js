@@ -5,27 +5,6 @@ import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 
-const styles = {
-  header: {
-    fontSize: 16,
-    marginBottom: 5,
-    fontWeight: 'bold'
-  },
-  content: {
-    fontSize: 14,
-    marginBottom: 10,
-    marginTop: 10,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray
-  }
-};
-
 /**
  * Confirmation dialog for when assigning a script or course from the course or script overview page
  */
@@ -68,3 +47,24 @@ export default class ConfirmHiddenAssignment extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    fontSize: 16,
+    marginBottom: 5,
+    fontWeight: 'bold'
+  },
+  content: {
+    fontSize: 14,
+    marginBottom: 10,
+    marginTop: 10,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray
+  }
+};

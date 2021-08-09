@@ -134,7 +134,7 @@ ru:
     email_signup: 'Зарегистрируйтесь при помощи вашей электронной почты'
     student_count: 'Зарегистрировано учеников: %{count}.'
     teacher_count: 'Зарегистрировано учителей: %{count}.'
-    overview: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. <a href="/"> Вы можете просматривать различные задачи и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов вы должны зарегистрироваться.'
+    overview: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. <a href="/"> Вы можете просматривать различные задачи и этапы</a> и без учетной записи, но для сохранения свего прогресса и проектов вы должны будете зарегистрироваться.'
     overview_markdown: 'Зарегистрируйте учетную запись, чтобы отслеживать свой прогресс или управлять своим классом. [Вы можете просматривать различные задачи и этапы](/) и без учетной записи, но для сохранения свего прогресса и проектов вы должны зарегистрироваться.'
     hoc_already_signed_up_heading: 'Начало работы без регистрации'
     hoc_already_signed_up_content: 'Вы зарегистрировались для преподавания Часа Кода! Вам и вашим ученикам необязательно заходить в Студию Кода для участия в этом мероприятии. Чтобы начать работу,<a href="%{learn_url}">выберите задние</a> для вашего класса и поделитесь ссылкой с ними. <br/> <br/> Если вам понравился Час Кода, то вы можете установить пароль и создать учетную запись в Студии Кода для регистрации ваших учеников в одном из наших <a href="%{educate_url}">курсов</a>.'
@@ -159,14 +159,16 @@ ru:
     invalid_password: "Пароль должен содержать не менее 6 символов"
     mismatch_password: "Введенные пароли не совпадают"
     student_consent: "Я подтверждаю что у меня есть согласие моих родителей и законных опекунов на разрешение использования Code.org."
-    agree_us_website: "Я согласен использовать веб-сайт, находящийся на территории США."
-    my_data_to_us: "Данные о моем использовании настоящего веб-сайта могут направляться в США, а также храниться или обрабатываться на территории США."
+    agree_us_data_transfer_student: '**Я согласен с тем, что Code.org может передавать данные (включая личные данные) в результате использования мной этого сайта в Соединенные Штаты** с целью размещения и обработки таких данных.'
+    agree_us_data_transfer_teacher: '**Я согласен с тем, что Code.org может передавать данные (включая личные данные) в результате использования мной (и моими учениками) этого сайта в Соединенные Штаты** с целью размещения и обработки таких данных.'
+    data_collection_us: "Я понимаю, что Code.org - это некоммерческий веб-сайт, расположенный в США, и что законы, регулирующие сбор данных в США, могут отличаться от законов моей страны."
+    visit_privacy: 'Посетите страницу [Политика конфиденциальности](%{privacy_url}) Code.org, чтобы узнать больше.'
     student_terms_markdown: "Адреса электронной почты не используются для контакта с учениками. Ученики никогда не будут получать электронные письма от Code.org, за исключением восстановления пароля. Просмотрите наши [правила по политике конфиденциальности](http://code.org/privacy) для дальнейшей информации."
     additional_information: "Чтобы продолжить регистрацию, нам нужна дополнительная информация."
     user_type_button: "Обновление типа учетной записи"
     user_type_label: "Тип Учётной Записи"
-    user_type_teacher: "Учитель"
     user_type_student: "Ученик"
+    user_type_teacher: "Учитель"
     field_is_required: "требуется"
     accept_terms: "Вы должны принять условия перед созданием учетной записи"
     error: "Произошла ошибка."
@@ -268,6 +270,7 @@ ru:
     invite_sent: 'Приглашение отправлено'
     added_teacher: '%{name} добавлен как твой учитель'
     registered: "Вы зарегистрированы в %{section_name}."
+    already_exists: 'Вы уже присоединились к классу %{section_name}.'
     error:
       signed_in: 'Прежде чем продолжить, выйдите из системы'
       username_not_found: 'Имя пользователя %{username} не найдено'
@@ -324,6 +327,7 @@ ru:
       game_lab_tutorials: "Уроки Лаборатории игр"
       sprite_lab_documentation: "Документация Лаборатории спрайтов"
       sprite_lab_tutorials: "Лаборатория спрайтов: учебники"
+      web_lab_documentation: "Документация веб-лаборатории"
       educate_overview: "Обзор преподавателя"
       educate_elementary: "Начальная школа"
       educate_middle: "Средняя школа"
@@ -547,8 +551,8 @@ ru:
     thank_you: 'Мы благодарим <a href="https://code.org/about/donors">всех, кто оказывает нам поддержку</a>, наших <a href="https://code.org/about/partners"> партнеров</a>, нашу <a href="https://code.org/about/team"> большую команду</a>, всех участников наших видеозаписей, а также наших <a href="https://code.org/about/advisors"> консультантов по вопросам образования</a> за поддержку в создании студии кода.'
     help_from_html: 'Мы хотим особенно поблагодарить инженеров компаний Google, Microsoft, Facebook, Twitter и многих других, которые помогали нам в создании этих материалов.'
     help_from_html_old: 'При создании данных материалов нам помогали инженеры из компаний Google, Microsoft, Facebook и Twitter.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола является товарным знаком и &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола является товарным знаком и &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены.<br />Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены.<br />Frozen&#8482; &copy; %{current_year} Disney. Все права защищены.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены.<br />Удивительный мир Гамбола (The Amazing World of Gumball) является товарным знаком и &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Все права защищены. Star Wars&#8482; &copy; %{current_year} Disney и Lucasfilm. Все права защищены. Frozen&#8482; &copy; %{current_year} Disney. Все права защищены. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Все права защищены. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Все права защищены. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Все права защищены. Удивительный мир Гамбола (The Amazing World of Gumball) является товарным знаком и &copy; 2015 г., Cartoon Network.'
     code_from_html: 'Code.org использует p5.play, который лицензируется на условиях <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Создано с помощью Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час кода&reg; являются товарными знаками Code.org.'
@@ -686,6 +690,7 @@ ru:
       title: "Спорт"
       body: "Создай баскетбольную игру или сочетай различные спортивные игры."
     text-compression:
+      title: "Сжатие текста"
       body: "В этом уроке, студенты будут использовать текстовый компрессионный виджет для сжатия текста путем замены модулей с символами."
     unplugged:
       title: "Уроки без компьютера"
@@ -976,9 +981,8 @@ ru:
       school_city: 'Город, где находится школа'
       school_country: 'Страна твоей школы'
       colombian_school_city: 'Город, где находится школа'
-      colombian_school_department: 'Отдел образования'
       colombian_school_municipality: 'Муниципальные школы'
-      colombian_school_name: 'Название школы'
+      colombian_chilean_school_name: 'Название школы'
       ages: 'Какие возраста вы обучали в этом году?'
       subjects: 'Каким предметам вы обучали в этом году?'
       resources: 'Какой из следующих образовательных ресурсов CS вы используете?'
@@ -1072,18 +1076,12 @@ ru:
     message: 'Продолжая просматривать наш сайт или нажимая кнопку «Я согласен», вы соглашаетесь с сохранением файлов cookie на вашем компьютере или устройстве.'
     more_information: "Смотрите политику конфиденциальности Code.org."
     accept: 'Я согласен(на)'
-  gdpr_dialog:
-    heading: 'Согласны ли вы использовать веб-сайт, находящийся на территории США?'
-    message: 'Данные о вашем использовании настоящего веб-сайта могут направляться в США, а также храниться или обрабатываться на территории США.'
-    link_intro: 'Для подробной информации смотри наше'
-    privacy_policy: 'политика конфиденциальности'
-    logout: 'Выйти'
-    yes: 'Да'
   page_not_found_title: "Страница не найдена"
   page_not_found_header: '404: Страница не найдена'
   page_not_found_description: "Страница, которую вы ищете, отсутствует по этому адресу. Проверьте адрес в Интернете, повторите отправку или вернитесь на нашу домашнюю страницу."
   page_not_found_button: "Вернуться на домашнюю страницу"
   copy: 'Копировать'
+  confirm: 'Подтвердить'
   maker:
     google_oauth:
       login_with_google: 'Войти в приложение Maker с помощью Google'

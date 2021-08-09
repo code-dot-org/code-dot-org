@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.twenty_hour_script.script_levels
+    script_levels = Script.twenty_hour_unit.script_levels
     @script_level_prev = script_levels[0]
     @script_level = @script_level_prev.next_progression_level
     @script_level_next = @script_level.next_progression_level
@@ -85,7 +85,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def build_expected_response(options = {})
     {
-      total_lines: 35,
       redirect: build_script_level_path(@script_level_next),
     }.merge options
   end
@@ -650,7 +649,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 0,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -661,7 +659,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -676,7 +673,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -684,8 +680,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "anonymous milestone not passing" do
     sign_out @user
-
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -703,9 +697,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # record activity in session
     assert_equal 0, client_state.level_progress(@script_level)
 
-    # lines in session does not change
-    assert_equal 10, client_state.lines
-
     assert_response :success
     assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
   end
@@ -715,7 +706,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -736,7 +726,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      total_lines: 10,
       level_source: "http://test.host/c/#{assigns(:level_source).id}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
@@ -747,7 +736,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-    client_state.add_lines(10)
 
     # do all the logging
     @controller.expects :log_milestone
@@ -924,44 +912,44 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert response['level_source'].match(/^http:\/\/test.host\/c\//)
   end
 
-  test 'milestone changes to next stage in default script' do
-    last_level_in_stage = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
+  test 'milestone changes to next lesson in default script' do
+    last_level_in_lesson = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
     post :milestone,
-      params: @milestone_params.merge(script_level_id: last_level_in_stage.id)
+      params: @milestone_params.merge(script_level_id: last_level_in_lesson.id)
     assert_response :success
     response = JSON.parse(@response.body)
-    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['stage_changing'])
+    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['lesson_changing'])
   end
 
-  test 'milestone changes to next stage in custom script' do
+  test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
     game = create(:game)
     (1..3).each {|n| create(:level, name: "Level #{n}", game: game)}
     script_dsl = ScriptDSL.parse(
-      "lesson 'Milestone Stage 1', display_name: 'Milestone Stage 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Stage 2', display_name: 'Milestone Stage 2'; level 'Level 3'",
+      "lesson 'Milestone Lesson 1', display_name: 'Milestone Lesson 1'; level 'Level 1'; level 'Level 2'; lesson 'Milestone Lesson 2', display_name: 'Milestone Lesson 2'; level 'Level 3'",
       "a filename"
     )
-    script = Script.add_script({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
+    script = Script.add_unit({name: 'Milestone Script'}, script_dsl[0][:lesson_groups])
 
-    last_level_in_first_stage = script.lessons.first.script_levels.last
+    last_level_in_first_lesson = script.lessons.first.script_levels.last
     post :milestone,
       params: @milestone_params.merge(
-        script_level_id: last_level_in_first_stage.id
+        script_level_id: last_level_in_first_lesson.id
       )
     assert_response :success
     response = JSON.parse(@response.body)
 
-    # find localized test strings for custom stage names in script
-    assert response.key?('stage_changing'), "No key 'stage_changing' in response #{response.inspect}"
-    assert_equal('milestone-stage-1', response['stage_changing']['previous']['name'])
+    # find localized test strings for custom lesson names in script
+    assert response.key?('lesson_changing'), "No key 'lesson_changing' in response #{response.inspect}"
+    assert_equal('milestone-lesson-1', response['lesson_changing']['previous']['name'])
   end
 
   test 'milestone post respects level_id for active level' do
     script = create :script
-    stage = create :lesson, script: script
+    lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: stage, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
 
     post :milestone,
       params: @milestone_params.merge(
@@ -1106,10 +1094,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :lesson, name: 'Stage1', script: script, lockable: true
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true
 
     # Create a ScriptLevel joining this level to the script.
-    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: stage
+    script_level = create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
 
     milestone_params = {
       user_id: student_1,
@@ -1129,7 +1117,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 403
 
     # explicity create a user_level that is unlocked
-    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, locked: false
 
     # should now succeed
     post :milestone, params: milestone_params
@@ -1137,7 +1125,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # milestone post should cause it to become locked again
     user_level = UserLevel.find(user_level.id)
-    assert user_level.locked?(stage)
+    assert user_level.show_as_locked?(lesson)
 
     # milestone post should also fail when we have an existing user_level that is locked
     post :milestone, params: milestone_params
@@ -1145,7 +1133,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     user_level.delete
     # explicity create a user_level that is readonly_answers
-    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
+    create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
   end

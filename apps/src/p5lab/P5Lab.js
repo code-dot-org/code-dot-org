@@ -38,7 +38,7 @@ import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
-} from './animationListModule';
+} from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
@@ -52,7 +52,7 @@ import {
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {addConsoleMessage, clearConsole} from './spritelab/textConsoleModule';
+import {addConsoleMessage, clearConsole} from './redux/textConsole';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
@@ -76,6 +76,9 @@ import {
 } from '@cdo/apps/util/exporter';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
+import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import createLibrary from './spritelab/libraries/libraryFactory';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -210,11 +213,12 @@ P5Lab.prototype.init = function(config) {
 
   this.skin = config.skin;
   if (this.isSpritelab) {
-    const MEDIA_URL = '/blockly/media/spritelab/';
-    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+    const mediaUrl = `/blockly/media/spritelab/${config.level
+      .instructionsIcon || 'avatar'}.png`;
+    this.skin.smallStaticAvatar = mediaUrl;
+    this.skin.staticAvatar = mediaUrl;
+    this.skin.winAvatar = mediaUrl;
+    this.skin.failureAvatar = mediaUrl;
 
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
@@ -273,7 +277,13 @@ P5Lab.prototype.init = function(config) {
       startLibraries = JSON.parse(config.level.startLibraries);
     }
     project.sourceHandler.setInitialLibrariesList(startLibraries);
-    getStore().dispatch(setInitialAnimationList(this.startAnimations));
+    getStore().dispatch(
+      setInitialAnimationList(
+        this.startAnimations,
+        false /* shouldRunV3Migration */,
+        this.isSpritelab
+      )
+    );
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
@@ -289,7 +299,9 @@ P5Lab.prototype.init = function(config) {
 
   config.shareWarningInfo = {
     hasDataAPIs: function() {
-      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+      return this.hasDataStoreAPIs(
+        this.studioApp_.getCode(true /* opt_showHidden */)
+      );
     }.bind(this),
     onWarningsComplete: function() {
       if (config.share) {
@@ -298,16 +310,34 @@ P5Lab.prototype.init = function(config) {
     }.bind(this)
   };
 
-  // Display CSF-style instructions when using Blockly. Otherwise provide a way
-  // for us to have top pane instructions disabled by default, but able to turn
-  // them on.
-  config.noInstructionsWhenCollapsed = !this.isSpritelab;
+  // Display CSF-style instructions when using Blockly (unless there are no
+  // instructions to display). Otherwise provide a way for us to have top pane
+  // instructions disabled by default, but able to turn them on.
+  config.noInstructionsWhenCollapsed =
+    !this.isSpritelab ||
+    (this.isSpritelab &&
+      !hasInstructions(
+        this.level.shortInstructions,
+        this.level.longInstructions,
+        config.hasContainedLevels
+      ));
 
   var breakpointsEnabled = !config.level.debuggerDisabled;
   config.enableShowCode = true;
   config.enableShowLinesCount = false;
 
   const onMount = () => {
+    try {
+      const localeCode = window.appOptions.locale;
+      getStore().dispatch(setLocaleCode(localeCode));
+    } catch (exception) {
+      console.warn(
+        'Unable to retrieve locale code, defaulting to en_us',
+        exception
+      );
+      getStore().dispatch(setLocaleCode('en_us'));
+    }
+
     this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {
@@ -345,6 +375,10 @@ P5Lab.prototype.init = function(config) {
 
     this.studioApp_.init(config);
 
+    if (startInAnimationTab(getStore().getState())) {
+      getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
+    }
+
     var finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, () => this.onPuzzleComplete(false));
@@ -359,10 +393,15 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
+      this.currentCode = Blockly.getWorkspaceCode();
       this.studioApp_.addChangeHandler(() => {
-        if (!getStore().getState().runState.isRunning) {
-          this.reset();
-          this.preview.apply(this);
+        const newCode = Blockly.getWorkspaceCode();
+        if (newCode !== this.currentCode) {
+          this.currentCode = newCode;
+          if (!getStore().getState().runState.isRunning) {
+            this.reset();
+            this.preview.apply(this);
+          }
         }
       });
     }
@@ -377,8 +416,10 @@ P5Lab.prototype.init = function(config) {
     (!config.hideSource &&
       !config.level.debuggerDisabled &&
       !config.level.iframeEmbedAppAndCode);
+  var showPauseButton = this.isSpritelab && !config.level.hidePauseButton;
   var showDebugConsole = config.level.editCode && !config.hideSource;
-  this.debuggerEnabled = showDebugButtons || showDebugConsole;
+  this.debuggerEnabled =
+    showDebugButtons || showPauseButton || showDebugConsole;
 
   if (this.debuggerEnabled) {
     getStore().dispatch(
@@ -426,25 +467,27 @@ P5Lab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
-    librariesEnabled: !!config.level.librariesEnabled
+    librariesEnabled: !!config.level.librariesEnabled,
+    validationEnabled: !!config.level.validationEnabled
   });
-
-  if (startInAnimationTab(getStore().getState())) {
-    getStore().dispatch(changeInterfaceMode(P5LabInterfaceMode.ANIMATION));
-  }
 
   // Push project-sourced animation metadata into store. Always use the
   // animations specified by the level definition for embed and contained
   // levels.
-  const initialAnimationList =
-    config.initialAnimationList && !config.embed && !config.hasContainedLevels
-      ? config.initialAnimationList
-      : this.startAnimations;
+  const useConfig =
+    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
+  let initialAnimationList = useConfig
+    ? config.initialAnimationList
+    : this.startAnimations;
+  initialAnimationList = this.loadAnyMissingDefaultAnimations(
+    initialAnimationList
+  );
 
   getStore().dispatch(
     setInitialAnimationList(
       initialAnimationList,
-      this.isSpritelab /* shouldRunV3Migration */
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab
     )
   );
 
@@ -472,6 +515,9 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
+            pauseHandler={this.onPause}
+            hidePauseButton={!!this.level.hidePauseButton}
+            onPromptAnswer={this.onPromptAnswer?.bind(this)}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -482,6 +528,47 @@ P5Lab.prototype.init = function(config) {
     return loader.catch(() => {});
   }
   return loader;
+};
+
+/**
+ * Load any necessary missing animations. For now, this is mainly for
+ * the "set background to" block, which needs to have backgrounds in the
+ * animation list at the start in order to look not broken.
+ * @param {Object} initialAnimationList
+ */
+P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
+  initialAnimationList
+) {
+  if (!this.isSpritelab) {
+    return initialAnimationList;
+  }
+  let configDictionary = {};
+  initialAnimationList.orderedKeys.forEach(key => {
+    const name = initialAnimationList.propsByKey[key].name;
+    configDictionary[name] = key;
+  });
+  // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+  // This is primarily to handle pre existing levels that don't have animations in their list yet
+  const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
+    const {categories} = initialAnimationList.propsByKey[key];
+    return categories && categories.includes('backgrounds');
+  });
+  const nameCheck = defaultSprites.orderedKeys.filter(key => {
+    return (
+      defaultSprites.propsByKey[key].categories.includes('backgrounds') &&
+      configDictionary[defaultSprites.propsByKey[key].name]
+    );
+  });
+  const hasBackgrounds = categoryCheck.length > 0 || nameCheck.length > 0;
+  if (!hasBackgrounds) {
+    defaultSprites.orderedKeys.forEach(key => {
+      if (defaultSprites.propsByKey[key].categories.includes('backgrounds')) {
+        initialAnimationList.orderedKeys.push(key);
+        initialAnimationList.propsByKey[key] = defaultSprites.propsByKey[key];
+      }
+    });
+  }
+  return initialAnimationList;
 };
 
 /**
@@ -586,6 +673,11 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
   });
 };
 
+/**
+ * Override to change pause behavior.
+ */
+P5Lab.prototype.onPause = function() {};
+
 P5Lab.prototype.onIsRunningChange = function() {
   this.setCrosshairCursorForPlaySpace();
 };
@@ -669,7 +761,13 @@ P5Lab.prototype.afterInject_ = function(config) {
     Blockly.JavaScript.addReservedWords(SpritelabReservedWords.join(','));
 
     // Don't add infinite loop protection
-    Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
+    Blockly.clearInfiniteLoopTrap();
+  }
+
+  if (this.level.blocklyVariables) {
+    Blockly.mainBlockSpace.registerGlobalVariables(
+      this.level.blocklyVariables.split(',').map(varName => varName.trim())
+    );
   }
 
   // Update p5Wrapper's scale and keep it updated with future resizes:
@@ -794,8 +892,11 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   if (message && msg[message]) {
     this.message = msg[message]();
   }
+  const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {
     this.result = ResultType.ERROR;
+  } else if (sourcesUnchanged) {
+    this.result = ResultType.FAILURE;
   } else {
     // In most cases, submit all results as success
     this.result = ResultType.SUCCESS;
@@ -810,6 +911,8 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
     });
   } else if (testResult) {
     this.testResults = testResult;
+  } else if (sourcesUnchanged) {
+    this.testResults = TestResults.FREE_PLAY_UNCHANGED_FAIL;
   } else {
     this.testResults = TestResults.FREE_PLAY;
   }
@@ -984,11 +1087,15 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      const spritelabCommands = this.commands;
+      this.spritelabLibrary = createLibrary(this.level, {
+        p5: this.p5Wrapper.p5
+      });
+
+      const spritelabCommands = this.spritelabLibrary.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
-          spritelabCommands[command].bind(this.p5Wrapper.p5),
+          spritelabCommands[command].bind(this.spritelabLibrary),
           null
         );
       }
@@ -1040,7 +1147,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     code += this.level.customHelperLibrary + '\n';
   }
   const userCodeStartOffset = code.length;
-  code += this.studioApp_.getCode();
+  code += this.studioApp_.getCode(true /* opt_showHidden */);
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,

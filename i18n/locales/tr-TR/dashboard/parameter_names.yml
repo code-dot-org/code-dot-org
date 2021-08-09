@@ -1,0 +1,19 @@
+tr:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: aktör
+      color: renk
+      counter: sayaç
+      height: Yükseklik
+      honey: bal
+      left: sol
+      length: uzunluk
+      min: min
+      points: Puanlar
+      radius: yarıçap
+      sides: kenarlar
+      size: boyut
+      speed: hız
+      theGuess: Tahmin
+      width: genişlik

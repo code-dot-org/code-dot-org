@@ -1,5 +1,5 @@
 {
-  "category": "Logic",
+  "category": "Sprites",
   "config": {
     "func": "isTouchingEdges",
     "blockText": "{SPRITE} is touching edges",

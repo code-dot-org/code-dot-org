@@ -20,8 +20,6 @@ he:
     mailer:
       confirmation_instructions:
         subject: Code.org הוראות אישרור
-      reset_password_instructions:
-        subject: Code.org הוראות איפוס סיסמה
       unlock_instructions:
         subject: הוראות לפתיחת נעילה
     omniauth_callbacks:
@@ -50,6 +48,7 @@ he:
         בדוק באימייל שלך ולחץ על קישור האימות בשביל לסיים את תהליך אימות האימייל שלך.
       updated: אתה עדכנת את החשבון שלך בהצלחה.
     sessions:
+      signed_in: " "
       signed_out: יצאת בהצלחה.
     unlocks:
       send_instructions: אתה תקבל הודעת דוא״ל עם הוראות כיצד לבטל את נעילת החשבון

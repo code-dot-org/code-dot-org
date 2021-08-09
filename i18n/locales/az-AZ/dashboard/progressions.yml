@@ -1,9 +1,90 @@
 az:
   data:
     progressions:
+      Accelerometer Events: Akselerometr hadisələri
+      Adding Images: Şəkillər əlavə etmək
+      Adding Screens: ekranlar əlavə etmək
+      Alien Defender: Yadplanteli mudafiyesi
+      'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
+      Arrays: Massivlər
+      Artist Project: Sənətçi Layihəsi
       'Artist: Variables': 'Rəssam: Dəyişənlər'
+      Attribution: Atributlar
+      Binary Numbers: İkilik rəqəmlər
+      Binary and Data: İkili və məlumat
+      Building an App: Bir App qurmaq
+      Button Circuits: düymə dövrələri
+      CSS Text Properties: CSS Mətn Xüsusiyyətləri
+      CSS and Style Sheets: CSS və Stil səhifələri
+      Challenge: meydan oxumaq
+      'Challenge: Draw an Image': 'Çağırış: Bir şəkil çəkin'
+      'Challenge: Updating Variables': 'Çağırış: Dəyişənləri Yeniləmə'
+      Challenges: Əngəllər
+      Chance: Şans
+      Change: Dəyişmək
+      Changing Screens: Ekranların dəyişdirilməsi
+      Checking for a Winner: Qazananı yoxlamaq
+      Collector Game: Kolleksiyaçı oyunu
+      Create a Story: Hekayə yarat
+      Create your project: Layihə yarat
+      Customize: Özəlləşdir
+      Debugging: Sazlama
+      Demo Apps: Demo applikasiyalar
+      Design Mode Elements: Dizayn rejimi elementləri
+      Drawing Shapes: Rəsm Şekilləri
+      End of Course Projects: Kurs Layihələri
       Events: Hadisələr
-      Functions: funksiyalar
+      Events and Properties: Hadisələr və xüsusiyyətlər
+      Example projects: " nümunə layihələr\n"
+      Exploration: Kəşf
+      'Exploration: Adding Style': 'Kəşfiyyat: Stil əlavə etmək'
+      Explore HTML: HTML kəşf edin
+      Formatting HTML: HTML formatı
+      Free Play: Azad Oyna
+      Functions: Funksiyalar
       Functions with Parameters: Parametrli funksiyalar
+      HTML Tags: HTML teqlər
+      Headings in HTML: HTML başlıqları
+      Hyperlinks: Köprülər
+      Importing Screens: Ekranlar idxal olunur
+      Introduction to Game Lab: Oyun Laboratoriyasına giriş
+      Introduction to Variables: Dəyişənlərə giriş
+      Keeping Data Secret: Məlumatlar Gizli Saxlanır
+      Layout Properties: Düzən Xüsusiyyətləri
+      Lesson Extras: Dərsə əlavələr
       Lists: Siyahılar
+      Lists in HTML: HTML siyahıları
+      Measures: Ölçülər
+      Modifying and Creating Arrays: Dizilərin dəyişdirilməsi və yaradılması
+      More Buttons: Daha çox Düymələr
+      Naming Variables: Dəyişənlərin adlanması
+      Overview: Yekun
+      Pair Programming: Estafet proqramlaşdırması
+      Planning: Planlama
+      Plotting Shapes in Game Lab: Oyun Laboratoriyasında Şekiller Çizim
+      Properties: Xüsusiyyətlər
+      RGB Widget: RGB Widget'i
+      Responding to User Input: İstifadəçi input-una cavab
+      Review: Gözdən keçirmə
+      Sprite Lab Project: Sprite Laboratoriyası Layihəsi
+      Sprite Scenes: Sprite səhnələri
+      The Body Element: Bədən elementi
+      Tour of Design Mode: Dizayn rejimi turu
+      Using the Grid: Şəbəkədən istifadə
+      Variables: dəyişənlər
+      Video: Video
+      'Video: Conditional Statements': 'Video: Şərti Bəyanatlar'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Oyun Laboratoriyasında Rəsm - Hissə 1'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Oyun Laboratoriyasında Rəsm - Hissə 2'
+      'Video: For Loops': 'Video: For dövrləri'
+      'Video: Functions': 'Video: Funksiyalar'
+      'Video: If/Else Statements': 'Video: If/Else Şərtləri'
+      'Video: Intro to CSS': 'Video: CSS-ə giriş'
+      'Video: Intro to CSS Part 2': 'Video: CSS Part 2-yə giriş'
+      'Video: Intro to Web Lab - Part 1': 'Video: Veb laboratoriyasına giriş - hissə 1'
+      'Video: Intro to Web Lab - Part 2': 'Video: Veb laboratoriyasına giriş - hissə 2'
+      'Video: Introduction to Arrays': 'Video: Massivlərə giriş'
+      'Video: Problem Solving Process': 'Video: Problemin Həll olunması prosesi'
+      'Video: What Makes a Computer, a Computer?': 'Video: Kompüter, kompüter nə edir?'
       Wrap-up: Yekun
+      getNumber: getNumber

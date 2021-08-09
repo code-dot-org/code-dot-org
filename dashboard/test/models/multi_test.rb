@@ -25,4 +25,22 @@ class MultiLevelTest < ActiveSupport::TestCase
     )
     assert_equal(level.correct_answer_indexes_array, [1, 2])
   end
+
+  test 'summarize_for_lesson_show sets questionText if it exists' do
+    level = create :multi
+    level.properties = {'questions': [{'text': 'Question text'}]}
+    level.save!
+
+    summary = level.summarize_for_lesson_show(false)
+    assert_equal 'Question text', summary[:questionText]
+  end
+
+  test 'summarize_for_lesson_show does not set questionText if it does not exist' do
+    level = create :multi
+    level.properties = {}
+    level.save!
+
+    summary = level.summarize_for_lesson_show(false)
+    assert_nil summary[:questionText]
+  end
 end

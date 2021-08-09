@@ -1,31 +1,49 @@
-import * as coreLibrary from '../coreLibrary';
-
 export const commands = {
   getAnimationsInUse() {
-    return coreLibrary.getAnimationsInUse();
+    return this.getAnimationsInUse();
   },
 
   getBackground() {
-    if (typeof coreLibrary.background === 'string') {
-      return coreLibrary.background;
+    const background = this.getBackground();
+    if (typeof background === 'string') {
+      return background;
     } else {
-      return coreLibrary.background.name;
+      return background.name;
     }
   },
 
+  getEventLog() {
+    return this.eventLog;
+  },
+
   getNumBehaviorsForAnimation(animation) {
-    return coreLibrary.getNumBehaviorsForAnimation(animation);
+    return this.getNumBehaviorsForAnimation(animation);
   },
 
   getNumBehaviorsForSpriteId(spriteId) {
-    return coreLibrary.getNumBehaviorsForSpriteId(spriteId);
+    return this.getNumBehaviorsForSpriteId(spriteId);
   },
 
   getBehaviorsForSpriteId(spriteId) {
-    return coreLibrary.getBehaviorsForSpriteId(spriteId);
+    return this.getBehaviorsForSpriteId(spriteId);
+  },
+
+  getPrintLog() {
+    return this.printLog;
+  },
+
+  getPromptVars() {
+    return this.promptVars;
   },
 
   getSpriteIdsInUse() {
-    return coreLibrary.getSpriteIdsInUse();
+    return this.getSpriteIdsInUse();
+  },
+
+  getTitle() {
+    return {
+      title: this.screenText.title,
+      subtitle: this.screenText.subtitle
+    };
   }
 };

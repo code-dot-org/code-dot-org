@@ -7,15 +7,6 @@ import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
 
-const styles = {
-  inTopPane: {
-    overflow: 'hidden'
-  },
-  notInTopPane: {
-    overflow: 'auto'
-  }
-};
-
 /**
  * A component for displaying our level instructions text, and possibly also
  * authored hints UI and/or an anigif. These instructions can appear in the top
@@ -33,7 +24,9 @@ class Instructions extends React.Component {
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func
+    onResize: PropTypes.func,
+    isBlockly: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   /**
@@ -55,6 +48,8 @@ class Instructions extends React.Component {
           markdown={this.props.longInstructions}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
+          isBlockly={this.props.isBlockly}
+          noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
         />
       );
     } else {
@@ -94,5 +89,14 @@ class Instructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  inTopPane: {
+    overflow: 'hidden'
+  },
+  notInTopPane: {
+    overflow: 'auto'
+  }
+};
 
 module.exports = Instructions;

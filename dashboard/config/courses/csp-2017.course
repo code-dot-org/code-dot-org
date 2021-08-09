@@ -11,7 +11,7 @@
     "csppostap-2017",
     "csp-post-survey"
   ],
-  "alternate_scripts": [
+  "alternate_units": [
     {
       "experiment_name": "subgoals-group-a",
       "alternate_script": "csp3-a",
@@ -23,6 +23,7 @@
       "default_script": "csp3-2017"
     }
   ],
+  "published_state": "stable",
   "properties": {
     "teacher_resources": [
       [
@@ -40,8 +41,12 @@
     ],
     "has_verified_resources": true,
     "family_name": "csp",
-    "version_year": "2017",
-    "is_stable": true,
-    "visible": true
-  }
+    "version_year": "2017"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

@@ -26,6 +26,9 @@
               - unless @level.uses_droplet?
                 %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
                   Copy workspace to clipboard
+            - elsif @level.is_a? Javalab
+              %ul
+                %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
         - else
           %li (Cannot edit)
         - if can? :delete, @level
@@ -68,25 +71,28 @@
       - elsif @script_level
         %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level)).to_s
 
-    -# Include any BubbleChoice parent script_levels in script_level list.
-    - parent_levels = BubbleChoice.parent_levels(@level.name)
-    - parent_script_level_count = parent_levels.flat_map(&:script_levels).count
-    This level is in #{@level.script_levels.count + parent_script_level_count} scripts:
+    This level is in #{@level.script_levels.count} scripts:
     %ul
       - @level.script_levels.each do |script_level|
         %li
           = link_to script_level.script.name, script_level.script
-          = "(stage ID: #{script_level.stage_id})"
+          = "(Lesson ID: #{script_level.stage_id})"
           as
           = link_to build_script_level_path(script_level), build_script_level_path(script_level)
-      - parent_levels.each do |parent_level|
-        - parent_level.script_levels.each do |script_level|
-          %li
-            = link_to script_level.script.name, script_level.script
-            = "(stage ID: #{script_level.stage_id})"
-            as
-            - sl_path = build_script_level_path(script_level, sublevel_position: parent_level.sublevel_position(@level))
-            = link_to sl_path, sl_path
+
+    This level is in #{@level.levels_parent_levels.count} other levels:
+    %ul
+      - @level.levels_parent_levels.each do |levels_parent_level|
+        %li
+          %p
+            = "#{levels_parent_level.kind.inspect} in "
+            = link_to levels_parent_level.parent_level.name, levels_parent_level.parent_level
+            = "(position #{levels_parent_level.position})" if levels_parent_level.position.present?
+      %li
+        %p{style: 'width: 400px;'}
+          %small
+            %strong NOTE:
+            This list includes contained levels, project template levels, and sublevels (both BubbleChoice and LevelGroup). Other methods of embedding levels inside other levels are not yet supported.
 
     .project_admin
     - if current_user.project_validator? && params[:channel_id]
@@ -179,11 +185,16 @@
         %li.reported-abuse{ style: 'display: none;' }
           Manually reported abusive
 
-      .admin-abuse{ :style => "display: none" }
+      .admin-abuse
         Abuse score:
         %span.admin-abuse-score
       %br
-        = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-
+        %button{id: "admin-abuse-reset", class: "btn btn-default btn-sm"}
+          Reset abuse score to 0
+      %br
+        %button{id: "admin-abuse-buffer", class: "btn btn-default btn-sm"}
+          Set abuse score to -50
+      %br
+      %br
       .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'

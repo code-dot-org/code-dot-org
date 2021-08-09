@@ -1,0 +1,31 @@
+name 'CSP - Variables Make overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Understanding the Variables Make Lesson
+
+**Goal:** The purpose of this section is to better understand the role of the teacher and student in the “Make” lesson type.  To do this, we will focus on the Variables Make lesson. *(Estimated time: 30 minutes)*
+
+## Context
+
+As a reminder, the goal of Make lessons is that students are able to independently decide when and how to use the new concept in the context of a larger project. In Make lessons:
+
+* Students are provided high-level steps to break down the project
+* The teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.
+
+## Tips for Make tasks:
+* **This is NOT a summative assessment.**  Students will have more opportunities to use the skills learned in this EIPM sequence in future EIPM sequence.  Students will be summatively assessed at the end of the full Unit on this content.
+* **They are intended to be one-day lessons.**  This still should fit into a 45 minute lesson.  You can provide the right level of support to the class to make it fit into this time frame.  Additionally, for students who more quickly finish the task, encourage them to add their own extensions to the task.
+* **While independence is the goal, you may need to work up to complete independence.**  This is students’ first experience with a “blank screen”.  In your first few “Make” lessons, you as the teacher may need to provide more support.  Over time, student confidence will increase, but don’t be afraid to provide support throughout the Make tasks, but especially in the first few. 
+
+## Do this: 
+* Read the lesson plan for [U4L4 - Variables Make](https://curriculum.code.org/csp-20/unit4/4/)
+* Review the CS Principles Variables Make - Photo Liker App - Activity Guide found in the “Links” section of the Variables Make lesson plan.
+* Match the lesson plans to the corresponding slides for the lesson.  You can find the slides linked in the “Links” section of the lesson plan. 
+* As you review these materials, consider how are the responsibilities in the Make lesson different from the Practice lesson?  How are they the same?
+
+In the following 2 levels, you will see the same levels as students will see in this lesson.  Follow the directions on the screen for each of these levels. 
+
+MARKDOWN

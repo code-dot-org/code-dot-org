@@ -18,6 +18,7 @@ fi:
       Game/Score: Peli/pistemäärä
       Games/Score: Pelit/pistemäärä
       Groups: Ryhmät
+      Location: Sijainti
       Locations: Sijainnit
       Logic: Logiikka
       Loops: Silmukat
@@ -27,4 +28,5 @@ fi:
       Text: teksti
       Variables: Muuttujat
       'Variables ': 'Muuttujat '
+      'Variables  ': 'Muuttujat  '
       World: Maailma

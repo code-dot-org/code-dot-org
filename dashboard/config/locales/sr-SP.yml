@@ -140,8 +140,8 @@ sr:
       да наставимо са процесом регистрације.
     user_type_button: Ажурирајте тип налога
     user_type_label: Врста налога
-    user_type_teacher: Учитељ
     user_type_student: студент
+    user_type_teacher: Учитељ
     field_is_required: је обавезан
     accept_terms: Морате се сложити да бисте креирали свој налог
     error: Дошло је до грешке.
@@ -264,6 +264,7 @@ sr:
       about_contact: Контактирајте нас
       about_faqs: Често постављана питања
       learn: Научи
+      stats: Статистика
       help_us: Помози нам
       legal_privacy: Политика приватности
       legal_tos: Услови коришћења
@@ -336,6 +337,7 @@ sr:
     delete_confirm: Да ли сте сигурни да желите да обришете свој налог?
     update_email: Ажурирај
     parent_guardian_email_label: Имејл од родитеља/старатеља
+    remove_parent_email_label: Уклони
   user_level:
     completed: Готово
     tried: Покушао
@@ -451,6 +453,8 @@ sr:
       body: Програмирај животиње и друга Minecraft створења у својој верзији Minecraft-а.
     unplugged_conditionals:
       title: Кондиционали
+    widgets:
+      audience: Узраста 14+
   multi-submittable:
     wrong_title: Хвала
     correct_title: Хвала
@@ -489,7 +493,7 @@ sr:
     form_labels:
       email: Електронска пошта
       school_name: Име школе
-      colombian_school_name: Име школе
+      colombian_chilean_school_name: Име школе
     form_entries:
       gender:
         male: Мушко
@@ -505,6 +509,5 @@ sr:
         opt_in_no: не
   cookie_banner:
     accept: Слажем се
-  gdpr_dialog:
-    true: Да
   copy: Копирај
+  confirm: Потврди

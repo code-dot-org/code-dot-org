@@ -22,40 +22,40 @@ style_min: true
 ---
 
 %link{href: "/css/starwars.css", rel: "stylesheet"}
+%div{dir: language_dir_class}
+  :ruby
+    tutorial = {
+      heading: I18n.t(:starwars_subtitle),
+      background_image: "/images/fit-1940/sw_landingpage.jpg",
+      left_heading: I18n.t(:starwars_javascript_title),
+      left_description: I18n.t(:starwars_javascript_description),
+      left_specs: I18n.t(:starwars_javascript_specs),
+      left_button_link: '/api/hour/begin/starwars',
+      left_button_text: I18n.t(:try_now),
+      right_heading:  I18n.t(:starwars_blocks_title),
+      right_description: I18n.t(:starwars_blocks_description),
+      right_specs: I18n.t(:starwars_blocks_specs),
+      right_button_link: '/api/hour/begin/starwarsblocks',
+      right_button_text: I18n.t(:try_now),
+      id_for_mobile_image: "starwars-mobile-image",
+    }
 
-:ruby
-  tutorial = {
-    heading: I18n.t(:starwars_subtitle),
-    background_image: "/images/fit-1940/sw_landingpage.jpg",
-    left_heading: I18n.t(:starwars_javascript_title),
-    left_description: I18n.t(:starwars_javascript_description),
-    left_specs: I18n.t(:starwars_javascript_specs),
-    left_button_link: '/api/hour/begin/starwars',
-    left_button_text: I18n.t(:try_now),
-    right_heading:  I18n.t(:starwars_blocks_title),
-    right_description: I18n.t(:starwars_blocks_description),
-    right_specs: I18n.t(:starwars_blocks_specs),
-    right_button_link: '/api/hour/begin/starwarsblocks',
-    right_button_text: I18n.t(:try_now),
-    id_for_mobile_image: "starwars-mobile-image",
-  }
+  = view :tutorial_promo, tutorial: tutorial
 
-= view :tutorial_promo, tutorial: tutorial
+  %div{style: "clear:both"}
 
-%div{style: "clear:both"}
+  %h2.sw-header2
+    = I18n.t(:no_internet)
+    %a{href: CDO.studio_url("/download/starwars")}= I18n.t(:download_offline)
 
-%h2.sw-header2
-  = I18n.t(:no_internet)
-  %a{href: CDO.studio_url("/download/starwars")}= I18n.t(:download_offline)
+  .starwars-videos{style: "clear: both;"}
+    %h2.sw-header2= I18n.t(:watch_inspirational_videos)
+    =view :inspirational_videos
 
-.starwars-videos{style: "clear: both;"}
-  %h2.sw-header2= I18n.t(:watch_inspirational_videos)
-  =view :inspirational_videos
+  %h2.sw-header2
+    = I18n.t(:are_you_teacher)
+    %a{href: "/hourofcode/starwars"}= I18n.t(:review_lesson_plan)
 
-%h2.sw-header2
-  = I18n.t(:are_you_teacher)
-  %a{href: "/hourofcode/starwars"}= I18n.t(:review_lesson_plan)
-
-%h2.sw-header2
-  = I18n.t(:speak_another_language)
-  %a{href: "/translate/starwars"}= I18n.t(:help_translate)
+  %h2.sw-header2
+    = I18n.t(:speak_another_language)
+    %a{href: "/translate/starwars"}= I18n.t(:help_translate)

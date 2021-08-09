@@ -131,8 +131,15 @@ es:
       Tendrás que escribir tu contraseña debajo para iniciar sesión.
     use_clever: Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}.
       Por favor, inicia sesión a través de tu Portal Clever.
+    invalid_provider: Lo sentimos, %{provider} las cuentas no pueden ser vinculadas
+      a las cuentas de Code.org.
+    migration_required: Lo sentimos, no podemos conectar o desconectar las cuentas
+      que todavía utilizan la versión antigua de cuenta. Por favor, actualice a la
+      nueva versión de la cuenta.
     unable_to_connect_provider: No se pudo conectar tu cuenta de Code.org a tu %{provider}.
       Por favor, inténtalo de nuevo.
+    disconnect_successful: "¡Correcto! Hemos desconectado la cuenta externa de su
+      cuenta de Code.org."
     already_in_use: Tu %{provider} ya está conectado a otra cuenta de Code.org.
     already_linked: La cuenta con tu %{provider} ya está vinculada a tu cuenta de
       Code.org.
@@ -191,10 +198,17 @@ es:
     mismatch_password: Las dos contraseñas  introducidas no coinciden
     student_consent: Confirmo que tengo la autorización de mis padres o guardianes
       legales para utilizar los servicios de Code.org.
-    agree_us_website: Estoy de acuerdo con el uso de un sitio web con sede en los
-      Estados Unidos.
-    my_data_to_us: Los datos de mi uso de este sitio pueden ser enviados y almacenados
-      o procesados en los Estados Unidos.
+    agree_us_data_transfer_student: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso de este sitio a los Estados Unidos**
+      con el fin de alojar y procesar dichos datos."
+    agree_us_data_transfer_teacher: "**Acepto que Code.org puede transferir datos
+      (incluyendo datos personales) de mi uso (y el uso de mis estudiantes) de este
+      sitio a los Estados Unidos** con el fin de alojar y procesar dichos datos."
+    data_collection_us: Entiendo que Code.org es un sitio web sin fines de lucro con
+      sede en los Estados Unidos y que las leyes que rigen la recopilación de datos
+      en los Estados Unidos pueden diferir de las leyes de mi país.
+    visit_privacy: Consulte la [política de privacidad](%{privacy_url}) de Code.org
+      para obtener más información.
     student_terms_markdown: Las direcciones de correo electrónico no se almacenan
       de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes
       nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten
@@ -204,8 +218,17 @@ es:
       con tu registro.
     user_type_button: Actualizar el tipo de cuenta
     user_type_label: Tipo de cuenta
-    user_type_teacher: Profesor
     user_type_student: estudiante
+    user_type_student_desc: 'Explora todos nuestros cursos y actividades, además de:'
+    user_type_student_ability_1: Guarda tu progreso y proyectos
+    user_type_student_ability_2: Únete a la sección de la clase de tu profesor
+    user_type_teacher: Profesor
+    user_type_teacher_desc: 'Todo aquello a lo que tienen acceso los estudiantes,
+      además de:'
+    user_type_teacher_ability_1: Crear secciones para la clase
+    user_type_teacher_ability_2: Asignar y seguir el trabajo de un estudiante
+    user_type_teacher_ability_3: Involucrarse en el aprendizaje profesional
+    user_type_teacher_ability_4: Interactúa en el foro de nuestro profesor
     field_is_required: es requerido
     accept_terms: Debes estar de acuerdo para crear una cuenta.
     error: Ocurrió un error.
@@ -315,7 +338,9 @@ es:
   follower:
     invite_sent: Invitación enviada
     added_teacher: "%{name} añadido como tu profesor"
-    registered: Se/te ha/has inscrito en % {section_name}.
+    registered: Se/te ha/has inscrito para % {section_name}.
+    captcha_required: Por favor, rellene el CAPTCHA para entrar en esta sección.
+    already_exists: Ya te has unido a la sección %{section_name}.
     error:
       signed_in: Cierra la sesión antes de continuar
       username_not_found: Usuario %{username} no encontrado
@@ -328,6 +353,12 @@ es:
       provider_managed_section: No puedes unirte a esta sección, porque está a cargo
         de otro proveedor. Consulta con tu docente para que te agregue a través de
         %{provider} y vuelve a sincronizar la sección.
+      restricted_section: No hemos podido añadirte a la sección %{section_code} porque
+        está bloqueada. Por favor, póngase en contacto con su profesor para obtener
+        ayuda.
+      full_section: No hemos podido añadirte a la sección %{section_code} porque ya
+        existen %{section_capacity} alumnos en ella. Ponte en contacto con tu profesor
+        para que te ayude.
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
@@ -380,6 +411,7 @@ es:
       game_lab_tutorials: Tutoriales del Laboratorio de juegos
       sprite_lab_documentation: Documentación del Laboratorio de sprites
       sprite_lab_tutorials: Tutoriales del Laboratorio de sprites
+      web_lab_documentation: Documentación del Laboratorio Web
       educate_overview: Resumen del docente
       educate_elementary: Escuela primaria
       educate_middle: Escuela secundaria
@@ -405,6 +437,7 @@ es:
       help_us: Ayudenos
       teach: Enseñar
       about: Acerca de
+      legal: Privacidad y Legalidad
       legal_privacy: Política de Privacidad
       legal_tos: Términos de uso
     user:
@@ -451,8 +484,8 @@ es:
       sports: Deportes
       spritelab: Laboratorio de sprites
       starwars: Star Wars
-      starwarsblocks: Star Wars (bloques)
-      starwarsblocks_hour: Star Wars (bloques)
+      starwarsblocks: La guerra de las galaxias (bloques)
+      starwarsblocks_hour: La guerra de las galaxias (bloques)
       weblab: Web Lab
       view_all: Ver todos los proyectos...
     popup:
@@ -493,6 +526,8 @@ es:
       worked_with: Trabajado con
       update_lock_settings: Actualiza la configuración de bloqueo aquí.
       clear_response: Respuesta clara
+    student_code_view_diabled: El código del alumno no puede ser consultado para esta
+      actividad.
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no
@@ -680,7 +715,10 @@ es:
       Network.
     code_from_html: Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
-    powered_by_aws: Powered by Amazon Web Services
+    powered_by_aws: Impulsado por Amazon Web Services
+    built_on_github: Creado en GitHub de Microsoft
+    google_copyright: "&copy; Google Inc. utilizado con permiso. Google Classroom
+      es una marca comercial de Google Inc."
     trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de
       Hora de Code ® son marcas registradas de Code.org."
     copyright: Derechos de autor
@@ -692,12 +730,14 @@ es:
     tos_short: Términos
     tos: Términos de uso
     privacy: Política de Privacidad
+    privacy_updated: Política de privacidad (actualizada)
     secure: Versión segura
     report_abuse: Reportar Abuso
     built_on_code_studio: Construido en Code Studio
     make_my_own_app: Haz tu propia aplicación
     how_it_works: Cómo funciona (ver el código)
     try_hour_of_code: "¡Prueba una Hora de Code!"
+    store: Tienda
   reference_area:
     title: "¿Necesitas ayuda?"
     subtitle: Ver estos vídeos y sugerencias
@@ -738,7 +778,7 @@ es:
         en modo normal. Disculpa las molestias.
   slow_loading: Esto está tardando más tiempo de lo habitual...
   try_reloading: Intenta volver a cargar la página
-  next_stage: "¡Finalizado! Sigue a la siguiente etapa"
+  next_stage: "¡Acabado! Sigue a la siguiente etapa"
   download_pdf: Abrir la planificación de la lección
   lesson_plan: Plan de clases
   view_lesson_plan: Ver el plan de estudios
@@ -836,8 +876,8 @@ es:
       body: Explora un mundo de Minecraft, a través de Code.
     minecraft2016:
       title: Minecraft
-      body: Construye un juego de Minecraft. Crea tus propias versiones de las gallinas,
-        ovejas, Creepers, zombis y más.
+      body: Construye tu propia versión de Minecraft. Crea tus propias versiones de
+        las gallinas, ovejas, Creepers, zombis y más.
     aquatic:
       title: Minecraft
     hero:
@@ -945,8 +985,8 @@ es:
   dialog:
     ok: OK
     startover_title: "¿Seguro que quieres empezar de nuevo?"
-    startover_body: Esto reiniciará el rompecabezas a su estado inicial y borrará
-      todos los datos que hayas agregado o cambiado.
+    startover_body: Esto reiniciará el rompecabeza a su estado inicial y borrará todos
+      los datos que hayas agregado o cambiado.
     startover_ok: Volver a empezar
     startover_cancel: Cancelar
   time:
@@ -1238,8 +1278,11 @@ es:
       school_city: Ciudad de la escuela
       school_country: País en el que está la escuela
       colombian_school_city: Ciudad de la escuela
-      colombian_school_department: Departamento de Escuela
-      colombian_school_name: Nombre de la escuela
+      colombian_chilean_school_department: Departamento/región del colegio
+      colombian_school_municipality: Municipio escolar
+      colombian_chilean_school_name: Nombre de la escuela
+      chilean_school_commune: Comuna
+      chilean_school_id: ID de colegio
       ages: "¿A qué grupos de edades enseñas este año?"
       subjects: "¿Qué materias enseñas este año?"
       resources: "¿Cuáles de los siguientes recursos educativos de ciencias de la
@@ -1271,10 +1314,12 @@ es:
       school_country:
         canada: Canadá
         chile: Chile
+        colombia: Colombia
         israel: Israel
         malaysia: Malasia
         mexico: México
         thailand: Tailandia
+        uzbekistan: Uzbekistán
       ages:
         ages_under_6: Hasta 6 años
         ages_7_8: 7-8 años
@@ -1338,7 +1383,9 @@ es:
         mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres
         compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url})
         o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_listed: Mi moderador no aparece en la lista
       facilitator_not_applicable: No aplicable
+      organizer_not_listed: Mi organizador no aparece en la lista
     logged_out:
       heading: "¡Gracias por tu interés en el Programa de Aprendizaje Profesional!"
       body: Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres
@@ -1361,20 +1408,13 @@ es:
       que se guarden las cookies en tu computadora o dispositivo.
     more_information: Mira la política de privacidad de Code.org.
     accept: De acuerdo
-  gdpr_dialog:
-    heading: "¿Aceptas utilizar un sitio web alojado en los Estados Unidos?"
-    message: Los datos de su uso de este sitio pueden ser enviados y almacenados o
-      procesados en los Estados Unidos.
-    link_intro: Para más información, mira nuestra
-    privacy_policy: política de privacidad
-    logout: Cerrar sesión
-    true: Sí
   page_not_found_title: No se encontró la página
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
     la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
   copy: Copiar
+  confirm: Confirmar
   maker:
     google_oauth:
       login_with_google: Inicia sesión en la aplicación Maker con Google
@@ -1388,6 +1428,7 @@ es:
         Google.
       error_invalid_user: ID de usuario inválida. Intenta iniciar sesión de nuevo.
       error_no_code: Por favor, ingresa tu código de inicio de sesión.
+      confirm_login: Selecciona "Confirmar" para iniciar sesión con tu cuenta de Google.
   parent_email_banner:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s
       týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
@@ -1395,3 +1436,5 @@ es:
     not_now: Teraz nie
   behaviors:
     this_sprite: Este sprite
+  unit_prefix: Unidad %{n}
+  code_org_logo_alt: Inicio de Code.org

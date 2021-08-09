@@ -22,6 +22,41 @@
               "repeat": "تکرار"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
         }
       }
     }

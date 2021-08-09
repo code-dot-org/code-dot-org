@@ -13,12 +13,6 @@ import RegionalPartnerDropdown, {
 } from '../components/regional_partner_dropdown';
 import {Button, Col, Row} from 'react-bootstrap';
 
-const styles = {
-  button: {
-    margin: '20px 20px 20px auto'
-  }
-};
-
 class CohortView extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType,
@@ -142,6 +136,12 @@ class CohortView extends React.Component {
     }
   }
 }
+
+const styles = {
+  button: {
+    margin: '20px 20px 20px auto'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,

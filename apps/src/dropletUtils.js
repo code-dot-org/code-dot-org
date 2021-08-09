@@ -2,6 +2,7 @@ import _ from 'lodash';
 import color from './util/color';
 import {singleton as studioApp} from './StudioApp';
 import {globalFunctions} from './dropletUtilsGlobalFunctions';
+import dontMarshalApi from './dontMarshalApi';
 
 /**
  * @name DropletBlock
@@ -46,6 +47,12 @@ const COLOR_GREEN = '#68D995';
 const COLOR_WHITE = '#FFFFFF';
 const COLOR_BLUE = '#64B5F6';
 const COLOR_ORANGE = '#FFB74D';
+
+const stringMethodPrefix = '[string].';
+const arrayMethodPrefix = '[list].';
+
+const stringBlockPrefix = 'str.';
+const arrayBlockPrefix = 'list.';
 
 /**
  * @type {DropletBlock[]}
@@ -119,6 +126,139 @@ export const dropletBuiltinConfigBlocks = [
     type: 'value',
     params: ['__'],
     docFunc: 'mathPow'
+  },
+  {
+    func: 'Math.sqrt',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathSqrt'
+  }
+];
+
+export const dropletStringBlocks = [
+  {
+    func: 'declareAssign_str_hello_world',
+    block: 'var str = "Hello World";',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'substring',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['start', 'end'],
+    params: ['6', '11'],
+    modeOptionName: '*.substring',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'indexOf',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['searchValue'],
+    params: ['"World"'],
+    modeOptionName: '*.indexOf',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'includes',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    paletteParams: ['searchValue'],
+    params: ['"World"'],
+    modeOptionName: '*.includes',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'length',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.length',
+    tipPrefix: stringMethodPrefix,
+    type: 'property'
+  },
+  {
+    func: 'toUpperCase',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.toUpperCase',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  },
+  {
+    func: 'toLowerCase',
+    blockPrefix: stringBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.toLowerCase',
+    tipPrefix: stringMethodPrefix,
+    type: 'value'
+  }
+];
+
+export const dropletArrayBlocks = [
+  {
+    func: 'declareAssign_list_123',
+    block: 'var list = [1, 2, 3];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'declareAssign_list_abd',
+    block: 'var list = ["a", "b", "d"];',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'accessListItem',
+    block: 'list[0]',
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'listLength',
+    block: 'list.length',
+    category: 'Variables',
+    noAutocomplete: true,
+    tipPrefix: arrayMethodPrefix,
+    type: 'property'
+  },
+  {
+    func: 'join',
+    blockPrefix: arrayBlockPrefix,
+    category: 'Variables',
+    modeOptionName: '*.join',
+    tipPrefix: arrayBlockPrefix,
+    paletteParams: ['separator'],
+    params: ['"-"'],
+    type: 'value'
+  },
+  {
+    func: 'insertItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'index', 'item'],
+    params: ['list', '2', '"c"'],
+    dontMarshal: true
+  },
+  {
+    func: 'appendItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'item'],
+    params: ['list', '"f"'],
+    dontMarshal: true
+  },
+  {
+    func: 'removeItem',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['list', 'index'],
+    params: ['list', '0'],
+    dontMarshal: true
   }
 ];
 
@@ -148,6 +288,7 @@ standardConfig.blocks = [
   {func: 'subtractOperator', block: '__ - __', category: 'Math'},
   {func: 'multiplyOperator', block: '__ * __', category: 'Math'},
   {func: 'divideOperator', block: '__ / __', category: 'Math'},
+  {func: 'moduloOperator', block: '__ % __', category: 'Math'},
   {func: 'equalityOperator', block: '__ == __', category: 'Math'},
   {func: 'inequalityOperator', block: '__ != __', category: 'Math'},
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math'},
@@ -159,12 +300,10 @@ standardConfig.blocks = [
   {func: 'notOperator', block: '!__', category: 'Math'},
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
-  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
   {
     func: 'randomNumber_min_max',
     block: 'randomNumber(1, 10)',
-    category: 'Math',
-    docFunc: 'randomNumber'
+    category: 'Math'
   },
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math'},
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math'},
@@ -172,6 +311,9 @@ standardConfig.blocks = [
   {func: 'mathMin', block: 'Math.min(__)', category: 'Math'},
   {func: 'mathRandom', block: 'Math.random()', category: 'Math'},
   {func: 'mathPow', block: 'Math.pow(__, __)', category: 'Math'},
+  {func: 'mathSqrt', block: 'Math.sqrt(__)', category: 'Math'},
+  {func: 'mathIncrement', block: '__++', category: 'Math'},
+  {func: 'mathDecrement', block: '__--', category: 'Math'},
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},

@@ -470,11 +470,23 @@ nl:
         title: Estafette Programmeren
       courseB_unplugged_MRF_2019:
         title: My Robotic Friends
+      BuildingAFoundation_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.BuildingAFoundation_2018.desc'
       Conditionals_2019:
         title: Voorwaardelijke instructies
         desc: Om voorwaardelijke instructies te leren gaan leerlingen een kaartspel
           spelen en regels maken als "als ik een rode kaar trek, krijg ik een punt"
           en "als ik een zwarte kaart krijg, krijg jij een punt".
+      courseF_unplugged_powerOfWords_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programmeren op Ruitjespapier
         desc: Leerlingen schrijven een algoritme (een reeks instructies) waarbij ze
@@ -492,6 +504,15 @@ nl:
           verscheidenheid van binaire opties. In deze les gaan we nog een stapje verder
           door te tonen hoe een computer nog meer complexe informatie (zoals afbeeldingen
           en kleuren) binair kan opslaan.
+      SongwritingParameters_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.SongwritingParameters_2018.desc'
+      Internet_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.Internet_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'vertaling ontbreekt: nl-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'vertaling ontbreekt: nl-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Rondjes lopen
         desc: Deze les behandelt het programmeerconcept van lussen (herhaalde instructies)

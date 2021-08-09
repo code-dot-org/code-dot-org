@@ -69,6 +69,7 @@ de:
   previous_page: Vorherige Seite
   next_page: Nächste Seite
   next_resource: Nächste Ressource
+  done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: Abbrechen
   okay: Okay
   or: oder
@@ -153,7 +154,7 @@ de:
       Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     overview_markdown: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte
       zu verfolgen und Ihre Klasse zu verwalten. [Die verschiedenen Stufen und Rätsel](/)
-      können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und
+      können Sie auch ohne Benutzerkennung ansehen. Zum Speichern Ihrer Projekte und
       Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     hoc_already_signed_up_heading: Starte ohne dich einzuloggen
     hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code'
@@ -196,9 +197,19 @@ de:
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
     student_consent: Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten
       habe, die Dienste von Code.org zu nutzen.
-    agree_us_website: Ich akzeptiere die Nutzung einer Website mit Sitz in den USA.
-    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt
-      werden und dort gespeichert und verarbeitet werden.
+    agree_us_data_transfer_student: "**Ich stimme zu, dass Code.org Daten (einschließlich
+      personenbezogener Daten) über meine Nutzung dieser Website in die Vereinigten
+      Staaten** zum Zwecke des Hostings und der Verarbeitung solcher Daten übertragen
+      darf."
+    agree_us_data_transfer_teacher: "**Ich stimme zu, dass Code.org Daten (einschließlich
+      personenbezogener Daten) über meine Nutzung (und der Nutzung dieser Website
+      durch meine Studierenden) in die Vereinigten Staaten** zum Zwecke des Hostings
+      und der Verarbeitung solcher Daten übertragen darf."
+    data_collection_us: Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige
+      Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen
+      in meinem Land abweichen können.
+    visit_privacy: Lesen Sie die [Datenschutzerklärung](%{privacy_url}) von Code.org,
+      um mehr zu erfahren.
     student_terms_markdown: E-Mail-Adressen werden nicht in einer Form gespeichert,
       die es uns ermöglicht, mit den Studenten in Kontakt zu treten. Schüler werden
       niemals E-Mails von Code.org erhalten, außer zur Wiederherstellung des Passworts.
@@ -207,8 +218,8 @@ de:
       mit deiner Anmeldung fortzufahren.
     user_type_button: Kontoart aktualisieren
     user_type_label: Kontentyp
-    user_type_teacher: Lehrer
     user_type_student: Schüler
+    user_type_teacher: Lehrer
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
     error: Ein Fehler ist aufgetreten.
@@ -224,7 +235,7 @@ de:
       über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den
       Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten
       Sie unsere Datenschutzerklärung)](%{privacy_policy_url})
-    parent_account_email_label: E-Mail an Eltern/Erziehungsberechtigte
+    parent_account_email_label: Eltern/Vormund E-Mail
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -319,6 +330,7 @@ de:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Du hast dich für %{section_name} registriert.
+    already_exists: Sie sind der Lerngruppe %{section_name} schon beigetreten.
     error:
       signed_in: Bitte melde dich ab, bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
@@ -513,7 +525,8 @@ de:
     current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
       zu bestätigen)"
     delete: Account löschen
-    delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
+    delete_text: Wenn Sie Ihren Account löschen, gehen alle Informationen und Fortschritte
+      verloren, die mit diesem Account verbunden sind.
     delete_text_teacher_managed_note: Du hast keine Berechtigung, dieses Konto zu
       löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich
       aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst.
@@ -522,9 +535,9 @@ de:
     delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
     deleted_user: Gelöschter Benutzer
     no_password_because_oauth: Kein Passwort, da du dich als Drittanbieter einloggst.
-    no_password_because_sponsored: Wende dich an deinen Lehrer um dich um dein Passwort
-      zu kümmern.
-    create_personal_login: Erstelle ein persönliches Login
+    no_password_because_sponsored: Wende dich an deinen Lehrer um dein Passwort zu
+      verwalten.
+    create_personal_login: Erstelle ein persönliches Login Kennwort
     create_personal_login_under_13_info: Wenn du dein Code.org-Konto auch nach dem
       Ende des Schuljahres weiter nutzen möchtest, bitte deinen Elternteil/Vormund,
       dir zu helfen, dein persönliches Login zu erstellen.
@@ -573,6 +586,7 @@ de:
       Laufenden zu bleiben. Sie können diese E-Mail-Adresse auch zur Wiederherstellung
       von Passwörtern verwenden.
     parent_guardian_email_label: Eltern / Erziehungsberechtigten E-Mail-Adresse
+    remove_parent_email_label: Entfernen
     none: Keiner
     only_one_parent_email_supported_warning: 'Hinweis: Zur Zeit können wir nur eine
       E-Mail-Adresse eines Elternteils/Erziehungsberechtigten pro SchülerInnen-Konto
@@ -669,21 +683,21 @@ de:
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben
       geholfen, diese Materialien zu erstellen.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm.
+      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle
       Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
       Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die
-      fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.
-    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm.
-      Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle
-      Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
-      Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
-      %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
-      Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
+      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />The
+      Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Alle
+      Rechte vorbehalten. Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte
+      vorbehalten. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte
+      vorbehalten. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Alle Rechte vorbehalten. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Alle Rechte vorbehalten. The Amazing World of Gumball is
+      trademark and &copy; 2015 Cartoon Network.
     code_from_html: Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der
       GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
@@ -1024,6 +1038,9 @@ de:
       zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit
       akzeptieren.
     review_terms: Aktualisierte Bedingungen ansehen
+  donor_interstitial:
+    local_supporters: Lokale Unterstützer
+    global_supporters: Globale Unterstützer
   school_info_interstitial:
     title: Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns,
       unsere Fortschritte zu verfolgen!
@@ -1256,7 +1273,7 @@ de:
       school_city: Stadt der Schule
       school_country: Land der Schule
       colombian_school_city: Stadt der Schule
-      colombian_school_name: Schulname
+      colombian_chilean_school_name: Schulname
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
       resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?
@@ -1289,10 +1306,12 @@ de:
       school_country:
         canada: Kanada
         chile: Chile
+        colombia: Kolumbien
         israel: Israel
         malaysia: Malaysien
         mexico: Mexiko
         thailand: Thailand
+        uzbekistan: Usbekistan
       ages:
         ages_under_6: "< 6 Jahre alt"
         ages_7_8: 7-8 Jahre alt
@@ -1337,6 +1356,7 @@ de:
         csf_express: CS Grundlagen (Pre-Express oder Express)
         csd: CS Entdeckungen
         csp: Informatik Grundprinzipien
+        not_applicable: Nicht anwendbar
       email_opt_in:
         opt_in_yes: Ja
         opt_in_no: Nein
@@ -1355,6 +1375,7 @@ de:
         Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen.
         Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url})
         eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!
+      facilitator_not_applicable: Nicht anwendbar
     logged_out:
       heading: Vielen Dank für Ihr Interesse am Professional Learning Program!
       body: Um zu beginnen, müssen Sie zuerst in Ihr Code.org-Konto eingeloggt sein.
@@ -1379,15 +1400,6 @@ de:
       stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.
     more_information: Siehe Datenschutzerklärung von Code.org.
     accept: Ich stimme zu
-  gdpr_dialog:
-    heading: Sind Sie damit einverstanden, eine Website mit Sitz in den Vereinigten
-      Staaten zu nutzen?
-    message: Daten aus deiner Nutzung dieser Site können in die USA geschickt werden
-      und dort gespeichert und verarbeitet werden.
-    link_intro: Für Details siehe unsere
-    privacy_policy: Datenschutzerklärung
-    logout: Abmelden
-    true: Ja
   page_not_found_title: Seite nicht gefunden
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
@@ -1395,6 +1407,7 @@ de:
     Sie zurück zu unserer Webseite.
   page_not_found_button: Zurück zur Homepage
   copy: Kopieren
+  confirm: Bestätigen
   maker:
     google_oauth:
       login_with_google: Melde dich in der Maker App mit Google an
@@ -1413,6 +1426,6 @@ de:
       Sie Ihre E-Mail-Adresse mit diesem Konto, um über die Fortschritte und Projekte
       Ihres Kindes auf dem Laufenden zu bleiben!"
     link_your_email: E-Mail-Adresse Verlinken
-    not_now: 'Nicht jetzt
-
-'
+    not_now: Nicht jetzt
+  behaviors:
+    this_sprite: dieser Sprite

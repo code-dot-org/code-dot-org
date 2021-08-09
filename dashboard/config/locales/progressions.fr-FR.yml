@@ -5,61 +5,243 @@ fr:
       '"If/Else" with the Bee': '"Si/Sinon" avec l''abeille'
       Adding Images: Ajouter des images
       Adding Screens: Ajouter des écrans
+      Alien Defender: Défenseur alien
+      Analog Sensors: Capteurs analogiques
       Animate Your Scene: Animez votre scène
       'App Project: Screen Design': 'Projet d’appli : Conception d’écran'
+      Arrays: Tableaux
       Artist Project: Projet d’Artiste
       'Artist: Variables': 'Artiste: Variables'
+      Back and Forth: Va et viens
+      Bass, Mid, and Treble: Grave, médium et aigü
       Binary Numbers: Nombres binaires
       Board Events: Évènements en provenance du circuit
       Board Input and Output: Entrée et sortie du plateau
       Boolean Comparison: comparaison booléenne
+      Booleans and Comparison Operators: Booléens et opérateurs de comparaison
       Build a Screen: Construisez un écran
       Building an App: Fabriquer une application
+      'Bunny ': 'Lapin
+
+'
+      Bunny Jumper: Saut de lapin
       Button Circuits: Circuits de bouton
+      Buttons and Switch: Boutons et interrupteur
       CS Discoveries Post-Course Survey: CS Discoveries Enquête Post-Cours
+      CSS Classes: Les classes CSS
+      CSS Text Properties: Propriétés texte CSS
+      CSS and Style Sheets: CSS et feuilles de style
       Challenge: Défi
+      'Challenge: Add More Inputs': 'Défi : Ajoute plus d’entrées'
+      'Challenge: Checking for Multiple Conditions': 'Défi : Vérifier des conditions
+        multiples'
+      'Challenge: Draw an Image': 'Défi : Dessine une image'
+      'Challenge: Extend Your Scene': 'Défie : Élargis ta scène'
+      'Challenge: Making Sense of Sensors': 'Défi : Donner du sens aux capteurs'
+      'Challenge: Updating Variables': 'Défi : Mettre des variables à jour'
       Challenges: Défis
+      Changing Screens: Changer d’écran
+      Changing Sensor Scale: Modifier l’échelle des capteurs
+      'Circuit Playground: Buzzer': 'Circuit Playground : Buzzer'
+      'Circuit Playground: Color LEDs': 'Circuit Playground : LEDs couleur'
+      'Circuit Playground: Introduction': 'Circuit Playground : LEDs'
+      'Circuit Playground: LEDs': 'Circuit Playground : LEDs'
+      Circuits and Logic: Circuits et logique
+      Collision Detection: Détection de collision
+      Collision Detection Review: Révision de la détection de collision
       Collisions: Collisions
       Combining Representations: Combiner des Représentations
+      'Conditionals: If Statements': " Instructions « si »"
+      Course E Artist Project: Cours E Projet Artiste
+      Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
+
+'
+      Course F Artist Project: Cours E Projet Artistique
+      Course F Sprite Lab Project: 'Cours F Projet d''Artiste
+
+'
       Create Your Own Animation: Créez votre propre animation
       Create a Story: Créez une histoire
       Create your project: Créez votre projet
+      Creating Sprites: Créer des sprites
+      Creative Commons Search: Recherche sur la licence Creative Commons
+      Dance Crews: Équipes de danse
       Debugging: Le Débogage
+      Debugging with Watchers: Débogage avec les observateurs
+      Demo - Bug Grab: Démo - Attrape-bugs
       Design Mode: Mode création
+      Design Mode Elements: Éléments en mode création
+      Designing Screens with Code: Dessiner des écrans en codant
+      Designing for Accessibility: Concevoir pour l'Accessibilité
+      Dogger Example: 'Exemple de Dogger
+
+'
       Drawing: Dessiner
+      Drawing Shapes: Dessiner des formes
+      Editing Images: Modifier les images
+      Emotion Machine Example: Exemple de machine d’émotion
+      End of Course Projects: Projets de fin de cours
+      Event Types: Types d'évènement
       Events: Événements
+      Exploration: Exploration
+      'Exploration: Adding Style': 'Exploration : Ajout de style'
+      'Exploration: For Loops': " Boucles « Pour »"
+      'Exploration: Sample Apps': " Exemples d'Aplications"
+      Explore HTML: Explorer le HTML
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
       Finishing Touches: Terminer les touches
       Follow the Mouse: Suivre la souris
       For Loops: Boucles « Pour »
+      Formatting HTML: Mise en forme HTML
       Free Play: Activité libre
       Functions: fonctions
+      Functions Review: Révision des fonctions
       Functions with Parameters: Fonctions avec Paramètres
+      Geometric Sun: Soleil géométrique
+      Get In Formation: Entrons en formation
+      Getters and Setters: Accesseurs en lecture et en écriture
       Getting Properties: Lire les propriétés
+      HTML Tags: Balises HTML
+      Hardware and Software: Matériel et logiciels
       Headings: Rubriques
+      Headings in HTML: Titres en HTML
       How to Make a Sprite: Comment Créer un Lutin
+      Hyperlinks: Liens hypertexte
+      If Statements: Instructions « si »
+      If-Else Statements: Instructions « si-alors »
+      Images in HTML: Les Images dans le HTML
+      Importing Screens: Importation d’écrans
+      Improve Your Game: Améliore ton jeu
+      Inspiration!: Inspiration !
+      Interactive Card: Carte interactive
+      Intro to Design Mode: Introduction au mode création
       Introducing Sprite Lab: Introduction au Labo des Lutins
       Introduction to Arrays: Introduction aux Tableaux
+      Introduction to Game Lab: Introduction au labo de jeux
       Keeping Data Secret: Garder les Données Secrètes
       Keyboard Input: Entrée Au Clavier
+      Layout Properties: Propriétés de la mise en page
       Lesson Extras: Les Extras de la Leçon
+      Lesson Overview: Aperçu de la leçon
       Linking Pages: Relier des Pages
       Linking Screens: Relier les Écrans
       Lists: Listes
+      Lists in HTML: Listes en HTML
+      Make a Prediction: Faites une prévision
+      Make it Your Own: Fais-le tien
+      Making Music: Créer de la Musique
       Measures: Mesures
+      'Mini-Project: About Me': À propos de Moi avec le Labo des Lutins
+      'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
+      'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
+      Modifying Arrays: Modifier et créer des tableaux
+      Modifying and Creating Arrays: Modifier et créer des tableaux
+      More Buttons: Plus de boutons
+      Multi-Screen Apps: Applications Multi-Écrans
+      My Online Neighborhood: Mon Quartier en Ligne
+      Naming Variables: Nommer les variables
+      Overview: Aperçu
       Pair Programming: Programmation en Binôme
+      Picturing Data: Représenter les Données
+      Plane Jumper: Saut d’avion
+      Planning: Planifier
+      Polling Events: Attendre les évènements
       Programming with Rey and BB-8: Programmer avec Rey et BB-8
       Project: Projet
+      Project - Finishing Touches: Projet - Finitions
       Properties: Propriétés
+      Quarter Notes: Noires
+      RGB Widget: Widget RVB
+      Random Numbers: Nombres aléatoires
       Reflection: Réflexion
       Representing Images: Représenter des Images
-      Sprite Lab Project: Projet Laboratoire Sprite
+      Responding to User Input: Répondre à l’entrée de l’utilisateur
+      Review: Vérifier
+      Revise Artist Project: 'Réviser le Projet d''Artiste
+
+'
+      Revise Sprite Lab Project: 'Réviser le Projet du Labo des Lutins
+
+'
+      Robot Doodle: 'Gribouillis de Robot
+
+'
+      Sample App: Appli d’exemple
+      Sample Game: Jeu d’exemple
+      Sample Platform Jumper Game: Jeu de plates-formes d’exemple
+      Sample Program: Programme d’exemple
+      Sensor Experiment: Expérience des capteurs
+      Shapes and Parameters: Formes et paramètres
+      Skill Building: Labo des Lutins
+      Speed it Up, Slow it Down: Accélére la, ralenti la
+      Sprite Interactions: Interactions de sprite
+      Sprite Interactions Review: Révision des interactions de sprite
+      Sprite Lab Example Project: 'Exemple de Projet du Labo des Lutins
+
+'
+      Sprite Lab Project: Projet Labo du Lutin
+      Sprite Properties: Propriétés du sprite
+      Sprite Scenes: Scènes de sprites
+      Sprite Velocity: Vélocité des sprites
+      Stopping the Outbreak with Masks: Stopper l'épidémie avec des masques
+      Text Compression: Compression de texte
+      The Accelerometer: L’accéléromètre
+      The Animation Tab: L’onglet Animation
+      The Draw Loop: La Boucle Dessiner
       The Harvester: La Moissonneuse
+      Tour of Design Mode: Visite du mode création
+      Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
+      Variables: variables
       Velocity: Vitesse
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
+      Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
+      'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles'
+      'Video: Booleans': 'Vidéo : Boléens'
+      'Video: CS Matters': 'Vidéo : Questions d’informatique'
+      'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
+      'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
+      'Video: Conditionals: If Statements': "  Instructions « si »"
+      'Video: Debugging with Scrat ': " Déboguer avec Scrat "
+      'Video: Drawing in Game Lab - Part 1': 'Vidéo : Dessiner dans le labo des jeux
+        - Partie 1'
+      'Video: Drawing in Game Lab - Part 2': 'Vidéo : Dessiner dans le labo des jeux
+        - Partie 2'
+      'Video: Events': " Événements"
+      'Video: Harvesting with Conditionals': " Récolter avec les Conditions"
+      'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles'
+      'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
+        1'
+      'Video: Intro to Web Lab - Part 2': 'Vidéo : Introduction au labo du web - Partie
+        2'
+      'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
+      'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
+      'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
+      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
+      'Video: Loops in Artist': " Les Boucles dans Artiste"
+      'Video: Measures': " Mesures"
+      'Video: Minecraft - Congratulations': " Minecraft - Félicitations"
+      'Video: Pair Programming': " Programmation en Binôme"
+      'Video: Pair Programming ': " Programmation en Binôme "
+      'Video: Problem Solving Process': Processus de Résolution De Problème
+      'Video: Programming with Rey and BB-8': " Programmer avec Rey et BB-8"
+      'Video: Properties': " Propriétés"
+      'Video: Sprite Movement': 'Vidéo : Animer un sprite'
+      'Video: Sprites in Action': " Les Lutins en Action"
+      'Video: Star Wars Project': " Projet Star Wars"
+      'Video: The Animation Tab': 'Vidéo : L’onglet Animation'
+      'Video: The Harvester': " La Moissonneuse"
+      'Video: Using the Repeat Block': " Utiliser le Bloc Répéter"
+      'Video: Variables in Artist': " Les Variables dans Artiste"
+      'Video: Velocity': 'Vidéo : la vitesse'
+      'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur
+        ?'
+      'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
+      Warm Up: Warm-up (Séance d’échauffement)
+      Where'd They Go?: Où iraient-ils ?
       While Loops with the Farmer: Les Boucles Tant Que avec la Fermière
       Wrap-up: Résumé et ouverture
+      getProperty: getProperty

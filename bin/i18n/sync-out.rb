@@ -3,7 +3,7 @@
 # Distribute downloaded translations from i18n/locales
 # back to blockly-core, apps, pegasus, and dashboard.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/languages'
 
 require 'cdo/crowdin/utils'
@@ -15,23 +15,29 @@ require 'parallel'
 require 'tempfile'
 require 'yaml'
 
+require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative 'hoc_sync_utils'
-require_relative '../../tools/scripts/ManifestBuilder'
+require_relative '../animation_assets/manifest_builder'
 
 def sync_out(upload_manifests=false)
+  puts "Sync out starting"
   rename_from_crowdin_name_to_locale
   restore_redacted_files
   distribute_translations(upload_manifests)
   copy_untranslated_apps
   rebuild_blockly_js_files
   restore_markdown_headers
+  Services::I18n::CurriculumSyncUtils.sync_out
   HocSyncUtils.sync_out
   puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  puts "Sync out completed successfully"
+rescue => e
+  puts "Sync out failed from the error: #{e}"
+  raise e
 end
 
 # Return true iff the specified file in the specified locale had changes
@@ -85,7 +91,9 @@ def rename_from_crowdin_name_to_locale
   # Now, any remaining directories named after the language name (rather than
   # the four-letter language code) represent languages downloaded from crowdin
   # that aren't in our system. Remove them.
-  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
+  # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
+  # character case on file systems which are case insensitive by default, such as OSX.
+  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
 end
 
 def find_malformed_links_images(locale, file_path)
@@ -132,17 +140,32 @@ def restore_redacted_files
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
-      if original_path.include? "course_content"
+      if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+        # Blocks are text, not markdown
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+      elsif original_path.starts_with? "i18n/locales/original/course_content"
+        # Course content should be merged with existing content, so existing
+        # data doesn't get lost
         restored_data = RedactRestoreUtils.restore_file(original_path, translated_path, ['blockly'])
         translated_data = JSON.parse(File.read(translated_path))
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
-      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
+        # Everything else is differentiated only by the plugins used
+        plugins = []
+        if [
+          'i18n/locales/original/dashboard/scripts.yml',
+          'i18n/locales/original/dashboard/courses.yml'
+        ].include? original_path
+          plugins << 'resourceLink'
+          plugins << 'vocabularyDefinition'
+        elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
+          plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+        end
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
       end
+
       find_malformed_links_images(locale, translated_path)
     end
     I18nScriptUtils.upload_malformed_restorations(locale)
@@ -212,6 +235,14 @@ end
 def serialize_i18n_strings(level, strings)
   result = Hash.new
 
+  if strings.key? "sublevels"
+    sublevel_content = strings.delete("sublevels")
+    sublevel_content.each do |sublevel_name, sublevel_strings|
+      sublevel = Level.find_by_name sublevel_name
+      result.deep_merge! serialize_i18n_strings(sublevel, sublevel_strings)
+    end
+  end
+
   if strings.key? "contained levels"
     contained_strings = strings.delete("contained levels")
     unless contained_strings.blank?
@@ -269,7 +300,9 @@ def distribute_course_content(locale)
     extension = type == "dsls" ? "yml" : "json"
     type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
-    existing_data = parse_file(type_file).dig(locale, "data", type) || {}
+    existing_data = File.exist?(type_file) ?
+      parse_file(type_file).dig(locale, "data", type) || {} :
+      {}
 
     type_data = Hash.new
     type_data[locale] = Hash.new
@@ -412,8 +445,18 @@ def restore_markdown_headers
       # that extension unless we check both with and without.
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
-    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    begin
+      source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    rescue Exception => err
+      puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
+      raise err
+    end
+    begin
+      header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    rescue Exception => err
+      puts "Error parsing yaml header path=#{path}"
+      raise err
+    end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)
     I18nScriptUtils.write_markdown_with_header(content, restored_header, path)

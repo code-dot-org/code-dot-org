@@ -8,14 +8,6 @@ import React from 'react';
 import $ from 'jquery';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
-const styles = {
-  contents: {
-    height: '100%',
-    width: '100%',
-    cursor: 'pointer'
-  }
-};
-
 export default class SessionAttendanceRow extends React.Component {
   static propTypes = {
     workshopId: PropTypes.number.isRequired,
@@ -185,3 +177,11 @@ export default class SessionAttendanceRow extends React.Component {
     );
   }
 }
+
+const styles = {
+  contents: {
+    height: '100%',
+    width: '100%',
+    cursor: 'pointer'
+  }
+};

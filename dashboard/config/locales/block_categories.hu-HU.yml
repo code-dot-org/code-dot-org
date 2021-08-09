@@ -16,16 +16,19 @@ hu:
       Functions: funkciók
       'Functions ': 'Függvények '
       Game/Score: Játék/pontszám
-      Games/Score: Játék/pontszám
+      Games/Score: Játékok/pontszám
       Groups: Csoportok
+      Input: Bemenet
+      Location: Helyszín
       Locations: Helyek
       Logic: Logika
       Loops: hurkok
       Math: Matematika
       Numbers: Számok
       Properties: Tulajdonságok
-      Sprites: Sprite-ok
+      Sprites: manók
       Text: szöveg
       Variables: változók
       'Variables ': 'Változók '
+      'Variables  ': 'Változók  '
       World: Világ

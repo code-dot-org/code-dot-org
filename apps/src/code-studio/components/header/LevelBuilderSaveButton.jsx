@@ -27,7 +27,8 @@ class LevelBuilderSaveButton extends React.Component {
       data: JSON.stringify(this.props.getChanges()),
       dataType: 'json',
       error: this.props.setProjectUpdatedError,
-      success: this.props.setProjectUpdatedSaved
+      success: this.props.setProjectUpdatedSaved,
+      contentType: 'application/json'
     });
   };
 

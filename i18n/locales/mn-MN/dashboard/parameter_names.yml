@@ -1,0 +1,15 @@
+mn:
+  data:
+    parameter_names:
+      actor: жүжигчин
+      color: өнгө
+      counter: тоологч
+      height: өндөр
+      honey: зөгийн бал
+      left: зүүн
+      length: урт
+      min: хамгийн бага
+      points: цэгүүд
+      size: хэмжээ
+      speed: хурд
+      width: өргөн

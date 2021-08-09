@@ -53,93 +53,6 @@ function select(event) {
   event.target.select();
 }
 
-const styles = {
-  modal: {
-    width: 720,
-    marginLeft: -360
-  },
-  abuseStyle: {
-    border: '1px solid',
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 20
-  },
-  abuseTextStyle: {
-    color: '#b94a48',
-    fontSize: 14
-  },
-  shareWarning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold'
-  },
-  button: {
-    backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
-  },
-  buttonDisabled: {
-    backgroundColor: color.gray,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
-  },
-  thumbnail: {
-    float: 'left',
-    marginRight: 10,
-    width: 125,
-    height: 125,
-    overflow: 'hidden',
-    borderRadius: 2,
-    border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.white,
-    position: 'relative'
-  },
-  thumbnailImg: {
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    width: '100%',
-    height: 'auto',
-    transform: 'translate(-50%,-50%)',
-    msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)'
-  },
-  sendToPhoneContainer: {
-    width: '100%',
-    marginTop: 15
-  },
-  sendToPhoneLeft: {
-    float: 'left',
-    width: '70%',
-    paddingRight: 20,
-    boxSizing: 'border-box'
-  },
-  sendToPhoneRight: {
-    float: 'right',
-    width: '30%'
-  }
-};
-
 function checkImageReachability(imageUrl, callback) {
   const img = new Image();
   img.onabort = () => callback(false);
@@ -280,23 +193,16 @@ class ShareAllowedDialog extends React.Component {
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
       encodeURIComponent(this.props.shareUrl);
-    const twitterShareUrlDefault =
-      'https://twitter.com/intent/tweet?url=' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;text=Check%20out%20what%20I%20made%20@codeorg' +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
-    // Check out the dance I made featuring @artist on @codeorg! URL #HourOfCode
-    const twitterShareUrlDance =
-      'https://twitter.com/intent/tweet?url=' +
-      '&amp;text=Check%20out%20the%20dance%20I%20made%20featuring%20@' +
-      artistTwitterHandle +
-      '%20on%20@codeorg!%20' +
-      encodeURIComponent(this.props.shareUrl) +
-      '&amp;hashtags=HourOfCode&amp;related=codeorg';
 
-    const twitterShareUrl = artistTwitterHandle
-      ? twitterShareUrlDance
-      : twitterShareUrlDefault;
+    const tweetText = artistTwitterHandle
+      ? `Check out the dance I made featuring @${artistTwitterHandle} on @codeorg!`
+      : 'Check out what I made on @codeorg!';
+    const twitterShareUrl =
+      'https://twitter.com/intent/tweet?text=' +
+      encodeURIComponent(tweetText) +
+      '&url=' +
+      encodeURIComponent(this.props.shareUrl) +
+      '&hashtags=HourOfCode&related=codeorg';
 
     const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
@@ -305,14 +211,17 @@ class ShareAllowedDialog extends React.Component {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
         iframeHeight: applabConstants.APP_HEIGHT + 140,
-        iframeWidth: applabConstants.APP_WIDTH + 32
+        // Extra 32 pixels added to account for phone frame
+        // Extra 40 pixels added to account for left and right padding divs (20 px each side)
+        iframeWidth: applabConstants.APP_WIDTH + 32 + 40
       };
     } else if (this.props.appType === 'gamelab') {
       embedOptions = {
         // If you change this width and height, make sure to update the
         // #visualizationColumn.wireframeShare css
         iframeHeight: p5labConstants.APP_HEIGHT + 357,
-        iframeWidth: p5labConstants.APP_WIDTH + 32
+        // Extra 40 pixels added to account for left and right padding divs (20 px each side)
+        iframeWidth: p5labConstants.APP_WIDTH + 40
       };
     }
     const {canPrint, canPublish, isPublished} = this.props;
@@ -376,7 +285,7 @@ class ShareAllowedDialog extends React.Component {
                       type="text"
                       id="sharing-input"
                       onClick={select}
-                      readOnly="true"
+                      readOnly
                       value={this.props.shareUrl}
                       style={{cursor: 'copy', width: 500}}
                     />
@@ -442,6 +351,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={facebookShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'facebook'
@@ -454,6 +364,7 @@ class ShareAllowedDialog extends React.Component {
                         <a
                           href={twitterShareUrl}
                           target="_blank"
+                          rel="noopener noreferrer"
                           onClick={wrapShareClick(
                             this.props.onClickPopup.bind(this),
                             'twitter'
@@ -523,6 +434,93 @@ class ShareAllowedDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  modal: {
+    width: 720,
+    marginLeft: -360
+  },
+  abuseStyle: {
+    border: '1px solid',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 20
+  },
+  abuseTextStyle: {
+    color: '#b94a48',
+    fontSize: 14
+  },
+  shareWarning: {
+    color: color.red,
+    fontSize: 13,
+    fontWeight: 'bold'
+  },
+  button: {
+    backgroundColor: color.purple,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top'
+  },
+  buttonDisabled: {
+    backgroundColor: color.gray,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top'
+  },
+  thumbnail: {
+    float: 'left',
+    marginRight: 10,
+    width: 125,
+    height: 125,
+    overflow: 'hidden',
+    borderRadius: 2,
+    border: '1px solid rgb(187,187,187)',
+    backgroundColor: color.white,
+    position: 'relative'
+  },
+  thumbnailImg: {
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    width: '100%',
+    height: 'auto',
+    transform: 'translate(-50%,-50%)',
+    msTransform: 'translate(-50%,-50%)',
+    WebkitTransform: 'translate(-50%,-50%)'
+  },
+  sendToPhoneContainer: {
+    width: '100%',
+    marginTop: 15
+  },
+  sendToPhoneLeft: {
+    float: 'left',
+    width: '70%',
+    paddingRight: 20,
+    boxSizing: 'border-box'
+  },
+  sendToPhoneRight: {
+    float: 'right',
+    width: '30%'
+  }
+};
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 

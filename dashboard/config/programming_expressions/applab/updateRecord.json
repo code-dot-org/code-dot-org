@@ -1,0 +1,18 @@
+{
+  "func": "updateRecord",
+  "category": "Data",
+  "paletteParams": [
+    "table",
+    "record",
+    "callback"
+  ],
+  "params": [
+    "\"mytable\"",
+    "{id:1, name:'Bob'}",
+    "function(record, success) {\n  \n}"
+  ],
+  "allowFunctionDrop": {
+    "2": true,
+    "3": true
+  }
+}

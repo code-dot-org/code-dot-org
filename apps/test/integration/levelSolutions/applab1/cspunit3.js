@@ -5,7 +5,7 @@ import {TestResults} from '@cdo/apps/constants';
 
 /**
  * This is based off of the currently version of U3L2_TurtleSquare_right.level,
- * which lives at /s/cspunit3/stage/2/puzzle/3
+ * which lives at /s/cspunit3/lessons/2/levels/3
  */
 var levelDefinition = {
   freePlay: true,
@@ -53,7 +53,7 @@ var levelDefinition = {
   longInstructions:
     '<img src="https://images.code.org/ad48e7224312a6c41f4fc5727af53cc0-image-1436287265071.png" style="float:right"> **Warm up 2:** Draw a 1 x 1 square to the front and right of the turtle as efficiently as possible.  The program should stop with turtle in its original position, facing its original direction.\r\n\r\nWhen you\'re done click the Finish button to move onto the next problem.\r\n\r\n',
   puzzle_number: 3,
-  stage_total: 7,
+  lesson_total: 7,
   lastAttempt: '',
   levelHtml:
     '<div xmlns="http://www.w3.org/1999/xhtml" id="divApplab" class="appModern" tabindex="1" style="width: 200px; height: 200px;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 200px; width: 200px; left: 0px; top: 0px; position: absolute; z-index: 0;"></div></div>',

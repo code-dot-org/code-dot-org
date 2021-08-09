@@ -125,6 +125,7 @@ mi:
     additional_information: Me whiwhi mātou ki ētahi mōhiohio anō kia āhei tonu tō
       waitohu mai.
     user_type_label: Momo Pūkete
+    user_type_student: Waitohu Ākonga
     field_is_required: me mātua
     accept_terms: Me mātua whakaae koe ki te waihanga pūkete
     email_preference_yes: Āe
@@ -241,6 +242,7 @@ mi:
       eval: Eval
       flappy: Flappy
       frozen: Frozen
+      iceage: Ao Kōpaka
       infinity: Mutunga Kore
       minecraft_adventurer: Kiri Māia Mahimaina
       minecraft_designer: Mahimaina
@@ -274,6 +276,7 @@ mi:
     student_teacher_disassociated: Kua tangohia a %{teacher_name} hei pouako mōu.
     panel:
       answer_viewer: Pae Pouako
+      student: Waitohu Ākonga
       viewing_solution: Tirotiro Whakautu
       try_it_yourself: Māu anō e whakamātau
       example: Tauira Whakautu
@@ -370,6 +373,8 @@ mi:
     male: Tāne
     female: Wahine
     none: Kāore i te hiahia kia uruparetia
+  user_type:
+    student: Waitohu Ākonga
   footer:
     thank_you: Ka whakamihia o mātou <a href="https://code.org/about/donors">kaituku</a>,
       <a href="https://code.org/about/partners">hoa mahi</a>, tā mātou <a href="https://code.org/about/team">
@@ -549,6 +554,7 @@ mi:
     unplugged_conditionals:
       title: Ngā Here
     widgets:
+      audience: Pakeke 14+
       cta: Ako me pēhea
   landing:
     report_bug: Pūrongotia tētahi Iro
@@ -869,6 +875,4 @@ mi:
       email_opt_in:
         opt_in_yes: Āe
         opt_in_no: Kāore
-  gdpr_dialog:
-    true: Āe
   copy: Tārua

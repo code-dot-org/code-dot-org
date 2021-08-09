@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: Maktabning to‘liq ishtiroki
 ---
 
 {{ signup_button }}

@@ -97,6 +97,14 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': देखिने
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': देखिने
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -139,6 +147,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -148,6 +157,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_getTime:
         options:
           UNIT:
@@ -182,6 +192,8 @@ ne:
         text: कुनै एक  रङ
       gamelab_randomColor:
         text: कुनै एक  रङ
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -191,10 +203,27 @@ ne:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इन्द्रणी
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पनि मुनि
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': चिसो
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -300,6 +329,11 @@ ne:
             '"a"': क
             '"s"': द
             '"d"': 'घ '
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': हो
+            '"no"': होइन
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -307,12 +341,20 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': इन्द्रणी
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
+      Vector_where:
+        options:
+          PROPERTY:
+            "'shapeColor'": color
       binary_move:
         options:
           DIR:

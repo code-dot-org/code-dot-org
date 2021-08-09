@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+
 import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
@@ -18,8 +19,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
     handleClose: PropTypes.func.isRequired,
 
     // provided by redux
-    removeLevel: PropTypes.func.isRequired,
-    levelKeyList: PropTypes.object.isRequired
+    removeLevel: PropTypes.func.isRequired
   };
 
   handleConfirm = () => {
@@ -38,8 +38,13 @@ export class UnconnectedRemoveLevelDialog extends Component {
     const {activitySection, handleClose, levelPosToRemove} = this.props;
     let bodyText;
     if (levelPosToRemove) {
-      const levelId = activitySection.levels[levelPosToRemove - 1].activeId;
-      const levelName = this.props.levelKeyList[levelId];
+      const scriptLevel = activitySection.scriptLevels[levelPosToRemove - 1];
+      const levelName =
+        scriptLevel.levels.length > 1
+          ? scriptLevel.levels.filter(level => {
+              return level.id === scriptLevel.activeId;
+            })[0].name
+          : scriptLevel.levels[0].name;
       bodyText = `Are you sure you want to remove the level named "${levelName}" from the script?`;
     }
     return (
@@ -58,9 +63,7 @@ export class UnconnectedRemoveLevelDialog extends Component {
 }
 
 const RemoveLevelDialog = connect(
-  state => ({
-    levelKeyList: state.levelKeyList
-  }),
+  state => ({}),
   {
     removeLevel
   }

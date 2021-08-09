@@ -18,6 +18,7 @@ eu:
       Game/Score: Jokoa/Puntuak
       Games/Score: Jokoak/Puntuak
       Groups: Taldeak
+      Location: Kokalekua
       Locations: Kokalekuak
       Logic: Logika
       Loops: Itzuliak
@@ -26,4 +27,5 @@ eu:
       Text: Testua
       Variables: Aldagaiak
       'Variables ': 'Aldagaiak '
+      'Variables  ': 'Aldagaiak  '
       World: Mundua

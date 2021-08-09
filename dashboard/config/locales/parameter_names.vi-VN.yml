@@ -1,0 +1,18 @@
+---
+vi:
+  data:
+    parameter_names:
+      actor: nhân vật
+      color: màu sắc
+      counter: biến đếm
+      height: chiều cao
+      honey: mật ong
+      left: trái
+      length: chiều dài
+      min: nhỏ nhất
+      points: điểm
+      radius: bán kính
+      sides: các cạnh
+      size: kích cỡ
+      speed: tốc độ
+      width: chiều rộng

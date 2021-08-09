@@ -95,7 +95,7 @@ cat <<JSON > $FIRST_BOOT
       "revision": "<%=commit%>",
     <% end -%>
     "branch": "${Branch}",
-    "sync": true
+    "sync": <%=!daemon%>
   },
   "cdo-secrets": {
 <% if frontends -%>
@@ -119,6 +119,11 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
+<% if database -%>
+  "cdo-mysql": {
+    "rds_proxy": "${DBProxy.Endpoint}"
+  },
+<% end -%>
 <% if CDO.chef_local_mode -%>
   "omnibus_updater": {
     "version": "$CHEF_VERSION"

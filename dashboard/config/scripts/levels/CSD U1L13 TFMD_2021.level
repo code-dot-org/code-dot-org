@@ -1,0 +1,20 @@
+<CurriculumReference>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-12-04T21:45:14.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Lesson Overview",
+    "reference": "/curriculum/csd-20/unit1/13/overview/index.html",
+    "parent_level_id": 23169,
+    "name_suffix": "_2021",
+    "teacher_markdown": "[key]\r\n\r\n* [Problem Solving Process (Game Theme) - Exemplar](https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/export?format=doc))\r\n\r\n[/key]\r\n\r\n",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 22:43:36 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:02:44 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:03:03 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:03:43 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 18:04:45 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-06 19:19:36 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-04-07 18:18:22 +0000\",\"changed\":[\"reference\",\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-08 18:22:18 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+}]]></config>
+</CurriculumReference>

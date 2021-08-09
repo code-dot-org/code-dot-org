@@ -1,71 +1,72 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Sanal Etkinlikler için Kodlama Saati Rehberi
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Sanal bir Kodlama Saati etkinliğine yönelik ipuçları
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Başarılı bir Kodlama Saati geçirmek için bizzat orada olmanıza gerek yok!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Kodlama Saati tüm dünyada genelde sınıflarda gerçekleştirilse de, eğlencenin tadını çıkarmak için bizzat var olmanıza gerek yok! Bu önerilerden bazılarını uzaktan kullanan öğrenciler için de interaktif ve ilham verici bir Kodlama Saati organize edebilirsiniz.  Hala sorularınız varsa, <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">sanal etkinlikler kılavuzumuza</a> göz atabilirsiniz.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Uzakta olsanız da birlikte başlayabiliriz
+Öğrencilerinizin aktiviteleri bağımsız olarak bitirmesini planlamış olsanız da, katılımcıları heyecanlandırmak için etkinliğinize çevrimiçi sanal bir başlangıçla başlamanızı öneririz. Etkinliğinizi başlatmanın birçok ilgi çekici yolu var: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Misafir konuşmacı davet edin</b>: Her çeşit özgeçmişe sahip binlerce gönüllü sizden haber bekliyor! Bu insanları aramak için <a href="https://code.org/volunteer/local">gönüllü haritamızı</a> kullanın. Sanal bir Kodlama Saati ile, eğer ihtiyacınız varsa uzaklık size engel değil, zira uzaktan yardım sunan gönüllüler için kendi posta kodunuzun dışında da arama yapabilirsiniz. Bir gönüllü ile bağlantı kurduğunuzda, olası konular, tartışma soruları ve benzerini belirlemek için <a href="http://hourofcode.com/us/how-to/volunteers">Kodlama Saati Gönüllü Elkitabını</a> referans olarak alabilirsiniz.</li> 
+<li><b>İlham verici bir video izletin</b>: Etkinliğinizi başlatmanın güvenilir bir başka yolu ise <a href="http://hourofcode.com/us/promote/resources#videos">ilham verici videolarımızdan</a> birini katılımcılara izletmektir. Çoğu video 5 dakikadan kısadır ve öğrencilerinizin tanıyacağı ünlülerden ilham ve teşvikler sunar.</li> 
+<li><b>İyilik için bilgisayar bilimi üzerine tartışın</b>: Teknolojinin gündelik yaşamlarımız üzerindeki etkisini göz önünde bulundurarak, Kodlama Saati etkinliğinizi, bilgisayar biliminin daha iyi anlaşılması için kullanın. Öğrencilere yönlendirici sorular sorun ve etkinliğinizin başlangıcında intertaktif bir tartışmaya başlatın. Sohbeti nasıl başlatacağınıza dair fikirler için, şu <a href="https://code.org/csforgood#prompts">tartışma sorularına</a> göz atın.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Önceden ne hazırlanmalı
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Video konferans platformunuzu belirleyin
+Muhtemelen Cisco Webex, Google Meet, Microsoft Teams, Skype, veya Zoom gibi platformları biliyorsunuzdur. Hangi aracı kullanırsanız kullanın, etkinlik tarihinizden önce bir miktar aşinalık kazanmanız, yeterliliklerini test etmenizi ve Kodlama Saati gündeminizi gözden geçirmenizi öneririz.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Öğrencilerin nasıl katılacağını planlayın
+**Kendiliğinden ilerleyen Kodlama Saati aktivitesi** Yaptığınız başlangıçtan sonra, öğrencilerinizin konferansı bırakıp kendi <a href="https://hourofcode.com/us/learn">Kodlama Saati aktivitelerini</a> kendi başlarına yapmalarına müsade etmenizi öneririz. Bu öğrencilerinizin kendilerini projelerine vermelerine ve Bilgisayar Bilimi konseptlerini daha iyi anlamalarına yardımcı olacak. Bu aynı zamanda, video konferans penceresinin açık olmasından kaynaklı dikkat dağıtıcıları ve engelleri de en aza indirgeyecek.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Önceden seçmeleri için 1-3 eğitim seçeneğini belirlemenize de kapı aralamış olacak. Sınıf seviyeleri için en uygun olan aktiviteleri seçmenizi sağlayacak. Ayrıca, halihazırda çalıştıkları eğitimlere aşina olursanız, öğrencilerinizin sizin yardımınızı gerektiren soruları olması durumunda yardım etmek konusunda da hazırlıklı olmuş olacaksınız.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Sınıfınızdakilerin başlangıçtan hemen sonra aktivitelelerini yapması bekleniyorsa, sanal bir konferans odası, sohbet platformu veya bir başka iletişim aracını açık tutmayı düşünebilirsiniz, böylelikle gerekirse soruları için sizinle yeniden iletişime geçebilirler.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Birlikte çevrimiçi Kodlama Saati aktivitesi** Etkinlik süresince katılımcılarınızı aynı video görüşmesinde tutmayı tercih ediyorsanız, her seferde iki pencerenin açık olması gerekeceğini göz önünde bulundurun - biri video konfeans platformu için, diğeri de öğrencilerin aktiviteleri üzerinde çalışması için.
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Ebeveynlerle birlikte**<br> 4'üncü sınıf veya altındaki öğrenciler için, bu öğrencilerin ebeveynlerini evde bir Kodlama Saati organize etmeleri konusunda teşvik edebilirsiniz. Bu oldukça faydalı <a href="https://hourofcode.com/us/how-to/parents">Ebeveyn Kılavuzunun</a> yanı sıra ebeveynleri önerilen bazı derler ile de destekleyebilirsiniz.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Bir gönüllüyü kaydedin
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+<a href="https://code.org/volunteer/local">gönüllü haritamızı</a> ziyaret ederek ihtiyaçlarınıza uygun bir gönüllü bulabilirsiniz. Birçoğu uzaktan katılım için uygundur ve bilgisayar bilimindeki deneyimleri, teknolojinin rollerini nasıl etkilediği hakkında konuşmak veya sadece öğrenci sorularının cevaplanmasında size yardımcı olmak konusunda istekli olacaktır. Bir gönüllü bulduğunuzda, bu etkinliğe dair rollerini konuşmak, teknik gereklilikler üzerine çalışmak ve çevrimiçi katılım mantığını oturtmak için önceden bir görüşme ayarladığınızdan emin olun.
+
+### 4. Kutlama malzemeleri
+Sanal Kodlama Saati kutlamanıza dair fikirler için aşağıdakilere göz atın. Bunlardan bazıları, örneğin tüm katılımcılarınız için bitirme <a href="https://code.org/certificates">sertifikalarının</a>hazırlanması, önceden hazırlanmanızı gerektirebilir.
 
 ---
 
-## Celebrate together
+## Birlikte kutlayın
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+Etkinliğin başlangıcında olduğu gibi, sonrasında kutlama yapmak için de bir araya gelin! Sanal kutlamanızı interaktif ve özel bir etkinlik haline getirmek için bazı fikirler:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Öğrencilerinizin tamamlanmış projelerini sınıfın geri kalanıyla paylaşmalarına müsade edin. Konferans platformunuz izin verdiği sürece, öğrencilerinizi projelerinin ekran görüntülerini alma ve bunu sanal arka planları olarak ayarlama konusunda teşvik bile edebilirsiniz!
+- Öğrendiklerinizi tartışın: Bilgisayar bilimi veya teknoloji hakkında neler öğrendiler? Bir problemle karşılaştıklarında ne yaptılar, problemi nasıl çözdüler?
+- Katılımcılarınız için <a href="https://code.org/certificates">sertifikalar hazırlayın ve paylaşın</a>
+- Sanal Kodlama Saatinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın; böylece başarılarınızı biz de vurgularız!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Son olarak, etkinliği bir <a href="https://code.org/volunteer/local">misafir konuşmacı</a>, <a href="https://hourofcode.com/us/promote/resources#">ilham verici video</a> veya <a href="https://code.org/csforgood#prompts">tartışma soruları</a> ile başlatmadıysanız, bu, söz konusu deneyimleri de dahil etmek için başka bir fırsat olabilir.
 
 {{ signup_button }}

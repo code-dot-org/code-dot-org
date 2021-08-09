@@ -1,0 +1,7 @@
+name 'CSA U3L8-L3'
+display_name 'Sum and Mean'
+description 'The Theater Manager needs your help finding some information about ticket sales for the upcoming concert!'
+
+sublevels
+level 'CSA U3L8-L3a'
+level 'CSA U3L8-L3b'

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const bonusLevel = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   display_name: PropTypes.string.isRequired,
   description: PropTypes.string,
   thumbnail_url: PropTypes.string,
@@ -12,6 +12,6 @@ export const bonusLevel = {
 };
 
 export const lessonOfBonusLevels = {
-  stageNumber: PropTypes.number.isRequired,
+  lessonNumber: PropTypes.number.isRequired,
   levels: PropTypes.arrayOf(PropTypes.shape(bonusLevel))
 };

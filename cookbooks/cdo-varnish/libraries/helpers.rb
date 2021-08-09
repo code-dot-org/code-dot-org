@@ -156,6 +156,9 @@ def process_request(behavior, _)
       cookies.map {|c| extract_cookie(c)}.join + "cookie.filter_except(\"#{cookies.join(',')}\");"
     end
   )
+  if behavior[:query] == false
+    out << "\n" + 'set req.url = regsub(req.url, "\?.*$", "");'
+  end
   REMOVED_HEADERS.each do |remove_header|
     name, value = remove_header.split ':'
     next if behavior[:headers].include? name

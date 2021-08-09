@@ -1,0 +1,11 @@
+{
+  "func": "mousePressedOver",
+  "paletteParams": [
+    "sprite"
+  ],
+  "params": [
+    "sprite"
+  ],
+  "category": "World",
+  "type": "value"
+}

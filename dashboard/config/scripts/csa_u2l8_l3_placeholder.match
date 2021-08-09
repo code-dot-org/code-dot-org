@@ -1,0 +1,14 @@
+name 'CSA U2L8-L3 Placeholder'
+title 'Check for Understanding'
+
+question 'method signature'
+answer 'consists of a name and parameter list'
+
+question 'accessor method'
+answer 'gives the value stored in an instance variable'
+
+question 'return by value'
+answer 'a copy of the value is given to where the method is called'
+
+question 'return keyword'
+answer 'exits a method and provides the value to where the method is called'

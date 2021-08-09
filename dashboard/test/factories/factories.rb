@@ -4,8 +4,8 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :course_offering do
-    sequence(:key) {|n| "bogus-course-offering-#{n}"}
-    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+    sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
+    sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
   end
 
   factory :course_version do
@@ -31,6 +31,7 @@ FactoryGirl.define do
 
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
+    published_state "beta"
   end
 
   factory :experiment do
@@ -50,6 +51,12 @@ FactoryGirl.define do
     end
     factory :single_user_experiment, class: 'SingleUserExperiment' do
     end
+  end
+
+  factory :pilot do
+    sequence(:name) {|n| "test-pilot-#{n}"}
+    sequence(:display_name) {|n| "Test Pilot #{n}"}
+    allow_joining_via_url 0
   end
 
   factory :section_hidden_lesson do
@@ -354,6 +361,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
@@ -631,6 +643,10 @@ FactoryGirl.define do
     game {Game.curriculum_reference}
   end
 
+  factory :javalab, parent: :level, class: Javalab do
+    game {Game.javalab}
+  end
+
   factory :block do
     transient do
       sequence(:index)
@@ -683,6 +699,7 @@ FactoryGirl.define do
 
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
+    published_state "beta"
 
     factory :csf_script do
       after(:create) do |csf_script|
@@ -704,10 +721,24 @@ FactoryGirl.define do
         csp_script.save
       end
     end
+
+    factory :csa_script do
+      after(:create) do |csa_script|
+        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.save
+      end
+    end
   end
 
   factory :featured_project do
     storage_app_id {456}
+  end
+
+  factory :user_ml_model do
+    user
+    model_id {Random.rand(111..999)}
+    name {"Model name #{Random.rand(111..999)}"}
+    metadata '{ "description": "Model details" }'
   end
 
   factory :script_level do
@@ -768,6 +799,7 @@ FactoryGirl.define do
 
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
+    display_name(&:key)
     script
 
     position do |lesson_group|
@@ -778,6 +810,7 @@ FactoryGirl.define do
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
+    has_lesson_plan false
     script
 
     absolute_position do |lesson|
@@ -785,10 +818,39 @@ FactoryGirl.define do
     end
 
     # relative_position is actually the same as absolute_position in our factory
-    # (i.e. it doesnt try to count lockable/non-lockable)
+    # i.e. it doesn't try to count lockable lessons without lesson plans separately
+    # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
+  end
+
+  factory :resource do
+    association :course_version
+    url 'fake.url'
+    name 'fake name'
+  end
+
+  factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
+    description 'fake description'
+  end
+
+  factory :vocabulary do
+    association :course_version
+    sequence(:key, 'a') {|char| "vocab_#{char}"}
+    word 'word'
+    definition 'definition'
+  end
+
+  factory :programming_environment do
+    sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_expression do
+    association :programming_environment
+    sequence(:name) {|n| "programming expression #{n}"}
+    sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do
@@ -797,10 +859,45 @@ FactoryGirl.define do
     script_level
   end
 
+  factory :lesson_activity do
+    sequence(:key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
+  factory :activity_section do
+    sequence(:key) {|n| "activity-section-#{n}"}
+    sequence(:position)
+    lesson_activity
+  end
+
   factory :activity do
     level
     user
     level_source {create :level_source, level: level}
+  end
+
+  factory :framework do
+    sequence(:shortcode) {|n| "framework-#{n}"}
+    sequence(:name) {|n| "Framework #{n}"}
+  end
+
+  factory :standard_category do
+    sequence(:shortcode) {|n| "category-#{n}"}
+    sequence(:description) {|n| "fake category description #{n}"}
+    category_type 'fake category type'
+  end
+
+  factory :standard do
+    framework
+    sequence(:shortcode) {|n| "standard-#{n}"}
+    sequence(:description) {|n| "fake description #{n}"}
+
+    trait :with_category do
+      after(:create) do |s|
+        s.category = create :standard_category, framework: s.framework
+      end
+    end
   end
 
   factory :concept do
@@ -843,7 +940,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script
+    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -895,24 +992,27 @@ FactoryGirl.define do
 
   factory :bubble_choice_level, class: BubbleChoice do
     game {create(:game, app: "bubble_choice")}
-    name 'name'
+    sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
-    transient do
-      sublevels []
-    end
     properties do
       {
         display_name: display_name,
-        sublevels: sublevels.pluck(:name)
       }
     end
 
+    # Allow passing a list of levels in the create method to automatically set
+    # up sublevels
+    transient do
+      sublevels []
+    end
+
+    after(:create) do |bubble_choice, evaluator|
+      bubble_choice.setup_sublevels(evaluator.sublevels.pluck(:name)) if evaluator.sublevels.present?
+    end
+
+    # Also allow specifying a trait to automatically create sublevels
     trait :with_sublevels do
-      after(:create) do |bc|
-        sublevels = create_list(:level, 3)
-        bc.properties['sublevels'] = sublevels.pluck(:name)
-        bc.save!
-      end
+      sublevels {create_list(:level, 3)}
     end
   end
 
@@ -1100,7 +1200,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).next).to_s}
+    id {((School.maximum(:id) || 0).next).to_s}
     address_line1 "123 Sample St"
     address_line2 "attn: Main Office"
     city "Seattle"
@@ -1218,6 +1318,7 @@ FactoryGirl.define do
     # Note: This creates channel_tokens where the channel is NOT an accurately
     # encrypted version of storage_app_id/app_id
     storage_app_id 1
+    association :level
     storage_id {storage_user.try(:id) || 2}
   end
 
@@ -1272,7 +1373,28 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
-    association :script_level
+    association :script
+
+    trait :with_script_level do
+      after(:build) do |tf|
+        create :script_level, script: tf.script, levels: [tf.level]
+      end
+    end
+  end
+
+  factory :code_review_comment do
+    association :commenter, factory: :student
+    association :project_owner, factory: :student
+
+    storage_app_id 1
+    comment 'a comment about your project'
+  end
+
+  factory :reviewable_project do
+    sequence(:storage_app_id)
+    association :user, factory: :student
+    association :level
+    association :script
   end
 
   factory :teacher_score do

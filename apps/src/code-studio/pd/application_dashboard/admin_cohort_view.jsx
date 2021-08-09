@@ -11,12 +11,6 @@ import downloadCsv from '../downloadCsv';
 import AdminCohortViewTable from './admin_cohort_view_table';
 import _ from 'lodash';
 
-const styles = {
-  downloadCsvButton: {
-    marginTop: 25
-  }
-};
-
 const roles = [
   'Teacher',
   'New Facilitator',
@@ -228,3 +222,9 @@ export default class AdminCohortView extends React.Component {
     );
   }
 }
+
+const styles = {
+  downloadCsvButton: {
+    marginTop: 25
+  }
+};

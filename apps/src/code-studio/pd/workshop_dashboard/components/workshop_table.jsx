@@ -15,12 +15,6 @@ import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  }
-};
-
 export default class WorkshopTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.shape({
@@ -162,6 +156,16 @@ export default class WorkshopTable extends React.Component {
         }
       },
       {
+        property: 'virtual',
+        header: {
+          label: 'Virtual',
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [this.formatBoolean]
+        }
+      },
+      {
         property: 'enrollments',
         header: {
           label: 'Signups',
@@ -274,7 +278,7 @@ export default class WorkshopTable extends React.Component {
   formatSignupUrl = workshopId => {
     const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
     return (
-      <a href={signupUrl} target="_blank">
+      <a href={signupUrl} target="_blank" rel="noopener noreferrer">
         {signupUrl}
       </a>
     );
@@ -368,3 +372,9 @@ export default class WorkshopTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  }
+};

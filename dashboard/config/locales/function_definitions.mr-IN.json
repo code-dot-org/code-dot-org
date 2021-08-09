@@ -475,6 +475,195 @@
               "width": "रुंदी"
             }
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "पुन्हा करा"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "काहीतरी करा"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "पूल बांधा"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "पूल बांधा"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "पूल बांधा"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "पूल बांधा"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "मार्ग स्वच्छ करा"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "मार्ग स्वच्छ करा"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "मार्ग स्वच्छ करा"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "मार्ग स्वच्छ करा"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "मोठा रस्ता दुरुस्त करा"
+          },
+          "fix short path": {
+            "name": "छोटा रस्ता दुरुस्त करा"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "मोठा रस्ता दुरुस्त करा"
+          },
+          "fix short path": {
+            "name": "छोटा रस्ता दुरुस्त करा"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "मोठा रस्ता दुरुस्त करा"
+          },
+          "fix short path": {
+            "name": "छोटा रस्ता दुरुस्त करा"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "मोठा रस्ता दुरुस्त करा"
+          },
+          "fix short path": {
+            "name": "छोटा रस्ता दुरुस्त करा"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "छोटा पूल बांधा"
+          },
+          "build long bridge": {
+            "name": "मोठा पूल बांधा"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "छोटा पूल बांधा"
+          },
+          "build long bridge": {
+            "name": "मोठा पूल बांधा"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "छोटा पूल बांधा"
+          },
+          "build long bridge": {
+            "name": "मोठा पूल बांधा"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "छोटा पूल बांधा"
+          },
+          "build long bridge": {
+            "name": "मोठा पूल बांधा"
+          }
         }
       }
     }

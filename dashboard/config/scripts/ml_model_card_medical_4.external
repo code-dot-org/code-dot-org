@@ -1,0 +1,11 @@
+name 'ml-model card-medical-4'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -5,7 +5,7 @@
 Feature: Weblab Versions
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/stage/32/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/32/levels/1?noautoplay=true"
   Then I rotate to landscape
   And I debug channel id
   And I wait until element "#submitButton" is visible

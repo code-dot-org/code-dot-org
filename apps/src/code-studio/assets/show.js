@@ -36,6 +36,7 @@ function hideAssetManager() {
  * @param [options.showUnderageWarning] {boolean} Warn if underage.
  * @param [options.useFilesApi] {boolean} Use files API instead of assets API.
  * @param [options.disableAudioRecording] {boolean} Do not display option to record and upload audio files
+ * @param [options.customAllowedExtensions] {string} Custom list of allowed file extensions. Used in place of typeFilter if provided
  * @param [options.elementId] {string} Logging Purposes: which element is the image chosen for
  */
 function showAssetManager(assetChosen, typeFilter, onClose, options) {
@@ -59,6 +60,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
   ReactDOM.render(
     React.createElement(pickerType, {
       typeFilter: typeFilter,
+      customAllowedExtensions: options.customAllowedExtensions,
       uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
       useFilesApi: !!options.useFilesApi,
       assetChosen: showChoseImageButton
@@ -72,7 +74,9 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
       elementId: options.elementId,
-      libraryOnly: options.libraryOnly
+      libraryOnly: options.libraryOnly,
+      currentValue: options.currentValue,
+      currentImageType: options.currentImageType
     }),
     codeDiv
   );

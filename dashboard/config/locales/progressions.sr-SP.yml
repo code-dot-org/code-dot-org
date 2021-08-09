@@ -3,12 +3,17 @@ sr:
   data:
     progressions:
       'Artist: Variables': 'Уметник: Променљиве'
+      Debugging: Отклањање грешака
+      Design Mode: Dizajn mod
       Events: Догађаји
       For Loops: Бројачке петље
       Free Play: Free Play
       Functions: Функције
       Functions with Parameters: Функције са параметрима
       Lists: Листе
+      Overview: Преглед
       Properties: Својства
+      Variables: Променљиве
       Velocity: Брзина
+      'Video: What Makes a Computer, a Computer?': 'Видео: Шта компјутер чини компјутером?'
       Wrap-up: Замотај-Умотај

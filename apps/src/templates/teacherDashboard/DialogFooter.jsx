@@ -13,7 +13,7 @@ const style = {
     right: '0',
     bottom: '0',
     background: 'white',
-    zIndex: '50'
+    zIndex: '500'
   },
   buttonRow: {
     display: 'flex',

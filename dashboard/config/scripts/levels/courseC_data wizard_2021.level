@@ -1,0 +1,1108 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-12-04T22:24:00.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return Studio.sayComplete > 0;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0}],[{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":10},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5,\"sprite\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "true",
+    "short_instructions": "Press Run. \r\nThe wizard will make animals appear. \r\n\r\nCount them. \r\nWhat do you notice?",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "instructions_important": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "timeout_failure_tick": "0",
+    "min_workspace_height": "2000",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "authored_hints": "[]",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 21285,
+    "name_suffix": "_2021",
+    "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "remove_items_when_actor_collides": "false",
+    "default_num_example_blocks": "false",
+    "background": "rainbow",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 18:00:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-22 18:00:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-02-04 15:25:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:26:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:26:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:27:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:28:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:28:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:29:39 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:29:51 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:29:58 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:30:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:35:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:35:53 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:35:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:36:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:36:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:37:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:37:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:37:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:37:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:37:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:38:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:39:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:40:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:40:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"sprites_hidden_to_start\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:41:13 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:41:41 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:41:44 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:42:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:42:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:43:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:43:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:44:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:44:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:44:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:45:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:45:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:46:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:46:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:47:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:47:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:48:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:48:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:49:37 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:49:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:49:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:50:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:51:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:51:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:51:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:52:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:52:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:53:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:53:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:57:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:58:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:58:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:58:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:59:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:59:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 15:59:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:00:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:02:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:02:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:02:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:03:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:03:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:04:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:04:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:07:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:29:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"short_instructions\",\"long_instructions\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:29:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:30:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:31:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:31:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:32:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:32:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:33:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:33:46 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:34:32 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:34:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:35:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:35:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:37:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:44:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 16:44:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"initialization_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:21:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:22:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:22:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:24:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:25:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:27:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:27:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-04 19:29:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-05 15:13:22 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-02-14 16:14:34 +0000\",\"changed\":[\"name\",\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-19 00:15:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"embed\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-03-19 00:16:33 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"embed\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-06-10 20:23:51 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-06-10 20:24:32 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-10-17 18:50:21 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setSprite">
+              <title name="VALUE">"visible"</title>
+              <title name="SPRITE">10</title>
+              <next>
+                <block type="studio_setBackground">
+                  <title name="VALUE">"rainbow"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">"rainbow"</title>
+              <next>
+                <block type="studio_setSprite">
+                  <title name="VALUE">"visible"</title>
+                  <title name="SPRITE">10</title>
+                  <next>
+                    <block type="studio_showTitleScreen">
+                      <title name="TITLE">Count the Pets</title>
+                      <title name="TEXT">How many will appear?</title>
+                      <next>
+                        <block type="variables_set">
+                          <title name="VAR">dogs</title>
+                          <value name="VALUE">
+                            <block type="math_number">
+                              <title name="NUM">0</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="variables_set">
+                              <title name="VAR">cats</title>
+                              <value name="VALUE">
+                                <block type="math_number">
+                                  <title name="NUM">0</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="variables_set">
+                                  <title name="VAR">birds</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">0</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set">
+                                      <title name="VAR">dragons</title>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <title name="NUM">0</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="variables_set">
+                                          <title name="VAR">wizard</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">11</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="studio_waitParams">
+                                              <value name="VALUE">
+                                                <block type="math_number">
+                                                  <title name="NUM">1</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="controls_for">
+                                                  <title name="VAR">currentActor</title>
+                                                  <value name="FROM">
+                                                    <block type="math_number">
+                                                      <title name="NUM">1</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="TO">
+                                                    <block type="math_number">
+                                                      <title name="NUM">13</title>
+                                                    </block>
+                                                  </value>
+                                                  <value name="BY">
+                                                    <block type="math_number">
+                                                      <title name="NUM">1</title>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO">
+                                                    <block type="variables_set">
+                                                      <title name="VAR">random</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_random_int">
+                                                          <value name="FROM">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                          </value>
+                                                          <value name="TO">
+                                                            <block type="math_number">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="controls_if">
+                                                          <mutation elseif="4"/>
+                                                          <value name="IF0">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO0">
+                                                            <block type="studio_setSprite">
+                                                            <title name="VALUE">"visible"</title>
+                                                            <title name="SPRITE">10</title>
+                                                            </block>
+                                                          </statement>
+                                                          <value name="IF1">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">GT</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">random</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">5</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO1">
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"dog"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_vanishSprite">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_playSound">
+                                                            <title name="SOUND">goal2</title>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"dog"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="variables_set">
+                                                            <title name="VAR">dogs</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <title name="OP">ADD</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dogs</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_if">
+                                                            <mutation else="1"/>
+                                                            <value name="IF0">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dogs</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text">
+                                                            <title name="TEXT">A dog!</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text_join_simple" inputcount="2">
+                                                            <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dogs</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="text">
+                                                            <title name="TEXT"> dogs!</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </statement>
+                                                          <value name="IF2">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">GT</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">random</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">3</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO2">
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"cat"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_vanishSprite">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_playSound">
+                                                            <title name="SOUND">goal1</title>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"cat"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="variables_set">
+                                                            <title name="VAR">cats</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <title name="OP">ADD</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">cats</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_if">
+                                                            <mutation else="1"/>
+                                                            <value name="IF0">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">cats</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text">
+                                                            <title name="TEXT">A cat!</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text_join_simple" inputcount="2">
+                                                            <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">cats</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="text">
+                                                            <title name="TEXT"> cats!</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </statement>
+                                                          <value name="IF3">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">GT</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">random</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO3">
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"bird"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_vanishSprite">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_playSound">
+                                                            <title name="SOUND">rubber</title>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"bird"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="variables_set">
+                                                            <title name="VAR">birds</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <title name="OP">ADD</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">birds</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_if">
+                                                            <mutation else="1"/>
+                                                            <value name="IF0">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">birds</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text">
+                                                            <title name="TEXT">A bird!</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text_join_simple" inputcount="2">
+                                                            <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">birds</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="text">
+                                                            <title name="TEXT"> birds!</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </statement>
+                                                          <value name="IF4">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">random</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </value>
+                                                          <statement name="DO4">
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_vanishSprite">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_playSound">
+                                                            <title name="SOUND">winpoint2</title>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">currentActor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_waitParams">
+                                                            <value name="VALUE">
+                                                            <block type="math_number">
+                                                            <title name="NUM">0.25</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="variables_set">
+                                                            <title name="VAR">dragons</title>
+                                                            <value name="VALUE">
+                                                            <block type="math_arithmetic">
+                                                            <title name="OP">ADD</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dragons</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_if">
+                                                            <mutation else="1"/>
+                                                            <value name="IF0">
+                                                            <block type="logic_compare">
+                                                            <title name="OP">EQ</title>
+                                                            <value name="A">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dragons</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="B">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text">
+                                                            <title name="TEXT">A dragon!</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <statement name="ELSE">
+                                                            <block type="studio_saySpriteParamsTime">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">wizard</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TEXT">
+                                                            <block type="text_join_simple" inputcount="2">
+                                                            <value name="ADD0">
+                                                            <block type="variables_get">
+                                                            <title name="VAR">dragons</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                            <block type="text">
+                                                            <title name="TEXT"> dragons!</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TIME">
+                                                            <block type="math_number">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </statement>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                  <next>
+                                                    <block type="studio_saySpriteParamsTime">
+                                                      <value name="SPRITE">
+                                                        <block type="variables_get">
+                                                          <title name="VAR">wizard</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="TEXT">
+                                                        <block type="text">
+                                                          <title name="TEXT">Count all the animals!</title>
+                                                        </block>
+                                                      </value>
+                                                      <value name="TIME">
+                                                        <block type="math_number">
+                                                          <title name="NUM">3</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollideSimple">
+          <title name="SPRITE">10</title>
+          <title name="SPRITENAME">"dog"</title>
+          <next>
+            <block type="studio_saySpriteParamsTime">
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="TEXT">
+                <block type="text_join_simple" inputcount="2">
+                  <value name="ADD0">
+                    <block type="variables_get">
+                      <title name="VAR">dogs</title>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text">
+                      <title name="TEXT"> dogs!</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="TIME">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollideSimple">
+          <title name="SPRITE">10</title>
+          <title name="SPRITENAME">"cat"</title>
+          <next>
+            <block type="studio_saySpriteParamsTime">
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="TEXT">
+                <block type="text_join_simple" inputcount="2">
+                  <value name="ADD0">
+                    <block type="variables_get">
+                      <title name="VAR">cats</title>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text">
+                      <title name="TEXT"> cats!</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="TIME">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite">
+              <title name="DIR">1</title>
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollideSimple">
+          <title name="SPRITE">10</title>
+          <title name="SPRITENAME">"bird"</title>
+          <next>
+            <block type="studio_saySpriteParamsTime">
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="TEXT">
+                <block type="text_join_simple" inputcount="2">
+                  <value name="ADD0">
+                    <block type="variables_get">
+                      <title name="VAR">birds</title>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text">
+                      <title name="TEXT"> birds!</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="TIME">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollideSimple">
+          <title name="SPRITE">10</title>
+          <title name="SPRITENAME">"dragon"</title>
+          <next>
+            <block type="studio_saySpriteParamsTime">
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="TEXT">
+                <block type="text_join_simple" inputcount="2">
+                  <value name="ADD0">
+                    <block type="variables_get">
+                      <title name="VAR">dragons</title>
+                    </block>
+                  </value>
+                  <value name="ADD1">
+                    <block type="text">
+                      <title name="TEXT"> dragons!</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <value name="TIME">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite">
+              <title name="DIR">2</title>
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite">
+              <title name="DIR">8</title>
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite">
+              <title name="DIR">4</title>
+              <value name="SPRITE">
+                <block type="variables_get">
+                  <title name="VAR">wizard</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">25</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="studio_setBackground">
+          <title name="VALUE">random</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">4</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">1000</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_changeScore"/>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">5</title>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

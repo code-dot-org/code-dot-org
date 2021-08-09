@@ -1,0 +1,15 @@
+name 'U10 SSQRP1 part 4_2021'
+editor_experiment ''
+
+
+
+description 'Which of the following grocery stores is LEAST likely to receive payment from _GroceryGrabbr_?'
+wrong 'A national chain of mid-sized grocery stores.'
+right 'A small, local store.'
+wrong 'A grocery store in a busy location with lots of customers.'
+wrong 'A popular, large grocery store.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

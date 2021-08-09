@@ -169,7 +169,7 @@ def get_weather_data
       record['Forecast Number'] = forecast_number
 
       # list.dt gives timestamp of forecast in UTC, city.timezone gives shift in seconds from UTC
-      parsed_date = Time.at(measurement['dt'] - parsed_response['city']['timezone'])
+      parsed_date = Time.at(measurement['dt'] + parsed_response['city']['timezone'])
       record.Date = parsed_date.strftime('%a %-m/%-d') # ex Wed 1/7
 
       weather_condition = measurement['weather'][0]

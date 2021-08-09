@@ -1,0 +1,10 @@
+name 'CSA U2L2-L6'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+For each of the following data values, determine which data type – `int`, `double`, `boolean`, or `String` – should be used to represent the value in Java. Explain your answer.
+
+1. Population of a country
+2. Shoe size
+3. Phone number
+MARKDOWN

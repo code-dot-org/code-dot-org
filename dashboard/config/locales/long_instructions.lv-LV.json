@@ -41,7 +41,12 @@
         "courseA_maze_seq8_2020": "Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!",
         "courseB_maze_seq12_2019": "Tagad notver to cūku, kā vien māki!",
         "courseB_maze_seq12_2020": "Tagad notver to cūku, kā vien māki!",
-        "courseB_maze_seq3": "_\"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!\"_"
+        "courseB_maze_seq3": "_\"Izlabo kodu, lai palīdzētu man tikt līdz cūkai!\"_",
+        "Overworld Move to Sheep_2021": "Pievieno otru \"pārvieto uz priekšu\" komandu, lai sasniegtu aitu.",
+        "courseA_maze_seq13_2021": "Notver to cūku, kā vien māki!",
+        "courseA_maze_seq6_2021": "Pārvietojies pa vienu ceļu, tad pa citu, lai palīdzētu putnam nokļūt līdz cūkai!",
+        "courseA_maze_seq8_2021": "Atrisini šo līmeni un palīdzi putnam tikt līdz cūkai!",
+        "courseB_maze_seq12_2021": "Tagad notver to cūku, kā vien māki!"
       }
     }
   }

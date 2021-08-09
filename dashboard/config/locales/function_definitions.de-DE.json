@@ -70,7 +70,11 @@
             "name": "zeichne rechtes Bein"
           },
           "draw body and arms": {
-            "name": "zeichne Körper und Arme"
+            "name": "zeichne Körper und Arme",
+            "parameters": {
+              "armlength": "Armlänge",
+              "bodylength": "Körperlänge"
+            }
           },
           "draw a head": {
             "name": "zeichne einen Kopf"
@@ -288,7 +292,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -296,7 +303,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -304,7 +314,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -312,7 +325,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -320,7 +336,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -328,7 +347,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -336,7 +358,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -344,7 +369,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -352,7 +380,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -360,7 +391,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -371,12 +405,15 @@
             "name": "zeichne ein bisschen"
           },
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 Artist Functions challenge": {
@@ -384,7 +421,7 @@
             "name": "zeichne eine Linie aus Quadraten"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 Bee Params 1": {
@@ -459,20 +496,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "Funktionsblock"
+          },
+          "patrol": {
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "Figur"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "Figur"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -480,7 +522,8 @@
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -488,7 +531,8 @@
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -524,7 +568,7 @@
             "name": "nach unten setzen/rückwärts"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "Course 4 SCF 1a": {
@@ -537,7 +581,7 @@
         },
         "Course 4 SCF 2": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw octagons": {
             "name": "zeichne Oktagons"
@@ -551,7 +595,7 @@
         },
         "Course 4 SCF 3": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -680,13 +724,15 @@
           "n-sided shape": {
             "name": "Form mit n Seiten",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a loop": {
             "name": "eine Schleife zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw spiral circle": {
@@ -700,7 +746,8 @@
           "draw a loop": {
             "name": "eine Schleife zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "n-sided shape": {
@@ -817,15 +864,18 @@
         },
         "NEW Course 4 Artist Functions 11": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw a line of  squares": {
+            "name": "zeichne 6 Quadrate"
           }
         },
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
@@ -833,7 +883,7 @@
         },
         "NEW Course 4 Artist Functions 13": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "draw a line of squares": {
             "name": "zeichne eine Linie aus Quadraten"
@@ -847,7 +897,7 @@
             "name": "zeichne eine Linie aus Quadraten"
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -857,7 +907,8 @@
         },
         "NEW Course 4 Artist Functions 4": {
           "draw a square": {
-            "name": "zeichne ein Quadrat"
+            "name": "zeichne ein Quadrat",
+            "description": "Zeichnet ein Quadrat mit der Seitenlänge 100 Pixel."
           }
         },
         "NEW Course 4 Artist Functions 7": {
@@ -867,7 +918,8 @@
         },
         "NEW Course 4 Artist Functions 8": {
           "draw a triangle": {
-            "name": "zeichne ein Dreieck"
+            "name": "zeichne ein Dreieck",
+            "description": "Zeichnet ein Dreieck mit der Seitenlänge 100."
           }
         },
         "NEW Course 4 Artist Functions 9": {
@@ -901,13 +953,15 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "do something": {
             "name": "Funktionsblock",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -915,7 +969,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -923,7 +978,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -931,7 +987,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -939,7 +996,8 @@
           "draw a spiral edge": {
             "name": "eine Spiralkante zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -949,16 +1007,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -970,7 +1034,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -982,7 +1047,8 @@
           "draw a square": {
             "name": "zeichne ein Quadrat",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -1073,7 +1139,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -1083,13 +1150,15 @@
             "parameters": {
               "height": "Höhe",
               "actor": "Figur"
-            }
+            },
+            "description": "springen Funktionsblock mit den Parametern Höhe und Figur"
           },
           "patrol": {
             "parameters": {
               "actor": "Figur",
               "speed": "Geschwindigkeit"
-            }
+            },
+            "name": "Streife gehen"
           }
         },
         "New Artist Project": {
@@ -1275,7 +1344,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1283,7 +1355,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1310,10 +1385,13 @@
             }
           },
           "draw a polygon": {
-            "name": "zeichne ein Vieleck"
+            "name": "zeichne ein Vieleck",
+            "parameters": {
+              "sides": "Kanten"
+            }
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -1444,7 +1522,10 @@
             "name": "zeichne ein bisschen"
           },
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1452,7 +1533,10 @@
             "name": "zeichne ein bisschen"
           },
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1460,7 +1544,10 @@
             "name": "zeichne ein bisschen"
           },
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1468,12 +1555,18 @@
             "name": "zeichne ein bisschen"
           },
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1481,7 +1574,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1489,7 +1585,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1497,7 +1596,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1505,7 +1607,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1513,7 +1618,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1521,7 +1629,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1529,7 +1640,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1537,7 +1651,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1545,7 +1662,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1553,7 +1673,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1561,7 +1684,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1569,7 +1695,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1577,7 +1706,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1585,7 +1717,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1593,7 +1728,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1601,7 +1739,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1609,7 +1750,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1617,7 +1761,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1625,7 +1772,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1633,7 +1783,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1641,7 +1794,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1649,7 +1805,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1657,7 +1816,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1665,7 +1827,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1673,7 +1838,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1681,7 +1849,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1689,7 +1860,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1697,7 +1871,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1705,7 +1882,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1713,7 +1893,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1721,7 +1904,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1729,7 +1915,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1737,7 +1926,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1745,7 +1937,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1753,7 +1948,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1761,7 +1959,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1769,7 +1970,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1777,7 +1981,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1785,7 +1992,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -1793,7 +2003,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "zeichne"
+            "name": "zeichne",
+            "parameters": {
+              "binary": "binärdatei"
+            }
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
@@ -3056,7 +3269,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3064,7 +3278,8 @@
           "draw a polygon": {
             "name": "zeichne ein Vieleck",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3072,7 +3287,8 @@
           "draw a spiral edge": {
             "name": "eine Spiralkante zeichnen",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           }
         },
@@ -3081,7 +3297,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3090,7 +3307,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3100,16 +3318,22 @@
             "parameters": {
               "points": "Punkte",
               "length": "Länge"
-            }
+            },
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge"
           },
           "draw a circle": {
-            "name": "Zeichne einen Kreis"
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
           },
           "draw a pinwheel": {
             "name": "zeichne ein Windrad",
             "parameters": {
               "length": "Länge",
-              "repeat": "wiederhole"
+              "repeat": "wiederhole",
+              "sides": "Kanten"
             }
           },
           "draw a triangle": {
@@ -3121,7 +3345,8 @@
           "draw a shape": {
             "name": "zeichne eine Form",
             "parameters": {
-              "length": "Länge"
+              "length": "Länge",
+              "sides": "Kanten"
             }
           },
           "draw a house": {
@@ -3140,7 +3365,8 @@
             "name": "eine Spiralkante zeichnen",
             "parameters": {
               "length": "Länge",
-              "min": "min"
+              "min": "min",
+              "sides": "Kanten"
             }
           }
         },
@@ -3152,10 +3378,13 @@
             }
           },
           "draw a polygon": {
-            "name": "zeichne ein Vieleck"
+            "name": "zeichne ein Vieleck",
+            "parameters": {
+              "sides": "Kanten"
+            }
           },
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -3163,7 +3392,7 @@
         },
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
-            "name": "ein Quadrat ziehen 20"
+            "name": "zeichne Quadrat 20"
           },
           "do something": {
             "name": "Funktionsblock"
@@ -3520,6 +3749,604 @@
           },
           "draw bit": {
             "name": "zeichne ein bisschen"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "meine Funktion"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge",
+              "sides": "Kanten"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern",
+            "description": "zeichne einen Stern mit vorgegebener Spitzenzahl und Seitenlänge",
+            "parameters": {
+              "points": "Punkte",
+              "length": "Länge"
+            }
+          },
+          "draw a circle": {
+            "name": "Zeichne einen Kreis",
+            "description": "zeichne einen Kreis mit vorgegebenem Radius",
+            "parameters": {
+              "radius": "Radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "zeichne ein Windrad",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge",
+              "repeat": "wiederhole"
+            }
+          },
+          "draw a triangle": {
+            "name": "zeichne ein Dreieck",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a shape": {
+            "name": "zeichne eine Form",
+            "parameters": {
+              "sides": "Kanten",
+              "length": "Länge"
+            }
+          },
+          "draw a house": {
+            "name": "Zeichne ein Haus",
+            "parameters": {
+              "length": "Länge"
+            }
+          },
+          "draw a square": {
+            "name": "zeichne ein Quadrat",
+            "parameters": {
+              "length": "Länge"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "baue Brücke"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "Weg freimachen"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "langen Pfad in Ordnung bringen\n"
+          },
+          "fix short path": {
+            "name": "kurzen Pfad in Ordnung bringen\n"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "kleine Brücke bauen"
+          },
+          "build long bridge": {
+            "name": "lange Brücke bauen"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "Funktion 1"
+          },
+          "function 2": {
+            "name": "Funktion 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "mögliche Lösung"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "zeichne Flamme",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "zeichne Feuer"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "Booster"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw hexagon": {
+            "name": "zeichne Sechseck"
+          },
+          "draw line of hexagons": {
+            "name": "zeichne Linie aus Sechsecken"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "zeichne einen Stern"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "zeichne ein Fenster"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate\n"
+          },
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate\n"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "Funktionsblock"
+          },
+          "draw triangle": {
+            "name": "zeichne Dreieck"
+          },
+          "draw line of triangles": {
+            "name": "zeichne eine Reihe aus Dreiecken"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "zeichne Sechseck"
+          },
+          "draw line of hexagons": {
+            "name": "zeichne Linie aus Sechsecken"
+          },
+          "staggered squares": {
+            "name": "versetzte Quadrate\n"
+          },
+          "draw a line of squares": {
+            "name": "zeichne eine Linie aus Quadraten"
+          },
+          "draw square": {
+            "name": "zeichne Quadrat"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "mein Design"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "mein Design"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "zeichne ein Quadrat"
+          },
+          "draw ear stems": {
+            "name": "zeichne Ohrstäbchen"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "zeichne Reihe aus Vielecken"
+          },
+          "draw polygon": {
+            "name": "zeichne Vieleck"
+          },
+          "do something": {
+            "name": "Funktionsblock"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          },
+          "pumpkin square": {
+            "name": "Kürbis-Quadrat"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "pumpkin square": {
+            "name": "Kürbis-Quadrat"
+          },
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get produce": {
+            "name": "Landwirtschaftliche Erzeugnisse holen\n"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "check for corn": {
+            "name": "Mais suchen\n"
+          },
+          "corn rectangle": {
+            "name": "Mais-Rechteck"
+          },
+          "lettuce stairs": {
+            "name": "Salat-Treppe"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "am Weg sammeln\n"
+          },
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "untersuche Quadrat nach Mais"
+          },
+          "get all pumpkins": {
+            "name": "hole alle Kürbisse"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "Gartenplatz"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "Spiel beenden"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "Bewege dich und hole den Nektar mit einem Zähler"
           }
         }
       }

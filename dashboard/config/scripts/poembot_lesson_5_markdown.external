@@ -1,0 +1,21 @@
+name 'poembot_lesson 5_markdown'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Poem Bot: Lesson 5
+
+
+<img src="https://images.code.org/36455e75aa6e692c8fe61feb7486f99c-image-1615329933168.png" style="float:left; padding-right:10px" alt="drawing" width="100"/>
+
+<br/>
+
+In this unplugged lesson, we’ll share and discuss our Poem Bot’s haikus in a poetry circle. 
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

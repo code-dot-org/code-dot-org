@@ -16,7 +16,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -29,7 +29,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Low-tech or no-tech?</h3>
@@ -50,7 +50,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. They’ll also see that computer science is social and collaborative.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. පරිගණක විද්‍යාව සමාජීය සහ සහයෝගී බව ඔවුන් දකිනු ඇත.
 
 <h3>Get the kids excited! </h3>
 
@@ -91,8 +91,8 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-<h2>What comes after the Hour of Code?</h2>
+<h2>කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

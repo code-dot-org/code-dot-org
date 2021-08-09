@@ -126,6 +126,7 @@ kk:
             '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
+            '"enter"': еңгізу
             '"x"': x
       gamelab_atTime:
         options:
@@ -135,6 +136,7 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -144,6 +146,7 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
       gamelab_getTime:
         options:
           UNIT:
@@ -178,6 +181,8 @@ kk:
         text: кездейсоқ түс
       gamelab_randomColor:
         text: кездейсоқ түс
+      gamelab_repeatForever:
+        text: әрқашан қайтала
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -188,10 +193,27 @@ kk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': су
               асты
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': қыс
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орта
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': шама
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орта
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -293,6 +315,11 @@ kk:
             '"right"': оңға қарай
             '"w"': Б
             '"s"': О
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': иә
+            '"no"': жоқ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -300,15 +327,23 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': кемпірқосақ
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": түс
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': кездейсоқ
       binary_move:
         options:

@@ -22,7 +22,7 @@ title: How-To untuk acara Hour of Code
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Ide acara lainnya**: 
     - Mintalah pemimpin industri lokal untuk mendiskusikan pekerjaannya yang melibatkan ilmu komputer.
     - Mintalah seorang politisi lokal dan mintalah siswa untuk mengajarkan kepadanya bagaimana cara memberi kode.
     - Mintalah sekelompok siswa menunjukkan aktivitas yang tidak dicabut.

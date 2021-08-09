@@ -17,6 +17,9 @@ Parameters:
 <% if frontends -%>
   DaemonInstanceType:
     Type: String
+  AutoscaleRollingBatchSize:
+    Type: Number
+    Default: 20
 <% end -%>
 <% if options.console -%>
   ConsoleInstanceType:
@@ -110,7 +113,7 @@ Resources:
   image_id: IMAGE_ID,
   ssh_key_name: SSH_KEY_NAME,
   subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
-  frontend_policies: [Ref: 'CDOPolicy'],
+  frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
   frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
   frontend_volume_size: 64,
   ami_timeout: 'PT120M',
@@ -294,7 +297,7 @@ Resources:
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
 <% if rack_env?(:production) -%>
-        # Grant scheduled processes (Contact Rollups, Export to Redshift, etc.) permission to clone/delete RDS clusters.
+        # Grant scheduled processes (Export to Redshift, etc.) permission to clone/delete RDS clusters.
         - PolicyName: CloneDeleteRDSClusters
           PolicyDocument:
             Statement:
@@ -405,7 +408,9 @@ Resources:
                   - dms:StartReplicationTask
                 Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
-      ManagedPolicyArns: [!Ref CDOPolicy]
+      ManagedPolicyArns:
+        - !Ref CDOPolicy
+        - !ImportValue IAM-SessionPermissions
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile
@@ -504,7 +509,7 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 <%   if database %>
     DependsOn: Aurora1
-<%   end -%>      
+<%   end -%>
 <% end-%>
 <% if alarms-%>
 <%=  component 'alarms'%>

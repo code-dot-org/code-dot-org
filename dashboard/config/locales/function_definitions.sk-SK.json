@@ -70,7 +70,11 @@
             "name": "nakresli pravú nohu"
           },
           "draw body and arms": {
-            "name": "nakresli telo a ruky"
+            "name": "nakresli telo a ruky",
+            "parameters": {
+              "armlength": "dĺžkaruky",
+              "bodylength": "dĺžkatela"
+            }
           },
           "draw a head": {
             "name": "nakresli hlavu"
@@ -288,7 +292,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -296,7 +303,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -304,7 +314,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -312,7 +325,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -320,7 +336,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -328,7 +347,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -336,7 +358,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -344,7 +369,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -352,7 +380,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -360,7 +391,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -371,7 +405,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -399,34 +436,53 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "získať 3 nektáre"
+            "name": "získať 3 nektáre",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "získať 3 nektáre"
+            "name": "získať 3 nektáre",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "získaj 5 nektárov"
+            "name": "získaj 5 nektárov",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "získaj 5 nektárov"
+            "name": "získaj 5 nektárov",
+            "parameters": {
+              "direction": "smer",
+              "nectar units": "jednotky nektáru"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "získať veľa nektáru"
+            "name": "získať veľa nektáru",
+            "parameters": {
+              "direction": "smer",
+              "nectars": "nektár"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "získaj nektár a vyrob med",
             "parameters": {
-              "honey": "med"
+              "honey": "med",
+              "direction": "smer",
+              "nectars": "nektár"
             }
           }
         },
@@ -541,7 +597,8 @@
           "get nectar": {
             "name": "získaj nektár",
             "parameters": {
-              "counter": "počítadlo"
+              "counter": "počítadlo",
+              "dir": "adr"
             }
           }
         },
@@ -555,7 +612,10 @@
             "name": "nakresli štvorec 20"
           },
           "draw octagons": {
-            "name": "nakresli osemuholníky"
+            "name": "nakresli osemuholníky",
+            "parameters": {
+              "numOctagons": "početOsemuholníkov"
+            }
           },
           "draw an octagon": {
             "name": "nakresli osemuholník"
@@ -687,7 +747,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "skontroluj odhad"
+            "name": "skontroluj odhad",
+            "parameters": {
+              "theGuess": "Tip"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -695,13 +758,15 @@
             "name": "n-stranný tvar",
             "description": "Tvar sa mení na základe počtu strán, ktoré má. Potrebuje dva parametre, dĺžku a počet strán. Dĺžka",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a loop": {
             "name": "nakresli cyklus",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw spiral circle": {
@@ -715,7 +780,8 @@
           "draw a loop": {
             "name": "nakresli cyklus",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "n-sided shape": {
@@ -923,13 +989,15 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "do something": {
             "name": "urob niečo",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -937,7 +1005,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -945,7 +1014,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -953,7 +1023,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -961,7 +1032,8 @@
           "draw a spiral edge": {
             "name": "nakresli kraj špirály",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -971,19 +1043,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -995,7 +1070,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -1007,7 +1083,8 @@
           "draw a square": {
             "name": "nakresli štvorec",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -1098,7 +1175,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -1108,7 +1186,8 @@
             "parameters": {
               "height": "výška",
               "actor": "postava"
-            }
+            },
+            "description": "blok s funkciou skoku s parametrami výšky a postavy"
           },
           "patrol": {
             "name": "hliadkuj",
@@ -1124,19 +1203,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -1148,7 +1230,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -1178,14 +1261,16 @@
             "parameters": {
               "height": "výška",
               "actor": "postava"
-            }
+            },
+            "description": "blok s funkciou skoku s parametrami výšky a postavy"
           },
           "patrol": {
             "name": "hliadkuj",
             "parameters": {
               "actor": "postava",
               "speed": "rýchlosť"
-            }
+            },
+            "description": "funkcia hliadky, ktorá má parameter aktéra a rýchlosti"
           }
         },
         "Robot Doodle": {
@@ -1305,7 +1390,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1313,7 +1401,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1340,7 +1431,10 @@
             }
           },
           "draw a polygon": {
-            "name": "nakresli mnohouholník"
+            "name": "nakresli mnohouholník",
+            "parameters": {
+              "sides": "Strany"
+            }
           },
           "draw a square 20": {
             "name": "nakresli štvorec 20"
@@ -1474,7 +1568,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1482,7 +1579,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1490,7 +1590,10 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1498,12 +1601,18 @@
             "name": "nakresli bit"
           },
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1511,7 +1620,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1519,7 +1631,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1527,7 +1642,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1535,7 +1653,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1543,7 +1664,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1551,7 +1675,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1559,7 +1686,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1567,7 +1697,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1575,7 +1708,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1583,7 +1719,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1591,7 +1730,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1599,7 +1741,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1607,7 +1752,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1615,7 +1763,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1623,7 +1774,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1631,7 +1785,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1639,7 +1796,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1647,7 +1807,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1655,7 +1818,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1663,7 +1829,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1671,7 +1840,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1679,7 +1851,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1687,7 +1862,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1695,7 +1873,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1703,7 +1884,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1711,7 +1895,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1719,7 +1906,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1727,7 +1917,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1735,7 +1928,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1743,7 +1939,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1751,7 +1950,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1759,7 +1961,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1767,7 +1972,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1775,7 +1983,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1783,7 +1994,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1791,7 +2005,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1799,7 +2016,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1807,7 +2027,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1815,7 +2038,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -1823,7 +2049,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "nakresli"
+            "name": "nakresli",
+            "parameters": {
+              "binary": "binárny"
+            }
           },
           "draw bit": {
             "name": "nakresli bit"
@@ -3092,7 +3321,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3100,7 +3330,8 @@
           "draw a polygon": {
             "name": "nakresli mnohouholník",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3108,7 +3339,8 @@
           "draw a spiral edge": {
             "name": "nakresli kraj špirály",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           }
         },
@@ -3117,7 +3349,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3126,7 +3359,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3136,19 +3370,22 @@
             "parameters": {
               "points": "body",
               "length": "dĺžka"
-            }
+            },
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán"
           },
           "draw a circle": {
             "name": "nakresli kružnicu",
             "parameters": {
               "radius": "polomer"
-            }
+            },
+            "description": "nakresli kruh s daným polomerom"
           },
           "draw a pinwheel": {
             "name": "nakresli veterník",
             "parameters": {
               "length": "dĺžka",
-              "repeat": "opakuj"
+              "repeat": "opakuj",
+              "sides": "Strany"
             }
           },
           "draw a triangle": {
@@ -3160,7 +3397,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "dĺžka"
+              "length": "dĺžka",
+              "sides": "Strany"
             }
           },
           "draw a house": {
@@ -3179,7 +3417,8 @@
             "name": "nakresli kraj špirály",
             "parameters": {
               "length": "dĺžka",
-              "min": "min"
+              "min": "min",
+              "sides": "Strany"
             }
           }
         },
@@ -3191,7 +3430,10 @@
             }
           },
           "draw a polygon": {
-            "name": "nakresli mnohouholník"
+            "name": "nakresli mnohouholník",
+            "parameters": {
+              "sides": "Strany"
+            }
           },
           "draw a square 20": {
             "name": "nakresli štvorec 20"
@@ -3559,6 +3801,604 @@
           },
           "draw bit": {
             "name": "nakresli bit"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "moja funkcia"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka",
+              "sides": "Strany"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu",
+            "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+            "parameters": {
+              "points": "body",
+              "length": "dĺžka"
+            }
+          },
+          "draw a circle": {
+            "name": "nakresli kružnicu",
+            "description": "nakresli kruh s daným polomerom",
+            "parameters": {
+              "radius": "polomer"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli veterník",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka",
+              "repeat": "opakuj"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojuholník",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "sides": "Strany",
+              "length": "dĺžka"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dom",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli štvorec",
+            "parameters": {
+              "length": "dĺžka"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "postav most"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "vymaž cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "oprav dlhú cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátku cestu"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "postav krátky most"
+          },
+          "build long bridge": {
+            "name": "postav dlhý most"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkcia 1"
+          },
+          "function 2": {
+            "name": "funkcia 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "možné riešenie"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "nakresli plameň",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "nakresli oheň"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "urýchľovač"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "urob niečo"
+          },
+          "draw hexagon": {
+            "name": "nakresli šesťuholník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli rad šesťuholníkov"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "nakresli uši"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          },
+          "draw ear stems": {
+            "name": "nakresli uši"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          },
+          "draw ear stems": {
+            "name": "nakresli uši"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "nakresli hviezdu"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nakresli hviezdu"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "nakresli hviezdu"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "nakresli okno"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "urob niečo"
+          },
+          "staggered squares": {
+            "name": "posunuté štvorce"
+          },
+          "draw a line of squares": {
+            "name": "nakresli rad štvorcov"
+          },
+          "draw square": {
+            "name": "nakresli štvorec"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          },
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "nakresli rad štvorcov"
+          },
+          "draw square": {
+            "name": "nakresli štvorec"
+          },
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "nakresli rad štvorcov"
+          },
+          "draw square": {
+            "name": "nakresli štvorec"
+          },
+          "do something": {
+            "name": "urob niečo"
+          },
+          "staggered squares": {
+            "name": "posunuté štvorce"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "urob niečo"
+          },
+          "draw triangle": {
+            "name": "nakresli trojuholník"
+          },
+          "draw line of triangles": {
+            "name": "nakresli rad trojuholníkov"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "nakresli šesťuholník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli rad šesťuholníkov"
+          },
+          "staggered squares": {
+            "name": "posunuté štvorce"
+          },
+          "draw a line of squares": {
+            "name": "nakresli rad štvorcov"
+          },
+          "draw square": {
+            "name": "nakresli štvorec"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "môj dizajn"
+          },
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "môj dizajn"
+          },
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          },
+          "draw ear stems": {
+            "name": "nakresli uši"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "nakresli štvorec"
+          },
+          "draw ear stems": {
+            "name": "nakresli uši"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "nakresli rad mnohouholníkov"
+          },
+          "draw polygon": {
+            "name": "nakresli mnohouholník"
+          },
+          "do something": {
+            "name": "urob niečo"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "pozbieraj popri ceste"
+          },
+          "check square for corn": {
+            "name": "kukurica"
+          },
+          "get all pumpkins": {
+            "name": "získaj všetky tekvice"
+          },
+          "pumpkin square": {
+            "name": "štvorec s tekvicou"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "pozbieraj popri ceste"
+          },
+          "pumpkin square": {
+            "name": "štvorec s tekvicou"
+          },
+          "check square for corn": {
+            "name": "kukurica"
+          },
+          "get produce": {
+            "name": "získaj plody"
+          },
+          "get all pumpkins": {
+            "name": "získaj všetky tekvice"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "pozbieraj popri ceste"
+          },
+          "check for corn": {
+            "name": "skontroluj kukuricu"
+          },
+          "corn rectangle": {
+            "name": "obdĺžnik kukurice"
+          },
+          "lettuce stairs": {
+            "name": "schody so šalátom"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "kukurica"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "kukurica"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "kukurica"
+          },
+          "get all pumpkins": {
+            "name": "získaj všetky tekvice"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "pozbieraj popri ceste"
+          },
+          "check square for corn": {
+            "name": "kukurica"
+          },
+          "get all pumpkins": {
+            "name": "získaj všetky tekvice"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "kukurica"
+          },
+          "get all pumpkins": {
+            "name": "získaj všetky tekvice"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "štvorec so záhradou"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "štvorec so záhradou"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "štvorec so záhradou"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "ukonči hru"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "posuň sa a získaj nektár s počítadlom"
           }
         }
       }

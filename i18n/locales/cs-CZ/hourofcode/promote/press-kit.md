@@ -57,15 +57,15 @@ Technology is transforming every industry on the planet. In 2015, 7 million open
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Dobrou zprávou je, že jsme na cestě, jak to změnit.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Dobrou zprávou je, že jsme na cestě, jak to změnit.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Každý Apple Store na světě už pořádal Hodinu programování. Even President Obama wrote his first line of code as part of the campaign.
 
 Proto se všech [X number] studentů z [SCHOOL NAME] účastní největší vzdělávací akce v historii, Hodiny kódu, během Týdne vzdělávání v informatice (3.–9. prosince).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+Hodina programování, kterou pořádá nezisková společnost Code.org a více než 100 dalších, je globální hnutí, které věří, že dnešní studenti jsou připraveni naučit se dovednosti kriticky nezbytné pro úspěch v 21. století. Please join us.
 
 Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
 
@@ -77,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### About Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

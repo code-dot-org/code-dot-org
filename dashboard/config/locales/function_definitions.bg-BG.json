@@ -29,7 +29,8 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "height": "височина"
+              "height": "височина",
+              "width": "широчина"
             }
           }
         },
@@ -37,7 +38,8 @@
           "draw square": {
             "name": "начертайте квадрат",
             "parameters": {
-              "height": "височина"
+              "height": "височина",
+              "width": "широчина"
             }
           },
           "draw a circle": {
@@ -675,6 +677,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "изпълнява нещо"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "цвят"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1194,7 +1201,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "размер"
+              "size": "размер",
+              "color": "цвят"
             }
           },
           "do something": {
@@ -1220,7 +1228,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "размер"
+              "size": "размер",
+              "color": "цвят"
             }
           },
           "do something": {
@@ -1259,7 +1268,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "размер"
+              "size": "размер",
+              "color": "цвят"
             }
           },
           "black outline": {
@@ -1355,6 +1365,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "изпълнява нещо"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "цвят"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1421,6 +1436,779 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "събери"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "прекрати игра"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "моята функция"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "рисува звезда",
+            "parameters": {
+              "points": "точки",
+              "length": "дължина"
+            }
+          },
+          "draw a circle": {
+            "name": "чертае кръг"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "дължина",
+              "repeat": "повтори"
+            }
+          },
+          "draw a triangle": {
+            "name": "чертае триъгълник",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a house": {
+            "name": "рисува къща",
+            "parameters": {
+              "length": "дължина"
+            }
+          },
+          "draw a square": {
+            "name": "чертае квадрат",
+            "parameters": {
+              "length": "дължина"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "рисува звезда"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          },
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          },
+          "draw triangle": {
+            "name": "начертайте триъгълник"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "начертайте квадрат"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "чертае квадрат"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "изпълнява нещо"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "двоичен код"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "широчина"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "широчина"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "широчина"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "широчина"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "широчина"
+            }
           }
         }
       }

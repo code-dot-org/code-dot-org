@@ -1,0 +1,20 @@
+{
+  "az-AZ": {
+    "data": {
+      "lessons": {
+        "coursef-2021/lesson-6": {
+          "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "[\\[sağlam düşüncə təhsili](https://creativecommons.org/)][1]\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.] [2]\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
+          "preparation": "-   Təlimat materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün vərəqələri çap edin.\n-   (İstəyə görə) Sinifdəki ekran üçün şeir afişası çap edin.",
+          "purpose": "Sağlam Fikirli Təhsil (Common Sense Education) bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
+          "student_overview": "Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin."
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "purpose": "Bu dərs dövrlərə giriş rolunu oynayır. Dövrlər şagirdlərin təkrarlanması lazım olan əmrləri qruplaşdıraraq kodlarını sadələşdirməsinə imkan verir. Şagirdlər sinif yoldaşlarının hərəkətlərindəki təkrarı qeyd edərək əmrlərin neçə dəfə təkrarlanacağını təyin edərək kritik düşünmə qabiliyyətlərini inkişaf etdirəcəklər. \"Xoşbəxt Xəritələr\"ə yenidən baxmaqla şagirdlər sıralamaq kimi köhnə anlayışları yeni təkrar dövrlər konsepsiyası ilə əlaqələndirmə şansı əldə edəcəklər."
+        }
+      }
+    }
+  }
+}

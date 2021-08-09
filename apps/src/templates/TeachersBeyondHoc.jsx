@@ -7,22 +7,6 @@ import VerticalImageResourceCard from './VerticalImageResourceCard';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
-const styles = {
-  heading: {
-    width: '100%'
-  },
-  mobileHeading: {
-    fontSize: 24,
-    lineHeight: 1.5
-  },
-  clear: {
-    clear: 'both'
-  },
-  spacer: {
-    height: 50
-  }
-};
-
 class TeachersBeyondHoc extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
@@ -85,6 +69,22 @@ class TeachersBeyondHoc extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    width: '100%'
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5
+  },
+  clear: {
+    clear: 'both'
+  },
+  spacer: {
+    height: 50
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

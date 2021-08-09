@@ -10,6 +10,17 @@ require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  # Used to determine who can access curriculum content
+  PUBLISHED_STATE = OpenStruct.new(
+    {
+      in_development: "in_development",
+      pilot: "pilot",
+      beta: "beta",
+      preview: "preview",
+      stable: "stable"
+    }
+  ).freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -28,8 +39,6 @@ module SharedConstants
     {
       not_tried: "not_tried",
       submitted: "submitted",
-      locked: "locked",
-      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",
@@ -142,6 +151,7 @@ module SharedConstants
       "setImageURL": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
@@ -192,6 +202,7 @@ module SharedConstants
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
+      "getPrediction": null,
 
       // Turtle
       "moveForward": null,
@@ -232,6 +243,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -247,6 +259,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
 
       // Variables
       "declareAssign_x": null,
@@ -270,6 +284,9 @@ module SharedConstants
       "appendItem": null,
       "removeItem": null,
       "join": null,
+      "declareAssign_object": null,
+      "getValue": null,
+      "addPair": null,
 
       // Functions
       "functionParams_none": null,
@@ -330,6 +347,9 @@ module SharedConstants
       "on": null,
       "off": null,
       "toggle": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
       "ledScreen.display": null,
       "ledScreen.clear": null,
       "ledScreen.scrollNumber": null,
@@ -382,6 +402,7 @@ module SharedConstants
       "drawSprites": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "keyDown": null,
       "keyWentDown": null,
       "keyWentUp": null,
@@ -436,6 +457,7 @@ module SharedConstants
       "createEdgeSprites": null,
       "shapeColor": null,
       "tint": null,
+      "alpha": null,
       "setVelocity": null,
       "getDirection": null,
       "getSpeed": null,
@@ -525,6 +547,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -540,6 +563,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
       "comment_Math": null,
 
       // Variables
@@ -547,15 +572,6 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
       "comment_Variables": null,
 
       // Functions
@@ -567,8 +583,6 @@ module SharedConstants
       "comment": null
     }
   JSON
-
-  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 
   # Subset of Ruby Logger::Severity constants.
   # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb

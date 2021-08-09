@@ -181,9 +181,16 @@ fi:
     invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
     mismatch_password: Antamasi salasanat eivät täsmää
     student_consent: Vahvistan että minulla on huoltajani lupa käyttää Code.org palveluita.
-    agree_us_website: Annan suostumukseni Yhdysvaltalaisen sivuston käyttöön.
-    my_data_to_us: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä
-      Yhdysvalloissa.
+    agree_us_data_transfer_student: "**Hyväksyn, että Code.org voi siirtää tietoja
+      (mukaan lukien henkilötiedot) tämän sivuston käytöstä Yhdysvalloille** tietojen
+      isännöimiseksi ja käsittelemiseksi."
+    agree_us_data_transfer_teacher: "**Hyväksyn, että Code.org voi siirtää tietoja
+      (mukaan lukien henkilökohtaiset tiedot) tämän sivuston käytöstäni (ja oppilaideni
+      sivun käytöstä) Yhdysvaltoihin** tällaisten tietojen isännöimiseksi ja käsittelemiseksi."
+    data_collection_us: Ymmärrän, että Code.org on yhdysvaltalainen voittoa tavoittelematon
+      verkkosivusto ja että Yhdysvaltojen tietojen keruuta koskevat lait saattavat
+      poiketa suomen laeista.
+    visit_privacy: Lue lisää Code.orgin [Tietosuojakäytäntö(]%{privacy_url}) sivuilla.
     student_terms_markdown: Sähköpostiosoitteita ei tallenneta muodossa, joka antaisi
       meidän ottaa yhteyttä oppilaisiin. Oppilaat eivät koskaan saa sähköpostia sivustolta
       Code.org muutoin kuin salasanan palauttamiseksi. Katso [tietosuojakäytännöstä](http://code.org/privacy)
@@ -191,8 +198,8 @@ fi:
     additional_information: Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista.
     user_type_button: Aseta tilin laji
     user_type_label: Tilin laji
-    user_type_teacher: Opettaja
     user_type_student: Oppilas
+    user_type_teacher: Opettaja
     field_is_required: vaaditaan
     accept_terms: Sinun on hyväksyttävä luodaksesi tili.
     error: Tapahtui virhe.
@@ -519,6 +526,7 @@ fi:
       päivityksiä lapsesi edistymisestä ja projekteista. Voit käyttää tätä sähköpostiosoitetta
       myös salasanan palautukseen.
     parent_guardian_email_label: Huoltajan sähköpostiosoite
+    remove_parent_email_label: Poista
     none: Ei mitään
     only_one_parent_email_supported_warning: 'Huomaa: Voimme tällä hetkellä tukea
       vain yhden vanhemman/huoltajan sähköpostiosoitetta oppilasta kohti.'
@@ -974,7 +982,7 @@ fi:
       email: Sähköposti
       school_name: Koulun nimi
       school_country: Koulun maa
-      colombian_school_name: Koulun nimi
+      colombian_chilean_school_name: Koulun nimi
     form_entries:
       gender:
         male: Mies
@@ -998,11 +1006,9 @@ fi:
       tallentamisen laitteellesi.
     more_information: Katso Code.org -sivuston tietosuojakäytäntö.
     accept: Hyväksyn
-  gdpr_dialog:
-    heading: Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?
-    message: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä Yhdysvalloissa.
-    true: Kyllä
+  page_not_found_title: Sivua ei löydy
   copy: Kopioi
+  confirm: Vahvista
   parent_email_banner:
     text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin
       pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"

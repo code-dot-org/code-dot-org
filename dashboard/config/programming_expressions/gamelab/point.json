@@ -1,0 +1,12 @@
+{
+  "func": "point",
+  "category": "Drawing",
+  "paletteParams": [
+    "x",
+    "y"
+  ],
+  "params": [
+    "200",
+    "200"
+  ]
+}

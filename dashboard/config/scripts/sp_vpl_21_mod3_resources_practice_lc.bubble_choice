@@ -1,0 +1,11 @@
+name 'SP-VPL-21-mod3-Resources-practice-lc'
+display_name 'Use resources to learn how to write new code'
+description '## Click on one of the options below to practice using resources to learn new code in Web Lab or Game Lab.'
+
+sublevels
+
+level 'SP-VPL-21-mod4-CSD U2 Heading Demo_2021'
+level 'SP-VPL-21-mod4-CSD U3 Drawing Squares to Corners_2021'
+
+
+

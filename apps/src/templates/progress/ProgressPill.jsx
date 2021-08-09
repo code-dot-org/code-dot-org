@@ -3,11 +3,157 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
-import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import {connect} from 'react-redux';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import {
+  BubbleShape,
+  BubbleSize
+} from '@cdo/apps/templates/progress/BubbleFactory';
+
+/**
+ * This component is similar to our ProgressBubble, except that instead of being
+ * a circle with a number inside, it is an ellipse with text (and possibly an
+ * icon)
+ */
+class ProgressPill extends React.Component {
+  static propTypes = {
+    levels: PropTypes.arrayOf(levelWithProgressType),
+    icon: PropTypes.string,
+    text: PropTypes.string,
+    tooltip: PropTypes.element,
+    disabled: PropTypes.bool,
+    selectedSectionId: PropTypes.string,
+    progressStyle: PropTypes.bool,
+    onSingleLevelClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
+  };
+
+  getUrl() {
+    const {
+      levels,
+      disabled,
+      selectedSectionId,
+      onSingleLevelClick
+    } = this.props;
+
+    const pillLinksToLevel =
+      !disabled && !onSingleLevelClick && levels.length === 1;
+
+    if (!pillLinksToLevel) {
+      return;
+    }
+
+    let url = levels[0].url;
+
+    if (selectedSectionId) {
+      url += stringifyQueryParams({section_id: selectedSectionId});
+    }
+
+    return url;
+  }
+
+  getTooltipProps() {
+    const {tooltip} = this.props;
+
+    const tooltipProps = {};
+    if (tooltip) {
+      const id = tooltip.props.tooltipId;
+      tooltipProps['data-tip'] = true;
+      tooltipProps['data-for'] = id;
+      tooltipProps['aria-describedby'] = id;
+    }
+
+    return tooltipProps;
+  }
+
+  render() {
+    const {
+      levels,
+      icon,
+      text,
+      tooltip,
+      disabled,
+      progressStyle,
+      isRtl,
+      onSingleLevelClick
+    } = this.props;
+
+    const firstLevel = levels[0];
+
+    const multiLevelStep = levels.length > 1;
+
+    const url = this.getUrl();
+
+    let onClick =
+      !multiLevelStep && !disabled && !url
+        ? () => onSingleLevelClick(firstLevel)
+        : undefined;
+
+    let style = {
+      ...styles.levelPill,
+      ...((url || onClick) && hoverStyle),
+      ...(!multiLevelStep &&
+        levelProgressStyle(firstLevel.status, firstLevel.kind))
+    };
+
+    // Adjust icon margins if locale is RTL
+    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
+
+    const tooltipProps = this.getTooltipProps();
+
+    const hasKeepWorkingFeedback =
+      firstLevel['teacherFeedbackReviewState'] === ReviewStates.keepWorking;
+
+    // Only put the bubble badge on if its a single assessment level (not set)
+    const displayBadge =
+      !multiLevelStep &&
+      (hasKeepWorkingFeedback || isLevelAssessment(firstLevel));
+
+    const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
+
+    return (
+      <a
+        href={url}
+        style={{textDecoration: 'none'}}
+        className="uitest-ProgressPill"
+        onClick={onClick}
+      >
+        <div {...tooltipProps} style={style}>
+          {icon && <FontAwesome icon={icon} />}
+          {text && (
+            <div
+              className="ProgressPillTextAndIcon"
+              style={{
+                ...textStyle,
+                ...(icon && iconMarginStyle)
+              }}
+            >
+              {text}
+            </div>
+          )}
+          {tooltip}
+          {displayBadge && (
+            <BubbleBadge
+              badgeType={
+                hasKeepWorkingFeedback
+                  ? BadgeType.keepWorking
+                  : BadgeType.assessment
+              }
+              bubbleSize={BubbleSize.full}
+              bubbleShape={BubbleShape.pill}
+            />
+          )}
+        </div>
+      </a>
+    );
+  }
+}
 
 const styles = {
   levelPill: {
@@ -48,88 +194,14 @@ const styles = {
   },
   iconMargin: {
     marginLeft: 10
+  },
+  iconMarginRTL: {
+    marginRight: 10
   }
 };
 
-/**
- * This component is similar to our ProgressBubble, except that instead of being
- * a circle with a number inside, it is an ellipse with text (and possibly an
- * icon)
- */
-class ProgressPill extends React.Component {
-  static propTypes = {
-    levels: PropTypes.arrayOf(levelType),
-    icon: PropTypes.string,
-    text: PropTypes.string,
-    tooltip: PropTypes.element,
-    disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
-    progressStyle: PropTypes.bool
-  };
+export const UnconnectedProgressPill = ProgressPill;
 
-  render() {
-    const {
-      levels,
-      icon,
-      text,
-      tooltip,
-      disabled,
-      selectedSectionId,
-      progressStyle
-    } = this.props;
-
-    const multiLevelStep = levels.length > 1;
-    let url = multiLevelStep || disabled ? undefined : levels[0].url;
-    if (url && selectedSectionId) {
-      url += stringifyQueryParams({section_id: selectedSectionId});
-    }
-
-    let style = {
-      ...styles.levelPill,
-      ...(url && hoverStyle),
-      ...(!multiLevelStep && levelProgressStyle(levels[0], false))
-    };
-
-    // If we're passed a tooltip, we also need to reference it from our div
-    let tooltipProps = {};
-    if (tooltip) {
-      const id = tooltip.props.tooltipId;
-      tooltipProps['data-tip'] = true;
-      tooltipProps['data-for'] = id;
-      tooltipProps['aria-describedby'] = id;
-    }
-
-    // Only put the assessment icon on if its a single assessment level (not set)
-    const levelIsAssessment =
-      isLevelAssessment(levels[0]) && levels.length === 1;
-
-    const textStyle = progressStyle ? styles.textProgressStyle : styles.text;
-
-    return (
-      <a
-        href={url}
-        style={{textDecoration: 'none'}}
-        className="uitest-ProgressPill"
-      >
-        <div {...tooltipProps} style={style}>
-          {icon && <FontAwesome icon={icon} />}
-          {text && (
-            <div
-              className="ProgressPillTextAndIcon"
-              style={{
-                ...textStyle,
-                ...(icon && styles.iconMargin)
-              }}
-            >
-              {text}
-            </div>
-          )}
-          {tooltip}
-          {levelIsAssessment && <SmallAssessmentIcon />}
-        </div>
-      </a>
-    );
-  }
-}
-
-export default Radium(ProgressPill);
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressPill));

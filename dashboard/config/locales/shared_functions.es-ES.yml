@@ -1,0 +1,22 @@
+---
+es:
+  data:
+    shared_functions:
+      driving with arrow keys: conducir con las teclas de flecha
+      fluttering: revoloteando
+      growing: creciente
+      jittering: nerviosismo
+      moving east: avanzando al este
+      moving east and looping: moviéndose hacia el este y haciendo un bucle
+      moving north: avanzando hacia el norte
+      moving south: avanzando hacia el sur
+      moving west: avanzando hacia el oeste
+      moving west and looping: moviéndose hacia el oeste y haciendo un bucle
+      moving with arrow keys: moverse con las flechas del teclado
+      patrolling: patrullando
+      shrinking: reducción
+      spinning left: girando a la izquierda
+      spinning right: girando a la derecha
+      swimming left and right: nadando a izquierda y derecha
+      wandering: vagando
+      wobbling: tambaleándose

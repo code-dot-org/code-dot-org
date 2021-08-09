@@ -22,13 +22,19 @@ class ExperimentsController < ApplicationController
     redirect_to '/', flash: {notice: "You have successfully joined the experiment '#{params[:experiment_name]}'."}
   end
 
-  VALID_EXPERIMENTS = ['2018-teacher-experience'] + Experiment::PILOT_EXPERIMENTS.collect {|p| p[:name] if p[:allow_joining_via_url]}.compact
+  # Returns whether the given experiment can be joined (or left) via url.
+  def can_join_via_url?(experiment_name)
+    # Currently, the only experiments that can be joined by url are pilots
+    # where allow_joining_via_url is true.
+    return true if Pilot.find_by(name: experiment_name).try(:allow_joining_via_url)
+    return false
+  end
 
   # GET /experiments/set_single_user_experiment/:experiment_name
   def set_single_user_experiment
     experiment_name = params[:experiment_name]
 
-    unless VALID_EXPERIMENTS.include?(experiment_name)
+    unless can_join_via_url?(experiment_name)
       redirect_to '/', flash: {alert: "'#{params[:experiment_name]}' is not a valid experiment."}
       return
     end
@@ -49,7 +55,7 @@ class ExperimentsController < ApplicationController
   def disable_single_user_experiment
     experiment_name = params[:experiment_name]
 
-    unless VALID_EXPERIMENTS.include?(experiment_name)
+    unless can_join_via_url?(experiment_name)
       redirect_to '/', flash: {alert: "'#{params[:experiment_name]}' is not a valid experiment."}
       return
     end

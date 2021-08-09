@@ -101,6 +101,14 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -129,6 +137,7 @@ gl:
             '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
+            '"enter"': introduza
       gamelab_atTime:
         options:
           UNIT:
@@ -139,6 +148,7 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -150,6 +160,7 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
       gamelab_getTime:
         options:
           UNIT:
@@ -182,6 +193,8 @@ gl:
         text: cor aleatoria
       gamelab_randomColor:
         text: cor aleatoria
+      gamelab_repeatForever:
+        text: Repetir para sempre
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -199,6 +212,11 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -316,6 +334,11 @@ gl:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': si
+            '"no"': non
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -323,15 +346,23 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': arco da vella
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": cor
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': aleatorio
       binary_move:
         options:

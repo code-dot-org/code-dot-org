@@ -159,14 +159,16 @@ zh-CN:
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
     student_consent: "我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
-    agree_us_website: "我同意使用美国的网站。"
-    my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
+    agree_us_data_transfer_student: '**我同意 Code.org 在我使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。'
+    agree_us_data_transfer_teacher: '**我同意 Code.org 在我（和我学生的）使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。'
+    data_collection_us: "我理解 Code.org 是基于美国的非营利组织，在美国管理该网站资料收集的法律可能会与我所从的国家有不同。"
+    visit_privacy: '访问 Code.org 的[隐私条款]（%{privacy_url}）以了解跟多。'
     student_terms_markdown: "注意：电子邮箱不会被存储，并用作与学生取得联系。Code.org 不会向学生发送与密码恢复无关的任何邮件。更多信息请查阅 [隐私政策](http://code.org/privacy)。"
     additional_information: "我们需要一些额外的信息来继续为你注册."
     user_type_button: "更新帐户类型"
     user_type_label: "帐户类型"
-    user_type_teacher: "老师"
     user_type_student: "学生"
+    user_type_teacher: "老师"
     field_is_required: "必填"
     accept_terms: "必须同意创建一个帐户。"
     error: "发生错误。"
@@ -268,6 +270,8 @@ zh-CN:
     invite_sent: '邀请已发送'
     added_teacher: '添加%{name}为你的老师'
     registered: "你已经注册了 %{section_name}。"
+    captcha_required: '请填写验证码加入本小组。'
+    already_exists: '你已经加入了小组 %{section_name}'
     error:
       signed_in: '请在注销后继续下一步操作。'
       username_not_found: '找不到用户名 %{用户名}'
@@ -313,6 +317,7 @@ zh-CN:
       sections: "小组"
       help_support: "帮助与支持"
       report_bug: "报告错误"
+      report_abuse: "举报滥用"
       teacher_community: "教师社区"
       professional_learning: "专业学习"
       documentation: "使用文档"
@@ -323,6 +328,7 @@ zh-CN:
       game_lab_tutorials: "游戏实验室说明"
       sprite_lab_documentation: "精灵图实验室文档"
       sprite_lab_tutorials: "精灵图实验室教程"
+      web_lab_documentation: "网站程序实验室文档"
       educate_overview: "教育工作者概述"
       educate_elementary: "小学"
       educate_middle: "中学"
@@ -348,6 +354,7 @@ zh-CN:
       help_us: "帮助我们"
       teach: "教学"
       about: "关于"
+      legal: "隐私与法律"
       legal_privacy: "隐私政策"
       legal_tos: "使用条款"
     user:
@@ -436,6 +443,7 @@ zh-CN:
       worked_with: '共事'
       update_lock_settings: '在这里更新锁设置。'
       clear_response: '清除回复'
+    student_code_view_diabled: '无法查看该活动的学生代码。'
   user:
     email_confirm_needed: '电子邮件地址尚未被确认：'
     email_confirm_needed_required: '你的电子邮件地址%{email} 尚未被确认：'
@@ -546,9 +554,11 @@ zh-CN:
     help_from_html: '我们要特别感谢来自亚马逊、谷歌和微软的工程师帮助创建本教程。'
     help_from_html_old: '来自亚马逊、谷歌和微软的工程师们帮助创建了本教程。'
     art_from_html: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。<br />星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。<br />冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。<br />冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。<br />愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。<br />植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。<br />阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
-    art_from_html_old: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
+    art_from_html_old: '《我的世界》&#8482; &copy; %{current_year} 微软. 保留所有权利. 星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业. 保留所有权利. 冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼. 保留所有权利. 冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯. 保留所有权利. 愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司. 保留所有权利. 植物大战僵尸&#8482; &copy; %{current_year} 电子艺界. 保留所有权利. 阿甘妙世界是商标 &copy; 2015 卡通网络.'
     code_from_html: 'Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> 之许可。'
     powered_by_aws: '由亚马逊网络服务'
+    built_on_github: '在微软的GitHub上构建'
+    google_copyright: '© Google Inc，在有许可下使用。谷歌课堂是Google Inc的一个商标。'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour of Code&reg; 是 Code.org 的注册商标。'
     copyright: '版权'
     more: '更多'
@@ -559,12 +569,14 @@ zh-CN:
     tos_short: '条款'
     tos: '使用条款'
     privacy: '隐私政策'
+    privacy_updated: '隐私政策（已更新）'
     secure: '安全版本'
     report_abuse: '举报滥用'
     built_on_code_studio: '在代码工作室中建立'
     make_my_own_app: '制作我自己的应用程序'
     how_it_works: '它是如何工作的（查看代码）'
     try_hour_of_code: '试试《编程一小时》！'
+    store: '商店'
   reference_area:
     title: '需要帮助吗？'
     subtitle: '看看这些视频和提示'
@@ -975,9 +987,8 @@ zh-CN:
       school_city: '学校所在城市'
       school_country: '学校所在国家'
       colombian_school_city: '学校所在城市'
-      colombian_school_department: '学校部门'
       colombian_school_municipality: '学校政府'
-      colombian_school_name: '学校名称'
+      colombian_chilean_school_name: '学校名称'
       ages: '今年将教什么年纪的学生？'
       subjects: '今年教的科目是什么？'
       resources: '您使用以下哪种计算机科学教育资源？'
@@ -1071,18 +1082,12 @@ zh-CN:
     message: '通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。'
     more_information: "查看 Code.org 的隐私政策。"
     accept: '我同意'
-  gdpr_dialog:
-    heading: '你同意使用一个美国的网站吗？'
-    message: '您使用本网站产生的数据可能会被传输至美国并在美国存储或处理。'
-    link_intro: '有关详细信息，请参阅我们'
-    privacy_policy: '隐私条款'
-    logout: '注销'
-    yes: '对'
   page_not_found_title: "找不到页面"
   page_not_found_header: '404：找不到页面'
   page_not_found_description: "您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。"
   page_not_found_button: "返回主页"
   copy: '复制'
+  confirm: '确认'
   maker:
     google_oauth:
       login_with_google: '登录到Google的制作者应用'
@@ -1092,6 +1097,7 @@ zh-CN:
       error_wrong_provider: '错误的提供方，请确认你使用的是Google登录'
       error_invalid_user: '无效的用户ID，请重新登录。'
       error_no_code: '请输入您的登录代码。'
+      confirm_login: '选择“确认”以使用您的Google帐户登录。'
   parent_email_banner:
     text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
     link_your_email: "关联您的电子邮箱"
@@ -1099,3 +1105,4 @@ zh-CN:
   behaviors:
     this_sprite: "这个精灵"
   unit_prefix: "单位%{n}"
+  code_org_logo_alt: "Code.org首页"

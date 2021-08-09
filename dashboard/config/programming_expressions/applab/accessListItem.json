@@ -1,0 +1,6 @@
+{
+  "func": "accessListItem",
+  "block": "list[0]",
+  "category": "Variables",
+  "noAutocomplete": true
+}

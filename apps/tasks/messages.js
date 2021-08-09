@@ -25,11 +25,20 @@ module.exports = function(grunt) {
           var formatted = process(locale, namespace, finalData);
           grunt.file.write(filePair.dest, formatted);
         } catch (e) {
-          var errorMsg = 'Error processing localization file ' + src + ': ' + e;
-          if (grunt.option('force')) {
-            grunt.log.warn(errorMsg);
+          if (locale === 'in_tl') {
+            // Crowdin generates a pseudo-language locale (in_tl) for all of our files. Sometimes Crowdin will output a
+            // pseudo-translation in an unexpected way and we cannot process it. This catches that error and skips the
+            // problem file. The english strings will be used instead and translators will have to go to the Crowdin
+            // website in order to translate the strings for that file.
+            let msg = `Error processing Crowdin in-context localization file. Using the in-context translation tool will not work for strings in ${src}: ${e}`;
+            grunt.log.debug(msg);
           } else {
-            throw new Error(errorMsg);
+            let errorMsg = `Error processing localization file ${src}: ${e}`;
+            if (grunt.option('force')) {
+              grunt.log.warn(errorMsg);
+            } else {
+              throw new Error(errorMsg);
+            }
           }
         }
       });

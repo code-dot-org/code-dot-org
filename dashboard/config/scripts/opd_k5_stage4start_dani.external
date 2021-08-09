@@ -1,0 +1,22 @@
+name 'OPD-K5 Stage4Start_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Loops > Stage 5 Overview
+
+This stage builds on your first programming experience by adding the core concept of **loops**.
+
+<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+By completing Stage 5, you will:
+
+- Practice coding simple loops
+- Reflect on classroom application
+
+> **What to Expect in this Stage:** In the levels that follow, we'll introduce an unplugged lesson and a series of puzzles from Course C (meant for Grade 2) that focus on the concept of loops. In order to complete a puzzle, you'll need to write code using visual, block-based programming. We'll close with an opportunity to reflect. You should spend between 20-45 minutes on this stage.
+
+Ready? Let's go!
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

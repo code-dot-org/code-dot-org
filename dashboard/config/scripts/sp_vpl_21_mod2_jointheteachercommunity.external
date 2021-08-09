@@ -1,0 +1,19 @@
+name 'SP-VPL-21-mod2-JoinTheTeacherCommunity'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Introduce yourself on the teacher forum
+
+##### **Step 1:** Open a new tab.
+##### **Step 2:** Navigate to Code.org and sign into your teacher account.
+##### **Step 3:** Click on the "?" in the upper right hand corner of the screen.
+##### **Step 4:** Select "Teacher forum" from the dropdown menu. 
+##### **Step 5:** Click on CS Discoveries.
+##### **Step 6:** Click on the Introduce yourself category.
+
+# Note to self - set up space for introduction on the forum, finish the instructions, and add a photo. 
+
+
+
+MARKDOWN

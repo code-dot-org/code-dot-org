@@ -74,6 +74,7 @@ fa:
         options:
           FORMAT:
             '"diamond"': الماس
+            '"row"': کلاس
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -99,6 +100,7 @@ fa:
         options:
           LAYOUT:
             '"diamond"': الماس
+            '"row"': کلاس
             '"random"': در هم
       Dancelab_randomColor:
         text: رنگ تصادفی
@@ -110,6 +112,22 @@ fa:
         options:
           EFFECT:
             '"none"': هیچکدام
+      Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': سریع
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          SPEED:
+            '1': normal
+            '2': سریع
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -138,6 +156,14 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': نمایان
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': نمایان
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -172,6 +198,10 @@ fa:
             '"right"': سمت راست
             '"space"': فضا
             '"x"': طول (x)
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': جلوگیری
       gamelab_atTime:
         options:
           UNIT:
@@ -180,6 +210,7 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -189,6 +220,7 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
       gamelab_getTime:
         options:
           UNIT:
@@ -223,6 +255,8 @@ fa:
         text: رنگ تصادفی
       gamelab_randomColor:
         text: رنگ تصادفی
+      gamelab_repeatForever:
+        text: تکرار بی‌پایان
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -232,10 +266,28 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': رنگین کمان
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': زیر آب
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
+            undefined: هیچکدام
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': اندازه
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': متوسط
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -267,6 +319,12 @@ fa:
             '"left"': سمت چپ
             '"right"': سمت راست
             '"space"': فضا
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": ماهی
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ماهی
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -297,10 +355,26 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+      Mikelab_hideFish:
+        options:
+          TRASH:
+            fish: ماهی
       Mikelab_ifDanceIs:
         options:
           DANCE:
             MOVES.Rest: هیچکدام
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ماهی
       Mikelab_randomColor:
         text: رنگ تصادفی
       Mikelab_repeatUntilComplete:
@@ -318,6 +392,10 @@ fa:
           CORNER:
             '"right"': سمت راست
             '"left"': سمت چپ
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': زیر
       Mikelab_sprite:
         options:
           LOCATION:
@@ -345,6 +423,11 @@ fa:
             '"a"': الف
             '"s"': جنوب
             '"d"': د
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'بله'
+            '"no"': 'نه'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -352,15 +435,25 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': تو پُر
+            '"rainbow"': رنگین کمان
       RyanLab_moveForward:
         text: برو جلو
       RyanLab_turnLeft:
         text: بپیچ به چپ
       RyanLab_turnRight:
         text: بپیچ به راست
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": رنگ
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': کلاس
             '"random"': در هم
       binary_move:
         options:

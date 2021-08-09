@@ -426,13 +426,13 @@ es:
         alg_15_biggame_update_player: CS en álgebra - Big Game Actualización de jugador
         alg_16_biggame_collision_detection: CS en álgebra - Big Game detección de colisiones
         alg_17_sambat_compound_booleans: CS en álgebra - compuestos booleanos
-        starwars_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
-        starwars_typing: 'Star Wars: Construyendo una Galaxia con Código - JavaScript'
-        starwars_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
-        starwars_congrats: 'Star Wars: Construyendo una Galaxia con Código - Enhorabuena'
-        starwars_blocks_intro: 'Star Wars: Construyendo una Galaxia con Código - Introducción'
-        starwars_blocks_events: 'Star Wars: Construyendo una Galaxia con Código - Eventos'
-        starwars_blocks_congrats: 'Star Wars: Construyendo una Galaxia con Código - Enhorabuena'
+        starwars_intro: 'La guerra de las galaxias: cómo construir una galaxia con código - Introducción'
+        starwars_typing: 'La guerra de las galaxias: cómo construir una galaxia con código - JavaScript'
+        starwars_events: 'La guerra de las galaxias: cómo construir una galaxia con código - Eventos'
+        starwars_congrats: 'La guerra de las galaxias: cómo construir una galaxia con código - Felicidades'
+        starwars_blocks_intro: 'La guerra de las galaxias: cómo construir una galaxia con código - Introducción'
+        starwars_blocks_events: 'La guerra de las galaxias: cómo construir una galaxia con código - Eventos'
+        starwars_blocks_congrats: 'La guerra de las galaxias: cómo construir una galaxia con código - Felicidades'
         mc_intro: Minecraft - Introducción
         mc_repeat: Minecraft - Repetir
         mc_if_statements: Minecraft - Cláusulas condicionales
@@ -501,7 +501,7 @@ es:
         CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
-        CSF_StarWars_ProjectIntro: Introducción al proyecto de Star Wars
+        CSF_StarWars_ProjectIntro: Introducción al proyecto La guerra de las galaxias
         mc_2018_intro: 'Minecraft: introducción al viaje acuático'
         MC_2018_loops: 'Minecraft: bloque repetir hasta en viaje acuático'
         mc_2018_conditionals: 'Minecraft: condicionales en viaje acuático'
@@ -567,6 +567,24 @@ es:
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Sucesos con Macklemore y Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA con Kat Graham y Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstracción con Susan Wojcicki y China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor y Paula Mejía'
+        csf21pilot_events: 'Laboratorio de Sprites: Sprites en acción (piloto del CSF 2021)'
+        csf21pilot_prompts: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto CSF 2021)'
+        outbreak_mike: CodeBytes Episodio 3 con Mike - Simulador de brotes
+        poembot-pilot-prompts: Haiku Bots - Prompt con Opciones [PILOT]
+        poembot-pilot-text: Haiku Bots - Almacenar Texto [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
+        csf_lots_of_sprites: 'Laboratorio de Sprite: Muchos Sprites'
+        playlab_2021: Introducción al laboratorio de juegos
+        playlab_2021_reader: Introducción al laboratorio de juegos
+        csp_defining_calling_functions: Definiendo y Llamando a Funciones
+        csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -1,0 +1,12 @@
+{
+  "func": "includes",
+  "category": "Variables",
+  "paletteParams": [
+    "searchValue"
+  ],
+  "params": [
+    "\"World\""
+  ],
+  "modeOptionName": "*.includes",
+  "type": "value"
+}

@@ -1,6 +1,7 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 
 require 'cdo/google/drive'
+require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
 require 'psych'
@@ -19,6 +20,10 @@ CROWDIN_PROJECTS = {
   "hour-of-code": {
     config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
     identity_file: File.join(File.dirname(__FILE__), "hourofcode_credentials.yml")
+  },
+  "codeorg-restricted": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "codeorg_restricted_credentials.yml")
   }
 }
 
@@ -54,10 +59,17 @@ class I18nScriptUtils
 
     # Make sure we treat the strings 'y' and 'n' as strings, and not bools
     yaml_bool = /^(?:y|Y|n|N)$/
+    # Make sure we use the right format for strings with '#' in them, otherwise
+    # YAML parsers might treat part of the string as a YAML comment.
+    octothorpe = /#/
     ast.grep(Psych::Nodes::Scalar).each do |node|
       if yaml_bool.match node.value
         node.plain = false
         node.quoted = true
+      elsif octothorpe.match node.value
+        node.plain = false
+        node.quoted = true
+        node.style = Psych::Nodes::Scalar::DOUBLE_QUOTED
       end
     end
 
@@ -132,33 +144,73 @@ class I18nScriptUtils
     URI.join("https://studio.code.org", path)
   end
 
+  # Used by get_level_from_url, for the script_level-specific case.
+  def self.get_script_level(route_params, url)
+    script = Script.get_from_cache(route_params[:script_id])
+    unless script.present?
+      Honeybadger.notify(
+        error_class: 'Could not find script in get_script_level',
+        error_message: "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
+      )
+      return nil
+    end
+
+    case route_params[:action]
+    when "show"
+      script_level = ScriptLevelsController.get_script_level(script, route_params)
+      script_level&.level
+    when "lesson_extras"
+      # Copied from ScriptLevelsController.lesson_extras
+      uri = URI.parse(url)
+      uri_params = CGI.parse(uri.query)
+      if uri_params.key?('id')
+        script_level = Script.cache_find_script_level(uri_params['id'].first)
+        script_level&.level
+      elsif uri_params.key?('level_name')
+        Level.find_by_name(uri_params['level_name'].first)
+      end
+    else
+      Honeybadger.notify(
+        error_class: 'Could not identify route in get_script_level',
+        error_message: "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
+      )
+      nil
+    end
+  end
+
+  # Given a code.org url, if it's a valid level url (including things like
+  # projects), return the level identified by this url.
+  #
+  # Note that this may not cover 100% of the possible different kinds of level
+  # urls; we expect to expand this function over time as new cases are
+  # discovered.
   def self.get_level_from_url(url)
     # memoize to reduce repeated database interactions
     @levels_by_url ||= Hash.new do |hash, new_url|
-      url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
-      matches = new_url.match(url_regex)
+      route_params = Rails.application.routes.recognize_path(new_url)
 
-      hash[new_url] =
-        if matches.nil?
-          project_url_regex = %r{https://studio.code.org/p/(?<project_name>[A-Za-z0-9\s\-_]+)}
-          project_matches = new_url.match(project_url_regex)
-          if project_matches.nil?
-            STDERR.puts "could not find level for url: #{new_url}"
-            nil
-          else
-            Level.find_by_name(ProjectsController::STANDALONE_PROJECTS[project_matches[:project_name]]['name'])
-          end
-        elsif matches[:level_info].starts_with?("extras")
-          level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
-          level_name = matches[:level_info].match(level_info_regex)[:level_name]
-          Level.find_by_name(CGI.unescape(level_name))
+      level =
+        case route_params[:controller]
+        when "projects"
+          Level.find_by_name(ProjectsController::STANDALONE_PROJECTS.dig(route_params[:key], :name))
+        when "script_levels"
+          get_script_level(route_params, new_url)
         else
-          script = Script.find_by_name(matches[:script_name])
-          stage = script.lessons.find_by_relative_position(matches[:stage_pos])
-          level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
-          level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-          stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
+          Honeybadger.notify(
+            error_class: 'Could not identify route in get_level_from_url',
+            error_message: "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
+          )
         end
+
+      unless level.present?
+        Honeybadger.notify(
+          error_class: 'Could not find level in get_level_from_url',
+          error_message: "could not find level for url #{new_url.inspect}"
+        )
+        next
+      end
+
+      hash[new_url] = level
     end
 
     @levels_by_url[url]
@@ -181,5 +233,41 @@ class I18nScriptUtils
   # any English content (description, social share stuff, etc).
   def self.sanitize_header!(header)
     header.slice!("title")
+  end
+
+  # If a script is updated such that its destination directory changes after
+  # creation, we can end up in a situation in which we have multiple copies of
+  # the script file in the repo, which makes it difficult for the sync out to
+  # know which is the canonical version.
+  #
+  # To prevent that, here we proactively check for existing files in the
+  # filesystem with the same filename as our target script file, but a
+  # different directory. If found, we refuse to create the second such script
+  # file and notify of the attempt, so the issue can be manually resolved.
+  #
+  # Note we could try here to remove the old version of the file both from the
+  # filesystem and from github, but it would be significantly harder to also
+  # remove it from Crowdin.
+  def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
+    level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
+
+    matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
+      other_filename == script_i18n_filename
+    end
+
+    return false if matching_files.empty?
+
+    # Clean up the file paths, just to make our output a little nicer
+    base = Pathname.new(level_content_directory)
+    relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
+    relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+    script_name = File.basename(script_i18n_name, '.*')
+    error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+    Honeybadger.notify(
+      error_class: 'Destination directory for script is attempting to change',
+      error_message: error_message
+    )
+    puts error_message
+    return true
   end
 end

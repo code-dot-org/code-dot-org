@@ -1,0 +1,25 @@
+name 'U4L5 CSP CFU terms_2021'
+title 'Terminology Matching'
+
+height '75'
+
+question 'Boolean Expression'
+answer 'Internet Protocol (IP)'
+question 'Logical Operator'
+answer 'Transmission Control Protocol (TCP)'
+question '&&'
+answer 'And'
+question '||'
+answer 'Or'
+question '!'
+answer 'Not'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN

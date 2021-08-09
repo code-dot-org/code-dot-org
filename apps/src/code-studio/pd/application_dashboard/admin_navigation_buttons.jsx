@@ -2,15 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap';
 
-const styles = {
-  buttonContainer: {
-    marginBottom: 20
-  },
-  button: {
-    marginRight: '10px'
-  }
-};
-
 export default class AdminNavigationButtons extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -35,3 +26,12 @@ export default class AdminNavigationButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonContainer: {
+    marginBottom: 20
+  },
+  button: {
+    marginRight: '10px'
+  }
+};

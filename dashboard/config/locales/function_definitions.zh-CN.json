@@ -113,7 +113,7 @@
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "2-3 Artist Functions 10": {
@@ -144,7 +144,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "2-3 Artist Functions 3": {
@@ -152,7 +152,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "2-3 Artist Functions 4": {
@@ -465,7 +465,8 @@
           "get 5 nectar": {
             "name": "获取5个花蜜",
             "parameters": {
-              "direction": "方向"
+              "direction": "方向",
+              "nectar units": "花蜜数量"
             }
           }
         },
@@ -475,7 +476,8 @@
             "parameters": {
               "direction": "方向",
               "nectars": "花蜜"
-            }
+            },
+            "description": "在任何方向收集所给予数量的花粉"
           }
         },
         "Course 4 Bee Params 8": {
@@ -485,7 +487,8 @@
               "honey": "蜂蜜",
               "direction": "方向",
               "nectars": "花蜜"
-            }
+            },
+            "description": "向某个方向移动以收集花粉或制作花蜜。"
           }
         },
         "Course 4 Play Lab Params 1": {
@@ -496,7 +499,8 @@
         },
         "Course 4 Play Lab Params 10": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
@@ -610,7 +614,8 @@
           "get nectar": {
             "name": "采花蜜",
             "parameters": {
-              "counter": "counter"
+              "counter": "counter",
+              "dir": "DIR（方向）"
             }
           }
         },
@@ -625,7 +630,10 @@
             "description": "画一个面积 20 的正方形"
           },
           "draw octagons": {
-            "name": "画多个八边形"
+            "name": "画多个八边形",
+            "parameters": {
+              "numOctagons": "numOctagons（八边形数量）"
+            }
           },
           "draw an octagon": {
             "name": "画一个八边形"
@@ -664,7 +672,8 @@
         },
         "FoodFight": {
           "level_up": {
-            "name": "升级"
+            "name": "升级",
+            "description": "升“关卡”一级，重置分数到零，加快敌军速度，并选择随机背景。"
           },
           "score_points": {
             "name": "积分",
@@ -700,7 +709,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -718,7 +728,8 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Geometric Sun_2018": {
@@ -732,7 +743,8 @@
             "name": "画窗户"
           },
           "rectangle": {
-            "name": "矩形"
+            "name": "矩形",
+            "description": "大笑"
           },
           "sun": {
             "name": "太阳"
@@ -750,12 +762,16 @@
             "name": "三角形"
           },
           "square": {
-            "name": "正方形"
+            "name": "正方形",
+            "description": "大笑"
           }
         },
         "Guess The Number": {
           "check guess": {
-            "name": "检查猜测"
+            "name": "检查猜测",
+            "parameters": {
+              "theGuess": "猜想"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -764,7 +780,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "形状的变化取决于它当前有多少个边。它有两个参数，长度和边数。长度 "
           },
           "draw a loop": {
             "name": "画一个循环",
@@ -789,7 +806,8 @@
             }
           },
           "n-sided shape": {
-            "name": "n边形"
+            "name": "n边形",
+            "description": "形状的变化取决于它当前有多少个边。它有两个参数，长度和边数。长度 "
           },
           "draw spiral circle": {
             "name": "画螺旋圈",
@@ -2209,7 +2227,7 @@
         },
         "courseE_artist_functions1": {
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions10": {
@@ -2258,7 +2276,7 @@
         },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions2": {
@@ -2266,7 +2284,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions2_2018": {
@@ -2274,7 +2292,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions2_2019": {
@@ -2282,7 +2300,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions2_2020": {
@@ -2290,7 +2308,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions2_copy": {
@@ -2298,7 +2316,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2696,7 +2714,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions_predict1_2018": {
@@ -2704,7 +2722,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions_predict1_2019": {
@@ -2712,7 +2730,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions_predict1_2020": {
@@ -2720,7 +2738,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions_predict1_copy": {
@@ -2728,7 +2746,7 @@
             "name": "画一个正方形"
           },
           "draw ear stems": {
-            "name": "画穗柄"
+            "name": "画眼镜腿"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3279,7 +3297,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的三角形"
           },
           "checker": {
             "name": "检查",
@@ -3309,7 +3328,8 @@
             "name": "画一个正方形",
             "parameters": {
               "length": "长度"
-            }
+            },
+            "description": "画一个带边长参数的正方形"
           }
         },
         "courseF_artist_fwp3": {
@@ -3826,6 +3846,621 @@
           },
           "draw bit": {
             "name": "绘制比特"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "可能的解决方案"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "绘制火焰",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "绘制火焰"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "助推器"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "结束游戏"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "用计数器移动并获取花蜜"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "我的函数"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "small flower": {
+            "name": "小花"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "逻辑之花2"
+          },
+          "LOGIC FLOWER": {
+            "name": "逻辑之花"
+          },
+          "LOGIC FLOWERS": {
+            "name": "逻辑之花"
+          },
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度",
+              "sides": "边"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "画一个星星",
+            "description": "用所给予的点和指定长度的边画一个星星",
+            "parameters": {
+              "points": "分数",
+              "length": "长度"
+            }
+          },
+          "draw a circle": {
+            "name": "画一个圆圈",
+            "description": "用给予的半径画一个圆圈",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "画一个风车",
+            "parameters": {
+              "sides": "边",
+              "length": "长度",
+              "repeat": "重复"
+            }
+          },
+          "draw a triangle": {
+            "name": "画一个三角形",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a shape": {
+            "name": "画一个图形",
+            "parameters": {
+              "sides": "边",
+              "length": "长度"
+            }
+          },
+          "draw a house": {
+            "name": "画一个房子",
+            "parameters": {
+              "length": "长度"
+            }
+          },
+          "draw a square": {
+            "name": "画一个正方形",
+            "parameters": {
+              "length": "长度"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "重置游戏"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "建一个桥"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "清除路径"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "固定长路径"
+          },
+          "fix short path": {
+            "name": "固定短路径"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "造一个短桥"
+          },
+          "build long bridge": {
+            "name": "造一个长桥"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "函数1"
+          },
+          "function 2": {
+            "name": "函数2"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw hexagon": {
+            "name": "画六边形"
+          },
+          "draw line of hexagons": {
+            "name": "画一列六边形"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "画一个星星"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "画一个窗口"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          },
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          },
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          },
+          "do something": {
+            "name": "做点什么"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "做点什么"
+          },
+          "draw triangle": {
+            "name": "绘制三角形"
+          },
+          "draw line of triangles": {
+            "name": "画一列三角形"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "画六边形"
+          },
+          "draw line of hexagons": {
+            "name": "画一列六边形"
+          },
+          "staggered squares": {
+            "name": "叠起来的正方形"
+          },
+          "draw a line of squares": {
+            "name": "画一条正方形线"
+          },
+          "draw square": {
+            "name": "画一个正方形"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "我的设计"
+          },
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "我的设计"
+          },
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "画一个正方形"
+          },
+          "draw ear stems": {
+            "name": "画眼镜腿"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "画一列多边形"
+          },
+          "draw polygon": {
+            "name": "画多边形"
+          },
+          "do something": {
+            "name": "做点什么"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          },
+          "pumpkin square": {
+            "name": "南瓜广场"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "pumpkin square": {
+            "name": "南瓜广场"
+          },
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get produce": {
+            "name": "获取产品"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "check for corn": {
+            "name": "查看玉米"
+          },
+          "corn rectangle": {
+            "name": "玉米矩形"
+          },
+          "lettuce stairs": {
+            "name": "生菜梯子"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "沿路径选取"
+          },
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "搜查广场上的玉米"
+          },
+          "get all pumpkins": {
+            "name": "收获所有的南瓜"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "花园广场"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "花园广场"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "花园广场"
           }
         }
       }

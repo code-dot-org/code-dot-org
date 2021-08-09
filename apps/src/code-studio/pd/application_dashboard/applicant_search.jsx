@@ -10,12 +10,6 @@ import {
 import $ from 'jquery';
 import {Link} from 'react-router';
 
-const styles = {
-  notFound: {
-    color: color.red
-  }
-};
-
 export default class ApplicantSearch extends React.Component {
   constructor(props) {
     super(props);
@@ -89,3 +83,9 @@ export default class ApplicantSearch extends React.Component {
     );
   }
 }
+
+const styles = {
+  notFound: {
+    color: color.red
+  }
+};

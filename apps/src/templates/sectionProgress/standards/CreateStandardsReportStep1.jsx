@@ -7,15 +7,6 @@ import DialogFooter from '../../teacherDashboard/DialogFooter';
 import {connect} from 'react-redux';
 import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
-const styles = {
-  noUnplugged: {
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    marginTop: 20,
-    marginBottom: 30
-  }
-};
-
 class CreateStandardsReportStep1 extends Component {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
@@ -52,6 +43,15 @@ class CreateStandardsReportStep1 extends Component {
     );
   }
 }
+
+const styles = {
+  noUnplugged: {
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    marginTop: 20,
+    marginBottom: 30
+  }
+};
 
 export const UnconnectedCreateStandardsReportStep1 = CreateStandardsReportStep1;
 

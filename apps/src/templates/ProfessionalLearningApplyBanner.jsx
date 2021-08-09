@@ -5,6 +5,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
   static propTypes = {
     useSignUpText: PropTypes.bool,
     nominated: PropTypes.bool,
+    teacherApplicationMode: PropTypes.string,
     style: PropTypes.object,
     linkSuffix: PropTypes.string
   };
@@ -129,8 +130,10 @@ class ProfessionalLearningApplyBanner extends React.Component {
       return 'Professional Learning is still on! Applications are open for Middle and High School teachers!';
     } else if (this.props.nominated) {
       return 'CONGRATULATIONS! You’ve been nominated for a scholarship!';
+    } else if (this.props.teacherApplicationMode === 'closing-soon') {
+      return 'Applications closing soon! 2021 Professional Learning for Middle and High School teachers';
     } else {
-      return 'SEATS OPEN - 2020 Professional Learning for Middle and High School Teachers';
+      return 'SEATS OPEN - 2021 Professional Learning for Middle and High School teachers';
     }
   }
 
@@ -179,7 +182,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Join us
+                    Apply Now
                   </button>
                 </div>
               </div>
@@ -189,7 +192,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Join us
+                    Apply Now
                   </button>
                 </div>
               </div>

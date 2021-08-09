@@ -25,8 +25,10 @@
   twentyhours_heading: "Try our Intro to Computer Science Course"
   twentyhours_text: "Finished your first Hour of Code? Learn more core computer science and programming concepts in this follow-up course."
   og_title: 'Every child deserves opportunity'
+  og_title_soon: "Համակարգչային գիտության ուսումնասիրման շաբաթ"
   og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   csedweek_og_title: "Համակարգչային գիտության ուսումնասիրման շաբաթ"
+  csedweek_og_description: "Every student in every school deserves the opportunity to study computer science. It's changing everything."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
   hoc2014_students: "Ուսանողներ"
   hoc2014_try: "Try it"
@@ -265,6 +267,8 @@
   homepage_hero_text_stat_loc: "2.5 միլին աղջիկներ են սովորում Code Studio-ի միջոցով"
   homepage_hero_text_stat_students: "#student_count ուսանողներ Code Studio-ում"
   homepage_hero_text_stat_served: 'Կոդի Ժամի #served մասնակից'
+  homepage_hero_hoc_is_coming: "Համակարգչային գիտության ուսումնասիրման շաբաթ"
+  homepage_hero_hoc_is_here: "Համակարգչային գիտության ուսումնասիրման շաբաթ"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "Frozen with Anna and Elsa"
   homepage_slot_text_teacher: "Ուսուցչի Վահանակ"
@@ -397,6 +401,7 @@
   sports_watch_video: "Watch the video"
   sports_featured_athletes: "Տեսնել ներկայացված ատլետներին"
   sports_athletes_title: "Ներկայացված մարզիկները"
+  watch_inspirational_videos: "Before you get started, watch one of these inspirational videos"
   video_title_inspire_girl: "Inspire a girl"
   video_1min: "1 րոպ"
   video_2min: "2 րոպ"
@@ -510,6 +515,7 @@
   dashboard_middle_courses_desc: "Our middle school curriculum uses computer science and programming within the context of middle school math and science - as a tool to teach math and science concepts. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
   dashboard_high_courses: "Year-long High School Courses"
   dashboard_high_courses_desc: "Our high school program helps school districts offer full-year computer science classes by preparing existing teaching staff to offer this new field. To register for professional development workshops, apply for a <a href=\"/educate/districts\">district-wide partnership</a> with Code.org."
+  dashboard_course_csina: "Computer Science in Algebra"
   dashboard_course_csina_desc: "Code.org has partnered with Bootstrap to develop a curriculum which teaches algebraic and geometric concepts through computer programming."
   dashboard_course_csins: "Computer Science in Science"
   dashboard_course_csins_desc: "Code.org has partnered with Project GUTS to deliver an introduction to computer science concepts within the context of modeling and simulation."
@@ -860,14 +866,36 @@
   course2_gradelevel: "Ages 6-18"
   course3_gradelevel: "Ages 8-18"
   course4_gradelevel: "Ages 10-18"
+  coursea_gradelevel: "Ages 4-7"
+  courseb_gradelevel: "Ages 5-8"
+  coursec_gradelevel: "Ages 6-10"
   coursed_gradelevel: "Grade 8+"
   coursee_gradelevel: "Ages 8-12"
+  coursef_gradelevel: "Ages 9-13"
+  coursea-2017_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  coursec-2017_gradelevel: Ages 6-10
   coursed-2017_gradelevel: Grade 8+
   coursee-2017_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursea-2018_gradelevel: Ages 4-7
+  courseb-2018_gradelevel: Ages 5-8
+  coursec-2018_gradelevel: Ages 6-10
   coursed-2018_gradelevel: Grade 8+
   coursee-2018_gradelevel: Ages 8-12
+  coursef-2018_gradelevel: Ages 9-13
+  coursea-2019_gradelevel: Ages 4-7
+  courseb-2019_gradelevel: Ages 5-8
+  coursec-2019_gradelevel: Ages 6-10
   coursed-2019_gradelevel: Grade 8+
   coursee-2019_gradelevel: Ages 8-12
+  coursef-2019_gradelevel: Ages 9-13
+  coursea-2020_gradelevel: Ages 4-7
+  courseb-2020_gradelevel: Ages 5-8
+  coursec-2020_gradelevel: Ages 6-10
+  coursed-2020_gradelevel: Grade 8+
+  coursee-2020_gradelevel: Ages 8-12
+  coursef-2020_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1193,6 +1221,9 @@
   user_header_settings: "Իմ էջը"
   user_header_logout: "Դուրս գալ"
   user_header_signin: "Մուտք գործել"
+  user_header_create: 'Ստեղծել '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Արտիստ '
   user_header_playlab: "Play Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
@@ -1205,6 +1236,7 @@
   hoc2018_mc_start: "Սկսել"
   hoc2018_mc_no_internet: "Չունե՞ք ինտերնետ:"
   hoc2018_mc_download_adventurer: "Ներբեռնեք Minecraft Արկածի անցանց տարբերակը:"
+  hoc2018_mc_watch_videos: "Before you get started, watch one of these inspirational videos"
   hoc2018_mc_video_1min: "1 րոպ"
   hoc2018_mc_video_2min: "2 րոպ"
   hoc2018_mc_video_5min: "5 րոպ"
@@ -1215,3 +1247,9 @@
   hoc2018_dance_teacher_resources_tile1_button: "Դաս Plan"
   hoc2018_dance_teacher_resources_tile2_button: "unplugged Ակտիվություն"
   hoc2018_dance_amazon_about_future_engineer_button: "Սովորել ավելին"
+  footer_powered_by_aws: "Powered by Սայլակ վեբ ծառայություններ"
+  footer_privacy_policy: "Գաղտնիության քաղաքականություն"
+  footer_donate: "Նվիրաբերել"
+  footer_support: "Help and Community"
+  footer_terms: "Պայմաններ"
+  ai_description: "Նկարագիր"

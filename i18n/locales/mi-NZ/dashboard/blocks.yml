@@ -961,6 +961,7 @@ mi:
             '"scale"': te rahi
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"speed"': terenga
       gamelab_checkTouching:
         text: "{CONDITION} pā {SPRITE1} ki {SPRITE2}"
         options:
@@ -971,6 +972,8 @@ mi:
         text: ina pāwhiria {SPRITE}
       gamelab_clickedSpritePointer:
         text: pāwhiria {SPRITE}
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -979,6 +982,7 @@ mi:
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
             '"tint"': tae
+            '"speed"': terenga
       gamelab_getTime:
         options:
           UNIT:
@@ -1054,17 +1058,23 @@ mi:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_location_picker:
+        text: "{LOCATION}"
       gamelab_mirrorSprite:
         options:
           DIRECTION:
             '"right"': matau
             '"left"': mauī
+      gamelab_newSpritePointer:
+        text: pāwhiria {SPRITE}
       gamelab_objectSpritePointer:
         text: pāwhiria {SPRITE}
       gamelab_randColor:
         text: tae matapōkere
       gamelab_randomColor:
         text: tae matapōkere
+      gamelab_repeatForever:
+        text: tōaitia mō ake ake
       gamelab_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       gamelab_setBackgroundImage:
@@ -1077,13 +1087,34 @@ mi:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kahukura
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': takerewai
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': hōtoke
+            undefined: kore
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': wawaenga
+            '100': large
       gamelab_setProp:
+        text: whakarite te {SPRITE} {PROPERTY} ki te {VAL}
         options:
           PROPERTY:
             '"scale"': te rahi
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"speed"': terenga
+      gamelab_setProp_dropdown:
+        text: whakarite te {SPRITE} {PROPERTY} ki te {SIZE}
+        options:
+          PROPERTY:
+            '"scale"': te rahi
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': wawaenga
+            '100': large
       gamelab_setSizes:
+        text: whakarite te {SPRITE} {PROPERTY} ki te {N}%
         options:
           PROPERTY:
             '"scale"': te rahi
@@ -1128,6 +1159,8 @@ mi:
             '"d"': d
       Mikelab_addBehaviorSimple:
         text: parehe {SPRITE} ka {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1208,6 +1241,8 @@ mi:
         options:
           SELECT:
             '"all"': katoa
+      Mikelab_groupWhenClickedOn:
+        text: ina pāwhiria {COSTUME}
       Mikelab_ifDanceIs:
         text: |-
           mena e mahi ana a {SPRITE} i te {DANCE}
@@ -1225,6 +1260,10 @@ mi:
             MOVES.Kick: Te Whetū
             MOVES.ThisOrThat: Tēnei Tēnā
             MOVES.Rest: Kore
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: tae matapōkere
       Mikelab_repeatUntilComplete:
@@ -1276,6 +1315,12 @@ mi:
             '"right"': tohu katau
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        text: ina pāwhiria {KEY}
+        options:
+          KEY:
+            '"yes"': āe
+            '"no"': kāore
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1283,24 +1328,48 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': kahukura
+      PoemBot_setForegroundEffect:
+        text: whakarite i te papamua {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': ua
+            '"bubbles"': ngā mirumiru
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
-      aalab_goToScene:
+      Vector_log:
+        text: kārere takiputa {MESSAGE}
+      Vector_where:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          PROPERTY:
+            "'shapeColor'": tae
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
+          FORMAT:
+            '"grid"': tukutuku
+            '"border"': pae
+            '"row"': rārangi
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': katoa
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': katoa
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
@@ -1338,7 +1407,7 @@ mi:
           TYPE:
             "'blueCoralBlock'": punga moana kikorangi
             "'redCoralBlock'": punga moana whero
-            "'sand'": oneone
+            "'sand'": kirikiri
             "'wool_blue'": wai hōhonu
             "'planksOak'": papa oke
             "'seaLantern'": rama moana
@@ -1348,8 +1417,8 @@ mi:
           {STATEMENT}
         options:
           TYPE:
-            "'sand'": oneone
-            "'darkPrismarine'": poromoana uriuri
+            "'sand'": kirikiri
+            "'darkPrismarine'": paraka kikorangi uriuri
             "'seaLantern'": rama moana
       craft_log:
         text: kārere takiputa {MESSAGE}
@@ -1364,7 +1433,7 @@ mi:
             '"stoneBricks"': periki kowhatu
             '"mossyStoneBricks"': periki kowhatu kohukohu
             '"crackedStoneBricks"': periki kowhatu pakaru
-            '"decorativeStoneBricks"': periki kowhatu whakapaipai
+            '"chiseledStoneBricks"': periki kowhatu whakapaipai
             '"blueCoralBlock"': paraka punga moana kikorangi
             '"pinkCoralBlock"': paraka punga moana māwhero
             '"magentaCoralBlock"': paraka punga moana mākurakura

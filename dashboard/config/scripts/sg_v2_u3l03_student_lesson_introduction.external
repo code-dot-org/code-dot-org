@@ -21,7 +21,7 @@ markdown <<MARKDOWN
 
 * Activity Guide: [Human Machine Language - Part 2: Min To Front](https://docs.google.com/document/d/1l2XoaDmn0vYphlT_KS9_Yl7TVgoy6z310qUuUGGKbGg)
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

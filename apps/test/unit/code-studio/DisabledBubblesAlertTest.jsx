@@ -29,6 +29,7 @@ describe('DisabledBubblesAlert', () => {
             <a
               href="https://support.code.org/hc/en-us/articles/115002660852"
               target="_blank"
+              rel="noopener noreferrer"
             >
               {i18n.learnMore()}
             </a>

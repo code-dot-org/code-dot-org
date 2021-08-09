@@ -6,15 +6,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           MOVE1:
             MOVES.Roll: خل بوونەوە
@@ -55,16 +55,16 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
-            '"UNICORN"': هەموو ئەسپە یەکشاخەکان
+            '"SHARK"': ماسی قرش
+            '"UNICORN"': ئەسپی یەکشاخە
           MOVE:
             '"next"': "(دواتر)"
             '"prev"': "(پێشتر)"
@@ -105,18 +105,19 @@ ku:
             '"x"': پێگەی ئاسۆیی
             '"y"': پێگەی ستوونی
       Dancelab_changePropEachBy:
+        text: بگۆڕە {GROUP} {PROPERTY} بە بڕی {VAL}
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
@@ -128,15 +129,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           MOVE:
             '"rand"': "(هەڕەمەکی)"
@@ -252,7 +253,6 @@ ku:
             '"measures"': پێوانەکان
           OP:
             '">"': ">"
-            '"<"': "\\<"
             '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} بپەڕێتەوە بۆ {LOCATION}"
@@ -270,15 +270,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
@@ -294,15 +294,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           FORMAT:
             '"border"': چوارچێوە
@@ -336,17 +336,11 @@ ku:
         text: دانەیەکی نوێ دروست بکە لە {COSTUME} بە ناوی {NAME} لە {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': بوونەوەری ئاسمانی
             '"BEAR"': وورچ
-            '"CAT"': پشیلە
-            '"DOG"': سەگ
-            '"DUCK"': مراوی
             '"FROG"': بۆق
-            '"MOOSE"': ڕەنە
+            '"MOOSE"': هەموو ڕەنەکان
             '"PINEAPPLE"': ئەناناس
-            '"ROBOT"': ڕۆبۆت
             '"SHARK"': ماسی قرش
-            '"UNICORN"': ئەسپی یەکشاخە
           LOCATION:
             "{x: 200, y: 100}": سەرەوە
             "{x: 200, y: 300}": خوارەوە
@@ -380,15 +374,15 @@ ku:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': بوونەوەری ئاسمانی
+            '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
             '"BEAR"': وورچەکان
-            '"CAT"': پشیلەکان
-            '"DOG"': سەگەکان
+            '"CAT"': هەموو پشیلەکان
+            '"DOG"': هەموو سەگەکان
             '"DUCK"': مراویەکان
             '"FROG"': بۆقەکان
-            '"MOOSE"': ڕەنە
+            '"MOOSE"': هەموو ڕەنەکان
             '"PINEAPPLE"': ئەناناس
-            '"ROBOT"': ڕۆبۆت
+            '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           LAYOUT:
@@ -496,15 +490,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           SPEED:
             '1': normal
@@ -560,15 +554,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
@@ -586,18 +580,19 @@ ku:
             '"y"': پێگەی ستوونی
             '"tint"': سێبەری ڕەنگ
       Dancelab_setPropRandomEach:
+        text: بە هەڕەمەکی {GROUP} {PROPERTY} ڕێکبخە
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
@@ -612,30 +607,30 @@ ku:
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintEachInline:
         text: سێبەری ڕەنگی {THIS} دابنێ بە {VAL}
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
       Dancelab_setTintInline:
         text: سێبەری ڕەنگی {SPRITE} دابنێ بە {VAL}
@@ -650,15 +645,15 @@ ku:
         options:
           THIS:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           VISIBILITY:
             'true': بینراو
@@ -680,15 +675,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
@@ -718,15 +713,15 @@ ku:
         options:
           GROUP:
             '"ALIEN"': هەموو بوونەوەرە ئاسمانیەکان
-            '"BEAR"': هەموو وورچەکان
+            '"BEAR"': وورچەکان
             '"CAT"': هەموو پشیلەکان
             '"DOG"': هەموو سەگەکان
-            '"DUCK"': هەموو مراویەکان
-            '"FROG"': هەموو بۆقەکان
+            '"DUCK"': مراویەکان
+            '"FROG"': بۆقەکان
             '"MOOSE"': هەموو ڕەنەکان
-            '"PINEAPPLE"': هەموو ئەناناسەکان
+            '"PINEAPPLE"': ئەناناس
             '"ROBOT"': هەموو ڕۆبۆتەکان
-            '"SHARK"': هەموو قرشەکان
+            '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
           PROPERTY:
             '"width"': پانی
@@ -763,7 +758,6 @@ ku:
         text: کاتێک {KEY} دادەگیرێت
         options:
           KEY:
-            '"space"': بۆشایی ئاسمان
             '"enter"': ئینتەر
             '"a"': a
             '"b"': b
@@ -828,6 +822,8 @@ ku:
         text: کرتە کرا {SPRITE}
       gamelab_comment:
         text: 'کۆمێنت: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "سپرایتێکی نوێ دروستبکە \n ناوی بنێ {NAME} \n بە جلوبەرگی {COSTUME} \n لە {LOCATION}"
       gamelab_destroy:
@@ -942,6 +938,8 @@ ku:
             '"West"': ڕۆژئاوا
       gamelab_moveToward:
         text: "{SPRITE} وێنەخاڵ بجوڵێنە {DISTANCE} بە ئاڕاستەی {TARGET}"
+      gamelab_newSpritePointer:
+        text: کرتە کرا {SPRITE}
       gamelab_objectSpritePointer:
         text: کرتە کرا {SPRITE}
       gamelab_playSound:
@@ -987,12 +985,16 @@ ku:
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ئەستێرە
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ژێرئاو
             undefined: هیچ
+      gamelab_setBackgroundImageAs:
+        text: پاشبنەما دابنێ {IMG}
       gamelab_setProp:
         text: دابنی {SPRITE} {PROPERTY} بە بڕی {VAL}
         options:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
+      gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} بکە بە {SIZE}"
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} بکە بە {N}%"
         options:
@@ -1059,6 +1061,8 @@ ku:
         text: پۆتانی yی {SPRITE}
       Mikelab_addBehaviorSimple:
         text: سپڕایت {SPRITE} دەستپێدەکات {BEHAVIOR}
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1161,6 +1165,8 @@ ku:
           {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} ئێستاکە {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: لاببە {TRASH}
       Mikelab_ifDanceIs:
         text: |-
           ئەگەر {SPRITE} ئەنجام بدات {DANCE}
@@ -1177,6 +1183,8 @@ ku:
             MOVES.Roll: خل بوونەوە
             MOVES.Kick: ئەستێرە
             MOVES.ThisOrThat: ئەمە یان ئەوە
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'شوێنی x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1194,6 +1202,15 @@ ku:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
+      Mikelab_setupSim:
+        text: |-
+          جوڵانەوەکە دیاریبکە لەگەڵ
+          {SPRITE1N}[SPRITE1COSTUME]
+          [1]خێرایی{SPRITE1SPEED}
+          {SPRITE2N}[SPRITE2COSTUME]
+          [4]خێرایی{SPRITE2SPEED}
+          کۆکراوەی
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_sprite:
         text: "{COSTUME} ێکی سپڕایتی نوێ لە {LOCATION}"
         options:
@@ -1220,10 +1237,22 @@ ku:
             '"s"': باشور
       Mikelab_whenMouseClicked:
         text: کاتێ ماوس کرتە دەکرێ
+      Mikelab_whenYesNoClicked:
+        text: کاتێک {KEY} کرتە دەکرێت
       Mikelab_xLocationOf:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': پتەو
+            '"rainbow"': پەلكەزێرینە
+      PoemBot_setForegroundEffect:
+        text: ئیفێکتی پێشبنەما دابنێ {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"bubbles"': بڵق
       SpriteLab2Beta_spriteSay:
         text: سپڕایت {SPRITE} بڵێ {TEXT} بەماوەی {SECONDS} چرکە
       Vector_createSpriteWith:
@@ -1251,35 +1280,12 @@ ku:
         options:
           PROPERTY:
             "'shapeColor'": ڕەنگ
-      aalab_addBehaviorForDuration:
-        text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
-      aalab_addBehaviorUntilBoolean:
-        text: سپڕایتی {SPRITE} دەست بە {BEHAVIOR} دەکات تا {CONDITION}
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
-      aalab_prompt:
-        text: پرسیار بکە {MESSAGE}
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': هێڵدار
+            '"border"': چوارچێوە
+            '"row"': ڕیز
             '"random"': هەڕەمەکی
       binary_drawBin:
         text: دووانی بکێشە {BIN}
@@ -1361,7 +1367,7 @@ ku:
             '"stoneBricks"': بلۆکی بەردین
             '"mossyStoneBricks"': بلۆکی بەردی قەوزەدار
             '"crackedStoneBricks"': بلۆکی بەردی شکاو
-            '"decorativeStoneBricks"': بلۆکی بەردی دیکۆرکراو
+            '"chiseledStoneBricks"': بلۆکی بەردی دیکۆرکراو
             '"blueCoralBlock"': بلۆکی مەرجانی شین
             '"pinkCoralBlock"': بلۆکی مەرجانی پەمەیی
             '"magentaCoralBlock"': بلۆکی مەرجانی ئەرخەوانی
@@ -1407,3 +1413,5 @@ ku:
           DIR:
             right: بۆ لای ڕاست ↻
             left: بۆ لای چەپ ↺
+      validation_validatedBackground:
+        text: پاشبنەما دابنێ {IMG}

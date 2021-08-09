@@ -19,6 +19,7 @@ ru:
       Games/Score: Игры/Счет
       Groups: Группы
       Input: Ввод
+      Location: Местоположение
       Locations: Места
       Logic: Логика
       Loops: Циклы
@@ -29,4 +30,5 @@ ru:
       Text: Текст
       Variables: Переменные
       'Variables ': 'Переменные '
+      'Variables  ': 'Переменные  '
       World: Мир

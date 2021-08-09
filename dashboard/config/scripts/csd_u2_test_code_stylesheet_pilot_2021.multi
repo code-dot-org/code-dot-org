@@ -1,0 +1,34 @@
+name 'CSD U2 Test code stylesheet_pilot_2021'
+editor_experiment ''
+title 'Question 5'
+
+wrong '1 and 3'
+wrong '2 and 4'
+right '2 and 3'
+wrong '3 and 4'
+wrong '1, 2, 3, and 4'
+
+markdown <<MARKDOWN
+Questions 5 and 6 deal with the following web page:
+
+![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+<div>
+What code in the stylesheet could have made the text green?<br><br>
+1. <pre style="display:inline-block;width:100px">.p {
+  color:green;
+}</pre>
+2. <pre style="display:inline-block;width:100px">p {
+  color:green;
+}</pre>
+3. <pre style="display:inline-block;width:100px">.special {
+  color:green;
+}</pre>
+4. <pre style="display:inline-block;width:100px">special {
+  color:green;
+}
+</pre>
+</div>
+MARKDOWN

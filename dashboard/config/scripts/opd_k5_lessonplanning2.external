@@ -1,0 +1,31 @@
+name 'OPD-K5 LessonPlanning2'
+skip_dialog true
+markdown <<MARKDOWN
+# Plan a Lesson
+**Total Suggested Time:**
+
+Plan a lesson that you would like to try out with your students.
+
+1.  Navigate to the a lesson plan for a course based on the grade level you will teach.
+2.  Use the Lesson Implementation Guide.
+3.  Try it out with your students.
+4.  Share with us how the lesson went!
+
+Steps to navigating and locating lesson plans:
+* Sign-in to Code.org
+* Click on “Course Catalog” link on the top left side
+* Scroll down to “Full Course Catalog”
+* Click on “Learn More” within the Elementary School tile
+* Scroll down to the courses and choose a course
+* Click on “View Course” to go to the course overview page
+* Choose the lesson to plan for
+* Click on “View Lesson Plan” on the right side
+
+
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+    
+
+MARKDOWN

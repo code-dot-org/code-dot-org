@@ -10,13 +10,12 @@
   "danceFeedbackNeedDifferentDance": "तुम्हाला निराळा नाच वापरला पाहिजे.",
   "danceFeedbackNeedEveryTwoMeasures": "तुम्ही 'every 2 measures' ब्लॉक वापरत असल्याची खात्री करा",
   "danceFeedbackNeedMakeANewDancer": "आणखी एक डांसर बनविण्यासाठी 'make a new' ब्लॉक वापरा.",
-  "danceFeedbackKeyEvent": "",
-  "danceFeedbackDidntPress": "",
-  "danceFeedbackPressedKey": "",
-  "danceFeedbackNeedTwoDancers": "",
-  "danceFeedbackOnlyOneDancerMoved": "",
-  "danceFeedbackNeedLead": "",
-  "danceFeedbackNeedBackup": "",
-  "danceFeedbackSetSize": "",
-  "measure": ""
+  "danceFeedbackKeyEvent": "तुम्ही <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml>ब्लॉकला काहीतरी कोड जोडल्याचे सुनिश्चित करा आणि तुमचा डान्स सुरू असताना ती की दाबा.",
+  "danceFeedbackDidntPress": "तुमचा डान्स सुरू असताना अॅरो की दाबल्याचे सुनिश्चित करा.",
+  "danceFeedbackPressedKey": "तुम्ही एक की दाबली पण तुमच्या डान्सरने प्रतिसाद दिला नाही.  ",
+  "danceFeedbackNeedTwoDancers": "तुम्ही दोन डान्सर्स तयार करणे आवश्यक आहे. ",
+  "danceFeedbackOnlyOneDancerMoved": "तुमच्या डान्सर्सपैकी केवळ एकाने हालचाल केली. ",
+  "danceFeedbackNeedLead": "तुम्ही <block type=\"Dancelab_makeAnonymousDanceSprite\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> ब्लॉक वापरून एक मुख्य डान्सर तयार करणेसुद्धा आवश्यक आहे.",
+  "danceFeedbackNeedBackup": "तुम्ही  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> ब्लॉक वापरून बॅकअप डान्सर्सचा एक गट तयार करणे आवश्यक आहे.",
+  "danceFeedbackSetSize": "संगीत सुरू झाल्यावर तुम्ही किमान एका डान्सरचा आकार बदलणे आवश्यक आहे."
 }

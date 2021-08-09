@@ -2384,9 +2384,12 @@ Studio.init = function(config) {
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
   studioApp().setPageConstants(config, appSpecificConstants);
-
+  var isRtl = getStore().getState().isRtl;
   var visualizationColumn = (
-    <StudioVisualizationColumn finishButton={!level.isProjectLevel} />
+    <StudioVisualizationColumn
+      isRtl={isRtl}
+      finishButton={!level.isProjectLevel}
+    />
   );
 
   ReactDOM.render(

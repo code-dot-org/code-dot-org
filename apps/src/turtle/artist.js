@@ -334,6 +334,7 @@ Artist.prototype.init = function(config) {
     appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
+  appSpecificConstants.validationEnabled = !!config.level.validationEnabled;
   this.studioApp_.setPageConstants(config, appSpecificConstants);
 
   var iconPath =
@@ -344,6 +345,8 @@ Artist.prototype.init = function(config) {
   var visualizationColumn = (
     <ArtistVisualizationColumn
       showFinishButton={!!config.level.freePlay && !config.level.isProjectLevel}
+      showSaveImageButton={!!config.level.enableDownloadImage}
+      displayCanvas={this.visualization.displayCanvas}
       iconPath={iconPath}
     />
   );

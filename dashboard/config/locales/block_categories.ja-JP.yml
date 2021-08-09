@@ -3,7 +3,7 @@ ja:
   data:
     block_categories:
       Actions: うごき
-      Advanced: 詳細設定
+      Advanced: 高度
       Behaviors: 行動
       Brushes: ブラシ
       Color: 色
@@ -18,13 +18,15 @@ ja:
       Game/Score: ゲーム/スコア
       Games/Score: ゲーム/スコア
       Groups: グループ
+      Location: ロケーション
       Locations: 場所
       Logic: ロジック
       Loops: くりかえし
       Math: 計算(けいさん)
-      Numbers: 数（かず）
-      Properties: "[プロパティ]"
+      Numbers: 数 (かず)
+      Properties: プロパティ
+      Sprites: スプライト
       Text: テキスト
       Variables: 変数（へんすう）
-      'Variables ': '変数(へんすう) '
+      'Variables ': 変数（へんすう）
       World: 世界

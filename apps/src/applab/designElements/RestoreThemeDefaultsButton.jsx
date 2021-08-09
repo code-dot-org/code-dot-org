@@ -3,14 +3,6 @@ import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-const styles = {
-  restoreButton: {
-    backgroundColor: '#0aa',
-    color: 'white',
-    float: 'right'
-  }
-};
-
 /**
  * A restore theme defaults button
  */
@@ -32,5 +24,13 @@ class RestoreThemeDefaultsButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  restoreButton: {
+    backgroundColor: '#0aa',
+    color: 'white',
+    float: 'right'
+  }
+};
 
 export default Radium(RestoreThemeDefaultsButton);

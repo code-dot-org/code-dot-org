@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../utils';
-import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
   importOrUpdateRoster,
   sectionCode,

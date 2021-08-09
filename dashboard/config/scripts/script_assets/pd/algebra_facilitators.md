@@ -170,5 +170,3 @@
     <p>Rodney Weems is a Diverse Learner Instructor at Ariel Community Academy in the Hyde Park/Kenwood community in Chicago, IL. He is part of the CODE.org/CS4ALL initiative in Chicago Public Schools.</p>
   </div>
 </div>
-
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

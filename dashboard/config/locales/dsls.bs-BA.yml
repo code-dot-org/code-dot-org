@@ -1179,33 +1179,33 @@ bs-BA:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+        - text: '15'
         - {}
         questions:
         - {}
@@ -1507,33 +1507,33 @@ bs-BA:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+        - text: '12'
         - {}
         questions:
         - {}
@@ -2031,3 +2031,264 @@ bs-BA:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: opis ovdje
+      outbreak_story2:
+        content1: opis ovdje
+      outbreak_freeplay_choice:
+        display_name: Slobodno Igranje
+      CourseF_outbreak_story:
+        content1: opis ovdje
+      CourseF_outbreak_story2:
+        content1: opis ovdje
+      OPD-K5 Stage3aGo_dani:
+        content1: opis ovdje
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: opis ovdje
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: opis ovdje
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: opis ovdje
+      csf_password_power-up_2021:
+        content1: opis ovdje

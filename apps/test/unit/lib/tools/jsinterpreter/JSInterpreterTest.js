@@ -315,7 +315,6 @@ setCallback(function(message) {
             enableEvents: false,
             ...config(allDone)
           });
-          expect(() => jsInterpreter.executeInterpreter(true)).to.throwError;
           expect(lastCallback).to.be.null;
           expect(allDone).not.to.have.been.called;
         });
@@ -952,7 +951,7 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(true);
         });
         it('will populate the executionError property of the interpreter', () => {
-          expect(jsInterpreter.executionError).to.be.defined;
+          expect(jsInterpreter.executionError).to.not.be.undefined;
           expect(jsInterpreter.executionError).to.equal('gotcha');
         });
         it('will call the handleError method.', () => {

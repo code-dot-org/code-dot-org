@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Time to create the final scene of your concert! In `NeighborhoodConcert.java`, add the following to your `showHelp()` method:\r\n\r\n1. Use `SoundLoader.read()` to create a `double` array from the `\"helpful.wav\"` file.\r\n\r\n2. Play the array of samples.\r\n\r\nIn `MyConcert.java`, add a `pause()` and call the `showHelp()` method after the call to `showTime()`.",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29291,
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263OMW0g3BlAa7exdgNga\nPtP3ltut55eTc95Up0vxcqhvMqZxK1djpqMZ43qhyNrKCpQ=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-23T15:57:13.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-23T15:57:13.411+00:00\",\"changed\":[\"cloned from \\\"CSA U3L10-L3\\\"\"],\"cloned_from\":\"CSA U3L10-L3\"},{\"changed_at\":\"2021-07-23 16:00:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:50:23 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

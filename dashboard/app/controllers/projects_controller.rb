@@ -138,6 +138,10 @@ class ProjectsController < ApplicationController
     },
     eval: {
       name: 'Eval Free Play'
+    },
+    javalab: {
+      name: 'New Java Lab Project',
+      levelbuilder_required: true
     }
   }.with_indifferent_access.freeze
 
@@ -164,7 +168,8 @@ class ProjectsController < ApplicationController
       :storage_apps__project_type___project_type,
       :storage_apps__published_at___published_at,
       :featured_projects__featured_at___featured_at,
-      :featured_projects__unfeatured_at___unfeatured_at
+      :featured_projects__unfeatured_at___unfeatured_at,
+      :featured_projects__topic___topic
     ]
   end
 
@@ -185,6 +190,7 @@ class ProjectsController < ApplicationController
         projectName: project_details_value['name'],
         channel: channel,
         type: project_details[:project_type],
+        topic: project_details[:topic],
         publishedAt: project_details[:published_at],
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
@@ -308,7 +314,6 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
-    azure_speech_service = azure_speech_service_options
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -320,9 +325,8 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      azure_speech_service_token: azure_speech_service[:azureSpeechServiceToken],
-      azure_speech_service_region: azure_speech_service[:azureSpeechServiceRegion],
-      azure_speech_service_languages: azure_speech_service[:azureSpeechServiceLanguages]
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      disallowed_html_tags: disallowed_html_tags
     )
 
     if params[:key] == 'artist'

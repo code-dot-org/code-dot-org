@@ -47,6 +47,7 @@
   "jumpBackward": "뒤로 점프:",
   "jumpForward": "앞으로 점프:",
   "jumpToOverDown": "%1 로 %2 만큼 아래 점프",
+  "jumpToPosition": "%1 위치로 점프하기",
   "jumpByDirection": "%1 방향으로 %2 픽셀 만큼 점프",
   "jumpTooltip": "아무것도 그리지 않고, 원하는 위치로 바로 이동시킵니다.",
   "jumpEastTooltip": "예술가를 오른쪽으로 점프시킵니다.",

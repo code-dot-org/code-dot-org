@@ -64,7 +64,7 @@
 #  index_user_proficiencies_on_user_id  (user_id) UNIQUE
 #
 
-class UserProficiency < ActiveRecord::Base
+class UserProficiency < ApplicationRecord
   include ConceptDifficulties
   belongs_to :user
 

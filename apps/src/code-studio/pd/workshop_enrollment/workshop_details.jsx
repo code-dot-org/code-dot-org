@@ -5,15 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {WorkshopPropType} from './enrollmentConstants';
 
-const styles = {
-  label: {
-    textAlign: 'right'
-  },
-  notes: {
-    whiteSpace: 'pre-wrap'
-  }
-};
-
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
@@ -59,9 +50,16 @@ export default class WorkshopDetails extends React.Component {
           <strong>Location:</strong>
         </div>
         <div className="span2">
-          {this.props.workshop.location_name}
-          <br />
-          {this.props.workshop.location_address}
+          {this.props.workshop.virtual
+            ? 'Virtual'
+            : this.props.workshop.location_name}
+          {!this.props.workshop.virtual &&
+            this.props.workshop.location_address && (
+              <div>
+                <br />
+                {this.props.workshop.location_address}
+              </div>
+            )}
         </div>
       </div>
     );
@@ -152,3 +150,12 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 }
+
+const styles = {
+  label: {
+    textAlign: 'right'
+  },
+  notes: {
+    whiteSpace: 'pre-wrap'
+  }
+};

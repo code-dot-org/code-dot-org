@@ -1,0 +1,35 @@
+{
+  "category": "",
+  "config": {
+    "func": "setPoem",
+    "blockText": "set poem {BG_EFFECT}",
+    "args": [
+      {
+        "name": "BG_EFFECT",
+        "options": [
+          [
+            "---",
+            "\"---\""
+          ],
+          [
+            "I Wandered Lonely as a Cloud",
+            "\"wordsworth\""
+          ],
+          [
+            "If I can Stop one Heart from Breaking",
+            "\"dickinson\""
+          ],
+          [
+            "Batty",
+            "\"silverstein\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

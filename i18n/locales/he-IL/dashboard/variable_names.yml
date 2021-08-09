@@ -1,0 +1,34 @@
+he:
+  data:
+    variable_names:
+      Blue: כחולים
+      Green: ירוקים
+      Red: אדומים
+      actor: שחקן
+      age: גיל
+      answer: "תשובה\n"
+      binary: בינארי
+      cats: כל החתולים
+      color: צבע
+      counter: סופר
+      dogs: כל הכלבים
+      height: גובה
+      honey: דבש
+      i: i
+      left: שמאלה
+      length: אורך
+      level: שלב
+      name: שם
+      nectar: צוף
+      planet: כוכב לכת
+      points: נקודות
+      random: אקראי
+      repeat: חזור שוב
+      right: ימינה
+      score: ציון
+      size: גודל
+      speed: מהירות
+      variable: משתנה.
+      width: רוחב
+      wizard: אשף
+      x: x

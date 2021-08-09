@@ -1,0 +1,31 @@
+name 'CSP-PL AYWS1 Workshop Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Module 1: CS Principles Virtual Professional Learning 
+
+## Module 1 Overview
+
+Welcome to your first set of asynchronous work for CS Principles!  We have selected a set of experiences for you to engage in that will feed into  the upcoming synchronous workshop of this module and also help you understand the content and curriculum as you prepare to teach your own students.  Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**During this asynchronous work you will:**
+
+* Read Unit overview of Units 3 and 4.
+* Review the final project for Unit 3.
+* Read and watch videos about the pedagogical tool we use to teach programming in Units 4, 5, and 7.
+* Answer some questions about the materials you reviewed.
+* Reflect on what you need to successfully use the new pedagogy introduced in this module.
+
+
+**After this asynchronous work you will:**
+
+* Understand how student skills and knowledge build between Units 3 and 4 in the curriculum.
+* Have a high level understanding of the specific pedagogy we use in all programming units starting with Unit 4 which we will build on during the synchronous module.
+* Have techniques for teaching programming in socially distanced and virtual classroom contexts. 
+
+
+Let's get started!
+
+MARKDOWN

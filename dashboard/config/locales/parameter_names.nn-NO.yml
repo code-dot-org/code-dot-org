@@ -1,0 +1,18 @@
+---
+nn:
+  data:
+    parameter_names:
+      actor: spelar
+      color: farge
+      counter: teljar
+      height: høgd
+      honey: honning
+      left: venstre
+      length: lengde
+      min: minimum
+      points: poeng
+      radius: radius
+      sides: Sider
+      size: størrelse
+      speed: fart
+      width: breidde

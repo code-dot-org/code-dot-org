@@ -145,12 +145,12 @@ en:
     email_signup: 'Sign up with your email address'
     student_count: '%{count} students have already signed up.'
     teacher_count: '%{count} teachers have already signed up.'
-    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various stages and puzzles</a> without an account, but you will need to sign up to save your progress and projects.'
-    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various stages and puzzles](/) without an account, but you will need to sign up to save your progress and projects.'
+    overview: 'Sign up for an account to track your progress or manage your classroom. <a href="/">You can browse the various lessons and levels</a> without an account, but you will need to sign up to save your progress and projects.'
+    overview_markdown: 'Sign up for an account to track your progress or your child’s progress or manage your classroom. [You can browse the various lessons and levels](/) without an account, but you will need to sign up to save your progress and projects.'
     hoc_already_signed_up_heading: 'Get started without logging in'
     hoc_already_signed_up_content: 'You are signed up to teach an Hour of Code! You and your students do not need to sign in to Code Studio to participate in this event. To get started, <a href="%{learn_url}">choose a tutorial</a> for your classroom and share the link with them.<br/><br/>If you enjoyed the Hour of Code and want to go further, you can set up a password and create a Code Studio account below to enroll your students in any of our <a href="%{educate_url}">longer courses</a>.'
-    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
-    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various stages and puzzles](%{studio_url}) without creating an account.'
+    hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various lessons and levels</a> without creating an account.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. [You can also continue to browse the various lessons and levels](%{studio_url}) without creating an account.'
     teacher_educator_guide: 'See educator guide'
     title: "Sign up for Code.org"
     school_name: 'School Name (optional)'
@@ -170,14 +170,24 @@ en:
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
     student_consent: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
-    agree_us_website: "I agree to using a website based in the United States."
-    my_data_to_us: "Data from my use of this site may be sent to and stored or processed in the United States."
+    agree_us_data_transfer_student: '**I agree that Code.org may transfer data (including personal data) from my use of this site to the United States** for the purpose of hosting and processing such data.'
+    agree_us_data_transfer_teacher: '**I agree that Code.org may transfer data (including personal data) from my use (and my students’ use) of this site to the United States** for the purpose of hosting and processing such data.'
+    data_collection_us: "I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country."
+    visit_privacy: 'Visit Code.org’s [Privacy Policy](%{privacy_url}) to learn more.'
     student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
     additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
     user_type_label: "Account Type"
-    user_type_teacher: "Teacher"
     user_type_student: "Student"
+    user_type_student_desc: "Explore all our courses and activities, plus:"
+    user_type_student_ability_1: "Save your progress and projects"
+    user_type_student_ability_2: "Join your teacher’s classroom section"
+    user_type_teacher: "Teacher"
+    user_type_teacher_desc: "Everything students have access to, plus:"
+    user_type_teacher_ability_1: "Create classroom sections"
+    user_type_teacher_ability_2: "Assign and track student work"
+    user_type_teacher_ability_3: "Enroll in professional learning"
+    user_type_teacher_ability_4: "Interact on our teacher forum"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account."
     error: "An error occurred."
@@ -278,7 +288,9 @@ en:
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
-    registered:  "You've registered for %{section_name}."
+    registered:  "You have successfully joined %{section_name}."
+    captcha_required: 'Please fill out the CAPTCHA to join this section.'
+    already_exists: 'You have already joined section %{section_name}.'
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -288,6 +300,8 @@ en:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
+      restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
+      full_section: "We couldn't add you to section %{section_code} because there are already %{section_capacity} students in it. Please contact your teacher for help."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
@@ -325,7 +339,7 @@ en:
       help_support: "Help and support"
       report_bug: "Report a problem"
       report_abuse: "Report abuse"
-      teacher_community: "Teacher community"
+      teacher_community: "Teacher forum"
       professional_learning: "Professional Learning"
       documentation: "Documentation"
       tutorials: "Tutorials"
@@ -335,6 +349,7 @@ en:
       game_lab_tutorials: "Game Lab Tutorials"
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
+      web_lab_documentation: "Web Lab Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -451,6 +466,7 @@ en:
       worked_with: 'Worked With'
       update_lock_settings: 'Update lock settings here.'
       clear_response: 'Clear response'
+    student_code_view_diabled: 'Student code cannot be viewed for this activity.'
   user:
     email_confirm_needed: 'Email address has not been confirmed:'
     email_confirm_needed_required: 'Your email address %{email} has not been confirmed:'
@@ -560,10 +576,12 @@ en:
     thank_you: 'We thank our <a href="https://code.org/about/donors">donors</a>, <a href="https://code.org/about/partners">partners</a>, our <a href="https://code.org/about/team">extended team</a>, our video cast, and our <a href="https://code.org/about/advisors">education advisors</a> for their support in creating Code Studio.'
     help_from_html: 'We especially want to recognize the engineers from Amazon, Google, and Microsoft who helped create these materials.'
     help_from_html_old: 'Engineers from Amazon, Google, and Microsoft helped create these materials.'
-    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; %{current_year} Cartoon Network.'
+    art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.'
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
-    powered_by_aws: 'Powered by Amazon Web Services'
+    powered_by_aws: 'Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.'
+    built_on_github: 'Built on GitHub from Microsoft'
+    google_copyright: '&copy; Google Inc. used with permission. Google Classroom is a trademark of Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: 'Copyright'
     more: 'More'
@@ -574,12 +592,14 @@ en:
     tos_short: 'Terms'
     tos: 'Terms of Service'
     privacy: 'Privacy Policy'
+    privacy_updated: 'Privacy Policy (updated)'
     secure: 'Secure Version'
     report_abuse: 'Report Abuse'
     built_on_code_studio: 'Built on Code Studio'
     make_my_own_app: 'Make my own app'
     how_it_works: 'How it Works (View Code)'
     try_hour_of_code: 'Try an Hour of Code!'
+    store: 'Store'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -608,7 +628,7 @@ en:
       weblab_unsupported_locale_storage: "You may experience issues using Web Lab in Private Browsing mode. Please reload your project in normal mode. Sorry for the inconvenience."
   slow_loading: 'This is taking longer than usual...'
   try_reloading: 'Try reloading the page'
-  next_stage: 'Finished! Continue to next stage'
+  next_stage: 'Finished! Continue to next lesson'
   download_pdf: 'Open Lesson Plan'
   lesson_plan: 'Lesson Plan'
   view_lesson_plan: 'View Lesson Plan'
@@ -781,7 +801,7 @@ en:
   dialog:
     ok: "OK"
     startover_title: "Are you sure you want to start over?"
-    startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
+    startover_body: "This will reset the level to its start state and reset all the data you've added or changed."
     startover_ok: "Start Over"
     startover_cancel: "Cancel"
   time:
@@ -825,7 +845,7 @@ en:
     save: "Save"
   race_interstitial:
     title: "Optional: Help us track our progress toward improving diversity in computer science"
-    message: "Please tell us your race (check all that apply)"
+    message: "Please tell us your race or ethnicity (check all that apply)"
     races:
       white: "White"
       black: "Black or African American"
@@ -988,7 +1008,7 @@ en:
       choose_different_focus_area: 'You can choose a different focus area if you think that it would help you better prepare to teach.'
       other_focus_areas_available: 'No matter what focus area you choose, all other resources will still be available for reference.'
       confirm_focus_areas: 'Confirm Focus Areas'
-  locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
+  locked_stage: 'The contents of this lesson are not visible because this lesson is currently locked. Your teacher can unlock this lesson when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
   no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
@@ -1039,9 +1059,11 @@ en:
       school_city: 'School City'
       school_country: 'School Country'
       colombian_school_city: 'School City'
-      colombian_school_department: 'School Department'
+      colombian_chilean_school_department: 'School Department/Region'
       colombian_school_municipality: 'School Municipality'
-      colombian_school_name: 'School Name'
+      colombian_chilean_school_name: 'School Name'
+      chilean_school_commune: 'Commune'
+      chilean_school_id: 'School ID'
       ages: 'Which age(s) do you teach this year?'
       subjects: 'Which subject(s) do you teach this year?'
       resources: 'Which of the following CS education resources do you use?'
@@ -1066,6 +1088,7 @@ en:
         malaysia: 'Malaysia'
         mexico: 'Mexico'
         thailand: 'Thailand'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1136,18 +1159,12 @@ en:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
     accept: 'I agree'
-  gdpr_dialog:
-    heading: 'Do you agree to using a web site based in the United States?'
-    message: 'Data from your use of this site may be sent to and stored or processed in the United States.'
-    link_intro: 'For details see our'
-    privacy_policy: 'privacy policy'
-    logout: 'Logout'
-    yes: 'Yes'
   page_not_found_title: "Page Not Found"
   page_not_found_header: '404: Page Not Found'
   page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
   page_not_found_button: "Return home"
   copy: 'Copy'
+  confirm: 'Confirm'
   maker:
     google_oauth:
       login_with_google: 'Login to the Maker App with Google'
@@ -1157,6 +1174,7 @@ en:
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
+      confirm_login: 'Select "Confirm" to log in with your Google account.'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1164,3 +1182,4 @@ en:
   behaviors:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
+  code_org_logo_alt: "Code.org Home"

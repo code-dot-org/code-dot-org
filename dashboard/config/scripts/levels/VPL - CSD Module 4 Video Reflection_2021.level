@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-05-28T01:04:20.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# App Lap - Design Mode\r\n\r\n## Overview \r\n\r\nThe purpose of this video is to give students a quick tour of design mode in App Lab. Students should know how to switch to design mode and recognize various elements that can be added in design mode.  Students first see these elements for design mode in the activity guide for Lesson 10: Paper Prototypes. \r\n\r\n## Questions to Consider\r\nAs you are watching the video, consider the following questions. \r\n\r\n* Where in App Lab can you design the user interface of your app?\r\n* What are some types of elements that you can add to your app?\r\n\r\n<a href=\"https://www.youtube.com/watch?v=zedN05TE0GI\" target=\"blank\">![](https://images.code.org/d76a28d998e1229370ec2aa1cc7c6f16-image-1597870820587.png)</a>\r\n\r\n##Reflection\r\n\r\nRespond to the following prompts in the text box below.\r\n\r\n* What about starting to use App Lab may be challenging for students? \r\n* What kind of supports may students need in the beginning?\r\n\r\n\r\n\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24414,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:55:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-07-10 00:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 00:38:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 17:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 17:13:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-23 20:02:29 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-19 21:05:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-19 21:06:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-19 21:11:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 17:45:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 18:56:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-08-24 18:56:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-19 17:12:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -27,7 +27,6 @@ foo = 17;
 
 I know, I know, it’s tempting to want to type <span style="font-family: monospace">var foo</span> the second time because you want to tell the computer, "Hey, I want to use the *variable foo*."    But you don’t have to. As we saw earlier, once the variable is made, you can just refer to it by its name.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Next: new ways to read the value inside a variable</a>
 
 
 MARKDOWN

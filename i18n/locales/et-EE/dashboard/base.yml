@@ -120,10 +120,14 @@ et:
     valid_password: "Sobilik salasõna!"
     invalid_password: "Salasõna peab olema vähemalt 6 tähemärgi pikkune"
     mismatch_password: "Sinu poolt sisestatud salasõnad ei ühti"
+    agree_us_data_transfer_student: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
+    agree_us_data_transfer_teacher: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
+    data_collection_us: "Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda minu koduriigis kehtivatest."
+    visit_privacy: 'Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).'
     additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
     user_type_label: "Konto tüüp"
-    user_type_teacher: "Õpetaja"
     user_type_student: "Õpilane"
+    user_type_teacher: "Õpetaja"
     field_is_required: "on nõutud"
     accept_terms: "Pead konto loomiseks nõustuma"
     email_preference_yes: "Jah"
@@ -133,6 +137,8 @@ et:
     public: 'Avalik'
     homeschool: 'Kodukool'
     other: 'Muu'
+    state: 'Olek'
+    district: 'Piirkond'
     school: 'Kool'
     school_name: 'Kooli nimi'
     school_zip: 'Kooli postiindeks'
@@ -229,6 +235,7 @@ et:
       educate_middle: "Põhikool"
       educate_high: "Gümnaasium"
       educate_hoc: "KoodiTund"
+      stats: "Vaata statistikat"
       teach: "Õpeta"
       about: "Info"
       legal_privacy: "Privaatsuspoliitika"
@@ -300,6 +307,7 @@ et:
       example: 'Näidislahendus'
       example_with_number: 'Näidislahend %{solution_number}'
       submitted_on: 'Esitatud:'
+      last_updated: 'Viimati uuendatud:'
       unsubmit: 'Võta vastus tagasi'
       worked_with: 'Töötas koos'
       update_lock_settings: 'Uuenda lukustatud seadeid siin.'
@@ -320,6 +328,7 @@ et:
     create_personal_login_under_13_parent_email: 'Lapsevanem/hooldaja e-posti aadress'
     update_email: "Uuenda"
     parent_guardian_email_label: "Lapsevanema/hooldaja e-posti aadress"
+    remove_parent_email_label: "Eemalda"
     none: "Mitte ükski"
     encrypted: "krüpteeritud"
   user_level:
@@ -752,7 +761,7 @@ et:
     form_labels:
       email: 'E-post'
       school_name: 'Kooli nimi'
-      colombian_school_name: 'Kooli nimi'
+      colombian_chilean_school_name: 'Kooli nimi'
     form_entries:
       gender:
         male: 'Mees'
@@ -774,6 +783,5 @@ et:
         opt_in_no: 'Ei'
   cookie_banner:
     accept: 'Olen nõus'
-  gdpr_dialog:
-    yes: 'Jah'
+  page_not_found_title: "Lehte ei leitud"
   copy: 'Kopeeri'

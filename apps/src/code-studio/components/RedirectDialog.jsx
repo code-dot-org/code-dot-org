@@ -6,15 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const styles = {
-  dialog: {
-    padding: 20
-  },
-  dialogHeader: {
-    marginTop: 0
-  }
-};
-
 export default class RedirectDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -60,3 +51,12 @@ export default class RedirectDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: 20
+  },
+  dialogHeader: {
+    marginTop: 0
+  }
+};

@@ -30,21 +30,6 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import {StickyContainer} from 'react-sticky';
 
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both'
-  },
-  bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10
-  }
-};
-
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
     tutorials: PropTypes.array.isRequired,
@@ -198,15 +183,9 @@ export default class TutorialExplorer extends React.Component {
    * Set up a smooth scroll to the top of all tutorials once we've re-rendered the
    * relevant changes.
    * Note that if that next render never comes, we won't actually do the scroll.
-   *
-   * Also note that this is currently disabled unless URL parameter "scrolltotop" is
-   * provided, due to flicker and mispositioning of the sticky header after scrolling
-   * on iOS devices.
    */
   scrollToTop() {
-    if (window.location.search.indexOf('scrolltotop') !== -1) {
-      this.shouldScrollToTop = true;
-    }
+    this.shouldScrollToTop = true;
   }
 
   /**
@@ -552,41 +531,41 @@ export default class TutorialExplorer extends React.Component {
     const grade = this.state.filters.grade[0];
 
     return (
-      <StickyContainer>
-        <div
-          style={{
-            width: getResponsiveContainerWidth(),
-            margin: '0 auto',
-            paddingBottom: 0
-          }}
-        >
-          {this.shouldShowTutorialsForLocale() && (
-            <div>
-              <h1>{i18n.headingTutorialsYourLanguage()}</h1>
-              {this.state.filteredTutorialsForLocale.length === 0 &&
-                i18n.noTutorialsYourLanguage()}
+      <div
+        style={{
+          width: getResponsiveContainerWidth(),
+          margin: '0 auto',
+          paddingBottom: 0
+        }}
+      >
+        {this.shouldShowTutorialsForLocale() && (
+          <div>
+            <h1>{i18n.headingTutorialsYourLanguage()}</h1>
+            {this.state.filteredTutorialsForLocale.length === 0 &&
+              i18n.noTutorialsYourLanguage()}
 
-              {this.state.filteredTutorialsForLocale.length > 0 && (
-                <TutorialSet
-                  tutorials={this.state.filteredTutorialsForLocale}
-                  specificLocale={true}
-                  localeEnglish={false}
-                  disabledTutorials={this.props.disabledTutorials}
-                  grade={grade}
-                />
-              )}
-            </div>
-          )}
+            {this.state.filteredTutorialsForLocale.length > 0 && (
+              <TutorialSet
+                tutorials={this.state.filteredTutorialsForLocale}
+                specificLocale={true}
+                localeEnglish={false}
+                disabledTutorials={this.props.disabledTutorials}
+                grade={grade}
+              />
+            )}
+          </div>
+        )}
 
-          {this.shouldShowAllTutorialsToggleButton() && (
-            <ToggleAllTutorialsButton
-              showAllTutorials={this.showAllTutorials}
-              hideAllTutorials={this.hideAllTutorials}
-              showingAllTutorials={this.state.showingAllTutorials}
-            />
-          )}
+        {this.shouldShowAllTutorialsToggleButton() && (
+          <ToggleAllTutorialsButton
+            showAllTutorials={this.showAllTutorials}
+            hideAllTutorials={this.hideAllTutorials}
+            showingAllTutorials={this.state.showingAllTutorials}
+          />
+        )}
 
-          {this.state.showingAllTutorials && (
+        {this.state.showingAllTutorials && (
+          <StickyContainer>
             <div ref={allTutorials => (this.allTutorials = allTutorials)}>
               <FilterHeader
                 mobileLayout={this.state.mobileLayout}
@@ -660,12 +639,27 @@ export default class TutorialExplorer extends React.Component {
                 </div>
               </div>
             </div>
-          )}
-        </div>
-      </StickyContainer>
+          </StickyContainer>
+        )}
+      </div>
     );
   }
 }
+
+const styles = {
+  bottomLinksContainer: {
+    padding: '10px 7px 40px 7px',
+    fontSize: 13,
+    lineHeight: '17px',
+    clear: 'both'
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
+  }
+};
 
 function getFilters({robotics, mobile}) {
   const filters = [

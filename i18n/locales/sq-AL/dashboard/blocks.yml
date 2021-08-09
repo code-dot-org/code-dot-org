@@ -75,6 +75,7 @@ sq:
         options:
           FORMAT:
             '"diamond"': diamant
+            '"row"': klasë
             '"random"': zakonshëm
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -104,8 +105,29 @@ sq:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
           LAYOUT:
             '"diamond"': diamant
+            '"row"': klasë
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
@@ -145,6 +167,14 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': e dukshme
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': e dukshme
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -170,6 +200,10 @@ sq:
           STRING:
             '"diamond"': diamant
             '"x"': x
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
       Dancelab_whenKey:
         options:
           KEY:
@@ -178,7 +212,19 @@ sq:
             '"down"': poshtë
             '"right"': djathtas
             '"space"': hapësirë
+            '"enter"': hyr
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
+            '"3"': '3'
+            '"5"': '5'
+            '"6"': '6'
+            '"8"': '8'
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': shmang
       gamelab_atTime:
         options:
           UNIT:
@@ -187,6 +233,7 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -196,6 +243,7 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_getTime:
         options:
           UNIT:
@@ -208,6 +256,9 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
       gamelab_keyPressed:
         options:
@@ -220,6 +271,9 @@ sq:
             '"left"': majtas
             '"right"': djathtas
             '"space"': hapësirë
+            '"f"': f
+            '"g"': g
+            '"q"': q
             '"x"': x
       gamelab_mirrorSprite:
         options:
@@ -230,6 +284,8 @@ sq:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
         text: ngjyrë e rastësishme
+      gamelab_repeatForever:
+        text: përsërit përgjithmonë
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -239,10 +295,28 @@ sq:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ylber
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
+            undefined: asnjë
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -325,6 +399,10 @@ sq:
           CORNER:
             '"right"': djathtas
             '"left"': majtas
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': poshte
       Mikelab_sprite:
         options:
           LOCATION:
@@ -338,7 +416,9 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -347,7 +427,14 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': po
+            '"no"': jo
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -355,15 +442,25 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': ylber
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": ngjyra
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"row"': klasë
             '"random"': zakonshëm
       binary_move:
         options:
@@ -421,7 +518,7 @@ sq:
             '"stoneBricks"': tulla guri
             '"mossyStoneBricks"': tulla guri me myshk
             '"crackedStoneBricks"': tulla guri të thyera
-            '"decorativeStoneBricks"': tulla guri zbukuruese
+            '"chiseledStoneBricks"': tulla guri zbukuruese
             '"blueCoralBlock"': blloku i koraleve blu
             '"pinkCoralBlock"': blloku i koraleve të kuqe
             '"magentaCoralBlock"': blloku i koraleve të purpurta

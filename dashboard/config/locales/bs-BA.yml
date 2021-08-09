@@ -109,8 +109,8 @@ bs:
     additional_information: Trebamo dodatne informacije kako bismo nastavili vašu
       prijavu.
     user_type_label: Tip računa
-    user_type_teacher: Učitelj
     user_type_student: Učenik
+    user_type_teacher: Učitelj
     field_is_required: je neophodno
     accept_terms: Morate pristati da bi napravili račun
     error: Došlo je do greške.
@@ -216,6 +216,7 @@ bs:
       about_us: O nama
       about_donors: Donatori
       about_jobs: Poslovi
+      stats: Prikaži Statistiku
       help_us: Pomogni nam
       teach: Podučavaj
       legal_privacy: Pravila Privatnosti
@@ -241,6 +242,7 @@ bs:
       eval: Eval
       flappy: Flappy
       frozen: Sniježno kraljevstvo
+      iceage: Ledeno Doba
       infinity: Beskonačnost
       playlab: Play Lab
       starwars: Zvijezdani ratovi
@@ -300,6 +302,7 @@ bs:
     enter_parent_email: Unesi email adresu od svog roditelja ili staratelja (za obnovu
       lozinke)
     update_email: Osvježi
+    remove_parent_email_label: Ukloni
     none: Nijedno
   user_level:
     completed: Kompletirano
@@ -488,6 +491,7 @@ bs:
     unplugged_conditionals:
       title: Uvjeti
     widgets:
+      audience: Uzrast 14+
       cta: Nauči kako
   landing:
     report_bug: Prijavi Grešku
@@ -693,6 +697,4 @@ bs:
         opt_in_no: Ne
   cookie_banner:
     accept: Slažem se
-  gdpr_dialog:
-    true: Da
   copy: Kopiraj

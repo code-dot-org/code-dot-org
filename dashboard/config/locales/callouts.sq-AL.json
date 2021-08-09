@@ -166,6 +166,24 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Përdor listën drop-down për të zëvendësuar \"???\" me një numër"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
         }
       }
     }

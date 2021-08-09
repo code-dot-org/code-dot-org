@@ -40,54 +40,6 @@ import {
   getCommandHistory
 } from './redux';
 
-const styles = {
-  debugAreaHeader: {
-    position: 'absolute',
-    top: styleConstants['resize-bar-width'],
-    left: 0,
-    right: 0,
-    textAlign: 'center',
-    lineHeight: '30px'
-  },
-  noPadding: {
-    padding: 0
-  },
-  noUserSelect: {
-    MozUserSelect: 'none',
-    WebkitUserSelect: 'none',
-    msUserSelect: 'none',
-    userSelect: 'none'
-  },
-  showHideIcon: {
-    position: 'absolute',
-    top: 0,
-    left: 8,
-    margin: 0,
-    lineHeight: styleConstants['workspace-headers-height'] + 'px',
-    fontSize: 18,
-    ':hover': {
-      cursor: 'pointer',
-      color: 'white'
-    }
-  },
-  showDebugWatchIcon: {
-    position: 'absolute',
-    top: 0,
-    right: '6px',
-    width: '18px',
-    margin: 0,
-    lineHeight: styleConstants['workspace-headers-height'] + 'px',
-    fontSize: 18,
-    ':hover': {
-      cursor: 'pointer',
-      color: 'white'
-    }
-  },
-  hidden: {
-    display: 'none'
-  }
-};
-
 const debugAreaTransitionValue = 'height 0.4s';
 
 const MIN_DEBUG_AREA_HEIGHT = 120;
@@ -106,6 +58,7 @@ class JsDebugger extends React.Component {
     debugConsole: PropTypes.bool.isRequired,
     debugWatch: PropTypes.bool.isRequired,
     debugSlider: PropTypes.bool.isRequired,
+    debugConsoleDisabled: PropTypes.bool.isRequired,
     appType: PropTypes.string.isRequired,
     isDebuggerPaused: PropTypes.bool.isRequired,
     isDebuggingSprites: PropTypes.bool.isRequired,
@@ -625,6 +578,7 @@ class JsDebugger extends React.Component {
           <DebugConsole
             style={openStyle}
             debugButtons={this.props.debugButtons}
+            debugConsoleDisabled={this.props.debugConsoleDisabled}
             debugWatch={showWatchPane}
             ref={debugConsole => (this._debugConsole = debugConsole)}
           />
@@ -650,12 +604,61 @@ class JsDebugger extends React.Component {
   }
 }
 
+const styles = {
+  debugAreaHeader: {
+    position: 'absolute',
+    top: styleConstants['resize-bar-width'],
+    left: 0,
+    right: 0,
+    textAlign: 'center',
+    lineHeight: '30px'
+  },
+  noPadding: {
+    padding: 0
+  },
+  noUserSelect: {
+    MozUserSelect: 'none',
+    WebkitUserSelect: 'none',
+    msUserSelect: 'none',
+    userSelect: 'none'
+  },
+  showHideIcon: {
+    position: 'absolute',
+    top: 0,
+    left: 8,
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: 'white'
+    }
+  },
+  showDebugWatchIcon: {
+    position: 'absolute',
+    top: 0,
+    right: '6px',
+    width: '18px',
+    margin: 0,
+    lineHeight: styleConstants['workspace-headers-height'] + 'px',
+    fontSize: 18,
+    ':hover': {
+      cursor: 'pointer',
+      color: 'white'
+    }
+  },
+  hidden: {
+    display: 'none'
+  }
+};
+
 export default connect(
   state => ({
     debugButtons: !!state.pageConstants.showDebugButtons,
     debugConsole: !!state.pageConstants.showDebugConsole,
     debugWatch: !!state.pageConstants.showDebugWatch,
     debugSlider: !!state.pageConstants.showDebugSlider,
+    debugConsoleDisabled: !!state.pageConstants.debugConsoleDisabled,
     appType: state.pageConstants.appType,
     isRunning: state.runState.isRunning,
     isEditWhileRun: state.runState.isEditWhileRun,

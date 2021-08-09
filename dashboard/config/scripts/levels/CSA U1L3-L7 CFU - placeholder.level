@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "long_instructions": "The Painter started with five units of paint on their paint tray. How many units of paint will the Painter have left on their paint tray after painting a straight line that connects the origin, (0, 0) to (3, 3)?\r\n",
+    "encrypted_solution": "91PmasBGuZSmiGilha6nfJBFpM/fLcNPv6bxFRQOYA1OUQ0fif5NhHu3bxd6\nHEfICfsLPxxBRByXZSVoJhO3KFX8fOFVKfkJapNkcNfDdPeA3NVW8FA//GBo\ni57MQLfPjvZHyoNws7Wumz/eXmqDk1xmrt/suahLk/DzjDZoLm4pV3Z0GZ/s\n4/k4fUN9TGCW1fmKxBOBjiyAK0YmcFI6byYvx4IcwhIyODWsS+c/oDupV7Gk\n5u6vhSdv4Wpecqb+VhB6YjooMn1Zxbh/lt1ZX5sD1rRgm1C41791ZWywR1l2\nU+bg0WHd+NUNrhm/voi5\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28449,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-06-16T17:15:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-26 15:38:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-19 15:10:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 17:14:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-16 17:15:18 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

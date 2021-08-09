@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Write your program for your Neighborhood Store Management Project.\r\n\r\nStart by editing the template for your superclass and subclasses based on your plan in your UML diagram.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2 Project Template",
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/OW91ZjWZs3cbmBjeYB2QcczvH3IJ1ozugjA35SqXP30=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-23T15:41:56.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:37:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:22:56 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:50:48 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Javalab>

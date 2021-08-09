@@ -592,6 +592,7 @@
   dashboard_middle_courses_desc: "Nosso currículo do Ensino Fundamental usa ciência da computação e programação no contexto de matemática e ciências do Ensino Fundamental, como uma ferramenta para ensinar conceitos matemáticos e de ciências. Para se registrar em oficinas de desenvolvimento profissional, solicite uma <a href=\"/educate/districts\">parceria</a> com a Code.org."
   dashboard_high_courses: "Cursos de um ano para alunos do Ensino Secundário"
   dashboard_high_courses_desc: "Nosso programa do Ensino Médio ajuda as escolas a oferecerem aulas de ciência da computação durante todo o ano, preparando o corpo docente para oferecer essa nova disciplina. Para se registrar em oficinas de desenvolvimento profissional, solicite uma <a href=\"/educate/districts\">parceria</a> com a Code.org."
+  dashboard_course_csina: "Ciência da computação em álgebra"
   dashboard_course_csina_desc: "A Code.org fez uma parceria com a Bootstrap para desenvolver um currículo que ensina conceitos algébricos e geométricos por meio da programação."
   dashboard_course_csins: "Informática nas Ciências"
   dashboard_course_csins_desc: "A Code.org fez uma parceria com o Projeto GUTS para fazer uma introdução aos conceitos da ciência da computação dentro do contexto da modelagem e da simulação."
@@ -881,9 +882,26 @@
   coursed-2017_name: Curso D (2017)
   coursee-2017_name: Curso E (2017)
   coursef-2017_name: Curso F (2017)
+  coursea-2019_name: Curso A (2019)
+  courseb-2019_name: Curso B (2019)
+  coursec-2019_name: Curso C (2019)
+  coursed-2019_name: Curso D (2019)
+  coursee-2019_name: Curso E (2019)
+  coursef-2019_name: Curso F (2019)
+  coursea-2020_name: Curso A (2020)
+  courseb-2020_name: Curso B (2020)
+  coursec-2020_name: Curso C (2020)
+  coursed-2020_name: Curso D (2020)
+  coursee-2020_name: Curso E (2020)
+  coursef-2020_name: Curso F (2020)
+  coursed-2021_name: Curso D (2021)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Pré-leitor Curso Expresso (2018)
+  express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Pré-leitor Curso Expresso (2019)
+  express-2020_name: Curso Expresso (2020)
+  pre-express-2020_name: Pré-leitor Curso Expresso (2020)
+  pre-express-2021_name: Pré-leitor Curso Expresso (2021)
   csd2_name: 'Unidade 2: Desenvolvimento da Web'
   csd3_name: 'Unidade 3: Animação e Jogos'
   accelerated_name: "Curso acelerado"
@@ -980,6 +998,12 @@
   coursed-2019_gradelevel: Notas 8+
   coursee-2019_gradelevel: Dos 8 aos 12 anos
   coursef-2019_gradelevel: Idades 9-13
+  coursea-2020_gradelevel: Idades 4-7
+  courseb-2020_gradelevel: Idades 5-8
+  coursec-2020_gradelevel: Idades 6-10
+  coursed-2020_gradelevel: Notas 8+
+  coursee-2020_gradelevel: Dos 8 aos 12 anos
+  coursef-2020_gradelevel: Idades 9-13
   accelerated_gradelevel: "Dos 10 aos 18 anos"
   codeorg_platformtext: "Navegadores modernos, smartphones e tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones e tablets"
@@ -1321,12 +1345,16 @@
   user_header_settings: "Definições da conta"
   user_header_logout: "Terminar sessão"
   user_header_signin: "Iniciar sessão"
+  user_header_create: 'Criar '
+  user_header_applab: 'Laboratório de aplicações '
+  user_header_artist: 'Artista '
   user_header_playlab: "Laboratório"
   user_header_dance: "Festa da Dança"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy Bird"
   user_header_view_my_projects: "Ver os meus projetos"
   view_all_sections: "Ver todas as turmas"
+  sign_in_instruct_website: "Ir para %{code_org_url}."
   applab_tile_start_tutorial: "Começar"
   account_sign_up_email_opt_in: "Podemos enviar-te um email sobre atualizações dos nossos cursos, oportunidades locais ou outras notícias sobre a ciência de computação? (aproximadamente 1 vez por mês)"
   account_sign_up_child_accept_terms: "Eu confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
@@ -1373,4 +1401,17 @@
   hoc2018_dance_teacher_resources_tile1_button: "Plano da aula"
   hoc2018_dance_teacher_resources_tile2_button: "Atividade offline"
   hoc2018_dance_amazon_about_future_engineer_button: "Saber mais"
+  hoc2018_dance_measure: "Compasso"
+  hoc2018_dance_measure_colon: 'Compasso:'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
+  footer_powered_by_aws: "Powered by Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Apenas em inglês"
+  footer_privacy_policy: "Política de privacidade"
+  footer_about: "Sobre"
+  footer_partners: "Parceiros"
+  footer_donate: "Doar"
+  footer_support: "Suporte"
+  footer_terms: "Termos"
+  ai_for_oceans_lesson_plan: "plano da lição"
+  ai_activity: "Actividade"
+  ai_description: "Descrição"

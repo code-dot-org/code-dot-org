@@ -43,9 +43,11 @@ export default storybook => {
         name: 'AnnouncementsEditor',
         story: () => (
           <AnnouncementsEditor
-            defaultAnnouncements={announcements}
+            announcements={announcements}
             inputStyle={inputStyle}
-            curriculumObject={'script'}
+            updateAnnouncements={() => {
+              console.log('update announcements');
+            }}
           />
         )
       }

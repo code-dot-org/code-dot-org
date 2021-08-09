@@ -10,6 +10,35 @@ import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
 import color from '../util/color';
 
+/**
+ * A purple pane header that can have be focused (purple) or unfocused (light purple).
+ */
+class PaneHeader extends React.Component {
+  static propTypes = {
+    hasFocus: PropTypes.bool.isRequired,
+    style: PropTypes.object,
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool
+  };
+
+  render() {
+    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
+
+    // TODO: AnimationTab should likely use components from PaneHeader, at
+    // which point purpleHeader style should move in here.
+    const composedStyle = {
+      ...style,
+      ...commonStyles.purpleHeader,
+      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
+      ...(teacherOnly && commonStyles.teacherBlueHeader),
+      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
+      ...(isMinecraft && commonStyles.minecraftHeader)
+    };
+
+    return <div {...props} style={composedStyle} />;
+  }
+}
+
 const styles = {
   paneSection: {
     textAlign: 'center',
@@ -59,6 +88,11 @@ const styles = {
       color: color.white
     }
   },
+  headerButtonDisabled: {
+    backgroundColor: color.light_gray,
+    ':hover': null,
+    cursor: 'default'
+  },
   headerButtonSpan: {
     paddingLeft: 12,
     paddingRight: 12,
@@ -75,39 +109,21 @@ const styles = {
     paddingRight: 0,
     paddingLeft: 8
   },
+  headerButtonIconHidden: {
+    paddingRight: 0,
+    paddingLeft: 0
+  },
   headerButtonNoLabel: {
     paddingRight: 0,
     paddingLeft: 0
   }
 };
 
-/**
- * A purple pane header that can have be focused (purple) or unfocused (light purple).
- */
-class PaneHeader extends React.Component {
-  static propTypes = {
-    hasFocus: PropTypes.bool.isRequired,
-    style: PropTypes.object,
-    teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
-  };
-
-  render() {
-    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
-
-    // TODO: AnimationTab should likely use components from PaneHeader, at
-    // which point purpleHeader style should move in here.
-    const composedStyle = {
-      ...style,
-      ...commonStyles.purpleHeader,
-      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-      ...(teacherOnly && commonStyles.teacherBlueHeader),
-      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
-      ...(isMinecraft && commonStyles.minecraftHeader)
-    };
-
-    return <div {...props} style={composedStyle} />;
-  }
+function sanitizedProps(props) {
+  const sanitized = {...props};
+  delete sanitized.styleKeeperContext;
+  delete sanitized.radiumConfigContext;
+  return sanitized;
 }
 
 /**
@@ -123,7 +139,7 @@ export const PaneSection = Radium(
     render() {
       return (
         <div
-          {...this.props}
+          {...sanitizedProps(this.props)}
           ref={root => (this.root = root)}
           style={{...styles.paneSection, ...this.props.style}}
         />
@@ -143,12 +159,14 @@ export const PaneButton = Radium(function(props) {
     ...(props.isMinecraft && styles.headerButtonMinecraft),
     ...(props.isPressed && styles.headerButtonPressed),
     ...(!props.headerHasFocus && styles.headerButtonUnfocused),
+    ...(props.isDisabled && styles.headerButtonDisabled),
     ...props.style
   };
 
   let iconStyle = {
     ...styles.headerButtonIcon,
-    ...(props.isRtl && styles.headerButtonIconRtl)
+    ...(props.isRtl && styles.headerButtonIconRtl),
+    ...(!props.iconClass && !props.hiddenImage && styles.headerButtonIconHidden)
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
@@ -157,11 +175,32 @@ export const PaneButton = Radium(function(props) {
     iconStyle = {...iconStyle, ...styles.headerButtonNoLabel};
   }
 
+  function renderIcon() {
+    const {iconClass, icon} = props;
+
+    if (iconClass) {
+      return <i className={iconClass} style={iconStyle} />;
+    }
+
+    if (icon) {
+      const Icon = icon.type;
+      return (
+        <Icon {...icon.props} style={{...iconStyle, ...icon.props.style}}>
+          {icon.children}
+        </Icon>
+      );
+    }
+  }
+
   return (
-    <div id={props.id} style={divStyle} onClick={props.onClick}>
+    <div
+      id={props.id}
+      style={divStyle}
+      onClick={props.isDisabled ? () => {} : props.onClick}
+    >
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
-        <i className={props.iconClass} style={iconStyle} />
+        {renderIcon()}
         <span style={styles.noPadding}>{label}</span>
       </span>
     </div>
@@ -169,10 +208,12 @@ export const PaneButton = Radium(function(props) {
 });
 PaneButton.propTypes = {
   headerHasFocus: PropTypes.bool.isRequired,
-  iconClass: PropTypes.string.isRequired,
+  iconClass: PropTypes.string,
+  icon: PropTypes.element,
   label: PropTypes.string.isRequired,
   isRtl: PropTypes.bool.isRequired,
   leftJustified: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   isPressed: PropTypes.bool,
   pressedLabel: PropTypes.string,
   onClick: PropTypes.func,

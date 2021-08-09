@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Starts an SSM Session Manager session to the EC2 instance, specified by Name (tag) or ID.
+
+INSTANCE_NAME="${1?
+Usage: $0 INSTANCE_NAME [OPTION]...}"
+
+if [[ "$INSTANCE_NAME" =~ ^i-.* ]]; then
+  INSTANCE_ID="$INSTANCE_NAME"
+else
+  INSTANCE_ID=$(aws ec2 describe-instances \
+    --filters "Name=tag:Name,Values=$INSTANCE_NAME" \
+    --query Reservations[].Instances[].[InstanceId] \
+    --output text \
+    | head -n1
+  )
+fi
+if [ -z "$INSTANCE_ID" ]; then
+  echo "Instance '$INSTANCE_NAME' not found."
+  exit 1
+fi
+
+aws ssm start-session --target "$INSTANCE_ID" "${@:2}"

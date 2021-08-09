@@ -1,0 +1,31 @@
+name 'VPL - CSD - Module 3 - U4L2 Investigation_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Lesson 2: Understanding Your User
+**Estimated Time: 25 minutes**
+
+## Investigation Goals
+
+**Consider how this lesson supports students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.**
+
+## Investigation Tasks
+
+* Read the lesson plan for <a href="https://curriculum.code.org/csd-20/unit4/2/" target="_blank">Lesson 2: Understanding Your User </a> 
+
+* Review user profiles that students will use
+
+* Identify ways for students to make connections between
+	* a user profile and user preferences for a product
+    * a user profile and adding features to a product 
+
+
+
+
+
+
+
+
+MARKDOWN

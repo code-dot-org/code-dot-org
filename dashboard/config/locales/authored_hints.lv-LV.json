@@ -167,6 +167,16 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
+          "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
         }
       }
     }

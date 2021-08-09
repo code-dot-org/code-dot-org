@@ -39,7 +39,7 @@
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "2-3 Artist Functions 11": {
@@ -62,7 +62,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "2-3 Artist Functions 3": {
@@ -70,7 +70,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "2-3 Artist Functions 4": {
@@ -154,7 +154,10 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -162,7 +165,10 @@
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -170,7 +176,10 @@
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -178,7 +187,10 @@
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -186,7 +198,10 @@
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -194,7 +209,10 @@
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -202,7 +220,10 @@
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -210,7 +231,10 @@
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -218,7 +242,10 @@
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -226,7 +253,10 @@
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -237,7 +267,10 @@
             "name": "बिट चित्रित करें"
           },
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           }
         },
         "Course 4 Artist Functions Inspiration": {
@@ -937,7 +970,10 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -945,7 +981,10 @@
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1106,7 +1145,10 @@
             "name": "बिट चित्रित करें"
           },
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1114,7 +1156,10 @@
             "name": "बिट चित्रित करें"
           },
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
@@ -1122,7 +1167,10 @@
             "name": "बिट चित्रित करें"
           },
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
@@ -1130,12 +1178,18 @@
             "name": "बिट चित्रित करें"
           },
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1143,7 +1197,10 @@
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1151,7 +1208,10 @@
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1159,7 +1219,10 @@
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1167,7 +1230,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1175,7 +1241,10 @@
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1183,7 +1252,10 @@
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1191,7 +1263,10 @@
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1199,7 +1274,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1207,7 +1285,10 @@
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1215,7 +1296,10 @@
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1223,7 +1307,10 @@
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1231,7 +1318,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1239,7 +1329,10 @@
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1247,7 +1340,10 @@
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1255,7 +1351,10 @@
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1263,7 +1362,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1271,7 +1373,10 @@
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1279,7 +1384,10 @@
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1287,7 +1395,10 @@
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1295,7 +1406,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1303,7 +1417,10 @@
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1311,7 +1428,10 @@
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1319,7 +1439,10 @@
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1327,7 +1450,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1335,7 +1461,10 @@
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1343,7 +1472,10 @@
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1351,7 +1483,10 @@
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1359,7 +1494,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1367,7 +1505,10 @@
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1375,7 +1516,10 @@
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1383,7 +1527,10 @@
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1391,7 +1538,10 @@
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1399,7 +1549,10 @@
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1407,7 +1560,10 @@
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1415,7 +1571,10 @@
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1423,7 +1582,10 @@
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1431,7 +1593,10 @@
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1439,7 +1604,10 @@
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1447,7 +1615,10 @@
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1455,7 +1626,10 @@
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "खींचें (चित्रित करें)"
+            "name": "खींचें (चित्रित करें)",
+            "parameters": {
+              "binary": "युग्मक"
+            }
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
@@ -1582,7 +1756,7 @@
         },
         "courseE_artist_functions1": {
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions10": {
@@ -1631,7 +1805,7 @@
         },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions2": {
@@ -1639,7 +1813,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions2_2018": {
@@ -1647,7 +1821,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions2_2019": {
@@ -1655,7 +1829,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions2_2020": {
@@ -1663,7 +1837,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions2_copy": {
@@ -1671,7 +1845,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2042,7 +2216,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions_predict1_2018": {
@@ -2050,7 +2224,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions_predict1_2019": {
@@ -2058,7 +2232,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions_predict1_2020": {
@@ -2066,7 +2240,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions_predict1_copy": {
@@ -2074,7 +2248,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयर स्टेम चित्रित करें"
+            "name": "ईयरस्टेमचित्रितकरें"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -2741,6 +2915,423 @@
           },
           "draw bit": {
             "name": "बिट चित्रित करें"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "points": "अंक",
+              "length": "लंबाई"
+            }
+          },
+          "draw a circle": {
+            "name": "एक चक्र बनाएं"
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "संभावी समाधान"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "लौ चित्रित करें",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "आग चित्रित करें"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "बूस्टर"
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw hexagon": {
+            "name": "षट्कोण खींचें"
+          },
+          "draw line of hexagons": {
+            "name": "षट्भुजों की लाइन खींचें"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "ईयरस्टेमचित्रितकरें"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयरस्टेमचित्रितकरें"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयरस्टेमचित्रितकरें"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "खिड़की चित्रित करें"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw triangle": {
+            "name": "त्रिकोण चित्रित करें"
+          },
+          "draw line of triangles": {
+            "name": "त्रिकोणों की लाइन खींचें"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "षट्कोण खींचें"
+          },
+          "draw line of hexagons": {
+            "name": "षट्भुजों की लाइन खींचें"
+          },
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "my design": {
+            "name": "मेरा डिज़ाइन"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "my design": {
+            "name": "मेरा डिज़ाइन"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयरस्टेमचित्रितकरें"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयरस्टेमचित्रितकरें"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "बहुभुजों की लाइन खींचें"
+          },
+          "draw polygon": {
+            "name": "बहुभुज चित्रित करें"
+          },
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "गेम खत्म करें"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "मूव करके काउंटर के साथ मधुरस प्राप्त करें"
           }
         }
       }

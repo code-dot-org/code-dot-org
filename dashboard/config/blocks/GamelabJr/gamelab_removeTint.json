@@ -7,6 +7,7 @@
       0.74
     ],
     "func": "removeTint",
+    "docFunc": "gamelab_removeTint",
     "blockText": "remove color from {THIS}",
     "args": [
       {

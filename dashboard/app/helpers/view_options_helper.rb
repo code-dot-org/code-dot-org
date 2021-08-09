@@ -12,6 +12,7 @@ module ViewOptionsHelper
     :autoplay_video,
     :channel,
     :readonly_workspace,
+    :is_code_reviewing,
     :is_external_project_level,
     :is_legacy_share,
     :legacy_share_style,
@@ -25,7 +26,7 @@ module ViewOptionsHelper
     :server_project_level_id,
     :game_display_name,
     :script_name,
-    :stage_position,
+    :lesson_position,
     :level_position,
     :public_caching,
     :is_13_plus,
@@ -35,10 +36,11 @@ module ViewOptionsHelper
     :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
     :signed_replay_log_url,
-    :azure_speech_service_token,
-    :azure_speech_service_region,
-    :azure_speech_service_languages,
-    :useGoogleBlockly
+    :azure_speech_service_voices,
+    :authenticity_token,
+    :useGoogleBlockly,
+    :disallowed_html_tags,
+    :backpack_channel
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

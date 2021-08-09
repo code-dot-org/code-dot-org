@@ -54,11 +54,16 @@ class FilesApi < Sinatra::Base
 
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+
+    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # no active project exists, which is handled below.
+    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 
@@ -140,6 +145,8 @@ class FilesApi < Sinatra::Base
   # GET /v3/(animations|assets|sources|files|libraries)/<channel-id>/<filename>?version=<version-id>
   #
   # Read a file. Optionally get a specific version instead of the most recent.
+  # Note: we depend on this URL in Javabuilder
+  # https://github.com/code-dot-org/javabuilder/blob/main/org-code-javabuilder/protocol/src/main/java/org/code/protocol/GlobalProtocol.java
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
     if endpoint == 'libraries'
@@ -268,7 +275,11 @@ class FilesApi < Sinatra::Base
     end
 
     return body_string unless parsed_json.key?('source')
-    blockly_xml = Nokogiri::XML(parsed_json['source'])
+    source_json = parsed_json['source']
+    if source_json.is_a?(Hash)
+      source_json = source_json.to_s
+    end
+    blockly_xml = Nokogiri::XML(source_json)
     return body_string unless blockly_xml.errors.empty?
 
     # first, remove all comment blocks by replacing them with the next block in
@@ -302,6 +313,45 @@ class FilesApi < Sinatra::Base
 
   def html?(headers)
     headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
+  end
+
+  def html_file?(filename)
+    File.extname(filename&.downcase) == '.html'
+  end
+
+  def valid_html_content?(body)
+    disallowed_tags = DCDO.get('disallowed_html_tags', [])
+
+    # Applicable Nokogiri selector rules:
+    #   Element selectors must start with //
+    #   Attribute selectors must start with @
+    #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
+    disallowed_tag_selectors = disallowed_tags.map do |tag|
+      tag_dup = tag.dup
+      attr_selector_index = tag_dup.index('[')
+      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
+      '//' + tag_dup
+    end
+
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+  end
+
+  # Determine whether or not a file is a valid HTML file.
+  # Returns true if:
+  #   1. It does not belong to a WebLab project.
+  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
+  # Returns false if the file is not an HTML file, does not belong to a project, or
+  # is a WebLab HTML file that contains disallowed HTML tags.
+  def valid_html_file?(encrypted_channel_id, filename, body)
+    return false unless html_file?(filename)
+
+    # Only validate WebLab HTML files. We need to get the project from the database
+    # in order to check whether or not the file belongs to a WebLab project.
+    project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
+    return false unless project
+    return true unless project[:projectType]&.downcase == 'weblab'
+
+    valid_html_content?(body)
   end
 
   #
@@ -338,7 +388,17 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    return bad_request if endpoint == 'libraries' && ShareFiltering.find_failure(body, request.locale)
+    if endpoint == 'libraries'
+      begin
+        share_failure = ShareFiltering.find_failure(body, request.locale)
+      rescue OpenURI::HTTPError => e
+        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      end
+      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
+      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
+      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
+      return bad_request if share_failure && share_failure[:type] != "address"
+    end
 
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
@@ -606,6 +666,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)
@@ -891,13 +952,23 @@ class FilesApi < Sinatra::Base
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
         file_mime_type = mime_type(File.extname(filename.downcase))
         rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-        if %i(adult racy).include? rating
+
+        case rating
+        when :adult, :racy
           # Incrementing abuse score by 15 to differentiate from manually reported projects
           new_score = storage_apps.increment_abuse(encrypted_channel_id, 15)
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
           not_found
+          return
+        when :unknown
+          # Content moderation was unable to scan the image, usually because we've exceeded
+          # the moderation service's request limit.  Return the default image for now and
+          # cache for 1-2 minutes to spread out future requests to the moderation service.
+          cache_for rand(60..120).seconds
+          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
+          return
         end
       end
     end

@@ -3,31 +3,6 @@ import React, {Component} from 'react';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
 import color from '../../../../util/color';
 
-const styles = {
-  title: {
-    fontSize: 32
-  },
-  image: {
-    width: 300,
-    marginTop: 10,
-    marginLeft: 50
-  },
-  step: {
-    marginTop: 25,
-    fontSize: 16
-  },
-  bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    display: 'inline'
-  },
-  expired: {
-    color: color.dark_red
-  },
-  codeText: {
-    fontFamily: 'monospace'
-  }
-};
-
 export default class DiscountCodeInstructions extends Component {
   static propTypes = {
     discountCode: PropTypes.string.isRequired,
@@ -124,6 +99,31 @@ export default class DiscountCodeInstructions extends Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    fontSize: 32
+  },
+  image: {
+    width: 300,
+    marginTop: 10,
+    marginLeft: 50
+  },
+  step: {
+    marginTop: 25,
+    fontSize: 16
+  },
+  bold: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    display: 'inline'
+  },
+  expired: {
+    color: color.dark_red
+  },
+  codeText: {
+    fontFamily: 'monospace'
+  }
+};
 
 const overviewMd = expirationString => `
 We're happy to share with you this discount code that will cover the cost of a $350 Circuit

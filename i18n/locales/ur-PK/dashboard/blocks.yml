@@ -383,7 +383,6 @@ ur:
             '"ALIEN"': اجنبی(Alien)
             '"BEAR"': ریچھ
             '"CAT"': بلی
-            '"DOG"': کتا
             '"FROG"': مینڈک
             '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': پائن ایپل
@@ -432,7 +431,7 @@ ur:
             '"DOG"': کتے
             '"DUCK"': بطخیں
             '"FROG"': مینڈک
-            '"MOOSE"': موز
+            '"MOOSE"': موس بارہ سنگا
             '"PINEAPPLE"': انناس
             '"ROBOT"': روبوٹس
             '"SHARK"': شارک
@@ -883,7 +882,7 @@ ur:
             '"left"': بائیں
             '"down"': نیچے
             '"right"': درست
-            '"space"': جگہ
+            '"space"': خلاء
             '"enter"': داخل کریں
             '"a"': a
             '"b"': b
@@ -977,9 +976,6 @@ ur:
             '"tint"': رنگت
       gamelab_getThisSprite:
         text: "{CHOICE} سرین"
-        options:
-          CHOICE:
-            '"this"': یہ
       gamelab_getTime:
         options:
           UNIT:
@@ -1064,13 +1060,6 @@ ur:
             '"z"': z
       gamelab_locationAt:
         text: 'مقام ایکس: {X} Y: {Y}'
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': مشرق
-            '"South"': جنوب
-            '"West"': مغرب
       gamelab_locationMouse:
         text: ماؤس کا مقام
       gamelab_locationOf:
@@ -1091,26 +1080,16 @@ ur:
         text: بڑھائیں {SPRITE} {DISTANCE} پکسلز آگے
       gamelab_moveInDirection:
         text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': مشرق
-            '"South"': جنوب
-            '"West"': مغرب
       gamelab_moveToward:
         text: اقدام {SPRITE} پکسلز {DISTANCE} کی طرف {TARGET}
+      gamelab_newSpritePointer:
+        text: کلک کیا {SPRITE}
       gamelab_objectSpritePointer:
         text: کلک کیا {SPRITE}
       gamelab_playSound:
         text: پلے آواز {SOUND}
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': مشرق
-            '"South"': جنوب
-            '"West"': مغرب
       gamelab_printText:
         text: پرنٹ {TEXT}
       gamelab_randColor:
@@ -1140,11 +1119,12 @@ ur:
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': کہکشاں
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': گرڈ
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': دھنک
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': اسکائی فائی
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاروں
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': پانی کے اندر
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': سردیاں
             undefined: کوئی نہیں
+      gamelab_setBackgroundImageAs:
+        text: پس منظر کو {IMG} پر سیٹ کریں
       gamelab_setProp:
         text: سیٹ {SPRITE} {PROPERTY} کرنے {VAL}
         options:
@@ -1152,6 +1132,11 @@ ur:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
+      gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY} کو {SIZE} سیٹ کریں"
+        options:
+          PROPERTY:
+            '"scale"': سائز
       gamelab_setSizes:
         text: مقرر کریں {SPRITE} {PROPERTY} {N}%
         options:
@@ -1247,6 +1232,8 @@ ur:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": مچھلی نہیں
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": میرا لیبل
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": میرا لیبل نہیں
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1275,14 +1262,9 @@ ur:
             '"direction"': حرکت کی سمت
       Mikelab_groupChangeAnim:
         text: "{SELECT} {COSTUME} کو {COSTUME2} میں تبدیل کریں"
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupChangePropBy:
         text: تبدیل {PROPERTY} کی {SELECT} {COSTUME} کی طرف سے {VAL}
         options:
-          SELECT:
-            '"this"': یہ
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
@@ -1302,9 +1284,6 @@ ur:
             "{x: 300, y: 300}": ذیلی دائیں
       Mikelab_groupDestroy:
         text: ہٹائیں {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupDisplace:
         text: تمام {COSTUME} بلاک {COSTUME2} منتقل کرنے سے
       Mikelab_groupEdgesDisplace:
@@ -1312,42 +1291,25 @@ ur:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}کے {PROPERTY}"
         options:
-          SELECT:
-            '"average"': اوسط
-            '"this"': یہ
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
       Mikelab_groupRemoveAllBehaviors:
         text: روکیں {SELECT} {COSTUME} رویے
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} رک جاتا ہے {BEHAVIOR}"
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupRemoveTint:
         text: "{SELECT} [COSTUME]123_321[1] سے رنگ ہٹا دیں"
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupSetProp:
         text: سیٹ {PROPERTY} کی {SELECT} {COSTUME} کرنے {VAL}
         options:
-          SELECT:
-            '"this"': یہ
           PROPERTY:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
       Mikelab_groupSetTint:
         text: کا رنگ تبدیل کریں {SELECT} {COSTUME} کرنے {COLOR}
-        options:
-          SELECT:
-            '"this"': یہ
       Mikelab_groupWhenClickedOn:
         text: جب {COSTUME} کلک کیا
       Mikelab_groupWhenXTouchesY:
@@ -1407,6 +1369,8 @@ ur:
           DANCE:
             MOVES.ClapHigh: مچھلی
             MOVES.Clown: میرا لیبل نہیں
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'مقام ایکس: {X} Y: {Y}'
       Mikelab_location_picker:
@@ -1429,6 +1393,13 @@ ur:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
+      Mikelab_setupSim:
+        text: |-
+          کے ساتھ سیٹ اپ تخروپن
+          {SPRITE1N}{SPRITE1COSTUME}رفتار{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}رفتار{SPRITE2SPEED}
+          جمع کرنے
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1470,12 +1441,23 @@ ur:
         text: جب {KEY} کلک کیا
         options:
           KEY:
-            '"yes"': جی ہاں
-            '"no"': نہیں
+            '"yes"': جی
+            '"no"': نہيں
       Mikelab_xLocationOf:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': ٹھوس
+            '"rainbow"': دھنک
+      PoemBot_setForegroundEffect:
+        text: پس منظر اثر {FG_EFFECT} سیٹ کریں
+        options:
+          FG_EFFECT:
+            '"rain"': بارش
+            '"bubbles"': بُلبُلے
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:
@@ -1509,41 +1491,12 @@ ur:
         options:
           PROPERTY:
             "'shapeColor'": رنگ
-      aalab_addBehaviorForDuration:
-        text: آلب سرین {SPRITE} شروع ہوتا ہے {BEHAVIOR} کے لئے {SECONDS} سیکنڈ کے لئے
-      aalab_addBehaviorUntilBoolean:
-        text: پریت {SPRITE} شروع {BEHAVIOR} تک {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: نیا سپرٹ نام{SPRITE_NAME} کے ساتھ کاسٹیوم{ANIMATION_NAME} مقام پر{LOCATION}
-      aalab_goToScene:
-        text: منظر پر جائیں {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': مشرق
-            '"South"': جنوب
-            '"West"': مغرب
-      aalab_prompt:
-        text: سوال پوچھیں {MESSAGE}
-      aalab_scene:
-        text: منظر {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: سیٹ اپ کہانی
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': گرڈ
+            '"border"': بارڈر
+            '"row"': قطار
             '"random"': بےترتیب
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}
@@ -1566,7 +1519,6 @@ ur:
           VAL:
             '0': بند
             '1': پر
-            '"toggle"': ٹوگل
       binary_drawString:
         text: ڈرائنگ ڈسٹرنگ {STR}
       binary_goTo:
@@ -1603,20 +1555,14 @@ ur:
         options:
           DIR:
             "'ahead'": آگے
-            "'right'": دائیں جانب
-            "'left'": بائیں جانب
       craft_ifStandingOn:
         text: |-
           پر کھڑے ہیں تو {TYPE}
           {STATEMENT}
         options:
           TYPE:
-            "'blueCoralBlock'": نیلے رنگ کے مرجان
-            "'redCoralBlock'": سرخ مرجان
             "'sand'": ریت
-            "'wool_blue'": گہری پانی
             "'planksOak'": شاہ بلوط planks
-            "'seaLantern'": سمندر لالٹین
       craft_ifStandingOnLimit:
         text: |-
           پر کھڑے ہیں تو {TYPE}
@@ -1624,41 +1570,12 @@ ur:
         options:
           TYPE:
             "'sand'": ریت
-            "'darkPrismarine'": تاریک قدیم
-            "'seaLantern'": سمندر لالٹین
       craft_log:
         text: لاگ ان پیغام {MESSAGE}
       craft_moveForward:
         text: آگے چلیں
       craft_placeBlock:
         text: جگہ {blockType}
-        options:
-          blockType:
-            '"strippedOak"': چھین لیا بلوط
-            '"strippedDarkOak"': سیاہ بلوط چھین لیا
-            '"stoneBricks"': پتھر اینٹوں
-            '"mossyStoneBricks"': موسی پتھر اینٹوں
-            '"crackedStoneBricks"': پھٹے پتھر اینٹوں
-            '"decorativeStoneBricks"': آرائشی پتھر اینٹوں
-            '"blueCoralBlock"': نیلے رنگ کے مرجان بلاک
-            '"pinkCoralBlock"': گلابی مرجان بلاک
-            '"magentaCoralBlock"': میجنٹا مرجان بلاک
-            '"redCoralBlock"': سرخ مرجان بلاک
-            '"yellowCoralBlock"': زرد مرجان بلاک
-            '"blueDeadCoralBlock"': نیلے رنگ کے مردہ مرجان بلاک
-            '"pinkDeadCoralBlock"': گلابی مردہ مرجان بلاک
-            '"magentaDeadCoralBlock"': میجنٹا مردہ مرجان بلاک
-            '"readDeadCoralBlock"': سرخ مردہ مرجان بلاک
-            '"yellowDeadCoralBlock"': زرد مردہ مرجان بلاک
-            '"prismarine"': بنیادی
-            '"darkPrismarine"': تاریک قدیم
-            '"seaLantern"': سمندر لالٹین
-            '"packedIce"': پیک برف
-            '"blueIce"': نیلے برف
-            '"blackConcrete"': سیاہ کنکریٹ
-            '"seaGrass"': سمندر گھاس
-            '"kelp"': kelp
-            '"polishedGranite"': پالش گرینائٹ
       craft_placePrismarine:
         text: جگہ بنیادی
       craft_placeTorch:
@@ -1671,15 +1588,13 @@ ur:
         text: سپن {ENTITY}
         options:
           ENTITY:
-            '"cod"': میڈیڈ
             '"dolphin"': ڈالفن
-            '"salmon"': سامن
-            '"seaTurtle"': سمندر کچھی
             '"squid"': سکویڈ
-            '"tropicalFish"': اشنکٹبندیی مچھلی
       craft_turn:
         text: باری {DIR}
         options:
           DIR:
             right: ٹھیک ہے
             left: بائیں بازو
+      validation_validatedBackground:
+        text: پس منظر کو {IMG} پر سیٹ کریں

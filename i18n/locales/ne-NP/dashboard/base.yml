@@ -114,8 +114,8 @@ ne:
     mismatch_password: "The two passwords you entered do not match"
     additional_information: "We need some additional information to continue signing you up."
     user_type_label: "Account Type"
-    user_type_teacher: "Teacher"
     user_type_student: "Student"
+    user_type_teacher: "Teacher"
     field_is_required: "is required"
     accept_terms: "You must agree to create an account"
     email_preference_yes: "हो"
@@ -286,6 +286,7 @@ ne:
     delete_confirm: 'Are you sure you want to delete your account?'
     deleted_user: 'deleted user'
     update_email: "Update"
+    remove_parent_email_label: "Remove"
   user_level:
     completed: 'Completed'
     tried: 'Tried'
@@ -468,6 +469,7 @@ ne:
     unplugged_conditionals:
       title: "Conditionals"
     widgets:
+      audience: "Ages 14+"
       cta: "Learn how"
   landing:
     report_bug: "Report Bug"
@@ -718,6 +720,4 @@ ne:
         opt_in_no: 'होइन'
   cookie_banner:
     accept: 'I agree'
-  gdpr_dialog:
-    yes: 'हो'
   copy: 'प्रतिलिपि गर्नुहोस्'

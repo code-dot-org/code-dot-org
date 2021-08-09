@@ -1,0 +1,41 @@
+name 'csp-post-survey-2020-markdown-with-link-to-survey'
+display_name 'CSD Post-Course Survey'
+
+markdown <<MARKDOWN
+# CS Principles Post-Course Survey
+
+**Your input and feedback is important to us!** We use it to:
+
+* understand your experience
+* make improvements to the course
+
+Thanks for taking the time to help make CS Principles even better!
+
+<a class="btn btn-large btn-success" href="/s/csp-post-survey-2020/lessons/1/levels/1/page/1" target="top">Click here to complete the CS Principles Post-Course Survey</a>
+
+(opens in a new tab)
+
+<br>
+
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Please have your students complete this survey!!!**
+
+* The results are vital for us (code.org) to sustain our courses and make improvements.
+* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.
+
+**To view results** -- the post-course survey is a little different. The survey which lives in its own unit of the course, and this page simply links to it.
+
+* To view anonymized results of the survey in your teacher dashboard, you need to (1) view survey/assessments, and then (2) select the post-course survey unit as the unit you want view.  
+
+* **More Instructions for viewing results of post-course survey**: [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/edit?usp=sharing)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]
+
+
+
+
+MARKDOWN

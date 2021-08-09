@@ -1,0 +1,9 @@
+name 'OPD-K5-EoCProjectE-2021'
+display_name 'End of Course Project for Course E'
+description '**You have reached the end of Course E! Choose a project to create.**'
+
+sublevels
+level 'CourseE_Project_SpriteLab_examples_2021'
+level 'CourseE_Project_SpriteLab_cupcake_examples_2021'
+level 'Course E: Artist Project_examples_2021'
+level 'Course E: Frozen Project_examples_2021'

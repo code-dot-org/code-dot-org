@@ -14,41 +14,41 @@ class UserLevelTest < ActiveSupport::TestCase
     @driver_user_level.navigator_user_levels << @navigator_user_level
   end
 
-  test "by_stage" do
+  test "by_lesson" do
     script = create :script
-    stage = create :lesson, script: script
-    script_level = create :script_level, script: script, lesson: stage
+    lesson = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: lesson
     level = script_level.levels.first
 
-    stage_user_level = create :user_level, script: script, level: level
+    lesson_user_level = create :user_level, script: script, level: level
     other_user_level = create :user_level
 
-    assert_includes UserLevel.by_stage(stage), stage_user_level
-    refute_includes UserLevel.by_stage(stage), other_user_level
+    assert_includes UserLevel.by_lesson(lesson), lesson_user_level
+    refute_includes UserLevel.by_lesson(lesson), other_user_level
   end
 
-  test "by_stage will find all levels for each script_level" do
+  test "by_lesson will find all levels for each script_level" do
     script = create :script
-    stage = create :lesson, script: script
+    lesson = create :lesson, script: script
     first_level = create :level
     second_level = create :level
     create :script_level,
       script: script,
-      lesson: stage,
+      lesson: lesson,
       levels: [
         first_level,
         second_level
       ]
 
-    assert_equal UserLevel.by_stage(stage), []
+    assert_equal UserLevel.by_lesson(lesson), []
 
     first_user_level = create :user_level, script: script, level: first_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level]
 
     second_user_level = create :user_level, script: script, level: second_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level, second_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
@@ -283,22 +283,9 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal [@driver_user_level], @navigator_user_level.driver_user_levels
   end
 
-  test "authorized_teacher cant become locked" do
-    teacher = create :teacher
-    teacher.permission = UserPermission::AUTHORIZED_TEACHER
-
-    stage = create(:lesson, lockable: true)
-
-    script_level = create :script_level, levels: [@level], lesson: stage
-
-    ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
-    ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
-
-    assert_equal true, script_level.locked?(@user)
-    assert_equal false, script_level.locked?(teacher)
-
-    assert_equal true, ul_student.locked?(stage)
-    assert_equal false, ul_teacher.locked?(stage)
+  test "virtual attribute `locked` sets `unlocked_at`" do
+    ul = UserLevel.create(user: @user, level: @level, locked: false)
+    assert_not_nil ul.send(:unlocked_at)
   end
 
   test 'most_recent_driver returns nil if no pair programming' do
@@ -331,6 +318,26 @@ class UserLevelTest < ActiveSupport::TestCase
       },
       passing_level_counts
     )
+  end
+
+  test 'update_best_result sets best_result to the given value' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+
+    new_best_result = 100
+    UserLevel.update_best_result(@user.id, @level.id, script.id, new_best_result)
+
+    assert_equal new_best_result, UserLevel.find(ul.id).best_result
+  end
+
+  test 'update_best_result does not change the updated_at date if touch_updated_at=false' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+    original_updated_at = ul.reload.updated_at
+
+    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, false)
+
+    assert_equal original_updated_at, UserLevel.find(ul.id).updated_at
   end
 
   test 'calculate_total_time_spent returns 0 if no time_spent recorded' do

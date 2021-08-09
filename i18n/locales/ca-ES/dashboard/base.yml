@@ -139,13 +139,11 @@ ca:
     invalid_password: "La contrasenya ha de tenir almenys 6 caràcters"
     mismatch_password: "Les dues contrasenyes que has introduït no coincideixen"
     student_consent: "Confirmo que tinc l'autorització dels meus pares o tutors legals per utilitzar los serveis de Code.org."
-    agree_us_website: "Estic d'acord a utilitzar un lloc web basat als Estats Units."
-    my_data_to_us: "Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades o processades als Estats Units."
     additional_information: "Necessitem alguna informació addicional per continuar amb la vostra inscripció."
     user_type_button: "Actualitzeu el tipus de compte"
     user_type_label: "Tipus de compte"
-    user_type_teacher: "Mestre"
     user_type_student: "alumne"
+    user_type_teacher: "Mestre"
     field_is_required: "és obligatori"
     accept_terms: "Has d'acceptar crear un compte."
     error: "S'ha produït un error."
@@ -251,6 +249,7 @@ ca:
       about_contact: "Contacta'ns"
       about_faqs: "Preguntes freqüents"
       learn: "Aprèn"
+      stats: "Estadístiques"
       help_us: "Ajuda'ns"
       teach: "Ensenya"
       about: "Quant a"
@@ -278,6 +277,7 @@ ca:
       flappy: 'Flappy'
       frozen: 'Frozen'
       gamelab: 'Laboratori de jocs'
+      iceage: 'Edat de gel'
       infinity: 'Infinit'
       minecraft_adventurer: 'Aventurer Minecraft'
       minecraft_designer: 'Minecraft'
@@ -331,6 +331,7 @@ ca:
     delete_confirm: 'Esteu segur que voleu suprimir el vostre compte?'
     update_email: "Actualitza"
     parent_guardian_email_label: "E-mail del pare/tutor"
+    remove_parent_email_label: "Esborra"
     none: "Cap"
   user_level:
     completed: 'Completat'
@@ -503,6 +504,7 @@ ca:
       title: "Condicionals"
     widgets:
       title: "Ginys"
+      audience: "Edat 14 +"
   landing:
     report_bug: "Informeu d'errors"
     support: "Obtenir ajuda"
@@ -634,7 +636,5 @@ ca:
         opt_in_no: 'No'
   cookie_banner:
     accept: 'D''acord'
-  gdpr_dialog:
-    message: 'Les dades del meu ús d''aquest lloc poden ser enviades, emmagatzemades o processades als Estats Units.'
-    yes: 'Sí'
   copy: 'Copiar'
+  confirm: 'confirmació'

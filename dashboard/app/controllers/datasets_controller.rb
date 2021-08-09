@@ -2,6 +2,7 @@ require 'json'
 require 'uri'
 
 class DatasetsController < ApplicationController
+  before_action :authenticate_user!
   before_action :require_levelbuilder_mode
   before_action :initialize_firebase
   authorize_resource class: false

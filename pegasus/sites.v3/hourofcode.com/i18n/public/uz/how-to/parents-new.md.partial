@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Dasturlash soati bo'yicha ota-onalar uchun yo'riqnoma
 ---
 
 # How to do an Hour of Code with your child
@@ -69,7 +69,7 @@ It’s okay if both you and your child are brand new to computer science. Here a
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
 - “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
+- "Texnologiya har doim ham biz xohlagan tarzda ishlamaydi."
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
 Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!

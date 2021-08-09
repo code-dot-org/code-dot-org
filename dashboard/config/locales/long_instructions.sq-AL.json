@@ -55,7 +55,12 @@
         "frozen square iterative": "Duket sikur jemi në gjysëm të rrugës për të bërë një katror. Le të vendosim 4 vija bashkë për të krijuar një katror.",
         "frozen square loop": "Përshendetje, quhem Ana nga Arendelle! Le të bëjmë një katror me bllokun \"Perserit\", që përdor pak blloqe. Sa herë (???) duhet të përseritet cikli i bllokut \"Përserit\" për të bërë një katror?",
         "frozen square loop 3x": "Le të krijojmë tre katrorë, që kthehen pas çdo katrori. Sigurohu të kthehesh me 120 gradë përpara çdo katrori të ri.",
-        "frozen square snowflake": "Mund të krijosh një flokë dëbore duke përdorur bllokun \"Përserit\" duke bërë një katror 10 herë, dhe bllokun \"Kthehu\" për t'u kthyer 36 gradë midis çdo katrori?"
+        "frozen square snowflake": "Mund të krijosh një flokë dëbore duke përdorur bllokun \"Përserit\" duke bërë një katror 10 herë, dhe bllokun \"Kthehu\" për t'u kthyer 36 gradë midis çdo katrori?",
+        "Overworld Move to Sheep_2021": "Shto një komandë të dytë \"ec përpara\" për të\narritur delet.",
+        "courseD_bee_nestedLoops8_2021": "Mblidh gjithë nektarin nga secila lule\ndhe bëj mjaltë tek çdo koshere. Përdor një cikël të mbivendosur. ",
+        "courseD_maze_nestedLoops4_2021": "Më ço tek luledielli!",
+        "courseF_bee2": "A mund të përdorësh një cikël për të mbledhur gjithë\nnektarin?",
+        "courseF_bee_for_challenge2_2021": "Zgjidhe këtë puzzle duke përdorur numrin\nmë të pakët të mundshëm të blloqeve."
       }
     }
   }

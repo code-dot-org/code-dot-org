@@ -60,6 +60,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': visible
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': visible
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -153,15 +161,28 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': 'yes'
+            '"no"': 'no'
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': rainbow
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": color
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': random
       binary_whenKey:
         options:

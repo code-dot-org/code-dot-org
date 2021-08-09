@@ -18,6 +18,8 @@ is:
       Game/Score: Leikur/skor
       Games/Score: Leikir/skor
       Groups: Hópar
+      Input: Inntak
+      Location: Staður
       Locations: Staðir
       Logic: Rökvísi
       Loops: Lykkjur
@@ -28,4 +30,5 @@ is:
       Text: texti
       Variables: Breytur
       'Variables ': 'Breytur '
+      'Variables  ': 'Breytur  '
       World: Heimur

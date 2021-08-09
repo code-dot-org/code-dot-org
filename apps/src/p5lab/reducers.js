@@ -7,12 +7,14 @@ import {
   TOGGLE_GRID_OVERLAY
 } from './actions';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import animationList from './animationListModule';
-import animationPicker from './AnimationPicker/animationPickerModule';
-import animationTab from './AnimationTab/animationTabModule';
-import locationPicker from './spritelab/locationPickerModule';
-import textConsole from './spritelab/textConsoleModule';
-var errorDialogStack = require('./errorDialogStackModule').default;
+import animationList from './redux/animationList';
+import animationPicker from './redux/animationPicker';
+import animationTab from './redux/animationTab';
+import locationPicker from './redux/locationPicker';
+import textConsole from './redux/textConsole';
+import spritelabInputList from './redux/spritelabInput';
+import locales from '@cdo/apps/redux/localesRedux';
+var errorDialogStack = require('./redux/errorDialogStack').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 
 function interfaceMode(state, action) {
@@ -60,5 +62,7 @@ module.exports = {
   animationJsonViewer,
   gridOverlay,
   locationPicker,
-  textConsole
+  textConsole,
+  spritelabInputList,
+  locales
 };

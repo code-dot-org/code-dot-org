@@ -104,10 +104,16 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: အားလုံး
+          VISIBILITY:
+            'true': မြင်နိုင်သော
       Dancelab_startMappingEach:
         options:
           GROUP:
@@ -145,6 +151,24 @@ my:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            undefined: ဘာမှမရှိ
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
+      gamelab_setProp_dropdown:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -198,6 +222,24 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': မိုးရွာသည်
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       craft_ifPath:
         options:
           DIR:

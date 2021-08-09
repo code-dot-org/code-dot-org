@@ -13,7 +13,7 @@
 #  index_pd_district_payment_terms_school_district_course  (school_district_id,course)
 #
 
-class Pd::DistrictPaymentTerm < ActiveRecord::Base
+class Pd::DistrictPaymentTerm < ApplicationRecord
   RATE_TYPES = [
     RATE_HOURLY = 'hourly'.freeze,
     RATE_DAILY = 'daily'.freeze

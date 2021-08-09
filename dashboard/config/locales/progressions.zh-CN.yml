@@ -6,52 +6,224 @@ zh-CN:
       Accelerometer Events: 加速传感器事件
       Adding Images: 添加图画
       Adding Screens: 添加屏幕
+      Alien Defender: 外星人辩护人
+      Analog Sensors: 模拟传感器
       Animate Your Scene: 活动你的场景
       Animating Sprites: 精灵图的动画
+      'App Project: Bugs and Features': '应用程序项目: 错误和功能'
+      'App Project: Linking Screens': 应用程序项目：链接屏幕
       'App Project: Screen Design': 应用程序项目：屏幕设计
+      'App Project: Screen Import': 应用程序项目：屏幕导入
+      Arrays: 数组
       Artist Project: 艺术家项目
       'Artist: Variables': 小艺术家：变量
+      Attribution: 属性
+      Back and Forth: 不断重复
+      Bass, Mid, and Treble: 低音、中音和高音
       Binary Numbers: 二进制数
+      Binary and Data: 二进制和数据
       Board Events: 主板事件
+      Booleans and Comparison Operators: 布尔值和比较运算符
+      Build a Screen: 创建屏幕
+      'Bunny ': '兔子 '
+      Bunny Jumper: 兔子跳线
       Button Circuits: 按钮电路
+      Buttons and Switch: 按钮和开关
       CS Discoveries Post-Course Survey: 计算机科学发现课后调查
+      CSS Classes: CSS 类
+      CSS Text Properties: CSS 文本属性
+      CSS and Style Sheets: CSS和样式表
       Challenge: 挑战
+      'Challenge: Add More Inputs': '挑战: 添加更多输入'
+      'Challenge: Checking for Multiple Conditions': 挑战：检查多重条件
+      'Challenge: Draw an Image': 挑战：绘制图像
+      'Challenge: Extend Your Scene': 挑战：扩展您的场景
+      'Challenge: Making Sense of Sensors': 挑战：理解传感器
+      'Challenge: Updating Variables': 挑战：更新变量
+      Challenges: 挑战
+      Change: 更改
+      Changing Screens: 更改屏幕
+      Changing Sensor Scale: 改变传感器的级别
+      'Circuit Playground: Buzzer': 电路播放场：模糊
+      'Circuit Playground: Color LEDs': 电路播放场：彩色LED
+      'Circuit Playground: Introduction': 电路播放场：LED
+      'Circuit Playground: LEDs': 电路播放场：LED
+      Circuits and Logic: 电路和逻辑
+      Code Your Own Flappy Game: 制作你自己的 Flappy 游戏吧
+      Collector Game: 收集者游戏
+      Collision Detection: 碰撞检测
+      Collision Detection Review: 碰撞检测回顾
       Collisions: 碰撞
       Combining Representations: 组合表示
+      'Conditionals: If Statements': '条件: If 语句'
+      Course E Artist Project: 课程E 艺术家项目
+      Course E Sprite Lab Project: 课程 E 精灵图实验室项目
+      Course F Artist Project: 课程 F 艺术家项目
+      Course F Sprite Lab Project: 课程 F 精灵图实验室项目
+      Create a Story: 创建一个故事
+      Creating Sprites: 创建精灵图
+      Creative Commons Search: 知识共享检索
+      Dance Crews: 舞蹈团队
+      Data Visualization: 数据可视化
       Debugging: 调试
+      Debugging with Watchers: 使用监视器调试
+      Demo - Bug Grab: 演示-错误抓取
+      Demo Apps: '演示App
+
+'
       Design Mode: 设计模式
+      Design Mode Elements: 设计模式元素
+      Designing Screens with Code: 使用代码设计屏幕
+      Designing for Accessibility: 辅助功能设计
+      Dogger Example: 小狗示例
       Drawing: 绘画
+      Drawing Shapes: 绘制形状
+      Editing Images: 编辑图像
+      Emotion Machine Example: 情绪机器示例
+      End of Course Projects: 结课项目
+      Event Types: 事件类型
       Events: 事件
+      Exploration: 探索
+      'Exploration: Adding Style': '探索: 添加样式'
+      Explore HTML: 浏览HTML
+      Exploring more CSS: 探索更多样式
+      Final Personal Website: 最后个人主页
       For Loops: 计数循环
+      Formatting HTML: 格式化 HTML
       Free Play: 自由发挥
       Functions: 函数
+      Functions Review: 功能回顾
       Functions with Parameters: 有参数的函数
+      Geometric Sun: 几何太阳
+      Get In Formation: 进入阵型
+      Getters and Setters: 取值器和设置器
       Getting Properties: 取值器属性
+      HTML Tags: HTML 标签
+      Hardware and Software: 硬件和软件
       Headings: 标题
+      Headings in HTML: HTML中的标题
       How to Make a Sprite: 如何制作精灵图
+      Hyperlinks: 超链接
+      If Statements: If 语句
+      If-Else Statements: If-else 语句
+      Images in HTML: HTML 中的图像
+      Importing Screens: 导入屏幕
+      Improve Your Game: 改善您的游戏
+      Input Examples: 输入样例
+      Inspiration!: 激励！
+      Interactive Card: 互动卡
+      Intro to Design Mode: 设计模式简介
       Introducing Sprite Lab: 向你介绍精灵图实验室
       Introduction to Arrays: 数组的简介
+      Introduction to Game Lab: 游戏实验室简介
+      Introduction to Variables: 变量简介
       Keeping Data Secret: 数据保密
       Keyboard Input: 键盘输入
+      Layout Properties: 布局属性
       Lesson Extras: 附加课程
+      Lesson Overview: 课程概述
       Linking Pages: 链接页面
       Linking Screens: 连接屏幕
       Lists: 列表
+      Lists in HTML: HTML 中的列表
+      Loops with the Artist: 与艺术家的循环
       Make a Prediction: 猜测一下
+      Make it Your Own: 让它成为你自己的
+      Making Music: 制作音乐
       Measures: 节拍
+      'Mini-Project: About Me': 关于我
+      Modifying Arrays: 修改数组
+      Modifying and Creating Arrays: 修改和创建数组
+      More Buttons: 更多按钮
+      Multi-Screen Apps: 多屏幕应用程序
+      My Online Neighborhood: 我的在线邻居
+      Naming Variables: 命名变量
+      Overview: 概览
       Pair Programming: 结对编程
+      Picturing Data: 图片数据
+      Plane Jumper: 飞机跳线
+      Planning: 规划
+      Plotting Shapes in Game Lab: 在游戏实验室中绘制形状
+      Polling Events: 轮询事件
       Predict: 预测
       Programming with Rey and BB-8: 与雷伊，BB-8一起编程
       Project: 项目
+      Project - Finishing Touches: 项目 - 最后的点缀
       Properties: 属性
       Publishing Your Website: 发布您的网站
+      Quarter Notes: 四分注释
+      RGB Widget: RGB部件
+      Random Numbers: 随机数
+      Recovery: 恢复
       Reflection: 反射
       Representing Images: 表示图像
+      Responding to Board Events: 响应主板事件
+      Responding to User Input: 响应用户输入
+      Review: 审阅
+      Revise Artist Project: 修改艺术家项目
+      Revise Sprite Lab Project: 修改精灵图实验室项目
+      Revisiting the Counter Pattern: 回顾计数模式
+      Robot Doodle: 机器人涂鸦
+      Sample App: 示例应用程序
+      Sample Game: 示例游戏
+      Sample Platform Jumper Game: 平台跳线游戏示例
+      Sample Program: 示例程序
+      Sensor Experiment: 传感器实验
+      Shapes and Parameters: 形状和参数
+      Skill Building: 技能建设
+      Speed it Up, Slow it Down: 加速、减速
+      Sprite Interactions: 精灵图互动
+      Sprite Interactions Review: 精灵图互动回顾
+      Sprite Lab Example Project: 精灵图实验室示例项目
       Sprite Lab Project: 精灵图实验室项目
+      Sprite Properties: 精灵图属性
+      Sprite Scenes: 精灵图场景
+      Sprite Velocity: 精灵图速度
+      Stopping the Outbreak with Masks: 用口罩阻止疫情爆发
+      Text Compression: 文本压缩
+      The Accelerometer: 加速传感器
+      The Animation Tab: 动画标签页
+      The Body Element: 身体部分
+      The Buzzer: 蜂鸣器
+      The Counter Pattern: 计数器模式
+      The Draw Loop: 绘制循环
       The Harvester: 收获者
+      Tour of Design Mode: 设计模式简介
+      Using Accelerometer Events: 使用加速传感器事件
+      Using Arrays: 使用数组
+      Using the Grid: 使用网格
       Using the Repeat Block: 使用循环块
+      Variables: 变量
       Velocity: 矢量
       Velocity and the Counter Pattern: 速度和计数模式
+      Velocity and the Counter Pattern Review: 速度和计数模式回顾
       Video: 视频
+      'Video: "If/Else" Statements': '视频: "If/else" 声明'
+      'Video: Booleans': '视频: 布尔值'
+      'Video: CS Matters': 视频：CS 事项
+      'Video: Conditional Statements': 视频：条件表达式
+      'Video: Conditionals': 视频：条件
+      'Video: Drawing in Game Lab - Part 1': '视频: 在游戏实验室中绘图-第1部分'
+      'Video: Drawing in Game Lab - Part 2': '视频: 在游戏实验室中绘图-第2部分'
+      'Video: For Loops': 视频：计数循环
+      'Video: Functions': '视频: 功能'
+      'Video: If/Else Statements': 视频：条件
+      'Video: Intro to CSS': 视频：CSS简介
+      'Video: Intro to CSS Part 2': '视频: CSS 简介第2部分'
+      'Video: Intro to Web Lab - Part 1': 视频：网络实验室简介 - 第一部分
+      'Video: Intro to Web Lab - Part 2': 视频：网络实验室简介 - 第二部分
+      'Video: Introduction to Arrays': 视频：数组的简介
+      'Video: Introduction to Sprites': '视频: 精灵图简介'
+      'Video: Introduction to the Draw Loop': '视频: 绘制循环简介'
+      'Video: Problem Solving Process': 视频：问题解决的方法
+      'Video: Sprite Movement': 视频：精灵图运动
+      'Video: The Animation Tab': '视频: "动画" 选项卡'
+      'Video: Velocity': '视频: 速度'
+      'Video: What Makes a Computer, a Computer?': 视频：什么使计算机成为计算机？
+      Warm Up: 热身
+      Where'd They Go?: 让他们去哪儿？
       While Loops with the Farmer: 当在农民循环中
       Wrap-up: 总结
+      Your Personal Website: 你的个人网站
+      getNumber: getNumber
+      getProperty: getProperty

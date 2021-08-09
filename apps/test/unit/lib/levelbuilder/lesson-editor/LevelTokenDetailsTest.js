@@ -3,25 +3,20 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import _ from 'lodash';
 
-const levelKeyList = {
-  1: 'Level One',
-  2: 'Level Two',
-  3: 'Level Three',
-  4: 'blockly:Studio:playlab_1'
-};
-
-const levelNameToIdMap = {
-  'Level One': 1,
-  'Level Two': 2,
-  'Level Three': 3,
-  'blockly:Studio:playlab_1': 4
-};
-
-const defaultLevel = {
+const defaultScriptLevel = {
+  id: '10',
   position: 1,
-  ids: [2],
-  activeId: 2
+  levels: [
+    {
+      name: 'Level 1',
+      id: '2',
+      url: '/fake/url/'
+    }
+  ],
+  activeId: '2',
+  expand: true
 };
 
 const assertCheckboxVisible = (wrapper, name, visible) => {
@@ -38,90 +33,94 @@ const assertChecked = (wrapper, name, checked) => {
   expect(label.find('input').props().checked).to.equal(checked);
 };
 
-const assertButtonVisible = (wrapper, name, visible) => {
-  const button = (
-    <button type="button">
-      <i />
-      {name}
-    </button>
-  );
-  expect(wrapper.containsMatchingElement(button)).to.equal(visible);
+const assertDisabled = (wrapper, name, disabled) => {
+  const label = wrapper
+    .find('.level-token-checkboxes')
+    .findWhere(n => n.name() === 'label' && n.text().includes(name));
+  expect(label.find('input').props().disabled).to.equal(disabled);
 };
 
 describe('LevelTokenDetails', () => {
-  let chooseLevel, addVariant, removeVariant, setActiveVariant, setField;
+  let setScriptLevelField;
   let defaultProps;
   beforeEach(() => {
-    chooseLevel = sinon.spy();
-    addVariant = sinon.spy();
-    removeVariant = sinon.spy();
-    setActiveVariant = sinon.spy();
-    setField = sinon.spy();
-
+    setScriptLevelField = sinon.spy();
     defaultProps = {
-      levelKeyList,
-      levelNameToIdMap,
-      chooseLevel,
-      addVariant,
-      removeVariant,
-      setActiveVariant,
-      setField,
-      level: defaultLevel,
+      setScriptLevelField,
+      scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
-      activityPosition: 1
+      activityPosition: 1,
+      lessonExtrasAvailableForUnit: false,
+      inactiveLevelNames: []
     };
   });
 
   it('renders with default props', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
 
-    assertCheckboxVisible(wrapper, 'named', false);
+    assertCheckboxVisible(wrapper, 'bonus', true);
     assertCheckboxVisible(wrapper, 'assessment', true);
     assertCheckboxVisible(wrapper, 'challenge', true);
 
+    assertChecked(wrapper, 'bonus', false);
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
-
-    assertButtonVisible(wrapper, 'Add Variant', false);
-    assertButtonVisible(wrapper, 'Remove Variant', false);
   });
 
-  it('shows new blank variant', () => {
+  it('bonus is enabled if lesson extras are not available for unit but bonus was already selected', () => {
+    let scriptLevel = _.cloneDeep(defaultScriptLevel);
+    scriptLevel.bonus = true;
+    const wrapper = shallow(
+      <LevelTokenDetails {...defaultProps} scriptLevel={scriptLevel} />
+    );
+    assertDisabled(wrapper, 'bonus', false);
+  });
+
+  it('bonus is disabled if lesson extras are not available for unit and bonus was not selected', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    assertDisabled(wrapper, 'bonus', true);
+  });
+
+  it('bonus is enabled if lesson extras are available for unit', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        level={{...defaultLevel, ids: [2, -1]}}
+        lessonExtrasAvailableForUnit={true}
       />
     );
-    //assertButtonVisible(wrapper, 'Add Variant', false);
-    assertButtonVisible(wrapper, 'Remove Variant', true);
-  });
-
-  it('shows multiple non-blank variants', () => {
-    const wrapper = shallow(
-      <LevelTokenDetails
-        {...defaultProps}
-        level={{...defaultLevel, ids: [2, 3]}}
-      />
-    );
-    //assertButtonVisible(wrapper, 'Add Variant', true);
-    assertButtonVisible(wrapper, 'Remove Variant', true);
+    assertDisabled(wrapper, 'bonus', false);
   });
 
   it('shows checked checkboxes', () => {
     const wrapper = shallow(
       <LevelTokenDetails
         {...defaultProps}
-        level={{
-          ...defaultLevel,
-          named: true,
+        scriptLevel={{
+          ...defaultScriptLevel,
+          bonus: true,
           assessment: true,
           challenge: true
         }}
       />
     );
-    assertChecked(wrapper, 'named', true);
+    assertChecked(wrapper, 'bonus', true);
     assertChecked(wrapper, 'assessment', true);
     assertChecked(wrapper, 'challenge', true);
+  });
+
+  it('does not show variants by default', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    expect(wrapper.text()).not.to.contain('inactive variants');
+  });
+
+  it('shows inactive variants when present', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        inactiveLevelNames={['Inactive Level']}
+      />
+    );
+    expect(wrapper.text()).to.contain('inactive variants');
+    expect(wrapper.text()).to.contain('Inactive Level');
   });
 });

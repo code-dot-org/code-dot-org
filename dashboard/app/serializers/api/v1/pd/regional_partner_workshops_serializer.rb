@@ -11,7 +11,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
       {
         id: workshop.id,
         dates: workshop.friendly_date_range,
-        location: workshop.location_address
+        location: workshop.friendly_location
       }
     end
   end

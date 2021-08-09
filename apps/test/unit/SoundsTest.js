@@ -4,13 +4,13 @@ import sinon from 'sinon';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('Sounds', () => {
-  const sounds = new Sounds();
-  const sourceURL = winMp3;
-  sounds.register({id: sourceURL, mp3: sourceURL});
-  const sound = sounds.soundsById[sourceURL];
-  let spy;
+  let sounds, sourceURL, sound, spy;
 
   beforeEach(() => {
+    sounds = new Sounds();
+    sourceURL = winMp3;
+    sounds.register({id: sourceURL, mp3: sourceURL});
+    sound = sounds.soundsById[sourceURL];
     spy = sinon.stub(sound, 'playAfterLoad');
   });
 

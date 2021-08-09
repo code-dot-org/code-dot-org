@@ -826,8 +826,8 @@ si-LK:
         title: බහුවරණ
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
         - {}
         - {}
         questions:
@@ -1834,6 +1834,587 @@ si-LK:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_freeplay_choice:
+        display_name: නොමිලේ ක්‍රීඩා කිරීම
+      Begin planning your project:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019_2020:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 L1 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L2 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L3 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L4 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L5 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 Lesson 6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 student record:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018_2019:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 2:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 3:
+        content1: විස්තරය මෙහි
+      Multi-Screen Apps:
+        content1: විස්තරය මෙහි
+      New Challenge Introduction:
+        content1: විස්තරය මෙහි
+        markdown: |-
+          ### නව අභියෝගය: අහඹු ආදේශක කේතාංකයක් බිඳ දැමීම ... නව විජට් එකක් සමඟ
+
+          මුළු හෝඩියම මාරු කරනවා වෙනුවට, අපි හෝඩියේ සෑම අක්ෂරයක්ම අහඹු ලෙස හෝඩියකට අනුරූපණය කළහොත් කුමක් කළ යුතුද? මෙය ** අහඹු ආදේශන කේතාංකයක් ලෙස හැඳින්වේ. **
+
+          ![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)
+
+          දැන්, රහස් පණිවිඩය සරල අකාරාදී මාරුවකින් කේතනය කර ඇතිවා වෙනුවට, ** අහඹු ආදේශනය ** සමඟ කේතනය කර ඇති පණිවිඩ වලට ඔබ මුහුණ දෙනු ඇත.
+
+
+          මෙය බිඳ දැමීමට වඩා දුෂ්කර වන අතර වඩාත් නවීන මෙවලමක් අවශ්‍ය වේ, එබැවින් ...
+
+          ඔබ ඉදිරියට යන්න ක්ලික් කළ විට, ගුප්තකේතන මෙවලමෙහි ** නව, වඩාත් නවීන අනුවාදයක් ඔබට පෙනෙනු ඇත ** එය ඔබට විවිධ දේවල් පෙන්වයි.
+
+          නමුත් එය කරන්නේ ටිකක් අභිරහසක්!
+
+          ### ඔබේ කාර්යය:
+
+            * මෙවලමෙහි මෙම නව අනුවාදයේ සිදුවන්නේ කුමක්දැයි සොයා බලන්න
+            * ඔබ වෙත ඉදිරිපත් කරනු ලබන තොරතුරු මොනවාද?
+            * මෙවලම ඔබට කිරීමට ඉඩ දෙන්නේ කුමක්දැයි සොයා බලන්න
+            * සුපුරුදු පරිදි: ඔබට එය බිඳ දැමිය නොහැක. ඒ නිසා දේවල් මත ක්ලික් කරන්න.
+            * ඔබ එය වටහා ගන්නේ නම්, අහඹු ආදේශකයක් සමඟ කේතනය කර ඇති පණිවිඩයක් බිඳ දැමිය හැකිය.
+
+          ### ඉඟිය
+
+          ඉංග්‍රීසියෙන් බහුලව භාවිතා වන අකුර ** E ** බව ඔබ දැන සිටියාද?
+
+          ### නැවත හමුවී සාකච්ඡා කරන්න
+            ටික වේලාවක් එය සමඟ සෙල්ලම් කිරීමෙන් පසුව, ඔබ සොයාගත් දේ සාකච්ඡා කිරීමට සහ සිදුවන්නේ කුමක්ද සහ මෙවලම භාවිතා කළ හැකි විවිධ ක්‍රම පිළිබඳව ඔබ දන්නා බව තහවුරු කර ගැනීමට ඔබ හවුල්කරුවෙකු, කුඩා කණ්ඩායමක්, මුළු පන්තියම සමඟ එකතු විය යුතුය.
+      OPD-K5 Reviewing Reflections:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo_copy:
+        content1: විස්තරය මෙහි
+      OPD-K5 conditionals introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 debugging:
+        content1: විස්තරය මෙහි
+      OPD-K5 diving deeper intro:
+        content1: විස්තරය මෙහි
+      OPD-K5 events introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops intro:
+        content1: විස්තරය මෙහි
+      OPD-K5 for loops introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 functions introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 journaling:
+        content1: විස්තරය මෙහි
+      OPD-K5 lesson implementation planning:
+        content1: විස්තරය මෙහි
+      OPD-K5 lesson plans:
+        content1: විස්තරය මෙහි
+      OPD-K5 loops introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 project:
+        content1: විස්තරය මෙහි
+      OPD-K5 projects introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 role_of_teacher:
+        content1: විස්තරය මෙහි
+      OPD-K5 sequencing introduced:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab unplugged:
+        content1: විස්තරය මෙහි
+      OPD-K5 sprite lab video:
+        content1: විස්තරය මෙහි
+      OPD-K5 types of lessons:
+        content1: විස්තරය මෙහි
+      OPD-K5 using lesson plans:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables introduction:
+        content1: විස්තරය මෙහි
+      OPD-K5 variables unplugged:
+        content1: විස්තරය මෙහි
+      OPD-K5 where to next:
+        content1: විස්තරය මෙහි
+      OPD-K5-projects-1:
+        content1: විස්තරය මෙහි
+      Prepare for your presentation:
+        content1: විස්තරය මෙහි
+      'Technique: Frequency Analysis':
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # ආදේශන කේතාංක බිඳ දැමීම
+
+          අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමේ හොඳම තාක්‍ෂණය ** සංඛ්‍යාත විශ්ලේෂණය ** ලෙස හැඳින්වේ.
+
+          අක්ෂර වින්‍යාසය: [විකිපීඩියා](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * ** සංඛ්‍යාත විශ්ලේෂණය ** යනු ඉංග්‍රීසි භාෂාවෙන් * නිතර නිතර * සමහර අකුරු දිස්වන ආකාරය මත පදනම් වූ තාක්‍ෂණයකි.
+          * උදාහරණයක් ලෙස, ඉංග්‍රීසි පෙළෙහි කොටසක් ලබා දී ඇති විට, * E *, * T *, * A * සහ * O * වඩාත් සුලභ වන අතර * Z *, * Q * සහ * X * දුර්ලභ වේ. ඒ හා සමානව, * TH *, * ER *, * ON *, සහ * AN * යනු එකිනෙකට යාබදව ඇති අකුරු යුගල වේ.
+          * ඇත්ත වශයෙන්ම, ඉංග්‍රීසි පෙළේ සියලුම සාම්පල සඳහා අකුරු බෙදා හැරීම දළ වශයෙන් සමාන වේ.
+
+
+          පෙර පිටුවේ ඇති විජට් අනුවාදය ඔබට සංඛ්‍යාත විශ්ලේෂණය හරහා ආදේශක කේතාංකයක් බිඳ දැමීමට උදව් කිරීමට අදහස් කරයි **.
+
+          සාමාන්‍ය ඉංග්‍රීසි ගද්‍ය කැබැල්ලක අකුරු සංඛ්‍යාතයට සාපේක්ෂව සංකේතාත්මක පණිවිඩයේ ඇති අක්ෂරවල සංඛ්‍යාතය විශ්ලේෂණය කිරීමෙන්, සමහර අක්ෂර සිතියම් ගත කිරීම් කුමක් විය හැකිද යන්න පිළිබඳව ඔබට පටු වීමට පටන් ගත හැකිය.
+
+          සංකේතාත්මක පෙළේ (තැඹිලි) අක්ෂරවල සංඛ්‍යාතය සාමාන්‍ය ඉංග්‍රීසි (නිල්) සංඛ්‍යාත සමඟ සැසඳෙන ආකාරය මෙවලම ඔබට පෙන්වයි.
+
+          ### ඉඟිය: ආරම්භ කළ යුත්තේ කොතැනින්ද?
+
+          1. කෙටි වචන සොයාගෙන පළමුව ඒවා "බිඳ දමන්න". එක් අකුරු වචන කීයක් ඔබ දන්නවාද? ("ඒ"). අකුරු 3 කින් යුත් වචනයක් වන්නේ "ද" යන්නයි.
+          2. ඔබ එය කළ පසු, ඔබට වඩාත් පොදු අකුරු කිහිපයක් සඳහා ආදේශක තිබේ. මෙම අර්ධ උපසිරැසි සමඟ වෙනත් වචන දෙස බැලීමට සහ හොඳ අනුමාන කිරීමට ඔබට බුද්ධිය භාවිතා කළ හැකිය.
+          3. අසීරු අකුරු අතළොස්සක් පමණක් සොයා ගැනීමෙන් පසුව, ඉතිරිය ඉක්මනින් කඩා වැටෙනු ඇත.
+          4. අක්ෂරවල සංඛ්‍යාත සංසන්දනය කිරීමෙන් සංවේදී අනුමාන කිරීම සඳහා හොඳ අවබෝධයක් ලැබේ.
+
+          ### මේක උත්සාහ කරන්න:
+          පහත සජීවිකරණය මඟින් යමෙකු ආරම්භ කරන බව පෙන්වයි. මෙන්න ඔවුන් උත්සාහ කළ දේ
+
+          * පළමුව අක්ෂර සංඛ්‍යාත අනුව වර්ග කරන්න.
+          * `` යන වචනයට අනුරූප විය හැකි අක්ෂර සමූහයක් හඳුනා ගන්න.
+          එය හොඳ ආරම්භයක්!
+
+          ! [](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## අහඹු ආදේශනය හොඳද?
+          * කුඩා පුහුණුවකින් පසු, අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමට ඔබට කොපමණ කාලයක් ගතවේද?
+          * මෙය හොඳ ද නැද්ද?
+      Terminology Recap:
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # විරාමය සහ නැවත සකස් කිරීම
+
+          ** සීසර් කේතාංකය ** සමඟ සංකේතනය කර ඇති පණිවිඩ, විශේෂයෙන් පරිගණකමය මෙවලමක් සමඟ බිඳ දැමීම ඉතා පහසුය. දැන් ඔබට අකාරාදී මාර්‍ග කේතාංකයක් ඉරිතලා යාමේ පුරුද්දක් ඇත (තරමක් පහසුයි, හාහ්?) අපි වඩාත් දුෂ්කර දෙයක් උත්සාහ කරමු.
+
+          ** පාරිභාෂිතය නැවත කියවීම: **
+
+          * ** ගුප්තකේතනය ** - පණිවිඩ රහසිගතව තබා ගැනීම සඳහා කේතනාංකනය කිරීමේ ක්‍රියාවලියක් වන බැවින් එය කියවිය හැක්කේ “බලයලත්” පාර්ශ්වයන්ට පමණි.
+          * ** විකේතනය ** - ගුප්තකේතනය ආපසු හරවන, රහස් පණිවිඩයක් ගෙන මුල් පිටපත ප්‍රතිනිෂ්පාදනය කරන ක්‍රියාවලියකි
+          * ** කේතාංකය ** - ගුප්තකේතනය සිදු කරන තාක්‍ෂණයක (හෝ ඇල්ගොරිතමයේ) සාමාන්‍ය යෙදුම
+          * ** සීසර්ගේ කේතාංකය ** - අක්ෂර මාලාව අක්ෂර කිහිපයකින් වෙනස් කරන සංකේතාංකනය සඳහා වූ තාක්‍ෂණයකි.
+          * ** ගුප්ත කේතනය බිඳ දැමීම ** - කේතාංකයේ සියලුම විශේෂතා නොදැන ඔබ රහස් පණිවිඩයක් විකේතනය කිරීමට උත්සාහ කරන විට, ඔබ උත්සාහ කරන්නේ ගුප්තකේතනය ** බිඳ දැමීමට ** ය.
+
+          ** ඊළඟ අභියෝගය බැලීමට ඉදිරියට යන්න ක්ලික් කරන්න ** ...
+      csf_be_a_super_digital_citizen:
+        content1: විස්තරය මෙහි
+      csf_password_power-up:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness:
+        content1: විස්තරය මෙහි
+      outbreak_story:
+        content1: විස්තරය මෙහි
+      outbreak_story2:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story2:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo_dani:
+        content1: විස්තරය මෙහි
+      'Overview: Design Mode':
+        markdown: |
+          #යෙදුම් විද්‍යාගාර සැලසුම් මාදිලියට සාදරයෙන් පිළිගනිමු
+          යෙදුම් විද්‍යාගාර සැලසුම් මාදිලියෙහි  "සැලසුම් මාදිලිය" මඟින් පරිශීලක අතුරුමුහුණත් අංග යෙදුමට (APP) ඇදගෙන යාමට ඉඩ දෙයි.
+
+          ### වචන මාලාව
+          * ** පරිශීලක අතුරුමුහුණත (UI) ** - පුද්ගලයෙකු (පරිශීලකයෙකු) පරිගණකය හෝ යෙදුම සමඟ කටයුතු කරන ආකාරය.
+          * ** UI මූලද්‍රව්‍ය ** හෝ  වස්තූන්,  රූප, පෙළ කොටු වැනි වස්තූන්, පහතට ඇද වැටෙන මෙනු, තිර යනාදිය  දමන්න.
+
+          ## උදාහරණය
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;">1.</span>යෙදුම් ප්‍රදේශයට ඉහළින් නව ස්විච කට්ටලයක් ඔබට පෙනෙනු ඇති අතර එය "සැලසුම් ප්‍රකාරය" සහ කේත ප්‍රකාරය අතර ඉදිරියට සහ පසුපසට යාමට ඉඩ දෙයි.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>මූලද්‍රව්‍යයක් එකතු කිරීම ඔබට අවශ්‍ය ඕනෑම වේලාවක එය යෙදුමට ඇදගෙන යාම මගින් පහසුය. එය යෙදුම් තිරය මත වූ පසු ඔබට එය නැවත ස්ථානගත කළ හැකිය, ප්‍රමාණය වෙනස් කළ හැකිය සහ ඒ පිළිබඳ තවත් බොහෝ දේ වෙනස් කළ හැකිය.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>ගුණාංග ඒකකය</em> මඟින් ඔබට UI මූලද්‍රව්‍යයක පෙනුම සහ පෙනුම වෙනස් කළ හැකි සියල්ල පෙන්වයි.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>මූලද්රව්ය හැඳුනුම්පත</strong> වැදගත් වන්නේ එය ඔබේ කේතයේ ඇති මූලද්රව්යයට යොමු වන ආකාරය නිසාය. අපි පසුව මූලද්‍රව්‍ය හැඳුනුම්පත් සාකච්ඡා කරමු.</p>
+          </div>
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span> පරිශීලකයා දකින පාරිදි බොත්තම් මත අකුරු පෙළ  ඔබ කැමති ඕනෑම දෙයක් බවට පත් කළ හැකිය.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>සටහන: පහළට අනුචලනය(mouse scroll) කරන්න, UI මූලද්‍රව්‍යයක් සඳහා වෙනත් ගුණාංග පහතින් "සැඟවී" තිබිය හැක.</p>
+          </div>
+          <div style="clear: both"></div>
+          <hr>
+          ** දැන් ඔබ උත්සාහ කරන්න! **
+      'Overview: Images':
+        markdown: "# රූප\n## අන්තර්ජාලයේ ඇති රූපයක URL එකක් ඇතුළත් කරන්න\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\nරූපයක URL ලබා ගැනීමට ක්‍රම කිහිපයක්
+          තිබේ.  \nපොදු ක්‍රමවේදයක් නම් (දකුණේ පෙන්වා ඇත) වෙබ් පිටුවක ඔබ කැමති රූපයක්
+          සොයාගෙන මව්සයෙහි දකුණු බොත්තම ක්ලික් කරන්න (හෝ ctrl-click) සහ \"පින්තූර
+          ලිපිනය පිටපත් කරන්න\" (Copy Image Address) වැනි යමක් තෝරාගෙන යෙදුම් විද්‍යාගාරයේ
+          පෙළ ( text box) කොටු‌වෙහි ඔබට එය ඇලවිය හැකිය (paste).\n\nඔබට සැක සහිත නම්,
+          ඔබට \"රූපය නව ටැබ් එකක විවෘත කරන්න\" වැනි විකල්පයක් තෝරා ගත හැකි අතර එමඟින්
+          රූපය තනිවම හුදකලා වන අතර URL ලිපිනය ලිපින තීරුවේ පෙන්වනු ඇත, ඔබට යෙදුම්
+          විද්‍යාගාරයට පිටපත් කිරීමට / ඇලවීමට හැකිය.\n\n** පොදු වැරැද්ද **: රූපයේ
+          URL යකට වඩා * රූප සෙවුම් වෙබ් අඩවියක * URL භාවිතා කිරීම.\n* ඔබ සත්‍ය රූප
+          ගොනුවකට යන මාර්ගය ලබා ගැනීමට වග බලා ගන්න - **. Jpg **, **. Gif ** හෝ **.
+          Png ** සමඟ අවසන් වන දෙයක්.\n* මේ ආකාරයෙන් ආරම්භ වන URL: `https: //www.google.com/search?
+          Q = cat & espv = 2 & biw = 1497 ....` බොහෝ විට වැරදිය.\n## ඔබේම පින්තූර
+          උඩුගත කරන්න\nඔබ ඔබේ පරිගණකයේ පින්තූර සුරකින ලද්දේ නම් ඒවා යෙදුම් විද්‍යාගාරයේ
+          ** වත්කම් කළමනාකරු ** වෙත උඩුගත කළ හැකිය. *ගොනුව උඩුගත කරන්න * ක්ලික් කර
+          තිරයේ ඇති උපදෙස් අනුගමනය කරන්න.\nපින්තූර සඳහා ගොනුව වර්ග : **. Jpg **, **.
+          Png **, හෝ **. Gif ** විය යුතුය.\nඔබ රූපය උඩුගත කළ පසු, එම ගොනුවට රූපය සැකසීමට
+          ** තෝරාගන්න **  කීලික් කල යුතුය. ඔබ පින්තූර කිහිපයක් එකතු කළහොත්, ඔබ ගොනුවක්
+          උඩුගත කරන සෑම අවස්ථාවකම ඒවා ලැයිස්තුගත කර ඇති අතර ඔබ දැනටමත් උඩුගත කර ඇති
+          * ඕනෑම * ගොනුවක් භාවිතා කිරීමට තෝරා ගත හැකිය.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n###
+          එය උත්සාහ කිරීමට ඉදිරියට යන්න ක්ලික් කරන්න!\n\n\n"
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: විස්තරය මෙහි
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: විස්තරය මෙහි
+      csf_password_power-up_2021:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: විස්තරය මෙහි
+      grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
         - {}

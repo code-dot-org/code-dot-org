@@ -9,6 +9,111 @@ import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
 import moment from 'moment/moment';
 
+class LibraryTable extends React.Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    importTable: PropTypes.func.isRequired,
+
+    // Provided via redux
+    libraryManifest: PropTypes.object.isRequired,
+    locale: PropTypes.string,
+    onShowPreview: PropTypes.func.isRequired
+  };
+
+  state = {
+    collapsed: true
+  };
+
+  toggleCollapsed = () =>
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+
+  render() {
+    const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+    const datasetInfo = getDatasetInfo(
+      this.props.name,
+      this.props.libraryManifest.tables
+    );
+    const shouldShowTable =
+      datasetInfo &&
+      (datasetInfo.published ||
+        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES));
+    if (!shouldShowTable) {
+      return null;
+    }
+
+    if (this.props.locale) {
+      moment.locale(this.props.locale);
+    }
+
+    return (
+      <div>
+        <a
+          style={styles.tableName}
+          onClick={this.toggleCollapsed}
+          className="uitest-dataset-table-link"
+        >
+          <FontAwesome className="fa fa-fw" icon={icon} />
+          <span>{this.props.name}</span>
+        </a>
+        {!this.state.collapsed && (
+          <div style={styles.collapsibleContainer}>
+            <div style={styles.tableDescription}>
+              {datasetInfo.lastUpdated && (
+                <span style={styles.lastUpdated}>
+                  {msg.lastUpdatedWithTime({
+                    time: moment(datasetInfo.lastUpdated).fromNow()
+                  })}
+                </span>
+              )}
+              <span style={{display: 'block'}}>{datasetInfo.description} </span>
+
+              {datasetInfo.docUrl && (
+                <span style={{display: 'block'}}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={datasetInfo.docUrl}
+                  >
+                    {msg.moreInfo()}
+                  </a>
+                </span>
+              )}
+
+              {datasetInfo.sourceUrl && (
+                <span style={{display: 'block'}}>
+                  {msg.dataSource() + ': '}
+                  <a href={datasetInfo.sourceUrl}>
+                    {datasetInfo.sourceText || datasetInfo.sourceUrl}
+                  </a>
+                </span>
+              )}
+            </div>
+            <div>
+              <button
+                style={styles.preview}
+                type="button"
+                onClick={() => this.props.onShowPreview(this.props.name)}
+                className="uitest-dataset-preview-btn"
+              >
+                {msg.preview()}
+              </button>
+              <button
+                style={styles.import}
+                type="button"
+                onClick={() => this.props.importTable(datasetInfo)}
+              >
+                {msg.import()}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+}
+
 const styles = {
   tableName: {
     fontFamily: '"Gotham 7r", sans-serif',
@@ -53,102 +158,6 @@ const styles = {
     display: 'inline-block'
   }
 };
-
-class LibraryTable extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    importTable: PropTypes.func.isRequired,
-
-    // Provided via redux
-    libraryManifest: PropTypes.object.isRequired,
-    locale: PropTypes.string,
-    onShowPreview: PropTypes.func.isRequired
-  };
-
-  state = {
-    collapsed: true
-  };
-
-  toggleCollapsed = () =>
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-
-  render() {
-    const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
-    const datasetInfo = getDatasetInfo(
-      this.props.name,
-      this.props.libraryManifest.tables
-    );
-    const shouldShowTable =
-      datasetInfo &&
-      (datasetInfo.published ||
-        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES));
-    if (!shouldShowTable) {
-      return null;
-    }
-
-    if (this.props.locale) {
-      moment.locale(this.props.locale);
-    }
-
-    return (
-      <div>
-        <a style={styles.tableName} onClick={this.toggleCollapsed}>
-          <FontAwesome className="fa fa-fw" icon={icon} />
-          <span>{this.props.name}</span>
-        </a>
-        {!this.state.collapsed && (
-          <div style={styles.collapsibleContainer}>
-            <div style={styles.tableDescription}>
-              {datasetInfo.lastUpdated && (
-                <span style={styles.lastUpdated}>
-                  {msg.lastUpdated({
-                    time: moment(datasetInfo.lastUpdated).fromNow()
-                  })}
-                </span>
-              )}
-              <span style={{display: 'block'}}>{datasetInfo.description} </span>
-
-              {datasetInfo.docUrl && (
-                <span style={{display: 'block'}}>
-                  <a target="_blank" href={datasetInfo.docUrl}>
-                    {msg.moreInfo()}
-                  </a>
-                </span>
-              )}
-
-              {datasetInfo.sourceUrl && (
-                <span style={{display: 'block'}}>
-                  {msg.dataSource() + ': '}
-                  <a href={datasetInfo.sourceUrl}>
-                    {datasetInfo.sourceText || datasetInfo.sourceUrl}
-                  </a>
-                </span>
-              )}
-            </div>
-            <div>
-              <button
-                style={styles.preview}
-                type="button"
-                onClick={() => this.props.onShowPreview(this.props.name)}
-              >
-                {msg.preview()}
-              </button>
-              <button
-                style={styles.import}
-                type="button"
-                onClick={() => this.props.importTable(datasetInfo)}
-              >
-                {msg.import()}
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  }
-}
 
 export default connect(
   state => ({

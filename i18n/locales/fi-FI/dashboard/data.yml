@@ -357,6 +357,8 @@ fi:
         CSF_collector_repeat_loops: Kerääjä toisto silmukat
         CSF_collector_text_blocks: 'TK perusteet: Keräilijä'
         CSF_create_functions: Funktioiden luominen
+        CSF_debugging_k1_blocks: Virheen etsintä
+        CSF_debugging_text_blocks: Virheen etsintä
         CSF_EF_cs_matters: Tietotekniikka on tärkeää
         CSF_maze_intro_k1_blocks: Tutustuminen Code Studio:on
         CSF_maze_intro_text_blocks: Tutustuminen Code Studio:on
@@ -451,11 +453,14 @@ fi:
         hoc_dance_congrats: Tanssibileet - Bileet päälle!
         csd_pair_programming: Pariohjelmointi
         csd_applab_parameters: Parametrilliset funktiot
+        csd_debugging: Virheen etsintä
         hoc_dance_congrats_2019: Tanssibileet 2019 - Bileet päälle!
         hoc_dance_warmup_2019: Tanssibileet 2019 - Lämmittely
         hoc_dance_events_2019: Tanssibileet 2019 - Tapahtumat
         hoc_dance_measures_2019: Tanssibileet 2019 - Mittayksiköt
         hoc_dance_properties_2019: Tanssibileet 2019 - Ominaisuudet
+        playlab_2021: Johdanto Pelilabraan
+        playlab_2021_reader: Johdanto Pelilabraan
     callout:
       text:
         drag_blocks: Vedä "liiku" -lohko ja napsauta se kiinni toisen lohkon alalaitaan

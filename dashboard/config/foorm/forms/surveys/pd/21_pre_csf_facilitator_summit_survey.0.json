@@ -1,0 +1,499 @@
+{
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "html",
+          "name": "Intro",
+          "html": "<p><h2>Pre-CSF Facilitator Summit Survey</h2>We are interested in learning about all facilitators' sense of readiness to lead high-quality, equity-focused Professional Learning experiences in 2021-22.  Your responses will be shared with Code.org staff running these workshops.  Thank you for taking a few minutes to complete this survey!</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "Course",
+          "title": "Are you attending the 2021 Facilitator Summit?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "workshop",
+          "title": "Which workshops are you facilitating in 2021-22?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "CSF Intro",
+              "text": "CSF Intro"
+            },
+            {
+              "value": "CSF Deep Dive",
+              "text": "CSF Deep Dive"
+            },
+            {
+              "value": "CSF Intro and Deep Dive",
+              "text": "CSF Intro and Deep Dive"
+            },
+            {
+              "value": "I’m not facilitating in 2021-22",
+              "text": "I’m not facilitating in 2021-22"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "iFeelIntro",
+          "visibleIf": "{workshop} = 'CSF Intro'",
+          "title": "I feel prepared to lead Code.org's CSF Intro workshops in 2021-22. ",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "iFeelDeepDive",
+          "visibleIf": "{workshop} = 'CSF Deep Dive'",
+          "title": "I feel prepared to lead Code.org's CSF Deep Dive workshops in 2021-22. ",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "iFeelBoth",
+          "visibleIf": "{workshop} = 'CSF Intro and Deep Dive'",
+          "title": "I feel prepared to lead Code.org's CSF Intro and Deep Dive workshops in 2021-22. ",
+          "rateMax": 7,
+          "minRateDescription": "Strongly Disagree",
+          "maxRateDescription": "Strongly Agree"
+        },
+        {
+          "type": "rating",
+          "name": "toWhatIntro",
+          "visibleIf": "{workshop} = 'CSF Intro'",
+          "title": "To what extent are the goals and objectives of the CSF Intro workshop clear to you as a facilitator?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all clear",
+          "maxRateDescription": "Very clear"
+        },
+        {
+          "type": "rating",
+          "name": "toWhatDeepDive",
+          "visibleIf": "{workshop} = 'CSF Deep Dive'",
+          "title": "To what extent are the goals and objectives of the CSF Deep Dive workshop clear to you as a facilitator?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all clear",
+          "maxRateDescription": "Very clear"
+        },
+        {
+          "type": "rating",
+          "name": "toWhatBoth",
+          "visibleIf": "{workshop} = 'CSF Intro and Deep Dive'",
+          "title": "To what extent are the goals and objectives of the CSF Intro and Deep Dive workshop clear to you as a facilitator?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all clear",
+          "maxRateDescription": "Very clear"
+        },
+        {
+          "type": "rating",
+          "name": "Needed",
+          "title": "To what extent do you feel confident in your ability to effectively explain the philosophy behind the curriculum to workshop participants?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all confident",
+          "maxRateDescription": "Very confident"
+        },
+        {
+          "type": "rating",
+          "name": "Commitment",
+          "title": "To what extent do you feel confident in your ability to support participants in building a commitment to creating equitable CS classrooms?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all confident",
+          "maxRateDescription": "Very confident"
+        },
+        {
+          "type": "rating",
+          "name": "Building",
+          "title": "To what extent do you feel confident in your ability to support participants in building equitable CS classrooms?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all confident",
+          "maxRateDescription": "Very confident"
+        },
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<p><b>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.”</b></p><p><br>\n<b>1-2 Not true of me now</b> - need more development, not well prepared<br>\n <br>\n<b>3-5 Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<br>\n<b>6-7 Very true of me now</b> - current strengths, well prepared<br>\n<br>\n<b>N/A</b> - respond N/A if you think the skill or knowledge is unnecessary or irrelevant for facilitating CSF workshops</p>"
+        },
+        {
+          "type": "matrix",
+          "name": "programKnowledgeSkills",
+          "title": "Right now, I have the knowledge and skills to...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            },
+            {
+              "value": "0",
+              "text": "N/A"
+            }
+          ],
+          "rows": [
+            {
+              "value": "navigate_resources",
+              "text": "Navigate to relevant teacher resources for the course, including lesson plans and the curriculum guide."
+            },
+            {
+              "value": "use_tools",
+              "text": "Use the tools designed for the course (eg., Play Lab, Sprite Lab, etc)."
+            },
+            {
+              "value": "explain_values",
+              "text": "Explain to teachers the values and philosophy of the Code.org curriculum and the Professional Learning Program."
+            },
+            {
+              "value": "demonstrate_practices",
+              "text": "Explain to teachers the values and philosophy of the Code.org curriculum and the Professional Learning Program."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "sessionPrep",
+          "title": "I know what I need to do to prepare for running...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            },
+            {
+              "value": "0",
+              "text": "N/A"
+            }
+          ],
+          "rows": [
+            {
+              "value": "discussion_session",
+              "text": "A discussion-based session (such as a discussion about supporting an inclusive CS classroom)."
+            },
+            {
+              "value": "facilitator_presentation",
+              "text": "A facilitator presentation session (such as connecting the dots)"
+            },
+            {
+              "value": "lesson_roleplay",
+              "text": "A Lesson Role Play session (such as Model Lessons)."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "facilitatingDiscussions",
+          "title": "Right now, when facilitating discussions, I have the skills to...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            },
+            {
+              "value": "0",
+              "text": "N/A"
+            }
+          ],
+          "rows": [
+            {
+              "value": "equitable_engagement",
+              "text": "Create an environment that ensures equitable engagement for all participants."
+            },
+            {
+              "value": "engage_skepticals",
+              "text": "Engage skeptical or resistant participants, or draw in someone who has disengaged."
+            },
+            {
+              "value": "equal_discussion",
+              "text": "Ensure that no one person (or small group of people) dominates discussions."
+            },
+            {
+              "value": "engage_defensive",
+              "text": "Engage with participants who are vocally defensive during conversations about equity in computer science."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "facilitatorResponsibilitiesSkills",
+          "title": "As a facilitator, right now, I have the skills to...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            },
+            {
+              "value": "0",
+              "text": "N/A"
+            }
+          ],
+          "rows": [
+            {
+              "value": "demonstrate_positive_change",
+              "text": "Ensure that teachers in my workshop demonstrate positive change in their attitudes and beliefs about equity in computer science classrooms."
+            },
+            {
+              "value": "address_challenges",
+              "text": "Address equity-related challenges in my workshop, even when it makes me or my participants uncomfortable."
+            },
+            {
+              "value": "welcome_perspectives",
+              "text": "Make participants whose perspectives and values are different from my own feel welcome in my workshop."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "concerns",
+          "title": "Right now, I am concerned about...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not a corncern"
+            },
+            {
+              "value": "2",
+              "text": "Minor concern"
+            },
+            {
+              "value": "3",
+              "text": "Moderate concern"
+            },
+            {
+              "value": "4",
+              "text": "Major concern"
+            },
+            {
+              "value": "5",
+              "text": "Biggest concern"
+            }
+          ],
+          "rows": [
+            {
+              "value": "cs_knowledge",
+              "text": "Having sufficient computer science content knowledge to lead my workshops."
+            },
+            {
+              "value": "feel_prepared",
+              "text": "Making sure that teachers in my workshops feel prepared to teach the course."
+            },
+            {
+              "value": "have_materials",
+              "text": "The amount of material and preparation necessary to run a workshop."
+            },
+            {
+              "value": "identify_contexts",
+              "text": "My ability to identify with teachers in my workshops who work in different contexts than I do."
+            },
+            {
+              "value": "develop_relationships_facilitators",
+              "text": "Developing an effective relationship with my co-facilitator(s)."
+            },
+            {
+              "value": "develop_relationships_partners",
+              "text": "Developing a good working relationship with the Regional Partner who is organizing a given workshop."
+            },
+            {
+              "value": "partner_facilitator_responsibilities",
+              "text": "How roles and responsibilities will be shared between facilitator and Regional Partner."
+            },
+            {
+              "value": "adopt_practices",
+              "text": "Teachers adopting and using equitable teaching practices when teaching the course."
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "overallTo52",
+          "title": "Overall, to what extent do you feel connected to the facilitator community?",
+          "rateMax": 7,
+          "minRateDescription": "Not at all connected",
+          "maxRateDescription": "Very connected"
+        },
+        {
+          "type": "matrix",
+          "name": "feel_community",
+          "title": "How much you do agree or disagree with the following statements about the Code.org facilitator community?   ",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "feel_member",
+              "text": "I feel like I'm a valued member of the Code.org facilitator community."
+            },
+            {
+              "value": "confident",
+              "text": "When I have questions, I am confident that I can get the help and support I need from the facilitator community."
+            },
+            {
+              "value": "sharing",
+              "text": "I feel like I can share my skills with the facilitator community. "
+            },
+            {
+              "value": "valued_facilitator",
+              "text": "I feel my work as a facilitator is valued and respected by Code.org."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give Code.org permission to quote me."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org.</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

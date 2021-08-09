@@ -74,7 +74,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Do This\r\n\r\n**Read:** Run this program and read the code carefully with a partner.\r\n\r\n**Discuss:** Discuss these questions with a partner and be prepared to share answers with the class.\r\n\r\n* What is the name of the library that this program uses?\r\n* On what line is a function from the library called?\r\n\r\n**Investigate:** Take a closer look at the library <a href=\"https://studio.code.org/projects/applab/g2YNl96t7c7kbGleMD5Dup00L4HkxOCLD5x0zucjzIw/view\" target=\"_blank\">here</a>\r\n\r\n* Talk with your partner about how `joinList()`, `linedList()`, and `numberedList()` work. Pay attention to the parameters and return values. ",
+    "long_instructions": "# Do This\r\n\r\n**Read:** Run this program and read the code carefully with a partner.\r\n\r\n**Discuss:** Discuss these questions with a partner and be prepared to share answers with the class.\r\n\r\n* What is the name of the library that this program uses?\r\n* On what line is a function from the library called?\r\n\r\n**Investigate:** Take a closer look at the library <a href=\"https://studio.code.org/projects/applab/g2YNl96t7c7kbGleMD5Dup00L4HkxOCLD5x0zucjzIw/view\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>\r\n\r\n* Talk with your partner about how `joinList()`, `linedList()`, and `numberedList()` work. Pay attention to the parameters and return values. ",
     "parent_level_id": 18135,
     "mini_rubric": "false",
     "encrypted": "false",

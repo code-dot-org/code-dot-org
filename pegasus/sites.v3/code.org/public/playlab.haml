@@ -7,9 +7,9 @@ social:
   "twitter:url": "http://code.org/playlab"
   "twitter:image:src" : "https://code.org/shared/images/courses/logo_tall_playlab.jpg"
   "twitter:title": "Play Lab Tutorials"
-  "twitter:description": "Select between Gumball, Ice Age, and Classic themes to create your own story or game."
+  "twitter:description": "Select between Ice Age and Classic themes to create your own story or game."
   "og:title": "Play Lab Tutorials"
-  "og:description": "Select between Gumball, Ice Age, and Classic themes to create your own story or game."
+  "og:description": "Select between Ice Age and Classic themes to create your own story or game."
   "og:image" : "https://code.org/shared/images/courses/logo_tall_playlab.jpg"
   "og:image:width": "446"
   "og:image:height": "243"
@@ -22,33 +22,30 @@ video_player: true
 
 %link{href: "/css/tutorial-landing.css", rel: "stylesheet"}
 
-%div{style: "clear:both"}
+%div{dir: language_dir_class}
 
-.playlab-container
-  %h1.header= I18n.t(:playlab_choose_theme)
-  %div.image-collection
-    %a.white-link{href: "/api/hour/begin/playlab"}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.purple= I18n.t(:playlab_classic_title)
-          %img.character-img{src: "/images/playlab_original3.png"}
-    %a.white-link{href: "/api/hour/begin/gumball"}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.blue.tall= I18n.t(:playlab_gumball_title)
-          %img.character-img{src: "/images/playlab_gumball.png"}
-    %a.white-link{href: "/api/hour/begin/iceage"}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.green= I18n.t(:playlab_iceage_title_live)
-          %img.character-img{src: "/images/playlab_iceage.png"}
+  %div{style: "clear:both"}
 
-%div{style: "clear:both"}
+  .playlab-container
+    %h1.header= I18n.t(:playlab_choose_theme)
+    %div.image-collection
+      %a.white-link{href: "/api/hour/begin/playlab"}
+        %div.choice
+          %div.choice-container
+            %div.choice-label.purple= I18n.t(:playlab_classic_title)
+            %img.character-img{src: "/images/playlab_original3.png"}
+      %a.white-link{href: "/api/hour/begin/iceage"}
+        %div.choice
+          %div.choice-container
+            %div.choice-label.green= I18n.t(:playlab_iceage_title_live)
+            %img.character-img{src: "/images/playlab_iceage.png"}
 
-%h2.header
-  = I18n.t(:speak_another_language)
-  %a{href: "/translate"}= I18n.t(:help_translate)
+  %div{style: "clear:both"}
 
-.inspire-videos{style: "clear: both;"}
-  %h2.header= I18n.t(:watch_inspirational_videos)
-  =view :inspirational_videos
+  %h2.header
+    = I18n.t(:speak_another_language)
+    %a{href: "/translate"}= I18n.t(:help_translate)
+
+  .inspire-videos{style: "clear: both;"}
+    %h2.header= I18n.t(:watch_inspirational_videos)
+    =view :inspirational_videos

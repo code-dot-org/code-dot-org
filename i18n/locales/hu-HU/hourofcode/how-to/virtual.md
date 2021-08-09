@@ -1,71 +1,110 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Kódolás Órája útmutató virtuális eseményekhez
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Tippek egy virtuális Kódolás Órája eseményhez
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Egy sikeres Kódolás Órája esemény levezényléséhez nem kell feltétlen személyesen is ott lenned!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+Míg a Kódolás Óráját hagyományosan az egész világon tantermekben tartják, neked nem kell személyesen is ott lenned, hogy egy jót szórakozzatok! Az alábbi tippek felhasználásával továbbra is egy interaktív és inspiráló órát szervezhetsz a hallgatóknak.  Vess egy pillantást a <a href="https://hourofcode.com/files/participation-guide-virtual.pdf"> virtuális esemény útmutatónkra</a>, ha még vannak kérdéseid.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Lehet, hogy külön tartózkodtok, de mégis elkezdhetitek együtt
+Még akkor is, ha azt tervezed, hogy a hallgatók önállóan végzik majd a feladatukat, azt javasoljuk, hogy egy online virtuális bejelentkezéssel kezdjétek el az eseményt, hogy a résztvevők átérezzék a hangulatot. Számos érdekes módja van annak, hogyan kezdheted el: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b> Hívj meg vendégelőadót</b>: Önként jelentkezők ezrei várják megkeresésed külünbőző szakterületekről! A kereséshez egyszerűen használd a <a href="https://code.org/volunteer/local"> önkéntes térképünket</a>. A virtuális óra során a távolság mit sem számít, ezért szükség esetén fontold meg más irányítószámon élő önkéntesek keresését is, akik távolról is tudnak segíteni. Miután kapcsolatba léptél egy önkéntessel, hivatkozhatsz a <a href="http://hourofcode.com/us/how-to/volunteers"> Kódolás Órája önkéntes útmutatóra </a> a lehetséges témák, vitkérdések és egyebek meghatározásához.</li> 
+<li><b> Inspiráló videó megjelenítése</b>: Egy másik remek kezdés, ha közösen megnéztek egy <a href="http://hourofcode.com/us/promote/resources#videos"> inspiráló videót</a>. Számos videó kevesebb mint 5 perces és elég ötletet és bátorítást ad hírességek szájából egyenesen a te diákjaidnak.</li> 
+<li><b> Beszéljetek a számítástechnikáról</b>: Fordítsd a Kódolás Órája eseményt a számítástechnika mélyebb megértésére, figyelembe véve a technológia mindennapi életünkre gyakorolt hatását. Tegyél fel kérdéseket a hallgatóknak, és alakítsd az esemény kezdetét interaktív beszélgetéssé. Ha ötleteket szeretnél kapni a beszélgetés elindításához, nézd meg ezeket a <a href="https://code.org/csforgood#prompts"> minta kérdéseket</a>.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Mit készítsek el előre
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Döntsd el mi legyen a virtuális platform
+Valószínűleg már ismered az olyan platformokat, mint a Cisco Webex, a Google Meet, a Microsoft Teams, a Skype vagy a Zoom. Bármelyiket is preferálod, azt javasoljuk, hogy ismerkedj meg a használatával, teszteld le annak képességeit, és futtass le egy Kódolás Órája programot  még az esemény dátuma előtt.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Tervezd meg a diákok részvételét
+** Önálló programzási tevékenység ** <br> Javasoljuk, hogy a kezdést követően engedd meg a hallgatóknak, hogy távozzanak a videokonferenciáról, hogy <a href="https://hourofcode.com/us/learn"> a Kódolás Órája gyakorlatokat  </ / a> önállóan tudják megoldani. Ez lehetővé teszi a hallgatók számára, hogy elmélyüljenek saját projektjeikben, és jobban megismerjék a számítástechnika fogalmait. Minimálisra csökkenti az esetleges figyelemelterelést, amit a videokonferencia-ablakok megnyitása okozna. </p> 
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+<p spaces-before="0">
+  Hasznos lehet, ha 1-3 gyakorlatot előre kiválasztassz és felajánlassz nekik, mint lehetséges opciót. Ez lehetővé teszi, hogy olyan tevékenységeket válassz, amelyek a legjobban megfelelnek az évfolyamnak. Ráadásul, ha a hallgatóknak kérdései lennének, amelyek segítséget igényelnek, akkor te is jobban felkészülhetsz a segítségnyújtásra, ha már ismerik az általuk kidolgozott oktatóanyagokat.
+</p>
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+<p spaces-before="0">
+  Ha az osztály várhatóan közvetlenül a kezdést követően fogja elkezdeni a gyakorlatot, akkor fontolóra veheted egy virtuális konferenciaterem, csevegési platform vagy más kommunikációs eszköz nyitva tartását, hogy szükség esetén kérdéseikkel újra kapcsolatba léphessenek veled.
+</p>
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+<p spaces-before="0">
+  <strong x-id = "1"> Kódolás Órája online </strong> <br> Ha a résztvevőket inkább ugyanabban a videohívásban szeretnéd tartani az esemény ideje alatt, kérjük, vedd figyelembe, hogy mindig két ablaknak kell nyitva lennie - az egyik a videokonferencia platformhoz, a másik pedig a hallgatóknak a feladatok elvégzésére.
+</p>
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+<p spaces-before="0">
+  <strong x-id = "1"> Szülőkkel </strong> <br> A 4. és annál alacsonyabb osztályba járó tanulók esetén érdemes megfontolni a szüleik bevonását is a Kódolás Órájába. Támogathatod őket néhány ajánlott oktatóanyaggal, valamint az alábbi hasznos <a href="https://hourofcode.com/us/how-to/parents"> útmutatóval</ a >. </p> 
+  
+  <p spaces-before="0">
+    <a href="https://hourofcode.com/us/how-to/parents"><img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" /></a>
+  </p>
 
-[<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
+<h3 spaces-before="0">
+  3. Vonj be önkéntest
+</h3>
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+<p spaces-before="0">
+  Az igényeknek megfelelően önkénteseket is találhatsz az <a href="https://code.org/volunteer/local"> önkéntes térképünkön</a>. Sokan elérhetők online, és több mint szívesen beszélnek a számítástechnikában szerzett tapasztalataikról, arról, hogy a technológia hogyan befolyásolja életüket, vagy egyszerűen csak segítséget nyújtanak a hallgatói kérdések megválaszolásához. Miután megtaláltad a megfelelő önkéntest, fontos, hogy még idő előtt egyeztessetek a részletekről és hogy megvitassátok a szerepét az eseményen, kidolgozzátok a technikai követelményeket és meghatározzátok az online részvétel logisztikáját.
+</p>
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+<h3 spaces-before="0">
+  4. Ünnepi kellékek
+</h3>
 
----
+<p spaces-before="0">
+  Vess egy pillantást alábbi ötletekre a virtuális ünnepléshez. Egyes gyakorlatok felkészülést igényelnek, például ilyen a <a href="https://code.org/certificates"> tanúsítványok </a> létrehozása az összes résztvevő számára.
+</p>
 
-## Celebrate together
+<hr />
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+<h2 spaces-before="0">
+  Ünnepeljünk együtt
+</h2>
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+<p spaces-before="0">
+  Hasonlóan ahhoz, ahogyan elindítottad az eseményt, találkozzatok újra, hogy megünnepeljétek! Íme néhány ötlet a virtuális ünneplés interaktívvá és különlegesé tételéhez:
+</p>
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+<ul>
+  <li>
+    Engedd meg a tanulóknak, hogy megosszák befejezett projektjeiket az osztály többi tagjával. Ha konferenciahívásra használt platform lehetővé teszi, akár arra is ösztönözheted őket, hogy készítsenek egy képernyőképet a projektjükről, és állítsák be azt virtuális háttérként!
+  </li>
+  <li>
+    Beszéljd meg a tanulságokat: Mit tanultak a számítástechnikáról és a technológiáról? Mit tettek, amikor problémába ütköztek, hogyan oldották meg?
+  </li>
+  <li>
+    <a href="https://code.org/certificates"> Tanúsítványok létrehozása és megosztása </a> a résztvevőkkel
+  </li>
+  <li>
+    Oszd meg a Kódolás Órája-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd #HourOfCode-t és a @codeorg-ot így kiemelhetjük a sikeredet!
+  </li>
+</ul>
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
 
-{{ signup_button }}
+<p spaces-before="0">
+  Végezetül csak annyit, ha nem <a href="https://code.org/volunteer/local"> vendégelőadóval</a> nyitottad meg az eseményt, egy <a href = "https : //hourofcode.com/us/promote/resources# "mark =" crwd-mark ">inspiráló videó</a>, vagy néhány <a href =" https://code.org/csforgood#prompts "mark =" crwd-mark "> vitakérdés</a> remek lehetőséget kínálnak, hogy beépítsd őket legközelebb az órádba.
+</p>
+
+<p spaces-before="0">
+  {{ signup_button }}
+</p>

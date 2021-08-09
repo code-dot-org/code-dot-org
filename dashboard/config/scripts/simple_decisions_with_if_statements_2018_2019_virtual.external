@@ -20,7 +20,7 @@ We want to add an `if` statement into the event handler to check the value of `c
 
 **Notice: use `==` to compare values.** 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 MARKDOWN

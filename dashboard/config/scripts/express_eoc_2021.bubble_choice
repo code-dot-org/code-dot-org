@@ -1,0 +1,9 @@
+name 'express_EOC_2021'
+display_name 'End of Course Project'
+description 'You have reached the end of Course E! Choose a project to create.'
+
+sublevels
+level 'CourseE_Project_SpriteLab_2021'
+level 'CourseD_EOC_dance_2021'
+level 'Course E: Artist Project_2021'
+level 'Course E: Frozen Project_2021'

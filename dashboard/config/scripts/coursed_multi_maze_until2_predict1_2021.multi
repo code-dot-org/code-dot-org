@@ -1,0 +1,6 @@
+name 'courseD_multi_maze_until2_predict1_2021'
+question 'Take a close look at the code below. What do you think will happen when you click "Run"?'
+wrong 'The bird will not move at all.', feedback: 'Incorrect. The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!'
+right 'The bird will make it to the pig.', feedback: 'Correct!'
+wrong 'The bird will move forward and run into the TNT.', feedback: 'Incorrect. The code makes the bird move forward while there is a safe path, then turn left.  It keeps doing this until it reaches the pig!'
+wrong 'The bird turns the wrong way.', feedback: 'The code makes the bird move forward while there is a path, then turn left.  It keeps doing this until it reaches the pig!.'

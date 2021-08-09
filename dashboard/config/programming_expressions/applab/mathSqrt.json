@@ -1,0 +1,5 @@
+{
+  "func": "mathSqrt",
+  "block": "Math.sqrt(__)",
+  "category": "Math"
+}

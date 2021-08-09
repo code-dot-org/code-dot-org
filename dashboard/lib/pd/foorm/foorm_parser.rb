@@ -40,21 +40,33 @@ module Pd::Foorm
     def self.parse_forms(forms)
       parsed_forms = {general: {}, facilitator: {}}
       forms.each do |form|
-        parsed_form = {general: {}, facilitator: {}}
-        form_questions = JSON.parse(form.questions)
-        form_questions = ::Foorm::Form.fill_in_library_items(form_questions)
-        form_questions.deep_symbolize_keys!
-        form_questions[:pages].each do |page|
-          page[:elements].each do |question_data|
-            parsed_form.deep_merge!(parse_element(question_data, false))
-          end
-        end
-        parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form[:general]
-        unless parsed_form[:facilitator].empty?
-          parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form[:facilitator]
+        parsed_form_questions = parse_form_questions(form.questions)
+
+        parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form_questions[:general]
+        unless parsed_form_questions[:facilitator].empty?
+          parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form_questions[:facilitator]
         end
       end
+
       parsed_forms
+    end
+
+    # Parse the questions of a single form, and return a readable version.
+    # @param [String] form_questions Unparsed JSON string containing a Form's questions.
+    # @return [Hash] Hash with two keys (:general and :facilitator), containing a readable version of the questions asked in a Form.
+    def self.parse_form_questions(form_questions)
+      form_questions_parsed_from_json = JSON.parse(form_questions)
+      parsed_form_questions = {general: {}, facilitator: {}}
+
+      filled_in_form_questions = ::Foorm::Form.fill_in_library_items(form_questions_parsed_from_json)
+      filled_in_form_questions.deep_symbolize_keys!
+      filled_in_form_questions[:pages]&.each do |page|
+        page[:elements]&.each do |question_data|
+          parsed_form_questions.deep_merge!(parse_element(question_data, false))
+        end
+      end
+
+      parsed_form_questions
     end
 
     # parse a form element
@@ -68,6 +80,9 @@ module Pd::Foorm
         if question_data[:type] == TYPE_PANEL_DYNAMIC
           elements = question_data[:templateElements]
         end
+
+        # Facilitator-specific questions are identified
+        # as panels that are named "facilitators"
         if question_data[:name] == 'facilitators'
           is_facilitator_question = true
         end
@@ -149,11 +164,6 @@ module Pd::Foorm
         end
       end
       choices_obj
-    end
-
-    def self.fill_question_placeholders(question)
-      question && question.sub!("{panel.facilitator_name}", "my facilitator")
-      question
     end
   end
 end

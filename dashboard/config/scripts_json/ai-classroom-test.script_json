@@ -1,0 +1,226 @@
+{
+  "script": {
+    "name": "ai-classroom-test",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-08-03 22:48:04 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "ai-classroom-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "ailab-explore",
+      "name": "Explore AI Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-class test-ai lab foods"
+        ],
+        "progression": "Introduction to AI Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-ai lab foods"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-class test-ai lab foods"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-class test-ai lab choice-parent"
+        ],
+        "progression": "Explore AI Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-ai lab choice-parent"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-class test-ai lab choice-parent"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-class test-app lab import"
+        ],
+        "progression": "Import a Model to App Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-app lab import"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-class test-app lab import"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ml-class test-app lab choice parent"
+        ],
+        "progression": "Customize Your App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-app lab choice parent"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-class test-app lab choice parent"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-ai lab foods",
+        "script_level.level_keys": [
+          "ml-class test-ai lab foods"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-ai lab choice-parent",
+        "script_level.level_keys": [
+          "ml-class test-ai lab choice-parent"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-app lab import",
+        "script_level.level_keys": [
+          "ml-class test-app lab import"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-app lab choice parent",
+        "script_level.level_keys": [
+          "ml-class test-app lab choice parent"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

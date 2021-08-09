@@ -1,0 +1,14 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-02-15T20:07:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "is_project_level": "true"
+  },
+  "published": true,
+  "notes": "",
+  "long_instructions": "# Java Lab \r\n This is a new Java Lab project! Write some Java code!"
+}]]></config>
+</Javalab>

@@ -1,4 +1,4 @@
 name 'CSP PD Example Question 1'
 question 'Which unit will you teach first'
-answer 'The sending binary messages unit', weight: 1, stage_name: 'Sending Binary Messages'
-answer 'The encoding numbers unit', weight: 1, stage_name: 'Encoding and Sending Numbers'
+answer 'The sending binary messages unit', weight: 1, lesson_name: 'Sending Binary Messages'
+answer 'The encoding numbers unit', weight: 1, lesson_name: 'Encoding and Sending Numbers'

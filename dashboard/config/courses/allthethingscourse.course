@@ -4,6 +4,13 @@
     "allthethings",
     "allthehiddenthings"
   ],
+  "published_state": "beta",
   "properties": {
-  }
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

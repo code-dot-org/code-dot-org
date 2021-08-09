@@ -1,0 +1,12 @@
+{
+  "func": "group.displace",
+  "category": "Groups",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_displace",
+  "noAutocomplete": true
+}

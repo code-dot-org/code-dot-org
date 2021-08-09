@@ -1,0 +1,26 @@
+---
+sq:
+  data:
+    variable_names:
+      actor: personazh
+      age: mosha
+      answer: përgjigje
+      binary: binare
+      birds: zogjtë
+      color: ngjyra
+      counter: numërues
+      height: gjatësia
+      honey: mjaltë
+      left: majtas
+      length: gjatesi
+      name: emri
+      nectar: nektar
+      points: pikët
+      random: zakonshëm
+      repeat: përsërit
+      right: djathtas
+      score: rezultati
+      size: madhësia
+      speed: shpejtësia
+      wizard: magjistar
+      x: x

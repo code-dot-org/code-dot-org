@@ -1,0 +1,22 @@
+---
+sk:
+  data:
+    shared_functions:
+      driving with arrow keys: ovládanie pomocou šípok
+      fluttering: chvenie
+      growing: rásť
+      jittering: chvieť sa
+      moving east: posúvať sa na východ
+      moving east and looping: posun na východ a cyklenie
+      moving north: posúvať sa na sever
+      moving south: posúvať sa na juh
+      moving west: posúvať sa na západ
+      moving west and looping: posun na západ a cyklenie
+      moving with arrow keys: posúvanie klávesami so šípkami
+      patrolling: hliadkovať
+      shrinking: zmenšovať sa
+      spinning left: rýchlo sa otočiť vľavo
+      spinning right: točenie vpravo
+      swimming left and right: plávať vľavo a vpravo
+      wandering: túlať sa
+      wobbling: kolísanie

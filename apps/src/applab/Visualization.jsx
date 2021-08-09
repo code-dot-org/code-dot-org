@@ -17,38 +17,9 @@ import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
-const styles = {
-  nonResponsive: {
-    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
-  },
-  share: {
-    // overrides nonReponsive
-    height: applabConstants.APP_HEIGHT
-  },
-  phoneFrame: {
-    marginBottom: 0,
-    borderColor: color.lighter_gray
-  },
-  phoneFrameRunning: {
-    borderColor: color.charcoal
-  },
-  screenBlock: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
-    overflow: 'hidden',
-    // layer 1 is design mode/div applab
-    // layer 2 is items being dragged out from toolbox
-    // layer 3 is cross-hair overlay
-    // layer 4 is this
-    zIndex: 4,
-    position: 'absolute',
-    top: 0,
-    left: 0
-  }
-};
-
 class Visualization extends React.Component {
   static propTypes = {
+    // Provided by redux
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
@@ -58,12 +29,6 @@ class Visualization extends React.Component {
     widgetMode: PropTypes.bool
   };
 
-  state = {
-    appWidth: this.props.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH
-  };
-
   handleDisableMaker = () => project.setMakerEnabled(null);
 
   handleTryAgain = () => {
@@ -71,26 +36,32 @@ class Visualization extends React.Component {
     studioApp().runButtonClick();
   };
 
+  getVisualizationClassNames = () => {
+    const {widgetMode, isResponsive, visualizationHasPadding} = this.props;
+
+    if (widgetMode) {
+      return classNames('widgetWidth', 'widgetHeight');
+    }
+
+    return classNames({
+      responsive: isResponsive,
+      with_padding: visualizationHasPadding
+    });
+  };
+
   render() {
-    const {appWidth} = this.state;
+    const appWidth = applabConstants.getAppWidth(this.props);
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
         id={VISUALIZATION_DIV_ID}
-        className={
-          this.props.widgetMode
-            ? 'widgetWidth widgetHeight'
-            : classNames({
-                responsive: this.props.isResponsive,
-                with_padding: this.props.visualizationHasPadding
-              })
-        }
+        className={this.getVisualizationClassNames()}
         style={[
           !this.props.isResponsive && {
             ...styles.nonResponsive,
-            ...{width: appWidth}
+            width: appWidth // Required for the project share page.
           },
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
@@ -127,6 +98,36 @@ class Visualization extends React.Component {
     );
   }
 }
+
+const styles = {
+  nonResponsive: {
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
+  },
+  share: {
+    // overrides nonReponsive
+    height: applabConstants.APP_HEIGHT
+  },
+  phoneFrame: {
+    marginBottom: 0,
+    borderColor: color.lighter_gray
+  },
+  phoneFrameRunning: {
+    borderColor: color.charcoal
+  },
+  screenBlock: {
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
+    overflow: 'hidden',
+    // layer 1 is design mode/div applab
+    // layer 2 is items being dragged out from toolbox
+    // layer 3 is cross-hair overlay
+    // layer 4 is this
+    zIndex: 4,
+    position: 'absolute',
+    top: 0,
+    left: 0
+  }
+};
 
 export const UnconnectedVisualization = Visualization;
 

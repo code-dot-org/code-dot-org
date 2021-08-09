@@ -91,7 +91,7 @@ class ScriptLevelsController < ApplicationController
       new_script = Script.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
 
-      if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+      if Script.family_names.include?(params[:script_id])
         Script.log_redirect(params[:script_id], new_script.name, request, 'unversioned-script-level-redirect', current_user&.user_type)
       end
 
@@ -105,17 +105,23 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
     configure_caching(@script)
-    load_script_level
+
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
+    raise ActiveRecord::RecordNotFound unless @script_level
+    authorize! :read, @script_level, params.slice(:login_required)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
-      render 'levels/_hidden_stage'
+      render 'levels/_hidden_lesson'
       return
     end
 
-    # If the stage is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that stage
+    # If the lesson is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that lesson
     return head(:forbidden) unless @script_level.lesson.published?(current_user)
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
@@ -127,11 +133,11 @@ class ScriptLevelsController < ApplicationController
     extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
 
     can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
-    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+    override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script_level&.script)
     if can_view_version
       # If user is allowed to see level but is assigned to a newer version of the level's script,
       # we will show a dialog for the user to choose whether they want to go to the newer version.
-      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+      @redirect_unit_url = @script_level&.script&.redirect_to_unit_url(current_user, locale: request.locale)
     elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
       # Redirect user to the proper script overview page if we think they ended up on the wrong level.
       redirect_to script_path(redirect_script) + "?redirect_warning=true"
@@ -151,36 +157,50 @@ class ScriptLevelsController < ApplicationController
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
 
+    @body_classes = @level.properties['background']
+
     present_level
   end
 
-  # Get a list of hidden stages for the current users section
-  def hidden_stage_ids
-    authorize! :read, ScriptLevel
-
-    stage_ids = current_user ? current_user.get_hidden_stage_ids(params[:script_id]) : []
-
-    render json: stage_ids
+  def self.get_script_level(script, params)
+    if params[:chapter]
+      script.get_script_level_by_chapter(params[:chapter])
+    elsif params[:lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
+    elsif params[:lockable_lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_lesson_position], params[:id], true)
+    else
+      script.get_script_level_by_id(params[:id])
+    end
   end
 
-  # toggles whether or not a stage is hidden for a section
+  # Get a list of hidden lessons for the current users section
+  def hidden_lesson_ids
+    authorize! :read, ScriptLevel
+
+    lesson_ids = current_user ? current_user.get_hidden_lesson_ids(params[:script_id]) : []
+
+    render json: lesson_ids
+  end
+
+  # toggles whether or not a lesson is hidden for a section
   def toggle_hidden
     script_id = params.require(:script_id)
     section_id = params.require(:section_id).to_i
-    stage_id = params[:stage_id]
+    lesson_id = params[:stage_id]
     # this is "true" in tests but true in non-test requests
     should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section
 
-    if stage_id
+    if lesson_id
       # TODO(asher): change this to use a cache
-      stage = Lesson.find(stage_id)
-      return head :forbidden unless stage.try(:script).try(:hideable_lessons)
-      section.toggle_hidden_stage(stage, should_hide)
+      lesson = Lesson.find(lesson_id)
+      return head :forbidden unless lesson.try(:script).try(:hideable_lessons)
+      section.toggle_hidden_lesson(lesson, should_hide)
     else
-      # We don't have a stage id, implying we instead want to toggle the hidden state of this script
+      # We don't have a lesson id, implying we instead want to toggle the hidden state of this script
       script = Script.get_from_cache(script_id)
       return head :bad_request if script.nil?
       section.toggle_hidden_script(script, should_hide)
@@ -189,7 +209,7 @@ class ScriptLevelsController < ApplicationController
     render json: []
   end
 
-  def stage_extras
+  def lesson_extras
     authorize! :read, ScriptLevel
 
     if current_user&.teacher?
@@ -203,15 +223,12 @@ class ScriptLevelsController < ApplicationController
       end
       # This errs on the side of showing the warning by only if the script we are in
       # is the assigned script for the section
-      @show_stage_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
+      @show_lesson_extras_warning = !@section&.lesson_extras && @section&.script&.name == params[:script_id]
     end
 
-    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
-    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
-    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
-
-    @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
+    @script = Script.get_from_cache(params[:script_id], raise_exceptions: false)
+    raise ActiveRecord::RecordNotFound unless @script
+    @lesson = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -227,20 +244,42 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
-    @script = @stage.script
-    @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
-      stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_lesson_extras(current_user),
-      bonus_levels: @script.get_bonus_script_levels(@stage, current_user),
-    }.camelize_keys
-    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
+    @lesson = Script.get_from_cache(
+      params[:script_id]
+    ).lesson_by_relative_position(
+      params[:lesson_position].to_i
+      )
+    @script = @lesson.script
+    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@lesson)
 
-    render 'scripts/stage_extras'
+    user = @user || current_user
+    unless user.nil?
+      # bonus level summaries explicitly don't contain any user-specific data,
+      # so we need to merge in the user's progress.
+      script_bonus_levels_by_lesson.each do |lesson|
+        lesson[:levels].each do |level_summary|
+          ul = UserLevel.find_by(
+            level_id: level_summary[:level_id], user_id: user.id, script: @script
+          )
+          level_summary[:perfect] = ul&.perfect?
+        end
+      end
+    end
+
+    @lesson_extras = {
+      next_lesson_number: @lesson.next_level_number_for_lesson_extras(user),
+      lesson_number: @lesson.relative_position,
+      next_level_path: @lesson.next_level_path_for_lesson_extras(user),
+      bonus_levels: script_bonus_levels_by_lesson,
+    }.camelize_keys
+    @bonus_level_ids = @lesson.script_levels.where(bonus: true).map(
+      &:level_ids
+    ).flatten
+
+    render 'scripts/lesson_extras'
   end
 
-  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
     require_levelbuilder_mode
@@ -248,26 +287,26 @@ class ScriptLevelsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    stage =
-      if params[:stage_position]
-        script.stage_by_relative_position(params[:stage_position])
+    lesson =
+      if params[:lesson_position]
+        script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.stage_by_relative_position(params[:lockable_stage_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
       end
 
-    render json: stage.summary_for_lesson_plans
+    render json: lesson.summary_for_lesson_plans
   end
 
   def self.get_script(request)
     script_id = request.params[:script_id]
-    # Due to a programming error, we have been inadvertently passing user: nil
-    # to Script.get_script_family_redirect_for_user . Since end users may be
-    # depending on this incorrect behavior, and we are trying to deprecate this
-    # codepath anyway, the current plan is to not fix this bug.
-    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
-      Script.get_script_family_redirect_for_user(script_id, user: nil, locale: request.locale) :
-      Script.get_from_cache(script_id)
-
+    script = Script.get_from_cache(script_id, raise_exceptions: false)
+    if script.nil? && Script.family_names.include?(script_id)
+      # Due to a programming error, we have been inadvertently passing user: nil
+      # to Script.get_unit_family_redirect_for_user . Since end users may be
+      # depending on this incorrect behavior, and we are trying to deprecate this
+      # codepath anyway, the current plan is to not fix this bug.
+      script = Script.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+    end
     raise ActiveRecord::RecordNotFound unless script
     script
   end
@@ -313,21 +352,6 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  def load_script_level
-    @script_level =
-      if params[:chapter]
-        @script.get_script_level_by_chapter(params[:chapter])
-      elsif params[:stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
-      elsif params[:lockable_stage_position]
-        @script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
-      else
-        @script.get_script_level_by_id(params[:id])
-      end
-    raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level
-  end
-
   def load_level_source
     if params[:solution] && @ideal_level_source = @level.ideal_level_source
       # load the solution for teachers clicking "See the Solution"
@@ -371,15 +395,17 @@ class ScriptLevelsController < ApplicationController
     return if params[:user_id].blank?
 
     if current_user.nil?
-      render text: 'Teacher view is not available for this puzzle', layout: true
+      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
       return
     end
 
-    user = User.find(params[:user_id])
+    user_to_view = User.find(params[:user_id])
+    if can?(:view_as_user, @script_level, user_to_view)
+      @user = user_to_view
 
-    # TODO: This should use cancan/authorize.
-    if user.student_of?(current_user) || current_user.project_validator?
-      @user = user
+      if can?(:view_as_user_for_code_review, @script_level, user_to_view)
+        view_options(is_code_reviewing: true)
+      end
     end
   end
 
@@ -440,9 +466,9 @@ class ScriptLevelsController < ApplicationController
   end
 
   def present_level
-    # All database look-ups should have already been cached by Script::script_cache_from_db
+    # All database look-ups should have already been cached by Script::unit_cache_from_db
     @game = @level.game
-    @stage ||= @script_level.lesson
+    @lesson ||= @script_level.lesson
 
     load_level_source
 
@@ -481,7 +507,10 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      authenticity_token: form_authenticity_token,
+      disallowed_html_tags: disallowed_html_tags
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 
@@ -505,7 +534,7 @@ class ScriptLevelsController < ApplicationController
 
   def set_redirect_override
     if params[:script_id] && params[:no_redirect]
-      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+      VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
   end
 

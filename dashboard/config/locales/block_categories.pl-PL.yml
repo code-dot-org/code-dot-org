@@ -18,13 +18,17 @@ pl:
       Game/Score: Gra/Punkty
       Games/Score: Gry/Punkty
       Groups: Grupy
+      Input: Wejście
+      Location: Miejsce
       Locations: Położenie
       Logic: Logika
       Loops: Pętle
       Math: Matematyka
       Numbers: Liczby
       Properties: Właściwości
+      Sprites: Duszki
       Text: Tekst
       Variables: Zmienne
       'Variables ': 'Zmienne '
+      'Variables  ': 'Zmienne  '
       World: Świat

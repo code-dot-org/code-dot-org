@@ -33,6 +33,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 
+  # GET /api/v1/users/<user_id>/display_theme
+  def get_display_theme
+    render json: {display_theme: @user&.display_theme}
+  end
+
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
   def get_donor_teacher_banner_details
     if current_user.teacher?
@@ -69,6 +74,14 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.save
 
     render json: {using_text_mode: !!@user.using_text_mode}
+  end
+
+  # POST /api/v1/users/<user_id>/display_theme
+  def update_display_theme
+    @user.display_theme = params[:display_theme]
+    @user.save
+
+    render json: {display_theme: @user.display_theme}
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement

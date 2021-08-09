@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:03:59.000Z",
+  "level_num": "custom",
+  "user_id": 684,
+  "properties": {
+    "video_key": "csp_applab_functions",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17700,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-04 17:15:19 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -30,8 +30,8 @@
   .script_text
     = text_area_tag('level[dsl_text]', @level.dsl_text || (@level.dsl_default))
 
-  - if @level.is_a?(External)
-    %p< If you want to embed blocks in this level, you can do so by adding associated_blocks 'block type' to the DSL field. Available block types are: #{External.possible_associated_blocks.join(', ')}
+    - if @level.is_a?(External)
+      %p< If you want to embed blocks in this level, you can do so by adding associated_blocks 'block type' to the DSL field. Available block types are: #{External.possible_associated_blocks.join(', ')}
 
     .markdown
       %p Edit Markdown:

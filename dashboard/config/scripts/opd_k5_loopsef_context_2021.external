@@ -1,0 +1,15 @@
+name 'OPD-K5-LoopsEF-context-2021'
+title 'Sequencing Introduced'
+description 'description here'
+markdown <<MARKDOWN
+# Sequencing in Courses E and F
+
+Course E transitions students to use sequencing to program **sprites**.  You will be introduced to sprites in Lesson 7 of this course.  
+
+Course F continues to build and strengthen students' skills in programming sprites, as well as introduces advanced computer science concepts such as variables and for loops.  Variables are introduced in Lesson X and For Loops are introduced in Lesson X of this online course.
+
+The <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="blank" rel="noopener noreferrer">Computer Science Fundamentals Curriculum Guide</a> provides course overviews on pages 8 - 19 indicating where concept occur within Courses A - E, as well as a brief description of each lesson in a course.
+
+Click "Continue" for an example of a student lesson level in Course E where students still engage with sequencing (algorithms) and are introduced to sprites. **The example student lesson level shown next is  from Course E, Lesson 5:  Swimming Fish with Sprite Lab**.
+
+MARKDOWN

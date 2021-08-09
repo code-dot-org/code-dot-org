@@ -149,6 +149,8 @@ ga:
       courseF_unplugged_powerOfWords:
         title: Gníomhaíocht Dhíphlugáilte
         desc: Inniú foghlaimeoidh tú céard a dhéanfaidh tú má tá duine ag caitheamh go holc leat ar líne.
+      deeper learning description:
+        desc: 'aistriúchán ar iarraidh: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algartaim Fhíorshaoil: Síol a Chur'
         desc: Taispeánann an ceacht seo bealaí a n-úsáidimid algartaim inár saol laethúil, ag úsáid cur síl mar shampla. Díríonn sé ar an ríomheolaíocht níos ginearálta, agus an ról tábhachtach a imríonn algartaim inti.
@@ -215,10 +217,6 @@ ga:
       courseF_unplugged_songwritingParameters:
         title: Ceapadh Ceoil le Paraiméadair
         desc: 'Ceann de na struchtúir is iontaí sa ríomheolaíocht é an fheidhm. Is éard atá ann ná píosa cóid beag is féidir a úsáid arís is arís eile mar chuid de ríomhchlár níos mó. Tar éis an cheacht seo, tuigfidh na daltaí an fáth a bhfuil feidhmeanna chomh háisiúil.  '
-      swipeRightPassThrough:
-        title: Seisiún Earcaíochta
-      swipeRightPassThrough-test123:
-        title: Seisiún Earcaíochta
       courseB_unplugged_MRF_2018:
         title: Mo Chairde Róbatacha
         desc: Foghlaim an ríomhchlárú trí cód a scríobh do do chairde!

@@ -352,6 +352,7 @@ fil:
         C4_unplugged_forloops: For Loops
         C4_unplugged_parameters: Pagsulat ng Awit na may mga Paremeters
         C4_unplugged_binary: Binary
+        CSF_a_b_artist_loops: Mga Loop sa Artist
         CSF_artist_angles: Anggulo sa Artista
         CSF_collector_k1_blocks: 'CS Fundamentals: Ang Kolektor'
         CSF_collector_repeat_loops: Collector Repeat Loops
@@ -470,6 +471,8 @@ fil:
         hoc_dance_properties_2019: Dance Party 2019 - Mga Property
         csf_private_and_personal_information: Pribado at Personal na Impormasyon
         csd_what_computers_are: Ano ang isang Kompyuter?
+        playlab_2021: Introduksiyon sa Play Lab
+        playlab_2021_reader: Introduksiyon sa Play Lab
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

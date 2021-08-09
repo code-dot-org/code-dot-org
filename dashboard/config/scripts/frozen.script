@@ -1,6 +1,9 @@
-hidden false
+family_name 'frozen'
+version_year 'unversioned'
+published_state 'preview'
+is_course true
 
-lesson 'Artist', display_name: 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'frozen line'
 level 'frozen perpendicular'
 level 'frozen square iterative'

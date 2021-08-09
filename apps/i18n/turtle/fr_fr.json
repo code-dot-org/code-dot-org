@@ -55,7 +55,7 @@
   "jumpNortheastTooltip": "Déplace l'artiste vers le nord-est sans laisser de traces.",
   "jumpNorthwestTooltip": "Déplace l'artiste vers le nord-ouest sans laisser de traces.",
   "jumpSouthTooltip": "Déplace l'artiste vers le Sud sans laisser aucune trace.",
-  "jumpSoutheastTooltip": "Déplace l'artiste vers le sud-ouest sans laisser de traces.",
+  "jumpSoutheastTooltip": "Déplacer l'artiste vers le Sud-Est sans laisser de trace.",
   "jumpSouthwestTooltip": "Déplace l'artiste vers le sud-ouest sans qu'il n'écrive.",
   "jumpWestTooltip": "Déplace l'artiste vers l'Ouest sans laisser aucune trace.",
   "left": "vers la gauche",

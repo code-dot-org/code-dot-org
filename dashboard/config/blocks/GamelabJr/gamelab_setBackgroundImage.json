@@ -1,5 +1,5 @@
 {
-  "category": "World",
+  "category": "Unused",
   "config": {
     "color": [
       240,
@@ -7,6 +7,7 @@
       0.65
     ],
     "func": "setBackgroundImage",
+    "docFunc": "gamelab_setBackgroundImage",
     "blockText": "set background to {IMG}",
     "args": [
       {

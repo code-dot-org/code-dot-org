@@ -1,12 +1,11 @@
-family_name 'csd1'
+family_name 'csd-one'
 
 hideable_lessons true
 project_widget_visible true
 student_detail_progress_view true
 lesson_extras_available true
 has_verified_resources true
-has_lesson_plan true
-is_stable true
+published_state 'pilot'
 tts true
 project_sharing true
 is_course true
@@ -21,4 +20,4 @@ professional_learning_course 'Exploring Computer Science PD Course'
 supported_locales ["de-DE"]
 project_widget_types ["gamelab", "weblab"]
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursea/standards/"]]
-script_announcements [{"notice"=>"This Online PD Resource is no longer available", "details"=>"Click \"Learn More\" to find out about the new Online PD Resources.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"failure", "visibility"=>"Teacher and student"}]
+announcements [{"notice"=>"This Online PD Resource is no longer available", "details"=>"Click \"Learn More\" to find out about the new Online PD Resources.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"failure", "visibility"=>"Teacher and student"}]

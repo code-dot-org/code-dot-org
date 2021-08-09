@@ -1,0 +1,9 @@
+{
+  "func": "circle",
+  "category": "Canvas",
+  "paletteParams": [
+    "x",
+    "y",
+    "radius"
+  ]
+}

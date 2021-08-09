@@ -1,0 +1,12 @@
+{
+  "func": "addToGroup",
+  "category": "Sprites",
+  "paletteParams": [
+    "group"
+  ],
+  "params": [
+    "group"
+  ],
+  "modeOptionName": "*.addToGroup",
+  "noAutocomplete": true
+}

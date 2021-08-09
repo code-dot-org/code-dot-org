@@ -6,22 +6,6 @@ import MiniView from '../progress/MiniView';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  headerItem: {
-    textAlign: 'center',
-    cursor: 'pointer'
-  },
-  caret: {
-    fontSize: 40,
-    color: color.orange,
-    lineHeight: '10px'
-  },
-  more: {
-    fontSize: 10,
-    lineHeight: '10px'
-  }
-};
-
 export default class HeaderPopup extends Component {
   static propTypes = {
     scriptName: PropTypes.string,
@@ -124,3 +108,19 @@ export default class HeaderPopup extends Component {
     );
   }
 }
+
+const styles = {
+  headerItem: {
+    textAlign: 'center',
+    cursor: 'pointer'
+  },
+  caret: {
+    fontSize: 40,
+    color: color.orange,
+    lineHeight: '10px'
+  },
+  more: {
+    fontSize: 10,
+    lineHeight: '10px'
+  }
+};

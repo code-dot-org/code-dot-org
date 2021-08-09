@@ -15,8 +15,10 @@ it:
       Functions: Funzioni
       'Functions ': 'Funzioni '
       Game/Score: Gioco/Punteggio
-      Games/Score: Gioco/Punteggio
+      Games/Score: Giochi/Punteggio
       Groups: Gruppi
+      Input: Input
+      Location: Luogo
       Locations: Posizioni
       Logic: Logica
       Loops: Cicli
@@ -27,4 +29,5 @@ it:
       Text: Testo
       Variables: Variabili
       'Variables ': 'Variabili '
+      'Variables  ': 'Variabili  '
       World: Ambiente

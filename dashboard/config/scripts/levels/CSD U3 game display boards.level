@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](/s/csd3-2017/stage/16/puzzle/9) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
+    "long_instructions": "# Display Boards\r\n\r\nNow that your backgrounds are working, you can add your display boards.  Most games have a score board, but you might also want to display information about player level or lives remaining.  Look at [Lesson 16 Puzzle 9](/s/csd3-2017/lessons/16/levels/9) for an example of how to make a scoreboard.\r\n\r\nFor each display board:\r\n* Create a function to display the information\r\n* Call the function in the draw loop\r\n\r\nBe sure to test your boards by changing the starting value of your variables and making sure the board also changes when you run the code.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

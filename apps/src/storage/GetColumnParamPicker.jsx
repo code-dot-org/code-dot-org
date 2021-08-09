@@ -10,22 +10,6 @@ export const ParamType = {
   COLUMN: 'COLUMN'
 };
 
-const styles = {
-  title: {
-    paddingLeft: '15px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.teal
-  },
-  option: {
-    paddingLeft: '30px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.purple
-  },
-  error: {
-    padding: '30px'
-  }
-};
-
 export default class GetColumnParamPicker extends React.Component {
   static propTypes = {
     param: PropTypes.oneOf(Object.values(ParamType)).isRequired,
@@ -96,3 +80,19 @@ export default class GetColumnParamPicker extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    paddingLeft: '15px',
+    fontFamily: "'Gotham 7r', sans-serif",
+    color: color.teal
+  },
+  option: {
+    paddingLeft: '30px',
+    fontFamily: "'Gotham 7r', sans-serif",
+    color: color.purple
+  },
+  error: {
+    padding: '30px'
+  }
+};

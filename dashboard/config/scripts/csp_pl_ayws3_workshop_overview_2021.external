@@ -1,0 +1,29 @@
+name 'CSP-PL AYWS3 Workshop Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 3: CS Principles Virtual Professional Learning 
+
+## Module 3 Overview
+
+Welcome to the Module 3 asynchronous work for CS Principles!  These experiences will help prepare you for the following synchronous workshop and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**During this asynchronous work you will:**
+
+* Read Unit overviews for Units 4 and 5.
+* Review the lesson plan for U5L1 - Lists Explore.
+* Reflect on the intellectual skills and abilities students exhibit in your classroom. 
+
+
+**After this asynchronous work you will:**
+
+* Understand how the content of Unit 4 connects to Unit 5.
+* Have experience with the mental model of a list developed in U5L1 - Lists Explore.  This will be used in the synchronous workshop for this module.
+* Have brainstormed intellectual skills and abilities students bring to your Computer Science classrooms.
+
+
+Let's get started!
+
+MARKDOWN

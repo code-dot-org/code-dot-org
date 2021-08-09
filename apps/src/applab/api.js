@@ -328,8 +328,13 @@ export function startWebRequest(url, func) {
   return Applab.executeCmd(null, 'startWebRequest', {url: url, func: func});
 }
 
-export function startWebRequestSync(url, headers, func) {
-  return Applab.executeCmd(null, 'startWebRequestSync', {url, func, headers});
+export function startWebRequestSync(url, func) {
+  return Applab.executeCmd(null, 'startWebRequest', {
+    url: url,
+    func: (status, contentType, responseText) => {
+      func(responseText);
+    }
+  });
 }
 
 export function getKeyValue(key, onSuccess, onError) {
@@ -381,12 +386,30 @@ export function createRecord(table, record, onSuccess, onError) {
   });
 }
 
+export function createRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'createRecord', {
+    table: table,
+    record: record,
+    onSuccess: callback,
+    onError: callback
+  });
+}
+
 export function readRecords(table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(null, 'readRecords', {
     table: table,
     searchParams: searchParams,
     onSuccess: onSuccess,
     onError: onError
+  });
+}
+
+export function readRecordsSync(table, callback) {
+  return Applab.executeCmd(null, 'readRecords', {
+    table: table,
+    searchParams: {},
+    onSuccess: callback,
+    onError: callback
   });
 }
 
@@ -399,12 +422,30 @@ export function updateRecord(table, record, onComplete, onError) {
   });
 }
 
+export function updateRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'updateRecord', {
+    table: table,
+    record: record,
+    onComplete: callback,
+    onError: callback
+  });
+}
+
 export function deleteRecord(table, record, onComplete, onError) {
   return Applab.executeCmd(null, 'deleteRecord', {
     table: table,
     record: record,
     onComplete: onComplete,
     onError: onError
+  });
+}
+
+export function deleteRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'deleteRecord', {
+    table: table,
+    record: record,
+    onComplete: callback,
+    onError: callback
   });
 }
 
@@ -532,5 +573,29 @@ export function drawChartFromRecords(
     columns: columns,
     options: options,
     callback: callback
+  });
+}
+
+export function getPrediction(modelName, modelId, testValues, callback) {
+  return Applab.executeCmd(null, 'getPrediction', {
+    modelName,
+    modelId,
+    testValues,
+    callback
+  });
+}
+
+export function getValue(object, key) {
+  return Applab.executeCmd(null, 'getValue', {
+    object,
+    key
+  });
+}
+
+export function addPair(object, key, value) {
+  return Applab.executeCmd(null, 'addPair', {
+    object,
+    key,
+    value
   });
 }

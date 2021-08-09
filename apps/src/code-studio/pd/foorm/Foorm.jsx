@@ -4,12 +4,6 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import Spinner from '../components/spinner';
 
-const styles = {
-  statusMessage: {
-    textAlign: 'center'
-  }
-};
-
 const SPINNER_WAIT_MS = 2000;
 
 export default class Foorm extends React.Component {
@@ -19,10 +13,17 @@ export default class Foorm extends React.Component {
     formVersion: PropTypes.number.isRequired,
     submitApi: PropTypes.string.isRequired,
     surveyData: PropTypes.object,
-    submitParams: PropTypes.object
+    submitParams: PropTypes.object,
+    customCssClasses: PropTypes.object,
+    onComplete: PropTypes.func,
+    inEditorMode: PropTypes.bool
   };
 
-  customCss = {
+  static defaultProps = {
+    customCssClasses: {}
+  };
+
+  defaultCss = {
     root: 'sv_main sv_default_css foorm-reset-font',
     header: 'sv_header foorm-adjust-header',
     body: 'sv_body foorm-adjust-body',
@@ -65,9 +66,24 @@ export default class Foorm extends React.Component {
     Survey.StylesManager.applyTheme('default');
 
     this.surveyModel = new Survey.Model(this.props.formQuestions);
+
+    // Settings to avoid jumping around the page
+    // when SurveyJS produces changes in focus/scrolling
+    // while editing a Foorm configuration.
+    if (this.props.inEditorMode) {
+      // Prevents focus from moving from codemirror in Foorm Editor
+      // to the first question of the rendered SurveyJS Survey.
+      this.surveyModel.focusFirstQuestionAutomatic = false;
+
+      // Prevents automatic scrolling to top of rendered SurveyJS Survey while editing a long configuration file.
+      this.surveyModel.onScrollingElementToTop.add((unused, options) => {
+        options.cancel = true;
+      });
+    }
   }
 
   onComplete = (survey, options) => {
+    this.props.onComplete && this.props.onComplete(survey.data);
     let requestData = {
       answers: survey.data,
       form_name: this.props.formName,
@@ -132,13 +148,14 @@ export default class Foorm extends React.Component {
   }
 
   render() {
+    const css = {...this.defaultCss, ...this.props.customCssClasses};
     return (
       <div>
         <Survey.Survey
           model={this.surveyModel}
           onComplete={this.onComplete}
           data={this.props.surveyData}
-          css={this.customCss}
+          css={css}
           requiredText={'(Required)'}
           showCompletedPage={false}
           maxTextLength={4000}
@@ -159,3 +176,9 @@ export default class Foorm extends React.Component {
     );
   }
 }
+
+const styles = {
+  statusMessage: {
+    textAlign: 'center'
+  }
+};

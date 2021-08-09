@@ -1,16 +1,16 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Ora e kodit si udhëzues për ngjarjet virtuale
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Këshilla për një ngjarje virtuale të Orës së Kodit
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Ju nuk duhet të jeni personalisht për të drejtuar një Orë Kodimi të suksesshëm!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our <a href="https://hourofcode.com/files/participation-guide-virtual.pdf">guide for virtual events</a> if you still have questions.
+While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
 
 <br><br>
 

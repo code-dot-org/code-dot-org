@@ -1,0 +1,610 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "hide_custom_blocks": true,
+    "embed": "false",
+    "instructions_important": "true",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "parent_level_id": 26936,
+    "auto_run_setup": "DRAW_LOOP",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "project_template_level_name": "courseE_aboutme_template_2021",
+    "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Say something about yourself, and make sure it's SAFE!\"_\r\n\r\nUse <xml><block type=\"gamelab_spriteClicked\" block-text=\"the when sprite clicked event block\"></block></xml> and <xml><block type=\"gamelab_printText\" block-text=\"the print text block\"></block></xml> (in the `World` blocks category) to share information about yourself when your sprite is clicked! \r\n\r\n**Just be sure the information you share is SAFE.**\r\n***\r\n####Examples of SAFE vs UNSAFE Information\r\n|  SAFE   |  UNSAFE  |\r\n|  ---    |   ---    |\r\n|first name   |  full name   |\r\n|favorite things   |   home address   |\r\n|respectful opinions  | phone number or email   |",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "encrypted_examples": "4miGIoIeVGgRfWuVtXK7Rv0z0DYjQIZk3pYLfEn7fG1Afy1eqlU8i8XS5YxG\n2LX0wpzYyz8isHr5etP4C7o45AQWQRtogttR26G2WQDtyYQ7tche4dtcr5rJ\nNkuCbGhS0tB7mquxOKjLbyyBU0h3DQ==\n",
+    "teacher_markdown": "This lesson contains a **mini-project** called *Interactive Poster*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\r\n",
+    "name_suffix": "_2021",
+    "hint_prompt_attempts_threshold": "1",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "validation_code": "if (!validationProps.successCriteria) {\r\n  validationProps.successCriteria = {\r\n    starterSprite: false,\r\n    clickedSprite: false,\r\n    printLogIncreased: false,\r\n    clickCausesPrint: false\r\n  };\r\n}\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {};\r\n}\r\n\r\n// Helper variables\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar eventLog = getEventLog();\r\nvar printLog = getPrintLog();\r\n\r\n// Check for at least 1 sprite\r\nif (spriteIds.length >= 1) {\r\n  validationProps.successCriteria.starterSprite = true;\r\n}\r\n\r\nvar clickEvent = false;\r\n\r\n// New event happened\r\nif (eventLog.length > validationProps.previous.eventLogLength) {\r\n  // check eventLog for WhenClick event\r\n  var currentEvent = eventLog[eventLog.length - 1];\r\n\r\n  if (currentEvent.includes(\"whenClick: \")) {\r\n    // current event is a click\r\n    validationProps.successCriteria.clickedSprite = true;\r\n    clickEvent = true;\r\n  }\r\n}\r\n\r\n// Check if print log increased\r\nif (printLog.length > validationProps.previous.printLogLength) {\r\n  validationProps.successCriteria.printLogIncreased = true;\r\n\r\n  // check if click caused print\r\n  if (clickEvent) {\r\n    validationProps.successCriteria.clickCausesPrint = true;\r\n  }\r\n}\r\n\r\n// Store previous event log and print log lengths\r\nvalidationProps.previous.eventLogLength = eventLog.length;\r\nvalidationProps.previous.printLogLength = printLog.length;\r\n\r\n// Set success time if success\r\nif (validationProps.successCriteria.starterSprite &&\r\n    validationProps.successCriteria.clickCausesPrint && \r\n   !validationProps.successTime)\r\n{\r\n  validationProps.successTime = World.frameCount;\r\n}\r\n\r\n// Delay fail time (so student can observe the wrong animation)\r\nvar earlyFailTime = 10;\r\nvar failTime = 150;\r\n\r\n// Check criteria and give failure feedback\r\nif (World.frameCount > earlyFailTime) {\r\n  if (!validationProps.successCriteria.starterSprite) {\r\n    levelFailure(3, \"noSprites\");\r\n  }\r\n}\r\n\r\nif (World.frameCount > failTime) {\r\n  if (!validationProps.successCriteria.clickedSprite) {\r\n    // already existing feedback string\r\n    console.log(\"Make sure that you click on each sprite and that you have the right events in your workspace.\");\r\n    levelFailure(3, \"spriteNotClicked\");\r\n  } else if (!validationProps.successCriteria.printLogIncreased ||\r\n             !validationProps.successCriteria.clickCausesPrint) {\r\n    console.log(\"You clicked your sprite but no text was printed. Add the `print` block to your `when clicked` event.\");\r\n    levelFailure(3, \"clickButNoPrint\");\r\n  }\r\n}\r\n\r\n// Pass 60 frames after success\r\nvar waitTime = 60;\r\nif (World.frameCount - validationProps.successTime >= waitTime) {\r\n  console.log(\"Generic success\");\r\n  levelFailure(0, \"genericSuccess\");\r\n}\r\n\r\npush();\r\nstroke(\"white\");\r\nif (!validationProps.successCriteria.starterSprite ||\r\n    !validationProps.successCriteria.clickCausesPrint) {\r\nfill(rgb(118,102,160));\r\nrect(0,390,(World.frameCount*400/failTime),10);\r\n} else {\r\nfill(rgb(0,173,188));\r\nrect(0,390,((World.frameCount-validationProps.successTime)*400/waitTime),10);\r\n}\r\npop();\r\n",
+    "preload_asset_list": null,
+    "video_key": "csf21pilot_events"
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2021-06-08T18:03:44.000Z",
+  "level_num": "custom",
+  "user_id": 833,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-07 23:26:05 +0000\",\"changed\":[\"notes\",\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"show_type_hints\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:27:41 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:33:34 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:34:59 +0000\",\"changed\":[\"block_pools\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:38:50 +0000\",\"changed\":[\"include_shared_functions\",\"use_modal_function_editor\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:41:30 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:43:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:04 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:44:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:45:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-07 23:46:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 19:53:02 +0000\",\"changed\":[\"hide_animation_mode\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:13:19 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:14:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:17:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 22:28:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:27:26 +0000\",\"changed\":[\"block_pools\",\"helper_libraries\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-08 23:29:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:50:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 18:55:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:03:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:30:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:39:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:44:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:45:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:47:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 19:55:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:00:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:02:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:04:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:05:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:08:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 20:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:12:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:19:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:26:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:37:26 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:38:38 +0000\",\"changed\":[\"toolbox_blocks\",\"include_shared_functions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-09 22:52:35 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 18:26:13 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-11 23:39:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-15 20:53:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 20:03:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 20:04:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\",\"tts_instructions_override\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 20:05:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 20:11:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 22:22:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"helper_libraries\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 22:23:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-25 22:49:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 18:42:51 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 18:46:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 18:47:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 18:55:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 19:00:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 19:00:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-28 19:13:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-29 21:55:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-29 21:57:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-29 23:58:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-29 23:59:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-30 00:37:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-30 23:42:53 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-01-31 03:37:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-04 21:56:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-04 21:58:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-04 23:06:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-05 18:10:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-05 18:18:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-05 18:20:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-06 22:35:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-06 22:37:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-03-07 17:31:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 01:26:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 22:43:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 22:44:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 22:47:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 22:48:25 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 22:49:28 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"short_instructions\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-03 23:01:46 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-04 00:01:39 +0000\",\"changed\":[\"name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-04 17:17:39 +0000\",\"changed\":[\"hide_animation_mode\",\"all_animations_single_frame\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-04 17:53:44 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-19 21:08:45 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-19 21:10:29 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-04-23 19:30:52 +0000\",\"changed\":[\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-05-06 19:52:24 +0000\",\"changed\":[\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-05-06 19:58:05 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-05-06 22:25:16 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"start_animations\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-05-06 22:27:29 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-05-06 23:50:16 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-05-11 00:46:07 +0000\",\"changed\":[\"include_shared_functions\",\"instructions_important\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-05-23 21:10:25 +0000\",\"changed\":[],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2019-06-20 19:08:15 +0000\",\"changed\":[\"solution_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-20 20:18:14 +0000\",\"changed\":[\"solution_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-06-20 21:43:38 +0000\",\"changed\":[\"solution_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2021-03-17 14:33:14 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-07 19:09:56 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-05-10 22:34:25 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-05-20 12:49:45 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-25 19:49:36 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-25 20:42:45 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-25 21:26:15 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-25 21:27:10 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-25 21:29:24 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-25 21:32:26 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-27 19:25:10 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-05-27 20:31:16 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-06-01 19:11:59 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":9227,\"changed_by_email\":\"kendrake.tsui@code.org\"},{\"changed_at\":\"2021-06-08 18:03:59 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-06-15 13:49:42 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon">
+              <title name="ANIMATION_NAME">"kid_outline_1"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker" deletable="false">
+                  <title name="LOCATION">{"x":200,"y":200}</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_spriteClicked">
+          <title name="CONDITION">"when"</title>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation">
+              <title name="ANIMATION">"kid_outline_1"</title>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_printText">
+              <value name="TEXT">
+                <block type="text">
+                  <title name="TEXT">Hello World!</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME">wandering</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">0</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">5</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_changePropBy">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int">
+                      <value name="FROM">
+                        <block type="math_number">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int">
+                                  <value name="FROM">
+                                    <block type="math_number">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the right across the screen</description>
+          </mutation>
+          <title name="NAME">moving east</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its left</description>
+          </mutation>
+          <title name="NAME">spinning left</title>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its right</description>
+          </mutation>
+          <title name="NAME">spinning right</title>
+          <statement name="STACK">
+            <block type="gamelab_turn">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME">shrinking</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">-1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME">growing</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite downwards across the screen</description>
+          </mutation>
+          <title name="NAME">moving south</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
+          </mutation>
+          <title name="NAME">swimming left and right</title>
+          <statement name="STACK">
+            <block type="controls_if">
+              <mutation elseif="1"/>
+              <value name="IF0">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_mirrorSprite">
+                  <title name="DIRECTION">"right"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="gamelab_mirrorSprite">
+                  <title name="DIRECTION">"left"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="math_number">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number">
+                                  <title name="NUM">180</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite upwards across the screen</description>
+          </mutation>
+          <title name="NAME">moving north</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the size of a sprite</description>
+          </mutation>
+          <title name="NAME">jittering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int">
+                  <value name="FROM">
+                    <block type="math_number">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the left across the screen</description>
+          </mutation>
+          <title name="NAME">moving west</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite across the screen, reversing direction if it touches the edges</description>
+          </mutation>
+          <title name="NAME">patrolling</title>
+          <statement name="STACK">
+            <block type="gamelab_moveForward">
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if">
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingEdges">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_edgesDisplace">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</GamelabJr>

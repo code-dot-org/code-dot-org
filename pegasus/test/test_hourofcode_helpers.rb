@@ -1,11 +1,17 @@
 require_relative './test_helper'
 require 'webmock/minitest'
+require 'geocoder'
 
 class HourOfCodeHelpersTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
+  end
+
+  def teardown
+    super
+    Geocoder.unstub(:search)
   end
 
   # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country / #hoc_detect_language in helpers/hourofcode_helpers.rb
@@ -15,13 +21,8 @@ class HourOfCodeHelpersTest < Minitest::Test
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range
     local_load_balancer = '10.31.164.34' # Private-network address range
 
-    # The geocoder gem resolves the IP using freegeoip, this mocks the underlying HTTP request.
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{gb_ip}").to_return(
-      body: {ip: gb_ip, country_code: 'GB'}.to_json
-    )
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{fr_ip}").to_return(
-      body: {ip: fr_ip, country_code: 'FR'}.to_json
-    )
+    Geocoder.stubs(:search).with(gb_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
+    Geocoder.stubs(:search).with(fr_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'FR')])
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [gb_ip, cloudfront_ip, local_load_balancer].join(', ')
@@ -58,14 +59,8 @@ class HourOfCodeHelpersTest < Minitest::Test
     untrusted_proxy_ip = '2.160.0.0' # Germany IP address range
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range
     local_load_balancer = '10.31.164.34' # Private-network address range
-
-    # The geocoder gem resolves the IP using freegeoip, this mocks the underlying HTTP requests.
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{user_ip}").to_return(
-      body: {ip: user_ip, country_code: 'GB'}.to_json
-    )
-    stub_request(:get, "#{CDO.freegeoip_host || 'freegeoip.io'}/json/#{untrusted_proxy_ip}").to_return(
-      body: {ip: untrusted_proxy_ip, country_code: 'DE'}.to_json
-    )
+    Geocoder.stubs(:search).with(user_ip, {ip_address: true}).returns([OpenStruct.new(country_code: 'GB')])
+    Geocoder.stubs(:search).with('127.0.0.1', {ip_address: true}).returns([OpenStruct.new(country_code: 'RD')])
 
     header 'host', 'hourofcode.com'
     header 'X_FORWARDED_FOR', [user_ip, untrusted_proxy_ip, cloudfront_ip, local_load_balancer].join(', ')

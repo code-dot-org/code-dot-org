@@ -16,7 +16,7 @@ La Hora del Código es fácil de ejecutar, incluso para principiantes. No necesi
 
 ¡Puede probar la Hora del Código con una computadora, una tablet, un teléfono inteligente o completamente desconectado! A continuación, te indicamos cómo empezar.
 
-[<button>Ver Guía en PDF </button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>Ver Guía en PDF </button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -29,7 +29,7 @@ Hay innumerables [actividades de la Hora del Código](https://hourofcode.com/us/
 Todas nuestras actividades integran la resolución de problemas y el pensamiento crítico con diversión y creatividad, pero estas son algunas de las favoritas de los estudiantes:
 
 - Para el niño al que le encanta jugar: [Minecraft](https://code.org/minecraft) o [Fiesta de baile](https://code.org/dance)
-- Para el niño que ama a Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - Para el niño al que le encanta aprender: [IA para océanos](https://code.org/oceans) o [Hacer música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
@@ -95,4 +95,4 @@ La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas s
 
 ¡Las ciencias de la computación no tienen que terminar con la Hora del Código! Si bien el 90% de los padres quieren que sus hijos aprendan ciencias de la computación, la mayoría de las escuelas todavía no las enseñan. Para ayudar, nuestro plan de estudios está basado en la web y es de uso gratuito para siempre. [Descubre cómo](https://code.org/yourschool) llevar la Ciencia de la Computación a la escuela de tu hijo hoy.
 
-[<button>Ver Guía en PDF </button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>Ver Guía en PDF </button>]({{ localized_files/hourofcode_parent_how_to }})

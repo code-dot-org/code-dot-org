@@ -33,7 +33,8 @@ export default function Sound(config, audioContext) {
   this.audioContext = audioContext;
   this.audioElement = null; // if HTML5 Audio
   this.reusableBuffer = null; // if Web Audio
-  this.playableBuffer = null; // if Web Audio
+  this.playableBuffers = []; // if Web Audio
+  this.isPlayingCount = 0; // if Web Audio
 
   /**
    * @private {boolean} Whether the sound is currently playing - sadly, neither
@@ -66,24 +67,25 @@ Sound.prototype.play = function(options) {
   }
 
   if (this.reusableBuffer) {
-    this.playableBuffer = this.newPlayableBufferSource(
-      this.reusableBuffer,
-      options
-    );
+    let index =
+      this.playableBuffers.push(
+        this.newPlayableBufferSource(this.reusableBuffer, options)
+      ) - 1;
 
     // Hook up on-ended callback, although browser support may be limited.
-    this.playableBuffer.onended = function() {
-      this.isPlaying_ = false;
-      if (options.onEnded) {
-        options.onEnded();
+    this.playableBuffers[index].onended = function() {
+      this.isPlayingCount--;
+      if (this.isPlayingCount === 0) {
+        this.isPlaying_ = false;
+        options.onEnded && options.onEnded();
       }
     }.bind(this);
 
     // Play sound, supporting older versions of the Web Audio API which used noteOn(Off).
-    if (this.playableBuffer.start) {
-      this.playableBuffer.start(0);
+    if (this.playableBuffers[index].start) {
+      this.playableBuffers[index].start(0);
     } else {
-      this.playableBuffer.noteOn(0);
+      this.playableBuffers[index].noteOn(0);
     }
     this.handlePlayStarted(options);
     return;
@@ -148,6 +150,7 @@ Sound.prototype.handleLoadFailed = function(status) {
 };
 
 Sound.prototype.handlePlayStarted = function(options) {
+  this.isPlayingCount++;
   this.isPlaying_ = true;
   if (options.callback) {
     options.callback(true);
@@ -156,13 +159,16 @@ Sound.prototype.handlePlayStarted = function(options) {
 
 Sound.prototype.stop = function() {
   try {
-    if (this.playableBuffer) {
-      if (this.playableBuffer.stop) {
-        // Newest web audio pseudo-standard.
-        this.playableBuffer.stop(0);
-      } else if (this.playableBuffer.noteOff) {
-        // Older web audio.
-        this.playableBuffer.noteOff(0);
+    if (this.playableBuffers.length) {
+      for (let index in this.playableBuffers) {
+        if (this.playableBuffers[index].stop) {
+          // Newest web audio pseudo-standard.
+          this.playableBuffers[index].stop(0);
+        } else if (this.playableBuffers[index].noteOff) {
+          // Older web audio.
+          this.playableBuffers[index].noteOff(0);
+        }
+        this.isPlayingCount--;
       }
     } else if (this.audioElement) {
       // html 5 audio.

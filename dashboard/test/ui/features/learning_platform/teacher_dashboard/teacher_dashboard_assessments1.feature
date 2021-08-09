@@ -4,7 +4,7 @@ Feature: Using the assessments tab in the teacher dashboard
   Scenario: Assessments tab initialization
     Given I create an authorized teacher-associated student named "Sally"
 
-    # Assign a script with a survey but no assessment
+    # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally" and go home
     And I get hidden script access
     And I click selector ".ui-test-section-dropdown" once I see it

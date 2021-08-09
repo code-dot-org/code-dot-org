@@ -2,24 +2,25 @@
 #
 # Table name: sections
 #
-#  id                :integer          not null, primary key
-#  user_id           :integer          not null
-#  name              :string(255)
-#  created_at        :datetime
-#  updated_at        :datetime
-#  code              :string(255)
-#  script_id         :integer
-#  course_id         :integer
-#  grade             :string(255)
-#  login_type        :string(255)      default("email"), not null
-#  deleted_at        :datetime
-#  stage_extras      :boolean          default(FALSE), not null
-#  section_type      :string(255)
-#  first_activity_at :datetime
-#  pairing_allowed   :boolean          default(TRUE), not null
-#  sharing_disabled  :boolean          default(FALSE), not null
-#  hidden            :boolean          default(FALSE), not null
-#  autoplay_enabled  :boolean          default(FALSE), not null
+#  id                   :integer          not null, primary key
+#  user_id              :integer          not null
+#  name                 :string(255)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  code                 :string(255)
+#  script_id            :integer
+#  course_id            :integer
+#  grade                :string(255)
+#  login_type           :string(255)      default("email"), not null
+#  deleted_at           :datetime
+#  stage_extras         :boolean          default(FALSE), not null
+#  section_type         :string(255)
+#  first_activity_at    :datetime
+#  pairing_allowed      :boolean          default(TRUE), not null
+#  sharing_disabled     :boolean          default(FALSE), not null
+#  hidden               :boolean          default(FALSE), not null
+#  tts_autoplay_enabled :boolean          default(FALSE), not null
+#  restrict_section     :boolean          default(FALSE)
 #
 # Indexes
 #
@@ -32,7 +33,7 @@ require 'full-name-splitter'
 require 'cdo/code_generation'
 require 'cdo/safe_names'
 
-class Section < ActiveRecord::Base
+class Section < ApplicationRecord
   self.inheritance_column = :login_type
 
   class << self
@@ -44,6 +45,10 @@ class Section < ActiveRecord::Base
       name.underscore.sub('_section', '')
     end
   end
+
+  # Sets a class variable for student limit.
+  # Is passed to React and HAML 'add_student' alerts.
+  @@section_capacity = 500
 
   include Rails.application.routes.url_helpers
   acts_as_paranoid
@@ -91,6 +96,8 @@ class Section < ActiveRecord::Base
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
+  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -160,8 +167,24 @@ class Section < ActiveRecord::Base
   # @param student [User] The student to enroll in this section.
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
   #   already in the section or has now been added.
-  def add_student(student)
+  def add_student(student, added_by = nil)
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
     return ADD_STUDENT_FAILURE if user_id == student.id
+    # If the section is restricted, return a restricted error unless a user is added by
+    # the teacher (Creating a Word or Picture login-based student) or is created via an
+    # OAUTH login section (Google Classroom / clever).
+    # added_by is passed only from the sections_students_controller, used by teachers to
+    # manager their rosters.
+    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
+      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+    end
+
+    # Unless the sections login type is Google or Clever
+    unless externally_rostered?
+      # Return a full section error if the section is already at capacity.
+      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+    end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
@@ -256,7 +279,7 @@ class Section < ActiveRecord::Base
       code: code,
       lesson_extras: lesson_extras,
       pairing_allowed: pairing_allowed,
-      autoplay_enabled: autoplay_enabled,
+      tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
       course_id: course_id,
@@ -270,6 +293,7 @@ class Section < ActiveRecord::Base
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
+      restrict_section: restrict_section
     }
   end
 
@@ -283,6 +307,32 @@ class Section < ActiveRecord::Base
 
   def provider_managed?
     false
+  end
+
+  def at_capacity?
+    students.distinct(&:id).size >= @@section_capacity
+  end
+
+  def capacity
+    @@section_capacity
+  end
+
+  def restricted?
+    restrict_section
+  end
+
+  def will_be_over_capacity?(students_to_add)
+    students.distinct(&:id).size + students_to_add > @@section_capacity
+  end
+
+  # Hide or unhide a lesson for this section
+  def toggle_hidden_lesson(lesson, should_hide)
+    hidden_lesson = SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: id)
+    if hidden_lesson && !should_hide
+      hidden_lesson.delete
+    elsif hidden_lesson.nil? && should_hide
+      SectionHiddenLesson.create(stage_id: lesson.id, section_id: id)
+    end
   end
 
   # Hide or unhide a stage for this section

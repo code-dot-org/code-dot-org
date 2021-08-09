@@ -1,5 +1,5 @@
 name 'U2 evaluation q2'
 question ‘Have you ever explored or thought about why different files types make files different sizes?’
-answer ‘Yep— I have a good sense of the relationship between file type and size’, weight: -1, stage_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
-answer ‘Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why’, weight: 1, stage_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
-answer ‘I… have no idea what you are talking about’, weight: 3, stage_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+answer ‘Yep— I have a good sense of the relationship between file type and size’, weight: -1, lesson_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+answer ‘Eh, I have noticed that certain file types are typically bigger than others, but do not have a good sense of why’, weight: 1, lesson_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'
+answer ‘I… have no idea what you are talking about’, weight: 3, lesson_name: 'Lessons 1 - 2: Bytes, File Sizes, and Text Compression'

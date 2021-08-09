@@ -62,6 +62,13 @@ em strong, strong em {
   font-family: Gotham\ 7i, sans-serif
 }
 
+/*This can be removed when Bootstrap is updated, as they've addressed
+the bug in the newest version. As-is, this overrides the display:block
+setting that removes our triangle dropdowns on list items.*/
+summary {
+  display: list-item;
+}
+
 th a:active, th a:hover, th a:link, th a:visited {
   color: #fff
 }

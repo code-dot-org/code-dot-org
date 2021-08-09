@@ -18,5 +18,5 @@ In this lesson, you will learn how to use the `deleteRecord` command to programm
 * Delete records in a database by using an ID and `deleteRecord`.
 * Improve the Contacts App by adding the ability to delete contacts.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

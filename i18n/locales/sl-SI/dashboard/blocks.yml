@@ -272,6 +272,10 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': vidno
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -286,6 +290,8 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+          VISIBILITY:
+            'true': vidno
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -344,6 +350,7 @@ sl:
             '"down"': dol
             '"right"': desno
             '"space"': vesolje
+            '"enter"': vnesi
             '"x"': x
             '"y"': 'y'
       gamelab_atTime:
@@ -356,6 +363,7 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -367,6 +375,7 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
       gamelab_getTime:
         options:
           UNIT:
@@ -403,6 +412,8 @@ sl:
         text: naključna barva
       gamelab_randomColor:
         text: naključna barva
+      gamelab_repeatForever:
+        text: ponavljaj kar naprej
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -412,12 +423,29 @@ sl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': mavrica
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodo
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -563,6 +591,11 @@ sl:
             '"a"': A
             '"s"': J
             '"d"': D
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': da
+            '"no"': ne
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -570,16 +603,43 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"solid"': ploskovita
+            '"rainbow"': mavrica
+      PoemBot_setForegroundEffect:
+        options:
+          FG_EFFECT:
+            '"rain"': dež
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": barva
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': naključno
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': vse
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': vse
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

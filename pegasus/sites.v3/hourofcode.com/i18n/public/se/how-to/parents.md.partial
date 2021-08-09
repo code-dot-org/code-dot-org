@@ -18,7 +18,7 @@ The Hour of Code is simple to run - even for beginners. You don’t need experie
 
 You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -31,7 +31,7 @@ There are countless [Hour of Code activities](https://hourofcode.com/us/learn) a
 All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
 
 - For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
-- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
 - For the child who loves to learn: [AI for Oceans](https://code.org/oceans) or [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>Low-tech or no-tech?</h3>
@@ -97,4 +97,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 Dihtordiehtaga ii dárbbat heaittihit Kodendiimmu maŋŋil! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>](https://hourofcode.com/files/HourofCode-Parent-How-To.pdf)
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

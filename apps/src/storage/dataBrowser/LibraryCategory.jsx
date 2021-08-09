@@ -5,30 +5,6 @@ import color from '../../util/color';
 import FontAwesome from '../../templates/FontAwesome';
 import LibraryTable from './LibraryTable';
 
-const styles = {
-  categoryName: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'pointer',
-    color: color.dark_charcoal
-  },
-  tableNumber: {
-    float: 'right',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.light_gray
-  },
-  categoryDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal
-  },
-  tableName: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.cyan
-  },
-  collapsibleContainer: {
-    paddingLeft: '16px'
-  }
-};
-
 class LibraryCategory extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -60,7 +36,11 @@ class LibraryCategory extends React.Component {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     return (
       <div>
-        <a style={styles.categoryName} onClick={this.toggleCollapsed}>
+        <a
+          style={styles.categoryName}
+          onClick={this.toggleCollapsed}
+          className="uitest-dataset-category"
+        >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
           <span style={styles.tableNumber}>
@@ -88,5 +68,29 @@ class LibraryCategory extends React.Component {
     );
   }
 }
+
+const styles = {
+  categoryName: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'pointer',
+    color: color.dark_charcoal
+  },
+  tableNumber: {
+    float: 'right',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.light_gray
+  },
+  categoryDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal
+  },
+  tableName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.cyan
+  },
+  collapsibleContainer: {
+    paddingLeft: '16px'
+  }
+};
 
 export default Radium(LibraryCategory);

@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Animate The Earth\r\n\r\n<img style=\"float:right\" src=\"https://images.code.org/1c05e3bd228881b77109488b2eb5e737-image-1472408305120.gif\">\r\n\r\nNow that everything is in the right place, you can make the sprites move using the properties and methods you have learned.  In this level, you can make the earth rotate.  If you want to animate another sprite, you can click on the following links:\r\n* [Animate the Comet](s/CSDU3-Draft/stage/12/puzzle/13)\r\n* [Animate the Spaceship](s/CSDU3-Draft/stage/12/puzzle/14)\r\n* [Animate the Satellite](s/CSDU3-Draft/stage/12/puzzle/15)\r\n\r\n# Do This\r\n\r\nUse the correct blocks to make the earth rotate as in the picture.\r\n",
+    "long_instructions": "# Animate The Earth\r\n\r\n<img style=\"float:right\" src=\"https://images.code.org/1c05e3bd228881b77109488b2eb5e737-image-1472408305120.gif\">\r\n\r\nNow that everything is in the right place, you can make the sprites move using the properties and methods you have learned.  In this level, you can make the earth rotate.  If you want to animate another sprite, you can click on the following links:\r\n* [Animate the Comet](s/CSDU3-Draft/lessons/12/levels/13)\r\n* [Animate the Spaceship](s/CSDU3-Draft/lessons/12/levels/14)\r\n* [Animate the Satellite](s/CSDU3-Draft/lessons/12/levels/15)\r\n\r\n# Do This\r\n\r\nUse the correct blocks to make the earth rotate as in the picture.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

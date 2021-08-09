@@ -1114,6 +1114,11 @@
             "parameters": {
               "sides": "Sider"
             }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "farge"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -2161,7 +2166,8 @@
           "checker": {
             "name": "sjekkar",
             "parameters": {
-              "size": "størrelse"
+              "size": "størrelse",
+              "color": "farge"
             }
           },
           "do something": {
@@ -2190,7 +2196,8 @@
           "checker": {
             "name": "sjekkar",
             "parameters": {
-              "size": "størrelse"
+              "size": "størrelse",
+              "color": "farge"
             }
           },
           "do something": {
@@ -2233,7 +2240,8 @@
           "filled square": {
             "name": "fyll kvadrat",
             "parameters": {
-              "size": "størrelse"
+              "size": "størrelse",
+              "color": "farge"
             }
           },
           "black outline": {
@@ -2351,6 +2359,11 @@
           "draw a polygon": {
             "parameters": {
               "sides": "Sider"
+            }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "farge"
             }
           }
         },
@@ -2592,6 +2605,1019 @@
         "Standalone_Artist_8": {
           "draw a shape": {
             "name": "tegn en form"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"enkel\" løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "min funksjon"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde",
+              "sides": "Sider"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "teikn ein sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikn ein trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "teikn eit hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "teikn eit kvadrat",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bygg bru"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "fjern bane"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "reparer lang vei"
+          },
+          "fix short path": {
+            "name": "reparer kort vei"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "bygg kort bru"
+          },
+          "build long bridge": {
+            "name": "bygg lang bru"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funksjon 1"
+          },
+          "function 2": {
+            "name": "funksjon 2"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "mulig løsning"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "draw hexagon": {
+            "name": "teikn sekskant"
+          },
+          "draw line of hexagons": {
+            "name": "teikn ei linje av sekskantar"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "teikn ei stjerne"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          },
+          "do something": {
+            "name": "gjer noko"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gjer noko"
+          },
+          "draw triangle": {
+            "name": "teikn trekant"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw hexagon": {
+            "name": "teikn sekskant"
+          },
+          "draw line of hexagons": {
+            "name": "teikn ei linje av sekskantar"
+          },
+          "staggered squares": {
+            "name": "forskjøvne kvadrat"
+          },
+          "draw a line of squares": {
+            "name": "tegn en linje av firkanter"
+          },
+          "draw square": {
+            "name": "teikn kvadrat"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "teikn eit kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "draw line of polygons": {
+            "name": "teikn linje av polygon"
+          },
+          "draw polygon": {
+            "name": "teikn polygon"
+          },
+          "do something": {
+            "name": "gjer noko"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          },
+          "pumpkin square": {
+            "name": "gresskarkvadrat"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "pumpkin square": {
+            "name": "gresskarkvadrat"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get produce": {
+            "name": "få produksjon"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check for corn": {
+            "name": "sjekk for korn"
+          },
+          "corn rectangle": {
+            "name": "kornrektangel"
+          },
+          "lettuce stairs": {
+            "name": "salat trapper"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "plukk opp langs banen"
+          },
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "sjekk kvadrat for korn"
+          },
+          "get all pumpkins": {
+            "name": "få alle gresskar"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "hagekvadrat"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "avslutt spelet"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "binær"
+            }
           }
         }
       }

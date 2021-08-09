@@ -103,6 +103,14 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setVisible:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
+      Dancelab_setVisibleEach:
+        options:
+          VISIBILITY:
+            'true': տեսանելի
       Dancelab_startMapping:
         options:
           PROPERTY:
@@ -145,6 +153,7 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"speed"': արագություն
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -154,6 +163,7 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"speed"': արագություն
       gamelab_getTime:
         options:
           UNIT:
@@ -188,6 +198,8 @@ hy:
         text: կամայական գույն
       gamelab_randomColor:
         text: կամայական գույն
+      gamelab_repeatForever:
+        text: կրկնել հավերժ
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -198,6 +210,11 @@ hy:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
       gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_setProp_dropdown:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -302,6 +319,11 @@ hy:
             '"right"': ճիշտ arrow
             '"w"': W
             '"s"': S
+      Mikelab_whenYesNoClicked:
+        options:
+          KEY:
+            '"yes"': այո
+            '"no"': ոչ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -309,15 +331,23 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': ծիածան
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_starwars_playSound:
+      Vector_where:
         options:
-          OPTION:
+          PROPERTY:
+            "'shapeColor'": գույնը
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': կամայական
       binary_move:
         options:

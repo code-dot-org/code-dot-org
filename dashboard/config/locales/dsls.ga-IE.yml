@@ -1105,7 +1105,6 @@ ga-IE:
         - text: Cén focal a litreodh na blocanna seo?
         title: Ilroghnach
       New Challenge Introduction:
-        content1: cur síos anseo
         markdown: "### Dúshlán Nua: Sifear Ionadaithe Randamaigh a Bhriseadh... le
           cúnamh ó ghiuirléid nua\n\nCéard a tharlódh dá ndéanfaimis mapáil ó gach
           litir den aibítir go dtí litir randamach, in áit aistriú simplí? Tugtar
@@ -1126,10 +1125,7 @@ ga-IE:
           imirt leis an uirlis, ba chóir duit suí síos le duine nó daoine eile - páirtnéir,
           grúpa beag, rang iomlán - agus cúrsaí a phlé. Bí cinnte go dtuigeann tú
           an uirlis agus na bealaí éagsúla í a úsáid.\n\n\n"
-      'Technique: Frequency Analysis':
-        content1: cur síos anseo
       Terminology Recap:
-        content1: cur síos anseo
         markdown: "# Sos agus Athbhreithniú\n\nTá sé an-éasca an **sifear Chaesair**
           a bhriseadh, go háirithe le cúnamh ríomhaireachta. Anois ó tá taithí agat
           ar shifir aistrithe a bhriseadh (an-éasca, huth?), bainimis triail as rud
@@ -2063,6 +2059,252 @@ ga-IE:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_freeplay_choice:
+        display_name: Saorimirt
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
         - correct: true

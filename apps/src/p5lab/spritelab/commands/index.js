@@ -1,0 +1,17 @@
+import {commands as actionCommands} from './actionCommands';
+import {commands as behaviorCommands} from './behaviorCommands';
+import {commands as eventCommands} from './eventCommands';
+import {commands as locationCommands} from './locationCommands';
+import {commands as spriteCommands} from './spriteCommands';
+import {commands as worldCommands} from './worldCommands';
+import {commands as validationCommands} from './validationCommands';
+
+export default {
+  ...actionCommands,
+  ...behaviorCommands,
+  ...eventCommands,
+  ...locationCommands,
+  ...spriteCommands,
+  ...worldCommands,
+  ...validationCommands
+};

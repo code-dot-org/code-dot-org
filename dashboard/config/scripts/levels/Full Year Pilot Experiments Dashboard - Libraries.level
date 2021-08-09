@@ -74,7 +74,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Turn on Student Created Libraries\r\n\r\nIn order to run this pilot [click here to reload the page](https://studio.code.org/s/csp5-pilot/stage/10/puzzle/2?enableExperiments=student-libraries). Afterwards if you click the gear in the toolbox, you should see an option to \"manage libraries\".\r\n\r\n[Click here if you want to turn off this feature.](https://studio.code.org/s/csp5-pilot/stage/10/puzzle/2?disableExperiments=student-libraries)\r\n\r\n![](https://images.code.org/878d0fc897f88037e82f19f9858287fd-image-1579795335434.png)",
+    "long_instructions": "# Turn on Student Created Libraries\r\n\r\nIn order to run this pilot [click here to reload the page](https://studio.code.org/s/csp5-pilot/lessons/10/levels/2?enableExperiments=student-libraries). Afterwards if you click the gear in the toolbox, you should see an option to \"manage libraries\".\r\n\r\n[Click here if you want to turn off this feature.](https://studio.code.org/s/csp5-pilot/lessons/10/levels/2?disableExperiments=student-libraries)\r\n\r\n![](https://images.code.org/878d0fc897f88037e82f19f9858287fd-image-1579795335434.png)",
     "parent_level_id": 19856,
     "mini_rubric": "false",
     "encrypted": "false",

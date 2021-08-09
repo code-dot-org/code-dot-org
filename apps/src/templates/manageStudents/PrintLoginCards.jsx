@@ -5,12 +5,6 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-const styles = {
-  button: {
-    marginLeft: 5
-  }
-};
-
 export default class PrintLoginCards extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -52,3 +46,9 @@ export default class PrintLoginCards extends Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    marginLeft: 5
+  }
+};

@@ -1,0 +1,76 @@
+{
+  "he-IL": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "פעולות",
+          "Brushes": "מברשות",
+          "Loops": "חזרות",
+          "Math": "מתמטיקה",
+          "Logic": "לוגיקה",
+          "Functions": "פונקציות",
+          "Variables": "משתנים"
+        },
+        "CourseD_EOC_dance": {
+          "World": "עולם",
+          "Dancers": "רקדנים",
+          "Properties": "מאפיינים",
+          "Events": "אירועים",
+          "Numbers": "מספרים",
+          "Logic": "לוגיקה"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "פעולות",
+          "Events": "אירועים",
+          "Loops": "חזרות",
+          "Math": "מתמטיקה",
+          "Logic": "לוגיקה",
+          "Games/Score": "משחקים/נקודות"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "עולם",
+          "Sprites": "דמויות",
+          "Actions": "פעולות",
+          "Events": "אירועים",
+          "Behaviors": "התנהגויות"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "עולם",
+          "Sprites": "דמויות",
+          "Locations": "מיקומים",
+          "Actions": "פעולות",
+          "Events": "אירועים",
+          "Behaviors": "התנהגויות",
+          "Variables": "משתנים",
+          "Math": "מתמטיקה",
+          "Logic": "לוגיקה",
+          "Functions": "פונקציות",
+          "Text": "טקסט",
+          "Comments": "תגובות"
+        },
+        "outbreak_freeplay": {
+          "World": "עולם",
+          "Sprites": "דמויות",
+          "Actions": "פעולות",
+          "Behaviors": "התנהגויות",
+          "Events": "אירועים",
+          "Locations": "מיקומים",
+          "Logic": "לוגיקה",
+          "Loops": "חזרות",
+          "Math": "מתמטיקה",
+          "Variables": "משתנים",
+          "Functions": "פונקציות",
+          "Comments": "תגובות"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "עולם",
+          "Sprites": "דמויות",
+          "Actions": "פעולות",
+          "Events": "אירועים",
+          "Logic": "לוגיקה",
+          "Math": "מתמטיקה"
+        }
+      }
+    }
+  }
+}

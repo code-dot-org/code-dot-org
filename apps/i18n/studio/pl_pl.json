@@ -34,7 +34,7 @@
   "bird": "ptak",
   "calloutPutCommandsHereRunStart": "Umieść tutaj polecenia, aby zostały wykonane po uruchomieniu programu",
   "calloutBlocklyPlaceGoUpHere": "Umieść tutaj blok \"idź w górę\", aby przejść wyżej",
-  "calloutBlocklyPlaceMoveUpHere": "Umieść tutaj blok \"move droid up\" by poruszać się do góry",
+  "calloutBlocklyPlaceMoveUpHere": "Umieść tutaj blok \"idź w górę\", aby przejść wyżej",
   "calloutClickEvents": "Kliknij na nagłówku zdarzenia, aby zobaczyć jego bloki.",
   "calloutUseArrowButtons": "Przytrzymaj te przyciski lub klawisze strzałek na klawiaturze, by poruszać się",
   "calloutUseArrowButtonsAutoSteer": "Ukryliśmy kod, jaki napisałeś, ale nadal możesz użyć klawiszy ze strzałkami, aby się poruszać",

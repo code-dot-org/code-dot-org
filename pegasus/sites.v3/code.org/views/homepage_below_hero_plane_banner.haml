@@ -1,5 +1,6 @@
 - if Homepage.show_professional_learning_banner(request)
   = inline_css 'homepage_below_hero_plane_banner.css'
+  - text = Homepage.professional_learning_banner_text()
 
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}
@@ -7,17 +8,12 @@
         .left.col-80.animateSlideInFromLeft
           .banner
             %img{src: "/images/homepage/professional-learning-2018-banner.png"}
-            .text
-              Professional Learning is still on! Applications
-              %br/
-              are open for Middle and High School teachers!
+            .text= text
         .right.col-20
           %button
             Join us
       .phone.phone-feature
-        .text
-          Professional Learning is still on! Applications are open
-          for Middle and High School teachers!
+        .text= text
         %button
           Join us
 

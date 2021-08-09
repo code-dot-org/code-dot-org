@@ -1,5 +1,3 @@
-/* global google */
-
 /**
  * Form for creating / editing workshop details.
  */
@@ -8,7 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
 import Spinner from '../../components/spinner';
@@ -45,6 +42,7 @@ import {
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
+import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 
 const styles = {
   readOnlyInput: {
@@ -67,6 +65,14 @@ const placeholderSession = {
   startTime: '9:00am',
   endTime: '5:00pm'
 };
+
+// When selecting whether a workshop is virtual through the UI,
+// a user is really selecting two things:
+//  a) whether the workshop is occurring virtually, and
+//  b) if there's a third party responsible for the content/structure of the workshop.
+// These two things are stored as separate attributes in the workshop model.
+const virtualWorkshopTypes = ['regional', 'friday_institute'];
+const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
   static contextTypes = {
@@ -94,6 +100,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_name: PropTypes.string,
       regional_partner_id: PropTypes.number,
       virtual: PropTypes.bool,
+      third_party_provider: PropTypes.string,
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
@@ -114,7 +121,6 @@ export class WorkshopForm extends React.Component {
     let initialState = {
       errors: [],
       shouldValidate: false,
-      useAutocomplete: true,
       facilitators: [],
       location_name: '',
       location_address: '',
@@ -133,7 +139,8 @@ export class WorkshopForm extends React.Component {
       showTypeOptionsHelpDisplay: false,
       regional_partner_id: '',
       virtual: false,
-      suppress_email: false
+      suppress_email: false,
+      third_party_provider: null
     };
 
     if (props.workshop) {
@@ -154,7 +161,8 @@ export class WorkshopForm extends React.Component {
           'regional_partner_id',
           'organizer',
           'virtual',
-          'suppress_email'
+          'suppress_email',
+          'third_party_provider'
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -168,19 +176,7 @@ export class WorkshopForm extends React.Component {
     return initialState;
   }
 
-  componentDidMount() {
-    this.enableAutocompleteLocation();
-  }
-
   componentWillUnmount() {
-    if (this.isGoogleMapsLoaded()) {
-      if (this.gm_authFailure) {
-        window.gm_authFailure = this.old_gm_authFailure;
-      }
-      if (this.autocomplete) {
-        google.maps.event.clearInstanceListeners(this.autocomplete);
-      }
-    }
     if (this.saveRequest) {
       this.saveRequest.abort();
     }
@@ -197,10 +193,6 @@ export class WorkshopForm extends React.Component {
     if (nextProps.readOnly && !this.props.readOnly) {
       this.setState(this.computeInitialState(this.props));
     }
-  }
-
-  componentDidUpdate() {
-    this.enableAutocompleteLocation();
   }
 
   loadAvailableFacilitators(course) {
@@ -223,44 +215,6 @@ export class WorkshopForm extends React.Component {
         regionalPartners: data
       });
     });
-  }
-
-  isGoogleMapsLoaded() {
-    return typeof google === 'object' && typeof google.maps === 'object';
-  }
-
-  enableAutocompleteLocation() {
-    if (!this.state.useAutocomplete) {
-      return;
-    }
-
-    // The way to catch google auth errors is in a global function :(
-    // See https://developers.google.com/maps/documentation/javascript/events#auth-errors
-    // If google auth fails, remove the autocomplete and re-draw.
-    if (!this.gm_authFailure) {
-      // Save existing function, if one exists.
-      this.old_gm_authFailure = window.gm_authFailure;
-      window.gm_authFailure = this.gm_authFailure = () => {
-        if (this.old_gm_authFailure) {
-          this.old_gm_authFailure();
-        }
-        this.setState({useAutocomplete: false});
-      };
-    }
-
-    if (
-      !this.autocomplete &&
-      this.locationAddressControl &&
-      this.isGoogleMapsLoaded()
-    ) {
-      this.autocomplete = new google.maps.places.Autocomplete(
-        this.locationAddressControl
-      );
-      google.maps.event.addListener(this.autocomplete, 'place_changed', () => {
-        const place = this.autocomplete.getPlace();
-        this.setState({location_address: place.formatted_address});
-      });
-    }
   }
 
   // Convert from [start, end] to [date, startTime, endTime]
@@ -466,7 +420,7 @@ export class WorkshopForm extends React.Component {
                 </HelpTip>
               </ControlLabel>
               <SelectIsVirtual
-                value={this.state.virtual}
+                value={this.currentVirtualStatus()}
                 onChange={this.handleVirtualChange}
                 readOnly={
                   this.props.readOnly ||
@@ -484,7 +438,7 @@ export class WorkshopForm extends React.Component {
                   <p>
                     <strong>
                       This functionality is disabled for all academic year
-                      workshops and virtual CSF workshops.
+                      workshops.
                     </strong>
                   </p>
                   <p>
@@ -499,7 +453,6 @@ export class WorkshopForm extends React.Component {
                 value={this.state.suppress_email || false}
                 readOnly={
                   this.props.readOnly ||
-                  this.state.virtual ||
                   MustSuppressEmailSubjects.includes(this.state.subject)
                 }
               />
@@ -625,7 +578,7 @@ export class WorkshopForm extends React.Component {
   }
 
   getInputStyle() {
-    return this.props.readOnly && styles.readOnlyInput;
+    return (this.props.readOnly && styles.readOnlyInput) || null;
   }
 
   handleErrorClick = i => {
@@ -714,16 +667,34 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
+  handleLocationChange = event => {
+    const location = event && event.target && event.target.value;
+    this.setState({location_address: location});
+    return location;
+  };
+
+  currentVirtualStatus = () => {
+    const {virtual, third_party_provider} = this.state;
+
+    // First, check if the third party provider is a valid
+    // virtual workshop type.
+    if (virtualWorkshopTypes.includes(third_party_provider)) {
+      return third_party_provider;
+    } else if (virtual) {
+      return 'regional';
+    } else {
+      return 'in_person';
+    }
+  };
+
   handleVirtualChange = event => {
-    // This field gets its own handler both so we can coerce its value to
-    // boolean, and so we can enforce some business logic that says:
-    // Virtual workshops ALWAYS suppress email.
-    const virtual = event.target.value === 'true';
-    const suppress_email = virtual || this.state.suppress_email;
+    // This field gets its own handler so we can coerce its value to boolean
+    const value = event.target.value;
+    const virtual = virtualWorkshopTypes.includes(value);
 
     this.setState({
       virtual,
-      suppress_email
+      third_party_provider: thirdPartyProviders.includes(value) ? value : null
     });
   };
 
@@ -774,8 +745,7 @@ export class WorkshopForm extends React.Component {
 
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
-        virtual: true,
-        suppress_email: true
+        virtual: true
       });
     }
 
@@ -810,6 +780,7 @@ export class WorkshopForm extends React.Component {
       notes: this.state.notes,
       virtual: this.state.virtual,
       suppress_email: this.state.suppress_email,
+      third_party_provider: this.state.third_party_provider,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
         this.state.destroyedSessions
@@ -1009,20 +980,13 @@ export class WorkshopForm extends React.Component {
             <Col sm={6}>
               <FormGroup>
                 <ControlLabel>Location Address (optional)</ControlLabel>
-                <FormControl
-                  type="text"
-                  key={this.state.useAutocomplete} // Change key to force re-draw
-                  ref={ref =>
-                    (this.locationAddressControl = ReactDOM.findDOMNode(ref))
-                  }
-                  value={this.state.location_address || ''}
+                <MapboxLocationSearchField
                   placeholder="Enter a location"
-                  id="location_address"
-                  name="location_address"
-                  onChange={this.handleFieldChange}
-                  maxLength={255}
+                  onChange={this.handleLocationChange}
+                  value={this.state.location_address || ''}
+                  readOnly={this.props.readOnly}
                   style={this.getInputStyle()}
-                  disabled={this.props.readOnly}
+                  className={'form-control'}
                 />
               </FormGroup>
             </Col>
@@ -1140,16 +1104,19 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     style={readOnly ? styles.readOnlyInput : undefined}
     disabled={readOnly}
   >
-    <option key={false} value={false}>
+    <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={true} value={true}>
-      Yes, this is a virtual workshop.
+    <option key={'friday_institute'} value={'friday_institute'}>
+      Yes, this is a Code.org-Friday Institute virtual workshop.
+    </option>
+    <option key={'regional'} value={'regional'}>
+      Yes, this is a regional virtual workshop.
     </option>
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
-  value: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
   onChange: PropTypes.func.isRequired
 };

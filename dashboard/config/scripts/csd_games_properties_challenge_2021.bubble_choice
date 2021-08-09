@@ -1,0 +1,7 @@
+name 'CSD Games Properties challenge_2021'
+display_name 'Challenges: Sprite Properties'
+description 'Try these new challenges with sprite properties'
+
+sublevels
+level 'CSD U3 properties tint_2021'
+level 'CSD U3 properties depth_2021'

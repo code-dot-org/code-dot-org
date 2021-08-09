@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "setSpeed",
+    "blockText": "set monster speed to {VAL}",
+    "args": [
+      {
+        "name": "VAL",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

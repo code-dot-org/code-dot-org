@@ -4,13 +4,6 @@ import ProgressBox from '../ProgressBox';
 import firehoseClient from '../../../lib/util/firehose';
 import {connect} from 'react-redux';
 
-const styles = {
-  lessonBox: {
-    marginRight: 5,
-    marginLeft: 5
-  }
-};
-
 class ProgressBoxForLessonNumber extends Component {
   static propTypes = {
     completed: PropTypes.bool,
@@ -65,6 +58,7 @@ class ProgressBoxForLessonNumber extends Component {
         <a
           href={linkToLessonPlan}
           target="_blank"
+          rel="noopener noreferrer"
           data-for={tooltipId}
           data-tip
           onClick={this.handleClick}
@@ -78,9 +72,16 @@ class ProgressBoxForLessonNumber extends Component {
   }
 }
 
+const styles = {
+  lessonBox: {
+    marginRight: 5,
+    marginLeft: 5
+  }
+};
+
 export const UnconnectedProgressBoxForLessonNumber = ProgressBoxForLessonNumber;
 
 export default connect(state => ({
   sectionId: state.sectionData.section.id,
-  scriptId: state.scriptSelection.scriptId
+  scriptId: state.unitSelection.scriptId
 }))(ProgressBoxForLessonNumber);

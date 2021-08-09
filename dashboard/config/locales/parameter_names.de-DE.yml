@@ -1,0 +1,19 @@
+---
+de:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: Figur
+      color: Farbe
+      counter: Zähler
+      height: Höhe
+      honey: Honig
+      left: links
+      length: Länge
+      min: min
+      points: Punkte
+      radius: Radius
+      sides: Kanten
+      size: Größe
+      speed: Geschwindigkeit
+      width: Breite

@@ -63,7 +63,7 @@ Brainstorm with students ways to tell someone else how to draw a picture:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course2/stage/4/puzzle/1)
+### <a name="Activity"></a> [Artist: Sequence](http://learn.code.org/s/course2/lessons/4/levels/1)
 
 In the Artist levels students will no longer be constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 

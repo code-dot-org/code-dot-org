@@ -1,5 +1,12 @@
 {
   "continue": "Davom etish",
   "areYouSure": "Aminmisiz?",
-  "cancel": "Bekor qilish"
+  "cancel": "Bekor qilish",
+  "yes": "Ha",
+  "no": "yo‘q",
+  "run": "Ishga tushirish",
+  "finish": "Tugatish",
+  "blue": "ko‘k",
+  "green": "yashil",
+  "red": "qizil"
 }

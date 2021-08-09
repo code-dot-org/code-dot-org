@@ -3,11 +3,15 @@ sq:
     block_categories:
       Actions: Veprime
       Color: Ngjyra
+      Comment: Komento
       Conditionals: Kushtet
       Events: Ngjarje
       Functions: funksione
+      'Functions ': 'funksione '
+      Location: Lokacioni
       Logic: Logjikë
       Loops: cikle 
       Math: Matematikë
       Text: Tekst
       Variables: variabla
+      'Variables ': 'Variabla '

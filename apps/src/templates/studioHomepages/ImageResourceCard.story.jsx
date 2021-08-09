@@ -13,7 +13,7 @@ export default storybook => {
           <ImageResourceCard
             title="Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            image="teacher-community"
+            image="teachercommunity.png"
             buttonText="Connect Today"
             link="link to teacher community"
           />

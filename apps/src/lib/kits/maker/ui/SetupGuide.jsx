@@ -16,6 +16,11 @@ import {
 import Button from '../../../../templates/Button';
 import ToggleGroup from '../../../../templates/ToggleGroup';
 import FontAwesome from '../../../../templates/FontAwesome';
+import {CHROME_APP_WEBSTORE_URL} from '../util/makerConstants';
+import {createStore, combineReducers} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -37,10 +42,22 @@ export default class SetupGuide extends React.Component {
   }
 
   render() {
+    // Create store for Provider
+    const store = createStore(
+      combineReducers({
+        isRtl,
+        responsive
+      })
+    );
+
     if (isCodeOrgBrowser() || isChromeOS()) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
     }
-    return <Downloads />;
+    return (
+      <Provider store={store}>
+        <Downloads />
+      </Provider>
+    );
   }
 }
 
@@ -146,7 +163,7 @@ class WindowsDownloads extends React.Component {
         )}
         {error && <FetchingLatestVersionError />}
         <div>
-          <h4>{i18n.instructions()}:</h4>
+          <h4>{i18n.instructionsWithColon()}</h4>
           <ol>
             <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
             <li>
@@ -283,7 +300,7 @@ const FetchingLatestVersionError = () => (
 
 const SetupInstructions = () => (
   <div>
-    <h4>{i18n.instructions()}:</h4>
+    <h4>{i18n.instructionsWithColon()}</h4>
     <ol>
       <li>{applabI18n.makerSetupDownloadAndInstall()}</li>
       <li>{applabI18n.makerSetupSignIn()}</li>
@@ -292,8 +309,6 @@ const SetupInstructions = () => (
   </div>
 );
 
-const CHROME_APP_WEBSTORE_URL =
-  'https://chrome.google.com/webstore/detail/codeorg-serial-connector/ncmmhcpckfejllekofcacodljhdhibkg';
 const MAKER_SETUP_PAGE_URL = document.location.origin + '/maker/setup';
 
 class ChromebookInstructions extends React.Component {
@@ -352,7 +367,7 @@ const latestInstaller = _.memoize(latestYamlUrl => {
     .then(response => response.text())
     .then(text => yaml.safeLoad(text))
     .then(datum => ({
-      filename: datum.url,
+      filename: datum.path,
       version: datum.version
     }));
 });

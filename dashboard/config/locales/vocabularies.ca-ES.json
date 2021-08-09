@@ -1,0 +1,74 @@
+{
+  "ca-ES": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Variable"
+        },
+        "internet/coursef/2021": {
+          "word": "Internet"
+        },
+        "define/coursef/2021": {
+          "word": "Defineix"
+        },
+        "debugging/courseb/2021": {
+          "word": "Depuració"
+        },
+        "drop/courseb/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/coursea/2021": {
+          "word": "Depuració"
+        },
+        "drop/coursea/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/coursec/2021": {
+          "word": "Depuració"
+        },
+        "binary/coursec/2021": {
+          "word": "Binari"
+        },
+        "debugging/coursed/2021": {
+          "word": "Depuració"
+        },
+        "conditionals/coursed/2021": {
+          "word": "Condicionals"
+        },
+        "debugging/express/2021": {
+          "word": "Depuració"
+        },
+        "conditionals/express/2021": {
+          "word": "Condicionals"
+        },
+        "function/express/2021": {
+          "word": "Funció"
+        },
+        "variable/express/2021": {
+          "word": "Variable"
+        },
+        "define/express/2021": {
+          "word": "Defineix"
+        },
+        "drop/pre-express/2021": {
+          "word": "Caiguda"
+        },
+        "debugging/pre-express/2021": {
+          "word": "Depuració"
+        },
+        "copyright/coursee/2021": {
+          "word": "Copyright"
+        },
+        "function/coursee/2021": {
+          "word": "Funció"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Condicionals"
+        },
+        "define/coursee/2021": {
+          "word": "Defineix"
+        }
+      }
+    }
+  }
+}

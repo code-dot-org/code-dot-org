@@ -900,7 +900,7 @@ ga:
             '"left"': ar chlé
             '"down"': síos
             '"right"': ar dheis
-            '"space"': an spásbharra
+            '"space"': spás
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -968,6 +968,7 @@ ga:
             '"x"': ionad x
             '"y"': ionad y
             '"direction"': treo gluaiseachta
+            '"speed"': luas
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} i dteagmháil le {SPRITE2}"
         options:
@@ -976,8 +977,12 @@ ga:
             '"while"': chomh fada is atá
       gamelab_clickedOn:
         text: nuair a chliceáiltear {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'nóta trachta: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "déan sprid nua \n darb ainm {NAME} \n le culaith {COSTUME} \n {LOCATION}"
       gamelab_destroy:
@@ -994,6 +999,7 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
             '"tint"': imir
+            '"speed"': luas
       gamelab_getThisSprite:
         options:
           CHOICE:
@@ -1100,6 +1106,10 @@ ga:
         text: suíomh na luiche
       gamelab_moveForward:
         text: bog {SPRITE} {DISTANCE} picteilín ar aghaidh
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrólú suas anuas
       gamelab_printText:
@@ -1116,6 +1126,8 @@ ga:
         text: nuair a stopann {SPRITE} {BEHAVIOR}
       gamelab_removeTint:
         text: bain an dath de {THIS}
+      gamelab_repeatForever:
+        text: go deo na ndeor
       gamelab_setAnimation:
         text: athraigh culaith {THIS} go {ANIMATION}
       gamelab_setBackground:
@@ -1136,6 +1148,15 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
             undefined: gan chúlra
+      gamelab_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': tamall
+            '100': large
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1145,6 +1166,17 @@ ga:
             '"x"': ionad x
             '"y"': ionad y
             '"direction"': treo gluaiseachta
+            '"speed"': luas
+      gamelab_setProp_dropdown:
+        text: 'socraigh {PROPERTY} do {SPRITE}: {SIZE}'
+        options:
+          PROPERTY:
+            '"scale"': méid
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': tamall
+            '100': large
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
@@ -1162,6 +1194,10 @@ ga:
           CONDITION:
             '"when"': nuair atá
             '"while"': chomh fada is atá
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: rothlam
       gamelab_turn:
@@ -1233,6 +1269,8 @@ ga:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ní iasc é
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mo-lipéad
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ní mo-lipéad é
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1385,6 +1423,8 @@ ga:
           DANCE:
             MOVES.ClapHigh: iasc
             MOVES.Clown: ní mo-lipéad é
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'ionad x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1470,6 +1510,16 @@ ga:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': tuar ceatha
+      PoemBot_setForegroundEffect:
+        text: 'socraigh éifeacht an tulra: {FG_EFFECT}'
+        options:
+          FG_EFFECT:
+            '"rain"': báisteach
+            '"bubbles"': boilgeoga
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:
@@ -1490,32 +1540,27 @@ ga:
         options:
           PROPERTY:
             "'shapeColor'": dath
-      aalab_addBehaviorUntilBoolean:
-        text: tosaíonn sprid {SPRITE} {BEHAVIOR} go dtí {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: sprid nua darb ainm {SPRITE_NAME} le culaith {ANIMATION_NAME} {LOCATION}
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: socrú an scéil
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': i ngreille
+            '"border"': ar an imeall
+            '"row"': ina ró
             '"random"': randamach
-            '"R2-D2 random"': R2-D2 randamach
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': uile
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': uile
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawPixelHere:
         options:
           VAL:
@@ -1585,7 +1630,7 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
-            '"decorativeStoneBricks"': brící cloiche maisiúla
+            '"chiseledStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta
@@ -1633,3 +1678,5 @@ ga:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
+      validation_validatedBackground:
+        text: 'socraigh an cúlra: {IMG}'

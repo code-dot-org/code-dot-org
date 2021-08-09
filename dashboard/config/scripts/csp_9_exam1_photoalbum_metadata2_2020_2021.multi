@@ -1,0 +1,13 @@
+name 'csp-9-exam1-photoalbum-metadata2-2020_2021'
+editor_experiment ''
+wrong 'The photographer will not be able to view any of the images'
+wrong 'The photographer will not be able to sort images by the date they were taken'
+right 'The photographer will not be able to filter to photographs taken in the morning'
+wrong 'The photographer will not be able to find images taken on the same date'
+
+markdown <<MARKDOWN
+This question refers to the same collection of photos and their metadata described in the previous question.
+
+Due to a computer error, the Time metadata for all of the photographs is accidentally set to the same time of day. The other pieces of metadata and the data itself are not affected by the error. Which of the following is MOST likely to be the result of this problem?
+
+MARKDOWN

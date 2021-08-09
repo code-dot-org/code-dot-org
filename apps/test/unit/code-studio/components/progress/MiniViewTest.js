@@ -20,7 +20,7 @@ describe('MiniView', () => {
 
     assert.equal(body.props().className, 'loading');
     assert.equal(wrapper.find('MiniViewTopRow').length, 1);
-    assert.equal(wrapper.find('ScriptOverview').length, 0);
+    assert.equal(wrapper.find('UnitOverview').length, 0);
   });
 
   it('shows course progress once progress has loaded', () => {
@@ -33,9 +33,9 @@ describe('MiniView', () => {
       0
     );
     assert.equal(wrapper.find('MiniViewTopRow').length, 1);
-    assert.equal(wrapper.find('Connect(ScriptOverview)').length, 1);
+    assert.equal(wrapper.find('Connect(UnitOverview)').length, 1);
     assert.equal(
-      wrapper.find('Connect(ScriptOverview)').props().onOverviewPage,
+      wrapper.find('Connect(UnitOverview)').props().onOverviewPage,
       false
     );
   });

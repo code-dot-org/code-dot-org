@@ -1,0 +1,515 @@
+{
+  "fr-FR": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Introduction au Labo des Lutins"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "Explorer les Applications"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Introduction au Labo des Lutins"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Explorer les Applications"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Les Lutins en Action"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": " Le Pouvoir des Mots\t"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Jouer avec les Boucles « Pour »"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Amusement avec la Boucle For - Clé d'Évaluation"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Jouer avec les Boucles « Pour »"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Jouer avec les Boucles « Pour »"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Jouer avec les Boucles « Pour »"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Jouer avec les Boucles « Pour »"
+        },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Exécuter des Simulations"
+        },
+        "ai-ml/coursef/2021": {
+          "name": " Apprentissage Automatique"
+        },
+        "ai-training/coursef/2021": {
+          "name": "IA : Les Données de Formation et la Déformation"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "IA : Impact sur la Société"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet et les réseaux connectés"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Cartes d'Adresse IP et Cartes de Type Livraison"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "design-process/coursef/2021": {
+          "name": "Processus de Conception"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "Conception du Projet Final"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "CS Fundamentals Projet Final"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": " Suivez la Traînée Digitale"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Bouge, Bouge"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Bouge, Bouge"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Bouge, Bouge"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Déplace-le, Déplace-le"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Visages de Sentiments"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Pièces du Jeu de la Carte Joyeuse"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "Rose des Vents"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Stevie et le Grand Projet"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Les Bugs Passés Inaperçus"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Tourner en Rond"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Tourner en Rond"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Tourner en Rond"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Tourner en Rond"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "CS Fundamentals Conseils pour l'Activité Principale"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Le Grand Événement"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Le Grand Événement"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Le Grand Événement"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Le Grand Événement (Cours A, B)"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": " Mon Quartier en Ligne"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Cartes Joyeuses"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "Imprimés Carte Joyeuse"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Imprimés Carte Joyeuse"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Pièces du Jeu de la Carte Joyeuse"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Imprimés XL de la Carte Joyeuse"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Visages de Sentiments"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Le Grand Événement"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Le Grand Événement"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Le Grand Événement"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Le Grand Événement (Cours A, B)"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS Fundamentals Conseils pour l'Activité Principale"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mes amis les robots"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mes amis les robots"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mes amis les robots"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mes amis les robots"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mes amis les robots"
+        },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "Blocs Débranchés de Labyrinthe"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS Fundamentals Conseils pour l'Activité Principale"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Introduction à l'Artiste"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Le Grand Événement"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Le Grand Événement"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Le Grand Événement"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Le Grand Événement (Cours C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "Les Bits par Rapport aux Octets"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Les bracelets binaires"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Les bracelets binaires"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Les bracelets binaires"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Les bracelets binaires"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Les bracelets binaires"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": ""
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": ""
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Programmation sur papier quadrillé"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Programmation de relais"
+        },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": " Débranché"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Visages de Sentiments"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Instructions conditionnelles avec des cartes"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Instructions conditionnelles avec des cartes"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "Les Conditions avec des Cartes - Exemple de Programme"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Instructions conditionnelles avec des cartes"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Instructions conditionnelles avec des cartes"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Instructions conditionnelles avec des cartes"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "Blocs Débranchés de Labyrinthe"
+        },
+        "pair_programming/express/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "artist_introduction/express/2021": {
+          "name": "Introduction à l'Artiste"
+        },
+        "turns_angles/express/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Les Lutins en Action"
+        },
+        "pause_and_think_online/express/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "variables_video/express/2021": {
+          "name": "variables"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "CS Fundamentals Projet Final"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Programmation en Binôme"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Visages de Sentiments"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": " Le Super Citoyen Numérique"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": " Informations Privées et Personnelles"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "Faire une Pause et Penser en ligne"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "Les Tours et les Angles"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "L'Écriture de Chansons avec des fonctions"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": " Écriture de chansons"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": " Blocs Débranchés (Cours C à F)"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Concevoir pour l'Accessibilité"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS Fundamentals Projet Final"
+        },
+        "design-process/coursee/2021": {
+          "name": "Processus de Conception"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 Façons Créatives pour Vos Élèves de Montrer Ce Qu'ils Savent"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Guide de mise en œuvre"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Guide Pédagogique"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Forum des Enseignants"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentation sur le Labo des Lutins"
+        }
+      }
+    }
+  }
+}

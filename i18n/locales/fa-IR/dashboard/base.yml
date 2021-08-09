@@ -114,8 +114,8 @@ fa:
     mismatch_password: "دو کلمه عبور واردشده یکی نیستند"
     additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
     user_type_label: "نوع حساب کاربری"
-    user_type_teacher: "دبیر"
     user_type_student: "دانش آموز"
+    user_type_teacher: "دبیر"
     field_is_required: "%s لازم است"
     error: "خطایی رخ داد."
     email_preference_privacy: "(سیاست‌های حفظ حریم خصوصی ما را ببینید)"
@@ -232,6 +232,7 @@ fa:
       about_contact: "تماس با ما"
       about_faqs: "سوال‌های متداول"
       learn: "یادگیری"
+      stats: "آمار"
       help_us: "به ما کمک کنید"
       teach: "آموزش"
       about: "درباره"
@@ -311,6 +312,7 @@ fa:
     delete_text_teacher_note: "لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش آموزهایتان را حدف نخواهدکرد."
     delete_confirm: 'آیا مطمئنید که میخواهید حسابتان را حذف کنید؟'
     update_email: "بروزرسانی"
+    remove_parent_email_label: "حذف کن"
     none: "هیچکدام"
   user_level:
     completed: 'انجام شد'
@@ -490,6 +492,7 @@ fa:
     unplugged_conditionals:
       title: "شرطی ها"
     widgets:
+      audience: "سنین 14+"
       cta: "یادبگیر چگونه"
   landing:
     report_bug: "گزارش اشکال"
@@ -639,7 +642,7 @@ fa:
       last_name: 'نام خانوادگی'
       email: 'ایمیل'
       school_name: 'نام مدرسه'
-      colombian_school_name: 'نام مدرسه'
+      colombian_chilean_school_name: 'نام مدرسه'
     form_entries:
       gender:
         male: 'مرد'
@@ -658,6 +661,6 @@ fa:
         opt_in_no: 'نه'
   cookie_banner:
     accept: 'موافقم'
-  gdpr_dialog:
-    yes: 'بله'
+  page_not_found_title: "صفحه پیدا نشد"
   copy: 'رونوشت‌'
+  confirm: 'تایید'

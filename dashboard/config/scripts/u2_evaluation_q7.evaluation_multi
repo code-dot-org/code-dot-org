@@ -1,5 +1,5 @@
 name 'U2 evaluation q7'
 question ‘Do you have experience using or making pivot or summary tables?’
-answer ‘Yes— I use pivot or summary tables frequently!’, weight: -1, stage_name: 'Lessons 11 - 15: Communicating with Visualizations'
-answer ‘I have some experience, but would not call myself a pro.’, weight: 1, stage_name: 'Lessons 11 - 15: Communicating with Visualizations'
-answer ‘I am pretty new to it or have never done it at all.’, weight: 3, stage_name: 'Lessons 11 - 15: Communicating with Visualizations'
+answer ‘Yes— I use pivot or summary tables frequently!’, weight: -1, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'
+answer ‘I have some experience, but would not call myself a pro.’, weight: 1, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'
+answer ‘I am pretty new to it or have never done it at all.’, weight: 3, lesson_name: 'Lessons 11 - 15: Communicating with Visualizations'

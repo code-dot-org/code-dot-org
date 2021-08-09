@@ -20,22 +20,6 @@ export const COLUMNS = {
 
 const ANSWER_COLUMN_WIDTH = 80;
 
-const styles = {
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
-  },
-  answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470
-  }
-};
-
 // Single table for individual student and individual assessment
 // multiple choice assessment. Each row is a single question,
 // the students response to that question, and whether the student got
@@ -190,5 +174,21 @@ class MultipleChoiceByStudentTable extends Component {
     );
   }
 }
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center'
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: 470
+  }
+};
 
 export default MultipleChoiceByStudentTable;

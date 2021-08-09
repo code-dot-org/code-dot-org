@@ -4,7 +4,7 @@ Feature: Feedback Tab Visibility
 
   Background:
     Given I create a teacher-associated student named "Lillian"
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
     Then I rotate to landscape
     And I wait to see "#runButton"
     And I press "runButton"
@@ -13,7 +13,7 @@ Feature: Feedback Tab Visibility
 
   Scenario: As student 'Feedback' tab is the 'Key Concept' tab if no feedback
     When I open my eyes to test "student with no feedback"
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
     And I wait for the page to fully load
     Then I see no difference for "student with no feedback tab"
     Then I sign out
@@ -29,7 +29,7 @@ Feature: Feedback Tab Visibility
     And I sign in as "Teacher_Lillian"
     And I give user "Teacher_Lillian" authorized teacher permission
 
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
     And I wait for the page to fully load
     Then I see no difference for "teacher rubric feedback tab"
 
@@ -49,7 +49,7 @@ Feature: Feedback Tab Visibility
     And I press "#ui-test-submit-feedback" using jQuery
     And element ".editor-column" contains text "Nice!"
     And element "#rubric-input-performanceLevel1" is checked
-    And I wait until "#ui-test-feedback-time" contains text "Last updated"
+    And I wait until "#ui-test-feedback-time" contains text "Updated by you"
     And element "#ui-test-submit-feedback" contains text "Update"
 
   #As teacher, refresh page and latest feedback is visible
@@ -60,7 +60,7 @@ Feature: Feedback Tab Visibility
   #As student, latest feedback from teacher is displayed
     Then I sign out
     And I sign in as "Lillian"
-    And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
     And I wait to see ".uitest-feedback"
     Then I press the first ".uitest-feedback" element
     And I wait to see "#ui-test-feedback-time"

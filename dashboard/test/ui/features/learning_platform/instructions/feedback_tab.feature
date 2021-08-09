@@ -4,7 +4,7 @@ Feature: Feedback Tab Visibility
 
 Background:
   Given I create a teacher-associated student named "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1?noautoplay=true"
+  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
   Then I rotate to landscape
   And I wait to see "#runButton"
   And I press "runButton"
@@ -12,10 +12,10 @@ Background:
   And I press "finishButton"
 
 Scenario: As student 'Feedback' tab is not visible if no feedback
-  #As student, with no feedback, can see Key Concept tab on rubric level
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+  #As student, with no feedback, can see Rubric tab on rubric level
+  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -36,19 +36,19 @@ Otherwise don't show feedback tab
   And I give user "Teacher_Lillian" authorized teacher permission
 
   #Not automatically visible on contained levels with no mini rubric
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
   And I wait for the page to fully load
   And element ".uitest-feedback" is not visible
 
   #Not automatically visible on un-contained levels with no mini rubric
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/7"
   And I wait for the page to fully load
   And element ".uitest-feedback" is not visible
 
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait for the page to fully load
   And I wait to see ".uitest-feedback"
-  And element ".editor-column" contains text "Key Concept"
+  And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
   And I wait to see ".editor-column"
   And element ".editor-column" contains text "This is the key concept for this mini rubric."
@@ -75,7 +75,7 @@ Otherwise don't show feedback tab
   And I press "#ui-test-submit-feedback" using jQuery
   And element ".editor-column" contains text "Nice!"
   And element "#rubric-input-performanceLevel1" is checked
-  And I wait until "#ui-test-feedback-time" contains text "Last updated"
+  And I wait until "#ui-test-feedback-time" contains text "Updated by you"
   And element "#ui-test-submit-feedback" contains text "Update"
 
   #As teacher, refresh page and latest feedback is visible
@@ -84,13 +84,13 @@ Otherwise don't show feedback tab
   And I wait until ".editor-column" contains text "Nice!"
   And I wait to see "#rubric-input-performanceLevel1"
   And element "#rubric-input-performanceLevel1" is checked
-  And element ".editor-column" contains text matching "Last updated .* ago"
+  And element ".editor-column" contains text matching "Updated by you"
   And element "#ui-test-submit-feedback" contains text "Update"
 
   #As student, latest feedback from teacher is displayed
   Then I sign out
   And I sign in as "Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/38/puzzle/1"
+  And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
   And I wait to see ".uitest-feedback"
   And I press the first ".uitest-feedback" element
   And I wait until ".editor-column" contains text "Nice!"

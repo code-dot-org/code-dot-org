@@ -571,6 +571,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
+  test "purges user with duplicate authentication option" do
+    # Create an user with an Google authentication option,
+    # then destroy (soft-delete) the authentication option.
+    user = create :user
+    auth_id = SecureRandom.uuid
+    google_auth = create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    google_auth.destroy
+
+    # Recreate the same Google authentication option.
+    # Now the user has duplicate authentication options, one active, one soft-deleted.
+    create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    user.reload
+
+    assert_nothing_raised do
+      purge_user user
+    end
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -1449,15 +1467,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: pegasus.contact_rollups
-  #
-  # TODO: To interact correctly with contact_rollups (a table controlled only
-  #   by a nightly batch job) we may want to update our user purge to be a
-  #   long-running operation; we'll queue a contact purge that the contact
-  #   rollups job will take care of, and when all deferred work is done we
-  #   will report that the hard-delete is completed.
-
-  #
   # Table: pegasus.forms
   # Table: pegasus.form_geos
   #
@@ -1820,62 +1829,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Pardot
-  # pegasus.contact_rollups
-  #
-
-  test "Pardot: Calls delete_pardot_prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
-      purge_user teacher
-    end
-  end
-
-  test "Pardot: Raises if Pardot reports issues deleting prospects" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
-      assert_raises RuntimeError do
-        purge_user teacher
-      end
-    end
-  end
-
-  test "Pardot: Does not contact Pardot outside of production" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(false)
-
-    with_contact_rollup_for(teacher) do
-      Pardot.expects(:delete_pardot_prospects).never
-      purge_user teacher
-    end
-  end
-
-  test "contact_rollups: Deletes user records" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
-      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
-        refute_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-
-        purge_user teacher_a
-
-        assert_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-      end
-    end
-  end
-
-  #
   # contact rollups V2
   #
 
@@ -2064,25 +2017,65 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil program_manager.purged_at
   end
 
+  test 'does not delete email centric data if there is a live account with the same email' do
+    # This behaviour is desired so we don't accidentally delete data related to a live account.
+    # teacher created an account and has responded to one of our census surveys.
+    teacher_old = create :teacher
+    teacher_name = teacher_old.name
+    teacher_email = teacher_old.email
+
+    # create the email related data
+    create :census_your_school2017v0, submitter_email_address: teacher_email
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    create :email_preference, email: teacher_email
+    refute_empty EmailPreference.where(email: teacher_email)
+    Poste2.create_recipient(teacher_email, name: teacher_name, ip_address: '127.0.0.1')
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+    # Pardot should not be told to delete the email from its records
+    ContactRollupsPardotMemory.expects(:find_or_create_by).never
+
+    # teacher deletes their old account because they no longer teach CS
+    teacher_old.destroy!
+    # teacher creates a new account because they started teaching CS again.
+    create :teacher, email: teacher_email
+    # the old teacher account which was soft deleted is now purged by our automated systems.
+    purge_user teacher_old
+
+    # confirm that the email related data is still present
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    refute_empty EmailPreference.where(email: teacher_email)
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+
+    # confirm the old teacher account is purged
+    assert teacher_old.purged_at
+  end
+
+  test 'deletes contact rollups final data' do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    create :contact_rollups_final, email: teacher_email
+
+    assert ContactRollupsFinal.find_by_email(teacher_email)
+    purge_user teacher
+    assert_nil ContactRollupsFinal.find_by_email(teacher_email)
+  end
+
+  test 'marks contact rollups pardot memory for deletion' do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    create :contact_rollups_pardot_memory, email: teacher_email
+
+    assert_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
+    purge_user teacher
+    refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
+  end
+
   private
 
   def assert_logged(expected_message)
     assert_includes @log.string, expected_message
-  end
-
-  def with_contact_rollup_for(user)
-    pardot_id = user.id
-    contact_rollups_id = contact_rollups.insert(
-      {
-        email: user.email,
-        dashboard_user_id: user.id,
-        pardot_id: pardot_id,
-        name: user.name
-      }
-    )
-    yield contact_rollups_id, pardot_id
-  ensure
-    contact_rollups.where(id: contact_rollups_id).delete if contact_rollups_id
   end
 
   #
@@ -2223,9 +2216,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
     end
-  end
-
-  def contact_rollups
-    PEGASUS_DB[:contact_rollups]
   end
 end

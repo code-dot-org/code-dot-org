@@ -6,22 +6,7 @@ import DialogFooter from '../../teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {connect} from 'react-redux';
-import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-
-const styles = {
-  textArea: {
-    minHeight: 100,
-    width: '95%'
-  },
-  header: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  optionalText: {
-    paddingLeft: 10
-  }
-};
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
 class CreateStandardsReportStep2 extends Component {
   static propTypes = {
@@ -118,10 +103,25 @@ class CreateStandardsReportStep2 extends Component {
   }
 }
 
+const styles = {
+  textArea: {
+    minHeight: 100,
+    width: '95%'
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  optionalText: {
+    paddingLeft: 10
+  }
+};
+
 export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
 
 export default connect(state => ({
   teacherComment: state.sectionStandardsProgress.teacherComment,
-  versionYear: getCurrentScriptData(state).version_year,
-  familyName: getCurrentScriptData(state).family_name
+  versionYear: getCurrentUnitData(state).version_year,
+  familyName: getCurrentUnitData(state).family_name
 }))(CreateStandardsReportStep2);

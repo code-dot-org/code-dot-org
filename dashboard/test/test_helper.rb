@@ -23,7 +23,8 @@ reporters = [CowReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
 end
-Minitest::Reporters.use! reporters
+# Skip this if the tests are run in RubyMine
+Minitest::Reporters.use! reporters unless ENV['RM_INFO']
 
 ENV["UNIT_TEST"] = 'true'
 ENV["RAILS_ENV"] = "test"
@@ -83,6 +84,13 @@ class ActiveSupport::TestCase
     Dashboard::Application.config.action_controller.perform_caching = false
     # as in, I still need to clear the cache even though we are not 'performing' caching
     Rails.cache.clear
+
+    # A list of keys used by our shared cache that should be cleared between every test.
+    [
+      ProfanityHelper::PROFANITY_PREFIX,
+      AzureTextToSpeech::AZURE_SERVICE_PREFIX,
+      AzureTextToSpeech::AZURE_TTS_PREFIX
+    ].each {|cache_prefix| CDO.shared_cache.delete_matched(cache_prefix)}
 
     # clear log of 'delivered' mails
     ActionMailer::Base.deliveries.clear
@@ -303,9 +311,7 @@ class ActiveSupport::TestCase
   def assert_caching_disabled(cache_control_header)
     expected_directives = [
       'no-cache',
-      'no-store',
-      'must-revalidate',
-      'max-age=0'
+      'no-store'
     ]
     assert_cache_control_match expected_directives, cache_control_header
   end
@@ -374,7 +380,8 @@ class ActionController::TestCase
     @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
+                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
+                         Nokogiri::HTML::Document.parse(@response.body)
                        end
   end
 
@@ -462,6 +469,7 @@ class ActionController::TestCase
 
     test name do
       # params can be a hash, or a proc that returns a hash at runtime
+      refute_nil params, "params in controller tests cannot be nil"
       params = instance_exec(&params) if params.is_a? Proc
 
       if user

@@ -1,7 +1,8 @@
 {
-  "category": "Actions",
+  "category": "Sprites",
   "config": {
     "func": "edgesDisplace",
+    "docFunc": "gamelab_edgesDisplace",
     "blockText": "edges block {SPRITE} from moving",
     "args": [
       {

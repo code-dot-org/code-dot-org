@@ -38,6 +38,8 @@ en-GB:
     edit: editar
     submit: Submit
   nav:
+    header:
+      educate_hoc: The Hour of Code
     user:
       create: Create
       infinity: Infinity
@@ -46,6 +48,9 @@ en-GB:
       answer_viewer: Teacher Panel
   home:
     trynow: Try now
+  upsell:
+    widgets:
+      audience: Ages 14+
   dialog:
     ok: OK
     startover_title: Are you sure you want to start over?
@@ -68,6 +73,4 @@ en-GB:
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
-  gdpr_dialog:
-    true: 'Yes'
   copy: Copy

@@ -17,7 +17,7 @@ During the Hour of Code campaign, your company can help raise awareness of the c
 - [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [Connect your company with a school](#connect-with-a-school)
 - [Host your own Hour of Code event](#host-hour-of-code)
-- [โปรโมท Hour of Code](#promote-hour-of-code)
+- [โปรโมทกิจกรรมชั่วโมงเขียนโค้ด](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
 
 * * *
@@ -34,7 +34,7 @@ One of the most fulfilling ways to participate in the Hour of Code is to volunte
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -128,7 +128,7 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 <a id="promote-hour-of-code"></a>
 
-## โปรโมท Hour of Code
+## โปรโมทกิจกรรมชั่วโมงเขียนโค้ด
 
 One of the best ways to help is to spread the word and promote the Hour of Code.
 

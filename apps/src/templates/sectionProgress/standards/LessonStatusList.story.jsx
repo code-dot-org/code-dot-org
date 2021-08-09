@@ -6,7 +6,7 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 
@@ -15,7 +15,7 @@ export default storybook => {
     combineReducers({
       sectionProgress,
       sectionStandardsProgress,
-      scriptSelection,
+      unitSelection,
       sectionData,
       currentUser
     })

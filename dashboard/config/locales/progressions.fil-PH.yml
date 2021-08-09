@@ -2,35 +2,59 @@
 fil:
   data:
     progressions:
+      Arrays: Mga Array
       Artist Project: Proyekto ng Artista
       'Artist: Variables': 'Artist: Mga Variable'
+      Back and Forth: Back and forth
+      Bass, Mid, and Treble: Bass, Mid, at Treble
       Binary Numbers: Binary na mga Numero
       Board Events: Mga Pangyayari sa Board
+      Collision Detection: Pagtukoy sa mga Banggaan
       Collisions: Mga Banggaan
       Combining Representations: Pagsasama-sama ng mga Representasyon
+      Dance Crews: Dance Crews
       Debugging: Pagdedebug
       Design Mode: Mode ng Pag-disenyo
+      Designing Screens with Code: Pagdidisenyo ng mga Screen gamit ang Code
       Drawing: Drowing
+      Event Types: Mga Tipo ng Pangyayari
       Events: Mga event
       For Loops: For Loops
       Free Play: Libreng Laro
       Functions: Mga function
       Functions with Parameters: Mga function na meron mga parameter
+      Get In Formation: Mag-formation
+      Getters and Setters: Tagakuha at Taga-takda
       Getting Properties: Pagkuha ng mga Katangian
       Headings: Mga Heading
+      Images in HTML: Mga Larawan sa HTML
       Introduction to Arrays: Introduksyon sa mga Array
       Keeping Data Secret: Pagiging Sekreto ng mga Datos
       Keyboard Input: Keyboard na Input
       Lesson Extras: Mga Ekstrang Aralin
       Linking Screens: Pag-uugnay sa mga Screen
       Lists: Mga listahan
+      Making Music: Paglikha ng Musika
       Measures: Mga Measure
+      More Buttons: Mas maraming button
+      Overview: Buod
       Pair Programming: Pair programming
+      Planning: Pagpaplano
+      Polling Events: Pag-poll ng mga Pangyayari
       Programming with Rey and BB-8: Pag-Program kasama sina Rey at BB-8
       Properties: Mga katangian
+      Quarter Notes: Quarter Notes
       Reflection: Pagmumuni-muni
       Representing Images: Pagkakatawan sa mga Larawan
+      Review: Repasuhin
+      Speed it Up, Slow it Down: Bilisan Ito, Bagalan Ito
+      Stopping the Outbreak with Masks: Pinipigilan ang Paglaganap gamit ang mga Mask
+      The Animation Tab: Ang Animation na Tab
+      The Draw Loop: Ang Draw na Loop
+      Variables: Mga variable
       Velocity: Belosidad
       Video: Video
+      'Video: Introduction to Arrays': Panimula o Introduksyon tungkol sa mga Arrays
+      Where'd They Go?: Saan sila nagpunta?
       While Loops with the Farmer: Mga While Loops sa Farmer
       Wrap-up: Wrap-up

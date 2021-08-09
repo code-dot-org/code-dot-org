@@ -1,32 +1,99 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+
+import AddLevelDialogTop from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
-import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
-import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import i18n from '@cdo/locale';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+
+import LessonEditorDialog from './LessonEditorDialog';
+
+export default class AddLevelDialog extends Component {
+  static propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    handleConfirm: PropTypes.func.isRequired,
+    addLevel: PropTypes.func.isRequired,
+    activityPosition: PropTypes.number.isRequired,
+    activitySection: activitySectionShape.isRequired
+  };
+
+  state = {
+    levelPosToRemove: null
+  };
+
+  handleRemoveLevel = levelPos => {
+    this.setState({levelPosToRemove: levelPos});
+  };
+
+  handleCloseRemoveLevelDialog = () => {
+    this.setState({levelPosToRemove: null});
+  };
+
+  render() {
+    return (
+      <LessonEditorDialog
+        isOpen={this.props.isOpen}
+        handleClose={this.props.handleConfirm}
+        style={styles.dialog}
+      >
+        <h2>Add Levels</h2>
+        <div
+          style={styles.dialogContent}
+          className="uitest-level-dialog-content"
+        >
+          <AddLevelDialogTop addLevel={this.props.addLevel} />
+          <div style={styles.bottomArea}>
+            <h4>Levels in Progression</h4>
+            <div style={styles.levelsBox}>
+              {this.props.activitySection.scriptLevels.map(scriptLevel => (
+                <LevelToken
+                  key={scriptLevel.position + '_' + scriptLevel.activeId[0]}
+                  scriptLevel={scriptLevel}
+                  removeLevel={this.handleRemoveLevel}
+                  activitySectionPosition={this.props.activitySection.position}
+                  activityPosition={this.props.activityPosition}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <RemoveLevelDialog
+          activitySection={this.props.activitySection}
+          activityPosition={this.props.activityPosition}
+          levelPosToRemove={this.state.levelPosToRemove}
+          handleClose={this.handleCloseRemoveLevelDialog}
+        />
+        <DialogFooter rightAlign>
+          <Button
+            text={i18n.closeAndSave()}
+            onClick={this.props.handleConfirm}
+            color={Button.ButtonColor.orange}
+            className="save-add-levels-button"
+          />
+        </DialogFooter>
+      </LessonEditorDialog>
+    );
+  }
+}
 
 const styles = {
   dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+    width: 970,
+    marginLeft: -500
   },
   dialogContent: {
     display: 'flex',
     flexDirection: 'column'
   },
-  leftColumn: {
+  topArea: {
     display: 'flex',
     flexDirection: 'column',
     margin: 15
   },
-  rightColumn: {
+  bottomArea: {
     display: 'flex',
     flexDirection: 'column',
     margin: 15
@@ -45,88 +112,3 @@ const styles = {
     flexDirection: 'column'
   }
 };
-
-export default class AddLevelDialog extends Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired,
-    currentLevels: PropTypes.array,
-    addLevel: PropTypes.func,
-    activityPosition: PropTypes.number,
-    activitySectionPosition: PropTypes.number
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      methodOfAddingLevel: 'Find Level'
-    };
-  }
-
-  handleToggle = value => {
-    this.setState({methodOfAddingLevel: value});
-  };
-
-  render() {
-    return (
-      <BaseDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
-        useUpdatedStyles
-        style={styles.dialog}
-      >
-        <h2>Add Levels</h2>
-        <div style={styles.dialogContent}>
-          <div style={styles.leftColumn}>
-            <ToggleGroup
-              selected={this.state.methodOfAddingLevel}
-              onChange={this.handleToggle}
-            >
-              <button type="button" value={'Find Level'}>
-                Find Level
-              </button>
-              <button type="button" value={'Create New Level'}>
-                Create New Level
-              </button>
-            </ToggleGroup>
-            {this.state.methodOfAddingLevel === 'Find Level' && (
-              <div style={styles.filtersAndLevels}>
-                <AddLevelFilters />
-                <AddLevelTable addLevel={this.props.addLevel} />
-              </div>
-            )}
-            {this.state.methodOfAddingLevel === 'Create New Level' && (
-              <CreateNewLevelInputs />
-            )}
-          </div>
-          <div style={styles.rightColumn}>
-            <h4>Levels in Progression</h4>
-            <div style={styles.levelsBox}>
-              {/*TODO Hook up removeLevel for the addLevelDialog*/}
-              {this.props.currentLevels.map(level => (
-                <LevelToken
-                  key={level.position + '_' + level.ids[0]}
-                  level={level}
-                  removeLevel={() => {
-                    console.log('remove level');
-                  }}
-                  activitySectionPosition={this.props.activitySectionPosition}
-                  activityPosition={this.props.activityPosition}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <DialogFooter rightAlign>
-          <Button
-            __useDeprecatedTag
-            text={i18n.closeAndSave()}
-            onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
-          />
-        </DialogFooter>
-      </BaseDialog>
-    );
-  }
-}

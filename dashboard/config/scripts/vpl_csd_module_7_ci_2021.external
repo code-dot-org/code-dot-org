@@ -1,0 +1,46 @@
+name 'VPL - CSD - Module 7 - CI_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 2: Designing Screens with Code
+**Estimated Time: 20 minutes**
+
+## Revisiting App Lab
+
+We have engaged with App Lab in previous modules for Units 3 and 4. In this section, you will continue to explore App Lab in Code Studio with Lesson 2: Designing Screens with Code. Let’s put on our “teacher hat” here as we identify the level types students will encounter in Lesson 2. Then, we will wear our "student hat" during the investigation that follows for Lesson 2 in order to prepare supporting students as they engage with App Lab.
+
+**Note:** You may feel more comfortable with App Lab if you have taught or plan to teach Unit 4. If you need more practice using App Lap, consider taking more time during the next levels as well as going back to levels in Unit 4 on code studio. Share any questions you want your facilitator to address in the synchronous workshop in the “Questions from Asynchronous Work” slide.
+
+
+## Level Types in Lesson 2
+
+Let's read about the different level types included in Lesson 2.  
+
+* **Predict Level** 
+	* Students read working code, discuss the code with a partner, and then predict what the code will do before running it themselves. 
+    * "For Teachers Only" provides the correct answer.
+    * You can see this in <a href="https://studio.code.org/s/csd6-2020/lessons/2/levels/2" target="_blank">Level 2 - Setting Properties </a>.
+
+* **Programming Level**
+	* Students complete targeted tasks that help with practicing and building specific skills from the lesson.
+    * You can see this in <a href="https://studio.code.org/s/csd6-2020/lessons/2/levels/3" target="_blank">Level 3 - Setting Properties </a>.
+
+* **Assessment Level**
+	* Programming levels to assess student mastery of the target skills from the lesson.
+    * Mini rubrics are provided in the "Key Concepts" tab.
+    * You can see this in <a href="https://studio.code.org/s/csd6-2020/lessons/2/levels/4" target="_blank">Level 4 - Setting Properties </a>.  Note the check mark that indicates it is an assessment level.
+
+* **Help & Tips**
+	* This tab includes resources that provide information on particular concepts of programming structures.
+    
+
+
+
+
+
+
+
+
+MARKDOWN

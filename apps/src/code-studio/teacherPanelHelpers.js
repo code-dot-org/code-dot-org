@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import {setSectionLockStatus} from './stageLockRedux';
+import {setSectionLockStatus} from './lessonLockRedux';
 import {
   setSections,
   selectSection
@@ -78,13 +78,13 @@ export function queryLockStatus(store, scriptId, pageType) {
       // sections are assigned to the script for the TeacherSectionSeletor.
       if (pageType !== 'script_overview') {
         store.dispatch(setSections(teacherSections));
+        const query = queryString.parse(location.search);
+        if (query.section_id) {
+          store.dispatch(selectSection(query.section_id));
+        }
       }
 
       store.dispatch(setSectionLockStatus(data));
-      const query = queryString.parse(location.search);
-      if (query.section_id) {
-        store.dispatch(selectSection(query.section_id));
-      }
       resolve();
     });
   });

@@ -2,16 +2,16 @@
 title: சர்வதேச பங்காளர்களை தொடர்பு கொள்
 ---
 
-{{signup_button}}
+{{ signup_button }}
 
 # சர்வதேச பங்காளர்களை தொடர்பு கொள்
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+Code.org ஒரு உண்மையான சர்வதேச இயக்கமாக மாற்ற உலகெங்கிலும் உள்ள பல நிறுவனங்களுடன் இணைந்து செயல்படுகிறது. 2017 ஆம் ஆண்டில், அனைத்து மணிநேர குறியீடு நிகழ்வுகளிலும் 60% யு.எஸ். க்கு வெளியே நிகழ்ந்தது உங்களுக்குத் தெரியுமா?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+உங்கள் நாட்டில் அதிகமானவர்களை ஈடுபடுத்த நீங்கள் ஒரு முக்கிய பங்கை வகிக்க முடியும்! நீங்கள் கீழேயுள்ள நாடுகளில் ஒன்றில் இருந்தால், பட்டியலிடப்பட்ட கூட்டாளரை அணுகி, உங்கள் உள்ளூர் மணிநேர குறியீட்டுடன் இணைக்கவும்.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+* இங்கே பட்டியலிடப்பட்டுள்ள உங்கள் நாட்டைப் பார்க்கவில்லையா? /em> [ ஒரு மணிநேர குறியீட்டு சர்வதேச கூட்டாளராக மாற விண்ணப்பிக்கவும் ](https://airtable.com/shreokz55rqubug8F)! <br /> <br /></p> 
 
 {{ international_partners_table }}
 
-{{signup_button}}
+{{ signup_button }}

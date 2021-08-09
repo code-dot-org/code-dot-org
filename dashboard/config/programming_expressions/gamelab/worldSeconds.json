@@ -1,0 +1,5 @@
+{
+  "func": "World.seconds",
+  "category": "World",
+  "type": "readonlyproperty"
+}

@@ -1,7 +1,6 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
-require 'cdo/pardot'
 
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
@@ -94,7 +93,7 @@ class DeleteAccountsHelper
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
-  def clean_and_destroy_pd_content(user_id)
+  def clean_and_destroy_pd_content(user_id, user_email)
     @log.puts "Cleaning PD content"
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
@@ -123,7 +122,16 @@ class DeleteAccountsHelper
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
 
+    # Delete survey submissions
     SurveyResult.where(user_id: user_id).destroy_all
+    Pd::MiscSurvey.where(user_id: user_id).destroy_all
+    Foorm::SimpleSurveySubmission.where(user_id: user_id).each do |simple_submission|
+      simple_submission.foorm_submission.destroy
+      simple_submission.destroy
+    end
+
+    # Delete email history
+    Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
 
     unless application_ids.empty?
       # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
@@ -164,6 +172,10 @@ class DeleteAccountsHelper
   end
 
   def remove_poste_data(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_poste_data' because there is a live account with this email"
+      return
+    end
     contact_ids = @pegasus_db[:contacts].where(email: email).map(:id)
     delivery_ids = @pegasus_db[:poste_deliveries].where(contact_id: contact_ids).map(:id)
     @pegasus_db[:poste_opens].where(delivery_id: delivery_ids).delete
@@ -171,40 +183,12 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
-  def remove_from_pardot_and_contact_rollups(contact_rollups_recordset)
-    # TODO: Make this an operation handled by the contact rollups task itself
-    #       instead of crossing the architectural boundary ourselves.
-    #       For now this is unsafe to run while contact rollups is itself running.
-    # Though we have the DB tables in all environments, we only sync data from the production
-    # environment with Pardot.
-    if CDO.rack_env? :production
-      pardot_ids = contact_rollups_recordset.
-        select(:pardot_id).
-        map {|contact_rollup| contact_rollup[:pardot_id]}
-      failed_ids = Pardot.delete_pardot_prospects(pardot_ids)
-      if failed_ids.any?
-        raise "Pardot.delete_pardot_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
-      end
-    end
-    contact_rollups_recordset.delete
-  end
-
-  # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
-  # contact_rollups pegasus table (master and reporting)
-  # @param [Integer] The user ID to purge from Pardot.
-  def remove_from_pardot_by_user_id(user_id)
-    @log.puts "Removing from Pardot"
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id)
-  end
-
-  def remove_from_pardot_by_email(email)
-    remove_from_pardot_and_contact_rollups @pegasus_db[:contact_rollups].where(email: email)
-  end
-
   # Marks emails for deletion from Pardot via contact rollups process.
-  # Will eventually replace current steps in account deletion process
-  # that directly delete prospects via Pardot API.
   def set_pardot_deletion_via_contact_rollups(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'set_pardot_deletion_via_contact_rollups' because there is a live account with this email"
+      return
+    end
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
@@ -222,6 +206,10 @@ class DeleteAccountsHelper
   # Removes CensusSubmission records associated with this email address.
   # @param [String] email An email address
   def remove_census_submissions(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_census_submissions' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing CensusSubmission"
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
@@ -237,6 +225,10 @@ class DeleteAccountsHelper
   # Removes EmailPreference records associated with this email address.
   # @param [String] email An email address
   def remove_email_preferences(email)
+    if User.find_by_email(email)
+      @log.puts "Skipping 'remove_email_preferences' because there is a live account with this email"
+      return
+    end
     @log.puts "Removing EmailPreference"
     record_count = EmailPreference.where(email: email).delete_all
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
@@ -297,6 +289,26 @@ class DeleteAccountsHelper
     end
   end
 
+  def purge_user_authentications(user)
+    @log.puts "Deleting user authentication options"
+    # Delete most recently destroyed (soft-deleted) record first
+    user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
+  def purge_contact_rollups(email)
+    @log.puts "Deleting ContactRollups records for email #{email}"
+    return unless email
+
+    # Contact rollups data are in 4 tables: ContactRollupsRaw, ContactRollupsProcessed,
+    # ContactRollupsPardotMemory, and ContactRollupsFinal.
+    # During daily contact rollups runs, ContactRollupsRaw and ContactRollupsProcessed
+    # are dropped, records marked for deletion in ContactRollupsPardotMemory are
+    # also purged. In addition, records in Pardot server are also deleted.
+    # Thus, only need to delete ContactRollupsFinal record here.
+    ContactRollupsFinal.find_by_email(email)&.destroy
+    set_pardot_deletion_via_contact_rollups(email)
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -319,7 +331,15 @@ class DeleteAccountsHelper
 
     # Cache user email here before destroying user; migrated users have their
     # emails stored in primary_contact_info, which will be destroyed.
-    user_email = user.email
+    # If the user account was already soft-deleted, then fallback to the :email attribute.
+    user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
+
+    # There is a bug in our system that causes a user to have duplicate
+    # authentication options, one active and one soft-deleted.
+    # Purging that user will fail because of ActiveRecord::RecordNotUnique
+    # (Mysql2::Error: Duplicate entry) exception.
+    # To prevent that issue, hard-deleting authentication options first.
+    purge_user_authentications user
 
     user.destroy
 
@@ -330,12 +350,11 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
-    clean_and_destroy_pd_content(user.id)
+    clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    remove_from_pardot_by_user_id(user.id)
-    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
+    purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
@@ -360,7 +379,6 @@ class DeleteAccountsHelper
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_poste_data(email)
-    remove_from_pardot_by_email(email)
     set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end

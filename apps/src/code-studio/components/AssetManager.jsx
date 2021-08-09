@@ -20,6 +20,12 @@ export const AudioErrorType = {
   INITIALIZE: 'initialize',
   SAVE: 'save'
 };
+export const ImageMode = {
+  FILE: 'file',
+  ICON: 'icon',
+  URL: 'url',
+  DEFAULT: 'default'
+};
 
 const errorMessages = {
   403: 'Quota exceeded. Please delete some files and try again.',
@@ -37,16 +43,11 @@ function getErrorMessage(status) {
   return errorMessages[status] || errorMessages.unknown;
 }
 
-const styles = {
-  emptyText: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px'
-  }
-};
-
 /**
- * A component for managing hosted assets.
+ * A component for managing hosted assets. If utilizing this shared component,
+ * verify the ImagePicker has access to the correct fields in your redux store,
+ * namely level.name and level.isStartMode. Otherwise, the files will not be
+ * saved to S3 or retrieved and displayed.
  */
 export default class AssetManager extends React.Component {
   static propTypes = {
@@ -384,3 +385,11 @@ export default class AssetManager extends React.Component {
     return assetList;
   }
 }
+
+const styles = {
+  emptyText: {
+    margin: '1em 0',
+    fontSize: '16px',
+    lineHeight: '20px'
+  }
+};

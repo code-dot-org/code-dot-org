@@ -2,22 +2,31 @@
   "pages": {
     "/projects": "home-learning-2020"
   },
+
   "banners": {
-    "teacher-apps-open-2020": {
-      "image": "/images/professional-learning-2019-3.png",
-      "title": "Sign up for Professional Learning",
-      "body": "98% of teachers recommend our engaging programs from elementary school to AP computer science for high school. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
-      "buttonText": "Join us",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
-      "buttonId": "teacher-apps-open-2020-sign-up"
+    "class-schedule-survey": {
+      "image": "/images/class-schedule-survey.png",
+      "title": "Fall 2021 Class Schedule Survey",
+      "body": "Please take a moment to fill out this 5-question survey. Answers you provide will help us determine when to offer programming like virtual field trips and talks with professionals during the fall semester.",
+      "buttonText": "Take the survey",
+      "buttonUrl": "https://docs.google.com/forms/d/e/1FAIpQLScS1FcBADzbFozhAXoICK4g1Yg2Hymhx0QYFP74yqSBXa0gnA/viewform",
+      "buttonId": "class-schedule-survey-fall2021"
     },
-    "teacher-apps-closing-2020": {
+    "teacher-apps-open-2021": {
+      "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
+      "title": "Sign up for Professional Learning",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning",
+      "buttonId": "teacher-apps-open-2021-sign-up"
+    },
+    "teacher-apps-closing-2021": {
       "image": "/images/professional-learning-2019-closing-soon.png",
       "title": "Don’t miss out. Apply today!",
-      "body": "98% of teachers recommend it and 90% of parents want their child to study computer science. Whether you are new to teaching CS, or have years of experience, join us in this movement and submit your application today.",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
       "buttonText": "Join us",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
-      "buttonId": "teacher-apps-closing-2020-sign-up"
+      "buttonUrl": "http://bit.ly/PLsignup-teacherdash",
+      "buttonId": "teacher-apps-closing-2021-sign-up"
     },
     "teacher-apps-nominate-2020": {
       "image": "/images/fill-970x562/professional-learning-2019-trophy.png",
@@ -45,6 +54,30 @@
       "buttonUrl": "https://code.org/athome/project-ideas",
       "buttonId": "view-project-ideas-2020-button",
       "backgroundColor": "#59b9dc"
+    },
+    "soonhoc-2020": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "The Hour of Code is Coming",
+      "body": "Sign up your class to try one of the over 115 new activities for the Hour of Code (Dec. 7-13). This year, we’ll explore how we can harness computer science and technologies like AI to help build the society we want to live in. Sign up today!",
+      "buttonText": "Join Us",
+      "buttonUrl": "https://hourofcode.com/us#join",
+      "buttonId": "2020-soonhoc"
+    },
+    "codebytes-2020": {
+      "image": "/images/marketing/CodeBytes_TeacherDashboard_540X289_CandyBag.png",
+      "title": "CodeBytes: Live interactive mini-lessons during CSEdWeek!",
+      "body": "Planning for the Hour of Code with your virtual classroom? Join us for CodeBytes, a series of 20 minute lessons that will livestream December 7-11. Episodes are designed for all grade bands and students with varying technology access.",
+      "buttonText": "Learn more",
+      "buttonUrl": "http://code.org/codebytes",
+      "buttonId": "codebytes"
+    },
+    "ai-2020": {
+      "image": "/images/marketing/AI-2020-540X289.png",
+      "title": "Explore Artificial Intelligence and Machine Learning",
+      "body": "Join us to explore how AI impacts our entire world in a brand new video series, train AI for Oceans in 25+ languages, and hear from a panel of experts during the Ethics of AI livestream on Tuesday, December 8th.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai",
+      "buttonId": "2020-ai"
     }
   }
 }

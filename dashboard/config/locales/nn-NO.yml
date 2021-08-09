@@ -185,9 +185,17 @@ nn:
     mismatch_password: Dei to passorda du skreiv inn er ikkje like
     student_consent: Eg stadfestar at eg har løyve frå foreldre eller føresatte til
       å nytte tenestene frå Code.org.
-    agree_us_website: Eg godtar å bruke ein nettstad som er basert i USA.
-    my_data_to_us: Mine data fra bruken av denne nettstaden kan sendast til, lagrast
-      eller bli handtert i USA.
+    agree_us_data_transfer_student: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk av dette nettstedet til USA** med formål om
+      å hoste og behandle slike data."
+    agree_us_data_transfer_teacher: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet
+      til USA** med formål om å hoste og behandle slike data."
+    data_collection_us: Jeg forstår at Code.org er et non profit-nettsted basert i
+      USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for
+      landet mitt.
+    visit_privacy: Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å
+      finne ut mer.
     student_terms_markdown: Epostadresser bli ikkje lagra i eit format som gir oss
       løyve til å kontakte elevane. Elevane vil aldri få epost fra Code.org, unntatt
       ved passordgjenoppretting. Se våre [retningslinjer for personvern] (http://code.org/privacy)
@@ -196,8 +204,8 @@ nn:
       di.
     user_type_button: Oppdater kontotype
     user_type_label: Kontotype
-    user_type_teacher: Lærar
     user_type_student: Elev
+    user_type_teacher: Lærar
     field_is_required: er påkreva
     accept_terms: Du må godta å opprette ein konto.
     error: Ein feil har oppstått.
@@ -299,6 +307,7 @@ nn:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som læraren din"
     registered: Du har meldt deg på %{section_name}.
+    already_exists: Du har allereie blitt med i seksjonen %{section_name}.
     error:
       signed_in: Ver snill å logge ut før du held fram
       username_not_found: Brukarnamnet %{username} fins ikkje
@@ -531,6 +540,7 @@ nn:
     account_successfully_updated: Kontoen er oppdatert.
     update_email: Oppdater
     parent_guardian_email_label: Epost til foreldre/føresette
+    remove_parent_email_label: Fjern
     none: Ingen
     encrypted: kryptert
   user_level:
@@ -1159,7 +1169,7 @@ nn:
       school_city: Skulen sin poststad
       school_country: Landet til skulen
       colombian_school_city: Skulen sin poststad
-      colombian_school_name: Namn på skule
+      colombian_chilean_school_name: Namn på skule
       ages: Kva alder underviser du dette året?
       subjects: Kva fag underviser du dette året?
       resources: Kva for følgjande utdanningsressursar i CS nyttar du?
@@ -1275,17 +1285,10 @@ nn:
       godtar du lagring av informasjonskapslar på datamaskina eller eininga di.
     more_information: Sjå Code.org sine retningslinjer for personvern.
     accept: Eg er einig
-  gdpr_dialog:
-    heading: Godtar du å nytte deg av ein nettstad basert i USA?
-    message: Data frå bruken av denne nettstaden kan bli sendt til, bli lagra og prosessert
-      i USA.
-    link_intro: For informasjon, sjå våre
-    privacy_policy: retningslinjer for personvern
-    logout: Logg ut
-    true: Ja
   page_not_found_title: Finn ikkje sida
   page_not_found_header: '404: Finn ikkje sida'
   page_not_found_description: Sida du leiter etter finst ikkje på denne adressa. Sjekk
     nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår.
   page_not_found_button: Gå heim
   copy: Kopier
+  confirm: Bekreft

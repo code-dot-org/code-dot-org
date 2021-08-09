@@ -4,17 +4,24 @@ ga:
     script:
       category:
         csd_category_name: Fionnachtana sa Ríomheolaíocht (2017-2018)
+        csd_2018_category_name: Fionnachtana sa Ríomheolaíocht (2018-2019)
+        csd_2019_category_name: Fionnachtana sa Ríomheolaíocht (2019-2020)
+        csd_2020_category_name: Fionnachtana sa Ríomheolaíocht (2020-2021)
+        csd_2021_category_name: Fionnachtana sa Ríomheolaíocht (2021-2022)
         csf_category_name: Buntús na Ríomheolaíochta
         csf_international_category_name: 'Buntús na Ríomheolaíochta: Idirnáisiúnta'
         csf2_draft_category_name: 'Á bhforbairt: Cúrsaí A-F'
-        csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
+        csp_category_name: Foras Feasa ar an Ríomheolaíocht ('15-'16)
         csp_2018_category_name: Foras Feasa ar an Ríomheolaíocht ('18-'19)
         csp_2019_category_name: Foras Feasa ar an Ríomheolaíocht ('19-'20)
+        csp_2020_category_name: Foras Feasa ar an Ríomheolaíocht ('20-'21)
+        csp_2021_category_name: Foras Feasa ar an Ríomheolaíocht ('21-'22)
         cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
         csp17_category_name: Foras Feasa ar an Ríomheolaíocht (2017-2018)
         full_course_category_name: Cúrsaí Iomlána
         hoc_category_name: An Uair Chódála
         math_category_name: Matamaitic
+        other_category_name: Eile
       name:
         course1:
           title: Cúrsa 1
@@ -63,6 +70,12 @@ ga:
               name: 'Spraotharlann: Cruthaigh Scéal'
             The Big Event:
               name: An Teagmhas Mór
+          student_description: Tá Cúrsa 1 dírithe ar pháistí atá ag foghlaim an léimh.
+            Cruthóidh na daltaí ríomhchláir, déanfaidh siad comhoibriú le daltaí eile,
+            forbróidh siad scileanna réitigh fadhbanna, agus leanfaidh siad ar aghaidh
+            in ainneoin deacrachtaí. Ag deireadh an chúrsa, cruthóidh gach dalta a
+            chluiche féin nó a scéal féin is féidir a chomhroinnt. Dírithe ar aois
+            5-6.
         course2:
           title: Cúrsa 2
           description: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu, ach nach
@@ -111,6 +124,10 @@ ga:
               name: An Teagmhas Mór
             Your Digital Footprint:
               name: Do Lorg Digiteach
+          student_description: Tá Cúrsa 2 dírithe ar dhaltaí a bhfuil léamh acu, ach
+            nach bhfuil aon taithí acu ar an ríomhchlárú. Sa chúrsa seo, cruthóidh
+            na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí
+            idirghníomhacha is féidir a chomhroinnt. Dírithe ar aois 7-10.
         course3:
           title: Cúrsa 3
           description: Tá Cúrsa 3 dírithe ar dhaltaí a rinne Cúrsa 2 cheana. Déanfaidh
@@ -165,6 +182,11 @@ ga:
               name: 'Spraotharlann: Cruthaigh Cluiche'
             'Studio: Create a Story':
               name: 'Spraotharlann: Cruthaigh Scéal'
+          student_description: Tá Cúrsa 3 dírithe ar dhaltaí a rinne Cúrsa 2 cheana.
+            Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad
+            i gCúrsaí 1 agus 2, chun réitigh níos solúbtha a thabhairt ar fadhbanna
+            níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí scéalta agus cluichí
+            idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10.
         playlab:
           title: Spraotharlann
           description: Cruthaigh scéal nó cluiche sa Spraotharlann!
@@ -172,6 +194,7 @@ ga:
           lessons:
             Play Lab:
               name: Spraotharlann
+          student_description: Cruthaigh scéal nó cluiche sa Spraotharlann!
         artist:
           title: Ealaíontóir
           description: Tarraing pictiúir iontacha leis an Ealaíontóir!
@@ -179,6 +202,7 @@ ga:
           lessons:
             Artist:
               name: Ealaíontóir
+          student_description: Tarraing pictiúir iontacha leis an Ealaíontóir!
         hourofcode:
           title: Cathair Ghríobháin Chlasaiceach
           description: Foghlaim buntús na ríomheolaíochta le carachtair ó Angry Birds,
@@ -188,6 +212,8 @@ ga:
           lessons:
             Maze:
               name: Cathair Ghríobháin
+          student_description: Foghlaim buntús na ríomheolaíochta le carachtair ó
+            Angry Birds, Plants vs. Zombies, agus Scrat ó Ice Age!
         frozen:
           title: Códáil in éindí le hAnna agus Elsa
           description: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht agus
@@ -199,6 +225,10 @@ ga:
           lessons:
             Artist:
               name: Ealaíontóir
+          student_description: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht
+            agus áilleacht an oighir. Cruthóidh tú calóga sneachta agus patrúin le
+            do scátaí oighir agus déanfaidh tú tírdhreach álainn geimhridh is féidir
+            a chomhroinnt le cairde!
         course4:
           title: Cúrsa 4
           description: Tá Cúrsa 4 dírithe ar dhaltaí a rinne Cúrsaí 2 agus 3 cheana.
@@ -255,6 +285,12 @@ ga:
               name: 'Díphlugáilte: Ceapadh Ceoil le Paraiméadair'
             'Unplugged: Tangrams':
               name: 'Díphlugáilte: Tangraim'
+          student_description: Tá Cúrsa 4 dírithe ar dhaltaí a rinne Cúrsaí 2 agus
+            3 cheana. Réiteoidh na daltaí fadhbanna níos casta trí choincheapa éagsúla
+            a tharraingt le chéile. Nuair a bheidh an cúrsa seo críochnaithe acu,
+            beidh siad in ann cláir a scríobh a thaispeánann scileanna éagsúla, mar
+            shampla lúba "for" agus feidhmeanna a ghlacann le paraiméadair. Dírithe
+            ar aois 9-13.
         Course4pre:
           title: Réamhriachtanas do Chúrsa 4
           description: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí nach
@@ -280,6 +316,8 @@ ga:
               name: 'Feirmeoir: Lúba "Chomh fada is"'
             'Maze: Sequence':
               name: 'Cathair Ghríobháin: Seicheamh'
+          student_description: Achoimre ar choincheapa tábhachtacha, dírithe ar dhaltaí
+            nach ndearna Cúrsaí 2 nó 3.
         usability:
           lessons:
             Binary:
@@ -318,6 +356,8 @@ ga:
           lessons:
             Infinity:
               name: Éigríoch
+          student_description: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
+            ina bhfuil carachtair Disney Infinity.
         algebrademo:
           lessons:
             Defining Variables:
@@ -382,6 +422,10 @@ ga:
               name: An Chathair Ghríobháin
             Wrap-up:
               name: Clabhsúr
+          student_description: Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa
+            ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí
+            idir 10 agus 18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí
+            a fháil!
         edit-code:
           title: Cuir an Cód in Eagar
           description: Cuir an Cód in Eagar
@@ -393,6 +437,7 @@ ga:
               name: An tEalaíontóir
             The Maze:
               name: An Chathair Ghríobháin
+          student_description: Cuir an Cód in Eagar
         events:
           title: Teagmhais
           description: Teagmhais
@@ -406,6 +451,7 @@ ga:
               name: Luacháil
             Studio:
               name: Stiúideo
+          student_description: Teagmhais
         flappy:
           title: Cód Flappy
           description: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad?
@@ -414,6 +460,8 @@ ga:
           lessons:
             Flappy Code:
               name: Cód Flappy
+          student_description: Ar mhaith leat do chluiche féin a scríobh i gceann
+            10 nóiméad? Bain triail as ár gcúrsa Flappy Code!
         jigsaw:
           title: Míreanna Mearaí
           description: Bain triail as na míreanna mearaí.
@@ -421,6 +469,7 @@ ga:
           lessons:
             Jigsaw:
               name: Míreanna Mearaí
+          student_description: Bain triail as na míreanna mearaí.
         step:
           title: Céim
           description: Bunchúrsa céimeanna
@@ -428,6 +477,7 @@ ga:
           lessons:
             Step:
               name: Céim
+          student_description: Bunchúrsa céimeanna
         Hour of Code:
           title: An Uair Chódála 2013
           description: Foghlaim buntús na ríomheolaíochta le carachtair ó Angry Birds
@@ -437,6 +487,8 @@ ga:
           lessons:
             Hour of Code 2013:
               name: An Uair Chódála 2013
+          student_description: Foghlaim buntús na ríomheolaíochta le carachtair ó
+            Angry Birds agus Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -490,8 +542,6 @@ ga:
             Teacher Dashboard:
               name: Painéal na Múinteoirí
         sciencePD2:
-          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
-          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
             Welcome!:
               name: Fáilte!
@@ -504,6 +554,7 @@ ga:
           lessons:
             Testing:
               name: Tástáil
+          student_description: Tástáil
         cspunit2:
           lessons:
             Encryption Algorithms:
@@ -528,6 +579,7 @@ ga:
               name: Teaghráin agus Íomhánna
             The Design Recipe:
               name: Oideas Dearaidh
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         allthethings:
           lessons:
             Artist:
@@ -576,6 +628,7 @@ ga:
               name: Teaghráin agus Íomhánna
             Teacher Dashboard:
               name: Painéal na Múinteoirí
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         cspfacilitator:
           lessons:
             App Lab:
@@ -592,19 +645,13 @@ ga:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
               name: Clabhsúr
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         algebraPD2:
-          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
-          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
+          title: Ríomheolaíocht san ailgéabar, cuid 2
           lessons:
             Teacher Dashboard:
               name: Painéal na Múinteoirí
@@ -620,9 +667,8 @@ ga:
               name: Fáilte!
             Wrap-Up:
               name: Clabhsúr
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         science-PD2:
-          description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
-          description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
             Welcome!:
               name: Fáilte!
@@ -636,35 +682,27 @@ ga:
               name: Fáilte!
             Wrap-Up:
               name: Clabhsúr
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         ECSPD2-iZone:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
               name: Clabhsúr
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         ECSPD2-NexTech:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
               name: Clabhsúr
+          student_description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
         asUnplugged:
+          description_audience: Aois 6-13
           lessons:
             Binary Bracelets:
               name: Bráisléid Dhénártha
@@ -684,6 +722,8 @@ ga:
               name: Ceapadh Ceoil
             The Big Event:
               name: An Teagmhas Mór
+        afterschool1:
+          description_audience: Aois 7-13
         ECSPD3-Unit2:
           lessons:
             Intro to Unit 2:
@@ -713,6 +753,7 @@ ga:
           lessons:
             Ice Age Play Lab:
               name: 'Spraotharlann: Ice Age'
+          student_description: Cruthaigh scéal nó cluiche sa Spraotharlann Ice Age!
         cspunit3temp:
           lessons:
             While Loops:
@@ -724,8 +765,8 @@ ga:
           lessons:
             Gumball Play Lab:
               name: 'Spraotharlann: Gumball'
+          student_description: Cruthaigh scéal nó cluiche sa Spraotharlann Gumball!
         starwars:
-          title: 'Star Wars: Tóg do Réaltra Féin le Cód'
           description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
@@ -733,8 +774,9 @@ ga:
           lessons:
             Hour of Code 2015:
               name: An Uair Chódála 2015
+          student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
+            Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
         starwarsblocks:
-          title: 'Star Wars: Tóg do Réaltra Féin le Cód'
           description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
@@ -742,6 +784,8 @@ ga:
           lessons:
             Hour of Code 2015:
               name: An Uair Chódála 2015
+          student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
+            Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
         mc:
           title: An Uair Chódála Minecraft
           description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan
@@ -750,6 +794,8 @@ ga:
           lessons:
             Hour of Code 2015:
               name: An Uair Chódála 2015
+          student_description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex
+            sa domhan Minecraft seo.
         oceans:
           title: AI ar son an Aigéin
           description: Foghlaim conas is féidir intleacht shaorga agus meaisínfhoghlaim
@@ -759,6 +805,8 @@ ga:
           lessons:
             Oceans:
               name: An tAigéan
+          student_description: Foghlaim conas is féidir intleacht shaorga agus meaisínfhoghlaim
+            a úsáid chun dul i ngleic le fadhbanna domhanda.
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -931,7 +979,10 @@ ga:
           lessons:
             Peer Review:
               name: Athbhreithniú Comhghleacaithe
+        CSF_Secret_Sample_Story:
+          description_audience: Aois 8-18+
         MikeTest:
+          description_audience: Aois 8-98
           lessons:
             Artist Functions:
               name: 'Ealaíontóir: Feidhmeanna'
@@ -950,7 +1001,10 @@ ga:
             'Bee: Conditionals':
               name: 'Beach: Coinníollacha'
         gradeKinder:
+          description_audience: Aois 5-18
           lessons:
+            Debugging:
+              name: Dífhabhtú
             Events:
               name: Teagmhais
             Events Unplugged:
@@ -964,13 +1018,17 @@ ga:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algartaim Fhíorshaoil: Síol a Chur'
         grade4:
+          description_audience: Aois 9-99
           lessons:
             Digital Citizenship:
               name: Saoránacht Dhigiteach
             Songwriting:
               name: Ceapadh Ceoil
         grade1:
+          description_audience: Aois 5-18
           lessons:
+            Debugging:
+              name: Dífhabhtú
             Events:
               name: Teagmhais
             Events Unplugged:
@@ -984,6 +1042,8 @@ ga:
             Unspotted Bugs:
               name: Fabhtanna nár tugadh faoi deara
         grade5:
+          title: Aois 10
+          description_audience: Aois 10-110
           lessons:
             'Artist: For Loops':
               name: 'Ealaíontóir: Lúba "Do Gach"'
@@ -1007,12 +1067,6 @@ ga:
               name: 'Díphlugáilte: Ceapadh Ceoil le Paraiméadair'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Fáilte!
             Wrap-up:
@@ -1026,11 +1080,17 @@ ga:
             Intro to Unit 3:
               name: Réamheolas ar Aonad 3
         ecs-unit4:
+          description: 'Aonad 4: Ríomhchlárú'
+          description_short: 'Aonad 4: Ríomhchlárú'
           lessons:
             Intro to Unit 4:
               name: Réamheolas ar Aonad 4
+          student_description: 'Aonad 4: Ríomhchlárú'
         grade3:
+          description_audience: Aois 5-18
           lessons:
+            " Bee: Conditionals":
+              name: " Beach: Coinníollacha"
             'Artist: Nested Loops':
               name: 'Ealaíontóir: Lúba Neadaithe'
             Bee Debugging:
@@ -1070,6 +1130,7 @@ ga:
             Conditionals:
               name: Coinníollacha
         grade2:
+          description_audience: Aois 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -1140,6 +1201,7 @@ ga:
           lessons:
             Bounce:
               name: Preabadh
+          student_description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
         hoc-encryption:
           title: 'An Uair Chódála: Criptiú Simplí'
           lessons:
@@ -1182,6 +1244,8 @@ ga:
           lessons:
             Minecraft Hour of Code Designer:
               name: Uair Chódála Minecraft - Dearthóir
+          student_description: Códáil ainmhithe agus créatúir eile i do leagan féin
+            de Minecraft.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1264,6 +1328,8 @@ ga:
               name: Réamhrá
             Ice Age Play Lab:
               name: 'Spraotharlann: Ice Age'
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
         classic-hoc-impact-study:
           description_short: Foghlaim buntús na ríomheolaíochta le go leor carachtar
             spraoiúil!
@@ -1283,6 +1349,7 @@ ga:
           lessons:
             Sports:
               name: Spórt
+          student_description: Cumaisc na rialacha ó spóirt éagsúla
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1364,6 +1431,8 @@ ga:
             csd6_2:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
           lessons:
+            Foo:
+              name: Fú
             Lists:
               name: Liostaí
             For Loops:
@@ -1376,6 +1445,8 @@ ga:
               name: Réamhrá
             Sprites:
               name: Sprideanna
+            Input:
+              name: Ionchur
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -1463,6 +1534,8 @@ ga:
               name: nialas
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Introduction:
               name: Réamhrá
             Ice Age Play Lab:
@@ -1527,6 +1600,8 @@ ga:
             extra_course_content:
               display_name: Ábhar Breise
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Ice Age Play Lab:
               name: 'Spraotharlann: Ice Age'
             Envelope Variables:
@@ -1550,6 +1625,8 @@ ga:
             csf_f_2:
               display_name: Ábhar Cúrsa F
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Building a Foundation:
               name: Dúshraith a Leagan
         csp-ap:
@@ -1633,6 +1710,8 @@ ga:
             content:
               display_name: Ábhar
         express-2017:
+          title: Luaschúrsa
+          assignment_family_title: Luaschúrsa
           lesson_groups:
             content:
               display_name: Ábhar
@@ -1681,6 +1760,8 @@ ga:
           lessons:
             Creating Functions:
               name: Feidhmeanna a chruthú
+            foo:
+              name: fú
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -1713,6 +1794,9 @@ ga:
               name: Buneolas ar an tSaotharlann Aipeanna - Tús Maith
             Intro to App Lab:
               name: Buneolas ar an tSaotharlann Aipeanna
+          student_description: Cruthaigh aip de do chuid féin in JavaScript le ríomhchlár
+            bunaithe ar bhlocanna nó ar théacs. Má tá taithí agat ar ríomhchlárú le
+            blocanna cheana, is féidir leat cur le do chuid scileanna.
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -1791,6 +1875,8 @@ ga:
           lessons:
             Building a Foundation:
               name: Dúshraith a Leagan
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Ice Age Play Lab:
               name: 'Spraotharlann: Ice Age'
             Envelope Variables:
@@ -1834,6 +1920,8 @@ ga:
           lessons:
             Minecraft Hour of Code:
               name: An Uair Chódála Minecraft
+          student_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair
+            Chódála! Téigh ar aistear trí Minecraft le cód.
         applab-intro-staging:
           lessons:
             Intro to AppLab - Choose Your Own Adventure:
@@ -1901,6 +1989,8 @@ ga:
           lessons:
             Building a Foundation:
               name: Dúshraith a Leagan
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Introduction:
               name: Réamhrá
             Ice Age Play Lab:
@@ -1986,6 +2076,7 @@ ga:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stiofán agus an Tionscadal Mór
         express-2018:
+          title: Luaschúrsa
           assignment_family_title: Luaschúrsa
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2016,8 +2107,6 @@ ga:
               name: Bráisléid Dhénártha
             'Unplugged: Binary':
               name: Íomhánna Dénártha
-            Artist Binary:
-              name: 'Ealaíontóir: Dénártha'
             Internet:
               name: An tIdirlíon
             Crowdsourcing:
@@ -2054,8 +2143,6 @@ ga:
               name: Saoránacht Dhigiteach
             'Unplugged: Binary':
               name: Íomhánna Dénártha
-            Artist Binary:
-              name: 'Ealaíontóir: Dénártha'
             Loops in Ice Age:
               name: Lúba in Ice Age
             Graph Paper Programming:
@@ -2090,6 +2177,8 @@ ga:
             cspSurvey:
               display_name: Suirbhé
           lessons:
+            Functions with Parameters_:
+              name: Feidhmeanna a ghlacann le Paraiméadair\_
             Functions with Parameters:
               name: Feidhmeanna a ghlacann le Paraiméadair
         coursee-2018:
@@ -2136,6 +2225,8 @@ ga:
               name: Mo Chairde Róbatacha
             Building a Foundation:
               name: Dúshraith a Leagan
+            'Algorithms: Tangrams':
+              name: 'Algartaim: Tangraim'
             Introduction:
               name: Réamhrá
             Ice Age Play Lab:
@@ -2453,6 +2544,9 @@ ga:
           description: Tá Minecraft ar ais le gníomhaíocht úrnua! Úsáid cruthaitheacht
             agus scileanna réitithe fadhbanna chun domhan faoi uisce a thógáil agus
             a thaiscéaladh le cód.
+          student_description: Tá Minecraft ar ais le gníomhaíocht úrnua! Úsáid cruthaitheacht
+            agus scileanna réitithe fadhbanna chun domhan faoi uisce a thógáil agus
+            a thaiscéaladh le cód.
         dance--draft:
           lessons:
             Dance Party:
@@ -2476,7 +2570,9 @@ ga:
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
             a leanann Cóisir Dhamhsa Code.org.
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
+          student_description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursef-2019:
+          title: Cúrsa F (2019)
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
             agus cruthaigh ealaín, scéal, nó cluiche.
           lesson_groups:
@@ -2532,6 +2628,7 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         coursed-2019:
+          title: Cúrsa D (2019)
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -2562,11 +2659,10 @@ ga:
               name: Saoránacht Dhigiteach
             'Unplugged: Binary':
               name: Íomhánna Dénártha
-            Artist Binary:
-              name: 'Ealaíontóir: Dénártha'
             Dance Party:
               name: Cóisir Dhamhsa
         coursee-2019:
+          title: Cúrsa E (2019)
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
@@ -2602,6 +2698,7 @@ ga:
             Songwriting:
               name: Ceapadh Ceoil
         express-2019:
+          title: Luaschúrsa (2019)
           lesson_groups:
             csf_warmup:
               display_name: Réamhchleachtadh
@@ -2628,8 +2725,6 @@ ga:
               name: Athróga i gClúdach Litreach
             For Loop Fun:
               name: Spraoi le Lúba
-            Learning Sprites with Sprite Lab:
-              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda
             Binary Bracelets:
@@ -2670,7 +2765,9 @@ ga:
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
             a leanann Cóisir Dhamhsa Code.org.
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
+          student_description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursec-2019:
+          title: Cúrsa C (2019)
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
             scéalta, agus cluichí.
           lesson_groups:
@@ -2698,6 +2795,7 @@ ga:
         gamelab:
           title: An tSaotharlann Cluichíochta
         coursea-2019:
+          title: Cúrsa A (2019)
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           lesson_groups:
             csf_digcit:
@@ -2714,6 +2812,7 @@ ga:
             Going Places Safely:
               name: Ag Taisteal Slán Sábháilte
         courseb-2019:
+          title: Cúrsa B (2019)
           description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
             Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
           lesson_groups:
@@ -2982,6 +3081,7 @@ ga:
             csp_project:
               display_name: Tionscadal
         csp2-pilot-staging:
+          title: 'Aonad 2: An tIdirlíon'
           lesson_groups:
             csp_variables:
               display_name: Athróga
@@ -3047,6 +3147,7 @@ ga:
             csp_project:
               display_name: Tionscadal
         csp9-pilot-staging:
+          title: 'Aonad 9: Sonraí'
           lesson_groups:
             csp_variables:
               display_name: Athróga
@@ -3144,6 +3245,10 @@ ga:
               name: Feidhmeanna
             Sprite Properties:
               name: Airíonna na Spride
+        maddie-test:
+          lessons:
+            stage 1:
+              name: céim 1
         csp3-pilot:
           lesson_groups:
             content:
@@ -3153,6 +3258,8 @@ ga:
           lessons:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+            Debugging:
+              name: Dífhabhtú
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -3170,6 +3277,9 @@ ga:
               display_name: Foramharc
             content:
               display_name: Ábhar
+          lessons:
+            Focus Area 1:
+              name: Curaclam
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -3182,6 +3292,11 @@ ga:
               display_name: Foramharc
             content:
               display_name: Ábhar
+          lessons:
+            Step 1:
+              name: Céim 1
+            Step 2:
+              name: Céim 2
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
@@ -3285,6 +3400,7 @@ ga:
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
           description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
             a leanann Cóisir Dhamhsa Code.org.
+          student_description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -3402,6 +3518,11 @@ ga:
               display_name: Feidhmeanna
             csp_project:
               display_name: Tionscadal
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -3412,12 +3533,22 @@ ga:
               display_name: Trasnáil
             csp_project:
               display_name: Tionscadal
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Paraiméadair agus Luachanna Athfhillte
             csp_libraries:
               display_name: Leabharlanna
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csd2-2020:
           lesson_groups:
             csd2_1:
@@ -3492,6 +3623,7 @@ ga:
             Sprites:
               name: Sprideanna
         coursea-2020:
+          title: Cúrsa A (2020)
           description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
           lesson_groups:
             csf_digcit:
@@ -3508,6 +3640,7 @@ ga:
             'Programming: Happy Maps':
               name: Mapaí Meidhreacha
         courseb-2020:
+          title: Cúrsa B (2020)
           description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
             Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
           lesson_groups:
@@ -3527,6 +3660,7 @@ ga:
             'Loops: Getting Loopy':
               name: Bí Lúbach
         coursec-2020:
+          title: Cúrsa C (2020)
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
             scéalta, agus cluichí.
           lesson_groups:
@@ -3546,6 +3680,7 @@ ga:
             'Events: The Big Event':
               name: An Teagmhas Mór
         coursed-2020:
+          title: Cúrsa D (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -3574,13 +3709,12 @@ ga:
               name: Coinníollacha le Cártaí
             'Unplugged: Binary':
               name: Íomhánna Dénártha
-            Artist Binary:
-              name: 'Ealaíontóir: Dénártha'
             Digital Citizenship:
               name: Saoránacht Dhigiteach
             Dance Party:
               name: Cóisir Dhamhsa
         coursee-2020:
+          title: Cúrsa E (2020)
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
@@ -3609,6 +3743,7 @@ ga:
                 háirithe i gcomhthéacs digiteach.  Spreagtar na daltaí chun meas a
                 bheith acu ar chearta ealaíontóirí, mar ghné den tSaoránacht Dhigiteach.
         coursef-2020:
+          title: Cúrsa F (2020)
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
             agus cruthaigh ealaín, scéal, nó cluiche.
           lesson_groups:
@@ -3649,6 +3784,7 @@ ga:
             AI for Oceans:
               name: AI ar son an Aigéin
         express-2020:
+          title: Luaschúrsa (2020)
           lesson_groups:
             csf_warmup:
               display_name: Réamhchleachtadh
@@ -3677,8 +3813,6 @@ ga:
               name: Peata Fíorúil i Saotharlann na Sprideanna
             Swimming Fish with Sprite Lab:
               name: Éisc ar snámh i Saotharlann na Sprideanna
-            Swimming Fish in Sprite Lab:
-              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party:
               name: Cóisir Dhamhsa Eachtardhomhanda
             Behaviors in Sprite Lab:
@@ -3702,23 +3836,63 @@ ga:
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
-              display_name: 'Aonad 1: Faisnéis Dhigiteach'
+              display_name: 'Aonad 1: Faisnéis dhigiteach'
             cspSurvey:
               display_name: Suirbhé
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
           lessons:
             CS Principles Pre-survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Aonad 2: An tIdirlíon'
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp3-2020:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
           lessons:
             Introduction to Design Mode:
               name: Buneolas ar an Mód Deartha
+            Debugging:
+              name: Dífhabhtú
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Aonad 9: Sonraí'
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp10-2020:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+            cspSurvey2020:
+              display_name: Suirbhé Iarchúrsa
+          lessons:
+            CS Principles Post-Course Survey:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
         csp3-virtual:
           description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
             trí dhearadh ó bharr anuas agus líníocht "turtair".
@@ -3730,6 +3904,10 @@ ga:
               name: Feidhmeanna a chruthú
             CS Principles Post Course survey:
               name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Dífhabhtú
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -3864,3 +4042,531 @@ ga:
               name: Cúrsa A
             Course B:
               name: Cúrsa B
+            CS Discoveries:
+              name: Fionnachtana sa Ríomheolaíocht
+            Course E:
+              name: Cúrsa E
+            Course F:
+              name: Cúrsa F
+            csf:
+              name: Buntús na Ríomheolaíochta
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI ar son an Aigéin
+        2021drafting:
+          lessons:
+            Course F Introduction:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+          lesson_groups:
+            introduction:
+              display_name: Réamhrá
+            lessonGroup-3:
+              display_name: Athróga
+            debugging:
+              display_name: Dífhabhtú
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csd1_1:
+              display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            csd1_2:
+              display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+            csd1_3:
+              display_name: Ceachtanna Malartacha
+        csd2-2021:
+          lessons:
+            Peer Review and Final Touches:
+              key: Piarmheasúnú agus Bailchríoch
+              name: Piarmheasúnú agus Bailchríoch
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Athróga
+              name: Athróga
+            Sprites:
+              key: Sprideanna
+              name: Sprideanna
+            Sprite Properties:
+              key: Airíonna na Spride
+              name: Airíonna na Spride
+            Text:
+              key: Téacs
+              name: Téacs
+            Conditionals:
+              key: Coinníollacha
+              name: Coinníollacha
+            Velocity:
+              key: Treoluas
+              name: Treoluas
+            Functions:
+              key: Feidhmeanna
+              name: Feidhmeanna
+          lesson_groups:
+            csd3_1:
+              display_name: 'Caibidil 1: Íomhánna agus Beochan'
+            csd3_2:
+              display_name: 'Caibidil 2: Tógáil Cluichí'
+            cspSurvey:
+              display_name: Suirbhé
+        csd4-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
+            csd4_2:
+              display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
+            csd5_2:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            cspSurvey:
+              display_name: Suirbhé
+        csd5-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Caibidil 1: Léiriú Sonraí'
+            csd5_2:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            cspSurvey:
+              display_name: Suirbhé
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Feidhmeanna a ghlacann le Paraiméadair
+              name: Feidhmeanna a ghlacann le Paraiméadair
+          lesson_groups:
+            csd6_1:
+              display_name: 'Caibidil 1: Ríomhchlárú le Crua-Earraí'
+            csd6_2:
+              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
+            cspSurvey:
+              display_name: Suirbhé
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+              name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
+          lesson_groups:
+            cspSurvey:
+              display_name: Suirbhé
+            csp_unit1_2020:
+              display_name: 'Aonad 1: Faisnéis dhigiteach'
+        csp2-2021:
+          lessons:
+            lesson-1:
+              name: 'Foras Feasa ar an Ríomheolaíocht: Suirbhé Iarchúrsa'
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Aonad 2: An tIdirlíon'
+            lessonGroup-2:
+              display_name: Suirbhé
+        csp3-2021:
+          lessons:
+            Introduction to Design Mode:
+              key: Buneolas ar an Mód Deartha
+              name: Buneolas ar an Mód Deartha
+            Debugging:
+              key: Dífhabhtú
+              name: Dífhabhtú
+          lesson_groups:
+            csp_unit3_2020:
+              display_name: 'Aonad 3: Buneolas ar Dhearadh Aipeanna'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Athróga
+            csp_conditionals:
+              display_name: Coinníollacha
+            csp_functions:
+              display_name: Feidhmeanna
+            csp_project:
+              display_name: Tionscadal
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Liostaí
+            csp_loops:
+              display_name: Lúba
+            csp_traversals:
+              display_name: Trasnáil
+            csp_project:
+              display_name: Tionscadal
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Paraiméadair agus Luachanna Athfhillte
+            csp_libraries:
+              display_name: Leabharlanna
+        csp9-2021:
+          lessons:
+            Machine Learning and Bias:
+              name: Meaisínfhoghlaim
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Aonad 9: Sonraí'
+        csp10-2021:
+          lesson_groups:
+            csp_unit10_2020:
+              display_name: 'Aonad 10: Cibearshlándáil agus Tionchar Domhanda'
+        coursea-2021:
+          description_short: Buntús na ríomheolaíochta do réamhléitheoirí.
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapaí Meidhreacha
+            Loops in Ice Age:
+              key: Lúba in Ice Age
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+        courseb-2021:
+          description_short: Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí.
+            Cosúil le Cúrsa A, ach le coincheapa níos doimhne.
+          lessons:
+            Move It, Move It:
+              key: Bog é, Bog é
+              name: Bog é, Bog é
+            'Loops: Getting Loopy':
+              name: Bí Lúbach
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+        coursec-2021:
+          description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
+            scéalta, agus cluichí.
+          lessons:
+            Binary Bracelets:
+              key: Bráisléid Dhénártha
+              name: Bráisléid Dhénártha
+            'Events: The Big Event':
+              name: An Teagmhas Mór
+          lesson_groups:
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_binary:
+              display_name: Dénártha
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+        coursed-2021:
+          title: Cúrsa D (2021)
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Ríomhchlárú ar Ghrafpháipéar
+            Relay Programming:
+              key: Códáil Sealaíochta
+              name: Códáil Sealaíochta
+            Dance Party:
+              key: Cóisir Dhamhsa
+              name: Cóisir Dhamhsa
+            Loops in Ice Age:
+              key: Lúba in Ice Age
+              name: Lúba in Ice Age
+            Conditionals with Cards:
+              key: Coinníollacha le Cártaí
+              name: Coinníollacha le Cártaí
+            'Unplugged: Binary':
+              key: 'Díphlugáilte: Dénártha'
+              name: Íomhánna Dénártha
+            Artist Binary:
+              key: 'Ealaíontóir: Dénártha'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_events:
+              display_name: Teagmhais
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+            csf_binary:
+              display_name: Dénártha
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            lessonGroup-6:
+              display_name: Saoránacht Dhigiteach
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Coinníollacha
+            Learning Sprites with Sprite Lab:
+              key: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            Alien Dance Party with Sprite Lab:
+              key: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            About Me:
+              name: Maidir Liomsa i Saotharlann na Sprideanna
+            'Functions: Songwriting':
+              name: Ceapadh Ceoil
+          lesson_groups:
+            ramp_up:
+              display_name: Lúba Neadaithe
+            csf_sprites:
+              display_name: Sprideanna
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_nested_loops:
+              display_name: Coinníollacha
+            csf_functions:
+              display_name: Feidhmeanna
+        coursef-2021:
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
+            agus cruthaigh ealaín, scéal, nó cluiche.
+          lessons:
+            Learning Sprites with Sprite Lab:
+              key: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            Events with Sprite Lab:
+              name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            Envelope Variables:
+              key: Athróga i gClúdach Litreach
+              name: Athróga i gClúdach Litreach
+            AI for Oceans:
+              key: AI ar son an Aigéin
+              name: AI ar son an Aigéin
+            Internet:
+              key: An tIdirlíon
+              name: An tIdirlíon
+            For Loop Fun:
+              key: Spraoi le Lúba
+              name: Spraoi le Lúba
+            Editing Behaviors:
+              name: Iompair i Saotharlann na Sprideanna
+            lesson-6:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            lesson-8:
+              name: Sprideanna ar Obair
+          lesson_groups:
+            ramp_up:
+              display_name: Sprideanna
+            csf_digcit:
+              display_name: Saoránacht Dhigiteach
+            csf_variables:
+              display_name: Lúba "Do Gach"
+            csf_for_loops:
+              display_name: Lúba "Do Gach"
+            lessonGroup-8:
+              display_name: Athróga
+            lessonGroup-7:
+              display_name: Saoránacht Dhigiteach
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Cóisir Dhamhsa
+              name: Cóisir Dhamhsa
+            Alien Dance Party:
+              key: Cóisir Dhamhsa Eachtardhomhanda
+              name: Cóisir Dhamhsa Eachtardhomhanda
+            Behaviors in Sprite Lab:
+              key: Iompair i Saotharlann na Sprideanna
+              name: Iompair i Saotharlann na Sprideanna
+            Virtual Pet with Sprite Lab:
+              key: Peata Fíorúil i Saotharlann na Sprideanna
+              name: Peata Fíorúil i Saotharlann na Sprideanna
+            lesson-1:
+              name: Cóisir Dhamhsa
+            lesson-3:
+              name: Sprideanna ar Obair
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_conditionals:
+              display_name: Coinníollacha
+            csf_functions:
+              display_name: Feidhmeanna
+            csf_variables:
+              display_name: Athróga
+            csf_for_loops:
+              display_name: Lúba "Do Gach"
+            csf_sprites:
+              display_name: Sprideanna
+            lessonGroup-9:
+              display_name: Teagmhais
+        pre-express-2021:
+          description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
+            scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad
+            bhliain.'
+          lesson_groups:
+            csf_sequencing:
+              display_name: Seicheamhú
+            csf_loops:
+              display_name: Lúba
+            csf_events:
+              display_name: Teagmhais
+        csf-2021-pilot:
+          lessons:
+            Learning Sprites with Sprite Lab:
+              name: Éisc ar snámh i Saotharlann na Sprideanna
+            Course F Introduction:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+            introducing-spritelab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+          lesson_groups:
+            ramp_up:
+              display_name: Réamhrá
+            lessonGroup-3:
+              display_name: Athróga
+            Sprites:
+              display_name: Sprideanna
+            variables:
+              display_name: Athróga
+        csd4-preview-2021:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
+            csd4_2:
+              display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
+            csd5_2:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            cspSurvey:
+              display_name: Suirbhé
+            csdSurvey:
+              display_name: Suirbhé
+        csd5-preview-2021:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Caibidil 1: Léiriú Sonraí'
+            csd5_2:
+              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
+            cspSurvey:
+              display_name: Suirbhé
+        contagion-pilot:
+          description_audience: Aois 10
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Ábhar
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        k5-onlinepd-2021:
+          lessons:
+            Sequencing:
+              key: Seicheamhú
+              name: Seicheamhú
+            Loops:
+              key: Lúba
+              name: Lúba
+            Events:
+              key: Teagmhais
+              name: Teagmhais
+            Conditionals:
+              key: Coinníollacha
+              name: Coinníollacha
+            Functions:
+              key: Feidhmeanna
+              name: Feidhmeanna
+            Variables:
+              key: Athróga
+              name: Athróga
+            For Loops:
+              key: Lúba "Do Gach"
+              name: Lúba "Do Gach"
+            Sprite Lab:
+              key: Saotharlann na Sprideanna
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Réamhrá
+            k5_diving_deeper_1:
+              display_name: 'Níos Doimhne: Cúrsaí E agus F'
+            Introduction:
+              display_name: Réamhrá
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Suirbhé
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Suirbhé
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Suirbhé
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Buntús na Ríomheolaíochta
+              name: Buntús na Ríomheolaíochta
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Comhphobal Múinteoirí
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: 'Aonad 2: Forbairt Gréasáin'
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Acmhainní
+            lessonGroup-2:
+              display_name: Aonad 1
+            lessonGroup-4:
+              display_name: Aonad 2
+            lessonGroup-5:
+              display_name: Aonad 3
+            lessonGroup-6:
+              display_name: Aonad 4
+            lessonGroup-7:
+              display_name: Aonad 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: tástáil
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Foramharc
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Foramharc

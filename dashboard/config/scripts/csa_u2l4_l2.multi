@@ -1,0 +1,25 @@
+name 'CSA U2L4-L2'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+Which term best represents the concept shown in this code segment?
+
+```
+public Dessert(String newFlavor, int newQty, double newPrice) {
+    flavor = newFlavor;
+    quantity = newQty;
+    price = newPrice;
+}
+
+public Dessert() {
+    flavor = “red velvet”;
+    quantity = 2;
+    price = 2.50;
+}
+```
+MARKDOWN
+
+wrong 'constructor'
+right 'overloaded constructors'
+wrong 'constructor signature'
+wrong 'call by value'

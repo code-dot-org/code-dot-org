@@ -25,6 +25,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     per = params[:per] || params[:limit] || 50
     user_query = params[:user_q]
 
+    # Retrieve all peer reviews
     reviews = PeerReview.all
 
     if user_query.presence
@@ -60,8 +61,11 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
 
     # This query gets matching fully-hydrated models in the correct order.
     real_reviews = PeerReview.find(reviews.map(&:id))
+
     real_reviews.each do |review|
-      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
+      script = Script.find(review.script_id)
+      # Pull out any that are tied to deprecated scripts/units
+      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless script.deprecated?
     end
 
     render json: {
@@ -97,7 +101,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
 
-      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels).each do |user_level|
+      UserLevel.where(user: enrollment.user, level: peer_reviewable_levels, script: script).each do |user_level|
         submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),

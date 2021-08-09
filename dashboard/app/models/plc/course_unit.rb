@@ -20,7 +20,7 @@
 
 # A named group of learning modules within a PLC course.
 # Corresponds to a Script in our regular curriculum hierarchy.
-class Plc::CourseUnit < ActiveRecord::Base
+class Plc::CourseUnit < ApplicationRecord
   belongs_to :script
   belongs_to :plc_course, class_name: '::Plc::Course'
   has_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_course_unit_id', dependent: :destroy
@@ -35,6 +35,10 @@ class Plc::CourseUnit < ActiveRecord::Base
 
   def has_evaluation?
     script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
+  end
+
+  def deprecated?
+    !!script&.deprecated
   end
 
   def determine_preferred_learning_modules(user)
@@ -52,10 +56,10 @@ class Plc::CourseUnit < ActiveRecord::Base
       level = EvaluationMulti.cache_find(level_id)
       selected_answer = level.answers[response['result'].to_i]
 
-      next if selected_answer['stage'].nil?
+      next if selected_answer['lesson'].nil?
 
-      stage = Lesson.find_by(name: selected_answer['stage'], script: script)
-      learning_module = stage.try(:plc_learning_module)
+      lesson = Lesson.find_by(name: selected_answer['lesson'], script: script)
+      learning_module = lesson.try(:plc_learning_module)
 
       next if learning_module.nil?
 

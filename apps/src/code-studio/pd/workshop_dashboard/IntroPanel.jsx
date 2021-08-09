@@ -199,7 +199,11 @@ export default class IntroPanel extends React.Component {
                 Tell teachers to sign into their Code Studio accounts. If they
                 do not already have an account tell them to create one by going
                 to{' '}
-                <a href={location.origin} target="_blank">
+                <a
+                  href={location.origin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {location.origin}
                 </a>
               </p>
@@ -222,7 +226,7 @@ export default class IntroPanel extends React.Component {
                 if they haven't already:
               </p>
               <p>
-                <a href={signupUrl} target="_blank">
+                <a href={signupUrl} target="_blank" rel="noopener noreferrer">
                   {signupUrl}
                 </a>
               </p>

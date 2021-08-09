@@ -22,7 +22,7 @@
         "FunctionalSuncatchers": "Fonksiyonel Güneş Avcıları",
         "GettingLoopy": "Döngüselleşme",
         "GettingLoopy_2018": "Döngüselleşme",
-        "GoingPlacesSafely": "Bir Yerlere Güvenle Gitmek",
+        "GoingPlacesSafely": "Biryerlere Güvenle Gitmek",
         "GoingPlacesSafely_2018": "Biryerlere Güvenle Gitmek",
         "GraphPaperProgramming": "Grafik Kağıdı Programlama",
         "GraphPaperProgramming_2018": "Grafik Kağıdı Programlama",
@@ -60,7 +60,9 @@
         "Internet_2018": "eksik çeviri: en-US.data.unplugged.Internet_2018.title",
         "SongwritingParameters_2018": "eksik çeviri: en-US.data.unplugged.SongwritingParameters_2018.title",
         "courseB_unplugged_CnC_2018": "Oluşturmak ve Adil Oynamak Mükemmel",
-        "courseF_unplugged_powerOfWords_2018": "eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
+        "courseF_unplugged_powerOfWords_2018": "eksik çeviri: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
+        "courseB_unplugged_loopyMRF_2018": "eksik çeviri: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
+        "courseE_unplugged_privateInformation_2018": "eksik çeviri: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title"
       }
     }
   }

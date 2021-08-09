@@ -1,0 +1,9 @@
+name 'U2L4 Multiple Choice packets_2021'
+title 'Multiple Choice: Packets'
+description ''
+question 'Which of the following is true regarding the way information is transmitted on the Internet?'
+
+wrong 'Information flows on a dedicated direct connection from the sender\’s device to the receiver\’s device using binary electrical signals.'
+wrong 'If a single packet is dropped, the entire file must be resent.'
+wrong 'Because of the reliability of the Internet, packets always arrive in the same order they were sent.'
+right 'Information does not travel in one piece, but rather as a datastream of packets.'

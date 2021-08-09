@@ -15,7 +15,7 @@
 #  index_pd_fit_weekend_registrations_on_registration_year  (registration_year)
 #
 
-class Pd::FitWeekendRegistrationBase < ActiveRecord::Base
+class Pd::FitWeekendRegistrationBase < ApplicationRecord
   include Pd::Form
 
   self.table_name = 'pd_fit_weekend_registrations'

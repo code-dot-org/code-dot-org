@@ -72,7 +72,7 @@ da:
             '"ROBOT"': robotter
             '"SHARK"': hajer
             '"SLOTH"': plads
-            '"UNICORN"': alle enhjørninger
+            '"UNICORN"': enhjørning
           MOVE:
             '"next"': "(Næste)"
             '"prev"': "(Forrige)"
@@ -111,6 +111,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -134,6 +135,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -240,6 +242,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -390,7 +393,7 @@ da:
             '"ALIEN"': alien
             '"BEAR"': bjørne
             '"CAT"': kat
-            '"DOG"': Hund
+            '"DOG"': hund
             '"DUCK"': and
             '"FROG"': frø
             '"MOOSE"': elge
@@ -488,20 +491,20 @@ da:
             '"disco_ball"': Diskokugle
             '"fireworks"': Fyrværkeri
             '"swirl"': Hypno
-            '"kaleidoscope"': Kaleidoskop
-            '"lasers"': Laser Dansegulv
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
             '"splatter"': Sprøjt af maling
             '"rainbow"': Regnbue
             '"snowflakes"': Sne
-            '"text"': Sangtitler
+            '"text"': Sangtitel
             '"galaxy"': Ydre rum
             '"sparkles"': Glitter
             '"spiral"': Spiral
             '"disco"': Kvadrater
             '"stars"': Stjerner
           PALETTE:
-            '"rave"': Sort og Hvid
-            '"cool"': Cool
+            '"rave"': Sort og hvid
+            '"cool"': Blå
             '"electronic"': Elektronik
             '"iceCream"': Soft Ice
             '"default"': Lys
@@ -526,14 +529,14 @@ da:
             '"flowers"': Blomster
             '"growing_stars"': Voksende stjerner
             '"swirl"': Hypno
-            '"kaleidoscope"': Kaleidoskop
-            '"lasers"': Laser Dansegulv
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
             '"splatter"': Sprøjt af maling
             '"rainbow"': Regnbue
             '"ripples_random"': Tilfældige krusninger
             '"ripples"': Krusninger
             '"snowflakes"': Sne
-            '"text"': Sangtitler
+            '"text"': Sangtitel
             '"squiggles"': Kruseduller
             '"galaxy"': Ydre rum
             '"sparkles"': Glitter
@@ -542,8 +545,8 @@ da:
             '"stars"': Stjerner
             '"music_wave"': Bølger
           PALETTE:
-            '"rave"': Sort og Hvid
-            '"cool"': Cool
+            '"rave"': Sort og hvid
+            '"cool"': Blå
             '"electronic"': Elektronik
             '"iceCream"': Soft Ice
             '"default"': Lys
@@ -591,10 +594,10 @@ da:
             '"bubbles"': Bobler
             '"confetti"': Konfetti
             '"hearts_red"': Hjerter
-            '"music_notes"': Noder
+            '"music_notes"': Musiknoder
             '"pineapples"': Ananaser
             '"pizzas"': Pizzaer
-            '"smiling_poop"': Poop
+            '"smiling_poop"': Lort
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
             '"smile_face"': Smiles
@@ -612,11 +615,11 @@ da:
             '"confetti"': Konfetti
             '"emojis"': Emojis
             '"hearts_red"': Hjerter
-            '"music_notes"': Noder
+            '"music_notes"': Musiknoder
             '"paint_drip"': Maling dråber
             '"pineapples"': Ananaser
             '"pizzas"': Pizzaer
-            '"smiling_poop"': Poop
+            '"smiling_poop"': Lort
             '"rain"': Regn
             '"floating_rainbows"': Regnbue
             '"smile_face"': Smiles
@@ -629,6 +632,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -652,6 +656,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -662,6 +667,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -686,6 +692,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -760,6 +767,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -788,6 +796,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -802,6 +811,7 @@ da:
         options:
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -831,6 +841,7 @@ da:
             '"UNICORN"': enhjørning
           PROPERTY:
             '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
             '"rotation"': rotation
             '"x"': vandret position
@@ -895,7 +906,7 @@ da:
             '"left"': venstre
             '"down"': ned
             '"right"': højre
-            '"space"': ydre rum
+            '"space"': rummet
             '"enter"': indtast
             '"a"': a
             '"b"': b
@@ -946,6 +957,10 @@ da:
         text: opret
       gamelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': undgå
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -961,6 +976,7 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
+            '"speed"': hastighed
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} berører {SPRITE2}"
         options:
@@ -973,6 +989,8 @@ da:
         text: klikket {SPRITE}
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "opret en ny figur \nmed navnet {NAME} \nmed udseendet {COSTUME} \npå
           {LOCATION}"
@@ -992,6 +1010,7 @@ da:
             '"y"': y-position
             '"direction"': bevægelses retning
             '"tint"': toning
+            '"speed"': hastighed
       gamelab_getThisSprite:
         text: "{CHOICE} figur"
       gamelab_getTime:
@@ -1113,6 +1132,8 @@ da:
             '"West"': Vest
       gamelab_moveToward:
         text: flyt {SPRITE} pixels {DISTANCE} imod {TARGET}
+      gamelab_newSpritePointer:
+        text: klikket {SPRITE}
       gamelab_objectSpritePointer:
         text: klikket {SPRITE}
       gamelab_playSound:
@@ -1139,6 +1160,8 @@ da:
         text: figur {SPRITE} stopper {BEHAVIOR}
       gamelab_removeTint:
         text: fjern farve fra {THIS}
+      gamelab_repeatForever:
+        text: Gentag for evigt
       gamelab_setAnimation:
         text: ændre {THIS} udseende til {ANIMATION}
       gamelab_setBackground:
@@ -1159,6 +1182,15 @@ da:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': undervands
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: ingen
+      gamelab_setBackgroundImageAs:
+        text: sæt baggrund til {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mellem
+            '100': large
       gamelab_setProp:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1168,10 +1200,23 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
-      gamelab_setSizes:
+            '"speed"': hastighed
+      gamelab_setProp_dropdown:
+        text: skift {SPRITE} {PROPERTY} med {SIZE}
         options:
           PROPERTY:
             '"scale"': størrelse
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mellem
+            '100': large
+      gamelab_setSizes:
+        text: skift {SPRITE} {PROPERTY} med {N}%
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+            '"width"': bredde
             '"height"': højde
       gamelab_spriteClicked:
         options:
@@ -1180,6 +1225,8 @@ da:
             '"while"': mens
       gamelab_subjectSpritePointer:
         text: klikket {SPRITE}
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -1212,6 +1259,14 @@ da:
             '"d"': d
       Mikelab_addBehaviorSimple:
         text: figur {SPRITE} begynder {BEHAVIOR}
+      Mikelab_addTrainingData:
+        options:
+          NAME:
+            "{x: 200, y: 100}": fisk
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": fisk
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1272,6 +1327,8 @@ da:
         options:
           SELECT:
             '"all"': alle
+      Mikelab_groupEdgesDisplace:
+        text: kant brik {COSTUME} fra flytning
       Mikelab_groupGetProp:
         options:
           PROPERTY:
@@ -1306,6 +1363,13 @@ da:
         options:
           SELECT:
             '"all"': alle
+      Mikelab_groupWhenClickedOn:
+        text: når {COSTUME} klikkes
+      Mikelab_hideFish:
+        text: slet {TRASH}
+        options:
+          TRASH:
+            fish: fisk
       Mikelab_ifDanceIs:
         text: |-
           hvis {SPRITE} gør {DANCE}
@@ -1323,6 +1387,20 @@ da:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
+      Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: fisk
+      Mikelab_ifRecognizeLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: fisk
+      Mikelab_ifRecognizeLabelOnly:
+        options:
+          DANCE:
+            MOVES.ClapHigh: fisk
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'placering x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1354,6 +1432,10 @@ da:
           CORNER:
             '"right"': højre
             '"left"': venstre
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"below"': nedenfor
       Mikelab_sprite:
         text: nyt {COSTUME} figur på {LOCATION}
         options:
@@ -1407,6 +1489,18 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+      PoemBot_setBackgroundEffect:
+        text: indstil baggrundseffekt {BG_EFFECT} [PALETTE][1]
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': regnbue
+      PoemBot_setForegroundEffect:
+        text: indstil baggrundseffekt {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': regn
+            '"bubbles"': bobler
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:
@@ -1440,43 +1534,27 @@ da:
         options:
           PROPERTY:
             "'shapeColor'": farve
-      aalab_addBehaviorForDuration:
-        text: aalab figur {SPRITE} begynder {BEHAVIOR} i {SECONDS} sekunder
-      aalab_addBehaviorUntilBoolean:
-        text: figur {SPRITE} begynder {BEHAVIOR} indtil {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ny figur der hedder{SPRITE_NAME} med udseendet {ANIMATION_NAME} placeret
-          på {LOCATION}
-      aalab_goToScene:
-        text: skift til scene {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: flyt {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Syd
-            '"West"': Vest
-      aalab_prompt:
-        text: spørg om {MESSAGE}
-      aalab_scene:
-        text: scene {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: opret spil
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': gitter
+            '"border"': grænse
+            '"row"': række
             '"random"': tilfældig
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: tegn binært {BIN}
       binary_drawBinScreen:
@@ -1571,7 +1649,7 @@ da:
             '"stoneBricks"': mursten
             '"mossyStoneBricks"': mursten med mos
             '"crackedStoneBricks"': knækkede mursten
-            '"decorativeStoneBricks"': dekorative mursten
+            '"chiseledStoneBricks"': dekorative mursten
             '"blueCoralBlock"': blå koral-blok
             '"pinkCoralBlock"': pink koral-blok
             '"magentaCoralBlock"': magenta koral-blok
@@ -1619,3 +1697,5 @@ da:
           DIR:
             right: til højre ↻
             left: til venstre ↺
+      validation_validatedBackground:
+        text: sæt baggrund til {IMG}

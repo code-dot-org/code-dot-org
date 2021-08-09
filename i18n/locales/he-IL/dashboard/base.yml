@@ -138,13 +138,11 @@ he:
     invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
     student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
-    agree_us_website: "אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית."
-    my_data_to_us: "יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית."
     additional_information: "יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך."
     user_type_button: "עדכן סוג חשבון"
     user_type_label: "סוג חשבון"
-    user_type_teacher: "מורה"
     user_type_student: "תלמיד"
+    user_type_teacher: "מורה"
     field_is_required: "נדרש"
     accept_terms: "עליך להסכים ליצירת חשבון"
     error: "אירעה שגיאה."
@@ -235,6 +233,7 @@ he:
     remove: '(הסר קבוצה)'
     type:
       picture: 'תמונת סיסמה'
+      word: 'המילה הסודית'
       email: 'דואר אלקטרוני'
       google_classroom: 'כיתת גוגל'
       clever: 'Clever'
@@ -242,6 +241,7 @@ he:
     invite_sent: 'הזמנה נשלחה'
     added_teacher: '%{name} נוסף כמורה שלך'
     registered: "נרשמת לקבוצה %{section_name}."
+    already_exists: 'הצטרפת כבר לקבוצה %{section_name}.'
     error:
       signed_in: 'בבקשה תצא לפני שתמשיך'
       username_not_found: 'שם משתמש %{username} לא נמצא'
@@ -345,6 +345,7 @@ he:
       frozen: 'לשבור את הקרח'
       gamelab: 'מעבדת המשחקים'
       gamelab_jr: 'מעבדת המשחקים (בטא)'
+      gumball: 'העולם המופלא של גאמבול'
       iceage: 'עידן הקרח'
       infinity: 'אינסוף'
       minecraft_adventurer: 'הרפתקן מיינקראפט'
@@ -427,6 +428,7 @@ he:
     account_successfully_updated: "חשבון עודכן בהצלחה."
     update_email: "עדכון"
     parent_guardian_email_label: "דוא\"ל של הורה/אפוטרופוס"
+    remove_parent_email_label: "הסר"
     none: "כלום"
     encrypted: "מוצפן"
   user_level:
@@ -467,6 +469,7 @@ he:
     no_primary_course: "נסה קורס קוד סטודיו"
     choose_next_course: "נסה קורס מסטודיו קוד ע\"י בחירת אחד מטה"
     print_certificate: "הדפס תעודה"
+  certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות ללמידה שלך."
   move_students:
     new_section_dne: "מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר קוד קבוצה אחרת."
     section_code_cant_be_current_section: "הקבוצה הנוכחית אינה יכולה להיות זהה כמו הקבוצה החדשה."
@@ -880,7 +883,7 @@ he:
       school_city: 'יישוב בית הספר'
       school_country: 'ארץ בית הספר'
       colombian_school_city: 'יישוב בית הספר'
-      colombian_school_name: 'שם בית הספר'
+      colombian_chilean_school_name: 'שם בית הספר'
       ages: 'איזה גיל(אים) אתה מלמד השנה?'
       subjects: 'איזה נושא(אים) אתה מלמד השנה?'
       resources: 'באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?'
@@ -934,11 +937,5 @@ he:
   cookie_banner:
     more_information: "הצג את מדיניות הפרטיות של Code.org."
     accept: 'מסכים'
-  gdpr_dialog:
-    heading: 'האם אתה מאשר להשתמש באתר המבוסס בשטח ארצות הברית?'
-    message: 'יתכן ונתוני השימוש שלך באתר ישלחו, ישמרו או יעובדו בארצות הברית.'
-    link_intro: 'לפרטים נוספים ראה את'
-    privacy_policy: 'מדיניות פרטיות'
-    logout: 'התנתק'
-    yes: 'כן'
   copy: 'העתק'
+  confirm: 'אשר'

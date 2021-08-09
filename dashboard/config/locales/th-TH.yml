@@ -131,8 +131,8 @@ th:
       Code.org ได้
     additional_information: เราต้องการข้อมูลบางอย่างเพิ่มเติมเพื่อดำเนินการสมัครต่อ
     user_type_label: ประเภทบัญชี
-    user_type_teacher: ครู
     user_type_student: นักเรียน
+    user_type_teacher: ครู
     field_is_required: จำเป็น
     accept_terms: คุณต้อง ยอมรับ เพื่อสร้างบัญชี
     email_preference_yes: ใช่
@@ -205,6 +205,7 @@ th:
     invite_sent: ส่งคำเชิญ
     added_teacher: "%{name} เพิ่มเป็นครูของคุณ"
     registered: คุณได้ลงทะเบียนสำหรับ %{section_name}.
+    already_exists: คุณเข้าร่วมในส่วน %{section_name} เรียบร้อยแล้ว
     error:
       signed_in: กรุณาออกจากระบบก่อนดำเนินการ
       username_not_found: ไม่พบ %{username} ในชื่อผู้ใช้งาน
@@ -214,6 +215,8 @@ th:
       section_not_found: ไม่พบส่วนที่มีโค้ด '%{section_code}'
       blank_code: กรุณาใส่รหัสเซคชั่น
       cant_join_own_section: ขออภัย คุณไม่สามารถร่วมเซคชั่นของคุณเอง
+      restricted_section: เราไม่สามารถเพิ่มคุณไปที่ส่วน %{section_code} เพราะส่วนนี้ถูกล็อคไว้
+        โปรดติดต่อขอความช่วยเหลือจากผู้สอน
     mail:
       student_disassociated:
         subject: 'การแจ้งเตือนของ Code.org: ขณะนี้ %{student_name} ไม่เเป็นนักเรียนของคุณ'
@@ -272,16 +275,19 @@ th:
       create: สร้าง
       applab: แอ๊ปแล็บ
       artist: ศิลปิน
+      artist_k1: ศิลปิน (เด็กวัยเรียนรู้)
       bounce: กระเด้ง
       dance: Dance Party
-      frozen: Frozen
+      frozen: โฟรเซ่น
       gamelab: เกมแล๊บ (Game Lab)
       gumball: โลกมหัศจรรย์ของ Gumball
       iceage: ยุคน้ำแข็ง (Ice Age)
       infinity: ไม่จำกัด
       minecraft_adventurer: การผจญภัยในไมน์คราฟท์
       minecraft_designer: ไมน์คราฟท์
-      starwars: Star Wars
+      playlab: เรื่องราวและเกม
+      sports: กีฬา
+      starwars: สตาร์วอร์ส
       starwarsblocks: สตาร์วอร์ส (บล็อก)
       starwarsblocks_hour: สตาร์วอร์ส (บล็อก)
     popup:
@@ -332,6 +338,7 @@ th:
     link_a_parent_email: เชื่อมต่ออีเมลของผู้ปกครอง/ผู้พิทักษ์ ไปยังบัญชีนี้ เพื่อรับข้อมูลความคืบหน้าและโครงการของบุตรหลานของคุณ
       คุณจะสามารถใช้ที่อยู่อีเมลนี้ในการกู้คืนรหัสผ่านได้
     parent_guardian_email_label: อีเมล์ของผู้ปกครอง/ผู้พิทักษ์
+    remove_parent_email_label: ลบ
     none: ไม่มี
     only_one_parent_email_supported_warning: 'หมายเหตุ: ในขณะนี้ เราสามารถรองรับที่อยู่อีเมลของผู้ปกครอง/ผู้พิทักษ์ได้เพียงหนึ่งอีเมลต่อหนึ่งบัญชีนักเรียนเท่านั้น'
   user_level:
@@ -433,6 +440,7 @@ th:
   pdf_download: ดาวน์โหลด PDF
   video_coming_soon: วีดีโอจะมาในเร็ว ๆ นี้!
   share_code:
+    flappy_og_title: มาดูรายละเอียดเกมแฟลปปี้ของฉันกันดีกว่า
     studio_og_title: มาลองแอปเพลย์แลป ของฉัน
   builder:
     level:
@@ -446,10 +454,22 @@ th:
       title: Dance Party
     dance-2019:
       title: Dance Party
+    hoc:
+      title: เขาวงกตสุดคลาสสิค
+      body: ลองศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ เพราะหลายล้านคนได้ลองแล้วด้วยตัวเอง
+    flappy:
+      title: แฟลปปี้โค้ด
+      body: อยากจะลองเขียนเกมในแบบของคุณโดยใช้เวลาไม่ถึง 10 นาทีรึเปล่า แนะนำให้อ่านบทช่วยสอน
+        "แฟลปปี้โค้ด" ดูนะ
     20-hour:
+      title: หลักสูตรเร่งรัด
       body: This 20-hour คอร์ส covers the core computer science and programming concepts
         in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส
         2-4 for a more complete experience!
+      body_short: เรียนรู้วิทยาการคอมพิวเตอร์พื้นฐานในเวอร์ชั่นเร่งรัดของหลักสูตร
+        2-4
+    hoc2014:
+      try_frozen: ศิลปินร่วมกับแอนนาและเอลซ่าจากโฟรเซ่น
     gallery:
       title: แกลเลอรี่
     gamelab:
@@ -457,16 +477,20 @@ th:
       body: เกมแลป(Game Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรมที่คุณสามารถสร้างภาพเคลื่อนไหวหรือที่เรียกกันว่าแอนนิเมชั่นแบบง่ายๆ
         หรือเกมที่มีวัตถุและตัวแสดงต่างๆ ที่สามารถโต้ตอบซึ่งกันและกันได้
       audience: อายุ 13+
+    hoc-encryption:
+      title: การเข้ารหัสแบบง่าย ๆ
+      body: นักเรียนจะได้ศึกษาเทคนิคที่นำมาใช้สร้างและแคร็คข้อความที่เข้ารหัสไว้
     weblab:
       body: เว็ปแลป(Web Lab) เป็นสภาพแวดล้อมในการเขียนโปรแกรม ที่ซึ่งคุณสามารถสร้างหน้าเว็ปอย่างง่ายๆ
         โดยการใช้ HTML และ CSS ออกแบบหน้าเว็ปของคุณและแบ่งปันไซท์ของคุณในชั่วเวลาไม่กี่วินาที
       audience: อายุ 13+
     frozen:
-      title: Frozen
+      title: โฟรเซ่น
     starwars:
-      title: Star Wars
+      title: สตาร์วอร์ส
     infinity:
-      title: เรื่องราวและเกม
+      title: เพลย์แลปแบบไม่สิ้นสุด
+      body: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity
     minecraft:
       title: ไมน์คราฟท์
       body: สำรวจโลก Minecraft ผ่านโค้ด
@@ -477,11 +501,22 @@ th:
       title: ไมน์คราฟท์
     hero:
       title: ไมน์คราฟท์
-      body: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด! มาผจญภัยไปกับไมน์คราฟท์ด้วยการใช้โค้ดเป็นเครื่องมือ
+      body: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
+        มาท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด
+    sports:
+      title: กีฬา
+      body: สร้างเกมบาสเก็ตบอลหรือมิกซ์แอนด์แมทช์หลาย ๆ เกม
+    text-compression:
+      title: การบีบอัดข้อความ
+      body: ในบทเรียนนี้ นักเรียนจะได้ใช้วิดเจ็ตการบีบอัดข้อความเพื่อบีบข้อความด้วยการใช้สัญลักษณ์แทนรูปแบบ
     unplugged:
+      title: บทเรียนแบบออฟไลน์
       audience: อายุ 4+
+      body_short: หากคุณไม่มีคอมพิวเตอร์ ให้ลองบทเรียนแบบออฟไลน์เหล่านี้ในห้องเรียน
     unplugged_conditionals:
       title: 'เงื่อนไข '
+      body: ใช้ไพ่หนึ่งสำรับเพื่อเรียนเรื่องอัลกอริทึมและเงื่อนไขต่าง ๆ จากกิจกรรม
+        "ออฟไลน์" นี้
     widgets:
       audience: อายุ 14+
   landing:
@@ -548,6 +583,7 @@ th:
     decline: ปิด
   progress:
     not_started: ยังไม่เริ่ม
+    in_progress: อยู่ระหว่างการดำเนินการ
     completed_too_many_blocks: เสร็จเรียบร้อย แต่ใช้บล็อกมากเกินไป
     completed_perfect: เสร็จ สมบูรณ์
     submitted: ส่งคำตอบแล้ว
@@ -571,13 +607,15 @@ th:
     review_in_progress: พร้อมพื่อทบทวน
   hoc_download:
     minecraft_name: ชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
-  view_teacher_guide: ดูคำแนะนำสำหรับครู
+    starwars_blocks_name: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (บล็อก)'
+    starwars_javascript_name: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (จาวาสคริปต์)'
+  view_teacher_guide: ดูคำแนะนำสำหรับผู้สอน
   pd:
     form_labels:
       email: อีเมล
       school_name: ชื่อโรงเรียน
       school_country: ประเทศของโรงเรียน
-      colombian_school_name: ชื่อโรงเรียน
+      colombian_chilean_school_name: ชื่อโรงเรียน
     form_entries:
       gender:
         male: ชาย
@@ -603,14 +641,13 @@ th:
         kodable: Kodable
       robotics:
         kodable: Kodable
+      workshop_course:
+        csf_express: CS พื้นฐาน (Pre-Express หรือ Express)
       email_opt_in:
         opt_in_yes: ใช่
         opt_in_no: ไม่ใช่
   cookie_banner:
     accept: ฉันเห็นด้วย
-  gdpr_dialog:
-    privacy_policy: นโยบายความเป็นส่วนตัว
-    true: ใช่
   page_not_found_header: '404: ไม่พบหน้าดังกล่าว'
   page_not_found_description: หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว
     เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา

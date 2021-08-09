@@ -1,0 +1,31 @@
+name 'CSA U2L5-L2 Placeholder'
+title 'Check for Understanding'
+description 'Match the term to the line number where its concept occurs. Some lines will not have matches.'
+
+markdown <<MARKDOWN
+```
+1  public class Expressions {
+2     public static void main(String[] args) {
+3        double a = 12.0;
+4        int b = 5;
+5        String c = "gr";
+6        c = c + (a - b);
+7        b /= 6;
+8        int d = 7 % 2;
+9        a = d / b;
+10    }
+11 }
+```
+MARKDOWN
+
+question 'compound assignment operator'
+answer 'Line 7'
+
+question 'concatenation'
+answer 'Line 6'
+
+question 'ArithmeticException'
+answer 'Line 9'
+
+question 'modulus'
+answer 'Line 8'

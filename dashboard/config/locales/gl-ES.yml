@@ -150,14 +150,12 @@ gl:
     mismatch_password: Os dous contrasinais que metiches non se corresponden
     student_consent: Confirmo que teño autorización de meus pais ou titores legais
       para empregrar os servizos de Code.org.
-    agree_us_website: Estou de acordo en usar un sitio web localizado nos Estados
-      Unidos.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
     user_type_button: Actualizar tipo de conta
     user_type_label: Tipo de conta
-    user_type_teacher: Profesor
     user_type_student: Estudante
+    user_type_teacher: Profesor
     field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
@@ -257,6 +255,7 @@ gl:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi agregado como o teu profesor"
     registered: Registrouse para %{section_name}.
+    already_exists: Xa te uniches ao grupo %{section_name}.
     error:
       signed_in: Antes de proseguires, pecha a sesión
       username_not_found: Nome de usuario %{username} non atopado
@@ -330,6 +329,7 @@ gl:
       about_contact: Póñase en contacto
       about_faqs: Preguntas frecuentes
       learn: Aprenda
+      stats: Ver estatísticas
       help_us: Axúdenos
       teach: Ensinar
       about: Sobre
@@ -425,6 +425,7 @@ gl:
       usar os servizos de Code.org incluso sen a supervisión dun profesor.
     update_email: Actualizar
     parent_guardian_email_label: Enderezo de correo electrónico da persoa responsable
+    remove_parent_email_label: Excluír
   user_level:
     completed: Concluído
     tried: Probado
@@ -630,6 +631,8 @@ gl:
       title: Minecraft
     unplugged_conditionals:
       title: Condicionais
+    widgets:
+      audience: A partir de 14 anos
   landing:
     report_bug: Comunicar erro
     support: Obter axuda
@@ -771,7 +774,7 @@ gl:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
-      colombian_school_name: Nome da escola
+      colombian_chilean_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino
@@ -791,6 +794,5 @@ gl:
         opt_in_no: Non
   cookie_banner:
     accept: Acepto
-  gdpr_dialog:
-    true: Si
+  page_not_found_title: Páxina non atopada
   copy: Copiar

@@ -4,13 +4,13 @@
 # 1. from i18n/locales/source to Code.org project
 # 2. from pegasus/sites.v3/code.org/public to Code.org - Markdown project
 # 3. from i18n/locales/source/hourofcode to Hourofcode project
+# 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
 require_relative 'i18n_script_utils'
 
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
-    puts "Beginning sync up"
-
+    puts "Sync up starting"
     CROWDIN_PROJECTS.each do |name, options|
       puts "Uploading source strings to #{name} project"
       command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
@@ -27,7 +27,10 @@ def sync_up
       end
     end
 
-    puts "Sync up complete"
+    puts "Sync up completed successfully"
+  rescue => e
+    puts "Sync up failed from the error: #{e}"
+    raise e
   end
 end
 

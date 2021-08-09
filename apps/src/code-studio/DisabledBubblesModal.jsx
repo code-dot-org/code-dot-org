@@ -2,20 +2,6 @@ import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 
-const styles = {
-  main: {
-    fontSize: 16,
-    margin: 15
-  },
-  paragraph: {
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  button: {
-    textAlign: 'right'
-  }
-};
-
 /**
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is isable)
@@ -37,6 +23,7 @@ export default class DisabledBubblesModal extends React.Component {
           <div style={styles.paragraph}>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://support.code.org/hc/en-us/articles/115002660852"
             >
               {i18n.learnMore()}
@@ -52,3 +39,17 @@ export default class DisabledBubblesModal extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    fontSize: 16,
+    margin: 15
+  },
+  paragraph: {
+    paddingTop: 5,
+    paddingBottom: 5
+  },
+  button: {
+    textAlign: 'right'
+  }
+};

@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
   load_resource :student, class: 'User', through: :section, parent: false, only: [:update, :remove]
@@ -51,6 +53,33 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       return render json: {errors: 'Not a valid section type'}, status: :bad_request
     end
 
+    if @section.will_be_over_capacity?(params[:students].size)
+
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'section capacity restriction',
+          event: "Section owner attempted to add #{params[:students].size > 1 ? 'multiple students' : 'a student'} to a full section",
+          data_json: {
+            section_id: @section.id,
+            section_code: @section.code,
+            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+            joiner_id: params[:students],
+            section_teacher_id: @section.user_id
+          }.to_json
+        }
+      )
+
+      render json: {
+        result: 'full',
+        sectionCapacity: @section.capacity,
+        numStudents: params[:students].size,
+        sectionCode: @section.code,
+        sectionStudentCount: @section.summarize[:numberOfStudents]
+      }, status: :forbidden
+      return
+    end
+
     errors = []
     new_students = []
     ActiveRecord::Base.transaction do
@@ -63,7 +92,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
           gender: student["gender"],
           sharing_disabled: !!student["sharing_disabled"],
         )
-        @section.add_student(new_student)
+        @section.add_student(new_student, current_user)
         new_students.push(new_student.summarize)
       rescue ActiveRecord::RecordInvalid => e
         errors << e.message

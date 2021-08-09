@@ -1,24 +1,67 @@
 nl:
   data:
     progressions:
+      Alien Defender: Alien Defender
       Artist Project: Artiest Project
       'Artist: Variables': 'Artiest: variabelen'
+      Back and Forth: Heen en weer
+      Bass, Mid, and Treble: Bass, mid en treble
       Binary Numbers: Binaire getallen
+      Challenges: Uitdagingen
+      Change: Aanpassen
+      Collision Detection: Botsingdetectie
+      Course E Artist Project: Cursus E Artist Project
+      Dance Crews: Dancecrews
       Debugging: Foutopsporing
       Design Mode: Ontwerpmodus
       Drawing: Tekenen
       Events: Gebeurtenissen
       For Loops: For-lussen
-      Free Play: Gratis spelen
+      Free Play: Vrije Speelruimte
       Functions: Functies
       Functions with Parameters: Functies met Parameters
+      Get In Formation: Ga in positie staan
+      Headings: Headings
       Introduction to Arrays: Inleiding tot Arrays
       Lesson Extras: Extra bij Lessen
       Lists: Lijsten
       Measures: Maten
+      More Buttons: Meer knoppen
+      Overview: Overzicht
       Pair Programming: Programmeren in Tweetallen
+      Planning: Plannen
+      Project: Project
       Properties: Eigenschappen
+      Quarter Notes: Kwartnoten
+      Reflection: Reflectie
+      Representing Images: Het voorstellen van afbeeldingen
+      Review: Beoordelen
+      Sliders: Schuifregelaars
+      Speed it Up, Slow it Down: Versnellen, vertragen
       Sprite Lab Project: Sprite Lab Project
+      Star Chaser: Sterrenpakker
+      Stopping the Outbreak with Masks: Stop de uitbraak met mondkapjes
+      Styling Text: Text stijlen
+      Styling with Classes: Stijlen met Classes
+      Styling your Website: Je website stijlen
+      Text Compression: Tekstcompressie
+      The Animation Tab: Het tabblad Animatie
+      The Artist in Code Studio: De artiest in Code Studio
+      The Buzzer: De zoemer
+      The Collector: De verzamelaar
+      UI Element Properties: Gebruikersinterface-elementeigenschappen
+      User Interface: Gebruikersinterface
+      Using Getters and Setters: Getters en Setters gebruiken
+      Using HTML Tags: HTML-tags gebruiken
+      Using Random Numbers: Willekeurige nummers gebruiken
+      Using the LED: De LED gebruiken
+      Using the Switch: De Switch gebruiken
+      Variables: Variabelen
       Velocity: Snelheid
       Video: Video
+      Warm Up: Opwarmen
+      Website Project: Websiteproject
+      Where'd They Go?: Waar zijn ze heen?
       Wrap-up: Einde
+      Your Personal Website: Je persoonlijke website
+      isTouching: isTouching

@@ -1,0 +1,12 @@
+{
+  "func": "soundSensor.setScale",
+  "category": "Circuit",
+  "params": [
+    "0",
+    "100"
+  ],
+  "paletteParams": [
+    "low",
+    "high"
+  ]
+}

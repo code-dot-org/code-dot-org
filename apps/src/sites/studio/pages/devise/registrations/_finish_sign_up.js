@@ -5,24 +5,31 @@ import ReactDOM from 'react-dom';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
   '#school-info-section',
-  '#email-preference-radio'
+  '#email-preference-radio',
+  '#teacher-gdpr'
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
   '#gender-dropdown',
   '#age-dropdown',
   '#student-consent',
-  '#parent-email-container'
+  '#parent-email-container',
+  '#student-gdpr'
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
 const {usIp, signUpUID} = scriptData;
+
+// User type buttons
+const teacherButton = document.getElementById('select-user-type-teacher');
+const studentButton = document.getElementById('select-user-type-student');
 
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
@@ -35,6 +42,19 @@ $(document).ready(() => {
   init();
 
   function init() {
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
+    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+      // If in variant, toggle large buttons
+      document.getElementById('select-user-type-original').style.cssText =
+        'display:none;';
+    } else {
+      // Otherwise (also the default), keep original dropdown
+      document.getElementById('select-user-type-variant').style.cssText =
+        'display:none;';
+      document.getElementById('signup-select-user-type-label').style.cssText =
+        'width:220px;';
+    }
+    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
@@ -49,6 +69,10 @@ $(document).ready(() => {
     if (alreadySubmitted) {
       return false;
     }
+
+    // Optimizely-related code for new sign-up user-type buttons (start)
+    optimizelyCountUserTypeSelection(getUserType());
+    // Optimizely-related code for new sign-up user-type buttons (end)
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
@@ -97,13 +121,46 @@ $(document).ready(() => {
     }
   }
 
+  // Keep if sign-up user type experiment favors variant (start)
+  // Event listeners for changing the user type
+  document.addEventListener('selectUserTypeTeacher', e => {
+    $('#user_user_type').val('teacher');
+    styleSelectedUserTypeButton('teacher');
+    setUserType('teacher');
+  });
+  document.addEventListener('selectUserTypeStudent', e => {
+    $('#user_user_type').val('student');
+    styleSelectedUserTypeButton('student');
+    setUserType('student');
+  });
+
+  function styleSelectedUserTypeButton(value) {
+    if (value === 'teacher') {
+      teacherButton.classList.add('select-user-type-button-selected');
+      studentButton.classList.remove('select-user-type-button-selected');
+    } else if (value === 'student') {
+      studentButton.classList.add('select-user-type-button-selected');
+      teacherButton.classList.remove('select-user-type-button-selected');
+    }
+  }
+  // Keep if sign-up user type experiment favors variant (end)
+
+  // Optimizely-related code for new sign-up user-type buttons
+  function optimizelyCountUserTypeSelection(userType) {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({type: 'event', eventName: userType});
+  }
+
+  // Keep if sign-up user type experiment favors original (just func. below)
   $('#user_user_type').change(function() {
     var value = $(this).val();
     setUserType(value);
   });
 
   function getUserType() {
-    return $('#user_user_type')[0].value;
+    var value = $('#user_user_type')[0].value;
+    styleSelectedUserTypeButton(value);
+    return value;
   }
 
   function setUserType(userType) {
@@ -161,7 +218,7 @@ $(document).ready(() => {
             schoolState={schoolData.schoolState}
             schoolZip={schoolData.schoolZip}
             schoolLocation={schoolData.schoolLocation}
-            useGoogleLocationSearch={schoolData.useGoogleLocationSearch}
+            useLocationSearch={schoolData.useLocationSearch}
             onCountryChange={onCountryChange}
             onSchoolTypeChange={onSchoolTypeChange}
             onSchoolChange={onSchoolChange}

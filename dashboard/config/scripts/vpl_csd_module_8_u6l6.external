@@ -1,0 +1,33 @@
+name 'VPL - CSD - Module 8 - U6L6'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 6 - Lesson 6:  Getting Properties  
+**Estimated time: 20 - 25 minutes**
+
+
+
+
+## Investigation Goal
+
+**Experiment with taking input with getProperty()**
+
+## Investigation Task
+
+* Explore getting and setting properties of different elements on the screen  
+
+Click continue to begin.
+
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

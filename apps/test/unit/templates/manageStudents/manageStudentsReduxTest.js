@@ -28,7 +28,9 @@ import manageStudents, {
   blankStudentTransferStatus,
   cancelStudentTransfer,
   transferStudentsSuccess,
-  transferStudentsFailure
+  transferStudentsFailure,
+  addStudentsFull,
+  transferStudentsFull
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 const sectionLoginData = {
@@ -301,6 +303,60 @@ describe('manageStudentsRedux', () => {
       const action = transferStudentsFailure(transferStatus.error);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, transferStatus);
+    });
+  });
+
+  describe('transferStudentsFull', () => {
+    it('sets the correct transferStatus status and error from a "Copy" action', () => {
+      const transferStatus = {
+        ...blankStudentTransferStatus,
+        status: TransferStatus.FULL,
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
+      };
+      const action = transferStudentsFull(
+        {...transferStatus, type: TransferType.MOVE_STUDENTS},
+        true
+      );
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.transferStatus, {
+        ...transferStatus,
+        verb: 'copy'
+      });
+    });
+    it('sets the correct transferStatus status and error from a "Copy" action', () => {
+      const transferStatus = {
+        ...blankStudentTransferStatus,
+        status: TransferStatus.FULL,
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
+      };
+      const action = transferStudentsFull(transferStatus, true);
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.transferStatus, {
+        ...transferStatus,
+        verb: 'copy'
+      });
+    });
+    it('sets the correct transferStatus status and error from a "Move" action', () => {
+      const transferStatus = {
+        ...blankStudentTransferStatus,
+        status: TransferStatus.FULL,
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
+      };
+      const action = transferStudentsFull(transferStatus, false);
+      const nextState = manageStudents(initialState, action);
+      assert.deepEqual(nextState.transferStatus, {
+        ...transferStatus,
+        verb: 'move'
+      });
     });
   });
 
@@ -868,6 +924,127 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FAIL,
         numStudents: 2
+      });
+    });
+
+    it('addStudentsFull updates the addStatus, and sets saving to false for the student', () => {
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          0: {
+            ...expectedBlankRow,
+            loginType: 'picture'
+          }
+        },
+        editingData: {
+          0: {
+            ...expectedBlankRow,
+            name: 'editing name',
+            loginType: 'picture'
+          }
+        },
+        sectionId: 10
+      };
+
+      // Add student to full section
+      const addStudentFullAction = addStudentsFull(
+        {
+          sectionCapacity: 500,
+          numStudents: 1,
+          sectionCode: 'ABCEDF',
+          sectionStudentCount: 500
+        },
+        [0]
+      );
+      const addedStudentState = manageStudents(
+        initialState,
+        addStudentFullAction
+      );
+
+      assert.deepEqual(addedStudentState.editingData[0], {
+        ...initialState.editingData[0],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.studentData[0], {
+        ...initialState.studentData[0],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.addStatus, {
+        status: AddStatus.FULL,
+        numStudents: 1,
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500
+      });
+    });
+
+    it('addStudentsFull handles multiple students', () => {
+      const studentInfo = {
+        0: {
+          ...expectedBlankRow,
+          loginType: 'picture'
+        },
+        1: {
+          ...expectedBlankRow,
+          id: 1,
+          loginType: 'picture',
+          name: 'new name'
+        },
+        2: {
+          ...expectedBlankRow,
+          id: 2,
+          loginType: 'picture',
+          name: 'new name'
+        }
+      };
+      const initialState = {
+        loginType: 'picture',
+        studentData: {
+          ...studentInfo
+        },
+        editingData: {
+          ...studentInfo
+        },
+        sectionId: 10
+      };
+
+      // Add students to a full section
+      const addStudentsFullAction = addStudentsFull(
+        {
+          sectionCapacity: 500,
+          numStudents: 2,
+          sectionCode: 'ABCEDF',
+          sectionStudentCount: 500
+        },
+        [1, 2]
+      );
+      const addedStudentState = manageStudents(
+        initialState,
+        addStudentsFullAction
+      );
+
+      assert.deepEqual(addedStudentState.editingData[1], {
+        ...initialState.editingData[1],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.editingData[2], {
+        ...initialState.editingData[2],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.studentData[1], {
+        ...initialState.studentData[1],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.studentData[2], {
+        ...initialState.studentData[2],
+        isSaving: false
+      });
+      assert.deepEqual(addedStudentState.addStatus, {
+        status: AddStatus.FULL,
+        numStudents: 2,
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500
       });
     });
   });

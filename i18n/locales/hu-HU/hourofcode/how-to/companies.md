@@ -4,43 +4,43 @@ title: Hour of Code How-To Guide for Companies
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Hogyan vehetnek részt cégek a Kódolás Órájában
 
 ### Találd meg, hogy hogyan tudod te és a munkatársaid inspirálni a diákokat, hogy kipróbálják a számítástudományt!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+A számítástechnikai gondolkodás segít fejleszteni a problémamegoldó képességeket, a logikát és a kreativitást. És mint jól tudjuk, a technológia átformál minden iparágat a világon. A mai diákoknak meg kell tanulniuk, hogyan kell technológiát létrehozni, nem csak használni azt. Ha korán elkezdessz ismerkedni vele, megalapozhatod a sikered a 21. században.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+A Kódolás Órája kampány során céged segíthet felhívni a figyelmet az informatikai mozgalomra. Akár önkéntesnek jelentkezel, akár rendezvényt tervezel a vállalatod számára, minden erőfeszítése nagy hatással lehet arra, hogy a marginalizált faji és etnikai csoportokból származó fiatal nők és hallgatók felismerjék a lehetőséget és az informatikára lehetőségként tekintsenek.
 
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Connect your company with a school](#connect-with-a-school)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Ösztönözd az alkalmazottakat, hogy önként jelentkezzenek egy osztályterembe](#encourage-employees)
+- [Építs kapcsolatot egy iskolával](#connect-with-a-school)
+- [Rendezz egy saját Kódolás Órája eseményt](#host-hour-of-code)
 - [Népszerűsítsd a Kódolás órája kezdeményezést](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Még több lehetőség, hogy támogast a Kódolás Óráját](#support-hour-of-code)
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Ösztönözd az alkalmazottakat, hogy önként jelentkezzenek egy osztályterembe
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+A Kódolás Óráján való részvétel az egyik legmegfelelőbb módja, ha önkéntesként jelentkezel egy helyi tanórára, akár személyesen, akár virtuálisan. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners](https://staging.hourofcode.com/files/hoc-corporate-toolkit.pdf).
+For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect your company with a school
+## Építs kapcsolatot egy iskolával
 
 You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
@@ -60,7 +60,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Rendezz egy saját Kódolás Órája eseményt
 
 If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
 
@@ -76,7 +76,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 |Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
 |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Mi vagy ki inspirál Téged? Hogyan kezdett el érdekelni a számítástechnika? Volt/van egy mentorod? Kérdezz a diákoktól, adj időt egy rövid kérdezz & felelekre. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|30-60 minutes | Code! Ha az eseményen személyesen veszel részt, akkor itt az idő, hogy válaszolj a kérdésekre, és átvezesd a diákokat az útvesztőkön. Próbáld meg nem egyből a megoldást elárulni, hanem inkább rávezető kérdéseket feltenni, ezáltal ráirányítva a megoldásra őket. Továbbá biztasd őket, hogy egymástól is bátran kérdezhetnek. Ha virtuálisan veszel részt, dolgozz együtt a tanárral, hogy kitaláljátok, mi a legjobb megoldás. Talán van értelme visszatérni az óra végén egy teljesítményértékelésre, hogy lássátok, milyen eredményt értek el a diákok. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -91,7 +91,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Devices:
 
-A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+A legjobb Kódolás Órája élményhez internetkapcsolattal rendelkező számítógépek kellenek. De nincs szükség minden gyereknek számítógépre, sőt a Kódolás Óráját akár számítógép nélkül is lehet csinálni! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
 
 - **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
 - **Don't have enough devices?** Use pair programming. Ha a tanulók összefognak, akkor tudják segíteni egymást és kevésbé támaszkodnak a tanárra. Megláthatják azt, hogy az informatika közösségépítő hatású, és együttműködésre sarkall.
@@ -150,7 +150,7 @@ Help raise awareness of the computer science movement with this sample content t
 #### Stats
 
 - Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- Az Egyesült Államokban a szoftveres szakemberek csupán 26% -a nő. Vezess be több fiatal nőt az informatikába a #HourOfCode segítségével https://hourofcode.com/ 
 - 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
 
 #### Create your own
@@ -169,7 +169,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Még több lehetőség, hogy támogast a Kódolás Óráját
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 

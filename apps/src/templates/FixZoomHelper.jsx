@@ -4,65 +4,6 @@ import color from '../util/color';
 import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
 
-const styles = {
-  button: {
-    position: 'fixed',
-    zIndex: 9999,
-    opacity: 0.8,
-    color: color.white,
-    backgroundColor: color.black,
-    borderRadius: 4,
-    padding: 15,
-    transform: 'translate(-100%,-100%)',
-    whiteSpace: 'nowrap',
-    cursor: 'pointer'
-  },
-  buttonIcon: {
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    fontSize: 24
-  },
-  buttonText: {
-    display: 'inline-block',
-    verticalAlign: 'middle',
-    paddingTop: 5
-  },
-  helper: {
-    position: 'fixed',
-    zIndex: 9998,
-    backgroundColor: 'white',
-    opacity: 0.8,
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    width: '100%',
-    height: '100%'
-  },
-  helperInner: {
-    position: 'fixed',
-    zIndex: 9999,
-    transform: 'translate(-50%,-50%)',
-    color: color.white,
-    backgroundColor: color.black,
-    opacity: 0.8,
-    padding: 15,
-    borderRadius: 5,
-    textAlign: 'center',
-    pointerEvents: 'none'
-  },
-  helperInnerIcons: {
-    fontSize: 24,
-    marginBottom: 10
-  },
-  closeX: {
-    position: 'absolute',
-    top: 5,
-    right: 5,
-    fontSize: 13
-  }
-};
-
 /**
  * If the browser supports window.visualViewport, and we detect that the user
  * is zoomed in, first show a small button in the bottom-right of the viewport.
@@ -185,3 +126,62 @@ export default class FixZoomHelper extends React.Component {
     }
   }
 }
+
+const styles = {
+  button: {
+    position: 'fixed',
+    zIndex: 9999,
+    opacity: 0.8,
+    color: color.white,
+    backgroundColor: color.black,
+    borderRadius: 4,
+    padding: 15,
+    transform: 'translate(-100%,-100%)',
+    whiteSpace: 'nowrap',
+    cursor: 'pointer'
+  },
+  buttonIcon: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    fontSize: 24
+  },
+  buttonText: {
+    display: 'inline-block',
+    verticalAlign: 'middle',
+    paddingTop: 5
+  },
+  helper: {
+    position: 'fixed',
+    zIndex: 9998,
+    backgroundColor: 'white',
+    opacity: 0.8,
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%'
+  },
+  helperInner: {
+    position: 'fixed',
+    zIndex: 9999,
+    transform: 'translate(-50%,-50%)',
+    color: color.white,
+    backgroundColor: color.black,
+    opacity: 0.8,
+    padding: 15,
+    borderRadius: 5,
+    textAlign: 'center',
+    pointerEvents: 'none'
+  },
+  helperInnerIcons: {
+    fontSize: 24,
+    marginBottom: 10
+  },
+  closeX: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    fontSize: 13
+  }
+};

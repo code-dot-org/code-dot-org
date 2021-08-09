@@ -5,6 +5,44 @@ import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import i18n from '@cdo/locale';
 
+/**
+ * A card used on the homepage to display information about a particular course
+ * or script for a user.
+ */
+class CourseCard extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
+
+  render() {
+    const {title, description, link, isRtl} = this.props;
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
+
+    return (
+      <a href={link} style={styles.card}>
+        <img
+          src={require('@cdo/static/small_purple_icons.png')}
+          style={styles.image}
+        />
+        <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
+        <div style={styles.description}>
+          {description}
+          <div style={styles.linkBox}>
+            <h3 style={styles.continueLink}>{i18n.viewCourse()}</h3>
+            <FontAwesome
+              icon={icon}
+              style={isRtl ? styles.chevronRtl : styles.chevron}
+            />
+          </div>
+        </div>
+      </a>
+    );
+  }
+}
+
 const styles = {
   card: {
     overflow: 'hidden',
@@ -93,44 +131,6 @@ const styles = {
     textDecoration: 'none'
   }
 };
-
-/**
- * A card used on the homepage to display information about a particular course
- * or script for a user.
- */
-class CourseCard extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
-  };
-
-  render() {
-    const {title, description, link, isRtl} = this.props;
-    const icon = isRtl ? 'chevron-left' : 'chevron-right';
-
-    return (
-      <a href={link} style={styles.card}>
-        <img
-          src={require('@cdo/static/small_purple_icons.png')}
-          style={styles.image}
-        />
-        <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
-        <div style={styles.description}>
-          {description}
-          <div style={styles.linkBox}>
-            <h3 style={styles.continueLink}>{i18n.viewCourse()}</h3>
-            <FontAwesome
-              icon={icon}
-              style={isRtl ? styles.chevronRtl : styles.chevron}
-            />
-          </div>
-        </div>
-      </a>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

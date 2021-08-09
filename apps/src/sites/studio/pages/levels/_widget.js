@@ -20,7 +20,7 @@ export function showInstructionsDialog() {
   showDialog(
     <InstructionsDialog
       title={i18n.puzzleTitle({
-        stage_total: appOptions.level.stage_total,
+        stage_total: appOptions.level.lesson_total,
         puzzle_number: appOptions.level.puzzle_number
       })}
       markdown={appOptions.level.longInstructions}

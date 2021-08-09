@@ -38,9 +38,7 @@ class ImageProperties extends React.Component {
       iconColorPicker = (
         <ColorPickerPropertyRow
           desc={'icon color'}
-          initialValue={elementUtils.rgb2hex(
-            element.getAttribute('data-icon-color') || '#000000'
-          )}
+          initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
       );
@@ -81,6 +79,7 @@ class ImageProperties extends React.Component {
         <ImagePickerPropertyRow
           desc={'image'}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
+          currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')}
           elementId={elementUtils.getId(element)}
         />
@@ -129,15 +128,8 @@ class ImageEvents extends React.Component {
 
   getClickEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "click", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' clicked!");\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} clicked!");\n}`;
+    return `onEvent("${id}", "click", ${callback});`;
   }
 
   insertClick = () => {
@@ -197,6 +189,7 @@ export default {
     elementUtils.setDefaultBorderStyles(element, {forceDefaults: true});
     element.setAttribute('src', '/blockly/media/1x1.gif');
     element.setAttribute('data-canonical-image-url', '');
+    element.setAttribute('data-image-type', '');
 
     // New elements are created with 'contain', but the default value for
     // existing (unadorned) images is 'fill' for compatibility reasons

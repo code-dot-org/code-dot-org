@@ -159,14 +159,16 @@ tr:
     invalid_password: "Parola en az 6 karakter olmalıdır"
     mismatch_password: "Girdiğiniz iki parola aynı değil"
     student_consent: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
-    agree_us_website: "Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyorum."
-    my_data_to_us: "Bu siteyi kullanımıma ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir."
+    agree_us_data_transfer_student: '**Code.org''un bu siteyi kullanımım ile ilgili verileri (kişisel veriler dahil), barındırma ve işleme amacıyla Amerika Birleşik Devletleri''ne** aktarabileceğini kabul ediyorum.'
+    agree_us_data_transfer_teacher: '**Code.org''un bu siteyi kullanımım (ve öğrencimin kullanımı) ile ilgili verileri (kişisel veriler dahil), barındırma ve işleme amacıyla Amerika Birleşik Devletleri''ne** aktarabileceğini kabul ediyorum.'
+    data_collection_us: "Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı olabileceğini anlıyorum."
+    visit_privacy: 'Daha fazla bilgi için Code.org''un [Gizlilik Politikasını](%{privacy_url}) ziyaret edin.'
     student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](http://code.org/privacy) bakınız."
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap türünü güncelle"
     user_type_label: "Hesap Türü"
-    user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
+    user_type_teacher: "Öğretmen"
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
@@ -265,6 +267,7 @@ tr:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
     registered: "%{section_name} için kayıt oldunuz."
+    already_exists: 'Zaten %{section_name} bölümüne katıldınız.'
     error:
       signed_in: 'Devam etmeden önce lütfen çıkış yapınız'
       username_not_found: '%{username} kullanıcı adı bulunamadı'
@@ -796,6 +799,11 @@ tr:
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
   donor_interstitial:
     title: "Ücretsiz Bilgisayar Bilimi kurslarınız ... tarafından sağlanmaktadır"
+    local_supporters: "Yerel destekçiler"
+    global_supporters: "Evrensel Destekçiler"
+    support_codeorg_1: "Code.org'a verilen her para daha çok öğrenci için fırsat yaratacaktır."
+    support_codeorg_2: "[Bağış yap](%{donate_url}) böylece  Code.org u destekle"
+    get_started: "Code.org sitesinde başla"
   school_info_interstitial:
     title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
     message: "Lütfen aşağıya okul bilgilerinizi girin."
@@ -973,9 +981,8 @@ tr:
       school_city: 'Okulun bulunduğu şehir'
       school_country: 'Okulun bulunduğu ülke'
       colombian_school_city: 'Okulun bulunduğu şehir'
-      colombian_school_department: 'Okul Bölümü'
       colombian_school_municipality: 'Okulun Bulunduğu Belediye'
-      colombian_school_name: 'Okulun Adı'
+      colombian_chilean_school_name: 'Okulun Adı'
       ages: 'Bu yıl hangi yaş gruplarına öğretiyorsunuz?'
       subjects: 'Bu yıl hangi konuları öğretiyorsunuz?'
       resources: 'Aşağıdaki BB eğitim kaynaklarından hangilerini kullanırsınız?'
@@ -1069,18 +1076,12 @@ tr:
     message: 'Sitemize göz atmaya devam ederek veya "Kabul Ediyorum"a tıklayarak, bilgisayarınızdaki veya cihazınızdaki çerezlerin depolanmasını kabul etmiş olursunuz.'
     more_information: "Code.org'un Gizlilik Politikasına bakın."
     accept: 'Kabul ediyorum'
-  gdpr_dialog:
-    heading: 'Amerika Birleşik Devletleri merkezli bir web sitesi kullanmayı kabul ediyor musunuz?'
-    message: 'Bu siteyi kullanımınıza ilişkin veriler Amerika Birleşik Devletleri’ne gönderilebilir ve Amerika Birleşik Devletleri’nde depolanabilir veya işlenebilir.'
-    link_intro: 'Ayrıntılar için gizlilik politikamıza'
-    privacy_policy: 'gizlilik politikası'
-    logout: 'Oturumu Kapat'
-    yes: 'Evet'
   page_not_found_title: "Sayfa Bulunamadı"
   page_not_found_header: '404: Sayfa Bulunamadı'
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
+  confirm: 'onaylayın'
   maker:
     google_oauth:
       login_with_google: 'Google ile Maker App''e giriş'
@@ -1096,3 +1097,4 @@ tr:
     not_now: "Şimdi değil"
   behaviors:
     this_sprite: "bu hareketli nesne"
+  unit_prefix: "Birim %{n}"

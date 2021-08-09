@@ -1,0 +1,35 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:41.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template_2021",
+    "hide_share_and_remix": "true",
+    "long_instructions": "# Add HTML\r\n\r\nNext, you should add the HTML to your page.\r\n\r\n# Do This\r\n* Add HTML to make the page you sketched in your project guide.\r\n* Double check that the page has everything you want, and make any changes you need.\r\n",
+    "parent_level_id": 20056,
+    "name_suffix": "_2021",
+    "reference_links": [
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "submittable": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-30 21:12:15 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:34:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:18:02 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]"
+}]]></config>
+</Weblab>

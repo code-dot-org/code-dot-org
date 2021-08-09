@@ -3,6 +3,49 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {videoDataShape} from './types';
 
+export default class VideoThumbnail extends Component {
+  static propTypes = {
+    video: videoDataShape,
+    onClick: PropTypes.func,
+    openInNewTab: PropTypes.bool
+  };
+
+  onThumbnailClick = () => {
+    const video = this.props.video;
+    this.props.onClick && this.props.onClick();
+    if (this.props.openInNewTab) {
+      window.open(video.src, '_blank', 'noopener,noreferrer');
+    } else {
+      showVideoDialog(
+        {
+          src: video.src,
+          name: video.name,
+          key: video.key,
+          download: video.download,
+          thumbnail: video.thumbnail,
+          enable_fallback: video.enable_fallback,
+          autoplay: video.autoplay
+        },
+        true
+      );
+    }
+  };
+
+  render() {
+    const video = this.props.video;
+    return (
+      <a style={styles.videoLink} onClick={this.onThumbnailClick}>
+        <img
+          style={styles.videoThumbnail}
+          src={video.thumbnail}
+          alt={video.name}
+        />
+        <span>{video.name}</span>
+      </a>
+    );
+  }
+}
+
 const styles = {
   videoLink: {
     display: 'inline-block',
@@ -19,41 +62,3 @@ const styles = {
     marginRight: 8
   }
 };
-
-export default class VideoThumbnail extends Component {
-  static propTypes = {
-    video: videoDataShape,
-    onClick: PropTypes.func
-  };
-
-  render() {
-    const video = this.props.video;
-    return (
-      <a
-        style={styles.videoLink}
-        onClick={() => {
-          this.props.onClick && this.props.onClick();
-          showVideoDialog(
-            {
-              src: video.src,
-              name: video.name,
-              key: video.key,
-              download: video.download,
-              thumbnail: video.thumbnail,
-              enable_fallback: video.enable_fallback,
-              autoplay: video.autoplay
-            },
-            true
-          );
-        }}
-      >
-        <img
-          style={styles.videoThumbnail}
-          src={video.thumbnail}
-          alt={video.name}
-        />
-        <span>{video.name}</span>
-      </a>
-    );
-  }
-}

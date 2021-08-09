@@ -5,6 +5,7 @@ import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -247,5 +248,92 @@ describe('ManageLinkedAccounts', () => {
     );
     const googleConnectButton = wrapper.find('BootstrapButton').at(0);
     expect(googleConnectButton).to.have.attr('disabled');
+  });
+
+  describe('in the Maker App', () => {
+    beforeEach(() => {
+      replaceOnWindow('MakerBridge', true);
+    });
+
+    afterEach(() => {
+      restoreOnWindow('MakerBridge', false);
+    });
+
+    it('renders the Google Account as disabled with explanatory tooltip', () => {
+      const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
+
+      expect(wrapper.find('table')).to.exist;
+      expect(wrapper.find('OauthConnection').at(0)).to.include.text(
+        'Google Account'
+      );
+
+      let googleOAuthButton = wrapper
+        .find('OauthConnection')
+        .at(0)
+        .find('BootstrapButton');
+      expect(googleOAuthButton).to.be.disabled();
+
+      const tooltip = wrapper
+        .find('OauthConnection')
+        .at(0)
+        .find('ReactTooltip')
+        .at(0);
+      expect(tooltip).to.include.text(
+        'This action cannot be done from the Maker App.'
+      );
+    });
+
+    it('Microsoft, Clever, and Facebook buttons are enabled with no tooltips', () => {
+      const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
+
+      expect(wrapper.find('table')).to.exist;
+      expect(wrapper.find('OauthConnection').at(1)).to.include.text(
+        'Microsoft Account'
+      );
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(1)
+          .find('BootstrapButton')
+      ).to.not.be.disabled();
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(1)
+          .find('ReactTooltip')
+      ).to.not.exist;
+
+      expect(wrapper.find('OauthConnection').at(2)).to.include.text(
+        'Clever Account'
+      );
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(2)
+          .find('BootstrapButton')
+      ).to.not.be.disabled();
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(2)
+          .find('ReactTooltip')
+      ).to.not.exist;
+
+      expect(wrapper.find('OauthConnection').at(3)).to.include.text(
+        'Facebook Account'
+      );
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(3)
+          .find('BootstrapButton')
+      ).to.not.be.disabled();
+      expect(
+        wrapper
+          .find('OauthConnection')
+          .at(3)
+          .find('ReactTooltip')
+      ).to.not.exist;
+    });
   });
 });

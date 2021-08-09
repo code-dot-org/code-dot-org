@@ -1,18 +1,18 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: 'Час кода: руководство для внеклассных занятий'
 ---
 
 {{ signup_button }}
 
 # Как преподавать Час Кода на внеклассных занятиях и в кружках
 
-### Join the movement and introduce your students to computer science with these steps.
+### Присоединитесь к движению и познакомьте ваших учеников с информатикой, выполнив следующие шаги.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Вычислительное мышление помогает приобретать навыки решения задач, развивает логическое и творческое мышление. Технологии меняют облик всех отраслей мировой экономики. Сегодня школьники должны учиться не только использовать технологии, но и создавать их. Начав обучение этому с ранних лет, они заложат основы успешной карьеры в 21 веке в любой сфере деятельности.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Участие в Часе кода – простой и занимательный способ познакомить вашего ребенка с информатикой, возможно впервые. Если вам понадобится помощь, вы можете найти [местных волонтёров](%= codeorg_url('/volunteer/local') %), которые помогут запустить Час Кода на внеклассных занятиях или кружках.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Час кода может быть организован и удаленно! Для начала ознакомьтесь с [нашими советами по проведению виртуального Часа кода](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -63,9 +63,9 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 6. Программируйте!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Найдите ссылку в списке [информации о выбранном вами пособии]({{ urls/learn }}) под количеством участников. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. - "Давайте научимся этому вместе." - "Технология не всегда работает так, как мы хотим." - "Изучение программирования - это как изучение нового языка; вы не будете сразу свободно разговаривать."
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. ""Давай разберемся вместе"". –“Технология не всегда работает так, как мы хотим”. – “Изучение программирования - это как изучение нового языка, вы не сразу заговорите свободно”.
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 

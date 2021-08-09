@@ -218,11 +218,19 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
+  task :bin_i18n_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_bin_i18n_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   task ci: [
     :shared_ci,
     :pegasus_ci,
     :dashboard_ci,
     :lib_ci,
+    :bin_i18n_ci,
     :ui_live
   ]
 
@@ -244,6 +252,11 @@ namespace :test do
   desc 'Runs lib tests.'
   task :lib do
     TestRunUtils.run_lib_tests
+  end
+
+  desc 'Runs bin/i18n tests.'
+  task :bin_i18n do
+    TestRunUtils.run_bin_i18n_tests
   end
 
   namespace :changed do
@@ -318,13 +331,21 @@ namespace :test do
       end
     end
 
+    desc 'Runs lib tests if lib might have changed from staging.'
+    task :bin_i18n do
+      run_tests_if_changed('bin_i18n', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/i18n/**/*']) do
+        TestRunUtils.run_bin_i18n_tests
+      end
+    end
+
     all_tasks = [:apps,
                  # currently disabled because these tests take too long to run on circle
                  # :interpreter,
                  :dashboard,
                  :pegasus,
                  :shared,
-                 :lib]
+                 :lib,
+                 :bin_i18n]
 
     task all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -333,7 +354,7 @@ namespace :test do
 
   task changed: ['changed:all']
 
-  task all: [:apps, :dashboard, :pegasus, :shared, :lib]
+  task all: [:apps, :dashboard, :pegasus, :shared, :lib, :bin_i18n]
 end
 task test: ['test:changed']
 

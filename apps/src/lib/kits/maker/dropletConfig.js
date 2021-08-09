@@ -142,7 +142,11 @@ const makerBlocks = [
   },
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
-  {func: 'createLed', ...createLedProps, type: 'either'},
+  {
+    func: 'createLed',
+    ...createLedProps,
+    type: 'either'
+  },
   {
     func: 'var myLed = createLed',
     ...createLedProps,
@@ -150,7 +154,11 @@ const makerBlocks = [
     docFunc: 'createLed'
   },
 
-  {func: 'createButton', ...createButtonProps, type: 'either'},
+  {
+    func: 'createButton',
+    ...createButtonProps,
+    type: 'either'
+  },
   {
     func: 'var myButton = createButton',
     ...createButtonProps,
@@ -410,7 +418,6 @@ const circuitPlaygroundBlocks = [
   }
 ];
 
-const ledScreenPrefix = 'ledScreen[0][0].';
 /* micro:bit specific blocks */
 const microBitBlocks = [
   {
@@ -441,24 +448,28 @@ const microBitBlocks = [
       }
     }
   },
-  {func: 'ledScreen', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
   {
-    func: 'on',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.on'
+    type: 'readonlyproperty'
   },
   {
-    func: 'off',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.on',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.off'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
-    func: 'toggle',
-    blockPrefix: ledScreenPrefix,
+    func: 'ledScreen.off',
     category: MICROBIT_CATEGORY,
-    modeOptionName: '*.toggle'
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
+  },
+  {
+    func: 'ledScreen.toggle',
+    category: MICROBIT_CATEGORY,
+    params: ['0', '0'],
+    paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.clear',
@@ -568,10 +579,22 @@ const microBitBlocks = [
     type: 'property'
   },
 
-  {func: 'compass.getHeading', category: MICROBIT_CATEGORY, type: 'value'},
+  {
+    func: 'compass.getHeading',
+    category: MICROBIT_CATEGORY,
+    type: 'value'
+  },
 
-  {func: 'tempSensor.F', category: MICROBIT_CATEGORY, type: 'readonlyproperty'},
-  {func: 'tempSensor.C', category: MICROBIT_CATEGORY, type: 'readonlyproperty'}
+  {
+    func: 'tempSensor.F',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  },
+  {
+    func: 'tempSensor.C',
+    category: MICROBIT_CATEGORY,
+    type: 'readonlyproperty'
+  }
 ];
 
 config.categories = {

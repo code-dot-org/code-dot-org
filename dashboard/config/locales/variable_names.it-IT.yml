@@ -1,0 +1,42 @@
+---
+it:
+  data:
+    variable_names:
+      Blue: Blu
+      Green: Verdi
+      Red: Rossi
+      actor: personaggio
+      age: età
+      answer: rispondi
+      armlength: lunghezza braccio
+      binary: binario
+      birds: uccelli
+      bodylength: lunghezza corpo
+      cats: tutti i gatti
+      color: colore
+      counter: contatore
+      direction: direzione
+      dogs: tutti i cani
+      energy: energia
+      height: altezza
+      honey: miele
+      i: i
+      left: a sinistra
+      length: lunghezza
+      level: livello
+      name: nome
+      nectar: nettare
+      nectars: nettare
+      planet: pianeta
+      points: punti
+      random: a caso
+      repeat: ripeti
+      right: a destra
+      score: punteggio
+      sides: lati
+      size: dimensione
+      speed: velocità
+      variable: variabile
+      width: larghezza
+      wizard: mago
+      x: x

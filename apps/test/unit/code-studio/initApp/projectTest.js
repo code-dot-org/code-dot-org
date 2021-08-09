@@ -13,6 +13,7 @@ describe('project.js', () => {
   let sourceHandler;
 
   const setData = project.__TestInterface.setCurrentData;
+  const setSources = project.__TestInterface.setCurrentSources;
 
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
@@ -438,7 +439,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -464,7 +465,7 @@ describe('project.js', () => {
             });
 
             it(`from a script level`, () => {
-              setFakeLocation(`${origin}/s/csp3-2019/stage/10/puzzle/4`);
+              setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
               expect(project.getShareUrl()).to.equal(expected);
             });
           });
@@ -973,6 +974,48 @@ describe('project.js', () => {
         expect(e).to.contain('foo');
         done();
       });
+    });
+  });
+
+  describe('project.isCurrentCodeDifferent', () => {
+    afterEach(() => {
+      setSources({});
+    });
+
+    it('compares unset sources as if they were an empty string', () => {
+      setSources({});
+      expect(project.isCurrentCodeDifferent('')).to.be.false;
+    });
+
+    it('compares null inputs as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent(null)).to.be.false;
+    });
+
+    it('compares unset input sources as if they were an empty string', () => {
+      setSources({source: ''});
+      expect(project.isCurrentCodeDifferent()).to.be.false;
+    });
+
+    it('ignores differences in line endings', () => {
+      setSources({source: 'foo\r\n\r\nbar'});
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
+    });
+
+    it('ignores differences in xml closing tags', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
+        .false;
+    });
+
+    it('notices differences in xml', () => {
+      setSources({source: '<xml><test/></xml>'});
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
+    });
+
+    it('notices differences in text', () => {
+      setSources({source: 'test'});
+      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
     });
   });
 });
