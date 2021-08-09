@@ -332,6 +332,7 @@ class JavalabView extends React.Component {
                     disableRunButtons={awaitingContainedResponse}
                     onContinue={onContinue}
                     renderSettings={this.renderSettings}
+                    showTestButton={false}
                   />
                 }
               />
