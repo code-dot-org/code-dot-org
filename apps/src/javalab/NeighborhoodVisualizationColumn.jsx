@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PreviewPaneHeader from './PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
-
 import {toggleVisualizationCollapsed} from './javalabRedux';
 
 const ICON_PATH = '/blockly/media/turtle/';
