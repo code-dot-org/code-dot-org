@@ -18,8 +18,6 @@ gl:
     mailer:
       confirmation_instructions:
         subject: "Instrucións de confirmación do Code.org"
-      reset_password_instructions:
-        subject: "Instrucións de reposición do contradinal do Code.org"
       unlock_instructions:
         subject: "Instrucións de desbloqueo"
     omniauth_callbacks:

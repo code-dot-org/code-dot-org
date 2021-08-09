@@ -21,8 +21,6 @@ ru:
     mailer:
       confirmation_instructions:
         subject: Инструкции Code.org по подтверждению
-      reset_password_instructions:
-        subject: Инструкции по сбросу пароля Code.org
       unlock_instructions:
         subject: Инструкция по разблокированию
     omniauth_callbacks:

@@ -15,10 +15,12 @@
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
 #  time_spent       :integer
+#  deleted_at       :datetime
+#  properties       :text(65535)
 #
 # Indexes
 #
-#  index_user_levels_on_user_id_and_level_id_and_script_id  (user_id,level_id,script_id) UNIQUE
+#  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
 require 'cdo/activity_constants'

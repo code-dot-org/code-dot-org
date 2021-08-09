@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:23 UTC",
+    "serialized_at": "2021-08-03 22:47:47 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp19-csd-mod-fit"
@@ -108,7 +108,6 @@
         ],
         "progression": "Background"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -133,7 +132,6 @@
         ],
         "progression": "Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -158,7 +156,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +180,6 @@
         ],
         "progression": "Evaluation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -208,7 +204,6 @@
         ],
         "progression": "Due Dates"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -232,7 +227,6 @@
           "dlp19_csd_prework-fit_content1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -256,7 +250,6 @@
           "dlp19_csd_prework-fit-prompt"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -280,7 +273,6 @@
           "dlp19_csd_prework-fit_content1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -304,7 +296,6 @@
           "dlp19_csd_prework-fit-prompt"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

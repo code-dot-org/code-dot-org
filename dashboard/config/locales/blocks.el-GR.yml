@@ -1789,3 +1789,5 @@ el:
           DIR:
             right: δεξιά ↻
             left: αριστερά ↺
+      validation_validatedBackground:
+        text: Ορισμός φόντου σε {IMG}

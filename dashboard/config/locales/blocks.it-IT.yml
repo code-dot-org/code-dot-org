@@ -1861,3 +1861,5 @@ it:
           DIR:
             right: destra ↻
             left: sinistra ↺
+      validation_validatedBackground:
+        text: imposta lo sfondo {IMG}

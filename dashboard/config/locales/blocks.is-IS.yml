@@ -1848,3 +1848,5 @@ is:
           DIR:
             right: hægri ↻
             left: vinstri ↺
+      validation_validatedBackground:
+        text: stilla bakgrunn á {IMG}

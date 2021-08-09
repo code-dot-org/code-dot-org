@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:24 UTC",
+    "serialized_at": "2021-08-03 22:46:58 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit1-support"
@@ -116,9 +116,9 @@
       "properties": {
         "level_keys": [
           "Sample Free Response"
-        ]
+        ],
+        "progression": "Sample Free Response"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,9 +140,9 @@
       "properties": {
         "level_keys": [
           "U1L5 How the Internet Works - Video"
-        ]
+        ],
+        "progression": "U1L5 How the Internet Works - Video"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,9 +164,9 @@
       "properties": {
         "level_keys": [
           "Sample External Resource"
-        ]
+        ],
+        "progression": "Sample External Resource"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,9 +188,9 @@
       "properties": {
         "level_keys": [
           "Empty Markdown Level"
-        ]
+        ],
+        "progression": "Empty Markdown Level"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -214,7 +214,6 @@
           "Sample CSP Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,9 +235,9 @@
       "properties": {
         "level_keys": [
           "U3L2 Free Response Reflection"
-        ]
+        ],
+        "progression": "U3L2 Free Response Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

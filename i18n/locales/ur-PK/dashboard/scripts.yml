@@ -765,3 +765,7 @@ ur:
           lessons:
             lesson-9:
               name: ٹیچر کمیونٹی
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: آزمانا

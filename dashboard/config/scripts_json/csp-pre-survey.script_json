@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:31 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp-pre-survey"
@@ -136,7 +136,6 @@
           "CSP pre-assessment survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -166,7 +165,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -192,7 +190,6 @@
           "CSP Unit 2 Ch2 Cumulative Assessment MC"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -216,7 +213,6 @@
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -240,7 +236,6 @@
           "CSP Unit 4 Ch1 Cumulative Assessment MC"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -264,7 +259,6 @@
           "csp_ap_questions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

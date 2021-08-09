@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:25 UTC",
+    "serialized_at": "2021-08-03 22:46:59 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "teachercon"
@@ -263,9 +263,9 @@
       "properties": {
         "level_keys": [
           "Welcome to TeacherCon!"
-        ]
+        ],
+        "progression": "Welcome to TeacherCon!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -287,9 +287,9 @@
       "properties": {
         "level_keys": [
           "TeacherCon Agenda"
-        ]
+        ],
+        "progression": "TeacherCon Agenda"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -311,9 +311,9 @@
       "properties": {
         "level_keys": [
           "TeacherCon Self-Assessment"
-        ]
+        ],
+        "progression": "TeacherCon Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -335,9 +335,9 @@
       "properties": {
         "level_keys": [
           "U1L4 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L4 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -359,9 +359,9 @@
       "properties": {
         "level_keys": [
           "U1L6 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L6 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -383,9 +383,9 @@
       "properties": {
         "level_keys": [
           "U1L9 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L9 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -407,9 +407,9 @@
       "properties": {
         "level_keys": [
           "U1L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -431,9 +431,9 @@
       "properties": {
         "level_keys": [
           "U1L11 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L11 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -455,9 +455,9 @@
       "properties": {
         "level_keys": [
           "U2L2 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L2 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -479,9 +479,9 @@
       "properties": {
         "level_keys": [
           "U2L3 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L3 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -503,9 +503,9 @@
       "properties": {
         "level_keys": [
           "U2L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -527,9 +527,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -551,9 +551,9 @@
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,9 +575,9 @@
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,9 +599,9 @@
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -623,9 +623,9 @@
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -647,9 +647,9 @@
       "properties": {
         "level_keys": [
           "Tuesday Report: Group Work and Peer Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Group Work and Peer Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -671,9 +671,9 @@
       "properties": {
         "level_keys": [
           "Wednesday Report: Group Work and Peer Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Group Work and Peer Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -695,9 +695,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -719,9 +719,9 @@
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -743,9 +743,9 @@
       "properties": {
         "level_keys": [
           "Tuesday Report: Balancing Teachers and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Balancing Teachers and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,9 +767,9 @@
       "properties": {
         "level_keys": [
           "Wednesday Report: Balancing Teachers and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -791,9 +791,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -815,9 +815,9 @@
       "properties": {
         "level_keys": [
           "Overview: Discovery Learning"
-        ]
+        ],
+        "progression": "Overview: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -839,9 +839,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning definition and history"
-        ]
+        ],
+        "progression": "Discovery learning definition and history"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -863,9 +863,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning techniques"
-        ]
+        ],
+        "progression": "Discovery learning techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -887,9 +887,9 @@
       "properties": {
         "level_keys": [
           "Tuesday Report: Discovery Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Discovery Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -911,9 +911,9 @@
       "properties": {
         "level_keys": [
           "Wednesday Report: Discovery Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Discovery Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -935,9 +935,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -959,9 +959,9 @@
       "properties": {
         "level_keys": [
           "Overview: Capturing Student Learning"
-        ]
+        ],
+        "progression": "Overview: Capturing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -983,9 +983,9 @@
       "properties": {
         "level_keys": [
           "What is the difference between formative and summative assessment?"
-        ]
+        ],
+        "progression": "What is the difference between formative and summative assessment?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,9 +1007,9 @@
       "properties": {
         "level_keys": [
           "Classroom Assessment Techniques"
-        ]
+        ],
+        "progression": "Classroom Assessment Techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1031,9 +1031,9 @@
       "properties": {
         "level_keys": [
           "Tuesday Report: Measuring Student Learning in Unit 1"
-        ]
+        ],
+        "progression": "Tuesday Report: Measuring Student Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1055,9 +1055,9 @@
       "properties": {
         "level_keys": [
           "Wednesday Report: Measuring Student Learning in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Measuring Student Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

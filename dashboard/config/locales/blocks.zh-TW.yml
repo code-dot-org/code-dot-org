@@ -1908,3 +1908,5 @@ zh-TW:
           DIR:
             right: 右方 ↻
             left: 左方 ↺
+      validation_validatedBackground:
+        text: 背景設為 {IMG}
