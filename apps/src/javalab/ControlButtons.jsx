@@ -8,12 +8,15 @@ import JavalabSettings from './JavalabSettings';
 
 export default function ControlButtons({
   isRunning,
+  isTesting,
   toggleRun,
+  toggleTest,
   isEditingStartSources,
   disableFinishButton,
   onContinue,
   renderSettings,
-  disableRunButtons
+  disableRunButtons,
+  showTestButton
 }) {
   return (
     <div>
@@ -29,6 +32,16 @@ export default function ControlButtons({
           isDisabled={disableRunButtons}
           id="javalabRun"
         />
+        {showTestButton && (
+          <JavalabButton
+            text={isTesting ? i18n.stopTests() : i18n.test()}
+            icon={<FontAwesome icon="flask" className="fa" />}
+            onClick={toggleTest}
+            isHorizontal
+            style={{...styles.button.all, ...styles.button.white}}
+            isDisabled={disableRunButtons}
+          />
+        )}
       </div>
       <div style={styles.rightButtons}>
         <JavalabSettings>{renderSettings()}</JavalabSettings>
@@ -48,12 +61,15 @@ export default function ControlButtons({
 
 ControlButtons.propTypes = {
   isRunning: PropTypes.bool.isRequired,
+  isTesting: PropTypes.bool.isRequired,
   toggleRun: PropTypes.func.isRequired,
+  toggleTest: PropTypes.func.isRequired,
   isEditingStartSources: PropTypes.bool,
   disableFinishButton: PropTypes.bool,
   onContinue: PropTypes.func.isRequired,
   renderSettings: PropTypes.func.isRequired,
-  disableRunButtons: PropTypes.bool
+  disableRunButtons: PropTypes.bool,
+  showTestButton: PropTypes.bool
 };
 
 const styles = {
