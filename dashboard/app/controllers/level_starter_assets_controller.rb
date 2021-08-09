@@ -6,7 +6,7 @@ class LevelStarterAssetsController < ApplicationController
 
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
-  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3)
+  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav)
 
   # GET /level_starter_assets/:level_name
   def show
