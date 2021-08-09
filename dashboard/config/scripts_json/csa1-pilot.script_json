@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-06 18:59:52 UTC",
+    "serialized_at": "2021-08-09 18:58:31 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -42,18 +42,6 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Practice Levels"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -406,7 +394,7 @@
       "key": "lesson-20",
       "name": "Assessment Day",
       "absolute_position": 20,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
@@ -418,21 +406,6 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "lesson-21",
-      "name": "Practice Lesson",
-      "absolute_position": 21,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 21,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -1299,18 +1272,6 @@
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455",
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -4699,6 +4660,16 @@
       }
     },
     {
+      "key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
+        "lesson_activity.key": "2375e8c8-75e5-4a83-9bb2-80d9fbe488dc"
+      }
+    },
+    {
       "key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
       "position": 1,
       "properties": {
@@ -4714,28 +4685,6 @@
       "seeding_key": {
         "activity_section.key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455"
-      }
-    },
-    {
-      "key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
-      "position": 1,
-      "properties": {
-        "progression_name": "Neighborhood Practice Levels"
-      },
-      "seeding_key": {
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
-      }
-    },
-    {
-      "key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
-      "position": 2,
-      "properties": {
-        "progression_name": "Console Practice Level"
-      },
-      "seeding_key": {
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
       }
     }
   ],
@@ -6443,150 +6392,24 @@
       "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "Neighborhood 8x8 Practice Level"
-        ],
-        "progression": "Neighborhood Practice Levels"
+          "CSA Unit 1 Pilot Assessment 2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Neighborhood 8x8 Practice Level"
+          "CSA Unit 1 Pilot Assessment 2021"
         ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2"
       },
       "level_keys": [
-        "Neighborhood 8x8 Practice Level"
-      ]
-    },
-    {
-      "chapter": 70,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 16x16 Practice Level"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 16x16 Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 16x16 Practice Level"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 8x8 Practice with Barriers"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 13x13 Practice with Barriers"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood Demos"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood Demos"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood Demos"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Console Practice Level"
-        ],
-        "progression": "Console Practice Level"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Console Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
-      },
-      "level_keys": [
-        "Console Practice Level"
+        "CSA Unit 1 Pilot Assessment 2021"
       ]
     }
   ],
@@ -7409,74 +7232,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "Neighborhood 8x8 Practice Level",
+        "level.key": "CSA Unit 1 Pilot Assessment 2021",
         "script_level.level_keys": [
-          "Neighborhood 8x8 Practice Level"
+          "CSA Unit 1 Pilot Assessment 2021"
         ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood 16x16 Practice Level",
-        "script_level.level_keys": [
-          "Neighborhood 16x16 Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood 8x8 Practice with Barriers",
-        "script_level.level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood 13x13 Practice with Barriers",
-        "script_level.level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood Demos",
-        "script_level.level_keys": [
-          "Neighborhood Demos"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Console Practice Level",
-        "script_level.level_keys": [
-          "Console Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2"
       }
     }
   ],
