@@ -54,7 +54,8 @@ class Javalab < Level
       level_params.merge(
         user: params[:user],
         game: Game.javalab,
-        level_num: 'custom'
+        level_num: 'custom',
+        published: true
       )
     )
   end
