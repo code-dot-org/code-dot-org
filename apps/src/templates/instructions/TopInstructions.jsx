@@ -106,7 +106,10 @@ class TopInstructions extends Component {
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool,
-    onHeightResize: PropTypes.func
+    onHeightResize: PropTypes.func,
+    // Use this if the caller wants to set an explicit height for the instructions rather
+    // than allowing this component to manage its own height.
+    explicitHeight: PropTypes.number
   };
 
   static defaultProps = {
@@ -555,7 +558,8 @@ class TopInstructions extends Component {
       ttsLongInstructionsUrl,
       standalone,
       displayDocumentationTab,
-      displayReviewTab
+      displayReviewTab,
+      explicitHeight
     } = this.props;
 
     const {
@@ -576,7 +580,7 @@ class TopInstructions extends Component {
       isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
-        height: height - RESIZER_HEIGHT
+        height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT
       },
       noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
@@ -724,13 +728,16 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView && resizable && !dynamicInstructions && (
-            <HeightResizer
-              resizeItemTop={this.getItemTop}
-              position={height}
-              onResize={this.handleHeightResize}
-            />
-          )}
+          {!isEmbedView &&
+            resizable &&
+            !dynamicInstructions &&
+            !explicitHeight && (
+              <HeightResizer
+                resizeItemTop={this.getItemTop}
+                position={height}
+                onResize={this.handleHeightResize}
+              />
+            )}
         </div>
       </div>
     );

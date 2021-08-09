@@ -10,8 +10,10 @@ import {
   setIsDarkMode,
   setIsRunning,
   setLeftWidth,
-  setRightWidth
+  setRightWidth,
+  setInstructionsExplicitHeight
 } from './javalabRedux';
+import {setInstructionsMaxHeightAvailable} from '../redux/instructions';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
@@ -53,10 +55,13 @@ class JavalabView extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     setLeftWidth: PropTypes.func,
     setRightWidth: PropTypes.func,
+    setInstructionsExplicitHeight: PropTypes.func,
     leftWidth: PropTypes.number,
     rightWidth: PropTypes.number,
-    topInstructionsHeight: PropTypes.number.isRequired,
+    instructionsExplicitHeight: PropTypes.number,
+    instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    setInstructionsMaxHeightAvailable: PropTypes.func,
     awaitingContainedResponse: PropTypes.bool
   };
 
@@ -72,6 +77,11 @@ class JavalabView extends React.Component {
     window.addEventListener('resize', () =>
       this.updateLayoutThrottled(this.props.leftWidth)
     );
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () =>
+        this.updateLayoutThrottled(this.props.leftWidth)
+      );
+    }
   }
 
   compile = () => {
@@ -175,7 +185,7 @@ class JavalabView extends React.Component {
     // Determine the available height.
     let availableHeight =
       window.innerHeight -
-      this.props.topInstructionsHeight -
+      this.props.instructionsRenderedHeight -
       miscExistingElementsHeight;
     if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
       availableHeight -= sliderHeight;
@@ -213,6 +223,26 @@ class JavalabView extends React.Component {
       availableWidth - styleConstants['resize-bar-width']
     );
 
+    if (this.props.visualization) {
+      // If there is a visualization, ensure that the instructions don't extend beyond
+      // the bottom of the window.  In particular, we want the horizontal resizer to still
+      // be visible, along with a peek at the visualization area.
+      const miscElementsExistingHeightVisualization = 150;
+      const minimumInstructionsHeight = 100;
+      this.props.setInstructionsMaxHeightAvailable(
+        Math.max(
+          window.innerHeight - miscElementsExistingHeightVisualization,
+          minimumInstructionsHeight
+        )
+      );
+    } else {
+      // If there is no visualization, make the instructions explicitly full height.
+      const miscElementsExistingHeightNoVisualization = 105;
+      this.props.setInstructionsExplicitHeight(
+        window.innerHeight - miscElementsExistingHeightNoVisualization
+      );
+    }
+
     // The right width can also change at this point, since it takes up the
     // remaining space.
     const actualLeftWidth = this.isLeftSideVisible()
@@ -234,7 +264,10 @@ class JavalabView extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (prevProps.topInstructionsHeight !== this.props.topInstructionsHeight) {
+    if (
+      prevProps.instructionsRenderedHeight !==
+      this.props.instructionsRenderedHeight
+    ) {
       this.updateLayoutThrottled(this.props.leftWidth);
     }
   }
@@ -253,6 +286,7 @@ class JavalabView extends React.Component {
       editorColumnHeight,
       leftWidth,
       rightWidth,
+      instructionsExplicitHeight,
       awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
@@ -291,6 +325,7 @@ class JavalabView extends React.Component {
                     ? TabType.REVIEW
                     : null
                 }
+                explicitHeight={instructionsExplicitHeight}
               />
               {this.isLeftSideVisible() && this.renderVisualization()}
             </div>
@@ -435,7 +470,8 @@ export default connect(
     editorColumnHeight: state.javalab.editorColumnHeight,
     leftWidth: state.javalab.leftWidth,
     rightWidth: state.javalab.rightWidth,
-    topInstructionsHeight: state.instructions.renderedHeight,
+    instructionsExplicitHeight: state.javalab.instructionsExplicitHeight,
+    instructionsRenderedHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions,
     awaitingContainedResponse: state.runState.awaitingContainedResponse
   }),
@@ -444,6 +480,10 @@ export default connect(
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setLeftWidth: width => dispatch(setLeftWidth(width)),
-    setRightWidth: width => dispatch(setRightWidth(width))
+    setRightWidth: width => dispatch(setRightWidth(width)),
+    setInstructionsExplicitHeight: height =>
+      dispatch(setInstructionsExplicitHeight(height)),
+    setInstructionsMaxHeightAvailable: height =>
+      dispatch(setInstructionsMaxHeightAvailable(height))
   })
 )(UnconnectedJavalabView);
