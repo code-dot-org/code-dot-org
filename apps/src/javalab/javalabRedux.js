@@ -13,6 +13,8 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
 const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
+const INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED =
+  'javalab/INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
@@ -29,6 +31,7 @@ const initialState = {
   renderedEditorHeight: 400,
   leftWidth: 400,
   rightWidth: 400,
+  instructionsExplicitHeight: undefined,
   isRunning: false,
   editorColumnHeight: 600,
   backpackApi: null,
@@ -186,6 +189,11 @@ export const setRightWidth = width => ({
   width
 });
 
+export const setInstructionsExplicitHeight = height => ({
+  type: INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED,
+  height
+});
+
 export const setEditorColumnHeight = editorColumnHeight => ({
   type: EDITOR_COLUMN_HEIGHT,
   editorColumnHeight
@@ -290,6 +298,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       rightWidth: action.width
+    };
+  }
+  if (action.type === INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED) {
+    return {
+      ...state,
+      instructionsExplicitHeight: action.height
     };
   }
   if (action.type === SET_IS_RUNNING) {
