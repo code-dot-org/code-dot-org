@@ -59,7 +59,7 @@ export default function ControlButtons({
         {!isEditingStartSources && (
           <JavalabButton
             text={finishButtonText}
-            onClick={!isSubmittable && onContinue}
+            onClick={isSubmittable ? null : onContinue}
             style={{...styles.button.all, ...styles.button.blue}}
             isDisabled={disableFinishButton}
             id={finishButtonId}
