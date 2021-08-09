@@ -875,12 +875,12 @@ describe('entry tests', () => {
             // locale files appear in the manifest when minifying.
             {
               from: 'build/locales',
-              to: '[path]/[name].[ext]',
+              to: '[path]/[name][ext]',
               toType: 'template'
             },
             minify && {
               from: 'build/locales',
-              to: '[path]/[name]wp[contenthash].[ext]',
+              to: '[path]/[name]wp[contenthash][ext]',
               toType: 'template'
             },
             // Libraries in this directory are assumed to have .js and .min.js
