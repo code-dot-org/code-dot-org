@@ -28,7 +28,7 @@ export default function ControlButtons({
     finishButtonId = 'submitButton';
   } else {
     finishButtonText = i18n.finish();
-    finishButtonId = 'javalabFinish';
+    finishButtonId = 'finishButton';
   }
 
   return (
@@ -43,7 +43,7 @@ export default function ControlButtons({
           isHorizontal
           style={{...styles.button.all, ...styles.button.orange}}
           isDisabled={disableRunButtons}
-          id="javalabRun"
+          id="runButton"
         />
         <JavalabButton
           text={isTesting ? i18n.stopTests() : i18n.test()}

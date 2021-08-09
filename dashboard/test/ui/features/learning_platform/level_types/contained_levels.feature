@@ -89,7 +89,7 @@ Scenario: Javalab with free response contained level
   And I see no difference for "finished level with contained level"
   Then I press "javalabFinish"
   # Make sure continue takes us to next level
-  And I wait until current URL contains "/home"
+  And I wait until current URL contains "/lessons/44/levels/7"
   Then I close my eyes
 
 

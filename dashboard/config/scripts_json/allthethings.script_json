@@ -4308,6 +4308,29 @@
       "level_keys": [
         "Allthethings Java Lab 6"
       ]
+    },
+    {
+      "chapter": 153,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab submittable"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab submittable"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab submittable"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6107,6 +6130,17 @@
         "level.key": "Allthethings Java Lab 6",
         "script_level.level_keys": [
           "Allthethings Java Lab 6"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab submittable",
+        "script_level.level_keys": [
+          "Allthethings Java Lab submittable"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",
