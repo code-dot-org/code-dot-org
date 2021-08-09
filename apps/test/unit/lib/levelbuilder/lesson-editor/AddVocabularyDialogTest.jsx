@@ -3,8 +3,13 @@ import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {
+  // Warnings allowed due to usage of deprecated componentWillMount
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let defaultProps, afterSaveSpy, handleCloseSpy;
   beforeEach(() => {
     afterSaveSpy = sinon.spy();

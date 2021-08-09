@@ -119,6 +119,13 @@ const styles = {
   }
 };
 
+function sanitizedProps(props) {
+  const sanitized = {...props};
+  delete sanitized.styleKeeperContext;
+  delete sanitized.radiumConfigContext;
+  return sanitized;
+}
+
 /**
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
@@ -132,7 +139,7 @@ export const PaneSection = Radium(
     render() {
       return (
         <div
-          {...this.props}
+          {...sanitizedProps(this.props)}
           ref={root => (this.root = root)}
           style={{...styles.paneSection, ...this.props.style}}
         />

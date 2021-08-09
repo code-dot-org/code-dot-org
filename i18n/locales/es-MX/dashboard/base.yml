@@ -168,7 +168,15 @@ es-MX:
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "Estudiante"
+    user_type_student_desc: "Explora todos nuestros cursos y actividades, además de:"
+    user_type_student_ability_1: "Guarda tu progreso y proyectos"
+    user_type_student_ability_2: "Únete a la sección de la clase de tu profesor"
     user_type_teacher: "Docente"
+    user_type_teacher_desc: "Todo aquello a lo que tienen acceso los estudiantes, además de:"
+    user_type_teacher_ability_1: "Crear secciones para la clase"
+    user_type_teacher_ability_2: "Asignar y seguir el trabajo de un estudiante"
+    user_type_teacher_ability_3: "Involucrarse en el aprendizaje profesional"
+    user_type_teacher_ability_4: "Interactúa en el foro de nuestro profesor"
     field_is_required: "es obligatorio"
     accept_terms: "Debes estar de acuerdo para crear una cuenta."
     error: "Ocurrió un error."
@@ -986,7 +994,7 @@ es-MX:
       colombian_chilean_school_department: 'Departamento/Región'
       colombian_school_municipality: 'Municipio'
       colombian_chilean_school_name: 'Nombre de la escuela'
-      chilean_school_commune: 'Communa'
+      chilean_school_commune: 'Comuna'
       chilean_school_id: 'Identificación de Escuela'
       ages: '¿A qué grupos de edades enseñas este año?'
       subjects: '¿Qué materias enseñas este año?'

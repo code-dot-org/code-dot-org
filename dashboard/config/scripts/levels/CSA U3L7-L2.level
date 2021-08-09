@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nIn `PainterPlus.java`:\r\n1. Create a counter variable called `numPainters` using a static variable and initialize it to 0.\r\n\r\n2. Update the constructor to increment `numPainters` each time an object of the `PainterPlus` class is created.\r\n\r\nIn `MyNeighborhood.java`:\r\n1. Create multiple `PainterPlus` objects.\r\n\r\n2. Print the counter variable `numPainters`.",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nIn `PainterPlus.java`:\r\n1. Create a counter variable called `numPainters` using a static variable and initialize it to `0`.\r\n\r\n2. Update the constructor to increment `numPainters` each time an object of the `PainterPlus` class is created.\r\n\r\nIn `MyNeighborhood.java`:\r\n1. Create multiple `PainterPlus` objects.\r\n\r\n2. Print the counter variable `numPainters`.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "serialized_maze": [
@@ -765,6 +765,6 @@
   "created_at": "2021-07-22T18:46:47.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-22 18:49:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:35:52 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-22 18:49:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:35:52 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 19:12:11 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

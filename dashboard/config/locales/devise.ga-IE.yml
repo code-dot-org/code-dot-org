@@ -21,8 +21,6 @@ ga:
     mailer:
       confirmation_instructions:
         subject: Treoracha maidir le deimhniú do chuntais Code.org
-      reset_password_instructions:
-        subject: Treoracha maidir le hathshocrú d'fhocail faire Code.org
       unlock_instructions:
         subject: Treoracha Díghlasála
     omniauth_callbacks:

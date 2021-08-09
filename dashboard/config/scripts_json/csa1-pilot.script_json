@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 14:22:29 UTC",
+    "serialized_at": "2021-08-03 15:12:56 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -5394,7 +5394,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L6-L4"
@@ -5550,7 +5550,7 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L7-L3"
@@ -5602,7 +5602,7 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L7-L5"
@@ -5810,7 +5810,7 @@
       "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L9-L4"
@@ -6122,7 +6122,7 @@
       "chapter": 54,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L11-L4"

@@ -21,8 +21,6 @@ vi:
     mailer:
       confirmation_instructions:
         subject: hướng dẫn xác nhận Code.org
-      reset_password_instructions:
-        subject: Hướng dẫn đặt lại mật khẩu Code.org
       unlock_instructions:
         subject: Hướng dẫn mở khóa
     omniauth_callbacks:

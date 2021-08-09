@@ -241,7 +241,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
-    test "add CourseScripts" do
+    test "add UnitGroupUnits" do
       unit_group = create :unit_group
 
       create(:script, name: 'unit1')
@@ -257,7 +257,30 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
-    test "cannot remove CourseScripts that cannot change course version" do
+    test "set published state to nil for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      unit2.reload
+      assert_nil unit1.published_state
+
+      unit1.update!(published_state: SharedConstants::PUBLISHED_STATE.preview)
+      unit2.update!(published_state: SharedConstants::PUBLISHED_STATE.preview)
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit1.reload
+      unit2.reload
+      assert_equal SharedConstants::PUBLISHED_STATE.preview, unit1.published_state
+      assert_nil unit2.published_state
+    end
+
+    test "cannot remove UnitGroupUnits that cannot change course version" do
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
 
@@ -280,7 +303,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 2, unit_group.default_unit_group_units.length
     end
 
-    test "cannot add CourseScripts that cannot change course version" do
+    test "cannot add UnitGroupUnits that cannot change course version" do
       course_version1 = create :course_version
       unit_group1 = create :unit_group, course_version: course_version1
       course_version2 = create :course_version
@@ -306,7 +329,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group1.default_unit_group_units.length
     end
 
-    test "remove CourseScripts" do
+    test "remove UnitGroupUnits" do
       unit_group = create :unit_group
 
       create(:unit_group_unit, unit_group: unit_group, position: 0, script: create(:script, name: 'unit1'))
@@ -916,5 +939,30 @@ class UnitGroupTest < ActiveSupport::TestCase
     refute UnitGroup.has_any_pilot_access?(teacher)
     assert UnitGroup.has_any_pilot_access?(pilot_teacher)
     assert UnitGroup.has_any_pilot_access?(levelbuilder)
+  end
+
+  test 'units_for_user' do
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+
+    csx = create(:unit_group, name: 'csx-2050', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csx1 = create(:script, name: 'csx1')
+    csx2 = create(:script, name: 'csx2')
+    csx3 = create(:script, name: 'csx3')
+
+    create(:unit_group_unit, position: 1, unit_group: csx, script: csx1)
+    create(:unit_group_unit, position: 2, unit_group: csx, script: csx2)
+    create(:unit_group_unit, position: 3, unit_group: csx, script: csx3)
+
+    assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(nil).map(&:name)
+    assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(teacher).map(&:name)
+    assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
+
+    csx2.update!(published_state: SharedConstants::PUBLISHED_STATE.in_development)
+    csx.reload
+
+    assert_equal ['csx1', 'csx3'], csx.units_for_user(nil).map(&:name)
+    assert_equal ['csx1', 'csx3'], csx.units_for_user(teacher).map(&:name)
+    assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
   end
 end

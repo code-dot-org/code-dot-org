@@ -303,8 +303,6 @@ StudioApp.prototype.init = function(config) {
   }
   this.config = config;
 
-  this.hasContainedLevels = config.hasContainedLevels;
-
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
 
@@ -550,8 +548,6 @@ StudioApp.prototype.init = function(config) {
     this.setupLegacyShareView();
   }
 
-  initializeContainedLevel();
-
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
@@ -771,9 +767,9 @@ StudioApp.prototype.scaleLegacyShare = function() {
   }
 };
 
-StudioApp.prototype.getCode = function() {
+StudioApp.prototype.getCode = function(opt_showHidden) {
   if (!this.editCode) {
-    return Blockly.getWorkspaceCode();
+    return Blockly.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -2122,9 +2118,7 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.polishCodeHook = config.polishCodeHook;
   this.hasContainedLevels = config.hasContainedLevels;
 
-  if (config.hasContainedLevels) {
-    initializeContainedLevel();
-  }
+  initializeContainedLevel();
 };
 
 // Overwritten by applab.

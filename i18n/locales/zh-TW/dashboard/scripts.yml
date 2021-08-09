@@ -17704,3 +17704,22 @@ zh-TW:
               name: 測試
         dlp21-csp-mod1:
           title: 電腦科學原理深入學習 模組 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 模組 1
+              description: 測試
+            lessonGroup-3:
+              display_name: 模組 2
+            lessonGroup-4:
+              display_name: 模組 3
+            lessonGroup-5:
+              display_name: 模組 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: 概覽
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: 概覽

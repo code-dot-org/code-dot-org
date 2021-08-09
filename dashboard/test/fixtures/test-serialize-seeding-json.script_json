@@ -217,7 +217,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -240,7 +239,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -262,7 +260,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -285,7 +282,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -307,7 +303,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -330,7 +325,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +346,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +368,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +389,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +411,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +432,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +454,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -487,7 +475,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -510,7 +497,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -532,7 +518,6 @@
       "assessment": false,
       "properties": {
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +540,6 @@
       "properties": {
         "challenge": true
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

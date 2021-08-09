@@ -20,8 +20,6 @@ uz:
     mailer:
       confirmation_instructions:
         subject: Code.org tasdiqlash yo‘riqnomasi
-      reset_password_instructions:
-        subject: Code.org parolni qayta tuzish yo‘riqnomasi
       unlock_instructions:
         subject: Qulfdan chiqarish yo‘riqnomasi
     omniauth_callbacks:

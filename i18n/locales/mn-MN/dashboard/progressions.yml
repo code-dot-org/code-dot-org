@@ -1,25 +1,38 @@
 mn:
   data:
     progressions:
+      Alien Defender: Харийн хамгаалагч
+      Arrays: Матрицууд
       Artist Project: Зураачийн төсөл
       'Artist: Variables': 'Зураач: Хувьсагчууд'
+      Back and Forth: Арагш, урагш
+      Bass, Mid, and Treble: Басс, Дунд, Требль
       Binary Numbers: Хоёртын тоо
       Board Events: Самбарын үйл явдлууд
       CS Discoveries Post-Course Survey: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+      Collision Detection: Мөргөлдөөнийг илрүүлэх
       Collisions: Мөргөлдөөн
       Combining Representations: Төлөөллийг нэгтгэх
+      Course E Artist Project: Хичээл E Зураачийн төсөл
+      Dance Crews: Бүжгийн багууд
       Debugging: Алдааг засах
       Design Mode: Дизайны горим
+      Designing Screens with Code: Дэлгэцийг кодоор загварчлах
       Designing for Accessibility: Хүртээмжтэй болгохын тулд дизайн хийх
       Drawing: Зураг
+      End of Course Projects: Хичээлийн төслийн төгсгөл
+      Event Types: Үйл явдлын төрөл
       Events: Үйл явдлууд
       For Loops: Гогцоонд зориулав
       Free Play: Чөлөөтэй тоглох
       Functions: Функцүүд
       Functions with Parameters: Параметртэй функцүүд
+      Get In Formation: Хэлбэржүүлэх
+      Getters and Setters: Авагчид ба тохируулагчид
       Getting Properties: Шинж чанарыг авах
       Headings: Гарчиг
       How to Make a Sprite: Шидтэнг хэрхэн хийх вэ
+      Images in HTML: HTML дээрх зургууд
       Introducing Sprite Lab: Шидтэний лабораторийг танилцуулах
       Introduction to Arrays: Матрицын танилцуулга
       Keeping Data Secret: Мэдээллийг нууцлах
@@ -28,22 +41,35 @@ mn:
       Linking Pages: Хуудас холбох
       Linking Screens: Дэлгэцүүдийг холбож байна
       Lists: Жагсаалтууд
+      Making Music: Хөгжим зохиох
       Measures: Арга хэмжээ
       'Mini-Project: About Me': 'Шидтэний лабтай хамтарсан миний тухай'
+      More Buttons: Илүү олон товчлуурууд
+      Multi-Screen Apps: Олон дэлгэцийн аппууд
       My Online Neighborhood: Миний онлайн хөрш
+      Overview: Тойм
       Pair Programming: Хос програмчлал
       Picturing Data: Өгөгдлийг зураглах
       Planning: Төлөвлөлт
+      Polling Events: Санал хураалтын үйл явдал
       Programming with Rey and BB-8: Рэй ба BB-8-тай програмчлах
       Project: Төсөл
       Properties: Шинж чанарууд
+      Quarter Notes: Дөрөвтийн тэмдэглэл
       Reflection: Тусгал
       Representing Images: Зургийг төлөөлөх
       Review: Хяналт
+      Speed it Up, Slow it Down: Үүнийг хурдасгах, удаашруулах
       Sprite Lab Project: Шидтэний лабораторийн төсөл
+      Text Compression: Текстийн шахалт
+      The Animation Tab: Анимэйшний таб
+      The Draw Loop: Зурах гогцоо
       The Harvester: Ургац хураагч
       Using the Repeat Block: Давталт блок ашиглах
+      Variables: Хувьсагчууд
       Velocity: Хурд
       Video: Видео
+      Where'd They Go?: Тэд хаашаа явах вэ?
       While Loops with the Farmer: Фермертэй хамтарсан Байхад гогцоо
       Wrap-up: Дуусгах
+      getNumber: getNumber

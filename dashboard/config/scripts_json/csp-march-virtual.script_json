@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:51 UTC",
+    "serialized_at": "2021-08-03 22:47:57 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp-march-virtual"
@@ -93,7 +93,6 @@
           "Mar20 Prework_0"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -118,7 +117,6 @@
         ],
         "progression": "Overview and Setup"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -143,7 +141,6 @@
         ],
         "progression": "Overview and Setup"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -168,7 +165,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -193,7 +189,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -218,7 +213,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +237,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -268,7 +261,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -293,7 +285,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -318,7 +309,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,7 +332,6 @@
           "Mar20 Part2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -367,7 +356,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +380,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +404,6 @@
         ],
         "progression": "Tasks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +428,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
