@@ -6,6 +6,7 @@ import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import FunctionEditor from './addons/functionEditor';
+import initializeGenerator from './addons/cdoGenerator';
 import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
@@ -261,35 +262,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
-  // This function was a custom addition in CDO Blockly, so we need to add it here
-  // so that our code generation logic still works with Google Blockly
-  blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
-    const generator = blocklyWrapper.getGenerator();
-    generator.init(blocklyWrapper.mainBlockSpace);
-    let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
-      true /* ordered */
-    );
-    if (opt_typeFilter) {
-      if (typeof opt_typeFilter === 'string') {
-        opt_typeFilter = [opt_typeFilter];
-      }
-      blocksToGenerate = blocksToGenerate.filter(block =>
-        opt_typeFilter.includes(block.type)
-      );
-    }
-    let code = [];
-    blocksToGenerate.forEach(block => {
-      code.push(blocklyWrapper.JavaScript.blockToCode(block));
-    });
-    code = code.join('\n');
-    code = generator.finish(code);
-    return code;
-  };
-
-  blocklyWrapper.Generator.prefixLines = function(text, prefix) {
-    return blocklyWrapper.JavaScript.prefixLines(text, prefix);
-  };
-
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
@@ -325,6 +297,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   initializeBlocklyXml(blocklyWrapper);
+  initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
