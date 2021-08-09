@@ -118,7 +118,11 @@ class OAuthLogins extends React.Component {
             })}
           />
           <br />
-          <img src={syncSectionImgSrc} style={{maxWidth: '50%'}} />
+          <img
+            src={syncSectionImgSrc}
+            style={{maxWidth: '50%'}}
+            alt={i18n.syncingYourStudents()}
+          />
         </div>
       </div>
     );
