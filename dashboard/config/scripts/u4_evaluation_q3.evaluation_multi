@@ -1,5 +1,5 @@
 name 'U4 evaluation q3’
 question ‘Do you have a sense of how companies use the data and information they collect about you and other app and website users?' 
 answer ‘Yes! I read my privacy policies closely and understand what\’s being collected and how it could be used’ 
-answer ‘I have some sense, but could stand to learn more’, weight: 1, stage_name: ‘Lessons 1 - 4: Data in the Real World’
-answer ‘I don\’t know much about this and would really like to know more’, weight: 3, stage_name: ‘Lessons 1 - 4: Data in the Real World’
+answer ‘I have some sense, but could stand to learn more’, weight: 1, lesson_name: ‘Lessons 1 - 4: Data in the Real World’
+answer ‘I don\’t know much about this and would really like to know more’, weight: 3, lesson_name: ‘Lessons 1 - 4: Data in the Real World’

@@ -41,6 +41,7 @@ import {
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import queryString from 'query-string';
 
 const ButtonState = {
   UP: 0,
@@ -55,7 +56,7 @@ const ArrowIds = {
 };
 
 /**
- * An instantiable GameLab class
+ * An instantiable Dance class
  * @constructor
  * @implements LogTarget
  */
@@ -93,13 +94,13 @@ Dance.prototype.injectStudioApp = function(studioApp) {
 };
 
 /**
- * Initialize Blockly and this GameLab instance.  Called on page load.
+ * Initialize Blockly and this Dance instance.  Called on page load.
  * @param {!AppOptionsConfig} config
- * @param {!GameLabLevel} config.level
+ * @param {!Dancelab} config.level
  */
 Dance.prototype.init = function(config) {
   if (!this.studioApp_) {
-    throw new Error('GameLab requires a StudioApp');
+    throw new Error('Dance requires a StudioApp');
   }
 
   this.level = config.level;
@@ -182,7 +183,12 @@ Dance.prototype.awaitTimingMetrics = function() {
 };
 
 Dance.prototype.initSongs = async function(config) {
-  const songManifest = await getSongManifest(config.useRestrictedSongs);
+  // Check for a user-specified manifest file.
+  const manifest = queryString.parse(window.location.search).manifest;
+  const songManifest = await getSongManifest(
+    config.useRestrictedSongs,
+    manifest
+  );
   const songData = parseSongOptions(songManifest);
   const selectedSong = getSelectedSong(songManifest, config);
 

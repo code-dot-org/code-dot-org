@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {classroomShape, loadErrorShape} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
@@ -20,46 +21,6 @@ const ctaButtonStyle = {
   boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
   fontSize: 14,
   padding: '8px 20px'
-};
-const styles = {
-  title: {
-    position: 'absolute',
-    left: 20,
-    color: color.dark_charcoal,
-    margin: '15px 0'
-  },
-  content: {
-    position: 'absolute',
-    left: 20,
-    top: 50,
-    right: 20,
-    bottom: 70,
-    overflowY: 'scroll'
-  },
-  classroomRow: {
-    padding: 10,
-    cursor: 'pointer'
-  },
-  highlightRow: {
-    backgroundColor: color.default_blue,
-    color: color.white
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 15,
-    right: 20,
-    left: 20
-  },
-  buttonPrimary: {
-    ...ctaButtonStyle,
-    float: 'right'
-  },
-  buttonSecondary: {
-    float: 'left',
-    background: '#eee',
-    color: '#5b6770',
-    border: '1px solid #c5c5c5'
-  }
 };
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
@@ -134,7 +95,11 @@ const LoadError = ({rosterProvider, loginType}) => {
           <p>{locale.authorizeGoogleClassroomsText()}</p>
           <ReauthorizeGoogleClassroom />
           <p>
-            <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {locale.errorLoadingRosteredSectionsSupport()}
             </a>
           </p>
@@ -144,7 +109,11 @@ const LoadError = ({rosterProvider, loginType}) => {
       return (
         <p>
           {locale.errorLoadingRosteredSections({type: loginType})}{' '}
-          <a href={ROSTERED_SECTIONS_SUPPORT_URL} target="_blank">
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {locale.errorLoadingRosteredSectionsSupport()}
           </a>
         </p>
@@ -267,6 +236,47 @@ class RosterDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    position: 'absolute',
+    left: 20,
+    color: color.dark_charcoal,
+    margin: '15px 0'
+  },
+  content: {
+    position: 'absolute',
+    left: 20,
+    top: 50,
+    right: 20,
+    bottom: 70,
+    overflowY: 'scroll'
+  },
+  classroomRow: {
+    padding: 10,
+    cursor: 'pointer'
+  },
+  highlightRow: {
+    backgroundColor: color.default_blue,
+    color: color.white
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 15,
+    right: 20,
+    left: 20
+  },
+  buttonPrimary: {
+    ...ctaButtonStyle,
+    float: 'right'
+  },
+  buttonSecondary: {
+    float: 'left',
+    background: '#eee',
+    color: '#5b6770',
+    border: '1px solid #c5c5c5'
+  }
+};
 export const UnconnectedRosterDialog = RosterDialog;
 export default connect(
   state => ({

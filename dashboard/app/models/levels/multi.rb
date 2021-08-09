@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 require "csv"
@@ -28,7 +29,7 @@ require "csv"
 class Multi < Match
   def dsl_default
     <<~ruby
-      name 'unique level name here'
+      name '#{DEFAULT_LEVEL_NAME}'
       title 'title'
       description 'description here'
       question 'Question'
@@ -64,5 +65,15 @@ class Multi < Match
       question_text = properties['markdown']
     end
     return question_text
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    localized_questions = localized_property(:questions)
+    question_text = localized_questions.any? ? localized_questions[0]['text'] : nil
+    super.merge(
+      {
+        questionText: question_text
+      }
+    )
   end
 end

@@ -1,0 +1,9 @@
+name 'courseD_EOC_examples_2021'
+display_name 'Project Examples'
+description 'You are about to start your final project. Before you begin, spend some time looking at the example projects.'
+
+sublevels
+level 'CourseD_EOC_bounce1_example_2021'
+level 'CourseD_EOC_starwars_example_2021'
+level 'CourseD_EOC_dance_examples_2021'
+level 'CourseD_EOC_artist_example2021'

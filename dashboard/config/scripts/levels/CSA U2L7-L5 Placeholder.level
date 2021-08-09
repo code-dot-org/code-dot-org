@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Consider the following class definitions.\r\n\r\n```\r\npublic class Car {\r\n   String model;\r\n   int topSpeed;\r\n   \r\n   public Car (String model, int topSpeed) {\r\n      this.model = model;\r\n      this.topSpeed = topSpeed;\r\n   }\r\n}\r\n\r\npublic class ElectricCar extends Car {\r\n   int chargeLevel;\r\n   \r\n   /* Write the header for the constructor here. */ {\r\n      super(model, topSpeed);\r\n      this.chargeLevel = chargeLevel;\r\n   }\r\n}\r\n```\r\n\r\nWrite the header for the constructor for the `ElectricCar` class.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28550
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-06-23T16:59:05.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:59:15 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -56,7 +56,7 @@ In this lesson students will help their bees to collect nectar from flowers and 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Sequence](http://learn.code.org/s/course1/stage/7/puzzle/1)
+### <a name="Activity"></a> [Bee: Sequence](http://learn.code.org/s/course1/lessons/7/levels/1)
 Point out to students that each flower and honeycomb has a little number next to it. That number tells you how much nectar to collect or honey to make.
 
 - Have students count their nectar and honey blocks out loud.

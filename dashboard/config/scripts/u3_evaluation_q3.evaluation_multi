@@ -1,4 +1,4 @@
 name 'U3 evaluation q3'
 question 'How comfortable are you identifying sequencing, selection, and iteration within an algorithm?'
 answer 'I feel confident in my ability to identify all three.'
-answer 'I feel uncomfortable identifying any part of an algorithm.', weight: 1, stage_name: ‘Lessons 1 - 3: Algorithms'
+answer 'I feel uncomfortable identifying any part of an algorithm.', weight: 1, lesson_name: ‘Lessons 1 - 3: Algorithms'

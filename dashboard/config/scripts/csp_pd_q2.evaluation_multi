@@ -1,4 +1,4 @@
 name 'CSP PD Q2'
 question 'How will you teach students?'
-answer 'I will make them write', weight: 1, stage_name: 'Strategies for Student Writing'
-answer 'I will make them learn from peers', weight: 1, stage_name: 'Supporting Peer Learning'
+answer 'I will make them write', weight: 1, lesson_name: 'Strategies for Student Writing'
+answer 'I will make them learn from peers', weight: 1, lesson_name: 'Supporting Peer Learning'

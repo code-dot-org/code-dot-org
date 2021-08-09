@@ -4,31 +4,31 @@ title: Partnerët
 
 Ora e Kodimit udhëhiqet nga Ora e Kodimit dhe komunitetet këshilluese dhe shqyrtuese të Javës së Edukimit në shkencat Kompjuterike.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Komuniteti udhëheq strategjitë për fushatën e Orës së Kodimit.
+[Komuniteti këshillues](%= resolve_url('/advisory-committee') %) përbëhet nga përfaqësues të K-12, akademi, organizata ndërkombëtare fitimprurëse dhe jo-fitimprurëse. Komuniteti udhëheq strategjitë për fushatën e Orës së Kodimit.
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.
+[Komuniteti shqyrtues](%= resolve_url('/review-committee') %) përbëhet nga 15 edukatorë të të gjitha niveleve të shkollimit që kanë akses dhe rekomandojnë aktivitete duke përdorur rubrikën e Komunitetit Këshillues. Këta edukatorë rishikojnë aktivitetet e drejtuara nga studentët dhe planet mësimore të drejtuara nga mësuesit të paraqitura nga qindra partnerë të aktiviteteve, duke vlerësuar vlerën arsimore të aktiviteteve, aftësinë për të angazhuar nxënës dhe tërheqjen e mundshme të grupeve të ndryshme të studentëve.
 
 Puna dhe përkushtimi i komuniteteve kanë kontribuar në suksesin e Orës së Kodimit dhe vizionin e saj për të ofruar një hyrje në shkencat kompjuterike për çdo nxënës.
 
-# Major Partners and Corporate Supporters
+# Partnerët kryesorë dhe mbështetësit e korporatave
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Partnerët Ndërkombëtarë
 
-{{ partners/international_partners }}
+{{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Partnerët e Kurrikulës dhe Tutorialit
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Partnerët dhe Mjetet e Infrastrukturës
 
 {{ partners/infrastructure_partners_tools }}
 

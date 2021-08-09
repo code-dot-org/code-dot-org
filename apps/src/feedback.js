@@ -22,6 +22,7 @@ import {TestResults, KeyCodes} from './constants';
 import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -42,7 +43,6 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var codegen = require('./lib/tools/jsinterpreter/codegen');
 /** @type {Object<string, function>} */
 var msg = require('@cdo/locale');
 var dom = require('./dom');
@@ -612,9 +612,9 @@ FeedbackUtils.saveThumbnail = function(image) {
 };
 
 FeedbackUtils.isLastLevel = function() {
-  const stage = getStore().getState().progress.stages[0];
+  const lesson = getStore().getState().progress.lessons[0];
   return (
-    stage.levels[stage.levels.length - 1].ids.indexOf(
+    lesson.levels[lesson.levels.length - 1].ids.indexOf(
       window.appOptions.serverLevelId
     ) !== -1
   );
@@ -650,7 +650,9 @@ FeedbackUtils.prototype.getNumBlocksUsed = function() {
  */
 FeedbackUtils.prototype.getNumCountableBlocks = function() {
   var i;
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return 0;
+  } else if (this.studioApp_.editCode) {
     var codeLines = 0;
     // quick and dirty method to count non-blank lines that don't start with //
     var lines = this.getGeneratedCodeString_().split('\n');
@@ -660,8 +662,9 @@ FeedbackUtils.prototype.getNumCountableBlocks = function() {
       }
     }
     return codeLines;
+  } else {
+    return this.getCountableBlocks_().length;
   }
-  return this.getCountableBlocks_().length;
 };
 
 /**
@@ -679,6 +682,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
       tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
+    } else if (options.feedbackType === TestResults.FREE_PLAY_UNCHANGED_FAIL) {
+      tryAgainText = msg.keepWorking();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
       tryAgainText = msg.tryAgain();
     } else {
@@ -747,6 +752,12 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
   } else {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
+      case TestResults.FREE_PLAY_UNCHANGED_FAIL:
+        logDialogActions('level_unchanged_failure', options, null);
+        message = options.useDialog
+          ? msg.freePlayUnchangedFail()
+          : msg.freePlayUnchangedFailInline();
+        break;
       case TestResults.RUNTIME_ERROR_FAIL:
         message = msg.runtimeErrorMsg({
           lineNumber: options.executionError.lineNumber
@@ -882,13 +893,13 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel =
           options.response && options.response.message === 'no more levels';
-        var stageCompleted = null;
-        if (options.response && options.response.stage_changing) {
-          stageCompleted = options.response.stage_changing.previous.name;
+        var lessonCompleted = null;
+        if (options.response && options.response.lesson_changing) {
+          lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
-          stageNumber: 0, // TODO: remove once localized strings have been fixed
-          stageName: stageCompleted,
+          lessonNumber: 0, // TODO: remove once localized strings have been fixed
+          stageName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
@@ -898,7 +909,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           var reinfFeedbackMsg =
             (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
 
-          if (options.level.disableFinalStageMessage) {
+          if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
@@ -910,7 +921,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
-            : stageCompleted
+            : lessonCompleted
             ? msg.nextStage(msgParams)
             : nextLevelMsg;
         }
@@ -1124,13 +1135,9 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   challenge = false
 ) {
   const numLinesWritten = this.getNumBlocksUsed();
-  const shouldShowTotalLines =
-    options.response &&
-    options.response.total_lines &&
-    options.response.total_lines !== numLinesWritten;
-  const totalNumLinesWritten = shouldShowTotalLines
-    ? options.response.total_lines
-    : 0;
+  // Use the response from the server if we have one. Otherwise use the client's data.
+  const totalLines =
+    (options.response && options.response.total_lines) || clientState.lines();
 
   const generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription:
@@ -1140,7 +1147,7 @@ FeedbackUtils.prototype.getShowCodeComponent_ = function(
   return (
     <CodeWritten
       numLinesWritten={numLinesWritten}
-      totalNumLinesWritten={totalNumLinesWritten}
+      totalNumLinesWritten={totalLines}
       useChallengeStyles={challenge}
     >
       <GeneratedCode
@@ -1179,10 +1186,12 @@ FeedbackUtils.prototype.shouldPromptForHint = function(feedbackType) {
  * Retrieve a string containing the user's generated Javascript code.
  */
 FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
-  if (this.studioApp_.editCode) {
+  if (getStore().getState().pageConstants.isBramble) {
+    return '';
+  } else if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   } else {
-    return codegen.workspaceCode(Blockly);
+    return Blockly.getWorkspaceCode();
   }
 };
 
@@ -1657,7 +1666,10 @@ FeedbackUtils.prototype.getMissingBlocks_ = function(blocks, maxBlocksToFlag) {
  * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function() {
-  if (this.studioApp_.editCode) {
+  if (
+    this.studioApp_.editCode ||
+    getStore().getState().pageConstants.isBramble
+  ) {
     return false;
   }
   var topBlocks = Blockly.mainBlockSpace.getTopBlocks();
@@ -1700,6 +1712,9 @@ FeedbackUtils.prototype.getTestResults = function(
   options
 ) {
   options = options || {};
+  if (getStore().getState().pageConstants.isBramble) {
+    return TestResults.FREE_PLAY;
+  }
   if (this.studioApp_.editCode) {
     if (levelComplete) {
       return TestResults.ALL_PASS;

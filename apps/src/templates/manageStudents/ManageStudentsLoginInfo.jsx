@@ -13,23 +13,6 @@ import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstr
 
 import LoginExport from './LoginExport';
 
-const styles = {
-  explanation: {
-    clear: 'both',
-    paddingTop: 20
-  },
-  heading: {
-    color: color.purple
-  },
-  listAlign: {
-    marginLeft: 10
-  },
-  sublistAlign: {
-    marginLeft: 20,
-    marginBottom: 10
-  }
-};
-
 class ManageStudentsLoginInfo extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -193,5 +176,22 @@ class ManageStudentsLoginInfo extends Component {
     );
   }
 }
+
+const styles = {
+  explanation: {
+    clear: 'both',
+    paddingTop: 20
+  },
+  heading: {
+    color: color.purple
+  },
+  listAlign: {
+    marginLeft: 10
+  },
+  sublistAlign: {
+    marginLeft: 20,
+    marginBottom: 10
+  }
+};
 
 export default ManageStudentsLoginInfo;

@@ -1,0 +1,36 @@
+name 'U77 CFU Libraries AP'
+title 'AP Pseudocode: Libraries'
+description ''
+right 'Line 03'
+wrong 'Line 06'
+wrong 'Line 08'
+wrong 'Line 11'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how questions with procedures will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+![](https://images.code.org/38a3904314c1f6446359e5e71e8320b1-image-1575580720791.17.50 PM.png)\
+
+## Practice Question
+
+The following procedure was developed to determine if a list contains a negative number. If the list contains a negative number it should return true, otherwise it should return false.
+
+An error was made in writing this function so that it does not work as intended. Which line of code would need to be fixed in order for the function to work as designed?
+
+```
+01 PROCEDURE checkNegative(list)
+02 {
+03  hasNegative <- true
+04    FOR EACH number IN list
+05    {
+06      IF(number < 0)
+07      {
+08        hasNegative <- true
+09      }
+10    }
+11  RETURN(hasNegative)
+12 }
+```
+MARKDOWN

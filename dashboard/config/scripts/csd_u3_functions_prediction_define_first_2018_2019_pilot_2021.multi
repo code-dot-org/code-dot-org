@@ -1,0 +1,13 @@
+name 'CSD U3 Functions Prediction define first_2018_2019_pilot_2021'
+wrong 'The red square will be drawn but the green one will not. You cannot call functions after they are created.', feedback: 'Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!'
+wrong 'The green square will be drawn but the red one will not You cannot call functions before they are created.', feedback: 'Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!'
+right 'Both squares will be drawn. You can create functions anywhere you like in your code.', feedback: 'Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!'
+wrong 'Neither square will be drawn. There is an error in the code.', feedback: 'Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!'
+
+markdown <<MARKDOWN
+# Does It Matter Where You Create Functions?
+
+So far all your functions have been created at the bottom of your code. What do you think will happen if you call a function before it's defined?
+
+Notice that the red square is drawn **before** its function is created while the green square is drawn **after** its function is created. Which of these do you think will be drawn?
+MARKDOWN

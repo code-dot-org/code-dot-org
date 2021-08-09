@@ -74,7 +74,7 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "<img src=\"https://images.code.org/cdcd32e50919b03b67dc4fcd31e2933b-image-1575316446714.53.56 AM.png\" style=\"float:right\">\r\n\r\n# Turn on Data Library\r\n\r\nIn order to run this pilot [click here to reload the page](https://studio.code.org/s/csp5-2020/stage/10/puzzle/2?enableExperiments=applabDatasets). Afterwards when you click the \"Data\" tab you should now see a \"Data Library\" like in the image to the right.\r\n\r\n[Click here if you want to turn off this feature.](https://studio.code.org/s/csp5-2020/stage/10/puzzle/2?disableExperiments=applabDatasets)\r\n\r\n",
+    "long_instructions": "<img src=\"https://images.code.org/cdcd32e50919b03b67dc4fcd31e2933b-image-1575316446714.53.56 AM.png\" style=\"float:right\">\r\n\r\n# Turn on Data Library\r\n\r\nIn order to run this pilot [click here to reload the page](https://studio.code.org/s/csp5-2020/lessons/10/levels/2?enableExperiments=applabDatasets). Afterwards when you click the \"Data\" tab you should now see a \"Data Library\" like in the image to the right.\r\n\r\n[Click here if you want to turn off this feature.](https://studio.code.org/s/csp5-2020/lessons/10/levels/2?disableExperiments=applabDatasets)\r\n\r\n",
     "parent_level_id": 19856,
     "mini_rubric": "false",
     "encrypted": "false",

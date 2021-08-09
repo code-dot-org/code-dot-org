@@ -1,0 +1,7 @@
+{
+  "func": "velocity",
+  "category": "Sprites",
+  "modeOptionName": "*.velocity",
+  "type": "property",
+  "noAutocomplete": true
+}

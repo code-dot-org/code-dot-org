@@ -14,3 +14,18 @@ wrong 'The app informs users of the total cost of their groceries.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** While the other three answers describe things that every user would expect to experience from using the app, not every user will necessarily find that it saves them time that they can then spend with their families.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.A.1 - The purpose of computing innovations is to solve problems or to pursue interests through creative expression.
+* IOC-1.A.3 - Not every effect of a computing innovation is anticipated in advance.
+
+
+
+:::
+
+
+MARKDOWN

@@ -4,25 +4,69 @@ import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import createResourcesReducer, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {Provider} from 'react-redux';
 import {
-  levelKeyList,
-  activities
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/SampleActivitiesData';
+  sampleActivities,
+  sampleActivityForLessonWithoutLessonPlan,
+  searchOptions
+} from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
+import {allowConsoleWarnings} from '../../../../test/util/testUtils';
 
-const createStore = () => {
-  registerReducers({...reducers});
+const resourcesEditor = createResourcesReducer('lessonResource');
+
+const createStoreWithLessonPlan = () => {
+  registerReducers({
+    ...reducers,
+    resources: resourcesEditor,
+    vocabularies: vocabulariesEditor
+  });
   const store = createStoreWithReducers();
-  store.dispatch(init(activities, levelKeyList));
+  store.dispatch(init(sampleActivities, searchOptions, [], false));
+  store.dispatch(initResources('lessonResource', []));
+  store.dispatch(initVocabularies([]));
   return store;
 };
+
+const createStoreWithoutLessonPlan = () => {
+  registerReducers({
+    ...reducers,
+    resources: resourcesEditor,
+    vocabularies: vocabulariesEditor
+  });
+  const store = createStoreWithReducers();
+  store.dispatch(
+    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [], false)
+  );
+  store.dispatch(initResources('lessonResource', []));
+  store.dispatch(initVocabularies([]));
+  return store;
+};
+
 export default storybook => {
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   storybook.storiesOf('ActivitiesEditor', module).addStoryTable([
     {
-      name: 'ActivitiesEditor',
+      name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
-        <Provider store={createStore()}>
-          <ActivitiesEditor />
+        <Provider store={createStoreWithLessonPlan()}>
+          <ActivitiesEditor hasLessonPlan={true} />
+        </Provider>
+      )
+    },
+    {
+      name: 'ActivitiesEditor For Lesson Without Lesson Plan',
+      story: () => (
+        <Provider store={createStoreWithoutLessonPlan()}>
+          <ActivitiesEditor hasLessonPlan={false} />
         </Provider>
       )
     }

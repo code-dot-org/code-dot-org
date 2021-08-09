@@ -1,0 +1,18 @@
+name 'OPD-K5 Welcome 2_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started > Computer Science Fundamentals Courses
+
+The goal of Code.org's professional development is to prepare teachers like you to integrate computer science into their classrooms and support their growth as teachers. After completing this online course, you'll be ready to teach one or more of the following Code.org Computer Science Fundamentals courses in your classroom:
+
+ - **[Course A](http://studio.code.org/s/coursea)**: approximately 12 hours (Kindergarten)
+ - **[Course B](http://studio.code.org/s/courseb)**: approximately 12 hours (Grade 1)
+ - **[Course C](http://studio.code.org/s/coursec)**: approximately 18 hours (Grade 2)
+ - **[Course D](http://studio.code.org/s/coursed)**: approximately 18 hours (Grade 3)
+ - **[Course E](http://studio.code.org/s/coursee)**: approximately 18 hours (Grade 4)
+ - **[Course F](http://studio.code.org/s/coursef)**: approximately 20 hours (Grade 5)
+ - **[Computer Science (CS) Fundamentals Express](http://studio.code.org/s/express)**: approximately 20 hours (Ages 8+)
+ - **[Computer Science (CS) Fundamentals Pre-Express](http://studio.code.org/s/pre-express)**: approximately 20 hours (Ages 4-8)
+
+
+MARKDOWN

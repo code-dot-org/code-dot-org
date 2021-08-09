@@ -106,7 +106,7 @@ export default class TooltipOverlay extends React.Component {
       const rectY = bubbleCoordinates.rectY + indexYOffset;
       const textY = rectY + TEXT_RECT_HEIGHT + TEXT_Y_OFFSET;
       return (
-        <g key={index}>
+        <svg key={index}>
           <rect
             x={rectX}
             y={rectY}
@@ -119,7 +119,7 @@ export default class TooltipOverlay extends React.Component {
           <text x={textX} y={textY} style={styles.text}>
             {string}
           </text>
-        </g>
+        </svg>
       );
     });
   }
@@ -160,9 +160,14 @@ export function textProvider(label) {
  * Simple provider that formats and renders the mouse coordinates.
  * @returns {function(): string}
  */
-export function coordinatesProvider(flip) {
+export function coordinatesProvider(flip = false, isRtl = false) {
   return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
-    return `x: ${Math.floor(props.mouseX)}, y: ${Math.floor(y)}`;
+    if (isRtl) {
+      // We have to use unicode to explicitly set the SVG text to LTR when the document is using RTL
+      return `\u202A${Math.round(y)} :y, ${Math.round(props.mouseX)} :x\u202C`;
+    } else {
+      return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
+    }
   };
 }

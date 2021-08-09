@@ -1,0 +1,12 @@
+{
+  "func": "isTouching",
+  "category": "Sprites",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "*.isTouching",
+  "type": "value"
+}

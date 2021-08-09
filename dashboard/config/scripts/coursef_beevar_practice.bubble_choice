@@ -1,0 +1,9 @@
+name 'courseF_beeVar_practice'
+editor_experiment ''
+display_name 'Bee Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with variables and the bee!'
+
+sublevels
+level 'courseF_bee_variables_5b_2021'
+level 'courseF_bee_variables_6c_2021'
+level 'courseF_bee_variables_7a_2021'

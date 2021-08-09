@@ -1,0 +1,22 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "startFollowing",
+    "blockText": "{SPRITE} begins following {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

@@ -85,4 +85,20 @@ class CourseVersionTest < ActiveSupport::TestCase
     course_version.destroy_and_destroy_parent_if_empty
     assert_nil CourseVersion.find_by(course_offering: nil, key: course_version.key)
   end
+
+  test "enforces key format" do
+    course_version = build :course_version, key: 'invalid key'
+    refute course_version.valid?
+    course_version.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
+    assert course_version.valid?
+  end
+
+  test "throws exception if changing course version of content root that prevent course version change" do
+    script = create :script, is_course: true
+    script.stubs(:prevent_course_version_change?).returns(true)
+    course_offering = create :course_offering
+    assert_raises do
+      CourseVersion.add_course_version(course_offering, script)
+    end
+  end
 end

@@ -20,6 +20,8 @@ Feature: Thank Donors Interstitial
   Scenario: New student sign in from code.org does not show donor interstitial on mobile
     Given I delete the cookie named "has_seen_thank_donors"
     Then I create a student who has never signed in named "Bob" and go home
+    # Wait for homepage to load before confirming that modal is not visible
+    Then I wait until element "#header-banner" is visible
     Then element "#thank-donors-modal" is not visible
 
   @eyes

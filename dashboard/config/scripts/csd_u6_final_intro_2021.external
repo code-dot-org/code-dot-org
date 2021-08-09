@@ -1,0 +1,35 @@
+name 'CSD U6 final intro_2021'
+display_name 'Design Your Prototype'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Prototype your own innovation
+
+Now that you have all the skills you need, it's time to make your own game!
+
+With a partner or team, brainstorm some different physical devices you could prototype. You can build on the programs that you've already made in previous lessons, innovative devices that you've seen in the real world, or any wild ideas you can come up with.
+
+Once you have settled on an idea with your team, fill out the Project Guide with the sketches of the physical components of your device, inputs and outputs that you'll need, and plans for what information you'll need to process.
+
+## Innovation Ideas
+
+To help kick off your brainstorming, check out these example projects:
+
+### Automatic Night Light
+
+Using conductive thread, LEDs, and the light sensor, create a decorative piece of wall art the becomes a night light when the lights go out. This one is designed to look like flickering fireflies.
+
+![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+### Musical Instrument
+
+Design a musical instrument that can be played any way you like, using sensors or buttons for input. In this case we created five new buttons using conductive copper tape, though you could also use aluminum foil or any other conductive material.
+
+![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+### Bop-it
+
+Make a game! This one uses an array to store the different commands, which are picked at random each time you correctly follow the instructions on screen.
+
+![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
+MARKDOWN

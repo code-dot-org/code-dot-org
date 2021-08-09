@@ -1,5 +1,6 @@
 require 'json'
 require 'open3'
+require 'shellwords'
 require 'tempfile'
 require 'yaml'
 
@@ -10,7 +11,7 @@ class RedactRestoreUtils
     args = ['bin/i18n/node_modules/.bin/redact']
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
-    args.push("-s #{source_path.inspect}")
+    args.push(Shellwords.escape(source_path))
     stdout, _status = Open3.capture2(args.join(" "))
 
     return JSON.parse(stdout)
@@ -20,8 +21,8 @@ class RedactRestoreUtils
     args = ['bin/i18n/node_modules/.bin/restore']
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
-    args.push("-s #{source_path.inspect}")
-    args.push("-r #{redacted_path.inspect}")
+    args.push("-s #{Shellwords.escape(source_path)}")
+    args.push("-r #{Shellwords.escape(redacted_path)}")
 
     stdout, _status = Open3.capture2(args.join(" "))
 

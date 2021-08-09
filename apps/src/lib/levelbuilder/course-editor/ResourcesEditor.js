@@ -3,22 +3,11 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import ResourceType, {
-  stringForType,
-  resourceShape
+  stringForType
 } from '@cdo/apps/templates/courseOverview/resourceType';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
-
-const styles = {
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  },
-  error: {
-    color: 'red'
-  }
-};
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 const defaultLinks = {
   '': '',
@@ -33,29 +22,29 @@ const defaultLinks = {
   [ResourceType.videos]: '/link/to/videos'
 };
 
+//Editor for Teacher Resources
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired
+    resources: PropTypes.array,
+    migratedResources: PropTypes.arrayOf(migratedResourceShape),
+    useMigratedResources: PropTypes.bool.isRequired,
+    studentFacing: PropTypes.bool,
+    updateResources: PropTypes.func,
+    courseVersionId: PropTypes.number,
+    getRollupsUrl: PropTypes.string
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.resources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
-    }
-
     this.state = {
-      resources,
       errorString: ''
     };
   }
 
   handleChangeType = (event, index) => {
-    const oldResources = this.state.resources;
+    const oldResources = this.props.resources;
     const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
     newResources[index].type = type;
@@ -70,18 +59,20 @@ export default class ResourcesEditor extends Component {
       errorString = 'Your resource types contains a duplicate';
     }
 
-    this.setState({resources: newResources, errorString});
+    this.setState({errorString});
+    this.props.updateResources(newResources);
   };
 
   handleChangeLink = (event, index) => {
-    const newResources = _.cloneDeep(this.state.resources);
+    const newResources = _.cloneDeep(this.props.resources);
     const link = event.target.value;
     newResources[index].link = link;
-    this.setState({resources: newResources});
+    this.props.updateResources(newResources);
   };
 
   render() {
-    const {resources, errorString} = this.state;
+    const {errorString} = this.state;
+    const {useMigratedResources, resources} = this.props;
 
     // avoid showing multiple empty resources
     const lastNonEmpty = _.findLastIndex(
@@ -89,33 +80,72 @@ export default class ResourcesEditor extends Component {
       ({type, link}) => link && type
     );
 
+    // If using migrated resources, we have to have a course version id
+    if (useMigratedResources && !this.props.courseVersionId) {
+      return (
+        <strong>
+          Cannot add resources to migrated unit without course version. A unit
+          must belong to a course or have 'Is a Standalone Unit' checked to have
+          a course version.
+        </strong>
+      );
+    }
+
     // Resources contains maxResources entries. For the empty entries, we want to
     // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
     // and +1 more because slice is exclusive.
     return (
       <div>
-        {resources.slice(0, lastNonEmpty + 2).map((resource, index) => (
-          <Resource
-            key={index}
-            id={index + 1}
-            resource={resource}
-            inputStyle={this.props.inputStyle}
-            handleChangeType={event => this.handleChangeType(event, index)}
-            handleChangeLink={event => this.handleChangeLink(event, index)}
+        {useMigratedResources ? (
+          <MigratedResourceEditor
+            courseVersionId={this.props.courseVersionId}
+            resourceContext={
+              this.props.studentFacing ? 'studentResource' : 'teacherResource'
+            }
+            resources={this.props.migratedResources}
+            getRollupsUrl={this.props.getRollupsUrl}
           />
-        ))}
+        ) : (
+          resources
+            .slice(0, lastNonEmpty + 2)
+            .map((resource, index) => (
+              <Resource
+                key={index}
+                id={index + 1}
+                resource={resource}
+                inputStyle={this.props.inputStyle}
+                handleChangeType={event => this.handleChangeType(event, index)}
+                handleChangeLink={event => this.handleChangeLink(event, index)}
+              />
+            ))
+        )}
 
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
-          <TeacherResourcesDropdown
-            resources={resources.filter(x => !!x.type)}
+          <ResourcesDropdown
+            resources={(resources || []).filter(x => !!x.type)}
+            migratedResources={this.props.migratedResources}
+            useMigratedResources={this.props.useMigratedResources}
+            studentFacing={this.props.studentFacing}
           />
         </div>
       </div>
     );
   }
 }
+
+const styles = {
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  },
+  error: {
+    color: 'red'
+  }
+};
 
 const Resource = ({
   id,

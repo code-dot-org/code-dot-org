@@ -1,7 +1,8 @@
 /* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
-import dontMarshalApi from './dontMarshalApi';
+import dontMarshalApi from '../dontMarshalApi';
+import {dropletStringBlocks, dropletArrayBlocks} from '../dropletUtils';
 import consoleApi from '../consoleApi';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
@@ -18,7 +19,6 @@ import {
 } from './setPropertyDropdown';
 import {getStore} from '../redux';
 import * as applabConstants from './constants';
-import experiments from '../util/experiments';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -31,12 +31,6 @@ function chooseAsset(typeFilter, callback) {
     showUnderageWarning: !getStore().getState().pageConstants.is13Plus
   });
 }
-
-var stringMethodPrefix = '[string].';
-var arrayMethodPrefix = '[list].';
-
-var stringBlockPrefix = 'str.';
-var arrayBlockPrefix = 'list.';
 
 // Configure shared APIs for App Lab
 // We wrap this because it runs before window.Applab exists
@@ -243,6 +237,7 @@ export var blocks = [
   },
   {...audioApiDropletConfig.playSound, category: 'UI controls'},
   {...audioApiDropletConfig.stopSound, category: 'UI controls'},
+  {...audioApiDropletConfig.playSpeech, category: 'UI controls'},
   {
     func: 'showElement',
     parent: api,
@@ -558,6 +553,9 @@ export var blocks = [
     parent: api,
     category: 'Data',
     paletteParams: ['url'],
+    params: [
+      '"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true"'
+    ],
     nativeIsAsync: true,
     noAutocomplete: true
   },
@@ -605,6 +603,16 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'createRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{name:'Alice'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'readRecords',
     parent: api,
     category: 'Data',
@@ -615,6 +623,15 @@ export var blocks = [
       "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'readRecordsSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table'],
+    params: ['"mytable"'],
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'updateRecord',
@@ -629,12 +646,32 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'updateRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{id:1, name:'Bob'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'deleteRecord',
     parent: api,
     category: 'Data',
     paletteParams: ['table', 'record', 'callback'],
     params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'deleteRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', '{id:1}'],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'onRecordEvent',
@@ -814,126 +851,9 @@ export var blocks = [
     paletteParams: ['message'],
     params: ['"message"']
   },
-  {
-    func: 'declareAssign_str_hello_world',
-    block: 'var str = "Hello World";',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'substring',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['start', 'end'],
-    params: ['6', '11'],
-    modeOptionName: '*.substring',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'indexOf',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['searchValue'],
-    params: ['"World"'],
-    modeOptionName: '*.indexOf',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'includes',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    paletteParams: ['searchValue'],
-    params: ['"World"'],
-    modeOptionName: '*.includes',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'length',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.length',
-    tipPrefix: stringMethodPrefix,
-    type: 'property'
-  },
-  {
-    func: 'toUpperCase',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.toUpperCase',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'toLowerCase',
-    blockPrefix: stringBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.toLowerCase',
-    tipPrefix: stringMethodPrefix,
-    type: 'value'
-  },
-  {
-    func: 'declareAssign_list_123',
-    block: 'var list = [1, 2, 3];',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'declareAssign_list_abd',
-    block: 'var list = ["a", "b", "d"];',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'accessListItem',
-    block: 'list[0]',
-    category: 'Variables',
-    noAutocomplete: true
-  },
-  {
-    func: 'listLength',
-    block: 'list.length',
-    category: 'Variables',
-    noAutocomplete: true,
-    tipPrefix: arrayMethodPrefix,
-    type: 'property'
-  },
-  {
-    func: 'join',
-    blockPrefix: arrayBlockPrefix,
-    category: 'Variables',
-    modeOptionName: '*.join',
-    tipPrefix: arrayBlockPrefix,
-    paletteParams: ['separator'],
-    params: ['"-"'],
-    type: 'value'
-  },
-  {
-    func: 'insertItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'index', 'item'],
-    params: ['list', '2', '"c"'],
-    dontMarshal: true
-  },
-  {
-    func: 'appendItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'item'],
-    params: ['list', '"f"'],
-    dontMarshal: true
-  },
-  {
-    func: 'removeItem',
-    parent: dontMarshalApi,
-    category: 'Variables',
-    paletteParams: ['list', 'index'],
-    params: ['list', '0'],
-    dontMarshal: true
-  },
+
+  ...dropletStringBlocks,
+  ...dropletArrayBlocks,
 
   {
     func: 'imageUploadButton',
@@ -1128,12 +1048,37 @@ export var blocks = [
     docFunc: 'comment',
     category: 'Goals',
     noAutocomplete: true
+  },
+  {
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['name', 'id', 'data', 'callback'],
+    params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
+  },
+  {
+    func: 'declareAssign_object',
+    block: `var object = {"key": "value"};`,
+    category: 'Variables',
+    noAutocomplete: true
+  },
+  {
+    func: 'getValue',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"'],
+    params: ['{"key": "value"}', '"key"'],
+    dontMarshal: true
+  },
+  {
+    func: 'addPair',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"', '"value"'],
+    params: ['object', '"key"', '"value"'],
+    dontMarshal: true
   }
 ];
-
-if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
-  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
-}
 
 export const categories = {
   'UI controls': {

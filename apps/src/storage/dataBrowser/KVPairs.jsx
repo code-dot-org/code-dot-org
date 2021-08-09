@@ -48,7 +48,7 @@ class KVPairs extends React.Component {
     };
 
     const kvTable = (
-      <table style={keyValueDataStyle}>
+      <table style={keyValueDataStyle} className="uitest-kv-table">
         <tbody>
           <tr>
             <th style={dataStyles.headerCell}>Key</th>

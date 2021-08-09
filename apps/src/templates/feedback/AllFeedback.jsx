@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import i18n from '@cdo/locale';
-import shapes from './shapes';
+import {feedbackShape} from './types';
 
 export default class AllFeedback extends Component {
   static propTypes = {
-    feedbacks: PropTypes.arrayOf(shapes.feedback)
+    feedbacks: PropTypes.arrayOf(feedbackShape)
   };
 
   render() {

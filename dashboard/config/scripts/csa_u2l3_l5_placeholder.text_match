@@ -1,0 +1,8 @@
+name 'CSA U2L3-L5 Placeholder'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+The owner of the Project Mercury Pastries food truck wants to sell drinks in addition to desserts. She plans to offer hot and cold drinks, such as coffee, juice, and soda. Write a `Drink` class based on the following specifications:
+* Instance variables for whether the drink is hot, the name of the drink, and the price of the drink
+* Constructor for initializing the instance variables
+MARKDOWN

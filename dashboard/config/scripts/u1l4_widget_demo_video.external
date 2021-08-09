@@ -10,5 +10,5 @@ markdown <<MARKDOWN
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dubPPv_ECPA" frameborder="0" allowfullscreen></iframe>
 </br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

@@ -71,10 +71,6 @@
     padding-bottom: 10px;
     .item {
 
-      html[dir=rtl] & {
-        margin-left: 0px;
-        margin-right: 25px;
-      }
 
       color: $white;
       line-height: 20px;
@@ -107,6 +103,9 @@
         font-family: $gotham-regular;
         color: $white;
         text-decoration: none;
+        html[dir=rtl], .rtl & {
+          float:right;
+        }
       }
 
       #about-more {
@@ -160,17 +159,27 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        html[dir=rtl], .rtl & {
+          float: right;
+        }
       }
       .arrow-down {
         font-size: 30px;
         float: right;
-        margin-top: -7px
+        margin-top: -7px;
+        html[dir=rtl], .rtl & {
+          float: left;
+        }
+        
       }
       .arrow-up {
         font-size: 30px;
         float: right;
         margin-top: -7px;
         display: none;
+        html[dir=rtl], .rtl & {
+          float: left;
+        }
       }
     }
 
@@ -224,6 +233,9 @@
 }
 
 #hamburger {
+  &:not(.user-is-tabbing) {
+    outline: none;
+  }
   #hamburger-icon {
     padding: 10px 28px 16px 0;
     float: right;

@@ -11,29 +11,6 @@ import color from '@cdo/apps/util/color';
 
 const PADDING = 15;
 
-const styles = {
-  studentNameColumnHeader: {
-    padding: PADDING
-  },
-  studentNameColumnCell: {
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    maxWidth: 200,
-    padding: PADDING,
-    verticalAlign: 'top'
-  },
-  responseColumnHeader: {
-    padding: PADDING
-  },
-  noResponse: {
-    color: color.lighter_gray
-  },
-  response: {
-    whiteSpace: 'pre-wrap'
-  }
-};
-
 export const COLUMNS = {
   NAME: 0,
   RESPONSE: 1
@@ -147,5 +124,28 @@ class FreeResponsesAssessmentsTable extends Component {
     );
   }
 }
+
+const styles = {
+  studentNameColumnHeader: {
+    padding: PADDING
+  },
+  studentNameColumnCell: {
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    maxWidth: 200,
+    padding: PADDING,
+    verticalAlign: 'top'
+  },
+  responseColumnHeader: {
+    padding: PADDING
+  },
+  noResponse: {
+    color: color.lighter_gray
+  },
+  response: {
+    whiteSpace: 'pre-wrap'
+  }
+};
 
 export default FreeResponsesAssessmentsTable;

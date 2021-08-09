@@ -1,0 +1,19 @@
+{
+  "func": "map",
+  "category": "Math",
+  "paletteParams": [
+    "value",
+    "start1",
+    "stop1",
+    "start2",
+    "stop"
+  ],
+  "params": [
+    "0.9",
+    "0",
+    "1",
+    "0",
+    "100"
+  ],
+  "type": "value"
+}

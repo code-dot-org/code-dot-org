@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   getExportableFeedbackData,
   isCurrentScriptCSD
@@ -12,33 +12,36 @@ import {CSVLink} from 'react-csv';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import experiments from '@cdo/apps/util/experiments';
+
+const keepWorkingExperiment = 'teacher-feedback-review-state';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
-  {label: i18n.lessonNumber(), key: 'stageNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonNumber(), key: 'lessonNum'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.keyConcept(), key: 'keyConcept'},
   {label: i18n.performanceLevel(), key: 'performance'},
   {label: i18n.performanceLevelDetails(), key: 'performanceLevelDetails'},
   {label: i18n.feedback(), key: 'comment'},
-  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
-  {label: i18n.lessonNumber(), key: 'stageNum'},
-  {label: i18n.lessonName(), key: 'stageName'},
+  {label: i18n.lessonNumber(), key: 'lessonNum'},
+  {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
   {label: i18n.feedback(), key: 'comment'},
-  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
+  {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
 
-const styles = {
-  icon: {
-    color: color.purple,
-    paddingRight: 5
-  }
+const REVIEW_STATE_HEADER = {
+  label: i18n.reviewState(),
+  key: 'reviewStateLabel'
 };
 
 /*
@@ -50,23 +53,40 @@ const styles = {
 class FeedbackDownload extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
+    onClickDownload: PropTypes.func.isRequired,
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
     isCurrentScriptCSD: PropTypes.bool
   };
 
+  constructor(props) {
+    super(props);
+
+    this.headers = this.getHeaders(props.isCurrentScriptCSD);
+  }
+
+  getHeaders(isCurrentScriptCSD) {
+    let headers = isCurrentScriptCSD
+      ? CSV_FEEDBACK_RUBRIC_HEADERS
+      : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
+
+    if (experiments.isEnabled(keepWorkingExperiment)) {
+      // create a copy to avoid modifying original constants
+      headers = [...headers];
+      headers.splice(-3, 0, REVIEW_STATE_HEADER);
+    }
+
+    return headers;
+  }
+
   render() {
     const {
       sectionName,
       exportableFeedbackData,
       scriptName,
-      isCurrentScriptCSD
+      onClickDownload
     } = this.props;
-
-    const HEADERS = isCurrentScriptCSD
-      ? CSV_FEEDBACK_RUBRIC_HEADERS
-      : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
 
     return (
       <div>
@@ -77,7 +97,8 @@ class FeedbackDownload extends Component {
             date: new Date().toDateString()
           })}
           data={exportableFeedbackData}
-          headers={HEADERS}
+          headers={this.headers}
+          onClick={onClickDownload}
         >
           <Button
             __useDeprecatedTag
@@ -102,6 +123,13 @@ class FeedbackDownload extends Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    color: color.purple,
+    paddingRight: 5
+  }
+};
 
 export const UnconnectedFeedbackDownload = FeedbackDownload;
 

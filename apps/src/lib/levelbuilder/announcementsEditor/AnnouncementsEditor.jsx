@@ -9,63 +9,44 @@ import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 
-const styles = {
-  preview: {
-    marginTop: 10
-  }
-};
-
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
-    defaultAnnouncements: PropTypes.arrayOf(announcementShape),
+    announcements: PropTypes.arrayOf(announcementShape),
     inputStyle: PropTypes.object.isRequired,
-    curriculumObject: PropTypes.string
+    updateAnnouncements: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      announcements: props.defaultAnnouncements
-    };
-  }
-
   add = () => {
-    this.setState({
-      announcements: this.state.announcements.concat({
+    this.props.updateAnnouncements(
+      this.props.announcements.concat({
         notice: '',
         details: '',
         link: '',
         type: NotificationType.information,
         visibility: VisibilityType.teacher
       })
-    });
+    );
   };
 
   remove = index => {
-    const newAnnouncements = [...this.state.announcements];
+    const newAnnouncements = [...this.props.announcements];
     newAnnouncements.splice(index, 1);
-    this.setState({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   change = (index, field, newValue) => {
-    const newAnnouncements = [...this.state.announcements];
+    const newAnnouncements = [...this.props.announcements];
     newAnnouncements[index][field] = newValue;
-    this.setState({
-      announcements: newAnnouncements
-    });
+    this.props.updateAnnouncements(newAnnouncements);
   };
 
   render() {
-    const {inputStyle} = this.props;
-    const {announcements} = this.state;
+    const {inputStyle, announcements} = this.props;
     return (
       <div>
         <input
           type="hidden"
-          name={`${this.props.curriculumObject}_announcements`}
+          name="announcements"
           value={JSON.stringify(announcements)}
         />
         <h4>
@@ -89,7 +70,8 @@ export default class AnnouncementsEditor extends Component {
           />
         ))}
         <button className="btn" type="button" onClick={this.add}>
-          Additional Announcement
+          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+          Add Announcement
         </button>
         {announcements.length > 0 && (
           <div>
@@ -107,3 +89,9 @@ export default class AnnouncementsEditor extends Component {
     );
   }
 }
+
+const styles = {
+  preview: {
+    marginTop: 10
+  }
+};

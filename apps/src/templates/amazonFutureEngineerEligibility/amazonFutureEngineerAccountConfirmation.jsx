@@ -4,20 +4,6 @@ import {Button} from 'react-bootstrap';
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  button: {
-    backgroundColor: color.orange,
-    color: color.white
-  },
-  header: {
-    marginTop: '10px',
-    marginBottom: '10px'
-  },
-  body: {
-    marginBottom: '10px'
-  }
-};
-
 const RETURN_TO = `user_return_to=${pegasus('/afe/submit')}`;
 const SIGN_UP_URL = studio(
   `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
@@ -74,3 +60,17 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
     );
   }
 }
+
+const styles = {
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
+  },
+  header: {
+    marginTop: '10px',
+    marginBottom: '10px'
+  },
+  body: {
+    marginBottom: '10px'
+  }
+};

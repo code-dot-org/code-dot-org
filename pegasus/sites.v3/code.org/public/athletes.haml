@@ -27,80 +27,82 @@ video_player: true
 
 %link{href: "/css/sports.css", rel: "stylesheet"}
 
-%div{style: "clear:both"}
+%div{dir: language_dir_class}
 
-.tutorial-video-container
-  %h2= I18n.t(:sports_video_title)
-  - url = "https://www.youtube.com/watch?v=ip051U7Rvds"
-  - facebook = {u: url}
-  - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
-  - if %w(es-ES es-MX).include? request.locale
-    = view :display_video_thumbnail, id: 'athletes_video_es', video_code: 'f6pwwPnx7B4', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code-es.mp4', letterbox: 'false'
-  - else
-    = view :display_video_thumbnail, id: 'athletes_video', video_code: 'ip051U7Rvds', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code.mp4', letterbox: 'false'
-  %a{href: "#featured-athletes"}
-    = I18n.t(:sports_featured_athletes)
-.tutorials-container
-  %div.image-collection
-    %h2= I18n.t(:sports_title)
-    %a.white-link{href: "/api/hour/begin/basketball"}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.blue= I18n.t(:sports_basketball_title)
-          %img.character-img{src: "/images/sports/basketball.png"}
-    %a.white-link{href: "/api/hour/begin/sports"}
-      %div.choice
-        %div.choice-container
-          %div.choice-label.blue= I18n.t(:sports_all_sports_title)
-          %img.character-img{src: "/images/sports/all_sports.png"}
+  %div{style: "clear:both"}
 
-%div{style: "clear:both"}
+  .tutorial-video-container
+    %h2= I18n.t(:sports_video_title)
+    - url = "https://www.youtube.com/watch?v=ip051U7Rvds"
+    - facebook = {u: url}
+    - twitter = {url: url, related: 'codeorg', text: "#{I18n.t(:sports_og_description)} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
+    - if %w(es-ES es-MX).include? request.locale
+      = view :display_video_thumbnail, id: 'athletes_video_es', video_code: 'f6pwwPnx7B4', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code-es.mp4', letterbox: 'false'
+    - else
+      = view :display_video_thumbnail, id: 'athletes_video', video_code: 'ip051U7Rvds', play_button: 'center', facebook: facebook, twitter: twitter, download_path: '//videos.code.org/social/athletes-hour-of-code.mp4', letterbox: 'false'
+    %a{href: "#featured-athletes"}
+      = I18n.t(:sports_featured_athletes)
+  .tutorials-container
+    %div.image-collection
+      %h2= I18n.t(:sports_title)
+      %a.white-link{href: "/api/hour/begin/basketball"}
+        %div.choice
+          %div.choice-container
+            %div.choice-label.blue= I18n.t(:sports_basketball_title)
+            %img.character-img{src: "/images/sports/basketball.png"}
+      %a.white-link{href: "/api/hour/begin/sports"}
+        %div.choice
+          %div.choice-container
+            %div.choice-label.blue= I18n.t(:sports_all_sports_title)
+            %img.character-img{src: "/images/sports/all_sports.png"}
 
-%h2.header
-  = I18n.t(:speak_another_language)
-  %a{href: "/translate"}= I18n.t(:help_translate)
+  %div{style: "clear:both"}
 
-.inspire-videos{style: "clear: both;"}
-  %h2.header= I18n.t(:watch_inspirational_videos)
-  - videos = []
-  - videos << { id: 'steph_curry',  code: 'NYzN0a1U8mI', text: I18n.t(:video_title_steph_curry),  duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-steph-curry.mp4"}
-  - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-draymond-green.mp4"}
-  - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-russell-okung.mp4"}
-  - videos << { id: 'marco_belinelli', code: 'Zh6E99aySI4', text: I18n.t(:video_title_marco_belinelli), duration: I18n.t(:video_2min)}
-  - videos << { id: 'chris_bosh',      code: 'kx3DxBbweGY', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-chris-bosh.mp4"}
+  %h2.header
+    = I18n.t(:speak_another_language)
+    %a{href: "/translate"}= I18n.t(:help_translate)
 
-  - videos.each do |video|
-    .col-50{style: "float:left; padding:10px"}
-      - url = "https://www.youtube.com/watch?v=#{video[:code]}"
-      - facebook = {u: url}
-      - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
-      = view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
+  .inspire-videos{style: "clear: both;"}
+    %h2.header= I18n.t(:watch_inspirational_videos)
+    - videos = []
+    - videos << { id: 'steph_curry',  code: 'NYzN0a1U8mI', text: I18n.t(:video_title_steph_curry),  duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-steph-curry.mp4"}
+    - videos << { id: 'draymond_green',  code: 'uJZyqeiAtlA', text: I18n.t(:video_title_draymond_green),  duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-draymond-green.mp4"}
+    - videos << { id: 'russell_okung',   code: '-aGEKVvoyLI', text: I18n.t(:video_title_russell_okung),   duration: I18n.t(:video_2min), download: "//videos.code.org/social/athlete-russell-okung.mp4"}
+    - videos << { id: 'marco_belinelli', code: 'Zh6E99aySI4', text: I18n.t(:video_title_marco_belinelli), duration: I18n.t(:video_2min)}
+    - videos << { id: 'chris_bosh',      code: 'kx3DxBbweGY', text: I18n.t(:video_title_chris_bosh),      duration: I18n.t(:video_1min), download: "//videos.code.org/social/athlete-chris-bosh.mp4"}
 
-  %div{style: 'clear: both'}
+    - videos.each do |video|
+      .col-50{style: "float:left; padding:10px"}
+        - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+        - facebook = {u: url}
+        - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
+        = view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download], letterbox: 'false'
 
-  .video-smalltext
+    %div{style: 'clear: both'}
+
+    .video-smalltext
+      %ul
+        %li!= I18n.t(:videos_more_markdown, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP', markdown: :inline)
+        %li!= I18n.t(:careers_page_more_markdown, careers_url: CDO.code_org_url('/careers'), markdown: :inline)
+
+  %div#featured-athletes
+    %h2= I18n.t(:sports_athletes_title)
     %ul
-      %li!= I18n.t(:videos_more_markdown, inspiring_videos_playlist: 'https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP', markdown: :inline)
-      %li!= I18n.t(:careers_page_more_markdown, careers_url: CDO.code_org_url('/careers'), markdown: :inline)
-
-%div#featured-athletes
-  %h2= I18n.t(:sports_athletes_title)
-  %ul
-    %li= I18n.t(:sports_athlete_Draymond)
-    %li= I18n.t(:sports_athlete_Serena)
-    %li= I18n.t(:sports_athlete_Russell)
-    %li= I18n.t(:sports_athlete_Sergio)
-    %li= I18n.t(:sports_athlete_Sue)
-    %li= I18n.t(:sports_athlete_Alana)
-    %li= I18n.t(:sports_athlete_Angelo)
-    %li= "Kobe Bryant, Olympic Gold Medalist and NBA Champion, Los Angeles Lakers"
-    %li= I18n.t(:sports_athlete_Nneka)
-    %li= I18n.t(:sports_athlete_Carmelo)
-    %li= I18n.t(:sports_athlete_Marco)
-    %li= I18n.t(:sports_athlete_Neymar)
-    %li= I18n.t(:sports_athlete_Sarah)
-    %li= I18n.t(:sports_athlete_Marcelo)
-    %li= I18n.t(:sports_athlete_Erika)
-    %li= I18n.t(:sports_athlete_John)
-    %li= I18n.t(:sports_athlete_Chris)
-    %li= I18n.t(:sports_athlete_Harrison)
+      %li= I18n.t(:sports_athlete_Draymond)
+      %li= I18n.t(:sports_athlete_Serena)
+      %li= I18n.t(:sports_athlete_Russell)
+      %li= I18n.t(:sports_athlete_Sergio)
+      %li= I18n.t(:sports_athlete_Sue)
+      %li= I18n.t(:sports_athlete_Alana)
+      %li= I18n.t(:sports_athlete_Angelo)
+      %li= "Kobe Bryant, Olympic Gold Medalist and NBA Champion, Los Angeles Lakers"
+      %li= I18n.t(:sports_athlete_Nneka)
+      %li= I18n.t(:sports_athlete_Carmelo)
+      %li= I18n.t(:sports_athlete_Marco)
+      %li= I18n.t(:sports_athlete_Neymar)
+      %li= I18n.t(:sports_athlete_Sarah)
+      %li= I18n.t(:sports_athlete_Marcelo)
+      %li= I18n.t(:sports_athlete_Erika)
+      %li= I18n.t(:sports_athlete_John)
+      %li= I18n.t(:sports_athlete_Chris)
+      %li= I18n.t(:sports_athlete_Harrison)

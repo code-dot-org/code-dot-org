@@ -1,0 +1,25 @@
+{
+  "func": "setRGB",
+  "category": "Canvas",
+  "paramButtons": {
+    "minArgs": 6,
+    "maxArgs": 7
+  },
+  "paletteParams": [
+    "imgData",
+    "x",
+    "y",
+    "r",
+    "g",
+    "b"
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0",
+    "255",
+    "255",
+    "255"
+  ],
+  "dontMarshal": true
+}

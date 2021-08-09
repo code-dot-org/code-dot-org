@@ -1,0 +1,37 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:46.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD Web Multi-page Template_2021",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 22993,
+    "name_suffix": "_2021",
+    "long_instructions": "# Your Group Project\r\n\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**What are hyperlinks?**]\r\n\r\nHyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br><br>\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n:::\r\n\r\n\r\n::: details [**How do I add a hyperlink?**]\r\n\r\nYou can <strong>add hyperlinks to your web page using the `<a>` element</strong>.  The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to.  The location of a local page is just the file path for that page. <br> <br>\r\n\r\nFor example to link to the unique houses page you would add the following code inside your `<body>` element. <br /><br />\r\n\r\n```\r\n\r\n<a href=\"houses.html\"> Unique Houses </a>\r\n\r\n```\r\n\r\n\r\n:::\r\n</div>\r\n\r\nHere is your group project.  It already has an index page, but you'll need to create all of the other pages.\r\n\r\n# Do This\r\n* Double check all of the page names in your website plan to make sure they follow good naming conventions.\r\n  * Check with the rest of your group if you need to change a page name.\r\n* Create a new page for each of the pages in your website plan.\r\n* Inside each new page, create an HTML comment that describes the page and who is in charge of it.\r\n* Check to make sure everyone in your group has the exact same list of HTML pages.",
+    "reference_links": [
+      "/docs/concepts/html/hyperlinks/",
+      "/docs/concepts/css/classes/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 16:47:53 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-07-27 15:55:48 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-03-01 17:22:58 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-11-29 18:17:01 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:11:03 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:11:29 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:33:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 16:19:38 +0000\",\"changed\":[\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:16:51 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 03:35:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 03:48:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 03:49:53 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-03-26 04:01:12 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:05:02 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab>

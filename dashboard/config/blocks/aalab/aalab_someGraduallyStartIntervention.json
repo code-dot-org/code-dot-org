@@ -1,0 +1,89 @@
+{
+  "category": "Outbreak",
+  "config": {
+    "func": "someGraduallyStartIntervention",
+    "blockText": "{PORTION} monsters {RATE} begin {BEHAVIOR}",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ],
+    "args": [
+      {
+        "name": "PORTION",
+        "options": [
+          [
+            "all",
+            "1"
+          ],
+          [
+            "most",
+            "0.75"
+          ],
+          [
+            "half of",
+            "0.5"
+          ],
+          [
+            "few",
+            "0.25"
+          ]
+        ]
+      },
+      {
+        "name": "RATE",
+        "options": [
+          [
+            "immediately",
+            "\"immediately\""
+          ],
+          [
+            "quickly",
+            "\"quickly\""
+          ],
+          [
+            "gradually",
+            "\"gradually\""
+          ],
+          [
+            "slowly",
+            "\"slowly\""
+          ]
+        ]
+      },
+      {
+        "name": "BEHAVIOR",
+        "options": [
+          [
+            "wandering randomly",
+            "\"wandering\""
+          ],
+          [
+            "congregating",
+            "\"congregating\""
+          ],
+          [
+            "wearing masks",
+            "\"quarantining\""
+          ],
+          [
+            "getting vaccinated",
+            "\"quarantining\""
+          ],
+          [
+            "social distancing",
+            "\"avoiding\""
+          ],
+          [
+            "quarantining when sick",
+            "\"quarantining\""
+          ],
+          [
+            "staying still",
+            "\"none\""
+          ]
+        ]
+      }
+    ]
+  }
+}

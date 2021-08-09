@@ -64,7 +64,7 @@ Encourage students to continue using the pair programming method that they learn
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course1/stage/4/puzzle/1)
+### <a name="Activity"></a> [Maze: Sequence](http://learn.code.org/s/course1/lessons/4/levels/1)
 As your students work through the puzzles, observe how they plan the path for the bird. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 You may want to go through a few puzzles on the projector. While doing this you can ask a one student to trace the path on the screen while another writes the directions on a whiteboard.
 

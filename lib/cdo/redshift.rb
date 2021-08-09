@@ -33,8 +33,7 @@ class RedshiftClient
     options = ''
     tty = ''
     dbname = 'dashboard'
-    login = 'dev'
-    @conn = PG::Connection.new(CDO.redshift_host, port, options, tty, dbname, login, CDO.redshift_password)
+    @conn = PG::Connection.new(CDO.redshift_host, port, options, tty, dbname, CDO.redshift_username, CDO.redshift_password)
   end
 
   def exec(sql_query)

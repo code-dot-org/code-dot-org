@@ -11,7 +11,7 @@
     "submittable": "false",
     "parent_level_id": 11525,
     "name_suffix": "_2019",
-    "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"../../../stage/6/puzzle/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
+    "long_instructions": "# Create and Name Your New Page\r\n\r\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\r\n\r\n# Do This\r\n* Create a new HTML page and rename it. (Look at <a href=\"../../../lessons/6/levels/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\r\n* Repeat this process for any other pages you want to add.\r\n\r\n",
     "reference_links": [
       "/docs/concepts/html/html-tags/",
       "/docs/concepts/html/headings-and-paragraphs/",

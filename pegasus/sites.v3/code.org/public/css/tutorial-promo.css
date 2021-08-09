@@ -24,15 +24,22 @@
   padding: 5px;
   top: 70px;
 }
+/* left-tutorial and right-tutorial are both usually aligned to the left side, different alignments are needed for dance and starwars */
 
-.left-tutorial {
+.left-tutorial  {
   right: 20px;
 }
-
+.left-tutorial.right-to-left{
+  left: 20px;
+  right: auto;
+}
 .right-tutorial {
   right: 270px;
 }
-
+.right-tutorial.right-to-left{
+  left: 270px;
+  right: auto;
+}
 .tutorial-promo-container .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;

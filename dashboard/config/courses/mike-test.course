@@ -1,0 +1,16 @@
+{
+  "name": "mike-test",
+  "script_names": [
+
+  ],
+  "published_state": "beta",
+  "properties": {
+    "has_numbered_units": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -8,5 +8,17 @@ wrong ‘Depending on context the same sequence of bits may represent different 
 wrong ‘Common abstractions that are represented by computing devices include numbers, characters, and color.’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** Abstraction helps by hiding complexity rather than surfacing it. For example, you don’t have to know all the details about how a car works in order to operate it.
+
+Abstraction got introduced in [Lesson 6 - Representing Text](https://curriculum.code.org/csp-20/unit1/6/)
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+DAT-1.A.5: Abstraction is the process of reducing complexity by focusing on the main idea. By hiding details irrelevant to the question at hand and bringing together related and useful details, abstraction reduces complexity and allows one to focus on the idea. 
+
+DAT-1.A.6: Bits are grouped to represent abstractions. These abstractions include, but are not limited to, numbers, characters, and color. 
+
+DAT-1.A.7: The same sequence of bits may represent different types of data in different contexts
+:::
 
 MARKDOWN

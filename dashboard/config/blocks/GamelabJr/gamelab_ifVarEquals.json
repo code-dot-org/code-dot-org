@@ -1,0 +1,25 @@
+{
+  "category": "Control",
+  "config": {
+    "func": "ifVarEquals",
+    "blockText": "if {NUM} ={VAL}\n{STATEMENT}",
+    "args": [
+      {
+        "name": "NUM",
+        "variableInput": true
+      },
+      {
+        "name": "VAL"
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

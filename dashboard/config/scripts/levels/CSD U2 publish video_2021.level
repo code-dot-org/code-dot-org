@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:49:41.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "csd_weblab_intro_3",
+    "instructions_important": "false",
+    "display_name": "Publishing Your Website",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What do you think your responsibilities are as a website publisher?\r\n* Why might you want to see the code or remix someone else's site?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "## Discussion Goals \r\n\r\nThe video content is fairly straightforward, but this is your last check in with students before they publish, so it's a good time to make sure they have full thought through the implications of publishing to the entire world.  They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\r\n\r\nAs they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates.  You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written. ",
+    "parent_level_id": 20059,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-04-03 23:55:14 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

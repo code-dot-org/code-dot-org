@@ -4,12 +4,20 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
-import {UnconnectedVisualizerModal as VisualizerModal} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import {
+  UnconnectedVisualizerModal as VisualizerModal,
+  OperatorType
+} from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
+import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
 
 const DEFAULT_PROPS = {
-  tableColumns: [],
+  tableColumns: ['column1', 'column2'],
   tableName: 'testTable',
-  tableRecords: []
+  tableRecords: [
+    '{"column1":"a","column2":123}',
+    '{"column1":"b","column2":456}',
+    '{"column1":"3","column2":0}'
+  ]
 };
 
 describe('VisualizerModal', () => {
@@ -53,6 +61,24 @@ describe('VisualizerModal', () => {
         .find({displayName: 'Filter'})
         .simulate('change', {target: {value: 'newColumn'}});
       expect(wrapper.instance().state.filterValue).to.equal('');
+    });
+
+    it('shows numeric filters only for numeric columns', () => {
+      let wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+      wrapper.instance().setState({
+        filterColumn: '',
+        filterValue: ''
+      });
+      //non-numeric column should display only 4 dropdowns
+      wrapper
+        .find({displayName: 'Filter'})
+        .simulate('change', {target: {value: 'column1'}});
+      expect(wrapper.find(DropDownField)).to.have.lengthOf(4);
+      //switch to numeric column, expect another dropdown
+      wrapper
+        .find({displayName: 'Filter'})
+        .simulate('change', {target: {value: 'column2'}});
+      expect(wrapper.find(DropDownField)).to.have.lengthOf(5);
     });
   });
 
@@ -167,7 +193,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['true', '"false"', '123', '"456"']);
+      ).to.deep.equal(['123', '"456"', '"false"', 'true']);
     });
 
     it('shows null, undefined, and "" separately', () => {
@@ -178,7 +204,7 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['null', 'undefined', '""']);
+      ).to.deep.equal(['""', 'null', 'undefined']);
     });
 
     it('returns a list of unique values in the column', () => {
@@ -196,7 +222,23 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().getValuesForFilterColumn(records, 'col')
-      ).to.deep.equal(['"xyz"', '"def"', '"123"', 'undefined', '123', 'true']);
+      ).to.deep.equal(['"123"', '123', '"def"', 'true', '"xyz"', 'undefined']);
+    });
+
+    it('sorts numeric values', () => {
+      let records = [
+        {id: 1, col: 123},
+        {id: 2, col: 32},
+        {id: 3, col: 57},
+        {id: 4, col: 0},
+        {id: 5, col: -10}
+      ];
+
+      expect(
+        wrapper
+          .instance()
+          .getValuesForFilterColumn(records, 'col', true /* isNumeric */)
+      ).to.deep.equal(['-10', '0', '32', '57', '123']);
     });
   });
 
@@ -225,7 +267,47 @@ describe('VisualizerModal', () => {
         wrapper.instance().filterRecords(records, 'filterCol', '0')
       ).to.deep.equal([records[4]]);
     });
+    it('operators work with numbers', () => {
+      let records = [
+        {id: 1, filterCol: 123, chartCol: 2},
+        {id: 2, filterCol: 456, chartCol: 3},
+        {id: 3, filterCol: 123, chartCol: 5},
+        {id: 4, filterCol: 0, chartCol: 5}
+      ];
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '123', OperatorType.GREATER_THAN)
+      ).to.deep.equal([records[1]]);
 
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(records, 'filterCol', '456', OperatorType.LESS_THAN)
+      ).to.deep.equal([records[0], records[2], records[3]]);
+
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '456',
+            OperatorType.LESS_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2], records[3]]);
+
+      expect(
+        wrapper
+          .instance()
+          .filterRecords(
+            records,
+            'filterCol',
+            '123',
+            OperatorType.GREATER_THAN_OR_EQUAL
+          )
+      ).to.deep.equal([records[0], records[1], records[2]]);
+    });
     it('works with booleans', () => {
       let records = [
         {id: 1, filterCol: true, chartCol: 2},

@@ -89,6 +89,11 @@ const BASE_DROPLET_CONFIG = Object.freeze({
       value: true,
       color: '#FFB74D',
       title: 'Math.pow'
+    },
+    'Math.sqrt': {
+      value: true,
+      color: '#FFB74D',
+      title: 'Math.sqrt'
     }
   },
   categories: {

@@ -1,0 +1,8 @@
+name 'CSD web movement challenge choice_2021'
+display_name 'Sprite Movement Challenges'
+description 'Add more to your fish scene or create something new.'
+
+sublevels
+level 'CSD U3 Movement Fish challenge_2021'
+level 'CSD U3 Movement Fish challenge2_2021'
+level 'CSD U3 L9 Freeplay_2021'

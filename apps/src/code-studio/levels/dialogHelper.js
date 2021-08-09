@@ -5,6 +5,7 @@ import PlayZone from '../components/playzone';
 import ReactDOM from 'react-dom';
 import {getResult} from './codeStudioLevels';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import experiments from '@cdo/apps/util/experiments';
 import Sounds from '../../Sounds';
 import {
   ErrorDialog,
@@ -24,6 +25,9 @@ var adjustedScroll = false;
  * @param {function} onHidden - Method called when dialog is hidden/closed
  */
 export function showDialog(component, callback, onHidden) {
+  if (experiments.isEnabled(experiments.BYPASS_DIALOG_POPUP)) {
+    return;
+  }
   const div = document.createElement('div');
   ReactDOM.render(component, div);
   const content = div.childNodes[0];
@@ -146,15 +150,15 @@ export function processResults(onComplete, beforeHook) {
 
         if (lastServerResponse.videoInfo) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.endOfStageExperience) {
+        } else if (lastServerResponse.endOfLessonExperience) {
           const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${i18n.stage()} ${stageInfo.position}: ${
-            stageInfo.name
+          const lessonInfo = lastServerResponse.previousStageInfo;
+          const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
+            lessonInfo.name
           }`;
           ReactDOM.render(
             <PlayZone
-              stageName={stageName}
+              lessonName={lessonName}
               onContinue={() => {
                 dialog.hide();
               }}

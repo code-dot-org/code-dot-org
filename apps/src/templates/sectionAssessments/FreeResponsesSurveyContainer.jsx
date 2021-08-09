@@ -9,14 +9,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20
-  }
-};
-
 const freeResponseQuestionsPropType = PropTypes.shape({
   questionNumber: PropTypes.number,
   questionText: PropTypes.string,
@@ -64,6 +56,14 @@ class FreeResponsesSurveyContainer extends Component {
     );
   }
 }
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedFreeResponsesSurveyContainer = FreeResponsesSurveyContainer;
 

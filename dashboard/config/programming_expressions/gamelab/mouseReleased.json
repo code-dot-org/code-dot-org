@@ -1,0 +1,7 @@
+{
+  "func": "mouseReleased",
+  "block": "function mouseReleased() {}",
+  "expansion": "function mouseReleased() {\n  __;\n}",
+  "category": "World",
+  "noAutocomplete": true
+}

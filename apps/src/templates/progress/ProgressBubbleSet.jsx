@@ -6,8 +6,115 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import {connect} from 'react-redux';
+
+// Deprecated in favor of ProgressTableDetailCell
+// component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
+class ProgressBubbleSet extends React.Component {
+  static propTypes = {
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+    disabled: PropTypes.bool.isRequired,
+    style: PropTypes.object,
+    selectedSectionId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    selectedStudentId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    hideToolTips: PropTypes.bool,
+    lessonExtrasEnabled: PropTypes.bool,
+    showSublevels: PropTypes.bool,
+    onBubbleClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
+  };
+
+  bubbleDisabled = level => {
+    const {disabled, lessonExtrasEnabled} = this.props;
+    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
+    // for the current section.
+    const disableBubble = disabled || (!lessonExtrasEnabled && level.bonus);
+    if (disableBubble) {
+      return true;
+    }
+    return false;
+  };
+
+  renderBubble = (level, index, isSublevel) => {
+    const {levels, selectedSectionId, selectedStudentId, isRtl} = this.props;
+
+    // Adjust background styles if locale is RTL
+    const backgroundFirstStyle = isRtl
+      ? styles.backgroundLast
+      : styles.backgroundFirst;
+    const backgroundLastStyle = isRtl
+      ? styles.backgroundFirst
+      : styles.backgroundLast;
+
+    const backgroundStyleProp = {
+      ...styles.background,
+      ...(level.isConceptLevel && styles.backgroundDiamond),
+      ...(isSublevel && styles.backgroundSublevel),
+      ...(level.isUnplugged && styles.backgroundPill),
+      ...(!isSublevel && index === 0 && backgroundFirstStyle),
+      ...(!isSublevel &&
+        !level.sublevels &&
+        index === levels.length - 1 &&
+        backgroundLastStyle)
+    };
+
+    const containerStyleProp = {
+      ...styles.container,
+      ...(level.isUnplugged && styles.pillContainer),
+      ...(level.isConceptLevel && styles.diamondContainer)
+    };
+
+    return (
+      <div style={styles.withBackground} key={index}>
+        <div style={backgroundStyleProp} />
+        <div style={containerStyleProp}>
+          <ProgressBubble
+            level={level}
+            disabled={this.bubbleDisabled(level)}
+            smallBubble={isSublevel}
+            selectedSectionId={selectedSectionId}
+            selectedStudentId={selectedStudentId}
+            hideToolTips={this.props.hideToolTips}
+            onClick={this.props.onBubbleClick}
+          />
+        </div>
+      </div>
+    );
+  };
+
+  render() {
+    const {levels, style, showSublevels} = this.props;
+    return (
+      <div style={{...styles.main, ...style}}>
+        {levels.map((level, index) => {
+          return (
+            <span key={index}>
+              {this.renderBubble(level, index, false)}
+              {showSublevels &&
+                level.sublevels &&
+                level.sublevels.map((sublevel, index) => {
+                  return (
+                    <span key={index}>
+                      {this.renderBubble(sublevel, index, true)}
+                    </span>
+                  );
+                })}
+            </span>
+          );
+        })}
+      </div>
+    );
+  }
+}
 
 const styles = {
   main: {
@@ -57,105 +164,8 @@ const styles = {
   }
 };
 
-class ProgressBubbleSet extends React.Component {
-  static propTypes = {
-    levels: PropTypes.arrayOf(levelType).isRequired,
-    disabled: PropTypes.bool.isRequired,
-    style: PropTypes.object,
-    //TODO: (ErinB) probably change to use just number during post launch clean-up.
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    selectedStudentId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
-    hideToolTips: PropTypes.bool,
-    pairingIconEnabled: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool,
-    showSublevels: PropTypes.bool
-  };
+export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 
-  bubbleDisabled = level => {
-    const {disabled, stageExtrasEnabled} = this.props;
-    // Bonus level (aka stage extras) bubble is disabled if stage extras are disabled
-    // for the current section.
-    const disableBubble = disabled || (!stageExtrasEnabled && level.bonus);
-    if (disableBubble) {
-      return true;
-    }
-    return false;
-  };
-
-  renderBubble = (level, index, isSublevel) => {
-    const {
-      levels,
-      selectedSectionId,
-      selectedStudentId,
-      hideAssessmentIcon
-    } = this.props;
-
-    return (
-      <div style={styles.withBackground} key={index}>
-        <div
-          style={[
-            styles.background,
-            level.isConceptLevel && styles.backgroundDiamond,
-            isSublevel && styles.backgroundSublevel,
-            level.isUnplugged && styles.backgroundPill,
-            !isSublevel && index === 0 && styles.backgroundFirst,
-            !level.sublevels &&
-              index === levels.length - 1 &&
-              styles.backgroundLast
-          ]}
-        />
-        <div
-          style={[
-            styles.container,
-            level.isUnplugged && styles.pillContainer,
-            level.isConceptLevel && styles.diamondContainer
-          ]}
-        >
-          <ProgressBubble
-            level={level}
-            disabled={this.bubbleDisabled(level)}
-            smallBubble={isSublevel}
-            selectedSectionId={selectedSectionId}
-            selectedStudentId={selectedStudentId}
-            hideToolTips={this.props.hideToolTips}
-            pairingIconEnabled={this.props.pairingIconEnabled}
-            hideAssessmentIcon={hideAssessmentIcon}
-          />
-        </div>
-      </div>
-    );
-  };
-
-  render() {
-    const {levels, style, showSublevels} = this.props;
-    return (
-      <div style={{...styles.main, ...style}}>
-        {levels.map((level, index) => {
-          return (
-            <span key={index}>
-              {this.renderBubble(level, index, false)}
-              {showSublevels &&
-                level.sublevels &&
-                level.sublevels.map((sublevel, index) => {
-                  return (
-                    <span key={index}>
-                      {this.renderBubble(sublevel, index, true)}
-                    </span>
-                  );
-                })}
-            </span>
-          );
-        })}
-      </div>
-    );
-  }
-}
-
-export default Radium(ProgressBubbleSet);
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressBubbleSet));

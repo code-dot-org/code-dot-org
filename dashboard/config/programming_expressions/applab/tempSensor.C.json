@@ -1,0 +1,5 @@
+{
+  "func": "tempSensor.C",
+  "category": "Circuit",
+  "type": "readonlyproperty"
+}

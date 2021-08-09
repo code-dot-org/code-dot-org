@@ -1,0 +1,13 @@
+{
+  "func": "atan2",
+  "category": "Math",
+  "paletteParams": [
+    "y",
+    "x"
+  ],
+  "params": [
+    "10",
+    "10"
+  ],
+  "type": "value"
+}

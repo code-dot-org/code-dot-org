@@ -1,0 +1,13 @@
+{
+  "func": "pointToEach",
+  "category": "Groups",
+  "paletteParams": [
+    "x",
+    "y"
+  ],
+  "params": [
+    "200",
+    "200"
+  ],
+  "modeOptionName": "*.pointToEach"
+}

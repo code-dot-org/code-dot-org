@@ -1,18 +1,22 @@
 import $ from 'jquery';
+
+import announcementsReducer, {
+  addAnnouncement
+} from '@cdo/apps/code-studio/announcementsRedux';
+import plcHeaderReducer, {
+  setPlcHeader
+} from '@cdo/apps/code-studio/plc/plcHeaderRedux';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import {registerReducers} from '@cdo/apps/redux';
 import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
+import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
-import plcHeaderReducer, {
-  setPlcHeader
-} from '@cdo/apps/code-studio/plc/plcHeaderRedux';
-import announcementsReducer, {
-  addAnnouncement
-} from '@cdo/apps/code-studio/announcementsRedux';
-import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
+
+import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
 $(document).ready(initPage);
 
@@ -23,15 +27,19 @@ function initPage() {
   const {scriptData, plcBreadcrumb} = config;
   const store = getStore();
   registerReducers({locales});
-  store.dispatch(setLocaleEnglishName(scriptData.locale));
+  store.dispatch(setLocaleCode(scriptData.locale_code));
 
   if (plcBreadcrumb) {
-    // Dispatch breadcrumb props so that ScriptOverviewHeader can add the breadcrumb
+    // Dispatch breadcrumb props so that UnitOverviewHeader can add the breadcrumb
     // as appropriate
     registerReducers({plcHeader: plcHeaderReducer});
     store.dispatch(
       setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path)
     );
+  }
+
+  if (scriptData.user_id) {
+    store.dispatch(setCurrentUserId(scriptData.user_id));
   }
 
   if (scriptData.has_verified_resources) {
@@ -42,9 +50,9 @@ function initPage() {
     store.dispatch(setVerified());
   }
 
-  if (scriptData.script_announcements) {
+  if (scriptData.announcements) {
     registerReducers({announcements: announcementsReducer});
-    scriptData.script_announcements.forEach(announcement =>
+    scriptData.announcements.forEach(announcement =>
       store.dispatch(
         addAnnouncement(
           announcement.notice,
@@ -58,4 +66,5 @@ function initPage() {
   }
 
   renderCourseProgress(scriptData);
+  tooltipifyVocabulary();
 }

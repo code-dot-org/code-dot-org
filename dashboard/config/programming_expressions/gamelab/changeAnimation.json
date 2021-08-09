@@ -1,0 +1,12 @@
+{
+  "func": "changeAnimation",
+  "category": "Sprites",
+  "paletteParams": [
+    "label"
+  ],
+  "params": [
+    "\"animation_1\""
+  ],
+  "modeOptionName": "*.changeAnimation",
+  "noAutocomplete": true
+}

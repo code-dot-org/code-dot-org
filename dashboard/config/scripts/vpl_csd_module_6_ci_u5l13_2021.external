@@ -1,0 +1,31 @@
+name 'VPL - CSD - Module 6 - CI - U5L13_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Unit 5 - Lesson 13:  Interpreting Data  
+**Estimated time: 20 minutes**
+
+
+
+
+## Investigation Goal
+
+**Identify how to use a cross tabulation table to find patterns and relationships in data**
+
+## Investigation Tasks
+
+* Review the "Overview" and "Purpose" in the lesson plan, <a href="https://curriculum.code.org/csd-20/unit5/13/" target="_blank">Lesson 13: Interpreting Data</a>
+
+* Complete the first cross tabulation table on the <a href="https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/edit" target="_blank">Interpreting Data Activity Guide</a>  using data from the <a href="https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/edit " target="_blank">Interpreting Data Resource</a> 
+
+
+
+
+
+
+
+
+
+MARKDOWN

@@ -3,6 +3,13 @@ require 'test_helper'
 class SchoolTest < ActiveSupport::TestCase
   include ActiveSupport::Testing::Stream
 
+  self.use_transactional_test_case = true
+
+  # merge_from_csv dry run tests require a clean schools table.
+  setup_all do
+    School.delete_all
+  end
+
   test "schools initialized from tsv" do
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
@@ -20,6 +27,54 @@ class SchoolTest < ActiveSupport::TestCase
         school_type: 'public',
       }
     )
+  end
+
+  test 'merge_from_csv in dry run mode with blank table makes no database writes' do
+    # Populate school districts, since schools depends on them as a foreign key.
+    SchoolDistrict.seed_all(stub_school_data: true, force: true)
+
+    begin
+      School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
+    rescue => error
+      assert_includes error.to_s, 'This was a dry run'
+      assert_equal 0, School.count
+    end
+  end
+
+  test 'merge_from_csv in dry run mode with existing rows makes no database writes' do
+    # Populate school districts, since schools depends on them as a foreign key.
+    SchoolDistrict.seed_all(stub_school_data: true, force: true)
+    School.merge_from_csv(School.get_seed_filename(true))
+
+    before_count = School.count
+
+    # Arbitrary change that should result in an update to each row.
+    parse_row = proc do |row|
+      {
+        id: row['id'],
+        state_school_id: row['state_school_id'],
+        name: row['name'] + 'test'
+      }
+    end
+
+    begin
+      School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
+    rescue => error
+      assert_includes error.to_s, 'This was a dry run'
+      assert_equal before_count, School.count
+    end
+  end
+
+  test 'reload_state_cs_offerings' do
+    school = create :school
+    state_cs_offering = create :state_cs_offering
+    state_cs_offering_collection = Census::StateCsOffering.where(state_school_id: state_cs_offering.state_school_id)
+
+    assert school.state_cs_offering.empty?
+    reloaded_state_cs_offerings = school.load_state_cs_offerings(state_cs_offering_collection, false)
+
+    assert_equal state_cs_offering_collection.pluck(:course, :school_year),
+      reloaded_state_cs_offerings.pluck(:course, :school_year)
   end
 
   test 'null state_school_id is valid' do

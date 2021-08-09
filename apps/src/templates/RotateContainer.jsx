@@ -3,41 +3,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 import _ from 'lodash';
 
-// NOTE: We still have a media query style associated with this component
-// in RotateContainer.scss which controls the display attribute (none vs block)
-const styles = {
-  rotateContainer: {
-    position: 'fixed',
-    zIndex: 10001,
-    backgroundColor: 'white',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    width: '100%',
-    height: '100%'
-  },
-  rotateContainerInner: {
-    position: 'absolute',
-    backgroundPosition: '50% 50%',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    width: '100%',
-    height: '100%'
-  },
-  rotateText: {
-    position: 'relative',
-    top: '50%',
-    left: '-40%'
-  },
-  paragraph: {
-    textAlign: 'center',
-    fontSize: 24,
-    lineHeight: 1.5,
-    transform: 'rotate(90deg)'
-  }
-};
-
 /**
  * "Rotate your device" overlay.
  */
@@ -125,3 +90,38 @@ export default class RotateContainer extends React.Component {
     );
   }
 }
+
+// NOTE: We still have a media query style associated with this component
+// in RotateContainer.scss which controls the display attribute (none vs block)
+const styles = {
+  rotateContainer: {
+    position: 'fixed',
+    zIndex: 10001,
+    backgroundColor: 'white',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%'
+  },
+  rotateContainerInner: {
+    position: 'absolute',
+    backgroundPosition: '50% 50%',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    width: '100%',
+    height: '100%'
+  },
+  rotateText: {
+    position: 'relative',
+    top: '50%',
+    left: '-40%'
+  },
+  paragraph: {
+    textAlign: 'center',
+    fontSize: 24,
+    lineHeight: 1.5,
+    transform: 'rotate(90deg)'
+  }
+};

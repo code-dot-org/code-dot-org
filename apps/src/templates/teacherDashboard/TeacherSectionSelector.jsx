@@ -10,21 +10,6 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {reload} from '../../utils';
 import queryString from 'query-string';
 
-const styles = {
-  select: {
-    height: 34,
-    width: 300
-  },
-  addNewSection: {
-    borderTop: `1px solid ${color.charcoal}`,
-    paddingTop: 16,
-    paddingBottom: 8,
-    paddingLeft: 20,
-    paddingRight: 12,
-    width: 268
-  }
-};
-
 export default class TeacherSectionSelector extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -39,7 +24,6 @@ export default class TeacherSectionSelector extends Component {
 
   state = {
     isMenuOpen: false,
-    canMenuOpen: true,
     targetPoint: {top: 0, left: 0}
   };
 
@@ -49,7 +33,7 @@ export default class TeacherSectionSelector extends Component {
   };
 
   handleClick = () => {
-    if (!this.state.isMenuOpen && this.state.canMenuOpen) {
+    if (!this.state.isMenuOpen) {
       this.openMenu();
     }
   };
@@ -65,21 +49,13 @@ export default class TeacherSectionSelector extends Component {
       top: rect.bottom + window.pageYOffset,
       left: rect.left + window.pageXOffset
     };
-    this.setState({isMenuOpen: true, canMenuOpen: false, targetPoint});
-  }
-
-  beforeClose = (node, resetPortalState) => {
-    resetPortalState();
-    this.closeMenu();
-    // Work around a bug in react-portal. see SettingsCog.jsx for details.
-    window.setTimeout(() => {
-      this.setState({canMenuOpen: true});
+    this.setState({
+      isMenuOpen: true,
+      targetPoint
     });
-  };
-
-  closeMenu() {
-    this.setState({isMenuOpen: false});
   }
+
+  closeMenu = () => this.setState({isMenuOpen: false});
 
   chooseMenuItem = section => {
     this.props.onChangeSection(section.id);
@@ -96,7 +72,10 @@ export default class TeacherSectionSelector extends Component {
     const {sections, selectedSection, courseId, scriptId} = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
-    const queryParams = queryString.stringify({courseId, scriptId});
+    const queryParams = queryString.stringify({
+      courseId,
+      scriptId
+    });
 
     return (
       <div>
@@ -119,7 +98,7 @@ export default class TeacherSectionSelector extends Component {
         <PopUpMenu
           isOpen={this.state.isMenuOpen}
           targetPoint={this.state.targetPoint}
-          beforeClose={this.beforeClose}
+          onClose={this.closeMenu}
           offset={menuOffset}
         >
           {sections &&
@@ -142,3 +121,19 @@ export default class TeacherSectionSelector extends Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    height: 34,
+    width: 300,
+    marginBottom: 0
+  },
+  addNewSection: {
+    borderTop: `1px solid ${color.charcoal}`,
+    paddingTop: 16,
+    paddingBottom: 8,
+    paddingLeft: 20,
+    paddingRight: 12,
+    width: 268
+  }
+};

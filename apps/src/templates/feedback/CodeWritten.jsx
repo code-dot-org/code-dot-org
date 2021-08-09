@@ -4,6 +4,77 @@ import React from 'react';
 import msg from '@cdo/locale';
 import trackEvent from '../../util/trackEvent';
 
+class CodeWritten extends React.Component {
+  static propTypes = {
+    numLinesWritten: PropTypes.number.isRequired,
+    totalNumLinesWritten: PropTypes.number.isRequired,
+    children: PropTypes.node,
+    useChallengeStyles: PropTypes.bool
+  };
+
+  render() {
+    const {
+      numLinesWritten,
+      totalNumLinesWritten,
+      children,
+      useChallengeStyles
+    } = this.props;
+    const lines = (
+      <p
+        id="num-lines-of-code"
+        className="lines-of-code-message"
+        style={useChallengeStyles ? styles.challengeLineCounts : null}
+      >
+        {msg.numLinesOfCodeWritten({numLines: numLinesWritten})}
+      </p>
+    );
+
+    let totalLines;
+    // Don't display totalLinesWritten the first time a user writes code. Only
+    // display it when the user has a total greater than the their current attempt.
+    if (totalNumLinesWritten && totalNumLinesWritten !== numLinesWritten) {
+      totalLines = (
+        <p
+          id="total-num-lines-of-code"
+          className="lines-of-code-message"
+          style={useChallengeStyles ? styles.challengeLineCounts : null}
+        >
+          {msg.totalNumLinesOfCodeWritten({
+            numLines: totalNumLinesWritten
+          })}
+        </p>
+      );
+    }
+
+    const showCode = (
+      <details
+        className="show-code"
+        style={useChallengeStyles ? styles.details : null}
+      >
+        <summary
+          role="button"
+          style={{
+            ...styles.summary,
+            ...(useChallengeStyles ? styles.challengeSummary : {})
+          }}
+          onClick={() => trackEvent('showCode', 'click', 'dialog')}
+        >
+          <b>{msg.showGeneratedCode()}</b>
+        </summary>
+        {children}
+      </details>
+    );
+
+    return (
+      <div>
+        {lines}
+        {totalLines}
+        {showCode}
+      </div>
+    );
+  }
+}
+
 const styles = {
   summary: {
     fontSize: 18,
@@ -25,72 +96,5 @@ const styles = {
     textAlign: 'left'
   }
 };
-
-class CodeWritten extends React.Component {
-  static propTypes = {
-    numLinesWritten: PropTypes.number.isRequired,
-    totalNumLinesWritten: PropTypes.number.isRequired,
-    children: PropTypes.node,
-    useChallengeStyles: PropTypes.bool
-  };
-
-  render() {
-    const lines = (
-      <p
-        id="num-lines-of-code"
-        className="lines-of-code-message"
-        style={
-          this.props.useChallengeStyles ? styles.challengeLineCounts : null
-        }
-      >
-        {msg.numLinesOfCodeWritten({numLines: this.props.numLinesWritten})}
-      </p>
-    );
-
-    let totalLines;
-    if (this.props.totalNumLinesWritten !== 0) {
-      totalLines = (
-        <p
-          id="total-num-lines-of-code"
-          className="lines-of-code-message"
-          style={
-            this.props.useChallengeStyles ? styles.challengeLineCounts : null
-          }
-        >
-          {msg.totalNumLinesOfCodeWritten({
-            numLines: this.props.totalNumLinesWritten
-          })}
-        </p>
-      );
-    }
-
-    const showCode = (
-      <details
-        className="show-code"
-        style={this.props.useChallengeStyles ? styles.details : null}
-      >
-        <summary
-          role="button"
-          style={{
-            ...styles.summary,
-            ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
-          }}
-          onClick={() => trackEvent('showCode', 'click', 'dialog')}
-        >
-          <b>{msg.showGeneratedCode()}</b>
-        </summary>
-        {this.props.children}
-      </details>
-    );
-
-    return (
-      <div>
-        {lines}
-        {totalLines}
-        {showCode}
-      </div>
-    );
-  }
-}
 
 export default Radium(CodeWritten);

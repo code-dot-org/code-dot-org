@@ -1,0 +1,6 @@
+name 'courseD_multi_farmer_while10_predict2_2021'
+question 'Take a good look at the code below. What will be left at the end of this puzzle?'
+wrong 'Nothing. This code will leave only level ground.', feedback: 'Incorrect. There is no code to remove dirt from the pile.'
+right 'This code will leave the pile completely untouched.', feedback: 'Correct!'
+wrong 'This code will leave the holes completely untouched.', feedback: 'Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.'
+wrong 'This code will leave the last hole untouched.', feedback: 'Incorrect. There is no code to remove dirt from the pile.'

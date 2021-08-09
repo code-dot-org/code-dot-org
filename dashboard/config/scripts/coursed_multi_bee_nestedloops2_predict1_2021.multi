@@ -1,0 +1,6 @@
+name 'courseD_multi_bee_nestedLoops2_predict1_2021'
+question 'Look closely at the nested loops below. What will happen when you click "Run"?'
+wrong 'The bee will move forward and get nectar only one time.', feedback: 'Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.'
+wrong 'The bee will get only 2 units of nectar.', feedback: 'Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.'
+right 'The bee will get all of the nectar.', feedback: 'Correct!'
+wrong 'The bee will turn the wrong direction.', feedback: 'Incorrect.  The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle.'

@@ -4,7 +4,7 @@
   #tts-error.alert.alert-error{style: "display: none"}
     #alert-content
   .row
-    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab))
+    - unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(Javalab))
       .span6
         %h5 Short Instructions
         = f.text_area :tts_short_instructions_override, placeholder: '', rows: 4, class:"input-block-level"

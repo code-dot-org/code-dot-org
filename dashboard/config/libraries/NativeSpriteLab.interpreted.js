@@ -8,6 +8,62 @@ function draw() {
   }
 }
 
+/**
+ * Must run in the interpreter, not natively, so that we can execute valueFn to get its value
+ * and be able to use that value within beginCollectingData. If beginCollectingData ran natively,
+ * calling valueFn would add a call into the interpreter on the call stack, but wouldn't execute
+ * immediately, so we wouldn't be able to use the value from within beginCollectingData.
+ */
+function beginCollectingData(valueFn, label) {
+  collectData(function() {
+    printText(['Time: ',getTime("seconds"),' sec. | ', label || '', ': ', valueFn()].join(''));
+  });
+}
+
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 10;
+ * ifVarEquals(i, 10, function() {
+ *   printText("first");
+ * });
+ * printText("second");
+ *
+ * If ifVarEquals() executed natively, the print statements would happen out of order.
+ */
+function ifVarEquals(variableName, value, callback) {
+  if (variableName == value) {
+    callback();
+  }
+}
+
+/**
+ * Must run in the interpreter, not natively, so that callback executes before withPercentChance() returns,
+ * rather than being added to the stack. For example, consider the following program:
+ * var i = 0;
+ * for (var count = 0; count < 100; count++) {
+ *   withPercentChance(50, function () {
+ *     i = (typeof i == 'number' ? i : 0) + 1;
+ *   });
+ * }
+ * printText(i)
+ *
+ * If withPercentChance() executed natively, i would still be 0 because the callbacks wouldn't have executed yet.
+ * Instead, if we keep the whole execution within the interpreter, the callbacks will execute before printText(),
+ * as expected.
+ */
+
+function withPercentChance(num, callback) {
+  if (randomNumber(0, 100) < num) {
+    callback();
+  }
+}
+
+function withPercentChanceDropdown(num, callback) {
+  withPercentChance(num, callback);
+}
+
 /* Legacy code only. Do not add any new code below here */
 function clickedOn(spriteId, callback) {
   spriteClicked('when', spriteId, callback);
@@ -15,6 +71,14 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function avoidingTargets() {
+  return {func: avoidingTargetsFunc(), name: 'avoiding targets'};
+}
+
+function followingTargets() {
+  return {func: followingTargetsFunc(), name: 'following targets'};
 }
 
 function tumbling(spriteId) {
@@ -139,122 +203,176 @@ function yLocationOf(spriteId) {
   return getProp(spriteId, 'y');
 }
 
-// Setup sim
-function setupSim(
-  s1number,
-  s1costume,
-  s1speed,
-  s2number,
-  s2costume,
-  s2speed,
-  s3number,
-  s3costume,
-  s3speed
-) {
-  World.collisions = {};
-  World.s3ToDelete = [];
-  World.sprite1score = 0;
-  World.sprite2score = 0;
-
-  // Wandering behavior at a certain speed, will be added to both s1 and s2 sprites.
-  function movementBehavior(speed) {
-    return function(spriteId) {
-      if (randomNumber(0, 5) == 0) {
-        changePropBy(spriteId, 'direction', randomNumber(-25, 25));
-      }
-      moveForward(spriteId, speed);
-      if (isTouchingEdges(spriteId)) {
-        edgesDisplace(spriteId);
-        changePropBy(spriteId, 'direction', randomNumber(135, 225));
-      }
-    };
-  }
-
-  // Initialize sprites
-  var counter_i = 0;
-  for (counter_i = 0; counter_i < s1number; counter_i++) {
-    makeNewSpriteAnon(s1costume, randomLocation());
-  }
-  addBehaviorSimple({costume: s1costume}, new Behavior(movementBehavior(s1speed)));
-
-  for (counter_i = 0; counter_i < s2number; counter_i++) {
-    makeNewSpriteAnon(s2costume, randomLocation());
-  }
-  addBehaviorSimple({costume: s2costume}, new Behavior(movementBehavior(s2speed)));
-
-  for (counter_i = 0; counter_i < s3number; counter_i++) {
-    makeNewSpriteAnon(s3costume, randomLocation());
-  }
-  setProp({costume: s3costume}, 'scale', 50);
-
-  /**
-  * We want to be able to randomize which sprite gets the point in the case of a tie. So the approach here is
-  * to use checkTouching() to detect all the collisions, but delay until the next frame to actually give a point
-  * and remove the s3 sprite. I'm using World.collisions to keep track of which s3 sprites should be deleted. The
-  * format is an object whose keys are the ids of s3 sprites, and the value is a list indicating which sprites are
-  * touching the given s3 sprite.
-  *
-  * Then to actually remove the s3 sprites and keep track of the score, I'm using a behavior. I have the behavior
-  * attached to sprite id 0, but it doesn't really matter which sprite (as long as it's not an s3 sprite that
-  * might get deleted). A behavior is just the simplest way to add a snippet of code that will get executed each frame.
-  * The behavior goes through each s3 to delete and randomly chooses one element from its corresponding list to be
-  * the sprite that "wins" the tie. (If there's only one item in the list, it means there was no tie, and that sprite
-  * wins by default.) Then it just tallies the score, deletes the s3 sprites, and checks whether the
-  * simulation should end. The one-frame delay isn't really noticeable since frames are so fast.
-  */
-
-  checkTouching('while', {costume: s1costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.objectSprite] == undefined) {
-      // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
-      // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.objectSprite] = [];
-      World.s3ToDelete.push(extraArgs.objectSprite);
-    }
-    World.collisions[extraArgs.objectSprite].push(s1costume);
-  });
-
-  checkTouching('while', {costume: s2costume}, {costume: s3costume}, function(extraArgs) {
-    if (World.collisions[extraArgs.objectSprite] == undefined) {
-      // We don't have any recorded collisions for this s3 sprite yet. Add it to the collisions map and
-      // to the list of s3 to delete next tick.
-      World.collisions[extraArgs.objectSprite] = [];
-      World.s3ToDelete.push(extraArgs.objectSprite);
-    }
-    World.collisions[extraArgs.objectSprite].push(s2costume);
-  });
-
-  function collectBehavior() {
-    for (var s3_counter = 0; s3_counter < World.s3ToDelete.length; s3_counter++) {
-      var s3_sprite = World.s3ToDelete[s3_counter];
-      var collidedSprites = World.collisions[s3_sprite];
-      // Randomly pick one "winner" for the collision.
-      var winnerIndex = randomNumber(0, collidedSprites.length - 1);
-      if (collidedSprites[winnerIndex] == s1costume) {
-        World.sprite1score += 1;
-        printText(s1costume + ' has collected ' + World.sprite1score);
-      }
-      if (collidedSprites[winnerIndex] == s2costume) {
-        World.sprite2score += 1;
-        printText(s2costume + ' has collected ' + World.sprite2score);
-      }
-      destroy({id: s3_sprite});
-    }
-    // Reset collisions and s3ToDelete before the next tick
-    World.collisions = {};
-    World.s3ToDelete = [];
-    checkSimulationEnd();
-  }
-  // We just need to run collectBehavior() each tick, doesn't actually matter which sprite it's attached to,
-  // as long as it's not one of the s3 sprites that might get destroyed at some point.
-  addBehaviorSimple({id: 0}, new Behavior(collectBehavior));
-
-  function checkSimulationEnd() {
-    if (countByAnimation({costume: s3costume}) === 0) {
-      destroy({costume: s1costume});
-      destroy({costume: s2costume});
-      printText('The simulation has ended after ' + World.seconds + ' seconds');
-      printText(s1costume + ' has collected ' + World.sprite1score);
-      printText(s2costume + ' has collected ' + World.sprite2score);
-    }
-  }
+//Mike's follow/avoid behavior blocks
+function startFollowing(sprites,targets){
+  addTarget(sprites, targets, "follow");
+  addBehaviorSimple(sprites, followingTargets());
 }
+
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, followingTargets());
+}
+
+function startAvoiding(sprites,targets){
+  addTarget(sprites, targets, "avoid");
+  addBehaviorSimple(sprites, avoidingTargets());
+}
+
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, avoidingTargets());
+}
+
+
+//Mike's Say Block Prototype code below this point
+function spriteSayTime(sprite,speech,time){
+  setProp(sprite, "speech", speech);
+  setProp(sprite, "timeout", time*30);
+}
+
+function spriteSay(sprite,speech){
+  spriteSayTime(sprite,speech,4);
+}
+
+function spriteSayChoices(sprite,speech){
+  spriteSay(sprite,speech);
+}
+
+
+function speechBubbles(){
+  var spriteIds = getSpriteIdsInUse();
+
+  for (var i = 0; i < spriteIds.length; i++) {
+    var spriteX=getProp({id: spriteIds[i]}, "x");
+    var spriteY=400-getProp({id: spriteIds[i]}, "y");
+    var spriteScale=getProp({id: spriteIds[i]}, "scale");
+    var spriteSpeech=getProp({id: spriteIds[i]}, "speech");
+    var spriteTimeout=getProp({id: spriteIds[i]}, "timeout");
+
+    if(spriteTimeout&&spriteSpeech!=undefined){
+      push();
+      var widthOfText=textWidth(spriteSpeech);
+      var textHeight=16;//font size
+
+      if (spriteSpeech.length > 150) {
+        spriteSpeech = spriteSpeech.substring(0, 149) + "…";
+      }
+      if(spriteSpeech.length < 50){
+        textHeight=20;
+        charCount=20;
+      } else if(spriteSpeech.length < 75){
+        textHeight=15;
+        charCount=25;
+      } else if(spriteSpeech.length < 125){
+        textHeight=10;
+        charCount=30;
+      } else {
+        textHeight=10;
+        charCount=35;
+      }
+      textSize(textHeight);
+
+      var charCount=Math.sqrt(spriteSpeech.length*10);
+      if(charCount < 20) {
+        charCount=20;
+      }
+
+
+      spriteSpeech=wordWrap(spriteSpeech,charCount);//16 characters per line
+      var lines = spriteSpeech.split(/\r\n|\r|\n/); 
+      setProp({id: spriteIds[i]}, "lineCount", lines.length);
+      fill(rgb(50,50,50,0.5));
+      stroke("gray");
+
+
+      textAlign(CENTER, TOP);
+
+
+      var minWidth=15;
+
+      for(var j=0;j<lines.length;j++){
+        if(minWidth<textWidth(lines[j])){
+          minWidth=textWidth(lines[j]);
+        }
+
+      }
+
+
+      var boxWidth=minWidth+5;
+      var boxHeight=((textHeight)+3)*(getProp({id: spriteIds[i]}, "lineCount"))+5;
+
+      var rectX=spriteX-boxWidth/2;
+      var rectY=spriteY-(spriteScale/2)-boxHeight-5;
+
+      if(rectX<0){
+        rectX=0;
+      }
+      if(rectX+boxWidth>400){
+        rectX=400-boxWidth;
+      }
+      if(rectX<0){
+        rectX=200-boxWidth/2;
+      }
+
+      if(rectY<0){rectY=0;}
+      if(rectY+boxHeight>400){
+        rectY=400-boxHeight;
+      }
+
+      strokeWeight(2);
+      var bubbleRad=4;
+      fill("white");
+      noStroke();
+      rect(rectX, rectY+bubbleRad, boxWidth, boxHeight-bubbleRad*2);
+      rect(rectX+bubbleRad,rectY,boxWidth-bubbleRad*2,boxHeight);
+      stroke("gray");
+      line(rectX,rectY+bubbleRad,rectX,rectY+boxHeight-bubbleRad);
+      line(rectX+boxWidth,rectY+bubbleRad,rectX+boxWidth,rectY+boxHeight-bubbleRad);
+      line(rectX+bubbleRad,rectY+boxHeight,rectX+boxWidth-bubbleRad,rectY+boxHeight);
+      line(rectX+bubbleRad,rectY,rectX+boxWidth-bubbleRad,rectY);
+
+      arc(rectX+bubbleRad, rectY+bubbleRad, bubbleRad*2, bubbleRad*2, 180, 270);
+      arc(rectX+bubbleRad, rectY+boxHeight-bubbleRad, bubbleRad*2, bubbleRad*2, 90, 180);
+      arc(rectX+boxWidth-bubbleRad, rectY+bubbleRad, bubbleRad*2, bubbleRad*2, 270, 0);
+      arc(rectX+boxWidth-bubbleRad, rectY+boxHeight-bubbleRad, bubbleRad*2, bubbleRad*2, 0, 90);
+      var tipX=(rectX+(boxWidth/2)+spriteX)/2;
+      var tipY=((spriteY-spriteScale/4)+3*(rectY+boxHeight))/4;
+      noStroke();
+      shape(rectX+boxWidth*4/10,rectY+boxHeight-1,tipX,tipY,rectX+boxWidth/2,rectY+boxHeight-1);
+      stroke("gray");
+
+      line(rectX+boxWidth*4/10,rectY+boxHeight,tipX,tipY);
+      line(tipX,tipY,rectX+boxWidth/2,rectY+boxHeight);
+      noStroke();
+      fill("black");
+
+      text(spriteSpeech,rectX+(boxWidth)/2,rectY+2.5);
+      changePropBy({id: spriteIds[i]}, "timeout", -1);
+      pop();
+    }
+  }
+
+}
+
+function wordWrap(str, maxWidth) {
+  var newLineStr = "\n"; done = false; res = '';
+  while (str.length > maxWidth) {
+    found = false;
+    // Inserts new line at first whitespace of the line
+    for (i = maxWidth - 1; i >= 0; i--) {
+      if(str.charAt(i)==" "){
+        res = res + [str.slice(0, i), newLineStr].join('');
+        str = str.slice(i + 1);
+        found = true;
+        break;
+      }
+    }
+    // Inserts new line at maxWidth position, the word is too long to wrap
+    if (!found) {
+      res += [str.slice(0, maxWidth), newLineStr].join('');
+      str = str.slice(maxWidth);
+    }
+  }
+  return res + str;
+}
+
+other.push(speechBubbles);

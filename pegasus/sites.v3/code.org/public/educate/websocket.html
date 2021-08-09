@@ -1,0 +1,78 @@
+<div id="main-content" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <h1>CSA Network Support Check</h1>
+        <p>
+          Use this page to test your school's network support for our CSA pilot course. The
+          Code.org CSA course uses a communication standard called WebSockets which may be blocked
+          by some school systems’ networks or device policies. If the network check is unsuccessful,
+          you will need to reach out to your school's IT department to update your school's firewall
+          settings or device policies.
+        </p>
+        <p>When checking network support, try to meet as many of these criteria as possible:</p>
+        <li>Use your school's internet connection</li>
+        <li>Use a student computer</li>
+        <li>Log into the computer with a student account</li>
+        <br/>
+        <p>Note: You do not need to be logged in to Code.org for this test to be successful.</p>
+        <label for="connect">Click "Connect" to check whether your school's network supports CSA tools</label>
+        <div>
+          <button id="connect" class="btn btn-primary">Connect</button>
+        </div>
+        <p id="loading" class="text-info" style="display: none">Connecting...</p>
+        <p id="success" class="text-success" style="display: none">
+          <strong>You successfully connected! No further action is needed.</strong>
+        </p>
+        <div id="fail" style="display: none">
+          <p class="text-danger">
+            <strong>Error. Connection unsuccessful.</strong>
+          </p>
+          <p>
+            <strong>Action required: </strong>
+            Please contact your IT department to update your school’s firewall settings or device
+            policies. Specifically, our CSA tools need to be able to initiate an Upgrade request on
+            *.code.org domains on the HTTPS port 443 and could maintain a secure WebSocket (WSS)
+            connection for up to 5 minutes. Let us know as soon as possible if this will be
+            impossible for your school.
+          </p>
+          <p>
+            Contact our Support Team (<a href="mailto:support@code.org">support@code.org</a>) if you have any questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function connect() {
+    let socket = new WebSocket("wss://javabuilderpilot.code.org?Authorization=connectivityTest");
+    document.querySelector("#loading").style.display = "block";
+    document.querySelector("#success").style.display = "none";
+    document.querySelector("#fail").style.display = "none";
+
+    socket.onopen = function(e) {
+      socket.send("connectivityTest");
+    };
+
+    socket.onmessage = function(message) {
+      if (message.data == "success") {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#success").style.display = "block";
+      } else {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#fail").style.display = "block";
+      }
+      socket.close();
+    }
+
+    socket.onerror = function(error) {
+      document.querySelector("#loading").style.display = "none";
+      document.querySelector("#fail").style.display = "block";
+      socket.close();
+    };
+  };
+  $(function () {
+    $( "#connect" ).click(function() { connect(); });
+  });
+</script>

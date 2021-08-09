@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-05-28T01:05:14.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Getting started with status\r\n\r\n**Goal:** In this section, our goal is to brainstorm ways students may demonstrate a variety of Computer Science skills in the classroom.  Eventually, as teachers we want to be able to use these insights to act in ways that help all students develop their own identities as computer science students. _(Estimated time: ~20 minutes)_\r\n\r\n## Understanding status in the classroom\r\nIn the synchronous workshop for this module we are going to consider the role status plays in the classroom.  To do this, we are going to separate **social status** from **academic status**.  We will focus on **academic status**, or the perception of a student’s academic capability. \r\n\r\nAs a teacher, we can influence a student’s academic status by broadening, labeling, and publicly recognizing what it means to be “smart” in a computer science classroom.\r\n\r\n_Note: You will notice we put “smart” in quotes throughout this module.  We use this word a lot in society, but in education we know there are multiple intelligences and not just one way to be “smart”.  Also, the concept that someone is “smart” or not goes against the concept of a growth mindset - that people can grow their abilities over time.  We use “smart” in quotes in this module to describe someone who has a high academic status in the classroom.  We acknowledge that status can change over time - throughout the year or throughout the class period._\r\n\r\n## Reflection prompt:\r\nFirst, let’s think of what the narrow definition of “smart” looks like in the computer science classroom.  When students think of being “smart” in computer science, what are some ways students see others as “smart” when it comes to computer science?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24395,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:55:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-07-10 00:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 00:38:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:21:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:44:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-16 13:35:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-16 13:36:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-23 15:19:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-13 15:37:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-13 15:40:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-14 18:17:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-14 18:25:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-19 18:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-08-19 19:14:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]"
+}]]></config>
+</FreeResponse>

@@ -1,36 +1,14 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 import {connect} from 'react-redux';
-import {addActivity} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-
-const styles = {
-  activityEditAndPreview: {
-    display: 'flex',
-    flexDirection: 'row',
-    margin: 10
-  },
-  editor: {
-    width: '55%'
-  },
-  preview: {
-    width: '45%',
-    marginLeft: 20
-  },
-  previewBox: {
-    border: '1px solid black',
-    padding: 10
-  },
-  addActivity: {
-    fontSize: 14,
-    color: 'white',
-    background: color.cyan,
-    border: `1px solid ${color.cyan}`,
-    boxShadow: 'none'
-  }
-};
+import {
+  addActivity,
+  getSerializedActivities
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import ReactDOM from 'react-dom';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 /*
  A GUI for editing activities in a lesson. Shows
@@ -40,15 +18,17 @@ const styles = {
 
 class ActivitiesEditor extends Component {
   static propTypes = {
+    hasLessonPlan: PropTypes.bool.isRequired,
     //redux
-    activities: PropTypes.array,
-    addActivity: PropTypes.func
+    activities: PropTypes.arrayOf(activityShape).isRequired,
+    addActivity: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
+      targetActivityPos: null,
       targetActivitySectionPos: null
     };
   }
@@ -56,7 +36,8 @@ class ActivitiesEditor extends Component {
   handleAddActivity = () => {
     this.props.addActivity(
       this.props.activities.length,
-      this.generateActivityKey()
+      this.generateActivityKey(),
+      this.generateActivitySectionKey()
     );
   };
 
@@ -73,15 +54,71 @@ class ActivitiesEditor extends Component {
     return `activity-${activityNumber}`;
   };
 
-  setTargetActivitySection = targetActivitySectionPos => {
-    this.setState({targetActivitySectionPos});
+  generateActivitySectionKey = () => {
+    let activitySectionNumber = 1;
+
+    let activitySectionKeys = [];
+    this.props.activities.forEach(activity => {
+      activity.activitySections.forEach(section => {
+        activitySectionKeys.push(section.key);
+      });
+    });
+
+    while (
+      activitySectionKeys.includes(`activitySection-${activitySectionNumber}`)
+    ) {
+      activitySectionNumber++;
+    }
+
+    return `activitySection-${activitySectionNumber}`;
+  };
+
+  // To be populated with the react ref of each ActivitySectionCard element.
+  sectionRefs = [];
+
+  setActivitySectionRef = (sectionRef, activityPos, sectionPos) => {
+    this.sectionRefs[activityPos] = this.sectionRefs[activityPos] || [];
+    this.sectionRefs[activityPos][sectionPos] = sectionRef;
   };
 
   // To be populated with the bounding client rect of each ActivitySectionCard element.
-  activitySectionMetrics = {};
+  sectionMetrics = [];
 
-  setActivitySectionMetrics = (metrics, activitySectionPosition) => {
-    this.activitySectionMetrics[activitySectionPosition] = metrics;
+  // populate sectionMetrics from sectionRefs.
+  updateActivitySectionMetrics = () => {
+    this.sectionMetrics = [];
+    this.sectionRefs.forEach((sectionRefs, activityPos) => {
+      sectionRefs.forEach((ref, sectionPos) => {
+        const node = ReactDOM.findDOMNode(ref);
+        const rect = !!node && node.getBoundingClientRect();
+        this.sectionMetrics[activityPos] =
+          this.sectionMetrics[activityPos] || [];
+        this.sectionMetrics[activityPos][sectionPos] = rect;
+      });
+    });
+  };
+
+  clearTargetActivitySection = () => {
+    this.setState({
+      targetActivityPos: null,
+      targetActivitySectionPos: null
+    });
+  };
+
+  // Given a clientY value of a location on the screen, find the ActivityCard
+  // and ActivitySectionCard corresponding to that location, and update
+  // targetActivityPos and targetActivitySectionPos to match.
+  updateTargetActivitySection = y => {
+    this.sectionMetrics.forEach((sectionMetrics, activityPos) => {
+      sectionMetrics.forEach((rect, sectionPos) => {
+        if (y > rect.top && y < rect.top + rect.height) {
+          this.setState({
+            targetActivityPos: activityPos,
+            targetActivitySectionPos: sectionPos
+          });
+        }
+      });
+    });
   };
 
   render() {
@@ -89,42 +126,55 @@ class ActivitiesEditor extends Component {
 
     return (
       <div style={styles.activityEditAndPreview}>
-        <div style={styles.editor}>
-          {activities.map(activity => {
-            return (
-              <ActivityCard
-                activity={activity}
-                activitiesCount={activities.length}
-                key={activity.key}
-                setActivitySectionMetrics={this.setActivitySectionMetrics}
-                setTargetActivitySection={this.setTargetActivitySection}
-                targetActivitySectionPos={this.state.targetActivitySectionPos}
-                activitySectionMetrics={this.activitySectionMetrics}
-              />
-            );
-          })}
+        {activities.map(activity => (
+          <ActivityCardAndPreview
+            key={activity.key}
+            activity={activity}
+            generateActivitySectionKey={this.generateActivitySectionKey}
+            activitiesCount={activities.length}
+            setActivitySectionRef={this.setActivitySectionRef}
+            updateTargetActivitySection={this.updateTargetActivitySection}
+            clearTargetActivitySection={this.clearTargetActivitySection}
+            targetActivityPos={this.state.targetActivityPos}
+            targetActivitySectionPos={this.state.targetActivitySectionPos}
+            activitySectionMetrics={this.sectionMetrics}
+            updateActivitySectionMetrics={this.updateActivitySectionMetrics}
+            hasLessonPlan={this.props.hasLessonPlan}
+          />
+        ))}
+        {this.props.hasLessonPlan && (
           <button
             onMouseDown={this.handleAddActivity}
-            className="btn"
+            className="btn add-activity"
             style={styles.addActivity}
             type="button"
           >
             <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-            Add Activity
+            Activity
           </button>
-        </div>
-        <div style={styles.preview}>
-          <h2>Preview</h2>
-          <div style={styles.previewBox}>
-            {activities.map(activity => {
-              return <Activity activity={activity} key={activity.key} />;
-            })}
-          </div>
-        </div>
+        )}
+        <input
+          type="hidden"
+          name="activities"
+          value={getSerializedActivities(this.props.activities)}
+        />
       </div>
     );
   }
 }
+
+const styles = {
+  activityEditAndPreview: {
+    margin: 10
+  },
+  addActivity: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none'
+  }
+};
 
 export const UnconnectedActivitiesEditor = ActivitiesEditor;
 

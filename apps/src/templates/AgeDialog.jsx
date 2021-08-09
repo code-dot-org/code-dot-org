@@ -9,44 +9,6 @@ import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal
-  },
-  dancePartyHeading: {
-    fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif"
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex'
-  },
-  middleCell: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    maxWidth: '50%'
-  },
-  age: {
-    paddingTop: 15
-  },
-  dropdown: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    marginTop: 2,
-    width: 160
-  }
-};
-
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
  * We want users seeing that dialog to have to input their age, so using
@@ -146,6 +108,44 @@ class AgeDialog extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal
+  },
+  dancePartyHeading: {
+    fontSize: 32,
+    fontFamily: "'Gotham 7r', sans-serif"
+  },
+  middle: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    display: 'flex'
+  },
+  middleCell: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    maxWidth: '50%'
+  },
+  age: {
+    paddingTop: 15
+  },
+  dropdown: {
+    verticalAlign: 'top',
+    marginRight: 10,
+    marginTop: 2,
+    width: 160
+  }
+};
 
 export const UnconnectedAgeDialog = AgeDialog;
 

@@ -15,6 +15,7 @@ import {itImplementsTheMakerBoardInterface} from '../MakerBoardTest';
 import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
+import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -22,7 +23,11 @@ process.hrtime = require('browser-process-hrtime');
 const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];
 
-export function itMakesCircuitPlaygroundComponentsAvailable(BoardClient) {
+export function itMakesCircuitPlaygroundComponentsAvailable(
+  BoardClient,
+  boardSpecificSetup = null,
+  boardSpecificTeardown = null
+) {
   const CP_CONSTRUCTOR_COUNT = 13;
   const CP_COMPONENT_COUNT = 16;
   const CP_COMPONENTS = [
@@ -57,8 +62,18 @@ export function itMakesCircuitPlaygroundComponentsAvailable(BoardClient) {
         },
         addCustomMarshalObject: sinon.spy()
       };
+      // Opportunity to stub anything needed to test a board
+      if (boardSpecificSetup) {
+        boardSpecificSetup(board);
+      }
 
       return board.connect();
+    });
+
+    afterEach(() => {
+      if (boardSpecificTeardown) {
+        boardSpecificTeardown(board);
+      }
     });
 
     describe('adds component constructors', () => {
@@ -266,7 +281,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(BoardClient) {
 }
 
 describe('CircuitPlaygroundBoard', () => {
-  let board, playground;
+  let board, playground, userAgentSpy;
 
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
@@ -307,6 +322,7 @@ describe('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     ChromeSerialPort.stub.setDeviceList(CIRCUIT_PLAYGROUND_PORTS);
+    circuitPlaygroundBoardSetup();
   });
 
   afterEach(() => {
@@ -315,16 +331,34 @@ describe('CircuitPlaygroundBoard', () => {
     CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     EventEmitter.prototype.once.restore();
     ChromeSerialPort.stub.reset();
+    circuitPlaygroundBoardTeardown();
   });
 
+  function circuitPlaygroundBoardSetup() {
+    // 'CrOS' represents ChromeOS
+    userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
+  }
+
+  function circuitPlaygroundBoardTeardown() {
+    userAgentSpy.restore();
+  }
+
   // Test coverage for Maker Board Interface
-  itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
+  itImplementsTheMakerBoardInterface(
+    CircuitPlaygroundBoard,
+    circuitPlaygroundBoardSetup,
+    circuitPlaygroundBoardTeardown
+  );
 
   /**
    * After installing on the interpreter, test that the components and
    * component constructors are available from the interpreter
    */
-  itMakesCircuitPlaygroundComponentsAvailable(CircuitPlaygroundBoard);
+  itMakesCircuitPlaygroundComponentsAvailable(
+    CircuitPlaygroundBoard,
+    circuitPlaygroundBoardSetup,
+    circuitPlaygroundBoardTeardown
+  );
 
   describe(`connect()`, () => {
     // Remove these lines when maker-captouch is on by default.
@@ -379,6 +413,23 @@ describe('CircuitPlaygroundBoard', () => {
     it('does not initialize components', () => {
       return board.connectToFirmware().then(() => {
         expect(board.prewiredComponents_).to.be.null;
+      });
+    });
+
+    it('does not set the boardType for classic boards', () => {
+      board.port_ = {vendorId: '0x239A', productId: '0x8011'};
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
+      });
+    });
+
+    it('sets the boardType for express boards', () => {
+      board.port_ = {
+        vendorId: '0x239A',
+        productId: '0x8018'
+      };
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
       });
     });
   });

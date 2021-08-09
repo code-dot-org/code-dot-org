@@ -19,22 +19,6 @@ export const COLUMNS = {
 
 const ANSWER_COLUMN_WIDTH = 200;
 
-const styles = {
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
-  },
-  answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH
-  },
-  optionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    maxWidth: 470
-  }
-};
-
 class MatchByStudentTable extends Component {
   static propTypes = {
     questionAnswerData: matchQuestionPropType,
@@ -194,5 +178,21 @@ class MatchByStudentTable extends Component {
     );
   }
 }
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center'
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH
+  },
+  optionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: 470
+  }
+};
 
 export default MatchByStudentTable;

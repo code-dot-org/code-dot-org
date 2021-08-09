@@ -7,6 +7,9 @@ import {BASE_DIALOG_WIDTH} from '../constants';
  * A generic modal dialog that has an x-close in the upper right, and a
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
+ *
+ * To use a styled version of this component that follows our style guide,
+ * use StylizedBaseDialog.jsx.
  */
 export default class BaseDialog extends React.Component {
   static propTypes = {
@@ -24,8 +27,11 @@ export default class BaseDialog extends React.Component {
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
+    bodyId: PropTypes.string,
+    bodyClassName: PropTypes.string,
     style: PropTypes.object,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
+    overflow: PropTypes.string
   };
 
   componentDidMount() {
@@ -97,6 +103,10 @@ export default class BaseDialog extends React.Component {
     let modalClassNames = 'modal';
     let modalBodyClassNames = 'modal-body';
     let modalBackdropClassNames = 'modal-backdrop';
+    const overflowX = this.props.overflow || 'hidden';
+    const overflowY =
+      this.props.overflow ||
+      (this.props.fixedHeight || this.props.fullHeight ? 'hidden' : 'auto');
 
     if (this.props.useUpdatedStyles) {
       wrapperClassNames = 'dashboard-styles';
@@ -105,9 +115,8 @@ export default class BaseDialog extends React.Component {
         background: '#fff',
         height: this.props.fixedHeight,
         maxHeight: !this.props.fixedHeight && '80vh',
-        overflowX: 'hidden',
-        overflowY:
-          this.props.fixedHeight || this.props.fullHeight ? 'hidden' : 'auto',
+        overflowX: overflowX,
+        overflowY: overflowY,
         borderRadius: 4
       };
       bodyStyle = {
@@ -128,6 +137,7 @@ export default class BaseDialog extends React.Component {
       modalClassNames = '';
       modalBodyClassNames = '';
     }
+
     bodyStyle = {
       ...bodyStyle,
       ...(this.props.hideBackdrop && {
@@ -136,6 +146,11 @@ export default class BaseDialog extends React.Component {
       }),
       ...this.props.style
     };
+
+    modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]
+      .filter(className => !!className)
+      .join(' ');
+
     let body = (
       <div
         style={bodyStyle}
@@ -144,7 +159,11 @@ export default class BaseDialog extends React.Component {
         ref="dialog"
         onKeyDown={this.handleKeyDown}
       >
-        <div style={modalBodyStyle} className={modalBodyClassNames}>
+        <div
+          style={modalBodyStyle}
+          id={this.props.bodyId}
+          className={modalBodyClassNames}
+        >
           {!this.props.uncloseable &&
             !this.props.hideCloseButton &&
             (this.props.useUpdatedStyles ? (

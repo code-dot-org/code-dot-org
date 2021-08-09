@@ -4,7 +4,7 @@ lesson_extras_available true
 editor_experiment 'broward'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
-lesson 'Sequencing in Maze', display_name: 'Sequencing in Maze'
+lesson 'Sequencing in Maze', display_name: 'Sequencing in Maze', has_lesson_plan: false
 level 'courseD_video_ramp1_experiment', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_experiment', progression: 'Practice'
 level 'courseC_maze_debugging9_experiment', progression: 'Practice'
@@ -19,7 +19,7 @@ level 'courseD_maze_ramp5a_experiment', progression: 'Practice'
 level 'courseD_maze_ramp5c_experiment', progression: 'Practice'
 
 lesson_group 'csf_loops', display_name: 'Loops'
-lesson 'Programming and Loops with the Artist', display_name: 'Programming and Loops with the Artist'
+lesson 'Programming and Loops with the Artist', display_name: 'Programming and Loops with the Artist', has_lesson_plan: false
 level 'courseC_video_artist_experiment', progression: 'Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_experiment', progression: 'Practice'
 level 'courseC_artist_prog2_experiment', progression: 'Practice'
@@ -35,7 +35,7 @@ bonus 'courseC_artist_prog_challenge1_experiment'
 bonus 'courseC_artist_prog_challenge2a_experiment'
 
 lesson_group 'csf_conditionals', display_name: 'Conditionals'
-lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic'
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic', has_lesson_plan: false
 level 'CourseE_HOC 2018 Level_1_experiment', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_2_experiment', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_3_experiment', progression: 'Practice'
@@ -48,7 +48,7 @@ level 'CourseE_HOC 2018 Level_9b_experiment', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_10_experiment', progression: 'Practice'
 level 'CourseE_HOC 2018 Level_11_experiment', progression: 'Practice'
 
-lesson 'Conditionals', display_name: 'Conditionals'
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: false
 level 'courseD_video_whileIntro_experiment', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_experiment', progression: 'Prediction'
 level 'courseE_farmer_ramp11a_experiment', progression: 'Practice'
@@ -64,14 +64,14 @@ level 'courseE_farmer_ramp12f_experiment', progression: 'Challenge', challenge: 
 level 'courseE_farmer_ramp12g_experiment', progression: 'Practice'
 
 lesson_group 'csf_events', display_name: 'Events'
-lesson 'Events: The Big Event', display_name: 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: false, unplugged: true
 level 'BigEvent-Unplugged_experiment'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Simon Says', display_name: 'Simon Says'
+lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: false, unplugged: true
 level 'SimonSays-Unplugged_experiment'
 
-lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprites with Sprite Lab'
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Learning Sprites with Sprite Lab', has_lesson_plan: false
 level 'CourseEF_video_IntroSpriteLab_experiment', progression: 'Introducing Sprite Lab'
 level 'Fish Tank 1-validated_experiment', progression: 'Prediction'
 level 'Fish Tank 2-validated_experiment', progression: 'Mini-Project: Swimming Fish'
@@ -82,7 +82,7 @@ level 'Fish Tank 5-validated_experiment', progression: 'Mini-Project: Swimming F
 level 'Fish Tank 6-validated_experiment', progression: 'Mini-Project: Swimming Fish (continued)'
 level 'Fish Tank 7-validated_experiment', progression: 'Free Play'
 
-lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab'
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab', has_lesson_plan: false
 level 'Dance Party 1-validated_experiment', progression: 'Prediction'
 level 'CDEF_video_SpritesInAction_experiment', progression: 'Video'
 level 'Dance Party 2_experiment', progression: 'Mini-Project: Alien Dance Moves'
@@ -94,10 +94,10 @@ level 'Dance Party 7_experiment', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_experiment', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Private and Personal Information', display_name: 'Private and Personal Information'
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: false, unplugged: true
 level 'PrivatePersonalInformation-Unplugged_experiment'
 
-lesson 'About Me', display_name: 'About Me'
+lesson 'About Me', display_name: 'About Me', has_lesson_plan: false
 level 'courseE_aboutme_1_experiment', progression: 'Free Play'
 level 'courseE_aboutme_2_experiment', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_3_experiment', progression: 'Mini-project: Interactive Poster'
@@ -106,11 +106,11 @@ level 'courseE_aboutme_5_experiment', progression: 'Mini-project: Interactive Po
 level 'courseE_aboutme_6_experiment', progression: 'Mini-project: Interactive Poster'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
-lesson 'Access Ability', display_name: 'Access Ability'
+lesson 'Access Ability', display_name: 'Access Ability', has_lesson_plan: false, unplugged: true
 level 'DesigningForAccessibilityMarkdownLevel_2019_experiment'
 
 lesson_group 'ramp_up', display_name: 'Ramp-Up'
-lesson 'Conditionals Review', display_name: 'Conditionals Review'
+lesson 'Conditionals Review', display_name: 'Conditionals Review', has_lesson_plan: false
 level 'courseD_video_whileIntro_experiment', progression: 'While Loops with the Farmer'
 level 'courseD_farmer_while4_predict1_experiment', progression: 'Prediction'
 level 'courseE_farmer_ramp11a_experiment', progression: 'Practice'

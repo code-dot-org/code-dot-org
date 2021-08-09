@@ -1,0 +1,19 @@
+name 'U10 SSQRP2 part 3_2021'
+editor_experiment ''
+
+
+
+
+
+description 'Which of the following may be an unintended effect of the use of _Snappy_?'
+wrong 'Users may identify other Snappy users in their own town. '
+right 'Large towns might look "happier" than small towns.'
+wrong 'Users can rater other "Happiness Moments" with emojis. '
+wrong 'Users are prevented from leaving negative comments.'
+
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

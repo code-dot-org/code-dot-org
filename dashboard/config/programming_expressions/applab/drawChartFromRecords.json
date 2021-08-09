@@ -1,0 +1,23 @@
+{
+  "func": "drawChartFromRecords",
+  "category": "Data",
+  "paramButtons": {
+    "minArgs": 4,
+    "maxArgs": 6
+  },
+  "paletteParams": [
+    "chartId",
+    "chartType",
+    "tableName",
+    "columns"
+  ],
+  "params": [
+    "\"chartId\"",
+    "\"bar\"",
+    "\"mytable\"",
+    "[\"columnOne\", \"columnTwo\"]"
+  ],
+  "allowFunctionDrop": {
+    "5": true
+  }
+}

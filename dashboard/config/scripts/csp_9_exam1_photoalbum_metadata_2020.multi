@@ -16,3 +16,21 @@ A photographer stores digital photographs on her computer. In this case the phot
 
 Which of the following could the photographer NOT do based on this metadata?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Since the metadata contains nothing about the content of the images themselves, the photographer could not filter photos to those taken of any particular object, including buildings.
+
+
+[Lesson 1 - Learning From Data](https://curriculum.code.org/csp-20/unit9/1/) introduced students to metadata and what can be learned from it.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.B: Describe what information can be extracted from metadata.
+
+
+:::
+
+
+MARKDOWN

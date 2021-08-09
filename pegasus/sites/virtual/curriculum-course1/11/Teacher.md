@@ -65,7 +65,7 @@ Part puzzle, part word search, the Spelling Bee asks students to program a bee t
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Spelling Bee](http://learn.code.org/s/course1/stage/11/puzzle/1)
+### <a name="Activity"></a> [Spelling Bee](http://learn.code.org/s/course1/lessons/11/levels/1)
 Very young students or struggling readers may need aditional support finding the words - using manipulatives (like Scrabble tiles) can help students see what words look like in different directions.
 
 [/together]

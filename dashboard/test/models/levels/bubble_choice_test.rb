@@ -9,7 +9,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     create :game, name: 'BubbleChoice'
 
     @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel2 = create :level, name: 'choice_2'
+    @sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
     @script_level = create :script_level, levels: [@bubble_choice]
@@ -95,6 +95,7 @@ DSL
   test 'summarize' do
     summary = @bubble_choice.summarize
     expected_summary = {
+      id: @bubble_choice.id.to_s,
       display_name: @bubble_choice.display_name,
       description: @bubble_choice.description,
       name: @bubble_choice.name,
@@ -103,6 +104,51 @@ DSL
       sublevels: @bubble_choice.summarize_sublevels
     }
 
+    assert_equal expected_summary, summary
+  end
+
+  test 'summarize with translations' do
+    # Create and save translations to I18n backend
+    level_translated_display_name = 'translated BubbleChoice display name'
+    level_translated_description = 'translated BubbleChoice description'
+    sublevel_translated_display_name = 'translated sublevel display name'
+    sublevel_translated_short_instruction = 'translated sublevel short instruction'
+    custom_i18n = {
+      data: {
+        dsls: {
+          @bubble_choice.name => {
+            display_name: level_translated_display_name,
+            description: level_translated_description
+          }
+        },
+        display_name: {
+          @sublevel1.name => sublevel_translated_display_name
+        },
+        short_instructions: {
+          @sublevel2.name => sublevel_translated_short_instruction
+        }
+      }
+    }
+
+    test_locale = :'te-ST'
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Expected summary with translations
+    expected_sublevel_summary = @bubble_choice.summarize_sublevels
+    expected_sublevel_summary[0][:display_name] = sublevel_translated_display_name
+    expected_sublevel_summary[1][:short_instructions] = sublevel_translated_short_instruction
+    expected_summary = {
+      id: @bubble_choice.id.to_s,
+      display_name: level_translated_display_name,
+      description: level_translated_description,
+      name: @bubble_choice.name,
+      type: @bubble_choice.type,
+      teacher_markdown: @bubble_choice.teacher_markdown,
+      sublevels: expected_sublevel_summary
+    }
+
+    summary = @bubble_choice.summarize should_localize: true
     assert_equal expected_summary, summary
   end
 
@@ -126,8 +172,8 @@ DSL
     expected_summary = [
       {
         # level_id and id are used by different features so keeping both
-        level_id: @sublevel1.id,
-        id: @sublevel1.id,
+        level_id: @sublevel1.id.to_s,
+        id: @sublevel1.id.to_s,
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
@@ -136,11 +182,12 @@ DSL
         name: @sublevel1.name,
         position: 1,
         letter: 'a',
-        icon: nil
+        icon: nil,
+        status: 'not_tried'
       },
       {
-        level_id: @sublevel2.id,
-        id: @sublevel2.id,
+        level_id: @sublevel2.id.to_s,
+        id: @sublevel2.id.to_s,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
@@ -149,7 +196,9 @@ DSL
         name: @sublevel2.name,
         position: 2,
         letter: 'b',
-        icon: nil
+        icon: nil,
+        status: 'not_tried',
+        short_instructions: @sublevel2.short_instructions
       }
     ]
 
@@ -172,12 +221,54 @@ DSL
     assert_nil sublevel_summary.last[:perfect]
   end
 
-  test 'best_result_sublevel_id returns sublevel with highest best_result for user' do
+  test 'summarize_sublevels does not leak progress between scripts' do
     student = create :student
-    create :user_level, user: student, level: @sublevel2, best_result: 100
-    create :user_level, user: student, level: @sublevel1, best_result: 20
+    other_script_level = create :script_level, levels: [@bubble_choice]
+    create :user_level,
+      user: student,
+      level: @sublevel1,
+      script: @script_level.script,
+      best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level,
+      user: student,
+      level: @sublevel2,
+      script: other_script_level.script,
+      best_result: ActivityConstants::BEST_PASS_RESULT
+    sublevel_summary = @bubble_choice.summarize_sublevels(
+      script_level: @script_level,
+      user_id: student.id
+    )
+    assert_equal 2, sublevel_summary.length
+    assert sublevel_summary.first[:perfect]
+    refute sublevel_summary.last[:perfect]
+  end
 
-    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student)
+  test 'get_sublevel_for_progress returns sublevel with highest best_result for user when there is no teacher feedback' do
+    student = create :student
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+
+    assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
+  test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    script = @script_level.script
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    assert_equal @sublevel1, @bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
+  test 'get_sublevel_for_progress returns nil if no sublevels have progress or feedback' do
+    student = create :student
+    assert_nil @bubble_choice.get_sublevel_for_progress(student, @script_level.script)
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
@@ -200,9 +291,9 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    sublevel1 = create :level, name: 'sublevel_1'
-    sublevel2 = create :level, name: 'sublevel_2'
-    sublevel3 = create :level, name: 'sublevel_3'
+    sublevel1 = create :level, name: 'sublevel_1', level_num: 'custom'
+    sublevel2 = create :level, name: 'sublevel_2', level_num: 'custom'
+    sublevel3 = create :level, name: 'sublevel_3', level_num: 'custom'
 
     # clone_with_suffix needs to be able to access the level object as well as
     # its DSL text. Rather than create an actual DSL file, we stub the level's
@@ -255,7 +346,56 @@ DSL
   test 'all_descendant_levels includes template levels of sublevels' do
     template = create :artist, name: 'template'
     artist = create :artist, name: 'artist', properties: {project_template_level_name: template.name}
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', sublevels: [artist]
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices_level', sublevels: [artist]
     assert_equal [artist.name, template.name], bubble_choice.all_descendant_levels.map(&:name)
+  end
+
+  test 'parent_levels will retrieve all parent levels' do
+    parents = []
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1, @sublevel2])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel1])
+    parents << create(:bubble_choice_level, sublevels: [@sublevel2])
+
+    assert_equal [@bubble_choice, parents[0], parents[1]], BubbleChoice.parent_levels(@sublevel1.name)
+    assert_equal [@bubble_choice, parents[0], parents[2]], BubbleChoice.parent_levels(@sublevel2.name)
+  end
+
+  test 'only actual sublevels are considered sublevels' do
+    sublevel = create :level
+    contained_level = create :level
+    bubble_choice = create :bubble_choice_level, sublevels: [sublevel]
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED,
+      position: 2
+    )
+    bubble_choice.reload
+    assert_equal [sublevel, contained_level], bubble_choice.child_levels.to_a
+    assert_equal [sublevel], bubble_choice.sublevels.to_a
+  end
+
+  test 'setup_sublevels will remove old sublevels' do
+    bubble_choice = create :bubble_choice_level
+    bubble_choice.setup_sublevels([@sublevel1.name, @sublevel2.name])
+    assert_equal [@sublevel1, @sublevel2], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    bubble_choice.setup_sublevels([@sublevel2.name])
+    assert_equal [@sublevel2], bubble_choice.sublevels
+  end
+
+  test 'setup_sublevels will not remove non-sublevel child levels' do
+    bubble_choice = create :bubble_choice_level
+    contained_level = create :level
+    ParentLevelsChildLevel.create(
+      parent_level: bubble_choice,
+      child_level: contained_level,
+      kind: ParentLevelsChildLevel::CONTAINED
+    )
+    assert_equal [contained_level], bubble_choice.child_levels.to_a
+    bubble_choice.setup_sublevels([@sublevel1.name])
+    assert_equal [@sublevel1], bubble_choice.sublevels
+    assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
   end
 end

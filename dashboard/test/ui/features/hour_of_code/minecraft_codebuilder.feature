@@ -9,7 +9,7 @@ Scenario: Importing an Agent level from a share link
   #
   # Create a new level source
   #
-  Given I am on "http://studio.code.org/s/allthethings/stage/25/puzzle/2"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/25/levels/2"
   And I rotate to landscape
   And I wait for the page to fully load
   And element "#runButton" is visible

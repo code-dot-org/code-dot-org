@@ -1,7 +1,10 @@
-hidden false
+family_name 'dance-2019'
+version_year 'unversioned'
+published_state 'preview'
 tts true
+is_course true
 
-lesson 'Dance Party', display_name: 'Dance Party'
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: false
 level 'Dance_2019_01'
 level 'Dance_2019_02'
 level 'Dance_2019_03'

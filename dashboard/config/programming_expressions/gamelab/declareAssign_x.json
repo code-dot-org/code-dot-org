@@ -1,0 +1,5 @@
+{
+  "func": "declareAssign_x",
+  "block": "var x = __;",
+  "category": "Variables"
+}

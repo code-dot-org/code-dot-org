@@ -103,7 +103,8 @@ var ELEMENT_ID_DENYLIST = [
   'submitButton',
   'unsubmitButton',
   'turtleImage',
-  'prompt-icon'
+  'prompt-icon',
+  'bubble'
 ];
 
 var TURTLE_CANVAS_ID = 'turtleCanvas';

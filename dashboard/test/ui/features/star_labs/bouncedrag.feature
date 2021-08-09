@@ -1,7 +1,7 @@
 Feature: Bounce blocks can be dragged
 
 Background:
-  Given I am on "http://studio.code.org/s/events/stage/1/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/events/lessons/1/levels/1?noautoplay=true"
 
 Scenario: Connect two blocks from toolbox
   When I rotate to landscape

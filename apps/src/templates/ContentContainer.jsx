@@ -14,6 +14,98 @@ import Radium from 'radium';
 
 const contentWidth = styleConstants['content-width'];
 
+class ContentContainer extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node)
+    ]),
+    heading: PropTypes.string,
+    linkText: PropTypes.string,
+    link: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+    description: PropTypes.string,
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    hideBottomMargin: PropTypes.bool
+  };
+
+  render() {
+    const {
+      heading,
+      link,
+      linkText,
+      description,
+      isRtl,
+      responsiveSize,
+      hideBottomMargin
+    } = this.props;
+
+    const showLinkTop = responsiveSize === 'lg' && link && linkText;
+    const showLinkBottom = responsiveSize !== 'lg' && link && linkText;
+    const boxStyles = styles.boxResponsive;
+    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
+
+    return (
+      <div style={[boxStyles, bottomMargin]}>
+        {(heading || (link && linkText)) && (
+          <div style={styles.headingBox}>
+            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
+              {heading}
+            </div>
+            {showLinkTop && (
+              <Link link={link} linkText={linkText} isRtl={isRtl} />
+            )}
+          </div>
+        )}
+        {description && <div style={styles.description}>{description}</div>}
+        <div style={styles.children}>
+          {React.Children.map(this.props.children, (child, index) => {
+            return <div key={index}>{child}</div>;
+          })}
+        </div>
+        {showLinkBottom && (
+          <div style={styles.standaloneLinkBox}>
+            <Link link={link} linkText={linkText} isRtl={isRtl} bottom={true} />
+          </div>
+        )}
+        <div style={styles.clear} />
+      </div>
+    );
+  }
+}
+
+class Link extends Component {
+  static propTypes = {
+    linkText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    bottom: PropTypes.bool
+  };
+
+  render() {
+    const {link, linkText, isRtl, bottom} = this.props;
+    let linkBoxStyle;
+    if (isRtl) {
+      linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
+    } else {
+      linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
+    }
+    const icon = isRtl ? 'chevron-left' : 'chevron-right';
+
+    return (
+      <div style={linkBoxStyle}>
+        <a href={link}>
+          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+          <div style={styles.linkToViewAll}>{linkText}</div>
+        </a>
+        <a href={link} style={{textDecoration: 'none'}}>
+          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+        </a>
+      </div>
+    );
+  }
+}
+
 const styles = {
   box: {
     width: contentWidth
@@ -115,98 +207,6 @@ const styles = {
     clear: 'both'
   }
 };
-
-class ContentContainer extends Component {
-  static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.node,
-      PropTypes.arrayOf(PropTypes.node)
-    ]),
-    heading: PropTypes.string,
-    linkText: PropTypes.string,
-    link: PropTypes.string,
-    isRtl: PropTypes.bool.isRequired,
-    description: PropTypes.string,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    hideBottomMargin: PropTypes.bool
-  };
-
-  render() {
-    const {
-      heading,
-      link,
-      linkText,
-      description,
-      isRtl,
-      responsiveSize,
-      hideBottomMargin
-    } = this.props;
-
-    const showLinkTop = responsiveSize === 'lg' && link && linkText;
-    const showLinkBottom = responsiveSize !== 'lg' && link && linkText;
-    const boxStyles = styles.boxResponsive;
-    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
-
-    return (
-      <div style={[boxStyles, bottomMargin]}>
-        {(heading || (link && linkText)) && (
-          <div style={styles.headingBox}>
-            <div style={isRtl ? styles.headingTextRtl : styles.headingText}>
-              {heading}
-            </div>
-            {showLinkTop && (
-              <Link link={link} linkText={linkText} isRtl={isRtl} />
-            )}
-          </div>
-        )}
-        {description && <div style={styles.description}>{description}</div>}
-        <div style={styles.children}>
-          {React.Children.map(this.props.children, (child, index) => {
-            return <div key={index}>{child}</div>;
-          })}
-        </div>
-        {showLinkBottom && (
-          <div style={styles.standaloneLinkBox}>
-            <Link link={link} linkText={linkText} isRtl={isRtl} bottom={true} />
-          </div>
-        )}
-        <div style={styles.clear} />
-      </div>
-    );
-  }
-}
-
-class Link extends Component {
-  static propTypes = {
-    linkText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired,
-    bottom: PropTypes.bool
-  };
-
-  render() {
-    const {link, linkText, isRtl, bottom} = this.props;
-    let linkBoxStyle;
-    if (isRtl) {
-      linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
-    } else {
-      linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
-    }
-    const icon = isRtl ? 'chevron-left' : 'chevron-right';
-
-    return (
-      <div style={linkBoxStyle}>
-        <a href={link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
-          <div style={styles.linkToViewAll}>{linkText}</div>
-        </a>
-        <a href={link} style={{textDecoration: 'none'}}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
-        </a>
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,

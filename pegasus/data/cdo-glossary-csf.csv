@@ -1,7 +1,7 @@
 id_s!,theWord_s,defined_t,locations_t,locations2_t,lessonURL_t,split_s,part1_s,part2_s,courseNum_s,part3_s,lessonNum_s,part4_s,part5_s,youTubeURL_t
 abstraction,abstraction, A simplified representation of something more complex.,"Course 3: Stage 1<br/>
 Course 4: Stage 5","Course 3: Stage 1 | 
-Course 4: Stage 5",https://studio.code.org/s/course1/stage/1/puzzle/1,https:,studio.code.org,s,course1,stage,1,puzzle,1,
+Course 4: Stage 5",https://studio.code.org/s/course1/lessons/1/levels/1,https:,studio.code.org,s,course1,lessons,1,levels,1,
 accessibility,accessibility,"The design of products, devices, services, or environments taking into consideration the ability for all users to access, including people who experience disabilities or those who are limited by older or slower technology.",,,,,,,,,,,,
 algorithm,algorithm,A list of steps to finish a task.,"Course 1: Stages 1, 6 <br/>
 Course 2: Stages 1, 2 <br/>

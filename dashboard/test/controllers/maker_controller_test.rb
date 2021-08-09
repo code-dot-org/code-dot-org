@@ -3,6 +3,8 @@ require 'test_helper'
 class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @student = create :student
     @teacher = create :teacher
@@ -297,6 +299,28 @@ class MakerControllerTest < ActionController::TestCase
     refute application.full_discount
   end
 
+  test "display_code: does not display secret code if no current_user" do
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: does not display secret code if no matching credential is found" do
+    user = create :user, :clever_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: displays secret code if matching credential is found" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+    user = create :user, :google_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: /.+/
+  end
+
   test "complete: fails if not given a signature" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher
@@ -477,7 +501,7 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_script(script_name, version_year, is_stable=true)
     Script.find_by_name(script_name) ||
-      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_stable: is_stable).tap do |script|
+      create(:script, name: script_name, family_name: 'csd6', version_year: version_year, is_maker_unit: true, published_state: is_stable ? SharedConstants::PUBLISHED_STATE.stable : SharedConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script
         lesson = create :lesson, script: script, lesson_group: lesson_group
         create :script_level, script: script, lesson: lesson
@@ -486,6 +510,6 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_course(course_name, version_year)
     UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: UnitGroup::CSD)
+      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedConstants::PUBLISHED_STATE.stable)
   end
 end

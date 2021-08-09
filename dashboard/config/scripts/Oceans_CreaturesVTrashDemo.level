@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "mode": "creaturesvtrashdemo"
+    "mode": "creaturesvtrashdemo",
+    "background": "oceans-blue"
   },
   "published": true,
   "notes": ""

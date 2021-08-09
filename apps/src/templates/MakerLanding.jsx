@@ -4,15 +4,6 @@ import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 import shapes from './studioHomepages/shapes';
 import i18n from '@cdo/locale';
 
-const styles = {
-  title: {
-    fontSize: 30
-  },
-  container: {
-    marginBottom: 20
-  }
-};
-
 export default class MakerLanding extends Component {
   static propTypes = {
     topCourse: shapes.topCourse
@@ -59,3 +50,12 @@ export default class MakerLanding extends Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    fontSize: 30
+  },
+  container: {
+    marginBottom: 20
+  }
+};

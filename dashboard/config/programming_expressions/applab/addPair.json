@@ -1,0 +1,14 @@
+{
+  "func": "addPair",
+  "category": "Variables",
+  "paletteParams": [
+    "object",
+    "\"key\"",
+    "\"value\""
+  ],
+  "params": [
+    "object",
+    "\"key\"",
+    "\"value\""
+  ]
+}

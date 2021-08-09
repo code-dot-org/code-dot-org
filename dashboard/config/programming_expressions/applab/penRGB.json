@@ -1,0 +1,18 @@
+{
+  "func": "penRGB",
+  "category": "Turtle",
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 4
+  },
+  "paletteParams": [
+    "r",
+    "g",
+    "b"
+  ],
+  "params": [
+    "120",
+    "180",
+    "200"
+  ]
+}

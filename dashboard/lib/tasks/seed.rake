@@ -48,7 +48,7 @@ namespace :seed do
   end
 
   timed_task foorm_libraries: :environment do
-    Foorm::LibraryQuestion.setup
+    Foorm::Library.setup
   end
 
   timed_task foorm_forms: :environment do
@@ -56,7 +56,7 @@ namespace :seed do
   end
 
   timed_task foorms: :environment do
-    Foorm::LibraryQuestion.setup
+    Foorm::Library.setup
     Foorm::Form.setup
   end
 
@@ -71,6 +71,7 @@ namespace :seed do
     '20-hour',
     'algebra',
     'allthehiddenthings',
+    'allthemigratedthings',
     'alltheplcthings',
     'allthethings',
     'allthettsthings',
@@ -92,7 +93,12 @@ namespace :seed do
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
+    'csd1-2019',
+    'csd2-2019',
     'csd3-2019',
+    'csd4-2019',
+    'csd5-2019',
+    'csd6-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -132,6 +138,7 @@ namespace :seed do
     'csp8-2020',
     'csp9-2020',
     'csp10-2020',
+    'csp-post-survey-2020',
     'dance',
     'events',
     'express-2017',
@@ -169,11 +176,10 @@ namespace :seed do
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
-      LevelLoader.update_unplugged if File.mtime('config/locales/unplugged.en.yml') > scripts_seeded_mtime
-      _, custom_i18n = Script.setup(custom_scripts)
+      _, custom_i18n = Script.setup(custom_scripts, show_progress: Rake.application.options.trace)
       Script.merge_and_write_i18n(custom_i18n)
     rescue
-      rm SEEDED # if we failed to do any of that stuff we didn't seed anything, did we
+      rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
     end
   end
@@ -181,20 +187,26 @@ namespace :seed do
   SCRIPTS_DEPENDENCIES = [
     :environment,
     :games,
+    :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
+    :programming_expressions,
     :blocks,
+    :standards,
     :shared_blockly_functions,
     :libraries,
   ].freeze
 
-  # Do the minimum amount of work to seed a single script, without seeding
-  # levels or other dependencies. For use in development. Example:
+  # Do the minimum amount of work to seed a single script or glob, without
+  # seeding levels or other dependencies. For use in development. Examples:
   # rake seed:single_script SCRIPT_NAME=express-2019
+  # rake seed:single_script SCRIPT_NAME="csp*-2020"
   timed_task single_script: :environment do
     script_name = ENV['SCRIPT_NAME']
     raise "must specify SCRIPT_NAME=" unless script_name
-    script_files = ["config/scripts/#{script_name}.script"]
+    script_files = Dir.glob("config/scripts/#{script_name}.script")
+    raise "no matching scripts found" unless script_files.present?
+    puts "seeding only scripts:\n#{script_files.join("\n")}"
     update_scripts(script_files: script_files)
   end
 
@@ -218,7 +230,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018 csd-2019 csp-2019 csp-2020).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
@@ -241,6 +253,12 @@ namespace :seed do
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
+
+      # This is only expected to happen when DSL_FILENAME is set and the
+      # filename is not found
+      unless dsls_glob.count > 0
+        raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
+      end
 
       # Parse each .[dsl] file and setup its model.
       dsls_glob.each do |filename|
@@ -275,6 +293,10 @@ namespace :seed do
     LevelLoader.load_custom_levels(level_name)
   end
 
+  timed_task deprecated_blockly_levels: :environment do
+    Services::DeprecatedLevelLoader.load_blockly_levels
+  end
+
   # Seeds the data in callouts
   timed_task callouts: :environment do
     Callout.transaction do
@@ -287,7 +309,14 @@ namespace :seed do
 
   # Seeds Standards
   timed_task standards: :environment do
-    Standard.seed
+    Framework.seed_all
+    StandardCategory.seed_all
+    Standard.seed_all
+  end
+
+  timed_task programming_expressions: :environment do
+    ProgrammingEnvironment.seed_all
+    ProgrammingExpression.seed_all
   end
 
   # Seeds the data in school_districts
@@ -371,6 +400,36 @@ namespace :seed do
     SecretPicture.setup
   end
 
+  timed_task restricted_section: :environment do
+    name = "Fake Section Cap Teacher"
+    email = "Fake-User-Email-Created-#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = "#{name}password"
+    user = User.create!(
+      {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+    )
+
+    section = Section.create!(name: 'Section Capacity Test', user: user)
+
+    500.times do |i|
+      follower = User.create(
+        {
+          name: "Fake Section Cap Student #{i}",
+          email: "#{i}#{email}",
+          password: password,
+          user_type: "student",
+          age: "14"
+        }
+      )
+      Follower.create!(section_id: section.id, student_user_id: follower.id)
+    end
+  end
+
   timed_task :cached_ui_test do
     HASH_FILE = 'db/ui_test_data.hash'
 
@@ -399,8 +458,8 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards].freeze
-  UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :standards].freeze
+  FULL_SEED_TASKS = [:videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
+  UI_TEST_SEED_TASKS = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
@@ -410,7 +469,7 @@ namespace :seed do
   timed_task ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms, :standards]
+  timed_task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms]
 
   desc "seed only dashboard data required for tests"
   timed_task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms]

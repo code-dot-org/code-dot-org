@@ -1,35 +1,35 @@
 require 'cdo/script_constants'
 
 class MakerController < ApplicationController
-  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code]
+  authorize_resource class: :maker_discount, except: [:home, :setup, :login_code, :display_code, :confirm_login]
 
-  # Maker Toolkit is currently used in CSD unit 6.
-  # Retrieves the current CSD unit 6 level that the user is working on.
+  # Maker Toolkit is currently used in CSD units marked with is_maker_unit.
+  # Retrieves the current CSD unit with is_maker_unit true that the user is working on.
   def home
     # Redirect to login if not signed in
     authenticate_user!
 
-    csd_unit_6_script = MakerController.maker_script current_user
-    current_level = current_user.next_unpassed_progression_level(csd_unit_6_script)
-    @csd_unit_6 = {
-      assignableName: data_t_suffix('script.name', csd_unit_6_script[:name], 'title'),
+    maker_unit_for_user = MakerController.maker_script current_user
+    current_level = current_user.next_unpassed_progression_level(maker_unit_for_user)
+    @maker_unit = {
+      assignableName: data_t_suffix('script.name', maker_unit_for_user[:name], 'title'),
       lessonName: current_level.lesson.localized_title,
-      linkToOverview: script_path(csd_unit_6_script),
-      linkToLesson: script_next_path(csd_unit_6_script, 'next')
+      linkToOverview: script_path(maker_unit_for_user),
+      linkToLesson: script_next_path(maker_unit_for_user, 'next')
     }
   end
 
   ScriptAndCourse = Struct.new(:script, :course)
 
   def self.maker_script(for_user)
-    maker_unit_scripts = Script.maker_unit_scripts.
+    maker_units = Script.maker_units.
         sort_by(&:version_year).
         reverse.
         freeze
-    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == UnitGroup::CSD}.freeze
-    # maker_years is a list of (script, course) tuples containing all visible versions of the CSD Unit on Maker.
+    csd_courses = UnitGroup.all_courses.select {|c| c.family_name == 'csd'}.freeze
+    # maker_years is a list of (script, course) tuples containing all launched versions of the CSD Unit on Maker.
     # Ordered from most recent to least.
-    maker_years = maker_unit_scripts.map do |s|
+    maker_years = maker_units.map do |s|
       ScriptAndCourse.new(s, csd_courses.find {|c| s.version_year == c.version_year})
     end.freeze
 
@@ -49,7 +49,7 @@ class MakerController < ApplicationController
     end
 
     # If none of the above applies, default to most recent.
-    maker_years.find {|y| y.script.is_stable?}.script
+    maker_years.find {|y| y.script.stable?}.script
   end
 
   def setup
@@ -68,7 +68,7 @@ class MakerController < ApplicationController
   end
 
   # POST /maker/apply
-  # Sets the teacher's intention to teach unit 6 and sends back eligibility information.
+  # Sets the teacher's intention to teach the maker unit and sends back eligibility information.
   def apply
     intention = params.require(:unit_6_intention)
 
@@ -122,10 +122,23 @@ class MakerController < ApplicationController
   # renders a page for users to copy and paste a login key
   def display_code
     # Generate encrypted code to display to user
-    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-    @secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
+    user_auth = current_user&.find_credential(AuthenticationOption::GOOGLE)
+    if user_auth.nil?
+      @secret_code = nil
+      return
+    end
+
+    secret_str = Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth[:authentication_id] + user_auth[:credential_type]
+    @secret_code = Encryption.encrypt_string_utf8(secret_str)
+  end
+
+  # GET /maker/confirm_login
+  # Renders a page to confirm uses want to login via Google OAuth
+  # This route is need to convert the GET request from the Maker App into
+  # a POST that can be used to login via Google OAuth
+  def confirm_login
+    return_to = params[:user_return_to]
+    session[:user_return_to] = return_to if return_to.present?
   end
 
   # POST /maker/complete
@@ -134,7 +147,7 @@ class MakerController < ApplicationController
   def complete
     signature = params.require(:signature)
 
-    # Must have started an application, and have said they were teaching unit 6, and confirmed their school
+    # Must have started an application, and have said they were teaching the maker unit, and confirmed their school
     application = CircuitPlaygroundDiscountApplication.find_by_studio_person_id(current_user.studio_person_id)
     return head :not_found unless application
     return head :forbidden unless application.admin_set_status? || (application.eligible_unit_6_intention? &&

@@ -89,7 +89,7 @@ module UsersHelper
       end
     end
 
-    user_data[:current_stage] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
+    user_data[:current_lesson] = user.next_unpassed_progression_level(script)&.lesson&.id unless exclude_level_progress || script.script_levels.empty?
 
     user_data.compact
   end
@@ -118,11 +118,74 @@ module UsersHelper
       user_data[:isTeacher] = true if user.teacher?
       user_data[:isVerifiedTeacher] = true if user.authorized_teacher?
       user_data[:linesOfCode] = user.total_lines
-    else
-      user_data[:linesOfCode] = client_state.lines
+      user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
-    user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     user_data
+  end
+
+  # Get level progress for a set of users within this script.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash]
+  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
+  #   {
+  #     "1": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     },
+  #     "2": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     }
+  #   }
+  def script_progress_for_users(users, script)
+    user_levels = User.user_levels_by_user_by_level(users, script)
+    teacher_feedbacks = teacher_feedbacks_by_student_by_level(users, script)
+    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
+    progress_by_user = users.inject({}) do |progress, user|
+      progress[user.id] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels[user.id],
+        teacher_feedback_by_level: teacher_feedbacks[user.id],
+        paired_user_levels: paired_user_levels_by_user[user.id],
+        include_timestamp: true
+      )
+      progress
+    end
+    timestamp_by_user = progress_by_user.transform_values do |user|
+      user.values.map {|level| level[:last_progress_at]}.compact.max
+    end
+
+    [progress_by_user, timestamp_by_user]
+  end
+
+  # Retrieve all teacher feedback for the designated set of users in the given
+  # script, with a single query.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash] TeacherFeedbacks by user id by level id
+  # Example return value (where 1,2,3 are user ids and 101, 102 are level ids):
+  # {
+  #   1: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   2: {
+  #     101: <TeacherFeedback ...>,
+  #     102: <TeacherFeedback ...>
+  #   },
+  #   3: {}
+  # }
+  private def teacher_feedbacks_by_student_by_level(users, script)
+    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    TeacherFeedback.
+      get_latest_feedbacks_received(users.map(&:id), nil, script.id).
+      group_by(&:student_id).
+      inject(initial_hash) do |memo, (student_id, teacher_feedbacks)|
+        memo[student_id] = teacher_feedbacks.index_by(&:level_id)
+        memo
+      end
   end
 
   # Merge the progress for the specified script and user into the user_data result hash.
@@ -133,19 +196,21 @@ module UsersHelper
       user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
-        user_data[:focusAreaStageIds] = unit_assignment.focus_area_stage_ids
+        user_data[:focusAreaLessonIds] = unit_assignment.focus_area_lesson_ids
         user_data[:changeFocusAreaPath] = script_preview_assignments_path script
       end
     end
 
     unless exclude_level_progress
       user_levels_by_level = user.user_levels_by_level(script)
+      teacher_feedback_by_level = teacher_feedbacks_by_student_by_level([user], script)
       paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
       user_data[:completed] = Policies::ScriptActivity.completed?(user, script)
-      user_data[:levels] = merge_user_progress_by_level(
+      user_data[:progress] = merge_user_progress_by_level(
         script: script,
         user: user,
         user_levels_by_level: user_levels_by_level,
+        teacher_feedback_by_level: teacher_feedback_by_level[user.id],
         paired_user_levels: paired_user_levels
       )
     end
@@ -162,94 +227,125 @@ module UsersHelper
   #   this in advance for many users in some use cases.
   # @param [Enumerable<Integer>] paired_user_levels
   #   A collection of UserLevel ids where the user was pairing.
+  # @param [Boolean] include_timestamp
+  #   Whether time_spent should be included in progress summary for a level
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
-    levels = {}
+  private def merge_user_progress_by_level(
+    script:,
+    user:,
+    user_levels_by_level:,
+    teacher_feedback_by_level:,
+    paired_user_levels:,
+    include_timestamp: false
+  )
+    progress = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
-        # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
-        sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
+        level_for_progress = level.get_level_for_progress(user, script)
+        ul = user_levels_by_level.try(:[], level_for_progress.id)
+
+        # For contained levels, progress is stored with the contained level id but feedback is stored with
+        # the level id, which is why we need a different level id to get feedback for contained levels.
+        level_id_for_feedback = level.contained_levels.any? ? level.id : level_for_progress.id
+
+        feedback = teacher_feedback_by_level.try(:[], level_id_for_feedback)
+        level_progress = get_level_progress(
+          user.id, ul, feedback, sl, paired_user_levels, include_timestamp
+        )
+
         if level.is_a?(BubbleChoice) # we have a parent level
-          # get progress for sublevels to save in levels hash
-          level.sublevels.each do |sublevel|
-            ul = user_levels_by_level.try(:[], sublevel.id)
-            completion_status = activity_css_class(ul)
-            # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-            submitted = !!ul.try(:submitted) &&
-              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-            readonly_answers = !!ul.try(:readonly_answers)
-            locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
-            if completion_status == LEVEL_STATUS.not_tried
-              # for now, we don't allow authorized teachers to be "locked"
-              if locked && !user.authorized_teacher?
-                levels[level_id] = {
-                  status: LEVEL_STATUS.locked
-                }
-              end
-              next
+          bubble_choice_progress = get_bubble_choice_progress(
+            level, user, user_levels_by_level, teacher_feedback_by_level, sl, paired_user_levels, include_timestamp
+          )
+          if bubble_choice_progress.present?
+            progress.merge!(bubble_choice_progress.compact)
+
+            sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
+              sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
-            levels[sublevel.id] = {
-              status: completion_status,
-              result: ul.try(:best_result) || 0,
-              submitted: submitted ? true : nil,
-              readonly_answers: readonly_answers ? true : nil,
-              paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-              locked: locked ? true : nil,
-              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
-              time_spent: ul&.time_spent&.to_i
-            }.compact
+            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
           end
         end
-        contained_level_id = level.contained_levels.try(:first).try(:id)
 
-        ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
-        completion_status = activity_css_class(ul)
-        # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-        submitted = !!ul.try(:submitted) &&
-          !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-        readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
+        next unless level_progress
 
-        if completion_status == LEVEL_STATUS.not_tried
-          # for now, we don't allow authorized teachers to be "locked"
-          if locked && !user.authorized_teacher?
-            levels[level_id] = {
-              status: LEVEL_STATUS.locked
-            }
-          end
-          next
+        # if status is nil or not_tried, we don't need to get pages completed
+        status = level_progress[:status]
+        unless status.nil? || status == LEVEL_STATUS.not_tried
+          # if the level has multiple pages, we add an additional
+          # array of booleans indicating which pages have been completed.
+          level_progress[:pages_completed] = get_pages_completed(user, sl)
         end
 
-        levels[level_id] = {
-          status: completion_status,
-          result: ul.try(:best_result) || 0,
-          submitted: submitted ? true : nil,
-          readonly_answers: readonly_answers ? true : nil,
-          paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-          locked: locked ? true : nil,
-          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
-          time_spent: ul&.time_spent&.to_i
-        }.compact
-
-        # Just in case this level has multiple pages, in which case we add an additional
-        # array of booleans indicating which pages have been completed.
-        pages_completed = get_pages_completed(user, sl)
-
-        next unless pages_completed
-
-        levels[level_id][:pages_completed] = pages_completed
-        pages_completed.each_with_index do |result, index|
-          levels["#{level_id}_#{index}"] = {
-            result: result,
-            submitted: submitted ? true : nil,
-            readonly_answers: readonly_answers ? true : nil
-          }.compact
-        end
+        progress[level_id] = level_progress.compact
       end
     end
-    levels
+    progress
+  end
+
+  # Summarizes a user's progress on a particular level
+  private def get_level_progress(
+    user_id,
+    user_level,
+    feedback,
+    script_level,
+    paired_user_levels,
+    include_timestamp
+  )
+    # if we don't have a user level, that means the user doesn't have any
+    # progress on this level, so the client interprets a nil value as not_tried.
+    # however, the default state of a lockable level is locked, so if the
+    # lesson is lockable, we need to indicate that the level is locked.
+    if user_level.nil?
+      if script_level.lesson.lockable?
+        return {locked: true}
+      elsif feedback.present?
+        return {
+          status: LEVEL_STATUS.not_tried,
+          teacher_feedback_review_state: feedback.review_state
+        }
+      else
+        return nil
+      end
+    end
+
+    return {
+      status: activity_css_class(user_level),
+      locked: user_level.show_as_locked?(script_level.lesson) || nil,
+      result: user_level.best_result || nil,
+      paired: (paired_user_levels.include? user_level.id) || nil,
+      last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
+      time_spent: user_level.time_spent&.to_i,
+      teacher_feedback_review_state: feedback&.review_state
+    }.compact
+  end
+
+  # Summarizes a user's level progress for bubble choice level
+  # (parent level and sublevels)
+  private def get_bubble_choice_progress(
+    level,
+    user,
+    user_levels_by_level,
+    teacher_feedback_by_level,
+    script_level,
+    paired_user_levels,
+    include_timestamp
+  )
+    progress = {}
+
+    # get progress for sublevels to save in levels hash
+    level.sublevels.each do |sublevel|
+      ul = user_levels_by_level.try(:[], sublevel.id)
+      feedback = teacher_feedback_by_level.try(:[], sublevel.id)
+      sublevel_progress = get_level_progress(user.id, ul, feedback, script_level, paired_user_levels, include_timestamp)
+      next unless sublevel_progress
+
+      progress[sublevel.id] = sublevel_progress
+    end
+
+    progress
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
@@ -309,7 +405,7 @@ module UsersHelper
     summary = summarize_user_progress(script, user)
     levels = script.script_levels.map(&:level)
     completed = levels.count do |l|
-      sum = summary[:levels][l.id]; sum && %w(perfect passed).include?(sum[:status])
+      sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
     end
     (100.0 * completed / levels.count).round(2)
   end

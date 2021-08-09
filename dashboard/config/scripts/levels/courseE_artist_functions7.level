@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2016-07-14T14:47:21.000Z",
-  "level_num": "custom",
-  "user_id": 285,
   "properties": {
     "skin": "artist",
     "embed": "false",
@@ -38,11 +34,16 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "hint_prompt_attempts_threshold": 18,
-    "contained_level_names": null
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/3990177fbbba18600aed908f50d9e45d=levelbuilder/119441.png",
+    "preload_asset_list": null
   },
+  "user_id": 285,
+  "game_id": 23,
+  "created_at": "2016-07-14T14:47:21.000Z",
+  "level_num": "custom",
   "published": true,
   "notes": "In this puzzle, students will used a nested loop or a function to create a series of \"windows\". This is the second in a mini-sequence of puzzles",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:54:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:42:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-24 15:54:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2021-04-29 15:30:17 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 4,
     "repeat_loops": 2,
@@ -123,21 +124,21 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="procedures_callnoreturn">
-              <mutation name="draw a house"/>
+              <mutation name="draw a window"/>
               <next>
                 <block type="jump_by_constant">
                   <title name="DIR">jumpForward</title>
                   <title name="VALUE">100</title>
                   <next>
                     <block type="procedures_callnoreturn">
-                      <mutation name="draw a house"/>
+                      <mutation name="draw a window"/>
                       <next>
                         <block type="jump_by_constant">
                           <title name="DIR">jumpForward</title>
                           <title name="VALUE">100</title>
                           <next>
                             <block type="procedures_callnoreturn">
-                              <mutation name="draw a house"/>
+                              <mutation name="draw a window"/>
                               <next>
                                 <block type="draw_turn_by_constant">
                                   <title name="DIR">turnRight</title>
@@ -152,14 +153,14 @@
                                           <title name="VALUE">90</title>
                                           <next>
                                             <block type="procedures_callnoreturn">
-                                              <mutation name="draw a house"/>
+                                              <mutation name="draw a window"/>
                                               <next>
                                                 <block type="jump_by_constant">
                                                   <title name="DIR">jumpForward</title>
                                                   <title name="VALUE">200</title>
                                                   <next>
                                                     <block type="procedures_callnoreturn">
-                                                      <mutation name="draw a house"/>
+                                                      <mutation name="draw a window"/>
                                                     </block>
                                                   </next>
                                                 </block>
@@ -185,7 +186,7 @@
         </block>
         <block type="procedures_defnoreturn">
           <mutation/>
-          <title name="NAME">draw a house</title>
+          <title name="NAME">draw a window</title>
           <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">4</title>

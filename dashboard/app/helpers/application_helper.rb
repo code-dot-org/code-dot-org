@@ -70,8 +70,6 @@ module ApplicationHelper
       LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
       LEVEL_STATUS.review_accepted
-    elsif user_level.try(:locked)
-      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
       LEVEL_STATUS.submitted
     elsif result.nil? || result == 0

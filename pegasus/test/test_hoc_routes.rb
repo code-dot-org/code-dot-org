@@ -1,4 +1,5 @@
 require_relative './test_helper'
+require 'helpers/auth_helpers'
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
@@ -50,7 +51,7 @@ class HocRoutesTest < Minitest::Test
 
     it 'ends given tutorial, providing script ID to congrats page' do
       assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-      assert_includes @pegasus.last_request.url, "&s=#{CGI.escape(Base64.urlsafe_encode64('mc'))}"
+      assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
     end
 
     it 'has certificate share page' do
@@ -96,7 +97,7 @@ class HocRoutesTest < Minitest::Test
         assert after_start_row[:started_at]
 
         assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-        assert_includes @pegasus.last_request.url, "&s=#{CGI.escape(Base64.urlsafe_encode64('mc'))}"
+        assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
         assert_includes @pegasus.last_request.url, '&co=testcompany'
 
         after_end_row = get_session_hoc_activity_entry
@@ -123,7 +124,7 @@ class HocRoutesTest < Minitest::Test
         assert after_start_row[:started_at]
 
         assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-        assert_includes @pegasus.last_request.url, "&s=#{CGI.escape(Base64.urlsafe_encode64('mc'))}"
+        assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
         assert_includes @pegasus.last_request.url, '&co=testcompany'
 
         after_end_row = get_session_hoc_activity_entry
@@ -152,7 +153,7 @@ class HocRoutesTest < Minitest::Test
         assert after_start_row[:started_at]
 
         assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
-        assert_includes @pegasus.last_request.url, "&s=#{CGI.escape(Base64.urlsafe_encode64('mc'))}"
+        assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
         assert_includes @pegasus.last_request.url, '&co=testcompany'
 
         after_end_row = get_session_hoc_activity_entry

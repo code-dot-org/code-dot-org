@@ -1,4 +1,6 @@
-lesson 'new stage', display_name: 'new stage'
+published_state 'beta'
+
+lesson 'new stage', display_name: 'new stage', has_lesson_plan: false
 level 'AWS Demo'
 level 'AWS applab'
 level 'AWS link'

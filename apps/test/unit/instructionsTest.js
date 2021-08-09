@@ -19,27 +19,27 @@ describe('instructions', () => {
 
     it('starts out uncollapsed', () => {
       var state = reducer(undefined, {});
-      assert.strictEqual(state.collapsed, false);
+      assert.strictEqual(state.isCollapsed, false);
     });
 
-    it('toggles collapsed', () => {
+    it('toggles isCollapsed', () => {
       var initialState, newState;
 
       // start collapsed
       initialState = {
-        collapsed: false,
+        isCollapsed: false,
         longInstructions: 'foo'
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.collapsed, true);
+      assert.strictEqual(newState.isCollapsed, true);
 
       // start uncollapsed
       initialState = {
-        collapsed: true,
+        isCollapsed: true,
         longInstructions: 'foo'
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.collapsed, false);
+      assert.strictEqual(newState.isCollapsed, false);
     });
 
     it('will collapse even if no long instructions', () => {
@@ -47,25 +47,25 @@ describe('instructions', () => {
 
       // start collapsed
       initialState = {
-        collapsed: false,
+        isCollapsed: false,
         shortInstructions: 'short',
         longInstructions: undefined
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.collapsed, true);
+      assert.strictEqual(newState.isCollapsed, true);
     });
 
     it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {
       var initialState, newState;
       initialState = {
-        collapsed: false,
+        isCollapsed: false,
         renderedHeight: 0,
         expandedHeight: 0,
         allowResize: true
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
-        collapsed: false,
+        isCollapsed: false,
         renderedHeight: 200,
         expandedHeight: 200,
         allowResize: true
@@ -75,13 +75,13 @@ describe('instructions', () => {
     it('setInstructionsRenderedHeight does not update without allowResize', () => {
       var initialState, newState;
       initialState = {
-        collapsed: false,
+        isCollapsed: false,
         renderedHeight: 0,
         expandedHeight: 0
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
-        collapsed: false,
+        isCollapsed: false,
         renderedHeight: 0,
         expandedHeight: 0
       });
@@ -90,14 +90,14 @@ describe('instructions', () => {
     it('setInstructionsRenderedHeight updates only rendered height if collapsed', () => {
       var initialState, newState;
       initialState = {
-        collapsed: true,
+        isCollapsed: true,
         renderedHeight: 0,
         expandedHeight: 0,
         allowResize: true
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
-        collapsed: true,
+        isCollapsed: true,
         renderedHeight: 200,
         expandedHeight: 0,
         allowResize: true
@@ -274,6 +274,7 @@ describe('instructions', () => {
             shortInstructions: 'non-markdown',
             shortInstructions2: undefined,
             longInstructions: 'markdown',
+            dynamicInstructions: undefined,
             hasContainedLevels,
             overlayVisible,
             teacherMarkdown: undefined,
@@ -305,6 +306,7 @@ describe('instructions', () => {
             shortInstructions: 'non-markdown',
             shortInstructions2: undefined,
             longInstructions: undefined,
+            dynamicInstructions: undefined,
             hasContainedLevels,
             overlayVisible,
             teacherMarkdown: undefined,
@@ -395,6 +397,7 @@ describe('instructions', () => {
           shortInstructions: undefined,
           shortInstructions2: undefined,
           longInstructions: undefined,
+          dynamicInstructions: undefined,
           teacherMarkdown: undefined,
           hasContainedLevels: undefined,
           levelVideos: ['notEmpty'],
@@ -421,6 +424,7 @@ describe('instructions', () => {
           shortInstructions: undefined,
           shortInstructions2: undefined,
           longInstructions: undefined,
+          dynamicInstructions: undefined,
           teacherMarkdown: undefined,
           hasContainedLevels: undefined,
           levelVideos: undefined,
@@ -447,6 +451,7 @@ describe('instructions', () => {
           shortInstructions: undefined,
           shortInstructions2: undefined,
           longInstructions: undefined,
+          dynamicInstructions: undefined,
           teacherMarkdown: undefined,
           hasContainedLevels: undefined,
           levelVideos: undefined,

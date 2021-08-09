@@ -14,6 +14,7 @@ module LevelsHelper
   include ApplicationHelper
   include UsersHelper
   include NotesHelper
+  include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -21,20 +22,20 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      if script_level.lesson.lockable?
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+      if script_level.lesson.numbered_lesson?
+        puzzle_page_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+        puzzle_page_script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
-      sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
-    elsif script_level.lesson.lockable?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    elsif !script_level.lesson.numbered_lesson?
+      script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
+      script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
-      script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
   end
 
@@ -106,6 +107,21 @@ module LevelsHelper
     channel_token&.channel
   end
 
+  # If given a level, script and a user, returns whether the level
+  # has been started by the user. A channel-backed level is considered started when a
+  # channel is created for the level, which happens when the user first visits the level page.
+  # Other levels are considered started when progress has been saved for the level (for example
+  # clicking the run button saves progress).
+  def level_started?(level, script, user)
+    return false unless user.present?
+
+    if level.channel_backed?
+      return get_channel_for(level, user).present?
+    else
+      user.last_attempt(level, script).present?
+    end
+  end
+
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
@@ -160,13 +176,20 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed? && params[:action] != 'edit_blocks'
+    if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
       view_options(
         channel: get_channel_for(@level, @user),
         server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
+    end
+
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
     end
 
     # Always pass user age limit
@@ -177,9 +200,9 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.lesson.absolute_position,
+        lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
       )
     end
 
@@ -239,7 +262,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -252,7 +275,8 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && @level.can_have_feedback?
+    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
+      @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end
@@ -276,6 +300,10 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+
+      if (@user || current_user) && @script
+        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+      end
     end
 
     if current_user
@@ -293,6 +321,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -308,16 +337,19 @@ module LevelsHelper
     use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_javalab = @level.is_a?(Javalab)
+    use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
-        use_google_blockly: view_options[:useGoogleBlockly],
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
+        use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
@@ -361,7 +393,7 @@ module LevelsHelper
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -458,7 +490,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -466,48 +498,12 @@ module LevelsHelper
   end
 
   def azure_speech_service_options
-    speech_service_options = {}
+    return {} unless @level.game.use_azure_speech_service?
+    {voices: AzureTextToSpeech.get_voices || {}}
+  end
 
-    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
-      # First, get the token
-      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
-      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
-      token_http_request.use_ssl = true
-      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
-      token_response = token_http_request.request(token_request)
-      speech_service_options[:azureSpeechServiceToken] = token_response.body
-      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
-
-      # Then, get the list of voices and languages
-      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-      voice_header = {'Authorization': 'Bearer ' + token_response.body}
-      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-      voice_http_request.use_ssl = true
-      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
-      voice_response = voice_http_request.request(voice_request)
-
-      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
-      language_dictionary = {}
-      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
-      all_voices.each do |voice|
-        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-        next if native_locale_name.empty?
-        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
-        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
-        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
-      end
-
-      language_dictionary.delete_if {|_, voices| voices.length < 3}
-
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
-    end
-    speech_service_options
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
-    speech_service_options
+  def disallowed_html_tags
+    DCDO.get('disallowed_html_tags', [])
   end
 
   # Options hash for Blockly
@@ -527,7 +523,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
@@ -552,9 +548,13 @@ module LevelsHelper
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
+    # Allow levelbuilders building AppLab widgets in start mode to access Applab as usual.
+    # Everywhere else, widgets should be treated as embedded levels.
+    treat_widget_as_embed = level_options['widgetMode'] && !@is_start_mode
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
-    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
+    level_options['embed'] = level_options['embed'] || treat_widget_as_embed
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
@@ -598,7 +598,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false
@@ -643,7 +643,9 @@ module LevelsHelper
       art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      built_on_github: I18n.t('footer.built_on_github'),
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
@@ -726,10 +728,10 @@ module LevelsHelper
         else
           data_t_suffix 'script.name', @script_level.script.name, 'title'
         end
-      stage = @script_level.name
+      lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{stage} ##{position}"
+        "#{script}: #{lesson} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
@@ -777,7 +779,7 @@ module LevelsHelper
   def session_id
     # session.id may not be available on the first visit unless we write to the session first.
     session['init'] = true
-    session.id
+    session.id.to_s
   end
 
   def user_or_session_id
@@ -790,13 +792,39 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
+  end
+
   # Assign a firebase authentication token based on the firebase secret,
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 

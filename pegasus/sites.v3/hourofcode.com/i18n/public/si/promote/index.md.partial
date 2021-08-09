@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# Hour of Code සදහා ඔබේ ප්‍රජාව සම්බන්ධ කරගන්න
 
 ## 1. හැමෝටම කියන්න
 
-Tell your friends about the **#HourOfCode**!
+**Hour of Code** ගැන ඔබේ මිතුරන්ටත් කියන්න
 
-{{ promote/share_buttons }}
+{{ප්‍රවර්ධනය / බෙදාගැනීමේ_ බොත්තම්}}
 
 ## 2. Hour of Code වැඩසටහණක් පැවැත්වීමට ඔබේ මුලුපාසලටම කියන්න
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+ මෙම විද්‍යුත් තැපෑල ඔබගේ විදුහල්පති වෙත යවන්න සහ ඔබේ පාසලේ සෑම පන්ති කාමරයකටම ලියාපදිංචි වන ලෙස අභියෝග කරන්න.</p> 
 
 ## 3. Hour of Code සඳහා සභාගීවීමට ඔබගේ සේවා ස්ථානයටත් කියන්න
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+ මෙම විද්‍යුත් තැපෑල ඔබගේ කළමනාකරුට හෝ සමාගමේ ප්‍රධාන විධායක නිලධාරියාට යවන්න.</p> 
 
 ## 4. ඔබේ ප්‍රජාව අතර Hour of Code පිළිබඳ ප්‍රචාරය කරන්න
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[ දේශීය කණ්ඩායමක් බඳවා ගන්න ]({{ප්‍රවර්ධනය / නියැදි_මේල් }==) - පිරිමි / ගැහැණු බාලදක්ෂ සමාජය, පල්ලිය, විශ්ව විද්‍යාලය, ප්‍රවීණ කණ්ඩායම, කම්කරු සංගමය හෝ සමහර මිතුරන්. නව කුසලතා ඉගෙන ගැනීමට ඔබ පාසලේ සිටිය යුතු නැත. ඔබේම සිදුවීමක් සඳහා මෙම [ පෝස්ටර්, බැනර්, ස්ටිකර්, වීඩියෝ සහ තවත් ](/promote/resources) භාවිතා කරන්න.
 
 ## 5. Hour of Code සඳහා සහය පලකිරීමට ඔබේ රටේ ඉහළ නිලධාරීන්ටත් කියන්න
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[ මෙම විද්‍යුත් තැපෑල ]({{ප්‍රවර්ධනය / නියැදි_මේල් }==) ඔබේ ප්‍රාදේශීය නියෝජිතයින්ට, නගර සභාවට හෝ පාසල් මණ්ඩලයට යවා පැය ගණනක කේතයක් සඳහා ඔබේ පාසලට පැමිණෙන ලෙස ඔවුන්ට ආරාධනා කරන්න. පැයක් ඉක්මවා ඔබේ ප්‍රදේශයේ පරිගණක විද්‍යාවට සහාය දැක්වීමට එය උදව් වේ.
 
 {{ signup_button }}

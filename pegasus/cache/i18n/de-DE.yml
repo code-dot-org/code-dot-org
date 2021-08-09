@@ -359,7 +359,7 @@ de-DE:
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_dance_title: Tanzparty
-  studiobar_dance_body: Kreieren und teilen Sie ihre eigene Tanzparty
+  studiobar_dance_body: Erstelle und teile deine eigene Tanzparty
   studiobar_hoc_title: Die Hour of Code
   studiobar_hoc_body: Mit Angry Birds programmieren lernen
   studiobar_flappy_title: Flappy Code
@@ -1308,12 +1308,14 @@ de-DE:
   coursed-2020_name: Kurs D (2019)
   coursee-2020_name: Kurs E (2019)
   coursef-2020_name: Kurs F (2019)
+  coursed-2021_name: Kurs D (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
   pre-express-2019_name: Leseanfänger-Expresskurs (2019)
   express-2020_name: Expresskurs (2019)
   pre-express-2020_name: Leseanfänger-Expresskurs (2020)
+  pre-express-2021_name: Leseanfänger-Expresskurs (2021)
   csd2_name: 'Lerneinheit 2: Webentwicklung'
   csd3_name: 'Lerneinheit 3: Animation und Spiele'
   accelerated_name: Beschleunigter Kurs
@@ -1415,6 +1417,12 @@ de-DE:
   coursed-2019_gradelevel: Ab 8. Klasse
   coursee-2019_gradelevel: Alter 8-12
   coursef-2019_gradelevel: Alter 9-13
+  coursea-2020_gradelevel: Alter 4-7
+  courseb-2020_gradelevel: Alter 5-8
+  coursec-2020_gradelevel: Alter 6-10
+  coursed-2020_gradelevel: Ab 8. Klasse
+  coursee-2020_gradelevel: Alter 8-12
+  coursef-2020_gradelevel: Alter 9-13
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1513,8 +1521,8 @@ de-DE:
   kodableunplugged_shortdescription: Eine spaßige Übung ohne Computer
   projguts_shortdescription: Probiere modellieren und simulieren mit Schere/Stein/Papier
   hourofcode_shortdescription: Lerne mit Mark Zuckerberg und Angry Birds zu programmieren!
-  frozen_shortdescription: Verwende Code, um Anna und Elsa bei ihrer Entdeckung der
-    Magie und Schönheit von Eis zu begleiten.
+  frozen_shortdescription: Lasst uns Code verwenden, um Anna und Elsa bei der Erforschung
+    der Magie und Schönheit von Eis zu begleiten.
   starwars_shortdescription: Lerne, Droiden zu programmieren und erschaffe dein eigenes
     Star Wars Spiel in einer weit, weit entfernten Galaxie.
   playlab_shortdescription: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
@@ -1597,6 +1605,52 @@ de-DE:
   coursef-2019_shortdescription_congrats: Lernen Sie alle Konzepte in den Grundlagen
     der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes
     Spiel.
+  coursea-2020_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2020_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2020_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2020_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2020_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2020_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+  coursea-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  courseb-2021_shortdescription_congrats: Erlernen der Grundlagen der Informatik und
+    der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte
+    am Ende des Kurses, die mit anderen geteilt werden kann.
+  coursec-2021_shortdescription_congrats: Erstellen Sie Programme mit Sequenzen, Schleifen
+    und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie
+    verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing
+    umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre
+    eigene Geschichte, die Sie mit anderen teilen können!
+  coursed-2021_shortdescription_congrats: Die SchülerInnen entwickeln ihr Verständnis
+    für Schleifen, Bedingungen und Ereignisse. Außer der Codierung lernen die SchülerInnen
+    auch etwas über digitale Bürgerschaft.
+  coursee-2021_shortdescription_congrats: Beginne mit der Programmierung von Algorithmen,
+    Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen.
+    Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt,
+    das du mit deinen Freunden und deiner Familie teilen kannst.
+  coursef-2021_shortdescription_congrats: Lerne die Verwendung verschiedener Arten
+    von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
+    Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von
+    Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein
+    Capstone Projekt, das du mit Freunden und Familie teilen kannst.
   codeorg_longdescription: Lerne die Grundlagen der Informatik mit Programmierbausteinen.
     Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von
     Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen,
@@ -2255,6 +2309,11 @@ de-DE:
     und Partnern entwickelt wurden.
   hoc_overview_partner_activities_link: Aktivitäten anzeigen
   hoc_overview_start_tutorial: Start
+  hoc_overview_more_resources: Weitere Informationen, wie Sie mit Ihrer Klasse aus
+    der Ferne zusammenarbeiten können, finden Sie in unserer Veranstaltungsanleitung
+    für eine [virtuelle Hour of Code](https://hourofcode.com/us/how-to/virtual). Teilen
+    Sie dieses Paket mit Schülern, die wenig Technik oder Konnektivität haben [Offline-Aktivitäten
+    für eine Hour of Code](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Lehrer-Leitfaden anzeigen
   hoc2018_creativity: Kreativität
   hoc2018_creativity_create: Erstellen
@@ -2468,3 +2527,20 @@ de-DE:
     Codes")
   homepage_slot_text_link_express_course: Versuche einen Express-Kurs
   page_not_available_button: Zurück zur Homepage
+  ! '': " "
+  footer_powered_by_aws: Betrieben von Amazon Web Services
+  codebytes_skinny_banner_english_only: Nur Englisch
+  footer_privacy_policy: Datenschutzerklärung
+  footer_about: Über
+  footer_partners: Partner
+  footer_donate: Spenden
+  footer_support: Unterstützung
+  footer_terms: Bedingungen
+  ai_for_oceans: KI für Meere
+  ai_for_oceans_lesson_plan: arbeitsplan
+  ai_in_partnership_with: In Zusammenarbeit mit
+  ai_microsoft_thanks: Wir danken Microsoft für die Unterstützung unserer Vision und
+    Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und
+    die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein.
+  ai_activity: Aufgabe
+  ai_description: Beschreibung

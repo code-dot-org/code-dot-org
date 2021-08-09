@@ -15,7 +15,7 @@
 
 require 'cdo/chat_client'
 
-class UserPermission < ActiveRecord::Base
+class UserPermission < ApplicationRecord
   belongs_to :user
 
   VALID_PERMISSIONS = [
@@ -23,7 +23,7 @@ class UserPermission < ActiveRecord::Base
     FACILITATOR = 'facilitator'.freeze,
     # Grants access to viewing hidden scripts.
     HIDDEN_SCRIPT_ACCESS = 'hidden_script_access'.freeze,
-    # Grants access to managing (e.g., editing) levels, stages, scripts, etc.
+    # Grants access to managing (e.g., editing) levels, lessons, scripts, etc.
     # Also grants access to viewing extra links related to editing these.
     # Also makes the account satisfy authorized_teacher?.
     LEVELBUILDER = 'levelbuilder'.freeze,
@@ -61,7 +61,7 @@ class UserPermission < ActiveRecord::Base
   before_destroy :log_permission_delete
 
   def log_permission_save
-    return if changed_attributes.empty?
+    return if saved_changes.empty?
 
     # In particular, we do not log for adhoc or test environments.
     return unless UserPermission.should_log?

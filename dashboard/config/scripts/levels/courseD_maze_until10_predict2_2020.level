@@ -47,7 +47,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-30 17:09:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-18 03:48:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-28 15:16:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-28 15:16:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-05-30 17:09:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-18 03:48:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-04-25 19:36:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-28 15:16:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-05-28 15:16:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -18,5 +18,5 @@ markdown <<MARKDOWN
 3) The bottom part, called the Workspace or blocks area, contains drawers of blocks that represent the programming commands as well as pages where you snap the blocks together to write programs. Programming is basically putting together a logical sequence of instructions.<br /><br /><img src="https://images.code.org/ffdece20e4f95a52e12e76c7a1c41ee8-image-1461971463781.jpg" style="border-radius:10px"/>
 <br><br>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

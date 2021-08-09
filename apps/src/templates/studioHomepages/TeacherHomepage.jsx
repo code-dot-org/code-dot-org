@@ -14,6 +14,7 @@ import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import NpsSurveyBlock from './NpsSurveyBlock';
 import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
@@ -38,6 +39,7 @@ export class UnconnectedTeacherHomepage extends Component {
     isEnglish: PropTypes.bool.isRequired,
     ncesSchoolId: PropTypes.string,
     showCensusBanner: PropTypes.bool.isRequired,
+    showNpsSurvey: PropTypes.bool,
     donorBannerName: PropTypes.string,
     censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
     teacherName: PropTypes.string,
@@ -49,8 +51,7 @@ export class UnconnectedTeacherHomepage extends Component {
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner,
-    donorBannerName: this.props.donorBannerName
+    showCensusBanner: this.props.showCensusBanner
   };
 
   bindCensusBanner = banner => {
@@ -168,19 +169,28 @@ export class UnconnectedTeacherHomepage extends Component {
       ncesSchoolId,
       censusQuestion,
       schoolYear,
+      showNpsSurvey,
       teacherId,
       teacherName,
       teacherEmail,
       canViewAdvancedTools,
       isEnglish,
-      specialAnnouncement
+      specialAnnouncement,
+      donorBannerName
     } = this.props;
 
-    // Show the regular announcement/notification for now.
-    const showAnnouncement = true;
+    // Whether we show the regular announcement/notification
+    const showAnnouncement = false;
+
+    // Whether we show the fallback (translatable) SpecialAnnouncement if there is no
+    // specialAnnouncement passed in as a prop. Currently we only show the fallback for
+    // English-speaking teachers.
+    const showFallbackSpecialAnnouncement = true;
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
+
+    const showDonorBanner = isEnglish && donorBannerName;
 
     return (
       <div>
@@ -192,9 +202,11 @@ export class UnconnectedTeacherHomepage extends Component {
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
           <ProtectedStatefulDiv ref="teacherReminders" />
+          {showNpsSurvey && <NpsSurveyBlock />}
           {isEnglish && specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={specialAnnouncement}
+              marginBottom="30px"
             />
           )}
           {announcement && showAnnouncement && (
@@ -207,12 +219,20 @@ export class UnconnectedTeacherHomepage extends Component {
                 buttonText={announcement.buttonText}
                 buttonLink={announcement.link}
                 newWindow={true}
-                analyticId={announcement.id}
+                googleAnalyticsId={announcement.id}
               />
               <div style={styles.clear} />
             </div>
           )}
-          {isEnglish && <SpecialAnnouncement isTeacher={true} />}
+          {!showAnnouncement && <br />}
+          {/* The current fallback announcement is for English-speaking teachers only. This announcement type
+          is designed to be translatable and in the future can be used for non-English teachers as a fallback
+          to the marketing-configured announcement. */}
+          {showFallbackSpecialAnnouncement &&
+            isEnglish &&
+            !specialAnnouncement && (
+              <SpecialAnnouncement isEnglish={isEnglish} isTeacher={true} />
+            )}
           {this.state.showCensusBanner && (
             <div>
               <CensusTeacherBanner
@@ -241,7 +261,7 @@ export class UnconnectedTeacherHomepage extends Component {
               <br />
             </div>
           )}
-          {isEnglish && this.state.donorBannerName && (
+          {showDonorBanner && (
             <div>
               <DonorTeacherBanner
                 showPegasusLink={true}

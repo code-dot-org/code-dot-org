@@ -7,6 +7,6 @@ markdown <<MARKDOWN
 "Thank you!" said the wizard. Now I can collect the potions that I need."
 
 <br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 </div>
 MARKDOWN

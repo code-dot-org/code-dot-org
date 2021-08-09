@@ -69,7 +69,7 @@ After creating simple linear movement, students will be asked to write functions
 ## Activity: Rocket Height
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll write functions that manipulate images to create animations. Head to [CS in Algebra stage 10](http://studio.code.org/s/algebra/stage/10/puzzle/1) in Code Studio to get started programming.
+In this stage you'll write functions that manipulate images to create animations. Head to [CS in Algebra stage 10](http://studio.code.org/s/algebra/lessons/10/levels/1) in Code Studio to get started programming.
 
 [/together]
 

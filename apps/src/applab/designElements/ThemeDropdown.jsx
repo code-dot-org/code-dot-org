@@ -5,29 +5,7 @@ import React from 'react';
 import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-
-const styles = {
-  outerContainer: {
-    marginBottom: 8,
-    width: 240
-  },
-  description: {
-    paddingLeft: 2,
-    paddingBottom: 2
-  },
-  label: {
-    paddingLeft: 4
-  },
-  icon: {
-    marginTop: 4,
-    marginBottom: 4
-  },
-  dropdownLabel: {
-    display: 'flex',
-    flexDeirection: 'row',
-    alignItems: 'center'
-  }
-};
+import FontAwesome from '../../templates/FontAwesome';
 
 export default class ThemeDropdown extends React.Component {
   static propTypes = {
@@ -60,6 +38,11 @@ export default class ThemeDropdown extends React.Component {
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
             <img style={styles.icon} src={themeOption.icon} />
             <div style={styles.label}>{themeOption.displayName}</div>
+            <div className="checkbox">
+              {selectedValue === themeOption.option && (
+                <FontAwesome icon="check" />
+              )}
+            </div>
           </div>
         )
       };
@@ -73,8 +56,35 @@ export default class ThemeDropdown extends React.Component {
           onChange={this.handleChange}
           options={renderedOptions}
           placeholder={''}
+          clearable={false}
         />
       </div>
     );
   }
 }
+
+const styles = {
+  outerContainer: {
+    marginBottom: 8,
+    width: 240
+  },
+  description: {
+    paddingLeft: 2,
+    paddingBottom: 2
+  },
+  label: {
+    paddingLeft: 4
+  },
+  icon: {
+    marginTop: 4,
+    marginBottom: 4
+  },
+  dropdownLabel: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: '10px',
+    cursor: 'pointer'
+  }
+};

@@ -3,16 +3,20 @@ import React from 'react';
 
 import Parser from '@code-dot-org/redactable-markdown';
 
+import {
+  details,
+  expandableImages,
+  visualCodeBlock,
+  xmlAsTopLevelBlock
+} from '@code-dot-org/remark-plugins';
+
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeReact from 'rehype-react';
 import defaultSanitizationSchema from 'hast-util-sanitize/lib/github.json';
 
-import details from './plugins/details';
-import expandableImages from './plugins/expandableImages';
 import externalLinks from './plugins/externalLinks';
-import xmlAsTopLevelBlock from './plugins/xmlAsTopLevelBlock';
 
 // create custom sanitization schema as per
 // https://github.com/syntax-tree/hast-util-sanitize#schema
@@ -52,7 +56,7 @@ blocklyTags.forEach(tag => {
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([xmlAsTopLevelBlock, expandableImages, details])
+  .use([expandableImages, visualCodeBlock, xmlAsTopLevelBlock, details])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST
@@ -83,6 +87,10 @@ export default class SafeMarkdown extends React.Component {
   };
 
   render() {
+    // We only open external links in a new tab if it's explicitly specified
+    // that we do so; this is absolutely not something we want to do as a
+    // general practice, but unfortunately there are some situations in which
+    // it is currently a requirement.
     const parser = this.props.openExternalLinksInNewTab
       ? markdownToReactExternalLinks
       : markdownToReact;

@@ -1,25 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  row: {
-    clear: 'both'
-  },
-  caption: {
-    float: 'left',
-    width: 300
-  },
-  input: {
-    float: 'left'
-  },
-  linkContainer: {
-    marginBottom: 7
-  },
-  link: {
-    fontSize: 15
-  }
-};
-
 export default class FoormPreviewIndex extends React.Component {
   static propTypes = {
     forms: PropTypes.arrayOf(PropTypes.object)
@@ -95,7 +76,12 @@ export default class FoormPreviewIndex extends React.Component {
         <h2>Preview</h2>
         {this.props.forms.map((form, index) => (
           <div style={styles.linkContainer} key={index}>
-            <a style={styles.link} target="_blank" href={this.getFormUrl(form)}>
+            <a
+              style={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={this.getFormUrl(form)}
+            >
               {form.name}
             </a>
           </div>
@@ -105,3 +91,22 @@ export default class FoormPreviewIndex extends React.Component {
     );
   }
 }
+
+const styles = {
+  row: {
+    clear: 'both'
+  },
+  caption: {
+    float: 'left',
+    width: 300
+  },
+  input: {
+    float: 'left'
+  },
+  linkContainer: {
+    marginBottom: 7
+  },
+  link: {
+    fontSize: 15
+  }
+};

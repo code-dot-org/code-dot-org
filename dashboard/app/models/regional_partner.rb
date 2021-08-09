@@ -22,7 +22,7 @@
 
 require 'state_abbr'
 
-class RegionalPartner < ActiveRecord::Base
+class RegionalPartner < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers
@@ -31,7 +31,7 @@ class RegionalPartner < ActiveRecord::Base
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
-  has_many :mappings, -> {order :state, :zip_code}, class_name: Pd::RegionalPartnerMapping, dependent: :destroy
+  has_many :mappings, -> {order :state, :zip_code}, class_name: 'Pd::RegionalPartnerMapping', dependent: :destroy
 
   has_many :pd_workshops, class_name: 'Pd::Workshop', foreign_key: 'regional_partner_id'
 
@@ -194,7 +194,7 @@ class RegionalPartner < ActiveRecord::Base
             # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
             # See https://github.com/alexreisner/geocoder#error-handling
             Retryable.retryable(on: StandardError) do
-              state = Geocoder.search(zip_code)&.first&.state_code
+              state = Geocoder.search(zip_code, params: {country: 'us'})&.first&.state_code
             end
           end
         rescue StandardError => e

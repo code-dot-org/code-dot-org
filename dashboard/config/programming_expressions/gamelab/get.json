@@ -1,0 +1,12 @@
+{
+  "func": "get",
+  "category": "Groups",
+  "paletteParams": [
+    "i"
+  ],
+  "params": [
+    "0"
+  ],
+  "modeOptionName": "*.get",
+  "type": "value"
+}

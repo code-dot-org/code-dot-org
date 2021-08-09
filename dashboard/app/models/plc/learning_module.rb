@@ -20,8 +20,8 @@
 # Modules are independent of courses. Two people taking the same course may have different modules
 # to complete. Additionally, some modules will be part of multiple courses. So courses are not
 # part of modules, and modules are not part of courses.
-# Learning Modules correspond to Stages in our regular curriculum hierarchy.
-class Plc::LearningModule < ActiveRecord::Base
+# Learning Modules correspond to Lessons in our regular curriculum hierarchy.
+class Plc::LearningModule < ApplicationRecord
   MODULE_TYPES = [
     REQUIRED_MODULE = 'required'.freeze,
     CONTENT_MODULE = 'content'.freeze,

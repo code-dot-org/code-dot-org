@@ -1,6 +1,6 @@
 /* global AudioContext */
 import Sound from './Sound';
-import {PROFANITY_FOUND} from './constants';
+import _ from 'lodash';
 
 /**
  * Interface for a sound registry and playback mechanism
@@ -59,9 +59,6 @@ export default function Sounds() {
    */
   this.audioUnlocked_ = false;
 
-  this.speechPlaying = false;
-  this.speechQueue = [];
-
   if (window.AudioContext) {
     try {
       this.audioContext = new AudioContext();
@@ -79,10 +76,15 @@ export default function Sounds() {
   }
 
   this.soundsById = {};
-  this.textBytesByLanguage = {};
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
+
+  /**
+   * Callbacks invoked when all audio is stopped (e.g., Sounds.stopAllAudio is invoked).
+   * @private {function[]}
+   */
+  this.onStopAllAudioCallbacks_ = [];
 }
 
 let singleton;
@@ -241,43 +243,6 @@ Sounds.prototype.checkDidSourcePlay_ = function(source, context, onComplete) {
 };
 
 /**
- * Registers the bytes of text to speech.
- * @param {string} language the language the text is spoken in.
- * @param {string} text the text that is being spoken.
- * @param {Array.<string>} profaneWords an array of profane words in the text if there are any. Otherwise null.
- * @param {string} gender the gender of the voice used to speak the text. Optional
- * @param {Array.<bytes>} bytes the bytes of the speech.
- */
-Sounds.prototype.registerTextBytes = function(
-  language,
-  text,
-  profaneWords,
-  gender,
-  bytes
-) {
-  this.textBytesByLanguage[language] = this.textBytesByLanguage[language] || {};
-  this.textBytesByLanguage[language][text] =
-    this.textBytesByLanguage[language][text] || {};
-  this.textBytesByLanguage[language][text].profaneWords = profaneWords;
-  if (gender) {
-    this.textBytesByLanguage[language][text][gender] = bytes;
-  }
-};
-
-/**
- * Retrieves the bytes of text to speech if it exists.
- * @param {string} language the language the text is spoken in.
- * @param {string} text the text that is being spoken.
- * @returns {Object} if text bytes found, null otherwise.
- */
-Sounds.prototype.getTextBytes = function(language, text) {
-  return (
-    this.textBytesByLanguage[language] &&
-    this.textBytesByLanguage[language][text]
-  );
-};
-
-/**
  * Registers a sound from a list of sound URL paths.
  * Note: you can only register one sound resource per file type
  * @param {Array.<string>} soundPaths list of sound file URLs ending in their
@@ -371,68 +336,11 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 };
 
 /**
- * @param {Promise} promise the promise that will resolve to the ArrayBuffer bytes to be played
- * @param {object} playbackOptions config for the playing of the sound.
- * @param {object} cacheParams optional parameters for caching the result of promise
- */
-Sounds.prototype.addPromiseToSpeechQueue = function(
-  promise,
-  playbackOptions,
-  cacheParams = undefined
-) {
-  this.speechQueue.push({promise, playbackOptions, cacheParams});
-  this.checkSpeechQueue();
-};
-
-Sounds.prototype.checkSpeechQueue = async function() {
-  if (this.speechQueue.length > 0 && !this.speechPlaying) {
-    this.speechPlaying = true;
-    let nextSpeech = this.speechQueue.shift();
-    let bytes = await nextSpeech.promise;
-    if (bytes === undefined) {
-      const cachedTextRecord = this.textBytesByLanguage[
-        nextSpeech.cacheParams.language
-      ][nextSpeech.cacheParams.text];
-      if (
-        cachedTextRecord.profaneWords !== undefined &&
-        cachedTextRecord.profaneWords.length > 0
-      ) {
-        nextSpeech.cacheParams.profanityFoundCallback(
-          cachedTextRecord.profaneWords
-        );
-        this.onSpeechFinished();
-      } else {
-        bytes = cachedTextRecord[nextSpeech.cacheParams.gender];
-        this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
-      }
-    } else if (bytes === PROFANITY_FOUND) {
-      this.onSpeechFinished();
-    } else if (nextSpeech.cacheParams !== undefined) {
-      const bytes = await nextSpeech.promise;
-      this.registerTextBytes(
-        nextSpeech.cacheParams.language,
-        nextSpeech.cacheParams.text,
-        nextSpeech.cacheParams.profaneWords,
-        nextSpeech.cacheParams.gender,
-        bytes.slice(0)
-      );
-      this.playBytes(bytes, nextSpeech.playbackOptions);
-    } else {
-      this.playBytes(bytes.slice(0), nextSpeech.playbackOptions);
-    }
-  }
-};
-
-Sounds.prototype.onSpeechFinished = function() {
-  this.speechPlaying = false;
-  this.checkSpeechQueue();
-};
-
-/**
+ * @param {string} id of the sound.
  * @param {ArrayBuffer} bytes of the sound to play.
  * @param {object} playbackOptions config for the playing of the sound.
  */
-Sounds.prototype.playBytes = function(bytes, playbackOptions) {
+Sounds.prototype.playBytes = function(id, bytes, playbackOptions) {
   if (this.isMuted) {
     return;
   }
@@ -444,6 +352,7 @@ Sounds.prototype.playBytes = function(bytes, playbackOptions) {
   soundConfig.playAfterLoadOptions = playbackOptions;
   soundConfig.bytes = bytes;
   let sound = new Sound(soundConfig, this.audioContext);
+  this.soundsById[id] = sound;
   sound.preloadBytes();
   sound.play();
 };
@@ -490,6 +399,16 @@ Sounds.prototype.stopAllAudio = function() {
       this.soundsById[soundId].stop();
     }
   }
+
+  _.over(this.onStopAllAudioCallbacks_)();
+};
+
+/**
+ * Register a callback that will be invoked when all audio is stopped.
+ * @param {function} callback with no arguments.
+ */
+Sounds.prototype.onStopAllAudio = function(callback) {
+  this.onStopAllAudioCallbacks_.push(callback);
 };
 
 Sounds.prototype.stopLoopingAudio = function(soundId) {

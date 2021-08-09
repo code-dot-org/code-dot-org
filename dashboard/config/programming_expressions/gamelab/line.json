@@ -1,0 +1,16 @@
+{
+  "func": "line",
+  "category": "Drawing",
+  "paletteParams": [
+    "x1",
+    "y1",
+    "x2",
+    "y2"
+  ],
+  "params": [
+    "0",
+    "0",
+    "400",
+    "400"
+  ]
+}

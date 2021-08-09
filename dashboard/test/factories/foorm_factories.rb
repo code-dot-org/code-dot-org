@@ -171,6 +171,28 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_pre_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+    day 0
+
+    association :foorm_submission, factory: :pre_workshop_foorm_submission
+  end
+
+  # this factory uses the real summer workshop pre survey.
+  factory :pre_workshop_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/summer_workshop_pre_survey"
+    foorm_submission_metadata
+
+    answers '{"workshop_course":"CS Discoveries","workshop_subject":"5-day Summer","regional_partner_name":"Partner1",
+              "is_virtual":"true","num_facilitators":"1","day":"0","is_friday_institute":"false","workshop_agenda":"",
+              "required_course_status":"required","course_length_weeks":"11_15","section_time_minutes":"50_less",
+              "grade_levels_csd":["11","9"],"total_pd_time":"16_35","cs_community":{"someone_to_turn_to":"6",
+              "know_teacher_leaders":"6"},"lead_learner":"4","recruit_responsibility":"2",
+              "highest_level_cs_education":"college_courses","assigned_or_chose_to_teach":"assigned",
+              "gender_identity":"female","racial_ethnic_identity":["white"]}'
+  end
+
   factory :day_0_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
     association :pd_workshop, factory: :csd_summer_workshop
     association :user, factory: :teacher
@@ -294,6 +316,7 @@ FactoryGirl.define do
   end
 
   factory :csf_intro_post_facilitator_workshop_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    facilitator_id 1
     association :pd_workshop, factory: :csf_101_workshop
     association :user, factory: :teacher
 
@@ -1111,5 +1134,44 @@ FactoryGirl.define do
       }
     ]
   }'
+  end
+
+  factory :foorm_library_question, class: 'Foorm::LibraryQuestion' do
+    sequence(:library_name) {|n| "surveys/pd/library_name#{n}"}
+    library_version 0
+    sequence(:question_name) {|n| "what_supported#{n}"}
+    sequence(:question) do |n|
+      "{
+        \"type\": \"comment\",
+        \"name\": \"what_supported#{n}\",
+        \"title\": \"What supported your learning the most today and why?\"
+      }"
+    end
+  end
+
+  factory :foorm_library, class: 'Foorm::Library' do
+    sequence(:name) {|n| "surveys/pd/library_name#{n}"}
+    version 0
+    published true
+
+    trait :with_questions do
+      transient do
+        number_of_questions 1
+      end
+
+      after(:create) do |library, evaluator|
+        library.library_questions = create_list(
+          :foorm_library_question,
+          evaluator.number_of_questions,
+          library_name: library.name
+        )
+      end
+    end
+  end
+
+  factory :foorm_simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
+    sequence(:path) {|n| "test_path_#{n}"}
+    form_name 'A form that does not actually exist'
+    form_version 0
   end
 end

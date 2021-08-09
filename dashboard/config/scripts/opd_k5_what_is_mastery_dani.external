@@ -1,0 +1,43 @@
+name 'OPD-K5 What is Mastery_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Looking Ahead > What is mastery?
+
+In the stages that follow, you will master the following basic core concepts of computer science:
+
+- Stage 4: Sequencing
+- Stage 5: Loops
+- Stage 6: Conditionals
+- Stage 7: Functions
+- Stage 8: Events
+
+## What is "mastery"?
+
+We define "mastery" as being able to do the following:
+
+- Define and explain what is meant by the core concept, and why it's important in computer science
+- Write simple programs applying the concept (by using visual programming to solve puzzles)
+- Reflect on how you might integrate the concept into your practice
+
+Use this list as your rubric as you work through the course. As you complete each stage, ask yourself:
+
+- Can I define and explain the importance of this particular core concept at a beginner level?
+- Was I able to successfully complete the simple puzzles in this stage?
+- Do I have a few ideas on how I might use this in my classroom?
+
+If you answer yes to each question, proceed to the next stage. If you answer no to any of the questions, consider revisiting the stage or exploring more about the topic in the student side of Code Studio before moving on.
+
+## Things to keep in mind while learning computer science:
+
+- The world of computer programming moves so fast that there really are no masters. **We're all learners** at different stages but we are still always learners.
+- Programming becomes more comfortable every time you come back to it. **You're not going to be an expert your first time.**
+- There's no way around it, the act of programming and **learning to program takes time, but anyone can do it!**
+
+> **Key Takeway:** The goal of the next several stages is not to turn you into a computer scientist, but to instead help you feel comfortable enough with the core concepts that you are excited to share your knowledge with your students.
+
+## After I "master" the concepts, what comes next?
+
+In **Stage 9**, you'll explore Code.org's free curricula and resources for teachers. You can choose to use any of these resources or other curricular resources of your choosing. Completing this course will give you the basics you need to understand any beginning computer science curriculum.
+
+In **Stages 10 and 11**, we'll point you in the direction of resources you can use to learn more or feel more prepared to teach these concepts in your classroom.
+MARKDOWN

@@ -30,7 +30,7 @@
 #  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
-class Pd::Workshop < ActiveRecord::Base
+class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
@@ -51,19 +51,16 @@ class Pd::Workshop < ActiveRecord::Base
   serialized_attrs [
     'fee',
 
-    # Indicates that this workshop will be conducted virtually, which has the
-    # following effects in our system:
-    #   - Ensures `suppress_email` is set (see below)
-    #     when it is left blank.
-    #   - Uses a different, virtual-specific post-workshop survey.
+    # Indicates that this workshop will be conducted virtually, which triggers
+    # a different, virtual-specific post-workshop survey.
     'virtual',
 
     # Allows a workshop to be associated with a third party
     # organization.
     # Only current allowed values are "friday_institute" and nil.
     # "friday_institute" represents The Friday Institute,
-    # a regional partner whose model of virtual workshop was used
-    # by several partners during summer 2020.
+    # a regional partner whose model of virtual workshop is being used
+    # by several partners.
     'third_party_provider',
 
     # If true, our system will not send enrollees reminders related to this workshop.
@@ -83,9 +80,9 @@ class Pd::Workshop < ActiveRecord::Base
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
-  validate :all_virtual_workshops_suppress_email
   validate :all_academic_year_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
+  validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
 
   validates :funding_type,
@@ -116,15 +113,15 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
-  def all_virtual_workshops_suppress_email
-    if virtual? && !suppress_email?
-      errors.add :properties, 'All virtual workshops must suppress email.'
-    end
-  end
-
   def all_academic_year_workshops_suppress_email
     if MUST_SUPPRESS_EMAIL_SUBJECTS.include?(subject) && !suppress_email?
       errors.add :properties, 'All academic year workshops must suppress email.'
+    end
+  end
+
+  def friday_institute_workshops_must_be_virtual
+    if friday_institute? && !virtual?
+      errors.add :properties, 'Friday Institute workshops must be virtual'
     end
   end
 
@@ -344,15 +341,15 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Friendly location string is determined by:
-  # 1. known variant of TBA? use TBA
-  # 2. processed location? use city, state
-  # 3. unprocessable location: use user-entered string
-  # 4. no location address at all? use blank
+  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
+  # 2. has processed_location: use city, state
+  # 3. known variant of TBA or no location address at all: 'Location TBA'
+  # 4. unprocessable location that is not TBA: use user-entered string
   def friendly_location
-    return 'Location TBA' if location_address_tba?
-    return 'Virtual Workshop' if location_address_virtual?
+    return 'Virtual Workshop' if location_address_virtual? || virtual?
     return "#{location_city} #{location_state}" if processed_location
-    location_address.presence || ''
+    return 'Location TBA' if location_address_tba? || !location_address.presence
+    return location_address
   end
 
   # Returns date and location (only date if no location specified)
@@ -442,6 +439,20 @@ class Pd::Workshop < ActiveRecord::Base
     ].include? subject
   end
 
+  def self.send_virtual_order_reminder_for_upcoming_in_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    scheduled_start_in_days(days).each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        email = Pd::WorkshopMailer.teacher_virtual_order_form_reminder(enrollment)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+      end
+    end
+    raise "Failed to send virtual order form reminders: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -523,6 +534,7 @@ class Pd::Workshop < ActiveRecord::Base
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
+    send_virtual_order_reminder_for_upcoming_in_days(7 * 4)
     send_reminder_to_close
     send_follow_up_after_days(30)
   end
@@ -797,7 +809,7 @@ class Pd::Workshop < ActiveRecord::Base
 
   # whether we will show the scholarship dropdown
   def scholarship_workshop?
-    csf? || local_summer?
+    csf? || local_summer? || ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(subject)
   end
 
   def pre_survey?
@@ -823,14 +835,14 @@ class Pd::Workshop < ActiveRecord::Base
   # @return an array of tuples, each in the format:
   #   [unit_name, [lesson names]]
   # Units represent the localized titles for scripts in the Course
-  # Lessons are the stage names for that script (unit) preceded by "Lesson n: "
+  # Lessons are the lesson names for that script (unit) preceded by "Lesson n: "
   def pre_survey_units_and_lessons
     return nil unless pre_survey?
-    pre_survey_course.default_scripts.map do |script|
+    pre_survey_course.default_units.map do |script|
       unit_name = script.title_for_display
-      stage_names = script.lessons.where(lockable: false).pluck(:name)
-      lesson_names = stage_names.each_with_index.map do |stage_name, i|
-        "Lesson #{i + 1}: #{stage_name}"
+      lesson_names = script.lessons.where(lockable: false).pluck(:name)
+      lesson_names = lesson_names.each_with_index.map do |lesson_name, i|
+        "Lesson #{i + 1}: #{lesson_name}"
       end
       [unit_name, lesson_names]
     end

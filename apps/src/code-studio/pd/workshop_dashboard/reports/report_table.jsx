@@ -9,12 +9,6 @@ import * as sort from 'sortabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  }
-};
-
 export default class ReportTable extends React.Component {
   static propTypes = {
     columns: PropTypes.array.isRequired,
@@ -101,3 +95,9 @@ export default class ReportTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  }
+};

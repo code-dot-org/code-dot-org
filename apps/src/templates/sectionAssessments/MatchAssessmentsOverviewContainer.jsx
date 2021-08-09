@@ -15,14 +15,6 @@ import {
 import i18n from '@cdo/locale';
 import {getTotalStudentCount} from '@cdo/apps/redux/sectionDataRedux';
 
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20
-  }
-};
-
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {
     questionAnswerData: PropTypes.arrayOf(matchDataPropType),
@@ -82,6 +74,14 @@ class MatchAssessmentsOverviewContainer extends Component {
     );
   }
 }
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedMatchAssessmentsOverviewContainer = MatchAssessmentsOverviewContainer;
 

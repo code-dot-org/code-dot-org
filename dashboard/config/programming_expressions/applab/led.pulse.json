@@ -1,0 +1,10 @@
+{
+  "func": "led.pulse",
+  "category": "Circuit",
+  "paletteParams": [
+    "interval"
+  ],
+  "params": [
+    "200"
+  ]
+}

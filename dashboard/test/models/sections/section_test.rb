@@ -381,7 +381,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: unit_group.id,
@@ -391,6 +391,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -420,7 +421,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -430,6 +431,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -462,7 +464,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: unit_group.id,
@@ -472,6 +474,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -498,7 +501,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -508,6 +511,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

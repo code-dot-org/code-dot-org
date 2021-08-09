@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ***
 
-## **1. Review "<a href="https://curriculum.code.org/csf-20/coursed/11/" target="blank">Conditionals with Cards</a>" lesson plan from Course D:** 
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursed/11/" target="blank" rel="noopener noreferrer">Conditionals with Cards</a>" lesson plan from Course D:**
 Course D is meant for Grade 3 students. Conditionals are not covered in Courses A, B, or C.
 <br/>
 
@@ -18,7 +18,7 @@ This is a video that you would show your students to help introduce the concept 
 This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
 
 ***
-<a href="https://curriculum.code.org/csf-19/coursed/10/" target="blank">![](https://images.code.org/bab82e394a5adcd8d6bbe95a736212ec-image-1592842779925.png)</a>
+<a href="https://curriculum.code.org/csf-19/coursed/10/" target="blank" rel="noopener noreferrer">![](https://images.code.org/bab82e394a5adcd8d6bbe95a736212ec-image-1592842779925.png)</a>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

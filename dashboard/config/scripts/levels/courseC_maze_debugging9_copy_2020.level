@@ -37,10 +37,10 @@
     "show_type_hints": "false",
     "short_instructions": "Use the blocks in the toolbox to build your program. Get the bird to the pig.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_debugging9_2019_1\",\r\n  \"callout_text\": \"Drag blocks from the toolbox into your workspace.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null,
     "encrypted": "false",
     "mini_rubric": "false",
-    "maze_data": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

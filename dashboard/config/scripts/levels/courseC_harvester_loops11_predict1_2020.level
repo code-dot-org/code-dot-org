@@ -43,7 +43,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-14 19:13:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-28 23:12:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-06 00:00:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-14 19:13:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-28 23:12:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-01-06 00:00:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

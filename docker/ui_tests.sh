@@ -44,6 +44,7 @@ ignore_eyes_mismatches: true
 disable_all_eyes_running: true
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
+firebase_shared_secret: $FIREBASE_SHARED_SECRET
 use_my_apps: true
 build_dashboard: true
 build_pegasus: true
@@ -71,6 +72,9 @@ RAKE_VERBOSE=true bundle exec rake install --trace
 
 # name: rake build
 RAKE_VERBOSE=true bundle exec rake build --trace
+
+# reprint the hostname in case the first printing has already been truncated by the drone UI
+hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
 
 # name: seed ui tests
 bundle exec rake circle:seed_ui_test --trace

@@ -1,0 +1,6 @@
+{
+  "func": "buzzer",
+  "category": "Circuit",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

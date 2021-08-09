@@ -3,10 +3,7 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
-
-const levelKeyList = {
-  22: 'Level Twenty Two'
-};
+import {sampleActivities} from './activitiesTestData';
 
 describe('RemoveLevelDialog', () => {
   let handleClose, removeLevel, props;
@@ -15,20 +12,10 @@ describe('RemoveLevelDialog', () => {
     removeLevel = sinon.spy();
     props = {
       activityPosition: 1,
-      activitySection: {
-        position: 3,
-        levels: [
-          {
-            position: 1,
-            activeId: 22,
-            ids: [22]
-          }
-        ]
-      },
+      activitySection: sampleActivities[0].activitySections[2],
       levelPosToRemove: 1,
       handleClose,
-      removeLevel,
-      levelKeyList
+      removeLevel
     };
   });
 

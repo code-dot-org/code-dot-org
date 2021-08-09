@@ -203,6 +203,59 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  generate_admin_only_tests_for :user_progress_form
+
+  test 'user_progress finds user by id' do
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: @not_admin.id.to_s}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_progress finds user by username' do
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: @not_admin.username}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_progress finds user by email' do
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: @not_admin.email}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_progress shows error for non-existent user' do
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: "bogus_name"}
+    assert_select '.alert-danger', 'User not found'
+  end
+
+  test 'user_progress returns progress' do
+    user = @not_admin
+    script1 = Script.first
+    script2 = Script.second
+    level1 = script1.script_levels.first.level
+    level2 = script1.script_levels.second.level
+    level3 = script2.script_levels.first.level
+
+    UserScript.create! user: user, script: script1
+    UserScript.create! user: user, script: script2
+    UserLevel.create! user: user, script: script1, level: level1, best_result: 100
+    UserLevel.create! user: user, script: script1, level: level2, best_result: 100
+    UserLevel.create! user: user, script: script2, level: level3, best_result: 100
+
+    sign_in @admin
+    post :user_progress_form, params: {user_identifier: @not_admin.id.to_s}
+
+    # page has 3 tables:
+    # table 1 - user information (1 row)
+    # table 2 - script progress (2 rows)
+    # table 3 - level progress (3 rows)
+    assert_select "table", 3
+    assert_select "table:nth-of-type(1) tbody tr", 1
+    assert_select "table:nth-of-type(2) tbody tr", 2
+    assert_select "table:nth-of-type(3) tbody tr", 3
+  end
+
   generate_admin_only_tests_for :permissions_form
 
   test 'find user for non-existent email displays no user error' do

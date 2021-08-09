@@ -8,11 +8,84 @@ import {
   levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {
+  BubbleShape,
+  BubbleSize
+} from '@cdo/apps/templates/progress/BubbleFactory';
 
 /**
  * A TeacherPanelProgressBubble represents progress for a specific level in the TeacherPanel. It can be a circle
  * or a diamond. The fill and outline change depending on the level status.
  */
+export class TeacherPanelProgressBubble extends React.Component {
+  static propTypes = {
+    // While this userLevel object does have the properties of a levelType object, can
+    // either be more like a userLevel object or a level object depenting on whether the
+    // user has made progress. For example, if the user has progress recorded, the id
+    // property of this object is the user_level id. In this case, to get the level id,
+    // use the level_id property.
+    userLevel: PropTypes.object.isRequired
+  };
+
+  render() {
+    const {userLevel} = this.props;
+
+    if (userLevel.assessment && userLevel.passed) {
+      userLevel.status = LevelStatus.completed_assessment;
+    }
+
+    const hideNumber = userLevel.paired || userLevel.bonus;
+
+    const style = {
+      ...styles.main,
+      ...(userLevel.isConceptLevel && styles.diamond),
+      ...levelProgressStyle(userLevel.status, userLevel.kind)
+    };
+
+    const shouldKeepWorking =
+      userLevel.teacherFeedbackReivewState === ReviewStates.keepWorking;
+
+    // Outer div here is used to make sure our bubbles all take up equivalent
+    // amounts of space, whether they're diamonds or circles
+    return (
+      <div
+        style={{
+          // Two pixels on each side for border, 2 pixels on each side for margin.
+          minWidth: DOT_SIZE + 8,
+          display: 'flex',
+          justifyContent: 'center'
+        }}
+      >
+        <div style={style}>
+          <div
+            style={{
+              fontSize: userLevel.paired || userLevel.bonus ? 14 : 16,
+              ...styles.contents,
+              ...(userLevel.isConceptLevel && styles.diamondContents)
+            }}
+          >
+            {userLevel.paired && <FontAwesome icon="users" />}
+            {userLevel.bonus && <FontAwesome icon="flag-checkered" />}
+            {!hideNumber && <span>{userLevel.levelNumber}</span>}
+          </div>
+          {shouldKeepWorking && (
+            <BubbleBadge
+              bubbleShape={
+                userLevel.isConceptLevel
+                  ? BubbleShape.diamond
+                  : BubbleShape.circle
+              }
+              bubbleSize={BubbleSize.full}
+              badgeType={BadgeType.keepWorking}
+            />
+          )}
+        </div>
+      </div>
+    );
+  }
+}
 
 const styles = {
   main: {
@@ -31,7 +104,8 @@ const styles = {
     transition:
       'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
     marginTop: 3,
-    marginBottom: 3
+    marginBottom: 3,
+    position: 'relative'
   },
   diamond: {
     width: DIAMOND_DOT_SIZE,
@@ -50,54 +124,3 @@ const styles = {
     transform: 'rotate(-45deg)'
   }
 };
-
-export class TeacherPanelProgressBubble extends React.Component {
-  static propTypes = {
-    level: PropTypes.object.isRequired
-  };
-
-  render() {
-    const {level} = this.props;
-
-    if (level.assessment && level.passed) {
-      level.status = LevelStatus.completed_assessment;
-    }
-
-    const number = level.levelNumber;
-
-    const hideNumber = level.paired || level.bonus;
-
-    const style = {
-      ...styles.main,
-      ...(level.isConceptLevel && styles.diamond),
-      ...levelProgressStyle(level, false)
-    };
-
-    // Outer div here is used to make sure our bubbles all take up equivalent
-    // amounts of space, whether they're diamonds or circles
-    return (
-      <div
-        style={{
-          // Two pixels on each side for border, 2 pixels on each side for margin.
-          minWidth: DOT_SIZE + 8,
-          display: 'flex',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={style}>
-          <div
-            style={{
-              fontSize: level.paired || level.bonus ? 14 : 16,
-              ...styles.contents,
-              ...(level.isConceptLevel && styles.diamondContents)
-            }}
-          >
-            {level.paired && <FontAwesome icon="users" />}
-            {level.bonus && <FontAwesome icon="flag-checkered" />}
-            {!hideNumber && <span>{number}</span>}
-          </div>
-        </div>
-      </div>
-    );
-  }
-}

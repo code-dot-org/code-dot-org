@@ -163,8 +163,7 @@ function getBoard() {
     return Promise.resolve(new FakeBoard());
   } else {
     if (project.getMakerAPIs() === MB_API) {
-      //TODO - break out the applicable parts of findPortWithViableDevice
-      return findPortWithViableDevice().then(() => new MicroBitBoard());
+      return findPortWithViableDevice().then(port => new MicroBitBoard(port));
     } else {
       return findPortWithViableDevice().then(
         port => new CircuitPlaygroundBoard(port)

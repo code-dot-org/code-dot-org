@@ -7,4 +7,4 @@ Feature: Public Key Cryptography - Continue Button
     Given I am on the 1st Public Key Cryptography test level
     When I press the last button with text "Continue" to load a new page
     And I wait until "#public-key-cryptography-mount" contains text "Pick a character"
-    Then check that I am on "http://studio.code.org/s/allthethings/stage/31/puzzle/2"
+    Then check that I am on "http://studio.code.org/s/allthethings/lessons/31/levels/2"

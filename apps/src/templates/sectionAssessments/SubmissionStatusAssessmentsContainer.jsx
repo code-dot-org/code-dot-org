@@ -11,15 +11,6 @@ import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
 import Button from '../Button';
 
-const styles = {
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  }
-};
-
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
@@ -40,20 +31,22 @@ const CSV_SUBMISSION_STATUS_HEADERS = [
 
 class SubmissionStatusAssessmentsContainer extends Component {
   static propTypes = {
+    onClickDownload: PropTypes.func.isRequired,
+    // from redux
     studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
     studentExportableData: PropTypes.arrayOf(studentExportableDataPropType)
   };
 
   render() {
-    const {studentExportableData} = this.props;
     return (
       <div>
         <div style={styles.buttonContainer}>
           <h2>{i18n.studentOverviewTableHeader()}</h2>
           <CSVLink
             filename="assessments-submission-status.csv"
-            data={studentExportableData}
+            data={this.props.studentExportableData}
             headers={CSV_SUBMISSION_STATUS_HEADERS}
+            onClick={this.props.onClickDownload}
           >
             <Button
               __useDeprecatedTag
@@ -70,6 +63,15 @@ class SubmissionStatusAssessmentsContainer extends Component {
     );
   }
 }
+
+const styles = {
+  buttonContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
+  }
+};
 
 export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
 

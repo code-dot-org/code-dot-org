@@ -49,6 +49,12 @@ const style = {
     flexShrink: 0,
     display: 'flex'
   },
+  debugInputWrapperDisabled: {
+    flexGrow: 0,
+    flexShrink: 0,
+    display: 'flex',
+    backgroundColor: '#eee'
+  },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,
     display: 'block',
@@ -69,6 +75,19 @@ const style = {
   inspector: {
     display: 'inline-flex'
   }
+};
+
+// These colors come from the ace editor defaults
+const inspectorTheme = {
+  ...chromeLight,
+  OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
+  OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
+  OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
+  OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
+  OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
+  OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
 };
 
 const WATCH_COMMAND_PREFIX = '$watch ';
@@ -126,6 +145,7 @@ export default connect(
         PropTypes.object,
         PropTypes.string
       ]).isRequired,
+      debugConsoleDisabled: PropTypes.bool.isRequired,
       maxLogLevel: PropTypes.string.isRequired,
       isAttached: PropTypes.bool.isRequired,
       addWatchExpression: PropTypes.func.isRequired,
@@ -144,6 +164,9 @@ export default connect(
       const input = e.target.value;
       if (e.keyCode === KeyCodes.ENTER) {
         e.preventDefault();
+        if (this.props.debugConsoleDisabled) {
+          return;
+        }
         this.props.commandHistory.push(input);
         e.target.value = '';
         this.appendLog({input: input});
@@ -191,9 +214,19 @@ export default connect(
       this.props.appendLog(output);
     }
 
-    componentDidUpdate() {
-      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    componentDidUpdate(prevProps) {
+      const prevOutputSize = prevProps.logOutput.size;
+      if (
+        typeof prevOutputSize === 'number' &&
+        prevOutputSize !== this.props.logOutput.size
+      ) {
+        this.jumpToBottom();
+      }
     }
+
+    jumpToBottom = () => {
+      this._debugOutput.scrollTop = this._debugOutput.scrollHeight;
+    };
 
     clearDebugInput() {
       // TODO: this needs to get called on ATTACH action being dispatched
@@ -243,49 +276,39 @@ export default connect(
     }
 
     displayOutputToConsole() {
-      // These colors come from the ace editor defaults
-      const inspectorTheme = {
-        ...chromeLight,
-        OBJECT_VALUE_NULL_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_UNDEFINED_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_REGEXP_COLOR: '#1A1AA6',
-        OBJECT_VALUE_STRING_COLOR: '#1A1AA6',
-        OBJECT_VALUE_SYMBOL_COLOR: '#1A1AA6',
-        OBJECT_VALUE_NUMBER_COLOR: 'rgb(0, 0, 205)',
-        OBJECT_VALUE_BOOLEAN_COLOR: 'rgb(88, 92, 246)',
-        OBJECT_VALUE_FUNCTION_PREFIX_COLOR: 'rgb(85, 106, 242)'
-      };
-      if (this.props.logOutput.size > 0) {
-        return this.props.logOutput.map((rowValue, i) => {
-          if ('function' === typeof rowValue.toJS) {
-            rowValue = rowValue.toJS();
-          }
-          if (rowValue.input) {
-            return <div key={i}>&gt; {rowValue.input}</div>;
-          } else if (rowValue.skipInspector) {
-            return rowValue.output;
-          } else if (this.isValidOutput(rowValue)) {
-            if (rowValue.fromConsoleLog) {
-              return (
-                <Inspector
-                  theme={inspectorTheme}
-                  key={i}
-                  data={rowValue.output}
-                />
-              );
-            } else {
-              return (
-                <div key={i}>
-                  &lt;{' '}
-                  <div style={style.inspector}>
-                    <Inspector theme={inspectorTheme} data={rowValue.output} />
-                  </div>
-                </div>
-              );
-            }
-          }
-        });
+      if (this.props.logOutput.size <= 0) {
+        return;
       }
+
+      return this.props.logOutput.map((rowValue, i) => {
+        if ('function' === typeof rowValue.toJS) {
+          rowValue = rowValue.toJS();
+        }
+        if (rowValue.input) {
+          return <div key={i}>&gt; {rowValue.input}</div>;
+        } else if (rowValue.skipInspector) {
+          return rowValue.output;
+        } else if (this.isValidOutput(rowValue)) {
+          if (rowValue.fromConsoleLog) {
+            return (
+              <Inspector
+                theme={inspectorTheme}
+                key={i}
+                data={rowValue.output}
+              />
+            );
+          } else {
+            return (
+              <div key={i}>
+                &lt;{' '}
+                <div style={style.inspector}>
+                  <Inspector theme={inspectorTheme} data={rowValue.output} />
+                </div>
+              </div>
+            );
+          }
+        }
+      });
     }
 
     render() {
@@ -327,7 +350,13 @@ export default connect(
           >
             {this.displayOutputToConsole()}
           </div>
-          <div style={style.debugInputWrapper}>
+          <div
+            style={
+              this.props.debugConsoleDisabled
+                ? style.debugInputWrapperDisabled
+                : style.debugInputWrapper
+            }
+          >
             <span style={style.debugInputPrompt} onClick={this.focus}>
               &gt;
             </span>
@@ -335,6 +364,7 @@ export default connect(
               type="text"
               spellCheck="false"
               id="debug-input"
+              disabled={this.props.debugConsoleDisabled}
               style={style.debugInput}
               ref={el => (this._debugInput = el)}
               onKeyDown={this.onInputKeyDown}

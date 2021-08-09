@@ -2,13 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Table} from 'react-bootstrap';
 
-const styles = {
-  table: {
-    marginTop: '20px',
-    width: '80%'
-  }
-};
-
 export default class ChangeLog extends React.Component {
   static propTypes = {
     changeLog: PropTypes.arrayOf(
@@ -43,3 +36,10 @@ export default class ChangeLog extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    marginTop: '20px',
+    width: '80%'
+  }
+};

@@ -447,6 +447,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_follow_up_after_days(30)
   end
 
+  # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
     session = create :pd_session, workshop: workshop
@@ -918,7 +919,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Fully purge the user account's PD records,
     # which removes their user ID from attendances.
-    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id, workshop_participant.email
     workshop.reload
 
     # Should still return 0 once we've fully purged the teacher user ID from the attendance
@@ -966,14 +967,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'process_location' do
     mock_geocoder_result = [
       OpenStruct.new(
-        latitude: 47.6101003,
-        longitude: -122.33746,
+        latitude: 47.610183,
+        longitude: -122.337401,
         city: 'Seattle',
         state: 'WA',
         formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
-    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
     Honeybadger.expects(:notify).never
 
     # Normal lookup
@@ -1056,26 +1057,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
-      create(:script).tap do |script|
+      create(:script, name: unit_name).tap do |script|
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script
-        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
         lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, key: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
-    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
-    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
-    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
+    add_unit.call 'pre-survey-unit-1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'pre-survey-unit-2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'pre-survey-unit-3', ['Unit 3 - Lesson 1']
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
-      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
-      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
-      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
+      ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['pre-survey-unit-2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['pre-survey-unit-3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
@@ -1132,13 +1132,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
       processed_location: nil
 
-    assert_equal 'March 30 - April 3, 2017', workshop.date_and_location_name
+    assert_equal 'March 30 - April 3, 2017, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name with no location nor sessions' do
     workshop = create :workshop, processed_location: nil, num_sessions: 0
 
-    assert_equal 'Dates TBA', workshop.date_and_location_name
+    assert_equal 'Dates TBA, Location TBA', workshop.date_and_location_name
   end
 
   test 'date_and_location_name for teachercon' do
@@ -1182,7 +1182,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
-    assert_equal '', workshop.friendly_location
+    assert_equal 'Location TBA', workshop.friendly_location
   end
 
   test 'friendly_location with virtual location' do
@@ -1396,7 +1396,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute potential_organizer_ids.include? program_manager.id
   end
 
-  test 'virtual workshops must suppress email' do
+  test 'virtual workshops don\'t automatically suppress email' do
     workshop = build :workshop
 
     # Non-virtual workshops may suppress email or not
@@ -1407,10 +1407,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.suppress_email = true
     assert workshop.valid?
 
-    # Virtual workshops must suppress email
+    # Virtual workshops may suppress email or not (change from previous behavior)
     workshop.virtual = true
     workshop.suppress_email = false
-    refute workshop.valid?
+    assert workshop.valid?
 
     workshop.suppress_email = true
     assert workshop.valid?
@@ -1452,15 +1452,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   test 'workshops third_party_provider must be nil or from specified list' do
     workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
     refute workshop.valid?
 
     workshop.third_party_provider = nil
-    assert workshop.valid?
-
-    # friday_institute is in list of approved third party providers
-    workshop.third_party_provider = 'friday_institute'
     assert workshop.valid?
   end
 

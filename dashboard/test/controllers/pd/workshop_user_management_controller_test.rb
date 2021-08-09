@@ -11,7 +11,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
     @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
   end
 
-  def self.test_workshop_admin_only(method, action, params = nil)
+  def self.test_workshop_admin_only(method, action, params = {})
     test_user_gets_response_for action, user: :student, method: method, params: params, response: :forbidden
     test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
     test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: :success

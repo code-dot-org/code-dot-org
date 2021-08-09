@@ -1,0 +1,379 @@
+{
+  "title": "Pre-CSD/P Facilitator Summit Survey",
+  "pages": [
+    {
+      "name": "",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<p>We are interested in learning about all facilitators' sense of readiness to lead high-quality, equity-focused Professional Learning experiences in 2021-2022. Your responses will be shared anonymously with Code.org staff running these workshops. Thank you for taking a few minutes to complete this survey!</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "Course",
+          "title": "For which course are you attending the Summit? If you are not attending the Summit this year, please mark “n/a.”",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "CSD"
+            },
+            {
+              "value": "item2",
+              "text": "CSP"
+            },
+            {
+              "value": "item3",
+              "text": "N/A"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "programKnowledgeSkills",
+          "title": "Right now, I have the knowledge and skills to...",
+          "columns": [
+            {
+              "value": "0",
+              "text": "N/A"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Row 1",
+              "text": "Navigate to relevant teacher resources for the course, including lesson plans and the curriculum guide."
+            },
+            {
+              "value": "Row 2",
+              "text": "Use the tools designed for the course (GameLab, AppLab, WebLab, etc.)."
+            },
+            {
+              "value": "Row 3",
+              "text": "Explain to teachers the values and philosophy of the Code.org curriculum and the Professional Learning Program."
+            },
+            {
+              "value": "Row 4",
+              "text": "Demonstrate equitable computer science teaching practices for teachers in my workshops."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "facilitatingDiscussions",
+          "title": "Right now, when facilitating discussions, I have the skills to...",
+          "columns": [
+            {
+              "value": "0",
+              "text": "N/A"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Row 1",
+              "text": "Create an environment that ensures equitable engagement for all participants."
+            },
+            {
+              "value": "Row 2",
+              "text": "Engage skeptical or resistant participants, or draw in someone who has disengaged."
+            },
+            {
+              "value": "Row 3",
+              "text": "Ensure that no one person (or small group of people) dominates discussions."
+            },
+            {
+              "value": "Row 4",
+              "text": "Engage with participants who are vocally defensive during conversations about equity in computer science."
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "iFeelCSD",
+          "visibleIf": "{Course} = 'item1'",
+          "title": "I feel prepared to lead Code.org's CSD Course workshops in 2021-2022.",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "iFeelCSP",
+          "visibleIf": "{Course} = 'item2'",
+          "title": "I feel prepared to lead Code.org's CSP Course workshops in 2021-2022.",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "toWhat",
+          "title": "To what extent are the goals and objectives of the {course} summer workshop clear to you as a facilitator?",
+          "description": "From 1 - Very Unclear to 7 - Very Clear",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "Needed",
+          "title": "To what extent do you feel confident in your ability to effectively explain the philosophy behind the curriculum to workshop participants?",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "commitment",
+          "title": "To what extent do you feel confident in your ability to support participants in building a commitment to creating equitable CS classrooms?",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "building",
+          "title": "To what extent do you feel confident in your ability to support participants in building equitable CS classrooms?",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "matrix",
+          "name": "concerns",
+          "title": "Right now, I am concerned about...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Not a concern"
+            },
+            {
+              "value": "2",
+              "text": "Minor concern"
+            },
+            {
+              "value": "3",
+              "text": "Moderate concern"
+            },
+            {
+              "value": "4",
+              "text": "Major concern"
+            },
+            {
+              "value": "5",
+              "text": "Biggest concern"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Row 1",
+              "text": "Having sufficient computer science content knowledge to lead my workshops."
+            },
+            {
+              "value": "Row 2",
+              "text": "Making sure that teachers in my workshops feel prepared to teach the course."
+            },
+            {
+              "value": "Row 3",
+              "text": "The amount of material and preparation necessary to run a workshop."
+            },
+            {
+              "value": "Row 4",
+              "text": "My ability to identify with teachers in my workshops who work in different contexts than I do."
+            },
+            {
+              "value": "Row 5",
+              "text": "Developing an effective relationship with my co-facilitator(s)."
+            },
+            {
+              "value": "Row 6",
+              "text": "Developing a good working relationship with the Regional Partner who is organizing a given workshop."
+            },
+            {
+              "value": "Row 7",
+              "text": "How roles and responsibilities will be shared between facilitator and Regional Partner."
+            },
+            {
+              "value": "Row 8",
+              "text": "Teachers adopting and using equitable teaching practices when teaching the course."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "question1",
+          "html": "<p><H3>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.” </h3><br>\n<b>1-2: Not true of me now</b> - need more development, not well prepared <br>\n<b>3-5: Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<b>6-7: Very true of me now</b>   - current strenghts, well prepared\n</p>"
+        },
+        {
+          "type": "matrix",
+          "name": "facilitatorResponsibilitiesSkills",
+          "title": "As a facilitator, right now, I have the skills to...",
+          "columns": [
+            {
+              "value": "0",
+              "text": "N/A"
+            },
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Row 1",
+              "text": "Ensure that teachers in my workshop demonstrate positive change in their attitudes and beliefs about equity in computer science classrooms."
+            },
+            {
+              "value": "Row 2",
+              "text": "Address equity-related challenges in my workshop, even when it makes me or my participants uncomfortable."
+            },
+            {
+              "value": "Row 3",
+              "text": "Make participants whose perspectives and values are different from my own feel welcome in my workshop."
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "overallTo52",
+          "title": "Overall, to what extent do you feel connected to the facilitator community?",
+          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "matrix",
+          "name": "connectedCommunity",
+          "title": "When it comes to the community",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "Row 1",
+              "text": "I feel like I'm a valued member of the Code.org facilitator community."
+            },
+            {
+              "value": "Row 2",
+              "text": "When I have questions, I am confident that I can get the help and support I need from the facilitator community."
+            },
+            {
+              "value": "Row 3",
+              "text": "I feel like I can share my skills with the facilitator community. "
+            },
+            {
+              "value": "Row 4",
+              "text": "I feel my work as a facilitator is valued and respected by Code.org."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "question3",
+          "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org</p>"
+        }
+      ],
+      "title": "Page 1"
+    }
+  ],
+  "published": true
+}

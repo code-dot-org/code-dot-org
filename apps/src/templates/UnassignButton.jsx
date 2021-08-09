@@ -5,17 +5,12 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  buttonMargin: {
-    marginLeft: 10
-  }
-};
-
 class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     // Redux
-    unassignSection: PropTypes.func.isRequired
+    unassignSection: PropTypes.func.isRequired,
+    isRtl: PropTypes.bool
   };
 
   constructor() {
@@ -38,11 +33,18 @@ class UnassignButton extends React.Component {
 
   render() {
     const {text, icon} = this.state;
+    const {isRtl} = this.props;
+
+    // Adjust styles if locale is RTL
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMargin;
+
     return (
       <div
         onMouseOver={this.onMouseOver}
         onMouseLeave={this.onMouseOut}
-        style={styles.buttonMargin}
+        style={buttonMarginStyle}
         className={'uitest-unassign-button'}
       >
         <Button
@@ -57,10 +59,25 @@ class UnassignButton extends React.Component {
   }
 }
 
+const styles = {
+  buttonMargin: {
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  buttonMarginRTL: {
+    marginRight: 10,
+    display: 'flex',
+    alignItems: 'center'
+  }
+};
+
 export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
-  null,
+  state => ({
+    isRtl: state.isRtl
+  }),
   {
     unassignSection
   }

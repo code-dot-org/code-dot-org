@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-01-05T01:30:18.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_external_netflix_data",
+    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20343,
+    "name_suffix": "_preview-2021",
+    "encrypted": "false",
+    "display_name": "How Netflix Uses Data",
+    "teacher_markdown": "Check that students have answered the first two \"Web Pix\" questions on their activity guide before showing this video.  After the video, they should answer the third question: How does Netflix solve the problem of collecting information about users and videos to make the best recommendation it can for each user?\r\n\r\n*You can hide the \"For Teachers Only\" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the \"View as Student\" option.*\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-16 04:11:34 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-19 18:13:20 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 04:59:49 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -1,47 +1,47 @@
 {
-  "https://studio.code.org/s/frozen/stage/1/puzzle/1": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/1": {
     "short_instructions": "Hi! I'm Elsa of Arendelle. Help me create a single line.",
     "callouts": {
       "run": "Hit \"Run\" to try your program!",
       "move_elsa_forward": "Drag a \"Move Forward\" block and snap it below the \"When Run\" block to make Elsa move forward"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/2": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/2": {
     "short_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
     "long_instructions": "Now let's see if we can create two lines that are at a 90 degree angle to each other. You will need to use the \"Turn\" block as well as the \"Move\" block.",
     "callouts": {
       "turn_elsa": "Use the \"Turn\" block to make Elsa turn. The number in the drop-down determines how much Elsa turns"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/3": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/3": {
     "short_instructions": "It seems like we're halfway to making a square. Let's put 4 lines together to create a square.",
     "long_instructions": "It seems like we're halfway to making a square. Let's put 4 lines together to create a square.",
     "callouts": {
       "frozen_create_square": "Attach more blocks here to create a square"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/4": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/4": {
     "short_instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
     "long_instructions": "Hi, I’m Anna of Arendelle! Let’s make a square with the “Repeat” block, which uses fewer blocks. How many times (???) should the “Repeat” block loop the blocks inside it to make a square?",
     "callouts": {
       "replace_questions": "Use the drop-down to replace \"???\" with a number"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/5": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/5": {
     "short_instructions": "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.",
     "long_instructions": "Let's create three squares, turning after each square. Be sure to turn by 120 degrees before each new square.",
     "callouts": {
       "replace_questions": "Use the drop-down to replace \"???\" with a number"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/6": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/6": {
     "short_instructions": "Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?",
     "long_instructions": "Can you create a snowflake using the “Repeat” block to make a square 10 times, and the “Turn” block to turn 36 degrees between each square?",
     "callouts": {
       "replace_questions": "Use the drop-down to replace \"???\" with a number"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/7": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/7": {
     "short_instructions": "Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?",
     "long_instructions": "Wrap a “Repeat” block around these commands to create a plus sign. Did you notice Elsa can move forward and backward?",
     "callouts": {
@@ -49,70 +49,70 @@
       "repeat_blocks_2": "(2) Move the \"Repeat\" block here, and place the gray blocks inside"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/8": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/8": {
     "short_instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
     "long_instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
     "callouts": {
       "replace_questions_degree": "Use the drop-down to replace \"???\" with a number"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/9": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/9": {
     "short_instructions": "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number.",
     "long_instructions": "Let's repeat it 90 times! How many times does 90 go into 360? Hint: It's a really small number."
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/10": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/10": {
     "short_instructions": "Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
     "long_instructions": "Use a repeat around these blocks to create a parallelogram. It's just like a rectangle but has different angles. This one has 60 degree and 120 degree angles instead of all 90 degree angles.",
     "callouts": {
       "frozen_diamond_repeat": "Use the repeat block to create this shape."
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/11": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/11": {
     "short_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram.",
     "long_instructions": "Did you know every snowflake is a different shape? Let's create a new snowflake by using another “Repeat\" block to repeat a parallelogram 4 times, turning right by 90 degrees between each parallelogram."
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/12": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/12": {
     "short_instructions": "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.",
     "long_instructions": "Now, let's create a new snowflake by using the repeat block to repeat a parallelogram 10 times, turning right by 36 degrees between each one.",
     "callouts": {
       "frozen_diamond_repeat": "Use the repeat block to create this shape."
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/13": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/13": {
     "short_instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?",
     "long_instructions": "A circle is a special shape. Can you figure out what number to replace the question marks with to draw a circle?"
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/14": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/14": {
     "short_instructions": "Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles.",
     "long_instructions": "Use the new “Create a circle” block to create 10 overlapping circles. Don't forget to jump forward between circles."
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/15": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/15": {
     "short_instructions": "Now let's create 20 overlapping circles, turning 18 degrees between each circle.",
     "long_instructions": "Now let's create 20 overlapping circles, turning 18 degrees between each circle."
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/16": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/16": {
     "short_instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
     "long_instructions": "Here's a ”Create circle” block that can make circles of different sizes. Can you use this to create a small circle of size 5 and a larger circle of size 10?",
     "callouts": {
       "frozen_circle_function_with_parameter_circle": "Use the \"create a circle\" block and change the size."
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/17": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/17": {
     "short_instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?",
     "long_instructions": "Intricate snow patterns can be created with very simple shapes. Can you make a pattern by repeating 5 circles of size 5 and 5 circles of size 10?"
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/18": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/18": {
     "short_instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.",
     "long_instructions": "Try using the ”Create a snowflake branch” block to create three branches, which starts to look like a snowflake.",
     "callouts": {
       "frozen_snowflake_branch": "Use the \"create a snowflake branch\" block"
     }
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/19": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/19": {
     "short_instructions": "Now let's repeat it 8 times to make a beautiful snowflake!",
     "long_instructions": "Now let's repeat it 8 times to make a beautiful snowflake!"
   },
-  "https://studio.code.org/s/frozen/stage/1/puzzle/20": {
+  "https://studio.code.org/s/frozen/lessons/1/levels/20": {
     "short_instructions": "You've officially become a master artist! Create a winter wonderland.",
     "long_instructions": "You've officially become a master artist! Create a winter wonderland.",
     "callouts": {

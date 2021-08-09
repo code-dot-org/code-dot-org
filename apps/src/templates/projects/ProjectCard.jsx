@@ -8,76 +8,6 @@ const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
-const styles = {
-  card: {
-    border: '1px solid #bbbbbb',
-    borderRadius: 2,
-    width: 214,
-    backgroundColor: color.white
-  },
-  title: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingTop: 18,
-    paddingBottom: 5,
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.charcoal,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    height: 18,
-    boxSizing: 'content-box'
-  },
-  titleLink: {
-    color: color.charcoal
-  },
-  lastEdit: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
-  },
-  ageRange: {
-    paddingLeft: 10,
-    paddingTop: 5,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
-  },
-  firstInitial: {
-    paddingTop: 5,
-    fontSize: 11,
-    paddingLeft: 15,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.charcoal
-  },
-  thumbnail: {
-    width: 214,
-    height: 150,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
-  },
-  fullThumbnail: {
-    height: 214
-  },
-  image: {
-    flexShrink: 0,
-    width: '100%',
-    weight: '100%'
-  },
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  noTime: {
-    paddingBottom: 10
-  }
-};
-
 export default class ProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
@@ -100,9 +30,9 @@ export default class ProjectCard extends React.Component {
       Object.assign(thumbnailStyle, styles.fullThumbnail);
     }
 
-    const shouldShowPublishedAt =
+    const shouldShowPublicDetails =
       isPublicGallery && isDetailView && projectData.publishedAt;
-    const noTimeOnCardStyle = shouldShowPublishedAt ? {} : styles.noTime;
+    const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
     return (
       <div className="project_card">
@@ -145,13 +75,18 @@ export default class ProjectCard extends React.Component {
               </span>
             )}
           </div>
-          {shouldShowPublishedAt && (
+          {shouldShowPublicDetails && !projectData.isFeatured && (
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
               <UnlocalizedTimeAgo
                 style={styles.bold}
                 dateString={projectData.publishedAt}
               />
+            </div>
+          )}
+          {shouldShowPublicDetails && projectData.isFeatured && (
+            <div style={styles.lastEdit}>
+              <span style={styles.bold}>{i18n.featuredProject()}</span>
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (
@@ -168,3 +103,74 @@ export default class ProjectCard extends React.Component {
     );
   }
 }
+
+const styles = {
+  card: {
+    border: '1px solid #bbbbbb',
+    borderRadius: 2,
+    width: 214,
+    backgroundColor: color.white
+  },
+  title: {
+    paddingLeft: 15,
+    paddingRight: 10,
+    paddingTop: 18,
+    paddingBottom: 5,
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.charcoal,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    height: 18,
+    boxSizing: 'content-box'
+  },
+  titleLink: {
+    color: color.charcoal
+  },
+  lastEdit: {
+    paddingLeft: 30,
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 11,
+    fontFamily: '"Gotham", sans-serif',
+    color: color.charcoal
+  },
+  ageRange: {
+    paddingLeft: 10,
+    paddingTop: 5,
+    fontSize: 11,
+    fontFamily: '"Gotham", sans-serif',
+    color: color.charcoal
+  },
+  firstInitial: {
+    paddingTop: 5,
+    fontSize: 11,
+    paddingLeft: 15,
+    paddingRight: 15,
+    fontFamily: '"Gotham", sans-serif',
+    color: color.charcoal
+  },
+  thumbnail: {
+    width: 214,
+    height: 150,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden'
+  },
+  fullThumbnail: {
+    height: 214
+  },
+  image: {
+    flexShrink: 0,
+    width: '100%',
+    weight: '100%'
+  },
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  noTime: {
+    paddingBottom: 10
+  }
+};

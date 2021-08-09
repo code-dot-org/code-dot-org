@@ -1,0 +1,110 @@
+---
+title: CS-focused Scholarships
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys Resources: Scholarships"
+  "og:description": "Explore potential opportunities to fund your CS education"
+  "og:image": "/images/csjourneys/og-scholarships.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "CS Journeys Resources: Scholarships"
+  "twitter:description": "Explore potential opportunities to fund your CS education"
+  "twitter:image": "/images/csjourneys/og-scholarships.jpg"
+---
+<a id="top"></a>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>CS-focused scholarships</h1>
+<p>Scholarships can help you pay for school without taking out costly student loans. View the featured scholarships, and be sure to use one or more of the scholarship finders below to find other scholarships to apply for.</p>
+
+<ul>
+  <li><a href="#search">Search for scholarships</a></li>
+  <li><a href="#featured">Featured scholarships</a></li>
+</ul>
+
+<br>
+
+<a id="search"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Search for scholarships:</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="careeronestop-scholar" href="https://www.careeronestop.org/toolkit/training/find-scholarships.aspx" target="_blank"><h3 style="color:#7665a0"><strong>CareerOneStop’s scholarship finder</strong></h3></a>
+<p>Searchable database of college scholarships from the U.S. Department of Labor. Use keywords to search, or sort using filters.</p>
+
+<a class="linktag" id="niche-scholarships" href="https://www.niche.com/colleges/scholarships/" target="_blank"><h3 style="color:#7665a0"><strong>Niche’s scholarship finder</strong></h3></a>
+<p>Searchable database of college scholarships from Niche. Sort using filters.</p>
+
+<a class="linktag" id="college-scholarships" href="http://www.collegescholarships.org/financial-aid/" target="_blank"><h3 style="color:#7665a0"><strong>CollegeScholarships.org</strong></h3></a>
+<p>Searchable database of college scholarships. Use keywords to search, or sort using filters.</p>
+
+<a class="linktag" id="cs-org-scholarships" href="https://www.computerscience.org/scholarships-overview/" target="_blank"><h3 style="color:#7665a0"><strong>ComputerScience.org</strong></h3></a>
+<p>Curated list of computer science scholarships.</p>
+
+<a class="linktag" id="scholarships-com" href="https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-major/computer-science-scholarships/" target="_blank"><h3 style="color:#7665a0"><strong>Scholarships.com</strong></h3></a>
+<p>Comprehensive list of computer science scholarships.</p>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="featured"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Featured scholarships:</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+
+<a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png" alt="Amazon Future Engineer logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Amazon Future Engineer</strong></h3></a>
+  <p>A serious 2-for-1 opportunity for students like you. $40,000 for college and a paid programming internship at Amazon for high school students from underserved and historically underrepresented backgrounds planning to major in CS.</p>
+  <p><i>Application period: November-February</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="aises-scholarships" href="https://www.aises.org/students/scholarships" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/aises.png" alt="AISES logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="aises-scholarships" href="https://www.aises.org/students/scholarships" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>American Indian Science and Engineering Society Scholarships</strong></h3></a>
+  <p>AISES offers a number of scholarships that help students acquire skills and training that will help them meet the unique STEM needs of their communities. <i>Students must be members of AISES to apply.</i></p>
+  <p><i>Application period: Through May 31st</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a class="linktag" id="google-scholarships" href="https://buildyourfuture.withgoogle.com/scholarships/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/google.png" alt="Google logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="google-scholarships" href="https://buildyourfuture.withgoogle.com/scholarships/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Scholarships+ from Google</strong></h3></a>
+  <p>Google offers a number of scholarships to students that identify with groups historically excluded from the technology industry.</p>
+  <p><i>Application period: varies</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a class="linktag" id="swe-scholarships" href="https://swe.org/scholarships/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/swe.png" alt="SWE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="swe-scholarships" href="https://swe.org/scholarships/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Scholarships from Society of Women Engineers</strong></h3></a>
+  <p>SWE Scholarships support those who identify as a female/woman and are pursuing an ABET-accredited bachelor or graduate student program in preparation for careers in engineering, engineering technology and computer science globally.</p>
+  <p><i>Application period: March-May for incoming college freshmen</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a class="linktag" id="msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Blacks at Microsoft Scholarship</strong></h3></a>
+  <p>The Blacks at Microsoft (BAM) group offers a number of scholarships to high school students of African descent planning on majoring in engineering, computer science, or business.</p>
+  <p><i>Application period: November-March</i></p>
+</div>
+<div style="clear: both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>

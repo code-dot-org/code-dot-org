@@ -1,4 +1,4 @@
 name 'U4 evaluation q10’
 question 'What type of student grouping or activities are you most comfortable facilitating in your classroom?'
-answer 'Having students do hands on activities to build knowledge and understanding of key concepts', weight: 1, stage_name: 'Group Work and Peer Learning'
-answer 'Having students work in small groups ', weight: 1, stage_name: 'Discovery Learning'
+answer 'Having students do hands on activities to build knowledge and understanding of key concepts', weight: 1, lesson_name: 'Group Work and Peer Learning'
+answer 'Having students work in small groups ', weight: 1, lesson_name: 'Discovery Learning'

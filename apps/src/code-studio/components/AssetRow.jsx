@@ -6,14 +6,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 
-const styles = {
-  deleteWarning: {
-    paddingLeft: '34px',
-    textAlign: 'left',
-    color: color.red
-  }
-};
-
 /**
  * A single row in the AssetManager, describing one asset.
  */
@@ -197,3 +189,11 @@ export default class AssetRow extends React.Component {
     );
   }
 }
+
+const styles = {
+  deleteWarning: {
+    paddingLeft: '34px',
+    textAlign: 'left',
+    color: color.red
+  }
+};

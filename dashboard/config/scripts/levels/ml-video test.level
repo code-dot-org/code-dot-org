@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "csd_ml_intro_to_ai_lab",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 8212,
+    "encrypted": "false"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-04-01T18:33:29.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-04-01 18:47:22 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

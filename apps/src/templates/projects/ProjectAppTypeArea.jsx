@@ -10,44 +10,6 @@ import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
 
-const styles = {
-  grid: {
-    width: styleConstants['content-width']
-  },
-  labHeading: {
-    textAlign: 'left',
-    fontSize: 24,
-    color: color.charcoal,
-    marginBottom: 0,
-    paddingBottom: 0,
-    paddingTop: 0,
-    float: 'left'
-  },
-  viewMore: {
-    color: color.teal,
-    float: 'right',
-    marginTop: 35,
-    cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  viewMoreButtons: {
-    float: 'right',
-    marginRight: 22
-  },
-  buttonRightMargin: {
-    marginRight: 20
-  },
-  iconPaddingLeft: {
-    paddingLeft: 6
-  },
-  iconPaddingRight: {
-    paddingRight: 6
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 const NUM_PROJECTS_TO_ADD = 12;
 
 class ProjectAppTypeArea extends React.Component {
@@ -56,8 +18,6 @@ class ProjectAppTypeArea extends React.Component {
     labName: PropTypes.string.isRequired,
     labViewMoreString: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
-    // TODO (Erin B.) remove when we have enough featured projects and a solid profanity filter
-    // that we can ensure there won't be inappropriate projects.
     hideViewMoreLink: PropTypes.bool,
     projectList: PropTypes.arrayOf(projectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
@@ -235,6 +195,44 @@ class ProjectAppTypeArea extends React.Component {
     );
   }
 }
+
+const styles = {
+  grid: {
+    width: styleConstants['content-width']
+  },
+  labHeading: {
+    textAlign: 'left',
+    fontSize: 24,
+    color: color.charcoal,
+    marginBottom: 0,
+    paddingBottom: 0,
+    paddingTop: 0,
+    float: 'left'
+  },
+  viewMore: {
+    color: color.teal,
+    float: 'right',
+    marginTop: 35,
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  viewMoreButtons: {
+    float: 'right',
+    marginRight: 22
+  },
+  buttonRightMargin: {
+    marginRight: 20
+  },
+  iconPaddingLeft: {
+    paddingLeft: 6
+  },
+  iconPaddingRight: {
+    paddingRight: 6
+  },
+  clear: {
+    clear: 'both'
+  }
+};
 
 export default connect(
   (state, ownProps) => ({

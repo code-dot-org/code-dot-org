@@ -5,16 +5,14 @@
  * external service like Microsoft Classroom or Clever.
  */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
+import {Heading1, Heading2} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
-import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from '../Button';
-import {OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 
 /**
@@ -40,64 +38,85 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {
-      title,
-      providers,
-      setLoginType,
-      handleImportOpen,
-      handleCancel,
-      disabled
-    } = this.props;
+    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const anyImportOptions =
-      (withGoogle || withMicrosoft || withClever) &&
-      typeof handleImportOpen === 'function';
+    const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    // Adjust max height of the LoginTypePicker container based on the number of
+    // LoginType cards (which affects number of rows in the CardContainer flexbox).
+    const containerHeight = hasThirdParty ? '500px' : '360px';
 
-    // explicitly constrain the container as a whole to the width of the
-    // content. We expect that differing length of translations versus english
-    // source text can cause unexpected layout changes, and this constraint
-    // should help mitigate some of them.
-    const containerStyle = {maxWidth: styleConstants['content-width']};
+    const style = {
+      container: {
+        width: styleConstants['content-width'],
+        height: containerHeight,
+        left: '20px',
+        right: '20px'
+      },
+      scroll: {
+        overflowX: 'hidden',
+        overflowY: 'auto',
+        height: 'calc(80vh - 200px)'
+      },
+      thirdPartyProviderUpsell: {
+        marginBottom: '10px'
+      },
+      footer: {
+        position: 'absolute',
+        width: styleConstants['content-width'],
+        height: '100px',
+        left: 0,
+        bottom: '-65px',
+        padding: '0px 20px 20px 20px',
+        backgroundColor: '#fff',
+        borderRadius: '5px'
+      },
+      emailPolicyNote: {
+        marginBottom: '20px',
+        paddingTop: '20px',
+        borderTop: '1px solid #000'
+      }
+    };
 
     return (
-      <div style={containerStyle}>
+      <div style={style.container}>
         <Heading1>{title}</Heading1>
-        <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
-        {anyImportOptions && (
-          <Heading3>{i18n.addStudentsManageMyOwn()}</Heading3>
-        )}
-        <CardContainer>
-          <PictureLoginCard onClick={setLoginType} />
-          <WordLoginCard onClick={setLoginType} />
-          <EmailLoginCard onClick={setLoginType} />
-        </CardContainer>
-        <div>
-          <b>{i18n.note()}</b>
-          {' ' + i18n.emailAddressPolicy() + ' '}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-            {i18n.moreInfo()}
-          </a>
+        <Heading2>{i18n.addStudentsToSectionInstructionsUpdated()}</Heading2>
+        <div style={style.scroll}>
+          <CardContainer>
+            {withGoogle && (
+              <GoogleClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withMicrosoft && (
+              <MicrosoftClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withClever && <CleverCard onClick={this.openImportDialog} />}
+            <PictureLoginCard onClick={setLoginType} />
+            <WordLoginCard onClick={setLoginType} />
+            <EmailLoginCard onClick={setLoginType} />
+          </CardContainer>
+          {!hasThirdParty && (
+            <div>
+              {i18n.thirdPartyProviderUpsell() + ' '}
+              <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
+                {i18n.learnHow()}
+              </a>
+              {' ' + i18n.connectAccountThirdPartyProviders()}
+            </div>
+          )}
         </div>
-        {anyImportOptions && (
-          <div>
-            <Heading3>{i18n.addStudentsSyncThirdParty()}</Heading3>
-            <CardContainer>
-              {withGoogle && (
-                <GoogleClassroomCard onClick={this.openImportDialog} />
-              )}
-              {withMicrosoft && (
-                <MicrosoftClassroomCard onClick={this.openImportDialog} />
-              )}
-              {withClever && <CleverCard onClick={this.openImportDialog} />}
-            </CardContainer>
+        <div style={style.footer}>
+          <div style={style.emailPolicyNote}>
+            <b>{i18n.note()}</b>
+            {' ' + i18n.emailAddressPolicy() + ' '}
+            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+              {i18n.moreInfo()}
+            </a>
           </div>
-        )}
-        <DialogFooter>
           <Button
             __useDeprecatedTag
             onClick={handleCancel}
@@ -106,7 +125,7 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
-        </DialogFooter>
+        </div>
       </div>
     );
   }
@@ -119,7 +138,7 @@ export default connect(state => ({
 const PictureLoginCard = props => (
   <LoginTypeCard
     className="uitest-pictureLogin"
-    title={i18n.loginTypePicture()}
+    title={i18n.loginTypePictureUpdated()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
     onClick={() => props.onClick('picture')}
@@ -133,7 +152,7 @@ PictureLoginCard.propTypes = {
 const WordLoginCard = props => (
   <LoginTypeCard
     className="uitest-wordLogin"
-    title={i18n.loginTypeWord()}
+    title={i18n.loginTypeWordUpdated()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
     onClick={() => props.onClick('word')}
@@ -155,7 +174,7 @@ EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 const GoogleClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
-    description={i18n.loginTypeGoogleClassroomDescription()}
+    description={i18n.loginTypeGoogleClassroomDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
   />
 );
@@ -164,7 +183,7 @@ GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 const MicrosoftClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
-    description={i18n.loginTypeMicrosoftClassroomDescription()}
+    description={i18n.loginTypeMicrosoftClassroomDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
   />
 );
@@ -173,7 +192,7 @@ MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 const CleverCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
-    description={i18n.loginTypeCleverDescription()}
+    description={i18n.loginTypeCleverDescriptionUpdated()}
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
   />
 );

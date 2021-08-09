@@ -5,38 +5,6 @@ import color from '../util/color';
 import AgeDropdown from './AgeDropdown';
 import commonMsg from '@cdo/locale';
 
-const styles = {
-  ageDropdown: {
-    fontSize: 14,
-    width: 220,
-    height: 30,
-    lineHeight: '30px',
-    marginBottom: 10
-  },
-  dataMessage: {
-    fontSize: 18,
-    lineHeight: '21px',
-    marginBottom: 30
-  },
-  dataMessageHighlight: {
-    backgroundColor: 'yellow'
-  },
-  ageMessage: {
-    fontSize: 18,
-    marginBottom: 10
-  },
-  moreInfo: {
-    marginLeft: 0,
-    fontSize: 15
-  },
-  ok: {
-    backgroundColor: color.orange,
-    border: '1px solid ' + color.orange,
-    color: color.white,
-    float: 'right'
-  }
-};
-
 /**
  * Dialog contents for when you visit a shared Applab page. If not signed in,
  * it will ask your age. If the app stores data, it will also alert you to
@@ -92,6 +60,7 @@ class ShareWarnings extends Component {
           <a
             style={styles.moreInfo}
             target="_blank"
+            rel="noopener noreferrer"
             href="https://code.org/privacy"
           >
             {commonMsg.shareWarningsMoreInfo()}
@@ -104,5 +73,37 @@ class ShareWarnings extends Component {
     );
   }
 }
+
+const styles = {
+  ageDropdown: {
+    fontSize: 14,
+    width: 220,
+    height: 30,
+    lineHeight: '30px',
+    marginBottom: 10
+  },
+  dataMessage: {
+    fontSize: 18,
+    lineHeight: '21px',
+    marginBottom: 30
+  },
+  dataMessageHighlight: {
+    backgroundColor: 'yellow'
+  },
+  ageMessage: {
+    fontSize: 18,
+    marginBottom: 10
+  },
+  moreInfo: {
+    marginLeft: 0,
+    fontSize: 15
+  },
+  ok: {
+    backgroundColor: color.orange,
+    border: '1px solid ' + color.orange,
+    color: color.white,
+    float: 'right'
+  }
+};
 
 export default ShareWarnings;

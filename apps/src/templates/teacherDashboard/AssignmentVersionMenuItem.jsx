@@ -95,7 +95,7 @@ export default class AssignmentVersionMenuItem extends Component {
                   style={{color: color.light_orange}}
                 />
                 &nbsp;
-                {i18n.inDevelopment()}
+                {i18n.preview()}
               </span>
             )}
           </span>

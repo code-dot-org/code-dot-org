@@ -30,13 +30,49 @@
       Family: aurora-mysql5.7
       Parameters: {'innodb_monitor_enable': 'all'}
 
-  DatabaseSecret:
+<% db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
+  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: !Sub "Secrets for accessing database from ${AWS::StackName} CloudFormation stack"
+      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
       GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
         GenerateStringKey: password
         PasswordLength: 10
         ExcludePunctuation: True
-      Name: !Sub "CfnStack/${AWS::StackName}/database-secret"
+      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
+<% secret; end -%>
+
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth:
+<% db_secrets.each do |secret| -%>
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
+<%end -%>
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  DBProxyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'rds'%>
+      Policies:
+        - PolicyName: RDSProxy
+          PolicyDocument:
+            Statement:
+<% db_secrets.each do |secret| -%>
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
+<%end -%>
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  DBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+    DependsOn: [Aurora0, Aurora1]
+    Properties:
+      DBProxyName: !Ref DBProxy
+      DBClusterIdentifiers: [!Ref AuroraCluster]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10

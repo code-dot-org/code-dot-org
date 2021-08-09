@@ -1,12 +1,5 @@
 import experiments from '@cdo/apps/util/experiments';
-
-// A map of "string source" -> "list of strings used"
-// For example: window.stringUsageSources['maze'] = ['level_1.instruction.header']
-// The data recorded in this will periodically be uploaded.
-if (!window.stringUsageSources) {
-  // Initialize if it doesn't already exist.
-  window.stringUsageSources = {};
-}
+import {getI18nStringTrackerWorker} from '@cdo/apps/util/i18nStringTrackerWorker';
 
 export default function localeWithI18nStringTracker(locale, source) {
   if (!experiments.isEnabled(experiments.I18N_TRACKING)) {
@@ -26,15 +19,13 @@ export default function localeWithI18nStringTracker(locale, source) {
 }
 
 // Records the usage of the given i18n string key from the given source file.
-// @param stringKey [String] The string key used to look up the i18n value e.g. 'home.banner_text'
-// @param source [String] Context for where the given string key came from e.g. 'maze', 'dance', etc.
+// @param {string} stringKey  The string key used to look up the i18n value e.g. 'home.banner_text'
+// @param {string} source Context for where the given string key came from e.g. 'maze', 'dance', etc.
 function log(stringKey, source) {
   if (!stringKey || !source) {
     return;
   }
-  if (!window.stringUsageSources[source]) {
-    // Initialize the list of strings for the source if it doesn't already exist.
-    window.stringUsageSources[source] = new Set();
-  }
-  window.stringUsageSources[source].add(stringKey);
+
+  // Send the usage data to a background worker thread to be buffered and sent.
+  getI18nStringTrackerWorker().log(stringKey, source);
 }

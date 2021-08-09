@@ -9,22 +9,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
-const styles = {
-  pairingSelector: {
-    maxHeight: window.innerHeight * 0.8 - 100,
-    overflowY: 'auto'
-  },
-  spinner: {
-    marginTop: '10px'
-  },
-  leftButton: {
-    marginLeft: 0
-  },
-  errorMessage: {
-    color: color.red
-  }
-};
-
 /**
  * A component for managing pair programming.
  */
@@ -243,3 +227,19 @@ export default class Pairing extends React.Component {
     }
   }
 }
+
+const styles = {
+  pairingSelector: {
+    maxHeight: window.innerHeight * 0.8 - 100,
+    overflowY: 'auto'
+  },
+  spinner: {
+    marginTop: '10px'
+  },
+  leftButton: {
+    marginLeft: 0
+  },
+  errorMessage: {
+    color: color.red
+  }
+};

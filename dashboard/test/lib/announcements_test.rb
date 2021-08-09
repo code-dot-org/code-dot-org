@@ -13,7 +13,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("Sign up for Professional Learning", announcement[:title])
     assert_equal("Join us", announcement[:buttonText])
     assert_equal("https://code.org/educate/professional-learning/middle-high", announcement[:buttonUrl])
-    assert_equal("teacher-apps-open-2020-sign-up", announcement[:buttonId])
+    assert_equal("teacher-apps-open-2021-sign-up", announcement[:buttonId])
   end
 
   test 'gets home announcement' do

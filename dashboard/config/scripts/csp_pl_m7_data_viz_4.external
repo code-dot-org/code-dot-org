@@ -1,0 +1,14 @@
+name 'CSP-PL M7 - Data Viz 4'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Tying it all together
+
+At the end of the unit, students engage in the entire Data Analysis Process by telling their own “data story”.  Using a <a href="https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/view" target="blank" rel="noopener noreferrer">Project Guide</a> to support and document their work, students will pick their own dataset and determine what new information can be determined using a visualization.
+
+At this point, students will have created four different visualizations using the Data Visualizer. Students will need to decide what type of visualization is best for their data. To help students make this decision, they may reference the following flow chart, found in U9L4, to help them make their decision.
+
+![](https://images.code.org/05365e6144f9a6df597f2638a2bffa30-image-1605746325831.png)
+MARKDOWN

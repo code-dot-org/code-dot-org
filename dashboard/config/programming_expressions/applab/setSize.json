@@ -1,0 +1,14 @@
+{
+  "func": "setSize",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "width",
+    "height"
+  ],
+  "params": [
+    "\"id\"",
+    "100",
+    "100"
+  ]
+}

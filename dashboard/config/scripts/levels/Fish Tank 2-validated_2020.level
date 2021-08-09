@@ -61,7 +61,8 @@
     "encrypted": "false",
     "encrypted_examples": "7QDqNF/pABBVWR6xQk5yNSQfWDi3cIQhtdlG3AcenG0BCX0YujCBqLTTgV44\npN+blEy8BJk3xKnP3FImJ8EBIg==\n",
     "teacher_markdown": "This lesson contains a **mini-project** called *Swimming Fish*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\r\n\r\nThis level will validate a student’s code by checking that the following conditions have been met:\r\n\r\n* Student must have at least one fish sprite with an active behavior.\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

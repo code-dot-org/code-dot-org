@@ -54,7 +54,7 @@ Students use the Bee environment to write programs that use loops with embedded 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: For Loops](http://learn.code.org/s/course4/stage/9/puzzle/1)
+### <a name="Activity"></a> [Bee: For Loops](http://learn.code.org/s/course4/lessons/9/levels/1)
 
 This activity walks students through the differences between loops and for loops. In many cases, it is possible to solve problems with brute force that can easily be solved using for loops instead. As you walk around, look for students who are correctly using for loops and counters, then point out why the counters make the program easier.
 

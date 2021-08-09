@@ -31,7 +31,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'user should prefer working on 20hour instead of hoc' do
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     hoc = Script.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
@@ -43,7 +43,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
-    real_script = Script.starwars_script
+    real_script = Script.starwars_unit
     fake_script = create :script
 
     user_script_1 = create :user_script, user: @user, script: real_script

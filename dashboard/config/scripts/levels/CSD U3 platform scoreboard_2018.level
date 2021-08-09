@@ -45,7 +45,7 @@
     "name_suffix": "_2018",
     "contained_level_names": null,
     "preload_asset_list": null,
-    "long_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 16 Level 9](../../16/puzzle/9).\r\n\r\n# Do This\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen."
+    "long_instructions": "# Make the Scoreboard\r\n\r\n<img src=\"https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png\" style=\"float:right;\">\r\n\r\nYou'll also need a scoreboard so the player can keep track of the score.   There's already a `showScore` function written, but it only shows the text \"Score\" and not the actual score. ([Show me where](#triggercallout=code_triggered))  You can see an example of a working scoreboard in [Lesson 16 Level 9](../../16/levels/9).\r\n\r\n# Do This\r\n\r\n* Read the code in the `showScore` function.\r\n* Call the function inside the draw loop, right after you draw the backgrounds.\r\n* Use the `text` block to display the score at the top of the screen."
   },
   "published": true,
   "notes": "",

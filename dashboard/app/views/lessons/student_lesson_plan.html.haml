@@ -1,0 +1,6 @@
+%link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
+%script{src: webpack_asset_path('js/lessons/student_lesson_plan.js'), data: {lesson: @lesson_data.to_json}}
+
+= render partial: 'shared/emulate_print_media'
+
+#show-container

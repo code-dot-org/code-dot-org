@@ -991,6 +991,12 @@ en:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} gets target {TARGET} to {OPT}"
+        options:
+          OPT:
+            '"follow"': follow
+            '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -999,6 +1005,10 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_avoidingTargets:
+        text: avoiding targets
+      gamelab_beginCollectingData:
+        text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1010,6 +1020,7 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
@@ -1022,6 +1033,8 @@ en:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: number of {SPRITE}
       gamelab_createNewSprite:
@@ -1030,8 +1043,12 @@ en:
         text: remove {THIS}
       gamelab_draggable:
         text: being draggable
+      gamelab_drawLine:
+        text: draw line {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
+      gamelab_followingTargets:
+        text: following targets
       gamelab_getAllSprites:
         text: all sprites
       gamelab_getProp:
@@ -1044,6 +1061,7 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"tint"': tint
+            '"speed"': speed
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1058,6 +1076,12 @@ en:
             '"frames"': frames
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_ifVarEquals:
+        text: |-
+          if {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} is pressed"
         options:
@@ -1179,6 +1203,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1207,6 +1233,8 @@ en:
         text: sprite {SPRITE} stops {BEHAVIOR}
       gamelab_removeTint:
         text: remove color from {THIS}
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1245,6 +1273,20 @@ en:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: none
+      gamelab_setBackgroundImageAs:
+        text: set background to {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: set new sprite default size to {SIZE}
+        options:
+          SIZE:
+            '100': large
+            '75': medium
+            '50': small
+            '25': extra small
+      gamelab_setPrompt:
+        text: prompt user {QUESTION} for variable {VAR}
+      gamelab_setPromptWithChoices:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} to {VAL}
         options:
@@ -1254,6 +1296,17 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
+      gamelab_setProp_dropdown:
+        text: set {SPRITE} {PROPERTY} to {SIZE}
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '100': large
+            '75': medium
+            '50': small
+            '25': extra small
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} to {N}%
         options:
@@ -1263,6 +1316,8 @@ en:
             '"height"': height
       gamelab_setTint:
         text: change color of {THIS} to {COLOR}
+      gamelab_setupScoreboard:
+        text: "draw scoreboard \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}target{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           setup simulation with
@@ -1278,8 +1333,38 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_spriteSay:
+        text: "{SPRITE} say {SPEECH}"
+      gamelab_spriteSayChoices:
+        text: "{SPRITE} say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
+      gamelab_spriteSayTime:
+        text: "{SPRITE}say{TEXT1}for{NUM}seconds"
+      gamelab_startAvoiding:
+        text: "{SPRITE} begins avoiding {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} begins following {TARGET}"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} stops avoiding other sprites"
+      gamelab_stopCollectingData:
+        text: stop collecting data
+      gamelab_stopFollowing:
+        text: "{SPRITE} stops following other sprites"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1290,6 +1375,8 @@ en:
             '"left"': left
       gamelab_updateTitleWithColor:
         text: show title screen {BREAK} title {TITLE} color {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: when all prompts answered
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
@@ -1307,8 +1394,12 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
+      gamelab_whenPromptAnswered:
+        text: when {VAR} answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
+      gamelab_whenSpriteCreated:
+        text: when {SPRITE} created
       gamelab_whenTouching:
         text: when {SPRITE1} touches {SPRITE2}
       gamelab_whenUpArrow:
@@ -1336,6 +1427,21 @@ en:
         text: while {SPRITE1} is touching {SPRITE2}
       gamelab_whileUpArrow:
         text: while up arrow pressed
+      gamelab_withPercentChance:
+        text: |-
+          if {NUM}% chance
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} chance
+           {STATEMENT}
+        options:
+          NUM:
+            '90': very high
+            '75': high
+            '50': 50/50
+            '25': low
+            '10': very low
       gamelab_xLocationOf:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
@@ -1353,6 +1459,10 @@ en:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       Mikelab_changeAnim:
         text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
@@ -1553,10 +1663,23 @@ en:
             MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "{SPRITE}'s costume is {COSTUME}"
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Balancing on the"'
+            '"A chubby cat "': '"A chubby cat"'
+            '"The "': '"The "'
+          TEXT2:
+            '" fence"': '" fence"'
+            '""': '""'
+            '" breeze blows"': '" breeze blows"'
       Mikelab_randomColor:
         text: random color
       Mikelab_removeAllBehaviors:
@@ -1607,6 +1730,25 @@ en:
             '"direction"': movement direction
       Mikelab_setTint:
         text: change color of {SPRITE} to {COLOR}
+      Mikelab_setupLevel:
+        text: |-
+          setup level with
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          outbreak setup
+          population:{SPRITE2N}
+          {TOGGLE}virus
+      Mikelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
+          collecting
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         text: scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}
         options:
@@ -1696,6 +1838,65 @@ en:
         text: x coordinate of {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinate of {SPRITE}
+      Outbreak_beginCongregating:
+        text: monsters begin congregating
+      Outbreak_beginQuarantining:
+        text: monsters begin quarantining when sick
+      Outbreak_beginSocialDistancing:
+        text: monsters begin social distancing
+      Outbreak_beginWandering:
+        text: monsters begin wandering
+      Outbreak_beginWearingMasks:
+        text: monsters begin wearing masks
+      Outbreak_layoutBorder:
+        text: layout monsters in a border
+      Outbreak_layoutClusters:
+        text: layout monsters in clusters of {NUM}
+      Outbreak_layoutGrid:
+        text: layout monsters as a grid
+      Outbreak_layoutRandom:
+        text: layout monsters randomly
+      Outbreak_setSpeed:
+        text: set monster speed to {VAL}
+      Outbreak_setupOutbreak:
+        text: setup Monster Town with{COUNT}monsters
+      Outbreak_stopMoving:
+        text: monsters stop moving
+      PoemBot_addLine:
+        text: add line {LINE}
+      PoemBot_randomWord:
+        text: random word
+      PoemBot_setAuthor:
+        text: set poem author {AUTHOR}
+      PoemBot_setBackgroundEffect:
+        text: set background effect {BG_EFFECT}
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': rainbow
+      PoemBot_setForegroundEffect:
+        text: set foreground effect {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': rain
+            '"bubbles"': bubbles
+      PoemBot_setPoem:
+        text: set poem {BG_EFFECT}
+        options:
+          BG_EFFECT:
+            '"---"': "---"
+            '"wordsworth"': I Wandered Lonely as a Cloud
+            '"silverstein"': Batty
+      PoemBot_setTitle:
+        text: set poem title {TITLE}
+      PoemBot_showPoem:
+        text: show poem
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      PoemBot_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -1733,49 +1934,151 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} begins {BEHAVIOR} for {SECONDS} seconds
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} begins {BEHAVIOR} until {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: new sprite named{SPRITE_NAME} with costume{ANIMATION_NAME} at location{LOCATION}
-      aalab_goToScene:
-        text: go to scene {SCENE}
+      aalab_layoutSprites:
+        text: layout monsters as a {FORMAT}
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: move {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      aalab_prompt:
-        text: ask question {MESSAGE}
-      aalab_scene:
-        text: scene {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup story
-      aalab_starwars_playSound:
-        text: play{OPTION}sound
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': row
             '"random"': random
-            '"R2-D2 random"': R2-D2 random
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_levelFailure:
+        text: student {STATE} wtih key {KEY}
+        options:
+          STATE:
+            '0': passes
+            '3': fails
+      aalab_setSpeed:
+        text: set monster speed to {VAL}
+      aalab_setupSim:
+        text: setup Monster Town with{COUNT}monsters
+      aalab_someGraduallyStartIntervention:
+        text: "{PORTION} monsters {RATE} begin {BEHAVIOR}"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          RATE:
+            '"immediately"': immediately
+            '"quickly"': quickly
+            '"gradually"': gradually
+            '"slowly"': slowly
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_someStartIntervention:
+        text: "{PORTION} monsters begin {BEHAVIOR}"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_spriteSayChoices:
+        text: "{SPRITE} say {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': I have spoken.
+            '"Bounty hunting is a complicated profession."': Bounty hunting is a complicated profession.
+            '"I will initiate self-destruct."': I will initiate self-destruct.
+            '"This is the way."': This is the way.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': People get built different. We don’t need to figure it out, we just need to respect it.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': You don’t need a mirror to look good. You’re beautiful on the inside.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Sometimes life is scary and dark. That is why we must find the light.
+            '"Everything small is just a smaller version of something big."': Everything small is just a smaller version of something big.
+            '"Suckin’ at something is the first step to being sorta good at something."': Suckin’ at something is the first step to being sorta good at something.
+            '"Life happens wherever you are, whether you make it or not."': Life happens wherever you are, whether you make it or not.
+            '"You can’t knock me down!"': You can’t knock me down!
+            '"Roar!"': Roar!
+            '"My first girlfriend turned into the moon."': My first girlfriend turned into the moon.
+            '"True humility is the only antidote to shame."': True humility is the only antidote to shame.
+            '"You are stronger and wiser and freer than you have ever been."': You are stronger and wiser and freer than you have ever been.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': You have to try every time. You can't quit because you're afraid you might fail.
+      aalab_startIntervention:
+        text: monsters begin {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            wandering: wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      batman_batmanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_batwomanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batwoman!"': I am Batwoman!
+      batman_bruceSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"Call me Bruce"': Call me Bruce.
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_catwomanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
+      batman_freezeSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I''m Mr. Freeze!"': I'm Mr. Freeze!
+            '"Stay Cool!"': Stay Cool!
+            '"Everyone, chill!"': Everyone, chill!
+            '"Cool party!"': Cool party!
+            '"Allow me to break the ice."': Allow me to break the ice.
+            '"Tonight’s forecast… a freeze is coming!"': Tonight’s forecast… a freeze is coming!
+      batman_harleySay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Harley Quinn!"': I am Harley Quinn!
+      batman_jokerSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I''m the Joker!"': I'm the Joker!
+      batman_nightwingSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Nightwing!"': I am Nightwing!
+      batman_poisonivySay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Poison Ivy!"': I am Poison Ivy!
+      batman_robinSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Robin!"': I am Robin!
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -1870,7 +2173,7 @@ en:
             '"stoneBricks"': stone bricks
             '"mossyStoneBricks"': mossy stone bricks
             '"crackedStoneBricks"': cracked stone bricks
-            '"decorativeStoneBricks"': decorative stone bricks
+            '"chiseledStoneBricks"': decorative stone bricks
             '"blueCoralBlock"': blue coral block
             '"pinkCoralBlock"': pink coral block
             '"magentaCoralBlock"': magenta coral block
@@ -1918,3 +2221,7 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      validation_validatedBackground:
+        text: set background to {IMG}
+      validation_validatedSound:
+        text: PLAYSound {SOUND}

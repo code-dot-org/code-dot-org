@@ -51,7 +51,11 @@ export default class PrivacyDialog extends React.Component {
                 aggregated. Our Regional Partners are contractually obliged to
                 treat this information with the same level of confidentiality as
                 Code.org. To see the full Code.org privacy policy, visit{' '}
-                <a href="https://code.org/privacy" target="_blank">
+                <a
+                  href="https://code.org/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   code.org/privacy
                 </a>
                 .
@@ -88,7 +92,11 @@ export default class PrivacyDialog extends React.Component {
               contractually obliged to treat this information with the same
               level of confidentiality as Code.org. To see Code.org’s complete
               Privacy Policy, visit{' '}
-              <a href="http://code.org/privacy" target="_blank">
+              <a
+                href="http://code.org/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 http://code.org/privacy
               </a>
               .

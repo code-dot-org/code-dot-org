@@ -13,44 +13,49 @@ import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {sandboxDocumentBody} from '../util/testUtils';
+import {
+  sandboxDocumentBody,
+  replaceOnWindow,
+  restoreOnWindow
+} from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import * as utils from '@cdo/apps/utils';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
 
   describe('StudioApp.singleton', () => {
-    beforeEach(stubStudioApp);
-    afterEach(restoreStudioApp);
-
     let containerDiv, codeWorkspaceDiv;
+
     beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      registerReducers(commonReducers);
+      replaceOnWindow('setTimeout', () => {});
+
       codeWorkspaceDiv = document.createElement('div');
       codeWorkspaceDiv.id = 'codeWorkspace';
       document.body.appendChild(codeWorkspaceDiv);
-
       containerDiv = document.createElement('div');
       containerDiv.id = 'foo';
       containerDiv.innerHTML = `
-  <button id="runButton" />
-  <button id="resetButton" />
-  <div id="visualizationColumn" />
-  <div id="toolbox-header" />
-  `;
+      <button id="runButton" />
+      <button id="resetButton" />
+      <div id="visualizationColumn" />
+      <div id="toolbox-header" />
+      `;
       document.body.appendChild(containerDiv);
     });
 
     afterEach(() => {
+      restoreStudioApp();
+      restoreRedux();
+      restoreOnWindow('setTimeout');
+
       document.body.removeChild(codeWorkspaceDiv);
       document.body.removeChild(containerDiv);
     });
-
-    beforeEach(() => {
-      stubRedux();
-      registerReducers(commonReducers);
-    });
-    afterEach(restoreRedux);
 
     describe('the init() method', () => {
       let files;
@@ -107,6 +112,88 @@ describe('StudioApp', () => {
       });
     });
 
+    describe('StudioApp.editDuringRunAlertHandler()', () => {
+      const mockCode = '<xml></xml>';
+      let studio;
+
+      beforeEach(() => {
+        studio = studioApp();
+        studio.executingCode = mockCode;
+        studio.clearHighlighting = sinon.spy();
+      });
+
+      afterEach(() => {
+        sinon.restore();
+      });
+
+      it('no-ops if app is not running', () => {
+        sinon.stub(studio, 'isRunning').returns(false);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('no-ops if code has not changed', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode);
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('no-ops if editDuringRunAlert is not undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.editDuringRunAlert = '<div/>';
+
+        studio.editDuringRunAlertHandler();
+
+        // Make sure clearHighlighting() was never called to confirm no-op.
+        expect(studio.clearHighlighting).to.have.not.been.called;
+      });
+
+      it('clears block highlighting', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.clearHighlighting).to.have.been.calledOnce;
+      });
+
+      it('checks localStorage if showEditDuringRunAlert is true', () => {
+        studio.showEditDuringRunAlert = true;
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        sinon.stub(utils, 'tryGetLocalStorage');
+
+        studio.editDuringRunAlertHandler();
+
+        expect(utils.tryGetLocalStorage).to.have.been.calledWith(
+          'hideEditDuringRunAlert',
+          null
+        );
+      });
+
+      it('renders editDuringRunAlert if showEditDuringRunAlert is true and editDuringRunAlert is undefined', () => {
+        sinon.stub(studio, 'isRunning').returns(true);
+        sinon.stub(studio, 'getCode').returns(mockCode + '<xml>more xml</xml'); // code has changed
+        studio.showEditDuringRunAlert = true;
+        studio.editDuringRunAlert = undefined;
+        sinon.stub(utils, 'tryGetLocalStorage').returns(null); // user has not dismissed this alert before
+        studio.displayWorkspaceAlert = sinon.spy();
+
+        studio.editDuringRunAlertHandler();
+
+        expect(studio.displayWorkspaceAlert).to.have.been.calledOnce;
+      });
+    });
+
     describe('The StudioApp.resetButtonClick function', () => {
       let studio, reportSpy;
       beforeEach(() => {
@@ -120,7 +207,7 @@ describe('StudioApp', () => {
         studio.reset = () => {};
 
         reportSpy = sinon.spy();
-        studio.report = reportSpy;
+        studio.debouncedSilentlyReport = reportSpy;
       });
 
       it('Sets hasReported to false', () => {
@@ -441,6 +528,37 @@ describe('StudioApp', () => {
 
       expect(changed1).to.be.true;
       expect(changed2).to.be.true;
+    });
+  });
+
+  describe('The StudioApp.validateCodeChanged function', () => {
+    let studio, codeDifferentStub;
+    beforeEach(() => {
+      codeDifferentStub = sinon.stub(project, 'isCurrentCodeDifferent');
+      studio = studioApp();
+    });
+
+    afterEach(() => {
+      codeDifferentStub.restore();
+    });
+
+    it('returns true if validationEnabled is not set', () => {
+      studio.config = {level: {}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns true if validationEnabled is false', () => {
+      studio.config = {level: {validationEnabled: false}};
+      expect(studio.validateCodeChanged()).to.be.true;
+      expect(codeDifferentStub).to.have.not.been.called;
+    });
+
+    it('returns the result of project.isCurrentCodeDifferent', () => {
+      studio.config = {level: {validationEnabled: true}};
+      codeDifferentStub.returns(false);
+      expect(studio.validateCodeChanged()).to.be.false;
+      expect(codeDifferentStub).to.have.been.called;
     });
   });
 });

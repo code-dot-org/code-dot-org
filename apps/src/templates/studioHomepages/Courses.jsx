@@ -14,12 +14,6 @@ import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import shapes from './shapes';
 
-const styles = {
-  content: {
-    maxWidth: styleConstants['content-width']
-  }
-};
-
 class Courses extends Component {
   static propTypes = {
     isEnglish: PropTypes.bool.isRequired,
@@ -28,7 +22,8 @@ class Courses extends Component {
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
-    specialAnnouncement: shapes.specialAnnouncement
+    specialAnnouncement: shapes.specialAnnouncement,
+    showAiCard: PropTypes.bool
   };
 
   componentDidMount() {
@@ -118,7 +113,7 @@ class Courses extends Component {
                     announcement={specialAnnouncement}
                   />
                 )}
-                <CoursesTeacherEnglish />
+                <CoursesTeacherEnglish showAiCard={this.props.showAiCard} />
               </div>
             )}
 
@@ -143,5 +138,11 @@ class Courses extends Component {
     );
   }
 }
+
+const styles = {
+  content: {
+    maxWidth: styleConstants['content-width']
+  }
+};
 
 export default Courses;

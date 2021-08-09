@@ -94,28 +94,44 @@ video_player: true
       %th Unit description
     %tr
       %td
-        %a{href: CDO.studio_url("/s/csp3-2019")}
-          %img{src: "/educate/csp/images/thumb_applab.png"}
+        %a{href: CDO.studio_url("/s/csp3-2021")}
+          %img{src: "/educate/csp/images/unit3.png"}
           Unit 3
       %td
-        %b.purple Algorithms and Programming
-        %p This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+        %b.purple Intro to App Design
+        %p Students design their first app while learning both fundamental programming concepts and collaborative software development processes. Students work with partners to develop a simple app that teaches classmates about a topic of personal interest. Throughout the unit, they learn how to use Code.org’s programming environment, App Lab, to design user interfaces and write simple event-driven programs. Along the way, students learn practices like debugging, pair programming, and collecting and responding to feedback, which they will be able to use throughout the course as they build ever more complex projects. The unit concludes with students sharing the apps they develop with their classmates.
     %tr
       %td
-        %a{href: CDO.studio_url("/s/csp5-2019")}
-          %img{src: "/educate/csp/images/thumb_app.png"}
+        %a{href: CDO.studio_url("/s/csp4-2021")}
+          %img{src: "/educate/csp/images/unit4.png"}
+          Unit 4
+      %td
+        %b.purple Variables, Conditions, and Functions
+        %p Students expand the types of apps they can create as they learn how to store information (variables), make decisions (conditionals), and better organize code (functions). Each programming topic is covered in a specific sequence of lessons that ask students to ‘Explore’ ideas through hands-on activities, ‘Investigate’ these ideas through guided code reading, ‘Practice’ with sample problems, and apply their understanding as they ‘Make’ a one-day scoped project. The entire unit concludes with a three-day open-ended project in which students must build an app that makes a recommendation about any topic they wish.
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csp5-2021")}
+          %img{src: "/educate/csp/images/unit5.png"}
           Unit 5
       %td
-        %b.purple Building Apps
-        %p This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event-driven apps.
+        %b.purple Lists, Loops, and Traversals
+        %p Students learn to build apps that use and process lists of information. Like the previous unit, students learn the core concepts of lists, loops, and traversals through a series of EIPM lesson sequences. Later in the unit, students are introduced to tools that allow them to import tables of real-world data to help further power the types of apps they can make. At the conclusion of the unit, students complete a week-long project in which they must design an app around a goal of their choosing that uses one of these data sets.
     %tr
       %td
-        %a{href: CDO.studio_url("/s/csppostap-2019")}
-          %img{src: "/educate/csp/images/data_button.png"}
-          Post-AP
+        %a{href: CDO.studio_url("/s/csp7-2021")}
+          %img{src: "/educate/csp/images/unit7.png"}
+          Unit 7
       %td
-        %b.purple Post-AP material - Making Data-backed apps
-        %p This unit teaches students how to use App Lab's database capabilites to make apps that store data in the cloud so it can be retrieved later.
+        %b.purple Parameters, Return, and Libraries
+        %p Students learn how to design clean and reusable code that can be shared with a single classmate or the entire world. In the beginning of the unit, students are introduced to the concepts of parameters and return, which allow for students to design functions that implement an algorithm. In the second half of the unit, students learn how to design libraries of functions that can be packaged up and shared with others. The unit concludes with students designing their own small library of functions that can be used by a classmate.
+    %tr
+      %td
+        %a{href: CDO.studio_url("/s/csp9-2021")}
+          %img{src: "/educate/csp/images/unit9.png"}
+          Unit 9
+      %td
+        %b.purple Data
+        %p Students explore and visualize datasets from a wide variety of topics as they hunt for patterns and try to learn more about the world around them from the data. Once again, students work with datasets in App Lab, but are now asked to make use of a data visualizer tool that assists students in finding data patterns. They learn how different types of visualizations can be used to better understand the patterns contained in datasets and how to use visualizations when investigating hypotheses. At the conclusion of the unit, students learn about the impacts of data analysis on the world around them and complete a final project in which they must uncover and present a data investigation they've completed independently.
 
   %h3
     %a{href: '/csd'} Computer Science Discoveries
@@ -127,7 +143,7 @@ video_player: true
       %th Unit description
     %tr
       %td
-        %a{href: CDO.studio_url("/s/csd4-2019")}
+        %a{href: CDO.studio_url("/s/csd4-2021")}
           %img{src: "/educate/csp/images/thumb_app.png"}
           Unit 4
       %td
@@ -152,18 +168,18 @@ video_player: true
   Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
 
   - cspunit3_videos = []
-  - cspunit3_videos << { id: 'turtle', category_title: 'Procedural abstraction and top-down design', caption: 'Program a turtle to move around the screen and draw anything from basic shapes to complex designs.', code: 'i2KHYUhtOlM', download_path: '//videos.code.org/2015/csp/applab/turtle.mp4', studio_stage: '/s/cspunit3/stage/2/puzzle/1' }
-  - cspunit3_videos << { id: 'functions', category_title: '', caption: 'Learn how to define and call functions so you can easily reuse code more efficiently.', code: 'yPWQfa4CHbw', download_path: '//videos.code.org/2015/csp/applab/functions.mp4', studio_stage: '/s/cspunit3/stage/3/puzzle/1' }
-  - cspunit3_videos << { id: 'functions_params', category_title: 'Documentation and simple loops', caption: 'Create functions with parameters to make functions that are more flexible and can be used to solve different kinds of problems.', code: 'k7Ji1E97-V0', download_path: '//videos.code.org/2015/csp/applab/functions_parameters.mp4', studio_stage: '/s/cspunit3/stage/6/puzzle/1' }
-  - cspunit3_videos << { id: 'loops', category_title: '', caption: 'Learn how to use loops to repeat code and simplify your app.', code: 'G8hfAk4PfOM', download_path: '//videos.code.org/2015/csp/applab/loops.mp4', studio_stage: '/s/cspunit3/stage/7/puzzle/1' }
-  - cspunit3_videos << { id: 'design_mode', category_title: 'Event-driven programming and apps', caption: 'Start using design mode to create a user interface for your app where users can click buttons, select from dropdowns, and even use a slider.', code: '-EoTeD4mSNU', download_path: '//videos.code.org/2015/csp/applab/design.mp4', studio_stage: '/s/cspunit3/stage/12/puzzle/1'}
-  - cspunit3_videos << { id: 'variables_1', category_title: 'Variables and strings', caption: 'An introduction to variables that can be used throughout your code.', code: 'G41G_PEWFjE', download_path: '//videos.code.org/2015/csp/applab/variables_1.mp4', studio_stage: '/s/cspunit3/stage/14/puzzle/1' }
-  - cspunit3_videos << { id: 'variables_2', category_title: '', caption: 'Learn how to use different kinds of variables to make your apps more complex.', code: 'ijjVDBPwA1o', download_path: '//videos.code.org/2015/csp/applab/variables_2.mp4', studio_stage: '/s/cspunit3/stage/15/puzzle/1' }
-  - cspunit3_videos << { id: 'conditionals_1', category_title: 'Conditionals and boolean logic', caption: 'Use boolean expressions to make decisions in your app logic.', code: 'y3rCKJNOwpA', download_path: '//videos.code.org/2015/csp/applab/conditionals_1.mp4', studio_stage: '/s/cspunit3/stage/18/puzzle/1' }
-  - cspunit3_videos << { id: 'conditionals_2', category_title: '', caption: 'Create conditions with if/else statements to make your app more unique.', code: 'UDi7xgIIW8E', download_path: '//videos.code.org/2015/csp/applab/conditionals_2.mp4', studio_stage: '/s/cspunit3/stage/18/puzzle/1'}
-  - cspunit3_videos << { id: 'conditionals_3', category_title: '', caption: 'Add more complex logic like AND and OR to give users more choices in your apps.', code: 'kyFdniI-ZZs', download_path: '//videos.code.org/2015/csp/applab/conditionals_3.mp4', studio_stage: '/s/cspunit3/stage/20/puzzle/1' }
-  - cspunit3_videos << { id: 'intro_lists', category_title: 'Loops and arrays', caption: 'Organize your information by using a list in your app.', code: 'KFy7u3Rhozs', download_path: '//videos.code.org/2015/csp/applab/lists_intro_full.mp4', studio_stage: '/s/cspunit3/stage/24/puzzle/1' }
-  - cspunit3_videos << { id: 'processing_lists', category_title: 'Processing arrays of data', caption: 'Create charts with your data by processing a list.', code: 'RQ6GJt9f2vg', download_path: '//videos.code.org/2015/csp/applab/processing_lists.mp4', studio_stage: '/s/cspunit3/stage/26/puzzle/1' }
+  - cspunit3_videos << { id: 'turtle', category_title: 'Procedural abstraction and top-down design', caption: 'Program a turtle to move around the screen and draw anything from basic shapes to complex designs.', code: 'i2KHYUhtOlM', download_path: '//videos.code.org/2015/csp/applab/turtle.mp4', studio_stage: '/s/cspunit3/lessons/2/levels/1' }
+  - cspunit3_videos << { id: 'functions', category_title: '', caption: 'Learn how to define and call functions so you can easily reuse code more efficiently.', code: 'yPWQfa4CHbw', download_path: '//videos.code.org/2015/csp/applab/functions.mp4', studio_stage: '/s/cspunit3/lessons/3/levels/1' }
+  - cspunit3_videos << { id: 'functions_params', category_title: 'Documentation and simple loops', caption: 'Create functions with parameters to make functions that are more flexible and can be used to solve different kinds of problems.', code: 'k7Ji1E97-V0', download_path: '//videos.code.org/2015/csp/applab/functions_parameters.mp4', studio_stage: '/s/cspunit3/lessons/6/levels/1' }
+  - cspunit3_videos << { id: 'loops', category_title: '', caption: 'Learn how to use loops to repeat code and simplify your app.', code: 'G8hfAk4PfOM', download_path: '//videos.code.org/2015/csp/applab/loops.mp4', studio_stage: '/s/cspunit3/lessons/7/levels/1' }
+  - cspunit3_videos << { id: 'design_mode', category_title: 'Event-driven programming and apps', caption: 'Start using design mode to create a user interface for your app where users can click buttons, select from dropdowns, and even use a slider.', code: '-EoTeD4mSNU', download_path: '//videos.code.org/2015/csp/applab/design.mp4', studio_stage: '/s/cspunit3/lessons/12/levels/1'}
+  - cspunit3_videos << { id: 'variables_1', category_title: 'Variables and strings', caption: 'An introduction to variables that can be used throughout your code.', code: 'G41G_PEWFjE', download_path: '//videos.code.org/2015/csp/applab/variables_1.mp4', studio_stage: '/s/cspunit3/lessons/14/levels/1' }
+  - cspunit3_videos << { id: 'variables_2', category_title: '', caption: 'Learn how to use different kinds of variables to make your apps more complex.', code: 'ijjVDBPwA1o', download_path: '//videos.code.org/2015/csp/applab/variables_2.mp4', studio_stage: '/s/cspunit3/lessons/15/levels/1' }
+  - cspunit3_videos << { id: 'conditionals_1', category_title: 'Conditionals and boolean logic', caption: 'Use boolean expressions to make decisions in your app logic.', code: 'y3rCKJNOwpA', download_path: '//videos.code.org/2015/csp/applab/conditionals_1.mp4', studio_stage: '/s/cspunit3/lessons/18/levels/1' }
+  - cspunit3_videos << { id: 'conditionals_2', category_title: '', caption: 'Create conditions with if/else statements to make your app more unique.', code: 'UDi7xgIIW8E', download_path: '//videos.code.org/2015/csp/applab/conditionals_2.mp4', studio_stage: '/s/cspunit3/lessons/18/levels/1'}
+  - cspunit3_videos << { id: 'conditionals_3', category_title: '', caption: 'Add more complex logic like AND and OR to give users more choices in your apps.', code: 'kyFdniI-ZZs', download_path: '//videos.code.org/2015/csp/applab/conditionals_3.mp4', studio_stage: '/s/cspunit3/lessons/20/levels/1' }
+  - cspunit3_videos << { id: 'intro_lists', category_title: 'Loops and arrays', caption: 'Organize your information by using a list in your app.', code: 'KFy7u3Rhozs', download_path: '//videos.code.org/2015/csp/applab/lists_intro_full.mp4', studio_stage: '/s/cspunit3/lessons/24/levels/1' }
+  - cspunit3_videos << { id: 'processing_lists', category_title: 'Processing arrays of data', caption: 'Create charts with your data by processing a list.', code: 'RQ6GJt9f2vg', download_path: '//videos.code.org/2015/csp/applab/processing_lists.mp4', studio_stage: '/s/cspunit3/lessons/26/levels/1' }
   - cspunit3_videos.each do |video|
     // Show the chapter title at the
     // beginning of each video chapter

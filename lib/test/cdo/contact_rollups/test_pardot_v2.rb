@@ -15,7 +15,7 @@ class PardotV2Test < Minitest::Test
     result = PardotV2.retrieve_prospects(0, ['id']) {|mappings| yielded_result = mappings}
 
     assert_equal 0, result
-    assert_equal nil, yielded_result
+    assert_nil yielded_result
   end
 
   def test_retrieve_prospects_with_result

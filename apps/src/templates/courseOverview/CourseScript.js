@@ -13,46 +13,10 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   isScriptHiddenForSection,
   toggleHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-const styles = {
-  main: {
-    display: 'table',
-    width: '100%',
-    height: '100%',
-    background: color.background_gray,
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    borderStyle: 'solid',
-    borderRadius: 2,
-    marginBottom: 12
-  },
-  content: {
-    padding: 20
-  },
-  description: {
-    marginTop: 20,
-    marginBottom: 20
-  },
-  title: {
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  // TODO: share better with ProgressLesson
-  hidden: {
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    marginTop: 0,
-    marginBottom: 12,
-    marginLeft: 0,
-    marginRight: 0
-  },
-  flex: {
-    display: 'flex'
-  }
-};
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class CourseScript extends Component {
   static propTypes = {
@@ -66,7 +30,7 @@ class CourseScript extends Component {
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
-    hiddenStageState: PropTypes.object.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
@@ -98,7 +62,7 @@ class CourseScript extends Component {
       description,
       viewAs,
       selectedSectionId,
-      hiddenStageState,
+      hiddenLessonState,
       hasNoSections,
       assignedSectionId,
       courseId,
@@ -107,7 +71,7 @@ class CourseScript extends Component {
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
-      hiddenStageState,
+      hiddenLessonState,
       selectedSectionId,
       id
     );
@@ -137,7 +101,9 @@ class CourseScript extends Component {
       >
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
-          <div style={styles.description}>{description}</div>
+          <div style={styles.description}>
+            <SafeMarkdown markdown={description} />
+          </div>
           <span style={styles.flex}>
             <Button
               __useDeprecatedTag
@@ -175,6 +141,44 @@ class CourseScript extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'table',
+    width: '100%',
+    height: '100%',
+    background: color.background_gray,
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    borderStyle: 'solid',
+    borderRadius: 2,
+    marginBottom: 12
+  },
+  content: {
+    padding: 20
+  },
+  description: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  title: {
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  // TODO: share better with ProgressLesson
+  hidden: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0
+  },
+  flex: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+};
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(
@@ -187,7 +191,7 @@ export default connect(
       ownProps.courseId,
       true
     ),
-    hiddenStageState: state.hiddenStage,
+    hiddenLessonState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0

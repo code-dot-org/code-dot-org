@@ -62,7 +62,7 @@
 
     - if standalone && !data['options'].try(:[], 'hide_submit')
       .buttons{class: data['submittable'] == 'true' ? 'submittable' : nil}
-        %a.btn.btn-large.btn-primary.next-stage.submitButton{id: "submit_level_#{level.id}"}
+        %a.btn.btn-large.btn-primary.next-lesson.submitButton{id: "submit_level_#{level.id}"}
           =t('submit')
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
           =t('unsubmit')

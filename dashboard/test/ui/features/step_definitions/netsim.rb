@@ -1,14 +1,14 @@
 # NetSim-specific Cucumber step definitions
 
-# Which stage of allthethings.script contains the netsim levels; this way we
+# Which lesson of allthethings.script contains the netsim levels; this way we
 # only have to update in one place if this changes.
-NETSIM_ALLTHETHINGS_STAGE = 14
+NETSIM_ALLTHETHINGS_LESSON = 14
 
 # Given I am on the 1st NetSim test level
 # Navigates to the requested level in the AllTheThings script.
 Given /^I am on the (\d+)(?:st|nd|rd|th)? (?:Net ?Sim|Internet Simulator) test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{NETSIM_ALLTHETHINGS_STAGE}/puzzle/#{level_index}?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{NETSIM_ALLTHETHINGS_LESSON}/levels/#{level_index}?noautoplay=true"
     And I rotate to landscape
   STEPS
 end

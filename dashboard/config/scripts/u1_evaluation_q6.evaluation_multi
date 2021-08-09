@@ -1,4 +1,4 @@
 name 'U1 evaluation q6'
 question ‘Have you ever looked at the traffic in your web browser when you request a website?’ 
 answer ‘Yes!’
-answer ‘Nope!’, weight: 1, stage_name:  'Lessons 12 - 13: Abstraction on the Internet'
+answer ‘Nope!’, weight: 1, lesson_name:  'Lessons 12 - 13: Abstraction on the Internet'

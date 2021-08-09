@@ -21,5 +21,5 @@ Keeping data in a remote database has the benefit of allowing data storage to be
 * Use callback functions to correctly sequence programs that involve data commands.
 * Improve the Contacts App.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

@@ -1,0 +1,11 @@
+{
+  "func": "sqrt",
+  "category": "Math",
+  "paletteParams": [
+    "num"
+  ],
+  "params": [
+    "9"
+  ],
+  "type": "value"
+}

@@ -1,36 +1,25 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import _ from 'lodash';
+
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LessonTip, {
   tipTypes
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
-import _ from 'lodash';
+import i18n from '@cdo/locale';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingBottom: 20,
-    paddingRight: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textArea: {
-    width: '95%'
-  }
-};
+import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
+import LessonEditorDialog from './LessonEditorDialog';
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    tip: tipShape,
-    handleConfirm: PropTypes.func.isRequired
+    tip: tipShape.isRequired,
+    handleConfirm: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -51,56 +40,86 @@ export default class EditTipDialog extends Component {
   handleTipTypeChange = event => {
     const newTip = _.cloneDeep(this.state.tip);
     const type = event.target.value;
-    console.log(event.target.value);
     newTip.type = type;
     this.setState({tip: newTip});
   };
 
-  handleClose = () => {
+  handleCloseAndSave = () => {
     this.props.handleConfirm(this.state.tip);
+  };
+
+  handleClose = () => {
+    this.props.handleConfirm();
+  };
+
+  handleDelete = () => {
+    this.props.handleDelete(this.state.tip.key);
+    this.props.handleConfirm();
   };
 
   render() {
     return (
-      <BaseDialog
+      <LessonEditorDialog
         isOpen={this.props.isOpen}
         handleClose={this.handleClose}
-        useUpdatedStyles
-        style={styles.dialog}
       >
         <div style={styles.dialogContent}>
-          <h2>Add Tip</h2>
+          <h2>Add Callout</h2>
           <select
             onChange={this.handleTipTypeChange}
-            defaultValue={tipTypes[this.state.tip.type].displayName}
+            value={this.state.tip.type}
           >
-            {Object.values(tipTypes).map((tip, index) => {
+            {Object.values(tipTypes).map((tipType, index) => {
               return (
                 <option
                   value={Object.keys(tipTypes)[index]}
                   key={`tip-${index}`}
                 >
-                  {tip.displayName}
+                  {tipType.displayName}
                 </option>
               );
             })}
           </select>
-          <textarea
-            defaultValue={this.state.tip.markdown}
-            onChange={this.handleTextChange}
-            style={styles.textArea}
+          <MarkdownEnabledTextarea
+            markdown={this.state.tip.markdown}
+            name={'callout'}
+            inputRows={5}
+            handleMarkdownChange={this.handleTextChange}
+            features={{imageUpload: true}}
           />
           <LessonTip tip={this.state.tip} />
         </div>
-        <DialogFooter rightAlign>
+        <DialogFooter>
+          <ConfirmDeleteButton
+            title={'Delete Callout?'}
+            body={`Are you sure you want to remove the ${
+              tipTypes[this.state.tip.type].displayName
+            } with key "${this.state.tip.key}" from the Activity?`}
+            buttonText={'Delete'}
+            containerStyle={styles.confirmDeleteButton}
+            onConfirmDelete={this.handleDelete}
+          />
           <Button
-            __useDeprecatedTag
-            text={i18n.closeAndSave()}
-            onClick={this.handleClose}
+            text={i18n.saveAndClose()}
+            onClick={this.handleCloseAndSave}
             color={Button.ButtonColor.orange}
           />
         </DialogFooter>
-      </BaseDialog>
+      </LessonEditorDialog>
     );
   }
 }
+
+const styles = {
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textArea: {
+    width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+};

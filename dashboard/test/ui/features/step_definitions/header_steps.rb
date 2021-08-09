@@ -1,3 +1,20 @@
+# Helper steps for interacting with the header
+When /^I (?:open|close) the help menu$/ do
+  help_menu_button_selector = '#help-icon'
+  steps %{
+    Then I wait until element "#{help_menu_button_selector}" is visible
+    And I click selector "#{help_menu_button_selector}"
+    Then I wait to see "#help-contents"
+  }
+end
+
+When /^I press help menu item "([^"]*)"$/ do |help_menu_item_id|
+  menu_item_selector = "#help-contents #{help_menu_item_id}"
+  steps %{
+    Then I wait until element "#{menu_item_selector}" is visible
+    And I click selector "#{menu_item_selector}"
+  }
+end
 
 Then /^I initiate pairing$/ do
   steps <<-STEPS

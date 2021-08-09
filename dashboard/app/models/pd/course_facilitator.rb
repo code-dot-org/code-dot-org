@@ -12,7 +12,7 @@
 #  index_pd_course_facilitators_on_facilitator_id_and_course  (facilitator_id,course) UNIQUE
 #
 
-class Pd::CourseFacilitator < ActiveRecord::Base
+class Pd::CourseFacilitator < ApplicationRecord
   belongs_to :facilitator, class_name: 'User'
 
   validates_inclusion_of :course, in: Pd::Workshop::COURSES

@@ -1,0 +1,17 @@
+name 'CSA U2L2-L2 Placeholder'
+title 'Check for Understanding'
+
+wrong '"blues"'
+wrong '"classic"'
+right '"pop"'
+
+markdown <<MARKDOWN
+What is the final value of the variable `genre`?
+
+```
+1  String genre;
+2  genre = "blues";
+3  genre = "classic";
+4  genre = "pop";
+```
+MARKDOWN

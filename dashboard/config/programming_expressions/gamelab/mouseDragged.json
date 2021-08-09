@@ -1,0 +1,7 @@
+{
+  "func": "mouseDragged",
+  "block": "function mouseDragged() {}",
+  "expansion": "function mouseDragged() {\n  __;\n}",
+  "category": "World",
+  "noAutocomplete": true
+}

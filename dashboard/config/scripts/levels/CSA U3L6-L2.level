@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "In `NeighborhoodConcert.java`, add the following to the `introDaytime()` method:\r\n1. Create an `int` array called `notes` that stores at least five values. For example:\r\n\r\n```\r\nint[] notes = {45, 46, 47, 46, 45};\r\n```\r\n\r\n2. Play the `notes` array by using an enhanced `for` loop and `myStage.playNoteAndPause()`. Use `Instrument.BASS` for the instrument and play each note for `0.3` seconds.\r\n\r\nRemember that the syntax for an enhanced `for` loop is:\r\n\r\n```\r\nfor (type variable : arrayName) {\r\n\r\n   // loop body\r\n\r\n}\r\n```\r\n\r\nIn `MyConcert.java`, test your `introDaytime()` method by commenting the call to `playConcert()` and adding the following:\r\n```\r\n// myConcert.playConcert();\r\n\r\nmyConcert.getImages();\r\nmyConcert.introDaytime();\r\nmyStage.play();\r\n```\r\n\r\nWhen you know it works, test your whole concert by uncommenting the call to `playConcert()` and deleting the calls to `getImages()`, `introDaytime()` and `play()`!",
+    "mini_rubric": "false",
+    "project_template_level_name": "CSA Neighborhood Concert Template",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "parent_level_id": 29245,
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tN7auHkLS870w3RdKAg\nly3NjoawUa3ILsGU5HHhhGAcQ4vbH87OE6hR4SLvvDc4KFo=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-07-22T15:35:35.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-07-22T15:35:35.111+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L3\\\"\"],\"cloned_from\":\"CSA U3L5-L3\"},{\"changed_at\":\"2021-07-22 16:11:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 16:27:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:31:32 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 18:13:33 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 18:25:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 18:59:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 19:04:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

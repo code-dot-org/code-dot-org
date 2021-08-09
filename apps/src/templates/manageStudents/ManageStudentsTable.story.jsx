@@ -7,7 +7,7 @@ import manageStudents, {
 } from './manageStudentsRedux';
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
-import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 const initialState = {
   manageStudents: {
@@ -20,7 +20,7 @@ const initialState = {
       id: 53
     }
   },
-  scriptSelection: {
+  unitSelection: {
     scriptId: 22,
     validScripts: [{id: 22, script_name: 'allthethings'}]
   }
@@ -244,7 +244,7 @@ export default storybook => {
   storybook
     .storiesOf('ManageStudentsTable', module)
     .withReduxStore(
-      {manageStudents, teacherSections, sectionData, scriptSelection},
+      {manageStudents, teacherSections, sectionData, unitSelection},
       initialState
     )
     .addStoryTable([

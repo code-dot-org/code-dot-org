@@ -9,5 +9,5 @@ markdown <<MARKDOWN
 # Task 2: Find and Fix the Error
 Oh no! The Code.org logo got messed up.  An extra bit was added to this image during transmission. Your task is to find the extra bit and remove it to fix the Code.org logo. HINT: one bit early on would make it look like many bits were out of order. 
 <br><br>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

@@ -6,7 +6,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     version1 = create :course_version, course_offering: course_offering
     version2 = create :course_version, course_offering: course_offering
 
-    assert_equal [version1, version2], course_offering.course_versions
+    assert_equal [version1, version2].sort_by(&:key), course_offering.course_versions.sort_by(&:key)
     assert_equal course_offering, version1.course_offering
     assert_equal course_offering, version2.course_offering
   end
@@ -15,12 +15,21 @@ class CourseOfferingTest < ActiveSupport::TestCase
   # Other cases are covered by directly testing add_course_offering below.
   test "Script.setup creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
-    scripts, _ = Script.setup([script_file])
-    script = scripts.first
+    script_names, _ = Script.setup([script_file])
+    script = Script.find_by!(name: script_names.first)
 
     offering = script.course_version.course_offering
     assert_equal 'xyz', offering.key
-    assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
+  end
+
+  test "ScriptSeed.seed_from_json_file creates CourseOffering and CourseVersion if is_course is true" do
+    script_file = File.join(self.class.fixture_path, 'test-new-seed-course-offering.script_json')
+    script = Services::ScriptSeed.seed_from_json_file(script_file)
+
+    offering = script.course_version.course_offering
+    assert_equal 'xyz', offering.key
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
   end
 
   test "UnitGroup.load_from_path creates CourseOffering and CourseVersion if is_course is true" do
@@ -29,7 +38,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     offering = unit_group.course_version.course_offering
     assert_equal 'xyz', offering.key
-    assert_equal [CourseVersion.find_by(key: '1234')], offering.course_versions
+    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
   end
 
   # "Unit tests", parameterized so they test both types of content roots (Scripts and UnitGroups).
@@ -130,6 +139,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
       assert_equal num_course_offerings, CourseOffering.count
       assert_equal num_course_versions, CourseVersion.count
     end
+  end
+
+  test "enforces key format" do
+    course_offering = build :course_offering, key: 'invalid key'
+    refute course_offering.valid?
+    course_offering.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
+    assert course_offering.valid?
   end
 
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)

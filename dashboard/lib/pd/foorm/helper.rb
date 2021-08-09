@@ -40,6 +40,11 @@ module Pd::Foorm
       end
     end
 
+    def fill_question_placeholders(question)
+      question && question.sub!("{panel.facilitator_name}", "my facilitator")
+      question
+    end
+
     protected
 
     def get_friendly_agenda(workshop_agenda)

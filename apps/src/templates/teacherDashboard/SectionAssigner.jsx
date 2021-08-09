@@ -8,19 +8,6 @@ import AssignButton from '@cdo/apps/templates/AssignButton';
 import UnassignButton from '@cdo/apps/templates/UnassignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  content: {
-    display: 'flex'
-  },
-  label: {
-    width: '100%',
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    paddingTop: 10,
-    paddingBottom: 10
-  }
-};
-
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -53,7 +40,7 @@ class SectionAssigner extends Component {
     );
 
     return (
-      <div>
+      <div style={styles.section}>
         <div style={styles.label}>{i18n.currentSection()}</div>
         <div style={styles.content}>
           <TeacherSectionSelector
@@ -83,6 +70,23 @@ class SectionAssigner extends Component {
     );
   }
 }
+
+const styles = {
+  section: {
+    marginBottom: 10
+  },
+  content: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  label: {
+    width: '100%',
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    paddingTop: 10,
+    paddingBottom: 10
+  }
+};
 
 export const UnconnectedSectionAssigner = SectionAssigner;
 

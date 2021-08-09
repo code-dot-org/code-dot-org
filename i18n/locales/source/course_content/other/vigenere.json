@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/vigenere/stage/1/puzzle/1": {
+  "https://studio.code.org/s/vigenere/lessons/1/levels/1": {
     "short_instructions": "Test",
     "long_instructions": "# Encrypt and decrypt a message with the Vigenère cipher\n\nThis is an interactive version of the Vigenère cipher that animates the encryption and decryption as it’s happening, given a piece of text to encrypt or decrypt and the key.\n\n# Do this\n\n### Encrypt a message\n\nClick Step several times, and trace what’s happening. Pay attention to:\n\n-   How the ciphertext is being produced\n-   What happens when you get to the last character of the key\n-   After you’ve stepped through a few characters click Play to watch the rest animate\n-   Hit Restart and play the animation again. You can use the speed slider to speed it up or slow it down  \n\n[][0]\n\n### Decrypt a message\n\nEncrypt a message as above, then:  \n\n-   Highlight and copy the ciphertext\n-   Paste it into the plaintext area. Note: Don’t change the key\n-   Change the Encrypt/Decrypt toggle to Decrypt\n-   Hit Step a few times, and then Play\n\nYou should see the original text emerge.\\\n[][1]\n\nHow hard would it be to crack a message encrypted with this cipher? Does the length of the key make a difference?"
   }

@@ -127,7 +127,7 @@ class AdminReportsController < ApplicationController
     rescue ActiveRecord::RecordNotFound
       render(
         layout: 'application',
-        text: "Script #{script_id_or_name} not found.",
+        html: "Script #{script_id_or_name} not found.",
         status: 404
       ) && return
     end
@@ -142,7 +142,7 @@ class AdminReportsController < ApplicationController
         )
         render(
           layout: 'application',
-          text: "PD progress data not found for #{sanitized_script_name}.",
+          html: "PD progress data not found for #{sanitized_script_name}.",
           status: 404
         )
       end

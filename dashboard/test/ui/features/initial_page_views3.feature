@@ -18,7 +18,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                                               | test_name                  |
       | http://code.org/                                                  | code.org homepage          |
-      | https://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true | embedded blocks     |
+      | https://studio.code.org/s/allthethings/lessons/13/levels/3?noautoplay=true | embedded blocks     |
 
   Scenario Outline: Logged out simple page view without instructions dialog
     Given I am on "http://studio.code.org/"

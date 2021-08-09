@@ -4,9 +4,9 @@ import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {connect} from 'react-redux';
-import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {scriptDataPropType} from '../sectionProgressConstants';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsIntroDialog from './StandardsIntroDialog';
 import StandardsProgressTable from './StandardsProgressTable';
@@ -63,6 +63,6 @@ export const UnconnectedStandardsView = StandardsView;
 
 export default connect(state => ({
   section: state.sectionData.section,
-  scriptData: getCurrentScriptData(state),
+  scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(StandardsView);

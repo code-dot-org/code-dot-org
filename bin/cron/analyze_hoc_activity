@@ -49,6 +49,9 @@ def main
   # discussion of ways to resolve the problem can be found in this document:
   # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
   total_started += 14_861_327
+  # March 2021:
+  # Microsoft provided data about Hour of Code served through their tutorials.
+  total_started += 3_774_215
 
   today = Date.today
   day = Date.new(2014, 12, 6)

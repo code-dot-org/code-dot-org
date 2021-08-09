@@ -13,6 +13,7 @@ import i18n from '@cdo/locale';
 export default class VersionHistory extends React.Component {
   static propTypes = {
     handleClearPuzzle: PropTypes.func.isRequired,
+    isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired
   };
 
@@ -119,6 +120,7 @@ export default class VersionHistory extends React.Component {
           isOwner: project.isOwner(),
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
+          isProjectTemplateLevel: this.props.isProjectTemplateLevel,
           currentSourceVersionId: project.getCurrentSourceVersionId()
         })
       },
@@ -132,21 +134,30 @@ export default class VersionHistory extends React.Component {
   };
 
   render() {
+    let title;
     let body;
     if (this.state.showSpinner) {
+      title = i18n.versionHistory_header();
       body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {
+      title = i18n.versionHistory_clearProgress_header();
       body = (
         <div>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
+          {this.props.isProjectTemplateLevel && (
+            <p className="template-level-warning">
+              {i18n.versionHistory_clearProgress_templateLevelWarning()}
+            </p>
+          )}
           <button
             type="button"
-            id="confirm-button"
-            style={{float: 'right'}}
+            className="btn-danger"
+            id="start-over-button"
+            style={{marginLeft: 0}}
             onClick={this.onClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_confirm()}
@@ -154,6 +165,7 @@ export default class VersionHistory extends React.Component {
           <button
             type="button"
             id="again-button"
+            style={{float: 'right'}}
             onClick={this.onCancelClearPuzzle}
           >
             {i18n.versionHistory_clearProgress_cancel()}
@@ -161,6 +173,8 @@ export default class VersionHistory extends React.Component {
         </div>
       );
     } else {
+      title = i18n.versionHistory_header();
+
       const rows = this.state.versions.map(
         function(version) {
           return (
@@ -205,7 +219,7 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <h1 className="dialog-title">{i18n.versionHistory_header()}</h1>
+        <h1 className="dialog-title">{title}</h1>
         {body}
         {this.state.statusMessage}
       </div>

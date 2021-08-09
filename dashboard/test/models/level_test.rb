@@ -143,10 +143,24 @@ class LevelTest < ActiveSupport::TestCase
 
   test "summarize returns object with expected fields" do
     summary = @level.summarize
-    assert_equal(summary[:level_id], @level.id)
+    assert_equal(summary[:level_id], @level.id.to_s)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], '__bob4')
     assert_nil(summary[:display_name])
+  end
+
+  test "summarize_for_edit returns object with expected fields" do
+    user = User.create(name: 'Best Curriculum Writer')
+    level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+    summary = level.summarize_for_edit
+
+    assert_equal(summary[:id], level.id.to_s)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], 'test_level')
+    assert_equal(summary[:owner], 'Best Curriculum Writer')
+    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+    assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
   test "get_question_text returns question text for free response level" do
@@ -295,14 +309,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal time, level.updated_at.to_i
   end
 
-  test 'artist levels are seeded with solutions' do
-    level = Artist.where(level_num: 'custom').first # custom levels have solutions
-    assert level.solution_blocks
-    assert level.ideal_level_source
-
-    assert_equal level.solution_blocks, level.ideal_level_source.data
-  end
-
   def update_contract_match
     name = 'contract match test'
     dsl_text = <<~DSL
@@ -426,21 +432,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal decrypted_hash['notes'], 'original notes'
   end
 
-  test 'project template level' do
-    template_level = Blockly.create(name: 'project_template')
-    template_level.start_blocks = '<xml/>'
-    template_level.save!
-
-    assert_nil template_level.project_template_level
-    assert_equal '<xml/>', template_level.start_blocks
-
-    real_level1 = Blockly.create(name: 'level 1')
-    real_level1.project_template_level_name = 'project_template'
-    real_level1.save!
-
-    assert_equal template_level, real_level1.project_template_level
-  end
-
   test 'key_to_params' do
     assert_equal({name: "Course 4 Level 1"}, Level.key_to_params('Course 4 Level 1'))
     assert_equal({game_id: Game.find_by_name('studio').id, level_num: 'playlab_1'}, Level.key_to_params('blockly:Studio:playlab_1'))
@@ -456,6 +447,34 @@ class LevelTest < ActiveSupport::TestCase
 
     level = Level.find_by_key 'PlantASeed'
     assert_equal 'PlantASeed', level.name
+  end
+
+  test 'cannot create two blockly levels with same key' do
+    game = create :game, name: 'Artist'
+    level1 = create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+    assert_equal 'blockly:Artist:5_5_5', level1.key
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+    end
+    assert_includes e.message, 'Validation failed: Level num has already been taken'
+  end
+
+  test 'cannot create multi and match levels with same key' do
+    multi = create :multi, name: 'multi match', level_num: nil, user_id: nil
+    assert_equal 'multi match', multi.key
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :match, name: 'multi match', level_num: nil, user_id: nil
+    end
+    assert_includes e.message, 'Validation failed: Name has already been taken'
+  end
+
+  test 'cannot create custom and dsl levels with same key' do
+    level1 = create :artist, name: 'artist multi', level_num: 'custom'
+    assert_equal 'artist multi', level1.key
+    e = assert_raises ActiveRecord::RecordInvalid do
+      create :multi, name: 'artist multi', level_num: nil, user_id: nil
+    end
+    assert_includes e.message, 'Validation failed: Name has already been taken'
   end
 
   test 'applab examples' do
@@ -549,11 +568,11 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    level1 = Script.twenty_hour_script.script_levels[0].level
+    level1 = Script.twenty_hour_unit.script_levels[0].level
     cache_level1 = Level.cache_find(level1.id)
     assert_equal(level1, cache_level1)
 
-    level2 = Script.course1_script.script_levels.last.level
+    level2 = Script.course1_unit.script_levels.last.level
     cache_level2 = Level.cache_find(level2.id)
     assert_equal(level2, cache_level2)
 
@@ -786,7 +805,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone' do
-    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
+    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>', level_num: 'custom'
     new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -827,7 +846,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone with suffix' do
-    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>', level_num: 'custom'
     new_level = old_level.clone_with_suffix(' copy')
     assert_equal 'level copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -836,7 +855,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix replaces old suffix' do
-    level_1 = create :level, name: 'my_level_1'
+    level_1 = create :level, name: 'my_level_1', level_num: 'custom'
 
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('_2')
@@ -852,7 +871,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix properly escapes suffixes' do
-    level_1 = create :level, name: 'your_level_1'
+    level_1 = create :level, name: 'your_level_1', level_num: 'custom'
 
     tricky_suffix = '!(."'
 
@@ -871,17 +890,17 @@ class LevelTest < ActiveSupport::TestCase
     new_name = 'x' * 58 + suffix
     assert_equal(70, new_name.length)
 
-    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
+    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>', level_num: 'custom'
     new_level = old_level.clone_with_suffix(suffix)
     assert_equal new_name, new_level.name
     assert_equal suffix, new_level.name_suffix
   end
 
   test 'clone with same suffix copies and shares project template level' do
-    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
-    level_1 = create :level, name: 'level 1'
+    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>', level_num: 'custom'
+    level_1 = create :level, name: 'level 1', level_num: 'custom'
     level_1.project_template_level_name = template_level.name
-    level_2 = create :level, name: 'level 2'
+    level_2 = create :level, name: 'level 2', level_num: 'custom'
     level_2.project_template_level_name = template_level.name
 
     level_1_copy = level_1.clone_with_suffix(' copy')
@@ -904,12 +923,12 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies contained levels' do
-    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
-    contained_level_2 = create :level, name: 'contained level 2'
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
+    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
 
     # level 1 has 1 contained level
 
-    level_1 = create :level, name: 'level 1'
+    level_1 = create :level, name: 'level 1', level_num: 'custom'
     level_1.contained_level_names = [contained_level_1.name]
     level_1_copy = level_1.clone_with_suffix(' copy')
 
@@ -921,7 +940,7 @@ class LevelTest < ActiveSupport::TestCase
 
     # level 2 has 2 contained levels, one of which has already been copied
 
-    level_2 = create :level, name: 'level 2'
+    level_2 = create :level, name: 'level 2', level_num: 'custom'
     level_2.contained_level_names = [
       contained_level_1.name,
       contained_level_2.name
@@ -934,8 +953,25 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix copies level concept difficulty' do
+    level_1 = create :level, name: 'level 1', level_num: 'custom'
+    level_1.assign_attributes(
+      'level_concept_difficulty' => {'sequencing' => 3, 'debugging' => 5}
+    )
+
+    refute_nil level_1.level_concept_difficulty
+    assert_equal 3, level_1.level_concept_difficulty.sequencing
+    assert_equal 5, level_1.level_concept_difficulty.debugging
+
+    level_1_copy = level_1.clone_with_suffix(' copy')
+
+    refute_nil level_1_copy.level_concept_difficulty
+    assert_equal 3, level_1_copy.level_concept_difficulty.sequencing
+    assert_equal 5, level_1_copy.level_concept_difficulty.debugging
+  end
+
   test 'clone with suffix sets editor experiment' do
-    old_level = create :level, name: 'old level'
+    old_level = create :level, name: 'old level', level_num: 'custom'
     new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
     assert_equal 'old level copy', new_level.name
     assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
@@ -1017,54 +1053,6 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal level.contained_level_names, ['real_name']
   end
 
-  test 'parent levels and child levels' do
-    parent = create :level
-    child = create :level
-    parent.child_levels << child
-    assert_equal [parent], child.parent_levels
-
-    # cannot add the same child a second time
-    assert_raises ActiveRecord::RecordInvalid do
-      parent.child_levels << child
-    end
-
-    # cannot add the same parent a second time
-    assert_raises ActiveRecord::RecordInvalid do
-      child.parent_levels << parent
-    end
-  end
-
-  test 'child levels are in order of position' do
-    parent = create :level
-    child3 = create :level
-    child2 = create :level
-    child1 = create :level
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child3,
-      position: 3
-    )
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child1,
-      position: 1
-    )
-    ParentLevelsChildLevel.find_or_create_by!(
-      parent_level: parent,
-      child_level: child2,
-      position: 2
-    )
-    assert_equal [child1, child2, child3], parent.child_levels
-  end
-
-  test 'all_descendant_levels works on self-referential project template levels' do
-    level_name = 'project-template-level'
-    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
-    assert_equal level, level.project_template_level
-
-    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
-  end
-
   test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
     script = create :csf_script
     assert script.hint_prompt_enabled?
@@ -1090,5 +1078,109 @@ class LevelTest < ActiveSupport::TestCase
     level = create :level
     create :script_level, levels: [level], script: no_hint_script
     refute level.hint_prompt_enabled?
+  end
+
+  test 'validates game' do
+    error = assert_raises ActiveRecord::RecordInvalid do
+      create :level, game: nil
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+
+    level = create :level
+    level.game = nil
+    error = assert_raises ActiveRecord::RecordInvalid do
+      level.save!
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+  end
+
+  test 'key list' do
+    # Make sure there are no levels from test fixtures for which computing a
+    # level key raises errors.
+    Level.key_list
+  end
+
+  test "get search options" do
+    search_options = Level.search_options
+    assert_equal search_options[:levelOptions].map {|option| option[0]}, [
+      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
+    assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
+
+  test "get_level_for_progress returns the level if there are no sublevels or contained levels" do
+    level = create :level
+    script_level = create :script_level, levels: [level]
+    student = create :student
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal level, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with the best result if no sublevels have keepWorking feedback" do
+    student = create :student
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel2, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback" do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+    create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel1, level_for_progress
+  end
+
+  test "get_level_for_progress returns the first contained level if the level has contained levels" do
+    student = create :student
+
+    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
+    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
+
+    level = create :level, name: 'level 1', level_num: 'custom'
+    level.contained_level_names = [contained_level_1.name, contained_level_2.name]
+    script_level = create :script_level, levels: [level]
+
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal contained_level_1, level_for_progress
+  end
+
+  test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
+    summary = @custom_level.summarize_for_lesson_show(false)
+    refute summary.key?('teacherMarkdown')
   end
 end

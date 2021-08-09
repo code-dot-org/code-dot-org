@@ -112,7 +112,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     should_send_new_teacher_email = current_user && current_user.teacher?
-    TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
+    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
     ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
 
@@ -528,7 +528,7 @@ class RegistrationsController < Devise::RegistrationsController
   def destroy_users(current_user, dependent_users)
     users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
-    User.destroy(user_ids_to_destroy)
+    User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
     log_account_deletion_to_firehose(current_user, dependent_users)
   end

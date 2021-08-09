@@ -22,6 +22,7 @@ class DesignWorkspace extends React.Component {
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentTheme: PropTypes.string.isRequired,
     handleScreenChange: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func,
 
     // provided by redux
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
@@ -50,6 +51,7 @@ class DesignWorkspace extends React.Component {
           isRtl={this.props.isRtl}
           isRunning={this.props.isRunning}
           showMakerToggle={this.props.showMakerToggle}
+          autogenerateML={this.props.autogenerateML}
         />
         <DesignModeBox
           element={this.props.element}

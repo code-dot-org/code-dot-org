@@ -74,6 +74,7 @@
     "lock_zero_param_functions": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
+    "validation_enabled": "true",
     "autocomplete_palette_apis_only": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",

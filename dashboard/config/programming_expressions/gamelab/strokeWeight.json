@@ -1,0 +1,10 @@
+{
+  "func": "strokeWeight",
+  "category": "Drawing",
+  "paletteParams": [
+    "size"
+  ],
+  "params": [
+    "3"
+  ]
+}

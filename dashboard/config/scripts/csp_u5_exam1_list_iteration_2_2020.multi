@@ -26,3 +26,17 @@ console.log(filteredWords);
 If the program above is run, what will be displayed in the console?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since the Boolean expression `word.length < 4` will only evaluate to `true` for words with 3 letters or fewer, those are the only words from the list `words` that will be added to the list `filteredWords`.
+
+Students wrote a very similar program meant to filter a list of names based on their length in [Lesson 11 - Traversals Practice](https://curriculum.code.org/csp-20/unit5/11/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.O: For algorithms involving elements of a list:
+a. Write iteration statements to traverse a list.
+b. Determine the result of an algorithm that includes list traversals.
+:::
+
+MARKDOWN

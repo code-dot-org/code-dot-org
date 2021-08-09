@@ -6,19 +6,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {getResponsiveValue} from './responsive';
 
-const styles = {
-  filterGroupOuter: {
-    float: 'left',
-    paddingBottom: 20,
-    paddingRight: 40,
-    paddingLeft: 10
-  },
-  filterGroupText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    borderBottom: 'solid grey 1px'
-  }
-};
-
 export default class FilterGroupContainer extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
@@ -39,3 +26,16 @@ export default class FilterGroupContainer extends React.Component {
     );
   }
 }
+
+const styles = {
+  filterGroupOuter: {
+    float: 'left',
+    paddingBottom: 20,
+    paddingRight: 40,
+    paddingLeft: 10
+  },
+  filterGroupText: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    borderBottom: 'solid grey 1px'
+  }
+};

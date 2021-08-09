@@ -8,6 +8,7 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import i18n from '@cdo/locale';
 import FontAwesome from '../../../../../src/templates/FontAwesome';
+import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
@@ -15,9 +16,9 @@ const MINIMUM_PROPS = {
   viewAs: ViewType.Student,
   hasSections: false,
   sectionsAreLoaded: false,
-  scriptHasLockableStages: false,
-  scriptAllowsHiddenStages: false,
-  unlockedStageNames: [],
+  unitHasLockableLessons: false,
+  unitAllowsHiddenLessons: false,
+  unlockedLessonNames: [],
   sectionData: null,
   onSelectUser: () => {},
   getSelectedUserId: () => {},
@@ -25,7 +26,7 @@ const MINIMUM_PROPS = {
 };
 
 describe('TeacherPanel', () => {
-  describe('on script page', () => {
+  describe('on unit page', () => {
     it('initial view as student', () => {
       const wrapper = shallow(
         <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Student} />
@@ -101,12 +102,12 @@ describe('TeacherPanel', () => {
     assert(!wrapper.containsMatchingElement(<SectionSelector />));
   });
 
-  it('shows section selection instructions if viewing as a teacher, and has sections and lockable stages', () => {
+  it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
     const wrapper = shallow(
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableStages={true}
+        unitHasLockableLessons={true}
         hasSections={true}
       />
     );
@@ -119,14 +120,14 @@ describe('TeacherPanel', () => {
     );
   });
 
-  it('adds a warning if there are also unlocked stages', () => {
+  it('adds a warning if there are also unlocked lessons', () => {
     const wrapper = shallow(
       <TeacherPanel
         {...MINIMUM_PROPS}
         viewAs={ViewType.Teacher}
-        scriptHasLockableStages={true}
+        unitHasLockableLessons={true}
         hasSections={true}
-        unlockedStageNames={['stage1', 'stage2']}
+        unlockedLessonNames={['lesson1', 'lesson2']}
       />
     );
     assert(
@@ -141,8 +142,8 @@ describe('TeacherPanel', () => {
             <div>
               {i18n.lockFollowing()}
               <ul>
-                <li>stage1</li>
-                <li>stage2</li>
+                <li>lesson1</li>
+                <li>lesson2</li>
               </ul>
             </div>
           </div>
@@ -187,7 +188,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('SelectedStudentInfo', () => {
-    describe('on script', () => {
+    describe('on unit', () => {
       it('does not display SelectedStudentInfo', () => {
         const wrapper = shallow(
           <TeacherPanel
@@ -217,7 +218,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );
@@ -227,7 +234,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    describe('on script', () => {
+    describe('on unit', () => {
       it('does not display example solutions', () => {
         const wrapper = shallow(
           <TeacherPanel {...MINIMUM_PROPS} viewAs={ViewType.Teacher} />
@@ -250,7 +257,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );
@@ -268,7 +281,13 @@ describe('TeacherPanel', () => {
               section: {
                 students: students
               },
-              section_script_levels: [{user_id: 1}]
+              section_script_levels: [
+                {
+                  id: 11,
+                  user_id: 1,
+                  status: LevelStatus.not_tried
+                }
+              ]
             }}
           />
         );

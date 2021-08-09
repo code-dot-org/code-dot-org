@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as shapes from '../shapes';
-import {editAnimation, removePendingFramesAction} from '../animationListModule';
-import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {editAnimation, removePendingFramesAction} from '../redux/animationList';
+import {show, Goal} from '../redux/animationPicker';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -35,7 +36,8 @@ class PiskelEditor extends React.Component {
     onNewFrameClick: PropTypes.func.isRequired,
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
-    isBlockly: PropTypes.bool
+    isBlockly: PropTypes.bool,
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
@@ -56,11 +58,20 @@ class PiskelEditor extends React.Component {
      */
     this.loadedAnimation_ = null;
 
+    /**
+     * @private {boolean} Tracks whether we have logged a Firehose event yet.
+     * - The Piskel editor saves continuously, so we only want to log the first
+     * event to Firehose.
+     */
+    this.hasLoggedFirehoseEvent_ = false;
+
     this.piskel = new PiskelApi();
     this.piskel.attachToPiskel(this.iframe);
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
+
+    this.iframe.contentWindow.piskel_locale = this.props.localeCode;
   }
 
   componentWillUnmount() {
@@ -195,6 +206,17 @@ class PiskelEditor extends React.Component {
     if (this.isLoadingAnimation_) {
       return;
     }
+
+    if (!this.hasLoggedFirehoseEvent_) {
+      firehoseClient.putRecord({
+        study: 'animation-library',
+        study_group: 'control-2020',
+        event: 'asset-editing',
+        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
+      });
+      this.hasLoggedFirehoseEvent_ = true;
+    }
+
     this.props.editAnimation(this.loadedAnimation_, {
       blob: message.blob,
       dataURI: message.dataURI,
@@ -222,7 +244,8 @@ export default connect(
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
     pendingFrames: state.animationList.pendingFrames,
-    isBlockly: state.pageConstants.isBlockly
+    isBlockly: state.pageConstants.isBlockly,
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),

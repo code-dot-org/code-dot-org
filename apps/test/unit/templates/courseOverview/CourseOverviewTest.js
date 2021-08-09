@@ -5,6 +5,8 @@ import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/c
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
+import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
+import {NotificationType} from '@cdo/apps/templates/Notification';
 
 const defaultProps = {
   name: 'csp',
@@ -38,7 +40,32 @@ const defaultProps = {
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
   versions: [],
-  sectionsForDropdown: []
+  sectionsForDropdown: [],
+  announcements: [],
+  isSignedIn: true,
+  useMigratedResources: false
+};
+
+const fakeTeacherAnnouncement = {
+  notice: 'Notice - Teacher',
+  details: 'Teachers are the best',
+  link: '/foo/bar/teacher',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacher
+};
+const fakeStudentAnnouncement = {
+  notice: 'Notice - Student',
+  details: 'Students are the best',
+  link: '/foo/bar/student',
+  type: NotificationType.information,
+  visibility: VisibilityType.student
+};
+const fakeTeacherAndStudentAnnouncement = {
+  notice: 'Notice - Teacher And Student',
+  details: 'More detail here',
+  link: '/foo/bar/teacherAndStudent',
+  type: NotificationType.information,
+  visibility: VisibilityType.teacherAndStudent
 };
 
 describe('CourseOverview', () => {
@@ -62,18 +89,35 @@ describe('CourseOverview', () => {
     );
   });
 
+  it('has non-verified and provided teacher announcements if necessary', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        announcements={[
+          fakeTeacherAnnouncement,
+          fakeTeacherAndStudentAnnouncement
+        ]}
+      />
+    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+  });
+
+  it('has student announcement if viewing as student', () => {
+    const wrapper = shallow(
+      <CourseOverview
+        {...defaultProps}
+        viewAs={ViewType.Student}
+        announcements={[fakeStudentAnnouncement]}
+      />
+    );
+    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+  });
+
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview {...defaultProps} isTeacher={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
-  });
-
-  it('renders no top row for students', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isTeacher={false} />
-    );
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 0);
   });
 
   it('renders a CourseScript for each script', () => {
@@ -132,7 +176,8 @@ describe('CourseOverview', () => {
           title: '2017',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         },
         {
           name: 'csp-2018',
@@ -140,7 +185,8 @@ describe('CourseOverview', () => {
           title: '2018',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         }
       ];
       const wrapper = shallow(
@@ -168,7 +214,8 @@ describe('CourseOverview', () => {
           title: '2017',
           canViewVersion: false,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         },
         {
           name: 'csp-2018',
@@ -176,7 +223,8 @@ describe('CourseOverview', () => {
           title: '2018',
           canViewVersion: true,
           isStable: true,
-          locales: []
+          locales: [],
+          localeCodes: []
         }
       ];
       const wrapper = shallow(

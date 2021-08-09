@@ -1,0 +1,26 @@
+name 'contagion_scientist'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Thinking Like a Scientist
+
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+Simulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.
+
+## Reset and Replay!
+Even when you write the code yourself, it's impossible to know exactly what will happen when you press run. The monsters wander randomly, so you don't know if the virus will spread quickly or slowly. Whenever you change your code, make sure to run your simulation more than once. Things won't happen the same way twice!
+
+## Collecting Data
+Try writing down your observations as you run your simulation. You can use the data collection block to count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks? 
+![](https://images.code.org/c2bd788f349ae9d08412a13120c12006-image-1611357393151.16.05 PM.png)
+
+## Making Predictions
+If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:
+* What would happen if only healthy monsters wore masks? 
+* What about only sick monsters? 
+<img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right; width:10%">
+
+## Let's Build Two More Models for our Simulation
+MARKDOWN

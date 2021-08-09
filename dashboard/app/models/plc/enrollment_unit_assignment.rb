@@ -22,7 +22,7 @@
 # complete the course.
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
-class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
+class Plc::EnrollmentUnitAssignment < ApplicationRecord
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked'.freeze,
     IN_PROGRESS = 'in_progress'.freeze,
@@ -68,7 +68,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
   end
 
-  def focus_area_stage_ids
+  def focus_area_lesson_ids
     plc_module_assignments.map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}.compact
   end
 
@@ -86,11 +86,11 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         }
       end
     else
-      # Otherwise, status is determined by the completion of stages
+      # Otherwise, status is determined by the completion of lessons
       plc_course_unit.script.lesson_groups.each do |lesson_group|
         summary << {
           category: lesson_group.localized_display_name,
-          status: Plc::EnrollmentModuleAssignment.stages_based_status(
+          status: Plc::EnrollmentModuleAssignment.lessons_based_status(
             plc_course_unit.script.lessons.select {|lesson| lesson.lesson_group == lesson_group},
             user,
             plc_course_unit.script

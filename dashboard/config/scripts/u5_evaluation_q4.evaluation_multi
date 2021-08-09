@@ -1,4 +1,4 @@
 name 'U5 evaluation q4’
 question 'When students have questions in class, what strategy do you generally use to answer it?'
-answer 'Answer it yourself', weight: 1, stage_name: 'Discovery Learning'
-answer 'Put the question to the other students in the classroom', weight: -1, stage_name: 'Discovery Learning'
+answer 'Answer it yourself', weight: 1, lesson_name: 'Discovery Learning'
+answer 'Put the question to the other students in the classroom', weight: -1, lesson_name: 'Discovery Learning'

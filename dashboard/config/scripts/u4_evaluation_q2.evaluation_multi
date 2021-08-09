@@ -1,5 +1,5 @@
 name 'U4 evaluation q2’
 question ‘Have you practiced or looked closely at the Explore Performance Task?’
 answer ‘Yes! I\’m very familiar with the Explore Task’
-answer ‘I\’ve looked at it once or twice, but haven\’t spent much time understanding it yet', weight: 1, stage_name: ‘Lessons 8 - 9: Practice PT’
-answer ‘I haven\’t really looked at the Explore Task yet’, weight: 2, stage_name: ‘Lessons 8 - 9: Practice PT’
+answer ‘I\’ve looked at it once or twice, but haven\’t spent much time understanding it yet', weight: 1, lesson_name: ‘Lessons 8 - 9: Practice PT’
+answer ‘I haven\’t really looked at the Explore Task yet’, weight: 2, lesson_name: ‘Lessons 8 - 9: Practice PT’

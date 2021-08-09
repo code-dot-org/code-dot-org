@@ -6,41 +6,6 @@ import React from 'react';
 import {getResponsiveValue} from './responsive';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-const styles = {
-  button: {
-    float: 'left',
-    width: '100%',
-    paddingLeft: 10,
-    paddingRight: 40
-  },
-  container: {
-    position: 'relative'
-  },
-  roboticsButtonImage: {
-    marginTop: 10,
-    marginBottom: 20,
-    width: '100%'
-  },
-  roboticsButtonText: {
-    fontFamily: "'Gotham 4r', sans-serif",
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    margin: '25px 15px 15px 15px',
-    color: 'white',
-    textAlign: 'center',
-    fontSize: 16
-  },
-  roboticsText: {
-    float: 'left',
-    margin: 5,
-    padding: 5,
-    borderRadius: 5,
-    marginBottom: 20,
-    backgroundColor: '#eee'
-  }
-};
-
 export default class RoboticsButton extends React.Component {
   static propTypes = {
     url: PropTypes.string
@@ -80,3 +45,38 @@ export default class RoboticsButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    float: 'left',
+    width: '100%',
+    paddingLeft: 10,
+    paddingRight: 40
+  },
+  container: {
+    position: 'relative'
+  },
+  roboticsButtonImage: {
+    marginTop: 10,
+    marginBottom: 20,
+    width: '100%'
+  },
+  roboticsButtonText: {
+    fontFamily: "'Gotham 4r', sans-serif",
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    margin: '25px 15px 15px 15px',
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16
+  },
+  roboticsText: {
+    float: 'left',
+    margin: 5,
+    padding: 5,
+    borderRadius: 5,
+    marginBottom: 20,
+    backgroundColor: '#eee'
+  }
+};

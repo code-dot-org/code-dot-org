@@ -1,0 +1,17 @@
+name 'Text and Prompts Video Projects'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+[Forest Animals](https://studio.code.org/projects/spritelab/BpbQBIselNP9-x1PCs0E7xMwmDKACt-N9vK7IEvBT-s)
+
+[Goose and Pig](https://studio.code.org/projects/spritelab/vnkEazZiHQczVAgV-tg7KXmzcelovZahtfZmwum4sBo/view)
+
+[Star Collector](https://studio.code.org/projects/spritelab/J6aJ5AuGSYKHTWzMxxkOm-LkXwzkn1NMVDAJ18vl3O8/view)
+
+[Pick a Pooch](https://studio.code.org/projects/spritelab/4MRVOjqun_WcejBgI3Ddb3721fJpS5qcqVJPmYPbxqY/)
+
+[Goober's Restaurant](https://studio.code.org/projects/spritelab/H-kP0L3JCv8LmdpqwXEF0BQXA_SSExmW1cv69AdcwNg/)
+
+[Cloud 9 Checkout](https://studio.code.org/projects/spritelab/wgvr_HeOzWrwp7Oyzin0O7DGGr8QIK4BJkKo6HwHkqI/)
+MARKDOWN

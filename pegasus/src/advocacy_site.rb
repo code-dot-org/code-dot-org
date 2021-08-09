@@ -41,13 +41,13 @@ class AdvocacySite
         links:
           [
             {
-              text_actual: "1-page summary",
-              url: "https://docs.google.com/document/d/15zBdBbXUA-yEzxEq0VeWAEb9nXuGjmNFWNrYp6UdM8U/edit?usp=sharing",
+              text_actual: "State-by-state details",
+              url: "http://bit.ly/9policies",
               new_tab: true
             },
             {
               text_actual: "National landscape state details",
-              url: "https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub",
+              url: "https://code.org/advocacy/landscape.pdf",
               new_tab: true
             },
             {

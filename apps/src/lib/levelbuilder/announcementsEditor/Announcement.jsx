@@ -6,14 +6,6 @@ import {
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
-const styles = {
-  announcement: {
-    border: '1px solid #ccc',
-    padding: 5,
-    marginBottom: 10
-  }
-};
-
 export default class Announcement extends Component {
   static propTypes = {
     announcement: announcementShape,
@@ -86,10 +78,22 @@ export default class Announcement extends Component {
             </select>
           </div>
         </label>
-        <button className="btn" type="button" onClick={() => onRemove(index)}>
+        <button
+          className="btn btn-danger"
+          type="button"
+          onClick={() => onRemove(index)}
+        >
           Remove
         </button>
       </div>
     );
   }
 }
+
+const styles = {
+  announcement: {
+    border: '1px solid #ccc',
+    padding: 5,
+    marginBottom: 10
+  }
+};

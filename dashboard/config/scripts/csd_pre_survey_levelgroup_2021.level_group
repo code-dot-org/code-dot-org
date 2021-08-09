@@ -1,0 +1,47 @@
+name 'csd-pre-survey-levelgroup_2021'
+title 'CS Discoveries Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 1_2021'
+level 'csp-pre-survey-2017-q3_2021'
+level 'csp-pre-survey-2017-q4_2021'
+level 'csp-pre-survey-2017-q9_2021'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general_2021'
+level 'csp-pre-survey-2017-q10_2021'
+level 'csp-pre-survey-2017-q11_2021'
+level 'csp-pre-survey-2017-q16_2021'
+level 'csp-pre-survey-2017-q12_2021'
+level 'csp-pre-survey-2017-q13_2021'
+level 'csp-pre-survey-2017-q17_2021'
+level 'csp-pre-survey-2017-q18_2021'
+level 'naturally-better-at-cs_2021'
+level 'csp-post-survey-2017-q33_2021'
+level 'same-ability_2021'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class_2021'
+level 'csp-pre-survey-2017-q19_2021'
+level 'csp-pre-survey-2017-q20_2021'
+level 'csp-pre-survey-2017-q22_2021'
+level 'will-be-myself-in-cs_2021'
+level 'worried-less-capable_2021'
+level 'reasons-took-course_2021'
+level 'csp-post-survey-who-encouraged-csp_2021'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future_2021'
+level 'csp-pre-survey-2017-q36-b_2021'
+level 'csp-post-survey-2017-q36-a_2021'
+level 'csp-pre-survey-2017-q29_2021'
+level 'csp-pre-survey-2017-q30_2021'
+level 'csp-pre-survey-2017-q31_2021'
+
+page
+text 'csp-pre-survey-2017 preamble 5 demographics_2021'
+level 'taken-other-cs_2021'
+level 'taken-other-code-org_2021'
+level 'outside-school-cs_2021'

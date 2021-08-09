@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:15.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "## Digital Information\r\n\r\nWhy should we care about information being represented digitally? How does this impact you personally?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 19189,
+    "name_suffix": "_2021",
+    "encrypted_solution": "leu6RdzAvW+gqmAoAPh9VPncUwYZjRoVTEZRpB59zbHxnMfHyPst8VPSVFal\nzcD10Pfd6wEtVmFrYpeJo6rLgxxSG1CRkgj+kJzsN7iBZ6jxSjeHB8ekiYXt\nXLkKnGm7wUP4qis3O8Rv1TCKVjex33PsQc81VmYn7ML3v+SnPXwpkGmgt5Yx\nEZBvmIiTpNUz+KMZgX8kvXnWWDnSKQdTURVKc9mNLSMEiy+gPpMZ7md61t35\nsm6waSkEm4fgaEapvbxb+hrgbA3GDxFDd7GLh/dzf+36U6JMq/mIoKWSBNTr\nMkZKSwYI4Jgr5UgtL3ebMl/s9Qz/lE0xp09SfyrfXTeisvfhCun3Q0WyQMcI\nBbeNFvOxTyEJDN+SpkCxa2zgndWhvCmN45Ktt0MjF8uJe3adL6t1f2kKQFCe\nzQOzbztIWpeFsi7/zd02GY4JVpuHnWryOvYUNIw0ditSGo6Ciw==\n",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:09:57 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:19:13 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:42:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-15 18:26:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-15 18:30:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-03 22:51:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

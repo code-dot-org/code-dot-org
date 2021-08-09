@@ -2,7 +2,7 @@ import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import {
   SET_SCRIPT,
   getSelectedScriptName
-} from '@cdo/apps/redux/scriptSelectionRedux';
+} from '@cdo/apps/redux/unitSelectionRedux';
 
 export const ALL_STUDENT_FILTER = 0;
 
@@ -269,7 +269,7 @@ export default function sectionAssessments(state = initialState, action) {
 export const getCurrentScriptAssessmentList = state => {
   let tempAssessmentList = computeScriptAssessmentList(
     state.sectionAssessments,
-    state.scriptSelection.scriptId
+    state.unitSelection.scriptId
   );
   /* Only add the feedback option to the dropdown for CSD and CSP */
   if (doesCurrentCourseUseFeedback(state)) {
@@ -285,7 +285,7 @@ export const getCurrentScriptAssessmentList = state => {
 export const getAssessmentResponsesForCurrentScript = state => {
   return (
     state.sectionAssessments.assessmentResponsesByScript[
-      state.scriptSelection.scriptId
+      state.unitSelection.scriptId
     ] || {}
   );
 };
@@ -294,7 +294,7 @@ export const getAssessmentResponsesForCurrentScript = state => {
 export const getCurrentAssessmentQuestions = state => {
   const currentScriptData =
     state.sectionAssessments.assessmentQuestionsByScript[
-      state.scriptSelection.scriptId
+      state.unitSelection.scriptId
     ] || {};
   return currentScriptData[state.sectionAssessments.assessmentId];
 };
@@ -306,9 +306,8 @@ export const getCurrentQuestion = state => {
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveys =
-      state.sectionAssessments.surveysByScript[
-        state.scriptSelection.scriptId
-      ] || {};
+      state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
+      {};
     const currentSurvey = surveys[state.sectionAssessments.assessmentId];
     const questionsData = currentSurvey.levelgroup_results;
     const question = questionsData[state.sectionAssessments.questionIndex];
@@ -607,7 +606,7 @@ export const getAssessmentsFreeResponseResults = state => {
  */
 export const getSurveyFreeResponseQuestions = state => {
   const surveysStructure =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
   if (!currentSurvey) {
@@ -636,7 +635,7 @@ export const getSurveyFreeResponseQuestions = state => {
  */
 export const getMultipleChoiceSurveyResults = state => {
   const surveysStructure =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveysStructure[state.sectionAssessments.assessmentId];
   if (!currentSurvey) {
@@ -693,7 +692,7 @@ export const getMultipleChoiceSurveyResults = state => {
 // Returns a boolean.  The selector function checks if the current assessment Id
 // is in the surveys structure.
 export const isCurrentAssessmentSurvey = state => {
-  const scriptId = state.scriptSelection.scriptId;
+  const scriptId = state.unitSelection.scriptId;
   const surveysStructure =
     state.sectionAssessments.surveysByScript[scriptId] || {};
 
@@ -948,9 +947,8 @@ export const countSubmissionsForCurrentAssessment = state => {
   const isSurvey = isCurrentAssessmentSurvey(state);
   if (isSurvey) {
     const surveysStructure =
-      state.sectionAssessments.surveysByScript[
-        state.scriptSelection.scriptId
-      ] || {};
+      state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
+      {};
     const currentSurvey = surveysStructure[currentAssessmentId];
     if (!currentSurvey || currentSurvey.levelgroup_results.length === 0) {
       return 0;
@@ -987,12 +985,12 @@ export const getExportableData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are stage, questionNumber, questionText, answer, numberAnswered.
+ * of CSV to download. Columns are lesson, questionNumber, questionText, answer, numberAnswered.
  */
 export const getExportableSurveyData = state => {
   const currentAssessmentId = state.sectionAssessments.assessmentId;
   const surveys =
-    state.sectionAssessments.surveysByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.surveysByScript[state.unitSelection.scriptId] ||
     {};
   const currentSurvey = surveys[currentAssessmentId];
   let responses = [];
@@ -1000,7 +998,7 @@ export const getExportableSurveyData = state => {
   for (let i = 0; i < currentSurvey.levelgroup_results.length; i++) {
     const questionResults = currentSurvey.levelgroup_results[i];
     const rowBase = {
-      stage: currentSurvey.stage_name,
+      lesson: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
       questionText: questionResults.question
     };
@@ -1035,7 +1033,7 @@ export const getExportableSurveyData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are studentName, stage, timestamp, question, response, and correct.
+ * of CSV to download. Columns are studentName, lesson, timestamp, question, response, and correct.
  */
 export const getExportableAssessmentData = state => {
   let responses = [];
@@ -1057,7 +1055,7 @@ export const getExportableAssessmentData = state => {
         const response = studentAssessment.level_results[questionIndex];
         responses.push({
           studentName: studentObject.student_name,
-          stage: studentAssessment.stage,
+          lesson: studentAssessment.lesson,
           timestamp: studentAssessment.timestamp,
           question: questionIndex + 1,
           response:
@@ -1075,12 +1073,12 @@ export const getExportableAssessmentData = state => {
 
 /**
  * @returns {array} of objects with keys corresponding to columns
- * of CSV to download. Columns are studentName, stage, level, key concept, rubric, comment, timestamp, .
+ * of CSV to download. Columns are studentName, lesson, level, key concept, rubric, comment, timestamp, .
  */
 export const getExportableFeedbackData = state => {
   let feedback = [];
   let feedbackForCurrentScript =
-    state.sectionAssessments.feedbackByScript[state.scriptSelection.scriptId] ||
+    state.sectionAssessments.feedbackByScript[state.unitSelection.scriptId] ||
     {};
 
   Object.keys(feedbackForCurrentScript).forEach(feedbackId => {
@@ -1147,7 +1145,7 @@ export function indexesToAnswerString(answerArr) {
  * @returns {number|undefined} The id of the first assessment or survey.
  */
 const getFirstAssessmentId = (state, scriptId) =>
-  computeScriptAssessmentList(state, scriptId).map(a => a.id)[0];
+  computeScriptAssessmentList(state, scriptId).map(a => parseInt(a.id))[0];
 
 /**
  * Returns a list of ids and names of assessments and surveys.
@@ -1169,7 +1167,7 @@ const computeScriptAssessmentList = (state, scriptId) => {
   const surveys = Object.keys(surveysStructure).map(surveyId => {
     return {
       id: parseInt(surveyId),
-      name: surveysStructure[surveyId].stage_name
+      name: surveysStructure[surveyId].lesson_name
     };
   });
 

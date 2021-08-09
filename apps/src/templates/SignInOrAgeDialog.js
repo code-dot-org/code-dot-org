@@ -12,64 +12,6 @@ import {reload} from '@cdo/apps/utils';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal
-  },
-  heading: {
-    fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex'
-  },
-  middleCell: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    maxWidth: '50%'
-  },
-  center: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    flexDirection: 'column',
-    display: 'flex'
-  },
-  centerLine: {
-    borderLeft: `1px solid ${color.lighter_gray}`,
-    marginLeft: '50%',
-    height: '100%'
-  },
-  centerText: {
-    padding: 3
-  },
-  button: {
-    paddingTop: 15
-  },
-  age: {
-    paddingTop: 15
-  },
-  dropdown: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    marginTop: 2,
-    width: 160
-  },
-  tooYoungButton: {
-    textAlign: 'right'
-  }
-};
-
 const sessionStorageKey = 'anon_over13';
 
 class SignInOrAgeDialog extends Component {
@@ -194,6 +136,64 @@ class SignInOrAgeDialog extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal
+  },
+  heading: {
+    fontSize: 16,
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
+  middle: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    display: 'flex'
+  },
+  middleCell: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    maxWidth: '50%'
+  },
+  center: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    flexDirection: 'column',
+    display: 'flex'
+  },
+  centerLine: {
+    borderLeft: `1px solid ${color.lighter_gray}`,
+    marginLeft: '50%',
+    height: '100%'
+  },
+  centerText: {
+    padding: 3
+  },
+  button: {
+    paddingTop: 15
+  },
+  age: {
+    paddingTop: 15
+  },
+  dropdown: {
+    verticalAlign: 'top',
+    marginRight: 10,
+    marginTop: 2,
+    width: 160
+  },
+  tooYoungButton: {
+    textAlign: 'right'
+  }
+};
 
 export const UnconnectedSignInOrAgeDialog = SignInOrAgeDialog;
 

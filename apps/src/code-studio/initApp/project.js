@@ -19,6 +19,8 @@ const NUM_ERRORS_BEFORE_WARNING = 3;
 var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 
 var hasProjectChanged = false;
+let projectSaveInProgress = false;
+let projectChangedWhileSaveInProgress = false;
 
 var assets = require('./clientApi').create('/v3/assets');
 var files = require('./clientApi').create('/v3/files');
@@ -277,6 +279,21 @@ var projects = (module.exports = {
     }
   },
 
+  /**
+   * Returns the project URL for the current project.
+   *
+   * This URL accesses the dashboard API for the sources S3 bucket where
+   * the main.json is generally stored.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified sources URL for the current project.
+   */
+  getProjectSourcesUrl() {
+    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`;
+  },
+
   getCurrentTimestamp() {
     if (!current) {
       return;
@@ -349,9 +366,9 @@ var projects = (module.exports = {
   },
 
   /**
-   * Sets abuse score to zero, saves the project, and reloads the page
+   * Sets abuse score, saves the project, and reloads the page
    */
-  adminResetAbuseScore() {
+  adminResetAbuseScore(score = 0) {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -360,16 +377,16 @@ var projects = (module.exports = {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      assets.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      files.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
+        $('.admin-abuse-score').text(score);
       });
     });
   },
@@ -495,6 +512,9 @@ var projects = (module.exports = {
     },
     setCurrentData(data) {
       current = data;
+    },
+    setCurrentSources(data) {
+      currentSources = data;
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
@@ -759,6 +779,9 @@ var projects = (module.exports = {
   },
   projectChanged() {
     hasProjectChanged = true;
+    if (projectSaveInProgress) {
+      projectChangedWhileSaveInProgress = true;
+    }
   },
   hasOwnerChangedProject() {
     return this.isOwner() && hasProjectChanged;
@@ -837,6 +860,7 @@ var projects = (module.exports = {
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
@@ -960,6 +984,40 @@ var projects = (module.exports = {
       });
     });
   },
+
+  /**
+   * Tests whether provided sample code is different from the current project code.
+   * This also normalizes the code so incidental differences in line endings or
+   * empty xml tags are not recognized as differences.
+   * @param {string} sampleCodeInput the code to diff against the current project code
+   */
+  isCurrentCodeDifferent(sampleCodeInput) {
+    // We can't use a default param here because we need to check for null and undefined
+    const sampleCode = sampleCodeInput || '';
+    const currentCode = currentSources.source || '';
+    let normalizedSample, normalizedCurrent;
+    const parser = new DOMParser();
+    const parsedCurrent = parser.parseFromString(currentCode, 'text/xml');
+    const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    // We normalize in different ways due to the difference in how droplet and blockly
+    // store code. Blockly is xml based and Droplet is plaintext based.
+    if (
+      parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
+      parsedSample.getElementsByTagName('parsererror').length > 0
+    ) {
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
+    } else {
+      // Normalize XML to ignore differences in closing tags.
+      const serializer = new XMLSerializer();
+      normalizedSample = serializer.serializeToString(parsedSample);
+      normalizedCurrent = serializer.serializeToString(parsedCurrent);
+    }
+
+    return normalizedSample !== normalizedCurrent;
+  },
+
   /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
@@ -1190,22 +1248,25 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(source => {
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const selectedSong = this.sourceHandler.getSelectedSong();
-        const generatedProperties = this.sourceHandler.getGeneratedProperties();
-        const libraries = this.sourceHandler.getLibrariesList();
-        callback({
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong,
-          generatedProperties,
-          libraries
-        });
-      })
+      this.sourceHandler
+        .getLevelSource()
+        .then(source => {
+          const html = this.sourceHandler.getLevelHtml();
+          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+          const selectedSong = this.sourceHandler.getSelectedSong();
+          const generatedProperties = this.sourceHandler.getGeneratedProperties();
+          const libraries = this.sourceHandler.getLibrariesList();
+          callback({
+            source,
+            html,
+            animations,
+            makerAPIsEnabled,
+            selectedSong,
+            generatedProperties,
+            libraries
+          });
+        })
+        .catch(error => callback({error}))
     );
   },
 
@@ -1398,15 +1459,33 @@ var projects = (module.exports = {
       return;
     }
 
+    // set project save in progress flag before fetching sources.
+    // If we get a change while the save is in progress, we don't
+    // want to mark hasProjectChanged to false.
+    projectSaveInProgress = true;
     this.getUpdatedSourceAndHtml_(newSources => {
+      if (newSources.error) {
+        header.showProjectSaveError();
+        callCallback();
+        return;
+      }
+
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
         return;
       }
 
       this.saveSourceAndHtml_(newSources, () => {
-        hasProjectChanged = false;
+        if (!projectChangedWhileSaveInProgress) {
+          hasProjectChanged = false;
+        }
+        projectSaveInProgress = false;
+        projectChangedWhileSaveInProgress = false;
         callCallback();
       });
     });

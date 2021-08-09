@@ -3,12 +3,6 @@ import i18n from '@cdo/locale';
 import Button from '../../Button';
 import PropTypes from 'prop-types';
 
-const styles = {
-  button: {
-    margin: '20px 0px'
-  }
-};
-
 export default class PrintReportButton extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired
@@ -32,3 +26,9 @@ export default class PrintReportButton extends Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: '20px 0px'
+  }
+};

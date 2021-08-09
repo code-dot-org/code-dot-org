@@ -1,0 +1,37 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "setupScoreboard",
+    "blockText": "draw scoreboard \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}target{SPRITE3COSTUME}",
+    "inline": false,
+    "args": [
+      {
+        "name": "SPRITE1COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "VAR1",
+        "type": "Number",
+        "field": false
+      },
+      {
+        "name": "SPRITE2COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "VAR2",
+        "type": "Number",
+        "field": false
+      },
+      {
+        "name": "SPRITE3COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

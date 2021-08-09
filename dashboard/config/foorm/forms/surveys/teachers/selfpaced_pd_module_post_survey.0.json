@@ -1,0 +1,228 @@
+{
+  "pages": [
+    {
+      "name": "survey",
+      "elements": [
+        {
+          "type": "html",
+          "name": "title_and_header",
+          "html": "<h2>Code.org Self-paced Online Professional Learning</h2>\n<h3>Post-module Survey</h3>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "section_setup_instructions",
+          "title": "Where is the best place to go if you are looking for written instructions for how to set up a class section on the Code.org website?",
+          "correctAnswer": "help_support",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "help_support",
+              "text": "Help and support "
+            },
+            {
+              "value": "report_a_problem",
+              "text": "Report a problem "
+            },
+            {
+              "value": "teacher_forum",
+              "text": "Teacher forum "
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "where_to_find_lesson_plans",
+          "useDisplayValuesInTitle": false,
+          "title": "Where is the best place to go to find a link to individual lesson plans? ",
+          "correctAnswer": "teacher_forum",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "teacher_dashboard",
+              "text": "The teacher dashboard"
+            },
+            {
+              "value": "course_overview",
+              "text": "The course overview page"
+            },
+            {
+              "value": "unit_overview",
+              "text": "The unit overview page"
+            },
+            {
+              "value": "curriculum_dot_codeorg",
+              "text": "Curriculum.code.org "
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "question2",
+          "title": "I have done or know how to do the following (select all that apply):",
+          "choices": [
+            {
+              "value": "verified_teacher",
+              "text": "Become a verified teacher"
+            },
+            {
+              "value": "setup_sections",
+              "text": "Set up classroom sections"
+            },
+            {
+              "value": "add_students_to_section",
+              "text": "Add students to a class section"
+            },
+            {
+              "value": "assign_course",
+              "text": "Assign course content to students in a class section"
+            },
+            {
+              "value": "nav_teacher_dashboard",
+              "text": "Navigate to the teacher dashboard"
+            },
+            {
+              "value": "track_progress",
+              "text": "Track student progress using the teacher dashboard"
+            },
+            {
+              "value": "provide_feedback",
+              "text": "Provide feedback on student work"
+            },
+            {
+              "value": "access_lesson_plans",
+              "text": "Access course lesson plans"
+            },
+            {
+              "value": "access_resources",
+              "text": "Access teacher resources"
+            },
+            {
+              "value": "access_support",
+              "text": "Access additional support"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "comfort_nav_website",
+          "title": "After completing this module, I feel more comfortable navigating and using the Code.org website than I did before starting this professional learning course. ",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "comfort_ability_to_teach_csd",
+          "title": "After completing this module, I feel more comfortable in my ability to teach CS Discoveries than I did before starting this professional learning course. ",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "supported_learning",
+          "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1). ",
+          "description": "Please apply each rank (1-5) exactly once; don't give the same ranking to two different items.",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5 "
+            }
+          ],
+          "rows": [
+            {
+              "value": "videos",
+              "text": "Watching videos about the Code.org website."
+            },
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "trying_a_task",
+              "text": "Trying a task with step by step instructions."
+            },
+            {
+              "value": "making_a_plan",
+              "text": "Making a plan related to preparing to teach CS Discoveries."
+            },
+            {
+              "value": "check_for_understanding",
+              "text": "Completing a check for understanding question."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback",
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
+        }
+      ]
+    },
+    {
+      "name": "results_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "results_reveal",
+          "html": "<h2>Your Responses</h2>\n<table>\n<tr>\n<th>question</th>\n<th>correct answer</th>\n<th>Your answer</th>\n</tr>\n<tr>\n<td> Where is the best place to go if you are looking for written instructions for how to set up a class section on the Code.org website?</td>\n<td>Help and support</td>\n<td>{section_setup_instructions}</td>\n</tr>\n<tr>\n<td> Where is the best place to go to find a link to individual lesson plans?  </td>\n<td>The unit overview page</td>\n<td> {where_to_find_lesson_plans}</td>\n</tr>\n</table>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

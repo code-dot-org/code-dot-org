@@ -7,7 +7,6 @@ class ScriptDSL < BaseDSL
     @skin = nil
     @current_scriptlevel = nil
     @video_key_for_next_level = nil
-    @hidden = true
     @login_required = false
     @hideable_lessons = false
     @student_detail_progress_view = false
@@ -15,43 +14,47 @@ class ScriptDSL < BaseDSL
     @lesson_extras_available = false
     @project_widget_visible = false
     @has_verified_resources = false
-    @has_lesson_plan = false
     @curriculum_path = nil
     @project_widget_types = []
     @wrapup_video = nil
-    @script_announcements = nil
+    @announcements = nil
     @new_name = nil
     @family_name = nil
     @version_year = nil
-    @is_stable = nil
+    @published_state = nil
     @supported_locales = []
     @pilot_experiment = nil
     @editor_experiment = nil
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @deprecated = false
     @is_course = false
+    @is_migrated = false
+    @is_maker_unit = false
   end
 
   integer :id
+
   string :professional_learning_course
+  boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
-  boolean :hidden
   boolean :login_required
   boolean :hideable_lessons
   boolean :student_detail_progress_view
   boolean :lesson_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
-  boolean :has_lesson_plan
-  boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :deprecated
   boolean :is_course
+  boolean :is_migrated
+  boolean :is_maker_unit
 
   string :wrapup_video
-  string :script_announcements
+  string :announcements
   string :new_name
   string :family_name
   string :version_year
@@ -59,6 +62,7 @@ class ScriptDSL < BaseDSL
   string :pilot_experiment
   string :editor_experiment
   string :curriculum_umbrella
+  string :published_state
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -91,8 +95,8 @@ class ScriptDSL < BaseDSL
     @lesson_groups.last[:description] = description
   end
 
-  def lesson_group_question(question)
-    @lesson_groups.last[:big_questions] << question
+  def lesson_group_big_questions(questions)
+    @lesson_groups.last[:big_questions] = questions
   end
 
   def lesson(key, properties = {})
@@ -110,6 +114,8 @@ class ScriptDSL < BaseDSL
         key: key,
         name: properties[:display_name],
         lockable: properties[:lockable],
+        has_lesson_plan: properties[:has_lesson_plan],
+        unplugged: properties[:unplugged],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
       }.compact
@@ -135,33 +141,35 @@ class ScriptDSL < BaseDSL
     lesson(nil)
     {
       id: @id,
-      hidden: @hidden,
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
+      only_instructor_review_required: @only_instructor_review_required,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
       has_verified_resources: @has_verified_resources,
-      has_lesson_plan: @has_lesson_plan,
       curriculum_path: @curriculum_path,
       project_widget_visible: @project_widget_visible,
       project_widget_types: @project_widget_types,
-      script_announcements: @script_announcements,
+      announcements: @announcements,
       new_name: @new_name,
       family_name: @family_name,
       version_year: @version_year,
-      is_stable: @is_stable,
+      published_state: @published_state,
       supported_locales: @supported_locales,
       pilot_experiment: @pilot_experiment,
       editor_experiment: @editor_experiment,
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
+      deprecated: @deprecated,
       lesson_groups: @lesson_groups,
-      is_course: @is_course
+      is_course: @is_course,
+      is_migrated: @is_migrated,
+      is_maker_unit: @is_maker_unit
     }
   end
 
@@ -309,6 +317,9 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize_to_string(script)
+    # the serialized data for migrated scripts lives in the .script_json file
+    return "is_migrated true\n" if script.is_migrated
+
     s = []
     # Legacy script IDs
     legacy_script_ids = {
@@ -322,9 +333,9 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
-    s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_lessons true' if script.hideable_lessons
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
@@ -332,22 +343,23 @@ class ScriptDSL < BaseDSL
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
     s << 'lesson_extras_available true' if script.lesson_extras_available
     s << 'has_verified_resources true' if script.has_verified_resources
-    s << 'has_lesson_plan true' if script.has_lesson_plan
     s << "curriculum_path '#{script.curriculum_path}'" if script.curriculum_path
     s << 'project_widget_visible true' if script.project_widget_visible
     s << "project_widget_types #{script.project_widget_types}" if script.project_widget_types
-    s << "script_announcements #{script.script_announcements}" if script.script_announcements
+    s << "announcements #{script.announcements}" if script.announcements
     s << "new_name '#{script.new_name}'" if script.new_name
     s << "family_name '#{script.family_name}'" if script.family_name
     s << "version_year '#{script.version_year}'" if script.version_year
-    s << 'is_stable true' if script.is_stable
+    s << "published_state '#{script.published_state}'" if script.published_state
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
     s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
     s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
+    s << "is_maker_unit true" if script.is_maker_unit
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)
@@ -362,10 +374,7 @@ class ScriptDSL < BaseDSL
         t += ", display_name: '#{escape(lesson_group.display_name)}'" if lesson_group.display_name
         s << t
         s << "lesson_group_description '#{escape(lesson_group.description)}'" if lesson_group.description
-        lesson_group.big_questions&.each do |big_question|
-          s << "lesson_group_question '#{escape(big_question)}'"
-        end
-
+        s << "lesson_group_big_questions '#{escape(lesson_group.big_questions)}'" if lesson_group.big_questions
       end
       lesson_group.lessons.each do |lesson|
         s << serialize_lesson(lesson)
@@ -381,7 +390,9 @@ class ScriptDSL < BaseDSL
     t = "lesson '#{escape(lesson.key)}'"
     t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
+    t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
+    t += ', unplugged: true' if lesson.unplugged
     s << t
     lesson.script_levels.each do |sl|
       type = 'level'
@@ -422,23 +433,14 @@ class ScriptDSL < BaseDSL
     assessment = nil,
     experiments = []
   )
+    named_level_name = named && (level.display_name || level.name)
+    progression_name = progression || named_level_name
     s = []
-    if level.key.start_with? 'blockly:'
-      s << "skin '#{level.skin}'" if level.try(:skin)
-      s << "video_key_for_next_level '#{level.video_key}'" if level.video_key
-
-      unless level.concepts.empty?
-        s << "concepts #{level.summarize_concepts}"
-      end
-
-      s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
-    end
     l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{escape(progression)}'" if progression
-    l += ', named: true' if named
+    l += ", progression: '#{escape(progression_name)}'" if progression_name
     l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l

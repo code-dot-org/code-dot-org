@@ -7,7 +7,7 @@ Feature: Contained Levels
 
 Scenario: Applab with free response contained level
   When I open my eyes to test "applab contained level"
-  Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
@@ -17,7 +17,7 @@ Scenario: Applab with free response contained level
   And I see no difference for "level run"
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
-  Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/15"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
   And I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "reloaded with contained level answered"
@@ -26,12 +26,12 @@ Scenario: Applab with free response contained level
   And I see no difference for "finished level with contained level"
   And I press "continue-button"
   # Make sure continue takes us to next level
-  And I wait until current URL contains "/stage/18/puzzle/16"
+  And I wait until current URL contains "/lessons/18/levels/16"
   Then I close my eyes
 
 Scenario: GameLab with a submittable contained level
-  When I open my eyes to test "gamelab contained level"
-  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/7"
+  When I open my eyes to test "gamelab submittable contained level"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/7"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load" using stitch mode "none"
@@ -41,11 +41,12 @@ Scenario: GameLab with a submittable contained level
   And I see no difference for "level run" using stitch mode "none"
   And I press "submitButton"
   And I press "confirm-button"
-  And I wait until current URL contains "/stage/41/puzzle/8"
+  And I wait until current URL contains "/lessons/41/levels/8"
+  Then I close my eyes
 
 Scenario: Gamelab with multiple choice contained level
-  When I open my eyes to test "gamelab contained level"
-  Given I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
+  When I open my eyes to test "gamelab multiple choice contained level"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load" using stitch mode "none"
@@ -55,7 +56,7 @@ Scenario: Gamelab with multiple choice contained level
   And I see no difference for "level run" using stitch mode "none"
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
-  Then I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/2"
+  Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
   And I rotate to landscape
   And I wait for the page to fully load
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
@@ -64,13 +65,38 @@ Scenario: Gamelab with multiple choice contained level
   And I see no difference for "finished level with contained level" using stitch mode "none"
   And I press "continue-button"
   # Make sure continue takes us to next level
-  And I wait until current URL contains "/stage/41/puzzle/3"
+  And I wait until current URL contains "/lessons/41/levels/3"
   Then I close my eyes
+
+Scenario: Javalab with free response contained level
+  When I open my eyes to test "javalab contained level"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
+  And I rotate to landscape
+  And I wait to see ".response"
+  And I scroll the ".response" element into view
+  Then I see no difference for "initial load"
+  Then I press keys "This is my answer" for element ".response"
+  And I see no difference for "answer entered"
+  Then I press "javalabRun"
+  And I see no difference for "level run"
+  # At this point, we should have submitted our result to the server, do
+  # a reload and make sure we have the submission
+  Then I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
+  And I rotate to landscape
+  And I wait to see ".response"
+  And I see no difference for "reloaded with contained level answered"
+  Then I press "javalabRun"
+  And I see no difference for "finished level with contained level"
+  Then I press "javalabFinish"
+  # Make sure continue takes us to next level
+  And I wait until current URL contains "/home"
+  Then I close my eyes
+
 
 Scenario: Authorized Teacher on Maze with free response contained level
   When I open my eyes to test "maze free response contained level"
   Given I sign in as "Teacher_Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/6"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/6"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
@@ -88,7 +114,7 @@ Scenario: Authorized Teacher on Maze with free response contained level
 Scenario: Authorized Teacher on App Lab with free response contained level
   When I open my eyes to test "applab free response contained level"
   Given I sign in as "Teacher_Lillian"
-  And I am on "http://studio.code.org/s/allthethings/stage/41/puzzle/3"
+  And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/3"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"
@@ -107,7 +133,7 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
   Given I create a teacher-associated student named "Sally"
   And I sign in as "Teacher_Sally" and go home
-  Then I am on "http://studio.code.org/s/coursee-2019/stage/4/puzzle/2"
+  Then I am on "http://studio.code.org/s/coursee-2019/lessons/4/levels/2"
   And I rotate to landscape
   And I wait for the page to fully load
   Then I see no difference for "initial load"

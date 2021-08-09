@@ -8,7 +8,8 @@
     "video_key": "oceans_training_data",
     "display_name": "Video: Training Data",
     "video_rounded_corners": true,
-    "video_full_width": true
+    "video_full_width": true,
+    "background": "oceans-blue"
   },
   "published": true,
   "notes": "",

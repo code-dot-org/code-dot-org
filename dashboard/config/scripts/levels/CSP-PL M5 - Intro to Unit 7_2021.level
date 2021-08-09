@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2021-05-28T01:05:17.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Understanding Unit 7\r\n\r\n**Goal:** The purpose of this section is to understand the larger picture of Unit 7 - Parameters, return, and libraries.  \r\n\r\n## Context for Unit 7\r\n* Unit 7 follows Unit 6 - Algorithms, which is an unplugged, 6 lesson long unit. \r\n* Unit 7 is the last unit where students learn new programming concepts. \r\n* After Unit 7, students will do the Create Performance Task for the AP Exam.  Note: we will be focusing more on the Create Performance Task in Module 8. \r\n* Since Unit 6 should be your first unit in semester 2, Unit 7 is approximately 1 week into your second semester.\r\n\r\n## Do this: \r\n* Read the information found on the <a href=\"https://curriculum.code.org/csp-20/unit7/\" target=\"blank\">Unit 7 landing page.</a> \r\n\r\n## Reflect: \r\nBased on what you read in the Unit 7 landing page, how does the content and structure of this unit help students prepare for the Create Performance Task?\r\n\r\n<span style=\"font-size:12px;\">**Note:** Your cohort's facilitators will be able to see your response, but your response will not be seen by other participants in your cohort. Facilitators will use these reflections to inform their planning for the upcoming synchronous workshop, but the primary purpose of these reflections is to allow you time to process or apply what you learn in the asynchronous work. For that reason, feel free to write as much or as little as is helpful for you - this might be two paragraphs, two sentences, a list, etc. You don't need to worry about spelling or punctuation in this space either - this is your space! </span>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24453,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:55:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2020-07-10 00:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 00:38:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:21:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-10 14:44:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-16 13:35:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-16 13:36:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-07-23 15:19:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-09-17 01:27:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-09-24 11:17:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-09-29 16:12:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-09-29 16:13:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2020-09-29 16:37:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]"
+}]]></config>
+</FreeResponse>

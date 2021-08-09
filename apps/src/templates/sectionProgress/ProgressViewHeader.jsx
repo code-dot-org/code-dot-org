@@ -2,37 +2,15 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {getCurrentScriptData} from './sectionProgressRedux';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
-const styles = {
-  heading: {
-    marginBottom: 0
-  },
-  tableHeader: {
-    marginBottom: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    justifyContent: 'space-between'
-  },
-  scriptLink: {
-    color: color.teal
-  },
-  refreshing: {
-    color: color.orange
-  },
-  refreshSpinner: {
-    marginRight: 5
-  }
-};
 
 class ProgressViewHeader extends Component {
   static propTypes = {
@@ -104,12 +82,34 @@ class ProgressViewHeader extends Component {
   }
 }
 
+const styles = {
+  heading: {
+    marginBottom: 0
+  },
+  tableHeader: {
+    marginBottom: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between'
+  },
+  scriptLink: {
+    color: color.teal
+  },
+  refreshing: {
+    color: color.orange
+  },
+  refreshSpinner: {
+    marginRight: 5
+  }
+};
+
 export const UnconnectedProgressViewHeader = ProgressViewHeader;
 
 export default connect(state => ({
   section: state.sectionData.section,
   currentView: state.sectionProgress.currentView,
   refreshing: state.sectionProgress.isRefreshingProgress,
-  scriptData: getCurrentScriptData(state),
+  scriptData: getCurrentUnitData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state)
 }))(ProgressViewHeader);

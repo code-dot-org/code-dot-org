@@ -5,6 +5,7 @@ display_name 'Introduction to Debugging'
 title 'Debugging Session'
 markdown <<MARKDOWN
 # Module 2: CS Principles Virtual Professional Learning 
+*(Estimated time: 5 minutes)*
 
 ## Module 2 Overview
 
@@ -21,8 +22,9 @@ Welcome to the asynchronous work of Module 2 for CS Principles!  The focus of th
 
 * Understand the role of the teacher and the student in a Practice and Make lesson types. 
 * Gain familiarity with the resources available to you as a teacher in the Practice and Make lessons. 
-* Have developed framework for considering when, where, and how you want to encourage collaboration in your classroom during programming lessons. 
+* Have developed a framework for considering when, where, and how you want to encourage collaboration in your classroom during programming lessons. 
+
+**Note**: If you have not yet watched the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3">5 videos on EIPM</a>, please watch them prior to engaging with this module, as they provide necessary context for each lesson type.
 
 Let's get started!
-
 MARKDOWN

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3-2017/stage/21/puzzle/17) and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3-2017/stage/20/puzzle/15) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
+    "long_instructions": "# Sprite Interactions\r\n\r\nThe last step is to create the functions that make your sprites interact in the right ways.  You'll need a function for each type of sprite interaction. You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3-2017/lessons/21/levels/17) and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3-2017/lessons/20/levels/15) as examples.\r\n\r\nFor each interaction:\r\n* Create a function in the functions area of your code\r\n* Call the function inside the draw loop\r\n\r\nAfter you make each function, run the code to test it before making another.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

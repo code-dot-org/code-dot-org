@@ -7,7 +7,8 @@ export default class NetworkResourceLink extends React.Component {
   static propTypes = {
     highlight: PropTypes.bool,
     icon: PropTypes.string.isRequired,
-    reference: PropTypes.string.isRequired
+    reference: PropTypes.string.isRequired,
+    openReferenceInNewTab: PropTypes.bool
   };
 
   state = {
@@ -27,6 +28,7 @@ export default class NetworkResourceLink extends React.Component {
         icon={this.props.icon}
         text={this.state.title ? this.state.title : this.props.reference}
         reference={this.props.reference}
+        openReferenceInNewTab={this.props.openReferenceInNewTab}
       />
     );
   }

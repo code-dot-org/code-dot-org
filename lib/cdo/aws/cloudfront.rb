@@ -250,7 +250,7 @@ module AWS
           Cookies: cookie_config,
           # Always explicitly include Host and CloudFront-Forwarded-Proto headers in CloudFront's cache key, to match Varnish defaults.
           Headers: headers,
-          QueryString: true
+          QueryString: behavior_config[:query] != false
         },
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
@@ -260,6 +260,7 @@ module AWS
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
         behavior[:PathPattern] = path if path
+        behavior[:RealtimeLogConfigArn] = {'Fn::ImportValue': 'AccessLogs-Config'}
       end
     end
 

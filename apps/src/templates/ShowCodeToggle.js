@@ -13,25 +13,6 @@ const BLOCKS_GLYPH_LIGHT =
 const BLOCKS_GLYPH_DARK =
   'data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
 
-const styles = {
-  blocksGlyph: {
-    display: 'none',
-    height: 18,
-    lineHeight: '24px',
-    verticalAlign: 'text-bottom',
-    paddingRight: 8
-  },
-  blocksGlyphRtl: {
-    paddingRight: 0,
-    paddingLeft: 8,
-    transform: 'scale(-1, 1)',
-    MozTransform: 'scale(-1, 1)',
-    WebkitTransform: 'scale(-1, 1)',
-    OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)'
-  }
-};
-
 const commonProps = {
   hasFocus: PropTypes.bool,
   isRtl: PropTypes.bool,
@@ -208,3 +189,22 @@ export default class ShowCodeToggle extends Component {
     );
   }
 }
+
+const styles = {
+  blocksGlyph: {
+    display: 'none',
+    height: 18,
+    lineHeight: '24px',
+    verticalAlign: 'text-bottom',
+    paddingRight: 8
+  },
+  blocksGlyphRtl: {
+    paddingRight: 0,
+    paddingLeft: 8,
+    transform: 'scale(-1, 1)',
+    MozTransform: 'scale(-1, 1)',
+    WebkitTransform: 'scale(-1, 1)',
+    OTransform: 'scale(-1, 1)',
+    msTransform: 'scale(-1, 1)'
+  }
+};

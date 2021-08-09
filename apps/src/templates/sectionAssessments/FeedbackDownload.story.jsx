@@ -4,8 +4,8 @@ import {UnconnectedFeedbackDownload} from './FeedbackDownload';
 const exampleExportableFeedbackData = [
   {
     studentName: 'Mike',
-    stageNum: '4',
-    stageName: 'Loops',
+    lessonNum: '4',
+    lessonName: 'Loops',
     levelNum: '7',
     keyConcept: 'You should be learning about loops',
     performanceLevelDetails: 'A loop is in the code',
@@ -15,8 +15,8 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Anne',
-    stageNum: '8',
-    stageName: 'Functions',
+    lessonNum: '8',
+    lessonName: 'Functions',
     levelNum: '10',
     keyConcept: '',
     performanceLevelDetails: '',
@@ -26,8 +26,8 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Mike',
-    stageNum: '3',
-    stageName: 'Variables',
+    lessonNum: '3',
+    lessonName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails:
@@ -38,8 +38,8 @@ const exampleExportableFeedbackData = [
   },
   {
     studentName: 'Anne',
-    stageNum: '3',
-    stageName: 'Variables',
+    lessonNum: '3',
+    lessonName: 'Variables',
     levelNum: '3',
     keyConcept: 'Use variables to help and make coding better.',
     performanceLevelDetails: 'You uses no variables',
@@ -59,6 +59,7 @@ export default storybook => {
         story: () => (
           <UnconnectedFeedbackDownload
             sectionName={'Test Section'}
+            onClickDownload={() => {}}
             exportableFeedbackData={exampleExportableFeedbackData}
             isCurrentScriptCSD={true}
             scriptName={'csd8-2011'}

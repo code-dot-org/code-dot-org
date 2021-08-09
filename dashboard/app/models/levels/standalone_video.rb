@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 class StandaloneVideo < Level
@@ -29,6 +30,7 @@ class StandaloneVideo < Level
     skip_sound
     video_rounded_corners
     video_full_width
+    background
   )
 
   before_validation do
@@ -78,6 +80,14 @@ class StandaloneVideo < Level
       scope: [:data, "teacher_markdown"],
       default: teacher_markdown,
       smart: true
+    )
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions
+      }
     )
   end
 end

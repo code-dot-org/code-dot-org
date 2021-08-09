@@ -24,12 +24,6 @@ class EnrolledWorkshops extends React.Component {
   }
 }
 
-const styles = {
-  button: {
-    width: '100%'
-  }
-};
-
 class EnrolledWorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape)
@@ -223,5 +217,11 @@ class EnrolledWorkshopsTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    width: '100%'
+  }
+};
 
 export {EnrolledWorkshops, EnrolledWorkshopsTable};

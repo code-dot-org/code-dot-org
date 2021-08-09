@@ -77,11 +77,12 @@ def build
     git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    Honeybadger.notify_new_release(rack_env, git_revision)
     write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
+
+    Honeybadger.notify_new_release(rack_env, git_revision)
 
     status = begin
       result = RakeUtils.rake_stream_output 'ci'
@@ -177,7 +178,7 @@ def main
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
       ChatClient.log message, color: 'red'
-      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red'
+      ChatClient.log "<@#{DevelopersTopic.dotd}> build failure", color: 'red' unless rack_env?(:adhoc)
 
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'

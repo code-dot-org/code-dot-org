@@ -1,0 +1,27 @@
+name 'CSP-PL Module 5 - Workshop Overview_2021'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 5: CS Principles Virtual Professional Learning 
+
+## Module 5 Overview
+
+Welcome to the Module 5 asynchronous work for CS Principles!  These experiences will help prepare you for the following synchronous workshop and also help you understand the content and curriculum as you prepare to teach your own students. Combined, these asynchronous tasks should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+**During this asynchronous work you will:**
+
+* Read Unit overview for Unit 7.
+* Review the lesson plan for U7L1 - Parameters and Return Explore.
+* Engage in the content from U7L3 - Parameters and Return Practice. 
+
+
+**After this asynchronous work you will:**
+
+* Understand how functions with parameters and a return work.  This is crucial content for the CS Principles Create Performance Task. 
+
+
+Let's get started!
+
+MARKDOWN

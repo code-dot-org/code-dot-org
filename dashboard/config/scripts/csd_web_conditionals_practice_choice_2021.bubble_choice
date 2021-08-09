@@ -1,0 +1,8 @@
+name 'CSD web conditionals practice choice_2021'
+display_name 'Conditionals Practice'
+description 'Practice using booleans and conditionals with these activities.'
+
+sublevels
+level 'CSD U3 Boolean Modify_2021'
+level 'CSD games conditionals bowl_2021'
+level 'CSD games conditionals practice spaceship_2021'

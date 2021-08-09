@@ -114,18 +114,10 @@ module.exports = {
           Applab.onPuzzleComplete();
         });
       },
-      expected: [
-        {
-          // change from design mode
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
     {
       description: 'add a screen',
@@ -756,18 +748,10 @@ module.exports = {
 
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          // resetButton clicked
-          result: undefined,
-          testResult: undefined
-        },
-        {
-          // onPuzzleComplete
-          result: true,
-          testResult: TestResults.FREE_PLAY
-        }
-      ]
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY
+      }
     },
 
     {

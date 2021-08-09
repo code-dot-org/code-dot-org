@@ -85,6 +85,7 @@ We're seeking candidates who demonstrate the following qualities:
 
 - Committed to supporting access to quality CS education for all students
 - Believes all teachers can teach CS
+- Dedicated to developing their own understanding of and support for equity
 
 [/col-80]
 
@@ -136,6 +137,7 @@ We're seeking candidates who demonstrate the following qualities:
 
 <h3 style="font-family: 'Gotham 5r', sans-serif">Engaging Leader</h3>
 
+- Demonstrated ability to effectively engage and co-lead learning experiences for adults
 - Demonstrated empathy for learners with a variety of backgrounds and levels of experience
 - Ability to "think on your feet" and make decisions that are in the best interest of the audience while maintaining fidelity to the program
 - Motivated self-starter

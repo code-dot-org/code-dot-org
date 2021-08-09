@@ -1,0 +1,894 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd4-2021",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-08-03 15:50:23 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd4-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Teaching and learning CS Discoveries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "The role of the teacher",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Learning CS Discoveries",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Teaching CS Discoveries",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    },
+    {
+      "key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    },
+    {
+      "key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b",
+        "lesson_activity.key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199"
+      }
+    },
+    {
+      "key": "de6164cd-44ec-465b-90c4-3383caee031b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lead Learner"
+      },
+      "seeding_key": {
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b",
+        "lesson_activity.key": "e27c2e41-7b96-47cd-b1ac-e3a7f3ee4199"
+      }
+    },
+    {
+      "key": "7a74c756-d607-4d85-bca9-da6079041f30",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pair programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "18e168f9-d7c5-442b-a310-620512864bec",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf",
+        "lesson_activity.key": "a6d4d393-d2da-4c3f-8fad-a4d59eb01852"
+      }
+    },
+    {
+      "key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lead learner"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419",
+        "lesson_activity.key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87"
+      }
+    },
+    {
+      "key": "e7c80839-4399-46ab-bf11-93a9e64f00bd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Differentiation"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7c80839-4399-46ab-bf11-93a9e64f00bd",
+        "lesson_activity.key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87"
+      }
+    },
+    {
+      "key": "0f26237e-ce27-44aa-b428-8a5309540da9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9",
+        "lesson_activity.key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning"
+        ],
+        "progression": "Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-TeachingLearning"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
+        "progression": "Lead Learner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-LeadLearner"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
+        "progression": "Lead Learner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-LeadLearner-vid"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
+        "progression": "Lead Learner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-EngagementAndLearning"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-Learning"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgramming"
+        ],
+        "progression": "Pair programming"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgramming"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid"
+        ],
+        "progression": "Pair programming"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgramming-vid"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2"
+        ],
+        "progression": "Pair programming"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgrammingPart2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "progression": "Using resources"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Resources"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
+        "progression": "Using resources"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-Resources-practice-lc"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging-vid"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Debugging-task"
+        ],
+        "progression": "Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-task"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging-task"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Differentiation"
+        ],
+        "progression": "Differentiation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Differentiation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "e7c80839-4399-46ab-bf11-93a9e64f00bd"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Differentiation"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Assessment"
+        ],
+        "progression": "Assessment"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Assessment"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment"
+        ],
+        "progression": "Assessment"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Task-Assessment"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment"
+        ],
+        "progression": "Assessment"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-TeachingLearning",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "f2fda932-26b2-4106-b67b-7bab5ecfe52b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-LeadLearner",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-LeadLearner-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-EngagementAndLearning",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-EngagementAndLearning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-Learning",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "7a74c756-d607-4d85-bca9-da6079041f30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgramming",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgramming-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgrammingPart2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "99b33af3-f7e7-44f1-81db-6e3b6256cf85"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Resources",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-Resources-practice-lc",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "18e168f9-d7c5-442b-a310-620512864bec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging-task",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-task"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "dd84ff35-a2b3-4f06-90e2-f24573214fdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Differentiation",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Differentiation"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "e7c80839-4399-46ab-bf11-93a9e64f00bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Assessment",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Task-Assessment",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

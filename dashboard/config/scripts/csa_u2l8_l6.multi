@@ -1,0 +1,21 @@
+name 'CSA U2L8-L6'
+title 'Check for Understanding'
+
+markdown <<MARKDOWN
+Consider the following class definition.
+
+```
+public class Smoothie {
+   private String fruit;
+   // Constructor not shown
+}
+```
+
+Which of the following is a correct header for a method of the `Smoothie` class that would return the value of the `private` instance variable `fruit` to use in a class other than `Smoothie`?
+MARKDOWN
+
+wrong 'private String getFruit()'
+wrong 'private void getFruit()'
+wrong 'public void getFruit()'
+right 'public String getFruit()'
+wrong 'public String getFruit(String fruit)'

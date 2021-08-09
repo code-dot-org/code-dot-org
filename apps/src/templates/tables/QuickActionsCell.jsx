@@ -12,37 +12,6 @@ export const QuickActionsCellType = {
   body: 'body'
 };
 
-const styles = {
-  icon: {
-    paddingLeft: 5,
-    paddingRight: 5,
-    paddingTop: 4,
-    paddingBottom: 4,
-    cursor: 'pointer'
-  },
-  actionButton: {
-    [QuickActionsCellType.body]: {
-      border: '1px solid ' + color.white,
-      borderRadius: 5,
-      color: color.darker_gray,
-      margin: 3
-    },
-    [QuickActionsCellType.header]: {
-      fontSize: 20,
-      lineHeight: '15px',
-      color: color.charcoal
-    }
-  },
-  hoverFocus: {
-    [QuickActionsCellType.body]: {
-      backgroundColor: color.lighter_gray,
-      border: '1px solid ' + color.light_gray,
-      borderRadius: 5,
-      color: color.white
-    }
-  }
-};
-
 export default class QuickActionsCell extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]).isRequired,
@@ -85,8 +54,7 @@ export default class QuickActionsCell extends Component {
   };
 
   // Menu closed
-  beforeClose = (_, resetPortalState) => {
-    resetPortalState();
+  onClose = () => {
     this.setState({
       open: false,
       canOpen: true
@@ -148,7 +116,7 @@ export default class QuickActionsCell extends Component {
         <PopUpMenu
           targetPoint={targetPoint}
           isOpen={this.state.open}
-          beforeClose={this.beforeClose}
+          onClose={this.onClose}
           showTail={false}
         >
           {this.props.children}
@@ -157,3 +125,34 @@ export default class QuickActionsCell extends Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 4,
+    paddingBottom: 4,
+    cursor: 'pointer'
+  },
+  actionButton: {
+    [QuickActionsCellType.body]: {
+      border: '1px solid ' + color.white,
+      borderRadius: 5,
+      color: color.darker_gray,
+      margin: 3
+    },
+    [QuickActionsCellType.header]: {
+      fontSize: 20,
+      lineHeight: '15px',
+      color: color.charcoal
+    }
+  },
+  hoverFocus: {
+    [QuickActionsCellType.body]: {
+      backgroundColor: color.lighter_gray,
+      border: '1px solid ' + color.light_gray,
+      borderRadius: 5,
+      color: color.white
+    }
+  }
+};
