@@ -13017,6 +13017,7 @@ es-MX:
             End of Course projects:
               name: Proyectos de fin de curso
           student_description: "¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
+          name: k5-onlinepd-2019
         dance-extras-2019:
           title: Sigue bailando (2019)
           description: Motívate con más ideas de proyectos.
@@ -17112,6 +17113,7 @@ es-MX:
           name: csd5-2021
           student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
         csd6-2021:
+          title: Computación física ('21-'22)
           description_short: Aprende a programar con dispositivos físicos.
           lessons:
             Innovations in Computing:
@@ -17198,6 +17200,7 @@ es-MX:
           name: csd6-2021
           student_description: La Unidad 6 explora el papel de las plataformas de hardware en la computación y cómo diferentes sensores pueden proporcionar entradas y salidas más efectivas que las del teclado, el ratón y el monitor tradicionales. Al usar el Laboratorio de aplicaciones y el Circuit Playground de Adafruit, podrás desarrollar programas que utilizan las mismas entradas y salidas de hardware que ves en los dispositivos inteligentes y observarás cómo un prototipo simple puede conducir a un producto terminado. La unidad concluye con un desafío de diseño en el que se utilizará Circuit Playground como base para innovar en tu propio diseño.
         csp1-2021:
+          title: Información digital ('21-'22)
           lessons:
             CS Principles Pre-survey:
               key: Encuesta previa de Principios de Ciencias de la Computación
@@ -17277,6 +17280,7 @@ es-MX:
               description: "### Filosofía y Pedagogía de la Unidad\n\n-   Esta unidad está diseñada para ser práctica, colaborativa y exploratoria. Uno de los principales objetivos de la unidad es crear una cultura positiva en el aula en la que los alumnos trabajen juntos, exploren problemas y comuniquen sus ideas. La mayoría de las lecciones incluyen dispositivos físicos o un widget digital y la mayor parte del tiempo de la lección debe dedicarse a que los alumnos exploren juntos estas herramientas para desarrollar una comprensión de los conceptos que destacan. El curso no comienza intencionadamente con la programación ya que, en muchas aulas, algunos alumnos tienen experiencia con la programación y otros no. La elección de comenzar con información digital e Internet permite crear una comunidad en el aula mientras se explora un tema que probablemente sea accesible para todos los alumnos. El ambiente de apoyo e inclusión en el aula que se construye en esta unidad debería ayudar a establecer un tono positivo que puede llevarse a cabo a lo largo del año escolar.\n\n-   Un objetivo importante del curso no es simplemente enseñar a los alumnos conocimientos técnicos, sino ponerlos en práctica de manera significativa. Esta unidad se basa en el proyecto de la unidad, que proporciona una oportunidad para que los alumnos sean \"decisorios\" sobre los impactos de la informática en la vida moderna. Otras unidades harán hincapié en potenciar las unidades como \"creadores\".\n\n### Evaluación y Proyectos Principales\n\nEl proyecto de la unidad pide a los alumnos que tengan en cuenta y debatan las cuestiones que surgen en la sociedad moderna debido a la digitalización de la información. Los alumnos analizarán un artículo que aborde la intersección entre la digitalización de la información y los acontecimientos actuales. Evaluarán los datos que se están digitalizando y valorarán los beneficios y los perjuicios que conlleva la digitalización de esta información. Los alumnos también completarán una evaluación al final de la unidad alineada con los objetivos del marco de los Principios CS cubiertos en esta unidad.\n\n### Conexiones AP\n\nEsta unidad y su proyecto asociado ayudan a desarrollar los conocimientos permanentes que se indican a continuación. Para un mapeo detallado de las unidades a los Objetivos de Aprendizaje y EKs, por favor vea la página de \"Estándares\" para esta unidad.\nAP® es una marca registrada de College Board\n\n-   DAT-1: La forma en que un ordenador representa los datos internamente es diferente de la forma en que los datos se interpretan y se muestran al usuario. Los programas se utilizan para traducir los datos a una representación más fácilmente comprensible para las personas.\n-   IOC-1: aunque las innovaciones informáticas suelen estar diseñadas para lograr un propósito específico, pueden tener consecuencias no deseadas\n\nEsta unidad incluye contenidos de los siguientes temas del Marco de Principios de CS de AP. Para obtener información más detallada sobre la cobertura de temas en el curso, revise [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n-   2.1 Números binarios\n-   2.2 Compresión de datos\n-   5.5 Asuntos legales y éticos."
           name: csp1-2021
         csp2-2021:
+          title: Internet ('21-'22)
           lessons:
             Welcome to the Internet:
               key: Bienvenidos a Internet
@@ -17305,6 +17309,7 @@ es-MX:
               description_teacher: Los alumnos aprenden que los grandes mensajes enviados por Internet se dividen en realidad en paquetes individuales y exploran los desafíos que esto crea. En primer lugar, los alumnos exploran una versión del "Simulador de Internet" que divide los mensajes en paquetes para hacerse una idea de cómo funciona. A continuación, los alumnos utilizan una guía de actividades que les conduce a través de los retos que crean los paquetes perdidos o desordenados. A continuación, diseñan su propio protocolo para hacer frente a estos problemas. Al final de la lección, los alumnos ven un vídeo y aprenden el Protocolo de Datagramas de Usuario (UDP) y el Protocolo de Control de Transmisión (TCP), dos protocolos diferentes para enviar mensajes divididos en paquetes.
             DNS and HTTP:
               key: DNS y HTTP
+              name: HTTP y DNS
               description_student: Aprende cómo se comparten los sitios web en Internet y luego examina si todo el mundo tiene realmente el mismo acceso a la información en la World Wide Web.
               description_teacher: 'Los alumnos concluyen su estudio de las capas de Internet aprendiendo sobre dos protocolos de alto nivel, HTTP y DNS. La lección comienza con un repaso de las capas que los alumnos ya han aprendido, es decir, la Internet física, la IP y el TCP/UDP. A continuación, la lección se adentra en el núcleo de la unidad, que es: "¿Qué sucede cuando escribo una dirección en mi navegador?". Los alumnos realizarán dos breves actividades, una desconectada y otra conectada, que exploran el funcionamiento del DNS. A continuación, los alumnos ven vídeos en los que se explica el funcionamiento del DNS y del HTTP, y toman notas en una guía de actividades que se les proporciona. La lección concluye con un repaso del funcionamiento de las diferentes capas de Internet.\\r'
             Project - Internet Dilemmas Part 1:
@@ -19193,11 +19198,11 @@ es-MX:
               description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan el código de inicio y realizan modificaciones sencillas para lograr diferentes resultados con un objeto `Pintor` y practican la creación de un objeto `Pintor` para identificar la relación entre una clase y un objeto.  '
             lesson-3:
               name: Utilización de comandos
-              description_student: 'Ahora que has conocido al `Pintor`, en esta lección utilizarás los comandos de acción para mover el `Pintor` por El Barrio. Aprenderás algunas de las reglas de Java que debes seguir para que el Pintor se mueva.  '
-              description_teacher: 'En esta lección, los alumnos aplican soluciones utilizando comandos de acción para mover al " Pintor " por El Barrio. Los alumnos desarrollan sus habilidades de pensamiento computacional traduciendo las soluciones en código Java mientras practican la duplicación de patrones. Mientras resuelven estos problemas, los alumnos aprenden la importancia de distinguir entre mayúsculas y minúsculas y del punto y coma en Java, y se les expone al uso de la notación de puntos para llamar a los comandos del "Pintor".  '
+              description_student: Ahora que has conocido al `Pintor`, en esta lección utilizarás los comandos de acción para mover el `Pintor` por El Barrio. Aprenderás algunas de las reglas de Java que debes seguir para que el Pintor se mueva.
+              description_teacher: En esta lección, los alumnos aplican soluciones utilizando comandos de acción para mover al " Pintor " por El Barrio. Los alumnos desarrollan sus habilidades de pensamiento computacional traduciendo las soluciones en código Java mientras practican la duplicación de patrones. Mientras resuelven estos problemas, los alumnos aprenden la importancia de distinguir entre mayúsculas y minúsculas y del punto y coma en Java, y se les expone al uso de la notación de puntos para llamar a los comandos del "Pintor".
             lesson-4:
               name: Condicionales y Depuración
-              description_student: 'Ahora que sabes cómo utilizar los comandos de acción, ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El Barrio utilizando comandos de recopilación de información. También aprendes a depurar e identificar estrategias para usar a lo largo del año.  '
+              description_student: Ahora que sabes cómo utilizar los comandos de acción, ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El Barrio utilizando comandos de recopilación de información. También aprendes a depurar e identificar estrategias para usar a lo largo del año.
               description_teacher: 'En esta lección, los alumnos modifican programas utilizando tres comandos de retorno: `isOnPaint()`, `isOnBucket()` y `canMove()`. Los booleanos, los condicionales y las sentencias de retorno se introducen a través de las sentencias `if` y los comandos de retorno del `Pintor` para que los alumnos practiquen el uso de la lógica condicional en sus programas. Estos conceptos se discuten con más detalle en futuras lecciones y se refuerzan a lo largo del curso. Los alumnos también desarrollan estrategias de depuración mediante la identificación de errores sintácticos y lógicos.'
             lesson-5:
               name: Más con Objetos
@@ -19213,7 +19218,7 @@ es-MX:
               description_teacher: Los alumnos amplían sus conocimientos sobre las estructuras de control y las expresiones booleanas utilizando las sentencias "si-si no" y el operador lógico "!" (no). Los alumnos practican el uso de la sentencia "si-si no" y "!" (no) para resolver problemas más complejos, además de los comandos del "Pintor" que han utilizado hasta ahora.
             lesson-8:
               name: Introducción a Revisiones del Código
-              description_student: 'Como ingeniero de software, quieres desarrollar un código que sea fácil de leer, mantener y modificar con el tiempo. En esta lección, practicarás el uso de las revisiones de código para proporcionar retroalimentación y comentarás las estrategias para dar y utilizar la retroalimentación. Estas estrategias serán útiles durante todo el año.  '
+              description_student: Como ingeniero de software, quieres desarrollar un código que sea fácil de leer, mantener y modificar con el tiempo. En esta lección, practicarás el uso de las revisiones de código para proporcionar retroalimentación y comentarás las estrategias para dar y utilizar la retroalimentación. Estas estrategias serán útiles durante todo el año.
               description_teacher: En este curso, los alumnos se imaginan a sí mismos como ingenieros de software y modelan las habilidades profesionales del mundo real. Los ingenieros de software utilizan las revisiones de código en toda la industria para desarrollar un código que sea fácil de leer, mantener y modificar con el tiempo. Los alumnos se inician en el proceso de revisión de código para sentar las bases de las habilidades que seguirán adquiriendo a lo largo del curso.
             lesson-9:
               name: Herencia y Métodos
@@ -19241,13 +19246,13 @@ es-MX:
               description_teacher: Antes, los alumnos recibían El Barrio inicial; ahora, los alumnos diseñan su propio Barrio. La lección se centra en responder a preguntas que no tienen una única respuesta correcta. Los alumnos descubren las ventajas y desventajas de las decisiones de diseño y practican la justificación de sus decisiones.
             lesson-15:
               name: Resumen de la Ingeniería de Software
-              description_student: 'Has aprendido mucho sobre cómo ser un ingeniero de software. Vuelves a ver los valores fundamentales de la ingeniería del software y reflexionas sobre cómo los has utilizado a lo largo de la unidad. También exploras el código fuente abierto y descubres lo mucho que sabes ahora sobre programación e ingeniería del software.  '
-              description_teacher: 'En esta lección, los alumnos examinan el código fuente abierto y conectan las aplicaciones del mundo real con los conceptos que han aprendido en esta unidad. Los alumnos repasan los valores fundamentales de la ingeniería del software y reflexionan sobre cómo los han utilizado. A través del descubrimiento, los alumnos afirman los valores fundamentales de la ingeniería del software.  '
+              description_student: Has aprendido mucho sobre cómo ser un ingeniero de software. Vuelves a ver los valores fundamentales de la ingeniería del software y reflexionas sobre cómo los has utilizado a lo largo de la unidad. También exploras el código fuente abierto y descubres lo mucho que sabes ahora sobre programación e ingeniería del software.
+              description_teacher: En esta lección, los alumnos examinan el código fuente abierto y conectan las aplicaciones del mundo real con los conceptos que han aprendido en esta unidad. Los alumnos repasan los valores fundamentales de la ingeniería del software y reflexionan sobre cómo los han utilizado. A través del descubrimiento, los alumnos afirman los valores fundamentales de la ingeniería del software.
             lesson-16:
               description_student: 'Para este proyecto, creas arte asfáltico en El Barrio utilizando las clases que has desarrollado y ampliado en esta unidad. Exploras la expresión creativa utilizando programas informáticos aplicando los conceptos que has aprendido para crear arte en el asfalto que represente algo significativo e interesante para ti. Exploras el hecho de ser un ingeniero de software a medida que haces una aportación de ideas, planificas tu proyecto y construyes tu programa. Fortaleces tus habilidades y procesos de desarrollo de software al participar en una revisión de código para aportar y utilizar comentarios mientras desarrollas tu programa.  '
               description_teacher: En este proyecto, los alumnos utilizan las habilidades que han desarrollado a lo largo de esta unidad para crear arte en asfalto en El Barrio utilizando las clases que han desarrollado y ampliado. Los alumnos eligen un tema o concepto para su arte en el asfalto que represente algo que les interese o sea significativo para ellos. Los alumnos tienen en cuenta cómo piensan utilizar las clases existentes para crear su arte en el asfalto. Tras una aportación de ideas y una planificación, los alumnos desarrollan sus programas para crear sus diseños.
             lesson-17:
-              description_student: 'Ahora pondrás en práctica las clases y comandos que has desarrollado a lo largo de la unidad y tu nueva clase y comando para crear tu arte del asfalto. Fortalecerás tus habilidades y procesos de desarrollo de software al participar en una revisión de código para aportar y utilizar comentarios mientras desarrollas tu programa.  '
+              description_student: Ahora pondrás en práctica las clases y comandos que has desarrollado a lo largo de la unidad y tu nueva clase y comando para crear tu arte del asfalto. Fortalecerás tus habilidades y procesos de desarrollo de software al participar en una revisión de código para aportar y utilizar comentarios mientras desarrollas tu programa.
               description_teacher: 'Los alumnos planificaron los usos de las clases existentes en la lección anterior y diseñaron una nueva clase, con el fin de proporcionar un comportamiento necesario para crear su arte del asfalto. En esta etapa del proyecto, los alumnos aplican las clases y comandos que han desarrollado a lo largo de la unidad y la nueva clase y comando para crear su diseño. Los alumnos refuerzan las habilidades y procesos de desarrollo de software mientras participan en una revisión de código para aportar y utilizar comentarios mientras desarrollan su programa. '
             lesson-18:
               description_student: A partir de la experiencia que has recibido en la lección anterior, finalizarás y presentarás tu Proyecto de Arte del Asfalto. ¡Comparte tus proyectos finales con tus compañeros y celebra tu éxito!
@@ -20404,3 +20409,22 @@ es-MX:
               name: Lección 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Módulo 1
+              description: prueba
+            lessonGroup-3:
+              display_name: Módulo 2
+            lessonGroup-4:
+              display_name: Módulo 3
+            lessonGroup-5:
+              display_name: Módulo 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Resumen
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Resumen

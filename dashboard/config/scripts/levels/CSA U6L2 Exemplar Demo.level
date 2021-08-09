@@ -1,0 +1,23 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Import `FoodTruck.java` from your **Backpack**.\r\n\r\nThe other food trucks sent their inventory reports to the owner with the quantities and prices entered as arrays of `String`s instead of `int`s and `double`s. Use the `Integer` and `Double` classes to create arrays of `int`s and `double`s containing the quantities and prices.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n\n\n\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "published": true,
+  "level_num": "custom",
+  "game_id": 68,
+  "created_at": "2021-08-09T13:33:29.000Z",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-08-09 13:35:07 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-09 13:35:52 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

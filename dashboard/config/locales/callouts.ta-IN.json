@@ -221,6 +221,39 @@
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "இந்த புதிரில் இந்த தொகுதிகளில் ஒன்று மட்டுமே உங்களிடம் உள்ளது."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "புதையலை சேகரிக்க இந்த தொகுதியைப் பயன்படுத்தவும்."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "இந்த புதிரில் எத்தனை தொகுதிகளை நீங்கள் பயன்படுத்தலாம் என்பதை இந்த எண் சொல்கிறது."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "உங்களுக்கு ஒரு குறிப்பு தேவைப்படும்போது லைட்பல்பைக் கிளிக் செய்க!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "அனைத்து தொகுதிகளையும் இணைத்த பிறகு, உங்கள் நிரலைத் தொடங்க \"Run\" என்பதை அழுத்தவும்."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "இது கருவிப்பெட்டி. உங்கள் புதிர்களை முடிக்க கூடுதல் தொகுதிகளை நீங்கள் காணலாம்."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "அனைத்து தொகுதிகளையும் ஒன்றாக இணைத்த பிறகு, உங்கள் நிரலைத் தொடங்க \"Run\" என்பதை அழுத்தவும்."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "உங்களுக்கு குறிப்பு தேவைப்படும்போது விளக்கை அழுத்தவும்!"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "இது கருவிப்பெட்டி. உங்கள் புதிர்களை முடிக்க கூடுதல் தொகுதிகளை நீங்கள் காணலாம்."
         }
       }
     }

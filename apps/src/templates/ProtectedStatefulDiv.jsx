@@ -41,7 +41,16 @@ class ProtectedStatefulDiv extends React.Component {
   }
 
   render() {
-    return <div {..._.omit(this.props, ['contentFunction'])} ref="root" />;
+    return (
+      <div
+        {..._.omit(this.props, [
+          'contentFunction',
+          'radiumConfigContext',
+          'styleKeeperContext'
+        ])}
+        ref="root"
+      />
+    );
   }
 }
 

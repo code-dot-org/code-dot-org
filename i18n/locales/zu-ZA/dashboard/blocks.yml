@@ -1,3 +1,4 @@
+---
 zu:
   data:
     blocks:
@@ -64,7 +65,7 @@ zu:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"no"': 'cha'
+            '"no"': cha
       RyanLab_moveForward:
         text: qubekela phambili
       craft_ifPath:

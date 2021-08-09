@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-22 15:33:06 UTC",
+    "serialized_at": "2021-08-03 22:48:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ai-classroom-test"
@@ -61,7 +61,6 @@
         ],
         "progression": "Introduction to AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -86,7 +85,6 @@
         ],
         "progression": "Explore AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -111,7 +109,6 @@
         ],
         "progression": "Import a Model to App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -136,7 +133,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

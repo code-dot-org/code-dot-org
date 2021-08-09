@@ -3,24 +3,17 @@
     "data": {
       "vocabularies": {
         "sprite/coursef/2021": {
-          "word": "Lutin",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Lutin"
         },
         "behavior/coursef/2021": {
-          "word": "comportement",
-          "definition": ""
+          "word": "comportement"
         },
         "program/coursef/2021": {
           "word": "Programme",
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "algorithm/coursef/2021": {
-          "word": "Algorithme",
-          "definition": ""
+          "word": "Algorithme"
         },
         "event/coursef/2021": {
           "word": "Évènement",
@@ -30,13 +23,8 @@
           "word": "Variable",
           "definition": "Un espace réservé pour une information qui peut changer."
         },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
         "input/coursef/2021": {
-          "word": "Entrée",
-          "definition": ""
+          "word": "Entrée"
         },
         "loop/coursef/2021": {
           "word": "Boucle",
@@ -49,10 +37,6 @@
         "for_loop/coursef/2021": {
           "word": "Boucle For",
           "definition": "Boucles qui ont un début, une fin et un incrément (intervalle de pas) prédéterminés."
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
         },
         "machine_learning/coursef/2021": {
           "word": "Apprentissage Automatique",
@@ -302,10 +286,6 @@
           "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
         },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
         "condition/coursed/2021": {
           "word": "Condition",
           "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action."
@@ -313,10 +293,6 @@
         "while_loop/coursed/2021": {
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "Algorithme",
@@ -343,20 +319,17 @@
           "definition": "L'art de créer un programme."
         },
         "behavior/express/2021": {
-          "word": "comportement",
-          "definition": ""
+          "word": "comportement"
         },
         "sprite/express/2021": {
-          "word": "Lutin",
-          "definition": ""
+          "word": "Lutin"
         },
         "event/express/2021": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2021": {
-          "word": "code",
-          "definition": ""
+          "word": "code"
         },
         "loop/express/2021": {
           "word": "Boucle",
@@ -382,10 +355,6 @@
           "word": "Boucle Tant Que",
           "definition": "Une boucle continue de répéter tant qu'une condition est vraie."
         },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
-        },
         "function/express/2021": {
           "word": "Fonction",
           "definition": "Un morceau de code que tu peux facilement appeler encore et encore."
@@ -393,10 +362,6 @@
         "variable/express/2021": {
           "word": "Variable",
           "definition": "Un espace réservé pour une information qui peut changer."
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
         },
         "for_loop/express/2021": {
           "word": "Boucle For",
@@ -471,24 +436,17 @@
           "definition": "Action qui provoque quelque chose."
         },
         "behavior/coursee/2021": {
-          "word": "comportement",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "comportement"
         },
         "sprite/coursee/2021": {
-          "word": "Lutin",
-          "definition": ""
+          "word": "Lutin"
         },
         "event/coursee/2021": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
         "copyright/coursee/2021": {
-          "word": "Copyright",
-          "definition": ""
+          "word": "Copyright"
         },
         "loop/coursee/2021": {
           "word": "Boucle",

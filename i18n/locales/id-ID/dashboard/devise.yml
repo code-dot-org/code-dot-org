@@ -18,8 +18,6 @@ id:
     mailer:
       confirmation_instructions:
         subject: "Petunjuk konfirmasi Code.org"
-      reset_password_instructions:
-        subject: "Instruksi atur ulang sandi Code.org"
       unlock_instructions:
         subject: "Membuka instruksi"
     omniauth_callbacks:

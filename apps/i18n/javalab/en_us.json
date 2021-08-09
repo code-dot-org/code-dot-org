@@ -38,6 +38,7 @@
   "errorTheaterDuplicatePlayCommand": "The play() method can only be called once per execution of the program.",
   "errorTheaterInvalidShape": "A shape needs to contain an even number of values to represent (x,y) coordinates, and must include at least 4 values.",
   "feedbackBeginning": "This is the beginning of feedback for your project.",
+  "feedbackBeginningPeer": "This is the beginning of feedback for {peerName}'s project.",
   "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
   "import": "Import",
   "includeFiles": "Include Files",
@@ -52,7 +53,9 @@
   "onlyVisibleToYou": "only visible to you",
   "programCompleted": "Program completed.",
   "reOpen": "Re-open",
+  "reviewClassmateProject": "Review a classmate’s project...",
   "resolve": "Resolve",
+  "returnToMyProject": "Return to my project",
   "running": "Running...",
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
@@ -60,5 +63,6 @@
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
-  "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}"
+  "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
+  "yourPeer": "your peer"
 }

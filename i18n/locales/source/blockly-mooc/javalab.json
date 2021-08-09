@@ -59,6 +59,8 @@
   "startingPainter": "Starting painter.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
+  "backpackSaveErrorTitle": "An error occurred",
+  "backpackSaveErrorMessage": "Please try again",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}"
 }

@@ -1818,3 +1818,5 @@ ar:
           DIR:
             right: إلى اليمين ↻
             left: إلى اليسار ↺
+      validation_validatedBackground:
+        text: تعيين الخلفية إلى {IMG}

@@ -23716,7 +23716,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Student CS practices
+              name: Learning CS Discoveries
               description_student: 
               description_teacher: 
             lesson-3:
@@ -24751,3 +24751,93 @@ en:
           description_audience: ''
           description_short: ''
           description: "###Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
+        csa-u6-dev:
+          lessons:
+            lesson-1:
+              name: Documenting Program Code
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Exploring Integer and Double Objects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Using ArrayLists to Store Data
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Working with ArrayList Data
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Storing Objects in an ArrayList
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Removing Data from an ArrayList
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Using String Methods
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Comparing Strings
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Solving Problems with Strings
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Solving Problems with ArrayLists
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Code Poetry Project
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Documenting Program Code
+            lesson-13:
+              name: Exploring Integer and Double Objects
+            lesson-14:
+              name: Using ArrayLists to Store Data
+            lesson-15:
+              name: Working with ArrayList Data
+            lesson-16:
+              name: Storing Objects in an ArrayList
+            lesson-17:
+              name: Removing Data from an ArrayList
+            lesson-18:
+              name: Using String Methods
+            lesson-19:
+              name: Comparing Strings
+            lesson-20:
+              name: Solving Problems with Strings
+            lesson-21:
+              name: Solving Problems with ArrayLists
+            lesson-22:
+              name: Code Poetry Project
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Exemplar Demos
+            lessonGroup-3:
+              display_name: Levels Development
+          name: csa-u6-dev
+          title: CSA Unit 6 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Hello, world!
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-draft
+          title: Hello, World
+          description_audience: ''
+          description_short: ''
+          description: ''

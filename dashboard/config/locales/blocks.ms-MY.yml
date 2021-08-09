@@ -1609,3 +1609,5 @@ ms:
           DIR:
             right: kanan?
             left: kiri
+      validation_validatedBackground:
+        text: tetapkan latar belakang ke {IMG}

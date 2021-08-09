@@ -1790,3 +1790,5 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      validation_validatedBackground:
+        text: суурь өнгийг {IMG} руу тохируулах
