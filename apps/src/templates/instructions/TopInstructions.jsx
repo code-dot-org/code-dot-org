@@ -627,8 +627,8 @@ class TopInstructions extends Component {
     }
 
     // ideally these props would get accessed directly from the redux
-    // store in the child, however TopInstructions is also used in
-    // in unconnected context, so we need to manually send these props through
+    // store in the child, however TopInstructions is also used in an unconnected
+    // context (in LevelDetailsDialog), so we need to manually send these props through
     const passThroughHeaderProps = {
       isMinecraft,
       ttsLongInstructionsUrl,
@@ -692,7 +692,6 @@ class TopInstructions extends Component {
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
-                user={user}
                 visible={tabSelected === TabType.COMMENTS}
                 isEditable={teacherViewingStudentWork}
                 rubric={rubric}
@@ -701,7 +700,8 @@ class TopInstructions extends Component {
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
-                teacher={this.props.user}
+                teacher={user}
+                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
