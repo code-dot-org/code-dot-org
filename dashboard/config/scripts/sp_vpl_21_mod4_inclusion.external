@@ -1,0 +1,49 @@
+name 'SP-VPL-21-mod4-Inclusion'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Inclusion
+
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">
+Inclusion is creating learning environments as well as using curricula and resources that are accessible, welcoming, and reflective of all students’ identities, backgrounds, differences, and perspectives.
+ </p>
+ 
+</div>
+<br>
+
+## What is my role as the teacher? 
+
+##### Your role as the teacher is to create a culture within your classroom where all students regardless of race, gender, language, ability, or socioeconomic background feel like they belong.  
+
+## How does the curriculum support inclusion?
+
+##### The CS Discoveries curriculum is intentionally designed to avoid privileging prior knowledge while honoring student voice and choice. This shows up in the curriculum in the following ways: 
+
+<img src="https://images.code.org/99f1b43cfbddb89ca53f2a12912f159e-image-1628540543391.jpg" width="365px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+* ##### The course begins with a unit focused on the problem solving process instead of jumping straight into programming. 
+* ##### Warm up prompts provide students the opportunity to bring in outside experiences.
+* ##### Lessons include scaffolding to support new to CS learners. 
+* ##### Programming lessons include choice levels that provide additional practice or challenge based on students' needs. 
+* ##### Projects incorporate student choice and opportunities for self-expression. 
+* ##### An emphasis is placed on students using resources to solve problems. 
+
+
+
+
+
+## What can I do to promote a culture of inclusion?
+
+* ##### **Consider your classroom environment:** What story does your classroom tell about who belongs in CS? Do all students see themselves represented in the images on your walls? Do the projects displayed on your walls feel approachable to new to CS students? Are there aspects of your classroom promote a growth mindset? 
+* ##### **Pay attention to grouping:** CS Discoveries includes many opportunities for students to collaborate and work together. Student groupings can have a big impact on whether or not a student feels like they belong in CS. Pay attention to student personalities, prior knowledge, and needs when selecting groups of students to work together. 
+* ##### **Avoid privileging prior knowledge:** 
+* ##### **Incorporate multiple student voices into class discussions:** 
+* ##### **Provide multiple opportunities for students to showcase their knowledge:** 
+
+ 
+
+
+MARKDOWN

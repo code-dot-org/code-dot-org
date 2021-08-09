@@ -22405,7 +22405,7 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: Practice Lesson
+              name: Unit 1 Pilot Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -22415,7 +22415,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Practice Levels
+              display_name: Pilot Survey
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -22501,7 +22501,7 @@ en:
           lessons:
             lesson-1:
               name: Creating Arrays
-              description_student: The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
+              description_student: The food truck owner increased their inventory of desserts. You have declared separate variables to keep track of the inventory, but what if you needed to store 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
               description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
             lesson-2:
               name: Accessing and Modifying Elements
