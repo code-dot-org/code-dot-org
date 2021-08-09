@@ -196,7 +196,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,7 +476,6 @@
       "properties": {
         "progression": "App: Is It Your Birthday?"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -498,7 +496,6 @@
       "properties": {
         "progression": "App: National Park Quiz"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -519,7 +516,6 @@
       "properties": {
         "progression": "App: How Many Countries..."
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -540,7 +536,6 @@
       "properties": {
         "progression": "App: My Famous Birthday"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +556,6 @@
       "properties": {
         "progression": "App: Stamp Notebook"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -582,7 +576,6 @@
       "properties": {
         "progression": "App: The Fastest Finger"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -603,7 +596,6 @@
       "properties": {
         "progression": "App: Guess the Number"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +616,6 @@
       "properties": {
         "progression": "App: Where Should I Live?"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
