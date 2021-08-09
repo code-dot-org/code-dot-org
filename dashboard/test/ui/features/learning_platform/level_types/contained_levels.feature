@@ -88,8 +88,6 @@ Scenario: Javalab with free response contained level
   Then I press "runButton"
   And I see no difference for "finished level with contained level"
   Then I press "finishButton"
-  # Make sure continue takes us to next level
-  And I wait until current URL contains "/home"
   Then I close my eyes
 
 
