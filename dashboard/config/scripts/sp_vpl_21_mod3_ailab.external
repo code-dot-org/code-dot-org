@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## How does AI Lab work? 
 
-##### Students can select from several pre-generated datasets, or upload your own data. They then decide what they would like to predict and which features to base their prediction off of. AI Lab will analyze the data and create a machine learning model which students can import into App Lab. Before saving their machine learning model, students also need to save a Model Card which acts like the documentation for their model.
+##### Students can select from several pre-generated datasets, or upload their own data. They then decide what they would like to predict and which features to base their prediction off of. AI Lab will analyze the data and create a machine learning model which students can import into App Lab. Before saving their machine learning model, students also need to save a Model Card which acts like the documentation for their model.
 
 ## Do students learn how to code in AI Lab? 
 

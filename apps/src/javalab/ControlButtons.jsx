@@ -16,6 +16,7 @@ export default function ControlButtons({
   onContinue,
   renderSettings,
   disableRunButtons,
+  showTestButton,
   isSubmittable,
   isSubmitted
 }) {
@@ -45,14 +46,16 @@ export default function ControlButtons({
           isDisabled={disableRunButtons}
           id="runButton"
         />
-        <JavalabButton
-          text={isTesting ? i18n.stopTests() : i18n.test()}
-          icon={<FontAwesome icon="flask" className="fa" />}
-          onClick={toggleTest}
-          isHorizontal
-          style={{...styles.button.all, ...styles.button.white}}
-          isDisabled={disableRunButtons}
-        />
+        {showTestButton && (
+          <JavalabButton
+            text={isTesting ? i18n.stopTests() : i18n.test()}
+            icon={<FontAwesome icon="flask" className="fa" />}
+            onClick={toggleTest}
+            isHorizontal
+            style={{...styles.button.all, ...styles.button.white}}
+            isDisabled={disableRunButtons}
+          />
+        )}
       </div>
       <div style={styles.rightButtons}>
         <JavalabSettings>{renderSettings()}</JavalabSettings>
@@ -80,6 +83,7 @@ ControlButtons.propTypes = {
   onContinue: PropTypes.func.isRequired,
   renderSettings: PropTypes.func.isRequired,
   disableRunButtons: PropTypes.bool,
+  showTestButton: PropTypes.bool,
   isSubmittable: PropTypes.bool,
   isSubmitted: PropTypes.bool
 };
