@@ -276,7 +276,7 @@ class ReviewTab extends Component {
 
     // channelId is not available on projects where the student has not edited the starter code.
     // comments cannot be made on projects in this tate.
-    const {projectOwnerHasEditedCode} = !!getStore().getState().pageConstants
+    const projectOwnerHasEditedCode = !!getStore().getState().pageConstants
       .channelId;
 
     if (projectOwnerHasEditedCode) {
