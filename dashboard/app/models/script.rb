@@ -116,7 +116,9 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless get_pilot_experiment.blank?
+    if !unit_group && pilot_experiment.present?
+      self.published_state = SharedConstants::PUBLISHED_STATE.pilot
+    end
   end
 
   # As we read and write to files with the unit name, to prevent directory
