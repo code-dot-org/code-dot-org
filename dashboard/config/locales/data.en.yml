@@ -635,6 +635,7 @@ en:
         Gettting_Started_ClassSection: Creating a Class Section
         Gettting_Started_StudentExperience: The Student Experience
         Getting_Started_BasicFeatures: Basic Features of Code.org
+        PL_overview_CSD: What is Computer Science Discoveries?
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

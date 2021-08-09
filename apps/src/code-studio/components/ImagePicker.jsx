@@ -10,10 +10,10 @@ import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
   image: '.jpg, .jpeg, .jfif, .gif, .png',
-  audio: '.mp3',
+  audio: '.mp3, .wav',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx',
   // Default set of valid extensions (used if type filter is not specified)
-  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .pdf, .doc, .docx'
+  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .wav, .pdf, .doc, .docx'
 };
 
 /**
