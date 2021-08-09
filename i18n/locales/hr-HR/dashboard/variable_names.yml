@@ -60,6 +60,7 @@ hr:
       level: razina
       marginX: marginaX
       marginY: marginaY
+      meal: obrok
       myName: mojeIme
       name: ime
       nectar: nektar
@@ -75,9 +76,13 @@ hr:
       repetitions: ponavljanja
       right: desno
       score: bodovi
+      score1: bodovi1
+      score2: bodovi2
       screenHeight: visinaZaslona
       screenWidth: širinaZaslona
       set sides: postavljanje strana
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: vikanje
       sides: strane
       size: veličina

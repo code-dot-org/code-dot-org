@@ -1,6 +1,7 @@
 {
   "allFilesCompile": "完成所有檔案了！",
   "backpackLabel": "背包",
+  "cancel": "取消",
   "clearConsole": "清除主控台",
   "commit": "提交",
   "commitCode": "提交程式碼",
@@ -23,5 +24,6 @@
   "newFile": "新增文件",
   "noMainMethod": "錯誤：你的程式並沒有包含主要函式。",
   "runtimeError": "你的程式碼在執行時碰到了例外。\n{cause}",
-  "twoMainMethods": "錯誤：你的程式碼只可以有一個主要函式。我們發現至少有兩個類別有主要函式。"
+  "twoMainMethods": "錯誤：你的程式碼只可以有一個主要函式。我們發現至少有兩個類別有主要函式。",
+  "saving": "正在儲存…"
 }

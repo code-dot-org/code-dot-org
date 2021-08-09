@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:50 UTC",
+    "serialized_at": "2021-08-03 22:47:08 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "fmscsd3preview"
@@ -74,9 +74,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Lesson Overview 2"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -98,9 +98,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Describe the Picture"
-        ]
+        ],
+        "progression": "Describe the Picture"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -122,9 +122,9 @@
       "properties": {
         "level_keys": [
           "CSD-U3-SFLP Simple Drawing"
-        ]
+        ],
+        "progression": "U3L01 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,9 +146,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 1"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -172,7 +172,6 @@
           "U3 - Simple Drawing - Rectangle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -196,7 +195,6 @@
           "U3 - Simple Drawing - Rectangle Width and Height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -220,7 +218,6 @@
           "U3 - Simple Drawing - X and Y values"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -244,7 +241,6 @@
           "U3 - Simple Drawing - Order of Blocks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,9 +262,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 2"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -292,7 +288,6 @@
           "U3 - Simple Drawing - Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +311,6 @@
           "U3 - Simple Drawing - Oval"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -340,7 +334,6 @@
           "U3 - Simple Drawing - Simple Shape Drawing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -364,7 +357,6 @@
           "U3 - Simple Drawing - Ellipse and No Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -388,7 +380,6 @@
           "U3 - Simple Drawing - Stroke and Stroke Weight"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -412,7 +403,6 @@
           "U3 - Simple Drawing - No Fill"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -436,7 +426,6 @@
           "U3 - Simple Drawing - Comments"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -460,7 +449,6 @@
           "U3 - Simple Drawing - Road Rects and Color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -484,7 +472,6 @@
           "U3 - Simple Drawing - Road Ellipse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -508,7 +495,6 @@
           "U3 - Simple Drawing - regular polygon"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -532,7 +518,6 @@
           "U3 - Simple Drawing - text"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,9 +539,9 @@
       "properties": {
         "level_keys": [
           "U3 - Simple Drawing - Plan Personal Drawing"
-        ]
+        ],
+        "progression": "Stop: Plan Your Drawing"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -580,7 +565,6 @@
           "U3 - Simple Drawing - Personal Drawing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

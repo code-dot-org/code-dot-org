@@ -102,9 +102,14 @@ class TopInstructions extends Component {
     collapsible: PropTypes.bool,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
+    initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
-    standalone: PropTypes.bool
+    standalone: PropTypes.bool,
+    onHeightResize: PropTypes.func,
+    // Use this if the caller wants to set an explicit height for the instructions rather
+    // than allowing this component to manage its own height.
+    explicitHeight: PropTypes.number
   };
 
   static defaultProps = {
@@ -128,9 +133,10 @@ class TopInstructions extends Component {
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
-        teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+        this.props.initialSelectedTab ||
+        (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
           ? TabType.COMMENTS
-          : TabType.INSTRUCTIONS,
+          : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
       studentId: studentId,
@@ -298,6 +304,10 @@ class TopInstructions extends Component {
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
+
+    if (this.props.onHeightResize) {
+      this.props.onHeightResize(newHeight);
+    }
   };
 
   refForSelectedTab = () => {
@@ -548,7 +558,8 @@ class TopInstructions extends Component {
       ttsLongInstructionsUrl,
       standalone,
       displayDocumentationTab,
-      displayReviewTab
+      displayReviewTab,
+      explicitHeight
     } = this.props;
 
     const {
@@ -569,7 +580,7 @@ class TopInstructions extends Component {
       isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
-        height: height - RESIZER_HEIGHT
+        height: explicitHeight ? explicitHeight : height - RESIZER_HEIGHT
       },
       noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
@@ -595,8 +606,13 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
+    // If we're displaying the review tab the teacher can leave feedback in that tab
+    // so we hide the teacher feedback tab if there's no rubric to avoid confusion about
+    // where the teacher should leave feedback
     const displayFeedback =
-      !!rubric || teacherViewingStudentWork || studentHasFeedback;
+      !!rubric ||
+      (!displayReviewTab && teacherViewingStudentWork) ||
+      studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -611,8 +627,8 @@ class TopInstructions extends Component {
     }
 
     // ideally these props would get accessed directly from the redux
-    // store in the child, however TopInstructions is also used in
-    // in unconnected context, so we need to manually send these props through
+    // store in the child, however TopInstructions is also used in an unconnected
+    // context (in LevelDetailsDialog), so we need to manually send these props through
     const passThroughHeaderProps = {
       isMinecraft,
       ttsLongInstructionsUrl,
@@ -676,7 +692,6 @@ class TopInstructions extends Component {
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
-                user={user}
                 visible={tabSelected === TabType.COMMENTS}
                 isEditable={teacherViewingStudentWork}
                 rubric={rubric}
@@ -685,7 +700,8 @@ class TopInstructions extends Component {
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
-                teacher={this.props.user}
+                teacher={user}
+                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
@@ -712,13 +728,16 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView && resizable && !dynamicInstructions && (
-            <HeightResizer
-              resizeItemTop={this.getItemTop}
-              position={height}
-              onResize={this.handleHeightResize}
-            />
-          )}
+          {!isEmbedView &&
+            resizable &&
+            !dynamicInstructions &&
+            !explicitHeight && (
+              <HeightResizer
+                resizeItemTop={this.getItemTop}
+                position={height}
+                onResize={this.handleHeightResize}
+              />
+            )}
         </div>
       </div>
     );
