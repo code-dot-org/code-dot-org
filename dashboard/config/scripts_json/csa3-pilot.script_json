@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-05 18:11:05 UTC",
+    "serialized_at": "2021-08-09 16:14:52 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -3037,7 +3037,7 @@
       "key": "f43cea3a-bcc1-4e02-973d-01deddab6c5c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithm video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4427,6 +4427,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L7-2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4672,7 +4675,7 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L7-L1"
@@ -4722,7 +4725,7 @@
       "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L7-L3"
@@ -4897,7 +4900,7 @@
       "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U3L8-L4"
@@ -6356,6 +6359,18 @@
       }
     },
     {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1960cNnJ-jloE4z8k-UF4rlsiNGmaQxS5/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
       "name": "Concert in the Theater Project Peer Interview Cards",
       "url": "https://docs.google.com/document/d/1AJiEb-Bz6zBMWhzSjv7DNc3Y3RZLeyYUAxZtbhSDW_A/edit#",
       "key": "concert_in_the_theater_project_peer_interview_cards",
@@ -6392,6 +6407,18 @@
       }
     },
     {
+      "name": "Constants",
+      "url": "https://drive.google.com/file/d/1ZFffIRmpx4BJWj-8X3pOYVAIHCEs4uyu/view?usp=sharing",
+      "key": "constants",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "constants"
+      }
+    },
+    {
       "name": "Creating Arrays",
       "url": "https://docs.google.com/document/d/1iizfp7lBTE9AR5joYnilOkcjFAMo4AFL83dDuJmSXv0/edit?usp=sharing",
       "key": "creating_arrays",
@@ -6401,6 +6428,18 @@
       },
       "seeding_key": {
         "resource.key": "creating_arrays"
+      }
+    },
+    {
+      "name": "Enhanced for Loops",
+      "url": "https://drive.google.com/file/d/1wJ6e8eMVE2bw5LC7HJAd1vsr01bJfXQ6/view?usp=sharing",
+      "key": "enhanced_for_loops",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops"
       }
     },
     {
@@ -6452,6 +6491,30 @@
       }
     },
     {
+      "name": "How Do Software Engineers Write Algorithms?",
+      "url": "https://drive.google.com/file/d/16XLWWcJBqX7daMO0Q9iPyRIDAMVjzGSJ/view?usp=sharing",
+      "key": "how_do_software_engineers_write_algorithms_",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_do_software_engineers_write_algorithms_"
+      }
+    },
+    {
+      "name": "Introducing for Loops",
+      "url": "https://drive.google.com/file/d/1YQV3hU69w628iHyXtDeJ1r2uE3go3nZd/view?usp=sharing",
+      "key": "introducing_for_loops",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introducing_for_loops"
+      }
+    },
+    {
       "name": "Investigating Arrays",
       "url": "https://docs.google.com/document/u/0/d/1_CR2CMcBWjVLt8UipUguTdB-0E5W_xSJhHps_jfkS7g/edit",
       "key": "investigating_arrays",
@@ -6473,6 +6536,18 @@
       },
       "seeding_key": {
         "resource.key": "math_class_source_code"
+      }
+    },
+    {
+      "name": "Nested Loops",
+      "url": "https://drive.google.com/file/d/1LkDYSa9eDg1iBc_EmPDRkK13-ZTUQZy5/view?usp=sharing",
+      "key": "nested_loops",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "nested_loops"
       }
     },
     {
@@ -6512,6 +6587,18 @@
       }
     },
     {
+      "name": "Polymorphism",
+      "url": "https://drive.google.com/file/d/1UUV1LKUumaYH2tevjUct0qqafU42EcW9/view?usp=sharing",
+      "key": "polymorphism",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "polymorphism"
+      }
+    },
+    {
       "name": "Polymorphism Role Cards",
       "url": "https://docs.google.com/presentation/d/1pc1T8Kn2Bd4o0kM_m8KUz0ED56mKYGtxoENqLy0eyms/edit?usp=sharing",
       "key": "polymorphism_role_cards",
@@ -6521,6 +6608,18 @@
       },
       "seeding_key": {
         "resource.key": "polymorphism_role_cards"
+      }
+    },
+    {
+      "name": "Static Variables",
+      "url": "https://drive.google.com/file/d/1Ie39OmNCaTnOlZkdU96AE1qw2EC-RqVR/view?usp=sharing",
+      "key": "static_variables",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "static_variables"
       }
     },
     {
@@ -6738,6 +6837,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "creating_arrays"
       }
     },
@@ -6763,6 +6868,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "_key_u3l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "nested_loops"
       }
     },
     {
@@ -6948,6 +7059,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "introducing_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u3l3_extra_practice"
       }
     },
@@ -6979,6 +7096,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u3l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "polymorphism"
       }
     },
     {
@@ -7026,6 +7149,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "tracing_loops"
       }
     },
@@ -7056,7 +7185,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "constants"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "math_class_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "static_variables"
       }
     },
     {
@@ -7123,6 +7264,12 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "array_algorithms_manipulatives"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "how_do_software_engineers_write_algorithms_"
       }
     },
     {

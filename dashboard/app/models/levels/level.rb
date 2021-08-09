@@ -564,6 +564,11 @@ class Level < ApplicationRecord
     ["Applab", "Gamelab", "Weblab"].include?(type)
   end
 
+  # Currently only Javalab can have code review
+  def can_have_code_review?
+    ["Javalab"].include?(type)
+  end
+
   def display_as_unplugged?
     # Levelbuilders can select if External/
     # Markdown levels should display as Unplugged.
