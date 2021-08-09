@@ -24,7 +24,7 @@ describe('The ShowCodeToggle component', () => {
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
     sinon.stub(project, 'getCurrentId').returns('some-project-id');
-    sinon.stub(utils, 'fireResizeEvent');
+    sinon.stub(utils, 'fireResizeEvent'); // Called by StudioApp.js
   });
   afterEach(() => {
     server.restore();
