@@ -3428,6 +3428,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign(
     {
+      canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
       skinId: config.skinId,
