@@ -1,0 +1,26 @@
+.csjourneys-banner-header {
+  font-family: "Gotham 5r", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  z-index: 1;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.csjourneys-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 971px) {
+  .csjourneys-banner-container {
+    padding: 0;
+  }
+
+  .csjourneys-banner-header {
+    font-size: 26px;
+  }
+}
