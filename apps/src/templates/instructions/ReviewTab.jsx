@@ -19,13 +19,15 @@ export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
-  // Populated by redux
   static propTypes = {
+    onLoadComplete: PropTypes.func,
+    // Populated by redux
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
 
   state = {
+    initialLoadCompleted: false,
     reviewCheckboxEnabled: false,
     isReadyForReview: false,
     reviewableProjectId: '',
@@ -65,53 +67,79 @@ class ReviewTab extends Component {
       serverScriptId
     } = getStore().getState().pageConstants;
 
-    codeReviewDataApi
-      .getCodeReviewCommentsForProject(channelId)
-      .done((data, _, request) => {
-        this.setState({
-          comments: data,
-          token: request.getResponseHeader('csrf-token')
-        });
-      });
+    const initialLoadPromises = [];
 
-    codeReviewDataApi
-      .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
-      .done(data => {
-        const id = (data && data.id) || null;
-        this.setState({
-          reviewCheckboxEnabled: data.canMarkReviewable,
-          isReadyForReview: data.reviewEnabled,
-          projectOwnerName: data.name,
-          reviewableProjectId: id
-        });
+    initialLoadPromises.push(
+      new Promise((resolve, reject) => {
+        codeReviewDataApi
+          .getCodeReviewCommentsForProject(channelId)
+          .done((data, _, request) => {
+            this.setState({
+              comments: data,
+              token: request.getResponseHeader('csrf-token')
+            });
+            resolve();
+          });
       })
-      .fail(() => {
-        this.setState({
-          reviewCheckboxEnabled: false,
-          isReadyForReview: false
-        });
-      });
+    );
+
+    initialLoadPromises.push(
+      new Promise((resolve, reject) => {
+        codeReviewDataApi
+          .getPeerReviewStatus(channelId, serverLevelId, serverScriptId)
+          .done(data => {
+            const id = (data && data.id) || null;
+            this.setState({
+              reviewCheckboxEnabled: data.canMarkReviewable,
+              isReadyForReview: data.reviewEnabled,
+              projectOwnerName: data.name,
+              reviewableProjectId: id
+            });
+            resolve();
+          })
+          .fail(() => {
+            this.setState({
+              reviewCheckboxEnabled: false,
+              isReadyForReview: false
+            });
+            reject();
+          });
+      })
+    );
 
     if (
       !this.props.viewAsCodeReviewer &&
       this.props.viewAs !== ViewType.Teacher
     ) {
-      codeReviewDataApi
-        .getReviewablePeers(channelId, serverLevelId, serverScriptId)
-        .done(data => {
-          this.setState({
-            reviewablePeers: _.chain(data)
-              .filter(peerEntry => peerEntry && peerEntry.length === 2)
-              .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
-              .value()
-          });
+      initialLoadPromises.push(
+        new Promise((resolve, reject) => {
+          codeReviewDataApi
+            .getReviewablePeers(channelId, serverLevelId, serverScriptId)
+            .done(data => {
+              this.setState({
+                reviewablePeers: _.chain(data)
+                  .filter(peerEntry => peerEntry && peerEntry.length === 2)
+                  .map(peerEntry => ({id: peerEntry[0], name: peerEntry[1]}))
+                  .value()
+              });
+              resolve();
+            })
+            .fail(() => {
+              this.setState({
+                errorLoadingReviewblePeers: true
+              });
+              reject();
+            });
         })
-        .fail(() => {
-          this.setState({
-            errorLoadingReviewblePeers: true
-          });
-        });
+      );
     }
+
+    Promise.all(initialLoadPromises).finally(() => {
+      this.setState({
+        initialLoadCompleted: true
+      });
+      this.props.onLoadComplete();
+    });
   }
 
   onNewCommentSubmit = commentText => {
@@ -344,6 +372,7 @@ class ReviewTab extends Component {
     const {viewAsCodeReviewer, viewAs} = this.props;
 
     const {
+      initialLoadCompleted,
       comments,
       forceRecreateEditorKey,
       isReadyForReview,
@@ -352,6 +381,14 @@ class ReviewTab extends Component {
       reviewablePeers,
       projectOwnerName
     } = this.state;
+
+    if (!initialLoadCompleted) {
+      return (
+        <div style={styles.loadingContainer}>
+          <Spinner size="large" />
+        </div>
+      );
+    }
 
     return (
       <div style={styles.reviewsContainer}>
@@ -394,6 +431,11 @@ export default connect(state => ({
 }))(ReviewTab);
 
 const styles = {
+  loadingContainer: {
+    display: 'flex',
+    margin: '25px',
+    justifyContent: 'center'
+  },
   reviewsContainer: {
     margin: '25px 5%'
   },
