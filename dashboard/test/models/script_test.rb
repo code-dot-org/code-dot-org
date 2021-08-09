@@ -557,13 +557,15 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    level = Script.find_by_name('course4').script_levels.second.level
-    expected = level.level_concept_difficulty
-    assert_not_nil expected
+    script_level = create(:script_level)
+    level = script_level.level
+    script = script_level.script
+    create(:lesson_group, lessons: [script_level.lesson], script: script)
+    expected = create(:level_concept_difficulty, level: level)
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, Script.get_from_cache('course4').script_levels.second.level.level_concept_difficulty
+    assert_equal expected, Script.get_from_cache(script.name).script_levels.first.level.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
@@ -3020,8 +3022,8 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert error.message.include? 'Duplicate entry'
-    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
+    assert_includes error.message, 'Duplicate entry'
+    assert_includes error.message, "for key 'script_levels.index_script_levels_on_seed_key'"
   end
 
   test 'can add unplugged for lesson' do
