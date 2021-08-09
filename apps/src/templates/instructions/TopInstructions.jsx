@@ -281,7 +281,10 @@ class TopInstructions extends Component {
    * contents of the comment tab.
    */
   forceTabResizeToMaxHeight = () => {
-    if (this.state.tabSelected === TabType.COMMENTS) {
+    if (
+      this.state.tabSelected === TabType.COMMENTS ||
+      this.state.tabSelected === TabType.REVIEW
+    ) {
       this.props.setInstructionsRenderedHeight(this.adjustMaxNeededHeight());
     }
   };
@@ -708,7 +711,10 @@ class TopInstructions extends Component {
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab ref={ref => (this.reviewTab = ref)} />
+              <ReviewTab
+                ref={ref => (this.reviewTab = ref)}
+                onLoadComplete={this.forceTabResizeToMaxHeight}
+              />
             )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
