@@ -58,7 +58,8 @@ class JavalabView extends React.Component {
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     setInstructionsSpecificMaxHeight: PropTypes.func,
-    awaitingContainedResponse: PropTypes.bool
+    awaitingContainedResponse: PropTypes.bool,
+    isVisualizationCollapsed: PropTypes.bool
   };
 
   state = {
@@ -220,20 +221,29 @@ class JavalabView extends React.Component {
     );
 
     if (this.props.visualization) {
-      // If there is a visualization, ensure that the instructions don't extend beyond
-      // the bottom of the window.  In particular, we want the horizontal resizer to still
-      // be visible, along with a peek at the visualization area.
-      const miscElementsExistingHeightVisualization = 150;
-      const minimumInstructionsHeight = 100;
-      this.props.setInstructionsSpecificMaxHeight(
-        Math.max(
-          window.innerHeight - miscElementsExistingHeightVisualization,
-          minimumInstructionsHeight
-        )
-      );
+      if (this.props.isVisualizationCollapsed) {
+        const miscElementsExistingHeightNoVisualization = 105;
+        this.props.setInstructionsExplicitHeight(
+          window.innerHeight - miscElementsExistingHeightNoVisualization - 70
+        );
+      } else {
+        // If there is a visualization, ensure that the instructions don't extend beyond
+        // the bottom of the window.  In particular, we want the horizontal resizer to still
+        // be visible, along with a peek at the visualization area.
+        const miscElementsExistingHeightVisualization = 150;
+        const minimumInstructionsHeight = 100;
+        this.props.setInstructionsSpecificMaxHeight(
+          Math.max(
+            window.innerHeight - miscElementsExistingHeightVisualization,
+            minimumInstructionsHeight
+          )
+        );
+
+        this.props.setInstructionsExplicitHeight(undefined);
+      }
     } else {
       // If there is no visualization, make the instructions explicitly full height.
-      const miscElementsExistingHeightNoVisualization = 105;
+      const miscElementsExistingHeightNoVisualization = 80;
       this.props.setInstructionsExplicitHeight(
         window.innerHeight - miscElementsExistingHeightNoVisualization
       );
@@ -262,7 +272,8 @@ class JavalabView extends React.Component {
   componentDidUpdate(prevProps) {
     if (
       prevProps.instructionsRenderedHeight !==
-      this.props.instructionsRenderedHeight
+        this.props.instructionsRenderedHeight ||
+      prevProps.isVisualizationCollapsed !== this.props.isVisualizationCollapsed
     ) {
       this.updateLayoutThrottled(this.props.leftWidth);
     }
@@ -425,7 +436,8 @@ const styles = {
     marginTop: styleConstants['resize-bar-width']
   },
   preview: {
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
+    imageRendering: 'pixelated'
   },
   javalab: {
     display: 'flex',
@@ -464,7 +476,8 @@ export default connect(
     instructionsExplicitHeight: state.javalab.instructionsExplicitHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
+    isVisualizationCollapsed: state.javalab.isVisualizationCollapsed
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

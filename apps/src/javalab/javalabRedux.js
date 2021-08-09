@@ -22,6 +22,7 @@ const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
+const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
 
 const initialState = {
   consoleLogs: [],
@@ -37,7 +38,8 @@ const initialState = {
   backpackApi: null,
   isStartMode: false,
   levelName: undefined,
-  disableFinishButton: false
+  disableFinishButton: false,
+  isVisualizationCollapsed: false
 };
 
 // Action Creators
@@ -125,6 +127,10 @@ export const setIsRunning = isRunning => ({
 export const setBackpackApi = backpackApi => ({
   type: SET_BACKPACK_API,
   backpackApi
+});
+
+export const toggleVisualizationCollapsed = () => ({
+  type: TOGGLE_VISUALIZATION_COLLAPSED
 });
 
 /**
@@ -340,6 +346,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       disableFinishButton: action.disableFinishButton
+    };
+  }
+  if (action.type === TOGGLE_VISUALIZATION_COLLAPSED) {
+    return {
+      ...state,
+      isVisualizationCollapsed: !state.isVisualizationCollapsed
     };
   }
   return state;
