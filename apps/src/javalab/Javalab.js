@@ -225,7 +225,11 @@ Javalab.prototype.init = function(config) {
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
 
-  getStore().dispatch(setDisableFinishButton(!!config.readonlyWorkspace));
+  getStore().dispatch(
+    setDisableFinishButton(
+      !!config.readonlyWorkspace && !config.level.submittable
+    )
+  );
 
   ReactDOM.render(
     <Provider store={getStore()}>

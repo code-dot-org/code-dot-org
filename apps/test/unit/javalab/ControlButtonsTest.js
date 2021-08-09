@@ -36,7 +36,7 @@ describe('Java Lab Control Buttons Test', () => {
     const wrapper = shallow(
       <ControlButtons {...defaultProps} isSubmittable={false} />
     );
-    const finishButton = wrapper.find('#javalabFinish');
+    const finishButton = wrapper.find('#finishButton');
     expect(finishButton).to.not.be.null;
     expect(finishButton.props().text).to.equal('Finish');
     expect(finishButton.props().onClick).to.not.be.null;
