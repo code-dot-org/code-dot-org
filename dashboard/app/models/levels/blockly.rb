@@ -63,7 +63,6 @@ class Blockly < Level
     definition_highlight
     definition_collapse
     disable_examples
-    project_template_level_name
     hide_share_and_remix
     is_project_level
     code_functions
@@ -71,7 +70,6 @@ class Blockly < Level
     failure_message_override
     droplet_tooltips_disabled
     lock_zero_param_functions
-    contained_level_names
     encrypted_examples
     disable_if_else_editing
     show_type_hints
@@ -116,15 +114,6 @@ class Blockly < Level
 
   def filter_level_attributes(level_hash)
     super(level_hash.tap {|hash| hash['properties'].except!(*xml_blocks)})
-  end
-
-  before_validation :update_contained_levels
-
-  def update_contained_levels
-    contained_level_names = properties["contained_level_names"]
-    contained_level_names.try(:delete_if, &:blank?)
-    contained_level_names = nil unless contained_level_names.try(:present?)
-    properties["contained_level_names"] = contained_level_names
   end
 
   before_save :update_preload_asset_list

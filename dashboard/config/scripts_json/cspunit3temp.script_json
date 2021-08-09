@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:11 UTC",
+    "serialized_at": "2021-08-03 22:46:53 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit3temp"
@@ -165,7 +165,6 @@
           "U3L28 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -189,7 +188,6 @@
           "U3 - Loops - 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -213,7 +211,6 @@
           "U3 - Loops - 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -237,7 +234,6 @@
           "U3 - Loops - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -261,7 +257,6 @@
           "U3 - Loops - Typing in Console"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -285,7 +280,6 @@
           "U3 - Loops - 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,7 +303,6 @@
           "U3 - Loops - 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -333,7 +326,6 @@
           "U3 - Loops - 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -357,7 +349,6 @@
           "U3 - Loops - 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,7 +372,6 @@
           "U3 - Loops - 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,7 +395,6 @@
           "U3 - Loops - 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,7 +418,6 @@
           "U3 - Loops -  Complex Condition"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,7 +441,6 @@
           "U3 - Loops - 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,7 +464,6 @@
           "U3 - Loops - 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -501,7 +487,6 @@
           "U3 - Loops - 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,7 +510,6 @@
           "U3 - Loops - Plus Plus"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +533,6 @@
           "U3 - Loops - Minus Minus"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -573,7 +556,6 @@
           "U3 - Loops - plus and minus = operator"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -597,7 +579,6 @@
           "U3 - Loops - minus = operator"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -621,7 +602,6 @@
           "U3 - Loops - 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +625,6 @@
           "U3 - Loops - 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -669,7 +648,6 @@
           "U3L28 Free Response Wrap Up"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -693,7 +671,6 @@
           "U3L29 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -717,7 +694,6 @@
           "U3 - Simulation - Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -741,7 +717,6 @@
           "U3 - Simulation - 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -765,7 +740,6 @@
           "U3 - Simulation - 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -789,7 +763,6 @@
           "U3 - Simulation - 2.1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -813,7 +786,6 @@
           "U3 - Simulation - 2.5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -837,7 +809,6 @@
           "U3 Simulation Updating Hypotheses"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,7 +832,6 @@
           "U3 - Simulation - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -885,7 +855,6 @@
           "U3 - Simulation - 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -909,7 +878,6 @@
           "U3 - Simulation - 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -933,7 +901,6 @@
           "U3 Simulations Hypotheses Reflections"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -957,7 +924,6 @@
           "U3 - Simulation - 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -981,7 +947,6 @@
           "U3L30 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1005,7 +970,6 @@
           "U3 - Arrays - createFirstArray"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1029,7 +993,6 @@
           "U3 - Arrays - appendItem"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1053,7 +1016,6 @@
           "U3 - Arrays - introIndex"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1077,7 +1039,6 @@
           "U3 - Arrays - indexPractice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1101,7 +1062,6 @@
           "U3 - Arrays - assignment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1125,7 +1085,6 @@
           "U3 - Arrays - assignment2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1149,7 +1108,6 @@
           "U3 - Arrays - assignment3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1173,7 +1131,6 @@
           "U3 - Arrays - stringsInArrays"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1154,6 @@
           "U3 - Arrays - insertingItems"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1221,7 +1177,6 @@
           "U3 - Arrays - remove"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1245,7 +1200,6 @@
           "U3 - Arrays - insertionErrors"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1269,7 +1223,6 @@
           "U3 - Arrays - length"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1293,7 +1246,6 @@
           "U3 - Arrays - lengthMinus1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1317,7 +1269,6 @@
           "U3 - Arrays - expressionsAsIndexes"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1341,7 +1292,6 @@
           "U3 - Arrays - Demo App"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1365,7 +1315,6 @@
           "U3 - Arrays - favThings giveIDs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1389,7 +1338,6 @@
           "U3 - Arrays - favThings createArray"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1413,7 +1361,6 @@
           "U3 - Arrays - favThings firstOutput"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1437,7 +1384,6 @@
           "U3 - Arrays - favThings Counting Variable"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1461,7 +1407,6 @@
           "U3 - Arrays - favThings Next"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1485,7 +1430,6 @@
           "U3 - Arrays - favThings Prev"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1509,7 +1453,6 @@
           "U3 - Arrays - favThings addItem"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1533,7 +1476,6 @@
           "U3 - Arrays - favThings bounds"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1557,7 +1499,6 @@
           "U3 - Arrays - favThings keepPlaying"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1581,7 +1522,6 @@
           "U3 - Arrays - Wrap Up 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1605,7 +1545,6 @@
           "U3 - Arrays - Wrap Up 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1629,7 +1568,6 @@
           "U3L31 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1653,7 +1591,6 @@
           "U3 - Keys - Demo App"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1677,7 +1614,6 @@
           "U3L25 - drag out key event"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1701,7 +1637,6 @@
           "U3 - Keys - Key Up and Down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1725,7 +1660,6 @@
           "U3L25 - play sound when up key"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1749,7 +1683,6 @@
           "U3 - Keys - Multiple Keys"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1773,7 +1706,6 @@
           "U3 - Keys - Buttons and Keys"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1797,7 +1729,6 @@
           "U3 - Keys - Functions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1821,7 +1752,6 @@
           "U3 - Keys - Add Image URLs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1845,7 +1775,6 @@
           "U3 - Keys - Final Image Scroller"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1869,7 +1798,6 @@
           "U3- Keys - Code Refactoring Exit Ticket"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1893,7 +1821,6 @@
           "U3L32 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1917,7 +1844,6 @@
           "U3 - Loops And Arrays - Intro For Loop"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1941,7 +1867,6 @@
           "U3 - Loops And Arrays - Print Array"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1965,7 +1890,6 @@
           "U3 - Loops And Arrays - Add 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1989,7 +1913,6 @@
           "U3 - Loops And Arrays - Divid by 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2013,7 +1936,6 @@
           "U3 - Loops And Arrays - Loop Array If"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2037,7 +1959,6 @@
           "U3 - Loops And Arrays - Linear Search"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2061,7 +1982,6 @@
           "U3 - Loops And Arrays - Counting Times"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2085,7 +2005,6 @@
           "U3 - Loops And Arrays - Printing Single True"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2109,7 +2028,6 @@
           "U3 - Loops And Arrays - Search with Boolean Var"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2133,7 +2051,6 @@
           "U3 - Loops And Arrays - Make it a Function"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2157,7 +2074,6 @@
           "U3 - Loops And Arrays - Make it a Function - add list parameter"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2181,7 +2097,6 @@
           "U3 - Loops And Arrays - General Search Param"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,7 +2120,6 @@
           "U3 - Loops And Arrays - Find Min"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2229,7 +2143,6 @@
           "U3L27 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2253,7 +2166,6 @@
           "U3 - Arrays and Loops - Explain Functions with Returns"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2277,7 +2189,6 @@
           "U3 - Return Values - useMinVal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2301,7 +2212,6 @@
           "U3 - Return Values - writeMaxVal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2325,7 +2235,6 @@
           "U3 - Return Values - debuggingMaxVal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2349,7 +2258,6 @@
           "U3 - Return Values - debuggingConstrain"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2373,7 +2281,6 @@
           "U3 - Return Values - constrainTurtle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2397,7 +2304,6 @@
           "U3 - Return Values - wrapTurtle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2421,7 +2327,6 @@
           "U3L33 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2445,7 +2350,6 @@
           "U3 - Canvas - introCanvas"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2469,7 +2373,6 @@
           "U3 - Canvas - 200dots"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2493,7 +2396,6 @@
           "U3 - Canvas - transparentDots"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,7 +2419,6 @@
           "U3 - Canvas - clickToAdd"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2541,7 +2442,6 @@
           "U3 - Canvas - usingOffsetXY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2565,7 +2465,6 @@
           "U3 - Canvas - draw at click point"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2589,7 +2488,6 @@
           "U3 - Canvas - changeToMouseMove"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2613,7 +2511,6 @@
           "U3 - Canvas - shiftKey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2637,7 +2534,6 @@
           "U3 - Canvas - appendToArray"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2661,7 +2557,6 @@
           "U3 - Canvas - redrawRandom"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2685,7 +2580,6 @@
           "U3 - Canvas - redrawRandom2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2709,7 +2603,6 @@
           "U3 - Canvas - redrawOriginal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2733,7 +2626,6 @@
           "U3 - Canvas - delete"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2757,7 +2649,6 @@
           "U3 - Canvas - movementFunction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2781,7 +2672,6 @@
           "U3 - Canvas - movementFunction fix Orig"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2805,7 +2695,6 @@
           "U3 - Canvas - sprayPaint"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2829,7 +2718,6 @@
           "U3 - Canvas - sketch"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2853,7 +2741,6 @@
           "U3L33 Free Response Getting Started"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2877,7 +2764,6 @@
           "U3L34 Student Lesson Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2901,7 +2787,6 @@
           "U3 - Practice Create Performance Task"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

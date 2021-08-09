@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Paint a Pinwheel",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nCreate a `PainterPlus` object at (6, 6) facing North with 50 units of paint.\r\n\r\nUse the array of paint colors to draw a pinwheel in the middle of The Neighborhood.\r\n\r\n![](https://images.code.org/3615cb5ea3351ba0e6dbc497c8a84013-image-1625234856710.png)",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nCreate a `PainterPlus` object at `(6, 6)` facing `North` with `50` units of paint.\r\n\r\nUse the array of paint colors to draw a pinwheel in the middle of The Neighborhood.\r\n\r\n![](https://images.code.org/3615cb5ea3351ba0e6dbc497c8a84013-image-1625234856710.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -1328,13 +1328,15 @@
       }
     },
     "parent_level_id": 28726,
-    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYT9+7Oi+MNQygDmcty\n05/yaOhHxHDCD1/jLQ8kMtYqYL1WIbeMcrg9KgZJDFM37O6cl+rl8ybPZht+\nxW8Uh463\n"
+    "encrypted_examples": "Y5oxU2saAYVgPIsEA2UtbgpirxPfyQgbuyBX978jkHYT9+7Oi+MNQygDmcty\n05/yaOhHxHDCD1/jLQ8kMtYqYL1WIbeMcrg9KgZJDFM37O6cl+rl8ybPZht+\nxW8Uh463\n",
+    "bubble_choice_description": "Make a pinwheel design in The Neighborhood using an array of paint colors.",
+    "thumbnail_url": "https://images.code.org/3615cb5ea3351ba0e6dbc497c8a84013-image-1625234856710.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-20T17:35:49.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-20T17:35:49.509+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L7a\\\"\"],\"cloned_from\":\"CSA U3L2-L7a\"},{\"changed_at\":\"2021-07-20 17:36:13 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 12:51:36 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-20T17:35:49.509+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L7a\\\"\"],\"cloned_from\":\"CSA U3L2-L7a\"},{\"changed_at\":\"2021-07-20 17:36:13 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 12:51:36 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-04 18:25:30 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

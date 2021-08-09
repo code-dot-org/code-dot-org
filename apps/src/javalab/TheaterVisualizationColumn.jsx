@@ -29,7 +29,7 @@ class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
         />
         <ProtectedVisualizationDiv>
-          <div style={styles.theater}>
+          <div id="theater-container" style={styles.theater}>
             <img id="theater" style={styles.theaterImage} />
             <audio id="theater-audio" autoPlay="true" />
           </div>
@@ -42,12 +42,12 @@ class TheaterVisualizationColumn extends React.Component {
 const styles = {
   theater: {
     backgroundColor: 'white',
-    width: 400,
-    height: 400
+    width: 800,
+    height: 800
   },
   theaterImage: {
-    width: 400,
-    height: 400
+    width: 800,
+    height: 800
   }
 };
 
