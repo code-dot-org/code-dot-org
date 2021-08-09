@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:52 UTC",
+    "serialized_at": "2021-08-03 22:46:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algPDmiami"
@@ -212,7 +212,6 @@
           "Calc Circles of Eval 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +235,6 @@
           "Calc Circles of Eval 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +258,6 @@
           "Calc Circles of Eval 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -284,7 +281,6 @@
           "Calc Circles of Eval 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -308,7 +304,6 @@
           "Calc Circles of Eval 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +327,6 @@
           "Calc Circles of Eval 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +350,6 @@
           "Calc Circles of Eval 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -380,7 +373,6 @@
           "Calc Circles of Eval 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +396,6 @@
           "Calc Circles of Eval Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -428,7 +419,6 @@
           "Eval Strings Images .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -452,7 +442,6 @@
           "Eval Strings Images .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -476,7 +465,6 @@
           "Eval Strings Images 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -500,7 +488,6 @@
           "Eval Strings Images 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +511,6 @@
           "Eval Strings Images 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -548,7 +534,6 @@
           "Eval Strings Images 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -572,7 +557,6 @@
           "Eval Strings Images 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -596,7 +580,6 @@
           "Eval Strings Images 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -620,7 +603,6 @@
           "Eval Strings Images 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -644,7 +626,6 @@
           "Eval Strings Images 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -668,7 +649,6 @@
           "Multi Strings Images 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -692,7 +672,6 @@
           "Eval Strings Images Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -716,7 +695,6 @@
           "Play Lab Rocket 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -740,7 +718,6 @@
           "Play Lab Rocket 2B"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -764,7 +741,6 @@
           "Play Lab Rocket 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -788,7 +764,6 @@
           "Play Lab Rocket 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -812,7 +787,6 @@
           "Play Lab Rocket 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -836,7 +810,6 @@
           "Play Lab Rocket Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -860,7 +833,6 @@
           "Eval Design Recipe .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -884,7 +856,6 @@
           "Eval Design Recipe 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -908,7 +879,6 @@
           "Eval Design Recipe 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -932,7 +902,6 @@
           "Eval Design Recipe 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -956,7 +925,6 @@
           "Eval Design Recipe 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -980,7 +948,6 @@
           "Calc Design Recipe 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1004,7 +971,6 @@
           "Calc Design Recipe 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1028,7 +994,6 @@
           "Calc Design Recipe 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1052,7 +1017,6 @@
           "Calc Design Recipe 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1076,7 +1040,6 @@
           "Big Game Animation 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1100,7 +1063,6 @@
           "Big Game Animation 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1124,7 +1086,6 @@
           "Big Game Animation 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1148,7 +1109,6 @@
           "Big Game Animation 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1172,7 +1132,6 @@
           "Eval Booleans 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1196,7 +1155,6 @@
           "Eval Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1220,7 +1178,6 @@
           "Eval Booleans 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1244,7 +1201,6 @@
           "Eval Booleans 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1268,7 +1224,6 @@
           "Eval Booleans 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1292,7 +1247,6 @@
           "Eval Booleans 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1316,7 +1270,6 @@
           "Blocks to Bools 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1340,7 +1293,6 @@
           "Blocks to Bools 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1364,7 +1316,6 @@
           "Blocks to Bools 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1388,7 +1339,6 @@
           "Blocks to Bools 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1412,7 +1362,6 @@
           "Sam the Butterfly 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1436,7 +1385,6 @@
           "Sam the Butterfly 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1460,7 +1408,6 @@
           "Sam the Butterfly 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1484,7 +1431,6 @@
           "Sam the Butterfly 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1508,7 +1454,6 @@
           "Sam the Butterfly 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1532,7 +1477,6 @@
           "Big Game Booleans 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1556,7 +1500,6 @@
           "Big Game Booleans 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1580,7 +1523,6 @@
           "Big Game Booleans 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1604,7 +1546,6 @@
           "Big Game Booleans 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1628,7 +1569,6 @@
           "Big Game Booleans 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1652,7 +1592,6 @@
           "Luigi's Pizza 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1676,7 +1615,6 @@
           "Luigi's Pizza 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1700,7 +1638,6 @@
           "Luigi's Pizza 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1724,7 +1661,6 @@
           "Luigi's Pizza 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1748,7 +1684,6 @@
           "Big Game Collision 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1772,7 +1707,6 @@
           "Big Game Collision 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1796,7 +1730,6 @@
           "Big Game Collision 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1820,7 +1753,6 @@
           "Big Game Collision 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1844,7 +1776,6 @@
           "Big Game Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "fit2019-apprentice",
-    "serialized_at": "2021-07-06 22:26:03 UTC",
+    "serialized_at": "2021-08-03 22:47:46 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "fit2019-apprentice"
@@ -150,9 +150,9 @@
       "properties": {
         "level_keys": [
           "welcome-apprentice-18"
-        ]
+        ],
+        "progression": "Welcome Apprentice Facilitators!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +176,6 @@
           "morning-prep-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +199,6 @@
           "feel-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +222,6 @@
           "debrief-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,7 +245,6 @@
           "engagement-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -272,7 +268,6 @@
           "novice-monday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +291,6 @@
           "morning-prep-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -320,7 +314,6 @@
           "feel-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +337,6 @@
           "instructional-strategy-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -368,7 +360,6 @@
           "debrief-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +383,6 @@
           "engagement-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +406,6 @@
           "novice-tuesday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +429,6 @@
           "morning-prep-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +452,6 @@
           "feel-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -488,7 +475,6 @@
           "getting-buy-in-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +498,6 @@
           "debrief-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +521,6 @@
           "engagement-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +544,6 @@
           "novice-wednesday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +567,6 @@
           "morning-prep-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +590,6 @@
           "feel-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,7 +613,6 @@
           "recruiting-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +636,6 @@
           "debrief-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,7 +659,6 @@
           "engagement-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,7 +682,6 @@
           "novice-thursday-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -726,9 +703,9 @@
       "properties": {
         "level_keys": [
           "apprentice-congrats"
-        ]
+        ],
+        "progression": "Congrats on completing the apprentice program!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

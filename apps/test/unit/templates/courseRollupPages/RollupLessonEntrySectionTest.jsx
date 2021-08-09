@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
 import {courseData} from './rollupTestData';
 import i18n from '@cdo/locale';
-import {Provider} from 'react-redux/src';
+import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';

@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:44 UTC",
+    "serialized_at": "2021-08-03 22:47:06 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "applab-1hour"
@@ -58,9 +58,9 @@
       "properties": {
         "level_keys": [
           "Escape Room Example"
-        ]
+        ],
+        "progression": "Escape Room Example"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -82,9 +82,9 @@
       "properties": {
         "level_keys": [
           "Overview: Design Mode"
-        ]
+        ],
+        "progression": "Overview: Design Mode"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -106,9 +106,9 @@
       "properties": {
         "level_keys": [
           "Overview: Images"
-        ]
+        ],
+        "progression": "Overview: Images"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +132,6 @@
           "Room Escape Workshop - 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +155,6 @@
           "Room Escape Workshop - 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -178,9 +176,9 @@
       "properties": {
         "level_keys": [
           "Overview: onEvent"
-        ]
+        ],
+        "progression": "Overview: onEvent"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -202,9 +200,9 @@
       "properties": {
         "level_keys": [
           "Overview: setPosition"
-        ]
+        ],
+        "progression": "Overview: setPosition"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +226,6 @@
           "Room Escape Workshop - 3-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +249,6 @@
           "Room Escape Workshop - 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -274,9 +270,9 @@
       "properties": {
         "level_keys": [
           "Overview: If Statements"
-        ]
+        ],
+        "progression": "Overview: If Statements"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +296,6 @@
           "Room Escape Workshop - 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +319,6 @@
           "Room Escape Workshop - 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +342,6 @@
           "Room Escape Workshop - 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +365,6 @@
           "Room Escape Workshop - 9-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +388,6 @@
           "Room Escape Workshop - 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +411,6 @@
           "Room Escape Workshop - 10 - 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,9 +432,9 @@
       "properties": {
         "level_keys": [
           "Final Room Escape App"
-        ]
+        ],
+        "progression": "Final Room Escape App"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
