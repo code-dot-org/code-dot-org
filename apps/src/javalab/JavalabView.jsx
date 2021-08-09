@@ -224,7 +224,7 @@ class JavalabView extends React.Component {
       if (this.props.isVisualizationCollapsed) {
         const miscElementsExistingHeightNoVisualization = 105;
         this.props.setInstructionsExplicitHeight(
-          window.innerHeight - miscElementsExistingHeightNoVisualization - 70
+          window.innerHeight - miscElementsExistingHeightNoVisualization - 45
         );
       } else {
         // If there is a visualization, ensure that the instructions don't extend beyond
