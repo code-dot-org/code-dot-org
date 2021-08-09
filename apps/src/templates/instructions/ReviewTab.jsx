@@ -300,22 +300,19 @@ class ReviewTab extends Component {
   }
 
   renderCommentEditor(forceRecreateEditorKey) {
-    if (
-      !this.state.isReadyForReview &&
-      this.props.viewAs !== ViewType.Teacher
-    ) {
+    if (this.state.isReadyForReview || this.props.viewAs === ViewType.Teacher) {
       return (
-        <div style={styles.messageText}>
-          {javalabMsg.disabledPeerReviewMessage()}
-        </div>
+        <CommentEditor
+          onNewCommentSubmit={this.onNewCommentSubmit}
+          key={forceRecreateEditorKey}
+        />
       );
     }
 
     return (
-      <CommentEditor
-        onNewCommentSubmit={this.onNewCommentSubmit}
-        key={forceRecreateEditorKey}
-      />
+      <div style={styles.messageText}>
+        {javalabMsg.disabledPeerReviewMessage()}
+      </div>
     );
   }
 
