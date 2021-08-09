@@ -20,7 +20,8 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
 
   serialized_attrs [
     'survey_data',
-    'allow_multiple_submissions'
+    'allow_multiple_submissions',
+    'allow_signed_out'
   ]
 
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
