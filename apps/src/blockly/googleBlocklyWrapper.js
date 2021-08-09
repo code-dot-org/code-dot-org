@@ -1,21 +1,21 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
-import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
-import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
-import initializeCdoConstants from '@cdo/apps/blocklyAddons/cdoConstants';
-import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
-import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
-import FunctionEditor from '@cdo/apps/blocklyAddons/functionEditor';
-import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
-import CdoMetricsManager from '@cdo/apps/blocklyAddons/cdoMetricsManager';
-import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
-import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
-import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
-import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
-import initializeVariables from '@cdo/apps/blocklyAddons/cdoVariables';
-import CdoVariableMap from '@cdo/apps/blocklyAddons/cdoVariableMap';
-import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
-import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
+import CdoBlockDragger from './addons/cdoBlockDragger';
+import CdoBlockSvg from './addons/cdoBlockSvg';
+import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import FunctionEditor from './addons/functionEditor';
+import CdoInput from './addons/cdoInput';
+import CdoMetricsManager from './addons/cdoMetricsManager';
+import CdoPathObject from './addons/cdoPathObject';
+import CdoTheme from './addons/cdoTheme';
+import initializeTouch from './addons/cdoTouch';
+import CdoTrashcan from './addons/cdoTrashcan';
+import initializeVariables from './addons/cdoVariables';
+import CdoVariableMap from './addons/cdoVariableMap';
+import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
+import initializeBlocklyXml from './addons/cdoXml';
 
 /**
  * Wrapper class for https://github.com/google/blockly
