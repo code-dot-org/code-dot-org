@@ -102,6 +102,7 @@ class TopInstructions extends Component {
     collapsible: PropTypes.bool,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
+    initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool,
@@ -132,9 +133,10 @@ class TopInstructions extends Component {
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
-        teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+        this.props.initialSelectedTab ||
+        (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
           ? TabType.COMMENTS
-          : TabType.INSTRUCTIONS,
+          : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
       studentId: studentId,
@@ -625,8 +627,8 @@ class TopInstructions extends Component {
     }
 
     // ideally these props would get accessed directly from the redux
-    // store in the child, however TopInstructions is also used in
-    // in unconnected context, so we need to manually send these props through
+    // store in the child, however TopInstructions is also used in an unconnected
+    // context (in LevelDetailsDialog), so we need to manually send these props through
     const passThroughHeaderProps = {
       isMinecraft,
       ttsLongInstructionsUrl,
@@ -690,7 +692,6 @@ class TopInstructions extends Component {
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
-                user={user}
                 visible={tabSelected === TabType.COMMENTS}
                 isEditable={teacherViewingStudentWork}
                 rubric={rubric}
@@ -699,7 +700,8 @@ class TopInstructions extends Component {
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
-                teacher={this.props.user}
+                teacher={user}
+                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (

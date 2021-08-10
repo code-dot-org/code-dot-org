@@ -28,7 +28,6 @@ const ErrorType = {
 
 export class TeacherFeedback extends Component {
   static propTypes = {
-    user: PropTypes.number,
     isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
@@ -40,7 +39,8 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    canHaveFeedbackReviewState: PropTypes.bool
   };
 
   constructor(props) {
@@ -189,10 +189,7 @@ export class TeacherFeedback extends Component {
 
   getLatestReviewState() {
     const {latestFeedback} = this.state;
-    const isAwaitingTeacherReview =
-      latestFeedback?.review_state === ReviewStates.keepWorking &&
-      latestFeedback?.student_updated_since_feedback;
-    const reviewState = isAwaitingTeacherReview
+    const reviewState = latestFeedback?.is_awaiting_teacher_review
       ? ReviewStates.awaitingReview
       : latestFeedback?.review_state;
     return reviewState || null;
@@ -201,10 +198,13 @@ export class TeacherFeedback extends Component {
   renderCommentAreaHeaderForTeacher() {
     const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
 
+    const hasEditableReviewState =
+      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
+
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {keepWorkingEnabled && (
+        {hasEditableReviewState && (
           <EditableReviewState
             latestReviewState={this.getLatestReviewState()}
             onReviewStateChange={this.onReviewStateChange}
@@ -352,5 +352,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
   selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
+    state.teacherSections && state.teacherSections.selectedSectionId,
+  canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
 }))(TeacherFeedback);
