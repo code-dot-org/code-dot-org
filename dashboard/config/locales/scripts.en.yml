@@ -22405,7 +22405,7 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: Practice Lesson
+              name: Unit 1 Pilot Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -22415,7 +22415,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Practice Levels
+              display_name: Pilot Survey
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -22486,11 +22486,17 @@ en:
               name: Assessment Day
               description_student: In this unit, you created objects and defined instance variables to represent attributes. You explored creating and using constructors to establish values for these attributes and how to work with the data stored in objects. You implemented accessor and mutator methods to access and modify the values stored in the instance variables and wrote `toString` methods to output information about the state of the object. You used the `Scanner` class to obtain user input to use as program data to create and work with your objects. You learned about using data types, operators, and expressions and implementing data encapsulation and object-oriented design. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-1:
+              name: Unit 2 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lesson group:
               display_name: Content
             lessonGroup-2:
               display_name: Show What You Know
+            lessonGroup-3:
+              display_name: Pilot Survey
           name: csa2-pilot
           title: Giving Objects State
           description_audience: ''
@@ -22501,7 +22507,7 @@ en:
           lessons:
             lesson-1:
               name: Creating Arrays
-              description_student: The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
+              description_student: The food truck owner increased their inventory of desserts. You have declared separate variables to keep track of the inventory, but what if you needed to store 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
               description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
             lesson-2:
               name: Accessing and Modifying Elements
@@ -22517,8 +22523,8 @@ en:
               description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
             lesson-5:
               name: Storing Objects into Arrays
-              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, you discover how subclasses implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
-              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects to show different types of animals in The Neighborhood and use each `Animal`'s version of their `speak()` method.
+              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.
             lesson-6:
               name: Traversing Arrays with Enhanced for Loops
               description_student: 'To access each element stored in an array, we traverse the array using a loop. You previously learned how to use `while` and `for` loops to access all or just some parts of an array. Today, you implement an enhanced `for` loop, which is a simplified `for` loop used to access each element of an array one by one. '
@@ -22565,11 +22571,17 @@ en:
               name: Assessment Day
               description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Unit 3 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
           name: csa3-pilot
           title: Expanding Program Data
           description_audience: ''
@@ -23712,7 +23724,7 @@ en:
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
-              name: The role of the teacher
+              name: Role of the teacher
               description_student: 
               description_teacher: 
             lesson-2:

@@ -2472,7 +2472,7 @@
     {
       "key": "initializer_list",
       "word": "Initializer List",
-      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( { } )",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
       "properties": {
       },
       "seeding_key": {
