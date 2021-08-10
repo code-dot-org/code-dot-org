@@ -133,4 +133,19 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     expected = {contained_level_names: ['child_level_test_clone']}
     assert_equal expected, result
   end
+
+  test 'project template level' do
+    template_level = Blockly.create(name: 'project_template')
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
+
+    assert_nil template_level.project_template_level
+    assert_equal '<xml/>', template_level.start_blocks
+
+    real_level1 = Blockly.create(name: 'level 1')
+    real_level1.project_template_level_name = 'project_template'
+    real_level1.save!
+
+    assert_equal template_level, real_level1.project_template_level
+  end
 end

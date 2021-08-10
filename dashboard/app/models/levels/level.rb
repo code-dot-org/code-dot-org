@@ -71,6 +71,7 @@ class Level < ApplicationRecord
     name_suffix
     parent_level_id
     contained_level_names
+    project_template_level_name
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
@@ -184,10 +185,6 @@ class Level < ApplicationRecord
 
   def complete_toolbox(type)
     "<xml id='toolbox' style='display: none;'>#{toolbox(type)}</xml>"
-  end
-
-  def host_level
-    project_template_level || self
   end
 
   # Overriden by different level types.
@@ -482,14 +479,6 @@ class Level < ApplicationRecord
     end
   end
 
-  # Project template levels are used to persist use progress
-  # across multiple levels, using a single level name as the
-  # storage key for that user.
-  def project_template_level
-    return nil if try(:project_template_level_name).nil?
-    Level.find_by_key(project_template_level_name)
-  end
-
   def strip_name
     self.name = name.to_s.strip unless name.nil?
   end
@@ -573,6 +562,17 @@ class Level < ApplicationRecord
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
   def can_have_feedback?
     ["Applab", "Gamelab", "Weblab"].include?(type)
+  end
+
+  # Currently only Javalab can have code review
+  def can_have_code_review?
+    ["Javalab"].include?(type)
+  end
+
+  # We hide this feature for contained levels because contained levels are currently not
+  # editable by students so setting the feedback review_state to keepWorking doesn't make sense.
+  def can_have_feedback_review_state?
+    contained_levels.empty?
   end
 
   def display_as_unplugged?
@@ -695,11 +695,6 @@ class Level < ApplicationRecord
 
     update_params = {name_suffix: new_suffix}
     update_params[:editor_experiment] = editor_experiment if editor_experiment
-
-    if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
-      update_params[:project_template_level_name] = new_template_level.name
-    end
 
     child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
     update_params.merge!(child_params_to_update)
