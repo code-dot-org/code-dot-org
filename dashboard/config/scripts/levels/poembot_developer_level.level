@@ -44,7 +44,7 @@
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 28937,
     "show_type_hints": "true",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "block_pool": "gamelab",
     "name_suffix": "_2020",
     "block_pools": [
@@ -67,13 +67,13 @@
     "authored_hints": "[]",
     "preload_asset_list": null
   },
-  "user_id": 9,
   "game_id": 64,
+  "published": true,
   "created_at": "2021-08-09T22:06:56.000Z",
   "level_num": "custom",
-  "published": true,
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-09T22:06:56.070+00:00\",\"changed\":[\"cloned from \\\"poembot_hoc_freePlay\\\"\"],\"cloned_from\":\"poembot_hoc_freePlay\"},{\"changed_at\":\"2021-08-09 22:07:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:07:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:09:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:11:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:13:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:16:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-09T22:06:56.070+00:00\",\"changed\":[\"cloned from \\\"poembot_hoc_freePlay\\\"\"],\"cloned_from\":\"poembot_hoc_freePlay\"},{\"changed_at\":\"2021-08-09 22:07:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:07:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:09:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:11:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:13:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:16:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-09 22:26:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
