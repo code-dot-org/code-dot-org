@@ -122,7 +122,7 @@ module Foorm
       assert_nil created_simple_survey_form.kind
       assert_equal @foorm_form.name, created_simple_survey_form.form_name
       assert_equal @foorm_form.version, created_simple_survey_form.form_version
-      assert_equal true, created_simple_survey_form.properties['allow_multiple_submissions']
+      assert_equal true, created_simple_survey_form.allow_multiple_submissions
     end
 
     test 'admin can create new simple survey form that allows anonymous submissions' do
@@ -133,7 +133,7 @@ module Foorm
 
       created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: @test_url_path)
       assert created_simple_survey_form
-      assert_equal true, created_simple_survey_form.properties['allow_signed_out']
+      assert_equal true, created_simple_survey_form.allow_signed_out
     end
 
     test 'creating simple survey form with invalid form fails' do
@@ -162,7 +162,7 @@ module Foorm
       expected_survey_data = {'a_key' => 'a_value'}
 
       created_simple_survey_form = Foorm::SimpleSurveyForm.find_by(path: @test_url_path)
-      assert_equal expected_survey_data, created_simple_survey_form.properties['survey_data']
+      assert_equal expected_survey_data, created_simple_survey_form.survey_data
     end
 
     test 'parse_survey_data raises error when key provided with no value' do
