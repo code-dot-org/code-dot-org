@@ -1,6 +1,7 @@
 @eyes
 Feature: NeighborhoodPainting
-    
+
+  @no_circle
   Scenario: Paint Glomming Shapes
     When I open my eyes to test "Paint Glomming Shapes"
     Given I create a levelbuilder named "Simone"
