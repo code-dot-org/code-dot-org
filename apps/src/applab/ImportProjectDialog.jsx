@@ -6,25 +6,6 @@ import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
 import color from '../util/color';
 import {fetchProject, toggleImportScreen} from './redux/screens';
 
-const styles = {
-  urlInputWrapper: {
-    display: 'flex',
-    alignItems: 'stretch',
-    width: '100%'
-  },
-  urlInput: {
-    width: 'inherit'
-  },
-  // TODO: ditch these styles in favor of standardized typography components
-  // once they exist
-  instructions: {
-    color: color.black
-  },
-  errorText: {
-    color: color.red
-  }
-};
-
 const initialState = {url: ''};
 
 export class ImportProjectDialog extends React.Component {
@@ -84,6 +65,25 @@ export class ImportProjectDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  urlInputWrapper: {
+    display: 'flex',
+    alignItems: 'stretch',
+    width: '100%'
+  },
+  urlInput: {
+    width: 'inherit'
+  },
+  // TODO: ditch these styles in favor of standardized typography components
+  // once they exist
+  instructions: {
+    color: color.black
+  },
+  errorText: {
+    color: color.red
+  }
+};
 
 export default connect(
   state => ({

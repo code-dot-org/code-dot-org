@@ -7,60 +7,6 @@ import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import shapes from './shapes';
 
-const styles = {
-  heading: {
-    paddingRight: 5,
-    paddingTop: 10,
-    paddingBottom: 20,
-    fontSize: 24,
-    lineHeight: '26px',
-    fontFamily: 'Gotham 3r',
-    color: color.charcoal
-  },
-  textItem: {
-    backgroundColor: color.teal,
-    padding: 25,
-    minHeight: 281,
-    boxSizing: 'border-box'
-  },
-  subHeading: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 27,
-    lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
-  },
-  subHeadingSmallFont: {
-    paddingRight: 0,
-    paddingBottom: 20,
-    fontSize: 25,
-    lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white
-  },
-  image: {
-    width: 485,
-    minHeight: 260,
-    height: 281
-  },
-  description: {
-    paddingRight: 10,
-    paddingBottom: 20,
-    fontSize: 14,
-    fontFamily: 'Gotham 4r',
-    lineHeight: '22px',
-    color: color.white
-  },
-  clear: {
-    clear: 'both'
-  },
-  container: {
-    width: '100%',
-    position: 'relative'
-  }
-};
-
 export class UnconnectedTwoColumnActionBlock extends Component {
   static propTypes = {
     id: PropTypes.string,
@@ -258,3 +204,57 @@ export class SpecialAnnouncementActionBlock extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    paddingRight: 5,
+    paddingTop: 10,
+    paddingBottom: 20,
+    fontSize: 24,
+    lineHeight: '26px',
+    fontFamily: 'Gotham 3r',
+    color: color.charcoal
+  },
+  textItem: {
+    backgroundColor: color.teal,
+    padding: 25,
+    minHeight: 281,
+    boxSizing: 'border-box'
+  },
+  subHeading: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 27,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  subHeadingSmallFont: {
+    paddingRight: 0,
+    paddingBottom: 20,
+    fontSize: 25,
+    lineHeight: 1.2,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white
+  },
+  image: {
+    width: 485,
+    minHeight: 260,
+    height: 281
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 20,
+    fontSize: 14,
+    fontFamily: 'Gotham 4r',
+    lineHeight: '22px',
+    color: color.white
+  },
+  clear: {
+    clear: 'both'
+  },
+  container: {
+    width: '100%',
+    position: 'relative'
+  }
+};
