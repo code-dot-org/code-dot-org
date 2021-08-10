@@ -20,13 +20,6 @@ import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  clear: {
-    clear: 'both',
-    height: 30
-  }
-};
-
 export class UnconnectedTeacherHomepage extends Component {
   static propTypes = {
     joinedSections: shapes.sections,
@@ -288,6 +281,13 @@ export class UnconnectedTeacherHomepage extends Component {
     );
   }
 }
+
+const styles = {
+  clear: {
+    clear: 'both',
+    height: 30
+  }
+};
 
 export default connect(
   state => ({}),
