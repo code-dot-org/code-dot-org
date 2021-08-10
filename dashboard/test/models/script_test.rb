@@ -399,13 +399,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal original_script_level_ids, unit.script_levels.map(&:id)
   end
 
-  test 'unplugged in unit' do
-    @unit_file = File.join(self.class.fixture_path, 'test-unplugged.script')
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 'Unplugged', unit.script_levels[1].level['type']
-  end
-
   test 'blockly level in custom unit' do
     game = Game.find_by_name('Studio')
     create :level, name: 'blockly', game: game, level_num: 100
@@ -425,16 +418,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -444,16 +437,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -505,7 +498,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = Script.first.script_levels.first.level
+    level = create(:level, :script)
 
     populate_cache_and_disconnect_db
 
@@ -513,7 +506,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = Script.first.script_levels.first.level
+    level = create(:level, :script)
 
     populate_cache_and_disconnect_db
 
@@ -562,6 +555,8 @@ class ScriptTest < ActiveSupport::TestCase
     script = script_level.script
     create(:lesson_group, lessons: [script_level.lesson], script: script)
     expected = create(:level_concept_difficulty, level: level)
+
+    assert_equal expected, script.script_levels.first.level.level_concept_difficulty
 
     populate_cache_and_disconnect_db
 
