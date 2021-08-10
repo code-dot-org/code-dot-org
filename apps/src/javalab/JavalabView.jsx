@@ -15,12 +15,16 @@ import {
   setInstructionsFullHeight
 } from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
+import TopInstructions, {
+  TabType
+} from '@cdo/apps/templates/instructions/TopInstructions';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
 import _ from 'lodash';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const FOOTER_BUFFER = 10;
 
@@ -323,6 +327,11 @@ class JavalabView extends React.Component {
                 standalone
                 displayDocumentationTab={false}
                 displayReviewTab
+                initialSelectedTab={
+                  queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
+                    ? TabType.REVIEW
+                    : null
+                }
                 explicitHeight={this.getInstructionsHeight()}
                 resizable={false}
               />
@@ -385,6 +394,7 @@ class JavalabView extends React.Component {
                     disableRunButtons={awaitingContainedResponse}
                     onContinue={onContinue}
                     renderSettings={this.renderSettings}
+                    showTestButton={false}
                   />
                 }
               />
