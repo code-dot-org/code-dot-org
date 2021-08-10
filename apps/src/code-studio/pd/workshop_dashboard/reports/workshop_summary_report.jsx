@@ -15,10 +15,6 @@ const FACILITATOR_DETAILS_COUNT = 6;
 const ATTENDANCE_DAYS_COUNT = 5;
 const QUERY_URL = '/api/v1/pd/workshop_summary_report';
 
-const styles = {
-  link: {cursor: 'pointer'}
-};
-
 export class WorkshopSummaryReport extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -304,6 +300,10 @@ export class WorkshopSummaryReport extends React.Component {
     );
   }
 }
+
+const styles = {
+  link: {cursor: 'pointer'}
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission
