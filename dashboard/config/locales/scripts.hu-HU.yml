@@ -1546,6 +1546,8 @@ hu:
               name: Listák
             For Loops:
               name: Számláló ciklusok
+            Map:
+              name: Térkép
             Functions with Parameters:
               name: Paraméteres függvények
         workshop-gamelab:
