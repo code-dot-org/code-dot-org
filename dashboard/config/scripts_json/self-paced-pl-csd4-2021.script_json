@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-09 17:40:30 UTC",
+    "serialized_at": "2021-08-10 15:22:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd4-2021"
@@ -31,7 +31,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "The role of the teacher",
+      "name": "Role of the teacher",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -181,10 +181,21 @@
       }
     },
     {
-      "key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419",
+      "key": "ecb46942-e148-4eec-bc96-2b71fb77b58a",
       "position": 1,
       "properties": {
-        "progression_name": "Lead learner"
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecb46942-e148-4eec-bc96-2b71fb77b58a",
+        "lesson_activity.key": "1c9a9fa0-b795-4471-8da8-c99d68cdfc87"
+      }
+    },
+    {
+      "key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419",
+      "position": 2,
+      "properties": {
+        "progression_name": "Inclusion"
       },
       "seeding_key": {
         "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419",
@@ -193,7 +204,7 @@
     },
     {
       "key": "e7c80839-4399-46ab-bf11-93a9e64f00bd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Differentiation"
       },
@@ -204,7 +215,7 @@
     },
     {
       "key": "0f26237e-ce27-44aa-b428-8a5309540da9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Assessment"
       },
@@ -292,31 +303,6 @@
     },
     {
       "chapter": 4,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod4-EngagementAndLearning"
-        ],
-        "progression": "Lead Learner"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-21-mod4-EngagementAndLearning"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd4-2021",
-        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
-      },
-      "level_keys": [
-        "SP-VPL-21-mod4-EngagementAndLearning"
-      ]
-    },
-    {
-      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -341,7 +327,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -366,7 +352,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -391,7 +377,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -416,7 +402,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -441,7 +427,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -466,7 +452,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -491,7 +477,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -516,7 +502,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -541,8 +527,77 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "ecb46942-e148-4eec-bc96-2b71fb77b58a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-teacher"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Inclusion"
+        ],
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Inclusion"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Inclusion"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-inclusion-c4u"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -566,11 +621,14 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 2,
+      "chapter": 17,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-DifferentiationContinued"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -588,8 +646,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 3,
+      "chapter": 18,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -613,9 +671,34 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 19,
+      "position": 7,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-AssessmentPlan"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -638,9 +721,9 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
-      "activity_section_position": 3,
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -693,18 +776,6 @@
         "level.key": "SP-VPL-21-mod4-LeadLearner-vid",
         "script_level.level_keys": [
           "SP-VPL-21-mod4-LeadLearner-vid"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-csd4-2021",
-        "activity_section.key": "de6164cd-44ec-465b-90c4-3383caee031b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-VPL-21-mod4-EngagementAndLearning",
-        "script_level.level_keys": [
-          "SP-VPL-21-mod4-EngagementAndLearning"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
@@ -822,6 +893,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-teacher",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "ecb46942-e148-4eec-bc96-2b71fb77b58a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Inclusion",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Inclusion"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-inclusion-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-21-mod4-Differentiation",
         "script_level.level_keys": [
           "SP-VPL-21-mod4-Differentiation"
@@ -849,6 +956,18 @@
         "level.key": "SP-VPL-21-mod4-Assessment",
         "script_level.level_keys": [
           "SP-VPL-21-mod4-Assessment"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "0f26237e-ce27-44aa-b428-8a5309540da9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-AssessmentPlan",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",

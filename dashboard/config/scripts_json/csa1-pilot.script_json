@@ -10,11 +10,12 @@
       "show_calendar": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-09 18:58:31 UTC",
+    "serialized_at": "2021-08-10 21:42:27 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -42,6 +43,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -406,6 +419,21 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Unit 1 Pilot Survey",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -1272,6 +1300,18 @@
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455",
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -4663,6 +4703,7 @@
       "key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
       "position": 3,
       "properties": {
+        "progression_name": "Unit 1 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
@@ -4685,6 +4726,17 @@
       "seeding_key": {
         "activity_section.key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
         "lesson_activity.key": "a86b0f9d-3481-4bcb-b49c-a51f18535455"
+      }
+    },
+    {
+      "key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSA Pilot Survey Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d",
+        "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5"
       }
     }
   ],
@@ -6396,7 +6448,8 @@
       "properties": {
         "level_keys": [
           "CSA Unit 1 Pilot Assessment 2021"
-        ]
+        ],
+        "progression": "Unit 1 Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -6410,6 +6463,31 @@
       },
       "level_keys": [
         "CSA Unit 1 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 1"
+        ],
+        "progression": "CSA Pilot Survey Unit 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 1"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 1"
       ]
     }
   ],
@@ -7241,6 +7319,18 @@
         "script.name": "csa1-pilot",
         "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 1",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 1"
+        ],
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d"
+      }
     }
   ],
   "resources": [
@@ -7494,6 +7584,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa1-pilot/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa1-pilot/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa1-pilot/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -8562,7 +8685,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csa1-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 

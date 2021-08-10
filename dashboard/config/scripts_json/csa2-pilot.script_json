@@ -10,11 +10,12 @@
       "hideable_lessons": true,
       "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-07 12:23:53 UTC",
+    "serialized_at": "2021-08-10 21:43:39 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -42,6 +43,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -303,7 +316,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -315,6 +328,21 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Unit 2 Pilot Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -917,6 +945,18 @@
         "lesson_activity.key": "c4e28d70-27fc-4788-9e42-8a012fda0e47",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "136cfee0-03ef-4675-b3d3-2876340bd82d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -1926,8 +1966,8 @@
       "key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the expressions widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the + operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the / operator.\n* Clarify how to use the % operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
-        "progression_name": "Expressions Widget",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use `System.out.print()` to display the result of the expression.\n* Answer the fill-in-the-blank questions for the `+` operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the `/` operator.\n* Clarify how to use the `%` operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
+        "progression_name": "Expressions Exploration",
         "tips": [
           {
             "type": "teachingTip",
@@ -4150,7 +4190,8 @@
       "key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 2 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
@@ -4173,6 +4214,17 @@
       "seeding_key": {
         "activity_section.key": "fe4926cf-9a74-47ed-815f-d28853b1ff09",
         "lesson_activity.key": "c4e28d70-27fc-4788-9e42-8a012fda0e47"
+      }
+    },
+    {
+      "key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSA Pilot Survey Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff",
+        "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d"
       }
     }
   ],
@@ -4636,7 +4688,7 @@
         "level_keys": [
           "CSA U2L5-L1"
         ],
-        "progression": "Expressions Widget"
+        "progression": "Expressions Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -5676,6 +5728,56 @@
       "level_keys": [
         "CSA U2L13-L1"
       ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
+        "progression": "Unit 2 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078"
+      },
+      "level_keys": [
+        "CSA Unit 2 Pilot MCQ Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "progression": "CSA Pilot Survey Unit 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6398,6 +6500,30 @@
         "script.name": "csa2-pilot",
         "activity_section.key": "4d42d735-613f-4246-a70e-6f48dfe3b108"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 2 Pilot MCQ Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 2",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff"
+      }
     }
   ],
   "resources": [
@@ -6651,6 +6777,39 @@
       },
       "seeding_key": {
         "resource.key": "accepting_user_input"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa2-pilot/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa2-pilot/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa2-pilot/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
       }
     },
     {
@@ -7665,7 +7824,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "csa2-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 
