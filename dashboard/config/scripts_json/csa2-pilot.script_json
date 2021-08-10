@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-09 19:05:57 UTC",
+    "serialized_at": "2021-08-10 18:50:33 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -42,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -303,7 +315,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -315,6 +327,21 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Unit 2 Pilot Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -917,6 +944,18 @@
         "lesson_activity.key": "c4e28d70-27fc-4788-9e42-8a012fda0e47",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "136cfee0-03ef-4675-b3d3-2876340bd82d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot"
       }
     }
@@ -4150,7 +4189,8 @@
       "key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 2 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078",
@@ -4173,6 +4213,17 @@
       "seeding_key": {
         "activity_section.key": "fe4926cf-9a74-47ed-815f-d28853b1ff09",
         "lesson_activity.key": "c4e28d70-27fc-4788-9e42-8a012fda0e47"
+      }
+    },
+    {
+      "key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSA Pilot Survey Unit 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff",
+        "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d"
       }
     }
   ],
@@ -5676,6 +5727,53 @@
       "level_keys": [
         "CSA U2L13-L1"
       ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 2 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078"
+      },
+      "level_keys": [
+        "CSA Unit 2 Pilot MCQ Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "progression": "CSA Pilot Survey Unit 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6397,6 +6495,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-pilot",
         "activity_section.key": "4d42d735-613f-4246-a70e-6f48dfe3b108"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 2 Pilot MCQ Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "8208d034-0d7d-4cd5-857c-db39bb8d3078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 2",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff"
       }
     }
   ],
