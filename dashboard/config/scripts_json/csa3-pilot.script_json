@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-09 16:14:52 UTC",
+    "serialized_at": "2021-08-10 18:52:35 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -44,6 +44,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-pilot"
       }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-pilot"
+      }
     }
   ],
   "lessons": [
@@ -56,8 +68,8 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.",
-        "preparation": "* Gather five sticky notes or small pieces of paper for each student\n* Print copies of the Array Manipulatives (one array and reference variable per student)\n* Gather scissors and 18 paper clips per student\n* (Optional) Cut out the Array Manipulatives and place the cutouts, paper clips, and sticky notes or pieces of paper in baggies\n* Print copies of the Creating Arrays handout (one per student)",
-        "student_overview": "The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements."
+        "preparation": "* Gather five sticky notes or small pieces of paper for each student\n* Print copies of the Array Manipulatives (one array and reference variable per student)\n* Gather scissors and 18 paper clips per student\n* Cut out the Array Manipulatives and place the cutouts, paper clips, and sticky notes or pieces of paper in baggies (optional)\n* Print copies of the Creating Arrays handout (one per student)",
+        "student_overview": "The food truck owner increased their inventory of desserts. You have declared separate variables to keep track of the inventory, but what if you needed to store 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -91,7 +103,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.",
-        "preparation": "* Gather 3-5 sticky notes per student\n* Designate an area in the classroom for students to place sticky notes\n* Print a copy of the For Loops Trace Tables handout (one copy per student)",
+        "preparation": "* Gather 3-5 sticky notes per student\n* Print copies of the For Loops Trace Tables handout (one copy per student)",
         "student_overview": "In this lesson, you learn about `for` loops and how to use them to traverse arrays. You revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. You use `for` loops to solve problems in The Neighborhood and get feedback on your work through a code review."
       },
       "seeding_key": {
@@ -125,9 +137,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students explore the functionality and benefits of polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.",
+        "overview": "Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.",
         "preparation": "* Print the Vocabulary Bingo Cards so each student receives one card\n* Print the Vocabulary Bingo Definitions and mix them up\n* Print copies of the Polymorphism Role Cards\n* Gather one index card or piece of scrap paper for each student",
-        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, you discover how subclasses implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater."
+        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects to show different types of animals in The Neighborhood and use each `Animal`'s version of their `speak()` method."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -300,7 +312,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -312,6 +324,21 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Unit 3 Pilot Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-pilot"
       }
     }
@@ -391,7 +418,7 @@
       "key": "6da23833-157b-49b6-ab7b-9e975d66dc7e",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 3,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -944,6 +971,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-pilot"
       }
+    },
+    {
+      "key": "81bc54aa-4321-447c-8f36-c8a21b06eedf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81bc54aa-4321-447c-8f36-c8a21b06eedf",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -951,8 +990,14 @@
       "key": "38d78c48-60e1-4274-879a-b11a2fa22bdb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The food truck owner wants to create a list of flavors that she will offer. What would we need to do to store all of the flavors she wants to offer in one variable?*\n\n**Discussion Goal:** Students share ideas to store multiple flavors in one variable and may begin to suggest a list structure.\n\n**Distribute:** Give each student five sticky notes or small pieces of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a flavor on each sticky note.",
-        "name": "Variable Storage"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The food truck owner wants to create a list of flavors that she will offer. Based on what we know about Java, how could we create a list of flavors?*\n\n**Discussion Goal:** Students share ideas to store multiple flavors in one variable and may begin to suggest a list structure.",
+        "name": "Variable Storage",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may suggest other approaches to creating a list, including a `String` with each flavor separated by a comma or creating a class. Ask guiding questions to guide students towards creating a variable that could reference multiple individual values:\n* *How would I search for a specific flavor?*\n* *What if I needed to change a flavor? How would I do that?*"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "38d78c48-60e1-4274-879a-b11a2fa22bdb",
@@ -963,7 +1008,7 @@
       "key": "d959647f-1a95-4490-8f92-152e14eabe5a",
       "position": 2,
       "properties": {
-        "description": "What if the food truck owner wanted to create 50 flavors or even 1,000 flavors?\n\nIn Java, when you have several values that you want to store that are of the same type, you can create a one-dimensional array.",
+        "description": "In Java, when you have several values that you want to store that are of the same type, you can create a one-dimensional array.",
         "remarks": true
       },
       "seeding_key": {
@@ -975,7 +1020,7 @@
       "key": "80c51fbe-10f4-4bb7-b7a3-41afbeec8c24",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce one-dimensional arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a one-dimensional array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define an element and an index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arrays video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some physical examples that are similar to a one-dimensional array? What does it mean to be immutable? How are arrays immutable?*\n\n**Discussion Goal:** Students should point out physical items that can store one or more values. Some examples might include a storage facility, school lockers, or freight cars. Students define the term immutable as something that cannot be changed. Students recall that the size of an array cannot be changed after it is created and is therefore immutable.",
+        "description": "**Do This:** Introduce one-dimensional arrays.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a one-dimensional array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to define element and index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arrays video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some physical examples that are similar to a one-dimensional array?*\n* *What does it mean to be immutable?*\n* *How are arrays immutable?*\n\n**Discussion Goal:** Students point out physical items that can store one or more values. Some examples might include a storage facility, school lockers, or freight cars. Students define the term immutable as something that cannot be changed. Students recall that the size of an array cannot be changed after it is created and is therefore immutable.",
         "duration": "5",
         "name": "Hip Hip Array"
       },
@@ -988,9 +1033,15 @@
       "key": "4f9ba64e-8bb4-4563-8141-75b2371a0844",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Array Manipulatives.\n\n**Do This:** Have students cut out the manipulatives and create paper clip chains by connecting three paper clips together.\n\n**Do This:** Demonstrate declaring and initializing an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize the array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and create the array in one line of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their Array Manipulatives to declare and initialize an array to store the flavors they wrote on their sticky notes. On a piece of paper, students write the line of code to declare and initialize the array.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Array Manipulatives.\n\n**Do This:** Have students cut out the manipulatives and create paper clip chains by connecting three paper clips together.",
         "duration": "15",
-        "name": "Declaring and Initializing an Array"
+        "name": "Declaring and Initializing an Array",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also reuse the paper clip chains created in Unit 2."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4f9ba64e-8bb4-4563-8141-75b2371a0844",
@@ -998,8 +1049,19 @@
       }
     },
     {
-      "key": "b4fc9699-377e-41a6-be76-8e49551cd0d4",
+      "key": "3fa3894e-4de3-4cab-8490-591fc4a25d37",
       "position": 3,
+      "properties": {
+        "description": "**Do This:** Demonstrate declaring and initializing an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare an array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize the array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and create the array in one line of code.\n\n**Distribute:** Give each student five sticky notes or small pieces of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a dessert flavor on each sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their Array Manipulatives to declare and initialize an array to store the flavors they wrote on their sticky notes. On a piece of paper, students write the line of code to declare and initialize the array."
+      },
+      "seeding_key": {
+        "activity_section.key": "3fa3894e-4de3-4cab-8490-591fc4a25d37",
+        "lesson_activity.key": "59822af3-1dda-433d-8d48-16ad16fae41b"
+      }
+    },
+    {
+      "key": "b4fc9699-377e-41a6-be76-8e49551cd0d4",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We now have a `String` array named `flavors`. Since `String`s are objects, each index location points to `null` as we see with these paper clip chains that are not connected to objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If we create an `int` array, it will initially contain the default value for `int`, or 0.",
         "remarks": true
@@ -1011,7 +1073,7 @@
     },
     {
       "key": "f099fbc9-d042-45b4-b736-375703b06595",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can you assign your flavors into the array?*\n\n**Discussion Goal:** Students suggest assigning each flavor to an index location in the array.",
         "tips": [
@@ -1028,7 +1090,7 @@
     },
     {
       "key": "a6599771-7e0d-48a1-8bca-20abd8c9225a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "Arrays can be created in multiple ways. To create an array with initial values specified, you can either declare and assign values or create an initializer list.",
         "remarks": true
@@ -1040,7 +1102,7 @@
     },
     {
       "key": "8a76b429-9638-4e60-9ffb-76153e1a9ad7",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce creating an array by declaring its type and name and storing values by assigning it to an index. Direct students to connect a paper clip chain from each index to one of their sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce creating an array using an initializer list.\n\n**Display:** Show the `flavors` array that is created using the initializer list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce referring to the length of the array.\n* Trace the code to determine the array's length.\n* Show the output of printing the length of the array.\n* Define the length of the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if we wanted to print the value at index 5?*\n\n**Discussion Goal:** Students predict that an error will occur because there is not an index 5 in this array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `ArrayIndexOutofBoundsExecption`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if we wanted to add a value at index 5?*\n\n**Discussion Goal:** Students predict that an error will occur because there is not an index 5 in this array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce that the length of the array cannot be changed after the array has been created."
       },
@@ -1051,7 +1113,7 @@
     },
     {
       "key": "3cd93cf6-4c1a-44bd-9510-481d251492d2",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Let's play the Array Game! If I call your name, bring your sticky notes and place them on the slide.",
         "duration": "15",
@@ -1065,13 +1127,13 @@
     },
     {
       "key": "b36b54c6-1d61-413f-94bb-c1077b29a6b1",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To play the array game, have students stand up and place them in groups of 3-4. Groups need to stand close to the area where the presentation will be displayed. For each question, select a student to use the sticky notes they created in the warm up activity.\n* Choose a student to place sticky notes in the designated array square on the slide.\n* Read the question out loud to the class.\n* Have groups discuss then select a group to answer the question. If the group gets the answer wrong, select another group. Rotate to different groups for each question.\n    * Answers will vary based on the student's sticky note. \n    * For the length of the array, have different students place fewer of their stickies on the slide so the length of the array will vary.\n* Have the student take the sticky notes off the slide and click through the animation to display the next question.\n* Repeat the instructions for the next round."
+            "markdown": "To play the array game, have students stand up and place them in groups of 3-4. Groups need to stand close to the area where the presentation will be displayed. For each question, select a student to use the sticky notes they created.\n* Choose a student to place sticky notes in the designated array square on the slide.\n* Read the question out loud to the class.\n* Have groups discuss then select a group to answer the question. If the group gets the answer wrong, select another group. Rotate to different groups for each question.\n    * Answers will vary based on the student's sticky note. \n    * For the length of the array, have different students place fewer of their stickies on the slide so the length of the array will vary.\n* Have the student take the sticky notes off the slide and click through the animation to display the next question.\n* Repeat the instructions for the next round."
           }
         ]
       },
@@ -1082,9 +1144,15 @@
     },
     {
       "key": "250cdb0f-76ce-4a0b-b4a1-9e75f45187ea",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creating Arrays handout.\n\n**Do This:** Students individually complete the Creating Arrays handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creating Arrays handout.\n\n**Do This:** Students individually complete the Creating Arrays handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work through the handout, circulate the classroom to help provide scaffolding to those who may need it. To help students make connections between data storage and arrays, particularly when using initializer lists and accessing elements, guide them back to the manipulative mental model. Encourage students to create a visual using their manipulatives whenever they may find it useful."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "250cdb0f-76ce-4a0b-b4a1-9e75f45187ea",
@@ -1095,7 +1163,7 @@
       "key": "6a5b8801-e1bb-4335-92f5-e03529d4bf73",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did we learn today? So what? Now what?*\n\n**Discussion Goal:** Students discuss the importance of arrays and how it is useful to store multiple values. Students make predictions on different uses of arrays in future lessons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the three W's.\n* *What did we learn today?* \n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the importance of arrays and how it is useful to store multiple values. Students make predictions on different uses of arrays in future lessons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Three W's"
       },
       "seeding_key": {
@@ -1125,7 +1193,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Instead of playing the array game as a class, place students in groups of 3 or 4. Have each group work together to write the answer for each statement. Share the solutions as a class."
+            "markdown": "Instead of playing the array game as a class, place students in groups of 3 or 4. Have each group work together to write the answer for each statement. Discuss the solutions as a class."
           }
         ]
       },
@@ -1138,7 +1206,7 @@
       "key": "aa5ede21-80b9-443b-95de-18391ff475b3",
       "position": 1,
       "properties": {
-        "description": "As many of you guessed yesterday, today is all about using arrays. We’re going to start by working in Code Studio to explore the structure of arrays and consider the types of information they can store.",
+        "description": "As many of you guessed yesterday, today is all about using arrays. We’re going to start by working in Java Lab to explore the structure of arrays and consider the types of information they can store.",
         "duration": "7",
         "name": "Investigating Arrays",
         "remarks": true
@@ -1164,7 +1232,7 @@
       "key": "8e26a74a-cd73-4183-b25f-6d30d037db6f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you know? What do you want to know?*\n\n**Discussion Goal:** Students share what they understand about how arrays work and what they wonder about using arrays. As students share what they know, encourage them to give examples to help recall syntax.\n\n**Do This:** Click through the animations on each slide to review array syntax and structure:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students a sample ‘Know’ section of the KWL chart and use the slide animation to share an example of each known item. Note that this is not an exhaustive list of the things they know about arrays (for example, a student may have \"find the length of a list\").\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share a sample ‘Want to Know’ section of the KWL. Note that one of the questions is “What is the Theater?”, which does not directly relate to arrays. Students learn about The Theater later."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know?* \n* *What do you want to know?*\n\n**Discussion Goal:** Students share what they understand about how arrays work and what they wonder about using arrays. As students share what they know, encourage them to give examples to help recall syntax.\n\n**Do This:** Review array syntax and structure:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students a sample ‘Know’ section of the KWL chart. Click through the animation to share an example of each known item.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share a sample ‘Want to Know’ section of the KWL."
       },
       "seeding_key": {
         "activity_section.key": "8e26a74a-cd73-4183-b25f-6d30d037db6f",
@@ -1175,7 +1243,7 @@
       "key": "9452f208-d9dd-4dd7-a4f5-bd06d85becc2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now that you’ve taken some time to investigate arrays, we’re going to use them to solve some challenges with `PainterPlus` in The Neighborhood. I'm here to help you when you need me! However, I first want to remind you of the following:\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck and reference the Debugging Wall.\n* Talk out loud to process.\n* Use the documentation to learn about arrays and how they work.\n* Talk to your partner or a pair next to you. If another pair asks for help, make sure to take some time to talk their question through with them.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now that you’ve taken some time to investigate arrays, we’re going to use them to solve some challenges with `PainterPlus` in The Neighborhood. I'm here to help you when you need me! However, I first want to remind you of the following:\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck and reference the Debugging Wall.\n* Talk out loud to process.\n* Look at the Documentation tab to review arrays and how they work.\n* Talk to your thinking partner or neighbor. If a peer asks for help, make sure to take some time to talk their question through with them.",
         "duration": "10",
         "name": "Arrays in The Neighborhood",
         "remarks": true
@@ -1194,7 +1262,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Circulate the room and encourage students to use the strategies displayed on the slide. Level 2 may take longer and feel somewhat tedious to students. Reassure students during this activity, as this sets up the value of how quickly they can complete Level 3."
+            "markdown": "Circulate the room and encourage students to use the strategies displayed on the slide. Level 2 may take longer and feel somewhat tedious to students. Reassure students during this activity, as this sets up the value of how quickly they can complete Level 3.\n\nThe purpose of Level 2 is to give students practice accessing elements of an array. If students are still working at the 6 minute mark, they have likely gotten the repetitive practice that they need to learn this skill. At this point, transition all students to Level 3 to see the value of using an array for this task and to give them time to complete the Check for Understanding on Level 4."
           }
         ]
       },
@@ -1224,8 +1292,8 @@
       "key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
       "position": 7,
       "properties": {
-        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. The Theater has just opened in The Neighborhood, and you have been asked to help create a concert using audio and visual effects.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
-        "duration": "10",
+        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. You will be helping the director plan and create the opening concert. The students at the elementary school will be invited to watch the concert, so the director wants to showcase all of the things that make up The Neighborhood.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
+        "duration": "15",
         "name": "Arrays in The Theater",
         "remarks": true
       },
@@ -1238,12 +1306,12 @@
       "key": "9412ddac-1a3c-48b1-815b-32ebb831eb55",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to The Theater video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students modify the constructor to use their own images of their neighborhood and themselves. Have students proceed to Level 6 to modify the `welcome()` method to use `drawImage()` and `drawText()` to display their neighborhood image and welcome text. On Level 7, students explore using `playNote()` and `pause()` with the array of song notes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to The Theater video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5-7 on Code Studio.",
         "progression_name": "Arrays in The Theater",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits after regrouping, log in to Code Studio yourself and open Level 7. Ask students to talk you through the steps of making a short song. Ask leading questions such as:\n* *How do I access notes from the `notes` array?*\n* *How do I make my song longer?*\n* *How can I add a pause between notes?*\n* *What values do you think are used for the duration?*\n\nThe video discusses these questions, but it may be helpful to review them after exploring The Theater on their own."
+            "markdown": "Remind students to use `//` to comment out the `myConcert.playConcert();` line so they can test the individual scenes. When students are ready to test the concert as a whole, they should uncomment the `myConcert.playConcert();` line.\n\nIf time permits after regrouping, log in to Code Studio yourself and open Level 7. Ask students to talk you through the steps of making a short song. Ask leading questions such as:\n* *How do I access notes from the `notes` array?*\n* *How do I make my song longer?*\n* *How can I add a pause between notes?*\n* *What values do you think are used for the duration?*\n\nThe video discusses these questions, but it may be helpful to review them after exploring The Theater on their own."
           }
         ]
       },
@@ -1257,7 +1325,7 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 8 on Code Studio. Students complete a choice level to solve problems using arrays in The Neighborhood.",
-        "duration": "10",
+        "duration": "7",
         "name": "Arrays Practice",
         "progression_name": "Solving Problems with Arrays"
       },
@@ -1267,34 +1335,10 @@
       }
     },
     {
-      "key": "28927d41-7cfb-45b6-ac0f-caf132990e84",
-      "position": 10,
-      "properties": {
-        "description": "Let's create the second scene and introduce yourself in your concert!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "28927d41-7cfb-45b6-ac0f-caf132990e84",
-        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
-      }
-    },
-    {
-      "key": "639e535c-0475-4a0c-b8dc-9fc17788d981",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 9 on Code Studio. Students modify the `introSelf()` method to draw an image of themselves at the center of the stage and write an introductory message. Have students continue to Level 10 to debug the array of notes.",
-        "progression_name": "Introducing Your Community"
-      },
-      "seeding_key": {
-        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981",
-        "lesson_activity.key": "12bd2f93-a8c4-4820-a2f2-b6b942c87e22"
-      }
-    },
-    {
       "key": "f0329aee-1636-4c63-9a17-0b751a353cd3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -1332,7 +1376,13 @@
       "key": "12d1c9f8-d87d-42db-91c6-60790231c90e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute 3-5 sticky notes per student. Click through the animated slide and prompt students to write down what they remember about each topic on separate sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share their sticky notes with a partner. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute 3-5 sticky notes per student. Click through the animated slide and prompt students to write down what they remember about each topic on separate sticky notes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternatively, you can have students write down what they remember on a scrap piece of paper or in a notebook."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "12d1c9f8-d87d-42db-91c6-60790231c90e",
@@ -1340,8 +1390,19 @@
       }
     },
     {
-      "key": "0d75e8fb-f2dd-4120-8718-0330149f12cc",
+      "key": "012fae51-4ac2-4030-9c50-909ea272d4cf",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share their sticky notes with a partner. "
+      },
+      "seeding_key": {
+        "activity_section.key": "012fae51-4ac2-4030-9c50-909ea272d4cf",
+        "lesson_activity.key": "6964bdb9-eed1-43dd-92cc-f7878ca65a31"
+      }
+    },
+    {
+      "key": "0d75e8fb-f2dd-4120-8718-0330149f12cc",
+      "position": 4,
       "properties": {
         "description": "Wow! We already know so much about loops, arrays, and trace tables. In today’s lesson, we will revisit all of these topics in new ways.",
         "remarks": true
@@ -1353,9 +1414,9 @@
     },
     {
       "key": "e61e30b6-cd1c-4f58-8808-d18958ee190b",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might loops, arrays, and trace tables go together? What do you think we will be doing during today’s lesson?*\n\n**Discussion Goal:** Students share their ideas to connect these topics. These ideas might include using loops with arrays and tracing the values stored in an array while looping the array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How might loops, arrays, and trace tables go together?*\n* *What do you think we will be doing during today’s lesson?*\n\n**Discussion Goal:** Students share their ideas to connect these topics. These ideas might include using loops with arrays and tracing the values stored in an array while looping the array."
       },
       "seeding_key": {
         "activity_section.key": "e61e30b6-cd1c-4f58-8808-d18958ee190b",
@@ -1405,7 +1466,7 @@
       "key": "fc9022a2-4443-4161-884c-55cf906cba8a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. In Level 1, students write a `for` loop to print out numbers 0-5. In Level 2, students use a `for` loop to traverse an array of paint colors to create a design in The Neighborhood. In Level 3, students traverse an array of paint colors backward. If desired, pair students for this activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
         "progression_name": "The Neighborhood: for Loops",
         "tips": [
           {
@@ -1437,7 +1498,7 @@
       "key": "b9bea4b9-415f-46e3-b39a-eba9659ddd29",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the For Loop Trace Tables Activity Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, work through the first iteration of the `for` loop. Record the first three lines on the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to work in pairs to finish the first trace table and then try the second.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using trace tables with `for` loops?*\n\n**Discussion Goal:** Students highlight that trace tables help track the output and the loop control variable's value."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the For Loop Trace Tables Activity Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, work through the first iteration of the `for` loop. Record the first three lines on the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to work in pairs to finish the first trace table and then complete the second individually.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using trace tables with `for` loops?*\n\n**Discussion Goal:** Students highlight that trace tables help track the output and the loop control variable's value."
       },
       "seeding_key": {
         "activity_section.key": "b9bea4b9-415f-46e3-b39a-eba9659ddd29",
@@ -1448,7 +1509,7 @@
       "key": "d2ec78ec-5b1a-4e06-bfa1-98f18602f8d0",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Each choice level uses `for` loops to traverse arrays in slightly different ways, but all require students to write at least one `for` loop to access and use an array of paint colors.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio.",
         "duration": "8",
         "name": "The Neighborhood: More for Loops",
         "progression_name": "The Neighborhood: More for Loops",
@@ -1602,7 +1663,7 @@
       "key": "4444c9e3-ce71-4c6c-945d-a77c7538a22e",
       "position": 7,
       "properties": {
-        "description": "Let's explore how to use color and shapes in The Theater to create Scene 3 for our concert.",
+        "description": "Let's explore how to use color and shapes in The Theater to create another scene for our concert.",
         "remarks": true
       },
       "seeding_key": {
@@ -1614,8 +1675,8 @@
       "key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students modify the code to explore using `drawRectangle()`, working with the `Color` class, and modifying the stroke and fill.",
-        "progression_name": "Rectangles and Color"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
+        "progression_name": "Color Changing Rectangles"
       },
       "seeding_key": {
         "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
@@ -1647,53 +1708,12 @@
       }
     },
     {
-      "key": "ccfa8aa8-4e9b-4e45-8757-8fb52ecab573",
+      "key": "eef34daa-bd85-45ef-aff8-e8baeadebc1d",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *You've just seen how you can convert between the different types of loops. When would we want to use a `while` loop?*\n\n**Discussion Goal:** Students share that a `while` loop can be used when it is unknown when the loop will end.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Guide students towards thinking about the difference between the header of a `while` loop and a `for` loop. For example, you could ask, *“Can you tell how many times a `for` loop will run from its header? How about a `while` loop?”*"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ccfa8aa8-4e9b-4e45-8757-8fb52ecab573",
-        "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
-      }
-    },
-    {
-      "key": "45547f4b-49c8-4351-8daf-0bceec2ae9af",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `while` loops can be useful for getting multiple values from a user.\n\nWith a `while` loop, we can loop until the user enters a specific value. This value is called a flag, or sentinel value. A sentinel value determines when to end a loop.\n\nSince we don't know how many times we will need to ask the user for input, we can use a `while` loop.\n\nFor example, this pseudocode will loop until the user enters a negative number.",
-        "duration": "10",
-        "name": "Using Sentinel Values",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "45547f4b-49c8-4351-8daf-0bceec2ae9af",
-        "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
-      }
-    },
-    {
-      "key": "e78beda9-972e-432f-8abd-7e5c64533bab",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. Students convert the pseudocode so they can input values to play music until a negative value is entered.",
-        "progression_name": "while Loops with Scanner"
-      },
-      "seeding_key": {
-        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab",
-        "lesson_activity.key": "93c75ca4-3c90-4116-bcaf-32dbf74864c6"
-      }
-    },
-    {
-      "key": "eef34daa-bd85-45ef-aff8-e8baeadebc1d",
-      "position": 14,
-      "properties": {
         "description": "Now let's put it all together to finish your scene!",
+        "duration": "10",
+        "name": "Practicing with while Loops",
         "remarks": true
       },
       "seeding_key": {
@@ -1703,9 +1723,9 @@
     },
     {
       "key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc",
-      "position": 15,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 7 on Code Studio to add a message to introduce people in their community. Have students continue to Level 8 to create and traverse the given array of images.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio.",
         "progression_name": "The People in Your Community"
       },
       "seeding_key": {
@@ -1717,8 +1737,14 @@
       "key": "de1303d4-5ea0-404a-873e-66488882cb29",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to draw a Venn Diagram on a piece of paper. Have students fill out the Venn Diagram to compare and contrast `while` loops and `for` loops.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some differences between `while` loops and `for` loops? What are some similarities?*\n\n**Discussion Goal:** Students note that both execute code repeatedly. `while` loops can be used when it is unknown when the loop will end. The `for` loop header initializes and modifies the loop control variable. `for` loops have a predetermined start and stop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
-        "name": "Comparing while and for Loops"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to draw a Venn Diagram on a piece of paper. Have students fill out the Venn Diagram to compare and contrast `while` loops and `for` loops.",
+        "name": "Comparing while and for Loops",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should include the following on their Venn Diagrams:\n* Counter variables can be initialized and modified in the `for` loop header.\n* `for` loops are easier to use with arrays.\n* `for` loops take less lines of code than `while` loops.\n* `while` loops are best for situations when the number of iterations is unknown.\n* Both loops can run code repeatedly.\n* Both loops can run either 0, 1, or many times.\n* Both can result in infinite loops."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "de1303d4-5ea0-404a-873e-66488882cb29",
@@ -1726,8 +1752,19 @@
       }
     },
     {
-      "key": "84d81b94-95f6-47a1-bfe1-d49715a85563",
+      "key": "927bf80b-4f17-4f2a-9887-d0bfa25fea2e",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some differences between `while` loops and `for` loops? What are some similarities?*\n\n**Discussion Goal:** Students note that both execute code repeatedly. `while` loops can be used when it is unknown when the loop will end. The `for` loop header initializes and modifies the loop control variable. `for` loops have a predetermined start and stop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "927bf80b-4f17-4f2a-9887-d0bfa25fea2e",
+        "lesson_activity.key": "9bd1b53b-2860-40e2-a299-3e577b0a173a"
+      }
+    },
+    {
+      "key": "84d81b94-95f6-47a1-bfe1-d49715a85563",
+      "position": 3,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -1780,27 +1817,8 @@
       }
     },
     {
-      "key": "53ebe14d-2417-45a4-8267-311ebc792f71",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson, you drew rectangles and images of people in sync with audio. What if you wanted to display different types of shapes or images instead of just one? How do you think you could do this?*\n\n**Discussion Goal:** Students brainstorm potential solutions, which may include creating individual arrays for each shape and traversing each at the same time. Students may begin to realize the inefficiencies of this approach since they would have to work with each array individually and could suggest generalizing individual shapes.",
-        "duration": "15",
-        "name": "Introduction to Polymorphism",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students may not immediately realize the inefficiencies of creating an array for each shape and traversing each at the same time. Guide students towards this conclusion by asking questions such as:\n* *What if we wanted to show a rectangle, then a triangle, then a circle? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *What if we needed to know information about each shape, like how many sides each shape has that we are using? How would we do this if we had a `Rectangle` array, a `Triangle` array, and a `Circle` array?*\n* *Can you think of ways that these tasks could be done more easily?*"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "53ebe14d-2417-45a4-8267-311ebc792f71",
-        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
-      }
-    },
-    {
       "key": "15a8847d-7eaf-495a-91c3-3a1fb9799dcc",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "When we helped the Project Mercury Pastries food truck owner, we used inheritance to create different types of desserts. Since they were all types of desserts, they shared attributes and behaviors of a `Dessert` object. They could also have special attributes and behaviors based on the type of dessert, like having frosting on cakes.",
         "remarks": true
@@ -1812,9 +1830,15 @@
     },
     {
       "key": "82d9d182-3ad1-4991-862d-8d31c38800d7",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Polymorphism Role Card.\n\n**Do This:** Use the Polymorphism Roles to have students act out Polymorphism Role Play:\n* Explain that each student has a role and a method.\n* When a role and method is called, students should follow the instructions specified on their card. \n* Randomly call out a role and method.\n* The student with that role and method acts out their method according to their instructions.\n\n**Discuss:** Talk through the following prompts to identify the inheritance hierarchy represented by the roles and guiding towards using polymorphism to store these roles in one array:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What is the relationship between the different roles we encountered? For example, what is the relationship between `Instrument` and `Guitar`?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why were your `play()` methods different than others even though the method name was the same?*\n* *What did the `Instrument` do when their `play()` method was called? Why?*\n* *If we wanted to store all of you into a list, or an array, what would be the type for the array?*\n* *If we created a list of `Instrument`s, how would we be able to call your `play()` methods?*\n\n**Discussion Goal:** Students notice that each role had specific versions of `play()`. When their role was called, they used their version of `play()` to instruct their actions. Students realize that `Instrument` has a generic version of `play()` and relate this generic version of `play()` to the `Instrument` representing a generic version of the other represented instruments. Since `Instrument` was a generic version of the other roles, it could represent the superclass, while the other roles could represent subclasses of `Instrument`. By the end of this discussion, students should start referring to polymorphic behavior and realize that since they are all types of `Instrument`s, then a program should call their version of `play()` when traversing the array.\n\n**Do This:** Define polymorphism and talk through the code example:\n* Polymorphism means performing an action in different ways. The `Instrument`s in the Polymorphism Role Play was an example of polymorphism.\n* In this example, `Animal` is the superclass, and `Dog` and `Cat` are the subclasses.\n* `Dog` is-a `Animal` and `Cat` is-a `Animal`, but `Animal` is NOT a `Dog` or `Cat`.\n* Each class has its own version of `speak()`.\n* When `speak()` is called on a `Cat` object, Java searches for and uses its version of `speak()` instead of the superclass version.\n* Since `Dog` is-a `Animal`, the `puppy` reference variable can be created of type `Animal` and store a `Dog` object in this variable. When `speak()` is called on this object, Java searches for and uses the `Dog`'s version of `speak()` since it is a `Dog` object.\n* To keep track of all of the `Animal`s in one list, create an array of type `Animal` to store `Dog` and `Cat` objects since `Dog` is-a `Animal` and `Cat` is-a `Animal`.\n* Alternatively, the `Dog` and `Cat` objects can be created first, then add their references to the `Animal` array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *If we wanted to store multiple desserts in a list, how could we go about doing that?*\n* *We could have a `Cake` array, `Donut` array, and so on, but getting information about all of the desserts might get difficult since we'd have to write code for each array. How could we make one generic array to store all types of desserts?*\n* *What would be the benefits of having an array of `Dessert` objects?*\n\n**Discussion Goal:** Students make the connection that since the superclass is a generic representation of its subclasses, it could be used as the type of the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Musical Object Role Card. Multiple students should have the same role.\n\n**Do This:** Use the Musical Object Roles to have students act out Musical Object Role Play:\n* Explain that each student has a role and a method.\n* When a role and method is called, students should follow the instructions specified on their card. \n* Randomly call out a role and method.\n* The student with that role and method acts out their method according to their instructions.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make sure at least one student has an `Instrument` card. If you have a small class, students could also have multiple role play cards."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "82d9d182-3ad1-4991-862d-8d31c38800d7",
@@ -1822,10 +1846,44 @@
       }
     },
     {
-      "key": "07fd7c60-2f6c-4551-bc35-08e55a15683d",
+      "key": "bab90521-b607-4bc4-8605-e826c5246419",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Talk through the following prompts to identify the inheritance hierarchy represented by the roles and to guide students towards using polymorphism to store these roles in one array:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What is the relationship between the different roles we encountered? For example, what is the relationship between `Instrument` and `Guitar`? Is it the same as the relationship between `Guitar` and `Drums`?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Why were your `play()` methods different than others even though the method name was the same?*\n* *What did the `Instrument` do when their `play()` method was called? Why?*\n* *If we wanted to store all of you into a list, or an array, what would be the type for the array?*\n* *If we created a list of `Instrument`s, how would we be able to call your `play()` methods?*\n\n**Discussion Goal:** Students notice that each role had specific versions of `play()`. When their role was called, they used their version of `play()` to instruct their actions. Since `Instrument` was a generic version of the other roles, it could represent the superclass, while the other roles could represent subclasses of `Instrument`."
+      },
+      "seeding_key": {
+        "activity_section.key": "bab90521-b607-4bc4-8605-e826c5246419",
+        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
+      }
+    },
+    {
+      "key": "6d8e9f39-c0fc-406e-ad00-3a4859a3db9e",
       "position": 4,
       "properties": {
-        "description": "Let's look at how we can use polymorphism to store and use an array of `Animal`s. We have `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects that all have an is-a relationship with `Animal`.",
+        "description": "What we just acted out was an example of a concept called polymorphism. An `Instrument` could be a `Guitar` or a `Flute`, allowing it to take on different forms and perform the `play()` action in different ways.\n\nWe see examples of polymorphism all around us, and it is useful for creating and working with lists of more generic types, or superclasses, that contain specific versions of objects, or their subclasses.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6d8e9f39-c0fc-406e-ad00-3a4859a3db9e",
+        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
+      }
+    },
+    {
+      "key": "775fbfbd-ee67-454f-b273-2092b37a8c0c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define polymorphism.\n\n**Do This:** Explain the implementation of polymorphism in the `Animal` hierarchy.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this example, `Animal` is the superclass, and `Dog` and `Cat` are the subclasses.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Dog` is-a `Animal` and `Cat` is-a `Animal`, but `Animal` is NOT a `Dog` or `Cat`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each class has its own version of `speak()`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When `speak()` is called on a `Cat` object, Java searches for and uses its version of `speak()` instead of the superclass version.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Since `Dog` is-a `Animal`, the `puppy` reference variable can be created of type `Animal` and store a `Dog` object in this variable. When `speak()` is called on this object, Java searches for and uses the `Dog`'s version of `speak()` since it is a `Dog` object.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> To keep track of all of the `Animal`s in one list, create an array of type `Animal` to store `Dog` and `Cat` objects since `Dog` is-a `Animal` and `Cat` is-a `Animal`."
+      },
+      "seeding_key": {
+        "activity_section.key": "775fbfbd-ee67-454f-b273-2092b37a8c0c",
+        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
+      }
+    },
+    {
+      "key": "07fd7c60-2f6c-4551-bc35-08e55a15683d",
+      "position": 6,
+      "properties": {
+        "description": "During our role play earlier, the `Instrument` represented a generic version of the other instruments that we had, making it the superclass of our `Instrument` objects. This means that `Guitar` is an `Instrument`, `Drums` is an `Instrument`, and so on. But does it work the other way around? Is `Instrument` a `Guitar`?",
         "remarks": true
       },
       "seeding_key": {
@@ -1835,10 +1893,10 @@
     },
     {
       "key": "9f2bb7d4-1069-472e-bcb9-238f97ba594f",
-      "position": 5,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students predict the output before running the program.",
-        "progression_name": "Animal is-a Chicken?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students predict the output before running the program, then debug the error.",
+        "progression_name": "Instrument is-a Guitar?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1853,9 +1911,9 @@
     },
     {
       "key": "18bba7d8-f17d-4e2c-beef-13c5d749e15c",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program? Why do you think this happened?*\n\n**Discussion Goal:** Students relate the is-a relationship to the structure of the constructor call. An `Animal` is not a `Chicken`, which causes an error in the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have a student write the error on a sticky note and add it to the Debugging Wall."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students relate the is-a relationship to the structure of the constructor call. An `Instrument` is not a `Guitar`, which causes an error in the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have a student write a strategy for identifying and fixing the error on a sticky note and add it to the Debugging Wall."
       },
       "seeding_key": {
         "activity_section.key": "18bba7d8-f17d-4e2c-beef-13c5d749e15c",
@@ -1864,11 +1922,11 @@
     },
     {
       "key": "dcae97e4-95a0-4c94-9773-3bf090a7678a",
-      "position": 7,
+      "position": 9,
       "properties": {
-        "description": "Let's create the next scene of our concert about the animals that live in The Neighborhood.",
+        "description": "Since the students from the elementary school will be attending the concert, the director wants to create a scene that shows animals they might encounter in The Neighborhood. Each animal will make its sound when it appears on the stage.\n\nThe director was inspired by a book they read, and they want to bring some of its parts to life in the concert.",
         "duration": "15",
-        "name": "Creating an Array of Shapes",
+        "name": "Creating an Array of Animals",
         "remarks": true
       },
       "seeding_key": {
@@ -1877,10 +1935,27 @@
       }
     },
     {
-      "key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
-      "position": 8,
+      "key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students create an array of `Animal`s to store `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Here We Are: Notes for Living on Planet Earth video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This video is a read-aloud of a children's book to provide background and inspiration for the scene and concert. You could choose to play only parts of the video or play just the last half of the video (starting at 2:02)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
+        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
+      }
+    },
+    {
+      "key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
         "progression_name": "Array of Animals"
       },
       "seeding_key": {
@@ -1890,7 +1965,7 @@
     },
     {
       "key": "1598b120-11c7-44a5-bd24-53cb4030d298",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "We can traverse this array of objects in the same way that we traverse arrays of primitive values.\n\nSince each element in the array is an object, we can call their methods as we traverse the array.",
         "remarks": true
@@ -1902,7 +1977,7 @@
     },
     {
       "key": "20993875-fa36-418f-92eb-6ba111a4be91",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show the output of traversing the `myAnimals` array and calling `speak()` on each element in the array.\n* The first element in the `myAnimals` array is a `Dog` object, so Java checks to see if the `Dog` object has its own version of the `speak()` method.\n* The `Dog` object's `speak()` method outputs `\"Woof!\"`\n* The next element in the `myAnimals` array is a `Cat` object, so Java checks to see if the `Cat` object has its own version of the `speak()` method.\n* The `Cat` object's `speak()` method outputs `\"Meow!\"`"
       },
@@ -1913,9 +1988,9 @@
     },
     {
       "key": "51bf2e09-7597-41db-adc9-cd0d71e359bb",
-      "position": 11,
+      "position": 14,
       "properties": {
-        "description": "We now have our array of `Animal`s. Let's use traversals to make our `Animal`s objects show with their sound!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In addition to using a `for` loop to traverse the array of `Animal` objects, we will need to call the `speak()` method to play the sound for that animal. We can also use `pause()` inside the loop to specify how long to wait before showing the next `Animal`.\n\nTo clear the stage before drawing the next `Animal`, we can use `myStage.clear()` inside the loop to reset the stage with a background color before displaying the next `Animal`. Let's give it a try!",
+        "description": "We now have our array of `Animal`s. Let's use traversals to make our `Animal` objects show with their sound!",
         "remarks": true
       },
       "seeding_key": {
@@ -1925,9 +2000,9 @@
     },
     {
       "key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
-      "position": 12,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students traverse the `Animal`s array and call the `speak()` method to display each `Animal` and play their sound.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio.",
         "progression_name": "Animals in The Neighborhood"
       },
       "seeding_key": {
@@ -1937,9 +2012,9 @@
     },
     {
       "key": "a88b2330-9829-4ef6-bf44-abab40dee09b",
-      "position": 13,
+      "position": 16,
       "properties": {
-        "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
+        "description": "Before showing code or a product to a client, it’s important for a software engineer to make sure that the program meets all specifications and runs efficiently. This is a good time for a code review, and to make any improvements needed prior to reviewing the concert's progress with the director.\n\nDon't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
       },
       "seeding_key": {
@@ -1949,7 +2024,7 @@
     },
     {
       "key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
-      "position": 14,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showAnimals()` method. Students request, receive, and review feedback on Level 3."
       },
@@ -2000,7 +2075,7 @@
       "key": "61d133b2-e872-41a5-b815-42c8175423f9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Move the `Painter` located at (2,2) onto the paint bucket at (2,6). How could this be achieved using a `while` loop? How could this be achieved using a `for` loop?*\n\n**Discussion Goal:** With a `while` loop, the `Painter` can be moved from (2,2) to (2,6) by moving the `Painter` forward until it is on a paint bucket. This condition can be checked using the `isOnPaintBucket()` method. With a `for` loop, the `Painter` can be moved from (2,0) to (2,6) by moving the `Painter` four times."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Move the `Painter` located at (2, 5) onto the paint bucket at (2, 1). How could this be achieved using a `while` loop? How could this be achieved using a `for` loop?*\n\n**Discussion Goal:** With a `while` loop, the `Painter` can be moved from (2, 5) to (2, 1) by moving the `Painter` forward until it is on a paint bucket. This condition can be checked using the `isOnPaintBucket()` method. With a `for` loop, the `Painter` can be moved from (2, 5) to (2, 1) by moving the `Painter` four times."
       },
       "seeding_key": {
         "activity_section.key": "61d133b2-e872-41a5-b815-42c8175423f9",
@@ -2008,12 +2083,24 @@
       }
     },
     {
-      "key": "6956c76c-1552-443b-80dc-7dc6adf44be1",
+      "key": "90ccdb2f-4cb8-4c75-a427-7dbb722c1907",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the definition and an example of an enhanced `for` loop.",
+        "description": "There is a third type of loop that we will use throughout this course. This type of loop can only be used in specialized situations where the loop control variable is being used as an iterator through a list.",
         "duration": "10",
-        "name": "Enhanced for Loops"
+        "name": "Enhanced for Loops",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "90ccdb2f-4cb8-4c75-a427-7dbb722c1907",
+        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
+      }
+    },
+    {
+      "key": "6956c76c-1552-443b-80dc-7dc6adf44be1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the definition and an example of an enhanced `for` loop."
       },
       "seeding_key": {
         "activity_section.key": "6956c76c-1552-443b-80dc-7dc6adf44be1",
@@ -2022,9 +2109,9 @@
     },
     {
       "key": "f8964343-cf8f-47ba-a25f-a8ca9c33aa28",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "An enhanced `for` loop is a simplified for loop to iterate through every element of an array starting at index 0.\n\nIn this example, we have an array of colors called `paintColors`. The code segment below is an enhanced `for` loop, which iterates through `paintColors` and prints each of its elements.",
+        "description": "In this example, we have an array of colors called `paintColors`. The code segment below is an enhanced `for` loop, which iterates through `paintColors` and prints each of its elements.",
         "remarks": true
       },
       "seeding_key": {
@@ -2034,7 +2121,7 @@
     },
     {
       "key": "36087712-bf62-486c-bd54-c81a82334f06",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students should highlight the syntax of the enhanced `for` loop header. Points to bring out include:\n* It starts with the `for` keyword like a `for` loop.\n* It uses a declared variable that is the same type of the array.\n* The variable is declared not initialized.\n* The name of the array to traverse follows the colon.\n* The loop variable stores the value of the element visited. The loop variable is used instead of using an indexed array element.\n* An enhanced `for` loop traverses through each element of an array from beginning to end.",
         "tips": [
@@ -2051,7 +2138,7 @@
     },
     {
       "key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Enhanced for Loop video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they use an enhanced `for` loop to play an array of notes.",
         "progression_name": "Write an Enhanced for Loop"
@@ -2063,9 +2150,9 @@
     },
     {
       "key": "5bab0d19-b7c9-4649-b6b1-a42f9eab8697",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slide to discuss the enhanced `for` loop variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> For each iteration of the enhanced `for` loop, the enhanced `for` loop variable is assigned a copy of the element without using its index.\n* In the first iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 90. The value is increased by 10 In the loop body, and it then prints 100.\n* In the second iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 75. The value is increased by 10, and it then prints 85.\n* In the third iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 50. The value is increased by 10, and it then prints 60.\n* In the fourth iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 88. The value is increased by 10, and it then prints 98.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the value of the enhanced `for` loop variable will not modify the original array. The array contents are displayed using the `Arrays` object's `toString` method to show that the loop did not change the original values.",
+        "description": "**Do This:** Click through the animated slide to discuss the enhanced `for` loop variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> For each iteration of the enhanced `for` loop, the enhanced `for` loop variable is assigned a copy of the element without using its index.\n   * In the first iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 90. The value is increased by 10 In the loop body, and it then prints 100.\n   * In the second iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 75. The value is increased by 10, and it then prints 85.\n   * In the third iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 50. The value is increased by 10, and it then prints 60.\n   * In the fourth iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 88. The value is increased by 10, and it then prints 98.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the value of the enhanced `for` loop variable will not modify the original array. The array contents are displayed using the `Arrays` object's `toString` method to show that the loop did not change the original values.",
         "duration": "15",
         "name": "Enhanced for Loop Variable",
         "tips": [
@@ -2082,9 +2169,9 @@
     },
     {
       "key": "e14a5363-f6e4-41f3-b72e-4e079a77f8f6",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the Tracing Loops activity guide to each student.\n\n**Do This:** Students complete the Tracing Loops activity guide in pairs. \n\n**Do This:** Review the Tracing Loops activity guide as a class. Draw the trace table on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values to add to the new row of the trace table. Compare how the array values and the loop variables change in a `for` loop versus an enhanced `for` loop. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the Tracing Loops activity guide to each student.\n\n**Do This:** Students complete the Tracing Loops activity guide in pairs. \n\n**Do This:** Review the Tracing Loops activity guide as a class. Draw the trace tables on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values to add to the new row of the trace table. Compare how the array values and the loop variables change in a `for` loop versus an enhanced `for` loop. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2099,9 +2186,9 @@
     },
     {
       "key": "b163015a-9ff2-4aa8-9d74-8ba0aa430bb4",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "**Group:** Divide students into groups of three.\n\n**Distribute:** Give each group a piece of paper.\n\n**Do This:** Assign each group one type of loop: `while` loop, `for` loop, or enhanced `for` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** When is it best to use this loop? When is it not best to use this loop?\n\n**Discussion Goal:** Students write when it is best and not best to use their assigned loop. After, have a student from each group volunteer to discuss what they wrote down. Possible points to bring out include:\n* `while` Loops:\n    * `while` loops are best to an indefinite number of iterations, as long as a certain condition remains `true`.  \n    * `while` loops become an infinite loop if the condition never evaluates to `false`. This can be a pro or con, depending on the use case.\n    * `while` loops are not best for iterating through an array when the length of the array or the number of iterations is known.\n* `for` Loops:\n    * `for` loops are best when the size of the array or the total number of iterations is known.\n    * `for` loops are best when the loop body needs the index of an element.\n    * `for` loops are best when the elements of the array need to be modified.\n    * It is better to use an enhanced `for` loop, however, if iterating through all elements of the array starting from index 0.\n* Enhanced `for` Loops:\n    * Enhanced `for` loops are best for looping through all values of an array without changing their value.\n    * Enhanced `for` loops are not best for modifying the array values or if the loop body needs the index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through the use cases and limitations of using an enhanced `for` loop.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students draw a three column table on a piece of paper. Students fill in when it is best to use each type of loop.",
         "duration": "10",
         "name": "Choosing a Loop"
       },
@@ -2111,11 +2198,28 @@
       }
     },
     {
-      "key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
-      "position": 8,
+      "key": "04b23d83-eca5-4b0d-bb81-783ac8e4f147",
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 3 and 4 on Code Studio. Students complete Level 3 in pairs, where they refactor a `for` loop and `while` loop into an enhanced `for` loop.  After, students independently complete the Check for Understanding on Level 4.",
-        "progression_name": "Refactoring Loops"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** When is it best to use this loop? When is it not best to use this loop?\n\n**Discussion Goal:** Students write when it is best and not best to use their assigned loop. After, have a student from each group volunteer to discuss what they wrote down. Possible points to bring out include:\n* `while` Loops:\n    * `while` loops are best to an indefinite number of iterations, as long as a certain condition remains `true`.  \n    * `while` loops become an infinite loop if the condition never evaluates to `false`. This can be a pro or con, depending on the use case.\n    * `while` loops are not best for iterating through an array when the length of the array or the number of iterations is known.\n* `for` Loops:\n    * `for` loops are best when the size of the array or the total number of iterations is known.\n    * `for` loops are best when the loop body needs the index of an element.\n    * `for` loops are best when the elements of the array need to be modified.\n    * It is better to use an enhanced `for` loop, however, if iterating through all elements of the array starting from index 0.\n* Enhanced `for` Loops:\n    * Enhanced `for` loops are best for looping through all values of an array without changing their value.\n    * Enhanced `for` loops are not best for modifying the array values or if the loop body needs the index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through the use cases and limitations of using an enhanced `for` loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "04b23d83-eca5-4b0d-bb81-783ac8e4f147",
+        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
+      }
+    },
+    {
+      "key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 3 and 4 on Code Studio.",
+        "progression_name": "Refactoring Loops",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, review Level 3 as a class. Have students explain how they refactored the code into an enhanced `for` loop and discuss how the code before and after refactoring is equivalent."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
@@ -2123,21 +2227,10 @@
       }
     },
     {
-      "key": "840fe5be-d27b-466e-8f44-a7bcac672ad2",
-      "position": 9,
-      "properties": {
-        "description": "**Do This:** Review Level 3 as a class. Open Code Studio and have students explain how they refactored the code into an enhanced `for` loop. Explain to students how the code before and after refactoring is equivalent."
-      },
-      "seeding_key": {
-        "activity_section.key": "840fe5be-d27b-466e-8f44-a7bcac672ad2",
-        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
-      }
-    },
-    {
       "key": "6b9c5b09-d0a1-402b-8bfe-7ce1bdc160a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -3788,13 +3881,8 @@
       "key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 3 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys). Allow five minutes for students to log in to Code Studio.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Topic Questions and Personal Progress Checks**\n\nFor more information, see the Code.org CSA Topic Coverage."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 3 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 3 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890",
@@ -3817,6 +3905,17 @@
       "seeding_key": {
         "activity_section.key": "6df7f101-922d-4e83-937e-ef0e0c9f89fc",
         "lesson_activity.key": "0afa0cc9-cb26-43e3-a7eb-d427ee80e9d4"
+      }
+    },
+    {
+      "key": "b9c9a1e9-8395-42e2-a9cd-d9a741735962",
+      "position": 1,
+      "properties": {
+        "progression_name": "CSA Pilot Survey Unit 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9c9a1e9-8395-42e2-a9cd-d9a741735962",
+        "lesson_activity.key": "81bc54aa-4321-447c-8f36-c8a21b06eedf"
       }
     }
   ],
@@ -4053,64 +4152,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U3L2-L9"
-        ],
-        "progression": "Introducing Your Community"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L2-L9"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
-      },
-      "level_keys": [
-        "CSA U3L2-L9"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L2-L10"
-        ],
-        "progression": "Introducing Your Community"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L2-L10"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
-      },
-      "level_keys": [
-        "CSA U3L2-L10"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3L2-L11"
+          "CSA U3L2-L9-2"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L2-L11"
+          "CSA U3L2-L9-2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
@@ -4118,11 +4167,11 @@
         "activity_section.key": "0d1559c3-5194-4d46-85fa-475df9565d27"
       },
       "level_keys": [
-        "CSA U3L2-L11"
+        "CSA U3L2-L9-2"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4147,7 +4196,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4172,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4197,7 +4246,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4222,7 +4271,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4247,7 +4296,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -4272,7 +4321,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4297,7 +4346,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4305,7 +4354,7 @@
         "level_keys": [
           "CSA U3L4-L2"
         ],
-        "progression": "Rectangles and Color"
+        "progression": "Color Changing Rectangles"
       },
       "bonus": false,
       "seeding_key": {
@@ -4322,7 +4371,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4347,7 +4396,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4372,15 +4421,12 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U3L4-L5"
-        ],
-        "progression": "while Loops with Scanner"
+        "progression": "The People in Your Community"
       },
       "bonus": false,
       "seeding_key": {
@@ -4390,22 +4436,19 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
       },
       "level_keys": [
         "CSA U3L4-L5"
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U3L4-L6"
-        ],
-        "progression": "while Loops with Scanner"
+        "progression": "The People in Your Community"
       },
       "bonus": false,
       "seeding_key": {
@@ -4415,14 +4458,14 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
       },
       "level_keys": [
         "CSA U3L4-L6"
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4447,7 +4490,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4455,7 +4498,7 @@
         "level_keys": [
           "CSA U3L5-L1"
         ],
-        "progression": "Animal is-a Chicken?"
+        "progression": "Instrument is-a Guitar?"
       },
       "bonus": false,
       "seeding_key": {
@@ -4472,7 +4515,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4497,7 +4540,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4522,7 +4565,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4547,7 +4590,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4572,7 +4615,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4597,7 +4640,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4622,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4647,7 +4690,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4672,7 +4715,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4697,7 +4740,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4722,7 +4765,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4747,7 +4790,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4772,7 +4815,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4797,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4822,7 +4865,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4847,7 +4890,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4872,7 +4915,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4897,7 +4940,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4922,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4947,7 +4990,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4972,7 +5015,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4997,7 +5040,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5022,7 +5065,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5047,7 +5090,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5072,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5097,7 +5140,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5122,7 +5165,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5147,7 +5190,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5172,7 +5215,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5197,7 +5240,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5222,7 +5265,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5247,7 +5290,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5272,7 +5315,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5297,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5322,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5344,6 +5387,50 @@
       },
       "level_keys": [
         "CSA U3L13-L1"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 3 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890"
+      },
+      "level_keys": [
+        "CSA Unit 3 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSA Pilot Survey Unit 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 3"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "b9c9a1e9-8395-42e2-a9cd-d9a741735962"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 3"
       ]
     }
   ],
@@ -5458,33 +5545,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L2-L9",
+        "level.key": "CSA U3L2-L9-2",
         "script_level.level_keys": [
-          "CSA U3L2-L9"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L2-L10",
-        "script_level.level_keys": [
-          "CSA U3L2-L10"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "639e535c-0475-4a0c-b8dc-9fc17788d981"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L2-L11",
-        "script_level.level_keys": [
-          "CSA U3L2-L11"
+          "CSA U3L2-L9-2"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
@@ -5621,7 +5684,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
       }
     },
     {
@@ -5633,7 +5696,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "e78beda9-972e-432f-8abd-7e5c64533bab"
+        "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc"
       }
     },
     {
@@ -6079,6 +6142,30 @@
         "script.name": "csa3-pilot",
         "activity_section.key": "bb0473c4-add1-40ee-ac06-75213b2301d9"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 3 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 3 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "0a9eaa07-f1c2-4bff-9942-4ab9a708d890"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 3",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 3"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "b9c9a1e9-8395-42e2-a9cd-d9a741735962"
+      }
     }
   ],
   "resources": [
@@ -6491,6 +6578,18 @@
       }
     },
     {
+      "name": "Here We Are: Notes for Living on Planet Earth",
+      "url": "https://youtu.be/ZgJzUet0-uE",
+      "key": "here_we_are_notes_for_living_on_planet_earth",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
+      }
+    },
+    {
       "name": "How Do Software Engineers Write Algorithms?",
       "url": "https://drive.google.com/file/d/16XLWWcJBqX7daMO0Q9iPyRIDAMVjzGSJ/view?usp=sharing",
       "key": "how_do_software_engineers_write_algorithms_",
@@ -6599,7 +6698,7 @@
       }
     },
     {
-      "name": "Polymorphism Role Cards",
+      "name": "Musical Objects Role Cards",
       "url": "https://docs.google.com/presentation/d/1pc1T8Kn2Bd4o0kM_m8KUz0ED56mKYGtxoENqLy0eyms/edit?usp=sharing",
       "key": "polymorphism_role_cards",
       "properties": {
@@ -7101,6 +7200,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "polymorphism"
       }
     },
@@ -7341,7 +7446,7 @@
     {
       "key": "initializer_list",
       "word": "Initializer List",
-      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( { } )",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
       "properties": {
       },
       "seeding_key": {
@@ -7461,7 +7566,7 @@
     {
       "key": "enhanced_for_loop",
       "word": "Enhanced for Loop",
-      "definition": "A simplified for loop to iterate through every element of an array in first-to-last order",
+      "definition": "A simplified `for` loop to iterate through every element of an array in first-to-last order",
       "properties": {
       },
       "seeding_key": {
@@ -7471,7 +7576,7 @@
     {
       "key": "enhanced_for_loop_variable",
       "word": "Enhanced for Loop Variable",
-      "definition": "A variable declared and used within an enhanced for loop to store a copy of the element visited",
+      "definition": "A variable declared and used within an enhanced `for` loop to store a copy of the element visited",
       "properties": {
       },
       "seeding_key": {
@@ -7754,7 +7859,7 @@
     {
       "key": "1c98472f-1a05-46c2-98fd-9b13f8069724",
       "properties": {
-        "description": "Explain the cause of an ArrayIndexOutOfBoundsException"
+        "description": "Explain the cause of an `ArrayIndexOutOfBoundsException`"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -7844,7 +7949,7 @@
     {
       "key": "41213ec0-f324-4170-8692-83ed0cd5ead9",
       "properties": {
-        "description": "Create an array of Shapes to store Rectangle, Circle, and Triangle objects"
+        "description": "Create an array of `Animal`s to store `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -7854,7 +7959,7 @@
     {
       "key": "0510020d-0b08-40af-9ec6-39f736296b36",
       "properties": {
-        "description": "Traverse an array of Shapes to call each object's drawShape() method"
+        "description": "Traverse an array of `Animal`s to call each object's `speak()` method"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -7874,7 +7979,7 @@
     {
       "key": "2ec8c793-1f18-4406-a5f6-2a85c0b429b1",
       "properties": {
-        "description": "Write enhanced for loops to traverse an array"
+        "description": "Write enhanced `for` loops to traverse an array"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -7884,7 +7989,7 @@
     {
       "key": "871ba35c-ac4a-43a6-92cb-4b7eba75ceda",
       "properties": {
-        "description": "Differentiate between using a while, for, and enhanced for loop"
+        "description": "Differentiate between when to use a `while`, `for`, and enhanced `for` loop"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
