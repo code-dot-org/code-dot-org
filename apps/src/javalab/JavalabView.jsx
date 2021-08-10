@@ -453,8 +453,7 @@ const styles = {
     marginTop: styleConstants['resize-bar-width']
   },
   preview: {
-    marginTop: styleConstants['resize-bar-width'],
-    imageRendering: 'pixelated'
+    marginTop: styleConstants['resize-bar-width']
   },
   javalab: {
     display: 'flex',
