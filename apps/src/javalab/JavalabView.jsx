@@ -14,7 +14,6 @@ import {
   setInstructionsHeight,
   setInstructionsFullHeight
 } from './javalabRedux';
-import {setInstructionsSpecificMaxHeight} from '../redux/instructions';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
@@ -60,7 +59,6 @@ class JavalabView extends React.Component {
     instructionsFullHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    setInstructionsSpecificMaxHeight: PropTypes.func,
     awaitingContainedResponse: PropTypes.bool,
     isVisualizationCollapsed: PropTypes.bool
   };
@@ -156,16 +154,23 @@ class JavalabView extends React.Component {
   };
 
   handleWidthResize = desiredWidth => {
-    let newWidth = Math.max(100, Math.min(desiredWidth, 600));
+    const leftWidthMin = 200;
+    const leftWidthMax = 600;
+    let newWidth = Math.max(leftWidthMin, Math.min(desiredWidth, leftWidthMax));
     this.props.setLeftWidth(newWidth);
 
     this.updateLayoutThrottled(newWidth);
   };
 
   handleInstructionsHeightResize = desiredHeight => {
+    // The max height of the instructions isn't too important to get right, because
+    // we don't allow the instructions to exceed available space in getInstructionsHeight.
+    const instructionsHeightMin = 100;
+    const instructionsHeightMax = window.innerHeight - 100;
+
     let newHeight = Math.max(
-      100,
-      Math.min(desiredHeight, window.innerHeight - 100)
+      instructionsHeightMin,
+      Math.min(desiredHeight, instructionsHeightMax)
     );
     this.props.setInstructionsHeight(newHeight);
 
@@ -272,16 +277,6 @@ class JavalabView extends React.Component {
 
   updateLayoutThrottled = _.throttle(this.updateLayout, 33);
 
-  componentDidUpdate(prevProps) {
-    if (
-      prevProps.instructionsRenderedHeight !==
-        this.props.instructionsRenderedHeight ||
-      prevProps.isVisualizationCollapsed !== this.props.isVisualizationCollapsed
-    ) {
-      this.updateLayoutThrottled(this.props.leftWidth);
-    }
-  }
-
   render() {
     const {
       isDarkMode,
@@ -328,7 +323,6 @@ class JavalabView extends React.Component {
                 standalone
                 displayDocumentationTab={false}
                 displayReviewTab
-                onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
                 explicitHeight={this.getInstructionsHeight()}
                 resizable={false}
               />
@@ -501,8 +495,6 @@ export default connect(
     setRightWidth: width => dispatch(setRightWidth(width)),
     setInstructionsHeight: height => dispatch(setInstructionsHeight(height)),
     setInstructionsFullHeight: height =>
-      dispatch(setInstructionsFullHeight(height)),
-    setInstructionsSpecificMaxHeight: height =>
-      dispatch(setInstructionsSpecificMaxHeight(height))
+      dispatch(setInstructionsFullHeight(height))
   })
 )(UnconnectedJavalabView);
