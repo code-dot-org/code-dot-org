@@ -19,8 +19,8 @@ export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
-  // Populated by redux
   static propTypes = {
+    // Populated by redux
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
@@ -64,6 +64,12 @@ class ReviewTab extends Component {
       serverLevelId,
       serverScriptId
     } = getStore().getState().pageConstants;
+
+    // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
+    // do not make API calls that require a channelId
+    if (!channelId) {
+      return;
+    }
 
     codeReviewDataApi
       .getCodeReviewCommentsForProject(channelId)
@@ -353,37 +359,50 @@ class ReviewTab extends Component {
       projectOwnerName
     } = this.state;
 
-    return (
-      <div style={styles.reviewsContainer}>
-        <div style={styles.reviewHeader}>
-          {viewAs !== ViewType.Teacher &&
-            !errorLoadingReviewblePeers &&
-            (viewAsCodeReviewer
-              ? this.renderBackToMyProject(this.onClickBackToProject)
-              : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
-          {this.renderReadyForReviewCheckbox()}
+    // channelId is not available on projects where the student has not edited the starter code.
+    // comments cannot be made on projects in this tate.
+    const projectOwnerHasNotEditedCode = !getStore().getState().pageConstants
+      .channelId;
+
+    if (projectOwnerHasNotEditedCode) {
+      return (
+        <div style={{...styles.reviewsContainer, ...styles.messageText}}>
+          {javalabMsg.noCodeReviewUntilStudentEditsCode()}
         </div>
-        {errorSavingReviewableProject && (
-          <div style={styles.peerReviewErrorMessage}>
-            {javalabMsg.togglePeerReviewError()}
+      );
+    } else {
+      return (
+        <div style={styles.reviewsContainer}>
+          <div style={styles.reviewHeader}>
+            {viewAs !== ViewType.Teacher &&
+              !errorLoadingReviewblePeers &&
+              (viewAsCodeReviewer
+                ? this.renderBackToMyProject(this.onClickBackToProject)
+                : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
+            {this.renderReadyForReviewCheckbox()}
           </div>
-        )}
-        <div style={styles.commentsSection}>
-          <div style={styles.messageText}>
-            {viewAsCodeReviewer || viewAs === ViewType.Teacher
-              ? javalabMsg.feedbackBeginningPeer({
-                  peerName: projectOwnerName
-                })
-              : javalabMsg.feedbackBeginning()}
-          </div>
-          {this.renderComments(
-            comments,
-            !isReadyForReview && viewAs !== ViewType.Teacher
+          {errorSavingReviewableProject && (
+            <div style={styles.peerReviewErrorMessage}>
+              {javalabMsg.togglePeerReviewError()}
+            </div>
           )}
-          {this.renderCommentEditor(forceRecreateEditorKey)}
+          <div style={styles.commentsSection}>
+            <div style={styles.messageText}>
+              {viewAsCodeReviewer || viewAs === ViewType.Teacher
+                ? javalabMsg.feedbackBeginningPeer({
+                    peerName: projectOwnerName
+                  })
+                : javalabMsg.feedbackBeginning()}
+            </div>
+            {this.renderComments(
+              comments,
+              !isReadyForReview && viewAs !== ViewType.Teacher
+            )}
+            {this.renderCommentEditor(forceRecreateEditorKey)}
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
