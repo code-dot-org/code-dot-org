@@ -5,6 +5,7 @@ id:
       reset_password_instructions:
         subject: Instruksi untuk mengganti kata sandi Code.org
         hello: Hallo %{user_email}!
+        change_password_for: 'Ganti kata sandi untuk %{user_name}:'
         change_my_password: 'Ganti kata sandi saya:'
         ignore_if_did_not_request: Jika anda tidak mengirim permintaan ini, abaikanlah
           email ini.
@@ -12,4 +13,6 @@ id:
           anda. Kata sandi dapat diganti melalui link yang tertera di email ini kapan
           saja dalam jangka waktu %{day_count} hari.
         your_password_wont_change: Kata sandi anda tidak akan berubah sampai anda
-          mengakses link diatas dan membuat kata sandi yang baru.
+          mengakses link di atas dan membuat kata sandi yang baru.
+        associated_account_password_wont_change: Kata sandi tidak akan berubah sampai
+          anda mengakses link di atas dan membuat kata sandi yang baru.
