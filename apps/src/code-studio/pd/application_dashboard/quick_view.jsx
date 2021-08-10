@@ -22,15 +22,6 @@ import $ from 'jquery';
 import {getApplicationStatuses} from './constants';
 import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
 
-const styles = {
-  button: {
-    margin: '20px 20px 20px auto'
-  },
-  select: {
-    width: 250
-  }
-};
-
 export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType,
@@ -182,6 +173,15 @@ export class QuickView extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: '20px 20px 20px auto'
+  },
+  select: {
+    width: 250
+  }
+};
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
