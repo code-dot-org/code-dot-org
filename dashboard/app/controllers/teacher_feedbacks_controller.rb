@@ -37,7 +37,7 @@ class TeacherFeedbacksController < ApplicationController
         marked_latest_for_level[level_feedback_key] = true
       end
 
-      feedback.summarize.merge({is_latest_for_level: is_latest}).merge(feedback&.get_script_level&.summary_for_feedback)
+      feedback.summarize(is_latest).merge(feedback&.get_script_level&.summary_for_feedback)
     end
   end
 

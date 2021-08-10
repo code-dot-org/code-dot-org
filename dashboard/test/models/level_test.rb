@@ -1178,4 +1178,11 @@ class LevelTest < ActiveSupport::TestCase
     summary = @custom_level.summarize_for_lesson_show(false)
     refute summary.key?('teacherMarkdown')
   end
+
+  test "can_have_feedback_review_state? returns false if the level has contained levels" do
+    contained_level = create :level
+    level_with_contained = create :level, contained_level_names: [contained_level.name]
+
+    assert_not level_with_contained.can_have_feedback_review_state?
+  end
 end
