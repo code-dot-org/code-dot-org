@@ -16,6 +16,7 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I wait to see "#unsubmitButton"
 
   # Unsubmit.
+  Then I press "runButton"
   Then I press "unsubmitButton"
   And I wait to see ".modal"
   And I press "confirm-button" to load a new page
