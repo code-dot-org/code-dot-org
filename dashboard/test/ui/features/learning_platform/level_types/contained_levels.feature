@@ -77,7 +77,7 @@ Scenario: Javalab with free response contained level
   Then I see no difference for "initial load" using stitch mode "none"
   Then I press keys "This is my answer" for element ".response"
   And I see no difference for "answer entered" using stitch mode "none"
-  Then I press "javalabRun"
+  Then I press "runButton"
   And I see no difference for "level run" using stitch mode "none"
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
@@ -85,9 +85,9 @@ Scenario: Javalab with free response contained level
   And I rotate to landscape
   And I wait to see ".response"
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
-  Then I press "javalabRun"
+  Then I press "runButton"
   And I see no difference for "finished level with contained level" using stitch mode "none"
-  Then I press "javalabFinish"
+  Then I press "finishButton"
   # Make sure continue takes us to next level
   And I wait until current URL contains "/lessons/44/levels/7"
   Then I close my eyes
