@@ -1,21 +1,22 @@
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
-import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
-import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
-import initializeCdoConstants from '@cdo/apps/blocklyAddons/cdoConstants';
-import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
-import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
-import FunctionEditor from '@cdo/apps/blocklyAddons/functionEditor';
-import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
-import CdoMetricsManager from '@cdo/apps/blocklyAddons/cdoMetricsManager';
-import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
-import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
-import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
-import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
-import initializeVariables from '@cdo/apps/blocklyAddons/cdoVariables';
-import CdoVariableMap from '@cdo/apps/blocklyAddons/cdoVariableMap';
-import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
-import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
+import CdoBlockDragger from './addons/cdoBlockDragger';
+import CdoBlockSvg from './addons/cdoBlockSvg';
+import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldDropdown from './addons/cdoFieldDropdown';
+import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import FunctionEditor from './addons/functionEditor';
+import initializeGenerator from './addons/cdoGenerator';
+import CdoInput from './addons/cdoInput';
+import CdoMetricsManager from './addons/cdoMetricsManager';
+import CdoPathObject from './addons/cdoPathObject';
+import CdoTheme from './addons/cdoTheme';
+import initializeTouch from './addons/cdoTouch';
+import CdoTrashcan from './addons/cdoTrashcan';
+import initializeVariables from './addons/cdoVariables';
+import CdoVariableMap from './addons/cdoVariableMap';
+import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
+import initializeBlocklyXml from './addons/cdoXml';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -261,35 +262,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   };
 
-  // This function was a custom addition in CDO Blockly, so we need to add it here
-  // so that our code generation logic still works with Google Blockly
-  blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
-    const generator = blocklyWrapper.getGenerator();
-    generator.init(blocklyWrapper.mainBlockSpace);
-    let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
-      true /* ordered */
-    );
-    if (opt_typeFilter) {
-      if (typeof opt_typeFilter === 'string') {
-        opt_typeFilter = [opt_typeFilter];
-      }
-      blocksToGenerate = blocksToGenerate.filter(block =>
-        opt_typeFilter.includes(block.type)
-      );
-    }
-    let code = [];
-    blocksToGenerate.forEach(block => {
-      code.push(blocklyWrapper.JavaScript.blockToCode(block));
-    });
-    code = code.join('\n');
-    code = generator.finish(code);
-    return code;
-  };
-
-  blocklyWrapper.Generator.prefixLines = function(text, prefix) {
-    return blocklyWrapper.JavaScript.prefixLines(text, prefix);
-  };
-
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
@@ -325,6 +297,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   initializeBlocklyXml(blocklyWrapper);
+  initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
