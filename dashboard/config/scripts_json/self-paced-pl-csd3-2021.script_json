@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-01 23:30:06 UTC",
+    "serialized_at": "2021-08-10 17:58:37 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -185,6 +185,17 @@
         "activity_section.key": "39354ecc-856a-4f21-8702-75032b3f28c5",
         "lesson_activity.key": "c0f77f67-bb5e-4fc7-8eb1-56d93e3df9b5"
       }
+    },
+    {
+      "key": "56c65594-c750-4fb1-b0ff-d7e4b1999b97",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "56c65594-c750-4fb1-b0ff-d7e4b1999b97",
+        "lesson_activity.key": "c0f77f67-bb5e-4fc7-8eb1-56d93e3df9b5"
+      }
     }
   ],
   "script_levels": [
@@ -194,9 +205,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-CourseOverview"
+        ],
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -222,7 +235,6 @@
         ],
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,9 +255,11 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSD-vid"
+        ],
         "progression": "Course overvew"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -271,7 +285,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +310,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,7 +335,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +360,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +385,6 @@
         ],
         "progression": "Course Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +410,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -427,7 +435,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,7 +460,6 @@
         ],
         "progression": "The problem solving process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,9 +480,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Tools"
+        ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -502,7 +510,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -528,7 +535,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +560,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -580,7 +585,6 @@
         ],
         "progression": "Tools "
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -606,7 +610,6 @@
         ],
         "progression": "Wrap up"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -627,9 +630,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Implementation"
+        ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,7 +660,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +685,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -707,7 +710,6 @@
         ],
         "progression": "Make an implementation plan"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -720,6 +722,28 @@
       },
       "level_keys": [
         "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "56c65594-c750-4fb1-b0ff-d7e4b1999b97"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-Navigation-Mod3"
       ]
     }
   ],
@@ -974,6 +998,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021",
         "activity_section.key": "39354ecc-856a-4f21-8702-75032b3f28c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-Navigation-Mod3",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd3-2021",
+        "activity_section.key": "56c65594-c750-4fb1-b0ff-d7e4b1999b97"
       }
     }
   ],
