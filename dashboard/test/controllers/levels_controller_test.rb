@@ -373,6 +373,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
+  test "should create spritelab level" do
+    game = Game.find_by_name("Spritelab")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'GamelabJr'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
     Level.any_instance.stubs(:write_to_file?).returns(true)
