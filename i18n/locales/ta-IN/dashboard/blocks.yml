@@ -819,6 +819,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -864,6 +865,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -952,6 +954,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_jumpTo:
         text: "{SPRITE} குதிக்கவும் {LOCATION}"
@@ -990,6 +993,7 @@ ta:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_mirrorSprite:
         options:
