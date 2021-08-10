@@ -257,7 +257,7 @@ class JavalabView extends React.Component {
       'max-width': availableWidth,
       'max-height': newVisualizationWidth,
       height: newVisualizationWidth,
-      left: (availableWidth - newVisualizationWidth) / 2
+      'margin-left': (availableWidth - newVisualizationWidth) / 2
     });
 
     // Also adjust the width of the small footer at the bottom.
