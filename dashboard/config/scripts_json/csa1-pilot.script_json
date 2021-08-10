@@ -10,11 +10,12 @@
       "show_calendar": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 18:49:26 UTC",
+    "serialized_at": "2021-08-10 21:42:27 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -7586,6 +7587,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa1-pilot/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa1-pilot/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa1-pilot/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Asphalt Art Project Peer Interview Cards",
       "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
       "key": "asphalt_art_project_peer_interview_cards",
@@ -8651,7 +8685,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csa1-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 
