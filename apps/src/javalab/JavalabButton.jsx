@@ -57,8 +57,7 @@ JavalabButton.propTypes = {
 };
 
 JavalabButton.defaultProps = {
-  isHorizontal: false,
-  id: ''
+  isHorizontal: false
 };
 
 const styles = {
