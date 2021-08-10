@@ -16,6 +16,7 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
   name: 'test-course',
@@ -41,6 +42,10 @@ const defaultProps = {
 };
 
 describe('CourseEditor', () => {
+  // Warnings allowed due to usage of deprecated componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
