@@ -13,8 +13,8 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
 const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
-const INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED =
-  'javalab/INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED';
+const SET_INSTRUCTIONS_HEIGHT = 'javalab/SET_INSTRUCTIONS_HEIGHT';
+const SET_INSTRUCTIONS_FULL_HEIGHT = 'javalab/SET_INSTRUCTIONS_FULL_HEIGHT';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
@@ -32,7 +32,8 @@ const initialState = {
   renderedEditorHeight: 400,
   leftWidth: 400,
   rightWidth: 400,
-  instructionsExplicitHeight: undefined,
+  instructionsHeight: 200,
+  instructionsFullHeight: 200,
   isRunning: false,
   editorColumnHeight: 600,
   backpackApi: null,
@@ -195,8 +196,13 @@ export const setRightWidth = width => ({
   width
 });
 
-export const setInstructionsExplicitHeight = height => ({
-  type: INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED,
+export const setInstructionsHeight = height => ({
+  type: SET_INSTRUCTIONS_HEIGHT,
+  height
+});
+
+export const setInstructionsFullHeight = height => ({
+  type: SET_INSTRUCTIONS_FULL_HEIGHT,
   height
 });
 
@@ -306,10 +312,16 @@ export default function reducer(state = initialState, action) {
       rightWidth: action.width
     };
   }
-  if (action.type === INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED) {
+  if (action.type === SET_INSTRUCTIONS_HEIGHT) {
     return {
       ...state,
-      instructionsExplicitHeight: action.height
+      instructionsHeight: action.height
+    };
+  }
+  if (action.type === SET_INSTRUCTIONS_FULL_HEIGHT) {
+    return {
+      ...state,
+      instructionsFullHeight: action.height
     };
   }
   if (action.type === SET_IS_RUNNING) {
