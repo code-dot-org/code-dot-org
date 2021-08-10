@@ -1344,12 +1344,13 @@ ActiveRecord::Schema.define(version: 2021_08_10_172702) do
   end
 
   create_table "project_version_metadata", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
-    t.string "storage_app_id", null: false
+    t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
     t.text "comment", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["storage_app_id"], name: "index_project_version_metadata_on_storage_app_id"
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_version_metadata_on_storage_app_id_and_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_version_metadata_on_storage_app_id", unique: true
   end
 
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
