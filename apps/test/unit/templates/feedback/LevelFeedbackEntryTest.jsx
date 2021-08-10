@@ -22,8 +22,7 @@ const DEFAULT_FEEDBACK = {
   comment: 'Great Work',
   performance: 'performanceLevel1',
   review_state: null,
-  is_latest_for_level: true,
-  student_updated_since_feedback: false
+  is_awaiting_teacher_review: false
 };
 
 const setUp = (overrideFeedback, useMount = false) => {
@@ -75,11 +74,10 @@ describe('LevelFeedbackEntry', () => {
     expect(wrapper.contains(i18n.keepWorking())).to.be.true;
   });
 
-  it('displays awaiting review if review_state is keepWorking and feedback is awaiting review', () => {
+  it('displays awaiting review if review state is present and is_awaiting_teacher_review', () => {
     const wrapper = setUp({
       review_state: ReviewStates.keepWorking,
-      is_latest_for_level: true,
-      student_updated_since_feedback: true
+      is_awaiting_teacher_review: true
     });
     expect(wrapper.contains(i18n.waitingForTeacherReview())).to.be.true;
   });
