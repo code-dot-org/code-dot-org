@@ -19,7 +19,7 @@ const styles = {
   },
   audioRTL: {
     wrapper: {
-      float: 'left'
+      order: 5
     }
   },
   audio: {
