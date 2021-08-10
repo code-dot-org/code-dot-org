@@ -27,6 +27,12 @@ class ScriptTest < ActiveSupport::TestCase
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
+    # To test level caching, we have to make sure to create a level in a script
+    # *before* generating the caches.
+    # We also want to test level_concept_difficulties, so make sure to give it
+    # one.
+    @cacheable_level = create(:level, :script, level_concept_difficulty: create(:level_concept_difficulty))
+
     # ensure that we have freshly generated caches with this unit_group/unit
     UnitGroup.clear_cache
     Script.clear_cache
@@ -498,19 +504,15 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = create(:level, :script)
-
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.id)
+    assert_equal @cacheable_level, Script.cache_find_level(@cacheable_level.id)
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = create(:level, :script)
-
     populate_cache_and_disconnect_db
 
-    assert_equal level, Script.cache_find_level(level.name)
+    assert_equal @cacheable_level, Script.cache_find_level(@cacheable_level.name)
   end
 
   test 'cache_find_level raises exception on bad ID and bad name' do
@@ -550,13 +552,10 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    script_level = create(:script_level)
-    level = script_level.level
-    script = script_level.script
-    create(:lesson_group, lessons: [script_level.lesson], script: script)
-    expected = create(:level_concept_difficulty, level: level)
+    script = @cacheable_level.script_levels.first.script
+    expected = @cacheable_level.level_concept_difficulty
 
-    assert_equal expected, script.script_levels.first.level.level_concept_difficulty
+    refute_nil expected
 
     populate_cache_and_disconnect_db
 
