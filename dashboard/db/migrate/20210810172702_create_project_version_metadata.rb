@@ -6,7 +6,7 @@ class CreateProjectVersionMetadata < ActiveRecord::Migration[5.2]
       t.text :comment
       t.timestamps
 
-      t.index [:storage_app_id], unique: true
+      t.index [:storage_app_id]
       t.index [:storage_app_id, :object_version_id], name: 'index_project_version_metadata_on_storage_app_id_and_version_id', unique: true
     end
 

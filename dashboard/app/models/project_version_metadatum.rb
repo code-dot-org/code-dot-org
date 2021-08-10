@@ -11,7 +11,7 @@
 #
 # Indexes
 #
-#  index_project_version_metadata_on_storage_app_id                 (storage_app_id) UNIQUE
+#  index_project_version_metadata_on_storage_app_id                 (storage_app_id)
 #  index_project_version_metadata_on_storage_app_id_and_version_id  (storage_app_id,object_version_id) UNIQUE
 #
 class ProjectVersionMetadatum < ApplicationRecord
