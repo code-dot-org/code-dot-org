@@ -70,10 +70,7 @@ class ReviewTab extends Component {
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
     if (!channelId) {
-      this.setState({
-        initialLoadCompleted: true
-      });
-      this.props.onLoadComplete();
+      this.setState({initialLoadCompleted: true});
       return;
     }
 
@@ -145,11 +142,14 @@ class ReviewTab extends Component {
     }
 
     Promise.all(initialLoadPromises).finally(() => {
-      this.setState({
-        initialLoadCompleted: true
-      });
-      this.props.onLoadComplete();
+      this.setState({initialLoadCompleted: true});
     });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!prevState.initialLoadCompleted && this.state.initialLoadCompleted) {
+      this.props.onLoadComplete();
+    }
   }
 
   onNewCommentSubmit = commentText => {
