@@ -20,6 +20,11 @@ export default function ControlButtons({
   isSubmittable,
   isSubmitted
 }) {
+  /* The ids of these buttons are relied on in other parts of the codebase.
+   * All of them are relied on for UI tests
+   * The submit/unsubmit button ids are relied on for hooking in the submit
+   * utils, see https://github.com/code-dot-org/code-dot-org/blob/47be99d6cf7df2be746b592906f50c0f3860b80a/apps/src/submitHelper.js#L26
+   */
   let finishButtonText, finishButtonId;
   if (isSubmitted) {
     finishButtonText = i18n.unsubmit();
