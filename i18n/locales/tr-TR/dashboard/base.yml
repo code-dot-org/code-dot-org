@@ -590,8 +590,6 @@ tr:
       link: "Daha fazlasını öğren"
       applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
-      oceans_unsupported_browser: "Bu tarayıcı, bu eğitim için desteklenmemektedir. Lütfen Edge, Chrome, Firefox veya başka modern tarayıcı kullanarak sayfayı ziyaret edin."
-      weblab_unsupported_browser: "Ne yazık ki, şu anda Web Lab bu tarayıcı yükleme ile ilgili sorunlar yaşıyorsanız. Bu çözülene kadar farklı bir tarayıcı kullanmak isteyebilirsiniz. Rahatsız ettiğim için özür dilerim."
       weblab_unsupported_locale_storage: "Web Lab Özel tarama modunda kullanma sorunlarla karşılaşabilirsiniz. Lütfen projenize normal modda yeniden yükleyin. Rahatsız ettiğim için özür dilerim."
   slow_loading: 'Bu normalden uzun sürüyor...'
   try_reloading: 'Sayfayı yeniden yüklemeyi deneyin'
