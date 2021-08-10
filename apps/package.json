@@ -243,7 +243,7 @@
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "filesaver.js": "0.2.0",
     "jshint": "^2.9.5",
-    "jszip": "3.0.0",
+    "jszip": "3.7.0",
     "memoize-one": "^5.1.1",
     "ml-knn": "^3.0.0",
     "object-fit-images": "^3.2.3",
