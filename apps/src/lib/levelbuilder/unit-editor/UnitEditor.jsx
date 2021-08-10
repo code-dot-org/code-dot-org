@@ -624,6 +624,16 @@ class UnitEditor extends React.Component {
                     This unit is part of a course. Go to the course edit page to
                     publish the course and its units.
                   </p>
+                  {/*
+                   Just use a checkbox instead of a dropdown to set the
+                   published state for now, because (1) units in unit groups
+                   really only need 2 of the 6 possible states at the moment,
+                   but (2) we haven't nailed down how many of these states we
+                   will need in the long term, and (3) we need these 2 states
+                   working now in order to launch the AP CSA pilot. The work to
+                   clean this up is tracked in:
+                   https://codedotorg.atlassian.net/browse/PLAT-1170
+                   */}
                   <label>
                     Hide this unit within this course
                     <input
