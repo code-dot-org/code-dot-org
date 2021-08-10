@@ -11,7 +11,8 @@ import {
   setIsRunning,
   setLeftWidth,
   setRightWidth,
-  setInstructionsExplicitHeight
+  setInstructionsHeight,
+  setInstructionsFullHeight
 } from './javalabRedux';
 import {setInstructionsSpecificMaxHeight} from '../redux/instructions';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
@@ -51,10 +52,12 @@ class JavalabView extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     setLeftWidth: PropTypes.func,
     setRightWidth: PropTypes.func,
-    setInstructionsExplicitHeight: PropTypes.func,
+    setInstructionsHeight: PropTypes.func,
+    setInstructionsFullHeight: PropTypes.func,
     leftWidth: PropTypes.number,
     rightWidth: PropTypes.number,
-    instructionsExplicitHeight: PropTypes.number,
+    instructionsHeight: PropTypes.number,
+    instructionsFullHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     setInstructionsSpecificMaxHeight: PropTypes.func,
@@ -159,6 +162,40 @@ class JavalabView extends React.Component {
     this.updateLayoutThrottled(newWidth);
   };
 
+  handleInstructionsHeightResize = desiredHeight => {
+    let newHeight = Math.max(
+      100,
+      Math.min(desiredHeight, window.innerHeight - 100)
+    );
+    this.props.setInstructionsHeight(newHeight);
+
+    this.updateLayoutThrottled(this.props.leftWidth);
+  };
+
+  getInstructionsHeight = () => {
+    if (this.props.isVisualizationCollapsed || !this.props.visualization) {
+      return this.props.instructionsFullHeight;
+    } else {
+      return Math.min(
+        this.props.instructionsHeight,
+        this.props.instructionsFullHeight
+      );
+    }
+  };
+
+  shouldShowInstructionsHeightResizer = () => {
+    return !this.props.isVisualizationCollapsed && this.props.visualization;
+  };
+
+  isLeftSideVisible = () => {
+    // It's possible that a console level without instructions won't have
+    // anything to show on the left side.
+    return (
+      this.props.viewMode !== CsaViewMode.CONSOLE ||
+      !!this.props.longInstructions
+    );
+  };
+
   updateLayout = availableWidth => {
     // We scale the visualization to take up as much space as it can, both
     // vertically and horizontally.  Its width is constrained by the width
@@ -173,7 +210,7 @@ class JavalabView extends React.Component {
     // if it's shown.
     // The visualization is a square, so the width it's rendered at will be
     // constrained by both the available width and height.
-    const miscExistingElementsHeight = 135;
+    const miscExistingElementsHeight = 150;
     const sliderHeight = 60;
 
     // The original visualization is rendered at 800x800.
@@ -182,7 +219,7 @@ class JavalabView extends React.Component {
     // Determine the available height.
     let availableHeight =
       window.innerHeight -
-      this.props.instructionsRenderedHeight -
+      this.props.instructionsHeight -
       miscExistingElementsHeight;
     if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
       availableHeight -= sliderHeight;
@@ -220,34 +257,9 @@ class JavalabView extends React.Component {
       availableWidth - styleConstants['resize-bar-width']
     );
 
-    if (this.props.visualization) {
-      if (this.props.isVisualizationCollapsed) {
-        const miscElementsExistingHeightNoVisualization = 105;
-        this.props.setInstructionsExplicitHeight(
-          window.innerHeight - miscElementsExistingHeightNoVisualization - 45
-        );
-      } else {
-        // If there is a visualization, ensure that the instructions don't extend beyond
-        // the bottom of the window.  In particular, we want the horizontal resizer to still
-        // be visible, along with a peek at the visualization area.
-        const miscElementsExistingHeightVisualization = 150;
-        const minimumInstructionsHeight = 100;
-        this.props.setInstructionsSpecificMaxHeight(
-          Math.max(
-            window.innerHeight - miscElementsExistingHeightVisualization,
-            minimumInstructionsHeight
-          )
-        );
-
-        this.props.setInstructionsExplicitHeight(undefined);
-      }
-    } else {
-      // If there is no visualization, make the instructions explicitly full height.
-      const miscElementsExistingHeightNoVisualization = 80;
-      this.props.setInstructionsExplicitHeight(
-        window.innerHeight - miscElementsExistingHeightNoVisualization
-      );
-    }
+    this.props.setInstructionsFullHeight(
+      window.innerHeight - miscExistingElementsHeight
+    );
 
     // The right width can also change at this point, since it takes up the
     // remaining space.
@@ -259,15 +271,6 @@ class JavalabView extends React.Component {
   };
 
   updateLayoutThrottled = _.throttle(this.updateLayout, 33);
-
-  isLeftSideVisible = () => {
-    // It's possible that a console level without instructions won't have
-    // anything to show on the left side.
-    return (
-      this.props.viewMode !== CsaViewMode.CONSOLE ||
-      !!this.props.longInstructions
-    );
-  };
 
   componentDidUpdate(prevProps) {
     if (
@@ -293,7 +296,6 @@ class JavalabView extends React.Component {
       editorColumnHeight,
       leftWidth,
       rightWidth,
-      instructionsExplicitHeight,
       awaitingContainedResponse
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
@@ -327,8 +329,19 @@ class JavalabView extends React.Component {
                 displayDocumentationTab={false}
                 displayReviewTab
                 onHeightResize={() => this.updateLayoutThrottled(leftWidth)}
-                explicitHeight={instructionsExplicitHeight}
+                explicitHeight={this.getInstructionsHeight()}
+                resizable={false}
               />
+              {this.shouldShowInstructionsHeightResizer() && (
+                <HeightResizer
+                  resizeItemTop={() => 60}
+                  position={
+                    this.getInstructionsHeight() +
+                    styleConstants['resize-bar-width']
+                  }
+                  onResize={this.handleInstructionsHeightResize}
+                />
+              )}
               {this.isLeftSideVisible() && this.renderVisualization()}
             </div>
 
@@ -473,7 +486,8 @@ export default connect(
     editorColumnHeight: state.javalab.editorColumnHeight,
     leftWidth: state.javalab.leftWidth,
     rightWidth: state.javalab.rightWidth,
-    instructionsExplicitHeight: state.javalab.instructionsExplicitHeight,
+    instructionsHeight: state.javalab.instructionsHeight,
+    instructionsFullHeight: state.javalab.instructionsFullHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
@@ -485,8 +499,9 @@ export default connect(
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
     setLeftWidth: width => dispatch(setLeftWidth(width)),
     setRightWidth: width => dispatch(setRightWidth(width)),
-    setInstructionsExplicitHeight: height =>
-      dispatch(setInstructionsExplicitHeight(height)),
+    setInstructionsHeight: height => dispatch(setInstructionsHeight(height)),
+    setInstructionsFullHeight: height =>
+      dispatch(setInstructionsFullHeight(height)),
     setInstructionsSpecificMaxHeight: height =>
       dispatch(setInstructionsSpecificMaxHeight(height))
   })
