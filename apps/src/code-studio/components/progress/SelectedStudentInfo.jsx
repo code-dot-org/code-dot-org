@@ -10,39 +10,6 @@ import {studentShape} from './StudentTable';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
-const styles = {
-  main: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row'
-  },
-  studentInfo: {
-    width: 150,
-    textAlign: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column'
-  },
-  bubble: {
-    marginLeft: 0
-  },
-  name: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold',
-    fontSize: 15
-  },
-  timeHeader: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
-  },
-  arrow: {
-    fontSize: 40,
-    cursor: 'pointer',
-    position: 'relative',
-    top: 30
-  }
-};
-
 export class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
@@ -182,3 +149,36 @@ export class SelectedStudentInfo extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'row'
+  },
+  studentInfo: {
+    width: 150,
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column'
+  },
+  bubble: {
+    marginLeft: 0
+  },
+  name: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  timeHeader: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold'
+  },
+  arrow: {
+    fontSize: 40,
+    cursor: 'pointer',
+    position: 'relative',
+    top: 30
+  }
+};
