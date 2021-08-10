@@ -2,39 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Review the program and try to predict the output. Then run the program to see the results.",
+    "long_instructions": "Review the program and try to predict the output. Run the program to see the results, then debug the error.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "parent_level_id": 29239,
     "start_sources": {
       "MyConcert.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\nimport java.util.Scanner;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    Stage myStage = Theater.stage;\n    \n\tChicken myChicken = new Animal(\"chicken.png\", \"chicken.wav\");\n    myStage.drawImage(myChicken, 200, 200, 100, 150, 30);\n    myChicken.speak();\n\n    myStage.play();\n    \n  }\n}",
+        "text": "public class MyInstruments {\n  public static void main(String[] args) {\n\n    Instrument someInstrument = new Instrument();\n    Guitar mainGuitar = new Guitar();\n    Instrument backupGuitar = new Guitar();\n    Guitar soloGuitar = new Guitar();\n\n    Instrument[] guitars = {someInstrument, mainGuitar, backupGuitar, soloGuitar};\n\n    for (int i = 0; i < guitars.length; i++) {\n      guitars[i].play();\n    }\n    \n  }\n}",
         "isVisible": true
       },
-      "Animal.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Animal {\n\n  private Image animalImage;\n  private String soundFile;\n\n  public Animal(String imageFile, String soundFile) throws FileNotFoundException {\n    this.animalImage = new Image(imageFile);\n    this.soundFile = soundFile;\n  }\n  \n  public Image getImage() {\n    return animalImage;\n  }\n\n  public String getSound() {\n    return soundFile;\n  }\n  \n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am an animal!\");\n    Theater.stage.playSound(soundFile);\n  }\n}",
-        "isVisible": false
+      "Instrument.java": {
+        "text": "public class Instrument {\n\n  public void play() {\n    System.out.println(\"(I don't make any sounds.)\");\n  }\n  \n}",
+        "isVisible": true
       },
-      "Chicken.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Chicken extends Animal {\n\n  public Chicken(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a chicken!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
-        "isVisible": false
-      },
-      "Sheep.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Sheep extends Animal {\n\n  public Sheep(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a sheep!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
-        "isVisible": false
-      },
-      "Tiger.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Tiger extends Animal {\n\n  public Tiger(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a tiger!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
-        "isVisible": false
-      },
-      "Wolf.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Wolf extends Animal {\n\n  public Wolf(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a wolf!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
-        "isVisible": false
-      },
-      "Zebra.java": {
-        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class Zebra extends Animal {\n\n  public Zebra(String imageFile, String soundFile) throws FileNotFoundException {\n    super(imageFile, soundFile);\n  }\n\n  public void speak() throws FileNotFoundException {\n    System.out.println(\"I am a zebra!\");\n    Theater.stage.playSound(super.getSound());\n  }\n}",
-        "isVisible": false
+      "Guitar.java": {
+        "text": "public class Guitar extends Instrument {\n\n  public void play() {\n    System.out.print(\"I make guitar sounds!\");\n  }\n  \n}",
+        "isVisible": true
       }
     },
     "encrypted_examples": [
@@ -46,6 +30,6 @@
   "created_at": "2021-07-29T14:26:34.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-29T14:26:34.962+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L1\\\"\"],\"cloned_from\":\"CSA U3L5-L1\"},{\"changed_at\":\"2021-07-29 14:26:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-29T14:26:34.962+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L1\\\"\"],\"cloned_from\":\"CSA U3L5-L1\"},{\"changed_at\":\"2021-07-29 14:26:42 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-10 15:47:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-10 15:47:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
