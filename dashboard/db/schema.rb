@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_03_222704) do
+ActiveRecord::Schema.define(version: 2021_08_09_205147) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1927,8 +1927,9 @@ ActiveRecord::Schema.define(version: 2021_08_03_222704) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "properties"
+    t.datetime "deleted_at"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
-    t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true
+    t.index ["user_id", "script_id", "deleted_at"], name: "index_user_scripts_on_user_id_and_script_id_and_deleted_at", unique: true
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

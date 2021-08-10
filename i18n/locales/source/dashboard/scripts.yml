@@ -22310,8 +22310,8 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               name: Using Variables
-              description_student: Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, its data type, and how we can use it. In this lesson, you use variables to store information used to create `Painter` objects and store information input by a user.
-              description_teacher: In this lesson, students explore the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
+              description_student: Variables provide a way for software engineers to store information. The type of information we need to store determines what kind of variable we need to use, how it stores data, and how we can use it. In this lesson, you use variables to store information and use these variables to create `Painter` objects and store information input by a user.
+              description_teacher: In this lesson, students investigate the functionality of variables and differentiate between primitive and reference variables. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
             lesson-3:
               name: Writing Constructors
               description_student: The Project Mercury Pastries food truck needs your help! The owner wants to sell desserts in The Neighborhood but needs to be able to input and store their desserts in a program. You have been asked to use your software engineering skills to create a program that can create dessert objects so the owner can keep track of their inventory. You start by creating a `Dessert` class so the owner can enter the flavor, available quantity, and price of each dessert they sell.
@@ -23555,15 +23555,30 @@ en:
             lesson-1:
               name: Overview of course content
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 25 minutes
             lesson-2:
               name: Overview of learning tools
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Become familiar with the student learning tools used within CS Discoveries.
+
+                **Suggested time:** 10 minutes
             lesson-3:
               name: 'Overview of implementation '
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Decide which units of CS Discoveries you will teach in your class.
+
+                **Suggested Time:** 10 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Overview of CS Discoveries
@@ -23575,7 +23590,7 @@ en:
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
-              name: Guidance for teaching CS Discoveries
+              name: The role of the teacher
               description_student: 
               description_teacher: 
             lesson-2:
@@ -23583,12 +23598,12 @@ en:
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Teaching practices
+              name: Teaching CS Discoveries
               description_student: 
               description_teacher: 
           lesson_groups:
             lessonGroup-2:
-              display_name: Guidance for teaching CS Discoveries
+              display_name: Teaching and learning CS Discoveries
           name: self-paced-pl-csd4-2021
           title: 'Module 4: Best practices for CS Discoveries'
           description_audience: ''
