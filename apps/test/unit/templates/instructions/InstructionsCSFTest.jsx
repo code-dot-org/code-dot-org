@@ -17,7 +17,7 @@ import authoredHints from '@cdo/apps/redux/authoredHints';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
-describe('InstructionsCSF', () => {
+describe.skip('InstructionsCSF', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
