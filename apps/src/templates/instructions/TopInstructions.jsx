@@ -106,7 +106,6 @@ class TopInstructions extends Component {
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool,
-    onHeightResize: PropTypes.func,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
     explicitHeight: PropTypes.number
@@ -304,10 +303,6 @@ class TopInstructions extends Component {
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
-
-    if (this.props.onHeightResize) {
-      this.props.onHeightResize(newHeight);
-    }
   };
 
   refForSelectedTab = () => {
@@ -728,16 +723,13 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView &&
-            resizable &&
-            !dynamicInstructions &&
-            !explicitHeight && (
-              <HeightResizer
-                resizeItemTop={this.getItemTop}
-                position={height}
-                onResize={this.handleHeightResize}
-              />
-            )}
+          {!isEmbedView && resizable && !dynamicInstructions && (
+            <HeightResizer
+              resizeItemTop={this.getItemTop}
+              position={height}
+              onResize={this.handleHeightResize}
+            />
+          )}
         </div>
       </div>
     );
