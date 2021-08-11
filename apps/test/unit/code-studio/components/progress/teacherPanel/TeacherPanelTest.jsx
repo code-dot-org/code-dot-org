@@ -28,12 +28,8 @@ const DEFAULT_PROPS = {
   unitHasLockableLessons: false,
   unlockedLessonNames: [],
   students: null,
-  lessonId: 1,
-  scriptId: 1,
-  isLessonExtras: false,
-  levelId: '11',
-  reloadTeacherPanelProgress: false,
-  onTeacherPanelReloaded: () => {}
+  levelsWithProgress: [],
+  loadLevelsWithProgress: () => {}
 };
 
 const sectionScriptLevelData = [
