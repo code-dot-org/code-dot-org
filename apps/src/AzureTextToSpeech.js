@@ -11,7 +11,14 @@ import Sounds from '@cdo/apps/Sounds';
  * @param {Error} error Any error that occurs while requesting the sound or checking for profanity.
  */
 class SoundResponse {
-  constructor(id, bytes, profaneWords = [], error = null, onEnded = null) {
+  constructor(
+    id,
+    bytes,
+    profaneWords = [],
+    error = null,
+    onEnded = null,
+    playbackOptions = {}
+  ) {
     this.id = id;
     this.bytes = bytes;
     this.playbackOptions = {
@@ -19,7 +26,8 @@ class SoundResponse {
       loop: false,
       forceHTML5: false,
       allowHTML5Mobile: true,
-      onEnded
+      onEnded,
+      ...playbackOptions
     };
     this.profaneWords = profaneWords;
     this.error = error;
@@ -332,9 +340,7 @@ export default class AzureTextToSpeech {
    */
   createSoundResponse_ = opts => {
     const onEnded = () => {
-      if (opts.onComplete) {
-        opts.onComplete();
-      }
+      opts.onComplete?.();
       this.onSoundComplete_();
     };
     return new SoundResponse(
