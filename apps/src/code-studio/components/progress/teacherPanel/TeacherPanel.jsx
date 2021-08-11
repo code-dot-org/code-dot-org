@@ -15,12 +15,7 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import $ from 'jquery';
-import {
-  setReloadTeacherPanelProgress,
-  hasLockableLessons
-} from '@cdo/apps/code-studio/progressRedux';
-import queryString from 'query-string';
+import {hasLockableLessons} from '@cdo/apps/code-studio/progressRedux';
 import {sectionData, studentShape} from './types';
 
 class TeacherPanel extends React.Component {
@@ -29,7 +24,6 @@ class TeacherPanel extends React.Component {
     getSelectedUserId: PropTypes.func,
     sectionData: sectionData,
     unitName: PropTypes.string,
-    // pageType describes the current route the user is on. Used only for logging.
     pageType: PropTypes.oneOf([
       pageTypes.level,
       pageTypes.scriptOverview,
@@ -52,12 +46,9 @@ class TeacherPanel extends React.Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    // we will load level progress data to the teacher panel when sections are sectionsAreLoaded
-    // if we're not on the script overview page
     if (
-      this.props.pageType !== pageTypes.scriptOverview &&
-      nextProps.sectionsAreLoaded &&
-      !this.props.sectionsAreLoaded
+      this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
+      nextProps.selectedSection?.id !== this.props.selectedSection?.id
     ) {
       this.props.loadLevelsWithProgress();
     }
@@ -127,7 +118,7 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     const displaySelectedStudentInfo =
-      viewAs === ViewType.Teacher && currentStudentScriptLevel;
+      viewAs === ViewType.Teacher && currentStudent;
 
     const displayLevelExamples =
       viewAs === ViewType.Teacher && sectionData && sectionData.level_examples;

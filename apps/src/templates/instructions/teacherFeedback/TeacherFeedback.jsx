@@ -19,10 +19,8 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  queryUserProgress,
-  setReloadTeacherPanelProgress
-} from '@cdo/apps/code-studio/progressRedux';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -368,7 +366,7 @@ export default connect(
   dispatch => ({
     updateUserProgress(userId) {
       dispatch(queryUserProgress(userId));
-      dispatch(setReloadTeacherPanelProgress(true));
+      dispatch(loadLevelsWithProgress());
     }
   })
 )(TeacherFeedback);

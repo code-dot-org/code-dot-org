@@ -14,7 +14,7 @@ export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
-    levelWithProgress: levelWithProgress.isRequired,
+    levelWithProgress: levelWithProgress,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
@@ -67,6 +67,28 @@ export default class SelectedStudentInfo extends React.Component {
 
   render() {
     const {selectedStudent, levelWithProgress} = this.props;
+
+    // While levelWithProgress is loading display arrows and student name only
+    if (!levelWithProgress) {
+      return (
+        <div style={styles.main}>
+          <RadiumFontAwesome
+            icon="caret-left"
+            onClick={this.previousStudent}
+            style={styles.arrow}
+          />
+          <div style={styles.studentInfo}>
+            <div style={styles.name}>{selectedStudent.name}</div>
+          </div>
+          <RadiumFontAwesome
+            icon="caret-right"
+            onClick={this.nextStudent}
+            style={styles.arrow}
+          />
+        </div>
+      );
+    }
+
     const {
       paired,
       navigator,
