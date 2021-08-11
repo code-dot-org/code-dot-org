@@ -106,14 +106,6 @@ class CoursesController < ApplicationController
       unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
-    # Update the published state of all the units in the course to be same as the course
-    unit_group.default_units.each do |unit|
-      unit.assign_attributes(published_state: course_params[:published_state], properties: {pilot_experiment: course_params[:pilot_experiment]})
-      next unless unit.changed?
-      unit.save!
-      unit.write_script_dsl
-      unit.write_script_json
-    end
     unit_group.reload
     render json: unit_group.summarize
   end

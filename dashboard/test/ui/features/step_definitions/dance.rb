@@ -1,5 +1,10 @@
 # Helper steps for dance party levels
 
+And (/^I wait for the song selector to load/) do
+  wait_for_jquery
+  wait_until {@browser.execute_script("return !!$('#song_selector').val();")}
+end
+
 Given /^I load the Dance Party free play level/i do
   individual_steps <<-STEPS
     And I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"

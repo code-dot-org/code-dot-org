@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:25 UTC",
+    "serialized_at": "2021-08-03 22:46:59 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "MikeTest"
@@ -91,7 +91,6 @@
           "MikeTest1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -115,7 +114,6 @@
           "MikeTest2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -139,7 +137,6 @@
           "MikeTest3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -163,7 +160,6 @@
           "MikeAssessment1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -187,7 +183,6 @@
           "bounce_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -211,7 +206,6 @@
           "2-3 Artist Functions 12 Mike"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -235,7 +229,6 @@
           "2-3 Artist Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -259,7 +252,6 @@
           "Mike Pair Programming"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -283,7 +275,6 @@
           "MikeStarNested"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -307,7 +298,6 @@
           "MikeStarHard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -331,7 +321,6 @@
           "MikeStar"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

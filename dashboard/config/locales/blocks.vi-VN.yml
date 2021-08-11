@@ -1775,3 +1775,5 @@ vi:
           DIR:
             right: phải ↻
             left: trái ↺
+      validation_validatedBackground:
+        text: thiết lập nền để {IMG}

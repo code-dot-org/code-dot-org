@@ -18,8 +18,6 @@ th:
     mailer:
       confirmation_instructions:
         subject: ขั้นตอนในการยืนยันของ Code.org
-      reset_password_instructions:
-        subject: ขั้นตอนในการติดตั้งรหัสผ่านอีกครั้งหนึ่ง ของ Code.org
       unlock_instructions:
         subject: คำสั่งปลดล็อก
     omniauth_callbacks:

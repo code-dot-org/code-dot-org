@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:42 UTC",
+    "serialized_at": "2021-08-03 22:47:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp3-support"
@@ -206,9 +206,9 @@
       "properties": {
         "level_keys": [
           "What's inside and how is it organized?"
-        ]
+        ],
+        "progression": "What's inside and how is it organized?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -230,9 +230,9 @@
       "properties": {
         "level_keys": [
           "Introduction to Unit 3"
-        ]
+        ],
+        "progression": "Introduction to Unit 3"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,9 +254,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Tool Talk"
-        ]
+        ],
+        "progression": "Unit 3 Tool Talk"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,9 +278,9 @@
       "properties": {
         "level_keys": [
           "Teaching Programming in Unit 3"
-        ]
+        ],
+        "progression": "Teaching Programming in Unit 3"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -302,9 +302,9 @@
       "properties": {
         "level_keys": [
           "Practice Performance Tasks in Unit 3"
-        ]
+        ],
+        "progression": "Practice Performance Tasks in Unit 3"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -326,9 +326,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Self-Assessment"
-        ]
+        ],
+        "progression": "Unit 3 Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,9 +350,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Vocab and Concept Review Activity"
-        ]
+        ],
+        "progression": "Unit 3 Vocab and Concept Review Activity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,9 +374,9 @@
       "properties": {
         "level_keys": [
           "AP Test Prep Guidance"
-        ]
+        ],
+        "progression": "AP Test Prep Guidance"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -398,9 +398,9 @@
       "properties": {
         "level_keys": [
           "3.1 - 3.3 Lesson Connections"
-        ]
+        ],
+        "progression": "3.1 - 3.3 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,9 +422,9 @@
       "properties": {
         "level_keys": [
           "Understanding the Human Machine Language"
-        ]
+        ],
+        "progression": "Understanding the Human Machine Language"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -446,9 +446,9 @@
       "properties": {
         "level_keys": [
           "3.1 - 3.3 Lesson Connections in the Framework"
-        ]
+        ],
+        "progression": "3.1 - 3.3 Lesson Connections in the Framework"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -470,9 +470,9 @@
       "properties": {
         "level_keys": [
           "U3 L1 - 3: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U3 L1 - 3: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,9 +494,9 @@
       "properties": {
         "level_keys": [
           "3.4 - 3.6 Lesson Connections"
-        ]
+        ],
+        "progression": "3.4 - 3.6 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -518,9 +518,9 @@
       "properties": {
         "level_keys": [
           "Introduction to App Lab and Turtle Programming"
-        ]
+        ],
+        "progression": "Introduction to App Lab and Turtle Programming"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -542,9 +542,9 @@
       "properties": {
         "level_keys": [
           "The Philosophy Behind the Four Primitive Programming Commands"
-        ]
+        ],
+        "progression": "The Philosophy Behind the Four Primitive Programming Commands"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,9 +566,9 @@
       "properties": {
         "level_keys": [
           "Defining and Calling Functions"
-        ]
+        ],
+        "progression": "Defining and Calling Functions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -590,9 +590,9 @@
       "properties": {
         "level_keys": [
           "Common Misconceptions about Functions"
-        ]
+        ],
+        "progression": "Common Misconceptions about Functions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -614,9 +614,9 @@
       "properties": {
         "level_keys": [
           "Top-Down Design"
-        ]
+        ],
+        "progression": "Top-Down Design"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -638,9 +638,9 @@
       "properties": {
         "level_keys": [
           "U3 L4 - 6: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U3 L4 - 6: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -662,9 +662,9 @@
       "properties": {
         "level_keys": [
           "3.7 - 3.9 Lesson Connections"
-        ]
+        ],
+        "progression": "3.7 - 3.9 Lesson Connections"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -686,9 +686,9 @@
       "properties": {
         "level_keys": [
           "Documentation in App Lab"
-        ]
+        ],
+        "progression": "Documentation in App Lab"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -710,9 +710,9 @@
       "properties": {
         "level_keys": [
           "Introduction to Functions with Parameters"
-        ]
+        ],
+        "progression": "Introduction to Functions with Parameters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -734,9 +734,9 @@
       "properties": {
         "level_keys": [
           "Functions with Parameters"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -758,9 +758,9 @@
       "properties": {
         "level_keys": [
           "Introduction to Loops"
-        ]
+        ],
+        "progression": "Introduction to Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -782,9 +782,9 @@
       "properties": {
         "level_keys": [
           "Using Loops"
-        ]
+        ],
+        "progression": "Using Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -806,9 +806,9 @@
       "properties": {
         "level_keys": [
           "U3 L7 - 9: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "U3 L7 - 9: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -830,9 +830,9 @@
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -854,9 +854,9 @@
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -878,9 +878,9 @@
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,9 +902,9 @@
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -926,9 +926,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Unit 3 Teaching Practice Plan: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -950,9 +950,9 @@
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,9 +974,9 @@
       "properties": {
         "level_keys": [
           "Classroom Management Tips for School Computer Labs"
-        ]
+        ],
+        "progression": "Classroom Management Tips for School Computer Labs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -998,9 +998,9 @@
       "properties": {
         "level_keys": [
           "Considerations for the 1-to-1 Classroom"
-        ]
+        ],
+        "progression": "Considerations for the 1-to-1 Classroom"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1022,9 +1022,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
-        ]
+        ],
+        "progression": "Unit 3 Teaching Practice Plan: Balancing Teacher and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1046,9 +1046,9 @@
       "properties": {
         "level_keys": [
           "Overview: Discovery Learning"
-        ]
+        ],
+        "progression": "Overview: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1070,9 +1070,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning definition and history"
-        ]
+        ],
+        "progression": "Discovery learning definition and history"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1094,9 +1094,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning techniques"
-        ]
+        ],
+        "progression": "Discovery learning techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1118,9 +1118,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Teaching Practice Plan: Discovery Learning"
-        ]
+        ],
+        "progression": "Unit 3 Teaching Practice Plan: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1142,9 +1142,9 @@
       "properties": {
         "level_keys": [
           "Overview: Capturing Student Learning"
-        ]
+        ],
+        "progression": "Overview: Capturing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1166,9 +1166,9 @@
       "properties": {
         "level_keys": [
           "What is the difference between formative and summative assessment?"
-        ]
+        ],
+        "progression": "What is the difference between formative and summative assessment?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1190,9 +1190,9 @@
       "properties": {
         "level_keys": [
           "Designing Assessment Questions"
-        ]
+        ],
+        "progression": "Designing Assessment Questions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1214,9 +1214,9 @@
       "properties": {
         "level_keys": [
           "Classroom Assessment Techniques"
-        ]
+        ],
+        "progression": "Classroom Assessment Techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1238,9 +1238,9 @@
       "properties": {
         "level_keys": [
           "Unit 3 Teaching Practice Plan: Assessing Student Learning"
-        ]
+        ],
+        "progression": "Unit 3 Teaching Practice Plan: Assessing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

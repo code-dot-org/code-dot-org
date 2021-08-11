@@ -1,0 +1,15 @@
+---
+es-MX:
+  devise:
+    mailer:
+      reset_password_instructions:
+        subject: Instrucciones para cambiar tu contraseña de Code.org
+        hello: "¡Hola %{user_email}!"
+        change_my_password: 'Cambiar mi contraseña:'
+        ignore_if_did_not_request: Si no solicitaste este enlace, puedes ignorar este
+          correo electrónico.
+        your_password_reset: Alguien ha solicitado un enlace para cambiar tu contraseña.
+          Para cambiar tu contraseña usa el enlace de abajo durante los próximos %{day_count}
+          días.
+        your_password_wont_change: Tu contraseña no cambiará hasta que accedas al
+          enlace y creas una nueva contraseña.

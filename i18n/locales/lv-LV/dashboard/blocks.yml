@@ -1,3 +1,4 @@
+---
 lv:
   data:
     blocks:
@@ -397,8 +398,8 @@ lv:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'jā'
-            '"no"': 'nē'
+            '"yes"': jā
+            '"no"': nē
       Mikelab_whileKeyPressed:
         options:
           KEY:

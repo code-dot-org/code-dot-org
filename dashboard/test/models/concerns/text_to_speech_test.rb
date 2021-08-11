@@ -75,16 +75,16 @@ class TextToSpeechTest < ActiveSupport::TestCase
       long_instructions: "This is contained"
     }
     outer_level = create :level, name: 'level 1', type: 'Blockly'
-    outer_level.contained_level_names = [contained_level_freeresponse.name]
+    outer_level.update(contained_level_names: [contained_level_freeresponse.name])
 
     outer_level_with_instructions = create :level, name: 'level 2', type: 'Blockly', long_instructions: "These aren't displayed"
-    outer_level_with_instructions.contained_level_names = [contained_level_freeresponse.name]
+    outer_level_with_instructions.update(contained_level_names: [contained_level_freeresponse.name])
 
     contained_level_freeresponse_2 = create :level, name: 'contained level 2', type: 'FreeResponse', properties: {
       long_instructions: "This is also contained"
     }
     outer_level_with_multiple_contained_levels = create :level, name: 'level 3', type: 'Blockly'
-    outer_level_with_multiple_contained_levels.contained_level_names = [contained_level_freeresponse.name, contained_level_freeresponse_2.name]
+    outer_level_with_multiple_contained_levels.update(contained_level_names: [contained_level_freeresponse.name, contained_level_freeresponse_2.name])
 
     contained_level_multi = create :level, name: 'contained level multi', type: 'Multi', properties: {
       'markdown': 'Contained',
@@ -96,7 +96,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       ]
     }
     outer_level_with_contained_multi_level = create :level, name: 'level 4', type: 'Blockly'
-    outer_level_with_contained_multi_level.contained_level_names = [contained_level_multi.name]
+    outer_level_with_contained_multi_level.update(contained_level_names: [contained_level_multi.name])
     assert_equal "This is contained\n", outer_level.tts_long_instructions_text
     assert_equal "This is contained\n", outer_level_with_instructions.tts_long_instructions_text
     assert_equal "This is contained\nThis is also contained\n", outer_level_with_multiple_contained_levels.tts_long_instructions_text
@@ -150,7 +150,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       ]
     }
     outer_level = create :level, name: 'level 4', type: 'Blockly'
-    outer_level.contained_level_names = [contained_level.name]
+    outer_level.update(contained_level_names: [contained_level.name])
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -215,8 +215,7 @@ class TextToSpeechTest < ActiveSupport::TestCase
       long_instructions: "This is the second contained"
     }
     outer_level = create :level, name: 'level 1', type: 'Blockly', published: true
-    outer_level.contained_level_names = [contained_level_one.name]
-    outer_level.save
+    outer_level.update(contained_level_names: [contained_level_one.name])
 
     outer_level.stubs(:write_to_file?).returns(true)
 

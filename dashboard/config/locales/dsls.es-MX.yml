@@ -10428,10 +10428,10 @@ es-MX:
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
         title: "¡Encuesta rápida de CS Discoveries!"
       PowerOfWords-Unplugged_2020:
-        markdown: |
-          # El Poder de las Palabras
+        markdown: |-
+          # El poder de las palabras
 
-          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+          ## ¿Qué debes hacer si alguien utiliza lenguaje mezquino o hiriente en Internet?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |
           # Información privada y personal
@@ -10448,12 +10448,12 @@ es-MX:
           Poniendo información sobre ti en línea, crea una huella digital.
       GettingLoopy-Unplugged:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       GettingLoopy-Unplugged_2020:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       MoveItMoveIt-Unplugged:
@@ -10626,9 +10626,9 @@ es-MX:
           En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
-          # Historias de Espacios en Blanco
+          # Historias del espacio en blanco
 
-          En esta lección, aprenderás a usar y escribir historias de espacios en blanco. Mira este vídeo para aprender cómo se conecta con la informática.
+          En esta lección, aprenderás a usar y escribir historias de espacio en blanco. Mira este video para aprender cómo esto se conecta con las ciencias de la computación.
       ForLoopFun-Unplugged_2021:
         markdown: |
           # Por el Divertido de Loop
@@ -10636,7 +10636,7 @@ es-MX:
           Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
       GettingLoopy-Unplugged_2021:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       GraphPaperProgramming-Unplugged_2021:
@@ -11763,10 +11763,10 @@ es-MX:
 
           - Prepararte para "dominar los conceptos básicos" de la computación revisando lo que sigue en el curso
       PowerOfWords-Unplugged_2021:
-        markdown: |
-          # El Poder de las Palabras
+        markdown: |-
+          # El poder de las palabras
 
-          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+          ## ¿Qué debes hacer si alguien utiliza lenguaje mezquino o hiriente en Internet?
       PrivatePersonalInformation-Unplugged_2021:
         markdown: |
           # Información privada y personal
@@ -12221,37 +12221,37 @@ es-MX:
       courseF_artist_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
-        display_name: Práctica con Artista
+        display_name: Práctica con el Artista
       courseF_beeFor_practice:
         description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_beeVar_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con las variables y la abeja!"
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_bee_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los bucles y la abeja!"
-        display_name: Práctica con Abeja
+        display_name: Práctica con la abeja
       courseF_events_freeplay:
         description: Ahora puedes utilizar lo que has aprendido para mejorar tu proyecto.
           ¡Sigue añadiendo a tu programa o empieza algo nuevo!
-        display_name: Eventos - Juego Libre
+        display_name: Eventos - Juego libre
       courseF_events_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los eventos!"
-        display_name: 'Práctica de Eventos '
+        display_name: Práctica de eventos
         teacher_markdown: |+
-          # Resumen del Nivel de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+          # Visión general de los niveles de elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a seleccionar sus opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los estudiantes a seleccionar las opciones por sí mismos, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |¡Despegar!|Aprendiendo a volar|Hacer un tonel|Encogerse y Crecer|Inflar un pez|Un pingüino en movimiento|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Despegue!|Aprendiendo a volar|Hacer un tonel|Encogerse y crecer|¡Infla un pez!|Un pingüino en movimiento|
           |-|-|-|-|-|-|-|
-          | ***Tipo*** |**Revisar**|**Debug**|**Corregir**|**Debug**|**Contenido Opcional**|**Contenido Opcional**
-          | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos when/while*|
+          | ***Escribir*** |**Revisar**|**Debug**|**Depurar**|**Debug**|**Contenido opcional**|**Contenido opcional**
+          | ***Concepto***|*events, behaviors*|*eventos, comportamientos*|*events, behaviors*|*eventos, comportamientos*|*when/while events*|*eventos cuando/mientras*|
 
 
       courseF_events_predict_multi:
@@ -12263,11 +12263,11 @@ es-MX:
             ambas cosas simultáneamente.
         - text: El sprite girará y se moverá al mismo tiempo.
           correct: true
-          feedback: "¡Correcto! Ambos comportamientos se producirán simultáneamente."
+          feedback: "¡Correcto! Ambos comportamientos ocurrirán simultáneamente."
         - text: El sprite girará primero y se moverá después.
-          feedback: No es correcto. En Laboratorio de Sprite, los bloques conectados
-            se suceden inmediatamente uno detrás de otro, por lo que ambos comportamientos
-            se producirán simultáneamente.
+          feedback: No es correcto. En Sprite Lab, los bloques conectados se suceden
+            inmediatamente uno detrás de otro, por lo que ambos comportamientos se
+            producirán simultáneamente.
         questions:
         - text: Lee el código y haz una predicción.
       courseF_intro_apps:
@@ -12309,7 +12309,7 @@ es-MX:
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
-        - text: El ordenador pedirá al usuario un número.
+        - text: La computadora pedirá un número al usuario.
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -12341,7 +12341,7 @@ es-MX:
       courseF_sprites_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
           todas las que puedas. ¡Sigue practicando con los sprites y los comportamientos!"
-        display_name: Práctica de Sprites
+        display_name: Práctica con sprites
         teacher_markdown: |+
           # Visión general de los niveles de elección
           Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
@@ -12373,48 +12373,48 @@ es-MX:
         - text: Lee el código y haz una predicción.
       courseF_text_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. Sigue practicando con el texto y las indicaciones."
-        display_name: Práctica de Texto y Avisos
+          todas las que puedas. ¡Sigue practicando con el texto y los avisos!"
+        display_name: Práctica de texto y avisos
         teacher_markdown: |+
-          # Visión General de los Niveles de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+          # Visión general de los niveles de elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los alumnos a auto-seleccionar las opciones, o para establecer las expectativas sobre el número de subniveles que deben completar.
+          Puedes utilizar las descripciones que aparecen a continuación para ayudar a los estudiantes a seleccionar las opciones por sí mismos, o para establecer las expectativas sobre el número de subniveles que deben completar.
 
-          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de la Voz para el Texto|Texto de los Avisos|¡Nombra el robot!|Etiquetas de Variables|Texto Grande|Solicitar colores|Empezar de cero|
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Uso de voz para texto|Texto de avisos|¡Nombra al robot!|Etiquetas de variables|Texto grande|Avisos de colores|Comenzar desde cero|
           |-|-|-|-|-|-|-|-|
-          | ***Tipo*** |**Revisisar**|**Debug**|**Depurar**|**Debug**|**Contenido Opcional**|**Optional Content**|**Juego Libre**
-          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*almacenar colores*|*sin contenido nuevo*
+          | ***Escribir*** |**Revisar**|**Debug**|**Depurar**|**Debug**|**Contenido opcional**|**Optional Content**|**Juego libre**
+          | ***Concepto***|*print block, events*|*avisos, eventos*|*adding spaces*|*etiquetas de variables coincidentes*|*title screen blocks*|*guardar colores*|*no hay contenido nuevo*
 
 
       courseF_variables_predict_multi:
         answers:
-        - text: El programa imprimirá "¡Hola nombre!"
+        - text: El programa mostrará "¡Hola nombre!"
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
-            usted escriba.
-        - text: El programa le dará la bienvenida con el nombre que introduzca.
+            escribas.
+        - text: El programa te dará la bienvenida con el nombre que escribas.
           correct: true
-          feedback: "¡Correcto! Lo que escribas se utilizará en lugar del bloque de
+          feedback: "¡Correcto! Se utilizará lo que escribas en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
-          feedback: Es incorrecto. El texto se imprime en la pantalla.
-        - text: El ordenador hará otra pregunta.
+          feedback: No es correcto. El texto aparece en la pantalla.
+        - text: La computadora hará otra pregunta.
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
-        - text: 'Este programa le permite responder a una pregunta escribiendo con
-            el teclado. El bloque `impresión` muestra el texto en la pantalla. Haz
-            una predicción: ¿Qué ocurrirá después de responder a la pregunta?'
+        - text: 'Este programa te permite escribir con el teclado para responder una
+            pregunta. El bloque `imprimir` muestra el texto en la pantalla. Haz una
+            predicción: ¿qué ocurrirá después de responder la pregunta?'
       courseF_variables_projects:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
-          de espacio en blanco. Si ya has terminado la "Parte 1" de tu proyecto, pasa
-          a la "Parte 2".
-        display_name: Elige un Proyecto
+          de espacio en blanco. Si ya has terminado la \"Parte 1\" de tu proyecto,
+          pasa a la \"Parte 2\".
+        display_name: Elige un proyecto
         teacher_markdown: |
-          # Visión General del Nivel de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero se les debe animar a completar **dos** niveles para el mismo proyecto.
+          # Visión general del nivel de elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles, pero se los debe animar a completar **dos** niveles para el mismo proyecto.
 
-          Es posible que los alumnos necesiten instrucciones muy claras para entender cómo navegar por las opciones existentes. Para cada una de las opciones del proyecto, hay dos subniveles disponibles. Para empezar, los alumnos deben elegir uno de los niveles marcados como "Parte 1". Una vez que terminen ese nivel, deben volver aquí y seleccionar la "Parte 2" del *mismo* proyecto. El primer nivel de cada elección proporcionará a los alumnos información sobre los componentes básicos de su proyecto. El segundo nivel es un "juego libre" que pretende permitir a los alumnos hacer los cambios que quieran en su código.
+          Es posible que los estudiantes necesiten instrucciones muy claras para entender cómo navegar por las opciones existentes. Para cada una de las elecciones del proyecto, hay dos subniveles disponibles. Para empezar, los estudiantes deben elegir uno de los niveles marcados como "Parte 1". Una vez que terminen ese nivel, deben volver aquí y seleccionar la "Parte 2" del *mismo* proyecto. El primer nivel de cada elección proporcionará a los estudiantes información sobre los componentes básicos de su proyecto. El segundo nivel es un "juego libre" que les permite hacer los cambios que quieran en su código.
       courseF_variables_samples:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
           en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
@@ -12433,11 +12433,11 @@ es-MX:
           Esto funciona mejor si ya tienes un plan.\n\nTu plan completo debe incluir:\n\n<img
           src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
           style=\"float:left; height:70px; padding:10px\"/>\n\n* El tipo de proyecto
-          que estás construyendo. Por ejemplo, una tarjeta de felicitación, un chatbot
-          o una historia en blanco.\n* Una lista de preguntas que le harás al usuario.\n*
-          El otro texto que mostrarás en la pantalla.\n* Una descripción o dibujo
-          de los sprites que necesitarás (y sus comportamientos).\n\nSi no estás seguro
-          de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"
+          que estás creando; por ejemplo, una tarjeta de felicitación, un chatbot
+          o una historia del espacio en blanco.\n* Una lista de preguntas que le harás
+          al usuario.\n* Otro texto que mostrarás en la pantalla.\n* Una descripción
+          o dibujo de los sprites que necesitarás (y sus comportamientos).\n\nSi no
+          estás seguro de estar preparado para seguir adelante, ¡consulta con tu docente!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: El artista resolverá el desafío correctamente.

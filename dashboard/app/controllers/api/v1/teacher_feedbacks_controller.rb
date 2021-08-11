@@ -18,7 +18,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     if @feedback.nil?
       head :no_content
     else
-      render json: @feedback.summarize
+      render json: @feedback.summarize(true)
     end
   end
 
@@ -32,7 +32,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       params.require(:student_id),
       params.require(:level_id),
       params.require(:script_id)
-    ).map(&:summarize)
+    ).map {|feedback| feedback.summarize(true)}
 
     render json: @level_feedbacks
   end
@@ -58,7 +58,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       end
 
       # reload is called so that the correct created_at date is sent back
-      render json: @teacher_feedback.reload.summarize, status: :created
+      render json: @teacher_feedback.reload.summarize(true), status: :created
     else
       head :bad_request
     end

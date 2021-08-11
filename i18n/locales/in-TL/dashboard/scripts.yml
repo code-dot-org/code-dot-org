@@ -21336,3 +21336,95 @@ in:
           lesson_groups: {}
           name: crwdns2690191:0crwdne2690191:0
           title: crwdns2690193:0crwdne2690193:0
+        dlp21-csd:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2690237:0crwdne2690237:0
+              description: crwdns2690239:0crwdne2690239:0
+            lessonGroup-3:
+              display_name: crwdns2690241:0crwdne2690241:0
+            lessonGroup-4:
+              display_name: crwdns2690243:0crwdne2690243:0
+            lessonGroup-5:
+              display_name: crwdns2690245:0crwdne2690245:0
+          name: crwdns2690247:0crwdne2690247:0
+        dlp21-csd-mod1:
+          lessons:
+            lesson-1:
+              name: crwdns2690257:0crwdne2690257:0
+            lesson-2:
+              name: crwdns2690263:0crwdne2690263:0
+          lesson_groups: {}
+          name: crwdns2690269:0crwdne2690269:0
+          title: crwdns2690271:0crwdne2690271:0
+        dlp21-csd-mod2:
+          lessons:
+            lesson-1:
+              name: crwdns2690279:0crwdne2690279:0
+            lesson-2:
+              name: crwdns2690285:0crwdne2690285:0
+          lesson_groups: {}
+          name: crwdns2690291:0crwdne2690291:0
+          title: crwdns2690293:0crwdne2690293:0
+          description: crwdns2690299:0crwdne2690299:0
+        dlp21-csd-mod3:
+          lessons:
+            lesson-1:
+              name: crwdns2690301:0crwdne2690301:0
+            lesson-2:
+              name: crwdns2690307:0crwdne2690307:0
+          lesson_groups: {}
+          name: crwdns2690313:0crwdne2690313:0
+          title: crwdns2690315:0crwdne2690315:0
+          description: crwdns2690321:0crwdne2690321:0
+        dlp21-csd-mod4:
+          lessons:
+            lesson-1:
+              name: crwdns2690323:0crwdne2690323:0
+            lesson-2:
+              name: crwdns2690329:0crwdne2690329:0
+          lesson_groups: {}
+          name: crwdns2690335:0crwdne2690335:0
+          title: crwdns2690337:0crwdne2690337:0
+          description: crwdns2690343:0crwdne2690343:0
+        dlp21-csp-mod2:
+          lessons:
+            lesson-1:
+              name: crwdns2690345:0crwdne2690345:0
+            lesson-2:
+              name: crwdns2690351:0crwdne2690351:0
+          lesson_groups: {}
+          name: crwdns2690357:0crwdne2690357:0
+          title: crwdns2690359:0crwdne2690359:0
+          description: crwdns2690365:0crwdne2690365:0
+        dlp21-csp-mod3:
+          lessons:
+            lesson-1:
+              name: crwdns2690367:0crwdne2690367:0
+            lesson-2:
+              name: crwdns2690373:0crwdne2690373:0
+          lesson_groups: {}
+          name: crwdns2690379:0crwdne2690379:0
+          title: crwdns2690381:0crwdne2690381:0
+          description: crwdns2690387:0crwdne2690387:0
+        dlp21-overview:
+          lessons: {}
+          lesson_groups: {}
+          name: crwdns2691001:0crwdne2691001:0
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: crwdns2691011:0crwdne2691011:0
+          lesson_groups: {}
+          name: crwdns2691017:0crwdne2691017:0
+          title: crwdns2691019:0crwdne2691019:0
+          description: crwdns2691025:0crwdne2691025:0
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: crwdns2691027:0crwdne2691027:0
+          lesson_groups: {}
+          name: crwdns2691033:0crwdne2691033:0
+          title: crwdns2691035:0crwdne2691035:0
+          description: crwdns2691041:0crwdne2691041:0

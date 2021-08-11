@@ -1,3 +1,4 @@
+---
 bn:
   data:
     blocks:
@@ -321,7 +322,7 @@ bn:
         options:
           KEY:
             '"yes"': '"হ্যাঁ"'
-            '"no"': 'না'
+            '"no"': না
       Mikelab_whileKeyPressed:
         options:
           KEY:

@@ -21,8 +21,6 @@ sl:
     mailer:
       confirmation_instructions:
         subject: Code.org navodila za potrditev
-      reset_password_instructions:
-        subject: Code.org navodila za ponastavitev gesla
       unlock_instructions:
         subject: Navodila za odklep
     omniauth_callbacks:

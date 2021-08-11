@@ -1,5 +1,6 @@
 {
   "backpackLabel": "Mochila",
+  "cancel": "Cancelar",
   "clearConsole": "Limpar Console",
   "compilerError": "Não foi possível compilar seu programa.  Procure por erros em seu programa e tente novamente.",
   "console": "Console",
@@ -14,5 +15,6 @@
   "newFile": "Novo Arquivo",
   "noMainMethod": "Erro: seu programa não contém um método principal.",
   "runtimeError": "Seu código apresentou uma exceção enquanto estava em execução.\n{cause}",
-  "twoMainMethods": "Erro: Seu código só pode ter um método principal.  Encontramos pelo menos duas classes com métodos principais."
+  "twoMainMethods": "Erro: Seu código só pode ter um método principal.  Encontramos pelo menos duas classes com métodos principais.",
+  "saving": "Salvando..."
 }

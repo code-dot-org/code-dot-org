@@ -27558,3 +27558,22 @@ uz:
           lessons:
             lesson-2:
               name: 2-dars
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Modul 1
+              description: test
+            lessonGroup-3:
+              display_name: Modul 2
+            lessonGroup-4:
+              display_name: Modul 3
+            lessonGroup-5:
+              display_name: Modul 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Overview
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Overview

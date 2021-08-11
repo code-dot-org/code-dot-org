@@ -1865,10 +1865,10 @@
           "craft_what_is_iron": "¡Extrae este hierro!"
         },
         "Virtual Pet 2_2021": {
-          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+          "vp_costumes": "¡Haz clic aquí para añadir nuevos disfraces a tu proyecto!"
         },
         "Virtual Pet 6_2021": {
-          "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
+          "vp_costumes": "¡Haz clic aquí para añadir nuevos disfraces a tu proyecto!"
         },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
@@ -1943,7 +1943,7 @@
           "sticker2": "Añade esto en el medio de tu programa."
         },
         "courseC_artist_prog2_2021": {
-          "slider": "Aquí puedes ralentizar tu programa."
+          "slider": "Aquí puedes desacelerar tu programa."
         },
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en otra lección."
@@ -2103,7 +2103,7 @@
           "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
         },
         "courseF_events_choice_penguin": {
-          "whenToWhile": "Intenta cambiar cuando a mientras."
+          "whenToWhile": "Intenta cambiar cuando por mientras."
         },
         "courseF_events_conflict": {
           "stops_block": "¡Nuevos bloques aquí!"
@@ -2112,25 +2112,25 @@
           "whenKey": "Utiliza el nuevo bloque de eventos que se encuentra aquí."
         },
         "courseF_events_practice_reorder": {
-          "stopAllBug": "Este bloque está mal ordenado."
+          "stopAllBug": "Este bloque está en el orden incorrecto."
         },
         "courseF_events_predict": {
           "behaviors_edit": "Haz clic aquí para ver cómo funciona este comportamiento."
         },
         "courseF_events_time": {
-          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+          "events_category": "Haz clic aquí para abrir la categoría Eventos."
         },
         "courseF_label_predict": {
           "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "Haga clic aquí para abrir la categoría Comportamientos."
+          "behaviors_category": "Haz clic aquí para abrir la categoría Comportamientos."
         },
         "courseF_sprites_make": {
           "sprites_category": "Haz clic aquí para abrir la categoría de Sprites."
         },
         "courseF_sprites_positioning": {
-          "locations_category": "Haga clic aquí para abrir la categoría de Ubicaciones."
+          "locations_category": "Haz clic aquí para abrir la categoría Ubicaciones."
         },
         "courseF_sprites_properties": {
           "sprites_category2": "Busca un nuevo bloque aquí."
@@ -2142,24 +2142,24 @@
           "text_color_finish": "¿Ha cambiado de color el fondo cuando has respondido a la pregunta? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "¿Ha terminado? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+          "text_generic_finish": "¿Has terminado? Si es así, pulsa 'Finalizar'. Si no, pulsa 'Reiniciar', cambia el código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_choice_title": {
           "title_block": "¡Busca dos nuevos bloques aquí!",
           "text_answer_finish": "¿Se ha mostrado una pantalla de título durante 3 segundos? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y pulsa \"Ejecutar\" de nuevo."
         },
         "courseF_text_concat": {
-          "join_blocks": "¡Busque nuevos bloques aquí!"
+          "join_blocks": "¡Busca nuevos bloques aquí!"
         },
         "courseF_text_events": {
-          "events_category": "Haga clic aquí para abrir la categoría de Eventos."
+          "events_category": "Haz clic aquí para abrir la categoría Eventos."
         },
         "courseF_text_print": {
           "print_block": "¡Encuentra el bloque de impresión aquí!",
-          "text_print_finish": "¿Se imprimió el mensaje anterior? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia tu código y pulsa \"Ejecutar\" de nuevo."
+          "text_print_finish": "¿Se imprimió el mensaje anterior? Si es así, pulsa 'Finalizar'. Si no es así, pulsa 'Reiniciar', cambia tu código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Encuentra aquí el bloque de avisos."
+          "prompt_block": "¡Encuentra el bloque de avisos aquí!"
         },
         "courseF_variables_predict": {
           "variablesPredict": "Fíjate bien en el código que hay debajo de este punto."

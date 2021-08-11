@@ -26,13 +26,14 @@
       "project_sharing": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/csp-explore/{LESSON}",
       "curriculum_umbrella": "CSP",
+      "is_stable": true,
       "family_name": "csp-explore",
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csp-explore",
-    "serialized_at": "2021-06-17 22:30:18 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:44 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp-explore-2019"
     }
@@ -140,9 +141,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL01 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -167,7 +168,6 @@
         ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -189,9 +189,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL02 SFLP_2018_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -213,9 +213,9 @@
       "properties": {
         "level_keys": [
           "CSP ExploreL03 SFLP_2019"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -239,7 +239,6 @@
           "csp-post-survey-intro-2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -263,7 +262,6 @@
           "csp-post-survey-levelgroup-2019.2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

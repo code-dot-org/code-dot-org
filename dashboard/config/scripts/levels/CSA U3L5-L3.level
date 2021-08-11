@@ -2,21 +2,19 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Time to animate the scene! In `NeighborhoodConcert.java`, add a loop to your `showAnimals()` method that does the following:\r\n1. Displays the `Animal` image on the image of the park. Each `Animal` object has a `getImage()` method to get the `Image` of the `Animal`.\r\n\r\n2. Plays the `Animal`'s sound by calling `speak()`.\r\n\r\n3. Pauses for two seconds to let the sound finish.\r\n\r\n4. Resets the stage using `clear()` to `Color.WHITE`.\r\n\r\n5. Pauses for one second to show the cleared stage.\r\n\r\nIn `MyConcert.java`, add a `pause()` after the call to `showCommunity()`. After the `pause()`, call `showAnimals()` to play the scene in your concert.",
+    "long_instructions": "Time to animate the scene! In `NeighborhoodConcert.java`, use a loop in your `showAnimals()` method to:\r\n1. Draw the `\"park.png\"` image as the background. Use `(0, 0)` for the x and y coordinates, `myStage.getWidth()` for the width, `myStage.getHeight()` for the height, and `0` for the rotation.\r\n\r\n2. Draw each `Animal` image on the stage. `Animal` has a `getImage()` method to get its image file. Call `getImage()` on each `Animal` in the array inside `myStage.drawImage()` to display the image. Use `(100, 100)` for the x and y coordinates, `200` for the width, `200` for the height, and `0` for the rotation.\r\n\r\n2. Play the `Animal`'s sound by calling `speak()`.\r\n\r\n3. Pause for `7` seconds to let the sound finish.\r\n\r\n4. Reset the stage using `clear()` to `Color.WHITE`.\r\n\r\nIn `MyConcert.java`, test your `showAnimals()` method by commenting the call to `playConcert()` and adding the following:\r\n```\r\n// myConcert.playConcert();\r\n\r\nmyConcert.showAnimals();\r\nmyStage.play();\r\n```\r\n\r\nWhen you know it works, test your whole concert by uncommenting the call to `playConcert()` and deleting the calls to `showAnimals()` and `play()`!",
     "mini_rubric": "false",
     "project_template_level_name": "CSA Neighborhood Concert Template",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "parent_level_id": 29243,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tN7auHkLS870w3RdKAg\nly3NZ3WoQj9rOGvezf6qhfKnkqEQE8yBlRdF4sT7k2j2tAI=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-22T14:22:58.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-22T14:22:58.788+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L2\\\"\"],\"cloned_from\":\"CSA U3L5-L2\"},{\"changed_at\":\"2021-07-22 14:26:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 14:28:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 14:45:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 15:20:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-22T14:22:58.788+00:00\",\"changed\":[\"cloned from \\\"CSA U3L5-L2\\\"\"],\"cloned_from\":\"CSA U3L5-L2\"},{\"changed_at\":\"2021-07-22 14:26:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 14:28:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 14:45:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 15:20:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 14:28:34 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 17:53:37 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 18:00:14 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-05 18:09:16 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

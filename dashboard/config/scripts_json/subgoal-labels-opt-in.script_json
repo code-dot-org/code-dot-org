@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:05 UTC",
+    "serialized_at": "2021-08-03 22:47:14 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "subgoal-labels-opt-in"
@@ -61,7 +61,6 @@
         ],
         "progression": "Click here to participate in the subgoal labels study"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
