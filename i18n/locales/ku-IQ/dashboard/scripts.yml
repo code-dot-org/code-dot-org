@@ -795,3 +795,7 @@ ku:
             Variables:
               key: گۆڕاوەکان
               name: گۆڕاوەکان
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: تاقیکردنەوە

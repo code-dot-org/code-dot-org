@@ -5,11 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Create a classroom section
 
-#### 1. Open a new tab and log into your teacher account on Code.org.
-#### 2. Click on the "Create a section" button in the classroom sections area of your "My Dashboard" page. 
-#### 3. Follow the prompts to create a class section. 
+### Steps for creating a classroom section:
+
+##### **Step 1:** Open a new tab and log into your teacher account on Code.org.
+##### **Step 2:** Click on the "Create a section" button in the classroom sections area of your "My Dashboard" page. 
+##### **Step 3:** Follow the prompts to create a classroom section. 
 
 
+![](https://images.code.org/d61b8eb3ae7c9e703e7a79c3f2a7eaba-image-1627609605928.46.36 PM.png)
 
-
+<a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section" target="blank" >Click here</a> for more detailed instructions
 MARKDOWN

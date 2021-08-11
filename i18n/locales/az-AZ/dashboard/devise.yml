@@ -18,8 +18,6 @@ az:
     mailer:
       confirmation_instructions:
         subject: "Code.org - təsdiq barədə təlimatlar"
-      reset_password_instructions:
-        subject: "Code.org - parolu yeniləmə barədə təlimatlar"
       unlock_instructions:
         subject: "Kilidi açmaq üçün təlimatlar"
     omniauth_callbacks:

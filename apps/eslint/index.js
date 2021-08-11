@@ -16,7 +16,9 @@ module.exports = {
           return (
             item.type === 'ClassDeclaration' ||
             (item.type === 'ExportDefaultDeclaration' &&
-              item.declaration.type === 'ClassDeclaration')
+              item.declaration.type === 'ClassDeclaration') ||
+            (item.type === 'ExportNamedDeclaration' &&
+              item.declaration?.type === 'ClassDeclaration')
           );
         }
 

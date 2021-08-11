@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:23 UTC",
+    "serialized_at": "2021-08-03 22:47:47 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "pl-csd-bugs"
@@ -58,9 +58,9 @@
       "properties": {
         "level_keys": [
           "CSD-PL AYWS1 Debugging Intro"
-        ]
+        ],
+        "progression": "Introduction to Debugging"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +84,6 @@
           "CSD U3 drawing practice 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +107,6 @@
           "CSD U3 drawing practice 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +130,6 @@
           "CSD U3 Variable names debug"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +153,6 @@
           "CSD U3 Sprites debug"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

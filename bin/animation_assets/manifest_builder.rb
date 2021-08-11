@@ -2,6 +2,8 @@ require 'aws-sdk-s3'
 require 'ruby-progressbar'
 require 'optparse'
 require 'parallel'
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require_relative '../../lib/cdo/aws/s3'
 require_relative '../../deployment'
 require_relative '../../lib/cdo/cdo_cli'
 require_relative '../../lib/cdo/png_utils'
@@ -12,6 +14,7 @@ DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
 DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/gamelab/animationLibrary.json".freeze
 SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
+SPRITELAB_MANIFEST_PATH = "animation-manifests/manifests/"
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -28,7 +31,7 @@ end
 # See: The Animation Library Tech Spec (requires login):
 # https://docs.google.com/document/d/18-LVuvKd0jKTUiGo5GYReUWM5oFWCyKRyEQURJ5HCOM/edit
 # Possible options:
-# - spritelab: build the custumeLibrary for SpriteLab
+# - spritelab: build the costumeLibrary for SpriteLab
 # - quiet: only log warnings and errors
 # - verbose: verbose log output
 class ManifestBuilder
@@ -74,10 +77,11 @@ class ManifestBuilder
     EOS
 
     if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading manifests/spritelabCostumeLibrary.json to S3"
+      manifest_filename = generate_spritelab_manifest_filename
+      info "Uploading #{manifest_filename} to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
-        "manifests/spritelabCostumeLibrary.json",
+        SPRITELAB_MANIFEST_PATH + 'spritelabCostumeLibrary.json',
         generate_json(animation_metadata, alias_map, category_map),
         acl: 'public-read',
         no_random: true,
@@ -213,10 +217,11 @@ The animation has been skipped.
       normalized_category_map[key.tr(' ', '_')] = value
     end
 
-    info "Uploading manifests/spritelabCostumeLibrary.#{locale}.json to S3"
+    manifest_filename = generate_spritelab_manifest_filename(locale)
+    info "Uploading #{manifest_filename} to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
-      "manifests/spritelabCostumeLibrary.#{locale}.json",
+      manifest_filename,
       generate_json(animation_metadata, alias_map, normalized_category_map),
       acl: 'public-read',
       no_random: true,
@@ -434,6 +439,11 @@ The animation has been skipped.
         'aliases': alias_map.sort.to_h
       }
     )
+  end
+
+  def generate_spritelab_manifest_filename(locale = nil)
+    filename = locale ? "spritelabCostumeLibrary.#{locale}.json" : 'spritelabCostumeLibrary.json'
+    SPRITELAB_MANIFEST_PATH + filename
   end
 
   def verbose(s)

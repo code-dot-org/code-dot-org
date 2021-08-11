@@ -26,7 +26,6 @@
 
 class Ailab < Level
   serialized_attrs %w(
-    project_template_level_name
     start_sources
     hide_share_and_remix
     is_project_level

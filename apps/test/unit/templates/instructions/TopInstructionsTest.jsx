@@ -1,7 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import {
+  UnconnectedTopInstructions as TopInstructions,
+  TabType
+} from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 
 const DEFAULT_PROPS = {
@@ -27,7 +30,8 @@ const DEFAULT_PROPS = {
   hidden: false,
   isMinecraft: false,
   isBlockly: false,
-  isRtl: false
+  isRtl: false,
+  displayReviewTab: false
 };
 
 describe('TopInstructions', () => {
@@ -60,6 +64,14 @@ describe('TopInstructions', () => {
       />
     );
     expect(wrapper.find('div')).to.have.lengthOf(1);
+  });
+
+  it('displays initial selected tab if supplied', () => {
+    const wrapper = shallow(
+      <TopInstructions {...DEFAULT_PROPS} initialSelectedTab={TabType.REVIEW} />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.REVIEW);
   });
 
   describe('viewing the Feedback Tab', () => {
@@ -102,6 +114,18 @@ describe('TopInstructions', () => {
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.true;
+      });
+
+      it('passes displayFeedback = false to TopInstructionsHeader if displayReviewTab = true and there is no rubric', () => {
+        const props = {...DEFAULT_PROPS, displayReviewTab: true};
+        const wrapper = shallow(<TopInstructions {...props} />);
+
+        wrapper.setState({
+          teacherViewingStudentWork: true
+        });
+
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
       });
     });
 

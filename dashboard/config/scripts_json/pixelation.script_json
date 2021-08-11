@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": "pixelation",
-    "serialized_at": "2021-07-06 22:26:07 UTC",
+    "serialized_at": "2021-08-03 22:46:45 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "pixelation"
@@ -122,7 +122,6 @@
           "Pixelation 4x4 Empty"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +145,6 @@
           "Pixelation 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -170,7 +168,6 @@
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -194,7 +191,6 @@
           "Pixelation - Lesson 15 - Color Shades"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -218,7 +214,6 @@
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -242,7 +237,6 @@
           "Pixelation Flappy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +260,6 @@
           "Pixelation Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -290,7 +283,6 @@
           "Mixing Colors"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -24,7 +24,7 @@ describe('CrosshairOverlay', () => {
 
   function checkRenderAtMousePosition(x, y) {
     const crosshairOverlay = renderAtMousePosition(x, y);
-    expect(crosshairOverlay.find('g')).to.have.length(1);
+    expect(crosshairOverlay.find('svg')).to.have.length(1);
     expect(crosshairOverlay.find('line')).to.have.length(2);
     const firstLine = crosshairOverlay.find('line').first();
     expect(firstLine.props().x1).to.equal(x);

@@ -5,13 +5,13 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "professional_learning_course": "2021 CS Principles Deeper Learning",
+      "professional_learning_course": "2021 CS Principles Deeper Learning ",
       "peer_reviews_to_complete": 6,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 19:20:27 UTC",
+    "serialized_at": "2021-08-09 18:03:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csp-mod2"
@@ -124,7 +124,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -150,7 +149,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +174,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -202,7 +199,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +224,6 @@
         ],
         "progression": "Prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

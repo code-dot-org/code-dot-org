@@ -18,8 +18,6 @@ cs:
     mailer:
       confirmation_instructions:
         subject: "Code.org instrukce o potvrzení"
-      reset_password_instructions:
-        subject: "Code.org instrukce o obnovení hesla"
       unlock_instructions:
         subject: "Pokyny k odemknutí"
     omniauth_callbacks:

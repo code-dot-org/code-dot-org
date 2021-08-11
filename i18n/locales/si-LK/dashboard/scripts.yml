@@ -2730,3 +2730,15 @@ si:
           lessons:
             lesson-3:
               name: පරීක්ෂාව
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: පරික්ෂාව
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: දළ විශ්ලේෂණය
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: දළ විශ්ලේෂණය

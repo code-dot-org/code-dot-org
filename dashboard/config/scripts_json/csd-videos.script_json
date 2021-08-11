@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:19 UTC",
+    "serialized_at": "2021-08-03 22:47:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd-videos"
@@ -133,9 +133,9 @@
       "properties": {
         "level_keys": [
           "CSD What Makes a Computer a Computer Video_2019"
-        ]
+        ],
+        "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -157,9 +157,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 1_2019"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -181,9 +181,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 2_2019"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -205,9 +205,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 Pair Programming Video_2019"
-        ]
+        ],
+        "progression": "Pair Programming"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -229,9 +229,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS_2019"
-        ]
+        ],
+        "progression": "Video: Intro to CSS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -253,9 +253,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS Part 2_2019"
-        ]
+        ],
+        "progression": "Video: Intro to CSS Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,9 +277,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 1_2019"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -301,9 +301,9 @@
       "properties": {
         "level_keys": [
           "CSD: Drawing in Game Lab 2_2019"
-        ]
+        ],
+        "progression": "Video: Drawing in Game Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -325,9 +325,9 @@
       "properties": {
         "level_keys": [
           "Introduction to Variables - Part 1_2019"
-        ]
+        ],
+        "progression": "Introduction to Variables"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,9 +349,9 @@
       "properties": {
         "level_keys": [
           "CSD: Sprites in Game Lab_2019"
-        ]
+        ],
+        "progression": "Video: Introduction to Sprites"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -373,9 +373,9 @@
       "properties": {
         "level_keys": [
           "CSD: Animation Tab_2019"
-        ]
+        ],
+        "progression": "Video: The Animation Tab"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,9 +397,9 @@
       "properties": {
         "level_keys": [
           "CSD: Introduction to the Draw Loop_2019"
-        ]
+        ],
+        "progression": "Video: Introduction to the Draw Loop"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -421,9 +421,9 @@
       "properties": {
         "level_keys": [
           "CSD: Animating Sprite Movement_2019"
-        ]
+        ],
+        "progression": "Video: Sprite Movement"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -445,9 +445,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Booleans Video_2019"
-        ]
+        ],
+        "progression": "Video: Booleans"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -469,9 +469,9 @@
       "properties": {
         "level_keys": [
           "csd U3 conditional statements video_2019"
-        ]
+        ],
+        "progression": "Video: Conditional Statements"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -493,9 +493,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 - Conditionals Video_2019"
-        ]
+        ],
+        "progression": "Video: If/Else Statements"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -517,9 +517,9 @@
       "properties": {
         "level_keys": [
           "CSD: Sprite Velocity_2019"
-        ]
+        ],
+        "progression": "Video: Velocity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -541,9 +541,9 @@
       "properties": {
         "level_keys": [
           "CSD U3 Functions Call Function_2019"
-        ]
+        ],
+        "progression": "Video: Calling and Defining Functions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -565,9 +565,9 @@
       "properties": {
         "level_keys": [
           "CSDU4 Design Mode Video_2019"
-        ]
+        ],
+        "progression": "Intro to Design Mode"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -589,9 +589,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 binary video_2019"
-        ]
+        ],
+        "progression": "Binary and Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -613,9 +613,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 Netflix Data Video_2019"
-        ]
+        ],
+        "progression": "How Netflix Uses Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -637,9 +637,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 Waze Data Video_2019"
-        ]
+        ],
+        "progression": "How Waze Uses Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -661,9 +661,9 @@
       "properties": {
         "level_keys": [
           "CSD U5 Amazon Data Video_2019"
-        ]
+        ],
+        "progression": "How Amazon Uses Data"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -685,9 +685,9 @@
       "properties": {
         "level_keys": [
           "CSD U6 hardware software video_2019"
-        ]
+        ],
+        "progression": "Hardware and Software"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -709,9 +709,9 @@
       "properties": {
         "level_keys": [
           "CSD U6 arrays video"
-        ]
+        ],
+        "progression": "Video: Introduction to Arrays"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -733,9 +733,9 @@
       "properties": {
         "level_keys": [
           "CSD: For Loop_2019"
-        ]
+        ],
+        "progression": "Video: For Loops"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -757,9 +757,9 @@
       "properties": {
         "level_keys": [
           "CSD U6 functions paramters video_2019"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

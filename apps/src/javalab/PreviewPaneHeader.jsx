@@ -11,6 +11,7 @@ import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 export default function PreviewPaneHeader({
   isCollapsed,
   isFullscreen,
+  toggleVisualizationCollapsed,
   disableAssetManagerButton = false,
   showAssetManagerButton = false,
   showPreviewTitle = true
@@ -20,7 +21,7 @@ export default function PreviewPaneHeader({
       <PaneButton
         headerHasFocus
         icon={<CollapserIcon isCollapsed={isCollapsed} />}
-        onClick={() => {}}
+        onClick={toggleVisualizationCollapsed}
         label=""
         isRtl={false}
         style={styles.transparent}
@@ -58,11 +59,12 @@ export default function PreviewPaneHeader({
 }
 
 PreviewPaneHeader.propTypes = {
-  isCollapsed: PropTypes.bool.isRequired,
   isFullscreen: PropTypes.bool.isRequired,
+  isCollapsed: PropTypes.bool.isRequired,
   showAssetManagerButton: PropTypes.bool,
   disableAssetManagerButton: PropTypes.bool,
-  showPreviewTitle: PropTypes.bool
+  showPreviewTitle: PropTypes.bool,
+  toggleVisualizationCollapsed: PropTypes.func
 };
 
 const styles = {
