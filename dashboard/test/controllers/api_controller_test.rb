@@ -931,16 +931,16 @@ class ApiControllerTest < ActionController::TestCase
     expected = {
       'script' => {
         'id' => @flappy.id,
-        'name' => 'Flappy Code',
-        'levels_count' => 10,
+        'name' => I18n.t("data.script.name.#{@flappy.name}.title"),
+        'levels_count' => 1,
         'lessons' => [{
-          'length' => 10,
-          'title' => 'Flappy Code'
+          'length' => 1,
+          'title' => @flappy.name
         }]
       },
       'students' => [{
         'id' => @student_flappy_1.id,
-        'levels' => (1..10).map {|level_num| ['not_tried', level_num, "/flappy/#{level_num}"]}
+        'levels' => [['not_tried', 1, "/s/#{@flappy.name}/lessons/1/levels/1"]]
       }]
     }
 
