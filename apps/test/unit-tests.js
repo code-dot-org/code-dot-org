@@ -1,10 +1,7 @@
 // This gets replaced by karma webpack with the updated files on rebuild
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import {
-  throwOnConsoleErrorsEverywhere,
-  throwOnConsoleWarningsEverywhere
-} from './util/throwOnConsole';
+import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
@@ -27,7 +24,6 @@ if (!runnable.length) {
 
 describe('unit tests', function() {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
   runnable.forEach(testsContext);
 });
