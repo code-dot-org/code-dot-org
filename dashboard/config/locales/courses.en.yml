@@ -124,3 +124,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        csa-pilot-facilitator:
+          title: csa-pilot-facilitator
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
