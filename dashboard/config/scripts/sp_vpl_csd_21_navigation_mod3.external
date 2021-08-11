@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 ## Help up make this module better
 
-#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csd_selfpaced_learning_platform" target="blank" >short survey</a> to provide your feedback on this module.
+#### Code.org values and is responsive to feedback. Please fill out this <a href="URL" target="blank" >short survey</a> to provide your feedback on this module.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_learning_platform" target="blank" rel="noopener noreferrer">Take the survey</a>
+<a class="btn btn-large btn-primary" href="URL" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 ## Choose your path to continue learning
 
@@ -71,9 +71,9 @@ markdown <<MARKDOWN
 </table>
 <br/>
 
-### **Option C:** Click the continue to next module button below to move to the next module in this course.
+### **Option C:** Click the "continue to next module" button below to move to the next module in this course.
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-csd3-2021/lessons/1/levels/1=<user_id/>" rel="noopener noreferrer" style="float:right;">Continue to next module</a>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-csd4-2021/lessons/1/levels/1=<user_id/>" rel="noopener noreferrer" style="float:right;">Continue to next module</a>
 
 ![](https://images.code.org/dacb010cde55bd80f820cafafbd3a7d5-image-1626881552425.32.03 AM.png)
 MARKDOWN
