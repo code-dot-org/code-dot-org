@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:31 UTC",
+    "serialized_at": "2021-08-11 01:51:04 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
@@ -48,7 +48,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Navigating this Professional Learning Course",
+      "name": "Navigating this professional learning course",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -121,7 +121,6 @@
           "SP-VPL-21-mod1-welcome-vid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -146,7 +145,6 @@
           "SP-VPL-21-mod1-CSisFoundational"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +169,6 @@
           "SP-VPL-CSD-21-Navigation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
