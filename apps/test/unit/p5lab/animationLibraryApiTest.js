@@ -1,9 +1,24 @@
 import sinon from 'sinon';
 import {expect, assert} from '../../util/reconfiguredChai';
-import {regenerateDefaultSpriteMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {
+  regenerateDefaultSpriteMetadata,
+  createDefaultSpriteMetadata
+} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 describe('animationLibraryApi', () => {
   let fetchSpy;
+  const defaultList = {
+    default_sprites: [
+      {
+        name: 'hippo',
+        key: 'category_animals/hippo'
+      },
+      {
+        name: 'wheat',
+        key: 'category_video_games/wheat'
+      }
+    ]
+  };
 
   beforeEach(() => {
     fetchSpy = sinon.stub(window, 'fetch');
@@ -14,19 +29,6 @@ describe('animationLibraryApi', () => {
   });
 
   describe('regenerateDefaultSpriteMetadata', () => {
-    let defaultList = {
-      default_sprites: [
-        {
-          name: 'hippo',
-          key: 'category_animals/hippo'
-        },
-        {
-          name: 'wheat',
-          key: 'category_video_games/wheat'
-        }
-      ]
-    };
-
     it('sends data to middleware in POST', () => {
       fetchSpy.returns(Promise.resolve({ok: true}));
 
@@ -62,11 +64,28 @@ describe('animationLibraryApi', () => {
   });
 
   describe('createDefaultSpriteMetadata', () => {
-    // check that props were translated
-    // check that UUID was created
+    it('generates sprite metadata from animation library', () => {
+      // Check that orderedKeys exists and contains two keys
+      const spriteMetadata = JSON.parse(
+        createDefaultSpriteMetadata(defaultList)
+      );
+      expect(spriteMetadata).to.have.property('orderedKeys');
+      expect(spriteMetadata.orderedKeys).to.have.length(2);
 
-    it('generates sprite props and sends to middleware', () => {});
+      // Check that keys are created in our UUID format
+      const firstKey = spriteMetadata.orderedKeys[0];
+      expect(firstKey).to.match(/^........-....-4...-....-............$/);
 
-    it('throws error when bad response', () => {});
+      //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
+      // a properly formatted sourceUrl, and the expected number of props.
+      const firstSpriteProps = spriteMetadata.propsByKey[firstKey];
+      expect(firstSpriteProps)
+        .to.have.property('sourceUrl')
+        .that.has.string('https://studio.code.org');
+      expect(firstSpriteProps)
+        .to.have.property('name')
+        .that.equals('hippo');
+      expect(Object.keys(firstSpriteProps)).to.have.length(8);
+    });
   });
 });
