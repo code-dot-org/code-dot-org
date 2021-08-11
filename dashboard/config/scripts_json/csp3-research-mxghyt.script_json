@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:05 UTC",
+    "serialized_at": "2021-08-03 22:47:14 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp3-research-mxghyt"
@@ -297,7 +297,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -322,7 +321,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,7 +345,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +369,6 @@
         ],
         "progression": "Quick Check-In"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +393,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,7 +417,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -447,7 +441,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -472,7 +465,6 @@
         ],
         "progression": "Turtle Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +489,6 @@
         ],
         "progression": "Introducing Simple Commands and Subgoals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +513,6 @@
         ],
         "progression": "Introducing Simple Commands and Subgoals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +537,6 @@
         ],
         "progression": "Introducing Simple Commands and Subgoals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -572,7 +561,6 @@
         ],
         "progression": "Introducing Simple Commands and Subgoals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -597,7 +585,6 @@
         ],
         "progression": "Introducing Simple Commands and Subgoals"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -622,7 +609,6 @@
         ],
         "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -647,7 +633,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -672,7 +657,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -697,7 +681,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -722,7 +705,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -747,7 +729,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -772,7 +753,6 @@
         ],
         "progression": "Defining and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -797,7 +777,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -822,7 +801,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -847,7 +825,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -872,7 +849,6 @@
         ],
         "progression": "(new) Abstraction in Programming"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -897,7 +873,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -922,7 +897,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -947,7 +921,6 @@
         ],
         "progression": "Using Functions With Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -972,7 +945,6 @@
         ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -997,7 +969,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1022,7 +993,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1017,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,7 +1041,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1097,7 +1065,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1122,7 +1089,6 @@
         ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1147,7 +1113,6 @@
         ],
         "progression": "Using Functions with Turtle Commands"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1172,7 +1137,6 @@
         ],
         "progression": "(new)AP Practice Response - Design Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1161,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1222,7 +1185,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1247,7 +1209,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1272,7 +1233,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1297,7 +1257,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1322,7 +1281,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1347,7 +1305,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1372,7 +1329,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1397,7 +1353,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1422,7 +1377,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1447,7 +1401,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1472,7 +1425,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1497,7 +1449,6 @@
         ],
         "progression": "Introduction to Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,7 +1473,6 @@
         ],
         "progression": "Make Your Own Turtle Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1547,7 +1497,6 @@
         ],
         "progression": "(new)AP Practice Response - Score a student response"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1572,7 +1521,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1597,7 +1545,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1622,7 +1569,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1647,7 +1593,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1672,7 +1617,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1697,7 +1641,6 @@
         ],
         "progression": "Functions with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1722,7 +1665,6 @@
         ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1747,7 +1689,6 @@
         ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1772,7 +1713,6 @@
         ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1797,7 +1737,6 @@
         ],
         "progression": "Drawing Shapes With Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1822,7 +1761,6 @@
         ],
         "progression": "Check Your Understanding: Defining Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1847,7 +1785,6 @@
         ],
         "progression": "(new) How to add comments to code"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1872,7 +1809,6 @@
         ],
         "progression": "(new) How to add comments to code"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1897,7 +1833,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1922,7 +1857,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1881,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1972,7 +1905,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1997,7 +1929,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2022,7 +1953,6 @@
         ],
         "progression": "Under the Sea Drawing with Parameters"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2047,7 +1977,6 @@
         ],
         "progression": "Check Your Understanding: Using Random Numbers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2072,7 +2001,6 @@
         ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2025,6 @@
         ],
         "progression": "(new)AP Practice Response - Managing Complexity"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2049,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2147,7 +2073,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2172,7 +2097,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2197,7 +2121,6 @@
         ],
         "progression": "Using Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2222,7 +2145,6 @@
         ],
         "progression": "Introduction to Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2247,7 +2169,6 @@
         ],
         "progression": "Introduction to Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2272,7 +2193,6 @@
         ],
         "progression": "Introduction to Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2297,7 +2217,6 @@
         ],
         "progression": "Introduction to Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2322,7 +2241,6 @@
         ],
         "progression": "Introduction to Loops"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2347,7 +2265,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2372,7 +2289,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2397,7 +2313,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2422,7 +2337,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2447,7 +2361,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2472,7 +2385,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2497,7 +2409,6 @@
         ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2522,7 +2433,6 @@
         ],
         "progression": "Project: Under the Sea"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2547,7 +2457,6 @@
         ],
         "progression": "(new)AP Practice Response - Identify the Abstraction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2572,7 +2481,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2597,7 +2505,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2622,7 +2529,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2647,7 +2553,6 @@
         ],
         "progression": "Lesson Vocabulary & Resources"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2672,7 +2577,6 @@
         ],
         "progression": "Design Your Components"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2694,9 +2598,9 @@
       "properties": {
         "level_keys": [
           "How To: Share Code with Teammates"
-        ]
+        ],
+        "progression": "How To: Share Code with Teammates"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2721,7 +2625,6 @@
         ],
         "progression": "Challenge: Design Your Digital Scene"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2762,7 +2665,6 @@
           }
         }
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2788,7 +2690,6 @@
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2812,7 +2713,6 @@
           "csp-post-survey-2017-levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

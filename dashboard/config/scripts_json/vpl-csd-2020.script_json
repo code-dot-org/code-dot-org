@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:01 UTC",
+    "serialized_at": "2021-08-03 22:48:01 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
@@ -187,7 +187,6 @@
         ],
         "progression": "Module 1 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +211,6 @@
         ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -237,7 +235,6 @@
         ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -262,7 +259,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -287,7 +283,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -312,7 +307,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -337,7 +331,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -362,7 +355,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +379,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -412,7 +403,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -437,7 +427,6 @@
         ],
         "progression": "New Content (~ 35 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -462,7 +451,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -487,7 +475,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +499,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +523,6 @@
         ],
         "progression": "Debugging (~ 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -562,7 +547,6 @@
         ],
         "progression": "Module 1 Asynchronous Wrap Up (~ 10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -587,7 +571,6 @@
         ],
         "progression": "Module 2 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -612,7 +595,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -637,7 +619,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -662,7 +643,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -687,7 +667,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -712,7 +691,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -737,7 +715,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -762,7 +739,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -787,7 +763,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -812,7 +787,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -837,7 +811,6 @@
         ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -862,7 +835,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -887,7 +859,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -912,7 +883,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -937,7 +907,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -962,7 +931,6 @@
         ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -987,7 +955,6 @@
         ],
         "progression": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1012,7 +979,6 @@
         ],
         "progression": "Module 3 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1037,7 +1003,6 @@
         ],
         "progression": "Check In (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1062,7 +1027,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1087,7 +1051,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1112,7 +1075,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1137,7 +1099,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1162,7 +1123,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1187,7 +1147,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1212,7 +1171,6 @@
         ],
         "progression": "Reflection (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1237,7 +1195,6 @@
         ],
         "progression": "Intro to Group Dynamics (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1262,7 +1219,6 @@
         ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1287,7 +1243,6 @@
         ],
         "progression": "Module 4 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1312,7 +1267,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1337,7 +1291,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1362,7 +1315,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1387,7 +1339,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1412,7 +1363,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1437,7 +1387,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1462,7 +1411,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1487,7 +1435,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1512,7 +1459,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1537,7 +1483,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1562,7 +1507,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1587,7 +1531,6 @@
         ],
         "progression": "Lesson Investigation (~70 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1612,7 +1555,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1637,7 +1579,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1662,7 +1603,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1687,7 +1627,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1712,7 +1651,6 @@
         ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1737,7 +1675,6 @@
         ],
         "progression": "Module 5 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1762,7 +1699,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1787,7 +1723,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1812,7 +1747,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1837,7 +1771,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1862,7 +1795,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1887,7 +1819,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1912,7 +1843,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1937,7 +1867,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1962,7 +1891,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1987,7 +1915,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2012,7 +1939,6 @@
         ],
         "progression": "Lesson Investigation (~65 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2037,7 +1963,6 @@
         ],
         "progression": "Reflection (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2062,7 +1987,6 @@
         ],
         "progression": "Supporting Equity (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2087,7 +2011,6 @@
         ],
         "progression": "Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2112,7 +2035,6 @@
         ],
         "progression": "Module 6 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2137,7 +2059,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2162,7 +2083,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2187,7 +2107,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2212,7 +2131,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2237,7 +2155,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2262,7 +2179,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2287,7 +2203,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2312,7 +2227,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2337,7 +2251,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2362,7 +2275,6 @@
         ],
         "progression": "Lesson Investigation (~60 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2387,7 +2299,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2412,7 +2323,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2437,7 +2347,6 @@
         ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2462,7 +2371,6 @@
         ],
         "progression": "Differentiation (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2487,7 +2395,6 @@
         ],
         "progression": "Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2512,7 +2419,6 @@
         ],
         "progression": "Module 7 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2537,7 +2443,6 @@
         ],
         "progression": "Theme Introduction (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2562,7 +2467,6 @@
         ],
         "progression": "Curriculum Investigation Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2587,7 +2491,6 @@
         ],
         "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2612,7 +2515,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2637,7 +2539,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2662,7 +2563,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2687,7 +2587,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2712,7 +2611,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2737,7 +2635,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2762,7 +2659,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2787,7 +2683,6 @@
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2812,7 +2707,6 @@
         ],
         "progression": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2837,7 +2731,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2862,7 +2755,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2887,7 +2779,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2912,7 +2803,6 @@
         ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2937,7 +2827,6 @@
         ],
         "progression": "Reflection: Problem Solving Process for Programming (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2962,7 +2851,6 @@
         ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2987,7 +2875,6 @@
         ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3012,7 +2899,6 @@
         ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3037,7 +2923,6 @@
         ],
         "progression": "Module 8 Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3062,7 +2947,6 @@
         ],
         "progression": "Curriculum Investigation Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3087,7 +2971,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3112,7 +2995,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3137,7 +3019,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3162,7 +3043,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3187,7 +3067,6 @@
         ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3212,7 +3091,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3237,7 +3115,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3262,7 +3139,6 @@
         ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3287,7 +3163,6 @@
         ],
         "progression": "Equity Journey (~5 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3312,7 +3187,6 @@
         ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

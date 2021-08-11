@@ -13,7 +13,11 @@ export default class StandardsReportHeader extends Component {
     return (
       <div style={styles.header}>
         <div style={styles.imageAndTitle}>
-          <img src="/shared/images/CodeLogo_White.png" style={styles.logo} />
+          <img
+            src="/shared/images/CodeLogo_White.png"
+            style={styles.logo}
+            alt={i18n.codeLogo()}
+          />
           <div style={styles.headerName}>{i18n.standardsReportHeader()}</div>
         </div>
         <div style={styles.headerRightColumn}>

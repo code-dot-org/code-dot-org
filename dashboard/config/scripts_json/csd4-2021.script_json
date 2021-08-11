@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:18 UTC",
+    "serialized_at": "2021-08-06 15:39:52 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd4-2021"
@@ -5893,7 +5893,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5919,7 +5918,6 @@
         ],
         "progression": "Sample Apps for Good"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5945,7 +5943,6 @@
         ],
         "progression": "Sample Apps for Good"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5971,7 +5968,6 @@
         ],
         "progression": "Sample Apps for Good"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5997,7 +5993,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6023,7 +6018,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6049,7 +6043,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6075,7 +6068,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6101,7 +6093,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6127,7 +6118,6 @@
         ],
         "progression": "Example Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6153,7 +6143,6 @@
         ],
         "progression": "Video: Intro to Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6179,7 +6168,6 @@
         ],
         "progression": "Build a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6205,7 +6193,6 @@
         ],
         "progression": "Build a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6231,7 +6218,6 @@
         ],
         "progression": "Build a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6257,7 +6243,6 @@
         ],
         "progression": "Build a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6283,7 +6268,6 @@
         ],
         "progression": "Finish a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6309,7 +6293,6 @@
         ],
         "progression": "Finish a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6335,7 +6318,6 @@
         ],
         "progression": "Finish a Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6361,7 +6343,6 @@
         ],
         "progression": "Design a Screen for your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6387,7 +6368,6 @@
         ],
         "progression": "App Project: Screen Design"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6413,7 +6393,6 @@
         ],
         "progression": "Adding Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6439,7 +6418,6 @@
         ],
         "progression": "Adding Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6465,7 +6443,6 @@
         ],
         "progression": "Adding Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6491,7 +6468,6 @@
         ],
         "progression": "Adding Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6517,7 +6493,6 @@
         ],
         "progression": "Events and Linking Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6543,7 +6518,6 @@
         ],
         "progression": "Events and Linking Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6569,7 +6543,6 @@
         ],
         "progression": "Events and Linking Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6595,7 +6568,6 @@
         ],
         "progression": "Combining Projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6621,7 +6593,6 @@
         ],
         "progression": "Combining Projects"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6647,7 +6618,6 @@
         ],
         "progression": "Updating Your Prototype"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6673,7 +6643,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6698,7 +6667,6 @@
           "CSD User Centered Design Post-Project Test_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6723,7 +6691,6 @@
           "CSD survey_placeholder_levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7270,6 +7237,18 @@
       }
     },
     {
+      "name": "Bugs and Features",
+      "url": "https://docs.google.com/document/d/1265CpF9-hjVtzzVy4q9hZzzlTIxE_F8Ky8Std-7vgA8/edit",
+      "key": "bugs_and_features",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "bugs_and_features"
+      }
+    },
+    {
       "name": "Changing Screens",
       "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
       "key": "changing_screens",
@@ -7438,6 +7417,18 @@
       },
       "seeding_key": {
         "resource.key": "explore-ui-elements"
+      }
+    },
+    {
+      "name": "Explore UI Elements",
+      "url": "https://docs.google.com/document/d/1L01gXcQN0ObiRNDZLy-QjKWJbXEMPlYLRdiXgdhUvgA/edit",
+      "key": "explore_ui_elements",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "explore_ui_elements"
       }
     },
     {
@@ -7614,6 +7605,30 @@
       },
       "seeding_key": {
         "resource.key": "paper_prototype_-_student_checklist"
+      }
+    },
+    {
+      "name": "Paper Prototype Planning",
+      "url": "https://docs.google.com/document/d/1hiMawWN9iTFxyremD9-adXrrrBDmXvBGyX3o27nCQC8/edit",
+      "key": "paper_prototype_planning",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "paper_prototype_planning"
+      }
+    },
+    {
+      "name": "Paper Prototype User Testing",
+      "url": "https://docs.google.com/document/d/1GC8GXJuYyy2MCzQrOBov-AZU-twa1jSnuzh823w7Xnc/edit",
+      "key": "paper_prototype_user_testing",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "paper_prototype_user_testing"
       }
     },
     {
@@ -7901,18 +7916,6 @@
       }
     },
     {
-      "name": "User Centered Design",
-      "url": "https://docs.google.com/document/d/1XI02ssNt_W9zWRU1IsYtekN7KHWZ5sM48D5cjJAPlOs/edit",
-      "key": "user-centered-design-exemplar-19",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "user-centered-design-exemplar-19"
-      }
-    },
-    {
       "name": "User Centered Design (Try & Reflect) 2021",
       "url": "https://docs.google.com/document/d/1mHWy7a3_eSdEgjXRFCb1ezGFdi1QMgPTtitqHap0ERQ/view",
       "key": "user-centered-design-reflect-2021",
@@ -7927,7 +7930,7 @@
     },
     {
       "name": "User Testing (Computer)",
-      "url": "https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/edit",
+      "url": "https://docs.google.com/document/d/1_ce_F8_tnexWhS718ALJadACNKe0oomeIeyKTwuWmAg/edit",
       "key": "user-experience-computer",
       "properties": {
         "type": "Activity Guide",
@@ -7940,7 +7943,7 @@
     },
     {
       "name": "User Testing (User)",
-      "url": "https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/edit",
+      "url": "https://docs.google.com/document/d/1qE028_n5aq9n8ebVm09uzu0169ykzvxfl8pUvV6S6D8/edit",
       "key": "user-experience-user",
       "properties": {
         "type": "Activity Guide",
@@ -7953,7 +7956,7 @@
     },
     {
       "name": "User Interface Screens",
-      "url": "https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/edit",
+      "url": "https://docs.google.com/document/d/1Mirzvq92BRcGrI4z0Mm4HamTTu_bkBiXFfsHYxTzXAM/edit",
       "key": "user-interface-screens",
       "properties": {
         "type": "Resource",
@@ -8004,6 +8007,42 @@
       }
     },
     {
+      "name": "User Centered Design (Define & Prepare)",
+      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
+      "key": "user_centered_design_define_prepare_",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "name": "User Centered Design (Try & Reflect)",
+      "url": "https://docs.google.com/document/d/1H_eXRckFRPnYGBoheT8DEauzwzc58Kp1XUOVCwtYZ_U/edit",
+      "key": "user_centered_design_try_reflect_",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_try_reflect_"
+      }
+    },
+    {
+      "name": "User Test Cases",
+      "url": "https://docs.google.com/document/d/1sY0WomOU0tFfIeBRCPzJCKs6LLI7kpmPNfYccwtcvi0/edit",
+      "key": "user_test_cases",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "user_test_cases"
+      }
+    },
+    {
       "name": "What's For Lunch Testing",
       "url": "https://www.youtube.com/watch?v=ny5UbRpG6PE",
       "key": "whats-for-lunch-testing",
@@ -8045,6 +8084,12 @@
       "seeding_key": {
         "lesson.key": "Bugs and Features",
         "resource.key": "bugs-and-features-planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "resource.key": "bugs_and_features"
       }
     },
     {
@@ -8141,6 +8186,12 @@
       "seeding_key": {
         "lesson.key": "Exploring UI Elements",
         "resource.key": "explore-ui-elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "explore_ui_elements"
       }
     },
     {
@@ -8266,6 +8317,12 @@
     {
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
+        "resource.key": "paper_prototype_planning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
         "resource.key": "phone-paper-prototype"
       }
     },
@@ -8374,6 +8431,12 @@
     {
       "seeding_key": {
         "lesson.key": "Prototype Testing",
+        "resource.key": "paper_prototype_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
         "resource.key": "unit-4-the-design-process"
       }
     },
@@ -8381,6 +8444,12 @@
       "seeding_key": {
         "lesson.key": "Prototype Testing",
         "resource.key": "user-test-cases"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "user_test_cases"
       }
     },
     {
@@ -8524,7 +8593,7 @@
     {
       "seeding_key": {
         "lesson.key": "User-Centered Design 1",
-        "resource.key": "user-centered-design-exemplar-19"
+        "resource.key": "user_centered_design_define_prepare_"
       }
     },
     {
@@ -8536,13 +8605,13 @@
     {
       "seeding_key": {
         "lesson.key": "User-Centered Design 2",
-        "resource.key": "user-centered-design-exemplar-19"
+        "resource.key": "user-centered-design-reflect-2021"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User-Centered Design 2",
-        "resource.key": "user-centered-design-reflect-2021"
+        "resource.key": "user_centered_design_try_reflect_"
       }
     }
   ],

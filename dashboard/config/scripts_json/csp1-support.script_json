@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:32 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp1-support"
@@ -251,9 +251,9 @@
       "properties": {
         "level_keys": [
           "What's inside and how is it organized?"
-        ]
+        ],
+        "progression": "What's inside and how is it organized?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,9 +275,9 @@
       "properties": {
         "level_keys": [
           "Introduction to Unit 1"
-        ]
+        ],
+        "progression": "Introduction to Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,9 +299,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Teaching Philosophy and Commentary"
-        ]
+        ],
+        "progression": "Unit 1 Teaching Philosophy and Commentary"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,9 +323,9 @@
       "properties": {
         "level_keys": [
           "Teaching with the Internet Simulator"
-        ]
+        ],
+        "progression": "Teaching with the Internet Simulator"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,9 +347,9 @@
       "properties": {
         "level_keys": [
           "Practice Performance Tasks in Unit 1"
-        ]
+        ],
+        "progression": "Practice Performance Tasks in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -371,9 +371,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Self-Assessment"
-        ]
+        ],
+        "progression": "Unit 1 Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -395,9 +395,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Vocab and Concept Review Activity"
-        ]
+        ],
+        "progression": "Unit 1 Vocab and Concept Review Activity"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,9 +419,9 @@
       "properties": {
         "level_keys": [
           "AP Test Prep Guidance"
-        ]
+        ],
+        "progression": "AP Test Prep Guidance"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -443,9 +443,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.2 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.2 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -467,9 +467,9 @@
       "properties": {
         "level_keys": [
           "Understanding Communication Protocols"
-        ]
+        ],
+        "progression": "Understanding Communication Protocols"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -491,9 +491,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.3 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.3 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -515,9 +515,9 @@
       "properties": {
         "level_keys": [
           "Binary as an Encoding Scheme"
-        ]
+        ],
+        "progression": "Binary as an Encoding Scheme"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -539,9 +539,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Sending Binary Messages"
-        ]
+        ],
+        "progression": "Internet Simulator: Sending Binary Messages"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -563,9 +563,9 @@
       "properties": {
         "level_keys": [
           "The Internet: Wires, Cables, and Wifi"
-        ]
+        ],
+        "progression": "The Internet: Wires, Cables, and Wifi"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -587,9 +587,9 @@
       "properties": {
         "level_keys": [
           "Lessons 2 - 3: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lessons 2 - 3: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -611,9 +611,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.4 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.4 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -635,9 +635,9 @@
       "properties": {
         "level_keys": [
           "Why Teach Number Systems?"
-        ]
+        ],
+        "progression": "Why Teach Number Systems?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -659,9 +659,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.5 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.5 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -683,9 +683,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.6 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.6 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -707,9 +707,9 @@
       "properties": {
         "level_keys": [
           "Sending Numbers: The Big Picture"
-        ]
+        ],
+        "progression": "Sending Numbers: The Big Picture"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -731,9 +731,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Sending Numbers"
-        ]
+        ],
+        "progression": "Internet Simulator: Sending Numbers"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -755,9 +755,9 @@
       "properties": {
         "level_keys": [
           "Reflection: Create your Own Number System"
-        ]
+        ],
+        "progression": "Reflection: Create your Own Number System"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -779,9 +779,9 @@
       "properties": {
         "level_keys": [
           "Lessons 4 - 6: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lessons 4 - 6: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -803,9 +803,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.7 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.7 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -827,9 +827,9 @@
       "properties": {
         "level_keys": [
           "What is ASCII?"
-        ]
+        ],
+        "progression": "What is ASCII?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -851,9 +851,9 @@
       "properties": {
         "level_keys": [
           "Task: ASCII Representation of your Name"
-        ]
+        ],
+        "progression": "Task: ASCII Representation of your Name"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -875,9 +875,9 @@
       "properties": {
         "level_keys": [
           "What is HTML?"
-        ]
+        ],
+        "progression": "What is HTML?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,9 +899,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Sending Text"
-        ]
+        ],
+        "progression": "Internet Simulator: Sending Text"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -923,9 +923,9 @@
       "properties": {
         "level_keys": [
           "Lesson 7: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lesson 7: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -947,9 +947,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.9 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.9 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -971,9 +971,9 @@
       "properties": {
         "level_keys": [
           "Addressing in the Game of Battleship"
-        ]
+        ],
+        "progression": "Addressing in the Game of Battleship"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -995,9 +995,9 @@
       "properties": {
         "level_keys": [
           "Task: Develop a Battleship Protocol"
-        ]
+        ],
+        "progression": "Task: Develop a Battleship Protocol"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1019,9 +1019,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Broadcast"
-        ]
+        ],
+        "progression": "Internet Simulator: Broadcast"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1043,9 +1043,9 @@
       "properties": {
         "level_keys": [
           "The Internet: IP Addresses & DNS"
-        ]
+        ],
+        "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1067,9 +1067,9 @@
       "properties": {
         "level_keys": [
           "Lesson 9: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lesson 9: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1091,9 +1091,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.10 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.10 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1115,9 +1115,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Routers"
-        ]
+        ],
+        "progression": "Internet Simulator: Routers"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1139,9 +1139,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.11 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.11 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1163,9 +1163,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: Packets"
-        ]
+        ],
+        "progression": "Internet Simulator: Packets"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1187,9 +1187,9 @@
       "properties": {
         "level_keys": [
           "The Internet: Packets, Routing, and Reliability"
-        ]
+        ],
+        "progression": "The Internet: Packets, Routing, and Reliability"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1211,9 +1211,9 @@
       "properties": {
         "level_keys": [
           "Lessons 10 - 11: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lessons 10 - 11: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1235,9 +1235,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.12 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.12 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1259,9 +1259,9 @@
       "properties": {
         "level_keys": [
           "Internet Simulator: DNS"
-        ]
+        ],
+        "progression": "Internet Simulator: DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1283,9 +1283,9 @@
       "properties": {
         "level_keys": [
           "The Internet: IP Addresses & DNS"
-        ]
+        ],
+        "progression": "The Internet: IP Addresses & DNS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1307,9 +1307,9 @@
       "properties": {
         "level_keys": [
           "Lesson 1.13 Overview"
-        ]
+        ],
+        "progression": "Lesson 1.13 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1331,9 +1331,9 @@
       "properties": {
         "level_keys": [
           "The Internet: HTTP and HTML"
-        ]
+        ],
+        "progression": "The Internet: HTTP and HTML"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1355,9 +1355,9 @@
       "properties": {
         "level_keys": [
           "Lessons 12 - 13: Teaching and Student Support Plan"
-        ]
+        ],
+        "progression": "Lessons 12 - 13: Teaching and Student Support Plan"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1379,9 +1379,9 @@
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1403,9 +1403,9 @@
       "properties": {
         "level_keys": [
           "Group Work and Peer Learning in Unit 1"
-        ]
+        ],
+        "progression": "Group Work and Peer Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1427,9 +1427,9 @@
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1451,9 +1451,9 @@
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1475,9 +1475,9 @@
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1499,9 +1499,9 @@
       "properties": {
         "level_keys": [
           "Teaching Practice Plan: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Teaching Practice Plan: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1523,9 +1523,9 @@
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1547,9 +1547,9 @@
       "properties": {
         "level_keys": [
           "Balancing Teacher and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Balancing Teacher and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1571,9 +1571,9 @@
       "properties": {
         "level_keys": [
           "Classroom Management Tips for School Computer Labs"
-        ]
+        ],
+        "progression": "Classroom Management Tips for School Computer Labs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1595,9 +1595,9 @@
       "properties": {
         "level_keys": [
           "Considerations for the 1-to-1 Classroom"
-        ]
+        ],
+        "progression": "Considerations for the 1-to-1 Classroom"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1619,9 +1619,9 @@
       "properties": {
         "level_keys": [
           "Teaching Practice Plan: Balancing Teacher and Tools"
-        ]
+        ],
+        "progression": "Teaching Practice Plan: Balancing Teacher and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1643,9 +1643,9 @@
       "properties": {
         "level_keys": [
           "Overview: Discovery Learning"
-        ]
+        ],
+        "progression": "Overview: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1667,9 +1667,9 @@
       "properties": {
         "level_keys": [
           "Discovery Learning in Unit 1"
-        ]
+        ],
+        "progression": "Discovery Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1691,9 +1691,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning definition and history"
-        ]
+        ],
+        "progression": "Discovery learning definition and history"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1715,9 +1715,9 @@
       "properties": {
         "level_keys": [
           "Discovery learning techniques"
-        ]
+        ],
+        "progression": "Discovery learning techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1739,9 +1739,9 @@
       "properties": {
         "level_keys": [
           "Teaching Practice Plan: Discovery Learning"
-        ]
+        ],
+        "progression": "Teaching Practice Plan: Discovery Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1763,9 +1763,9 @@
       "properties": {
         "level_keys": [
           "Overview: Capturing Student Learning"
-        ]
+        ],
+        "progression": "Overview: Capturing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1787,9 +1787,9 @@
       "properties": {
         "level_keys": [
           "Assessing Student Learning in Unit 1"
-        ]
+        ],
+        "progression": "Assessing Student Learning in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1811,9 +1811,9 @@
       "properties": {
         "level_keys": [
           "What is the difference between formative and summative assessment?"
-        ]
+        ],
+        "progression": "What is the difference between formative and summative assessment?"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1835,9 +1835,9 @@
       "properties": {
         "level_keys": [
           "Designing Assessment Questions"
-        ]
+        ],
+        "progression": "Designing Assessment Questions"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1859,9 +1859,9 @@
       "properties": {
         "level_keys": [
           "Classroom Assessment Techniques"
-        ]
+        ],
+        "progression": "Classroom Assessment Techniques"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1883,9 +1883,9 @@
       "properties": {
         "level_keys": [
           "Teaching Practice Plan: Assessing Student Learning"
-        ]
+        ],
+        "progression": "Teaching Practice Plan: Assessing Student Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

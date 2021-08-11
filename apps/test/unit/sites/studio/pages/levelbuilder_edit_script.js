@@ -2,8 +2,13 @@ import sinon from 'sinon';
 import ReactDOM from 'react-dom';
 import {expect} from '../../../../util/deprecatedChai';
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('the level builder page init script', () => {
+  // Warnings allowed due to usage of deprecated componentWillReceiveProps
+  // lifecycle method.
+  allowConsoleWarnings();
+
   let container;
   beforeEach(() => {
     sinon.spy(ReactDOM, 'render');
