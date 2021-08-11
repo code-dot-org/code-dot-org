@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default function DefaultSpriteRow(props) {
-  let {name, keyValue, onDelete} = props;
+  let {name, keyValue, onDelete, onMove} = props;
   return (
     <div style={styles.assetRow}>
       <Button
@@ -13,6 +13,20 @@ export default function DefaultSpriteRow(props) {
         onClick={() => onDelete(name)}
         icon="trash"
         iconClassName="fa-trash"
+      />
+      <Button
+        color={Button.ButtonColor.gray}
+        onClick={() => onMove(true /*moveForward*/, name)}
+        size={Button.ButtonSize.narrow}
+        icon="arrow-up"
+        iconClassName="fa-arrow-up"
+      />
+      <Button
+        color={Button.ButtonColor.gray}
+        onClick={() => onMove(false /*moveForward*/, name)}
+        size={Button.ButtonSize.narrow}
+        icon="arrow-down"
+        iconClassName="fa-arrow-down"
       />
       <h3>
         {name}: {keyValue}
@@ -24,7 +38,8 @@ export default function DefaultSpriteRow(props) {
 DefaultSpriteRow.propTypes = {
   name: PropTypes.string.isRequired,
   keyValue: PropTypes.string.isRequired,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func.isRequired,
+  onMove: PropTypes.func.isRequired
 };
 
 const styles = {

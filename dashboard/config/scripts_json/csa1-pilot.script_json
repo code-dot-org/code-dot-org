@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 15:12:56 UTC",
+    "serialized_at": "2021-08-10 18:49:26 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -50,7 +50,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Practice Levels"
+        "display_name": "Pilot Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -406,7 +406,7 @@
       "key": "lesson-20",
       "name": "Assessment Day",
       "absolute_position": 20,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
@@ -423,7 +423,7 @@
     },
     {
       "key": "lesson-21",
-      "name": "Practice Lesson",
+      "name": "Unit 1 Pilot Survey",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
@@ -1303,12 +1303,12 @@
       }
     },
     {
-      "key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
+      "key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e",
+        "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5",
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
@@ -2934,7 +2934,7 @@
       "key": "d7d0d734-3dee-47b7-a3ae-808487ab780b",
       "position": 7,
       "properties": {
-        "description": "The next step of the code review is to review the author’s program. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it.",
+        "description": "The next step of the code review is to review the author’s program. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the individual who wrote it.",
         "duration": "15",
         "name": "Writing Good Feedback",
         "remarks": true
@@ -4699,6 +4699,17 @@
       }
     },
     {
+      "key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 1 Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2",
+        "lesson_activity.key": "2375e8c8-75e5-4a83-9bb2-80d9fbe488dc"
+      }
+    },
+    {
       "key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
       "position": 1,
       "properties": {
@@ -4717,25 +4728,14 @@
       }
     },
     {
-      "key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
+      "key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d",
       "position": 1,
       "properties": {
-        "progression_name": "Neighborhood Practice Levels"
+        "progression_name": "CSA Pilot Survey Unit 1"
       },
       "seeding_key": {
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b",
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
-      }
-    },
-    {
-      "key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
-      "position": 2,
-      "properties": {
-        "progression_name": "Console Practice Level"
-      },
-      "seeding_key": {
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6",
-        "lesson_activity.key": "cd8936a9-ab8a-465a-9aea-e0a9352be60e"
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d",
+        "lesson_activity.key": "0314f960-244c-40ad-9fc4-c43bf8dec7d5"
       }
     }
   ],
@@ -4751,7 +4751,6 @@
         ],
         "progression": "Exploring The Neighborhood"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4777,7 +4776,6 @@
         ],
         "progression": "Investigate the Painter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4803,7 +4801,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4829,7 +4826,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4855,7 +4851,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4881,7 +4876,6 @@
         ],
         "progression": "Methods to Move"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4907,7 +4901,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4933,7 +4926,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4959,7 +4951,6 @@
         ],
         "progression": "Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4985,7 +4976,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5011,7 +5001,6 @@
         ],
         "progression": "Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5037,7 +5026,6 @@
         ],
         "progression": "Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5063,7 +5051,6 @@
         ],
         "progression": "Checking for Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5089,7 +5076,6 @@
         ],
         "progression": "Debugging Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5115,7 +5101,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5141,7 +5126,6 @@
         ],
         "progression": "No-Argument Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5167,7 +5151,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5186,14 +5169,13 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L5-L3 2"
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5219,7 +5201,6 @@
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5238,14 +5219,13 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "CSA U1L5-L5 2"
         ],
         "progression": "Parameterized Constructors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5271,7 +5251,6 @@
         ],
         "progression": "Efficient Solutions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5297,7 +5276,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5323,7 +5301,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5349,7 +5326,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5375,7 +5351,6 @@
         ],
         "progression": "while Loops with New Boolean Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5401,7 +5376,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5427,7 +5401,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5453,7 +5426,6 @@
         ],
         "progression": "Using Your Toolbox"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5479,7 +5451,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5505,7 +5476,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5531,7 +5501,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5557,7 +5526,6 @@
         ],
         "progression": "Navigating Using if-else"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5583,7 +5551,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5609,7 +5576,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5635,7 +5601,6 @@
         ],
         "progression": "Logical Operator ! (not)"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5661,7 +5626,6 @@
         ],
         "progression": "The Code Review Cycle"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5687,7 +5651,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5713,7 +5676,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5739,7 +5701,6 @@
         ],
         "progression": "Painter: Turning and Turning"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5765,7 +5726,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5791,7 +5751,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5817,7 +5776,6 @@
         ],
         "progression": "Creating PainterPlus"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5843,7 +5801,6 @@
         ],
         "progression": "PainterPlus: turnRight()"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5869,7 +5826,6 @@
         ],
         "progression": "Bug: Calling a Subclass's Method on a Superclass Object"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5895,7 +5851,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5921,7 +5876,6 @@
         ],
         "progression": "Using PainterPlus Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5947,7 +5901,6 @@
         ],
         "progression": "PainterPlus Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5973,7 +5926,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5999,7 +5951,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6025,7 +5976,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6051,7 +6001,6 @@
         ],
         "progression": "Writing Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6077,7 +6026,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6103,7 +6051,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6129,7 +6076,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6155,7 +6101,6 @@
         ],
         "progression": "Using Painting Methods"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6181,7 +6126,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6207,7 +6151,6 @@
         ],
         "progression": "Writing the SprayPainter Class"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6233,7 +6176,6 @@
         ],
         "progression": "SprayPainter Mural"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6259,7 +6201,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6285,7 +6226,6 @@
         ],
         "progression": "Create StampPainter"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6311,7 +6251,6 @@
         ],
         "progression": "Create Your Stamp Method"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6337,7 +6276,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6363,7 +6301,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6389,7 +6326,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6414,7 +6350,6 @@
           "CSA U1L15-L1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6440,7 +6375,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6466,7 +6400,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6492,7 +6425,6 @@
         ],
         "progression": "Asphalt Art Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6511,156 +6443,50 @@
       "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "Neighborhood 8x8 Practice Level"
+          "CSA Unit 1 Pilot Assessment 2021"
         ],
-        "progression": "Neighborhood Practice Levels"
+        "progression": "Unit 1 Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Neighborhood 8x8 Practice Level"
+          "CSA Unit 1 Pilot Assessment 2021"
         ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2"
       },
       "level_keys": [
-        "Neighborhood 8x8 Practice Level"
+        "CSA Unit 1 Pilot Assessment 2021"
       ]
     },
     {
       "chapter": 70,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 16x16 Practice Level"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 16x16 Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 16x16 Practice Level"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 8x8 Practice with Barriers"
-      ]
-    },
-    {
-      "chapter": 72,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood 13x13 Practice with Barriers"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Neighborhood Demos"
-        ],
-        "progression": "Neighborhood Practice Levels"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Neighborhood Demos"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      },
-      "level_keys": [
-        "Neighborhood Demos"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 6,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Console Practice Level"
+          "CSA Pilot Survey Unit 1"
         ],
-        "progression": "Console Practice Level"
+        "progression": "CSA Pilot Survey Unit 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Console Practice Level"
+          "CSA Pilot Survey Unit 1"
         ],
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot",
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d"
       },
       "level_keys": [
-        "Console Practice Level"
+        "CSA Pilot Survey Unit 1"
       ]
     }
   ],
@@ -7483,74 +7309,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Neighborhood 8x8 Practice Level",
+        "level.key": "CSA Unit 1 Pilot Assessment 2021",
         "script_level.level_keys": [
-          "Neighborhood 8x8 Practice Level"
+          "CSA Unit 1 Pilot Assessment 2021"
         ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
+        "activity_section.key": "b55aa0e4-bca1-4783-9788-159aef7270c2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Neighborhood 16x16 Practice Level",
+        "level.key": "CSA Pilot Survey Unit 1",
         "script_level.level_keys": [
-          "Neighborhood 16x16 Practice Level"
+          "CSA Pilot Survey Unit 1"
         ],
         "lesson.key": "lesson-21",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood 8x8 Practice with Barriers",
-        "script_level.level_keys": [
-          "Neighborhood 8x8 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood 13x13 Practice with Barriers",
-        "script_level.level_keys": [
-          "Neighborhood 13x13 Practice with Barriers"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Neighborhood Demos",
-        "script_level.level_keys": [
-          "Neighborhood Demos"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "1eafa288-36d9-424f-85a6-f50d52a6ab8b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Console Practice Level",
-        "script_level.level_keys": [
-          "Console Practice Level"
-        ],
-        "lesson.key": "lesson-21",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-pilot",
-        "activity_section.key": "7523cc5e-464f-4969-bffb-7cf327fe11a6"
+        "activity_section.key": "7f6ac50e-f299-4118-8c09-d8a5f1a51b7d"
       }
     }
   ],
@@ -7871,6 +7649,18 @@
       }
     },
     {
+      "name": "Conditionals",
+      "url": "https://drive.google.com/file/d/1hyWJDDhNPcwc98qjfeHwUifAzo3dkxYl/view?usp=sharing",
+      "key": "conditionals",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
       "name": "Create Your Stamp",
       "url": "https://docs.google.com/document/d/14Dfvbwje3LDMkc83wSBElT-VK3zVu1ImH7RzJab0k9s/edit?usp=sharing",
       "key": "create_your_stamp",
@@ -7881,6 +7671,18 @@
       },
       "seeding_key": {
         "resource.key": "create_your_stamp"
+      }
+    },
+    {
+      "name": "Creating Objects",
+      "url": "https://drive.google.com/file/d/1Yvi3F7mT5I3y4qiYMsyMYpnqmTTOtGLR/view?usp=sharing",
+      "key": "creating_objects",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creating_objects"
       }
     },
     {
@@ -7907,6 +7709,18 @@
       },
       "seeding_key": {
         "resource.key": "harmonica_app_open_source_code"
+      }
+    },
+    {
+      "name": "if-else Statements",
+      "url": "https://drive.google.com/file/d/1h-BRs9A-UO_OHAqRA6coeYi_8ri-6aE1/view?usp=sharing",
+      "key": "if-else_statements",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if-else_statements"
       }
     },
     {
@@ -7958,6 +7772,30 @@
       },
       "seeding_key": {
         "resource.key": "painter_says"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://youtu.be/q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Parameterized Constructors",
+      "url": "https://drive.google.com/file/d/1sFcHpes5Sl1T0tEF8yrt0JV4cjDbJo9S/view?usp=sharing",
+      "key": "parameterized_constructors",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "parameterized_constructors"
       }
     },
     {
@@ -8280,6 +8118,18 @@
       "seeding_key": {
         "resource.key": "vocabulary_draw"
       }
+    },
+    {
+      "name": "What is Java?",
+      "url": "https://drive.google.com/file/d/1E5L-ADA40ai9CGrpdUkfZIHwPCr1QBPx/view?usp=sharing",
+      "key": "what_is_java_",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_java_"
+      }
     }
   ],
   "lessons_resources": [
@@ -8597,6 +8447,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "what_is_java_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-20",
         "resource.key": "unit_1_presentation_slides"
       }
@@ -8616,6 +8472,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "u1l3_extra_practice"
       }
     },
@@ -8629,6 +8491,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "conditionals"
       }
     },
     {
@@ -8653,6 +8521,18 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "creating_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "parameterized_constructors"
       }
     },
     {
@@ -8701,6 +8581,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "if-else_statements"
       }
     },
     {

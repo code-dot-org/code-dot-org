@@ -9,6 +9,7 @@ import {
   allowConsoleWarnings,
   createMouseEvent
 } from '../../../../util/testUtils.js';
+import * as utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,
@@ -66,6 +67,8 @@ describe('The JSDebugger component', () => {
       removeEventSpy.withArgs(e);
     });
 
+    sinon.stub(utils, 'fireResizeEvent');
+
     root = mount(
       <Provider store={getStore()}>
         <JsDebugger onSlideOpen={sinon.spy()} onSlideShut={sinon.spy()} />
@@ -79,6 +82,7 @@ describe('The JSDebugger component', () => {
   afterEach(() => {
     root.unmount();
     dom.getTouchEventName.restore();
+    utils.fireResizeEvent.restore();
     restoreRedux();
   });
 
