@@ -3017,7 +3017,7 @@ class ScriptTest < ActiveSupport::TestCase
       )
     end
     assert_includes error.message, 'Duplicate entry'
-    assert_includes error.message, "for key 'script_levels.index_script_levels_on_seed_key'"
+    assert_includes error.message, "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'can add unplugged for lesson' do
