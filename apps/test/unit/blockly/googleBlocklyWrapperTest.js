@@ -1,7 +1,7 @@
 /* global Blockly */
 import GoogleBlockly from 'blockly/core';
-import initializeGoogleBlocklyWrapper from '@cdo/apps/sites/studio/pages/googleBlocklyWrapper';
-import {expect} from '../../../../util/reconfiguredChai';
+import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+import {expect} from '../../util/reconfiguredChai';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
 describe('Google Blockly Wrapper', () => {

@@ -36,6 +36,34 @@ export const commands = {
     };
   },
 
+  glideFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      if (sprite.glideTargets?.length > 0) {
+        let currentTarget = sprite.glideTargets[0];
+        let distance = Math.sqrt(
+          (sprite.x - currentTarget.x) ** 2 + (sprite.y - currentTarget.y) ** 2
+        );
+        if (distance < sprite.speed) {
+          sprite.x = currentTarget.x;
+          sprite.y = currentTarget.y;
+          sprite.glideTargets.shift();
+        } else {
+          let angle = Math.atan2(
+            currentTarget.y - sprite.y,
+            currentTarget.x - sprite.x
+          );
+          if (!isNaN(angle)) {
+            let dy = Math.sin(angle) * sprite.speed;
+            let dx = Math.cos(angle) * sprite.speed;
+            sprite.x += dx;
+            sprite.y += dy;
+          }
+        }
+      }
+    };
+  },
+
   avoidingTargetsFunc() {
     return spriteArg => {
       const sprite = this.getSpriteArray(spriteArg)[0];
