@@ -16,8 +16,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 16:47:51 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-07-30 20:28:30 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd7-2021"
     }
@@ -8168,6 +8168,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
         "progression": "Check-In Survey"
       },
       "named_level": false,
@@ -9491,6 +9494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,

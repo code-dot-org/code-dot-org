@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:21 UTC",
+    "serialized_at": "2021-08-03 22:47:21 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp3-recovery"
@@ -64,7 +64,6 @@
         ],
         "progression": "Click here for instructions on how to recover your Under the Sea project code."
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

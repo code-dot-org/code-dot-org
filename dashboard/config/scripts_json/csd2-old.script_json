@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:50 UTC",
+    "serialized_at": "2021-08-03 22:47:09 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd2-old"
@@ -285,9 +285,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 1 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 1 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -309,9 +309,9 @@
       "properties": {
         "level_keys": [
           "Rating Websites"
-        ]
+        ],
+        "progression": "Rating Websites"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -333,9 +333,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 2 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 2 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -357,9 +357,9 @@
       "properties": {
         "level_keys": [
           "Personal Website Examples"
-        ]
+        ],
+        "progression": "Personal Website Examples"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,9 +381,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 3 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 3 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,9 +405,9 @@
       "properties": {
         "level_keys": [
           "CSD Design Instructions Site"
-        ]
+        ],
+        "progression": "CSD Design Instructions Site"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,9 +429,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 4 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 4 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,9 +453,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 1"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -479,7 +479,6 @@
           "CSDU2 - Type Anything"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -501,9 +500,9 @@
       "properties": {
         "level_keys": [
           "CSDU2 - Inspector Warm Up"
-        ]
+        ],
+        "progression": "CSDU2 - Inspector Warm Up"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,9 +524,9 @@
       "properties": {
         "level_keys": [
           "Introduction to HTML"
-        ]
+        ],
+        "progression": "Introduction to HTML"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,9 +548,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 2"
-        ]
+        ],
+        "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,7 +574,6 @@
           "CSDU2 - First-Weblab"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,7 +597,6 @@
           "CSDU2 - Headers"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -623,7 +620,6 @@
           "CSDU2 - Paragraphs 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -647,7 +643,6 @@
           "CSD Header Size Prediction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -671,7 +666,6 @@
           "CSDU2 - Paragraphs 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -695,7 +689,6 @@
           "Hobbies Page Example"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -719,7 +712,6 @@
           "CSDU2 - HobbiesPage"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -741,9 +733,9 @@
       "properties": {
         "level_keys": [
           "Stop: Hobbies Page"
-        ]
+        ],
+        "progression": "Stop: Hobbies Page"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,7 +759,6 @@
           "Recipe Page Example"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -791,7 +782,6 @@
           "CSDU2 - Recipe Page Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -815,7 +805,6 @@
           "CSDU2 - Unordered Lists"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -839,7 +828,6 @@
           "CSDU2 - ordered Lists"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,9 +849,9 @@
       "properties": {
         "level_keys": [
           "CSDU2 - Finish Recipe"
-        ]
+        ],
+        "progression": "CSDU2 - Finish Recipe"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -885,9 +873,9 @@
       "properties": {
         "level_keys": [
           "Intro to Web Lab - Part 3"
-        ]
+        ],
+        "progression": "Intro to Web Lab - Part 3"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -909,9 +897,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 5 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 5 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -935,7 +923,6 @@
           "CSDU2 - Recipe Valid Update"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -959,7 +946,6 @@
           "CSDU2 - head and body tag intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -983,7 +969,6 @@
           "CSDU2 - Hobbies Valid Update"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,7 +992,6 @@
           "CSDU2 - Local Images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1029,9 +1013,9 @@
       "properties": {
         "level_keys": [
           "Stop: Images"
-        ]
+        ],
+        "progression": "Stop: Images"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1055,7 +1039,6 @@
           "CSDU2 - About Me Page start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1077,9 +1060,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 6 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 6 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1103,7 +1086,6 @@
           "CSDU2 - Debugging 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1127,7 +1109,6 @@
           "CSDU2 - Debugging 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1151,7 +1132,6 @@
           "CSDU2 - Debugging 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1175,7 +1155,6 @@
           "CSDU2 - Debugging 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1199,7 +1178,6 @@
           "CSD Creating Debugging Strat"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1221,9 +1199,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 7 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1245,9 +1223,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS"
-        ]
+        ],
+        "progression": "Video: Intro to CSS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1271,7 +1249,6 @@
           "CSD U2 text style h1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1295,7 +1272,6 @@
           "CSD U2 text style h3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1317,9 +1293,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 CSS explain"
-        ]
+        ],
+        "progression": "CSD U2 CSS explain"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1343,7 +1319,6 @@
           "CSD U2 text style size"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1367,7 +1342,6 @@
           "CSD U2 text style font family"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1391,7 +1365,6 @@
           "CSD U2 text style decoration"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1415,7 +1388,6 @@
           "CSD U2 text style text align"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1437,9 +1409,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 text style review"
-        ]
+        ],
+        "progression": "CSD U2 text style review"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1461,9 +1433,9 @@
       "properties": {
         "level_keys": [
           "Video: Intro to CSS Part 2"
-        ]
+        ],
+        "progression": "Video: Intro to CSS Part 2"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1487,7 +1459,6 @@
           "CSD U2 add file - OLD"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1511,7 +1482,6 @@
           "CSD U2 text style freeplay - OLD"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1533,9 +1503,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 8 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1559,7 +1529,6 @@
           "CSD U2 layout style sample"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1583,7 +1552,6 @@
           "CSD U2 layout style bgcolor"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1605,9 +1573,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 more CSS"
-        ]
+        ],
+        "progression": "CSD U2 more CSS"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1631,7 +1599,6 @@
           "CSD U2 layout style body"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1655,7 +1622,6 @@
           "CSD U2 layout style border"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1679,7 +1645,6 @@
           "CSD U2 layout style borderradius"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1703,7 +1668,6 @@
           "CSD U2 layout style float"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1727,7 +1691,6 @@
           "CSD U2 layout style width"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1751,7 +1714,6 @@
           "CSD U2 layout style margin"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1773,9 +1735,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 layout style review"
-        ]
+        ],
+        "progression": "CSD U2 layout style review"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1799,7 +1761,6 @@
           "CSD U2 layout style freeplay - OLD"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1821,9 +1782,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 9 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 9 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1845,9 +1806,9 @@
       "properties": {
         "level_keys": [
           "CSDU2 - Starting Personal Home Page"
-        ]
+        ],
+        "progression": "CSDU2 - Starting Personal Home Page"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1869,9 +1830,9 @@
       "properties": {
         "level_keys": [
           "Stop: Personal Home Page Warm Up"
-        ]
+        ],
+        "progression": "Stop: Personal Home Page Warm Up"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1895,7 +1856,6 @@
           "CSDU2 - Multi Site First"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1919,7 +1879,6 @@
           "CSDU2 - New Html Files"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1943,7 +1902,6 @@
           "CSDU2 - Copy Code"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1967,7 +1925,6 @@
           "CSDU2 - New Class Files"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1991,7 +1948,6 @@
           "CSDU2 - Link and Nav"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2015,7 +1971,6 @@
           "CSDU2 - Header of Page"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2039,7 +1994,6 @@
           "CSDU2 - Missing Home Link"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2061,9 +2015,9 @@
       "properties": {
         "level_keys": [
           "Stop: Website Navigation"
-        ]
+        ],
+        "progression": "Stop: Website Navigation"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2087,7 +2041,6 @@
           "CSDU2 - Nav on Personal Website"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2111,7 +2064,6 @@
           "CSDU2 - Nav add to Personal Site"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2135,7 +2087,6 @@
           "CSDU2 - Style to Personal Site"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2157,9 +2108,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 10 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2183,7 +2134,6 @@
           "CSD U2 RGB intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,9 +2155,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 RGB Colors"
-        ]
+        ],
+        "progression": "CSD U2 RGB Colors"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2231,7 +2181,6 @@
           "CSD U2 RGB winter"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2255,7 +2204,6 @@
           "CSD U2 RGB summer"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2279,7 +2227,6 @@
           "CSD U2 RGB others"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2303,7 +2250,6 @@
           "CSD U2 classes sample"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2325,9 +2271,9 @@
       "properties": {
         "level_keys": [
           "CSD U2 Classes Introduction"
-        ]
+        ],
+        "progression": "CSD U2 Classes Introduction"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2351,7 +2297,6 @@
           "CSD U2 classes modify"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2375,7 +2320,6 @@
           "CSD U2 classes spring"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2399,7 +2343,6 @@
           "CSD U2 classes summer"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2421,9 +2364,9 @@
       "properties": {
         "level_keys": [
           "Stop: Classes"
-        ]
+        ],
+        "progression": "Stop: Classes"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2447,7 +2390,6 @@
           "CSDU2 - Matching Class Style Checker"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2471,7 +2413,6 @@
           "CSDU2 - PW - Class Style Personal Site - OLD"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2493,9 +2434,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 11 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 11 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,9 +2458,9 @@
       "properties": {
         "level_keys": [
           "Peer Review: Personal Website"
-        ]
+        ],
+        "progression": "Peer Review: Personal Website"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2541,9 +2482,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 12 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 12 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2565,9 +2506,9 @@
       "properties": {
         "level_keys": [
           "Social Sleuth"
-        ]
+        ],
+        "progression": "Social Sleuth"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2589,9 +2530,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 13 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 13 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2615,7 +2556,6 @@
           "CSDU2 - PW - Pre Publishing Check"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2639,7 +2579,6 @@
           "CSDU2 - PW - Pre Publishing 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2663,7 +2602,6 @@
           "CSDU2 - PW - Pre Publishing 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2687,7 +2625,6 @@
           "CSDU2 - PW - Pre Publishing 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2711,7 +2648,6 @@
           "CSDU2 - PW - Pre Publishing 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2735,7 +2671,6 @@
           "CSDU2 - PW - Pre Publishing 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2757,9 +2692,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 14 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 14 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2781,9 +2716,9 @@
       "properties": {
         "level_keys": [
           "Search Engine Optimizer"
-        ]
+        ],
+        "progression": "Search Engine Optimizer"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2805,9 +2740,9 @@
       "properties": {
         "level_keys": [
           "How Search Works"
-        ]
+        ],
+        "progression": "How Search Works"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2831,7 +2766,6 @@
           "CSDU2 - SEO 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2855,7 +2789,6 @@
           "CSDU2 - SEO 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2879,7 +2812,6 @@
           "CSDU2 - SEO 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2903,7 +2835,6 @@
           "CSDU2 - SEO 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2927,7 +2858,6 @@
           "CSDU2 - SEO Final"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2949,9 +2879,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 15 Overview"
-        ]
+        ],
+        "progression": "Unit 2 Lesson 15 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2975,7 +2905,6 @@
           "CSDU2 IP Portfolio"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2999,7 +2928,6 @@
           "CSDU2 IP Fair Use"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3023,7 +2951,6 @@
           "CSDU2 IP Research Content"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3047,7 +2974,6 @@
           "CSDu2 IP CC Search"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3071,7 +2997,6 @@
           "CSDU2 IP Add Images"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3095,7 +3020,6 @@
           "CSDU2 IP Final Touches"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3117,9 +3041,9 @@
       "properties": {
         "level_keys": [
           "Unit 2 Lesson 16 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3141,9 +3065,9 @@
       "properties": {
         "level_keys": [
           "Final Personal Website - OLD"
-        ]
+        ],
+        "progression": "Final Personal Website"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

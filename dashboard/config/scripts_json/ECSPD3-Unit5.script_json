@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:08 UTC",
+    "serialized_at": "2021-08-03 22:46:52 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ECSPD3-Unit5"
@@ -137,7 +137,6 @@
           "ECS Phase 3 Welcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -161,7 +160,6 @@
           "ECSPD3-u5 about"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +183,6 @@
           "PD check your progress"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -209,7 +206,6 @@
           "ECSPD3-u5 plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +229,6 @@
           "ECSPD course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +252,6 @@
           "ECSPD3-u5 overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +275,6 @@
           "ECSPD3-u5 intro to u5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,7 +298,6 @@
           "ECSPD3-u5 connections"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +321,6 @@
           "CSPPD3-u5 what is data"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +344,6 @@
           "ECSPD3-u5 tools"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +367,6 @@
           "ECSPD3-u5 lesson overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +390,6 @@
           "ECSPD3-u5 day 1-3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +413,6 @@
           "ECSPD3-u5 day 4-5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +436,6 @@
           "ECSPD3-u5 day 6-7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -473,7 +459,6 @@
           "ECSPD3-u5 day 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +482,6 @@
           "ECSPD3-u5 day 9-12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +505,6 @@
           "ECSPD3-u5 day 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +528,6 @@
           "ECSPD3-u5 day 14-16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +551,6 @@
           "ECSPD3-u5 day 17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -593,7 +574,6 @@
           "ECSPD3-u5 day 18-20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +597,6 @@
           "ECSPD3-u5 day 21"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +620,6 @@
           "ECSPD3-u5 day 22-24"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +643,6 @@
           "ECSPD3-u5 day 25"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -689,7 +666,6 @@
           "ECSPD3-u5 day 26-27"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -713,7 +689,6 @@
           "ECSPD3-u5 day 28-29"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -737,7 +712,6 @@
           "ECSPD3-u5 day 30"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +735,6 @@
           "ECSPD3-u5 challenge inside"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -785,7 +758,6 @@
           "ECSPD3-u5 what is a challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -809,7 +781,6 @@
           "ECSPD3-u5 challenge details"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -833,7 +804,6 @@
           "ECSPD3-u5 list of challenges"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -857,7 +827,6 @@
           "CSPPD3-u2 expectations"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +850,6 @@
           "ECSPD3-u5 pick a challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -905,7 +873,6 @@
           "ECSPD3-u5 complete the challenge overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -929,7 +896,6 @@
           "ECSD3-u5 do the challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -953,7 +919,6 @@
           "CSPPD3-u2 create your extension"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -977,7 +942,6 @@
           "CSPPD3-u2 reflect on challenge"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1001,7 +965,6 @@
           "ECSPD3-u5 share out overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1025,7 +988,6 @@
           "ECSPD3-u5 post to forum"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1011,6 @@
           "ECSPD3-u5 submit"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1073,7 +1034,6 @@
           "ECSPD3-u5 post survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

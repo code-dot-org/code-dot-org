@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 16:29:14 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-02 21:21:49 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -1129,7 +1129,13 @@
       "key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
@@ -5578,8 +5584,8 @@
       }
     },
     {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "name": "Code.org How-to Videos",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how-to-videos",
       "properties": {
         "audience": "Teacher"
@@ -5614,7 +5620,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+      "name": "Build a Newspaper Table",
       "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
       "key": "intro-to-problem-solving-newspaper-table-2020",
       "properties": {
@@ -5638,7 +5644,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Spaghetti Bridge",
+      "name": "Spaghetti Bridge",
       "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
       "properties": {
@@ -5723,7 +5729,7 @@
       }
     },
     {
-      "name": "Processing",
+      "name": "Apps with Processing",
       "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
       "key": "processing-2020",
       "properties": {
@@ -5798,11 +5804,11 @@
       }
     },
     {
-      "name": "Solving Problems ",
+      "name": "Tangrams",
       "url": "https://docs.google.com/document/d/15EVADKK_Dk3UVwDIbuRK6TLjIJJD8-6bVWPsu0zTvLc/edit",
       "key": "solving-problems-tangrams-2020",
       "properties": {
-        "type": "Tangrams",
+        "type": "Resource",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -5823,7 +5829,7 @@
       }
     },
     {
-      "name": "Storage",
+      "name": "Apps with Storage",
       "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
       "key": "storage",
       "properties": {
@@ -5836,7 +5842,7 @@
       }
     },
     {
-      "name": "Storage",
+      "name": "Apps with Storage",
       "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
       "key": "storage-1",
       "properties": {
@@ -5860,7 +5866,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/",
+      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
       "key": "the-problem-solving-process",
       "properties": {
         "type": "Activity Guide",

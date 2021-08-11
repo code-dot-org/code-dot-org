@@ -5,42 +5,44 @@ description 'description here'
 markdown <<MARKDOWN
 # Navigating to support
 
-<img src="https://images.code.org/9edd9f47a54fe869cd79466c018ba600-image-1625255716340.32.08 PM.png" style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQVRt-vt6HIIASMzdDDvAlhWfHCQYBJXHh8IcibPVd7naDakcLTjX1vFHVN0nHiuFYYDZg_SbvVk8SB/pub?w=432&h=219" style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
 
-### To access general teacher support:
+## Steps to access teacher support:
 
-1. Click on the "?" to access the support dropdown menu.
-2. Select the type of support you would like to access.
+##### **Step 1:** Click on the "?" to access the support dropdown menu.
+##### **Step 2:** Select the type of support you would like to access.
 
-Additional support.... 
 
 <div style= "clear:both"/>
 
-# Types of general teacher support
+# Types of teacher support
 
-<img src="https://images.code.org/dc36e49ec4a6eed993d5f5fae17c7416-image-1625258924035.46.35 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/d2df5f5c6a055ae3b8638824d8842aa1-image-1627660627522.56.47 AM.png" style="float: left; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 ## Help and support
 
-Description of help and support
+##### The help and support page will bring you to a library of support articles that contain written instructions for common tasks along with answers to frequently asked questions. This is also where you will go to read about new feature updates.  
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/b7131045327b33e100d4de0d7f37b173-image-1625259197446.52.59 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/aaf5253bc5e6f848f5e1ffe6ceaaac52-image-1627660873667.01.03 AM.png" style="float: left; height: 240px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## Report a problem
 
-description of report a problem 
+##### If you need to contact the Code.org team directly, select the report a problem option. Select this option to report problems with the curriculum or website or to ask a question specific to you, your students, or your account. After submitting your message, someone from the Code.org team will follow up with you via email. 
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/a66a3bdbeccc2c1d00941f66a04feebd-image-1625258823243.46.47 PM.png" style="float: left; height: 150px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/2d9466590c0b3a2ad36cf3156bbac40b-image-1627660957082.02.20 AM.png" style="float: left; height: 220px; clear: both; margin: 0 20px 20px 0;">
 
-## Teacher community
+## Teacher forum
 
-description of forum
+##### The teacher forum is a place where you can connect with other CS Discoveries teachers to share ideas and get support from your peers. 
 
 <div style="clear:both"/>
+
+
+
 
 MARKDOWN
