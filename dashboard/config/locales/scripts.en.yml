@@ -7792,6 +7792,10 @@ en:
               name: CSP pre-survey 2021
             CSP post-survey 2020:
               name: CSP post-survey 2020
+            CSP pre-survey 21-2:
+              name: CSP pre-survey 21-22
+            CSD pre-survey 21-2:
+              name: CSD pre-survey 21-22
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -22405,7 +22409,7 @@ en:
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
-              name: Practice Lesson
+              name: Unit 1 Pilot Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -22415,7 +22419,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Practice Levels
+              display_name: Pilot Survey
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
@@ -22486,11 +22490,17 @@ en:
               name: Assessment Day
               description_student: In this unit, you created objects and defined instance variables to represent attributes. You explored creating and using constructors to establish values for these attributes and how to work with the data stored in objects. You implemented accessor and mutator methods to access and modify the values stored in the instance variables and wrote `toString` methods to output information about the state of the object. You used the `Scanner` class to obtain user input to use as program data to create and work with your objects. You learned about using data types, operators, and expressions and implementing data encapsulation and object-oriented design. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-1:
+              name: Unit 2 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lesson group:
               display_name: Content
             lessonGroup-2:
               display_name: Show What You Know
+            lessonGroup-3:
+              display_name: Pilot Survey
           name: csa2-pilot
           title: Giving Objects State
           description_audience: ''
@@ -22501,7 +22511,7 @@ en:
           lessons:
             lesson-1:
               name: Creating Arrays
-              description_student: The food truck owner increased her inventory of desserts. Before you had to declare separate variables to keep track of inventory, but what if you had 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
+              description_student: The food truck owner increased their inventory of desserts. You have declared separate variables to keep track of the inventory, but what if you needed to store 150 desserts? That would be a lot of variables! In this lesson, you explore how to create a one-dimensional (1D) array, determine its length, and use index values to access individual elements.
               description_teacher: In this unplugged lesson, students create one-dimensional (1D) arrays to store lists of values. Students learn how to refer to the length of a 1D array and access individual elements that are stored.
             lesson-2:
               name: Accessing and Modifying Elements
@@ -22517,16 +22527,16 @@ en:
               description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
             lesson-5:
               name: Storing Objects into Arrays
-              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, you discover how subclasses implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
-              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Shape` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Analysis of a code segment provides an example to guide the implementation of polymorphism in The Theater.
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method.
+              description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.
             lesson-6:
               name: Traversing Arrays with Enhanced for Loops
               description_student: 'To access each element stored in an array, we traverse the array using a loop. You previously learned how to use `while` and `for` loops to access all or just some parts of an array. Today, you implement an enhanced `for` loop, which is a simplified `for` loop used to access each element of an array one by one. '
               description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
             lesson-7:
               name: Using Static Variables and Constants
-              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants.
-              description_teacher: Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.
+              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Neighborhood and in The Theater.
+              description_teacher: Students implement static variables and constants to count the number of `PainterPlus` objects created and set maximum and minimum values for the volume of sounds in The Theater.
             lesson-8:
               name: Answering Questions with Arrays
               description_student: Today you develop algorithms to solve problems. These algorithms can be applied to finding the cheapest item on a menu, finding the highest or lowest note in a sound, or identifying the location of shapes on the stage. Each of these problems use similar structures in their solutions. You identify these patterns so you can apply the algorithms you develop today to problems you encounter in the future.
@@ -22538,11 +22548,11 @@ en:
             lesson-10:
               name: Manipulating Elements in an Array
               description_student: You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem.
-              description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.
+              description_teacher: Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem.
             lesson-11:
               name: Concert in The Theater Project - Day 1
-              description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio.
-              description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.
+              description_student: For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert soundtrack.
+              description_teacher: For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert soundtrack.
             lesson-12:
               name: Concert in The Theater Project - Day 2
               description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
@@ -22565,11 +22575,17 @@ en:
               name: Assessment Day
               description_student: In this unit, you worked with one-dimensional arrays to store primitive values and object references in The Theater. You represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, you evaluate your achievement of the unit learning objectives and skills on a multiple-choice assessment.
               description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              name: Unit 3 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
           name: csa3-pilot
           title: Expanding Program Data
           description_audience: ''
@@ -23203,7 +23219,7 @@ en:
           description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also explore lesson plans on the [All Resources](./resources) page. Each lesson includes a link to its lesson plan.
+            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also explore lesson plans on the [All Resources](/s/aiml-2021/resources) page. Each lesson includes a link to its lesson plan.
           student_description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
@@ -23215,7 +23231,6 @@ en:
               big_questions: |-
                 - How does machine learning find patterns in data to make decisions?
                 - How can we avoid bias when training a machine learning model?
-                - How can machine learning be used to solve problems in our community?
             lessonGroup-3:
               display_name: Chapter 2 - Design a Machine Learning App
               big_questions: "- How can machine learning be used to solve problems in our community?"
@@ -23381,7 +23396,6 @@ en:
               big_questions: |-
                 - How does machine learning find patterns in data to make decisions?
                 - How can we avoid bias when training a machine learning model?
-                - How can machine learning be used to solve problems in our community?
               description: Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating "unplugged - AI Lab - App Lab" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.
             lessonGroup-3:
               display_name: Chapter 2 - Design a Machine Learning App
@@ -23595,7 +23609,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Navigating this Professional Learning Course
+              name: Welcome to this professional learning course
               description_student: 
               description_teacher: 
             lesson-3:
@@ -23623,7 +23637,7 @@ en:
           title: 'Module 1: Welcome '
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will learn:**\n* What Code.org is\n* How to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries\n* Learn how to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
@@ -23712,17 +23726,22 @@ en:
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
-              name: The role of the teacher
+              name: Role of the teacher
               description_student: 
-              description_teacher: 
+              description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 10 minutes"
             lesson-2:
               name: Learning CS Discoveries
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+
+                **Suggested Time:** 30 minutes
             lesson-3:
               name: Teaching CS Discoveries
               description_student: 
-              description_teacher: 
+              description_teacher: "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 20 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Teaching and learning CS Discoveries
@@ -23730,7 +23749,7 @@ en:
           title: 'Module 4: Teaching and learning CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Consider the role of the teacher in a CS Discoveries classroom.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom. \n\n**Suggested Time:** 60 minutes"
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 60 minutes"
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
@@ -24841,3 +24860,61 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: " Navigating Code.org learning platform"
+              description_student: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
+            Navigating lesson plans and resources:
+              name: Navigating lesson plans and resources
+              description_student: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 30 minutes
+            Navigating support:
+              name: Navigating support
+              description_student: 
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+            lesson-4:
+              key: lesson-4
+              name: Navigating the Code.org learning platform
+              description_student: ''
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
+            lesson-3:
+              key: lesson-3
+              name: Navigating lesson plans and resources
+              description_student: ''
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-8:
+              key: lesson-8
+              name: Navigating support
+              description_student: ''
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          title: Navigating Code.org for CSA Pilot Teachers
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CSA. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n\n**Suggested time:** 1 hour\n\n\n\n\n"
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          name: csa-self-paced-pl

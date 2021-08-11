@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 const styles = {
   icon: {
-    fontSize: 18
+    fontSize: 18,
+    fontWeight: 400
   }
 };
 
@@ -23,7 +24,7 @@ function CollapserIcon({
       onClick={onClick}
       role="button"
       className={iconClass + ' fa'}
-      style={{...styles.icon, ...style}}
+      style={{...style, ...styles.icon}}
     />
   );
 }

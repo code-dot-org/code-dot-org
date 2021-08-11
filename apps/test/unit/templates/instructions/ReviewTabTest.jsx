@@ -18,6 +18,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import PeerSelectDropdown from '@cdo/apps/templates/instructions/codeReview/PeerSelectDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 describe('Code Review Tab', () => {
   const token = 'token';
@@ -26,7 +27,7 @@ describe('Code Review Tab', () => {
   const serverScriptId = 'serverScriptId123';
   const reviewableProjectId = 'reviewableProjectId123';
   const existingComment = Factory.build('CodeReviewComment');
-  let wrapper, server, clock;
+  let wrapper, server, clock, onLoadComplete;
 
   beforeEach(() => {
     server = sinon.fakeServer.create();
@@ -53,6 +54,8 @@ describe('Code Review Tab', () => {
       [200, {}, '']
     );
 
+    onLoadComplete = sinon.spy();
+
     stubRedux();
     registerReducers(commonReducers);
     getStore().dispatch(
@@ -63,7 +66,10 @@ describe('Code Review Tab', () => {
       })
     );
 
-    wrapper = shallow(<ReviewTab viewAsCodeReviewer={false} />);
+    wrapper = shallow(
+      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+    );
+    wrapper.setState({initialLoadCompleted: true});
   });
 
   afterEach(() => {
@@ -73,6 +79,26 @@ describe('Code Review Tab', () => {
 
     server.restore();
     restoreRedux();
+  });
+
+  it('renders loading spinner before initial load is completed', () => {
+    wrapper = shallow(
+      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+    );
+
+    expect(wrapper.find(Spinner).length).to.equal(1);
+  });
+
+  it('calls onLoadComplete callback after initial load is completed', () => {
+    onLoadComplete.resetHistory();
+
+    wrapper = shallow(
+      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+    );
+    sinon.assert.notCalled(onLoadComplete);
+
+    wrapper.setState({initialLoadCompleted: true});
+    sinon.assert.calledOnce(onLoadComplete);
   });
 
   it('renders without error if project has no comments', () => {
@@ -259,8 +285,13 @@ describe('Code Review Tab', () => {
     });
 
     wrapper = shallow(
-      <ReviewTab viewAsCodeReviewer={false} viewAs={ViewType.Teacher} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        viewAsCodeReviewer={false}
+        viewAs={ViewType.Teacher}
+      />
     );
+    wrapper.setState({initialLoadCompleted: true});
 
     expect(wrapper.find(CommentEditor).length).to.equal(1);
   });
@@ -292,15 +323,23 @@ describe('Code Review Tab', () => {
 
   it('shows back to my project button if viewing peer project', () => {
     server.respond();
-    wrapper = shallow(<ReviewTab viewAsCodeReviewer={true} />);
+    wrapper = shallow(
+      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={true} />
+    );
+    wrapper.setState({initialLoadCompleted: true});
     expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
     expect(wrapper.find(Button).length).to.equal(1);
   });
 
   it('does not show the peer dropdown or back to project button if a teacher is viewing the project', () => {
     wrapper = shallow(
-      <ReviewTab viewAsCodeReviewer={false} viewAs={ViewType.Teacher} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        viewAsCodeReviewer={false}
+        viewAs={ViewType.Teacher}
+      />
     );
+    wrapper.setState({initialLoadCompleted: true});
 
     server.respond();
 
