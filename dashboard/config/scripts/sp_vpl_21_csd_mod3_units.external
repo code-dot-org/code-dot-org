@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course structure
+# Units
 
-#### **CS Discoveries is divided into seven units each split into two chapters.** Each unit centers around a unique CS topic. Chapters begin with context setting and exploration that lay the foundation for the concepts explored in the chapter. The majority of each chapter is spent in skill building lessons that focus on particular learning objectives. Each chapter culminates with an open-ended project that challenges students to apply the skills learned throughout the unit. 
+#### **CS Discoveries is divided into seven units.** Units are structured to give students context and motivation for the content before skill building. Units begin with a lesson that leverages students’ knowledge and experience in problem solving and technology. This lays the foundation for the skills and content that the unit introduces.  Each unit is split into chapters, and the bulk of each chapter is spent in skill building lessons that focus on particular learning objectives.  
 
 ## Click on the units below to learn about the course content:
 
@@ -73,7 +73,7 @@ Using App Lab and Adafruit’s Circuit Playground, students develop programs tha
 
 <details><summary><strong>Unit 7: AI and Machine Learning</strong></summary>
 
-<img src="https://images.code.org/23870973273698bef1760088e33585bb-image-1627697008136.56.59 PM.png" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/7980152abc6fb3bc99d3f986f4071baa-image-1628699865854.png" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 
 In this optional **AI and Machine Learning** unit, students learn how computers can find patterns in data to make decisions. Students use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.

@@ -112,6 +112,7 @@ class Census::StateCsOffering < ApplicationRecord
     IL
     IN
     KS
+    KY
     LA
     MA
     MD
@@ -119,12 +120,14 @@ class Census::StateCsOffering < ApplicationRecord
     MO
     MS
     MT
+    NC
     ND
     NE
     NJ
     NM
     NY
     OH
+    OK
     OR
     PA
     RI

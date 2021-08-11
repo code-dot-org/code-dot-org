@@ -9,7 +9,7 @@ function setGlobals() {
   document.body.innerHTML = '<div id="codeApp"><div id="app"></div></div>';
   // locale file requires Blockly as a global
   var blockly = require('@code-dot-org/blockly');
-  var initializeCdoBlocklyWrapper = require('../../src/sites/studio/pages/cdoBlocklyWrapper');
+  var initializeCdoBlocklyWrapper = require('../../src/blockly/cdoBlocklyWrapper');
   window.Blockly = initializeCdoBlocklyWrapper(blockly);
 
   try {

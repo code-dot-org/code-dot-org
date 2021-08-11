@@ -21,13 +21,13 @@ class ApiControllerTest < ActionController::TestCase
     end
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
-    flappy = Script.get_from_cache(Script::FLAPPY_NAME)
-    @flappy_section = create(:section, user: @teacher, script_id: flappy.id)
+    @flappy = create(:text_match, :script).script_levels.first.script
+    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
-    allthings = Script.get_from_cache('allthethings')
-    @allthings_section = create(:section, user: @teacher, script_id: allthings.id)
+    @allthings = create(:text_match, :script).script_levels.first.script
+    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
     @allthings_section.reload
@@ -79,14 +79,14 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
 
-    # make sure our response has lesson from allthethingsscript
-    assert /\/s\/allthethings\// =~ response[0]['url']
+    # make sure our response has lesson from the specified script
+    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with assigned course" do
     unit_group = create :unit_group
-    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache('allthethings'), position: 1
-    create :unit_group_unit, unit_group: unit_group, script: Script.get_from_cache(Script::FLAPPY_NAME), position: 2
+    create :unit_group_unit, unit_group: unit_group, script: @allthings, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: @flappy, position: 2
     unit_group.reload
 
     section = create(:section, user: @teacher, login_type: 'word', unit_group: unit_group)
@@ -95,7 +95,7 @@ class ApiControllerTest < ActionController::TestCase
     section.reload
     student.reload
 
-    make_text_progress_in_script(Script.get_from_cache('allthethings'), student)
+    make_text_progress_in_script(@allthings, student)
 
     get :section_text_responses, params: {section_id: section.id}
     assert_response :success
@@ -103,11 +103,11 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from allthethings
-    assert /\/s\/allthethings\// =~ response[0]['url']
+    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with specific script" do
-    script = Script.find_by_name('cspunit1')
+    script = create(:text_match, :script).script_levels.first.script
 
     make_text_progress_in_script(@allthings_section.script, @student_allthings)
     make_text_progress_in_script(script, @student_allthings)
@@ -122,7 +122,7 @@ class ApiControllerTest < ActionController::TestCase
     # did not receive responses from multiple scripts
     assert_equal 1, response.length
     # response is from script_id (not section's script)
-    assert /\/s\/cspunit1\// =~ response[0]['url']
+    assert /\/s\/#{script.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with script with text response" do
@@ -750,7 +750,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress" do
-    script = Script.twenty_hour_unit
+    script = create(:script, :with_levels, levels_count: 2)
 
     user = create :user, total_lines: 2
     create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
@@ -771,12 +771,12 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_unit
+    script = create(:script, :with_levels, levels_count: 1)
 
     user = create :user, total_lines: 2
     sign_in user
 
-    script_level = script.script_levels[0]
+    script_level = script.script_levels.first
     level = script_level.level
     level_source = create :level_source, level: level, data: 'level source'
 
@@ -837,7 +837,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get user progress for lesson for signed-out user" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
-    script = Script.hoc_2014_unit
+    script = create(:script, :with_levels, levels_count: 1)
     script_level = script.script_levels[0]
     level = script_level.level
 
@@ -868,7 +868,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get user progress for lesson with young student" do
-    script = Script.twenty_hour_unit
+    script = create(:script, :with_levels, levels_count: 1)
     young_student = create :young_student
     sign_in young_student
 
@@ -885,7 +885,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "should get user progress for disabled milestone posts" do
     Gatekeeper.set('postMilestone', value: false)
-    script = Script.course1_unit
+    script = create(:script, :with_levels, levels_count: 1)
     user = create :user, total_lines: 2
     sign_in user
 
@@ -930,7 +930,7 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     expected = {
       'script' => {
-        'id' => Script.get_from_cache(Script::FLAPPY_NAME).id,
+        'id' => @flappy.id,
         'name' => 'Flappy Code',
         'levels_count' => 10,
         'lessons' => [{
@@ -1118,7 +1118,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    assert_equal Script.get_from_cache(Script::FLAPPY_NAME).id, JSON.parse(@response.body)['script']['id']
+    assert_equal @flappy.id, JSON.parse(@response.body)['script']['id']
   end
 
   test "should not return progress for bonus levels" do
@@ -1144,7 +1144,7 @@ class ApiControllerTest < ActionController::TestCase
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script)
 
     user = create :user
     sign_in user
