@@ -7792,6 +7792,10 @@ en:
               name: CSP pre-survey 2021
             CSP post-survey 2020:
               name: CSP post-survey 2020
+            CSP pre-survey 21-2:
+              name: CSP pre-survey 21-22
+            CSD pre-survey 21-2:
+              name: CSD pre-survey 21-22
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -22531,8 +22535,8 @@ en:
               description_teacher: In this lesson, students use an enhanced `for` loop to traverse an array. Students identify the differences, advantages, and disadvantages of using an enhanced `for` loop instead of a traditional `for` or `while` loop to traverse an array.
             lesson-7:
               name: Using Static Variables and Constants
-              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants.
-              description_teacher: Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.
+              description_student: Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Neighborhood and in The Theater.
+              description_teacher: Students implement static variables and constants to count the number of `PainterPlus` objects created and set maximum and minimum values for the volume of sounds in The Theater.
             lesson-8:
               name: Answering Questions with Arrays
               description_student: Today you develop algorithms to solve problems. These algorithms can be applied to finding the cheapest item on a menu, finding the highest or lowest note in a sound, or identifying the location of shapes on the stage. Each of these problems use similar structures in their solutions. You identify these patterns so you can apply the algorithms you develop today to problems you encounter in the future.
@@ -23607,7 +23611,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Navigating this Professional Learning Course
+              name: Navigating this professional learning course
               description_student: 
               description_teacher: 
             lesson-3:
@@ -24853,3 +24857,61 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform:
+              name: " Navigating Code.org learning platform"
+              description_student: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
+            Navigating lesson plans and resources:
+              name: Navigating lesson plans and resources
+              description_student: 
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 30 minutes
+            Navigating support:
+              name: Navigating support
+              description_student: 
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+            lesson-4:
+              key: lesson-4
+              name: Navigating the Code.org learning platform
+              description_student: ''
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Navigate the Code.org website and teacher tools.
+
+                **Suggested time:** 30 minutes
+            lesson-3:
+              key: lesson-3
+              name: Navigating lesson plans and resources
+              description_student: ''
+              description_teacher: |-
+                **You will learn how to:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-8:
+              key: lesson-8
+              name: Navigating support
+              description_student: ''
+              description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigating Code.org
+          title: Navigating Code.org for CSA Pilot Teachers
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CSA. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n\n**Suggested time:** 1 hour\n\n\n\n\n"
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          name: csa-self-paced-pl
