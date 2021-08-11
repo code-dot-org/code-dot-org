@@ -457,7 +457,8 @@ const styles = {
   },
   javalab: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    direction: 'ltr'
   },
   clear: {
     clear: 'both'
