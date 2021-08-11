@@ -44,6 +44,11 @@ export default class Neighborhood {
     this.speedSlider = new Slider(10, 35, 130, slider);
     this.signals = [];
     this.nextSignalIndex = 0;
+
+    // Expose an interface for testing
+    window.__TestInterface.setSpeedSliderValue = value => {
+      this.speedSlider.setValue(value);
+    };
   }
 
   handleSignal(signal) {
