@@ -543,6 +543,75 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "ecb46942-e148-4eec-bc96-2b71fb77b58a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-teacher"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Inclusion"
+        ],
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Inclusion"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Inclusion"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2021",
+        "activity_section.key": "3dd4d0e5-eb8c-4702-8a0c-e5e332e5a419"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-inclusion-c4u"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "SP-VPL-21-mod4-Overview-teacher"
         ],

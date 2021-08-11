@@ -1,6 +1,7 @@
 <Javalab>
   <config><![CDATA[{
   "game_id": 68,
+  "published": true,
   "created_at": "2021-07-21T14:39:18.000Z",
   "level_num": "custom",
   "user_id": 9271,
