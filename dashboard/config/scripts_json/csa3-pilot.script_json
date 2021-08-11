@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 21:44:47 UTC",
+    "serialized_at": "2021-08-11 00:31:01 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -2507,7 +2507,7 @@
       "key": "5a328f09-7437-407e-8eb6-36efa960470e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were there multiple ways to find the cheapest item? What is the most efficient solution?*\n\n**Discussion Goal:** Students recognize that while they may have slightly different variable names or create variables in different orders, their steps are generally the same. Student algorithms might include:\n* Storing the cheapest price they have seen so far\n* Checking every item on the menu\n* Comparing the current item and the lowest one they have seen so far\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Efficiency refers to the amount of time or resources needed to execute an algorithm. What is the most efficient solution?*\n\n**Discussion Goal:** Students choose algorithms that have the least number of steps to execute."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were there multiple ways to find the cheapest item?*\n\n**Discussion Goal:** Students recognize that while they may have slightly different variable names or create variables in different orders, their steps are generally the same. Student algorithms might include:\n* Storing the cheapest price they have seen so far\n* Checking every item on the menu\n* Comparing the current item and the lowest one they have seen so far\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Efficiency is getting the best outcome with  the least amount of waste. What is the most efficient solution?*\n\n**Discussion Goal:** Students choose algorithms that have the least number of steps to execute."
       },
       "seeding_key": {
         "activity_section.key": "5a328f09-7437-407e-8eb6-36efa960470e",
@@ -2572,7 +2572,7 @@
       "key": "934d8729-ccdc-4238-bfc8-94b29a34b666",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement a modified version of their maximum algorithm to find the lowest note in a sound.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug a modified version of their maximum algorithm to find the lowest note in a sound.",
         "progression_name": "Vocal Range - Minimum",
         "tips": [
           {
@@ -2602,7 +2602,7 @@
       "key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are strategies we can use when debugging off-by-one errors like the one we saw on Level 2?*\n\n**Discussion Goal:** Students identify steps to use when debugging off-by-one errors, including:\n* Debugging the method header by verifying that the control variable is initialized to a valid index value and the condition does not allow it to go past the largest index\n* Using print statements to print the index value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the debugging wall that describes bugs with scope."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are strategies we can use when debugging off-by-one errors like the one we saw on Level 2?*\n\n**Discussion Goal:** Students identify steps to use when debugging off-by-one errors, including:\n* Debugging the method header by verifying that the control variable is initialized to a valid index value and the condition does not allow it to go past the largest index\n* Using print statements to print the index value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall that describes how to identify off-by-one errors and a strategy to debug."
       },
       "seeding_key": {
         "activity_section.key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
@@ -2626,7 +2626,7 @@
       "key": "799c2677-55a8-4b8d-a870-11c149db98fd",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students translate their pseudocode to Java to calculate the sum or the mean of all elements in an array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students translate their pseudocode to Java to calculate the sum or the average of the elements in the given arrays.",
         "progression_name": "Sum and Mean",
         "tips": [
           {
@@ -2655,7 +2655,7 @@
       "key": "4e7f0905-6134-43c5-8ff0-fecb4e0aa4fc",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students translate their pseudocode to Java to find if any elements in an array are greater than 0 and if all elements in an array are greater than 0.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio.",
         "progression_name": "Identifying Properties Algorithms"
       },
       "seeding_key": {
@@ -2728,7 +2728,7 @@
       "position": 1,
       "properties": {
         "description": "Developing more complex programs requires planning. Before writing code, software engineers first create diagrams, flowcharts, and algorithms to figure out how to tell the computer what to do. This process makes it much easier to write code using the plans they create.",
-        "duration": "13",
+        "duration": "17",
         "name": "Swapping Elements in an Array",
         "remarks": true
       },
@@ -2741,7 +2741,13 @@
       "key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How Do Software Engineers Write Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Array Algorithms handout, a set of Array Algorithms Manipulatives, a double variable cup, an extra array from the previous lesson's Array Manipulatives, sticky notes, scrap pieces of paper, and 18 paper clips. Direct students to cut out the Array Algorithms Manipulatives and create 6 paper clip chains."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How Do Software Engineers Write Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Array Algorithms handout, a set of Array Algorithms Manipulatives, a double variable cup, an extra array from the previous lesson's Array Manipulatives, sticky notes, scrap pieces of paper, and 18 paper clips. Direct students to cut out the Array Algorithms Manipulatives and create 6 paper clip chains.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you still have paper clip chains from previous lessons, you can reuse them here rather than creating new ones."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
@@ -2764,7 +2770,7 @@
       "key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their manipulatives to set up one of their array manipulatives to match the starting array shown on the slide. Click through this animated slide to show each phase of applying the algorithm and the end result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we swap the first two shapes in the array?*\n\n**Discussion Goal:** Students suggest placing the shape at index 1 in index 0 or placing the shape at index 0 in index 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the error that results from attempting to set the next element to contain the value stored in the first element."
+        "description": "**Do This:** Have students use their manipulatives to set up one of their array manipulatives to match the starting array shown on the slide. Click through this animated slide to show each phase of applying the algorithm and the end result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we swap the first two shapes in the array?*\n\n**Discussion Goal:** Students suggest placing the shape at index 1 in index 0 or placing the shape at index 0 in index 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the error that results from attempting to set the next element to contain the value stored in the first element."
       },
       "seeding_key": {
         "activity_section.key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
@@ -2836,12 +2842,12 @@
       }
     },
     {
-      "key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
+      "key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think will happen to the sound if we replaced all the duplicate samples with 0?*\n\n**Discussion Goal:** Students share ideas of potential effects, which may include muting parts of the sound or making parts of the sound louder or softer.\n\n**Group:** Put students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode on their Planning Array Algorithms handout for an algorithm to count the number of duplicate samples and modify the samples array to set the duplicates to 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
-        "duration": "8",
-        "name": "Finding and Replacing Duplicate Samples",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to find samples that were above or below a specific value, like 0? How could we do this?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include using an `if` statement within the loop to check each element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to find and count values that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If we wanted to create a new sound using just those samples that are greater than 0, what do we need to add to our algorithm?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include creating a new array and assigning the element to the new array within the `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to add pseudocode to create a new sound using the samples that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
+        "duration": "18",
+        "name": "Finding Samples That Meet Specific Criteria",
         "tips": [
           {
             "type": "teachingTip",
@@ -2850,62 +2856,27 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show a pseudocode solution. Give students time to check and correct their work."
-      },
-      "seeding_key": {
-        "activity_section.key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
-        "progression_name": "Writing the replaceDuplicates() Method"
-      },
-      "seeding_key": {
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students note that while they can still hear the sound, some static can be heard that was not in the original sound."
-      },
-      "seeding_key": {
-        "activity_section.key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to find samples that were above or below a specific value, like 0? How could we do this?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include using an `if` statement within the loop to check each element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to find and count values that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If we wanted to create a new sound using just those samples that are greater than 0, what do we need to add to our algorithm?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include creating a new array and assigning the element to the new array within the `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to add pseudocode to create a new sound using the samples that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
-        "duration": "14",
-        "name": "Finding Samples That Meet Specific Criteria"
-      },
-      "seeding_key": {
         "activity_section.key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
         "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
       }
     },
     {
-      "key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
-      "position": 15,
+      "key": "49d7090a-caac-4a1b-a0ec-1def1a1ad259",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
+        "description": "We're going to use this algorithm to create the next scene in the concert. The elementary students that are attending the concert are going on a field trip soon to the lake, so the director wants to showcase the type of fish they might find there as the next scene.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "49d7090a-caac-4a1b-a0ec-1def1a1ad259",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
         "progression_name": "Writing the find() Method"
       },
       "seeding_key": {
@@ -2915,7 +2886,7 @@
     },
     {
       "key": "e9201e46-c5d3-4813-857b-03d46ec37af0",
-      "position": 16,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students share different ideas about what they hear, including that it sounds compressed, sped up, and that samples are missing."
       },
@@ -2926,7 +2897,7 @@
     },
     {
       "key": "bcd1fffb-65b0-4053-8237-345f644cbba7",
-      "position": 17,
+      "position": 14,
       "properties": {
         "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
@@ -2938,9 +2909,9 @@
     },
     {
       "key": "8340f623-1d23-4357-aeed-942658fd0c4c",
-      "position": 18,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `find()` method. Students request, receive, and review feedback on Level 5."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `find()` method. Students request, receive, and review feedback on Level 3."
       },
       "seeding_key": {
         "activity_section.key": "8340f623-1d23-4357-aeed-942658fd0c4c",
@@ -5081,23 +5052,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U3L9-L2"
-        ],
-        "progression": "Writing the replaceDuplicates() Method"
+        "progression": "Writing the find() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L2"
+          "CSA U3L9-L2-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
+        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
       },
       "level_keys": [
-        "CSA U3L9-L2"
+        "CSA U3L9-L2-2"
       ]
     },
     {
@@ -5106,90 +5074,34 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U3L9-L3"
-        ],
-        "progression": "Writing the replaceDuplicates() Method"
+        "progression": "Writing the find() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L3"
+          "CSA U3L9-L3-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
+        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
       },
       "level_keys": [
-        "CSA U3L9-L3"
+        "CSA U3L9-L3-2"
       ]
     },
     {
       "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L4"
-        ],
-        "progression": "Writing the find() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L4"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
-      },
-      "level_keys": [
-        "CSA U3L9-L4"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L5"
-        ],
-        "progression": "Writing the find() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L5"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
-      },
-      "level_keys": [
-        "CSA U3L9-L5"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 6,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U3L9-L6"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L6"
+          "CSA U3L9-L4-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -5197,11 +5109,11 @@
         "activity_section.key": "676245d7-79b1-4ae2-836c-6f91bd745a1a"
       },
       "level_keys": [
-        "CSA U3L9-L6"
+        "CSA U3L9-L4-2"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5226,7 +5138,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5251,7 +5163,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5276,7 +5188,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5301,7 +5213,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5326,7 +5238,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5351,7 +5263,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5376,7 +5288,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5401,7 +5313,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5426,7 +5338,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5451,7 +5363,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6031,33 +5943,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L2",
+        "level.key": "CSA U3L9-L2-2",
         "script_level.level_keys": [
-          "CSA U3L9-L2"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L9-L3",
-        "script_level.level_keys": [
-          "CSA U3L9-L3"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L9-L4",
-        "script_level.level_keys": [
-          "CSA U3L9-L4"
+          "CSA U3L9-L2-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6067,9 +5955,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L5",
+        "level.key": "CSA U3L9-L3-2",
         "script_level.level_keys": [
-          "CSA U3L9-L5"
+          "CSA U3L9-L3-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6079,9 +5967,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L6",
+        "level.key": "CSA U3L9-L4-2",
         "script_level.level_keys": [
-          "CSA U3L9-L6"
+          "CSA U3L9-L4-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -8122,16 +8010,6 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "7be17fc5-6be0-4fdf-90ec-47a361f1e278"
-      }
-    },
-    {
-      "key": "45b23f27-344f-46ef-9fdd-40a7b2534afc",
-      "properties": {
-        "description": "Replace duplicate elements in an array with a new value"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "45b23f27-344f-46ef-9fdd-40a7b2534afc"
       }
     },
     {

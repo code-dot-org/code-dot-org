@@ -7792,6 +7792,10 @@ en:
               name: CSP pre-survey 2021
             CSP post-survey 2020:
               name: CSP post-survey 2020
+            CSP pre-survey 21-2:
+              name: CSP pre-survey 21-22
+            CSD pre-survey 21-2:
+              name: CSD pre-survey 21-22
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -23607,7 +23611,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Navigating this Professional Learning Course
+              name: Navigating this professional learning course
               description_student: 
               description_teacher: 
             lesson-3:
@@ -24856,7 +24860,7 @@ en:
         csa-self-paced-pl:
           lessons:
             Navigating the Code.org learning platform:
-              name: 'Navigating the Code.org learning platform '
+              name: " Navigating Code.org learning platform"
               description_student: 
               description_teacher: |-
                 **You will learn how to:**
