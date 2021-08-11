@@ -7,13 +7,13 @@ import color from '@cdo/apps/util/color';
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
 // text to be vertically stacked.
 function JavalabButton({
+  id,
   icon,
   text,
   className,
   style,
   onClick,
   isHorizontal,
-  id,
   isDisabled = false
 }) {
   let textStyle = {};
@@ -25,8 +25,8 @@ function JavalabButton({
 
   return (
     <button
-      type="button"
       id={id}
+      type="button"
       className={className}
       style={{
         ...styles.button,
