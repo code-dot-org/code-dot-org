@@ -705,6 +705,20 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
 
+    trait :with_levels do
+      ignore do
+        levels_count 0
+      end
+
+      after(:create) do |script, evaluator|
+        evaluator.levels_count.times do
+          level = create(:level)
+          script_level = create(:script_level, levels: [level])
+          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        end
+      end
+    end
+
     factory :csf_script do
       after(:create) do |csf_script|
         csf_script.curriculum_umbrella = 'CSF'
