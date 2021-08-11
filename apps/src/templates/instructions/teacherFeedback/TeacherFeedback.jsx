@@ -19,6 +19,8 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -40,6 +42,7 @@ export class TeacherFeedback extends Component {
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
+    updateUserProgress: PropTypes.func.isRequired,
     canHaveFeedbackReviewState: PropTypes.bool
   };
 
@@ -145,6 +148,10 @@ export class TeacherFeedback extends Component {
       .done(data => {
         if (this.state.reviewStateUpdated) {
           this.recordReviewStateUpdated();
+          // The review state effects the state of the progress bubbles,
+          // we re-fetch user progress after the review state has changed
+          // so that the progress bubbles reflect the latest feedback
+          this.props.updateUserProgress(this.studentId);
         }
         this.setState({
           latestFeedback: data,
@@ -348,10 +355,18 @@ const styles = {
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
-  selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId,
-  canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
-}))(TeacherFeedback);
+export default connect(
+  state => ({
+    viewAs: state.viewAs,
+    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    selectedSectionId:
+      state.teacherSections && state.teacherSections.selectedSectionId,
+    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+  }),
+  dispatch => ({
+    updateUserProgress(userId) {
+      dispatch(queryUserProgress(userId));
+      dispatch(loadLevelsWithProgress());
+    }
+  })
+)(TeacherFeedback);
