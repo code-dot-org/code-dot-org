@@ -64,7 +64,8 @@ class JavalabView extends React.Component {
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     awaitingContainedResponse: PropTypes.bool,
-    isVisualizationCollapsed: PropTypes.bool
+    isVisualizationCollapsed: PropTypes.bool,
+    isInstructionsCollapsed: PropTypes.bool
   };
 
   state = {
@@ -182,7 +183,12 @@ class JavalabView extends React.Component {
   };
 
   getInstructionsHeight = () => {
-    if (this.props.isVisualizationCollapsed || !this.props.visualization) {
+    if (this.props.isInstructionsCollapsed) {
+      return 30;
+    } else if (
+      this.props.isVisualizationCollapsed ||
+      !this.props.visualization
+    ) {
       return this.props.instructionsFullHeight;
     } else {
       return Math.min(
@@ -193,7 +199,11 @@ class JavalabView extends React.Component {
   };
 
   shouldShowInstructionsHeightResizer = () => {
-    return !this.props.isVisualizationCollapsed && this.props.visualization;
+    return (
+      !this.props.isInstructionsCollapsed &&
+      !this.props.isVisualizationCollapsed &&
+      this.props.visualization
+    );
   };
 
   isLeftSideVisible = () => {
@@ -494,7 +504,8 @@ export default connect(
     instructionsRenderedHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
-    isVisualizationCollapsed: state.javalab.isVisualizationCollapsed
+    isVisualizationCollapsed: state.javalab.isVisualizationCollapsed,
+    isInstructionsCollapsed: state.instructions.isCollapsed
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
