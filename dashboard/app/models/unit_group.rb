@@ -195,7 +195,8 @@ class UnitGroup < ApplicationRecord
     units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
     if units_to_remove.any?(&:prevent_course_version_change?)
-      raise 'Cannot remove units that have resources or vocabulary'
+      unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
+      raise "Cannot remove units that have resources or vocabulary: #{unit_names}"
     end
 
     if new_units_objects.any? do |s|
