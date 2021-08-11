@@ -4,6 +4,7 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
@@ -128,15 +129,27 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
+      {
+        test: /\.css$/,
+        use: [
+          {loader: MiniCssExtractPlugin.loader, options: {esModule: false}},
+          {loader: 'css-loader'}
+        ]
+      },
       {
         test: /\.scss$/,
         use: [
-          {loader: 'style-loader'},
+          {loader: MiniCssExtractPlugin.loader, options: {esModule: false}},
           {loader: 'css-loader'},
           {
             loader: 'sass-loader',
-            options: {sassOptions: {includePaths: [scssIncludePath]}}
+            options: {
+              implementation: 'sass',
+              sassOptions: {
+                includePaths: [scssIncludePath],
+                outputStyle: 'compressed'
+              }
+            }
           }
         ]
       },
@@ -236,7 +249,8 @@ var storybookConfig = _.extend({}, baseConfig, {
       ),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     }),
-    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
+    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
+    new MiniCssExtractPlugin()
   ]
 });
 
@@ -338,7 +352,8 @@ var karmaConfig = _.extend({}, baseConfig, {
       ),
       LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-    })
+    }),
+    new MiniCssExtractPlugin()
   ]
 });
 
@@ -390,7 +405,8 @@ function create(options) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
+      new MiniCssExtractPlugin()
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
