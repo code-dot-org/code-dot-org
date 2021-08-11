@@ -504,15 +504,19 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
+    level = Script.first.script_levels.first.level
+
     populate_cache_and_disconnect_db
 
-    assert_equal @cacheable_level, Script.cache_find_level(@cacheable_level.id)
+    assert_equal level, Script.cache_find_level(level.id)
   end
 
   test 'cache_find_level uses cache with name lookup' do
+    level = Script.first.script_levels.first.level
+
     populate_cache_and_disconnect_db
 
-    assert_equal @cacheable_level, Script.cache_find_level(@cacheable_level.name)
+    assert_equal level, Script.cache_find_level(level.name)
   end
 
   test 'cache_find_level raises exception on bad ID and bad name' do
