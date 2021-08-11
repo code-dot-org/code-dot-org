@@ -176,9 +176,8 @@ const styles = {
     width: 150,
     textAlign: 'center',
     display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexDirection: 'column'
   },
   bubble: {
     marginLeft: 0

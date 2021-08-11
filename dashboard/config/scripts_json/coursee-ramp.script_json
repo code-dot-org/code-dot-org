@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:45 UTC",
+    "serialized_at": "2021-08-03 22:47:06 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "coursee-ramp"
@@ -91,7 +91,6 @@
           "DiceRace"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -115,7 +114,6 @@
           "courseE_video_ramp1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -139,7 +137,6 @@
           "courseE_maze_ramp1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -163,7 +160,6 @@
           "courseE_maze_ramp2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -187,7 +183,6 @@
           "courseE_maze_ramp3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -211,7 +206,6 @@
           "courseE_maze_ramp4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -235,7 +229,6 @@
           "courseE_maze_ramp5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -259,7 +252,6 @@
           "courseE_maze_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -283,7 +275,6 @@
           "courseD_maze_video_Loops"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -307,7 +298,6 @@
           "courseE_maze_ramp6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -331,7 +321,6 @@
           "courseE_maze_ramp7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -355,7 +344,6 @@
           "courseE_artist_ramp8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -379,7 +367,6 @@
           "courseC_video_angles"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -403,7 +390,6 @@
           "courseE_artist_ramp9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -427,7 +413,6 @@
           "courseE_artist_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -451,7 +436,6 @@
           "courseD_video_nestedLoopsArtist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -475,7 +459,6 @@
           "courseE_artist_ramp10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +482,6 @@
           "courseE_farmer_ramp11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -523,7 +505,6 @@
           "courseE_maze_ramp13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +528,6 @@
           "courseE_external_ramp14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -571,7 +551,6 @@
           "courseD_video_whileIntro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -595,7 +574,6 @@
           "courseE_farmer_ramp11a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -619,7 +597,6 @@
           "courseE_farmer_ramp12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -643,7 +620,6 @@
           "courseE_farmer_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -667,7 +643,6 @@
           "courseE_video_ifElse"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -691,7 +666,6 @@
           "courseE_farmer_ramp12a"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -715,7 +689,6 @@
           "courseE_farmer_ramp13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -739,7 +712,6 @@
           "courseE_bee_ramp14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -763,7 +735,6 @@
           "courseE_farmer_predict2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -787,7 +758,6 @@
           "courseD_video_repeatUntil"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -811,7 +781,6 @@
           "courseE_farmer_ramp15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -835,7 +804,6 @@
           "courseE_farmer_ramp16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -859,7 +827,6 @@
           "courseE_bee_ramp17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nIn `PainterPlus.java`, write the `moveFast()` method.\r\n\r\nIn `MyNeighborhood.java`, navigate `PainterPlus` through the maze using `moveFast()` and collect 15 units of paint.",
+    "long_instructions": "Import `PainterPlus.java` from your **Backpack**.\r\n\r\nIn `PainterPlus.java`, write the `moveFast()` method.\r\n\r\nIn `MyNeighborhood.java`, navigate `PainterPlus` through the maze using `moveFast()` and collect 25 units of paint.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -1024,13 +1024,15 @@
       }
     },
     "project_template_level_name": "CSA U1L10 Template",
-    "encrypted_examples": "rKrnptZT3a3dnl2xWh//0KHMbsOSUo/nJ+Kz1Vt1ppg00gN9sTkhDn4b6tEI\nQF3OUfkkN/P+jIZgBrZdQHIgTatbCR3jCEH41evEG3sG+SKcOCYKTn4UkVvw\nuyHMAeDX\n"
+    "encrypted_examples": "rKrnptZT3a3dnl2xWh//0KHMbsOSUo/nJ+Kz1Vt1ppg00gN9sTkhDn4b6tEI\nQF3OUfkkN/P+jIZgBrZdQHIgTatbCR3jCEH41evEG3sG+SKcOCYKTn4UkVvw\nuyHMAeDX\n",
+    "bubble_choice_description": "Navigate through the maze using moveFast().",
+    "thumbnail_url": "https://images.code.org/abbf1f79d7ba0fec8bcc39a5f3a45203-image-1627577534296.gif"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-07-08T16:22:37.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-08 16:26:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 16:44:58 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:08:31 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:28:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:59:29 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:38:25 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-08 16:26:51 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 16:44:58 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:08:31 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:28:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 18:59:29 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-12 13:38:25 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 16:23:29 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 16:52:38 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

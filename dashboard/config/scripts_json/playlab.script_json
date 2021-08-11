@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": "playlab",
-    "serialized_at": "2021-07-06 22:26:07 UTC",
+    "serialized_at": "2021-08-03 22:46:42 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "playlab"
@@ -62,7 +62,6 @@
           "blockly:Studio:playlab_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -86,7 +85,6 @@
           "blockly:Studio:playlab_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -110,7 +108,6 @@
           "blockly:Studio:playlab_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -134,7 +131,6 @@
           "blockly:Studio:playlab_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -158,7 +154,6 @@
           "blockly:Studio:playlab_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -182,7 +177,6 @@
           "blockly:Studio:playlab_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -206,7 +200,6 @@
           "blockly:Studio:playlab_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -230,7 +223,6 @@
           "blockly:Studio:playlab_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +246,6 @@
           "blockly:Studio:playlab_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,7 +269,6 @@
           "blockly:Studio:playlab_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

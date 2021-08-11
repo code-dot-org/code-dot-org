@@ -4,7 +4,6 @@ import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
-import CoreLibrary from './CoreLibrary';
 
 var SpriteLab = function() {
   P5Lab.call(this);
@@ -25,7 +24,6 @@ SpriteLab.prototype.preview = function() {
     // and, not knowing that preload is still in progress, would attempt to call p5.redraw(), and mess up the preview
     return;
   }
-  this.coreLibrary = new CoreLibrary(this.p5Wrapper.p5);
   getStore().dispatch(clearConsole());
   Sounds.getSingleton().muteURLs();
   if (this.p5Wrapper.p5 && this.JSInterpreter) {
@@ -45,7 +43,6 @@ SpriteLab.prototype.preview = function() {
 
 SpriteLab.prototype.reset = function() {
   P5Lab.prototype.reset.call(this);
-  this.coreLibrary = new CoreLibrary(this.p5Wrapper.p5);
   getStore().dispatch(clearPrompts());
   this.preview();
 };
@@ -53,15 +50,15 @@ SpriteLab.prototype.reset = function() {
 SpriteLab.prototype.onPause = function(isPaused) {
   const current = new Date().getTime();
   if (isPaused) {
-    this.coreLibrary.endPause(current);
+    this.spritelabLibrary.endPause(current);
   } else {
-    this.coreLibrary.startPause(current);
+    this.spritelabLibrary.startPause(current);
   }
 };
 
 SpriteLab.prototype.onPromptAnswer = function(variableName, value) {
   getStore().dispatch(popPrompt());
-  this.coreLibrary.onPromptAnswer(variableName, value);
+  this.spritelabLibrary.onPromptAnswer(variableName, value);
 };
 
 SpriteLab.prototype.setupReduxSubscribers = function(store) {

@@ -81,7 +81,7 @@ end
 Then /^I open the progress drop down of the current page$/ do
   steps %{
     Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
+    And I wait to see ".uitest-summary-progress-table"
   }
 end
 
@@ -109,4 +109,16 @@ end
 # PLC Progress
 Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
   element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
+end
+
+# Note: only works for levels other than the current one
+Then(/^check that level (\d+) on this lesson is done$/) do |level|
+  undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
+  !undone
+end
+
+# Note: only works for levels other than the current one
+Then(/^check that level (\d+) on this lesson is not done$/) do |level|
+  undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
+  undone
 end

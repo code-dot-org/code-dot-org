@@ -23,7 +23,7 @@ describe('BackpackClientApi', () => {
     ]);
   };
 
-  describe('save with provided channel id', () => {
+  describe('with provided channel id', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi(channelId);
@@ -37,7 +37,7 @@ describe('BackpackClientApi', () => {
       fetchChannelIdStub.restore();
     });
 
-    it('does not fetch channel id', () => {
+    it('save does not fetch channel id', () => {
       setSaveResponse(200, 'test.java');
       backpackClientApi.saveFiles(
         sampleFileJson,
@@ -63,7 +63,7 @@ describe('BackpackClientApi', () => {
       expect(successCallback).to.have.been.calledOnce;
     });
 
-    it('retries, then calls error on failure', () => {
+    it('save retries, then calls error on failure', () => {
       setSaveResponse(500, 'test2.java');
       backpackClientApi.saveFiles(
         sampleFileJson,
@@ -81,7 +81,7 @@ describe('BackpackClientApi', () => {
     });
   });
 
-  describe('save without provided channel id', () => {
+  describe('without provided channel id', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       backpackClientApi = new BackpackClientApi();
@@ -95,7 +95,7 @@ describe('BackpackClientApi', () => {
       fetchChannelIdStub.restore();
     });
 
-    it('fetches channel id', () => {
+    it('save fetches channel id', () => {
       setSaveResponse(200, 'test.java');
       backpackClientApi.saveFiles(
         sampleFileJson,
@@ -105,6 +105,18 @@ describe('BackpackClientApi', () => {
       );
       server.respond();
       expect(fetchChannelIdStub).to.have.been.calledOnce;
+    });
+
+    it('get files calls error callback', () => {
+      backpackClientApi.getFileList(errorCallback, successCallback);
+      expect(errorCallback).to.have.been.calledOnce;
+      assert(successCallback.notCalled);
+    });
+
+    it('fetch file calls error callback', () => {
+      backpackClientApi.fetchFile('test.java', errorCallback, successCallback);
+      expect(errorCallback).to.have.been.calledOnce;
+      assert(successCallback.notCalled);
     });
   });
 });

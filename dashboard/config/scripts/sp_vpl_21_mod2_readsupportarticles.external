@@ -5,10 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Task: Practice finding a support article 
 
-#### 1. Open a new tab.
-#### 2. Navigate to Code.org and sign into your teacher account.
-#### 3. Click on the "?" in the upper right hand corner of the screen.
-#### 4. Select and read a support article that interests you.
+<img src="https://images.code.org/e881ea7611e5646701a5f8b288921001-image-1627662136954.56.47 AM.png" style="float: right; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
+### Steps to access support articles:
 
+##### **Step 1:** Open a new tab.
+##### **Step 2:** Navigate to Code.org and sign into your teacher account.
+##### **Step 3:** Click on the "?" in the upper right hand corner of the screen.
+##### **Step 4:** Select and read a support article that interests you.
+
+ <div style="clear:both"/>
 MARKDOWN

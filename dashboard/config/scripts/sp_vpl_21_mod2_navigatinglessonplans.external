@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Navigate to lesson plans
+# Task: Navigate to lesson plans
 
 ### Steps to access lesson plans:
 
@@ -26,7 +26,7 @@ markdown <<MARKDOWN
 
 ## Course overview page
 
-Description of course overview page
+The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button.
 
 <hr style="clear:both">
 
@@ -35,7 +35,7 @@ Description of course overview page
 
 ## Unit overview page
 
-description of unit overview page
+The unit overview page contains a short description of each lesson within the unit along with unit level teacher resources. From this page, you can also access management features such as hiding and showing lessons for students. Each lesson has a blue View Lesson Plan button to see the lesson plan for the unit.
 
 <hr style="clear:both">
 
@@ -43,7 +43,7 @@ description of unit overview page
 
 ## Lesson plans
 
-description of lesson plans
+Within the lesson plan, you will find a teaching guide, lesson objectives, links to student and teacher lesson resources, standards alignment, and all other content necessary for teaching the lesson. You can also preview student facing levels from within the lesson plan. To navigate between lessons, you can click the purple "Other Lessons in this Unit" button and choose a different lesson plan to view.
 
 <div style="clear:both"/>
 

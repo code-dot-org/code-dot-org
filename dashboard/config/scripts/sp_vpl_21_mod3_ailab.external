@@ -5,15 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Lab
 
-<img src="https://images.code.org/10bf05baf01ff076b246285fcaeff14c-image-1626285765664.01.01 PM.png" style="float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+#### AI Lab is an environment that lets students interact with tabular data to train a machine learning model. 
 
-#### AI Lab is an environment that lets students interact with tabular data to train a machine learning model. Students can select from several pre-generated datasets, or upload your own data. They then decide what they would like to predict and which features to base their prediction off of. AI Lab will analyze the data and create a machine learning model which students can import into App Lab. Before saving their machine learning model, students also need to save a Model Card which acts like the documentation for their model.
+![]()
 
-##### <a href="https://levelbuilder-studio.code.org/s/ai-lab/lessons/2/levels/1" target="blank" >Click here</a> to learn more about AI Lab. 
+<img src="https://images.code.org/b6c5128788be1060ff8cb12ec271d552-image-1627583918152.png" style=" padding-left: 65px; height: 300px; clear: both; margin: 0 20px 20px 0;">
 
-## Note to self - update this link when video is complete. 
+## How does AI Lab work? 
 
-# Brainstorm with Dan about ways to make this page better. What story are we trying to tell here? What do people need to know about AI Lab?
+##### Students can select from several pre-generated datasets, or upload their own data. They then decide what they would like to predict and which features to base their prediction off of. AI Lab will analyze the data and create a machine learning model which students can import into App Lab. Before saving their machine learning model, students also need to save a Model Card which acts like the documentation for their model.
 
+## Do students learn how to code in AI Lab? 
 
+##### No, students don't do any coding in AI Lab itself. Instead, students can import their machine learning models into App Lab to create machine learning apps.
 MARKDOWN

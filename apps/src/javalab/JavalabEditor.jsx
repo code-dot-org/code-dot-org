@@ -7,7 +7,8 @@ import {
   sourceValidationUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight
+  setRenderedHeight,
+  setEditorColumnHeight
 } from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
@@ -54,6 +55,7 @@ class JavalabEditor extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     // populated by redux
     setRenderedHeight: PropTypes.func.isRequired,
+    setEditorColumnHeight: PropTypes.func.isRequired,
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
     sourceValidationUpdated: PropTypes.func,
@@ -89,6 +91,7 @@ class JavalabEditor extends React.Component {
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
     this.updateFileType = this.updateFileType.bind(this);
+    this.onImportFile = this.onImportFile.bind(this);
     this._codeMirrors = {};
 
     // Used to manage dark and light mode configuration.
@@ -132,6 +135,20 @@ class JavalabEditor extends React.Component {
     orderedTabKeys.forEach(tabKey => {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
+
+    this.handleHeightResize(this.props.height);
+    this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
+
+    window.addEventListener('resize', () => {
+      this.handleHeightResizeThrottled(this.props.height);
+      this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
+    });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', () => {
+        this.handleHeightResizeThrottled(this.props.height);
+        this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
+      });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -330,7 +347,8 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  onCreateFile(filename) {
+  onCreateFile(filename, fileContents) {
+    fileContents = fileContents || '';
     if (Object.keys(this.props.sources).includes(filename)) {
       this.setState({
         newFileError: this.duplicateFileError(filename)
@@ -350,7 +368,7 @@ class JavalabEditor extends React.Component {
     newTabs.push(newTabKey);
 
     // add new file to sources
-    this.props.setSource(filename, '');
+    this.props.setSource(filename, fileContents);
     projectChanged();
 
     // add new tab and set it as the active tab
@@ -410,6 +428,30 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  onImportFile(filename, fileContents) {
+    const {fileMetadata} = this.state;
+    // If filename already exists in sources, replace file contents.
+    // Otherwise, create a new file.
+    if (Object.keys(this.props.sources).includes(filename)) {
+      // find editor for filename and overwrite contents of that editor
+      let editorKey = null;
+      for (const key in fileMetadata) {
+        if (fileMetadata[key] === filename) {
+          editorKey = key;
+        }
+      }
+      const editor = this.editors[editorKey];
+      editor.dispatch({
+        changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
+      });
+      this.props.setSource(filename, fileContents);
+    } else {
+      // create new file
+      this.onCreateFile(filename, fileContents);
+    }
+    projectChanged();
+  }
+
   duplicateFileError(filename) {
     return javalabMsg.duplicateProjectFilenameError({filename: filename});
   }
@@ -460,6 +502,8 @@ class JavalabEditor extends React.Component {
 
     this.props.setRenderedHeight(newHeight);
   };
+
+  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 33);
 
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
@@ -525,6 +569,7 @@ class JavalabEditor extends React.Component {
               id={'javalab-editor-backpack'}
               isDarkMode={isDarkMode}
               isDisabled={isReadOnlyWorkspace}
+              onImport={this.onImportFile}
             />
           </PaneSection>
           <PaneButton
@@ -630,7 +675,7 @@ class JavalabEditor extends React.Component {
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.getPosition()}
-              onResize={this.handleHeightResize}
+              onResize={this.handleHeightResizeThrottled}
               style={styles.resizer}
             />
           </div>
@@ -761,6 +806,7 @@ export default connect(
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename)),
-    setRenderedHeight: height => dispatch(setRenderedHeight(height))
+    setRenderedHeight: height => dispatch(setRenderedHeight(height)),
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
   })
 )(Radium(JavalabEditor));

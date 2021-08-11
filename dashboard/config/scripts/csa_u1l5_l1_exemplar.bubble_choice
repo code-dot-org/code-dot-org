@@ -1,7 +1,0 @@
-name 'CSA U1L5-L1 Exemplar'
-display_name 'Default Painters'
-description 'Use the no-argument constructor to create a Painter object.'
-
-sublevels
-level 'CSA U1L5-L1a Exemplar'
-level 'CSA U1L5-L1b Exemplar'

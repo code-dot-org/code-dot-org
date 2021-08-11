@@ -12,7 +12,7 @@
 #
 # Indexes
 #
-#  index_reviewable_projects_on_storage_app_id_and_user_id  (storage_app_id,user_id)
+#  index_reviewable_projects_on_user_script_level_storage_app  (user_id,script_id,level_id,storage_app_id)
 #
 class ReviewableProject < ApplicationRecord
   belongs_to :user

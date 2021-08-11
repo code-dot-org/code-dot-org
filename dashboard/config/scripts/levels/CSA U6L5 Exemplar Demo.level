@@ -1,0 +1,18 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n\n\n\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "published": true,
+  "level_num": "custom",
+  "game_id": 68,
+  "created_at": "2021-08-09T14:01:13.000Z",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-08-09 14:02:04 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

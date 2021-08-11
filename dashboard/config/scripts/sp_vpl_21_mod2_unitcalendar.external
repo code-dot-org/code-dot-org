@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Modify the unit calendar
+# Task: Modify the unit calendar
 
-##### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
+#### The unit calendar is a tool you can use to help plan your unit pacing. The calendar can be adjusted based on instructional minutes per week. 
 
 ## Steps to modify the unit calendar
 
