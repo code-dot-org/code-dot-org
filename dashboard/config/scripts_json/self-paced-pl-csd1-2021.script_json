@@ -10,8 +10,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 01:51:04 UTC",
-    "published_state": null,
+    "serialized_at": "2021-08-11 17:33:10 UTC",
+    "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
     }
@@ -48,7 +48,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Navigating this professional learning course",
+      "name": "Welcome to this professional learning course",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -161,6 +161,27 @@
     },
     {
       "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021",
+        "activity_section.key": "6c6ab391-027f-4777-bd36-0816ca9bb7fa"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -202,6 +223,18 @@
         "level.key": "SP-VPL-21-mod1-CSisFoundational",
         "script_level.level_keys": [
           "SP-VPL-21-mod1-CSisFoundational"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd1-2021",
+        "activity_section.key": "6c6ab391-027f-4777-bd36-0816ca9bb7fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
