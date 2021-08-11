@@ -69,6 +69,7 @@ PreviewPaneHeader.propTypes = {
 
 const styles = {
   transparent: {
+    marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
     backgroundColor: 'transparent',
     ':hover': {
       backgroundColor: 'transparent'
