@@ -7,6 +7,7 @@ import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -46,33 +47,19 @@ class TeacherPanel extends React.Component {
     unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
-    lessonId: PropTypes.number.isRequired,
-    scriptId: PropTypes.number.isRequired,
-    isLessonExtras: PropTypes.bool.isRequired,
-    levelId: PropTypes.string,
-    reloadTeacherPanelProgress: PropTypes.bool.isRequired,
-    onTeacherPanelReloaded: PropTypes.func.isRequired
+    levelsWithProgress: PropTypes.array,
+    loadLevelsWithProgress: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      levelsWithProgress: [],
-      isLoadingLevelsWithProgress: false
-    };
-  }
-
-  componentDidMount() {
-    this.getSectionData();
-  }
-
   componentWillReceiveProps(nextProps) {
+    // we will load level progress data to the teacher panel when sections are sectionsAreLoaded
+    // if we're not on the script overview page
     if (
-      nextProps.reloadTeacherPanelProgress &&
-      !this.state.isLoadingLevelsWithProgress
+      this.props.pageType !== pageTypes.scriptOverview &&
+      nextProps.sectionsAreLoaded &&
+      !this.props.sectionsAreLoaded
     ) {
-      this.getSectionData(this.props.onTeacherPanelReloaded);
+      this.props.loadLevelsWithProgress();
     }
   }
 
@@ -97,56 +84,6 @@ class TeacherPanel extends React.Component {
     this.props.onSelectUser(id);
   };
 
-  getSectionData = onComplete => {
-    const {
-      sectionData,
-      levelId,
-      lessonId,
-      scriptId,
-      isLessonExtras
-    } = this.props;
-
-    if (!sectionData?.section) {
-      return;
-    }
-
-    this.setState({isLoadingLevelsWithProgress: true});
-
-    const baseUrl = `/api/teacher_panel_progress/${sectionData.section.id}`;
-
-    let query;
-    if (isLessonExtras) {
-      query = {
-        lesson_id: lessonId,
-        is_lesson_extras: true,
-        script_id: scriptId
-      };
-    } else {
-      query = {
-        script_id: scriptId,
-        level_id: levelId
-      };
-    }
-
-    $.ajax({
-      url: baseUrl + '?' + queryString.stringify(query),
-      method: 'GET'
-    })
-      .done(data => {
-        this.setState({
-          levelsWithProgress: data,
-          isLoadingLevelsWithProgress: false
-        });
-        onComplete && onComplete();
-      })
-      .fail(err => {
-        console.log(
-          `Failed to update teacher panel (${err.status}) ${err.statusText}`
-        );
-        this.setState({isLoadingLevelsWithProgress: false});
-      });
-  };
-
   render() {
     const {
       sectionData,
@@ -163,7 +100,7 @@ class TeacherPanel extends React.Component {
     let currentStudent = null;
     let currentStudentScriptLevel = null;
 
-    const {levelsWithProgress} = this.state;
+    const {levelsWithProgress} = this.props;
 
     if (sectionData) {
       if (sectionData.section && sectionData.section.students) {
@@ -190,9 +127,7 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     const displaySelectedStudentInfo =
-      viewAs === ViewType.Teacher &&
-      currentStudent &&
-      (students || []).length > 0;
+      viewAs === ViewType.Teacher && currentStudentScriptLevel;
 
     const displayLevelExamples =
       viewAs === ViewType.Teacher && sectionData && sectionData.level_examples;
@@ -365,14 +300,12 @@ export default connect(
       selectedSection: state.teacherSections.sections[selectedSectionId],
       unlockedLessonNames: unlockedLessonIds.map(id => lessonNames[id]),
       students: state.teacherSections.selectedStudents,
-      lessonId: state.progress.currentLessonId,
-      scriptId: state.progress.scriptId,
-      isLessonExtras: state.progress.isLessonExtras,
-      levelId: state.progress.currentLevelId,
-      reloadTeacherPanelProgress: state.progress.reloadTeacherPanelProgress
+      levelsWithProgress: state.teacherPanel.levelsWithProgress,
+      isLoadingLevelsWithProgress:
+        state.teacherPanel.isLoadingLevelsWithProgress
     };
   },
   dispatch => ({
-    onTeacherPanelReloaded: () => dispatch(setReloadTeacherPanelProgress(false))
+    loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress())
   })
 )(TeacherPanel);

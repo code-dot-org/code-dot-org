@@ -14,7 +14,7 @@ export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
-    levelWithProgress: levelWithProgress,
+    levelWithProgress: levelWithProgress.isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
@@ -67,6 +67,14 @@ export default class SelectedStudentInfo extends React.Component {
 
   render() {
     const {selectedStudent, levelWithProgress} = this.props;
+    const {
+      paired,
+      navigator,
+      driver,
+      submitLevel,
+      status,
+      updatedAt
+    } = levelWithProgress;
 
     return (
       <div style={styles.main}>
@@ -77,48 +85,41 @@ export default class SelectedStudentInfo extends React.Component {
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
-          {levelWithProgress?.paired && (
+          {paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {levelWithProgress.navigator && (
-                <div key={levelWithProgress.navigator}>
-                  {i18n.partner({partner: levelWithProgress.navigator})}
-                </div>
+              {navigator && (
+                <div key={navigator}>{i18n.partner({partner: navigator})}</div>
               )}
-              {levelWithProgress.driver && (
-                <div key={levelWithProgress.driver}>
-                  {i18n.loggedIn({partner: levelWithProgress.driver})}
-                </div>
+              {driver && (
+                <div key={driver}>{i18n.loggedIn({partner: driver})}</div>
               )}
             </div>
           )}
-          {levelWithProgress && (
-            <div style={styles.bubble}>
-              <ProgressBubble
-                level={levelWithProgress}
-                disabled={true}
-                hideTooltips={true}
-                hideAssessmentBadge={true}
-              />
-            </div>
-          )}
-          {levelWithProgress && !levelWithProgress.submitLevel && (
+          <div style={styles.bubble}>
+            <ProgressBubble
+              level={levelWithProgress}
+              disabled={true}
+              hideTooltips={true}
+              hideAssessmentBadge={true}
+            />
+          </div>
+          {!submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
-                {levelWithProgress.status !== LevelStatus.not_tried &&
-                levelWithProgress.updatedAt
-                  ? new Date(levelWithProgress.updatedAt).toLocaleString()
+                {status !== LevelStatus.not_tried && updatedAt
+                  ? new Date(updatedAt).toLocaleString()
                   : i18n.notApplicable()}
               </div>
             </div>
           )}
-          {levelWithProgress?.submitLevel && (
+          {submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
               <div>
-                {levelWithProgress.status === LevelStatus.submitted
-                  ? new Date(levelWithProgress.updatedAt).toLocaleString()
+                {status === LevelStatus.submitted
+                  ? new Date(updatedAt).toLocaleString()
                   : i18n.notApplicable()}
               </div>
               <Button
@@ -127,7 +128,7 @@ export default class SelectedStudentInfo extends React.Component {
                 color="blue"
                 onClick={this.onUnsubmit}
                 id="unsubmit-button-uitest"
-                disabled={levelWithProgress.status !== LevelStatus.submitted}
+                disabled={status !== LevelStatus.submitted}
               />
             </div>
           )}
