@@ -74,50 +74,50 @@
   "12": {
     "name": "N-DonutTruck-1",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 1
+    "row": 3,
+    "column": 0
   },
   "13": {
     "name": "N-DonutTruck-2",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 2
+    "row": 3,
+    "column": 1
   },
   "14": {
     "name": "N-DonutTruck-3",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 3
+    "row": 4,
+    "column": 0
   },
   "15": {
     "name": "N-DonutTruck-4",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 4
+    "row": 4,
+    "column": 1
   },
   "16": {
     "name": "N-DonutTruck-5",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 5
+    "row": 5,
+    "column": 0
   },
   "17": {
     "name": "N-DonutTruck-6",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 6
+    "row": 5,
+    "column": 1
   },
   "18": {
     "name": "N-DonutTruck-7",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 7
+    "row": 6,
+    "column": 0
   },
   "19": {
     "name": "N-DonutTruck-8",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 8
+    "row": 6,
+    "column": 1
   },
   "20": {
     "name": "E-DonutTruck-1",
@@ -285,25 +285,25 @@
     "name": "top-left-sidewalk-corner",
     "sheet": "sidewalk.png",
     "row": 0,
-    "column": 0
+    "column": 4
   },
   "50": {
     "name": "top-right-sidwalk-corner",
     "sheet": "sidewalk.png",
     "row": 0,
-    "column": 1
+    "column": 6
   },
   "51": {
     "name": "bottom-right-sidewalk-corner",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 2
+    "row": 2,
+    "column": 6
   },
   "52": {
     "name": "bottom-left-sidewalk-corner",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 3
+    "row": 2,
+    "column": 4
   },
   "53": {
     "name": "south-left-horizontal-bench",
@@ -1664,50 +1664,50 @@
   "279": {
     "name": "bottom-left-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 4
+    "row": 2,
+    "column": 1
   },
   "280": {
     "name": "bottom-right-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 5
+    "row": 2,
+    "column": 2
   },
   "281": {
     "name": "top-left-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 6
+    "row": 1,
+    "column": 1
   },
   "282": {
     "name": "top-right-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 7
+    "row": 1,
+    "column": 2
   },
   "283": {
     "name": "bottom-horizontal-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 8
+    "row": 2,
+    "column": 5
   },
   "284": {
     "name": "right-vertical-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 9
+    "row": 1,
+    "column": 6
   },
   "285": {
     "name": "left-vertical-sidewalk-straight",
     "sheet": "sidewalk.png",
     "row": 1,
-    "column": 0
+    "column": 4
   },
   "286": {
     "name": "top-horizontal-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 1,
-    "column": 1
+    "row": 0,
+    "column": 5
   },
   "287": {
     "name": "E-Painter",
