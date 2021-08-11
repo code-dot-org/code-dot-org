@@ -10,7 +10,7 @@ var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 var CopyPlugin = require('copy-webpack-plugin');
 var {StatsWriterPlugin} = require('webpack-stats-plugin');
 var UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
-var sass = require('node-sass');
+var sass = require('sass');
 var TerserPlugin = require('terser-webpack-plugin');
 var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
@@ -323,7 +323,7 @@ describe('entry tests', () => {
     all: {
       options: {
         // Compression currently occurs at the ../dashboard sprockets layer.
-        outputStyle: 'nested',
+        outputStyle: 'compressed',
         includePaths: ['node_modules', '../shared/css/'],
         implementation: sass
       },
