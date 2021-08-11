@@ -10,11 +10,12 @@
       "hideable_lessons": true,
       "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 18:52:35 UTC",
+    "serialized_at": "2021-08-11 15:08:56 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -139,7 +140,7 @@
       "properties": {
         "overview": "Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.",
         "preparation": "* Print the Vocabulary Bingo Cards so each student receives one card\n* Print the Vocabulary Bingo Definitions and mix them up\n* Print copies of the Polymorphism Role Cards\n* Gather one index card or piece of scrap paper for each student",
-        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects to show different types of animals in The Neighborhood and use each `Animal`'s version of their `speak()` method."
+        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -173,9 +174,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Students implement static variables and constants to count the number of `Shape` objects created and set maximum and minimum values for the volume of sounds. Students explore source code for the `Math` class to connect real-world code and the concepts they have learned so far.",
+        "overview": "Students implement static variables and constants to count the number of `PainterPlus` objects created and set maximum and minimum values for the volume of sounds in The Theater.",
         "preparation": "* Print copies of the Math Class Source Code handout (one per student)",
-        "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Theater. You examine the `Math` class source code to see additional examples of static variables and constants."
+        "student_overview": "Instance variables are useful for storing attributes unique to a given object, but sometimes all objects of a class need to share specific attributes. Using static variables, you create shared attributes to represent counters and reusable constants in The Neighborhood and in The Theater."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -227,7 +228,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.",
+        "overview": "Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem.",
         "preparation": "* Print one-sided copies of the Vocabulary Draw Activity Guide for each group of students\n* (Optional) Cut out the strips for the vocabulary game before class\n* Prepare necessary materials for each group: blank paper or a whiteboard and marker for each group, pair of scissors if not pre-cutting vocabulary strips\n* Print copies of the Planning Array Algorithms handout (one copy for each student)\n* Print copies of the Unit 3 Guide handout (one copy for each student)",
         "student_overview": "You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem."
       },
@@ -245,9 +246,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.",
+        "overview": "For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert soundtrack.",
         "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Concert in the Theater Project Planning Guide (one per student)",
-        "student_overview": "For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio."
+        "student_overview": "For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert soundtrack."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -1292,7 +1293,7 @@
       "key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
       "position": 7,
       "properties": {
-        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. You will be helping the director plan and create the opening concert. The students at the elementary school will be invited to watch the concert, so the director wants to showcase all of the things that make up The Neighborhood.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
+        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. You will be helping the director plan and create the opening concert. The students at the elementary school will be invited to watch the concert, so the director wants to tell a story that the kids will enjoy.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
         "duration": "15",
         "name": "Arrays in The Theater",
         "remarks": true
@@ -1663,7 +1664,7 @@
       "key": "4444c9e3-ce71-4c6c-945d-a77c7538a22e",
       "position": 7,
       "properties": {
-        "description": "Let's explore how to use color and shapes in The Theater to create another scene for our concert.",
+        "description": "Let's explore how to use color and shapes in The Theater to create another scene for our concert. In this scene, we'll be showing off some of your character's favorite foods. First, let's create an interesting effect using squares and circles, then we'll show the food images on the stage.",
         "remarks": true
       },
       "seeding_key": {
@@ -1676,7 +1677,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
-        "progression_name": "Color Changing Rectangles"
+        "progression_name": "Rectangles and Circles"
       },
       "seeding_key": {
         "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
@@ -1687,7 +1688,7 @@
       "key": "f288ac30-0ba3-49b0-9f0d-a3347fbd08b6",
       "position": 9,
       "properties": {
-        "description": "Now you know how to create shapes to use in your visualization. Let's practice displaying these with `while` and `for` loops.",
+        "description": "Now you know how to create shapes to use in your concert. Let's create an interesting effect with these shapes by displaying these with `while` and `for` loops.",
         "remarks": true
       },
       "seeding_key": {
@@ -1699,7 +1700,7 @@
       "key": "196d4557-0289-4723-9c6a-784e4f88edf0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a while loop to a for loop, while the other student does a different level to convert a for loop to a while loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then complete a vocabulary matching level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a while loop to a for loop, while the other student does a different level to convert a for loop to a while loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then continue to Level 4 to complete the Check for Understanding.",
         "progression_name": "while to for to while"
       },
       "seeding_key": {
@@ -1726,7 +1727,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio.",
-        "progression_name": "The People in Your Community"
+        "progression_name": "Your Character's Favorite Foods"
       },
       "seeding_key": {
         "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc",
@@ -1924,7 +1925,7 @@
       "key": "dcae97e4-95a0-4c94-9773-3bf090a7678a",
       "position": 9,
       "properties": {
-        "description": "Since the students from the elementary school will be attending the concert, the director wants to create a scene that shows animals they might encounter in The Neighborhood. Each animal will make its sound when it appears on the stage.\n\nThe director was inspired by a book they read, and they want to bring some of its parts to life in the concert.",
+        "description": "For the next scene of our concert, let's introduce your character's friends!",
         "duration": "15",
         "name": "Creating an Array of Animals",
         "remarks": true
@@ -1935,25 +1936,8 @@
       }
     },
     {
-      "key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Here We Are: Notes for Living on Planet Earth video.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This video is a read-aloud of a children's book to provide background and inspiration for the scene and concert. You could choose to play only parts of the video or play just the last half of the video (starting at 2:02)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
-        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
-      }
-    },
-    {
       "key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
         "progression_name": "Array of Animals"
@@ -1965,7 +1949,7 @@
     },
     {
       "key": "1598b120-11c7-44a5-bd24-53cb4030d298",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "We can traverse this array of objects in the same way that we traverse arrays of primitive values.\n\nSince each element in the array is an object, we can call their methods as we traverse the array.",
         "remarks": true
@@ -1977,7 +1961,7 @@
     },
     {
       "key": "20993875-fa36-418f-92eb-6ba111a4be91",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show the output of traversing the `myAnimals` array and calling `speak()` on each element in the array.\n* The first element in the `myAnimals` array is a `Dog` object, so Java checks to see if the `Dog` object has its own version of the `speak()` method.\n* The `Dog` object's `speak()` method outputs `\"Woof!\"`\n* The next element in the `myAnimals` array is a `Cat` object, so Java checks to see if the `Cat` object has its own version of the `speak()` method.\n* The `Cat` object's `speak()` method outputs `\"Meow!\"`"
       },
@@ -1988,7 +1972,7 @@
     },
     {
       "key": "51bf2e09-7597-41db-adc9-cd0d71e359bb",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "We now have our array of `Animal`s. Let's use traversals to make our `Animal` objects show with their sound!",
         "remarks": true
@@ -2000,10 +1984,10 @@
     },
     {
       "key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio.",
-        "progression_name": "Animals in The Neighborhood"
+        "progression_name": "Your Character's Friends"
       },
       "seeding_key": {
         "activity_section.key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
@@ -2012,7 +1996,7 @@
     },
     {
       "key": "a88b2330-9829-4ef6-bf44-abab40dee09b",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "Before showing code or a product to a client, it’s important for a software engineer to make sure that the program meets all specifications and runs efficiently. This is a good time for a code review, and to make any improvements needed prior to reviewing the concert's progress with the director.\n\nDon't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
@@ -2024,9 +2008,9 @@
     },
     {
       "key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
-      "position": 17,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showAnimals()` method. Students request, receive, and review feedback on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showFriends()` method. Students request, receive, and review feedback on Level 3."
       },
       "seeding_key": {
         "activity_section.key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
@@ -2137,10 +2121,33 @@
       }
     },
     {
-      "key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
+      "key": "0994436b-e52b-4c35-8157-ab848de4d054",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Enhanced for Loop video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they use an enhanced `for` loop to play an array of notes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Enhanced for Loop video. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0994436b-e52b-4c35-8157-ab848de4d054",
+        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
+      }
+    },
+    {
+      "key": "f4f6a50f-8d2b-45e9-bea0-593f5c90dcfb",
+      "position": 6,
+      "properties": {
+        "description": "In the next scene of your concert, your character meets a unicorn that convinces them to travel the world. Let's introduce this unicorn with some music!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f4f6a50f-8d2b-45e9-bea0-593f5c90dcfb",
+        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
+      }
+    },
+    {
+      "key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
         "progression_name": "Write an Enhanced for Loop"
       },
       "seeding_key": {
@@ -2150,7 +2157,7 @@
     },
     {
       "key": "5bab0d19-b7c9-4649-b6b1-a42f9eab8697",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "**Do This:** Click through the animated slide to discuss the enhanced `for` loop variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> For each iteration of the enhanced `for` loop, the enhanced `for` loop variable is assigned a copy of the element without using its index.\n   * In the first iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 90. The value is increased by 10 In the loop body, and it then prints 100.\n   * In the second iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 75. The value is increased by 10, and it then prints 85.\n   * In the third iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 50. The value is increased by 10, and it then prints 60.\n   * In the fourth iteration of this enhanced `for` loop, the enhanced `for` loop variable is storing a value of 88. The value is increased by 10, and it then prints 98.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the value of the enhanced `for` loop variable will not modify the original array. The array contents are displayed using the `Arrays` object's `toString` method to show that the loop did not change the original values.",
         "duration": "15",
@@ -2169,7 +2176,7 @@
     },
     {
       "key": "e14a5363-f6e4-41f3-b72e-4e079a77f8f6",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the Tracing Loops activity guide to each student.\n\n**Do This:** Students complete the Tracing Loops activity guide in pairs. \n\n**Do This:** Review the Tracing Loops activity guide as a class. Draw the trace tables on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values to add to the new row of the trace table. Compare how the array values and the loop variables change in a `for` loop versus an enhanced `for` loop. ",
         "tips": [
@@ -2186,7 +2193,7 @@
     },
     {
       "key": "b163015a-9ff2-4aa8-9d74-8ba0aa430bb4",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students draw a three column table on a piece of paper. Students fill in when it is best to use each type of loop.",
         "duration": "10",
@@ -2199,7 +2206,7 @@
     },
     {
       "key": "04b23d83-eca5-4b0d-bb81-783ac8e4f147",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** When is it best to use this loop? When is it not best to use this loop?\n\n**Discussion Goal:** Students write when it is best and not best to use their assigned loop. After, have a student from each group volunteer to discuss what they wrote down. Possible points to bring out include:\n* `while` Loops:\n    * `while` loops are best to an indefinite number of iterations, as long as a certain condition remains `true`.  \n    * `while` loops become an infinite loop if the condition never evaluates to `false`. This can be a pro or con, depending on the use case.\n    * `while` loops are not best for iterating through an array when the length of the array or the number of iterations is known.\n* `for` Loops:\n    * `for` loops are best when the size of the array or the total number of iterations is known.\n    * `for` loops are best when the loop body needs the index of an element.\n    * `for` loops are best when the elements of the array need to be modified.\n    * It is better to use an enhanced `for` loop, however, if iterating through all elements of the array starting from index 0.\n* Enhanced `for` Loops:\n    * Enhanced `for` loops are best for looping through all values of an array without changing their value.\n    * Enhanced `for` loops are not best for modifying the array values or if the loop body needs the index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through the use cases and limitations of using an enhanced `for` loop."
       },
@@ -2209,8 +2216,20 @@
       }
     },
     {
+      "key": "82ba4855-ed34-48dc-8b4a-96fc0bb3ffb0",
+      "position": 12,
+      "properties": {
+        "description": "It's time to bring in the unicorn! Use enhanced `for` loops to display the given arrays of unicorn images to create the next scene in your concert.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "82ba4855-ed34-48dc-8b4a-96fc0bb3ffb0",
+        "lesson_activity.key": "ea48c1c6-d696-4d04-999f-64ab287949fa"
+      }
+    },
+    {
       "key": "8a64f43d-0e0a-4701-bc7d-f7d15f341bb6",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Levels 3 and 4 on Code Studio.",
         "progression_name": "Refactoring Loops",
@@ -2268,7 +2287,7 @@
       "key": "6390063b-a426-4e60-9b66-27db4802bbf9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to store a value that is shared by all instances of a class? For example, all of these `Student` objects attend the same school. How could we share a variable that stores the school's name with all `Student` objects?*\n\n**Discussion Goal:** Students share ideas for storing a value that is shared by all instances of a class, including creating an instance variable to store the value."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What if we wanted to store a value that is shared by all instances of a class?*\n* *For example, all of these `Student` objects attend the same school. How could we share a variable that stores the school's name with all `Student` objects?*\n\n**Discussion Goal:** Students share ideas for storing a value that is shared by all instances of a class, including creating an instance variable to store the value."
       },
       "seeding_key": {
         "activity_section.key": "6390063b-a426-4e60-9b66-27db4802bbf9",
@@ -2291,13 +2310,13 @@
       "key": "37f81f41-9bb1-4580-88c2-741f45d33a4d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of static variable and the `static` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Static Variables video.\n\n**Do This:** Click through the three slides to discuss static variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each instance of the class shares a static variable, which is in one fixed location in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A static variable can be created by adding the static keyword before the variable during declaration.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Static variables belong to a class, not an object. To use a static variable, use the `ClassName` and the dot operator.",
-        "duration": "15",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of static variable and the `static` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Static Variables video. Play the video inside the player on the slide rather than making it full screen so students can see the questions next to the video.\n\n**Do This:** Click through the three slides to discuss static variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each instance of the class shares a static variable, which is in one fixed location in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A static variable can be created by adding the static keyword before the variable during declaration.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Static variables belong to a class, not an object. To use a static variable, use the `ClassName` and the dot operator.",
+        "duration": "17",
         "name": "Static Variables",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may note the `static` keyword being used in the `main` method. The `main` method is declared as a static method so that the Java Virtual Machine can call it without creating any instance of a class. \n\nThe `static` keyword can be used with a class, variable, or method. A static class, variable, or method belongs to a class and can be used without creating an object."
+            "markdown": "Students may note the `static` keyword being used in the `main` method. The `main` method is declared as a static method so that it can be called without creating an instance of a class.\n\nThe `static` keyword can be used with a class, variable, or method. A static class, variable, or method belongs to a class and can be used without creating an object."
           }
         ]
       },
@@ -2344,7 +2363,7 @@
       "key": "7b1f0297-f869-4193-868f-b75117b0e04d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1, then complete Level 2 in pairs. They create and use a static variable to count the number of `PainterPlus` objects created.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
         "progression_name": "Create a Static Variable"
       },
       "seeding_key": {
@@ -2357,7 +2376,7 @@
       "position": 6,
       "properties": {
         "description": "A static variable is stored in one space in memory and can be updated for all instances of the class.\n\nThere are situations in our program where we may want a variable to be unchangeable or constant.",
-        "duration": "10",
+        "duration": "18",
         "name": "Constants",
         "remarks": true
       },
@@ -2370,7 +2389,7 @@
       "key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Definition of a constant.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you used constants before? How were they useful?*\n\n**Discussion Goal:** Students share constants they have used, such as pi in math class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define constant.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Where have you used constants before?*\n* *How were they useful?*\n\n**Discussion Goal:** Students share constants they have used, such as pi in math class."
       },
       "seeding_key": {
         "activity_section.key": "18fd18e8-1e43-48d0-adbc-16ee386e8b2e",
@@ -2393,7 +2412,7 @@
       "key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Constants video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Constants video. Play the video inside the player on the slide rather than making it full screen so students can see the questions next to the video."
       },
       "seeding_key": {
         "activity_section.key": "69a972fc-0b91-473d-9ba3-cecf0fbc89a4",
@@ -2404,7 +2423,7 @@
       "key": "2b0698fe-6829-4298-ab51-05d424a8edc9",
       "position": 10,
       "properties": {
-        "description": "In The Theater, a useful place to use a constant is to store the minimum and the maximum volume to control how loud or quiet our sounds play.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sounds are waves. The higher the amplitude (height) of the wave, the louder the sound is at that instant. When the amplitude of the sound is shorter, the sound is quieter.\n\nAt certain amplitudes, the sound we want to create becomes hard to hear clearly. Let’s create constants for the minimum and maximum volume in the `SoundEffects` class.",
+        "description": "In The Theater, a useful place to use a constant is to store the minimum and the maximum volume to control how loud or quiet our sounds play.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sounds are waves. The higher the amplitude (height) of the wave, the louder the sound is at that instant. When the amplitude of the sound is shorter, the sound is quieter.\n\nAt certain amplitudes, the sound we want to create becomes hard to hear clearly. Let’s create constants for the minimum and maximum volume in the `SoundEffects` class and use them to control the volume in the next scene of the concert. This next scene will play music louder during the daytime but quieter at night.",
         "remarks": true
       },
       "seeding_key": {
@@ -2416,7 +2435,7 @@
       "key": "8937d0f7-ee73-415c-a145-23c5c8644e0b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3-5 on Code Studio. Students independently complete the Check for Understanding on Level then create a `double` array from a sound file on Level 4. Have students complete Level 5 in pairs, where they create constants for the minimum and maximum volume.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3-6 on Code Studio.",
         "progression_name": "Volume Constants"
       },
       "seeding_key": {
@@ -2425,41 +2444,10 @@
       }
     },
     {
-      "key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
-      "position": 12,
-      "properties": {
-        "description": "Static and constant variables are used across the industry. Let’s explore an example.\n\nThe `Math` class contains variables and methods for performing mathematical tasks with numbers. You will learn more about the `Math` class in a later unit, but let’s inspect the code to see how static variables and constants are used in the `Math` class.",
-        "duration": "10",
-        "name": "Math Class Source Code",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "74fae15e-e0a5-4983-abda-147b2e5c26f1",
-        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
-      }
-    },
-    {
-      "key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Math Class Source Code handout.\n\n**Do This:** Students complete the Math Class Source Code handout with a partner.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The next unit covers the `Math` class. If you do not have time to review the activity guide, have students write down questions about the `Math` class and address their questions in the next unit. \n\nIf time permits, review the activity guide as a class or in student pairs. Discuss observations based on notes collected."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "63b8dddf-a55a-4ec2-9237-d22bfac998ba",
-        "lesson_activity.key": "31b2da95-0bad-49b2-b6a2-4d4f18aebf33"
-      }
-    },
-    {
       "key": "3a131bbd-72c8-441b-ab5a-a70964b08a15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -2502,7 +2490,7 @@
       "key": "5a328f09-7437-407e-8eb6-36efa960470e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were there multiple ways to find the cheapest item? What is the most efficient solution?*\n\n**Discussion Goal:** Students recognize that while they may have slightly different variable names or create variables in different orders, their steps are generally the same. Student algorithms might include:\n* Storing the cheapest price they have seen so far\n* Checking every item on the menu\n* Comparing the current item and the lowest one they have seen so far\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Efficiency refers to the amount of time or resources needed to execute an algorithm. What is the most efficient solution?*\n\n**Discussion Goal:** Students choose algorithms that have the least number of steps to execute."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Were there multiple ways to find the cheapest item?*\n\n**Discussion Goal:** Students recognize that while they may have slightly different variable names or create variables in different orders, their steps are generally the same. Student algorithms might include:\n* Storing the cheapest price they have seen so far\n* Checking every item on the menu\n* Comparing the current item and the lowest one they have seen so far\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Efficiency is getting the best outcome with  the least amount of waste. What is the most efficient solution?*\n\n**Discussion Goal:** Students choose algorithms that have the least number of steps to execute."
       },
       "seeding_key": {
         "activity_section.key": "5a328f09-7437-407e-8eb6-36efa960470e",
@@ -2567,7 +2555,7 @@
       "key": "934d8729-ccdc-4238-bfc8-94b29a34b666",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement a modified version of their maximum algorithm to find the lowest note in a sound.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug a modified version of their maximum algorithm to find the lowest note in a sound.",
         "progression_name": "Vocal Range - Minimum",
         "tips": [
           {
@@ -2597,7 +2585,7 @@
       "key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are strategies we can use when debugging off-by-one errors like the one we saw on Level 2?*\n\n**Discussion Goal:** Students identify steps to use when debugging off-by-one errors, including:\n* Debugging the method header by verifying that the control variable is initialized to a valid index value and the condition does not allow it to go past the largest index\n* Using print statements to print the index value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the debugging wall that describes bugs with scope."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are strategies we can use when debugging off-by-one errors like the one we saw on Level 2?*\n\n**Discussion Goal:** Students identify steps to use when debugging off-by-one errors, including:\n* Debugging the method header by verifying that the control variable is initialized to a valid index value and the condition does not allow it to go past the largest index\n* Using print statements to print the index value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall that describes how to identify off-by-one errors and a strategy to debug."
       },
       "seeding_key": {
         "activity_section.key": "793e66d8-584a-46b6-a1bc-7159800b1dcb",
@@ -2621,7 +2609,7 @@
       "key": "799c2677-55a8-4b8d-a870-11c149db98fd",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students translate their pseudocode to Java to calculate the sum or the mean of all elements in an array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students translate their pseudocode to Java to calculate the sum or the average of the elements in the given arrays.",
         "progression_name": "Sum and Mean",
         "tips": [
           {
@@ -2650,7 +2638,7 @@
       "key": "4e7f0905-6134-43c5-8ff0-fecb4e0aa4fc",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 4 and 5 on Code Studio. Students translate their pseudocode to Java to find if any elements in an array are greater than 0 and if all elements in an array are greater than 0.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio.",
         "progression_name": "Identifying Properties Algorithms"
       },
       "seeding_key": {
@@ -2723,7 +2711,7 @@
       "position": 1,
       "properties": {
         "description": "Developing more complex programs requires planning. Before writing code, software engineers first create diagrams, flowcharts, and algorithms to figure out how to tell the computer what to do. This process makes it much easier to write code using the plans they create.",
-        "duration": "13",
+        "duration": "17",
         "name": "Swapping Elements in an Array",
         "remarks": true
       },
@@ -2736,7 +2724,13 @@
       "key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How Do Software Engineers Write Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Array Algorithms handout, a set of Array Algorithms Manipulatives, a double variable cup, an extra array from the previous lesson's Array Manipulatives, sticky notes, scrap pieces of paper, and 18 paper clips. Direct students to cut out the Array Algorithms Manipulatives and create 6 paper clip chains."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the How Do Software Engineers Write Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Array Algorithms handout, a set of Array Algorithms Manipulatives, a double variable cup, an extra array from the previous lesson's Array Manipulatives, sticky notes, scrap pieces of paper, and 18 paper clips. Direct students to cut out the Array Algorithms Manipulatives and create 6 paper clip chains.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you still have paper clip chains from previous lessons, you can reuse them here rather than creating new ones."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa830ac8-19b7-4450-bf09-be65b30c884e",
@@ -2759,7 +2753,7 @@
       "key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use their manipulatives to set up one of their array manipulatives to match the starting array shown on the slide. Click through this animated slide to show each phase of applying the algorithm and the end result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we swap the first two shapes in the array?*\n\n**Discussion Goal:** Students suggest placing the shape at index 1 in index 0 or placing the shape at index 0 in index 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the error that results from attempting to set the next element to contain the value stored in the first element."
+        "description": "**Do This:** Have students use their manipulatives to set up one of their array manipulatives to match the starting array shown on the slide. Click through this animated slide to show each phase of applying the algorithm and the end result.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we swap the first two shapes in the array?*\n\n**Discussion Goal:** Students suggest placing the shape at index 1 in index 0 or placing the shape at index 0 in index 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the error that results from attempting to set the next element to contain the value stored in the first element."
       },
       "seeding_key": {
         "activity_section.key": "06b724e7-1fc9-4fad-adda-aa81dd72fe86",
@@ -2831,12 +2825,12 @@
       }
     },
     {
-      "key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
+      "key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think will happen to the sound if we replaced all the duplicate samples with 0?*\n\n**Discussion Goal:** Students share ideas of potential effects, which may include muting parts of the sound or making parts of the sound louder or softer.\n\n**Group:** Put students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode on their Planning Array Algorithms handout for an algorithm to count the number of duplicate samples and modify the samples array to set the duplicates to 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
-        "duration": "8",
-        "name": "Finding and Replacing Duplicate Samples",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to find samples that were above or below a specific value, like 0? How could we do this?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include using an `if` statement within the loop to check each element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to find and count values that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If we wanted to create a new sound using just those samples that are greater than 0, what do we need to add to our algorithm?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include creating a new array and assigning the element to the new array within the `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to add pseudocode to create a new sound using the samples that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
+        "duration": "18",
+        "name": "Finding Samples That Meet Specific Criteria",
         "tips": [
           {
             "type": "teachingTip",
@@ -2845,62 +2839,27 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8d3216c6-1f72-44b5-9487-500b0b43efc1",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show a pseudocode solution. Give students time to check and correct their work."
-      },
-      "seeding_key": {
-        "activity_section.key": "e0728cb0-dd6d-455d-8c55-72f57b4d29ee",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
-        "progression_name": "Writing the replaceDuplicates() Method"
-      },
-      "seeding_key": {
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students note that while they can still hear the sound, some static can be heard that was not in the original sound."
-      },
-      "seeding_key": {
-        "activity_section.key": "929cf088-659e-4eb0-94f8-87ce7d3f2244",
-        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
-      }
-    },
-    {
-      "key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we wanted to find samples that were above or below a specific value, like 0? How could we do this?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include using an `if` statement within the loop to check each element.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to find and count values that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If we wanted to create a new sound using just those samples that are greater than 0, what do we need to add to our algorithm?*\n\n**Discussion Goal:** Students share ideas to approach this problem, which may include creating a new array and assigning the element to the new array within the `if` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to add pseudocode to create a new sound using the samples that are greater than 0. Students use the manipulatives to step through the problem and translate the steps into pseudocode.",
-        "duration": "14",
-        "name": "Finding Samples That Meet Specific Criteria"
-      },
-      "seeding_key": {
         "activity_section.key": "cf33b57b-0498-4f87-9630-dbdb0e222c20",
         "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
       }
     },
     {
-      "key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
-      "position": 15,
+      "key": "49d7090a-caac-4a1b-a0ec-1def1a1ad259",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4 and 5 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
+        "description": "We're going to use this algorithm to create the next scene in the concert. In the next scene, your character is continuing their travels to visit the ocean. Use your new algorithm to manipulate the audio and create the scene.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "49d7090a-caac-4a1b-a0ec-1def1a1ad259",
+        "lesson_activity.key": "967bccb0-1196-4e55-be06-494d14e98e51"
+      }
+    },
+    {
+      "key": "701d3b4e-388b-4dda-ab36-331ea3727aab",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students individually translate the pseudocode they wrote in their groups to Java. Students test it to hear the effect on the array.",
         "progression_name": "Writing the find() Method"
       },
       "seeding_key": {
@@ -2910,7 +2869,7 @@
     },
     {
       "key": "e9201e46-c5d3-4813-857b-03d46ec37af0",
-      "position": 16,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did the modifications we made to the array of samples do to the sound?*\n\n**Discussion Goal:** Students share different ideas about what they hear, including that it sounds compressed, sped up, and that samples are missing."
       },
@@ -2921,7 +2880,7 @@
     },
     {
       "key": "bcd1fffb-65b0-4053-8237-345f644cbba7",
-      "position": 17,
+      "position": 14,
       "properties": {
         "description": "This is a good opportunity to do a code review to make improvements. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
@@ -2933,9 +2892,9 @@
     },
     {
       "key": "8340f623-1d23-4357-aeed-942658fd0c4c",
-      "position": 18,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `find()` method. Students request, receive, and review feedback on Level 5."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `find()` method. Students request, receive, and review feedback on Level 3."
       },
       "seeding_key": {
         "activity_section.key": "8340f623-1d23-4357-aeed-942658fd0c4c",
@@ -3052,7 +3011,7 @@
       "key": "2278dee0-5d83-49b8-939a-ec74ac214150",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Nested Loop video. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Nested Loops video. "
       },
       "seeding_key": {
         "activity_section.key": "2278dee0-5d83-49b8-939a-ec74ac214150",
@@ -3075,7 +3034,7 @@
       "key": "09ec0807-8a56-4515-96e2-828e98b36c3a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the questions with a nearby partner. Bring the class back together and review:\n* The `for` loop is nested inside the `while` loop. \n* The loop control variable changes each time through the loop based on the increment or decrement specified in the header. The inner loop iterates two times, but after the full program runs, it will iterate four times.\n* The outer loop will iterate a total of two times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the outer loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declarations\n* The `while` loop iteration \n* The increment of i each time the loop iterates\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declaration of `j` and `weeks`\n* The `for` loop iteration \n* The compiler’s exit from the `for` loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Do This:* Click through the animated slide of what happens when the nested `for` loop inside the while loop executes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the questions with a nearby partner. Bring the class back together and review:\n* The `for` loop is nested inside the `while` loop. \n* The loop control variable changes each time through the loop based on the increment or decrement specified in the header. The inner loop iterates two times, but after the full program runs, it will iterate four times.\n* The outer loop will iterate a total of two times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the outer loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declarations\n* The `while` loop iteration \n* The increment of `i` each time the loop iterates\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declaration of `j` and `weeks`\n* The `for` loop iteration \n* The end of the `for` loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested `for` loop inside the while loop executes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3092,7 +3051,7 @@
       "key": "e5f4bd6d-ae0d-4d3b-96da-e0d223d942e1",
       "position": 6,
       "properties": {
-        "description": "Now that we understand how nested loops are structured, we will apply our new knowledge first in Code Studio, then using The Theater.",
+        "description": "Now that we understand how nested loops are structured, let's use these to create more complex visuals in our concert. For the next scene of our concert, your character has decided to visit space! You will use nested loops to animate each planet to move around your character.",
         "remarks": true
       },
       "seeding_key": {
@@ -3104,7 +3063,7 @@
       "key": "701a0a16-a929-4249-969d-8d078cfed67f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. In Level 1, students write a nested loop that counts down numbers 10-1 and prints out “I love CS!!”. In Level 2, students create a nested loop to repeat the animation of shapes for three verses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
         "progression_name": "Nested Loops"
       },
       "seeding_key": {
@@ -3130,7 +3089,7 @@
       "key": "f43cea3a-bcc1-4e02-973d-01deddab6c5c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n**Distribute:** Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3147,7 +3106,7 @@
       "key": "fce07cb6-b698-4067-b240-b457002a0c77",
       "position": 10,
       "properties": {
-        "description": "Now we know how to write the shift and reverse algorithms in pseudocode, let’s translate them to Java.",
+        "description": "Now we know how to write the shift and reverse algorithms in pseudocode. Let's translate them to Java to create the final scene of our concerts. For the final scene, your character has decided to return to their home to be with their friends and family.",
         "remarks": true
       },
       "seeding_key": {
@@ -3184,7 +3143,7 @@
       "key": "bb7dcf5e-04a9-42ec-a370-ab565e672fff",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Concert in the Theater Project with the students:\n* Students create a concert in The Theater that plays audio and displays shapes in sync. \n* Students implement new and existing algorithms to perform manipulations on audio and shapes while incorporating object-oriented design principles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What new or existing algorithms can you use in your concert to perform manipulations?*\n\n**Discussion Goal:** Students share algorithms they developed in the previous lessons and this lesson. Students suggest creating new algorithms to blend sounds together and perform other manipulations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Concert in The Theater Project with the students:\n* Students create a concert in The Theater that plays audio and displays images or shapes in sync.\n* Students use new and existing algorithms to manipulate arrays of sound, images, or shapes while incorporating object-oriented design principles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What new or existing algorithms can you use in your concert to perform manipulations?*\n\n**Discussion Goal:** Students share algorithms they developed in the previous lessons and this lesson. Students suggest creating new algorithms to blend sounds together and perform other manipulations.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3265,7 +3224,7 @@
       "key": "af96f42f-5f47-4fbb-a814-41b7ec2ce1b3",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `SoundMaster.play(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
+        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `emojiConcert.playSoundtrack(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
         "name": "Listen to Remixes"
       },
       "seeding_key": {
@@ -3347,7 +3306,7 @@
       "key": "3a4e9a5d-c194-4820-b452-a790e7e8a862",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to individually select an existing sound clip to use and write the code for their remix algorithm in the `SoundEffects` class. Students test their algorithm on the chosen sound clip.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to individually select an existing sound clip to use and write the code for their remix algorithm in the `SoundEffects` class. Students test their algorithm on their chosen sound clip.",
         "progression_name": "Concert in The Theater Project",
         "tips": [
           {
@@ -3426,7 +3385,7 @@
       "key": "12f7a0e0-416a-44e8-b086-77175c9d602b",
       "position": 2,
       "properties": {
-        "description": "Today you will continue to develop your Concert in the Theater project. Yesterday, we created our audio. Today you will add visualizations to your concert. Keep in mind what remixes inspired you as you work.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking 10 minutes to do code reviews after about 20 minutes of development work.\n\nFirst, there is a new rule for concerts: the last song can only start playing if the current length of the concert is less than 10 seconds! The last song has to start within the first 10 seconds, otherwise the concert ends.",
+        "description": "Today you will continue to develop your Concert in the Theater project. Yesterday, we created our soundtrack. Today you will add visuals to your concert. Keep in mind what remixes inspired you as you work.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking 10 minutes to do code reviews after about 20 minutes of development work.\n\nFirst, there is a new rule for concerts: the last song can only start playing if the current length of the concert is less than 10 seconds! The last song has to start within the first 10 seconds, otherwise the concert ends.",
         "remarks": true
       },
       "seeding_key": {
@@ -3486,7 +3445,7 @@
       "key": "9177f55e-5567-40ba-9053-51dc7f97ebaf",
       "position": 4,
       "properties": {
-        "description": "Now we’re going to add visuals! Open Lesson 10 Level 2 in a new tab and look at your code for inspiration on how you can use a nested loop with an array of `Shape`s. Copy and paste the code, then modify it to create the visuals for your concert.",
+        "description": "Now we’re going to add visuals! Look back at the concert we created in this unit for ideas. You can choose to draw shapes or display images or both! Use nested loops to create an interesting scene to go with your soundtrack.",
         "duration": "10",
         "name": "Visualize the Concert",
         "remarks": true
@@ -3504,7 +3463,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may move at different speeds depending on their visualization. If students finish early, encourage them to think back to the remixes that inspired them during the warm up to improve their audio."
+            "markdown": "Students may move at different speeds depending on their scene. If students finish early, encourage them to think back to the remixes that inspired them during the warm up to improve their soundtrack."
           }
         ]
       },
@@ -4354,7 +4313,7 @@
         "level_keys": [
           "CSA U3L4-L2"
         ],
-        "progression": "Color Changing Rectangles"
+        "progression": "Rectangles and Circles"
       },
       "bonus": false,
       "seeding_key": {
@@ -4426,7 +4385,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The People in Your Community"
+        "level_keys": [
+          "CSA U3L4-L5"
+        ],
+        "progression": "Your Character's Favorite Foods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4448,7 +4410,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "The People in Your Community"
+        "level_keys": [
+          "CSA U3L4-L6"
+        ],
+        "progression": "Your Character's Favorite Foods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4548,7 +4513,7 @@
         "level_keys": [
           "CSA U3L5-L3"
         ],
-        "progression": "Animals in The Neighborhood"
+        "progression": "Your Character's Friends"
       },
       "bonus": false,
       "seeding_key": {
@@ -4842,18 +4807,43 @@
     {
       "chapter": 38,
       "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L7-L6-2"
+        ],
+        "progression": "Volume Constants"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L7-L6-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      },
+      "level_keys": [
+        "CSA U3L7-L6-2"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U3L7-L6"
+          "CSA U3L7-L7"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L7-L6"
+          "CSA U3L7-L7"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -4861,11 +4851,11 @@
         "activity_section.key": "f21e0cce-2fe0-4ac8-a985-ce2f4fe8912d"
       },
       "level_keys": [
-        "CSA U3L7-L6"
+        "CSA U3L7-L7"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4890,7 +4880,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4915,7 +4905,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4940,7 +4930,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4965,7 +4955,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4990,7 +4980,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5015,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5040,70 +5030,45 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U3L9-L2"
+          "CSA U3L9-L2-2"
         ],
-        "progression": "Writing the replaceDuplicates() Method"
+        "progression": "Writing the find() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L2"
+          "CSA U3L9-L2-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
+        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
       },
       "level_keys": [
-        "CSA U3L9-L2"
+        "CSA U3L9-L2-2"
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U3L9-L3"
-        ],
-        "progression": "Writing the replaceDuplicates() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L3"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
-      },
-      "level_keys": [
-        "CSA U3L9-L3"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L4"
+          "CSA U3L9-L3-2"
         ],
         "progression": "Writing the find() Method"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L4"
+          "CSA U3L9-L3-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -5111,49 +5076,24 @@
         "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
       },
       "level_keys": [
-        "CSA U3L9-L4"
+        "CSA U3L9-L3-2"
       ]
     },
     {
       "chapter": 49,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U3L9-L5"
-        ],
-        "progression": "Writing the find() Method"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3L9-L5"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "701d3b4e-388b-4dda-ab36-331ea3727aab"
-      },
-      "level_keys": [
-        "CSA U3L9-L5"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 6,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA U3L9-L6"
+          "CSA U3L9-L4-2"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3L9-L6"
+          "CSA U3L9-L4-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -5161,11 +5101,11 @@
         "activity_section.key": "676245d7-79b1-4ae2-836c-6f91bd745a1a"
       },
       "level_keys": [
-        "CSA U3L9-L6"
+        "CSA U3L9-L4-2"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5190,7 +5130,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5215,7 +5155,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5240,7 +5180,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5265,7 +5205,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5290,7 +5230,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5315,7 +5255,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5340,7 +5280,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5365,7 +5305,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5390,11 +5330,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Pilot Assessment 2021"
+        ],
         "progression": "Unit 3 Assessment"
       },
       "bonus": false,
@@ -5412,11 +5355,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 3"
+        ],
         "progression": "CSA Pilot Survey Unit 3"
       },
       "bonus": false,
@@ -5881,9 +5827,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L7-L6",
+        "level.key": "CSA U3L7-L6-2",
         "script_level.level_keys": [
-          "CSA U3L7-L6"
+          "CSA U3L7-L6-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-pilot",
+        "activity_section.key": "8937d0f7-ee73-415c-a145-23c5c8644e0b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L7-L7",
+        "script_level.level_keys": [
+          "CSA U3L7-L7"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
@@ -5977,33 +5935,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L2",
+        "level.key": "CSA U3L9-L2-2",
         "script_level.level_keys": [
-          "CSA U3L9-L2"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L9-L3",
-        "script_level.level_keys": [
-          "CSA U3L9-L3"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa3-pilot",
-        "activity_section.key": "43fd7430-22cb-4d5b-9cb1-8c830b2c4d79"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3L9-L4",
-        "script_level.level_keys": [
-          "CSA U3L9-L4"
+          "CSA U3L9-L2-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6013,9 +5947,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L5",
+        "level.key": "CSA U3L9-L3-2",
         "script_level.level_keys": [
-          "CSA U3L9-L5"
+          "CSA U3L9-L3-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6025,9 +5959,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3L9-L6",
+        "level.key": "CSA U3L9-L4-2",
         "script_level.level_keys": [
-          "CSA U3L9-L6"
+          "CSA U3L9-L4-2"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6230,18 +6164,6 @@
       }
     },
     {
-      "name": "[KEY] Math Class Source Code",
-      "url": "https://docs.google.com/document/d/1GjGz_NLEbBYDX0_LfgvhEPLS6fVmeOEnSVuw-roOXpA/edit?usp=sharing",
-      "key": "_key_math_class_source_code",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "_key_math_class_source_code"
-      }
-    },
-    {
       "name": "[KEY] Planning Array Algorithms",
       "url": "https://docs.google.com/document/d/1gnxgtXzU_zKbhH0C7ZtUh8h5ZD6ncGQI8NADMgddJNY/edit#",
       "key": "_key_planning_array_algorithms",
@@ -6407,6 +6329,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_u3l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa3-pilot/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa3-pilot/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa3-pilot/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
       }
     },
     {
@@ -6578,18 +6533,6 @@
       }
     },
     {
-      "name": "Here We Are: Notes for Living on Planet Earth",
-      "url": "https://youtu.be/ZgJzUet0-uE",
-      "key": "here_we_are_notes_for_living_on_planet_earth",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
-      }
-    },
-    {
       "name": "How Do Software Engineers Write Algorithms?",
       "url": "https://drive.google.com/file/d/16XLWWcJBqX7daMO0Q9iPyRIDAMVjzGSJ/view?usp=sharing",
       "key": "how_do_software_engineers_write_algorithms_",
@@ -6623,18 +6566,6 @@
       },
       "seeding_key": {
         "resource.key": "investigating_arrays"
-      }
-    },
-    {
-      "name": "Math Class Source Code",
-      "url": "https://docs.google.com/document/d/1BO5II-icxNOI-r_atrO7uS9tx6mDvHcDBNEYkZLxEgA/edit?usp=sharing",
-      "key": "math_class_source_code",
-      "properties": {
-        "type": "Handout",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "math_class_source_code"
       }
     },
     {
@@ -7200,12 +7131,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
         "resource.key": "polymorphism"
       }
     },
@@ -7278,12 +7203,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "_key_math_class_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
         "resource.key": "_key_u3l7_extra_practice"
       }
     },
@@ -7291,12 +7210,6 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "constants"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "resource.key": "math_class_source_code"
       }
     },
     {
@@ -7397,7 +7310,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csa3-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csa3-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -8017,16 +7947,6 @@
       }
     },
     {
-      "key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56",
-      "properties": {
-        "description": "Examine source code for Java’s Math class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "objective.key": "12d31902-90f3-4c2e-ac46-9b0ef1255e56"
-      }
-    },
-    {
       "key": "49d39301-b4c0-4382-a6b8-71492dc93b89",
       "properties": {
         "description": "Write algorithms using array traversals to find specific data"
@@ -8067,16 +7987,6 @@
       }
     },
     {
-      "key": "45b23f27-344f-46ef-9fdd-40a7b2534afc",
-      "properties": {
-        "description": "Replace duplicate elements in an array with a new value"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "45b23f27-344f-46ef-9fdd-40a7b2534afc"
-      }
-    },
-    {
       "key": "70d071df-1ee3-4210-8bd3-bba962095501",
       "properties": {
         "description": "Obtain elements from an array that meet specific criteria to create a new array"
@@ -8089,21 +7999,11 @@
     {
       "key": "4e74fe99-78c6-4354-befb-63a60f136583",
       "properties": {
-        "description": "Define a nested loop"
+        "description": "Use a nested loop to traverse a 1D array"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "4e74fe99-78c6-4354-befb-63a60f136583"
-      }
-    },
-    {
-      "key": "16cb3674-9465-4d1a-83b2-4baf464c17e5",
-      "properties": {
-        "description": "Create a nested loop and iteration statement"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "16cb3674-9465-4d1a-83b2-4baf464c17e5"
       }
     },
     {
