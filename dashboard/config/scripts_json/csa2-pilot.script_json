@@ -10,11 +10,12 @@
       "hideable_lessons": true,
       "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 18:50:33 UTC",
+    "serialized_at": "2021-08-11 15:16:41 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -5734,6 +5735,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Pilot MCQ Assessment 2021"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6776,6 +6780,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa2-pilot/resources",
+      "key": "all_resources_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_1"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa2-pilot/standards",
+      "key": "all_standards_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_1"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa2-pilot/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Arithmetic Operators",
       "url": "https://drive.google.com/file/d/1d0opG89VXlYLNaSx47qLJNogC5n6mOQZ/view?usp=sharing",
       "key": "arithmetic_operators",
@@ -7061,6 +7098,18 @@
       },
       "seeding_key": {
         "resource.key": "neighborhood_store_management_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "Overloaded Constructors",
+      "url": "https://drive.google.com/file/d/11OlCi3rX9StSEXRO8Yz-FYNDxYSgtvvG/view?usp=sharing",
+      "key": "overloaded_constructors",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
       }
     },
     {
@@ -7542,6 +7591,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u2l4_extra_practice"
       }
     },
@@ -7787,7 +7842,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "csa2-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 
