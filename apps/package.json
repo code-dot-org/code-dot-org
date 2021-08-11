@@ -4,8 +4,8 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": ">=8.15",
-    "npm": ">=3.10.8"
+    "node": "^14.17.1",
+    "npm": "^6.14.13"
   },
   "scripts": {
     "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
@@ -50,7 +50,7 @@
     "@babel/preset-react": "^7.0.0",
     "@cdo/interpreted": "link:../dashboard/config/libraries",
     "@code-dot-org/artist": "0.2.1",
-    "@code-dot-org/blockly": "3.5.37",
+    "@code-dot-org/blockly": "4.0.0",
     "@code-dot-org/craft": "0.2.2",
     "@code-dot-org/dance-party": "1.0.3",
     "@code-dot-org/johnny-five": "0.11.1-cdo.2",
@@ -151,7 +151,7 @@
     "moment": "^2.19.3",
     "newrelic": "^1.27.2",
     "node-js-marker-clusterer": "^1.0.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.0",
     "pepjs": "^0.4.3",
     "pixelmatch": "^5.2.0",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.0",
@@ -176,7 +176,7 @@
     "react-paginate": "^6.3.0",
     "react-pointable": "^1.1.1",
     "react-redux": "~4.4.9",
-    "react-router": "^3.2.3",
+    "react-router": "3.2.6",
     "react-select": "^1.2.1",
     "react-sticky": "^6.0.3",
     "react-tether": "^1.0.4",
@@ -246,7 +246,6 @@
     "jszip": "3.0.0",
     "memoize-one": "^5.1.1",
     "ml-knn": "^3.0.0",
-    "node-sass": "^4.13.0",
     "object-fit-images": "^3.2.3",
     "pa11y-ci": "^2.3.0",
     "prop-types": "^15.6.2",

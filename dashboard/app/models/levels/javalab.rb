@@ -26,7 +26,6 @@
 
 class Javalab < Level
   serialized_attrs %w(
-    project_template_level_name
     start_sources
     validation
     hide_share_and_remix
@@ -37,6 +36,7 @@ class Javalab < Level
     starter_assets
     serialized_maze
     start_direction
+    contained_level_names
   )
 
   before_save :fix_examples, :parse_maze

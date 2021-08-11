@@ -1766,3 +1766,5 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      validation_validatedBackground:
+        text: पृष्ठभूमि के तौर पर {IMG} सेट करें

@@ -18240,3 +18240,22 @@ ar:
               display_name: محتوى
         dlp21-csp-mod1:
           title: وحدة 1 التعلم العميق في مبادئ علوم الكمبيوتر
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الوحدة 1
+              description: اختبار
+            lessonGroup-3:
+              display_name: الوحدة 2
+            lessonGroup-4:
+              display_name: الوحدة 3
+            lessonGroup-5:
+              display_name: الوحدة 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: لمحة عامة
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: لمحة عامة

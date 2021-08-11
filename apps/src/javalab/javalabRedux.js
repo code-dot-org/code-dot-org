@@ -13,12 +13,15 @@ const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const EDITOR_HEIGHT_UPDATED = 'javalab/EDITOR_HEIGHT_UPDATED';
 const LEFT_WIDTH_UPDATED = 'javalab/LEFT_WIDTH_UPDATED';
 const RIGHT_WIDTH_UPDATED = 'javalab/RIGHT_WIDTH_UPDATED';
+const INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED =
+  'javalab/INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
+const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 
 const initialState = {
   consoleLogs: [],
@@ -28,11 +31,13 @@ const initialState = {
   renderedEditorHeight: 400,
   leftWidth: 400,
   rightWidth: 400,
+  instructionsExplicitHeight: undefined,
   isRunning: false,
   editorColumnHeight: 600,
   backpackApi: null,
   isStartMode: false,
-  levelName: undefined
+  levelName: undefined,
+  disableFinishButton: false
 };
 
 // Action Creators
@@ -138,6 +143,13 @@ export const setLevelName = levelName => ({
   levelName
 });
 
+export const setDisableFinishButton = disableFinishButton => {
+  return {
+    type: SET_DISABLE_FINISH_BUTTON,
+    disableFinishButton
+  };
+};
+
 // Selectors
 export const getSources = state => {
   let sources = {};
@@ -175,6 +187,11 @@ export const setLeftWidth = width => ({
 export const setRightWidth = width => ({
   type: RIGHT_WIDTH_UPDATED,
   width
+});
+
+export const setInstructionsExplicitHeight = height => ({
+  type: INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED,
+  height
 });
 
 export const setEditorColumnHeight = editorColumnHeight => ({
@@ -283,6 +300,12 @@ export default function reducer(state = initialState, action) {
       rightWidth: action.width
     };
   }
+  if (action.type === INSTRUCTIONS_EXPLICIT_HEIGHT_UPDATED) {
+    return {
+      ...state,
+      instructionsExplicitHeight: action.height
+    };
+  }
   if (action.type === SET_IS_RUNNING) {
     return {
       ...state,
@@ -311,6 +334,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       levelName: action.levelName
+    };
+  }
+  if (action.type === SET_DISABLE_FINISH_BUTTON) {
+    return {
+      ...state,
+      disableFinishButton: action.disableFinishButton
     };
   }
   return state;

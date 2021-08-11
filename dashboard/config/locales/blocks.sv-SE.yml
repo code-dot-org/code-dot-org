@@ -1742,3 +1742,5 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      validation_validatedBackground:
+        text: ställa in bakgrunden till {IMG}

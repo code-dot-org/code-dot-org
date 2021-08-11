@@ -1191,6 +1191,7 @@ ko:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 그리드
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 비
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 별
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 물속
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 겨울
             undefined: 없음
@@ -1532,6 +1533,7 @@ ko:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 도시
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': 지하철
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1798,3 +1800,5 @@ ko:
           DIR:
             right: 우측 윙어
             left: 왼쪽
+      validation_validatedBackground:
+        text: 배경을 {IMG}으로 설정

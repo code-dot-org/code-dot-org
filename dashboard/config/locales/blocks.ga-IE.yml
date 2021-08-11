@@ -1682,3 +1682,5 @@ ga:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
+      validation_validatedBackground:
+        text: 'socraigh an cúlra: {IMG}'

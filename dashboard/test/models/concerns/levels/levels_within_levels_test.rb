@@ -1,6 +1,19 @@
 require 'test_helper'
 
 class LevelsWithinLevelsTest < ActiveSupport::TestCase
+  test 'cannot delete levels that other levels reference as children' do
+    child = create(:level, parent_levels: [create(:level)])
+    refute child.destroy
+    assert_equal ["Cannot delete record because dependent parent levels exist"],
+      child.errors.full_messages
+  end
+
+  test 'can delete levels that other levels reference as parents' do
+    parent = create(:level, child_levels: [create(:level)])
+    assert parent.destroy
+    assert parent.errors.full_messages.empty?
+  end
+
   test 'parent levels and child levels' do
     parent = create :level
     child = create :level
@@ -119,5 +132,20 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     result = Level.clone_child_levels(parent, '_test_clone')
     expected = {contained_level_names: ['child_level_test_clone']}
     assert_equal expected, result
+  end
+
+  test 'project template level' do
+    template_level = Blockly.create(name: 'project_template')
+    template_level.start_blocks = '<xml/>'
+    template_level.save!
+
+    assert_nil template_level.project_template_level
+    assert_equal '<xml/>', template_level.start_blocks
+
+    real_level1 = Blockly.create(name: 'level 1')
+    real_level1.project_template_level_name = 'project_template'
+    real_level1.save!
+
+    assert_equal template_level, real_level1.project_template_level
   end
 end

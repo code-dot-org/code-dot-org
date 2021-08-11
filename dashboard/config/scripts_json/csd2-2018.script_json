@@ -58,7 +58,7 @@
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2021-07-30 20:27:40 UTC",
+    "serialized_at": "2021-08-03 22:47:25 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2018"
@@ -347,7 +347,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +371,6 @@
         ],
         "progression": "Top Websites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +395,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,7 +419,6 @@
         ],
         "progression": "Exemplar Personal Websites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -447,7 +443,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -472,7 +467,6 @@
         ],
         "progression": "Experiment with Web Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +491,6 @@
         ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -522,7 +515,6 @@
         ],
         "progression": "Explore HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +539,6 @@
         ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -572,7 +563,6 @@
         ],
         "progression": "HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -597,7 +587,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -622,7 +611,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -647,7 +635,6 @@
         ],
         "progression": "Using HTML Tags"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -672,7 +659,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -697,7 +683,6 @@
         ],
         "progression": "Pair Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -722,7 +707,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -747,7 +731,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -772,7 +755,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -797,7 +779,6 @@
         ],
         "progression": "Headings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -822,7 +803,6 @@
         ],
         "progression": "Headings in HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -847,7 +827,6 @@
         ],
         "progression": "Problem Solving Process for Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -872,7 +851,6 @@
         ],
         "progression": "Your Personal Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -897,7 +875,6 @@
         ],
         "progression": "Your Personal Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -922,7 +899,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -947,7 +923,6 @@
         ],
         "progression": "Social Sleuth"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -972,7 +947,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -997,7 +971,6 @@
         ],
         "progression": "Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1022,7 +995,6 @@
         ],
         "progression": "Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1019,6 @@
         ],
         "progression": "Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,7 +1043,6 @@
         ],
         "progression": "Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1097,7 +1067,6 @@
         ],
         "progression": "Lists in HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1122,7 +1091,6 @@
         ],
         "progression": "Expanding Your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1147,7 +1115,6 @@
         ],
         "progression": "Expanding Personal Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1172,7 +1139,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1163,6 @@
         ],
         "progression": "Images in HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1222,7 +1187,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1247,7 +1211,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1272,7 +1235,6 @@
         ],
         "progression": "Adding Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1297,7 +1259,6 @@
         ],
         "progression": "Creative Commons Search"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1322,7 +1283,6 @@
         ],
         "progression": "Attribution"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1347,7 +1307,6 @@
         ],
         "progression": "Attribution"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1372,7 +1331,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1397,7 +1355,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1422,7 +1379,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1447,7 +1403,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1472,7 +1427,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1497,7 +1451,6 @@
         ],
         "progression": "Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,7 +1475,6 @@
         ],
         "progression": "Formatting HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1547,7 +1499,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1572,7 +1523,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1597,7 +1547,6 @@
         ],
         "progression": "Hyperlinks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1622,7 +1571,6 @@
         ],
         "progression": "Linking Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1647,7 +1595,6 @@
         ],
         "progression": "Linking Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1672,7 +1619,6 @@
         ],
         "progression": "Project Guide"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1697,7 +1643,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1722,7 +1667,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1747,7 +1691,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1772,7 +1715,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1797,7 +1739,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1822,7 +1763,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1847,7 +1787,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1872,7 +1811,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1897,7 +1835,6 @@
         ],
         "progression": "Exploration: Adding Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1922,7 +1859,6 @@
         ],
         "progression": "Video: Intro to CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1883,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1972,7 +1907,6 @@
         ],
         "progression": "Styling Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1997,7 +1931,6 @@
         ],
         "progression": "CSS and Style Sheets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2022,7 +1955,6 @@
         ],
         "progression": "Fonts and Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2047,7 +1979,6 @@
         ],
         "progression": "Fonts and Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2072,7 +2003,6 @@
         ],
         "progression": "Fonts and Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2027,6 @@
         ],
         "progression": "Fonts and Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2051,6 @@
         ],
         "progression": "CSS Text Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2147,7 +2075,6 @@
         ],
         "progression": "Video: Intro to CSS Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2172,7 +2099,6 @@
         ],
         "progression": "Styling your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2197,7 +2123,6 @@
         ],
         "progression": "Styling your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2222,7 +2147,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2247,7 +2171,6 @@
         ],
         "progression": "Exploring more CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2272,7 +2195,6 @@
         ],
         "progression": "Exploring more CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2297,7 +2219,6 @@
         ],
         "progression": "The Body Element"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2322,7 +2243,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2347,7 +2267,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2372,7 +2291,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2397,7 +2315,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2422,7 +2339,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2447,7 +2363,6 @@
         ],
         "progression": "Layout with CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2472,7 +2387,6 @@
         ],
         "progression": "Layout Properties"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2497,7 +2411,6 @@
         ],
         "progression": "Styling your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2522,7 +2435,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2547,7 +2459,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2572,7 +2483,6 @@
         ],
         "progression": "RGB Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2597,7 +2507,6 @@
         ],
         "progression": "RGB Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2622,7 +2531,6 @@
         ],
         "progression": "RGB Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2647,7 +2555,6 @@
         ],
         "progression": "RGB Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2672,7 +2579,6 @@
         ],
         "progression": "RGB Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2697,7 +2603,6 @@
         ],
         "progression": "CSS Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2722,7 +2627,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2747,7 +2651,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2772,7 +2675,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2797,7 +2699,6 @@
         ],
         "progression": "Styling with Classes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2822,7 +2723,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2847,7 +2747,6 @@
         ],
         "progression": "Final Personal Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2872,7 +2771,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2897,7 +2795,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -311,8 +311,14 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
-    @level.destroy
-    redirect_to(params[:redirect] || levels_url)
+    result = @level.destroy
+    if result
+      flash.notice = "Deleted #{@level.name.inspect}"
+      redirect_to(params[:redirect] || levels_url)
+    else
+      flash.alert = @level.errors.full_messages.join(". ")
+      redirect_to(edit_level_path(@level))
+    end
   end
 
   def new

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:30 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "alltheplcthings"
@@ -250,9 +250,9 @@
       "properties": {
         "level_keys": [
           "Welcome to TeacherCon!"
-        ]
+        ],
+        "progression": "Welcome to TeacherCon!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -274,9 +274,9 @@
       "properties": {
         "level_keys": [
           "TeacherCon Agenda"
-        ]
+        ],
+        "progression": "TeacherCon Agenda"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -298,9 +298,9 @@
       "properties": {
         "level_keys": [
           "TeacherCon Self-Assessment"
-        ]
+        ],
+        "progression": "TeacherCon Self-Assessment"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -322,9 +322,9 @@
       "properties": {
         "level_keys": [
           "U1L4 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L4 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -346,9 +346,9 @@
       "properties": {
         "level_keys": [
           "U1L6 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L6 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -370,9 +370,9 @@
       "properties": {
         "level_keys": [
           "U1L9 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L9 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -394,9 +394,9 @@
       "properties": {
         "level_keys": [
           "U1L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -418,9 +418,9 @@
       "properties": {
         "level_keys": [
           "U1L11 Lesson Overview"
-        ]
+        ],
+        "progression": "U1L11 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,9 +442,9 @@
       "properties": {
         "level_keys": [
           "U2L2 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L2 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -466,9 +466,9 @@
       "properties": {
         "level_keys": [
           "U2L3 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L3 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -490,9 +490,9 @@
       "properties": {
         "level_keys": [
           "U2L10 Lesson Overview"
-        ]
+        ],
+        "progression": "U2L10 Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -516,7 +516,6 @@
           "cspu5_assess1_eventprograms"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -540,7 +539,6 @@
           "cspu5_assess1_elementid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -564,7 +562,6 @@
           "cspu5_assess1_debugging"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -588,7 +585,6 @@
           "cspu5_assess1_codevalues"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -610,9 +606,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -634,9 +630,9 @@
       "properties": {
         "level_keys": [
           "Overview: Group Work and Peer Learning"
-        ]
+        ],
+        "progression": "Overview: Group Work and Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -658,9 +654,9 @@
       "properties": {
         "level_keys": [
           "Collaborative Learning and Group Work: Description and Strategies"
-        ]
+        ],
+        "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -682,9 +678,9 @@
       "properties": {
         "level_keys": [
           "The Official Peer Instruction Blog"
-        ]
+        ],
+        "progression": "The Official Peer Instruction Blog"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -706,9 +702,9 @@
       "properties": {
         "level_keys": [
           "the Journal of Peer Learning"
-        ]
+        ],
+        "progression": "the Journal of Peer Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -730,9 +726,9 @@
       "properties": {
         "level_keys": [
           "Wednesday Report: Balancing Teachers and Tools in Unit 1"
-        ]
+        ],
+        "progression": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -754,9 +750,9 @@
       "properties": {
         "level_keys": [
           "Peer Review Level 1 - Tuesday Report"
-        ]
+        ],
+        "progression": "Peer Review Level 1 - Tuesday Report"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -778,9 +774,9 @@
       "properties": {
         "level_keys": [
           "Peer Review Level 2 - Wednesday Report"
-        ]
+        ],
+        "progression": "Peer Review Level 2 - Wednesday Report"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -802,9 +798,9 @@
       "properties": {
         "level_keys": [
           "Exploring Practices and Strategies during TeacherCon"
-        ]
+        ],
+        "progression": "Exploring Practices and Strategies during TeacherCon"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -826,9 +822,9 @@
       "properties": {
         "level_keys": [
           "Overview: Balancing Teachers and Tools"
-        ]
+        ],
+        "progression": "Overview: Balancing Teachers and Tools"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,9 +846,9 @@
       "properties": {
         "level_keys": [
           "Peer Review Level 1 - Tuesday Report"
-        ]
+        ],
+        "progression": "Peer Review Level 1 - Tuesday Report"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,9 +870,9 @@
       "properties": {
         "level_keys": [
           "Peer Review Level 2 - Wednesday Report"
-        ]
+        ],
+        "progression": "Peer Review Level 2 - Wednesday Report"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

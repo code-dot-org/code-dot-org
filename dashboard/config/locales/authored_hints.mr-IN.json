@@ -1126,6 +1126,104 @@
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "तुम्ही `repeat` लूपमध्ये एकापेक्षा जास्त ब्लॉक्स वापरू शकता. ",
           "course_starWars_loops9_c": "हे कोडे सोडवण्यासाठी तुम्हाला डावीकडे वळण्याची गरज नाही. तुमची सगळी वळणे उजवीकडे असू शकतात."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "तुम्ही एकॉर्नपर्यंत पोचेपर्यंत एकावेळी एकच सूचना जोडण्याचा प्रयत्न करा.",
+          "courseB_maze_seq4_b": "तुम्हाला हे कोडे सोडवण्यासाठी <xml><block type=\"maze_moveEast\"/></xml> चा वापर करायचा असेल."
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "जर तुम्ही अडकलात तर कागदावर मार्ग काढून पहा.",
+          "courseB_maze_seq5_b": "हे कोडे सोडवायचे 2 मार्ग आहेत!",
+          "courseB_maze_seq5_c": "एकॉर्नपर्यंत कसे पोचायचे ते माहिती नाही? हा मार्ग वापरून पहा."
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "तुमच्या शेवटच्या कोडमध्ये तीन मूव्हमेंट ब्लॉक्स असतील. ",
+          "courseB_maze_seq6_b": "जर तुम्ही अडकलात तर, कोडे दोन भागात सोडवण्याचा प्रयत्न करा, एक बाजूने आणि एक वर-आणि-खाली. ",
+          "courseB_maze_seq5_c": "हे कोडे सोडवायचे दोन मार्ग आहेत.",
+          "courseB_maze_seq5_d": "एकॉर्नपर्यंत कसे पोचायचे ते माहिती नाही? हा मार्ग वापरून पहा."
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "स्क्रॅटला एकॉर्नपर्यंत पोचवण्यासाठी 1 ब्लॉक जोडा.",
+          "courseB_maze_seq7_b": "तुम्हाला दिलेला कोड रन करण्याचा प्रयत्न करा आणि काय होतेय ते पहा.",
+          "courseB_maze_seq7_c": "एकॉर्नपर्यंत पोचू शकला नाहीत? हा मार्ग वापरून पहा!"
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_b": "ब्लॉक्सची पुन्हा रचना करा आणि जिन्याच्या पॅटर्नचा मार्ग वापरा. ",
+          "courseB_maze_seq_challenge2_a": "हे कोडे सोडवण्यासाठी तुम्ही काही ब्लॉक्स जोडण्याची किंवा काढण्याची आवश्यकता नाही."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "जर स्क्रॅट तुम्हाला पाहिजे ते करत नसेल तर दोन्ही ब्लॉक्स एकमेकांना व्यवस्थित जोडले आहेत, हे सुनिश्चित करा आणि मग पुन्हा \"Run\" क्लिक करा.",
+          "2": "चूक करायला घाबरू नका! काहीतरी करायचा प्रयत्न करा आणि जर ते होत नसेल तर दुसरे काहीतरी करून बघा!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "स्क्रॅटला हालचाल करायला लावण्यासाठी ब्लॉक्स <xml><block type=\"when_run\"/></xml> ला जोडा!",
+          "courseB_maze_seq1_b": "स्क्रॅटला एकॉर्नपर्यंत पोचवण्यासाठी यातील तीन <xml><block type=\"maze_moveSouth\"/></xml> ॲरोज बाहेर काढा आणि त्यांना <xml><block type=\"when_run\"/></xml> ब्लॉकला जोडा."
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "तुम्ही कोडे सोडवेपर्यंत एकावेळी एकच ब्लॉक जोडण्याचा प्रयत्न करा.",
+          "courseB_maze_seq8_b": "हे कोडे सोडवण्याचे अनेक मार्ग आहेत!",
+          "courseB_maze_seq8_c": "कोणत्या मार्गाने जायचे माहिती नाही? हा मार्ग वापरून पहा!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "सर्व पायऱ्या आधी एका कागदावर लिहायचा प्रयत्न करा.",
+          "courseB_maze_seq9_b": "एकावेळी एक ब्लॉक असा तुमचा प्रोग्रॅम तयार करा आणि तयार करता करता टेस्ट करा.",
+          "courseB_maze_seq9_c": "हे कोडे सोडवायचे दोन मार्ग आहेत.",
+          "courseB_maze_seq9_d": "अडकलात? हा मार्ग वापरून पहा!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "यावेळी सर्वांत जवळचा मार्ग उपयोगी पडणार नाही.",
+          "courseB_maze_seq_challenge1_b": "सुरुवात करण्यासाठी  <xml><block type=\"maze_moveWest\"/></xml> ब्लॉक वापरण्याचा प्रयत्न करा."
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "तुम्ही खजिना घेऊन चौरसात पोचला की तो उचलण्यासाठी हा ब्लॉक वापरा.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "सोपे सोल्युशन म्हणजे 2 वेळा पूर्वेकडे जा आणि मग खजिना मिळवा."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "तुम्ही कोणता खजिना गोळा करण्यापूर्वी तुम्हाला हालचाल करावी लागेल.",
+          "courseA_collector_loops2_b": "तुम्ही खजिना घेऊन चौरसात पोचला की तो उचलण्यासाठी हा ब्लॉक वापरा.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nलूप\n\nवापरण्याचा प्रयत्न करा!",
+          "courseA_collector_loops3_b": "लक्षात ठेवा, तुम्ही <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूपच्या आत 1 पेक्षा जास्त ब्लॉक्स वापरू शकता.  "
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "लॉरेल किती दूर जाते, हे बदलण्यासाठी, लूप किती वेळा रन होतो ती संख्या बदला.",
+          "courseA_collector_loops4_b": "हे विसरू नका की लॉरेलला खाली चालत जावे लावेल आणि तिने <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप संपवल्यावर खजिना गोळा करा!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "जर तुम्हाला लगेचच उत्तर मिळाले नाही तर तुम्हाला कोणते बाण लागतील हे ठरवण्यासाठी आणि पॅटर्न शोधण्यासाठी\nएक कागद वापरण्याचा प्रयत्न करा.  ",
+          "courseA_collector_loops5_b": "समस्येचे 2 भागात विभाजन करा, दोन्ही बाजूंना जाणे आणि मग खाली जाणे.",
+          "courseA_collector_loops5_c": "लॉरेलला पश्चिमेकडे नेणारा आणि खजिना गोळा करणारा <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप वापरून तुम्ही सुरुवात कराल. "
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "काय चुकले ते कळत नाही? काय घडते ते पाहण्यासाठी कोड रन करण्याचा प्रयत्न करा.",
+          "courseA_collector_loops6_b": "सर्वांत लहान सोल्युशनमध्ये एकापाठोपाठ एक 2 <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूप्स आहेत."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "जर पुढे काय हे तुम्हाला समजत नसेल तर, लॉरेल कुठेपर्यंत पोचली आहे, ते पाहण्यासाठी कोड रन करा."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "तुम्हाला हे कोडे सोडवण्यात अडचणी येत असतील तर मूव्ह्ज एका कागदावर लिहिण्याचा प्रयत्न करा आणि काही पॅटर्न आहे का शोधा.",
+          "courseA_collector_loops8_b": "या कोड्याचे तीन स्वतंत्र समस्यांमध्ये विभाजन करण्याचा प्रयत्न करा आणि प्रत्येक समस्येसाठी लूप्स लिहा.",
+          "courseA_collector_loops8_c": "हे लक्षात ठेवा की तुम्ही कोडचा एकावेळी एक भाग तयार करू शकता, तिथून पुढे कुठे जायचे हे ठरवण्यासाठी \"Run\" दाबा."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "जर तुम्हाला लूप्स वापरण्यासाठी सर्वांत चांगल्या जागा सापडल्या नाहीत तर पायरी पायरीने कोड लिहायचा प्रयत्न करा आणि पॅटर्न शोधा."
         }
       }
     }

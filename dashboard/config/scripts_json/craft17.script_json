@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:06 UTC",
+    "serialized_at": "2021-08-03 22:47:15 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "craft17"
@@ -60,7 +60,6 @@
           "MC_HOC_2017_01_RETRY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "MC_HOC_2017_02_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +106,6 @@
           "MC_HOC_2017_03_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +129,6 @@
           "MC_HOC_2017_04_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +152,6 @@
           "MC_HOC_2017_04POINT5_RYAN"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +175,6 @@
           "MC_HOC_2017_05_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +198,6 @@
           "MC_HOC_2017_06_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +221,6 @@
           "Function intro Ryan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +244,6 @@
           "MC_HOC_2017_07_Cole"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +267,6 @@
           "MC_HOC_2017_10_RETRY"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +290,6 @@
           "MC_HOC_2017_Ali"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +313,6 @@
           "MC_HOC_2017_FP20x20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

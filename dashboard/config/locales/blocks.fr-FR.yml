@@ -1767,3 +1767,5 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      validation_validatedBackground:
+        text: établir {IMG} comme arrière-plan

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:19 UTC",
+    "serialized_at": "2021-08-03 22:47:20 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd4-old"
@@ -314,9 +314,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L01 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -338,9 +338,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L02 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -362,9 +362,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L03 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -386,9 +386,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L04 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,9 +410,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L05 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -434,9 +434,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L06 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -458,9 +458,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L07 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -485,7 +485,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -507,9 +506,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L08 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -531,9 +530,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L09 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,9 +554,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L10 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,9 +578,9 @@
       "properties": {
         "level_keys": [
           "Example App Types"
-        ]
+        ],
+        "progression": "Example App Types"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -606,7 +605,6 @@
         ],
         "progression": "Demo Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -631,7 +629,6 @@
         ],
         "progression": "Demo Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +653,6 @@
         ],
         "progression": "Demo Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +677,6 @@
         ],
         "progression": "Demo Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -703,9 +698,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L11 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -727,9 +722,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L12 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -751,9 +746,9 @@
       "properties": {
         "level_keys": [
           "Building a UI with Design Mode"
-        ]
+        ],
+        "progression": "Building a UI with Design Mode"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -778,7 +773,6 @@
         ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -803,7 +797,6 @@
         ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -828,7 +821,6 @@
         ],
         "progression": "Intro to Design Mode"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,9 +842,9 @@
       "properties": {
         "level_keys": [
           "Choosing Good IDs"
-        ]
+        ],
+        "progression": "Choosing Good IDs"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -877,7 +869,6 @@
         ],
         "progression": "Designing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,7 +893,6 @@
         ],
         "progression": "Designing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -927,7 +917,6 @@
         ],
         "progression": "Designing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -952,7 +941,6 @@
         ],
         "progression": "Designing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -977,7 +965,6 @@
         ],
         "progression": "Designing Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,9 +986,9 @@
       "properties": {
         "level_keys": [
           "Design a Screen for your App"
-        ]
+        ],
+        "progression": "Design a Screen for your App"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1023,9 +1010,9 @@
       "properties": {
         "level_keys": [
           "CSD U4 - Design Mode Project"
-        ]
+        ],
+        "progression": "App Project: Screen Design"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,9 +1034,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L13 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1071,9 +1058,9 @@
       "properties": {
         "level_keys": [
           "Responding to User Input"
-        ]
+        ],
+        "progression": "Responding to User Input"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1098,7 +1085,6 @@
         ],
         "progression": "User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1123,7 +1109,6 @@
         ],
         "progression": "User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1148,7 +1133,6 @@
         ],
         "progression": "User Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1170,9 +1154,9 @@
       "properties": {
         "level_keys": [
           "Multi-Screen Apps"
-        ]
+        ],
+        "progression": "Multi-Screen Apps"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1181,6 @@
         ],
         "progression": "Connecting Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1222,7 +1205,6 @@
         ],
         "progression": "Connecting Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1247,7 +1229,6 @@
         ],
         "progression": "Connecting Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1272,7 +1253,6 @@
         ],
         "progression": "Connecting Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1294,9 +1274,9 @@
       "properties": {
         "level_keys": [
           "Importing Screens"
-        ]
+        ],
+        "progression": "Importing Screens"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1318,9 +1298,9 @@
       "properties": {
         "level_keys": [
           "CSDU4 Project Import"
-        ]
+        ],
+        "progression": "App Project: Screen Import"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1342,9 +1322,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L14 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1366,9 +1346,9 @@
       "properties": {
         "level_keys": [
           "Changing Design Elements with Code"
-        ]
+        ],
+        "progression": "Changing Design Elements with Code"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1393,7 +1373,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1418,7 +1397,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1443,7 +1421,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1468,7 +1445,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1493,7 +1469,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1518,7 +1493,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1543,7 +1517,6 @@
         ],
         "progression": "Changing Text"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1565,9 +1538,9 @@
       "properties": {
         "level_keys": [
           "Getting Better User Input"
-        ]
+        ],
+        "progression": "Getting Better User Input"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1592,7 +1565,6 @@
         ],
         "progression": "Other Forms of Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1617,7 +1589,6 @@
         ],
         "progression": "Other Forms of Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1642,7 +1613,6 @@
         ],
         "progression": "Other Forms of Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1667,7 +1637,6 @@
         ],
         "progression": "Other Forms of Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1692,7 +1661,6 @@
         ],
         "progression": "Other Forms of Input"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1714,9 +1682,9 @@
       "properties": {
         "level_keys": [
           "Adding Functionality to your App"
-        ]
+        ],
+        "progression": "Adding Functionality to your App"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1738,9 +1706,9 @@
       "properties": {
         "level_keys": [
           "CSDU4 Project Functionality"
-        ]
+        ],
+        "progression": "App Project: Adding Functionality"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1762,9 +1730,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L15 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1786,9 +1754,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L16 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1810,9 +1778,9 @@
       "properties": {
         "level_keys": [
           "CSDU4 Project Bug Feature"
-        ]
+        ],
+        "progression": "App Project: Bugs and Features"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1834,9 +1802,9 @@
       "properties": {
         "level_keys": [
           "CSD U4L17 SFLP"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1861,7 +1829,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

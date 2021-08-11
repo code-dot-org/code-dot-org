@@ -21,8 +21,6 @@ se:
     mailer:
       confirmation_instructions:
         subject: Code.org duođaštanneavvagat
-      reset_password_instructions:
-        subject: Code.org čoavddasáni rievdadeami neavvagat
       unlock_instructions:
         subject: Raba Neavvagiid
     omniauth_callbacks:

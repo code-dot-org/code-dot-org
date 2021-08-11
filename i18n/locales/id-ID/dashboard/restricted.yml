@@ -1,0 +1,10 @@
+id:
+  devise:
+    mailer:
+      reset_password_instructions:
+        subject: "Instruksi untuk mengganti kata sandi Code.org"
+        hello: "Hallo %{user_email}!"
+        change_my_password: "Ganti kata sandi saya:"
+        ignore_if_did_not_request: "Jika anda tidak mengirim permintaan ini, abaikanlah email ini."
+        your_password_reset: "Kami telah menerima permintaan untuk mengganti kata sandi anda. Kata sandi dapat diganti melalui link yang tertera di email ini kapan saja dalam jangka waktu %{day_count} hari."
+        your_password_wont_change: "Kata sandi anda tidak akan berubah sampai anda mengakses link diatas dan membuat kata sandi yang baru."

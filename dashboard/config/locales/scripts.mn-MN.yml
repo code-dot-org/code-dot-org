@@ -24604,3 +24604,22 @@ mn:
               name: Test
         dlp21-csp-mod1:
           title: КШУ-ны нээлтийг гүн гүнзгий сурах модуль 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Модуль 1
+              description: тест
+            lessonGroup-3:
+              display_name: Модуль 2
+            lessonGroup-4:
+              display_name: Модуль 3
+            lessonGroup-5:
+              display_name: Модуль 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Тойм
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Тойм
