@@ -258,10 +258,8 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.all_courses
-    all_courses = Rails.cache.fetch('valid_courses/all') do
-      UnitGroup.all.to_a
-    end
-    all_courses.freeze
+    return all.to_a unless should_cache?
+    @@all_courses ||= course_cache.values.uniq.freeze
   end
 
   def self.family_names
