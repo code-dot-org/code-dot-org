@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 21:43:39 UTC",
+    "serialized_at": "2021-08-11 15:16:41 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -7101,6 +7101,18 @@
       }
     },
     {
+      "name": "Overloaded Constructors",
+      "url": "https://drive.google.com/file/d/11OlCi3rX9StSEXRO8Yz-FYNDxYSgtvvG/view?usp=sharing",
+      "key": "overloaded_constructors",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "overloaded_constructors"
+      }
+    },
+    {
       "name": "Quiz, Quiz, Trade",
       "url": "https://docs.google.com/document/d/1OZltNkaoYF7gkHsaEUnYovjg6MceYGFan__UMCjOJeM/edit?usp=sharing",
       "key": "quiz_quiz_trade",
@@ -7574,6 +7586,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "construct_an_object_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "overloaded_constructors"
       }
     },
     {

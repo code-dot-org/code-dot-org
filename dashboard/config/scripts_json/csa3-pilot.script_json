@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 00:31:01 UTC",
+    "serialized_at": "2021-08-11 15:08:56 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -140,7 +140,7 @@
       "properties": {
         "overview": "Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.",
         "preparation": "* Print the Vocabulary Bingo Cards so each student receives one card\n* Print the Vocabulary Bingo Definitions and mix them up\n* Print copies of the Polymorphism Role Cards\n* Gather one index card or piece of scrap paper for each student",
-        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects to show different types of animals in The Neighborhood and use each `Animal`'s version of their `speak()` method."
+        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -228,7 +228,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem. Students participate in a code review to provide and receive feedback to refine their solutions before previewing the unit project.",
+        "overview": "Students use nested loops and develop algorithms to perform manipulations on arrays to shift and reverse elements. Before writing Java code, students plan the algorithm using pseudocode to identify the process needed to solve the problem.",
         "preparation": "* Print one-sided copies of the Vocabulary Draw Activity Guide for each group of students\n* (Optional) Cut out the strips for the vocabulary game before class\n* Prepare necessary materials for each group: blank paper or a whiteboard and marker for each group, pair of scissors if not pre-cutting vocabulary strips\n* Print copies of the Planning Array Algorithms handout (one copy for each student)\n* Print copies of the Unit 3 Guide handout (one copy for each student)",
         "student_overview": "You learn about nested loops, which is a loop inside a loop. You can use a nested loop to search values in an array more efficiently. You continue to develop algorithms to perform manipulations to shift and reverse the order of elements. Before writing Java code, you plan the algorithm using pseudocode to identify the process needed to solve the problem."
       },
@@ -246,9 +246,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert audio.",
+        "overview": "For this project, students use one-dimensional arrays and standard algorithms to develop a concert in The Theater. Students begin by choosing a remix algorithm from a set of remix options and writing its pseudocode with a partner. They translate the pseudocode into code and combine their new algorithm with the algorithms they developed in earlier lessons to create their concert soundtrack.",
         "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the Concert in the Theater Project Planning Guide (one per student)",
-        "student_overview": "For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert audio."
+        "student_overview": "For this project, you design a concert in The Theater. With a partner, you choose a remix algorithm and write its pseudocode. You translate the pseudocode into code and combine it with the algorithms you developed in earlier lessons to create your concert soundtrack."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -1293,7 +1293,7 @@
       "key": "df774f62-ad1c-416a-bb2e-7438cd65bd3f",
       "position": 7,
       "properties": {
-        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. You will be helping the director plan and create the opening concert. The students at the elementary school will be invited to watch the concert, so the director wants to showcase all of the things that make up The Neighborhood.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
+        "description": "In addition to creating and using arrays, we will also be exploring The Theater in this unit. You will be helping the director plan and create the opening concert. The students at the elementary school will be invited to watch the concert, so the director wants to tell a story that the kids will enjoy.\n\nWe're going to start developing this concert by first exploring some of the things we can do in The Theater and creating the first scene.",
         "duration": "15",
         "name": "Arrays in The Theater",
         "remarks": true
@@ -1664,7 +1664,7 @@
       "key": "4444c9e3-ce71-4c6c-945d-a77c7538a22e",
       "position": 7,
       "properties": {
-        "description": "Let's explore how to use color and shapes in The Theater to create another scene for our concert.",
+        "description": "Let's explore how to use color and shapes in The Theater to create another scene for our concert. In this scene, we'll be showing off some of your character's favorite foods. First, let's create an interesting effect using squares and circles, then we'll show the food images on the stage.",
         "remarks": true
       },
       "seeding_key": {
@@ -1677,7 +1677,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
-        "progression_name": "Color Changing Rectangles"
+        "progression_name": "Rectangles and Circles"
       },
       "seeding_key": {
         "activity_section.key": "0d782854-0381-4a9d-91e6-ac0144ef5600",
@@ -1688,7 +1688,7 @@
       "key": "f288ac30-0ba3-49b0-9f0d-a3347fbd08b6",
       "position": 9,
       "properties": {
-        "description": "Now you know how to create shapes to use in your visualization. Let's practice displaying these with `while` and `for` loops.",
+        "description": "Now you know how to create shapes to use in your concert. Let's create an interesting effect with these shapes by displaying these with `while` and `for` loops.",
         "remarks": true
       },
       "seeding_key": {
@@ -1700,7 +1700,7 @@
       "key": "196d4557-0289-4723-9c6a-784e4f88edf0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a while loop to a for loop, while the other student does a different level to convert a for loop to a while loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then complete a vocabulary matching level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in the same pairs. Direct students to Level 3 on Code Studio. In each pair, one student does the first choice level to convert a while loop to a for loop, while the other student does a different level to convert a for loop to a while loop. Both choice levels are the same except for the loop. Once both partners are done, they check each other's work. Students then continue to Level 4 to complete the Check for Understanding.",
         "progression_name": "while to for to while"
       },
       "seeding_key": {
@@ -1727,7 +1727,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio.",
-        "progression_name": "The People in Your Community"
+        "progression_name": "Your Character's Favorite Foods"
       },
       "seeding_key": {
         "activity_section.key": "8eb03d84-fc19-490a-b6f4-ad278fa2d5dc",
@@ -1925,7 +1925,7 @@
       "key": "dcae97e4-95a0-4c94-9773-3bf090a7678a",
       "position": 9,
       "properties": {
-        "description": "Since the students from the elementary school will be attending the concert, the director wants to create a scene that shows animals they might encounter in The Neighborhood. Each animal will make its sound when it appears on the stage.\n\nThe director was inspired by a book they read, and they want to bring some of its parts to life in the concert.",
+        "description": "For the next scene of our concert, let's introduce your character's friends!",
         "duration": "15",
         "name": "Creating an Array of Animals",
         "remarks": true
@@ -1936,25 +1936,8 @@
       }
     },
     {
-      "key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Here We Are: Notes for Living on Planet Earth video.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This video is a read-aloud of a children's book to provide background and inspiration for the scene and concert. You could choose to play only parts of the video or play just the last half of the video (starting at 2:02)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4d632521-a1f7-4c55-b840-f0e9afa116b1",
-        "lesson_activity.key": "30450664-87e4-42e0-86ce-b088ba2d7db7"
-      }
-    },
-    {
       "key": "4704f11d-68a7-44fa-94bd-7fb69dc9149c",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio.",
         "progression_name": "Array of Animals"
@@ -1966,7 +1949,7 @@
     },
     {
       "key": "1598b120-11c7-44a5-bd24-53cb4030d298",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "We can traverse this array of objects in the same way that we traverse arrays of primitive values.\n\nSince each element in the array is an object, we can call their methods as we traverse the array.",
         "remarks": true
@@ -1978,7 +1961,7 @@
     },
     {
       "key": "20993875-fa36-418f-92eb-6ba111a4be91",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to show the output of traversing the `myAnimals` array and calling `speak()` on each element in the array.\n* The first element in the `myAnimals` array is a `Dog` object, so Java checks to see if the `Dog` object has its own version of the `speak()` method.\n* The `Dog` object's `speak()` method outputs `\"Woof!\"`\n* The next element in the `myAnimals` array is a `Cat` object, so Java checks to see if the `Cat` object has its own version of the `speak()` method.\n* The `Cat` object's `speak()` method outputs `\"Meow!\"`"
       },
@@ -1989,7 +1972,7 @@
     },
     {
       "key": "51bf2e09-7597-41db-adc9-cd0d71e359bb",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "We now have our array of `Animal`s. Let's use traversals to make our `Animal` objects show with their sound!",
         "remarks": true
@@ -2001,10 +1984,10 @@
     },
     {
       "key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio.",
-        "progression_name": "Animals in The Neighborhood"
+        "progression_name": "Your Character's Friends"
       },
       "seeding_key": {
         "activity_section.key": "6b38c9e6-e29e-4e34-bdd2-24f5fc1e0265",
@@ -2013,7 +1996,7 @@
     },
     {
       "key": "a88b2330-9829-4ef6-bf44-abab40dee09b",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "Before showing code or a product to a client, it’s important for a software engineer to make sure that the program meets all specifications and runs efficiently. This is a good time for a code review, and to make any improvements needed prior to reviewing the concert's progress with the director.\n\nDon't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!",
         "remarks": true
@@ -2025,9 +2008,9 @@
     },
     {
       "key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
-      "position": 17,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showAnimals()` method. Students request, receive, and review feedback on Level 3."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's `showFriends()` method. Students request, receive, and review feedback on Level 3."
       },
       "seeding_key": {
         "activity_section.key": "83d04523-0b6d-41d4-b9e6-c67b0a869373",
@@ -2152,7 +2135,7 @@
       "key": "f4f6a50f-8d2b-45e9-bea0-593f5c90dcfb",
       "position": 6,
       "properties": {
-        "description": "The director has given us some notes they want to play for the next scene of the concert. They want the notes to be played in order, from the first to the last.",
+        "description": "In the next scene of your concert, your character meets a unicorn that convinces them to travel the world. Let's introduce this unicorn with some music!",
         "remarks": true
       },
       "seeding_key": {
@@ -2164,7 +2147,7 @@
       "key": "2e61bbc6-ab5a-4ef5-86fb-1f54f3a82eaa",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 1 and 2 on Code Studio. Students independently complete the Check for Understanding on Level 1 then complete Level 2 in pairs, where they use an enhanced `for` loop to play an array of notes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
         "progression_name": "Write an Enhanced for Loop"
       },
       "seeding_key": {
@@ -2236,7 +2219,7 @@
       "key": "82ba4855-ed34-48dc-8b4a-96fc0bb3ffb0",
       "position": 12,
       "properties": {
-        "description": "Fireworks are really popular in The Neighborhood, so the next scene in the concert will display a firework on the stage. The director has images that look like a firework when each image is shown in order from the first to the last image. Let's use these to create our next scene.",
+        "description": "It's time to bring in the unicorn! Use enhanced `for` loops to display the given arrays of unicorn images to create the next scene in your concert.",
         "remarks": true
       },
       "seeding_key": {
@@ -2864,7 +2847,7 @@
       "key": "49d7090a-caac-4a1b-a0ec-1def1a1ad259",
       "position": 11,
       "properties": {
-        "description": "We're going to use this algorithm to create the next scene in the concert. The elementary students that are attending the concert are going on a field trip soon to the lake, so the director wants to showcase the type of fish they might find there as the next scene.",
+        "description": "We're going to use this algorithm to create the next scene in the concert. In the next scene, your character is continuing their travels to visit the ocean. Use your new algorithm to manipulate the audio and create the scene.",
         "remarks": true
       },
       "seeding_key": {
@@ -3028,7 +3011,7 @@
       "key": "2278dee0-5d83-49b8-939a-ec74ac214150",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Nested Loop video. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Nested Loops video. "
       },
       "seeding_key": {
         "activity_section.key": "2278dee0-5d83-49b8-939a-ec74ac214150",
@@ -3051,7 +3034,7 @@
       "key": "09ec0807-8a56-4515-96e2-828e98b36c3a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the questions with a nearby partner. Bring the class back together and review:\n* The `for` loop is nested inside the `while` loop. \n* The loop control variable changes each time through the loop based on the increment or decrement specified in the header. The inner loop iterates two times, but after the full program runs, it will iterate four times.\n* The outer loop will iterate a total of two times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the outer loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declarations\n* The `while` loop iteration \n* The increment of i each time the loop iterates\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declaration of `j` and `weeks`\n* The `for` loop iteration \n* The compiler’s exit from the `for` loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Do This:* Click through the animated slide of what happens when the nested `for` loop inside the while loop executes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the questions with a nearby partner. Bring the class back together and review:\n* The `for` loop is nested inside the `while` loop. \n* The loop control variable changes each time through the loop based on the increment or decrement specified in the header. The inner loop iterates two times, but after the full program runs, it will iterate four times.\n* The outer loop will iterate a total of two times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the outer loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declarations\n* The `while` loop iteration \n* The increment of `i` each time the loop iterates\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested loop executes. Pause at each step to discuss what is happening. Highlight the following:\n* The variable declaration of `j` and `weeks`\n* The `for` loop iteration \n* The end of the `for` loop\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide of what happens when the nested `for` loop inside the while loop executes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3068,7 +3051,7 @@
       "key": "e5f4bd6d-ae0d-4d3b-96da-e0d223d942e1",
       "position": 6,
       "properties": {
-        "description": "Now that we understand how nested loops are structured, we will apply our new knowledge first in Code Studio, then using The Theater.",
+        "description": "Now that we understand how nested loops are structured, let's use these to create more complex visuals in our concert. For the next scene of our concert, your character has decided to visit space! You will use nested loops to animate each planet to move around your character.",
         "remarks": true
       },
       "seeding_key": {
@@ -3080,7 +3063,7 @@
       "key": "701a0a16-a929-4249-969d-8d078cfed67f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. In Level 1, students write a nested loop that counts down numbers 10-1 and prints out “I love CS!!”. In Level 2, students create a nested loop to repeat the animation of shapes for three verses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio.",
         "progression_name": "Nested Loops"
       },
       "seeding_key": {
@@ -3106,7 +3089,7 @@
       "key": "f43cea3a-bcc1-4e02-973d-01deddab6c5c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Distribute: Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Shift and Reverse Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on previous written algorithms, how can you manipulate sound elements in an array algorithm to shift or reverse?*\n\n**Discussion Goal:** Students share in a shift algorithm you need an indexed `for` loop to change the array and access two elements at different indices. Students share a reverse algorithm you can write a `for` loop to start with the last element in the array. \n\n**Distribute:** Give each student a copy of the Planning Array Algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students with a partner to write pseudocode on their Planning Array Algorithms handout for an algorithm to shift and reverse samples in the sound array.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3123,7 +3106,7 @@
       "key": "fce07cb6-b698-4067-b240-b457002a0c77",
       "position": 10,
       "properties": {
-        "description": "Now we know how to write the shift and reverse algorithms in pseudocode, let’s translate them to Java.",
+        "description": "Now we know how to write the shift and reverse algorithms in pseudocode. Let's translate them to Java to create the final scene of our concerts. For the final scene, your character has decided to return to their home to be with their friends and family.",
         "remarks": true
       },
       "seeding_key": {
@@ -3160,7 +3143,7 @@
       "key": "bb7dcf5e-04a9-42ec-a370-ab565e672fff",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Concert in the Theater Project with the students:\n* Students create a concert in The Theater that plays audio and displays shapes in sync. \n* Students implement new and existing algorithms to perform manipulations on audio and shapes while incorporating object-oriented design principles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What new or existing algorithms can you use in your concert to perform manipulations?*\n\n**Discussion Goal:** Students share algorithms they developed in the previous lessons and this lesson. Students suggest creating new algorithms to blend sounds together and perform other manipulations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an overview of the Concert in The Theater Project with the students:\n* Students create a concert in The Theater that plays audio and displays images or shapes in sync.\n* Students use new and existing algorithms to manipulate arrays of sound, images, or shapes while incorporating object-oriented design principles.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What new or existing algorithms can you use in your concert to perform manipulations?*\n\n**Discussion Goal:** Students share algorithms they developed in the previous lessons and this lesson. Students suggest creating new algorithms to blend sounds together and perform other manipulations.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3241,7 +3224,7 @@
       "key": "af96f42f-5f47-4fbb-a814-41b7ec2ce1b3",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `SoundMaster.play(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
+        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `emojiConcert.playSoundtrack(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
         "name": "Listen to Remixes"
       },
       "seeding_key": {
@@ -3323,7 +3306,7 @@
       "key": "3a4e9a5d-c194-4820-b452-a790e7e8a862",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to individually select an existing sound clip to use and write the code for their remix algorithm in the `SoundEffects` class. Students test their algorithm on the chosen sound clip.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to individually select an existing sound clip to use and write the code for their remix algorithm in the `SoundEffects` class. Students test their algorithm on their chosen sound clip.",
         "progression_name": "Concert in The Theater Project",
         "tips": [
           {
@@ -3402,7 +3385,7 @@
       "key": "12f7a0e0-416a-44e8-b086-77175c9d602b",
       "position": 2,
       "properties": {
-        "description": "Today you will continue to develop your Concert in the Theater project. Yesterday, we created our audio. Today you will add visualizations to your concert. Keep in mind what remixes inspired you as you work.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking 10 minutes to do code reviews after about 20 minutes of development work.\n\nFirst, there is a new rule for concerts: the last song can only start playing if the current length of the concert is less than 10 seconds! The last song has to start within the first 10 seconds, otherwise the concert ends.",
+        "description": "Today you will continue to develop your Concert in the Theater project. Yesterday, we created our soundtrack. Today you will add visuals to your concert. Keep in mind what remixes inspired you as you work.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking 10 minutes to do code reviews after about 20 minutes of development work.\n\nFirst, there is a new rule for concerts: the last song can only start playing if the current length of the concert is less than 10 seconds! The last song has to start within the first 10 seconds, otherwise the concert ends.",
         "remarks": true
       },
       "seeding_key": {
@@ -3462,7 +3445,7 @@
       "key": "9177f55e-5567-40ba-9053-51dc7f97ebaf",
       "position": 4,
       "properties": {
-        "description": "Now we’re going to add visuals! Open Lesson 10 Level 2 in a new tab and look at your code for inspiration on how you can use a nested loop with an array of `Shape`s. Copy and paste the code, then modify it to create the visuals for your concert.",
+        "description": "Now we’re going to add visuals! Look back at the concert we created in this unit for ideas. You can choose to draw shapes or display images or both! Use nested loops to create an interesting scene to go with your soundtrack.",
         "duration": "10",
         "name": "Visualize the Concert",
         "remarks": true
@@ -3480,7 +3463,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may move at different speeds depending on their visualization. If students finish early, encourage them to think back to the remixes that inspired them during the warm up to improve their audio."
+            "markdown": "Students may move at different speeds depending on their scene. If students finish early, encourage them to think back to the remixes that inspired them during the warm up to improve their soundtrack."
           }
         ]
       },
@@ -4330,7 +4313,7 @@
         "level_keys": [
           "CSA U3L4-L2"
         ],
-        "progression": "Color Changing Rectangles"
+        "progression": "Rectangles and Circles"
       },
       "bonus": false,
       "seeding_key": {
@@ -4405,7 +4388,7 @@
         "level_keys": [
           "CSA U3L4-L5"
         ],
-        "progression": "The People in Your Community"
+        "progression": "Your Character's Favorite Foods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4430,7 +4413,7 @@
         "level_keys": [
           "CSA U3L4-L6"
         ],
-        "progression": "The People in Your Community"
+        "progression": "Your Character's Favorite Foods"
       },
       "bonus": false,
       "seeding_key": {
@@ -4530,7 +4513,7 @@
         "level_keys": [
           "CSA U3L5-L3"
         ],
-        "progression": "Animals in The Neighborhood"
+        "progression": "Your Character's Friends"
       },
       "bonus": false,
       "seeding_key": {
@@ -5052,6 +5035,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2-2"
+        ],
         "progression": "Writing the find() Method"
       },
       "bonus": false,
@@ -5074,6 +5060,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3-2"
+        ],
         "progression": "Writing the find() Method"
       },
       "bonus": false,
@@ -5096,6 +5085,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4-2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6541,18 +6533,6 @@
       }
     },
     {
-      "name": "Here We Are: Notes for Living on Planet Earth",
-      "url": "https://youtu.be/ZgJzUet0-uE",
-      "key": "here_we_are_notes_for_living_on_planet_earth",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
-      }
-    },
-    {
       "name": "How Do Software Engineers Write Algorithms?",
       "url": "https://drive.google.com/file/d/16XLWWcJBqX7daMO0Q9iPyRIDAMVjzGSJ/view?usp=sharing",
       "key": "how_do_software_engineers_write_algorithms_",
@@ -7146,12 +7126,6 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u3l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "resource.key": "here_we_are_notes_for_living_on_planet_earth"
       }
     },
     {
@@ -8025,21 +7999,11 @@
     {
       "key": "4e74fe99-78c6-4354-befb-63a60f136583",
       "properties": {
-        "description": "Define a nested loop"
+        "description": "Use a nested loop to traverse a 1D array"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "4e74fe99-78c6-4354-befb-63a60f136583"
-      }
-    },
-    {
-      "key": "16cb3674-9465-4d1a-83b2-4baf464c17e5",
-      "properties": {
-        "description": "Create a nested loop and iteration statement"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "16cb3674-9465-4d1a-83b2-4baf464c17e5"
       }
     },
     {
