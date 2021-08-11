@@ -88,7 +88,6 @@ Scenario: Javalab with free response contained level
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "finished level with contained level" using stitch mode "none"
-  Then I press "finishButton"
   Then I close my eyes
 
 Scenario: Authorized Teacher on Maze with free response contained level
