@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cdo/honeybadger'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -25,6 +26,12 @@ class ApplicationController < ActionController::Base
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
+
+  after_action :test
+
+  def test
+    puts "status: #{status}"
+  end
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
@@ -76,6 +83,22 @@ class ApplicationController < ActionController::Base
   rescue_from ActionView::MissingTemplate do |exception|
     Rails.logger.warn("Missing template: #{exception}")
     render_404
+  end
+
+  # Cloudfront handles 504 redirect to static error page
+  rescue_from Exception do |exception|
+    puts status
+    puts exception
+    if status === 504
+      # Honeybadger log here
+      Honeybadger.notify(
+        exception,
+        error_message: "Request returned status code 504",
+      )
+      puts "its a 504!"
+      # puts "#{exception}"
+    end
+    #raise exception
   end
 
   def render_404

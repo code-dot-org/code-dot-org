@@ -7,6 +7,9 @@ class CoursesController < ApplicationController
   authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
+    puts "Within index"
+    # return head :gateway_timeout
+    # raise Timeout::Error
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
       format.html do
