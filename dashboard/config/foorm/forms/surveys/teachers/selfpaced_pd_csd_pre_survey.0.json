@@ -4,6 +4,11 @@
       "name": "page1",
       "elements": [
         {
+          "type": "html",
+          "name": "question1",
+          "html": "<h2>Code.org Self-paced Online Professional Learning</h2><p><strong>Welcome to the program!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h3>Progam Pre-Survey</h3>"
+        },
+        {
           "type": "radiogroup",
           "name": "main_goal",
           "title": "My main goal for this professional learning is to: ",
