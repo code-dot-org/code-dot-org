@@ -288,7 +288,9 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
-    create_level_params = level_params
+    # safely convert params to hash now so that if they are modified later, it
+    # will not result in a ActionController::UnfilteredParameters error.
+    create_level_params = level_params.to_h
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
