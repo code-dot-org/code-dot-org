@@ -1519,6 +1519,7 @@ pl:
             Unit 6 lessons:
               name: Jednostka 6 Lekcje
         cspunit4draft:
+          description_short: Dane
           lessons:
             Check Your Assumptions:
               name: Sprawdź swoje założenia
@@ -2751,6 +2752,8 @@ pl:
               name: Wzajemne recenzje
             Describing Web Pages:
               name: Opisywanie stron
+        CSDU5-Draft:
+          description_short: Dane
         CSF_Secret_Sample_Story:
           description_audience: W wieku 8-18+
           lessons:
@@ -13551,6 +13554,8 @@ pl:
               display_name: Intensyfikacja działań
             csf_variables:
               display_name: Zmienne
+            csf_data:
+              display_name: Dane
             csf_for_loops:
               display_name: Pętle dla (for)
             csf_internet:
@@ -14861,6 +14866,8 @@ pl:
               display_name: Pętle
             csf_events:
               display_name: Zdarzenia
+            csf_data:
+              display_name: Dane
             end_of_course_project:
               display_name: Koniec projektu kursu
           lessons:
@@ -22743,6 +22750,8 @@ pl:
               display_name: Pętle
             csf_events:
               display_name: Zdarzenia
+            csf_data:
+              display_name: Dane
             end_of_course_project:
               display_name: Koniec projektu kursu
           lessons:
@@ -23393,6 +23402,8 @@ pl:
               display_name: Cyfrowe obywatelstwo
             csf_variables:
               display_name: Zmienne
+            csf_data:
+              display_name: Dane
             csf_for_loops:
               display_name: Pętle dla (for)
             csf_sprites:
@@ -27343,6 +27354,8 @@ pl:
               display_name: Pętle
             csf_events:
               display_name: Zdarzenia
+            csf_data:
+              display_name: Dane
             end_of_course_project:
               display_name: Koniec projektu kursu
           name: coursec-2021
@@ -29353,10 +29366,10 @@ pl:
                 relacje między klasą a obiektem. '
             lesson-3:
               name: Korzystanie z poleceń
-              description_student: 'Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń
+              description_student: Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń
                 akcji w tej lekcji, aby przesunąć „Malarza” po okolicy. Dowiesz się
                 o niektórych zasadach Javy, których musisz przestrzegać, aby Malarz
-                się poruszał. '
+                się poruszał.
               description_teacher: Podczas tej lekcji uczniowie wdrażają rozwiązania
                 za pomocą poleceń akcji, aby poruszać „Malarzem” po okolicy. Rozwijają
                 umiejętności myślenia komputacyjnego, tłumacząc rozwiązania na kod
@@ -29366,10 +29379,10 @@ pl:
                 poleceń „Malarz”.
             lesson-4:
               name: Warunki i debugowanie
-              description_student: 'Teraz, gdy wiesz, jak używać poleceń akcji, pomagasz
+              description_student: Teraz, gdy wiesz, jak używać poleceń akcji, pomagasz
                 `Malarzowi` w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem
                 za pomocą poleceń zbierających informacje. Dowiesz się również o debugowaniu
-                i zidentyfikujesz strategie do wykorzystania przez cały rok. '
+                i zidentyfikujesz strategie do wykorzystania przez cały rok.
               description_teacher: 'Na tej lekcji uczniowie modyfikują programy przy
                 użyciu trzech poleceń zwrotnych: `isOnPaint ()`, `isOnBucket ()` i
                 `canMove ()`. Instrukcje logiczne, instrukcje warunkowe i instrukcje
@@ -29415,11 +29428,11 @@ pl:
                 pory.
             lesson-8:
               name: Wprowadzenie do weryfikacji kodu
-              description_student: 'Jako inżynier oprogramowania chcesz tworzyć kod,
+              description_student: Jako inżynier oprogramowania chcesz tworzyć kod,
                 który z czasem będzie łatwy do odczytania, utrzymania i modyfikowania
                 przez innych. Na tej lekcji przećwiczysz używanie recenzji kodu do
                 opininiowania i omawiania strategii przekazywania i wykorzystywania
-                informacji zwrotnych. Te strategie będą przydatne przez cały rok! '
+                informacji zwrotnych. Te strategie będą przydatne przez cały rok!
               description_teacher: Na tym kursie uczniowie przyjmują rolę inżynierów
                 oprogramowania i modelują umiejętności zawodowe w świecie rzeczywistym.
                 Inżynierowie oprogramowania używają recenzji kodu w całej branży do
@@ -30711,14 +30724,178 @@ pl:
           name: sb-chardev-v1
           title: Story Board Character Development
         dlp21-csp-mod4:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
           lesson_groups:
             lessonGroup-2:
               display_name: Etap 1
             lessonGroup-3:
               display_name: Etap 2
           name: dlp21-csp-mod4
-          title: '2021 Zasady informatyki Głębokie uczenie Moduł 4  '
-          description: ogólne instrukcje
+          title: 2021 Zasady informatyki Głębokie uczenie Moduł 4 dla Warsztatów 4
+          description: "## Ten moduł zostanie w pełni opublikowany przed 5 listopada
+            2021 r. Sprawdź później, czy otrzymasz monity."
         dlp21-csp-mod1:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
           name: dlp21-csp-mod1
           title: Zasady informatyki Głębokie uczenie Moduł 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Moduł 1
+              description: test
+            lessonGroup-3:
+              display_name: Moduł 2
+            lessonGroup-4:
+              display_name: Moduł 3
+            lessonGroup-5:
+              display_name: Moduł 4
+          name: dlp21-csd
+        dlp21-csd-mod1:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csd-mod1
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 1 dla Warsztatu
+            1
+        dlp21-csd-mod2:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csd-mod2
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu
+            2
+          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września
+            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
+        dlp21-csd-mod3:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csd-mod3
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 3 dla Warsztatu
+            3
+          description: "## Ten moduł zostanie w pełni opublikowany przed 1 października
+            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
+        dlp21-csd-mod4:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csd-mod4
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 4 dla Warsztatu
+            4
+          description: "## Ten moduł zostanie w pełni opublikowany przed 5 listopada
+            2021 r. Sprawdź później, czy otrzymasz monity."
+        dlp21-csp-mod2:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csp-mod2
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 2 dla Warsztatu
+            2
+          description: "## Ten moduł zostanie w pełni opublikowany przed 3 września
+            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
+        dlp21-csp-mod3:
+          lessons:
+            lesson-1:
+              name: 'Etap 1: Zwiększ zrozumienie'
+            lesson-2:
+              name: 'Krok 2: Wykaż zrozumienie'
+          name: dlp21-csp-mod3
+          title: 2021 Odkrycia informatyki Głębokie uczenie Moduł 3 dla Warsztatu
+            3
+          description: "## Ten moduł zostanie w pełni opublikowany przed 1 października
+            2021 r. Zajrzyj tu później, aby zobaczyć swoje monity."
+        dlp21-overview:
+          name: dlp21-overview
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Streszczenie
+          name: dlp21-csd-overview
+          title: Odkrycia informatyki Omówienie głębszego uczenia się
+          description: Witamy w programie Głębsze uczenie 2021 dla zaczynających moderatorów
+            Odkryć informatyki.
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Streszczenie
+          name: dlp21-csp-overview
+          title: 2021 Zasady informatyki Omówienie głębszego uczenia
+          description: "### Witamy w programie Głębsze uczenie 2021 dla początkujących
+            moderatorów kursu Zasad informatyki."
+        csa-u6-dev:
+          lessons:
+            lesson-1:
+              name: Dokumentowanie kodu programu
+            lesson-2:
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-3:
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-4:
+              name: Pracując z danymi w liście w tablicy
+            lesson-5:
+              name: Przechowując obiekty w liście w tablicy
+            lesson-6:
+              name: Usuwanie danych z listy w tablicy
+            lesson-8:
+              name: Stosowanie metod łańcuchów
+            lesson-9:
+              name: Porównywanie łańcuchów
+            lesson-10:
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-7:
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-11:
+              name: Projekt poezji kodu
+            lesson-12:
+              name: Dokumentowanie kodu programu
+            lesson-13:
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-14:
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-15:
+              name: Pracując z danymi w liście w tablicy
+            lesson-16:
+              name: Przechowując obiekty w liście w tablicy
+            lesson-17:
+              name: Usuwanie danych z listy w tablicy
+            lesson-18:
+              name: Stosowanie metod łańcuchów
+            lesson-19:
+              name: Porównywanie łańcuchów
+            lesson-20:
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-21:
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-22:
+              name: Projekt poezji kodu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przekładowe dema
+            lessonGroup-3:
+              display_name: Rozwój poziomami
+          name: csa-u6-dev
+          title: CSA Jednostka 6 Rozwój
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Witaj świecie!
+          name: hello-world-draft
+          title: Witaj świecie

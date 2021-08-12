@@ -1770,3 +1770,5 @@ fi:
           DIR:
             right: oikea ↻
             left: vasen ↺
+      validation_validatedBackground:
+        text: aseta tausta {IMG}

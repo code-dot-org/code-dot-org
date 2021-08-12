@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:03 UTC",
+    "serialized_at": "2021-08-03 22:47:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "andrea-test"
@@ -131,7 +131,6 @@
         ],
         "progression": "What is Deeper Learning"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +155,6 @@
         ],
         "progression": "President Question"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -181,7 +179,6 @@
         ],
         "progression": "Vice President Question"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -206,7 +203,6 @@
           "andrea-test2"
         ]
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +229,6 @@
         ],
         "progression": "Sandwich"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

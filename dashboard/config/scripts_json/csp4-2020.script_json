@@ -71,7 +71,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:06 UTC",
+    "serialized_at": "2021-08-03 22:47:49 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2020"
@@ -399,7 +399,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +423,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +447,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +471,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +495,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +519,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +543,6 @@
         ],
         "progression": "Thermostat App v1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +567,6 @@
         ],
         "progression": "Thermostat App v1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,7 +591,6 @@
         ],
         "progression": "Thermostat App v2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +615,6 @@
         ],
         "progression": "Thermostat App v3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +639,6 @@
         ],
         "progression": "Thermostat App v3"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -674,7 +663,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +687,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -724,7 +711,6 @@
         ],
         "progression": "Assigning Numbers and Strings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -749,7 +735,6 @@
         ],
         "progression": "Assigning Numbers and Strings"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -774,7 +759,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +783,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +807,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +831,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +855,6 @@
         ],
         "progression": "Variables and Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +879,6 @@
         ],
         "progression": "Debugging Scope Issues"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +903,6 @@
         ],
         "progression": "Debugging Scope Issues"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +927,6 @@
         ],
         "progression": "Putting it Together"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,7 +951,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,7 +975,6 @@
         ],
         "progression": "Check for Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1024,7 +999,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1023,6 @@
         ],
         "progression": "Try the Photo Liker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1074,7 +1047,6 @@
         ],
         "progression": "Make the Photo Liker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1099,7 +1071,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1124,7 +1095,6 @@
         ],
         "progression": "Conditionals: Boolean Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1149,7 +1119,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1174,7 +1143,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1199,7 +1167,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1224,7 +1191,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1249,7 +1215,6 @@
         ],
         "progression": "If-Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1274,7 +1239,6 @@
         ],
         "progression": "If-Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1299,7 +1263,6 @@
         ],
         "progression": "If-Else Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1324,7 +1287,6 @@
         ],
         "progression": "Logical Operators: AND OR"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1349,7 +1311,6 @@
         ],
         "progression": "Logical Operators: AND OR"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1374,7 +1335,6 @@
         ],
         "progression": "Patterns: If-else-if"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1399,7 +1359,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1424,7 +1383,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1449,7 +1407,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1474,7 +1431,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1499,7 +1455,6 @@
         ],
         "progression": "Boolean expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1524,7 +1479,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1549,7 +1503,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1574,7 +1527,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1599,7 +1551,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1624,7 +1575,6 @@
         ],
         "progression": "If-Statements"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1649,7 +1599,6 @@
         ],
         "progression": "Logical Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1674,7 +1623,6 @@
         ],
         "progression": "Logical Operators"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1699,7 +1647,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1724,7 +1671,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1749,7 +1695,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1774,7 +1719,6 @@
         ],
         "progression": "Try to the Museum Ticket Generator App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1799,7 +1743,6 @@
         ],
         "progression": "Make the Museum Ticket Generator App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1824,7 +1767,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1849,7 +1791,6 @@
         ],
         "progression": "Explore Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1874,7 +1815,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1899,7 +1839,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1924,7 +1863,6 @@
         ],
         "progression": "Declaring and Calling Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1949,7 +1887,6 @@
         ],
         "progression": "Update Screen Pattern"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1974,7 +1911,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1999,7 +1935,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2024,7 +1959,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2049,7 +1983,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2074,7 +2007,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2099,7 +2031,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2124,7 +2055,6 @@
         ],
         "progression": "Declare and Call Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2149,7 +2079,6 @@
         ],
         "progression": "Function Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2174,7 +2103,6 @@
         ],
         "progression": "Function Scope"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2199,7 +2127,6 @@
         ],
         "progression": "When to Declare Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2224,7 +2151,6 @@
         ],
         "progression": "When to Declare Functions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2249,7 +2175,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2274,7 +2199,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2299,7 +2223,6 @@
         ],
         "progression": "Quote Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2324,7 +2247,6 @@
         ],
         "progression": "Make the Quote Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2349,7 +2271,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2374,7 +2295,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2399,7 +2319,6 @@
         ],
         "progression": "Sample Apps"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2424,7 +2343,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2449,7 +2367,6 @@
         ],
         "progression": "Create the Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2474,7 +2391,6 @@
         ],
         "progression": "Create the Variables"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2499,7 +2415,6 @@
         ],
         "progression": "Create the Function"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2524,7 +2439,6 @@
         ],
         "progression": "Add onEvents"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2549,7 +2463,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2574,7 +2487,6 @@
         ],
         "progression": "Test Your Decision Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2599,7 +2511,6 @@
         ],
         "progression": "Submit Your Decision Maker App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2624,7 +2535,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2649,7 +2559,6 @@
         ],
         "progression": "Unit 4 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2674,7 +2583,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

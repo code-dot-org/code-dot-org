@@ -3309,8 +3309,7 @@ hi-IN:
           feedback: सही!
         - {}
         questions:
-        - text: नीचे दिए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
-            के बाद क्या होगा?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: कटाई मशीन दो कद्दू लेगी।

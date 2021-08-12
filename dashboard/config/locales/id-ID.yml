@@ -733,12 +733,6 @@ id:
       gamelab_unsupported_tablet: Game Lab sangat cocok di komputer atau laptop dengan
         mouse dan keyboard. Anda mungkin mengalami masalah menggunakan alat ini di
         perangkat Anda saat ini.
-      oceans_unsupported_browser: Browser ini tidak didukung untuk tutorial ini. Silakan
-        mengunjungi halaman ini dengan Edge, Chrome, Firefox, atau browser modern
-        lainnya.
-      weblab_unsupported_browser: Maaf, kami saat ini mengalami masalah memuat Web
-        Lab di browser ini. Anda mungkin perlu menggunakan browser lain sampai masalah
-        ini terselesaikan. Mohon maaf atas ketidaknyamanannya.
       weblab_unsupported_locale_storage: Mungkin Anda mengalami masalah menggunakan
         Web Lab dalam mode Penjelajahan Pribadi. Tolong muat ulang proyek Anda dalam
         mode normal. Mohon maaf atas ketidaknyamanannya.

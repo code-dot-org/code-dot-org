@@ -1825,3 +1825,5 @@ uz:
           DIR:
             right: o‘ngga ↻
             left: chapga ↺
+      validation_validatedBackground:
+        text: orqa fonni {IMG} ga o'zgartirish

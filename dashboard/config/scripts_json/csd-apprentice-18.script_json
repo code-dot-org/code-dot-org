@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:52 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd-apprentice-18"
@@ -148,9 +148,9 @@
       "properties": {
         "level_keys": [
           "welcome-apprentice-18"
-        ]
+        ],
+        "progression": "Welcome Apprentice Facilitators!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -174,7 +174,6 @@
           "morning-prep-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -198,7 +197,6 @@
           "feel-monday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -222,7 +220,6 @@
           "csd-pushDL-unit1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -246,7 +243,6 @@
           "morning-prep-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -270,7 +266,6 @@
           "feel-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -294,7 +289,6 @@
           "instructional-strategy-tuesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -318,7 +312,6 @@
           "csd-pushDL-unit2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -342,7 +335,6 @@
           "morning-prep-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -366,7 +358,6 @@
           "feel-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,7 +381,6 @@
           "getting-buy-in-wednesday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -414,7 +404,6 @@
           "csd-pushDL-unit2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -438,7 +427,6 @@
           "morning-prep-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -462,7 +450,6 @@
           "feel-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -486,7 +473,6 @@
           "recruiting-thursday"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -510,7 +496,6 @@
           "csd-pushDL-unit3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -532,9 +517,9 @@
       "properties": {
         "level_keys": [
           "apprentice-congrats"
-        ]
+        ],
+        "progression": "Congrats on completing the apprentice program!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

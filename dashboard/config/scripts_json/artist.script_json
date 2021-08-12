@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "artist",
-    "serialized_at": "2021-07-06 22:25:47 UTC",
+    "serialized_at": "2021-08-03 22:46:40 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "artist"
@@ -63,7 +63,6 @@
           "Standalone_Artist_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -87,7 +86,6 @@
           "Standalone_Artist_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -111,7 +109,6 @@
           "Standalone_Artist_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -135,7 +132,6 @@
           "Standalone_Artist_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -159,7 +155,6 @@
           "Standalone_Artist_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -183,7 +178,6 @@
           "Standalone_Artist_5.5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,7 +201,6 @@
           "Standalone_Artist_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,7 +224,6 @@
           "Standalone_Artist_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -255,7 +247,6 @@
           "Standalone_Artist_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -279,7 +270,6 @@
           "Standalone_Artist_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

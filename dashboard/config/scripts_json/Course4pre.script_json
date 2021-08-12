@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:48 UTC",
+    "serialized_at": "2021-08-03 22:46:43 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "Course4pre"
@@ -180,7 +180,6 @@
           "2-3 Maze 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +203,6 @@
           "2-3 Maze 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +226,6 @@
           "2-3 Maze 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +249,6 @@
           "2-3 Maze 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +272,6 @@
           "2-3 Maze 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +295,6 @@
           "2-3 Maze 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +318,6 @@
           "2-3 Maze 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +341,6 @@
           "2-3 Maze 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +364,6 @@
           "2-3 Maze 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +387,6 @@
           "2-3 Maze Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +410,6 @@
           "2-3 Maze Match 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -444,7 +433,6 @@
           "2-3 Artist 1 new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -468,7 +456,6 @@
           "2-3 Artist 2 new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -492,7 +479,6 @@
           "2-3 Artist 3new"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -516,7 +502,6 @@
           "2-3 Artist 3.4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -540,7 +525,6 @@
           "2-3 Artist 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -564,7 +548,6 @@
           "2-3 Artist 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -588,7 +571,6 @@
           "2-3 Artist 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -612,7 +594,6 @@
           "2-3 Artist 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -636,7 +617,6 @@
           "2-3 Artist 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -660,7 +640,6 @@
           "2-3 Artist Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -684,7 +663,6 @@
           "2-3 Artist Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -708,7 +686,6 @@
           "2-3 artist match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -732,7 +709,6 @@
           "2-3 Artist Loops New 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -756,7 +732,6 @@
           "2-3 Artist Loops New 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -780,7 +755,6 @@
           "4-5 Artist 3.5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -804,7 +778,6 @@
           "4-5 Artist 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -828,7 +801,6 @@
           "2-3 Artist 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -852,7 +824,6 @@
           "2-3 Artist 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -876,7 +847,6 @@
           "2-3 Artist Loops New 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -900,7 +870,6 @@
           "2-3 Artist Loops New 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +893,6 @@
           "2-3 Artist Loops New 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -948,7 +916,6 @@
           "2-3 Artist Loops New 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -972,7 +939,6 @@
           "2-3 Artist Loops New 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -996,7 +962,6 @@
           "2-3 Artist Loops New 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1020,7 +985,6 @@
           "2-3 Artist Loops New 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1044,7 +1008,6 @@
           "2-3 artist loops match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1068,7 +1031,6 @@
           "2-3 artist loops multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1092,7 +1054,6 @@
           "2-3 artist loops multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1116,7 +1077,6 @@
           "2-3 Bee Conditionals 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1140,7 +1100,6 @@
           "2-3 Bee Conditionals 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1164,7 +1123,6 @@
           "2-3 Bee Conditionals 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1188,7 +1146,6 @@
           "2-3 Bee Conditionals 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1212,7 +1169,6 @@
           "2-3 Bee Conditionals 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1236,7 +1192,6 @@
           "2-3 Bee Conditionals 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1260,7 +1215,6 @@
           "2-3 Bee Conditionals 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1284,7 +1238,6 @@
           "2-3 Bee Conditionals 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1308,7 +1261,6 @@
           "2-3 Bee Conditionals 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1332,7 +1284,6 @@
           "2-3 Bee Conditionals 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1356,7 +1307,6 @@
           "2-3 Bee Conditionals 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1380,7 +1330,6 @@
           "2-3 Bee Conditionals 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1404,7 +1353,6 @@
           "2-3 Bee Conditionals Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1428,7 +1376,6 @@
           "2-3 bee conditionals multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1452,7 +1399,6 @@
           "2-3 bee conditionals multi 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1476,7 +1422,6 @@
           "4-5 Nested Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1500,7 +1445,6 @@
           "4-5 Nested Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1524,7 +1468,6 @@
           "4-5 Nested Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1548,7 +1491,6 @@
           "4-5 Nested Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1572,7 +1514,6 @@
           "4-5 Nested Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1596,7 +1537,6 @@
           "4-5 Nested Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1620,7 +1560,6 @@
           "4-5 Nested Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1644,7 +1583,6 @@
           "4-5 Nested Loops 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1668,7 +1606,6 @@
           "4-5 Nested Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1692,7 +1629,6 @@
           "4-5 Nested Loops 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1716,7 +1652,6 @@
           "4-5 Nested Loops Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1740,7 +1675,6 @@
           "4-5 artist loops multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1764,7 +1698,6 @@
           "4-5 While Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1788,7 +1721,6 @@
           "4-5 While Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1812,7 +1744,6 @@
           "4-5 While Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1836,7 +1767,6 @@
           "4-5 While Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1860,7 +1790,6 @@
           "4-5 While Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1884,7 +1813,6 @@
           "4-5 While Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1908,7 +1836,6 @@
           "4-5 While Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1932,7 +1859,6 @@
           "4-5 While Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1956,7 +1882,6 @@
           "4-5 While Loops Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1980,7 +1905,6 @@
           "4-5 Bee Nested Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2004,7 +1928,6 @@
           "4-5 Bee Nested Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2028,7 +1951,6 @@
           "4-5 Bee Nested Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2052,7 +1974,6 @@
           "4-5 Bee Nested Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2076,7 +1997,6 @@
           "4-5 Bee Nested Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2100,7 +2020,6 @@
           "2-3 Bee Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2124,7 +2043,6 @@
           "4-5 Bee Nested Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2148,7 +2066,6 @@
           "2-3 Bee Loops 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2172,7 +2089,6 @@
           "4-5 Bee Nested Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2196,7 +2112,6 @@
           "4-5 Bee Nested Loops Rows"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2220,7 +2135,6 @@
           "2-3 Bee Loops Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2244,7 +2158,6 @@
           "4-5 Bee Nested Loops Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2268,7 +2181,6 @@
           "4-5 bee loops multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2292,7 +2204,6 @@
           "2-3 Artist Functions 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2316,7 +2227,6 @@
           "2-3 Artist Functions 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2340,7 +2250,6 @@
           "2-3 Artist Functions 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2364,7 +2273,6 @@
           "2-3 Artist Functions 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2388,7 +2296,6 @@
           "2-3 Artist Functions 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2412,7 +2319,6 @@
           "2-3 Artist Functions 11.5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2436,7 +2342,6 @@
           "2-3 Artist Functions 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2460,7 +2365,6 @@
           "2-3 Artist Functions 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2484,7 +2388,6 @@
           "2-3 Artist Functions 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2508,7 +2411,6 @@
           "2-3 artist functions multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2532,7 +2434,6 @@
           "4-5 Bee Debugging 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2556,7 +2457,6 @@
           "4-5 Bee Debugging 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2580,7 +2480,6 @@
           "4-5 Bee Debugging 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2604,7 +2503,6 @@
           "4-5 Bee Debugging 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2628,7 +2526,6 @@
           "4-5 Bee Debugging 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2652,7 +2549,6 @@
           "4-5 Bee Debugging 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2676,7 +2572,6 @@
           "4-5 Bee Debugging 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2700,7 +2595,6 @@
           "4-5 Bee Debugging 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2724,7 +2618,6 @@
           "4-5 Bee Debugging 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2748,7 +2641,6 @@
           "4-5 Bee Debugging 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2772,7 +2664,6 @@
           "4-5 Bee Debugging 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2796,7 +2687,6 @@
           "4-5 Bee Debugging Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2820,7 +2710,6 @@
           "4-5 bee debug multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

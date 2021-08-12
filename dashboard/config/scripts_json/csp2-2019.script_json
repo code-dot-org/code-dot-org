@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2021-07-30 20:27:58 UTC",
+    "serialized_at": "2021-08-03 22:47:43 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2019"
@@ -224,7 +224,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -249,7 +248,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -274,7 +272,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +296,6 @@
         ],
         "progression": "Quick Check-In"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +320,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -349,7 +344,6 @@
         ],
         "progression": "Text Compression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +368,6 @@
         ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -399,7 +392,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -424,7 +416,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +440,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -474,7 +464,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -499,7 +488,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +512,6 @@
         ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +536,6 @@
         ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +560,6 @@
         ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -599,7 +584,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -624,7 +608,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -649,7 +632,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -674,7 +656,6 @@
         ],
         "progression": "Images, Pixels, and RGB"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +680,6 @@
         ],
         "progression": "Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -724,7 +704,6 @@
         ],
         "progression": "Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -749,7 +728,6 @@
         ],
         "progression": "Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -774,7 +752,6 @@
         ],
         "progression": "Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +776,6 @@
         ],
         "progression": "Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +800,6 @@
         ],
         "progression": "Favicon Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +824,6 @@
         ],
         "progression": "Widget: Color Pixelation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -874,7 +848,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +872,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +896,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -949,7 +920,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -974,7 +944,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,7 +968,6 @@
         ],
         "progression": "Check Your Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1024,7 +992,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1048,7 +1015,6 @@
           "CSP Unit 2 Ch1 Cumulative Assessment MC_2018_2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,7 +1038,6 @@
           "csp-post-survey-intro-2019"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1096,7 +1061,6 @@
           "csp-post-survey-levelgroup-2019.2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

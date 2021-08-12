@@ -1764,3 +1764,5 @@ ja:
           DIR:
             right: 右↻
             left: 左↺
+      validation_validatedBackground:
+        text: 背景を次の値に設定する {IMG}

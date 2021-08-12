@@ -10667,8 +10667,7 @@ pt-BR:
           feedback: Correto!
         - {}
         questions:
-        - text: Observe atentamente o código abaixo. O que acontecerá depois que você
-            clicar em "Executar"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: O colheitadora irá pegar duas abóboras.

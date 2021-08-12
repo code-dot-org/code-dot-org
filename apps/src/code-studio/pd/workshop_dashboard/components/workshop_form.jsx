@@ -44,20 +44,6 @@ import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  },
-  noFeeContainer: {
-    paddingBottom: 7
-  },
-  yesFeeRadio: {
-    width: '100%'
-  }
-};
-
 // Default to today, 9am-5pm.
 const placeholderSession = {
   placeholderId: '_0',
@@ -1088,6 +1074,20 @@ export class WorkshopForm extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  },
+  noFeeContainer: {
+    paddingBottom: 7
+  },
+  yesFeeRadio: {
+    width: '100%'
+  }
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission,

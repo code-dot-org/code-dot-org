@@ -2744,3 +2744,15 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: таңдау
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Қысқаша шолу
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Қысқаша шолу

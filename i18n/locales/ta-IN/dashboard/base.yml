@@ -33,6 +33,7 @@ ta:
         age: 'வயது'
         gender: 'பாலினம்'
         edit_header: 'கணக்கு விவரங்களை திருத்து'
+  beta: "பீட்டா"
   hello: "ஹலோ உலகம்"
   welcome_back: "மீண்டும் வருக, %{name}"
   see_your_learning_plan: "உங்கள் கற்றல் திட்டத்தைக் காண்க"
@@ -40,6 +41,9 @@ ta:
   next_page: அடுத்த பக்கம்
   cancel: "ரத்து செய்"
   or: "அல்லது"
+  join_section:
+    code:
+      placeholder: "பிரிவு குறியீடு (ABCDEF)"
   add_hint_form:
     placeholder: 'உங்கள் குறிப்பை இங்கே உள்ளிடவும்'
     submit: 'உதவிக்குறிப்பு சேர்'
@@ -58,12 +62,14 @@ ta:
     signed_in: 'உள்நுளைந்தீர்கள்!'
     twitter: 'Twitter'
     facebook: 'Facebook'
+    clever: 'புத்திசாலி'
     forgot_password: 'உங்கள் கடவுச்சொல் மறந்துவிட்டதா?'
   signup_form:
     age: 'வயது'
     user_type_student: "மாணவர்"
     user_type_teacher: "ஆசிரியர்"
     field_is_required: "தேவைப்படுகிறது"
+    email_preference_privacy: "(எங்கள் தனியுரிமைக் கொள்கையைப் பார்க்கவும்)"
     email_preference_yes: "ஆம்"
     email_preference_no: "இல்லை"
     parent_account_checkbox: "நான் எனது குழந்தையின் சார்பாக பதிவு செய்யும் பெற்றோர் / பாதுகாவலர்"
@@ -86,6 +92,8 @@ ta:
   section:
     type:
       email: 'மின்னஞ்சல்'
+      google_classroom: 'கூகுள் வகுப்பறை'
+      clever: 'புத்திசாலி'
   follower:
     invite_sent: 'அழைப்பு அனுப்பப்பட்டது'
     added_teacher: '%{name} உங்களது ஆசிரியராக சேர்க்கப்பட்டுள்ளார்'
@@ -103,10 +111,12 @@ ta:
   nav:
     header:
       finished_hoc: "நான் முடித்துவிட்டேன்!"
+      my_dashboard: "எனது டாஷ்போர்டு"
       course_catalog: "பாடத்திட்ட கேட்டலாக்"
       project_gallery: "திட்டப்பணிகள்"
       help_support: "உதவி மற்றும் ஆதரவு"
       report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
+      professional_learning: "தொழில்முறை கற்றல்"
       educate_hoc: "நிரல்வரி நேரம்"
       stats: "புள்ளிவிவரங்கள்"
       about: "பற்றி"
@@ -119,20 +129,31 @@ ta:
       signin: 'உள்நுழை'
       signup: 'ஒரு அக்கவுண்டை உருவாக்குங்கள்'
       create: 'உருவாக்கு'
+      algebra_game: 'இயற்கணிதம்'
       artist: 'கலைஞர்'
       artist_k1: 'கலைஞர் (முன் வாசகர்)'
+      basketball: 'கூடைப்பந்து'
+      calc: 'Calc'
       dance: 'நடன விருந்து'
+      eval: 'Eval'
+      flappy: 'தட்டையான'
       frozen: 'உறைந்த'
+      gamelab_jr: 'கேம் லேப் (பீட்டா)'
       infinity: 'முடிவிலி'
+      minecraft_aquatic: 'Minecraft நீர்வாழ்'
+      minecraft_hero: 'Minecraft ஹீரோ'
+      playlab_k1: 'ப்ளே லேப் (முன்-ரீடர்)'
       sports: 'விளையாட்டு'
       starwars: 'ஸ்டார் வார்ஸ் '
       starwarsblocks: 'ஸ்டார் வார்ஸ் (பிளாக்ஸ்)'
       starwarsblocks_hour: 'ஸ்டார் வார்ஸ் (பிளாக்ஸ்)'
+      weblab: 'வலை ஆய்வகம்'
     popup:
       close: 'மூடு'
       prizes_link: 'மேலதிக தகவல்'
   teacher:
     panel:
+      answer_viewer: 'ஆசிரியர் குழு'
       student: 'மாணவர்'
   user:
     update_email: "புதுப்பிக்கவும்"
@@ -164,6 +185,7 @@ ta:
   video:
     tab: 'வீடியோ.'
     notes: 'வீடியோ இல்லையா? குறிப்புகளைக் காட்டு.'
+    label: 'காணொளி'
   lesson_plan: 'பாட திட்டம்'
   view_lesson_plan: 'பாட திட்டத்தைக் காண்க'
   share_code:
@@ -222,6 +244,8 @@ ta:
     privacy: "தனியுரிமை கொள்கை"
     accept_tos: Code.org -க்காக பதிவுசெய்து கொள்வதன் மூலம், நீங்கள் எங்களின் [சேவை விதிமுறைகள்](%{tos_url}) மற்றும் [தனியுரிமை கொள்கை](%{privacy_url}) ஆகியவற்றை ஏற்றுக்கொள்கிறீர்கள்.
     print: "அச்சிடு"
+  school_info_interstitial:
+    save: "சேமி"
   race_interstitial:
     races:
       other: "வேறு"
@@ -244,6 +268,8 @@ ta:
   pd:
     form_labels:
       email: 'மின்னஞ்சல்'
+      school_city: 'பள்ளி நகரம்'
+      colombian_school_city: 'பள்ளி நகரம்'
     form_entries:
       subjects:
         cs: 'கணினி அறிவியல்'

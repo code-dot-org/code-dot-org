@@ -1038,8 +1038,6 @@ zh-CN:
           UNIT:
             '"seconds"': " 秒"
             '"frames"': 帧
-      gamelab_hideHaiku:
-        text: 隐藏俳句
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
       gamelab_ifVarEquals:
@@ -1185,8 +1183,6 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
-      gamelab_printHaiku:
-        text: 显示俳句 {BREAK} 诗歌名 {TITLE} 诗歌作者 {AUTHOR} 第1行 {LINE1} 第2行 {LINE2}
       gamelab_printText:
         text: 打印 {TEXT}
       gamelab_randColor:
@@ -1907,3 +1903,5 @@ zh-CN:
           DIR:
             right: 右 ↻
             left: 左 ↺
+      validation_validatedBackground:
+        text: 设置背景为 {IMG}
