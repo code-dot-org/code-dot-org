@@ -3,36 +3,28 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
-export const studentShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
-});
+import {levelWithProgress, studentShape} from './types';
 
 class StudentTable extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired,
-    // While this userLevels object does have the properties of a levelType,
-    // it is conceptually more similar to a userLevel object. For example,
-    // the id property of this object is the user_level id. To get the level
-    // id, use the level_id property.
-    userLevels: PropTypes.arrayOf(PropTypes.object),
+    levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
     unitName: PropTypes.string
   };
 
   getRowLink = studentId => {
-    let url;
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
 
-    if (this.props.userLevels) {
-      url = this.props.userLevels[0].bonus
+    let url;
+    if (this.props.levelsWithProgress?.length) {
+      url = this.props.levelsWithProgress[0].bonus
         ? 'extras'
-        : this.props.userLevels[0].levelNumber;
+        : this.props.levelsWithProgress[0].levelNumber;
     } else {
       url = this.props.unitName;
     }
@@ -42,15 +34,17 @@ class StudentTable extends React.Component {
 
   getRowStyle = (selectedUserId, id) => {
     const isSelected = selectedUserId === id;
-    if (isSelected) {
-      return [styles.tr, styles.selected];
-    } else {
-      return styles.tr;
-    }
+    return isSelected ? [styles.tr, styles.selected] : styles.tr;
   };
 
   render() {
-    const {students, onSelectUser, getSelectedUserId, userLevels} = this.props;
+    const {
+      students,
+      onSelectUser,
+      getSelectedUserId,
+      levelsWithProgress
+    } = this.props;
+
     const selectedUserId = getSelectedUserId();
 
     return (
@@ -70,18 +64,17 @@ class StudentTable extends React.Component {
             >
               <td key={`td-${student.id}`} style={styles.td}>
                 <div style={styles.studentTableRow}>
-                  {userLevels && (
-                    <TeacherPanelProgressBubble
-                      userLevel={userLevels.find(
-                        userLevel => student.id === userLevel.user_id
+                  {!!levelsWithProgress?.length && (
+                    <ProgressBubble
+                      level={levelsWithProgress.find(
+                        userLevel => student.id === userLevel.userId
                       )}
+                      disabled={true}
+                      hideTooltips={true}
+                      hideAssessmentBadge={true}
                     />
                   )}
-                  <div
-                    style={
-                      userLevels ? styles.nameWithBubble : styles.nameInUnit
-                    }
-                  >
+                  <div style={styles.name}>
                     {student.name}
                     <a
                       href={this.getRowLink(student.id)}
@@ -133,12 +126,7 @@ const styles = {
   meRow: {
     padding: '1px 1px 1px 5px'
   },
-  nameInUnit: {
-    paddingLeft: 5,
-    margin: '1px 1px 1px 0',
-    flexGrow: 1
-  },
-  nameWithBubble: {
+  name: {
     paddingLeft: 5,
     margin: '1px 1px 1px 0',
     flexGrow: 1
