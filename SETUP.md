@@ -248,8 +248,10 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
      * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
-     * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
-     * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
+     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 3: Configure Instance**: 
+       * Set IAM Role to `DeveloperEC2`
+       * Set VPC to `vpc-a48462c3`
      * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
