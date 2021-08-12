@@ -1,4 +1,4 @@
-import spriteManifest from '@cdo/apps/p5lab/spritelab/spriteCostumeLibrary.json';
+import spriteManifest from '../p5lab/spritelab/spriteCostumeLibrary.json';
 import {createUuid} from '@cdo/apps/utils';
 
 export const UploadType = {
