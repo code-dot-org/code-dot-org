@@ -69,9 +69,13 @@ describe('SpriteLab', () => {
         instance.p5Wrapper.p5.allSprites = sinon.spy();
         instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
         instance.p5Wrapper.p5.redraw = sinon.spy();
+        instance.p5Wrapper.resetExecution = sinon.spy();
+        instance.p5Wrapper.startExecution = sinon.spy();
+        instance.p5Wrapper.setLoop = sinon.spy();
         instance.JSInterpreter = sinon.spy();
         instance.JSInterpreter.deinitialize = sinon.spy();
         instance.initInterpreter = sinon.spy();
+        instance.mobileControls = {reset: () => {}, update: () => {}};
         instance.onP5Setup = sinon.spy();
         instance.onIsDebuggingSpritesChange = sinon.spy();
         instance.onStepSpeedChange = sinon.spy();
