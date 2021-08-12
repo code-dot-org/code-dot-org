@@ -22558,7 +22558,7 @@ en:
             lesson-12:
               name: Concert in The Theater Project - Day 2
               description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
-              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
+              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using shapes or images, then participate in a code review to give and use feedback as they develop their program.
             lesson-13:
               name: Concert in The Theater Project - Day 3
               description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
@@ -23612,7 +23612,7 @@ en:
               description_teacher: |-
                 **You will:**
 
-                * Get an introduction to Code.org and CS Discoveries
+                * Get an introduction to Code.org and CS Discoveries.
 
                 **Suggested Time:** 8 minutes
             lesson-2:
@@ -23621,7 +23621,7 @@ en:
               description_teacher: |-
                 **You will:**
 
-                * Learn how to engage in this professional learning course
+                * Learn how to engage in this professional learning course.
 
                 **Suggested Time:** 2 minutes
             lesson-3:
@@ -23649,7 +23649,7 @@ en:
           title: 'Module 1: Welcome '
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries\n* Learn how to engage in this professional learning course\n\n**Suggested Time:** 10 minutes"
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Discoveries.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csd2-2021:
           lessons:
             lesson-4:
@@ -25365,7 +25365,7 @@ en:
             Concert in The Theater Project - Day 2:
               name: Concert in The Theater Project - Day 2
               description_student: You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program.
-              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.
+              description_teacher: In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using shapes or images, then participate in a code review to give and use feedback as they develop their program.
             Concert in The Theater Project - Day 3:
               name: Concert in The Theater Project - Day 3
               description_student: In the previous lesson, you created a prioritized list of work to complete. Today, you self-assess your work against the project rubric then review your prioritized list to decide what revisions you need to make to your concert. You then share your final project with your peers to celebrate your success!
