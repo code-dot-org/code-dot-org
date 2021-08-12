@@ -201,7 +201,7 @@ export const commands = {
       locale: voices[language].locale,
       authenticityToken,
       onFailure: message => outputWarning(message + '\n'),
-      onComplete: validOnComplete && onComplete
+      onComplete: validOnComplete ? onComplete : null
     });
     azureTTS.enqueueAndPlay(promise);
   }
