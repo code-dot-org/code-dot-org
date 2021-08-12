@@ -4,6 +4,7 @@ import {
   regenerateDefaultSpriteMetadata,
   createDefaultSpriteMetadata
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import testAnimationLibrary from './testAnimationLibrary.json';
 
 describe('animationLibraryApi', () => {
   let fetchSpy;
@@ -19,9 +20,18 @@ describe('animationLibraryApi', () => {
       }
     ]
   };
+  const returnData = testAnimationLibrary;
 
   beforeEach(() => {
     fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy
+      .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')
+      .returns(
+        Promise.resolve({
+          ok: true,
+          json: () => JSON.stringify(returnData)
+        })
+      );
   });
 
   afterEach(() => {
@@ -30,7 +40,9 @@ describe('animationLibraryApi', () => {
 
   describe('regenerateDefaultSpriteMetadata', () => {
     it('sends data to middleware in POST', () => {
-      fetchSpy.returns(Promise.resolve({ok: true}));
+      fetchSpy
+        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultList).then(() => {
         expect(fetchSpy).calledWith(
@@ -41,13 +53,15 @@ describe('animationLibraryApi', () => {
     });
 
     it('throws error when bad response', () => {
-      fetchSpy.returns(
-        Promise.resolve({
-          ok: false,
-          status: '000',
-          statusText: 'Test error message'
-        })
-      );
+      fetchSpy
+        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .returns(
+          Promise.resolve({
+            ok: false,
+            status: '000',
+            statusText: 'Test error message'
+          })
+        );
 
       return regenerateDefaultSpriteMetadata(defaultList).then(
         () => {
@@ -66,24 +80,25 @@ describe('animationLibraryApi', () => {
   describe('createDefaultSpriteMetadata', () => {
     it('generates sprite metadata from animation library', () => {
       // Check that orderedKeys exists and contains two keys
-      const spriteMetadata = createDefaultSpriteMetadata(defaultList);
-      expect(spriteMetadata).to.have.property('orderedKeys');
-      expect(spriteMetadata.orderedKeys).to.have.length(2);
+      return createDefaultSpriteMetadata(defaultList).then(spriteMetadata => {
+        expect(spriteMetadata).to.have.property('orderedKeys');
+        expect(spriteMetadata.orderedKeys).to.have.length(2);
 
-      // Check that keys are created in our UUID format
-      const firstKey = spriteMetadata.orderedKeys[0];
-      expect(firstKey).to.match(/^........-....-4...-....-............$/);
+        // Check that keys are created in our UUID format
+        const firstKey = spriteMetadata.orderedKeys[0];
+        expect(firstKey).to.match(/^........-....-4...-....-............$/);
 
-      //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
-      // a properly formatted sourceUrl, and the expected number of props.
-      const firstSpriteProps = spriteMetadata.propsByKey[firstKey];
-      expect(firstSpriteProps)
-        .to.have.property('sourceUrl')
-        .that.has.string('https://studio.code.org');
-      expect(firstSpriteProps)
-        .to.have.property('name')
-        .that.equals('hippo');
-      expect(Object.keys(firstSpriteProps)).to.have.length(8);
+        //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
+        // a properly formatted sourceUrl, and the expected number of props.
+        const firstSpriteProps = spriteMetadata.propsByKey[firstKey];
+        expect(firstSpriteProps)
+          .to.have.property('sourceUrl')
+          .that.has.string('https://studio.code.org');
+        expect(firstSpriteProps)
+          .to.have.property('name')
+          .that.equals('hippo');
+        expect(Object.keys(firstSpriteProps)).to.have.length(8);
+      });
     });
   });
 });
