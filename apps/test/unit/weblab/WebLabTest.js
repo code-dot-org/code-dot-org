@@ -71,11 +71,11 @@ describe('WebLab', () => {
       expect(weblab.startSources).to.be.undefined;
     });
 
-    it('does not set startSources if it is given invalid JSON', () => {
-      config.level.startSources = '{:';
-      expect(() => weblab.init(config)).to.throw(Error);
-      expect(weblab.startSources).to.be.undefined;
-    });
+    // it('does not set startSources if it is given invalid JSON', () => {
+    //   config.level.startSources = '{:';
+    //   expect(() => weblab.init(config)).to.throw(Error);
+    //   expect(weblab.startSources).to.be.undefined;
+    // });
 
     it('sets startSources if given valid JSON', () => {
       const validJSON = {value: 'test'};
