@@ -77,7 +77,7 @@ export function createDefaultSpriteMetadata(listData) {
     orderedKeys.push(key);
     propsByKey[key] = props;
   }
-  return JSON.stringify({orderedKeys, propsByKey});
+  return {orderedKeys, propsByKey};
 }
 
 // Regenerates the metadata for the default list of sprites in SpriteLab
@@ -88,7 +88,7 @@ export function regenerateDefaultSpriteMetadata(listData) {
     headers: {
       'content-type': 'application/json'
     },
-    body: defaultMetadata
+    body: JSON.stringify(defaultMetadata)
   })
     .then(response => {
       if (!response.ok) {
