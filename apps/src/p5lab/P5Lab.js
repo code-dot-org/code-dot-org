@@ -670,6 +670,13 @@ P5Lab.prototype.setupReduxSubscribers = function(store) {
     ) {
       this.onStepSpeedChange(state.runState.stepSpeed);
     }
+
+    if (
+      !lastState.poemBot ||
+      state.poemBot.selectedPoem !== lastState.poemBot.selectedPoem
+    ) {
+      this.reset();
+    }
   });
 };
 

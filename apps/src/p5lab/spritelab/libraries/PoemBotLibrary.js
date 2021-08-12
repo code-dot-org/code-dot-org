@@ -1,3 +1,5 @@
+import _ from 'lodash';
+import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from './CoreLibrary';
 import {commands as backgroundEffects} from '../commands/poembot/backgroundEffects';
 import {commands as foregroundEffects} from '../commands/poembot/foregroundEffects';
@@ -16,11 +18,7 @@ const PLAYSPACE_SIZE = 400;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
-    this.poem = {
-      title: '',
-      author: '',
-      lines: []
-    };
+    this.poem = _.cloneDeep(getStore().getState().poemBot.selectedPoem);
     this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
