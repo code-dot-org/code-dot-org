@@ -254,10 +254,14 @@ class JavalabView extends React.Component {
       scale = 0;
     }
     const scaleCss = `scale(${scale})`;
-    if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
-      $('#svgMaze').css('transform', scaleCss);
-    } else if (this.props.viewMode === CsaViewMode.THEATER) {
-      $('#theater-container').css('transform', scaleCss);
+    switch (this.props.viewMode) {
+      case CsaViewMode.NEIGHBORHOOD:
+        $('#svgMaze').css('transform', scaleCss);
+        break;
+      case CsaViewMode.THEATER:
+      case CsaViewMode.PLAYGROUND:
+        $('#theater-container').css('transform', scaleCss);
+        break;
     }
 
     // Size the visualization div (which will actually set the rendered
