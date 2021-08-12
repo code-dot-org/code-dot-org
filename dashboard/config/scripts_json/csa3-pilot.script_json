@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 15:08:56 UTC",
+    "serialized_at": "2021-08-12 16:56:43 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -121,8 +121,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.",
-        "student_overview": "Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You create visuals for your music using the `Rectangle` class."
+        "overview": "Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students use rectangles and circles as visuals to create effects in The Theater.",
+        "student_overview": "Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You use rectangles and circles as visuals to create effects in The Theater."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -140,7 +140,7 @@
       "properties": {
         "overview": "Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.",
         "preparation": "* Print the Vocabulary Bingo Cards so each student receives one card\n* Print the Vocabulary Bingo Definitions and mix them up\n* Print copies of the Polymorphism Role Cards\n* Gather one index card or piece of scrap paper for each student",
-        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method."
+        "student_overview": "You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `show()` method."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -7879,7 +7879,7 @@
     {
       "key": "41213ec0-f324-4170-8692-83ed0cd5ead9",
       "properties": {
-        "description": "Create an array of `Animal`s to store `Chicken`, `Sheep`, `Tiger`, `Wolf`, and `Zebra` objects"
+        "description": "Create an array of `Animal`s to store `Animal` objects"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -7889,7 +7889,7 @@
     {
       "key": "0510020d-0b08-40af-9ec6-39f736296b36",
       "properties": {
-        "description": "Traverse an array of `Animal`s to call each object's `speak()` method"
+        "description": "Traverse an array of `Animal`s to call each object's `show()` method"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
