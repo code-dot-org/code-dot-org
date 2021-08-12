@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 16:32:03 UTC",
+    "serialized_at": "2021-08-11 19:08:04 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -10972,6 +10972,19 @@
       }
     },
     {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
       "name": "All Code",
       "url": "/s/csd7-2021/code",
       "key": "all_code_5",
@@ -12070,6 +12083,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
         "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
