@@ -66,9 +66,7 @@ describe('animationLibraryApi', () => {
   describe('createDefaultSpriteMetadata', () => {
     it('generates sprite metadata from animation library', () => {
       // Check that orderedKeys exists and contains two keys
-      const spriteMetadata = JSON.parse(
-        createDefaultSpriteMetadata(defaultList)
-      );
+      const spriteMetadata = createDefaultSpriteMetadata(defaultList);
       expect(spriteMetadata).to.have.property('orderedKeys');
       expect(spriteMetadata.orderedKeys).to.have.length(2);
 
