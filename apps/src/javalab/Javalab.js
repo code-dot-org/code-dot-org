@@ -53,6 +53,8 @@ const Javalab = function() {
   this.studioApp_ = null;
   this.miniApp = null;
   this.visualization = null;
+
+  this.csrf_token = null;
 };
 
 /**
@@ -218,6 +220,10 @@ Javalab.prototype.init = function(config) {
 
   getStore().dispatch(setDisableFinishButton(config.readonlyWorkspace));
 
+  fetch('/project_versions/get_token', {
+    method: 'GET'
+  }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -330,7 +336,7 @@ Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': this.csrf_token
       },
       body: JSON.stringify({
         storage_id: project.getCurrentId(),
