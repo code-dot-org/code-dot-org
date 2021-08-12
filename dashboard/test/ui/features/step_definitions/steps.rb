@@ -935,15 +935,6 @@ Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expect
   expect(actual_num).to eq(expected_num.to_i)
 end
 
-And(/^I give user "([^"]*)" pilot access to "([^"]*)"$/) do |name, pilot|
-  require_rails_env
-  user = User.find_by_email_or_hashed_email(@users[name][:email])
-  SingleUserExperiment.find_or_create_by!(
-    min_user_id: user.id,
-    name: pilot
-  )
-end
-
 And /^I dismiss the language selector$/ do
   steps %Q{
     And I click selector ".close" if I see it
