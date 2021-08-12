@@ -408,6 +408,7 @@ class FilesApi < Sinatra::Base
     current_version = params['version'] || params['currentVersion']
     should_replace = params['replace'] == 'true'
     version_to_replace = params['version'] || (should_replace && params['currentVersion']) unless endpoint === 'assets'
+    tags = params['persistIndefinitely'] ? 'persistIndefinitely=true' : ''
 
     timestamp = params['firstSaveTimestamp']
     tab_id = params['tabId']
@@ -415,14 +416,14 @@ class FilesApi < Sinatra::Base
 
     abuse_score = StorageApps.get_abuse(encrypted_channel_id)
 
-    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace, abuse_score)
+    response = buckets.create_or_replace(encrypted_channel_id, filename, body, version_to_replace, abuse_score, tags)
 
     {
       filename: filename,
       category: category,
       size: body.length,
       versionId: response.version_id,
-      timestamp: Time.now # for logging purposes
+      timestamp: Time.now, # for logging purposes
     }.to_json
   end
 

@@ -1024,7 +1024,7 @@ var projects = (module.exports = {
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    * @returns {Promise} A promise containing the project data.
    */
-  save(forceNewVersion, preparingRemix) {
+  save(forceNewVersion, preparingRemix, persistIndefinitely = false) {
     if (!isEditable()) {
       return Promise.resolve();
     }
@@ -1041,7 +1041,8 @@ var projects = (module.exports = {
             sourceAndHtml,
             (err, result) => (err ? reject(err) : resolve()),
             forceNewVersion,
-            preparingRemix
+            preparingRemix,
+            persistIndefinitely
           )
         )
       );
@@ -1067,7 +1068,8 @@ var projects = (module.exports = {
     sourceAndHtml,
     callback,
     forceNewVersion,
-    clientSideRemix
+    clientSideRemix,
+    persistIndefinitely = false
   ) {
     if (!isEditable()) {
       return;
@@ -1115,6 +1117,9 @@ var projects = (module.exports = {
           `&replace=${!!replaceCurrentSourceVersion}` +
           `&firstSaveTimestamp=${encodeURIComponent(firstSaveTimestamp)}` +
           `&tabId=${utils.getTabId()}`;
+      }
+      if (persistIndefinitely) {
+        params += '&persistIndefinitely=true';
       }
       const filename = SOURCE_FILE + params;
       sources.put(
