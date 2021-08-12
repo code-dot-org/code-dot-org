@@ -53,11 +53,9 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   # Open the dropdown and verify the same three dots.
   Then I open the progress drop down of the current page
-  # TODO: Fix steps below after react-tooltip upgrade. Behavior has been verified manually.
-  # Tracked by https://codedotorg.atlassian.net/browse/LP-1988
-  # And I verify progress in the drop down of the current page is "perfect_assessment" for lesson 23 level 2
-  # And I verify progress in the drop down of the current page is "not_tried" for lesson 23 level 3
-  # And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
+  And I verify progress in the drop down of the current page is "perfect_assessment" for lesson 23 level 2
+  And I verify progress in the drop down of the current page is "not_tried" for lesson 23 level 3
+  And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
@@ -80,11 +78,9 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   # Open the dropdown and verify the same three dots.
   Then I open the progress drop down of the current page
-  # TODO: Fix steps below after react-tooltip upgrade. Behavior has been verified manually.
-  # Tracked by https://codedotorg.atlassian.net/browse/LP-1988
-  # And I verify progress in the drop down of the current page is "perfect_assessment" for lesson 23 level 2
-  # And I verify progress in the drop down of the current page is "not_tried" for lesson 23 level 3
-  # And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
+  And I verify progress in the drop down of the current page is "perfect_assessment" for lesson 23 level 2
+  And I verify progress in the drop down of the current page is "not_tried" for lesson 23 level 3
+  And I verify progress in the drop down of the current page is "attempted_assessment" for lesson 23 level 4
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
