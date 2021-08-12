@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {Position} from '@cdo/apps/constants';
-import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
+// import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import Artist from '@cdo/apps/turtle/artist';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
@@ -366,52 +366,52 @@ describe('Artist', () => {
     });
   });
 
-  describe('autoArtist', () => {
-    const studioApp = studioAppSingleton();
+  // describe('autoArtist', () => {
+  //   const studioApp = studioAppSingleton();
 
-    it('executes upon reset', done => {
-      const artist = new Artist();
-      const execute = sinon.stub(artist, 'execute');
-      artist.injectStudioApp(studioApp);
-      artist
-        .init({
-          skin: {},
-          level: {
-            autoRun: true
-          }
-        })
-        .then(done)
-        .catch(() => done());
+  //   it('executes upon reset', done => {
+  //     const artist = new Artist();
+  //     const execute = sinon.stub(artist, 'execute');
+  //     artist.injectStudioApp(studioApp);
+  //     artist
+  //       .init({
+  //         skin: {},
+  //         level: {
+  //           autoRun: true
+  //         }
+  //       })
+  //       .then(done)
+  //       .catch(() => done());
 
-      artist.resetButtonClick();
+  //     artist.resetButtonClick();
 
-      expect(execute).to.have.been.called;
-      execute.restore();
-    });
+  //     expect(execute).to.have.been.called;
+  //     execute.restore();
+  //   });
 
-    it('executes upon code changes', done => {
-      const artist = new Artist();
-      const execute = sinon.stub(Artist.prototype, 'execute');
-      const container = document.createElement('div');
-      container.id = 'artistContainer';
-      document.body.appendChild(container);
-      artist.injectStudioApp(studioApp);
-      artist
-        .init({
-          skin: {},
-          level: {
-            autoRun: true
-          },
-          containerId: 'artistContainer'
-        })
-        .then(done)
-        .catch(() => done());
-      studioApp.runChangeHandlers();
+  //   it('executes upon code changes', done => {
+  //     const artist = new Artist();
+  //     const execute = sinon.stub(Artist.prototype, 'execute');
+  //     const container = document.createElement('div');
+  //     container.id = 'artistContainer';
+  //     document.body.appendChild(container);
+  //     artist.injectStudioApp(studioApp);
+  //     artist
+  //       .init({
+  //         skin: {},
+  //         level: {
+  //           autoRun: true
+  //         },
+  //         containerId: 'artistContainer'
+  //       })
+  //       .then(done)
+  //       .catch(() => done());
+  //     studioApp.runChangeHandlers();
 
-      expect(execute).to.have.been.called;
-      execute.restore();
-    });
-  });
+  //     expect(execute).to.have.been.called;
+  //     execute.restore();
+  //   });
+  // });
 
   describe('prepareForRemix', () => {
     let artist, newDom, oldXml;

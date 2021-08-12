@@ -51,7 +51,6 @@ echo "Running with parallelism: ${PROCS}"
 PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 ${PARALLEL} <<SCRIPT
-npm run lint
 (PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
 (PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook)
 (PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
