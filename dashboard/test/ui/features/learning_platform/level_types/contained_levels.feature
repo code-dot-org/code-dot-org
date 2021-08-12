@@ -79,6 +79,7 @@ Scenario: Javalab with free response contained level
   And I see no difference for "answer entered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "level run" using stitch mode "none"
+
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
   Then I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
@@ -87,9 +88,6 @@ Scenario: Javalab with free response contained level
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "finished level with contained level" using stitch mode "none"
-  Then I press "finishButton"
-  # Make sure continue takes us to next level
-  And I wait until current URL contains "/lessons/44/levels/7"
   Then I close my eyes
 
 Scenario: Authorized Teacher on Maze with free response contained level
