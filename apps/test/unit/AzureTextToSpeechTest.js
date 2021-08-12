@@ -11,7 +11,6 @@ const assertSoundResponsesEqual = (expected, actual) => {
       actual.playbackOptions[opt]
     );
   });
-  // assert.deepEqual(expected.playbackOptions, actual.playbackOptions);
   assert.deepEqual(expected.profaneWords, actual.profaneWords);
   assert.equal(expected.error, actual.error);
 };
