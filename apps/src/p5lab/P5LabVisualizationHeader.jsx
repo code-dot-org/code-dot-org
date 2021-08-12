@@ -1,3 +1,4 @@
+/* global appOptions */
 /** @file Row of controls above the visualization. */
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,6 +11,7 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
 import * as utils from '../utils';
+import PoemSelector from './spritelab/PoemSelector';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -54,24 +56,28 @@ class P5LabVisualizationHeader extends React.Component {
   render() {
     const {interfaceMode, allowAnimationMode} = this.props;
     return (
-      <div style={styles.main} id="playSpaceHeader">
-        <ToggleGroup
-          selected={interfaceMode}
-          onChange={this.changeInterfaceMode}
-        >
-          <button type="button" value={P5LabInterfaceMode.CODE} id="codeMode">
-            {msg.codeMode()}
-          </button>
-          {allowAnimationMode && (
-            <button
-              type="button"
-              value={P5LabInterfaceMode.ANIMATION}
-              id="animationMode"
-            >
-              {this.props.spriteLab ? msg.costumeMode() : msg.animationMode()}
+      <div id="playSpaceHeader">
+        {this.props.spriteLab &&
+          appOptions.level.blockPools?.includes('PoemBot') && <PoemSelector />}
+        <div style={styles.main}>
+          <ToggleGroup
+            selected={interfaceMode}
+            onChange={this.changeInterfaceMode}
+          >
+            <button type="button" value={P5LabInterfaceMode.CODE} id="codeMode">
+              {msg.codeMode()}
             </button>
-          )}
-        </ToggleGroup>
+            {allowAnimationMode && (
+              <button
+                type="button"
+                value={P5LabInterfaceMode.ANIMATION}
+                id="animationMode"
+              >
+                {this.props.spriteLab ? msg.costumeMode() : msg.animationMode()}
+              </button>
+            )}
+          </ToggleGroup>
+        </div>
       </div>
     );
   }
