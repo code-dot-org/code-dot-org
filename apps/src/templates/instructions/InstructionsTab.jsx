@@ -45,6 +45,7 @@ export default class InstructionsTab extends Component {
         className={this.props.className}
         onClick={this.props.onClick}
         style={combinedStyle}
+        title={this.props.text}
       >
         {this.props.text}
       </a>
