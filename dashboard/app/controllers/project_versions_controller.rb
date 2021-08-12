@@ -1,5 +1,4 @@
 class ProjectVersionsController < ApplicationController
-  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
   # POST /project_versions
@@ -11,5 +10,10 @@ class ProjectVersionsController < ApplicationController
     else
       return head :bad_request
     end
+  end
+
+  def get_token
+    headers['csrf-token'] = form_authenticity_token
+    return head :ok
   end
 end
