@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:22 UTC",
+    "serialized_at": "2021-08-11 12:38:42 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -160,7 +160,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
-        "preparation": "\r\n* Print copies of the Flippy Do Pro, 1 per group\r\n* Scissors",
+        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true
@@ -3840,15 +3840,11 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "survey_placeholder_levelgroup"
-        ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "survey_placeholder_levelgroup"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3856,7 +3852,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "survey_placeholder_levelgroup"
+        "csp-pre-survey-levelgroup_21_22"
       ]
     },
     {
@@ -3870,7 +3866,6 @@
         ],
         "progression": "Computer Science is Changing Everything"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3896,7 +3891,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3922,7 +3916,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3948,7 +3941,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3974,7 +3966,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4000,7 +3991,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4026,7 +4016,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4052,7 +4041,6 @@
         ],
         "progression": "Widget: Binary Odometer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4078,7 +4066,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4104,7 +4091,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4130,7 +4116,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4156,7 +4141,6 @@
         ],
         "progression": "Video: Intro to Pixelation Encoding B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4182,7 +4166,6 @@
         ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4208,7 +4191,6 @@
         ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4234,7 +4216,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4260,7 +4241,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4286,7 +4266,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4312,7 +4291,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4338,7 +4316,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4364,7 +4341,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4390,7 +4366,6 @@
         ],
         "progression": "RGB Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4416,7 +4391,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4442,7 +4416,6 @@
         ],
         "progression": "More Shades of Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4468,7 +4441,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4494,7 +4466,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4520,7 +4491,6 @@
         ],
         "progression": "Color Sampling Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4546,7 +4516,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4572,7 +4541,6 @@
         ],
         "progression": "How Computers Work: Binary and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4598,7 +4566,6 @@
         ],
         "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4624,7 +4591,6 @@
         ],
         "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4650,7 +4616,6 @@
         ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4676,7 +4641,6 @@
         ],
         "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4702,7 +4666,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4728,7 +4691,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4754,7 +4716,6 @@
         ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4780,7 +4741,6 @@
         ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4806,7 +4766,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4831,7 +4790,6 @@
           "U1L12 CFU Creative Commons_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4856,7 +4814,6 @@
           "U1L12 CFU Copyright_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4882,7 +4839,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4908,7 +4864,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4934,7 +4889,6 @@
         ],
         "progression": "Unit 1 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4953,9 +4907,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "survey_placeholder_levelgroup",
+        "level.key": "csp-pre-survey-levelgroup_21_22",
         "script_level.level_keys": [
-          "survey_placeholder_levelgroup"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",

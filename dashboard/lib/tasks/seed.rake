@@ -187,6 +187,7 @@ namespace :seed do
   SCRIPTS_DEPENDENCIES = [
     :environment,
     :games,
+    :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
     :programming_expressions,
@@ -290,6 +291,10 @@ namespace :seed do
   timed_task custom_levels: :environment do
     level_name = ENV['LEVEL_NAME']
     LevelLoader.load_custom_levels(level_name)
+  end
+
+  timed_task deprecated_blockly_levels: :environment do
+    Services::DeprecatedLevelLoader.load_blockly_levels
   end
 
   # Seeds the data in callouts
@@ -448,7 +453,7 @@ namespace :seed do
     end
 
     puts 'Cache mismatch, running full ui test seed'
-    Rake::Task['seed:ui_test'].invoke
+    RakeUtils.rake_stream_output 'seed:ui_test'
     File.write(HASH_FILE, current_hash)
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end

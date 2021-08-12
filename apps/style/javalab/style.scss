@@ -113,5 +113,15 @@ div#visualizationResizeBar {
 }
 
 #codeApp.pin_bottom {
-  top: 50px;
+  left: 10px;
+  right: 10px;
+}
+
+// Override regular behavior while we are forcing JavaLab to be LTR only.
+#visualization.responsive > * {
+  html[dir="RTL"] & {
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
 }

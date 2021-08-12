@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-07-20 22:21:28 UTC",
+    "serialized_at": "2021-07-27 16:15:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "allthemigratedthings"
@@ -389,7 +389,6 @@
         ],
         "progression": "Levels are Cool"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -415,7 +414,6 @@
         ],
         "progression": "Bubble Choice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -441,7 +439,6 @@
         ],
         "progression": "Standalone Video"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -467,7 +464,6 @@
         ],
         "progression": "Level with Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

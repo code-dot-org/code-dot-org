@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:49 UTC",
+    "serialized_at": "2021-08-03 22:47:08 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd1-old"
@@ -180,9 +180,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 1 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,9 +204,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 2 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,9 +228,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 3 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,9 +252,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 4 Overview"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,9 +276,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 5 Overview"
-        ]
+        ],
+        "progression": "Unit 1 Lesson 5 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,9 +300,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 6 Overview"
-        ]
+        ],
+        "progression": "Unit 1 Lesson 6 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -326,7 +326,6 @@
           "CSD U1 - PixFilter 1x1 intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,7 +349,6 @@
           "CSD U1 - PixFilter Filter Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +372,6 @@
           "CSD U1 - PixFilter Mushroom"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -398,7 +395,6 @@
           "CSD U1 - PixFilter Filter Revisit"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,7 +418,6 @@
           "CSD U1 - PixFilter Mario"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -446,7 +441,6 @@
           "CSD U1 - PixFilter UnFilter"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -470,7 +464,6 @@
           "CSD U1 - PixFilter FreePlay"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -492,9 +485,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 7 Overview"
-        ]
+        ],
+        "progression": "Unit 1 Lesson 7 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -516,9 +509,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 8 Overview"
-        ]
+        ],
+        "progression": "Unit 1 Lesson 8 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -542,7 +535,6 @@
           "CSD U1 Input Output Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,7 +558,6 @@
           "CSD U1 Input Output C1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -590,7 +581,6 @@
           "CSD U1 Input Output C2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -614,7 +604,6 @@
           "CSD U1 Input Output C3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -638,7 +627,6 @@
           "CSD U1 Input Output C4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -660,9 +648,9 @@
       "properties": {
         "level_keys": [
           "Unit 1 Lesson 9 Overview"
-        ]
+        ],
+        "progression": "Unit 1 Lesson 9 Overview"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

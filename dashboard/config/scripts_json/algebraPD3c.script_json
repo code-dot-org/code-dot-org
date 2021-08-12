@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:16 UTC",
+    "serialized_at": "2021-08-03 22:46:55 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algebraPD3c"
@@ -92,7 +92,6 @@
           "PDAlg 3CWelcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +115,6 @@
           "PDAlg 3CAbout"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +138,6 @@
           "OPD-K5 CS Tips"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,7 +161,6 @@
           "PDAlg 3CPlanning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,7 +184,6 @@
           "PDAlg 3CGo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +207,6 @@
           "PDAlg 3CGathering"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +230,6 @@
           "PDAlg 3CSharing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +253,6 @@
           "PDAlg 3CShare Forum"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -284,7 +276,6 @@
           "PDAlg 3CFuture"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -308,7 +299,6 @@
           "PDAlg 3CCourseAB"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -332,7 +322,6 @@
           "PDAlg 3CBootstrap"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +345,6 @@
           "PDAlg 3CElective"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -380,7 +368,6 @@
           "PDAlg 3CSharePlan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -404,7 +391,6 @@
           "PDAlg 3CCongrats"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

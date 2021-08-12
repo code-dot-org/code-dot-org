@@ -3,18 +3,19 @@ import * as utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
+
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
  * @type {Object.<string, number>}
  */
-var nextElementIdMap = {};
+let nextElementIdMap = {};
 
 /**
  * @readonly
  * @enum {string}
  */
-var ElementType = utils.makeEnum(
+const ElementType = utils.makeEnum(
   'BUTTON',
   'LABEL',
   'TEXT_INPUT',
@@ -30,7 +31,7 @@ var ElementType = utils.makeEnum(
   'PHOTO_SELECT'
 );
 
-var elements = {};
+let elements = {};
 elements[ElementType.BUTTON] = require('./button');
 elements[ElementType.LABEL] = require('./label');
 elements[ElementType.TEXT_INPUT] = require('./textInput');
@@ -46,7 +47,9 @@ elements[ElementType.SLIDER] = require('./slider');
 elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
 
 export default {
-  ElementType: ElementType,
+  ElementType,
+  elements,
+
   /**
    * Returns an element id with the given prefix which is unused within
    * the applab app's DOM.

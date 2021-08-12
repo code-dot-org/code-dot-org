@@ -545,6 +545,6 @@
   "created_at": "2021-07-30T13:51:46.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-30T13:51:46.092+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4c\\\"\"],\"cloned_from\":\"CSA U1L5-L4c\"},{\"changed_at\":\"2021-07-30 13:51:51 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:29:16 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-30T13:51:46.092+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L4c\\\"\"],\"cloned_from\":\"CSA U1L5-L4c\"},{\"changed_at\":\"2021-07-30 13:51:51 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:29:16 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-02 17:33:35 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

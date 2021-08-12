@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:10 UTC",
+    "serialized_at": "2021-08-03 22:46:52 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algebraPD3b"
@@ -152,7 +152,6 @@
           "PDAlg 3BWelcome"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +175,6 @@
           "PDAlg 3BAbout"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +198,6 @@
           "OPD-K5 CS Tips"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +221,6 @@
           "PDAlg 3BPlanning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,7 +244,6 @@
           "PDAlg 3BGo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -272,7 +267,6 @@
           "PDAlg 3B Lessons1-3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +290,6 @@
           "PDAlg 1-3 Circles"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -320,7 +313,6 @@
           "PDAlg 1-3 Circles Practice"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +336,6 @@
           "PDAlg 3B Lessons4-7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -368,7 +359,6 @@
           "PDAlg 4-7 Contracts"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +382,6 @@
           "PDAlg 4-7 Contracts Match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +405,6 @@
           "PDAlg 4-7 Variables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +428,6 @@
           "PDAlg 4-7 Big Game"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +451,6 @@
           "PDAlg 3B Lessons8-12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -488,7 +474,6 @@
           "PDAlg 8-12 Design Recipe"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +497,6 @@
           "PDAlg 8-12 Examples"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +520,6 @@
           "PDAlg 8-12 ex dr 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +543,6 @@
           "PDAlg 8-12 ex dr 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +566,6 @@
           "PDAlg 8-12 Rocket Height"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +589,6 @@
           "PDAlg 8-12 Rocket Height Puzzle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,7 +612,6 @@
           "PDAlg 3B Lessons13-16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +635,6 @@
           "PDAlg 13-16 Booleans"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,7 +658,6 @@
           "PDAlg 13-16 Simple Sam"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,7 +681,6 @@
           "PDAlg 13-16 Sam Extension"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -728,7 +704,6 @@
           "PDAlg 13-16 Sam Extension Puzzle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -752,7 +727,6 @@
           "PDAlg 3B Lessons17-20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,7 +750,6 @@
           "PDAlg 17-20 Luigi Extensions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -800,7 +773,6 @@
           "PDAlg 17-20 Luigi Extension Puzzle"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +796,6 @@
           "PDAlg phase 3b survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -848,7 +819,6 @@
           "PDAlg 3B Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -872,7 +842,6 @@
           "PDAlg 3B KeepLearning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -896,7 +865,6 @@
           "PDAlg 3B Survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

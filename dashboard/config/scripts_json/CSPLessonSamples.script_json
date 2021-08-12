@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:53 UTC",
+    "serialized_at": "2021-08-03 22:46:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "CSPLessonSamples"
@@ -75,7 +75,6 @@
           "Pixelation - Video - Lesson 14 - B and W"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +98,6 @@
           "Pixelation - Lesson 14 - Make the Letter A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +121,6 @@
           "Pixelation - Lesson 14 - Fix bit offset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +144,6 @@
           "Pixelation - Lesson 14 - Make your own B and W Image"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +167,6 @@
           "Pixelation - Video - Color 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +190,6 @@
           "Pixelation - Lesson 15 - Complete 3-bit color"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -219,7 +213,6 @@
           "Pixelation - Video - Color 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -243,7 +236,6 @@
           "Pixelation - Lesson 15 - Color Shades"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +259,6 @@
           "Pixelation - Video - Color 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +282,6 @@
           "Pixelation - Lesson 15 - Color Shades 4x4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -315,7 +305,6 @@
           "Pixelation Flappy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -339,7 +328,6 @@
           "Pixelation Bee"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -363,7 +351,6 @@
           "Pixelation - Lesson 15 - Favicon Instructions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +374,6 @@
           "Pixelation - Lesson 15 - Color Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

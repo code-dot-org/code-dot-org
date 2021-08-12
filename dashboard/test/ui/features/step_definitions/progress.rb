@@ -81,7 +81,7 @@ end
 Then /^I open the progress drop down of the current page$/ do
   steps %{
     Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
+    And I wait to see ".uitest-summary-progress-table"
   }
 end
 
