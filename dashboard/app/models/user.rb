@@ -117,6 +117,7 @@ class User < ApplicationRecord
     parent_email_banner_dismissed
     section_attempts
     section_attempts_last_reset
+    share_teacher_email_regional_partner_opt_in
   )
 
   # Include default devise modules. Others available are:
@@ -247,10 +248,12 @@ class User < ApplicationRecord
     end
   end
 
-  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners
+  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
-    if teacher? && within_united_states?
-      print ('Test it' + share_teacher_email_reg_partner_opt_in)
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher? && share_teacher_email_reg_partner_opt_in.downcase == "yes"
+      user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
     end
   end
 
