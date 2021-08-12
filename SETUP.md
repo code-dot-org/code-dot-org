@@ -190,9 +190,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
-    1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-    1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. `sudo apt-get update && sudo apt-get install yarn=1.22.5-1`
+    1. `npm install -g yarn@1.22.5`.
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
