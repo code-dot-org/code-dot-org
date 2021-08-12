@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-08-11 16:28:56 UTC",
+    "serialized_at": "2021-08-11 19:07:20 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -10985,6 +10985,19 @@
       }
     },
     {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
       "name": "All Code",
       "url": "/s/aiml-2021/code",
       "key": "all_code",
@@ -11956,6 +11969,12 @@
       "seeding_key": {
         "lesson.key": "lesson-23",
         "resource.key": "view_and_download_survey_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson1",
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
