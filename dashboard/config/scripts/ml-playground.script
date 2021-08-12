@@ -168,3 +168,6 @@ level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'
 level 'ml-class test-ai lab 2', progression: 'Explore AI Lab'
 level 'ml-class test-app lab 1', progression: 'Importing into App Lab'
 
+lesson 'CSP Tester', display_name: 'CSP Tester', has_lesson_plan: false
+level 'CSP U7 Param Practice App_3_ExemplarIssue', progression: 'Parameters and Returns'
+

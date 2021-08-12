@@ -731,13 +731,6 @@ ro:
       gamelab_unsupported_tablet: Laboratorul de jocuri funcționează cel mai bine
         pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să
         întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent.
-      oceans_unsupported_browser: Acest browser nu este suportat pentru acest tutorial.
-        Te rugăm să vizitezi această pagină folosind Edgge, Chrome, Firefox sau alt
-        browser modern.
-      weblab_unsupported_browser: Din păcate, în prezent, întâmpinăm probleme cu încărcarea
-        Laboratorului de web în acest browser. Poate doriți să utilizați un browser
-        diferit până când acest lucru este rezolvat. Ne cerem scuze pentru neplăcerile
-        create.
       weblab_unsupported_locale_storage: S-ar putea să întâmpinați probleme la utilizarea
         Laboratorului de web în modul de navigare privată. Vă rugăm, reîncărcați proiectul
         în modul normal. Ne pare rău pentru inconveniență.

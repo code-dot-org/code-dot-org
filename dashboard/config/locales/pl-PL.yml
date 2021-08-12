@@ -765,12 +765,6 @@ pl:
       gamelab_unsupported_tablet: Game Lab działa najlepiej na komputerze stacjonarnym
         lub laptopie z myszką i klawiaturą. W przypadku korzystania z tych narzędzi
         na obecnym urządzeniu, mogą wystąpić problemy.
-      oceans_unsupported_browser: Ta przeglądarka nie obsługuje niniejszego samouczka.
-        Prosimy spróbować odwiedzić tę stronę korzystając z przeglądarki Edge, Chrome,
-        Firefox lub innej nowoczesnej przeglądarki.
-      weblab_unsupported_browser: Niestety obecnie występują problemy z ładowaniem
-        Web Lab w tej przeglądarce. Proponujemy skorzystać z innej przeglądarki dopóki
-        problem nie zostanie rozwiązany. Przepraszamy za niedogodności.
       weblab_unsupported_locale_storage: Mogą wystąpić problemy w czasie używania
         Web Lab w trybie prywatnego przeglądania. Prosimy o przeładowanie projektu
         w zwykłym trybie przeglądarki. Przepraszamy za niedogodności.

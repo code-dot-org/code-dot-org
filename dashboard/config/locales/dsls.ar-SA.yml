@@ -4561,8 +4561,7 @@ ar-SA:
           feedback: صحيح!
         - {}
         questions:
-        - text: أمعن النظر في حلقات التكرار المتداخلة أدناه. ما الذي يحدث عند الضغط
-            على زر "تشغيل"؟
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: الحصادة ستلتقط يقطينتين.

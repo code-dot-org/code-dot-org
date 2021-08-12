@@ -523,8 +523,6 @@ se:
       unsupported_message: "Du neahttalohkki ii dorjojuvvo. Ođas du neahttalohkki dása [ovtta min dorjojuvvon neahttalohkkiide](%{supported_browsers_url}). Don sáhtát geahččalit geahččat siiddu, muhto fertet vuordit ahte funkšunálitehta sáhttá billohuvvot."
       applab_unsupported_tablet: "App Lab doaibmá buoremusat stášuneara dahje mátkedihtoris mas lea sáhpán ja boallobeavdi. Don soaittát bártidit go geavahat dán reaiddu du dálá reaiddus."
       gamelab_unsupported_tablet: "Speallan Lab doaibmá buoremusat stášuneara dahje mátkedihtoris mas lea sáhpán ja boallobeavdi. Don soaittát bártidit go geavahat dán reaiddu du dálá reaiddus."
-      oceans_unsupported_browser: "Dát neahttalohkki ii dorjojuvvo dán neavvagii. Geahččal finihit dán siiddus geavahettiin Edge, Chrome, Firefox, dahje eará modearna neahttalohkki."
-      weblab_unsupported_browser: "Dađibahábut mis leat juste dál váttisvuođat lástet Web Lab dán neahttalohkkis. Soaitá buoremus ahte geahččalat eará neahttalohkki dassážii go dát lea čovdojuvvon. Šállošit dán."
       weblab_unsupported_locale_storage: "Don soaittát vásihit váttisvuođaid geavahit Web Lab du Priváhta Neahttalohkki modusas. Laste ođđasit du prošeavtta normála modusis. Šállošit dán."
   slow_loading: 'Dát ádjána guhkit go dábálaččat...'
   try_reloading: 'Geahččal ođđasit lástet dán siiddu'

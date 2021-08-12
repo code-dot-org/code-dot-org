@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:02 UTC",
+    "serialized_at": "2021-08-11 21:32:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ml-playground"
@@ -398,6 +398,21 @@
       },
       "seeding_key": {
         "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "CSP Tester",
+      "name": "CSP Tester",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP Tester",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
@@ -3214,6 +3229,30 @@
       "level_keys": [
         "ml-class test-app lab 1"
       ]
+    },
+    {
+      "chapter": 118,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "progression": "Parameters and Returns"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "lesson.key": "CSP Tester",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "CSP U7 Param Practice App_3_ExemplarIssue"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4500,6 +4539,17 @@
           "ml-class test-app lab 1"
         ],
         "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7 Param Practice App_3_ExemplarIssue",
+        "script_level.level_keys": [
+          "CSP U7 Param Practice App_3_ExemplarIssue"
+        ],
+        "lesson.key": "CSP Tester",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
