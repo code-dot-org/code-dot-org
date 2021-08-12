@@ -98,6 +98,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     # apps/src/code-studio/pd/form_components/utils.js
     entries = Hash[entry_keys.map do |key, values|
       [key, values.map do |value|
+        # Capitalize country values to be consistent with other country strings in our database
         answer = key.to_s == 'schoolCountry' ? value.titleize : value
         {
           answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
