@@ -17980,3 +17980,19 @@ de:
           lessons:
             lesson-1:
               name: Übersicht
+        csa-u6-dev:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-7: {}
+            lesson-11: {}
+        hello-world-draft:
+          lessons:
+            lesson-1: {}

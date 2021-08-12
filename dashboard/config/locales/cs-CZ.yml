@@ -718,11 +718,6 @@ cs:
       gamelab_unsupported_tablet: Game Lab funguje nejlépe na stolním počítači nebo
         laptopu s myší a klávesnicí. Při používání tohoto nástroje na svém aktuálním
         zařízení můžete zaznamenat problémy.
-      oceans_unsupported_browser: Tento kurz nepodporuje váš prohlížeč. Zkuste prosím
-        použít Edge, Chrome, Firefox nebo jiný moderní prohlížeč.
-      weblab_unsupported_browser: Bohužel právě máme problémy s načítáním Web Lab
-        do tohoto prohlížeče. Možná budete chtít používat jiný prohlížeč, dokud to
-        nebude vyřešeno. Omlouváme se za nepříjemnosti.
       weblab_unsupported_locale_storage: Při používání Web Lab v režimu soukromého
         prohlížení možná zaznamenáte problémy. Načtěte prosím svůj projekt znovu v
         normálním režimu. Omlouváme se za nepříjemnosti.

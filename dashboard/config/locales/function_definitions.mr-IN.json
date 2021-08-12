@@ -488,6 +488,18 @@
             "parameters": {
               "repeat": "पुन्हा करा"
             }
+          },
+          "small flower": {
+            "name": "लहान फूल"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "लॉजिक फुले2"
+          },
+          "LOGIC FLOWER": {
+            "name": "लॉजिक फूल"
+          },
+          "LOGIC FLOWERS": {
+            "name": "लॉजिक फुले"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -663,6 +675,11 @@
           },
           "build long bridge": {
             "name": "मोठा पूल बांधा"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "गेम रीसेट करा"
           }
         }
       }

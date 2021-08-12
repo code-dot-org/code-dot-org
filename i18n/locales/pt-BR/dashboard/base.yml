@@ -585,8 +585,6 @@ pt:
       link: "Saiba mais"
       applab_unsupported_tablet: "App Lab funciona melhor em um computador desktop ou laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
       gamelab_unsupported_tablet: "O Laboratório de Jogos funciona melhor em um computador desktop ou um laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
-      oceans_unsupported_browser: "Esse tutorial não roda neste navegador. Tente visitar essa página usando Edge, Chrome, Firefox ou outro navegador moderno."
-      weblab_unsupported_browser: "Infelizmente, estamos com problemas com o carregamento do Web Lab neste navegador. Você pode tentar usar um navegador diferente até que isso seja resolvido. Desculpe pela inconveniência."
       weblab_unsupported_locale_storage: "Você pode ter problemas ao usar o Laboratório Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo normal. Desculpe pela inconveniência."
   slow_loading: 'Isso está demorando mais do que o normal...'
   try_reloading: 'Tente recarregar a página'

@@ -3605,7 +3605,7 @@ cs-CZ:
           feedback: Nesprávně. Modrý vetřelec se začne pohybovat nahoru a dolů po
             obrazovce.
         questions:
-        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Zahradnice posbírá dvě dýně.

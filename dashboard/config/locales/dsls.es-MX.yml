@@ -633,13 +633,13 @@ es-MX:
           | [![Ardilla hambrienta (Laboratorio de juegos)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Ardilla hambrienta (Laboratorio de juegos")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [[Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | ¡Intenta añadir sonidos a este juego! | ¡Intenta añadir otra escena a esta historia! |
       BigEvent-Unplugged:
-        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
-          acciones que un computador monitorea. En esta lección usted reaccionará
-          de manera diferente dependiendo cuál botón esta presionado.\n"
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, los eventos
+          son acciones que una computadora monitorea. En esta lección, tú reaccionarás
+          de manera diferente dependiendo qué botón estés presionado.\n"
       BigEvent-Unplugged_2020:
-        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
-          acciones que un computador monitorea. En esta lección usted reaccionará
-          de manera diferente dependiendo cuál botón esta presionado.\n"
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, los eventos
+          son acciones que una computadora monitorea. En esta lección, tú reaccionarás
+          de manera diferente dependiendo qué botón estés presionado.\n"
       Building a UI with Design Mode:
         markdown: |
           # Bienvenidos al modo de diseño de Laboratorio de aplicaciones
@@ -7067,7 +7067,7 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota, porque gira en sentido equivocado.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -8534,7 +8534,7 @@ es-MX:
 
       courseF_EOC_2020:
         display_name: Proyecto de fin de curso
-        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
+        description: "¡Has llegado al final del curso F! Elige un proyecto para crear."
       courseF_bee_variables_8a_2018:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
@@ -10468,14 +10468,14 @@ es-MX:
           Utiliza un mapa y da órdenes para llegar a la meta.
       TheRightAppMarkdownLevel_2019:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
           aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2019_2020:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
@@ -10483,9 +10483,9 @@ es-MX:
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: "¡Encuesta rápida de CS Discoveries!"
       BigEvent-Unplugged_2021:
-        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
-          acciones que un computador monitorea. En esta lección usted reaccionará
-          de manera diferente dependiendo cuál botón esta presionado.\n"
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, los eventos
+          son acciones que una computadora monitorea. En esta lección, tú reaccionarás
+          de manera diferente dependiendo qué botón estés presionado.\n"
       BinaryBracelets-Unplugged_2021:
         markdown: |-
           # Pulseras binarias
@@ -10500,10 +10500,9 @@ es-MX:
           Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
       CourseF_outbreak_story:
         content1: descripción aquí
-        markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
+        markdown: "# El brote: programa tu propia simulación\n\n## ¡Bienvenido a Monster
           Town!\nMonster Town solía ser un lugar feliz y saludable. A los monstruos
-          de Monster Town les encantaba pasearse para visitar a sus amigos. \n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          de Monster Town les encantaba pasear y visitar a sus amigos. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -10515,9 +10514,9 @@ es-MX:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nUn día, uno de los monstruos empezó a sentirse mal.
-          ¡El monstruo había cogido un **virus**! Un virus es un pequeño organismo
-          que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado.
-          Siguieron visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          ¡El monstruo se había contagiado un **virus**! Un virus es un pequeño organismo
+          que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado
+          y siguieron visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -10528,8 +10527,8 @@ es-MX:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nPoco después, otros dos monstruos enfermaron. ¡Era
-          el mismo virus! Parece que se contagiaron de su amigo.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPoco después, otros dos monstruos se enfermaron.
+          ¡Era el mismo virus! Parece que se contagiaron de su amigo.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -10542,7 +10541,7 @@ es-MX:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nEl virus se extendió lentamente a otros monstruos
           que estaban cerca. Los monstruos sanos empezaron a preocuparse de que todos
-          pudieran enfermar. Los monstruos enfermos empezaron a preocuparse de que
+          pudieran enfermarse. Los monstruos enfermos empezaron a preocuparse de que
           iban a contagiar el virus a todos los demás.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -10559,18 +10558,18 @@ es-MX:
           tras estudiar el virus, los vecinos de Monster Town hicieron un importante
           descubrimiento. Se dieron cuenta de que era menos probable que contagiaran
           el virus si llevaban mascarillas en la boca. Con las mascarillas puestas,
-          era menos probable que los monstruos enfermos contagiaran el virus a los
-          sanos.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          los monstruos enfermos no tendrían tantas posibilidades de contagiar el
+          virus a los sanos.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
           ¿Qué ocurrirá a continuación?\n\nHoy vas a escribir código para crear y
-          ejecutar tu propia **simulación** del brote de virus en Monster Town.  Una
-          simulación es un modelo informático de un proceso o sistema. Aprende a codificar
-          y a hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
+          ejecutar tu propia **simulación** del brote de virus en Monster Town. Una
+          simulación es un modelo informático de un proceso o sistema. Aprende a programar
+          y hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
           Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* * ¿Con qué rapidez se propagará el
-          virus?\n\n* * ¿Se enfermará todo el mundo?\n\n* * ¿Cómo ayudarán las mascarillas?\n\n\nCuando
+          style=\"float:right; width:15%\">\n\n* *¿Con qué rapidez se propagará el
+          virus?*\n\n* *¿Se enfermarán todos?*\n\n* *¿Cómo ayudan las mascarillas?*\n\n\nCuando
           hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje
           sobre lo que crees que podemos hacer para ayudar a mantener a los demás
           sanos cuando un virus llega a la ciudad. \n"
@@ -10631,9 +10630,9 @@ es-MX:
           En esta lección, aprenderás a usar y escribir historias de espacio en blanco. Mira este video para aprender cómo esto se conecta con las ciencias de la computación.
       ForLoopFun-Unplugged_2021:
         markdown: |
-          # Por el Divertido de Loop
+          # Diversión con el bucle desde
 
-          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
+          Sabemos que los bucles nos permiten hacer cosas una y otra vez, pero ahora vamos a aprender cómo usarlos con otras estructuras ya integradas.
       GettingLoopy-Unplugged_2021:
         markdown: |-
           # Cómo hacerse Loopy
@@ -10651,9 +10650,9 @@ es-MX:
           Crea un algoritmo para mover al personaje a través de un laberinto.
       Internet-Unplugged_2021:
         markdown: |
-          # El Internet
+          # Internet
 
-          Construye tu propio Internet en la clase sólo usando pedazos de papel.
+          Usa pedazos de papel para crear tu propia Internet en el aula.
       MoveItMoveIt-Unplugged_2021:
         markdown: |-
           # Muévete, muévete
@@ -11789,7 +11788,7 @@ es-MX:
           Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
       TheRightAppMarkdownLevel_2021:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
@@ -11836,7 +11835,7 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota, porque gira en sentido equivocado.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -11905,7 +11904,7 @@ es-MX:
           para crear."
         display_name: Proyecto de fin de curso
       courseD_EOC_examples_2021:
-        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+        description: Estás a punto de empezar tu proyecto final. Antes de comenzar,
           dedica un tiempo a mirar los proyectos de ejemplo.
         display_name: Ejemplos de Proyecto
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -12142,8 +12141,7 @@ es-MX:
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
-            clic en "Ejecutar"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La cosechadora recogerá dos calabazas.
@@ -12209,13 +12207,13 @@ es-MX:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
       courseF_EOC_2021:
-        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
+        description: "¡Has llegado al final del curso F! Elige un proyecto para crear."
         display_name: Proyecto de fin de curso
       courseF_EOC_examples_2021:
-        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
+        description: "¡Has llegado al final del curso F! Elige un proyecto para crear."
         display_name: Proyecto de fin de curso
       courseF_EOC_samples_2021:
-        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+        description: Estás a punto de empezar tu proyecto final. Antes de comenzar,
           dedica un tiempo a mirar los proyectos de ejemplo.
         display_name: Proyecto de fin de curso
       courseF_artist_practice:
@@ -12223,8 +12221,8 @@ es-MX:
           todas las que puedas. ¡Sigue practicando con los bucles y el Artista!"
         display_name: Práctica con el Artista
       courseF_beeFor_practice:
-        description: ¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
-          todas las que puedas. ¡Sigue practicando con los bucles "for" y la abeja!
+        description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
+          todas las que puedas. ¡Sigue practicando con los bucles desde y la abeja!"
         display_name: Práctica con la abeja
       courseF_beeVar_practice:
         description: "¡Gran trabajo hasta ahora! Elige tu próxima actividad. Completa
@@ -12289,12 +12287,11 @@ es-MX:
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una comida marchando!"'
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
-        - text: '"¡Una que viene enseguida!"'
+        - text: '"¡Una  marchando!"'
           correct: true
           feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
         - text: No se imprimirá nada.
-          feedback: No se imprimirá nada, pero es incorrecto. El evento y el bloque
-            de impresión seguirán funcionando.
+          feedback: No es correcto. El evento y el bloque de impresión seguirán funcionando.
         questions:
         - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
             se imprimirá si el usuario escribe "pizza"?
@@ -12417,15 +12414,15 @@ es-MX:
           Es posible que los estudiantes necesiten instrucciones muy claras para entender cómo navegar por las opciones existentes. Para cada una de las elecciones del proyecto, hay dos subniveles disponibles. Para empezar, los estudiantes deben elegir uno de los niveles marcados como "Parte 1". Una vez que terminen ese nivel, deben volver aquí y seleccionar la "Parte 2" del *mismo* proyecto. El primer nivel de cada elección proporcionará a los estudiantes información sobre los componentes básicos de su proyecto. El segundo nivel es un "juego libre" que les permite hacer los cambios que quieran en su código.
       courseF_variables_samples:
         description: Crearás una tarjeta de felicitación, un chatbot o una historia
-          en blanco. Antes de empezar, explora los proyectos de ejemplo que aparecen
-          a continuación para ver qué te interesa crear. Pulsa "Terminar" cuando estés
-          listo para empezar a planificar tu propio programa.
-        display_name: Exploración - Ejemplos de Programas
+          de espacio en blanco. Antes de empezar, explora los proyectos de ejemplo
+          que aparecen a continuación para ver qué te interesa crear. Pulsa \"Finalizar\"
+          cuando estés listo para empezar a planificar tu propio programa.
+        display_name: Exploración - Ejemplos de programas
         teacher_markdown: |
-          # Visión General de los Niveles de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
+          # Visión general de los niveles de elección
+          Los niveles de elección proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar al menos uno de los subniveles aquí, pero pueden trabajar en tantos como ellos (o tú) quieran.
 
-          Los alumnos deben mirar estos proyectos cuidadosamente antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o hacer que los alumnos los exploren por su cuenta.
+          Los estudiantes deben mirar estos proyectos con atención antes de decidir lo que quieren crear. Pueden estudiarlos juntos en clase o que los exploren por su cuenta.
       courseF_variables_stop:
         content1: descripción aquí
         markdown: "#¡Detente!\n\n## ¿Estás seguro de que estás listo para seguir adelante?
@@ -12501,7 +12498,7 @@ es-MX:
         description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
         display_name: Proyecto de fin de curso
       express_EOC_examples_2021:
-        description: Estás a punto de empezar tu proyecto final. Antes de empezar,
+        description: Estás a punto de empezar tu proyecto final. Antes de comenzar,
           dedica un tiempo a mirar los proyectos de ejemplo.
         display_name: Ejemplos de Proyecto
       grade2_multi_collector_A_predict1_2021:
