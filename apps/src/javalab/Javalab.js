@@ -324,8 +324,21 @@ Javalab.prototype.afterClearPuzzle = function() {
   project.autosave();
 };
 
-Javalab.prototype.onCommitCode = function(commitNotes) {
-  project.autosave();
+Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
+  project.save(true, false).then(result => {
+    fetch('/project_versions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+      },
+      body: JSON.stringify({
+        storage_id: project.getCurrentId(),
+        version_id: project.getCurrentSourceVersionId(),
+        comment: commitNotes
+      })
+    }).then(() => onSuccessCallback());
+  });
 };
 
 Javalab.prototype.onOutputMessage = function(message) {
