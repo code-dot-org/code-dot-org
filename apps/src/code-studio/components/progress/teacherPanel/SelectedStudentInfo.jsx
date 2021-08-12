@@ -1,31 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import Button from '@cdo/apps/templates/Button';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {studentShape} from './StudentTable';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import {levelWithProgress, studentShape} from './types';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
-export class SelectedStudentInfo extends React.Component {
+export default class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
-    // While this userLevel object does have the properties of a levelType,
-    // it is conceptually more similar to a userLevel object. For example,
-    // the id property of this object is the user_level id. To get the level
-    // id, use the level_id property.
-    userLevel: PropTypes.object,
+    levelWithProgress: levelWithProgress,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
 
   onUnsubmit = () => {
     $.ajax({
-      url: `/user_levels/${this.props.userLevel.id}`,
+      url: `/user_levels/${this.props.levelWithProgress.userLevelId}`,
       method: 'PUT',
       data: {
         user_level: {
@@ -36,18 +32,6 @@ export class SelectedStudentInfo extends React.Component {
     })
       .done(data => {
         // Let's just refresh so that the dots are correct, etc.
-        location.reload();
-      })
-      .fail(err => console.error(err));
-  };
-
-  onClearResponse = () => {
-    $.ajax({
-      url: `/user_levels/${this.props.userLevel.id}`,
-      method: 'DELETE'
-    })
-      .done(data => {
-        // Refresh, so that we no longer have the students response loaded
         location.reload();
       })
       .fail(err => console.error(err));
@@ -82,7 +66,37 @@ export class SelectedStudentInfo extends React.Component {
   };
 
   render() {
-    const {selectedStudent, userLevel} = this.props;
+    const {selectedStudent, levelWithProgress} = this.props;
+
+    // While levelWithProgress is loading display arrows and student name only
+    if (!levelWithProgress) {
+      return (
+        <div style={styles.main}>
+          <RadiumFontAwesome
+            icon="caret-left"
+            onClick={this.previousStudent}
+            style={styles.arrow}
+          />
+          <div style={styles.studentInfo}>
+            <div style={styles.name}>{selectedStudent.name}</div>
+          </div>
+          <RadiumFontAwesome
+            icon="caret-right"
+            onClick={this.nextStudent}
+            style={styles.arrow}
+          />
+        </div>
+      );
+    }
+
+    const {
+      paired,
+      navigator,
+      driver,
+      submitLevel,
+      status,
+      updatedAt
+    } = levelWithProgress;
 
     return (
       <div style={styles.main}>
@@ -93,40 +107,41 @@ export class SelectedStudentInfo extends React.Component {
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
-          {userLevel.paired && (
+          {paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {userLevel.navigator && (
-                <div key={userLevel.navigator}>
-                  {i18n.partner({partner: userLevel.navigator})}
-                </div>
+              {navigator && (
+                <div key={navigator}>{i18n.partner({partner: navigator})}</div>
               )}
-              {userLevel.driver && (
-                <div key={userLevel.driver}>
-                  {i18n.loggedIn({partner: userLevel.driver})}
-                </div>
+              {driver && (
+                <div key={driver}>{i18n.loggedIn({partner: driver})}</div>
               )}
             </div>
           )}
           <div style={styles.bubble}>
-            <TeacherPanelProgressBubble userLevel={userLevel} />
+            <ProgressBubble
+              level={levelWithProgress}
+              disabled={true}
+              hideTooltips={true}
+              hideAssessmentBadge={true}
+            />
           </div>
-          {!userLevel.submitLevel && (
+          {!submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
-                {userLevel.status !== LevelStatus.not_tried
-                  ? new Date(userLevel.updated_at).toLocaleString()
+                {status !== LevelStatus.not_tried && updatedAt
+                  ? new Date(updatedAt).toLocaleString()
                   : i18n.notApplicable()}
               </div>
             </div>
           )}
-          {userLevel.submitLevel && (
+          {submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
               <div>
-                {userLevel.status === LevelStatus.submitted
-                  ? new Date(userLevel.updated_at).toLocaleString()
+                {status === LevelStatus.submitted
+                  ? new Date(updatedAt).toLocaleString()
                   : i18n.notApplicable()}
               </div>
               <Button
@@ -135,7 +150,7 @@ export class SelectedStudentInfo extends React.Component {
                 color="blue"
                 onClick={this.onUnsubmit}
                 id="unsubmit-button-uitest"
-                disabled={userLevel.status !== LevelStatus.submitted}
+                disabled={status !== LevelStatus.submitted}
               />
             </div>
           )}
@@ -157,10 +172,11 @@ const styles = {
     flexDirection: 'row'
   },
   studentInfo: {
+    minHeight: 80,
     width: 150,
     textAlign: 'center',
     display: 'flex',
-    justifyContent: 'center',
+    alignItems: 'center',
     flexDirection: 'column'
   },
   bubble: {
