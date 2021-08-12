@@ -54,10 +54,8 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     uuid_name_1 = "#{SecureRandom.uuid}.png"
     key_1 = "starter_assets/#{uuid_name_1}"
     uuid_name_2 = "#{SecureRandom.uuid}.jpg"
-    key_2 = "starter_assets/#{uuid_name_2}"
     file_objs = [
-      MockS3ObjectSummary.new(key_1, 123, 1.day.ago),
-      MockS3ObjectSummary.new(key_2, 321, 2.days.ago)
+      MockS3ObjectSummary.new(key_1, 123, 1.day.ago)
     ]
     LevelStarterAssetsController.any_instance.
       expects(:get_object).once.
