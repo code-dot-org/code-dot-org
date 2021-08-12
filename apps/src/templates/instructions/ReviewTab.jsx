@@ -153,11 +153,21 @@ class ReviewTab extends Component {
   }
 
   onNewCommentSubmit = commentText => {
-    const channelId = getStore().getState().pageConstants.channelId;
+    const {
+      channelId,
+      serverScriptId,
+      serverLevelId
+    } = getStore().getState().pageConstants;
     const {token} = this.state;
 
     codeReviewDataApi
-      .submitNewCodeReviewComment(commentText, channelId, token)
+      .submitNewCodeReviewComment(
+        commentText,
+        channelId,
+        serverScriptId,
+        serverLevelId,
+        token
+      )
       .done(newComment => {
         const comments = this.state.comments;
         comments.push(newComment);

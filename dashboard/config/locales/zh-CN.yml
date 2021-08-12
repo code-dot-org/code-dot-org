@@ -614,8 +614,6 @@ zh-CN:
       link: 了解详情
       applab_unsupported_tablet: 应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       gamelab_unsupported_tablet: 游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
-      oceans_unsupported_browser: 本教程不支持此浏览器。 请尝试使用 Edge，Chrome，Firefox 或其他现代浏览器访问此页面。
-      weblab_unsupported_browser: 很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。
       weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
   slow_loading: 请再多等一会儿...
   try_reloading: 请重新刷新页面

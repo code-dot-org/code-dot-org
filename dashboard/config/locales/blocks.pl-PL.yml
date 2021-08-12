@@ -1067,6 +1067,8 @@ pl:
           UNIT:
             '"seconds"': sekundy
             '"frames"': ramki
+      gamelab_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
       gamelab_ifVarEquals:
@@ -1833,6 +1835,7 @@ pl:
           BG_EFFECT:
             '"---"': "---"
             '"wordsworth"': Wędrowałem samotnie jak chmura
+            '"dickinson"': Jeśli mogę zatrzymać jedno serce przed złamaniem
             '"silverstein"': Batty
       PoemBot_setTitle:
         text: ustaw tytuł wiersza {TITLE}
