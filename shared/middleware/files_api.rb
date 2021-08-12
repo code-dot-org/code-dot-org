@@ -423,7 +423,7 @@ class FilesApi < Sinatra::Base
       category: category,
       size: body.length,
       versionId: response.version_id,
-      timestamp: Time.now, # for logging purposes
+      timestamp: Time.now # for logging purposes
     }.to_json
   end
 
