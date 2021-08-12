@@ -10,7 +10,7 @@
             {
               "type": "html",
               "name": "question1",
-              "html": "<h2>How useful was Module 2?</h2>\n<p>We're interested in your feedback about how useful the activities in Module 2 were for you.</p>\n"
+              "html": "<h2>Foo Foo How useful was Module 2?</h2>\n<p>We're interested in your feedback about how useful the activities in Module 2 were for you.</p>\n"
             },
             {
               "type": "html",

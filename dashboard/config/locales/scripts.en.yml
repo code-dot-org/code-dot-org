@@ -22525,11 +22525,11 @@ en:
               description_teacher: Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.
             lesson-4:
               name: Traversing Arrays with while Loops
-              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You create visuals for your music using the `Rectangle` class.
-              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
+              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You use rectangles and circles as visuals to create effects in The Theater.
+              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students use rectangles and circles as visuals to create effects in The Theater.
             lesson-5:
               name: Storing Objects into Arrays
-              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method.
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `show()` method.
               description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.
             lesson-6:
               name: Traversing Arrays with Enhanced for Loops
@@ -23609,11 +23609,21 @@ en:
             lesson-1:
               name: Welcome to Code.org
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to Code.org and CS Discoveries
+
+                **Suggested Time:** 8 minutes
             lesson-2:
-              name: Welcome to this professional learning course
+              name: Welcome to "Teaching CS Discoveries"
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Learn how to engage in this professional learning course
+
+                **Suggested Time:** 2 minutes
             lesson-3:
               name: Accessing and Using Lesson Plans
             lesson-4:
@@ -23649,6 +23659,7 @@ en:
                 **You will learn how to:**
 
                 * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
 
                 **Suggested time:** 30 minutes
             lesson-5:
@@ -23687,7 +23698,7 @@ en:
           title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
@@ -24819,19 +24830,25 @@ en:
               description_student: 
               description_teacher: 
             lesson-12:
-              name: Documenting Program Code
+              name: Tools
+              description_student: 
+              description_teacher: 
             lesson-13:
-              name: Exploring Integer and Double Objects
+              name: Examples
+              description_student: 
+              description_teacher: 
             lesson-14:
-              name: Using ArrayLists to Store Data
+              name: Neighborhood 16x16
             lesson-15:
-              name: Working with ArrayList Data
+              name: Neighborhood 32x32
             lesson-16:
-              name: Storing Objects in an ArrayList
+              name: Theater
             lesson-17:
-              name: Removing Data from an ArrayList
+              name: Console
             lesson-18:
-              name: Using String Methods
+              name: Widgets
+              description_student: 
+              description_teacher: 
             lesson-19:
               name: Comparing Strings
             lesson-20:
@@ -24842,9 +24859,11 @@ en:
               name: Code Poetry Project
           lesson_groups:
             lessonGroup-2:
-              display_name: Exemplar Demos
+              display_name: Lessons
             lessonGroup-3:
-              display_name: Levels Development
+              display_name: Project
+            lessonGroup-4:
+              display_name: Demos and Resources
           name: csa-u6-dev
           title: CSA Unit 6 Development
           description_audience: ''
@@ -25137,6 +25156,7 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
             Defining Attributes:
@@ -25295,6 +25315,7 @@ en:
           student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
           description_short: ''
           description_audience: ''
+          name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
             Creating Arrays:
@@ -25311,11 +25332,11 @@ en:
               description_teacher: Students write `for` loops to traverse arrays and to search for and modify elements that meet certain conditions. Students revisit The Neighborhood and use trace tables to document how code executes within a `for` loop. They participate in a code review after completing a choice level and revise their code based on feedback.
             Traversing Arrays with while Loops:
               name: Traversing Arrays with while Loops
-              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You create visuals for your music using the `Rectangle` class.
-              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students create their own music visuals using the `Rectangle` class.
+              description_student: Do you remember `while` loops? In this lesson, you investigate edge cases of `while` loops and make connections between `while` and `for` loops. You use rectangles and circles as visuals to create effects in The Theater.
+              description_teacher: Students review `while` loops and learn about infinite loops. Students explore creating visuals before converting between `while` and `for` loops. Students use rectangles and circles as visuals to create effects in The Theater.
             Storing Objects into Arrays:
               name: Storing Objects into Arrays
-              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `speak()` method.
+              description_student: You explore the functionality and benefits of an object-oriented principle called polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, you discover how subclasses can each have their own versions of behaviors. You create a new scene for your concert in The Theater using an array of `Animal` objects and use each `Animal`'s version of their `show()` method.
               description_teacher: Students explore the functionality and benefits of polymorphism to create and traverse an array of `Animal` objects. After reviewing inheritance, students discover that subclasses can implement specific versions of behaviors. Students create a new scene for their concert in The Theater using an array of `Animal` objects to demonstrate polymorphism.
             Traversing Arrays with Enhanced for Loops:
               name: Traversing Arrays with Enhanced for Loops
@@ -25465,6 +25486,7 @@ en:
           student_description: In this unit, you create one-dimensional arrays to store primitive values and object references. You represent constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, you use conditionals and iteration to search for values that meet specific criteria or to perform manipulations to solve problems.
           description_short: ''
           description_audience: ''
+          name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
             Using Existing Libraries to Add Capabilities:
@@ -25612,6 +25634,7 @@ en:
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           description_short: ''
           description_audience: ''
+          name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
             Creating Tables of Data:
@@ -25759,3 +25782,4 @@ en:
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
           description_short: ''
           description_audience: ''
+          name: csa5-pilot-facilitator
