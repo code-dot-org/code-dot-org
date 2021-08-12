@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 16:56:52 UTC",
+    "serialized_at": "2021-08-12 21:06:29 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa3-pilot-facilitator"
@@ -264,7 +264,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using an array of `Shape`s, then participate in a code review to give and use feedback as they develop their program.",
+        "overview": "In the previous lesson, students wrote a remix algorithm and combined it with the algorithms they developed in earlier lessons. Students use static variables and constants to add constraints to the length of the concert. They add visuals to the concert using shapes or images, then participate in a code review to give and use feedback as they develop their program.",
         "student_overview": "You continue designing your concert in The Theater by adding constraints to the length of the concert and adding visuals. You complete a code review to gain feedback to continue developing your program."
       },
       "seeding_key": {
