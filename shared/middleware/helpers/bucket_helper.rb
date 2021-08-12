@@ -171,11 +171,11 @@ class BucketHelper
     s3.copy_object(bucket: @bucket, copy_source: URI.encode("#{@bucket}/#{key}"), key: key, metadata: {abuse_score: abuse_score.to_s}, metadata_directive: 'REPLACE')
   end
 
-  def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0)
+  def create_or_replace(encrypted_channel_id, filename, body, version = nil, abuse_score = 0, tags = '')
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
 
     key = s3_path owner_id, storage_app_id, filename
-    response = s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s})
+    response = s3.put_object(bucket: @bucket, key: key, body: body, metadata: {abuse_score: abuse_score.to_s}, tagging: tags)
 
     # Delete the old version, if doing an in-place replace
     s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
