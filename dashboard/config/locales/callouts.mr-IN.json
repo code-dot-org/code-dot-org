@@ -272,12 +272,6 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "हे लोखंड खणून काढा!"
         },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
-        },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "जेव्हा तुम्हाला हिंट हवी असेल तेव्हा लाईटबल्बवर क्लिक करा!  "
         },
@@ -286,6 +280,114 @@
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "ही संख्या तुम्हाला यातील किती ब्लॉक्स तुम्ही या कोड्यात वापरू शकता, ते सांगते."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "तुमच्या प्रोजेक्टमध्ये नवीन पोशाख जोडण्यासाठी येथे क्लिक करा!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "तुमच्या प्रोजेक्टमध्ये नवीन पोशाख जोडण्यासाठी येथे क्लिक करा!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "आधी Run बटण दाबा!",
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "आधी Run बटण दाबा!",
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_apps_collector": {
+          "run_button": "आधी Run बटण दाबा!",
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_apps_pet": {
+          "run_button": "आधी Run बटण दाबा!",
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "प्ले एरीयाचा आकार बदलण्यासाठी 3 बिंदू ड्रॅग करा."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": " when च्याऐवजी  while वापरण्याचा प्रयत्न करा."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "इथे नवीन ब्लॉक्स आहेत!"
+        },
+        "courseF_events_key": {
+          "whenKey": "इथे असलेला नवीन इव्हेंट ब्लॉक वापरा."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "या ब्लॉकचा क्रम चुकीचा आहे. "
+        },
+        "courseF_events_time": {
+          "events_category": "इव्हेंट्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "या नंतरचा कोड नीट पाहा."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "बिहेवियर्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "स्प्राईट्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "लोकेशन्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "येथे नवीन ब्लॉक शोधा."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "दोन नवीन ब्लॉक्स येथे शोधा!",
+          "text_answer_finish": "टायटल स्क्रीन 3 सेकंद दिसला का? जर असेल तर 'Finish' दाबा. नसेल तर 'Reset' दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा. "
+        },
+        "courseF_text_events": {
+          "events_category": "इव्हेंट्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "या नंतरचा कोड नीट पाहा."
+        },
+        "courseF_text_print": {
+          "print_block": "प्रिंट ब्लॉक इथे सापडेल!",
+          "text_print_finish": "मेसेज वर प्रिंट झाला का? तसे असेल तर, 'Finish'  दाबा. नसेल तर 'Reset' दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा.  "
+        },
+        "courseF_text_answer": {
+          "answered_block": "येथे नवीन ब्लॉक शोधा!"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "तुमचे करून झाले का? तसे असेल तर, 'Finish'  दाबा. नसेल तर 'Reset' दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "येथे नवीन ब्लॉक्स शोधा!"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "प्रॉम्प्ट ब्लॉक इथे सापडेल!"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "तुमच्या कोडमध्ये एका वेळी एक ब्लॉक याप्रमाणे पुढे जा."
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "तुम्ही प्रश्नाचे उत्तर दिल्यावर पार्श्वभूमीचा रंग बदलला का? तसे असेल तर, 'Finish'  दाबा. नसेल तर 'Reset' दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
         }
       }
     }

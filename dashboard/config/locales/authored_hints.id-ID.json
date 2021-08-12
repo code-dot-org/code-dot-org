@@ -9568,9 +9568,7 @@
         },
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
-          "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
-          "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
           "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog_challenge1_2021": {
@@ -10031,14 +10029,13 @@
           "courseD_bee_nestedLoops1_c": "Ingatlah untuk menggunakan blok `get nectar` begitu anda berada di lapangan dengan bunga."
         },
         "courseD_bee_nestedLoops2_2021": {
-          "courseD_bee_nestedLoops2_a": "Untuk menyelesaikan puzzle ini, Anda perlu menyarangkan satu loop \\`repeat 'ke dalam loop yang lain.",
+          "courseD_bee_nestedLoops2_a": "Untuk menyelesaikan puzzle ini, Anda perlu menyarangkan satu loop `repeat 'ke dalam loop yang lain.",
           "courseD_bee_nestedLoops2_b": "Tidak tahu di mana harus meletakkan loop? Cobalah tuliskan kode di atas kertas langkah demi langkah dan cari sebuah pola.",
           "courseD_bee_nestedLoops2_c": "Ingat anda bisa memasukkan lebih dari satu blok ke dalam satu loop."
         },
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "Anda hanya perlu mengulangi `get nectar` di dalam `repeat` yang memiliki blok `move forward` di dalamnya.",
-          "courseD_bee_nestedLoops7_b": "Anda akan membutuhkan ketiga blok `repeat` yang tersedia untuk menyelesaikan puzzle ini.",
-          "courseD_bee_nestedLoops7_c": "Sarangkan blok Anda sedalam tiga, seperti ini:\n\n-   repeat 4\n    -   repeat 3\n        -   repeat 12\n            -   get nectar\n        -   move forward\n    -   turn right"
+          "courseD_bee_nestedLoops7_b": "Anda akan membutuhkan ketiga blok `repeat` yang tersedia untuk menyelesaikan puzzle ini."
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Anda harus memiliki kedua events ini dalam kode Anda:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10490,11 +10487,7 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Bisakah Anda mencari pola antara jumlah langkah yang perlu diambil dengan jumlah nektar yang perlu dikumpulkan?",
           "courseF_bee_for10_b": "Kumpulan bunga pertama memiliki total **14 bunga**. Untuk sampai di kumpulan pertama ini, lebah harus terbang turun **7 kotak** (atau 14 kotak dibagi 2.) Berapa banyak bunga yang ada dalam kumpulan berikutnya dan berapa banyak kotak yang perlu dilalui oleh lebah untuk sampai tujuan?",
-          "courseF_bee_for10_c": "Dalam puzzle, kumpulan bunga pertama memiliki **14** bunga, yang kedua memiliki **10** bunga, yang ketiga memiliki **6** bunga, dan yang keempat memiliki **2** bunga.\n\nDalam gambar ini, perhatikan ada blok **7** persegi merah, **5** persegi jingga, **3** persegi hijau, dan **1** persegi biru. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nBagaimana pola hubungan angka-angka itu?",
           "courseF_bee_for10_d": "Anda memerlukan 2 pengulangan, satu menggunakan blok matematika."
-        },
-        "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "Seberapa lebih sedikitkah 12 dibanding 15?\\\nSeberapa lebih sedikitkah 9 dibanding 12?\n\nApakah Anda melihat pola?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Anda perlu dua blok dalam loop `repeat` untuk mengumpulkan semua nektar."
@@ -10525,8 +10518,7 @@
         },
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Jika loop Anda menghitung maju, kenaikannya ditambahkan ke variabel counter Anda setiap kali selesai. \n\nApa yang perlu Anda tambahkan ke setiap angka untuk mendapatkan jumlah nektar berikutnya?",
-          "courseF_bee_for8_b": "Dalam puzzle ini, Anda akan perlu bergerak dalam pola anak tangga untuk mencapai bunga.",
-          "courseF_bee_for8_c": "Loop Anda akan menghitung _dari 3 ke 15_ dengan angka kenaikan tertentu. Berapa angka itu?"
+          "courseF_bee_for8_b": "Dalam puzzle ini, Anda akan perlu bergerak dalam pola anak tangga untuk mencapai bunga."
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Coba lakukan perhitungan matematika dengan variabel counter.\n\nApa yang harus Anda lakukan kepada counter di setiap bunga untuk meratakan jumlah nektar yang perlu Anda kumpulkan?",

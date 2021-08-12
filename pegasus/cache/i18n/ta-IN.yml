@@ -234,6 +234,8 @@ ta-IN:
 
 '
   volunteer_engineer_submission_field_description: விளக்கம்
+  volunteer_engineer_submission_field_email_preference_privacy: "(எங்கள் தனியுரிமைக்
+    கொள்கையைப் பார்க்கவும்)"
   volunteer_engineer_submission_field_email_preference_yes: ஆம்
   volunteer_engineer_submission_field_email_preference_no: இல்லை
   volunteer_engineer_submission_submit: சமர்ப்பிக்க
@@ -461,9 +463,11 @@ ta-IN:
   finch_beyond_gradelevel: வயது 8+
   sphero_beyond_gradelevel: வயது 8+
   flappy_shortcode: flap
+  header_my_dashboard: எனது டாஷ்போர்டு
   header_courses: பாடங்கள்
   header_course_catalog: பாடத்திட்ட கேட்டலாக்
   header_project_gallery: திட்டப்பணிகள்
+  header_professional_learning: தொழில்முறை கற்றல்
   header_educate_hoc: நிரல்வரி நேரம்
   header_stats: புள்ளிவிவரங்கள்
   header_about: பற்றி
@@ -478,6 +482,9 @@ ta-IN:
   user_header_create: 'உருவாக்குக '
   user_header_artist: 'கலைஞர் '
   user_header_dance: நடன விருந்து
+  user_header_flappy: தட்டையான
+  user_header_view_my_projects: எனது திட்டங்களைப் பார்க்கவும்
+  view_all_sections: அனைத்து பிரிவுகளையும் பார்க்கவும்
   applab_tile_subtitle: தொகுதி அடிப்படையிலான நிரலாக்கத்தைப் பயன்படுத்தி ஜாவாஸ்கிரிப்டில்
     உங்கள் சொந்த பயன்பாட்டை உருவாக்கவும். அல்லது உரை அடிப்படையிலான நிரலாக்கத்துடன்
     உங்கள் திறமைகளை அடுத்த கட்டத்திற்கு கொண்டு செல்லுங்கள்.(English Only)
@@ -542,6 +549,9 @@ ta-IN:
   hoc2018_mc_back_journey: Minecraft ஒரு புதிய செயல்பாட்டுடன் மணிநேர குறியீட்டிற்கு
     திரும்பியுள்ளது! குறியீட்டைக் கொண்டு Minecraft வழியாக பயணம்.
   hoc2018_mc_teacher_guide: ஆசிரியர் வழிகாட்டியைக் காண்க
+  hoc2018_mc_minecraft_education: Minecraft கல்வி
+  hoc2018_mc_continue_learning: Minecraft மூலம் கற்றலைத் தொடரவும்.
+  hoc2018_mc_go_to_mc_education: Minecraft கல்விக்குச் செல்லவும்
   hoc2018_dance_party_main_heading: நடன விருந்து
   hoc2018_dance_party_subheading: டான்ஸ் பார்ட்டியை மொழிபெயர்க்க உதவுங்கள்
   hoc2018_dance_party_box_title: நடன விருந்து

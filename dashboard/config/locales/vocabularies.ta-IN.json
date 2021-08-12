@@ -2,6 +2,9 @@
   "ta-IN": {
     "data": {
       "vocabularies": {
+        "behavior/coursef/2021": {
+          "word": "நடத்தை"
+        },
         "variable/coursef/2021": {
           "word": "மாறி"
         },
@@ -35,6 +38,9 @@
         "debugging/express/2021": {
           "word": "பிழைத்திருத்தம்"
         },
+        "behavior/express/2021": {
+          "word": "நடத்தை"
+        },
         "conditionals/express/2021": {
           "word": "நிபந்தனைகள்"
         },
@@ -52,6 +58,9 @@
         },
         "debugging/pre-express/2021": {
           "word": "பிழைத்திருத்தம்"
+        },
+        "behavior/coursee/2021": {
+          "word": "நடத்தை"
         },
         "copyright/coursee/2021": {
           "word": "காப்புரிமை"

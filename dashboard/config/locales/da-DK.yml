@@ -698,12 +698,6 @@ da:
       gamelab_unsupported_tablet: Game Lab kører bedst på en stationær eller på en
         bærbar med en mus og et tastatur. Du kan opleve problemer ved brug af dette
         værktøj på din nuværende enhed.
-      oceans_unsupported_browser: Denne browser understøtter ikke denne vejledning.
-        Prøv venligst at besøge denne side ved brug af Edge, Chrome, Firefox eller
-        en anden moderne browser.
-      weblab_unsupported_browser: Desværre oplever vi på nuværende tidspunkt problemer
-        med indlæsning af Web Lab på denne browser. Du bliver nød til at bruge en
-        anden browser indtil problemet er løst. Beklager ulejligheden.
       weblab_unsupported_locale_storage: Du kan opleve problemer ved at bruge Web
         Lab i privat-browsing tilstand. Indlæs venligst dit projekt i normal tilstand.
         Beklager ulejligheden.

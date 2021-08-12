@@ -595,8 +595,6 @@ fr:
       link: "En savoir plus"
       applab_unsupported_tablet: "Le Labo des Applis fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
       gamelab_unsupported_tablet: "Le Labo des Jeux fonctionne idéalement sur un ordinateur portable ou de bureau avec une souris et un clavier. Il se peut que vous rencontriez des problèmes en utilisant cet outil sur votre appareil actuel."
-      oceans_unsupported_browser: "Ce navigateur n'est pas pris en charge pour ce didacticiel. Veuillez essayer de visiter cette page en utilisant Edge, Chrome, Firefox ou un autre navigateur moderne."
-      weblab_unsupported_browser: "Malheureusement, nous rencontrons actuellement des problèmes de chargement du Labo du Web avec ce navigateur. Vous pourriez utiliser un autre navigateur d’ici que tout soit résolu. Nous sommes désolés pour la gêne occasionnée."
       weblab_unsupported_locale_storage: "Il se peut que vous rencontriez des difficultés en utilisant le Labo du Web, en mode incognito. Merci de recharger votre projet en mode normal. Nous sommes désolés pour la gêne occasionnée."
   slow_loading: 'Cela prend plus de temps que d''habitude...'
   try_reloading: 'Essaie de recharger la page'

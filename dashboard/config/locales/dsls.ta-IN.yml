@@ -1030,7 +1030,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: எனக்கு தெரியாது
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1038,7 +1038,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: எனக்கு தெரியாது
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1046,7 +1046,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: எனக்கு தெரியாது
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1054,7 +1054,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: எனக்கு தெரியாது
         questions:
         - {}
       courseC_multi_starWars_predict2:
@@ -2187,7 +2187,8 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: கலைஞர் ஒரு ஐங்கோணத்தை வரைவார்
+          feedback: "தவறானது. கலைஞர் ஒரு சதுரத்தை வரைகிறார். \n"
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2021:
@@ -2197,14 +2198,17 @@ ta-IN:
           correct: true
         - text: '15'
         - text: '20'
+          feedback: தவறானது. விவசாயி ஒவ்வொரு 3 சுழல்களிலும் 4 பூசணிக்காயை சேகரிப்பார்.
+            4 முறை 3 என்பது 12 ஆகும்!
         questions:
-        - {}
+        - text: கீழே உள்ள குறியீட்டை கவனமாக பாருங்கள். நீங்கள் "ஓடு" என்பதைக் கிளிக்
+            செய்த பிறகு விவசாயி எத்தனை பூசணிக்காயைச் சேகரிப்பார்?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - {}
         - correct: true
         - correct: true
-        - {}
+        - text: கீறல் முதல் தொகுதியிலிருந்து நகராது.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2021:
@@ -2212,7 +2216,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: பறவை சுவரில் ஓடும்.
         questions:
         - {}
       courseC_multi_starWars_predict1_2021:
@@ -2220,7 +2224,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: பிபி -8 3 இடங்களை மட்டுமே நகர்த்தும்.
         questions:
         - {}
       courseC_multi_starWars_predict2_2021:
@@ -2228,7 +2232,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: பிபி -8 முதல் வளையத்திற்குப் பிறகு தவறான திசையில் திரும்பும்.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -2245,7 +2249,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: தேனீ மேகத்தை அடையாது.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_dani:
@@ -2261,7 +2265,7 @@ ta-IN:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: தேனீ பூக்கள் மற்றும் தேன்கூடு இரண்டிலிருந்தும் தேனையும் பெற முயற்சிக்கும்.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2021:
@@ -2269,7 +2273,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: தேனீ தவறான திசையில் திரும்பும்.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2021:
@@ -2294,7 +2298,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: இந்த குறியீடு கடைசி ஓட்டையை தொடாமல் விட்டுவிடும்.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2021:
@@ -2302,7 +2306,7 @@ ta-IN:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: விவசாயி ஒரு முறை மட்டுமே அழுக்கை அகற்றுவார்.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
@@ -2310,7 +2314,7 @@ ta-IN:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: முன்னோக்கி செல்லும் பாதையின் முடிவில் சோம்பை சிக்கிவிடும்.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2021:
@@ -2318,7 +2322,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: பறவை தவறான வழியில் திரும்புகிறது.
         questions:
         - {}
       courseE_multi_dance_events_predict1_2021:
@@ -2423,7 +2427,7 @@ ta-IN:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: லாரல் இந்தக் குறியீட்டைப் பயன்படுத்தி 1 பொக்கிஷத்தை சேகரிப்பார்.
         questions:
         - {}
       courseD_project_exemplars_2020_2021:
@@ -2761,3 +2765,35 @@ ta-IN:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: விளக்கம் இங்கே
+        markdown: |
+          # சராசரியை நிறுத்து
+
+          ## ஆன்லைனில் யாராவது உங்களுக்கு அர்த்தம் இருந்தால் நீங்கள் என்ன செய்ய வேண்டும்?
+
+          *** எஸ் ** டெப்.
+          *** T ** ஒரு நம்பகமான வயது வந்தவர்.
+          *** O ** K தளங்கள் முதலில்.
+          *** P ** ause மற்றும் ஆன்லைனில் சிந்திக்கவும்.
+
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # பைனரி வளையல்கள்
+
+          கணினிகள் புரிந்துகொள்ளும் அமைப்பில் உங்கள் பெயரைக் குறிக்கும் ஒரு வளையலை உருவாக்கவும்!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # என் ரோபோடிக் நண்பர்கள்
+
+          உங்கள் நண்பர்களுக்கான குறியீட்டை எழுதி நிரல் செய்ய கற்றுக்கொள்ளுங்கள்!
+      courseD_EOC_examples_2021:
+        display_name: திட்ட எடுத்துக்காட்டுகள்
+      courseF_EOC_samples_2021:
+        description: நீங்கள் உங்கள் இறுதி திட்டத்தை தொடங்க உள்ளீர்கள். நீங்கள் தொடங்குவதற்கு
+          முன், எடுத்துக்காட்டு திட்டங்களைப் பார்க்க சிறிது நேரம் செலவிடுங்கள்.
+        display_name: பாடத்திட்டத்தின் முடிவு
+      express_EOC_examples_2021:
+        display_name: திட்ட எடுத்துக்காட்டுகள்

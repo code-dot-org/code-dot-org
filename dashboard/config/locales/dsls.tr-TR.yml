@@ -6023,7 +6023,7 @@ tr-TR:
           feedback: Doğru!
         - {}
         questions:
-        - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Çiftçi iki balkabağı toplayacak.

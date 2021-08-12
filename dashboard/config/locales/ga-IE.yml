@@ -725,12 +725,6 @@ ga:
       gamelab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Cluichíochta
         ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go
         mbeidh fadhbanna agat ar an ngléas seo.
-      oceans_unsupported_browser: Ní thacaímid leis an mbrabhsálaí seo sa chúrsa teagaisc
-        seo. Tabhair cuairt ar an leathanach seo in Edge, Chrome, Firefox, nó brabhsálaí
-        nua-aimseartha eile.
-      weblab_unsupported_browser: Faraor ní féidir Saotharlann an Ghréasáin a lódáil
-        sa mbrabhsálaí seo faoi láthair. Molaimid duit brabhsálaí difriúil a úsáid
-        go dtí go réiteoimid an fhadhb seo. Gabh ár leithscéal.
       weblab_unsupported_locale_storage: Seans go mbeidh fadhbanna agat le Saotharlann
         an Ghréasáin i bhfuinneog phríobháideach. Ba chóir duit an togra a athlódáil
         i ngnáthfhuinneog. Gabh ár leithscéal.

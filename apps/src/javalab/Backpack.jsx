@@ -4,9 +4,14 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
 import JavalabButton from './JavalabButton';
+import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
 import {connect} from 'react-redux';
 import {setSource} from './javalabRedux';
+import {makeEnum} from '@cdo/apps/utils';
+import JavalabDialog from './JavalabDialog';
+
+const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 
 /**
  * A button that drops down to a set of importable files, and closes itself if
@@ -18,7 +23,8 @@ class Backpack extends Component {
     isDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object
+    backpackApi: PropTypes.object,
+    sources: PropTypes.object
   };
 
   state = {
@@ -26,7 +32,9 @@ class Backpack extends Component {
     backpackFilenames: [],
     backpackFilesLoading: false,
     backpackLoadError: false,
-    selectedFiles: []
+    selectedFiles: [],
+    openDialog: null,
+    overwriteFileList: []
   };
 
   expandDropdown = () => {
@@ -48,20 +56,74 @@ class Backpack extends Component {
   handleImport = () => {
     const {selectedFiles} = this.state;
     if (selectedFiles.length > 0) {
-      selectedFiles.forEach(filename => {
-        this.props.backpackApi.fetchFile(
-          filename,
-          () => {} /* onError, currently do nothing */,
-          fileContents =>
-            this.props.onImport(filename, fileContents) /* onSuccess */
-        );
-      });
+      this.validateFilenamesForImport(
+        this.importFiles,
+        this.showImportWarning,
+        this.showImportError
+      );
     }
+  };
+
+  importFiles = () => {
+    this.state.selectedFiles.forEach(filename => {
+      this.props.backpackApi.fetchFile(
+        filename,
+        () => {} /* onError, currently do nothing */,
+        fileContents =>
+          this.props.onImport(filename, fileContents) /* onSuccess */
+      );
+    });
     this.collapseDropdown();
   };
 
+  showImportWarning = files => {
+    this.setState({
+      openDialog: Dialog.IMPORT_WARNING,
+      overwriteFileList: files
+    });
+  };
+
+  showImportError = files => {
+    this.setState({
+      openDialog: Dialog.IMPORT_ERROR,
+      overwriteFileList: files
+    });
+  };
+
+  validateFilenamesForImport = (
+    successCallback,
+    warnCallback,
+    errorCallback
+  ) => {
+    let hiddenFilenamesUsed = [];
+    let visibleFilenamesUsed = [];
+    const {selectedFiles} = this.state;
+    const {sources} = this.props;
+    selectedFiles.forEach(filename => {
+      const source = sources[filename];
+      if (source) {
+        if (source.isVisible) {
+          visibleFilenamesUsed.push(filename);
+        } else {
+          hiddenFilenamesUsed.push(filename);
+        }
+      }
+    });
+    if (hiddenFilenamesUsed.length > 0) {
+      errorCallback(hiddenFilenamesUsed);
+    } else if (visibleFilenamesUsed.length > 0) {
+      warnCallback(visibleFilenamesUsed);
+    } else {
+      successCallback();
+    }
+  };
+
   collapseDropdown = () => {
-    this.setState({dropdownOpen: false});
+    this.setState({
+      dropdownOpen: false,
+      overwriteFileList: [],
+      openDialog: null
+    });
   };
 
   handleClickOutside = () => {
@@ -109,6 +171,21 @@ class Backpack extends Component {
     }
   };
 
+  prettyPrintFileNames(filenames) {
+    if (filenames.length === 0) {
+      return '';
+    } else if (filenames.length === 1) {
+      return filenames[0];
+    } else {
+      let result = filenames[0];
+      for (let i = 1; i < filenames.length - 1; i++) {
+        result += `, ${filenames[i]}`;
+      }
+      result += ` and ${filenames[filenames.length - 1]}`;
+      return result;
+    }
+  }
+
   render() {
     const {isDarkMode, isDisabled} = this.props;
     const {
@@ -116,7 +193,9 @@ class Backpack extends Component {
       backpackFilenames,
       backpackFilesLoading,
       backpackLoadError,
-      selectedFiles
+      selectedFiles,
+      openDialog,
+      overwriteFileList
     } = this.state;
 
     const showFiles =
@@ -127,6 +206,7 @@ class Backpack extends Component {
       !backpackFilesLoading &&
       !backpackLoadError &&
       backpackFilenames.length === 0;
+    const filenamesForDialog = this.prettyPrintFileNames(overwriteFileList);
 
     return (
       <div>
@@ -199,6 +279,38 @@ class Backpack extends Component {
             )}
           </div>
         )}
+        <JavalabDialog
+          isOpen={openDialog === Dialog.IMPORT_WARNING}
+          handleConfirm={this.importFiles}
+          handleClose={() => this.setState({openDialog: null})}
+          message={
+            overwriteFileList.length > 1
+              ? javalabMsg.fileImportWarningMultiple({
+                  filenames: filenamesForDialog
+                })
+              : javalabMsg.fileImportWarningSingular({
+                  filename: filenamesForDialog
+                })
+          }
+          isDarkMode={isDarkMode}
+          confirmButtonText={javalabMsg.replace()}
+          closeButtonText={javalabMsg.cancel()}
+        />
+        <JavalabDialog
+          isOpen={openDialog === Dialog.IMPORT_ERROR}
+          handleConfirm={() => this.setState({openDialog: null})}
+          message={
+            overwriteFileList.length > 1
+              ? javalabMsg.fileImportErrorMultiple({
+                  filenames: filenamesForDialog
+                })
+              : javalabMsg.fileImportErrorSingular({
+                  filename: filenamesForDialog
+                })
+          }
+          isDarkMode={isDarkMode}
+          confirmButtonText={msg.dialogOK()}
+        />
       </div>
     );
   }
@@ -284,7 +396,8 @@ const styles = {
 export const UnconnectedBackpack = Backpack;
 export default connect(
   state => ({
-    backpackApi: state.javalab.backpackApi
+    backpackApi: state.javalab.backpackApi,
+    sources: state.javalab.sources
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source))

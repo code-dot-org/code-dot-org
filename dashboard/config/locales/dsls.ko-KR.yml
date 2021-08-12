@@ -5302,7 +5302,7 @@ ko-KR:
           feedback: 맞습니다!
         - {}
         questions:
-        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: 수확인은 두 개의 호박을 딸 것입니다.

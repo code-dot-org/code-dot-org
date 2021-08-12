@@ -638,9 +638,6 @@ pt:
         nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas
         algumas funcionalidade podem não estar disponíveis.
       link: Saber mais
-      oceans_unsupported_browser: Este browser não é suportado para este tutorial.
-        Por favor tente visitar esta página usando Edge, Chrome, Firefox, ou outro
-        browser mais moderno.
   slow_loading: Isto está a demorar mais do que o habitual...
   try_reloading: Tente recarregar a página
   next_stage: Concluído! Continuar para a próxima fase
