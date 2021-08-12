@@ -9329,7 +9329,7 @@ zh-CN:
         - text: 外星人将从屏幕顶部消失。
           feedback: 不正确。蓝色外星人将开始在屏幕上上下移动。
         questions:
-        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: 收获者会采摘两个南瓜。
