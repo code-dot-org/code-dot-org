@@ -57,7 +57,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -239,7 +238,7 @@ P5Lab.prototype.init = function(config) {
   this.level.helperLibraries = this.level.helperLibraries || [];
 
   this.level.softButtons = this.level.softButtons || [];
-  this.startAnimations = {};
+  this.startAnimations = {orderedKeys: [], propsByKey: {}};
   if (this.level.useDefaultSprites) {
     getDefaultListMetadata().then(defaultSprites => {
       this.startAnimations = defaultSprites;
@@ -254,7 +253,8 @@ P5Lab.prototype.init = function(config) {
         ? config.initialAnimationList
         : this.startAnimations;
       initialAnimationList = this.loadAnyMissingDefaultAnimations(
-        initialAnimationList
+        initialAnimationList,
+        defaultSprites
       );
 
       getStore().dispatch(
@@ -540,9 +540,11 @@ P5Lab.prototype.init = function(config) {
  * the "set background to" block, which needs to have backgrounds in the
  * animation list at the start in order to look not broken.
  * @param {Object} initialAnimationList
+ * @param {Object} defaultSprites
  */
 P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
-  initialAnimationList
+  initialAnimationList,
+  defaultSprites = {orderedKeys: [], propsByKey: {}}
 ) {
   if (!this.isSpritelab) {
     return initialAnimationList;
@@ -552,7 +554,7 @@ P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
     const name = initialAnimationList.propsByKey[key].name;
     configDictionary[name] = key;
   });
-  // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+  // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.
   // This is primarily to handle pre existing levels that don't have animations in their list yet
   const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
     const {categories} = initialAnimationList.propsByKey[key];
