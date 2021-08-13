@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   getDefaultList,
-  updateDefaultList
+  updateDefaultList,
+  regenerateDefaultJSON
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -97,6 +98,7 @@ export default class DefaultSpritesEditor extends React.Component {
     let jsonList = {};
     jsonList['default_sprites'] = this.state.defaultList;
     updateDefaultList(jsonList)
+      .then(() => regenerateDefaultJSON(jsonList))
       .then(() => {
         this.setState({
           pendingChangesCount: 0,
