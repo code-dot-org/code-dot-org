@@ -9,15 +9,18 @@ markdown <<MARKDOWN
 
 ## The majority of our students are young women or students from marginalized racial and ethnic groups
 
-<img src="https://images.code.org/2ef588f51f2aeedcdc6f6728ee8a1c73-image-1628645832665.36.40 PM.png"  style = "height: 500px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/65a91afb6fa3e31a8c3e22c4560924e3-image-1628863624258.png"  style = "height: 435px; clear: both; margin: 0 20px 20px 0;">
 
+<img src="https://images.code.org/df814273eb0c71a2757b736d20203fb4-image-1628863642569.png"  style = "height: 435px; clear: both; margin: 0 20px 20px 0;">
+
+***Percentage breakdown is for US students only*** 
 
 ##### Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning.
 
 ##### For the fourth year in a row, students from marginalized racial and ethnic groups make up half of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="https://code.org/diversity" target="blank" rel="noopener noreferrer">we encourage you to read more about our efforts</a>.
 
-> ##**Curriculum Value:** Computer Science is Foundational for Every Student
-**We believe that computing is so fundamental to understanding and participating in society that it is valuable for every student to learn as part of a modern education.** We see computer science as a liberal art, a subject that provides students with a critical lens for interpreting the world around them. Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not. Computer science can be life-changing, not just skill training.
+> ##**Curriculum Value:** Equity
+**We believe that acknowledging and shining a light on the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students.** We provide tools and strategies to help teachers understand and address well-known equity gaps within the field. We recognize that some students and classrooms need more supports than others, and so those with the greatest needs should be prioritized. **All students can succeed in computer science when given the right supports and opportunities, regardless of prior knowledge or privilege.** We actively seek to eliminate and discredit stereotypes that plague computer science and lead to attrition of the very students we aim to reach.
 
 ## Our commitment to accessibility
 
@@ -28,7 +31,5 @@ markdown <<MARKDOWN
 ## Our commitment to free curriculum and open source technology
 
 ##### All curriculum resources and tutorials we author will forever be free to use and openly licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" rel="noopener noreferrer" >Creative Commons license</a> allowing others to make derivative education resources for non-commercial purposes. Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an open source project.
-
-
 
 MARKDOWN
