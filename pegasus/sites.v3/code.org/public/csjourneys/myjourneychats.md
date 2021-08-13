@@ -105,7 +105,7 @@ social:
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, October 13th at 11 am EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Thursday, October 14th at 11 am EDT</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science.</p>
 <p><b>About the speakers</b>:
@@ -187,7 +187,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 11 am EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 1 pm EDT</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
 <p><b>About the speaker</b>:
@@ -196,9 +196,9 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 </p>
 
 <!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" rel="noopener noreferrer" target="_blank"></noscript>
+<noscript><a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" rel="noopener noreferrer" target="_blank"></noscript>
 <!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-163522164195" type="button">Register my class</button>
+<button id="eventbrite-widget-modal-trigger-166980004689" type="button">Register My Classroom</button>
 <noscript></a>Register on Eventbrite</noscript>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -210,9 +210,9 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 
     window.EBWidgets.createWidget({
         widgetType: 'checkout',
-        eventId: '163522164195',
+        eventId: '166980004689',
         modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-163522164195',
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-166980004689',
         onOrderComplete: exampleCallback
     });
 </script>
