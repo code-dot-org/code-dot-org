@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # About CS Discoveries
 
-#### CS Discoveries is Code.org's computer science curriculum designed for 6 - 10th grade students. It is mapped to CTSA standards and covers topics such as artificial intelligence, problem solving, programming, physical computing, user centered design, and data, while inspiring students as they build their own websites, apps, animations, games, and physical computing systems.
+#### CS Discoveries is Code.org's computer science curriculum designed for 6 - 10th grade students. It is mapped to <a href="https://www.csteachers.org/page/standards" target="blank" rel="noopener noreferrer">CSTA standards</a> and covers topics such as artificial intelligence, problem solving, programming, physical computing, user centered design, and data, while inspiring students as they build their own websites, apps, animations, games, and physical computing systems.
 
 <img src="https://images.code.org/6e16f92fd28d2a8a9b7407358b4e3eee-image-1628789678563.jpg" width="380px" style="border-radius:10px; float:right; margin: 0 0 40px 40px; float:left;">
 
@@ -25,8 +25,8 @@ markdown <<MARKDOWN
 
 
 
-> ##**Curriculum Value:** Student engagement and learning
-We believe that students learn best when they are intrinsically motivated. We prioritize learning experiences that are active, relevant to students’ lives, and provide students authentic choice. **We encourage students to be curious, solve personally relevant problems and to express themselves through creation.** Learning is an inherently social activity, so we interweave lessons with discussions, presentations, peer feedback, and shared reflections. As students proceed through our pathway, we increasingly shift responsibility to students to formulate their own questions, develop their own solutions, and critique their own work.
+> ##**Curriculum Value:** Computer Science is Foundational for Every Student
+We believe that computing is so fundamental to understanding and participating in society that it is **valuable for every student to learn as part of a modern education.** We see computer science as a liberal art, a subject that provides students with a critical lens for interpreting the world around them. **Computer science prepares all students to be active and informed contributors to our increasingly technological society whether they pursue careers in technology or not.** Computer science can be life-changing, not just skill training.
 
-![]()
+
 MARKDOWN
