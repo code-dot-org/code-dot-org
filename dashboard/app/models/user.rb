@@ -218,6 +218,8 @@ class User < ApplicationRecord
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
+  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in.present?}
+
   before_destroy :soft_delete_channels
 
   def save_email_preference
@@ -243,6 +245,10 @@ class User < ApplicationRecord
         form_kind: nil
       )
     end
+  end
+
+  def save_email_reg_partner_preference
+    print('Saved reg partner preference: ' + share_teacher_email_reg_partner_opt_in)
   end
 
   # after_create :send_new_teacher_email
@@ -396,6 +402,9 @@ class User < ApplicationRecord
   attr_accessor :parent_email_preference_request_ip
   attr_accessor :parent_email_preference_source
 
+  attr_accessor :share_teacher_email_reg_partner_opt_in_required
+  attr_accessor :share_teacher_email_reg_partner_opt_in
+
   attr_accessor :data_transfer_agreement_required
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
@@ -457,6 +466,8 @@ class User < ApplicationRecord
   validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
+
+  validates_presence_of :share_teacher_email_reg_partner_opt_in, if: :share_teacher_email_reg_partner_opt_in_required
 
   def parent_email_preference_opt_in_required?
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
