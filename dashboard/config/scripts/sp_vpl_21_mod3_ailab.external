@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 ![]()
 
-<img src="https://images.code.org/b6c5128788be1060ff8cb12ec271d552-image-1627583918152.png" style=" padding-left: 65px; height: 300px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/b6c5128788be1060ff8cb12ec271d552-image-1627583918152.png" alt="Image of four steps in AI Lab: Choose a dataset, prepare data, train AI model, and assess results. AI bot is shown learning new information." style=" padding-left: 65px; height: 300px; clear: both; margin: 0 20px 20px 0;">
 
 ## How does AI Lab work? 
 
