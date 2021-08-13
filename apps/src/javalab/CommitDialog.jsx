@@ -7,7 +7,7 @@ import StylizedBaseDialog, {
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {connect} from 'react-redux';
 
-class CommitDialog extends React.Component {
+export class UnconnectedCommitDialog extends React.Component {
   state = {
     filesToBackpack: [],
     commitNotes: '',
@@ -167,6 +167,10 @@ class CommitDialog extends React.Component {
     this.setState({filesToBackpack});
   };
 
+  updateNotes = commitNotes => {
+    this.setState({commitNotes});
+  };
+
   render() {
     const {commitNotes, filesToBackpack} = this.state;
     const {isOpen, files} = this.props;
@@ -184,7 +188,7 @@ class CommitDialog extends React.Component {
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
-            onChangeNotes={commitNotes => this.setState({commitNotes})}
+            onChangeNotes={this.updateNotes}
           />
         }
         renderFooter={this.renderFooter}
@@ -195,7 +199,7 @@ class CommitDialog extends React.Component {
   }
 }
 
-CommitDialog.propTypes = {
+UnconnectedCommitDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   files: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClose: PropTypes.func.isRequired,
@@ -320,4 +324,4 @@ const styles = {
 export default connect(state => ({
   sources: state.javalab.sources,
   backpackApi: state.javalab.backpackApi
-}))(CommitDialog);
+}))(UnconnectedCommitDialog);
