@@ -24,6 +24,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
+    this.p5.noStroke();
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -59,6 +60,10 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       addLine(line) {
         this.poem.lines.push(line || [BLANK_TEXT]);
+      },
+
+      setFontColor(color) {
+        this.p5.fill(color);
       },
 
       setTitle(line) {
@@ -162,8 +167,6 @@ export default class PoemBotLibrary extends CoreLibrary {
 
   drawPoem() {
     let yCursor = OUTER_MARGIN;
-    this.p5.fill('black');
-    this.p5.noStroke();
     this.p5.textSize(FONT_SIZE);
     this.p5.textAlign(this.p5.CENTER);
     if (this.poem.title) {
@@ -201,12 +204,6 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.p5.textAlign(this.p5.LEFT);
     let xCursor = start;
     line.forEach(textItem => {
-      // TODO: Make font colors configurable by students
-      if (textItem.type === 'random') {
-        this.p5.fill('blue');
-      } else {
-        this.p5.fill('black');
-      }
       this.p5.text(textItem.value, xCursor, yPos);
       xCursor += this.p5.textWidth(textItem.value + ' ');
     });
