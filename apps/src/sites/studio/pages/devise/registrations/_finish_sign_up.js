@@ -37,6 +37,9 @@ let schoolData = {
   countryCode: usIp ? 'US' : ''
 };
 
+// Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
+let isInUnitedStates = schoolData.countryCode === 'US';
+
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   init();
@@ -179,7 +182,7 @@ $(document).ready(() => {
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
-    toggleVisShareEmailRegPartner(true);
+    toggleVisShareEmailRegPartner(isInUnitedStates);
   }
 
   function switchToStudent() {
@@ -207,8 +210,8 @@ $(document).ready(() => {
 
   // Show opt-in for teachers in the U.S. for sharing their email with
   // Code.org regional partners.
-  function toggleVisShareEmailRegPartner(isTeacher) {
-    if (isTeacher) {
+  function toggleVisShareEmailRegPartner(isTeacherInUnitedStates) {
+    if (isTeacherInUnitedStates) {
       $('#share-email-reg-part-preference-radio').fadeIn();
     } else {
       $('#share-email-reg-part-preference-radio').hide();
@@ -249,6 +252,8 @@ $(document).ready(() => {
       schoolData.country = event.value;
       schoolData.countryCode = event.label;
     }
+    isInUnitedStates = schoolData.countryCode === 'US';
+    toggleVisShareEmailRegPartner(isInUnitedStates);
     renderSchoolInfo();
   }
 
