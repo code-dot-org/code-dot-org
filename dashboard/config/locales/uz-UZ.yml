@@ -760,12 +760,6 @@ uz:
       gamelab_unsupported_tablet: Game Lab sichqoncha va klaviatura yordamida ish
         stoli yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan
         foydalanishda muammolarga duch kelishingiz mumkin.
-      oceans_unsupported_browser: Ushbu o'quv qo'llanmada ushbu brauzer qo'llab-quvvatlanmaydi.
-        Iltimos, Edge, Chrome, Firefox yoki boshqa zamonaviy brauzer yordamida ushbu
-        sahifaga kirib ko'ring.
-      weblab_unsupported_browser: Afsuski, biz hozirda ushbu brauzerda Web Lab-ni
-        yuklashda muammolarga duch kelmoqdamiz. Bu hal bo'lguncha boshqa brauzerdan
-        foydalanishingiz mumkin. Noqulaylik uchun uzr.
       weblab_unsupported_locale_storage: Shaxsiy ko'rib chiqish rejimida Web Lab bilan
         bog'liq muammolarga duch kelishingiz mumkin. Iltimos, loyihangizni normal
         rejimda qayta yuklang. Noqulaylik uchun uzr.

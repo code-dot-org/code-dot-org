@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:20 UTC",
+    "serialized_at": "2021-08-11 03:50:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "allthesurveys"
@@ -278,6 +278,36 @@
       },
       "seeding_key": {
         "lesson.key": "CSP post-survey 2020",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSP pre-survey 21-2",
+      "name": "CSP pre-survey 21-22",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSP pre-survey 21-2",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "key": "CSD pre-survey 21-2",
+      "name": "CSD pre-survey 21-22",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD pre-survey 21-2",
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }
@@ -727,6 +757,52 @@
       "level_keys": [
         "csp-post-survey-levelgroup-2020"
       ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_22"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_21_22"
+        ],
+        "lesson.key": "CSP pre-survey 21-2",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csp-pre-survey-levelgroup_21_22"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22"
+        ],
+        "lesson.key": "CSD pre-survey 21-2",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      },
+      "level_keys": [
+        "csd-pre-survey-levelgroup_21_22"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -935,6 +1011,28 @@
           "csp-post-survey-levelgroup-2020"
         ],
         "lesson.key": "CSP post-survey 2020",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pre-survey-levelgroup_21_22",
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_21_22"
+        ],
+        "lesson.key": "CSP pre-survey 21-2",
+        "lesson_group.key": "",
+        "script.name": "allthesurveys"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-levelgroup_21_22",
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22"
+        ],
+        "lesson.key": "CSD pre-survey 21-2",
         "lesson_group.key": "",
         "script.name": "allthesurveys"
       }

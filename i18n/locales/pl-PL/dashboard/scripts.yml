@@ -19732,3 +19732,62 @@ pl:
           name: dlp21-csp-overview
           title: 2021 Zasady informatyki Omówienie głębszego uczenia
           description: "### Witamy w programie Głębsze uczenie 2021 dla początkujących moderatorów kursu Zasad informatyki."
+        csa-u6-dev:
+          lessons:
+            lesson-1:
+              name: Dokumentowanie kodu programu
+            lesson-2:
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-3:
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-4:
+              name: Pracując z danymi w liście w tablicy
+            lesson-5:
+              name: Przechowując obiekty w liście w tablicy
+            lesson-6:
+              name: Usuwanie danych z listy w tablicy
+            lesson-8:
+              name: Stosowanie metod łańcuchów
+            lesson-9:
+              name: Porównywanie łańcuchów
+            lesson-10:
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-7:
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-11:
+              name: Projekt poezji kodu
+            lesson-12:
+              name: Dokumentowanie kodu programu
+            lesson-13:
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-14:
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-15:
+              name: Pracując z danymi w liście w tablicy
+            lesson-16:
+              name: Przechowując obiekty w liście w tablicy
+            lesson-17:
+              name: Usuwanie danych z listy w tablicy
+            lesson-18:
+              name: Stosowanie metod łańcuchów
+            lesson-19:
+              name: Porównywanie łańcuchów
+            lesson-20:
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-21:
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-22:
+              name: Projekt poezji kodu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Przekładowe dema
+            lessonGroup-3:
+              display_name: Rozwój poziomami
+          name: csa-u6-dev
+          title: CSA Jednostka 6 Rozwój
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Witaj świecie!
+          name: hello-world-draft
+          title: Witaj świecie

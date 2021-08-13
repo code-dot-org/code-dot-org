@@ -555,8 +555,6 @@ fi:
     upgrade:
       unsupported_message: "Selaintasi ei tueta. Päivitä selaimesi [johonkin tuetuista selaimistamme](%{supported_browsers_url}). Voit yrittää katsella tätä sivua, mutta todennäköisesti sen toiminnallisuudet ovat rikki."
       link: "Lue lisää"
-      oceans_unsupported_browser: "Tätä oppituntia ei tueta tällä selaimella. Kokeile tätä sivua Edge, Chrome, Firefox, tai muulla nykyaikaisella selaimella."
-      weblab_unsupported_browser: "Valitettavasti meillä on tällä hetkellä vaikeuksia tämän nettilabran laatamisessa tällä selaimella. Voisit onnistua paremmin jollain toisella selaimella kunnes tämä on saatu toimimaan. Pahoittelemme."
   slow_loading: 'Tämä kestää kauemmin kuin tavallisesti...'
   try_reloading: 'Yritä ladata sivu uudelleen'
   next_stage: 'Valmis! Siirry seuraavalle tasolle'

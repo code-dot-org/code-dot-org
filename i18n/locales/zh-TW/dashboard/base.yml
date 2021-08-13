@@ -603,8 +603,6 @@ zh-TW:
       link: "進一步了解"
       applab_unsupported_tablet: "在桌上電腦使用 App Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
       gamelab_unsupported_tablet: "在桌上電腦使用 Game Lab 是比較建議的方式，有滑鼠、鍵盤的平板上也可以。在你目前的裝置上使用，可能會遇到一些操作上的問題。"
-      oceans_unsupported_browser: "本教程不支援此瀏覽器。請使用 Edge、Chrome、Firefox 或其他流行的瀏覽器查看此頁面。"
-      weblab_unsupported_browser: "很抱歉，在這個瀏覽器上讀取 Web Lab 時發生了一些問題，請換個瀏覽器試試，造成不便請見諒。"
       weblab_unsupported_locale_storage: "很抱歉，在這個瀏覽器上使用隱藏模式，會導致載入 Web Lab 時發生問題，請將瀏覽器切換回正常模式，造成不便請見諒。"
   slow_loading: '請再等等，這次讀取的時間比較久一點.......'
   try_reloading: '請重新載入頁面'
