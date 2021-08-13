@@ -61,6 +61,10 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.poem.lines.push(line || [BLANK_TEXT]);
       },
 
+      setFont(font) {
+        this.p5.textFont(font);
+      },
+
       setTitle(line) {
         if (line) {
           this.poem.title = line[0].value;
