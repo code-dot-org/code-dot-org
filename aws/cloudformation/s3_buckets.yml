@@ -100,6 +100,10 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       BucketName: "cdo-v3-trained-ml-models"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true
@@ -107,3 +111,25 @@ Resources:
         RestrictPublicBuckets: true
       VersioningConfiguration:
         Status: "Enabled"
+  MLModelsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref MLModelsBucket
+      PolicyDocument:
+        Statement:
+          - Sid: Grant Drone permission to objects created by CI tests.
+            Effect: "Allow"
+            Action: "s3:*"
+            Resource: "arn:aws:s3:::cdo-v3-trained-ml-models/*"
+            Principal:
+              {
+                AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
+              }
+          - Sid: Grant Drone permission to list objects for CI tests.
+            Effect: "Allow"
+            Action: "s3:ListBucket"
+            Resource: "arn:aws:s3:::cdo-v3-trained-ml-models"
+            Principal:
+              {
+                AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
+              }
