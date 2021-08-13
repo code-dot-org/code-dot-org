@@ -179,11 +179,13 @@ $(document).ready(() => {
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
+    toggleVisShareEmailRegPartner(true);
   }
 
   function switchToStudent() {
     fadeInFields(STUDENT_ONLY_FIELDS);
     hideFields(TEACHER_ONLY_FIELDS);
+    toggleVisShareEmailRegPartner(false);
   }
 
   function trackUserType(type) {
@@ -201,6 +203,16 @@ $(document).ready(() => {
 
   function hideFields(fields) {
     $(fields.join(', ')).hide();
+  }
+
+  // Show opt-in for teachers in the U.S. for sharing their email with
+  // Code.org regional partners.
+  function toggleVisShareEmailRegPartner(isTeacher) {
+    if (isTeacher) {
+      $('#share-email-reg-part-preference-radio').fadeIn();
+    } else {
+      $('#share-email-reg-part-preference-radio').hide();
+    }
   }
 
   function renderSchoolInfo() {
