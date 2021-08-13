@@ -1,9 +1,6 @@
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import {
-  throwOnConsoleErrorsEverywhere,
-  throwOnConsoleWarningsEverywhere
-} from './util/throwOnConsole';
+import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import stubFirehose from './util/stubFirehose';
 
@@ -11,7 +8,6 @@ var integrationContext = require.context('./integration', false, /Tests?\.js$/);
 
 describe('integration tests', function() {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
   clearTimeoutsBetweenTests();
   stubFirehose();
   integrationContext
