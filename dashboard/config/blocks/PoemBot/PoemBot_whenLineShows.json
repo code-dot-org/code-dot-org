@@ -1,0 +1,22 @@
+{
+  "category": "",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenLineShows",
+    "blockText": "when line {N} shows",
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "args": [
+      {
+        "name": "N",
+        "type": "Number"
+      }
+    ],
+    "eventBlock": true
+  }
+}
