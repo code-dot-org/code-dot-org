@@ -79,6 +79,7 @@ import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exp
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import createLibrary from './spritelab/libraries/libraryFactory';
+import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -238,8 +239,32 @@ P5Lab.prototype.init = function(config) {
   this.level.helperLibraries = this.level.helperLibraries || [];
 
   this.level.softButtons = this.level.softButtons || [];
+  this.startAnimations = {};
   if (this.level.useDefaultSprites) {
-    this.startAnimations = defaultSprites;
+    getDefaultListMetadata().then(defaultSprites => {
+      this.startAnimations = defaultSprites;
+      // Push project-sourced animation metadata into store. Always use the
+      // animations specified by the level definition for embed and contained
+      // levels.
+      const useConfig =
+        config.initialAnimationList &&
+        !config.embed &&
+        !config.hasContainedLevels;
+      let initialAnimationList = useConfig
+        ? config.initialAnimationList
+        : this.startAnimations;
+      initialAnimationList = this.loadAnyMissingDefaultAnimations(
+        initialAnimationList
+      );
+
+      getStore().dispatch(
+        setInitialAnimationList(
+          initialAnimationList,
+          this.isSpritelab /* shouldRunV3Migration */,
+          this.isSpritelab
+        )
+      );
+    });
   } else if (
     this.level.startAnimations &&
     this.level.startAnimations.length > 0
@@ -470,26 +495,6 @@ P5Lab.prototype.init = function(config) {
     librariesEnabled: !!config.level.librariesEnabled,
     validationEnabled: !!config.level.validationEnabled
   });
-
-  // Push project-sourced animation metadata into store. Always use the
-  // animations specified by the level definition for embed and contained
-  // levels.
-  const useConfig =
-    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
-  let initialAnimationList = useConfig
-    ? config.initialAnimationList
-    : this.startAnimations;
-  initialAnimationList = this.loadAnyMissingDefaultAnimations(
-    initialAnimationList
-  );
-
-  getStore().dispatch(
-    setInitialAnimationList(
-      initialAnimationList,
-      this.isSpritelab /* shouldRunV3Migration */,
-      this.isSpritelab
-    )
-  );
 
   this.generatedProperties = {
     ...config.initialGeneratedProperties
