@@ -61,6 +61,7 @@ Scenario: Teacher sign in from studio.code.org
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Casey"
+  Then I sign out
 
 Scenario: Join non-existent section from sign in page shows error
   Given I am on "http://studio.code.org/users/sign_in/"
