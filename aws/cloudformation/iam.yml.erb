@@ -107,9 +107,6 @@ Resources:
           - Effect: Allow
             Action: iam:PassRole
             Resource: '*'
-          - Effect: Allow
-            Action: cloudformation:CreateChangeSet
-            Resource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
           # Require CloudFormation Service Role on all stack operations.
           - Effect: Deny
             Action:
@@ -117,7 +114,7 @@ Resources:
               - cloudformation:UpdateStack
               - cloudformation:DeleteStack
               - cloudformation:CreateChangeSet
-            Resource: '*'
+            NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
