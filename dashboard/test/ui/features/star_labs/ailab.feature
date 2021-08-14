@@ -6,20 +6,20 @@ Feature: AI Lab
     And I wait to see ".editor-column"
     And I see the dynamic instructions are showing "selectDataset" key
     And I click selector "#overlay"
-    And I click selector ".uitest-ailab-dataset-image"
+    And I select dataset "0"
     And I see the dynamic instructions are showing "selectedDataset" key
     And I wait to see "#data-card"
     And I click selector "#uitest-continue-button" 
     And I see the dynamic instructions are showing "dataDisplayLabel" key
     And I click selector "#overlay"
-    When I select data table column "0"
+    When I select data table column "1"
     And I see "#column-inspector"
     And I click selector "#uitest-select-label-button"
     And I see "#uitest-remove-statement-label"
     And I click selector "#uitest-continue-button"
     And I see the dynamic instructions are showing "dataDisplayFeatures" key
     And I click selector "#overlay"
-    When I select data table column "1"
+    When I select data table column "2"
     And I see "#column-inspector"
     And I click selector "#uitest-add-feature-button"
     And I see "#uitest-remove-statement-feature"
@@ -44,9 +44,10 @@ Feature: AI Lab
     And I see "#statement"
     And I see "#uitest-model-card-form"
     Then element "#uitest-continue-button" is disabled
-    And I press keys "Model Name" for element "#uitest-model-name-input"
+    And I press keys "123" for element "#uitest-model-name-input"
     And I wait until "#uitest-continue-button" is not disabled
-    And I click selector "#uitest-continue-button"
+    Then selector "#uitest-continue-button" doesn't have class "opacity"
+    And I click "#uitest-continue-button"
     And I see the dynamic instructions are showing "modelSummary" key
     And I see "#statement"
     And I wait to see "#uitest-model-card"
@@ -55,7 +56,7 @@ Feature: AI Lab
     And I see "#codeApp"
     And I press the settings cog
     And I press the settings cog menu item "Manage AI Models"
-    And element "#uitest-ai-trained-models-header" has text "AI Trained Model"
+    And I see "#uitest-ai-trained-models-header"
     And I wait to see "#uitest-model-card"
     And I click "#uitest-import-model-button"
     And I wait to see "#ModelName_predict_button"
