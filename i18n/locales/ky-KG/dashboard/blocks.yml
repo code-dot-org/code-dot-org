@@ -1,3 +1,4 @@
+---
 ky:
   data:
     blocks:
@@ -482,8 +483,8 @@ ky:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'ооба'
-            '"no"': 'жок'
+            '"yes"': ооба
+            '"no"': жок
       Mikelab_whileKeyPressed:
         options:
           KEY:

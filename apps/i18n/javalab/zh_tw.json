@@ -1,6 +1,7 @@
 {
   "allFilesCompile": "完成所有檔案了！",
   "backpackLabel": "背包",
+  "cancel": "取消",
   "clearConsole": "清除主控台",
   "commit": "提交",
   "commitCode": "提交程式碼",
@@ -15,6 +16,7 @@
   "editor": "編輯器",
   "enablePeerReview": "啟用同儕審查",
   "illegalMethodAccess": "你嘗試存取被我們的安全政策阻擋的函式。\n{cause}",
+  "import": "匯入",
   "includeFiles": "包括的檔案",
   "internalCompilerException": "哇。我們在編譯你的程式時遇到了錯誤。試著重新跑看看。如果持續遇到錯誤，請透過 support@code.org 聯絡我們。請記得在訊息中留下連線ID {connectionId} 。",
   "internalException": "哇。我們遇到了錯誤。試著重新跑看看。如果持續遇到錯誤，請透過 support@code.org 聯絡我們。請記得在訊息中留下連線ID {connectionId} 。",
@@ -23,5 +25,6 @@
   "newFile": "新增文件",
   "noMainMethod": "錯誤：你的程式並沒有包含主要函式。",
   "runtimeError": "你的程式碼在執行時碰到了例外。\n{cause}",
-  "twoMainMethods": "錯誤：你的程式碼只可以有一個主要函式。我們發現至少有兩個類別有主要函式。"
+  "twoMainMethods": "錯誤：你的程式碼只可以有一個主要函式。我們發現至少有兩個類別有主要函式。",
+  "saving": "正在儲存…"
 }

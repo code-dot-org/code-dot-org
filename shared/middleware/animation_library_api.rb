@@ -6,6 +6,7 @@ require 'cdo/aws/s3'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
+ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaultSprites.json'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains
@@ -102,7 +103,7 @@ class AnimationLibraryApi < Sinatra::Base
     manifest_extension = (app_type == 'spritelab' && locale != 'en_us') ? "#{locale}.json" : 'json'
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object("manifests/#{manifest_filename}.#{manifest_extension}").
+      object("animation-manifests/manifests/#{manifest_filename}.#{manifest_extension}").
       get
     content_type result.content_type
     cache_for 3600
@@ -136,6 +137,22 @@ class AnimationLibraryApi < Sinatra::Base
     if request.content_type == 'application/json'
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
+
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+    else
+      bad_request
+    end
+  end
+
+  #
+  # POST /api/v1/animation-library/default-spritelab-metadata
+  #
+  # Update default sprite JSON in S3
+  post %r{/api/v1/animation-library/default-spritelab-metadata} do
+    dont_cache
+    if request.content_type == 'application/json'
+      body = request.body.string
+      key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
 
       Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
     else

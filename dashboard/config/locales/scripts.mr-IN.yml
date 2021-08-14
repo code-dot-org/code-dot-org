@@ -536,6 +536,10 @@ mr:
           lessons:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+        subgoal-labels-opt-in:
+          lessons:
+            other:
+              name: इतर
         applab-intro:
           title: अॅप लॅबची ओळख
           lessons:
@@ -822,6 +826,10 @@ mr:
           lessons:
             Artist:
               name: आर्टीस्ट
+        aquatic:
+          lessons:
+            Aquatic:
+              name: पाण्याखालचे जग
         dance--draft:
           lessons:
             Dance Party:
@@ -1279,6 +1287,9 @@ mr:
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
         2021drafting:
+          lessons:
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
           lesson_groups:
             debugging:
               display_name: डीबगिंग
@@ -1361,6 +1372,10 @@ mr:
             For Loops in Artist:
               key: आर्टीस्टमध्ये फॉर लूप्स
               name: आर्टीस्टसह फॉर लूप्स
+            Virtual Pet:
+              key: व्हर्च्युअल पाळीव प्राणी
+            lesson-7:
+              name: स्प्राईट्स तयार करणे
         express-2021:
           lessons:
             Dance Party:
@@ -1379,6 +1394,8 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             lesson-1:
               name: डांस पार्टी
+            lesson-2:
+              name: स्प्राईट्स तयार करणे
           lesson_groups:
             csf_warmup:
               display_name: वार्म अप
@@ -1390,6 +1407,10 @@ mr:
           lesson_groups:
             csf_events:
               display_name: ईव्हेंट्स
+        csf-2021-pilot:
+          lessons:
+            Making Sprites:
+              name: स्प्राईट्स तयार करणे
         k5-onlinepd-2021:
           lessons:
             Events:
@@ -1398,3 +1419,11 @@ mr:
             Conditionals:
               key: कंडीशनल्स
               name: कंडीशनल्स
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: आढावा
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: आढावा

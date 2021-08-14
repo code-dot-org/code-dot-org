@@ -3,7 +3,12 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lead learner
+# Role of the teacher
+
+## What is my role as the teacher in a CS Discoveries classroom?
+
+##### CS Discovers teachers are active participants in the learning experience. Teachers are responsible for fostering an inclusive growth-oriented culture, modeling good learning strategies, and supporting students in developing the target skills and understandings. In a CS Discoveries classroom, the teacher is the lead learner who guides students in solving their own problems, developing new skills, and gaining new knowledge. 
+
 
 <div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
 

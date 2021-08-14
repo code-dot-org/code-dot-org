@@ -21,6 +21,7 @@
           "https://curriculum.code.org/csp-20/unit7/standards/"
         ]
       ],
+      "is_stable": true,
       "script_announcements": [
         {
           "notice": "",
@@ -56,8 +57,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:30:32 UTC",
-    "published_state": "stable",
+    "serialized_at": "2021-08-03 22:47:50 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp7-2020"
     }
@@ -300,7 +301,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -325,7 +325,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,7 +349,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -375,7 +373,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -400,7 +397,6 @@
         ],
         "progression": "App Investigation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +421,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -450,7 +445,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -475,7 +469,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -500,7 +493,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,7 +517,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -550,7 +541,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,7 +565,6 @@
         ],
         "progression": "console.log Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -600,7 +589,6 @@
         ],
         "progression": "App Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -625,7 +613,6 @@
         ],
         "progression": "App Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -650,7 +637,6 @@
         ],
         "progression": "MOD Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +661,6 @@
         ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -700,7 +685,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -725,7 +709,6 @@
         ],
         "progression": "Try the Rock Paper Scissors App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -750,7 +733,6 @@
         ],
         "progression": "Make the Rock Paper Scissors App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -775,7 +757,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -800,7 +781,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -825,7 +805,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -850,7 +829,6 @@
         ],
         "progression": "States App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -875,7 +853,6 @@
         ],
         "progression": "Pigify App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -900,7 +877,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -925,7 +901,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -950,7 +925,6 @@
         ],
         "progression": "Using Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -975,7 +949,6 @@
         ],
         "progression": "Using Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1000,7 +973,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1025,7 +997,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1050,7 +1021,6 @@
         ],
         "progression": "Testing Libraries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1075,7 +1045,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1100,7 +1069,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1125,7 +1093,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1150,7 +1117,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1175,7 +1141,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1200,7 +1165,6 @@
         ],
         "progression": "Test a Classmate's Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1225,7 +1189,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1250,7 +1213,6 @@
         ],
         "progression": "Build Your Library"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1275,7 +1237,6 @@
         ],
         "progression": "Lesson Overview"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1300,7 +1261,6 @@
         ],
         "progression": "Unit 7 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1325,7 +1285,6 @@
         ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

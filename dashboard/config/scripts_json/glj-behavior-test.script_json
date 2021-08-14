@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:28 UTC",
+    "serialized_at": "2021-08-03 22:47:24 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "glj-behavior-test"
@@ -60,7 +60,6 @@
           "KIKI GLJ Test 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "KIKI GLJ Test 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

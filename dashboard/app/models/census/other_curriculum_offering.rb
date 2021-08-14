@@ -23,6 +23,7 @@ class Census::OtherCurriculumOffering < ApplicationRecord
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 
   SUPPORTED_PROVIDERS = %w(
+    BootUp
     TEALS
     PLTW
   ).freeze

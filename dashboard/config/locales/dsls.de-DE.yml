@@ -7120,8 +7120,7 @@ de-DE:
           feedback: Richtig!
         - correct: true
         questions:
-        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
-            klickst?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Die Erntearbeiterin wird zwei Kürbisse ernten.

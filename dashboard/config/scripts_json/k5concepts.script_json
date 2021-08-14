@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:31 UTC",
+    "serialized_at": "2021-08-03 22:47:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5concepts"
@@ -203,7 +203,6 @@
           "BigEvent"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -227,7 +226,6 @@
           "2-3 Big Event Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -251,7 +249,6 @@
           "GettingLoopy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -275,7 +272,6 @@
           "2-3 Getting Loopy Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -299,7 +295,6 @@
           "comingSoon"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -323,7 +318,6 @@
           "Conditionals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -347,7 +341,6 @@
           "2-3 Conditionals Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -371,7 +364,6 @@
           "comingSoon"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -395,7 +387,6 @@
           "SongwritingParameters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +410,6 @@
           "4-5 Songwriting Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -443,7 +433,6 @@
           "EnvelopeVariables"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -467,7 +456,6 @@
           "MadGlibs"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -491,7 +479,6 @@
           "ForLoopFun"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -515,7 +502,6 @@
           "grade5_bee_for_loops3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -539,7 +525,6 @@
           "grade5_bee_for_loops5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -563,7 +548,6 @@
           "grade5_bee_for_loops9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -587,7 +571,6 @@
           "SongwritingWithParameters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -611,7 +594,6 @@
           "grade5_artist_parameters_triangles3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -635,7 +617,6 @@
           "grade5_artist_parameters_squares2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -659,7 +640,6 @@
           "grade5_artist_functionparameters8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -683,7 +663,6 @@
           "grade5_playlab_variables12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -707,7 +686,6 @@
           "grade5_artist_functionparameters11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -731,7 +709,6 @@
           "BinaryBracelets"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -755,7 +732,6 @@
           "2-3 Binary Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -779,7 +755,6 @@
           "BinaryImages"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -803,7 +778,6 @@
           "grade5_pixelation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -827,7 +801,6 @@
           "grade5_artist_binary5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -851,7 +824,6 @@
           "grade5_artist_binary4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -875,7 +847,6 @@
           "grade5_artist_binary8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +870,6 @@
           "grade5_artist_binary9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -923,7 +893,6 @@
           "grade5_artist_binary11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

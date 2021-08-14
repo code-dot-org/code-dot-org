@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-07-29 16:47:06 UTC",
+    "serialized_at": "2021-08-11 19:07:20 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -31,7 +31,7 @@
       "properties": {
         "display_name": "Chapter 1 - Understanding Machine Learning",
         "description": "Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.",
-        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n- How can machine learning be used to solve problems in our community?"
+        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -8096,7 +8096,6 @@
         ],
         "progression": "Recognizing Fish"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8122,7 +8121,6 @@
         ],
         "progression": "Recognizing Fish Features"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8148,7 +8146,6 @@
         ],
         "progression": "Recognizing Expressions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8169,9 +8166,11 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2021"
+        ],
         "progression": "Check-In Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8197,7 +8196,6 @@
         ],
         "progression": "Looking for Patterns"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8223,7 +8221,6 @@
         ],
         "progression": "Green Glass Door"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8249,7 +8246,6 @@
         ],
         "progression": "Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8275,7 +8271,6 @@
         ],
         "progression": "Improved Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8301,7 +8296,6 @@
         ],
         "progression": "Shoe Recommendation Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8327,7 +8321,6 @@
         ],
         "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8353,7 +8346,6 @@
         ],
         "progression": "Fruit and Veggie Explorer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8379,7 +8371,6 @@
         ],
         "progression": "Recognizing Shapes"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8405,7 +8396,6 @@
         ],
         "progression": "Pizza Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8431,7 +8421,6 @@
         ],
         "progression": "You Choose: Restaurant Recommendations"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8457,7 +8446,6 @@
         ],
         "progression": "Book Recommender App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8483,7 +8471,6 @@
         ],
         "progression": "Import a Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8509,7 +8496,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8535,7 +8521,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8561,7 +8546,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8587,7 +8571,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8613,7 +8596,6 @@
         ],
         "progression": "Choice Levels: Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8639,7 +8621,6 @@
         ],
         "progression": "Medical Priority App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8665,7 +8646,6 @@
         ],
         "progression": "Book Recommender Model Card"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8691,7 +8671,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8717,7 +8696,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8743,7 +8721,6 @@
         ],
         "progression": "Medical Dataset Model Cards"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8769,7 +8746,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8795,7 +8771,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8821,7 +8796,6 @@
         ],
         "progression": "Zoo Predictions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8847,7 +8821,6 @@
         ],
         "progression": "Importing Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8873,7 +8846,6 @@
         ],
         "progression": "Customizing Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8899,7 +8871,6 @@
         ],
         "progression": "Example App: Zoo Classification"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8925,7 +8896,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8951,7 +8921,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8977,7 +8946,6 @@
         ],
         "progression": "Pet Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9003,7 +8971,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9029,7 +8996,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9055,7 +9021,6 @@
         ],
         "progression": "Adding New Screens"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9081,7 +9046,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9107,7 +9071,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9133,7 +9096,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9159,7 +9121,6 @@
         ],
         "progression": "Safari Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9185,7 +9146,6 @@
         ],
         "progression": "Safari App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9211,7 +9171,6 @@
         ],
         "progression": "Raspado Recommender"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9237,7 +9196,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9263,7 +9221,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9289,7 +9246,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9315,7 +9271,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9341,7 +9296,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9367,7 +9321,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9393,7 +9346,6 @@
         ],
         "progression": "Driver Alert System"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9419,7 +9371,6 @@
         ],
         "progression": "You Choose: Improve Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9445,7 +9396,6 @@
         ],
         "progression": "Train a Model in AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9471,7 +9421,6 @@
         ],
         "progression": "Create an App in App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9492,9 +9441,11 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2021"
+        ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9520,7 +9471,6 @@
         ],
         "progression": "Create a Google Form"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9546,7 +9496,6 @@
         ],
         "progression": "Kim's Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9572,7 +9521,6 @@
         ],
         "progression": "Kim's Survey Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9598,7 +9546,6 @@
         ],
         "progression": "AI Lab and Kim's Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9624,7 +9571,6 @@
         ],
         "progression": "Isaac's Survey Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9650,7 +9596,6 @@
         ],
         "progression": "AI Lab and Isaac's Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9676,7 +9621,6 @@
         ],
         "progression": "Club Datasets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9702,7 +9646,6 @@
         ],
         "progression": "Alternative Datasets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9728,7 +9671,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9754,7 +9696,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9780,7 +9721,6 @@
         ],
         "progression": "Import Your Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9806,7 +9746,6 @@
         ],
         "progression": "Add a Welcome Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9832,7 +9771,6 @@
         ],
         "progression": "Add a Welcome Screen"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9858,7 +9796,6 @@
         ],
         "progression": "Customize Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9884,7 +9821,6 @@
         ],
         "progression": "Review Your App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9910,7 +9846,6 @@
         ],
         "progression": "Design an AI App - AI Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9936,7 +9871,6 @@
         ],
         "progression": "Design an AI App - App Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9962,7 +9896,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -9987,7 +9920,6 @@
           "CSD survey_placeholder_levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -10967,6 +10899,18 @@
       }
     },
     {
+      "name": "Accuracy in AI Lab",
+      "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+      "key": "accuracy_in_ai_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
       "name": "AI Code of Ethics",
       "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
       "key": "ai-and-machine-learning-lesson-14-ai-code-of-ethics",
@@ -11038,6 +10982,19 @@
       },
       "seeding_key": {
         "resource.key": "ai_lab_select_label"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
@@ -11183,6 +11140,18 @@
       }
     },
     {
+      "name": "Creating a Survey",
+      "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+      "key": "creating_a_survey",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_survey"
+      }
+    },
+    {
       "name": "Patterns in Data",
       "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
       "key": "crosstabs_and_models",
@@ -11298,6 +11267,18 @@
       },
       "seeding_key": {
         "resource.key": "if-statements_in_app_lab"
+      }
+    },
+    {
+      "name": "Importing a Model in App Lab",
+      "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+      "key": "importing_a_model_in_app_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "importing_a_model_in_app_lab"
       }
     },
     {
@@ -11614,6 +11595,30 @@
       }
     },
     {
+      "name": "Selecting a Label",
+      "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+      "key": "selecting_a_label",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_a_label"
+      }
+    },
+    {
+      "name": "Selecting Features",
+      "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+      "key": "selecting_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_features"
+      }
+    },
+    {
       "name": "Shoe Survey",
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
       "key": "shoe_survey",
@@ -11784,6 +11789,30 @@
       }
     },
     {
+      "name": "Using Data with Categorical Features",
+      "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+      "key": "using_data_with_categorical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "name": "Using Data with Numerical Features",
+      "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+      "key": "using_data_with_numerical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_numerical_features"
+      }
+    },
+    {
       "name": "View and Download Survey Data",
       "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
       "key": "view_and_download_survey_data",
@@ -11891,6 +11920,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-22",
+        "resource.key": "creating_a_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
         "resource.key": "questions_form_day"
       }
     },
@@ -11939,6 +11974,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson1",
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson1",
         "resource.key": "classifying-fish"
       }
     },
@@ -11982,6 +12023,12 @@
       "seeding_key": {
         "lesson.key": "lesson12",
         "resource.key": "model_cards_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson12",
+        "resource.key": "selecting_a_label"
       }
     },
     {
@@ -12155,6 +12202,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson5",
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
         "resource.key": "intro_ai_lab"
       }
     },
@@ -12162,6 +12215,12 @@
       "seeding_key": {
         "lesson.key": "lesson5",
         "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "selecting_features"
       }
     },
     {
@@ -12178,8 +12237,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson5",
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson6",
         "resource.key": "app_lab_import"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson6",
+        "resource.key": "importing_a_model_in_app_lab"
       }
     },
     {
@@ -12222,6 +12293,12 @@
       "seeding_key": {
         "lesson.key": "lesson8",
         "resource.key": "numerical_data_in_ai_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson8",
+        "resource.key": "using_data_with_numerical_features"
       }
     },
     {

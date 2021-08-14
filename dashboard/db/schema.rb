@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_222333) do
+ActiveRecord::Schema.define(version: 2021_08_11_223210) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -242,8 +242,10 @@ ActiveRecord::Schema.define(version: 2021_07_28_222333) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "storage_id", null: false
+    t.integer "script_id"
+    t.datetime "deleted_at"
     t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id"
-    t.index ["storage_id", "level_id"], name: "index_channel_tokens_on_storage_id_and_level_id", unique: true
+    t.index ["storage_id", "level_id", "script_id", "deleted_at"], name: "index_channel_tokens_unique", unique: true
     t.index ["storage_id"], name: "index_channel_tokens_on_storage_id"
   end
 
@@ -276,6 +278,8 @@ ActiveRecord::Schema.define(version: 2021_07_28_222333) do
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "project_version"
+    t.integer "script_id"
+    t.integer "level_id"
     t.integer "commenter_id", null: false
     t.text "comment", limit: 16777215
     t.integer "project_owner_id"
@@ -1341,6 +1345,16 @@ ActiveRecord::Schema.define(version: 2021_07_28_222333) do
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
+  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.string "object_version_id", null: false
+    t.text "comment", limit: 16777215
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1811,7 +1825,9 @@ ActiveRecord::Schema.define(version: 2021_07_28_222333) do
     t.boolean "readonly_answers"
     t.datetime "unlocked_at"
     t.integer "time_spent"
-    t.index ["user_id", "level_id", "script_id"], name: "index_user_levels_on_user_id_and_level_id_and_script_id", unique: true
+    t.datetime "deleted_at"
+    t.text "properties"
+    t.index ["user_id", "script_id", "level_id", "deleted_at"], name: "index_user_levels_unique", unique: true
   end
 
   create_table "user_ml_models", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1923,8 +1939,9 @@ ActiveRecord::Schema.define(version: 2021_07_28_222333) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "properties"
+    t.datetime "deleted_at"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
-    t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true
+    t.index ["user_id", "script_id", "deleted_at"], name: "index_user_scripts_on_user_id_and_script_id_and_deleted_at", unique: true
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

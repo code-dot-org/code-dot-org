@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:27:53 UTC",
+    "serialized_at": "2021-08-03 22:46:46 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "CSPPD"
@@ -152,7 +152,6 @@
           "CSPPD presurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +175,6 @@
           "Welcome to the Family!"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -200,7 +198,6 @@
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -224,7 +221,6 @@
           "PDECS commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -248,7 +244,6 @@
           "PDECS commitment match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -272,7 +267,6 @@
           "PDECS attendance commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -296,7 +290,6 @@
           "ECSPD pause"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -320,7 +313,6 @@
           "CSPPD program overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -344,7 +336,6 @@
           "CSPPD curriculum overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -368,7 +359,6 @@
           "CSPPD unit matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -392,7 +382,6 @@
           "CSPPD course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -416,7 +405,6 @@
           "CSPPD PT description"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +428,6 @@
           "CSPPD AP quiz"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -464,7 +451,6 @@
           "CSPPD PD overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -488,7 +474,6 @@
           "CSPPD PD Phases"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +497,6 @@
           "CSPPD phase matching"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -536,7 +520,6 @@
           "CSPPD PD goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -560,7 +543,6 @@
           "CSPPD program overlap"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -584,7 +566,6 @@
           "CSPPD instructional materials"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +589,6 @@
           "CSPPD materials overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -632,7 +612,6 @@
           "CSPPD materials question1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -656,7 +635,6 @@
           "CSPPD impact of CS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -680,7 +658,6 @@
           "ECSPD impact vid1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -704,7 +681,6 @@
           "ECSPD impact vid2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -728,7 +704,6 @@
           "ECSPD impact vid2 question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -752,7 +727,6 @@
           "CSPPD impact in program"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,7 +750,6 @@
           "ECSPD what is growth mindset"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -800,7 +773,6 @@
           "ECSPD growth mindset in the classroom"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -824,7 +796,6 @@
           "ECSPD growth mindset question"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -848,7 +819,6 @@
           "ECSPD growth mindset strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -872,7 +842,6 @@
           "CSPPD strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -896,7 +865,6 @@
           "CSPPD teaching strategies video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -920,7 +888,6 @@
           "CSPPD strategies"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -944,7 +911,6 @@
           "CSPPD facilitators"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -968,7 +934,6 @@
           "CSPPD forum introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -992,7 +957,6 @@
           "ECSPD PD details"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1016,7 +980,6 @@
           "CSPPD postsurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1040,7 +1003,6 @@
           "CSPPD end of p1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

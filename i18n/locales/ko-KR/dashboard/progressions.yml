@@ -5,19 +5,23 @@ ko:
       Accelerometer Events: 가속도계 이벤트
       Adding Images: 이미지 추가
       Adding Screens: 스크린 추가
+      Alien Defender: 외계인 방어대
       Animate Your Scene: 장면을 애니메이트 하라
       Artist Intro with JR Hildebrand: 아티스트 인트로 JR 힐데브랜드
       Artist Intro with JR Hildebrande: 아티스트 인트로 JR 힐데브랜드
       Artist Project: 아티스트 프로젝트
       'Artist: Variables': '화가: 변수'
       Attribution: 권한 정보
+      Back and Forth: 앞뒤로
       Basic Conditionals: 기본 조건
+      Bass, Mid, and Treble: 저음, 중간음, 고음
       Binary Numbers: 바이너리 수
       Board Events: 보드 이벤트
       Board Input and Output: 보드 입력 및 출력
       Boolean Comparison: 부울 비교
       Build a Screen: 화면 작성하라
       Building an App: 앱 만들기
+      'Bunny ': '토끼 '
       CS Discoveries Post-Course Survey: CS 발견 과정 후 설문 조사
       CS Discoveries Post-course Survey: CS 발견 과정 후 설문 조사
       Cake Defender: 케이크 디펜더
@@ -27,6 +31,7 @@ ko:
       Checking for a Winner: 당첨자 확인
       Code Your Own Flappy Game: 자신만의 플래피 게임을 만들어보세요.
       Collector Game: 컬렉터 게임
+      Collision Detection: 충돌 감지
       Collisions: 충돌
       Collisions in Games: 게임에서의 충돌
       Color LEDs: 컬러 LED
@@ -34,9 +39,14 @@ ko:
       Combining Representations: 표현 결합
       'Conditionals: If Statements': '조건: :"만약에" 문장들'
       'Conditionals: If and If/Else Statements': '조건: "만약에" 와 "만약에/다른" 문장들'
+      Course E Artist Project: 과정 E 아티스트 프로젝트
+      Course E Sprite Lab Project: 과정 E 스프라이트 랩 프로젝트
+      Course F Artist Project: 과정 F 아티스트 프로젝트
+      Course F Sprite Lab Project: 과정 F 스프라이트 랩 프로젝트
       Create Your Own Animation: 자신만의 애니메이션 만들기
       Create a Story: 스토리 작성
       Create your project: 프로젝트 만들기
+      Dance Crews: 댄스 크루
       Data Visualization: 데이터 시각화
       De-bugging with the Step Button: 스텝버튼으로 디버깅하기
       Debugging: 디버깅
@@ -44,7 +54,9 @@ ko:
       Demo Apps: 데모 앱
       Design Mode: 디자인 모드
       Designing for Accessibility: 접근가능성을 위한 설계
+      Dogger Example: 도거 예
       Drawing: 그리기
+      End of Course Projects: 과정말 프로젝트
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
       Events and Properties: 이벤트 및 속성
@@ -54,6 +66,7 @@ ko:
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: 웹 연구소와 함께 실험 
       Exploration: 탐구
+      Explore HTML: HTML 배우자
       Exploring more CSS: CSS 추가 탐색
       Finish a Screen: 화면 완료하라
       Finish the Prototype: 프로토타입 완성하라
@@ -68,7 +81,11 @@ ko:
       Free Play: 자유 플레이
       Functions: 함수
       Functions with Parameters: 함수(값 전달)
+      Geometric Sun: 기하학 태양
+      Get In Formation: 대형 만들기
+      Getters and Setters: 게터 및 세터
       Getting Properties: 속성 얻기
+      HTML Tags: HTML 태그
       Headings: 제목
       How to Create a Simple Function: 단순 함수를 만드는 방법
       How to Make a Sprite: 스프라이트 만드는 방법
@@ -76,6 +93,7 @@ ko:
       Images and Sounds: 이미지와 소리
       Input Examples: 입력 예제
       Input with If-Else: 만약-다른 사용하여 입력 
+      Inspiration!: 영감!
       Intro to For Loops: 루프 소개
       Intro to Sprites: 스프라이트 소개
       Intro to Variables: 변수에 대한 소개
@@ -114,6 +132,7 @@ ko:
       'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
       'Mini-project: Sticker Design': '미니 프로젝트: 스티커 드자인'
       Modify simulation variables: 시뮬레이션 변수 수정
+      More Buttons: 더 많은 단추
       More Input: 추가 정보
       More Parameters: 경로 매개 변수
       Motorcycle: 오토바이
@@ -124,6 +143,7 @@ ko:
       Nested Loops with the Bee: 벌과 함께 내포된 루프
       New Shapes: 새 도형
       Orientation: 오리엔테이션
+      Overview: 개요
       Pair Programming: 페어 프로그래밍
       Picturing Data: 데이터 묘사
       Planning: 계획
@@ -143,6 +163,7 @@ ko:
       Project - Sprites and Interactions: 프로젝트 - 스프라이트 및 상호작용
       Project Work: 프로젝트 작업
       Properties: 등록 정보
+      Quarter Notes: 4분 음표
       RGB Exploration: RGB 탐험
       Reading Sensors: 센서 읽기 
       Reflection: 성찰
@@ -153,6 +174,9 @@ ko:
       Repeat Until Statements: 장치 문장 반복
       Representing Images: 이미지 표현
       Review: 검토
+      Revise Artist Project: 아티스트 프로젝트 수정
+      Revise Sprite Lab Project: 스프라이트 랩 프로젝트 수정
+      Robot Doodle: 로봇 두들
       Run a simulation: 시뮬레이션 실행
       Sample Programs: 샘플 프로그램
       Screen Design: 스크린 디자인
@@ -166,12 +190,17 @@ ko:
       Skill Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
+      Speed it Up, Slow it Down: 속도를 높여요, 속도는 낮춰요
+      Sprite Lab Example Project: 스프라이트 랩 예 프로젝트
       Sprite Lab Project: 스프라이트 랩 프로젝트
+      Sprite Properties: 스프라이트 속성
       Sprites and the Draw Loop: 스프라이트와 드로 루프
       Star Chaser: 스타 체이서
       Styling Text: 스타일링 텍스트
       Styling with Classes: 클래스를 사용한 스타일링
       Styling your Website: 웹 사이트 스타일 지정하기
+      Text Compression: 텍스트 압축
+      The Animation Tab: 애니메이션 탭
       The Artist in Code Studio: 코드 스튜디오 아티스트
       The Buzzer: 버저 
       The Collector: 컬렉터
@@ -184,10 +213,17 @@ ko:
       Using the LED: LED 사용
       Using the Repeat Block: 반복 블록 사용
       Using the Switch: 스위치 사용
+      Variables: 변수
       Velocity: 속도
       Video: 비디오
+      'Video: CS Matters': '동영상: CS 문제'
+      'Video: Intro to Web Lab - Part 1': '비디오: 웹 연구소 소개 - 파트 1'
+      'Video: Intro to Web Lab - Part 2': '비디오: 웹 연구소 소개 - 파트 2'
+      'Video: Problem Solving Process': '영상: 문제 해결 과정'
+      'Video: What Makes a Computer, a Computer?': '비디오: 컴퓨터는 무엇으로 구성되나?'
       Warm Up: 워밍업 
       Website Project: 웹사이트 프로젝트 
+      Where'd They Go?: 어디 갔어요?
       While Loops with the Farmer: While 루프와 농부
       Wrap-up: 마무리
       Your Personal Website: 개인 웹사이트 

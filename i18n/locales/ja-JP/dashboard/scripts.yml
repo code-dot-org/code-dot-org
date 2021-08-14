@@ -17460,3 +17460,22 @@ ja:
               display_name: 内容
         dlp21-csp-mod1:
           title: CS原則 詳細学習 モジュール1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: モジュール1
+              description: テスト
+            lessonGroup-3:
+              display_name: モジュール2
+            lessonGroup-4:
+              display_name: モジュール3
+            lessonGroup-5:
+              display_name: モジュール4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: 概要
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: 概要

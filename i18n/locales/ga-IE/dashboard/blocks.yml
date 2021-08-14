@@ -1,8 +1,9 @@
+---
 ga:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "malartaíodh gach [GROUP][0] idir [MOVE1][2] \nagus [MOVE2][3] gach [N][1] tomhas"
+        text: "malartaíodh gach {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
         options:
           GROUP:
             sprites: uile
@@ -43,20 +44,20 @@ ga:
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
       Dancelab_atTimestamp:
-        text: tar éis [TIMESTAMP][0] [UNIT][1]
+        text: tar éis {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_changeColorBy:
-        text: 'méadaigh [METHOD][1] de gach [COLOR][0]: [AMOUNT][2]'
+        text: 'méadaigh {METHOD} de gach {COLOR}: {AMOUNT}'
         options:
           METHOD:
             '"hue"': lí
             '"saturation"': sáithiú
             '"brightness"': gile
       Dancelab_changeMoveEachLR:
-        text: "déanadh gach [GROUP][0] [MOVE][1] [DIR][2] go brách"
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
         options:
           GROUP:
             sprites: uile
@@ -88,7 +89,7 @@ ga:
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
       Dancelab_changeMoveLR:
-        text: "déanadh [SPRITE][0] [MOVE][1] [DIR][2] go brách"
+        text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
           MOVE:
             '"next"': "(Ar Aghaidh)"
@@ -106,7 +107,7 @@ ga:
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
       Dancelab_changePropBy:
-        text: 'méadaigh [PROPERTY][1] de gach [SPRITE][0]: [VAL][2]'
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -116,7 +117,7 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_changePropEachBy:
-        text: 'méadaigh [PROPERTY][1] de gach [GROUP][0]: [VAL][2]'
+        text: 'méadaigh {PROPERTY} de gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
@@ -140,7 +141,7 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_doMoveEachLR:
-        text: "déanadh gach [GROUP][0] [MOVE][1] [DIR][2] uair amháin"
+        text: déanadh gach {GROUP} {MOVE} {DIR} uair amháin
         options:
           GROUP:
             sprites: uile
@@ -182,7 +183,7 @@ ga:
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
       Dancelab_doMoveLR:
-        text: "déanadh [SPRITE][0] [MOVE][1] [DIR][2] uair amháin"
+        text: déanadh {SPRITE} {MOVE} {DIR} uair amháin
         options:
           MOVE:
             '"rand"': "(Randamach)"
@@ -210,34 +211,34 @@ ga:
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
       Dancelab_everyMeasuresRange:
-        text: 'athdhéan gach [N][0] tomhas tar éis [START][1] '
+        text: 'athdhéan gach {N} tomhas tar éis {START} '
       Dancelab_everySeconds:
-        text: 'athdhéan gach [N][0] [UNIT][1] '
+        text: 'athdhéan gach {N} {UNIT} '
         options:
           UNIT:
             '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_everySecondsRange:
-        text: 'gach [N][0] [UNIT][1] ó [START][2] go [STOP][3] '
+        text: 'gach {N} {UNIT} ó {START} go {STOP} '
         options:
           UNIT:
             measures: Tomhas
             seconds: Soicind
       Dancelab_everyVerseChorus:
-        text: 'gach [UNIT][0] '
+        text: 'gach {UNIT} '
         options:
           UNIT:
             '"verse"': véarsa
             '"chorus"': curfá
       Dancelab_getEnergy:
-        text: faigh [RANGE][0]
+        text: faigh {RANGE}
         options:
           RANGE:
             '"low"': dord
             '"mid"': meán-raon
             '"high"': tribil
       Dancelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': méid
@@ -248,15 +249,15 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_getTime:
-        text: an t-am reatha i [UNIT][0]
+        text: an t-am reatha i {UNIT}
         options:
           UNIT:
             '"measures"': tomhas
             '"seconds"': soicind
       Dancelab_ifDanceIs:
         text: |-
-          má tá [SPRITE][0] ag déanamh [DANCE][1]
-          [DO1][2] [DO2][3]
+          má tá {SPRITE} ag déanamh {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bualadh Bos Ard
@@ -272,8 +273,8 @@ ga:
             MOVES.Rest: Dada
       Dancelab_ifTime:
         text: |-
-          má tá [UNIT][0] [OP][1] [N][2]
-          [DO1][3] [DO2][4]
+          má tá {UNIT} {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': tomhas
@@ -283,7 +284,7 @@ ga:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "cuir [SPRITE][0] [LOCATION][1]"
+        text: cuir {SPRITE} {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
@@ -297,7 +298,7 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_jumpToEach:
-        text: cuir gach [GROUP][0] [LOCATION][1]
+        text: cuir gach {GROUP} {LOCATION}
         options:
           GROUP:
             sprites: uile
@@ -325,7 +326,7 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": randamach
       Dancelab_layoutSprites:
-        text: leag gach [GROUP][0] amach [FORMAT][1]
+        text: leag gach {GROUP} amach {FORMAT}
         options:
           GROUP:
             sprites: uile
@@ -357,7 +358,7 @@ ga:
             '"plus"': ar chruth an phlus
             '"random"': randamach
       Dancelab_makeAnonymousDanceSprite:
-        text: déan [COSTUME][0] nua [LOCATION][1]
+        text: déan {COSTUME} nua {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': eachtrán
@@ -385,8 +386,8 @@ ga:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_makeNewDanceSprite:
         text: |-
-          déan [COSTUME][0] nua
-          darb ainm [NAME][1] [LOCATION][2]
+          déan {COSTUME} nua
+          darb ainm {NAME} {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': eachtrán
@@ -413,8 +414,7 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          déan [N][0] [COSTUME][1] nua [LAYOUT][2]
+        text: déan {N} {COSTUME} nua {LAYOUT}
         options:
           'N':
             '2': '2'
@@ -465,21 +465,20 @@ ga:
             '"plus"': ar chruth an phlus
             '"random"': randamach
       Dancelab_mixColors:
-        text: measc [COLOR1][0] agus [COLOR2][1]
+        text: measc {COLOR1} agus {COLOR2}
       Dancelab_nMeasures:
-        text: "[N][0] tomhas"
+        text: "{N} tomhas"
       Dancelab_randomColor:
         text: dath randamach
       Dancelab_setBackground:
-        text: 'socraigh dath an chúlra: [COLOR][0]'
+        text: 'socraigh dath an chúlra: {COLOR}'
       Dancelab_setBackgroundEffect:
         text: |-
           socraigh éifeacht an chúlra:
-          [EFFECT][0] [PALETTE][1]
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Dada
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(Randamach)"
             '"circles"': Ciorcail
             '"color_cycle"': Dathanna
             '"diamonds"': Diamaint
@@ -510,7 +509,7 @@ ga:
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
           socraigh éifeacht an chúlra:
-          [EFFECT][1] [PALETTE][0]
+          {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"none"': Dada
@@ -550,7 +549,7 @@ ga:
             '"vintage"': Sean-Nóis
             '"warm"': Teolaí
       Dancelab_setDanceSpeed:
-        text: 'socraigh luas an damhsa do [SPRITE][0]: [SPEED][1]'
+        text: 'socraigh luas an damhsa do {SPRITE}: {SPEED}'
         options:
           SPEED:
             '1': gnáthmhód
@@ -559,7 +558,7 @@ ga:
             '0.5': mall
             '0.25': an-mhall
       Dancelab_setDanceSpeedEach:
-        text: 'socraigh luas an damhsa do gach [GROUP][0]: [SPEED][1]'
+        text: 'socraigh luas an damhsa do gach {GROUP}: {SPEED}'
         options:
           GROUP:
             sprites: uile
@@ -582,11 +581,10 @@ ga:
             '0.5': mall
             '0.25': an-mhall
       Dancelab_setForegroundEffect:
-        text: 'socraigh éifeacht an tulra: [EFFECT][0]'
+        text: 'socraigh éifeacht an tulra: {EFFECT}'
         options:
           EFFECT:
             '"none"': Dada
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(Randamach)"
             '"bubbles"': Boilgeoga
             '"confetti"': Coinfití
             '"hearts_red"': Croíthe
@@ -601,7 +599,7 @@ ga:
             '"color_lights"': Soilse Stáitse
             '"raining_tacos"': Tacónna
       Dancelab_setForegroundEffectExtended:
-        text: 'socraigh éifeacht an tulra: [EFFECT][0]'
+        text: 'socraigh éifeacht an tulra: {EFFECT}'
         options:
           EFFECT:
             '"none"': Dada
@@ -624,7 +622,7 @@ ga:
             '"exploding_stars"': Pléascadh Réaltaí
             '"raining_tacos"': Tacónna
       Dancelab_setProp:
-        text: 'socraigh [PROPERTY][1] do [SPRITE][0]: [VAL][2] '
+        text: 'socraigh {PROPERTY} do {SPRITE}: {VAL} '
         options:
           PROPERTY:
             '"scale"': méid
@@ -634,7 +632,7 @@ ga:
             '"x"': ionad cothrománach
             '"y"': ionad ingearach
       Dancelab_setPropEach:
-        text: 'socraigh [PROPERTY][1] do gach [GROUP][0]: [VAL][2]'
+        text: 'socraigh {PROPERTY} do gach {GROUP}: {VAL}'
         options:
           GROUP:
             sprites: uile
@@ -659,7 +657,7 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setPropRandom:
-        text: socraigh [PROPERTY][1] [SPRITE][0] go randamach
+        text: socraigh {PROPERTY} {SPRITE} go randamach
         options:
           PROPERTY:
             '"scale"': méid
@@ -670,7 +668,7 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setPropRandomEach:
-        text: socraigh [PROPERTY][1] do gach [GROUP][0] go randamach
+        text: socraigh {PROPERTY} do gach {GROUP} go randamach
         options:
           GROUP:
             sprites: uile
@@ -695,9 +693,9 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setTint:
-        text: 'socraigh imir ar [SPRITE][0]: [VAL][1]'
+        text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setTintEach:
-        text: 'socraigh imir ar gach [THIS][0]: [VAL][1]'
+        text: 'socraigh imir ar gach {THIS}: {VAL}'
         options:
           THIS:
             sprites: uile
@@ -714,7 +712,7 @@ ga:
             '"SLOTH"': spadán
             '"UNICORN"': aonbheannach
       Dancelab_setTintEachInline:
-        text: 'socraigh imir ar gach [THIS][0]: [VAL][1]'
+        text: 'socraigh imir ar gach {THIS}: {VAL}'
         options:
           THIS:
             sprites: uile
@@ -731,15 +729,15 @@ ga:
             '"SLOTH"': spadán
             '"UNICORN"': aonbheannach
       Dancelab_setTintInline:
-        text: 'socraigh imir ar [SPRITE][0]: [VAL][1]'
+        text: 'socraigh imir ar {SPRITE}: {VAL}'
       Dancelab_setVisible:
-        text: 'socraigh infheictheacht [SPRITE][0]: [VISIBILITY][1]'
+        text: 'socraigh infheictheacht {SPRITE}: {VISIBILITY}'
         options:
           VISIBILITY:
             'true': infheicthe
             'false': dofheicthe
       Dancelab_setVisibleEach:
-        text: 'socraigh infheictheacht [THIS][0]: [VISIBILITY][1]'
+        text: 'socraigh infheictheacht {THIS}: {VISIBILITY}'
         options:
           THIS:
             sprites: uile
@@ -759,7 +757,7 @@ ga:
             'true': infheicthe
             'false': dofheicthe
       Dancelab_startMapping:
-        text: "athraigh [PROPERTY][1] [SPRITE][0] ag leanúint [RANGE][2]"
+        text: athraigh {PROPERTY} {SPRITE} ag leanúint {RANGE}
         options:
           PROPERTY:
             '"scale"': méid
@@ -774,7 +772,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_startMappingEach:
-        text: "athraigh [PROPERTY][1] de gach [GROUP][0] ag leanúint [RANGE][2]"
+        text: athraigh {PROPERTY} de gach {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
@@ -803,7 +801,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_stopMapping:
-        text: "stop ag athrú [PROPERTY][1] [SPRITE][0] ag leanúint [RANGE][2]"
+        text: stop ag athrú {PROPERTY} {SPRITE} ag leanúint {RANGE}
         options:
           PROPERTY:
             '"scale"': méid
@@ -819,7 +817,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_stopMappingEach:
-        text: "stop ag athrú [PROPERTY][1] de gach [GROUP][0] ag leanúint [RANGE][2]"
+        text: stop ag athrú {PROPERTY} de gach {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
@@ -849,7 +847,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_translateStrings:
-        text: aistrigh [STRING][0]
+        text: aistrigh {STRING}
         options:
           STRING:
             '"music_wave"': Tonnta
@@ -895,7 +893,7 @@ ga:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: nuair a bhrúitear [KEY][0]
+        text: nuair a bhrúitear {KEY}
         options:
           KEY:
             '"up"': suas
@@ -941,7 +939,7 @@ ga:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: nuair a shroicheann an [RANGE][0] buaic
+        text: nuair a shroicheann an {RANGE} buaic
         options:
           RANGE:
             '0': dord
@@ -952,17 +950,17 @@ ga:
       Dancelab_whenSetup2:
         text: socrú
       Dancelab_whenSetupSong:
-        text: 'socraigh [SONG][0] '
+        text: 'socraigh {SONG} '
       gamelab_addBehaviorSimple:
-        text: nuair a thosaíonn [SPRITE][0] [BEHAVIOR][1]
+        text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
+        text: "{ANIMATION}"
       gamelab_atTime:
         options:
           UNIT:
             '"seconds"': soicind
       gamelab_changePropBy:
-        text: 'méadaigh [PROPERTY][1] de gach [SPRITE][0]: [VAL][2]'
+        text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -972,27 +970,27 @@ ga:
             '"direction"': treo gluaiseachta
             '"speed"': luas
       gamelab_checkTouching:
-        text: "[CONDITION][0] [SPRITE1][1] i dteagmháil le [SPRITE2][2]"
+        text: "{CONDITION} {SPRITE1} i dteagmháil le {SPRITE2}"
         options:
           CONDITION:
             '"when"': nuair atá
             '"while"': chomh fada is atá
       gamelab_clickedOn:
-        text: nuair a chliceáiltear [SPRITE][0]
+        text: nuair a chliceáiltear {SPRITE}
       gamelab_clickedSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_comment:
-        text: 'nóta trachta: [COMMENT][0]'
+        text: 'nóta trachta: {COMMENT}'
       gamelab_costumeImage:
-        text: "[COSTUME][0]"
+        text: "{COSTUME}"
       gamelab_createNewSprite:
-        text: "déan sprid nua \n darb ainm [NAME][0] \n le culaith [COSTUME][1] \n [LOCATION][2]"
+        text: "déan sprid nua \n darb ainm {NAME} \n le culaith {COSTUME} \n {LOCATION}"
       gamelab_destroy:
-        text: bain [THIS][0]
+        text: bain {THIS}
       gamelab_edgesDisplace:
-        text: cuir cosc ar [SPRITE][0] bogadh ar an imeall
+        text: cuir cosc ar {SPRITE} bogadh ar an imeall
       gamelab_getProp:
-        text: "[SPRITE][0] [PROPERTY][1]"
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': méid
@@ -1047,11 +1045,11 @@ ga:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "[SPRITE][0] ar imeall an scáileáin"
+        text: "{SPRITE} ar imeall an scáileáin"
       gamelab_jumpTo:
-        text: "cuir [SPRITE][0] [LOCATION][1]"
+        text: cuir {SPRITE} {LOCATION}
       gamelab_keyPressed:
-        text: "[CONDITION][0] [KEY][1] brúite"
+        text: "{CONDITION} {KEY} brúite"
         options:
           CONDITION:
             '"when"': nuair atá
@@ -1089,17 +1087,17 @@ ga:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'ionad x: [X][0] y: [Y][1]'
+        text: 'ionad x: {X} y: {Y}'
       gamelab_locationMouse:
         text: suíomh na luiche
       gamelab_locationOf:
-        text: suíomh [SPRITE][0]
+        text: suíomh {SPRITE}
       gamelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
-        text: déan sprid nua [ANIMATION_NAME][0] [LOCATION][1]
+        text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       gamelab_mirrorSprite:
-        text: "aghaidh [SPRITE][0] [DIRECTION][1]"
+        text: aghaidh {SPRITE} {DIRECTION}
         options:
           DIRECTION:
             '"right"': ar dheis
@@ -1107,15 +1105,15 @@ ga:
       gamelab_mouseLocation:
         text: suíomh na luiche
       gamelab_moveForward:
-        text: bog [SPRITE][0] [DISTANCE][1] picteilín ar aghaidh
+        text: bog {SPRITE} {DISTANCE} picteilín ar aghaidh
       gamelab_newSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: patrólú suas anuas
       gamelab_printText:
-        text: priontáil [TEXT][0]
+        text: priontáil {TEXT}
       gamelab_randColor:
         text: dath randamach
       gamelab_randomColor:
@@ -1123,19 +1121,19 @@ ga:
       gamelab_randomLocation:
         text: in áit randamach
       gamelab_removeAllBehaviors:
-        text: "stopann [SPRITE][0] go hiomlán"
+        text: stopann {SPRITE} go hiomlán
       gamelab_removeBehaviorSimple:
-        text: nuair a stopann [SPRITE][0] [BEHAVIOR][1]
+        text: nuair a stopann {SPRITE} {BEHAVIOR}
       gamelab_removeTint:
-        text: bain an dath de [THIS][0]
+        text: bain an dath de {THIS}
       gamelab_repeatForever:
         text: go deo na ndeor
       gamelab_setAnimation:
-        text: athraigh culaith [THIS][0] go [ANIMATION][1]
+        text: athraigh culaith {THIS} go {ANIMATION}
       gamelab_setBackground:
-        text: 'socraigh dath an chúlra: [COLOR][0]'
+        text: 'socraigh dath an chúlra: {COLOR}'
       gamelab_setBackgroundImage:
-        text: 'socraigh an cúlra: [IMG][0]'
+        text: 'socraigh an cúlra: {IMG}'
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': pluais
@@ -1151,7 +1149,7 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
             undefined: gan chúlra
       gamelab_setBackgroundImageAs:
-        text: 'socraigh an cúlra: [IMG][0]'
+        text: 'socraigh an cúlra: {IMG}'
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1160,7 +1158,7 @@ ga:
             '75': tamall
             '100': large
       gamelab_setProp:
-        text: 'socraigh [PROPERTY][1] do [SPRITE][0]: [VAL][2]'
+        text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -1170,7 +1168,7 @@ ga:
             '"direction"': treo gluaiseachta
             '"speed"': luas
       gamelab_setProp_dropdown:
-        text: 'socraigh [PROPERTY][1] do [SPRITE][0]: [SIZE][2]'
+        text: 'socraigh {PROPERTY} do {SPRITE}: {SIZE}'
         options:
           PROPERTY:
             '"scale"': méid
@@ -1180,40 +1178,40 @@ ga:
             '75': tamall
             '100': large
       gamelab_setSizes:
-        text: 'socraigh [PROPERTY][1] do [SPRITE][0]: [N][2]%'
+        text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
           PROPERTY:
             '"scale"': méid
             '"width"': leithead
             '"height"': airde
       gamelab_setTint:
-        text: athraigh dath [THIS][0] go [COLOR][1]
+        text: athraigh dath {THIS} go {COLOR}
       gamelab_showTitleScreen:
-        text: taispeáin scáileán an teidil [BREAK][0] teideal [TITLE][1] téacs [SUBTITLE][2]
+        text: taispeáin scáileán an teidil {BREAK} teideal {TITLE} téacs {SUBTITLE}
       gamelab_spriteClicked:
-        text: "[CONDITION][0] [SPRITE][1] cliceáilte"
+        text: "{CONDITION} {SPRITE} cliceáilte"
         options:
           CONDITION:
             '"when"': nuair atá
             '"while"': chomh fada is atá
       gamelab_subjectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_textVariableJoin:
-        text: "[VAR][0][TEXT2][1]"
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: rothlam
       gamelab_turn:
-        text: cas [SPRITE][0] [DIRECTION][1] [N][2] céim
+        text: cas {SPRITE} {DIRECTION} {N} céim
         options:
           DIRECTION:
             '"right"': ar dheis
             '"left"': ar chlé
       gamelab_updateTitleWithColor:
-        text: taispeáin scáileán an teidil [BREAK][0] teideal [TITLE][1] dath [COLOR][2]
+        text: taispeáin scáileán an teidil {BREAK} teideal {TITLE} dath {COLOR}
       gamelab_whenDownArrow:
         text: nuair a bhrúitear an tsaighead síos
       gamelab_whenKey:
-        text: nuair a bhrúitear [KEY][0]
+        text: nuair a bhrúitear {KEY}
         options:
           KEY:
             '"up"': suas
@@ -1230,13 +1228,13 @@ ga:
       gamelab_whenRightArrow:
         text: nuair a bhrúitear an tsaighead dheas
       gamelab_whenTouching:
-        text: nuair a theagmhaíonn [SPRITE1][0] le [SPRITE2][1]
+        text: nuair a theagmhaíonn {SPRITE1} le {SPRITE2}
       gamelab_whenUpArrow:
         text: nuair a bhrúitear an tsaighead suas
       gamelab_whileDownArrow:
         text: agus an tsaighead síos brúite
       gamelab_whileKey:
-        text: agus [KEY][0] brúite
+        text: agus {KEY} brúite
         options:
           KEY:
             '"up"': suas
@@ -1255,13 +1253,13 @@ ga:
       gamelab_whileUpArrow:
         text: agus an tsaighead suas brúite
       gamelab_xLocationOf:
-        text: comhordanáid x de [SPRITE][0]
+        text: comhordanáid x de {SPRITE}
       gamelab_yLocationOf:
-        text: comhordanáid y de [SPRITE][0]
+        text: comhordanáid y de {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: nuair a thosaíonn [SPRITE][0] [BEHAVIOR][1]
+        text: nuair a thosaíonn {SPRITE} {BEHAVIOR}
       Mikelab_addTrainingData:
-        text: 'sonraí traenála nua: [NAME][0],[LOCATION][1]'
+        text: 'sonraí traenála nua: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": réad
@@ -1272,7 +1270,7 @@ ga:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mo-lipéad
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ní mo-lipéad é
       Mikelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1321,7 +1319,7 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
       Mikelab_groupCreateNewSprite:
-        text: déan [COSTUME][0] nua [LOCATION][1]
+        text: déan {COSTUME} nua {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
@@ -1340,7 +1338,7 @@ ga:
             '"all"': uile
             '"this"': é seo
       Mikelab_groupEdgesDisplace:
-        text: cuir cosc ar [COSTUME][0] bogadh ar an imeall
+        text: cuir cosc ar {COSTUME} bogadh ar an imeall
       Mikelab_groupGetProp:
         options:
           SELECT:
@@ -1384,19 +1382,19 @@ ga:
             '"all"': uile
             '"this"': é seo
       Mikelab_groupWhenClickedOn:
-        text: nuair a chliceáiltear [COSTUME][0]
+        text: nuair a chliceáiltear {COSTUME}
       Mikelab_groupWhenXTouchesY:
-        text: nuair a theagmhaíonn [COSTUME][0] le [COSTUME2][1]
+        text: nuair a theagmhaíonn {COSTUME} le {COSTUME2}
       Mikelab_hideFish:
-        text: bain [TRASH][0]
+        text: bain {TRASH}
         options:
           TRASH:
             object: réad
             fish: iasc
       Mikelab_ifDanceIs:
         text: |-
-          má tá [SPRITE][0] ag déanamh [DANCE][1]
-          [DO1][2] [DO2][3]
+          má tá {SPRITE} ag déanamh {DANCE}
+          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bualadh Bos Ard
@@ -1426,15 +1424,15 @@ ga:
             MOVES.ClapHigh: iasc
             MOVES.Clown: ní mo-lipéad é
       Mikelab_joinText:
-        text: "[TEXT][0] [NEXT][1]"
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
-        text: 'ionad x: [X][0] y: [Y][1]'
+        text: 'ionad x: {X} y: {Y}'
       Mikelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: dath randamach
       Mikelab_removeBehaviorSimple:
-        text: nuair a stopann [SPRITE][0] [BEHAVIOR][1]
+        text: nuair a stopann {SPRITE} {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: go deo na ndeor
       Mikelab_sendBad:
@@ -1457,7 +1455,7 @@ ga:
             '"right"': ar dheis
             '"left"': ar chlé
       Mikelab_sprite:
-        text: '[COSTUME][0] nua [LOCATION][1]'
+        text: "{COSTUME} nua {LOCATION}"
         options:
           LOCATION:
             "{x: 200, y: 100}": ag an mbarr
@@ -1471,9 +1469,9 @@ ga:
             "{x: 300, y: 300}": ag an mbun ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Randamach
       Mikelab_whenClickedOn:
-        text: nuair a chliceáiltear [SPRITE][0]
+        text: nuair a chliceáiltear {SPRITE}
       Mikelab_whenKeyPressed:
-        text: nuair a bhrúitear [KEY][0]
+        text: nuair a bhrúitear {KEY}
         options:
           KEY:
             '"up"': an tsaighead suas brúite
@@ -1496,11 +1494,11 @@ ga:
             '"s"': D
             '"d"': D
       Mikelab_whenYesNoClicked:
-        text: nuair a chliceáiltear [KEY][0]
+        text: nuair a chliceáiltear {KEY}
         options:
           KEY:
-            '"yes"': 'tá'
-            '"no"': 'níl'
+            '"yes"': tá
+            '"no"': níl
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1509,15 +1507,15 @@ ga:
             '"left"': an tsaighead chlé brúite
             '"right"': an tsaighead dheas brúite
       Mikelab_xLocationOf:
-        text: comhordanáid x de [SPRITE][0]
+        text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
-        text: comhordanáid y de [SPRITE][0]
+        text: comhordanáid y de {SPRITE}
       PoemBot_setBackgroundEffect:
         options:
           BG_EFFECT:
             '"rainbow"': tuar ceatha
       PoemBot_setForegroundEffect:
-        text: 'socraigh éifeacht an tulra: [FG_EFFECT][0]'
+        text: 'socraigh éifeacht an tulra: {FG_EFFECT}'
         options:
           FG_EFFECT:
             '"rain"': báisteach
@@ -1531,13 +1529,13 @@ ga:
       Vector_positionCenter:
         text: sa lár
       Vector_push:
-        text: 'socraigh an treoluas: [VECTOR][0]'
+        text: 'socraigh an treoluas: {VECTOR}'
       Vector_randomLocation:
         text: in áit randamach
       Vector_setColor:
-        text: 'socraigh an dath: [COLOR][0]'
+        text: 'socraigh an dath: {COLOR}'
       Vector_setSize:
-        text: 'socraigh an leithead: [WIDTH][0] agus an airde: [HEIGHT][1]'
+        text: 'socraigh an leithead: {WIDTH} agus an airde: {HEIGHT}'
       Vector_where:
         options:
           PROPERTY:
@@ -1566,8 +1564,8 @@ ga:
       binary_drawPixelHere:
         options:
           VAL:
-            '0': 'as'
-            '1': 'ann'
+            '0': as
+            '1': ann
             '"toggle"': scoránaigh
       binary_goToHome:
         text: léim go dtí an barr ar chlé
@@ -1579,7 +1577,7 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
       binary_whenKey:
-        text: nuair a bhrúitear [KEY][0]
+        text: nuair a bhrúitear {KEY}
         options:
           KEY:
             '"up"': suas
@@ -1593,8 +1591,8 @@ ga:
             '"d"': d
       craft_ifPath:
         text: |-
-          má tá cosán [DIR][0]
-          [STATEMENT][1]
+          má tá cosán {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": ar aghaidh
@@ -1602,8 +1600,8 @@ ga:
             "'left'": ar chlé
       craft_ifStandingOn:
         text: |-
-          má tá tú ar [TYPE][0]
-          [STATEMENT][1]
+          má tá tú ar {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": coiréal gorm
@@ -1614,8 +1612,8 @@ ga:
             "'seaLantern'": laindéar farraige
       craft_ifStandingOnLimit:
         text: |-
-          má tá tú ar [TYPE][0]
-          [STATEMENT][1]
+          má tá tú ar {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": gaineamh
@@ -1624,7 +1622,7 @@ ga:
       craft_moveForward:
         text: téigh ar aghaidh
       craft_placeBlock:
-        text: cuir [blockType][0]
+        text: cuir {blockType}
         options:
           blockType:
             '"strippedOak"': dair scafa
@@ -1659,13 +1657,13 @@ ga:
       craft_repeatUntilConduit:
         text: |-
           go dtí go mbeidh an seoladán déanta
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           athdhéan go dtí an sprioc
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: cruthaigh [ENTITY][0] nua
+        text: cruthaigh {ENTITY} nua
         options:
           ENTITY:
             '"cod"': trosc
@@ -1675,10 +1673,10 @@ ga:
             '"squid"': máthair shúigh
             '"tropicalFish"': iasc trópaiceach
       craft_turn:
-        text: cas [DIR][0]
+        text: cas {DIR}
         options:
           DIR:
             right: ar deiseal ↻
             left: ar tuathal ↺
       validation_validatedBackground:
-        text: 'socraigh an cúlra: [IMG][0]'
+        text: 'socraigh an cúlra: {IMG}'

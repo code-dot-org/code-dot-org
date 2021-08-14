@@ -1,17 +1,28 @@
 ja:
   data:
     progressions:
+      Alien Defender: エイリアンをまもれ
       Artist Project: アーティスト プロジェクト
       'Artist: Variables': 'アーティスト：変数（へんすう）'
+      Back and Forth: バック&フォース（行ったり来たり）
+      Bass, Mid, and Treble: ベース、ミドル、トレブル
       Binary Numbers: 2進数
       Board Events: ボードイベント
+      'Bunny ': 'Bunny '
       CS Discoveries Post-Course Survey: CS発見 コース後アンケート
       Collisions: 衝突
       Combining Representations: 表現を組み合わせる
+      Course E Artist Project: コースE アーティスト
+      Course E Sprite Lab Project: Course E Sprite Lab Project
+      Course F Artist Project: コースF アーティスト
+      Course F Sprite Lab Project: コースF スプライト ラボ
+      Dance Crews: ダンスクルー
       Debugging: デバッギング
       Design Mode: 設計モード
       Designing for Accessibility: アクセシビリティのための設計
+      Dogger Example: Dogger Example
       Drawing: "グラフィック\n"
+      End of Course Projects: 付録
       Events: イベント
       Example Projects: プロジェクトの例
       Exploration: 探究
@@ -19,9 +30,13 @@ ja:
       For Loops: ループ用
       Functions: 関数(かんすう) 
       Functions with Parameters: パラメーター付き関数
+      Geometric Sun: Geometric Sun
+      Get In Formation: フォーメーションにつきます
+      Getters and Setters: ゲッターとセッター
       Getting Properties: プロパティの取得
       Headings: 見出し
       How to Make a Sprite: スプライトの作り方
+      Inspiration!: インスピレーション！
       Introducing Sprite Lab: スプライトラボの紹介
       Introduction to Arrays: Introduction to Arrays
       Keeping Data Secret: データの秘密を守る
@@ -34,22 +49,34 @@ ja:
       'Mini-Project: About Me': 'スプライトラボについて'
       'Mini-Project: Alien Dance Party': ' エイリアンダンスパーティー'
       'Mini-Project: Virtual Pet': ' バーチャルペット'
+      More Buttons: 追加のボタン
       My Online Neighborhood: 私のオンラインネイバーフッド
+      Overview: 概要
       Pair Programming: ペアプログラミング
       Picturing Data: データで予測
       Planning: 計画
       Programming with Rey and BB-8: レイとBB-8と学ぶプログラミング
       Project: プロジェクト
       Properties: プロパティ
+      Quarter Notes: 四分音符
       Reflection: 復習
       Representing Images: 画像の表現
       Review: 確認する
+      Revise Artist Project: アーティストの復習
+      Revise Sprite Lab Project: スプライト ラボの復習
+      Robot Doodle: Robot Doodle
       Skill Building: スキル構築
+      Speed it Up, Slow it Down: スピードアップ、スローダウン
+      Sprite Lab Example Project: スプライト ラボのサンプル
       Sprite Lab Project: スプライトラボプロジェクト
+      Text Compression: テキスト圧縮
+      The Animation Tab: '[アニメーション] タブ'
       The Harvester: 収穫機
       Using the Repeat Block: 繰り返しブロックの使用
+      Variables: 変数（へんすう）
       Velocity: 速度
       Video: ビデオ
+      'Video: CS Matters': 'Video: コンピュータ科学の問題'
       'Video: Debugging with Scrat ': ' スクラットと学ぶデバッグ '
       'Video: Events': ' イベント'
       'Video: Getting Loopy': ' ルーピーをゲット'
@@ -62,6 +89,7 @@ ja:
       'Video: Nested Loops': ' 入れ子のループ'
       'Video: Pair Programming': ' ペアプログラミング'
       'Video: Pair Programming ': ' ペアプログラミング '
+      'Video: Problem Solving Process': 'ビデオ：問題解決の手順'
       'Video: Programming with Rey and BB-8': ' レイとBB-8と学ぶプログラミング'
       'Video: Properties': ' プロパティ'
       'Video: Sprites in Action': ' 実行中のスプライト'
@@ -70,5 +98,6 @@ ja:
       'Video: Variables in Artist': ' アーティストと学ぶ変数'
       'Video: While Loops with the Farmer': ' 農夫と学ぶWhileループ'
       Warm Up: ウォームアップ
+      Where'd They Go?: どこへ行った？
       While Loops with the Farmer: 農夫と学ぶWhileループ
       Wrap-up: ラップアップ

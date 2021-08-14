@@ -278,7 +278,7 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false, named_level: false
+        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false
       end
 
       ScriptSeed.seed_from_json(json)
@@ -1155,7 +1155,7 @@ module Services
               level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
               create :script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
-                     assessment: false, bonus: false, named_level: false
+                     assessment: false, bonus: false
               sl_num += 1
             end
           end
