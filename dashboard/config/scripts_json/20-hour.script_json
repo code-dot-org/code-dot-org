@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "20-hour",
-    "serialized_at": "2021-07-06 22:25:42 UTC",
+    "serialized_at": "2021-08-03 22:46:39 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "20-hour"
@@ -363,7 +363,6 @@
           "blockly:Unplug1:u_1_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -387,7 +386,6 @@
           "blockly:Maze:2_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -411,7 +409,6 @@
           "blockly:Maze:2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -435,7 +432,6 @@
           "blockly:Maze:2_2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -459,7 +455,6 @@
           "blockly:Maze:2_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -483,7 +478,6 @@
           "blockly:Maze:2_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -507,7 +501,6 @@
           "blockly:Maze:2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -531,7 +524,6 @@
           "blockly:Maze:2_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -555,7 +547,6 @@
           "blockly:Maze:2_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -579,7 +570,6 @@
           "blockly:Maze:2_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -603,7 +593,6 @@
           "blockly:Maze:2_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -627,7 +616,6 @@
           "blockly:Maze:2_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -651,7 +639,6 @@
           "blockly:Maze:2_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +662,6 @@
           "blockly:Maze:2_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +685,6 @@
           "blockly:Maze:2_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -723,7 +708,6 @@
           "blockly:Maze:2_14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -747,7 +731,6 @@
           "blockly:Maze:2_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -771,7 +754,6 @@
           "blockly:Maze:2_16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -795,7 +777,6 @@
           "blockly:Maze:2_17"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -819,7 +800,6 @@
           "blockly:Maze:2_18"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -843,7 +823,6 @@
           "blockly:Maze:2_19"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -867,7 +846,6 @@
           "blockly:Unplug2:u_2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -891,7 +869,6 @@
           "blockly:Unplug3:u_3_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -915,7 +892,6 @@
           "blockly:Artist:1_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -939,7 +915,6 @@
           "blockly:Artist:1_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -963,7 +938,6 @@
           "blockly:Artist:1_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -987,7 +961,6 @@
           "blockly:Artist:1_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1011,7 +984,6 @@
           "blockly:Artist:1_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1035,7 +1007,6 @@
           "blockly:Artist:1_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1059,7 +1030,6 @@
           "blockly:Artist:1_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1083,7 +1053,6 @@
           "blockly:Artist:1_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1107,7 +1076,6 @@
           "blockly:Artist:1_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1131,7 +1099,6 @@
           "blockly:Artist:1_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1155,7 +1122,6 @@
           "blockly:Unplug4:u_4_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1179,7 +1145,6 @@
           "blockly:Artist2:4_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1203,7 +1168,6 @@
           "blockly:Artist2:4_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1227,7 +1191,6 @@
           "blockly:Artist2:4_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1251,7 +1214,6 @@
           "blockly:Artist2:4_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1275,7 +1237,6 @@
           "blockly:Artist2:4_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1299,7 +1260,6 @@
           "blockly:Artist2:4_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1323,7 +1283,6 @@
           "blockly:Artist2:4_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1347,7 +1306,6 @@
           "blockly:Artist2:4_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1371,7 +1329,6 @@
           "blockly:Artist2:4_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1395,7 +1352,6 @@
           "blockly:Artist2:4_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1419,7 +1375,6 @@
           "blockly:Artist2:4_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1443,7 +1398,6 @@
           "blockly:Unplug5:u_5_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1467,7 +1421,6 @@
           "blockly:Farmer:karel_1_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1491,7 +1444,6 @@
           "blockly:Farmer:karel_1_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1515,7 +1467,6 @@
           "blockly:Farmer:karel_1_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1539,7 +1490,6 @@
           "blockly:Farmer:karel_1_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1563,7 +1513,6 @@
           "blockly:Farmer:karel_1_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1587,7 +1536,6 @@
           "blockly:Farmer:karel_1_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1611,7 +1559,6 @@
           "blockly:Farmer:karel_1_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1635,7 +1582,6 @@
           "blockly:Farmer:karel_1_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1659,7 +1605,6 @@
           "blockly:Farmer:karel_1_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1683,7 +1628,6 @@
           "blockly:Farmer:karel_1_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1707,7 +1651,6 @@
           "blockly:Farmer:karel_1_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1731,7 +1674,6 @@
           "blockly:Unplug6:u_6_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1755,7 +1697,6 @@
           "blockly:Artist3:2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1779,7 +1720,6 @@
           "blockly:Artist3:2_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1803,7 +1743,6 @@
           "blockly:Artist3:2_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1827,7 +1766,6 @@
           "blockly:Artist3:2_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1851,7 +1789,6 @@
           "blockly:Artist3:2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1875,7 +1812,6 @@
           "blockly:Artist3:2_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1899,7 +1835,6 @@
           "blockly:Artist3:2_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1923,7 +1858,6 @@
           "blockly:Artist3:2_7_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1947,7 +1881,6 @@
           "blockly:Artist3:2_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1971,7 +1904,6 @@
           "blockly:Artist3:2_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1995,7 +1927,6 @@
           "blockly:Artist3:2_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2019,7 +1950,6 @@
           "blockly:Unplug7:u_7_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2043,7 +1973,6 @@
           "blockly:Farmer2:karel_2_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2067,7 +1996,6 @@
           "blockly:Farmer2:karel_2_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2091,7 +2019,6 @@
           "blockly:Farmer2:karel_2_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2115,7 +2042,6 @@
           "blockly:Farmer2:karel_2_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2139,7 +2065,6 @@
           "blockly:Farmer2:karel_2_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2163,7 +2088,6 @@
           "blockly:Farmer2:karel_2_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2187,7 +2111,6 @@
           "blockly:Farmer2:karel_2_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2211,7 +2134,6 @@
           "blockly:Farmer2:karel_2_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2235,7 +2157,6 @@
           "blockly:Farmer2:karel_2_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2259,7 +2180,6 @@
           "blockly:Farmer2:karel_2_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2283,7 +2203,6 @@
           "blockly:Unplug8:u_8_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2307,7 +2226,6 @@
           "blockly:Artist4:3_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2331,7 +2249,6 @@
           "blockly:Artist4:3_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2355,7 +2272,6 @@
           "blockly:Artist4:3_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2379,7 +2295,6 @@
           "blockly:Artist4:3_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2403,7 +2318,6 @@
           "blockly:Artist4:3_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2427,7 +2341,6 @@
           "blockly:Artist4:3_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2451,7 +2364,6 @@
           "blockly:Artist4:3_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2475,7 +2387,6 @@
           "blockly:Artist4:3_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2499,7 +2410,6 @@
           "blockly:Artist4:3_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2523,7 +2433,6 @@
           "blockly:Artist4:3_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2547,7 +2456,6 @@
           "blockly:Unplug9:u_9_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2571,7 +2479,6 @@
           "blockly:Farmer3:karel_debug_seq_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2595,7 +2502,6 @@
           "blockly:Farmer3:karel_debug_seq_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2619,7 +2525,6 @@
           "blockly:Farmer3:karel_debug_repeat"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2643,7 +2548,6 @@
           "blockly:Farmer3:karel_debug_while"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2667,7 +2571,6 @@
           "blockly:Farmer3:karel_debug_if"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2691,7 +2594,6 @@
           "blockly:Farmer3:karel_debug_if_else"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2715,7 +2617,6 @@
           "blockly:Farmer3:karel_debug_function_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2739,7 +2640,6 @@
           "blockly:Farmer3:karel_debug_function_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2763,7 +2663,6 @@
           "blockly:Farmer3:karel_debug_function_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2787,7 +2686,6 @@
           "blockly:Unplug10:u_10_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2811,7 +2709,6 @@
           "blockly:Artist5:5_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2835,7 +2732,6 @@
           "blockly:Artist5:5_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2859,7 +2755,6 @@
           "blockly:Artist5:5_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2883,7 +2778,6 @@
           "blockly:Artist5:5_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2907,7 +2801,6 @@
           "blockly:Artist5:5_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2931,7 +2824,6 @@
           "blockly:Artist5:5_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2955,7 +2847,6 @@
           "blockly:Unplug11:u_11_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

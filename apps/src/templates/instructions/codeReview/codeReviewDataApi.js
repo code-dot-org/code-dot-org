@@ -8,13 +8,21 @@ export function getCodeReviewCommentsForProject(channelId) {
   });
 }
 
-export function submitNewCodeReviewComment(commentText, channelId, token) {
+export function submitNewCodeReviewComment(
+  commentText,
+  channelId,
+  scriptId,
+  levelId,
+  token
+) {
   return $.ajax({
     url: `/code_review_comments`,
     type: 'POST',
     headers: {'X-CSRF-Token': token},
     data: {
       channel_id: channelId,
+      script_id: scriptId,
+      level_id: levelId,
       comment: commentText
     }
   });
@@ -67,5 +75,17 @@ export function deleteCodeReviewComment(commentId, token) {
     url: `/code_review_comments/${commentId}`,
     type: 'DELETE',
     headers: {'X-CSRF-Token': token}
+  });
+}
+
+export function getReviewablePeers(channelId, levelId, scriptId) {
+  return $.ajax({
+    url: `/reviewable_projects/for_level`,
+    type: 'GET',
+    data: {
+      channel_id: channelId,
+      level_id: levelId,
+      script_id: scriptId
+    }
   });
 }

@@ -11,7 +11,8 @@ export const WebSocketMessageType = {
   THEATER: 'THEATER',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
-  DEBUG: 'DEBUG'
+  DEBUG: 'DEBUG',
+  STATUS: 'STATUS'
 };
 
 export const JavabuilderExceptionType = {
@@ -52,6 +53,16 @@ export const NeighborhoodSignalType = {
   DONE: 'DONE'
 };
 
+export const NeighborhoodExceptionType = makeEnum(
+  'INVALID_GRID',
+  'INVALID_DIRECTION',
+  'GET_SQUARE_FAILED',
+  'INVALID_COLOR',
+  'INVALID_LOCATION',
+  'INVALID_MOVE',
+  'INVALID_PAINT_LOCATION'
+);
+
 export const TheaterSignalType = {
   AUDIO_URL: 'AUDIO_URL',
   VISUAL_URL: 'VISUAL_URL',
@@ -59,4 +70,26 @@ export const TheaterSignalType = {
   VISUAL: 'VISUAL'
 };
 
+export const StatusMessageType = {
+  COMPILING: 'COMPILING',
+  COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
+  RUNNING: 'RUNNING',
+  GENERATING_RESULTS: 'GENERATING_RESULTS',
+  EXITED: 'EXITED'
+};
+
+export const SoundExceptionType = makeEnum(
+  'INVALID_AUDIO_FILE_FORMAT',
+  'MISSING_AUDIO_DATA'
+);
+
+export const MediaExceptionType = makeEnum('IMAGE_LOAD_ERROR');
+
+export const TheaterExceptionType = makeEnum(
+  'DUPLICATE_PLAY_COMMAND',
+  'INVALID_SHAPE'
+);
+
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
+
+export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
