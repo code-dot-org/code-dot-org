@@ -3,6 +3,7 @@ class Ability
   include Pd::Application::ActiveApplicationModels
 
   CSA_PILOT = 'csa-pilot'
+  CSA_PILOT_FACILITATORS = 'csa-pilot-facilitators'
 
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
@@ -361,7 +362,10 @@ class Ability
     if user.persisted?
       if user.has_pilot_experiment?(CSA_PILOT) ||
         (!user.teachers.empty? &&
-          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)})
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)}) ||
+          user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
+        (!user.teachers.empty? &&
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)})
         can :get_access_token, :javabuilder_session
       end
     end
