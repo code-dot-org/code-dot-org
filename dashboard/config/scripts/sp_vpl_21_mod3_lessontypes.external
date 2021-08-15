@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons
 
-<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" alt="Image of a classroom full of students raising their hands." width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 #### Each chapter of CS Discoveries consists of individual lessons that share common characteristics. Knowing the types of lessons in the curriculum will help you understand the intent and purpose along with your role in teaching the lesson.  
 
