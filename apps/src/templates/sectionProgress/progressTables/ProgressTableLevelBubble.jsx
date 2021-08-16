@@ -166,7 +166,8 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     // letter bubbles and unplugged bubbles are all of the same shape and
     // content, so for those we can return a shorter key.
     if (bubbleSize === BubbleSize.letter) {
-      return `ltr:ttl=${title}&${statusString}`;
+      const badge = this.shouldShowKeepWorkingBadge() ? '&bdg' : '';
+      return `ltr:ttl=${title}&${statusString}${badge}`;
     } else if (isUnplugged) {
       return `unp:${statusString}`;
     }
