@@ -15,7 +15,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     @malformed.update_column(:email, '')  # Bypasses validation!
 
     @user = create :user, email: 'test_user@example.com'
-    @script = Script.first
+    @script = create(:script, :with_levels, levels_count: 1)
     @level = @script.script_levels.first.level
     @manual_pass_params = {
       user_id: @user.id,
@@ -231,8 +231,8 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'user_progress returns progress' do
     user = @not_admin
-    script1 = Script.first
-    script2 = Script.second
+    script1 = create(:script, :with_levels, levels_count: 2)
+    script2 = create(:script, :with_levels, levels_count: 1)
     level1 = script1.script_levels.first.level
     level2 = script1.script_levels.second.level
     level3 = script2.script_levels.first.level
