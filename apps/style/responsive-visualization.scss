@@ -1,5 +1,7 @@
+@use "sass:math";
+
 @mixin visualization-width-height-original($width, $height, $visualizationOriginalWidth) {
-  $scale: $width / $visualizationOriginalWidth;
+  $scale: math.div($width, $visualizationOriginalWidth);
 
   #visualization.responsive {
     max-height: $height;
