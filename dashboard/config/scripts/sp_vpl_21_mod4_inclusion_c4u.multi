@@ -5,7 +5,7 @@ question 'Who is CS Discoveries designed for?'
 wrong 'High achieving students who are looking for an additional academic challenge'
 wrong 'Students with computer science prior knowledge and experience'
 right 'All students regardless of race, gender, language, ability, or socioeconomic background'
-wrong 'All students can participate, but the course was designed with boys in mind'
+wrong 'All students can participate, but the course was designed for students with prior CS knowledge.'
 
 
 markdown <<MARKDOWN

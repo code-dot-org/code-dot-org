@@ -19571,7 +19571,7 @@ en:
               description_teacher: |-
                 **Question of the Day:** How can we choose products based on the needs of a user?
 
-                To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.
+                To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one set of shoes that would make it more useful or usable.
             Understanding Your User:
               key: Understanding Your User
               name: Understanding Your User
@@ -23698,7 +23698,7 @@ en:
           title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Access support while teaching the course.\n\n**Suggested time:** 1 hour\n\n\n\n\n"
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Discoveries. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes\n\n\n\n\n"
         self-paced-pl-csd3-2021:
           lessons:
             lesson-1:
@@ -23709,7 +23709,7 @@ en:
 
                 * Gain a high-level understanding of the CS Discoveries curriculum.
 
-                **Suggested time:** 25 minutes
+                **Suggested time:** 30 minutes
             lesson-2:
               name: Overview of learning tools
               description_student: 
@@ -23718,7 +23718,7 @@ en:
 
                 * Become familiar with the student learning tools used within CS Discoveries.
 
-                **Suggested time:** 15 minutes
+                **Suggested time:** 20 minutes
             lesson-3:
               name: 'Overview of implementation '
               description_student: 
@@ -23735,13 +23735,13 @@ en:
           title: 'Module 3: Overview of CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 50 minutes"
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n* Become familiar with the programming environments used within CS Discoveries.\n* Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
               name: Role of the teacher
               description_student: 
-              description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 10 minutes"
+              description_teacher: "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
             lesson-2:
               name: Learning CS Discoveries
               description_student: 
@@ -23750,7 +23750,7 @@ en:
 
                 * Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
 
-                **Suggested Time:** 30 minutes
+                **Suggested Time:** 25 minutes
             lesson-3:
               name: Teaching CS Discoveries
               description_student: 
@@ -23762,7 +23762,7 @@ en:
           title: 'Module 4: Teaching and learning CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 60 minutes"
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 50 minutes"
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
