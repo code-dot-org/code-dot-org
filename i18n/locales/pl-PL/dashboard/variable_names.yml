@@ -82,6 +82,8 @@ pl:
       screenHeight: wysokość ekranu
       screenWidth: szerokość ekranu
       set sides: ustaw boki
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       shout: krzyczeć
       sides: boki
       size: rozmiar

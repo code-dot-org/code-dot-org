@@ -5,11 +5,13 @@
     "login_required": false,
     "properties": {
       "has_lesson_plan": true,
-      "background": "oceans-blue"
+      "background": "oceans-blue",
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:28 UTC",
+    "family_name": "oceans",
+    "serialized_at": "2021-08-03 22:47:48 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "oceans"
@@ -62,7 +64,6 @@
           "Oceans_Video_Machine_Learning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -86,7 +87,6 @@
           "Oceans_FishVTrash"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -110,7 +110,6 @@
           "Oceans_CreaturesVTrashDemo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -134,7 +133,6 @@
           "Oceans_CreaturesVTrash"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -158,7 +156,6 @@
           "Oceans_Video_Training_Data"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -182,7 +179,6 @@
           "Oceans_Short"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -206,7 +202,6 @@
           "Oceans_Video_Societal_Implications"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -230,7 +225,6 @@
           "Oceans_Long"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

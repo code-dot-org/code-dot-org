@@ -2377,3 +2377,132 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_EOC_2021:
+        description: Du er kommet til den sidste lektion i Kursus D!. Vælg et projekt
+          at starte med.
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen_2021:
+        content1: Beskrivelse her
+      csf_password_power-up_2021:
+        content1: Beskrivelse her

@@ -3,6 +3,7 @@ eu:
   data:
     parameter_names:
       actor: aktore
+      color: kolorea
       counter: kontagailua
       height: Altuera
       honey: eztia

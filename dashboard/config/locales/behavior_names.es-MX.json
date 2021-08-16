@@ -13,8 +13,8 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente"
         },
         "Virtual Pet 1_2020": {
@@ -28,8 +28,8 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente"
         },
         "Virtual Pet 3_2019": {
@@ -54,9 +54,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 3_2020": {
           "wandering2": "deambulando2",
@@ -80,9 +80,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "behaviors 1": {
           "mystery behavior": "comportamiento misterioso",
@@ -97,8 +97,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 1_2020": {
           "mystery behavior": "comportamiento misterioso",
@@ -113,8 +113,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 2": {
           "flying": "volar",
@@ -129,8 +129,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 2_2020": {
           "flying": "volar",
@@ -145,8 +145,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 3": {
           "zooming east": "acercándose al este",
@@ -161,8 +161,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 3_2020": {
           "zooming east": "acercándose al este",
@@ -177,8 +177,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 3a": {
           "zooming east": "acercándose al este",
@@ -193,8 +193,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 3a_2020": {
           "zooming east": "acercándose al este",
@@ -209,8 +209,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 4": {
           "move south and west": "moverse al sur y al oeste",
@@ -225,8 +225,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 4_2020": {
           "move south and west": "moverse al sur y al oeste",
@@ -241,8 +241,8 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 6": {
           "running east": "corriendo hacia el este",
@@ -256,9 +256,9 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "rolling": "rodar",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "behaviors 6_2020": {
           "running east": "corriendo hacia el este",
@@ -272,9 +272,9 @@
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "rolling": "rodar",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "behaviors 7": {
           "running east": "corriendo hacia el este",
@@ -289,8 +289,8 @@
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
           "rolling": "rodar",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors 7_2020": {
           "running east": "corriendo hacia el este",
@@ -305,8 +305,8 @@
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
           "rolling": "rodar",
-          "swimming left and right": "nadando a izquierda y derecha",
-          "moving east": "avanzando al este"
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este"
         },
         "behaviors free play": {
           "spinning and growing": "girando y creciendo"
@@ -338,9 +338,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "outbreak5": {
           "recovering": "recuperación",
@@ -363,7 +363,7 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente"
         },
         "outbreak8": {
@@ -379,7 +379,7 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente"
         },
         "outbreak_freeplay": {
@@ -395,7 +395,7 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente"
         },
         "CourseE_Project_SpriteLab": {
@@ -408,9 +408,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseE_Project_SpriteLab_2019": {
           "wandering": "deambulando",
@@ -422,9 +422,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseE_hoops": {
           "wandering": "deambulando",
@@ -436,10 +436,10 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
           "being hungry": "tener hambre",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseF_Project_SpriteLab": {
           "wandering": "deambulando",
@@ -451,9 +451,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseF_Project_SpriteLab_2019": {
           "wandering": "deambulando",
@@ -465,9 +465,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 2": {
           "wandering": "deambulando",
@@ -480,8 +480,8 @@
           "spinning left": "girando a la izquierda",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 2_2019": {
           "wandering": "deambulando",
@@ -494,8 +494,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 2_2020": {
           "wandering": "deambulando",
@@ -508,8 +508,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 3_2019": {
           "wandering": "deambulando",
@@ -522,8 +522,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 3_2020": {
           "wandering": "deambulando",
@@ -536,8 +536,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 4_2019": {
           "wandering": "deambulando",
@@ -550,8 +550,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 4_2020": {
           "wandering": "deambulando",
@@ -564,8 +564,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 5_2019": {
           "wandering": "deambulando",
@@ -578,8 +578,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 5_2020": {
           "wandering": "deambulando",
@@ -592,8 +592,8 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Dance Party 6": {
           "wandering": "deambulando",
@@ -604,9 +604,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Dance Party 6_2019": {
           "wandering": "deambulando",
@@ -617,9 +617,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Dance Party 6_2020": {
           "wandering": "deambulando",
@@ -630,9 +630,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Dance Party 7_2019": {
           "wandering": "deambulando",
@@ -643,9 +643,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Dance Party 7_2020": {
           "wandering": "deambulando",
@@ -656,9 +656,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Dance Party Freeplay": {
           "wandering": "deambulando",
@@ -669,9 +669,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 2-validated_2019": {
           "wandering": "deambulando",
@@ -682,9 +682,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 2-validated_2020": {
           "wandering": "deambulando",
@@ -695,9 +695,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 3-validated_2019": {
           "wandering": "deambulando",
@@ -708,9 +708,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 3-validated_2020": {
           "wandering": "deambulando",
@@ -721,9 +721,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 4-validated_2019": {
           "wandering": "deambulando",
@@ -734,9 +734,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 4-validated_2020": {
           "wandering": "deambulando",
@@ -747,9 +747,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 5-validated_2019": {
           "wandering": "deambulando",
@@ -760,9 +760,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 5-validated_2020": {
           "wandering": "deambulando",
@@ -773,9 +773,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 6-validated_2019": {
           "wandering": "deambulando",
@@ -786,9 +786,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Fish Tank 6-validated_2020": {
           "wandering": "deambulando",
@@ -799,9 +799,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "OPD-K5-spritelab-2": {
           "wandering": "deambulando",
@@ -812,9 +812,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "OPD-K5-spritelab-3": {
           "wandering": "deambulando",
@@ -825,9 +825,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "OPD-K5-spritelab-4": {
           "wandering": "deambulando",
@@ -838,9 +838,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "OPD-K5-spritelab-6": {
           "wandering": "deambulando",
@@ -851,9 +851,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "OPD-K5-spritelab-7": {
           "wandering": "deambulando",
@@ -864,9 +864,9 @@
           "moving west": "moviéndose al oeste",
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
-          "swimming left and right": "nadando a izquierda y derecha",
+          "swimming left and right": "nadar a izquierda y derecha",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Virtual Pet 2": {
           "wandering": "deambulando",
@@ -879,8 +879,8 @@
           "spinning left": "girando a la izquierda",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "moving east": "moverse al este",
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 2_2019": {
           "wandering": "deambulando",
@@ -892,9 +892,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 2_2020": {
           "wandering": "deambulando",
@@ -906,9 +906,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 4": {
           "wandering": "deambulando",
@@ -920,7 +920,7 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Virtual Pet 4_2019": {
           "wandering": "deambulando",
@@ -932,9 +932,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 4_2020": {
           "wandering": "deambulando",
@@ -946,9 +946,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "Virtual Pet 5": {
           "wandering": "deambulando",
@@ -960,7 +960,7 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Virtual Pet 6": {
           "wandering": "deambulando",
@@ -972,7 +972,7 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "Virtual Pet Freeplay": {
           "wandering": "deambulando",
@@ -984,7 +984,7 @@
           "spinning right": "girando a la derecha",
           "jittering": "poniéndose nervioso",
           "growing": "creciente",
-          "moving east": "avanzando al este"
+          "moving east": "moverse al este"
         },
         "courseE_Dogger_2": {
           "wandering": "deambulando",
@@ -998,9 +998,9 @@
           "jittering": "poniéndose nervioso",
           "drive left": "conducir a la izquierda",
           "drive right": "conducir a la derecha",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_1": {
           "wandering": "deambulando",
@@ -1012,9 +1012,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_1_2020": {
           "wandering": "deambulando",
@@ -1026,9 +1026,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_2": {
           "wandering": "deambulando",
@@ -1040,9 +1040,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_2_2020": {
           "wandering": "deambulando",
@@ -1054,9 +1054,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_3": {
           "wandering": "deambulando",
@@ -1068,9 +1068,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_3_2020": {
           "wandering": "deambulando",
@@ -1082,9 +1082,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_4": {
           "wandering": "deambulando",
@@ -1096,9 +1096,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_4_2020": {
           "wandering": "deambulando",
@@ -1110,9 +1110,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_5": {
           "wandering": "deambulando",
@@ -1124,9 +1124,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseE_aboutme_5_2020": {
           "wandering": "deambulando",
@@ -1138,9 +1138,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "courseF_extras_sim": {
           "wandering 2": "deambulando 2",
@@ -1158,10 +1158,10 @@
           "jittering": "poniéndose nervioso",
           "flying south and loop": "volando hacia el sur y el bucle",
           "drive south and loop": "conducir hacia el sur y el bucle",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
           "being hungry": "tener hambre",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseE_Project_SpriteLab_2020": {
           "wandering": "deambulando",
@@ -1173,9 +1173,9 @@
           "moving west": "moviéndose al oeste",
           "patrolling": "patrullando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "CourseF_Project_SpriteLab_2020": {
           "spinning left": "girando a la izquierda",
@@ -1187,9 +1187,9 @@
           "patrolling": "patrullando",
           "wandering": "deambulando",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente",
-          "swimming left and right": "nadando a izquierda y derecha"
+          "swimming left and right": "nadar a izquierda y derecha"
         },
         "outbreak_freeplay_basic": {
           "recovering": "recuperación",
@@ -1204,8 +1204,1607 @@
           "patrolling": "patrullando",
           "moving with arrow keys": "moverse con las teclas de flecha",
           "jittering": "poniéndose nervioso",
-          "moving east": "avanzando al este",
+          "moving east": "moverse al este",
           "growing": "creciente"
+        },
+        "CourseE_Project_SpriteLab_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "CourseE_Project_SpriteLab_cupcake_examples_2021": {
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "growing": "creciente",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "patrolling": "patrullando",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "moving west2": "moviéndose al oeste2",
+          "spinning right2": "girando a la derecha2",
+          "growing2": "creciendo2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving east2": "moviéndose hacia el este2",
+          "moving north2": "moviéndose al norte2",
+          "patrolling2": "patrullando2",
+          "moving south2": "moviéndose al sur2",
+          "jittering2": "poniéndose nervioso2",
+          "wandering2": "deambulando2",
+          "shrinking2": "encogiéndose2",
+          "spinning left2": "girando a la izquierda2",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "CourseE_Project_SpriteLab_examples_2021": {
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "growing": "creciente",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "patrolling": "patrullando",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "moving west2": "moviéndose al oeste2",
+          "spinning right2": "girando a la derecha2",
+          "growing2": "creciendo2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving east2": "moviéndose hacia el este2",
+          "moving north2": "moviéndose al norte2",
+          "patrolling2": "patrullando2",
+          "moving south2": "moviéndose al sur2",
+          "jittering2": "poniéndose nervioso2",
+          "wandering2": "deambulando2",
+          "shrinking2": "encogiéndose2",
+          "spinning left2": "girando a la izquierda2",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "CourseF_outbreak1": {
+          "recovering": "recuperación",
+          "wandering": "deambulando"
+        },
+        "CourseF_outbreak2": {
+          "recovering": "recuperación",
+          "wandering": "deambulando"
+        },
+        "CourseF_outbreak3": {
+          "recovering": "recuperación",
+          "wandering": "deambulando"
+        },
+        "CourseF_outbreak4": {
+          "recovering": "recuperación",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha"
+        },
+        "CourseF_outbreak5": {
+          "recovering": "recuperación",
+          "wandering": "deambulando"
+        },
+        "CourseF_outbreak6": {
+          "recovering": "recuperación",
+          "wandering": "deambulando"
+        },
+        "CourseF_outbreak7": {
+          "recovering": "recuperación",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving left and right": "moverse de izquierda a derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha"
+        },
+        "CourseF_outbreak8": {
+          "recovering": "recuperación",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving left and right": "moverse de izquierda a derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha"
+        },
+        "Dance Party 2_2021": {
+          "spinning left": "girando a la izquierda",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "swimming left and right": "nadar a izquierda y derecha"
+        },
+        "Dance Party 3_2021": {
+          "spinning left": "girando a la izquierda",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "swimming left and right": "nadar a izquierda y derecha"
+        },
+        "Dance Party 4_2021": {
+          "spinning left": "girando a la izquierda",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "swimming left and right": "nadar a izquierda y derecha"
+        },
+        "Dance Party 5_2021": {
+          "spinning left": "girando a la izquierda",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "swimming left and right": "nadar a izquierda y derecha"
+        },
+        "Dance Party 6_2021": {
+          "jittering": "poniéndose nervioso",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Dance Party 7_2021": {
+          "jittering": "poniéndose nervioso",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Fish Tank 2-validated_2021": {
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Fish Tank 3-validated_2021": {
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Fish Tank 4-validated_2021": {
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Fish Tank 5-validated_2021": {
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Fish Tank 6-validated_2021": {
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha"
+        },
+        "Virtual Pet 1_2021": {
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "Virtual Pet 2_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "Virtual Pet 3_2021": {
+          "wandering": "deambulando",
+          "wandering2": "deambulando2",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "moving east2": "moviéndose hacia el este2",
+          "shrinking": "encogiendose",
+          "spinning left2": "girando a la izquierda2",
+          "growing": "creciente",
+          "spinning right2": "girando a la derecha2",
+          "moving south": "moviéndose al sur",
+          "shrinking2": "encogiéndose2",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "growing2": "creciendo2",
+          "moving south2": "moviéndose al sur2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "moving north2": "moviéndose al norte2",
+          "patrolling": "patrullando",
+          "jittering2": "poniéndose nervioso2",
+          "moving west2": "moviéndose al oeste2",
+          "patrolling2": "patrullando2"
+        },
+        "courseE_aboutme_1_2021": {
+          "wobbling": "tambalearse",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "courseE_aboutme_2_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "courseE_aboutme_3_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "courseE_aboutme_4_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "courseE_aboutme_5_2021": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando"
+        },
+        "courseF_apps_aquarium": {
+          "wandering2": "deambulando2",
+          "wandering": "deambulando",
+          "moving east2": "moviéndose hacia el este2",
+          "moving west": "moviéndose al oeste",
+          "moving east": "moverse al este",
+          "moving west2": "moviéndose al oeste2",
+          "wobbling": "tambalearse",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "spinning left2": "girando a la izquierda2",
+          "spinning right2": "girando a la derecha2",
+          "shrinking2": "encogiéndose2",
+          "growing2": "creciendo2",
+          "moving south2": "moviéndose al sur2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving north2": "moviéndose al norte2",
+          "jittering2": "poniéndose nervioso2",
+          "patrolling2": "patrullando2",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
+          "driving with arrow keys2": "conducir con las flechas del teclado2"
+        },
+        "courseF_apps_card": {
+          "blocking movement": "bloqueo de movimiento",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "spinning left": "girando a la izquierda"
+        },
+        "courseF_apps_chatbot": {
+          "blocking movement": "bloqueo de movimiento",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "spinning left": "girando a la izquierda",
+          "wandering2": "deambulando2",
+          "moving east2": "moviéndose hacia el este2",
+          "spinning left2": "girando a la izquierda2",
+          "spinning right2": "girando a la derecha2",
+          "shrinking2": "encogiéndose2",
+          "growing2": "creciendo2",
+          "moving south2": "moviéndose al sur2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving north2": "moviéndose al norte2",
+          "jittering2": "poniéndose nervioso2",
+          "moving west2": "moviéndose al oeste2",
+          "patrolling2": "patrullando2",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
+          "driving with arrow keys2": "conducir con las flechas del teclado2"
+        },
+        "courseF_apps_collector": {
+          "wandering": "deambulando",
+          "moving west2": "moviéndose al oeste2",
+          "flying west and looping": "volar hacia el oeste y hacer un bucle",
+          "fluttering": "revolotear",
+          "moving east2": "moviéndose hacia el este2",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "wandering2": "deambulando2",
+          "spinning left2": "girando a la izquierda2",
+          "spinning right2": "girando a la derecha2",
+          "shrinking2": "encogiéndose2",
+          "growing2": "creciendo2",
+          "moving south2": "moviéndose al sur2",
+          "swimming left and right2": "nadando hacia la izquierda y derecha2",
+          "moving north2": "moviéndose al norte2",
+          "jittering2": "poniéndose nervioso2",
+          "patrolling2": "patrullando2",
+          "moving with arrow keys2": "moverse con las flechas del teclado2",
+          "driving with arrow keys2": "conducir con las flechas del teclado2"
+        },
+        "courseF_apps_madlib": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_apps_pet": {
+          "patrolling": "patrullando",
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_editable_card": {
+          "blocking movement": "bloqueo de movimiento",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "spinning left": "girando a la izquierda"
+        },
+        "courseF_editable_chatbot": {
+          "blocking movement": "bloqueo de movimiento",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wandering": "deambulando",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "shrinking": "encogiendose",
+          "patrolling": "patrullando",
+          "growing": "creciente",
+          "jittering": "poniéndose nervioso",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "spinning left": "girando a la izquierda"
+        },
+        "courseF_editable_madlib": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_choice_conflict": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_choice_conflict2": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_choice_penguin": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_choice_pufferfish": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_conflict": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_freeplay_air": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_freeplay_animals": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_freeplay_aquatic": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_freeplay_blank": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_freeplay_food": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_freeplay_space": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_events_key": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_practice_reorder": {
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_predict": {
+          "mystery behavior": "comportamiento misterioso",
+          "wandering": "deambulando",
+          "running east": "corriendo hacia el este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving east": "moverse al este"
+        },
+        "courseF_events_review": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_ship": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_stops": {
+          "moving east": "moverse al este",
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_events_time": {
+          "patrolling": "patrullando",
+          "wobbling": "tambalearse",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_label_predict": {
+          "moving east": "moverse al este",
+          "moving west": "moviéndose al oeste",
+          "mystery behavior": "comportamiento misterioso",
+          "wandering": "deambulando",
+          "running east": "corriendo hacia el este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "patrolling": "patrullando"
+        },
+        "courseF_place_fruit": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_behaviors": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "moving west": "moviéndose al oeste"
+        },
+        "courseF_sprites_clouds": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_desert": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_freeplay_air": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_freeplay_animals": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_freeplay_aquatic": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_freeplay_blank": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_freeplay_food": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_freeplay_space": {
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east": "moverse al este",
+          "moving east and looping": "moverse hacia el este y hacer un bucle",
+          "moving west": "moviéndose al oeste",
+          "wandering": "deambulando",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse"
+        },
+        "courseF_sprites_make": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_moreSprites": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_positioning": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_predict": {
+          "moving east": "moverse al este",
+          "moving west": "moviéndose al oeste",
+          "mystery behavior": "comportamiento misterioso",
+          "wandering": "deambulando",
+          "running east": "corriendo hacia el este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "patrolling": "patrullando"
+        },
+        "courseF_sprites_properties": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_sprites_ship": {
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_answer": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_color": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_conversation": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_events": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_freeplay": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_interview": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_multiprompt": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_choice_title": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_concat": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_events": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_print": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_prompts": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_text_review": {
+          "patrolling": "patrullando",
+          "moving forward": "avanzar",
+          "growing": "creciente",
+          "moving west": "moviéndose al oeste",
+          "spinning right": "girando a la derecha",
+          "moving east": "moverse al este",
+          "moving north": "moviéndose al norte",
+          "moving south": "moviéndose al sur",
+          "jittering": "poniéndose nervioso",
+          "wandering": "deambulando",
+          "shrinking": "encogiendose",
+          "spinning left": "girando a la izquierda",
+          "fluttering": "revolotear",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_card": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_card_finish": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_chatbot": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_chatbot_finish": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_madlib": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_madlib_finish": {
+          "wandering": "deambulando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
+        },
+        "courseF_variables_predict": {
+          "moving east": "moverse al este",
+          "moving west": "moviéndose al oeste",
+          "mystery behavior": "comportamiento misterioso",
+          "wandering": "deambulando",
+          "running east": "corriendo hacia el este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "patrolling": "patrullando"
+        },
+        "simcustom_2021": {
+          "wandering": "deambulando",
+          "patrolling": "patrullando",
+          "moving east": "moverse al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "encogiendose",
+          "growing": "creciente",
+          "moving south": "moviéndose al sur",
+          "swimming left and right": "nadar a izquierda y derecha",
+          "moving north": "moviéndose al norte",
+          "jittering": "poniéndose nervioso",
+          "moving west": "moviéndose al oeste",
+          "moving with arrow keys": "moverse con las teclas de flecha",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revolotear",
+          "wobbling": "tambalearse",
+          "moving west and looping": "moverse hacia el oeste y hacer un bucle",
+          "moving east and looping": "moverse hacia el este y hacer un bucle"
         }
       }
     }

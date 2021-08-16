@@ -5,32 +5,46 @@ zh-TW:
       Accelerometer Events: 加速計事件
       Adding Images: 增加圖像
       Adding Screens: 新增畫面
+      Alien Defender: 外星人入侵
+      Analog Sensors: 類比感測器
       Animate Your Scene: 為你的場景賦予生命
       Animating Sprites: 動畫角色
+      Arrays: 陣列
       Artist Intro with JR Hildebrand: 由 JR 希爾布蘭來介紹畫家
       Artist Intro with JR Hildebrande: 由 JR 希爾布蘭來介紹畫家
       Artist Project: 藝術專案
       'Artist: Variables': '小藝術家 - 變數（Variables）'
       Attribution: 根目錄 -> 資料 -> 進度 -> 屬性
+      Back and Forth: 不斷重複
       Basic Conditionals: 基本條件判斷
+      Bass, Mid, and Treble: 低音、中音和高音
       Binary Numbers: 二進位數
+      Binary and Data: 二進位和資料
       Board Events: 電路板事件
       Board Input and Output: 根目錄 -> 資料 -> 進度 -> 輸入輸出控制板
       Boolean Comparison: 布林值比較
       Build a Screen: 建造一個畫面
       Building an App: 構建一個手機應用程式
+      'Bunny ': "兔子\n"
       Button Circuits: 按鈕電路
+      Buttons and Switch: 按鈕和開關
       CS Discoveries Post-Course Survey: 電腦科學探索課後問卷調查
       CS Discoveries Post-course Survey: 電腦科學探索課後問卷調查
+      CSS Text Properties: CSS 文字屬性
+      CSS and Style Sheets: CSS 與樣式表
       Cake Defender: 蛋糕守衛者
       Challenge: 挑戰
       Challenge Levels: 挑戰等級
+      'Challenge: Draw an Image': '挑戰：繪製圖像'
       Challenges: 挑戰
       Chance: 機會
       Change: 改變
+      Changing Sensor Scale: 感測器測量值的修改
       Checking for a Winner: 確認誰是贏家
       Code Your Own Flappy Game: 實作你自己的像素鳥遊戲
       Collector Game: 收集遊戲
+      Collision Detection: 碰撞檢測
+      Collision Detection Review: 碰撞檢測
       Collisions: 碰撞
       Collisions in Games: 遊戲中的碰撞
       Color LEDs: 彩色顯示器
@@ -38,18 +52,30 @@ zh-TW:
       Combining Representations: 組合表示
       'Conditionals: If Statements': 'If-條件陳述式'
       'Conditionals: If and If/Else Statements': 'If 以及 If/Else -條件陳述式'
+      Course E Artist Project: 課程 E -小藝術家專案
+      Course E Sprite Lab Project: "課程 E 精靈實驗室專案\n"
+      Course F Artist Project: "課程 F 小藝術家專案\n"
+      Course F Sprite Lab Project: "課程 F 精靈實驗室專案\n"
       Create Your Own Animation: 建立你自己的動畫
       Create a Story: 新增故事
       Create your project: 創建你的專案
       Creating a Simulation: 設計模擬
+      Dance Crews: 舞蹈團隊
       Data Visualization: 資料視覺化
       De-bugging with the Step Button: 透過步驟按鈕進行除錯
       Debugging: 除錯
       Debugging with the Step Button: 透過步驟按鈕進行除錯
+      Demo - Bug Grab: 演示 - 錯誤抓取
       Demo Apps: 展示手機應用程式
       Design Mode: 設計模式
+      Designing Screens with Code: 以程式碼設計螢幕畫面
       Designing for Accessibility: 以無障礙為目的設計程式
+      Dogger Example: "小狗示例\n"
       Drawing: 繪圖
+      Drawing Shapes: 圖形的繪製
+      Editing Images: 圖像的編輯
+      End of Course Projects: 課程項目結束
+      Event Types: 事件類型
       Events: 事件
       Events and Linking Screens: 事件以及連結的畫面
       Events and Properties: 事件與屬性
@@ -57,7 +83,11 @@ zh-TW:
       Expanding Personal Website: 擴展個人網站
       Expanding Your Website: 擴展你的網站
       Experiment with Web Lab: 使用網路實驗室進行實驗
+      Exploration: 探索
+      'Exploration: Adding Style': '探索: 添加樣式'
+      Explore HTML: 探索 HTML
       Exploring more CSS: 探索更多的CSS
+      Final Personal Website: 完成你的個人網站
       Finish a Screen: 完成一個畫面
       Finish the Prototype: 完成原型
       Finishing Functions: 完成函式
@@ -68,29 +98,43 @@ zh-TW:
       For Loops: 計次迴圈（For Loops）
       For Loops and Color LEDs: For 迴圈以及彩色顯示器
       For Loops and Repeat Blocks: For迴圈以及重複區塊
+      Formatting HTML: 格式化 HTML
       Free Play: 自由發揮
       Functions: 函式
       Functions with Parameters: 函式帶參數
+      Geometric Sun: "幾何太陽\n"
+      Get In Formation: 加入陣形
+      Getters and Setters: Getter 與 Setter
       Getting Properties: 取得屬性
+      HTML Tags: HTML 標籤
+      Hardware and Software: 硬體和軟體
       Headings: 標題
       How to Create a Simple Function: 如何建立一個簡單的函示
       How to Make a Sprite: 如何建立一個角色
+      Hyperlinks: 超連結
       Ice Age Loops: 冰原歷險記迴圈
       Images and Sounds: 圖案與聲音
+      Images in HTML: 在 HTML 中的圖像
       Input Examples: 輸入範例
       Input with If-Else: 使用 If-Else 的輸入
+      Inspiration!: "自由發揮！\n"
+      Intro to Design Mode: 設計模式簡介
       Intro to For Loops: 迴圈介紹
       Intro to Sprites: 精靈圖介紹
       Intro to Variables: 參數介紹
       Introducing Sprite Lab: Sprite Lab 簡介
       Introduction to Arrays: 陣列（Arrays）的介紹
+      Introduction to Game Lab: Game Lab 的介紹
+      Introduction to Variables: 變數介紹
       Iteration and Parameters: 迭代和參數
       Keeping Data Secret: 讓資料保密
       Keyboard Input: 鍵盤輸入
       LED Apps: 發光二極管 應用程式
+      Layout Properties: 布局属性
       Layout with CSS: CSS佈局
       Learning from Simulations: 從模擬中學習
       Lesson Extras: 額外關卡
+      Lesson Overview: 教學內容概覽
       Light Show: 燈光表演
       Linking Pages: 鏈接頁面
       Linking Screens: 連結不同畫面
@@ -98,6 +142,7 @@ zh-TW:
       Loops with the Artist: 讓畫家進行迴圈操作
       Make a Prediction: 預測一下
       Make it Interactive: 讓他變得更有互動性
+      Making Music: 製作音樂
       Making Scenes: 製作場景
       Making Songs: 製作歌曲
       Making Sounds: 發出聲音
@@ -107,8 +152,8 @@ zh-TW:
       'Mini-Project: Alien Dance Moves': '小專案: 外星人的舞步'
       'Mini-Project: Alien Dance Party': '小專案: 外星人跳舞派對'
       'Mini-Project: Royal Battle': '小專案: 皇家對戰'
-      'Mini-Project: Snowflake #1': '小專案: 雪花一號'
-      'Mini-Project: Snowflake #2': '小專案: 雪花二號'
+      "Mini-Project: Snowflake #1": "小專案: 雪花一號"
+      "Mini-Project: Snowflake #2": "小專案: 雪花二號"
       'Mini-Project: Swimming Fish': '小專案: 游泳的魚兒'
       'Mini-Project: Swimming Fish (continued)': "小專案: 游泳的魚兒(續)\n"
       'Mini-Project: Virtual Pet': '小專案: 虛擬寵物'
@@ -118,17 +163,21 @@ zh-TW:
       'Mini-project: Jorge the Dog': '小專案: 喬治狗兒'
       'Mini-project: Sticker Design': '小專案: 設計貼紙'
       Modify simulation variables: 修改模擬變數
+      Modifying Arrays: 修改陣列
+      More Buttons: 更多按鈕
       More Input: 更多輸入
       More Monsters: 更多怪物
       More Parameters: 更多參數
       Motorcycle: 摩托車
       Movement with the Counter Pattern: 使用計數器來移動
+      Multi-Screen Apps: 多螢幕應用程式
       Multiframe Animations: 多視窗動畫
       Musical Arrays: 音樂陣列
       My Online Neighborhood: 我的線上鄰居
       Nested Loops with the Bee: 跟著蜜蜂一起使用巢狀迴圈
       New Shapes: 新的形狀
       Orientation: 螢幕方向
+      Overview: 概覽
       Pair Programming: 結對編程
       Picturing Data: 描繪資料
       Planning: 計畫
@@ -138,6 +187,8 @@ zh-TW:
       Platform Jumper - Player: 平台跳跳人 -  玩家
       Playing Notes: 遊玩筆記
       Playing with Notes: 遊玩筆記
+      Plotting Shapes in Game Lab: 在 Game Lab 裡繪製圖形
+      Polling Events: 輪詢事件
       Post-Course Survey Instructions: 課後問券指示
       Practice: 練習
       Prediction: 預測
@@ -151,7 +202,9 @@ zh-TW:
       Project Work: '專案: 工作'
       Properties: 屬性
       Publishing Your Website: Publishing Your Website
+      Quarter Notes: 四分音符
       RGB Exploration: 三原色的探索
+      Random Numbers: 隨機取數
       Reading Sensors: 讀取感測器
       Recovery: 恢復
       Reflection: 反思
@@ -161,8 +214,14 @@ zh-TW:
       Repeat Unit Statements: 重複單位陳述式
       Repeat Until Statements: 重複... 直到... 陳述式
       Representing Images: 表示圖像
+      Responding to User Input: 回應使用者輸入的內容
       Review: 檢視
+      Revise Artist Project: "修訂小藝術家專案\n"
+      Revise Sprite Lab Project: "修訂精靈實驗室專案\n"
+      Robot Doodle: "機器人塗鴉\n"
       Run a simulation: 執行一個模擬程式
+      Sample App: 應用程式範例
+      Sample Program: 範例程式
       Sample Programs: 範例程式
       Screen Design: 畫面設計
       Sensor Events: 感測事件
@@ -173,35 +232,72 @@ zh-TW:
       Share Your Message: 分享你的訊息
       Side Scroller: 側邊捲軸
       Simple Circuits: 簡易電路
+      Skill Building: 技能發展
       Sliders: 滑塊
       Smart Bike - Blinkers: 智慧單車 - 閃光警戒燈
+      Speed it Up, Slow it Down: 加速、減速
+      Sprite Interactions: 角色的互動
+      Sprite Lab Example Project: "精靈實驗室示例專案\n"
       Sprite Lab Project: Sprite Lab 專案
+      Sprite Velocity: 角色速度
       Sprites and the Draw Loop: 小怪跟畫迴圈
       Star Chaser: 星星追尋者
       Stopping the Outbreak with Masks: 用口罩阻止疫情爆發
       Styling Text: 文字樣式化
       Styling with Classes: 利用類別進行樣式化
       Styling your Website: 樣式化你的網站
+      Text Compression: 文字壓縮
+      The Accelerometer: 加速器
+      The Animation Tab: 動畫頁籤
       The Artist in Code Studio: 在程式碼工作室裡面的畫家
+      The Body Element: Body 元素
       The Buzzer: 蜂鳴器
       The Collector: 搜集者
+      The Draw Loop: draw（繪圖）迴圈
       The Harvester: 農夫
       UI Element Properties: 操作介面元素屬性
       User Interface: 使用者介面
+      Using Accelerometer Events: 使用加速器事件
       Using Getters and Setters: 使用 取屬性函式（Getters） 跟設定屬性函式（Setters）
       Using HTML Tags: 使用HTML 標籤
       Using Random Numbers: 使用隨機數字
+      Using the Grid: 網格的用法
       Using the LED: 使用彩色顯示器
       Using the Repeat Block: 使用「重複」積木
       Using the Switch: 使用開關
       Vaccines: 疫苗
+      Variables: 變數
       Velocity: 速度
       Video: 影片
+      'Video: "If/Else" Statements': '影片：如果/否則 陳述式'
+      'Video: Booleans': '影片：布林值'
+      'Video: CS Matters': '影片：計算機科學很重要'
+      'Video: Conditional Statements': '影片：條件陳述式'
+      'Video: Conditionals': '影片：條件判斷'
+      'Video: Drawing in Game Lab - Part 1': '影片：用 Game Lab 繪圖 - 第 1 部分'
+      'Video: Drawing in Game Lab - Part 2': '影片：用 Game Lab 繪圖 - 第 2 部分'
       'Video: For Loops': '影片：計次迴圈'
+      'Video: Functions': '影片：函式'
+      'Video: If/Else Statements': '影片：如果/否則 陳述式'
+      'Video: Intro to CSS': '影片：CSS 介紹'
+      'Video: Intro to CSS Part 2': '影片：CSS 介紹 - 第 2 部分'
+      'Video: Intro to Web Lab - Part 1': '影片：Web Lab 介紹 - 第 1 部分'
+      'Video: Intro to Web Lab - Part 2': '影片：Web Lab 介紹 - 第 2 部分'
+      'Video: Introduction to Arrays': '影片：陣列的介紹'
+      'Video: Introduction to Sprites': '影片：角色的介紹'
+      'Video: Introduction to the Draw Loop': '影片：圖形迴圈的介紹'
+      'Video: Problem Solving Process': '影片：問題的解決流程'
+      'Video: Sprite Movement': '影片：角色動作'
+      'Video: The Animation Tab': '影片：動畫頁籤'
+      'Video: Velocity': '影片：速度'
+      'Video: What Makes a Computer, a Computer?': '影片：是什麼讓電腦成為電腦？'
       Warm Up: 熱身
       Website Project: 網站專案
       Welcome to Monster Town: 歡迎來到怪物鎮
+      Where'd They Go?: 他們要去哪？
       While Loops with the Farmer: 與農夫一起嘗試 while（當）迴圈
       Wrap-up: 總結
       Your Personal Website: 你的個人主頁
+      getNumber: getNumber
+      getProperty: 取得屬性
       isTouching: 是否碰到了

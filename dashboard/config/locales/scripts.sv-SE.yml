@@ -313,8 +313,8 @@ sv:
           student_description: Ett urval av kurs 4 nivåer för användartester.
         algebra:
           title: Datavetenskap i Algebra
-          description: Lär dig funktionell programmering genom algebra
-          description_short: Lär dig funktionell programmering genom algebra
+          description: Lär dig funktionell programmering genom algebra.
+          description_short: Lär dig funktionell programmering genom algebra.
           lessons:
             'Calc: Defining Variables':
               name: Definiera variabler och Substitution
@@ -356,7 +356,7 @@ sv:
               name: 'Ouppkopplad: Design recept'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Ouppkopplad: videospel och koordinat-plan'
-          student_description: Lär dig funktionell programmering genom algebra
+          student_description: Lär dig funktionell programmering genom algebra.
         infinity:
           title: Disney Infinity Play Lab
           description: Använd Play Lab för att skapa en berättelse eller ett spel
@@ -388,8 +388,6 @@ sv:
           student_description: En handfull pussel för att demonstrera miljön och programmeringsspråket
             som används i Code.org CS i Algebra
         K5PD:
-          title: K5 Professionell utveckling
-          description: Professionell utveckling för K5 kurser
           lessons:
             Computer Science Pedagogy:
               name: Datavetenskapens pedagogik
@@ -405,7 +403,8 @@ sv:
               name: Unplugged lektioner
             Writing computer programs:
               name: Skriva datorprogram
-          student_description: Professionell utveckling för K5 kurser
+            new stage:
+              name: ny etapp
         netsim:
           title: Internet Simulator
         pixelation:
@@ -504,12 +503,12 @@ sv:
             Prova vår Flappy Code övning!
         jigsaw:
           title: Pussel
-          description: Prova vår Jigsaw handledning
-          description_short: Prova vår Jigsaw handledning
+          description: Prova vår Jigsaw handledning.
+          description_short: Prova vår Jigsaw handledning.
           lessons:
             Jigsaw:
               name: Pussel
-          student_description: Prova vår Jigsaw handledning
+          student_description: Prova vår Jigsaw handledning.
         step:
           title: Steg
           description: Steg handledning
@@ -546,11 +545,6 @@ sv:
           student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
         cspunit1:
           title: CSP enhet 1 - Digital Information
-          description: Denna enhet utforskar de tekniska utmaningar och frågor som
-            uppkommer av behovet att representera digital information i datorer och
-            överföra det mellan människor och data- enheter.
-          description_short: Utforska hur digital information är representerad och
-            överförd
           lessons:
             Binary Numbers:
               name: Binära tal
@@ -562,13 +556,8 @@ sv:
               name: Skicka bitar i den verkliga världen
             Text Compression:
               name: Text komprimering
-          student_description: Denna enhet utforskar de tekniska utmaningar och frågor
-            som uppkommer av behovet att representera digital information i datorer
-            och överföra det mellan människor och data- enheter.
         algebraPD:
           title: Datavetenskap i Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Evaluation Blocks:
               name: Utvärderingsblock
@@ -576,7 +565,6 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
-          student_description: Lär ut funktionell programmering genom algebra
         algPDmiami:
           title: Datavetenskap i Algebra PD
           description: Undervisa i algebra genom funktionell programmering
@@ -625,22 +613,14 @@ sv:
             Lesson 15:
               name: Lektion 15
         ECSPD:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         sciencePD:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         cspunit3:
-          description_short: Utforska hur digital information är representerad och
-            överförd
           lessons:
             Creating Functions:
               name: Skapa funktioner
@@ -661,23 +641,15 @@ sv:
             The Design Recipe:
               name: Design recept
         ECSPD-NexTech:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         ECSPD-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         algebraPD-NexTech:
           title: Datavetenskap i Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Evaluation Blocks:
               name: Utvärderingsblock
@@ -685,11 +657,8 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
-          student_description: Lär ut funktionell programmering genom algebra
         algebraPD-iZone:
           title: Datavetenskap i Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Evaluation Blocks:
               name: Utvärderingsblock
@@ -697,40 +666,22 @@ sv:
               name: Introduktion till PD
             Teacher Dashboard:
               name: Lärare Dashboard
-          student_description: Lär ut funktionell programmering genom algebra
         sciencePD-NexTech:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         sciencePD-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
-          student_description: Lär ut funktionell programmering genom algebra
         sciencePD2:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-          student_description: Lär ut funktionell programmering genom algebra
-        cspunit2:
-          description_short: Utforska hur digital information är representerad och
-            överförd
-          lessons:
-            The Internet:
-              name: Internet
         algebraPD2a:
           title: Datavetenskap i Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Booleans:
               name: Booleska värden
@@ -750,7 +701,6 @@ sv:
               name: Strängar och bilder
             The Design Recipe:
               name: Design recept
-          student_description: Lär ut funktionell programmering genom algebra
         allthethings:
           title: Allt!
           description: Alla typer av nivå för UI-tester
@@ -791,8 +741,6 @@ sv:
           student_description: Alla typer av nivå för UI-tester
         algebraPD2b:
           title: Datavetenskap i Algebra PD
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Booleans:
               name: Booleska värden
@@ -814,7 +762,6 @@ sv:
               name: Lärare Dashboard
             Writing Contracts:
               name: Skriva kontrakt
-          student_description: Lär ut funktionell programmering genom algebra
         cspfacilitator:
           lessons:
             App Lab:
@@ -828,17 +775,12 @@ sv:
             Next Steps:
               name: Nästa steg
         ECSPD2:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
-          student_description: Lär ut funktionell programmering genom algebra
         algebraPD2:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Teacher Dashboard:
               name: Lärare Dashboard
@@ -846,57 +788,42 @@ sv:
               name: Design recept
             Welcome!:
               name: Välkommen!
-          student_description: Lär ut funktionell programmering genom algebra
         sciencePD2b:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-          student_description: Lär ut funktionell programmering genom algebra
         science-PD2:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-          student_description: Lär ut funktionell programmering genom algebra
         Equity-OnlinePD:
           lessons:
             Next Steps:
               name: Nästa steg
         sciencePD2b-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-          student_description: Lär ut funktionell programmering genom algebra
         ECSPD2-iZone:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
-          student_description: Lär ut funktionell programmering genom algebra
         ECSPD2-NexTech:
-          description: Lär ut funktionell programmering genom algebra
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Welcome!:
               name: Välkommen!
             Wrap-up:
               name: Gör klart
-          student_description: Lär ut funktionell programmering genom algebra
         asUnplugged:
+          description_audience: Åldrarna 6-13
           lessons:
             Binary Bracelets:
               name: Binära armband
@@ -916,6 +843,8 @@ sv:
               name: Låtskrivande
             The Big Event:
               name: Den stora händelsen
+        afterschool1:
+          description_audience: Åldrarna 7-13
         algebraPD3a:
           title: Datavetenskap i Algebra PD
         ScienceP3OLPT2:
@@ -941,8 +870,6 @@ sv:
           student_description: Skapa en berättelse eller gör ett spel med Ice Age
             Play Lab!
         cspunit3temp:
-          description_short: Utforska hur digital information är representerad och
-            överförd
           lessons:
             While Loops:
               name: "'Medan' loopar(slingor)"
@@ -957,7 +884,6 @@ sv:
           student_description: Skapa en berättelse eller gör ett spel med Gumball
             Play Lab!
         starwars:
-          title: 'Star Wars: Bygg en galax med kod'
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
             i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star
@@ -968,7 +894,6 @@ sv:
           student_description: Lär dig att programmera droider och skapa ditt eget
             Star Wars-spel i en galax långt, långt borta.
         starwarsblocks:
-          title: 'Star Wars: Bygg en galax med kod'
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
             i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star
@@ -980,8 +905,8 @@ sv:
             Star Wars-spel i en galax långt, långt borta.
         mc:
           title: Minecraft Hour of Code
-          description: Använd block med kod för att ta med Steve eller Alex på ett
-            äventyr genom denna Minecraft-värld
+          description: Använd block av kod för att ta Steve eller Alex på ett äventyr
+            genom denna Minecraft-värld.
           description_short: Utforska en Minecraft-värld genom kod
           lessons:
             Hour of Code 2015:
@@ -994,12 +919,6 @@ sv:
               name: Välkommen!
             Wrap-Up:
               name: Sammanfattning
-        cspunit5:
-          description_short: Utforska hur digital information är representerad och
-            överförd
-        cspunit4:
-          description_short: Utforska hur digital information är representerad och
-            överförd
         AlgebraA:
           description: Lär dig funktionell programmering genom algebra
           description_short: Lär dig funktionell programmering genom algebra
@@ -1024,7 +943,6 @@ sv:
               name: 'Ouppkopplad: Design recept'
           student_description: Lär dig funktionell programmering genom algebra
         AlgebraB:
-          title: Datavetenskap i Algebra
           description: Lär dig funktionell programmering genom algebra
           description_short: Lär dig funktionell programmering genom algebra
           lessons:
@@ -1052,9 +970,7 @@ sv:
               name: 'Ouppkopplad: videospel och koordinat-plan'
           student_description: Lär dig funktionell programmering genom algebra
         algebraPD1:
-          title: Datavetenskap i Algebra PD
           description: Undervisa i algebra genom funktionell programmering
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Evaluation Blocks:
               name: Utvärderingsblock
@@ -1100,8 +1016,6 @@ sv:
               name: Introduktion till PD
         CSF_Secret_Sample:
           description_audience: Åldrar 8 + (efter kurs 2)
-        ECSPD1:
-          description_short: Lär ut funktionell programmering genom algebra
         algebraFacilitator:
           description: Undervisa i algebra genom funktionell programmering
           description_short: Undervisa i algebra genom funktionell programmering
@@ -1114,7 +1028,6 @@ sv:
               name: Lärare Dashboard
           student_description: Undervisa i algebra genom funktionell programmering
         sciencePD1:
-          description_short: Lär ut funktionell programmering genom algebra
           lessons:
             Introduction to PD:
               name: Introduktion till PD
@@ -1137,11 +1050,18 @@ sv:
               display_name: Innehåll
             practice:
               display_name: Undervisningsmetoder
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Växla till designläge
         CSDU2-Draft:
           lessons:
             Peer Review:
               name: Din recension
+        CSF_Secret_Sample_Story:
+          description_audience: Åldrarna 8-18+
         MikeTest:
+          description_audience: Åldrarna 8-98
           lessons:
             Artist Functions:
               name: 'Konstnären: Funktioner'
@@ -1160,7 +1080,10 @@ sv:
             'Bee: Conditionals':
               name: 'Biet: Villkor'
         gradeKinder:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            Debugging:
+              name: Felsökning
             Events:
               name: Händelser
             'Jigsaw: Learn to drag and drop':
@@ -1170,13 +1093,17 @@ sv:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
         grade4:
+          description_audience: Ålder 9-99
           lessons:
             Digital Citizenship:
               name: Digitalt medborgarskap
             Songwriting:
               name: Låtskrivande
         grade1:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            Debugging:
+              name: Felsökning
             Events:
               name: Händelser
             'Jigsaw: Learn to drag and drop':
@@ -1184,6 +1111,7 @@ sv:
             Loops:
               name: loopar
         grade5:
+          description_audience: Åldrarna 10-110
           lessons:
             'Artist: For Loops':
               name: 'Konstnären: ''för''-slingor'
@@ -1212,7 +1140,10 @@ sv:
             Wrap-up:
               name: Gör klart
         grade3:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
+            " Bee: Conditionals":
+              name: " Biet: Villkor"
             'Artist: Nested Loops':
               name: 'Konstnären: Nästlade slingor'
             Bee Debugging:
@@ -1229,6 +1160,23 @@ sv:
               display_name: Innehåll
             practice:
               display_name: Undervisningsmetoder
+          lessons:
+            Lesson 1,10:
+              name: Lektion 1,10
+            Lesson 1,11:
+              name: Lektion 1,11
+            Lesson 1,4:
+              name: Lektion 1,4
+            Lesson 1,6:
+              name: Lektion 1,6
+            Lesson 1,9:
+              name: Lektion 1,9
+            Lesson 2,10:
+              name: Lektion 2,10
+            Lesson 2,2:
+              name: Lektion 2,2
+            Lesson 2,3:
+              name: Lektion 2,3
         csd3-2017:
           lesson_groups:
             csd3_1:
@@ -1243,6 +1191,7 @@ sv:
             Conditionals:
               name: Villkor
         grade2:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
           lessons:
             Flappy:
               name: Flappy
@@ -1316,6 +1265,8 @@ sv:
           student_description: Göra en basketmatch
         csd2-2017:
           lessons:
+            new stage:
+              name: ny etapp
             Peer Review:
               name: Din recension
             Lists:
@@ -1411,6 +1362,8 @@ sv:
               name: Introduktion
             Ice Age Play Lab:
               name: Ice Age Play Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
         classic-hoc-impact-study:
           description_short: Prova grunderna i datavetenskap med många roliga figurer!
           lessons:
@@ -1449,6 +1402,10 @@ sv:
               display_name: Innehåll
             practice:
               display_name: Undervisningsmetoder
+        csdgraveyard:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-support:
           lesson_groups:
             required:
@@ -1510,6 +1467,8 @@ sv:
               name: Introduktion
         csd5-draft:
           lessons:
+            new stage:
+              name: ny etapp
             Representing Images:
               name: Representerar bilder
             Problem Solving and Data:
@@ -1522,6 +1481,10 @@ sv:
           lessons:
             Extra:
               name: Extra
+        applab-2hour:
+          lessons:
+            new stage:
+              name: ny etapp
         coursed-ramp:
           lessons:
             Introduction:
@@ -1587,6 +1550,8 @@ sv:
               name: temp
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -1631,6 +1596,8 @@ sv:
           title: Kurs E
           assignment_family_title: Kurs E
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Envelope Variables:
@@ -1647,6 +1614,8 @@ sv:
           title: Kurs F
           assignment_family_title: Kurs F
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Building a Foundation:
               name: Bygga en grund
         cspnovice:
@@ -1758,8 +1727,14 @@ sv:
           lessons:
             Thanks:
               name: Tack
+        csp-pre-survey-test-2017:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-research-mxghyt:
           lessons:
+            new stage:
+              name: ny etapp
             Creating Functions:
               name: Skapa funktioner
         e-f-ramp:
@@ -1790,6 +1765,10 @@ sv:
               name: Artist binär
             Building a Foundation:
               name: Bygga en grund
+        csp3-a:
+          lessons:
+            new stage:
+              name: ny etapp
         new-express:
           lesson_groups:
             content:
@@ -1815,6 +1794,8 @@ sv:
           lessons:
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             Envelope Variables:
@@ -1833,10 +1814,18 @@ sv:
               name: Problemlösning och data
             Automating Data Decisions:
               name: Automatisera databeslut
+        hocali:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-staging:
           lessons:
             Creating Functions:
               name: Skapa funktioner
+        pwc:
+          lessons:
+            new stage:
+              name: ny etapp
         hero:
           description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet!
             Res genom Minecraft via koden.
@@ -1845,6 +1834,18 @@ sv:
               name: Minecraft Hour of Code
           student_description: Minecraft är tillbaka för Hour of Code med en helt
             ny aktivitet! Res genom Minecraft via koden.
+        csp-explore-2017:
+          lessons:
+            new stage:
+              name: ny etapp
+        aws-demo:
+          lessons:
+            new stage:
+              name: ny etapp
+        colehoc17:
+          lessons:
+            new stage:
+              name: ny etapp
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1863,6 +1864,8 @@ sv:
           lessons:
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -1892,6 +1895,10 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        textbook:
+          lessons:
+            new stage:
+              name: ny etapp
         csd3-2018:
           lesson_groups:
             csd3_1:
@@ -1942,8 +1949,6 @@ sv:
               name: Binära armband
             'Unplugged: Binary':
               name: Binära bilder
-            Artist Binary:
-              name: Artist binär
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1976,8 +1981,6 @@ sv:
               name: Digitalt medborgarskap
             'Unplugged: Binary':
               name: Binära bilder
-            Artist Binary:
-              name: Artist binär
             Graph Paper Programming:
               name: Kalkyleringsprogrammering
             Relay Programming:
@@ -1995,6 +1998,8 @@ sv:
               name: Binära armband
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funktioner med parametrar\_
             Functions with Parameters:
               name: Funktioner med parametrar
         coursee-2018:
@@ -2023,6 +2028,8 @@ sv:
               name: Mina Robotic- vänner
             Building a Foundation:
               name: Bygga en grund
+            'Algorithms: Tangrams':
+              name: 'Algoritmer: Tangrams'
             Introduction:
               name: Introduktion
             Ice Age Play Lab:
@@ -2201,11 +2208,12 @@ sv:
             Artist:
               name: Konstnären
         dance:
-          title: Dansparty
           description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara och ytterligare 25 artister!
+            Ciara och 25 andra!
           description: Koda ditt egna dansparty som du kan dela med dina vänner.
           lessons:
+            new stage:
+              name: ny etapp
             Dance Party:
               name: Dansparty
           student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
@@ -2295,8 +2303,6 @@ sv:
               name: Digitalt medborgarskap
             'Unplugged: Binary':
               name: Binära bilder
-            Artist Binary:
-              name: Artist binär
             Dance Party:
               name: Dansparty
         coursee-2019:
@@ -2370,6 +2376,8 @@ sv:
             content:
               display_name: Innehåll
           lessons:
+            new stage:
+              name: ny etapp
             'null':
               name: 'null'
         dance-extras-gallery:
@@ -2440,6 +2448,10 @@ sv:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Verklighetsalgoritmer: Så ett frö'
+        dani-test-script:
+          lessons:
+            new stage:
+              name: ny etapp
         csd2-2019:
           lessons:
             Lists:
@@ -2514,12 +2526,18 @@ sv:
             required:
               display_name: Översikt
           lessons:
+            new stage:
+              name: ny etapp
             Number Systems:
               name: Talsystem
             Sending Binary Messages:
               name: Skicka binära meddelanden
             Binary Numbers:
               name: Binära tal
+        csd-videos:
+          lessons:
+            new stage:
+              name: ny etapp
         time4csdemo:
           lessons:
             Crowdsourcing:
@@ -2583,6 +2601,8 @@ sv:
             csp_libraries:
               display_name: Bibliotek
           lessons:
+            new stage:
+              name: ny etapp
             Libraries:
               name: Bibliotek
         csp8-pilot-staging:
@@ -2629,6 +2649,9 @@ sv:
               display_name: Projekt
             required:
               display_name: Översikt
+          lessons:
+            new stage:
+              name: ny etapp
         fit2019-novice:
           lesson_groups:
             required:
@@ -2666,12 +2689,21 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        maddie-test:
+          lessons:
+            stage 1:
+              name: steg 1
+            new stage:
+              name: ny etapp
         csp3-pilot:
           lesson_groups:
             content:
               display_name: Innehåll
             required:
               display_name: Översikt
+          lessons:
+            Debugging:
+              name: Felsökning
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2705,6 +2737,9 @@ sv:
               display_name: Översikt
             content:
               display_name: Innehåll
+          lessons:
+            new stage:
+              name: ny etapp
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
@@ -2751,8 +2786,13 @@ sv:
               display_name: Innehåll
             required:
               display_name: Översikt
+          lessons:
+            new stage:
+              name: ny etapp
         peru-2019:
           lessons:
+            new stage:
+              name: ny etapp
             Introduction:
               name: Introduktion
             Nested Loops:
@@ -2776,6 +2816,8 @@ sv:
           lessons:
             Next Steps:
               name: Nästa steg
+            extra:
+              name: extra
             Loops:
               name: loopar
             Conditionals:
@@ -2793,6 +2835,10 @@ sv:
             timmen.
           student_description: Med ytterligare projektidéer kan du fortsätta efter
             den första timmen.
+        csp10-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2803,6 +2849,9 @@ sv:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+          lessons:
+            new stage:
+              name: ny etapp
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -2854,6 +2903,10 @@ sv:
               display_name: Bibliotek
             required:
               display_name: Översikt
+        csp8-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -2876,6 +2929,10 @@ sv:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
+        csp9-pilot:
+          lessons:
+            new stage:
+              name: ny etapp
         csd2-2020:
           lessons:
             Images:
@@ -2977,8 +3034,6 @@ sv:
               name: Villkorssatser med kort
             'Unplugged: Binary':
               name: Binära bilder
-            Artist Binary:
-              name: Artist binär
             Digital Citizenship:
               name: Digitalt medborgarskap
             Dance Party:
@@ -3039,12 +3094,50 @@ sv:
               name: Stavnings-bi
         csp1-2020:
           lessons:
+            new stage:
+              name: ny etapp
             Binary Numbers:
               name: Binära tal
+        csp2-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp3-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+            Debugging:
+              name: Felsökning
+        csp6-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp8-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp9-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp10-2020:
+          lessons:
+            new stage:
+              name: ny etapp
+        csp-march-virtual:
+          lessons:
+            new stage:
+              name: ny etapp
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Skapa funktioner
+        jess-test-script:
+          lessons:
+            new stage:
+              name: ny etapp
+            Debugging:
+              name: Felsökning
         csd2-virtual:
           lessons:
             Images:
@@ -3066,10 +3159,16 @@ sv:
               name: funktioner
         code-break:
           lessons:
+            new stage:
+              name: ny etapp
             Algorithms:
               name: Algoritmer
             Events:
               name: Händelser
+        no-lg:
+          lessons:
+            new stage:
+              name: ny etapp
         csp5-virtual-part2:
           lessons:
             While Loops:
@@ -3091,6 +3190,10 @@ sv:
           lesson_groups:
             k5_next_steps_1:
               display_name: Nästa steg
+        dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: lektion 2
         csd3-virtual:
           lessons:
             Variables:
@@ -3138,12 +3241,6 @@ sv:
           title: Simulera ett utbrott
           description_short: Använd Sprite Lab för att skapa en simulering av ett
             virusutbrott.
-        ml-playground:
-          lessons:
-            lesson14:
-              name: Lektion 14
-            lesson15:
-              name: Lektion 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -3170,6 +3267,8 @@ sv:
               display_name: variabler
             outbreak:
               display_name: Utbrottssimulator
+            debugging:
+              display_name: Felsökning
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -3216,6 +3315,11 @@ sv:
             Binary Numbers:
               key: Binära tal
               name: Binära tal
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Felsökning
+              name: Felsökning
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -3297,7 +3401,6 @@ sv:
               name: Binära bilder
             Artist Binary:
               key: Artist binär
-              name: Artist binär
           lesson_groups:
             csf_events:
               display_name: Händelser
@@ -3409,12 +3512,8 @@ sv:
             av ett virusutbrott.
         ai-unit-pilot:
           lessons:
-            lesson14:
-              name: Lektion 14
-            lesson15:
-              name: Lektion 15
-            lesson17:
-              name: Lektion 15
+            intro:
+              name: Lektion 1
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3423,10 +3522,20 @@ sv:
           lesson_groups:
             lesson group:
               display_name: Innehåll
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introduktion
             Loops:
               key: loopar
               name: loopar
@@ -3448,11 +3557,68 @@ sv:
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduktion
-            k5_next_steps_1:
-              display_name: Nästa steg
             Introduction:
               display_name: Introduktion
-        aiml-2021:
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lektion 1
+            Lesson 2:
+              display_name: Lektion 2
+            Lesson 3:
+              display_name: Lektion 3
+            Lesson 4:
+              display_name: Lektion 4
+            Lesson 5:
+              display_name: Lektion 5
+        kodea-pd-2021:
           lessons:
-            lesson15:
-              name: Lektion 15
+            Next Steps:
+              key: Nästa steg
+              name: Nästa steg
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Lärar gemenskapen
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Resurser
+            lessonGroup-2:
+              display_name: Enhet 1
+            lessonGroup-4:
+              display_name: Enhet 2
+            lessonGroup-5:
+              display_name: Enhet 3
+            lessonGroup-6:
+              display_name: Enhet 4
+            lessonGroup-7:
+              display_name: Enhet 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        tesspltest:
+          lessons:
+            lesson-2:
+              name: Lektion 2
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Översikt
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Översikt

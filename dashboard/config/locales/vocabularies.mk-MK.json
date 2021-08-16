@@ -1,0 +1,29 @@
+{
+  "mk-MK": {
+    "data": {
+      "vocabularies": {
+        "variable/coursef/2021": {
+          "word": "Променлива"
+        },
+        "define/coursef/2021": {
+          "word": "Дефинирајте"
+        },
+        "function/express/2021": {
+          "word": "Функција"
+        },
+        "variable/express/2021": {
+          "word": "Променлива"
+        },
+        "define/express/2021": {
+          "word": "Дефинирајте"
+        },
+        "function/coursee/2021": {
+          "word": "Функција"
+        },
+        "define/coursee/2021": {
+          "word": "Дефинирајте"
+        }
+      }
+    }
+  }
+}

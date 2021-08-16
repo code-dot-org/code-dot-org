@@ -37,6 +37,13 @@ $baseFontFamily: $gotham-regular;
 $headingsFontWeight: normal;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+$selectUserTypeButtonBorderColor: #ccc;
+$selectUserTypeButtonBackgroundColor: #fff;
+$selectUserTypeButtonTextColor: #000;
+$selectUserTypeButtonBackgroundColorHover: #ddd;
+$selectUserTypeButtonTextColorHover: #000;
+$selectUserTypeButtonBackgroundColorSelected: #00adbc;
+$selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
 // Font-awesome 4.6.3
@@ -464,7 +471,7 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 270px;
+$footer_height: 216px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -1747,6 +1754,54 @@ a.download-video {
     margin: 20px 0;
   }
 
+  .select-user-type-teacher-button, .select-user-type-student-button {
+    min-width: 225px;
+    min-height: 275px;
+    position: relative;
+    background-color: $selectUserTypeButtonBackgroundColor;
+    color: $selectUserTypeButtonTextColor;
+    border-radius: 15px;
+    border-color: $selectUserTypeButtonBorderColor;
+
+    .user-type-name {
+      position: absolute;
+      left: 35%;
+      top: 20px;
+      text-align: center;
+    }
+
+    .user-type-desc {
+      position: absolute;
+      top: 55px;
+      text-align: left;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .user-type-abilities-unordered-list {
+      position: absolute;
+      text-align: left;
+      margin-left: 30px;
+      margin-right: 5px;
+      top: 100px;
+    }
+  }
+
+  .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
+    background-color: $selectUserTypeButtonBackgroundColorHover;
+    color: $selectUserTypeButtonTextColorHover;
+  }
+
+  .select-user-type-button-selected {
+    background-color: $selectUserTypeButtonBackgroundColorSelected;
+    color: $selectUserTypeButtonTextColorSelected;
+  }
+
+  .select-user-type-button-selected:hover {
+    background-color: $selectUserTypeButtonBackgroundColorSelected;
+    color: $selectUserTypeButtonTextColorSelected;
+  }
+
   .finish-signup {
     width: 800px;
   }
@@ -1883,6 +1938,10 @@ a.download-video {
       p {
         margin: 0;
       }
+    }
+
+    #signup-select-user-type-label {
+      width: 135px;
     }
 
     .padded-container {

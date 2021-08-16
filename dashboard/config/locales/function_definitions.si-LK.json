@@ -593,6 +593,11 @@
             "parameters": {
               "sides": "පැති"
             }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "පාට"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1025,7 +1030,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "විශාලත්වය"
+              "size": "විශාලත්වය",
+              "color": "පාට"
             }
           },
           "do something": {
@@ -1051,7 +1057,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "විශාලත්වය"
+              "size": "විශාලත්වය",
+              "color": "පාට"
             }
           },
           "do something": {
@@ -1090,7 +1097,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "විශාලත්වය"
+              "size": "විශාලත්වය",
+              "color": "පාට"
             }
           },
           "black outline": {
@@ -1205,6 +1213,11 @@
           "draw a polygon": {
             "parameters": {
               "sides": "පැති"
+            }
+          },
+          "draw background": {
+            "parameters": {
+              "color": "පාට"
             }
           }
         },
@@ -1356,6 +1369,731 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "මගේ ශ්‍රිතය"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "මගේ ශ්‍රිතය"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න",
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "parameters": {
+              "points": "ලකුණු",
+              "length": "දිග"
+            }
+          },
+          "draw a circle": {
+            "name": "රවුමක් අඳින්න",
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "sides": "පැති",
+              "length": "දිග"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ශ්‍රිතය 1"
+          },
+          "function 2": {
+            "name": "ශ්‍රිතය 2"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          },
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "ක්‍රීඩාව අවසන් කරන්න"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "parameters": {
+              "binary": "ද්විමය"
+            }
           }
         }
       }

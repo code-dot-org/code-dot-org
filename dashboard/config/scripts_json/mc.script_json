@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:12 UTC",
+    "family_name": "mc",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "mc"
@@ -60,7 +62,6 @@
           "Overworld Move to Sheep"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +85,6 @@
           "Overworld Chop Tree"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +108,6 @@
           "Overworld Shear Sheep"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
           "Overworld Chop Trees"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +154,6 @@
           "Overworld Place Wall"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +177,6 @@
           "Overworld House Frame Chosen"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +200,6 @@
           "Overworld Plant Crops"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +223,6 @@
           "Overworld Avoid Monsters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +246,6 @@
           "Underground Mining Coal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +269,6 @@
           "Underground Iron"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +292,6 @@
           "Underground Avoiding Lava"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +315,6 @@
           "Underground If Statements"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +338,6 @@
           "Overworld Powered Minecart"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +361,6 @@
           "Overworld Free Play 20x20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

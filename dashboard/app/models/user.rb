@@ -2197,6 +2197,11 @@ class User < ApplicationRecord
     )
   end
 
+  def has_pilot_experiment?(pilot_name)
+    return false unless pilot_name
+    SingleUserExperiment.enabled?(user: self, experiment_name: pilot_name)
+  end
+
   # Called before_destroy.
   # Soft-deletes any projects and other channel-backed progress belonging to
   # this user.  Unfeatures any featured projects belonging to this user.

@@ -137,7 +137,7 @@ sq:
             'Bee: Functions':
               name: 'Bleta: Funksionet'
             'Bee: Nested Loops':
-              name: 'Bleta: Ciklet e Mbivendosura'
+              name: 'Bletë: Ciklet e Mbivendosura'
             Bounce:
               name: Hidhu
             Computational Thinking:
@@ -203,8 +203,8 @@ sq:
             eksplorojnë magjinë dhe bukurinë e akullit. Ti do të krijosh flokë dëbore
             dhe modele ndërkohë që bën patinazh në akull dhe bën një magji dimërore
             që mund ta ndash me shokët e tu!
-          description_short: Le të përdorim kodin për të bashkuar Ann-en dhe Elsa-n
-            ndërsa ato eksplorojnë magjinë dhe bukurinë e akullit.
+          description_short: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
+            që ato eksplorojnë magjinë dhe bukurinë e akullit.
           lessons:
             Artist:
               name: Artisti
@@ -294,7 +294,7 @@ sq:
             'Bee: Debugging':
               name: 'Bletë: Rregullimi'
             'Bee: Nested Loops':
-              name: 'Bleta: Ciklet e Mbivendosura'
+              name: 'Bletë: Ciklet e Mbivendosura'
             'Farmer: While Loops':
               name: 'Fermeri: Ciklet While'
             'Maze: Sequence':
@@ -319,8 +319,8 @@ sq:
             e përdorueshmërisë.
         algebra:
           title: Shkenëa Kompjuterike në Algjebër
-          description: Mëso Programimin Funksional nëpërmjet Algjebrës
-          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
+          description: Mëso Programimin Funksional nëpërmjet Algjebrës.
+          description_short: Mëso Programimin Funksional nëpërmjet Algjebrës.
           lessons:
             'Eval: Conditionals':
               name: Kushtet
@@ -336,7 +336,7 @@ sq:
               name: 'Unplugged: Receta e Dizenjimit'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Video Lojërat dhe Planet e Koordinuar'
-          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
+          student_description: Mëso Programimin Funksional nëpërmjet Algjebrës.
         infinity:
           title: Larmishmeria e lojrave ne laboratorin e Disney
           description: Perdorni laboratorin e lojrave per te krijuar nje histori ose
@@ -487,12 +487,12 @@ sq:
             Provo tutorialin tonë Flappy Code!
         jigsaw:
           title: Jigsaw
-          description: Provoni tutorialet tona Jigsaw
-          description_short: Provoni tutorialet tona Jigsaw
+          description: Provoni tutorialet tona Jigsaw.
+          description_short: Provoni tutorialet tona Jigsaw.
           lessons:
             Jigsaw:
               name: Jigsaw
-          student_description: Provoni tutorialet tona Jigsaw
+          student_description: Provoni tutorialet tona Jigsaw.
         step:
           title: Një hap
           description: Pasoje tutorialin
@@ -615,18 +615,11 @@ sq:
             Introduction to PD:
               name: Hyrje në PD
         sciencePD2:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-        cspunit2:
-          lessons:
-            The Internet:
-              name: Interneti
         algebraPD2a:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -652,6 +645,8 @@ sq:
               name: Bletë
             Bounce:
               name: Hidhu
+            Farmer:
+              name: Fermer
             Flappy:
               name: Flappy
             Jigsaw:
@@ -711,8 +706,6 @@ sq:
               name: Mbështjell
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         algebraPD2:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
             Teacher Dashboard:
               name: Dërrasa e zezë
@@ -720,7 +713,6 @@ sq:
               name: Receta e Dizenjimit
             Welcome!:
               name: Mirë se vini!
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         sciencePD2b:
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -731,14 +723,11 @@ sq:
               name: Mbyll
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         science-PD2:
-          description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
-          description_short: 'Faza e 2-të Online: Studimi i Përzierë Veror'
           lessons:
             Welcome!:
               name: Mirë se vini!
             Wrap-Up:
               name: Mbyll
-          student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         Equity-OnlinePD:
           lessons:
             Next Steps:
@@ -771,6 +760,7 @@ sq:
               name: Mbështjell
           student_description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
         asUnplugged:
+          description_audience: Moshat 6-13
           lessons:
             Binary Bracelets:
               name: Byzylykët Binarë
@@ -790,6 +780,8 @@ sq:
               name: Të shkruarit e Këngëve
             The Big Event:
               name: Eventi i Madh
+        afterschool1:
+          description_audience: Moshat 7-13
         cspunit4draft:
           description_short: të dhëna
         ScienceP3OLPT2:
@@ -825,7 +817,6 @@ sq:
               name: Laboratori i Lojës Gumball
           student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
         starwars:
-          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
             në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star
@@ -836,7 +827,6 @@ sq:
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
             Star Wars në një galaksi shumë, shumë larg.
         starwarsblocks:
-          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
             në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star
@@ -848,9 +838,9 @@ sq:
             Star Wars në një galaksi shumë, shumë larg.
         mc:
           title: Ora e Kodimit Minecraft
-          description: Përdorini blloqe kodi për të dërguar Steve ose Alex në një
-            aventurë përmes botës Minecraft
-          description_short: Eksploro botën e Minecraft përmes kodit
+          description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një
+            aventurë nëpër këtë botë Minecraft.
+          description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
           lessons:
             Hour of Code 2015:
               name: Ora e Kodimit 2015
@@ -870,17 +860,22 @@ sq:
               name: 'Calc: Përcaktimi i Variablave'
             'Calc: Evaluation Blocks':
               name: 'Calc: Blloqet e Vlerësimit'
+            'Eval: Defining Functions':
+              name: 'Eval: Përcaktimi i Funksioneve'
+            'Eval: Functions':
+              name: 'Eval: Funksionet'
             'Eval: Strings and Images':
               name: 'Eval: Stringet dhe figurat'
             'Eval: Writing Contracts':
               name: 'Eval: Kontratat e Shkruara'
+            'Play Lab: Defining Functions':
+              name: 'Play Lab: Përcaktimi i Funkisoneve'
             'Unplugged: Contracts':
               name: 'Unplugged: Kontratat'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Receta e Dizenjimit'
           student_description: Mëso Programimin Funksional nëpërmjet Algjebrës
         AlgebraB:
-          title: Shkenëa Kompjuterike në Algjebër
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
           lessons:
@@ -969,13 +964,20 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: dan is a masive dick-
         CSDU2-Draft:
           lessons:
             Peer Review:
               name: Rishikimi i ndërsjellë
         CSDU5-Draft:
           description_short: të dhëna
+        CSF_Secret_Sample_Story:
+          description_audience: Moshat 8-18+
         MikeTest:
+          description_audience: Moshat 8-98
           lessons:
             Artist Functions:
               name: Funksionet e Artistit
@@ -994,7 +996,10 @@ sq:
             'Bee: Conditionals':
               name: 'Bletë: Kushtet'
         gradeKinder:
+          description_audience: Moshat 5-18
           lessons:
+            Debugging:
+              name: Rregullimi
             Events:
               name: Ngjarje
             'Jigsaw: Learn to drag and drop':
@@ -1004,13 +1009,19 @@ sq:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmet e jetës-Reale: Mbill një Farë'
         grade4:
+          title: Klasat 4
+          description_audience: Moshat 10-99
           lessons:
             Digital Citizenship:
               name: Shtetësi Dixhitale
             Songwriting:
               name: Të shkruarit e Këngëve
         grade1:
+          title: Klasat 1
+          description_audience: Moshat 5-18
           lessons:
+            Debugging:
+              name: Rregullimi
             Events:
               name: Ngjarje
             'Jigsaw: Learn to drag and drop':
@@ -1018,6 +1029,8 @@ sq:
             Loops:
               name: cikle
         grade5:
+          title: Klasat 5
+          description_audience: Moshat 10-110
           lessons:
             'Artist: For Loops':
               name: 'Artisti: Ciklet For'
@@ -1046,7 +1059,11 @@ sq:
             Wrap-up:
               name: Mbështjell
         grade3:
+          title: Klasat 3
+          description_audience: Moshat 5-18
           lessons:
+            " Bee: Conditionals":
+              name: " Bletë: Kushtet"
             'Artist: Nested Loops':
               name: 'Artisti: CIklet e Mbivendosura'
             Bee Debugging:
@@ -1063,6 +1080,23 @@ sq:
               display_name: Përmbajtja
             practice:
               display_name: Praktikat mësimore
+          lessons:
+            Lesson 1,10:
+              name: Lekcioni 1,10
+            Lesson 1,11:
+              name: Lekcioni 1,11
+            Lesson 1,4:
+              name: Lekcioni 1,4
+            Lesson 1,6:
+              name: Lekcioni 1,6
+            Lesson 1,9:
+              name: Lekcioni 1,9
+            Lesson 2,10:
+              name: Lekcioni 2,10
+            Lesson 2,2:
+              name: Lekcioni 2,2
+            Lesson 2,3:
+              name: Lekcioni 2,3
         csd3-2017:
           lessons:
             Functions:
@@ -1072,6 +1106,7 @@ sq:
             Conditionals:
               name: Kushtet
         grade2:
+          description_audience: Moshat 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -1232,6 +1267,8 @@ sq:
               name: Hyrja
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
         classic-hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere
             zbavitëse!
@@ -1376,6 +1413,8 @@ sq:
               name: pa vlerë
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Introduction:
               name: Hyrja
             Ice Age Play Lab:
@@ -1408,6 +1447,8 @@ sq:
               name: Përsëritjet e Mbivendosura
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
             Envelope Variables:
@@ -1422,6 +1463,8 @@ sq:
               name: Përsëritjet e Mbivendosura
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Building a Foundation:
               name: Krijimi i një fondacioni
         cspnovice:
@@ -1586,6 +1629,8 @@ sq:
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Ice Age Play Lab:
               name: Laboratori i lojës Epoka e Akullnajave
             Envelope Variables:
@@ -1624,6 +1669,8 @@ sq:
           lessons:
             Building a Foundation:
               name: Krijimi i një fondacioni
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Introduction:
               name: Hyrja
             Ice Age Play Lab:
@@ -1692,8 +1739,6 @@ sq:
               name: Byzylykët Binarë
             'Unplugged: Binary':
               name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
             Internet:
               name: Interneti
             Crowdsourcing:
@@ -1724,8 +1769,6 @@ sq:
               name: Shtetësi Dixhitale
             'Unplugged: Binary':
               name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
             Graph Paper Programming:
               name: Programimi Grafik me Letër
             Relay Programming:
@@ -1742,6 +1785,8 @@ sq:
               name: Byzylykët Binarë
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funksionet me parametra\_
             Functions with Parameters:
               name: Funksionet me parametra
         coursee-2018:
@@ -1768,6 +1813,8 @@ sq:
               name: Miqtë e mi Robotikë
             Building a Foundation:
               name: Krijimi i një fondacioni
+            'Algorithms: Tangrams':
+              name: 'Algoritmet: Tangrams'
             Introduction:
               name: Hyrja
             Ice Age Play Lab:
@@ -1986,8 +2033,6 @@ sq:
               name: Shtetësi Dixhitale
             'Unplugged: Binary':
               name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -2270,12 +2315,19 @@ sq:
               name: Kushtet
             Functions:
               name: funksione
+        maddie-test:
+          lessons:
+            stage 1:
+              name: faza 1
         csp3-pilot:
           lesson_groups:
             content:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+          lessons:
+            Debugging:
+              name: Rregullimi
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2533,8 +2585,6 @@ sq:
               name: Kushtoret me Karta
             'Unplugged: Binary':
               name: Imazhet Binare
-            Artist Binary:
-              name: Artist Binar
             Digital Citizenship:
               name: Shtetësi Dixhitale
         coursee-2020:
@@ -2588,6 +2638,10 @@ sq:
           lessons:
             Spelling Bee:
               name: Bleta Gërmëzuese
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Rregullimi
         csp3-virtual:
           lessons:
             Creating Functions:
@@ -2596,6 +2650,8 @@ sq:
           lessons:
             Tools:
               name: Veglat
+            Debugging:
+              name: Rregullimi
         csp5-virtual:
           lessons:
             While Loops:
@@ -2636,6 +2692,10 @@ sq:
           lesson_groups:
             k5_next_steps_1:
               display_name: Hapat e ardhshme
+        dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: lekcioni 2
         csd3-virtual:
           lessons:
             Variables:
@@ -2669,18 +2729,14 @@ sq:
           lesson_groups:
             lg_1:
               display_name: Përmbajtja
-        ml-playground:
-          lessons:
-            lesson14:
-              name: Lekcioni 14
-            lesson15:
-              name: Lekcioni 15
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Hyrja
             lessonGroup-3:
               display_name: variabla
+            debugging:
+              display_name: Rregullimi
         csd3-2021:
           lessons:
             Variables:
@@ -2700,6 +2756,11 @@ sq:
             Functions with Parameters:
               key: Funksionet me parametra
               name: Funksionet me parametra
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Rregullimi
+              name: Rregullimi
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2772,7 +2833,6 @@ sq:
               name: Imazhet Binare
             Artist Binary:
               key: Artist Binar
-              name: Artist Binar
           lesson_groups:
             csf_events:
               display_name: Ngjarje
@@ -2817,8 +2877,6 @@ sq:
               display_name: Shtetësi Dixhitale
             csf_variables:
               display_name: Për Ciklet
-            csf_data:
-              display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
             lessonGroup-8:
@@ -2855,14 +2913,8 @@ sq:
               display_name: variabla
             variables:
               display_name: variabla
-        ai-unit-pilot:
-          lessons:
-            lesson14:
-              name: Lekcioni 14
-            lesson15:
-              name: Lekcioni 15
-            lesson17:
-              name: Lekcioni 15
+        contagion-pilot:
+          description_audience: Klasat 5
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -2871,10 +2923,20 @@ sq:
           lesson_groups:
             lesson group:
               display_name: Përmbajtja
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Hyrja
             Loops:
               key: cikle
               name: cikle
@@ -2896,16 +2958,46 @@ sq:
           lesson_groups:
             k5_getting_started_1:
               display_name: Hyrja
-            k5_next_steps_1:
-              display_name: Hapat e ardhshme
             Introduction:
               display_name: Hyrja
-        aiml-2021:
-          lessons:
-            lesson15:
-              name: Lekcioni 15
         kodea-pd-2021:
           lessons:
             Next Steps:
               key: Hapat e ardhshme
               name: Hapat e ardhshme
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitulli 1
+            lessonGroup-4:
+              display_name: Kapitulli 2
+            lessonGroup-5:
+              display_name: Kapitulli 3
+            lessonGroup-6:
+              display_name: Kapitulli 4
+            lessonGroup-7:
+              display_name: Kapitulli 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Përmbledhja
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Përmbledhja

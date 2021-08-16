@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:33 UTC",
+    "family_name": "hoc-encryption",
+    "serialized_at": "2021-08-03 22:47:02 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "hoc-encryption"
@@ -58,9 +60,9 @@
       "properties": {
         "level_keys": [
           "Crack a Caesar Cipher"
-        ]
+        ],
+        "progression": "Crack a Caesar Cipher"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -82,9 +84,9 @@
       "properties": {
         "level_keys": [
           "Terminology Recap"
-        ]
+        ],
+        "progression": "Terminology Recap"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -106,9 +108,9 @@
       "properties": {
         "level_keys": [
           "New Challenge Introduction"
-        ]
+        ],
+        "progression": "New Challenge Introduction"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -130,9 +132,9 @@
       "properties": {
         "level_keys": [
           "Crack Random Substitution"
-        ]
+        ],
+        "progression": "Crack Random Substitution"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -154,9 +156,9 @@
       "properties": {
         "level_keys": [
           "Technique: Frequency Analysis"
-        ]
+        ],
+        "progression": "Technique: Frequency Analysis"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -178,9 +180,9 @@
       "properties": {
         "level_keys": [
           "Video - Encryption and Public Keys"
-        ]
+        ],
+        "progression": "Video - Encryption and Public Keys"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

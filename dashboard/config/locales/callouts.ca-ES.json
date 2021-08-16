@@ -224,6 +224,37 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Utilitza la llista desplegable per substituir \"???\" per un valor"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nou bloc!",
+          "new_block_4": "Nou bloc!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Fes clic a \"Executa\" per provar el teu programa"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Aquest ferro és meu!"
         }
       }
     }

@@ -14,6 +14,8 @@
         .dim!= piped_spaces
         = link_to t('landing.help_support'), 'https://support.code.org', target: '_blank', id: "support"
         .dim!= piped_spaces
+        = link_to t('footer.store'), 'https://store.code.org'
+        .dim!= piped_spaces
         = link_to t('footer.tos_short'), CDO.code_org_url('/tos')
         %br/
 
@@ -22,8 +24,6 @@
           = sanitize(t('footer.help_from_html_old'), tags: %w(a br), attributes: %w(href))
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
-          = sanitize(t('footer.google_copyright'), tags: %w(a br), attributes: %w(href))
-          = sanitize(t('footer.powered_by_aws'), tags: %w(a br), attributes: %w(href))
           %br/
           = sanitize(t('footer.built_on_github'), tags: %w(a br), attributes: %w(href))
         %div.powered-by-aws

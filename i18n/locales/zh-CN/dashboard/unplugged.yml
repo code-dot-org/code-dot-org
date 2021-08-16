@@ -219,15 +219,6 @@ zh-CN:
       courseF_unplugged_songwritingParameters:
         title: 通过输入参数来作曲。
         desc: '函数是计算机科学世界中最宏伟的建筑物之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。  '
-      swipeRightPassThrough:
-        title: 招聘方案会议
-        desc: "# 招聘方案会议  \n \n## Swipe Right for CS  \n在这个会议上，我们会使用一个工具叫“Swipe Right for CS”。是由我们麻省理工学院的合作伙伴开发的。在 \"Swipe Right for CS“里，你会阅读一些学生的个人资料, 并考虑您可能要用的具体的陈述来说服他或她注册你的 计算机科学原理课程。\n\n### 如何工作的 \n在您播放Swipe Right for CS时, 您会看到一系列的您可以说给学生的引文。你可以在引号中向右滑动来看你可以如何更有效地说服学生报名参加课程, 把那些您认为不会有效的语句向左滑动。在会议期间, 我们将小组讨论你认为哪些类型的陈述最有效果能让学生注册 计算机科学, 你将有机会看到其他在您小组的人怎样滑动选择每一个论点。 \n \n\n当您单击下面的 \"继续\", 我们将您加入这个活动中, 并登录您的 Code.org 电子邮件地址。"
-      swipeRightPassThrough-test123:
-        title: 招聘方案会议
-        desc: "# 招聘方案会议  \n \n## Swipe Right for CS  \n在这个会议上，我们会使用一个工具叫“Swipe Right for CS”。是由我们麻省理工学院的合作伙伴开发的。在 \"Swipe Right for CS“里，你会阅读一些学生的个人资料, 并考虑您可能要用的具体的陈述来说服他或她注册你的 计算机科学原理课程。\n\n### 如何工作的 \n在您播放Swipe Right for CS时, 您会看到一系列的您可以说给学生的引文。你可以在引号中向右滑动来看你可以如何更有效地说服学生报名参加课程, 把那些您认为不会有效的语句向左滑动。在会议期间, 我们将小组讨论你认为哪些类型的陈述最有效果能让学生注册 计算机科学, 你将有机会看到其他在您小组的人怎样滑动选择每一个论点。 \n \n\n当您单击下面的 \"继续\", 我们将您加入这个活动中, 并登录您的 Code.org 电子邮件地址。"
-      brad-repro-bug-000:
-        title: Brad报告错误000
-        desc: "# Brad报告错误 000  \n# # 尝试重新创建 bug 布鲁克报告  \n过程如下:  \n1。从线下开始。填充信息。点击保存并发布. \n2。\"破坏\" 级别  \n3。做个具有相同的内容和相同的名称的\"markdown\" 级别。选中进行加密。保存"
       courseB_unplugged_MRF_2018:
         title: 我的机器人朋友
         desc: 为朋友写代码来学习编程！
@@ -346,8 +337,6 @@ zh-CN:
       PaperPlanes_2019:
         title: '生活中的算法: 纸飞机'
         desc: 这节课程以制作纸飞机的方法为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
-      test-uid-passthrough:
-        desc: "# 招聘场景会议\\r\n\\r\n## Swipe Right for CS\\r\n这次会议中会使用叫做 \"Swipe Right for CS\" 的工具，由 MIT 合作伙伴开发。在 Swipe Right for CS 中，可以查看学生的资料，从而可以考虑说服学生注册你的计算机原理课程的具体方法。\\r\n\\r\n## 它是怎么运行的\\r\n在使用 Swipe Right for CS时，会看到一系列可以告诉每个学生的话语。如果觉得某句话对说服学生注册有效，可向右滑动它。如果觉得没有用，可向左滑动。在会议期间，会分组讨论，解释你在哪些语言在说服学生注册上最有效的想法，可有机会看看组里的其他人的想法。\\r\n<br><br><br><br>\\r\n\\r\n<span style=\"display:none\">submitButton next-stage</span>\\r\n\\r\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">点击这里打开 Swipe Right for CS!</a>\\r\n\\r\n"
       PlantASeed_2019:
         title: '真实算法： 播种一颗种子'
         desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
@@ -386,6 +375,3 @@ zh-CN:
       timeforcs_demo_conditionals:
         title: 条件语句
         desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
-      TheRightApp_2019:
-        title: 正确的应用程序
-        desc: "* 如今每个人都在使用计算机，尤其是智能手机。\n* 智能手机上的应用，又被称为“App”。它们能帮助人们做很多事情，例如与朋友聊天、听音乐、购物或浏览互联网。\n* 对于开发者而言，站在其他人的角度上，并从他们的需求出发来设计应用是颇为重要的！\n\n![]\n(https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

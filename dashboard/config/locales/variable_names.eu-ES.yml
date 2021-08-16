@@ -3,7 +3,11 @@ eu:
   data:
     variable_names:
       actor: aktore
+      age: adina
+      answer: erantzuna
+      binary: bitarra
       cats: katu guztiak
+      color: kolorea
       counter: kontagailua
       dogs: txakur guztiak
       height: Altuera

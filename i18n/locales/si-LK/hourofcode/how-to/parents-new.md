@@ -43,7 +43,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 <h3>More than one child at home?</h3>
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. They’ll also see that computer science is social and collaborative.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. පරිගණක විද්‍යාව සමාජීය සහ සහයෝගී බව ඔවුන් දකිනු ඇත.
 
 <h3>Get the kids excited! </h3>
 This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
@@ -85,6 +85,6 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-<h2>What comes after the Hour of Code?</h2>
+<h2>කේත වේලාවෙන් පසුව පැමිණෙන්නේ කුමක්ද?</h2>
 
 Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.

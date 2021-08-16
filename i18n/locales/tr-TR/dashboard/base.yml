@@ -167,8 +167,8 @@ tr:
     additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap türünü güncelle"
     user_type_label: "Hesap Türü"
-    user_type_teacher: "Öğretmen"
     user_type_student: "öğrenci"
+    user_type_teacher: "Öğretmen"
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
@@ -267,6 +267,7 @@ tr:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
     registered: "%{section_name} için kayıt oldunuz."
+    already_exists: 'Zaten %{section_name} bölümüne katıldınız.'
     error:
       signed_in: 'Devam etmeden önce lütfen çıkış yapınız'
       username_not_found: '%{username} kullanıcı adı bulunamadı'
@@ -589,8 +590,6 @@ tr:
       link: "Daha fazlasını öğren"
       applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
-      oceans_unsupported_browser: "Bu tarayıcı, bu eğitim için desteklenmemektedir. Lütfen Edge, Chrome, Firefox veya başka modern tarayıcı kullanarak sayfayı ziyaret edin."
-      weblab_unsupported_browser: "Ne yazık ki, şu anda Web Lab bu tarayıcı yükleme ile ilgili sorunlar yaşıyorsanız. Bu çözülene kadar farklı bir tarayıcı kullanmak isteyebilirsiniz. Rahatsız ettiğim için özür dilerim."
       weblab_unsupported_locale_storage: "Web Lab Özel tarama modunda kullanma sorunlarla karşılaşabilirsiniz. Lütfen projenize normal modda yeniden yükleyin. Rahatsız ettiğim için özür dilerim."
   slow_loading: 'Bu normalden uzun sürüyor...'
   try_reloading: 'Sayfayı yeniden yüklemeyi deneyin'
@@ -980,9 +979,8 @@ tr:
       school_city: 'Okulun bulunduğu şehir'
       school_country: 'Okulun bulunduğu ülke'
       colombian_school_city: 'Okulun bulunduğu şehir'
-      colombian_school_department: 'Okul Bölümü'
       colombian_school_municipality: 'Okulun Bulunduğu Belediye'
-      colombian_school_name: 'Okulun Adı'
+      colombian_chilean_school_name: 'Okulun Adı'
       ages: 'Bu yıl hangi yaş gruplarına öğretiyorsunuz?'
       subjects: 'Bu yıl hangi konuları öğretiyorsunuz?'
       resources: 'Aşağıdaki BB eğitim kaynaklarından hangilerini kullanırsınız?'
@@ -1081,6 +1079,7 @@ tr:
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
+  confirm: 'onaylayın'
   maker:
     google_oauth:
       login_with_google: 'Google ile Maker App''e giriş'

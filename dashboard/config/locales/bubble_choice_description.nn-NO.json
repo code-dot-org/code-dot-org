@@ -1,2 +1,11 @@
 {
+  "nn-NO": {
+    "data": {
+      "bubble_choice_description": {
+        "courseC_artist_prog_challenge1_2021": "Teikn eit rom for kvar av dyra. Det er mange ulike måtar å løyse denne oppgåva på, så ha det gøy. Den kortast moglege løysinga brukar 6 blokkar, men du kan bruke så mange du vil!",
+        "courseD_bee_nestedLoops8_2021": "Saml inn all nektar frå kvar blomst og lag honning i alle bikubene. ",
+        "ramp_artist_loops8_2021": "Sjå etter eit mønster, og gjer denne koden kortare ved å bruke løkker."
+      }
+    }
+  }
 }

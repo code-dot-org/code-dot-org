@@ -370,16 +370,9 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize(include_prev_next=true, for_edit: false)
-    kind =
-      if level.unplugged?
-        LEVEL_KIND.unplugged
-      elsif assessment
-        LEVEL_KIND.assessment
-      else
-        LEVEL_KIND.puzzle
-      end
-
     ids = level_ids
+    active_id = oldest_active_level.id
+    inactive_ids = ids - [active_id]
 
     levels.each do |l|
       ids.concat(l.contained_levels.map(&:id))
@@ -387,7 +380,8 @@ class ScriptLevel < ApplicationRecord
 
     summary = {
       ids: ids.map(&:to_s),
-      activeId: oldest_active_level.id.to_s,
+      activeId: active_id.to_s,
+      inactiveIds: inactive_ids.map(&:to_s),
       position: position,
       kind: kind,
       icon: level.icon,
@@ -518,12 +512,14 @@ class ScriptLevel < ApplicationRecord
     lesson_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
     if lesson_extra_user_level
       {
-        id: lesson_extra_user_level.id.to_s,
+        id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
+        passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect,
-        passed: true
-      }.merge!(lesson_extra_user_level.attributes)
+        userLevelId: lesson_extra_user_level.id,
+        updatedAt: lesson_extra_user_level.updated_at
+      }
     elsif bonus_level_ids.count == 0
       {
         # Some lessons have a lesson extras option without any bonus levels. In
@@ -531,7 +527,7 @@ class ScriptLevel < ApplicationRecord
         # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: true,
         status: SharedConstants::LEVEL_STATUS.perfect
       }
@@ -539,7 +535,7 @@ class ScriptLevel < ApplicationRecord
       {
         id: bonus_level_ids.first.to_s,
         bonus: true,
-        user_id: student.id,
+        userId: student.id,
         passed: false,
         status: SharedConstants::LEVEL_STATUS.not_tried
       }
@@ -550,27 +546,9 @@ class ScriptLevel < ApplicationRecord
     levels.map(&:contained_levels).flatten
   end
 
-  # Returns the level whose status will determine state of the progress bubble
-  def get_level_for_progress(student)
-    # If the level is a bubble choice, determine which sublevel's status to display in our progress bubble.
-    # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
-    # progress for sublevel that has the best result. Otherwise display progress for the level.
-    if bubble_choice?
-      keep_working_level = level.keep_working_sublevel(student, script)
-      best_result_level = level.best_result_sublevel(student, script)
-      return keep_working_level || best_result_level || level
-    elsif contained_levels.any?
-      # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
-      # We only display our first contained level, display progress for that level.
-      return contained_levels.first
-    else
-      return level
-    end
-  end
-
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
-    level_for_progress = get_level_for_progress(student)
+    level_for_progress = oldest_active_level.get_level_for_progress(student, script)
     user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
 
     status = activity_css_class(user_level)
@@ -601,18 +579,19 @@ class ScriptLevel < ApplicationRecord
       driver: driver,
       navigator: navigator,
       isConceptLevel: level.concept_level?,
-      user_id: student.id,
+      userId: student.id,
       passed: passed,
       status: status,
       levelNumber: position,
       assessment: assessment,
       bonus: bonus,
-      teacherFeedbackReivewState: feedback&.review_state
+      teacherFeedbackReviewState: feedback&.review_state,
+      kind: kind
     }
 
     if user_level
-      # note: level.id gets replaced with user_level.id here
-      teacher_panel_summary.merge!(user_level.attributes)
+      teacher_panel_summary[:userLevelId] = user_level.id
+      teacher_panel_summary[:updatedAt] = user_level.updated_at
     end
 
     teacher_panel_summary
@@ -744,6 +723,18 @@ class ScriptLevel < ApplicationRecord
     )
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
+    end
+  end
+
+  private
+
+  def kind
+    if level.unplugged?
+      LEVEL_KIND.unplugged
+    elsif assessment
+      LEVEL_KIND.assessment
+    else
+      LEVEL_KIND.puzzle
     end
   end
 end

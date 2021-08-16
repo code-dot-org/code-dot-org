@@ -135,7 +135,27 @@
         "CourseD_EOC_dance": "Stvori vlastiti ples!",
         "CourseD_EOC_starwars": "Stvori vlastitu igru Star Wars!",
         "courseC_artist_prog5_2021": "Ova kuća treba krov! Nacrtaj trokut.  Savjet: sve tri strane su iste dužine.",
-        "courseE_artist_functions1_dani": "Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata duljine 25 piksela."
+        "courseE_artist_functions1_dani": "Pozdrav. Ja zombi umjetnik. Ja voljeti crtati! Pomozi mi nacrtati kvadratne naočale.  Savjet: most između čaše je kraći od kvadrata duljine 25 piksela.",
+        "CourseD_EOC_artist_2021": "Stvori vlastiti crtež!",
+        "CourseD_EOC_bounce1_2021": "Stvori vlastitu košarkašku utakmicu!",
+        "CourseD_EOC_dance_2021": "Stvori vlastiti ples!",
+        "CourseD_EOC_starwars_2021": "Stvori vlastitu igru Star Wars!",
+        "Overworld Avoid Monsters_2021": "Naletjeti na \"creepera\" loša je ideja.\nOprezno se provucite pored Creepera do sigurnosti svog doma.",
+        "Overworld Chop Tree_2021": "Drvo je vrlo važan resurs. Mnoge stvari napravljeni su od drva. Prošetajte do stabla i nasjeckajte ga pomoću naredbe \"uništiti blok\".",
+        "Overworld Chop Trees_2021": "Moramo sagraditi kuću prije zalaska sunca. Kuće zahtijevaju puno drva stoga srušite sva 3 stabla.",
+        "Overworld Free Play 20x20_2021": "Čestitamo! Završili ste sve naše zagonetke! Sada rudarite, gradite i stvorite nešto jedinstveno pomoću svega što ste dosad naučili.",
+        "Overworld House Frame Chosen_2021": "Izgradite ostatak svoje kuće od bilo kojeg materijala. Petlja za ponavljanje dobro će vam doći.",
+        "Overworld Move to Sheep_2021": "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.",
+        "Overworld Place Wall_2021": "Izgradnja svake kuće počinje od zidova. Izgradi prvi dio svoje kuće stavljanjem \"postaviti dasku breze\" i \"idi naprijed\" naredbe unutar petlje za ponavljanje.",
+        "Overworld Plant Crops_2021": "Dobro je planirati unaprijed. Posadite usjeve na obje obale kako ne biste bili gladni kasnije.",
+        "Overworld Powered Minecart_2021": "Odličan posao! Skupili ste puno resursa i izgradili skromni dom. Sada položite željeznicu od ruba karte do vratiju svoje kuće.",
+        "Overworld Shear Sheep_2021": "Vrijeme je za šišanje ovaca! Upotrijebi naredbu \"ošišaj\" kako biste prikupili vunu s obje ovce.",
+        "Underground Avoiding Lava_2021": "Ispod nekih blokova skriva se lava koju će biti potrebno prekriti prije pomicanje naprijed. Naredba \"ako\" može vam za to pomoći. Dodajte i \"idi naprijed\" naredbu na pravo mjesto kako biste izvadili rudu iz blokova.",
+        "Underground If Statements_2021": "Sada postaje zeznuto. Iskopaj 3 crvene rude, ali nemoj pasti u lavu. Iskoristi \"ako\" naredbu i položi kocku kaldrme preko lave.",
+        "Underground Iron_2021": "Hodanje u rastaljene lave je loša ideja. Mjesto kaldrma stvoriti most, a zatim moja dva željeza blokova.",
+        "Underground Mining Coal_2021": "Najcjenjenije resurse pronaći će te ispod zemlje, no tamo može postati mračno. Stoga upalite bar dvije baklje i iskopajte bar dva bloka ugljena.",
+        "courseD_maze_nestedLoops4_2021": "Odvedi me do suncokreta!",
+        "courseD_maze_nestedLoops6_2021": "Odvedi me do suncokreta!"
       }
     }
   }

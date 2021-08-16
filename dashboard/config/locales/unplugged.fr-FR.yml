@@ -417,51 +417,6 @@ fr:
           Cette leçon aidera les élèves à comprendre intuitivement pourquoi le fait
           d’associer des morceaux de code à des fonctions est une pratique tellement
           utile.
-      swipeRightPassThrough:
-        title: Séance scénarios de recrutement
-        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
-          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
-          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
-          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
-          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
-          à votre cours de CS Principes. \r \n\r \n### Comment ça marche \r\nLorsque
-          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
-          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
-          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
-          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
-          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
-          en groupe de vos réflexions sur les types de déclarations les plus efficaces
-          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
-          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
-          \r \n\r \n\r\nLorsque vous cliquerez sur continuer, ci-dessous, nous vous
-          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
-          vous êtes connecté."
-      swipeRightPassThrough-test123:
-        title: Séance scénarios de recrutement
-        desc: "# Session de Scénarios de Recrutement\r\n\r\n## Swipe Right for CS
-          \r\nPour cette session, nous utiliserons un outil appelé « Swipe Right for
-          CS » qui a été développé par nos partenaires du MIT. Dans Swipe Right for
-          CS, vous lirez certains profils d'étudiants et envisagerez des déclarations
-          spécifiques que vous pourriez utiliser pour les convaincre de s'inscrire
-          à votre cours de CS Principes. \r \n\r \n### Comment ça marche \r\nLorsque
-          vous jouerez à Swipe Right for CS, vous verrez une série de citations que
-          vous pourriez dire à chaque étudiant. Vous glisserez vers la droite sur
-          les citations qui, selon vous, seraient efficaces pour convaincre les étudiants
-          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
-          qui, selon vous seraient pas efficaces. Au cours de la session, nous discuterons
-          en groupe de vos réflexions sur les types de déclarations les plus efficaces
-          pour amener un étudiant à s'inscrire à CS, et vous aurez l'occasion de voir
-          comment d'autres personnes de votre atelier ont glissé sur chacun des arguments.
-          \r \n\r \n\r\nLorsque vous cliquerez sur continuer, ci-dessous, nous vous
-          enverrons au jeu, et transmettrons l'adresse courriel de Code.org avec laquelle
-          vous êtes connecté."
-      brad-repro-bug-000:
-        title: Brad Reproduction de Bug 000
-        desc: "# Brad reproduction de bug 000\r\n## Tentative de recréer un bug rapporté
-          par Brooke\r\nle processus est le suivant :\r\n1. commencer avec un niveau
-          « déconnecté ». peupler d'informations. sauvegarder et publier.\r\n2. «
-          détruire » le niveau\r\n3. créer un niveau « markdown » avec le même contenu
-          et le même nom. sauvegarder et publier"
       courseB_unplugged_MRF_2018:
         title: Mes amis les robots
         desc: Apprends à programmer en écrivant du code pour tes amis !
@@ -654,25 +609,6 @@ fr:
           dans notre vie quotidienne, et s’appuie, pour cela, sur la fabrication d’avions
           en papier. Cette leçon se concentre également sur l'informatique, en général,
           et le rôle essentiel que jouent les algorithmes.
-      test-uid-passthrough:
-        desc: "# Session de Scénarios de Recrutement\r\r## Swipe Right for CS \rPour
-          cette session, nous utiliserons un outil appelé « Swipe Right for CS » qui
-          a été développé par nos partenaires du MIT. Dans Swipe Right for CS, vous
-          lirez certains profils d'étudiants et envisagerez des déclarations spécifiques
-          que vous pourriez utiliser pour les convaincre de s'inscrire à votre cours
-          sur les Principes de l’Informatique. \r\r## Comment ça marche\rLorsque vous
-          jouerez à Swipe Right for CS, vous verrez une série de citations que vous
-          pourriez dire à chaque étudiant. Vous glisserez vers la droite sur les citations
-          qui, selon vous, seraient efficaces pour convaincre cet étudiant, en particulier,
-          de s'inscrire au cours et glisserez vers la gauche sur les déclarations
-          qui, selon vous ne seraient pas efficaces. Au cours de la session, nous
-          discuterons en groupe de vos réflexions sur les types de déclarations les
-          plus efficaces pour amener un étudiant à s'inscrire en Informatique, et
-          vous aurez l'occasion de voir comment d'autres personnes de votre atelier
-          ont glissé sur chacun des arguments.\r<br><br><br><br>\r\r<span style=\"display:none\">submitButton
-          next-stage</span>\r\r <a class=\"btn btn-large btn-primary submitButton\"
-          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid = <
-          user_id/>\"> Cliquez ici pour jouer à Swipe Right for CS !< /a> \r \r"
       PlantASeed_2019:
         title: 'Algorithmes du Monde Réel : Planter une Graine'
         desc: Cette leçon fait appel aux façons dont nous utilisons des algorithmes
@@ -735,12 +671,3 @@ fr:
           à un jeu de cartes et créent des règles comme « Si je tire une carte rouge,
           je gagne un point », et « Si je tire une carte noire, tu gagnes un point
           ».
-      TheRightApp_2019:
-        title: La Bonne Application
-        desc: "* Tout le monde utilise des ordinateurs ces jours-ci, en particulier
-          des smartphones. \r\n* Les applications smartphone, ou « applications »,
-          aident les gens à faire des choses comme parler à des amis, écouter de la
-          musique, faire des achats, ou tout simplement explorer le Web.\r \n* Il
-          est important, pour les programmeurs, de comprendre les besoins des autres
-          et de concevoir des applications enles gardant à l'esprit !\r \n\\ r\n!
-          [] (https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

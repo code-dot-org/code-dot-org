@@ -97,6 +97,7 @@ ca:
           student_description: El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.
         course3:
           title: Curs 3
+          description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs 2. Els alumnes aprofundiran en els temes de programació introduïts en els cursos anteriors cap a solucions flexibles i problemes més complexos. Al final del curs, els alumnes creen històries interactives i jocs que poden compartir amb tothom. Recomanat per cicle superior de primària.
           description_short: Aprofundeix encara més en la programació creant jocs i històries interactives. El curs 3 és una continuació del curs 2.
           description_audience: De 8 a 18 anys
           lessons:
@@ -127,7 +128,7 @@ ca:
             Digital Citizenship:
               name: Ciutadania digital
             'Farmer: While Loops':
-              name: 'Pagesa: bucles mentre'
+              name: Pagesa - bucles mentre
             Internet:
               name: Internet
             Maze:
@@ -140,6 +141,7 @@ ca:
               name: 'Play Lab: Creeu un joc'
             'Studio: Create a Story':
               name: 'Play Lab: Crea una història'
+          student_description: El Curs 3 està dissenyat per alumnes que ja han fet el Curs 2. Els alumnes aprofundiran en els temes de programació introduïts en els cursos anteriors cap a solucions flexibles i problemes més complexos. Al final del curs, els alumnes creen històries interactives i jocs que poden compartir amb tothom. Recomanat per cicle superior de primària.
         playlab:
           title: Play Lab
           description: Crea una història o fes una partida amb Play Lab!
@@ -237,7 +239,7 @@ ca:
             'Bee: Nested Loops':
               name: 'Abella: bucles imbricats'
             'Farmer: While Loops':
-              name: 'Pagesa: bucles mentre'
+              name: Pagesa - bucles mentre
             'Maze: Sequence':
               name: 'Laberint: seqüència'
         usability:
@@ -256,6 +258,7 @@ ca:
               name: Variables
           student_description: Una selecció de nivells del Curs 4 per proves d'ús.
         algebra:
+          title: Informàtica en àlgebra
           lessons:
             'Eval: Conditionals':
               name: Condicionals
@@ -400,10 +403,6 @@ ca:
           lessons:
             Wrap-Up:
               name: Recapitulació
-        cspunit2:
-          lessons:
-            The Internet:
-              name: Internet
         algebraPD2a:
           lessons:
             Booleans:
@@ -423,6 +422,8 @@ ca:
               name: Abella
             Bounce:
               name: Rebota
+            Farmer:
+              name: Pagès
             Flappy:
               name: Flappy
             Jigsaw:
@@ -484,6 +485,7 @@ ca:
             Wrap-up:
               name: Recapitulació
         asUnplugged:
+          description_audience: Edats 6-13
           lessons:
             Binary Bracelets:
               name: Polseres binàries
@@ -503,6 +505,8 @@ ca:
               name: Composició de cançons
             The Big Event:
               name: El gran esdeveniment
+        afterschool1:
+          description_audience: Edats 7-13
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -516,7 +520,6 @@ ca:
             While Loops:
               name: Bucles Mentres
         starwars:
-          title: 'Star Wars: Construcció d''una galàxia amb codi'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           lessons:
@@ -524,7 +527,6 @@ ca:
               name: Hora del codi 2015
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         starwarsblocks:
-          title: 'Star Wars: Construcció d''una galàxia amb codi'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           lessons:
@@ -599,7 +601,14 @@ ca:
           lessons:
             Game Lab:
               name: Laboratori de jocs
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Mode de disseny
+        CSF_Secret_Sample_Story:
+          description_audience: De 8 a 18 anys+
         MikeTest:
+          description_audience: De 8 a 98 anys
           lessons:
             Artist Functions:
               name: 'Artista: Funcions'
@@ -614,7 +623,10 @@ ca:
             'Bee: Conditionals':
               name: 'Abella: Condicionals'
         gradeKinder:
+          description_audience: De 5 a 18 anys
           lessons:
+            Debugging:
+              name: Depuració
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -624,13 +636,19 @@ ca:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
         grade4:
+          title: Qualificacions 4
+          description_audience: De 9 a 99 anys
           lessons:
             Digital Citizenship:
               name: Ciutadania digital
             Songwriting:
               name: Composició de cançons
         grade1:
+          title: Qualificacions 1
+          description_audience: De 5 a 18 anys
           lessons:
+            Debugging:
+              name: Depuració
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -638,6 +656,8 @@ ca:
             Loops:
               name: Bucles
         grade5:
+          title: Qualificacions 5
+          description_audience: Edats de 10-110
           lessons:
             'Artist: For Loops':
               name: 'Artista: Per bucles'
@@ -664,7 +684,11 @@ ca:
             Wrap-up:
               name: Recapitulació
         grade3:
+          title: Qualificacions 3
+          description_audience: De 5 a 18 anys
           lessons:
+            " Bee: Conditionals":
+              name: " Abella: Condicionals"
             'Artist: Nested Loops':
               name: 'Artista: bucles imbricats'
             Bee Debugging:
@@ -672,7 +696,7 @@ ca:
             Bounce:
               name: Rebota
             'Farmer: While Loops':
-              name: 'Pagesa: bucles mentre'
+              name: Pagesa - bucles mentre
         alltheplcthings:
           lesson_groups:
             required:
@@ -686,6 +710,7 @@ ca:
             Conditionals:
               name: Condicionals
         grade2:
+          description_audience: De 5 a 18 anys
           lessons:
             Flappy:
               name: Flappy
@@ -805,6 +830,8 @@ ca:
               name: Composició amb paràmetres
             Introduction:
               name: Introducció
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
         classic-hoc-impact-study:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
           lessons:
@@ -913,6 +940,8 @@ ca:
               name: nul
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Introduction:
               name: Introducció
         artist-and-bb8:
@@ -957,6 +986,8 @@ ca:
           description_audience: De 8 a 12 anys
           description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Songwriting with Parameters:
               name: Composició amb paràmetres
             Building a Foundation:
@@ -969,6 +1000,8 @@ ca:
           description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Building a Foundation:
               name: Posant les bases
         cspnovice:
@@ -1021,6 +1054,8 @@ ca:
               display_name: Vista general
         express-2017:
           title: Curs exprés
+          assignment_family_title: Curs exprés
+          description_audience: De 9 a 18 anys
           description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
           lessons:
             Introduction:
@@ -1039,6 +1074,8 @@ ca:
               name: Bucles imbricats
         pre-express-2017:
           title: Prelector exprés
+          assignment_family_title: Prelector exprés
+          description_audience: De 4 a 8 anys
           description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1103,6 +1140,8 @@ ca:
           lessons:
             Building a Foundation:
               name: Posant les bases
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Songwriting with Parameters:
               name: Composició amb paràmetres
         csp3-staging:
@@ -1133,6 +1172,8 @@ ca:
           lessons:
             Building a Foundation:
               name: Posant les bases
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Introduction:
               name: Introducció
             Songwriting with Parameters:
@@ -1173,6 +1214,10 @@ ca:
             Going Places Safely:
               name: Anant a llocs segurs
         express-2018:
+          title: Curs exprés
+          assignment_family_title: Curs exprés
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
@@ -1194,8 +1239,6 @@ ca:
               name: Polseres binàries
             'Unplugged: Binary':
               name: Imatges binàries
-            Artist Binary:
-              name: Artista binari
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1230,8 +1273,6 @@ ca:
               name: Ciutadania digital
             'Unplugged: Binary':
               name: Imatges binàries
-            Artist Binary:
-              name: Artista binari
             Graph Paper Programming:
               name: Programació de paper quadriculat
             Relay Programming:
@@ -1251,6 +1292,8 @@ ca:
               name: Polseres binàries
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funcions amb Paràmetres\_
             Functions with Parameters:
               name: Funcions amb Paràmetres
         coursee-2018:
@@ -1282,6 +1325,8 @@ ca:
               name: Els meus amics robòtics
             Building a Foundation:
               name: Posant les bases
+            'Algorithms: Tangrams':
+              name: 'Algoritmes: Tàngrams'
             Introduction:
               name: Introducció
             Songwriting with Parameters:
@@ -1369,6 +1414,9 @@ ca:
             required:
               display_name: Vista general
         pre-express-2018:
+          assignment_family_title: Prelector exprés
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
@@ -1391,20 +1439,19 @@ ca:
             Artist:
               name: Artista
         dance:
-          title: Festa de ball
           description_short: Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, i 25 més!
-          description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
           lessons:
             Dance Party:
               name: Festa de ball
-          student_description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
         frozen-2018-test-b:
           lessons:
             Artist:
               name: Artista
         aquatic:
           title: 'Minecraft: Viatge aquàtic'
-          description_short: Utilitza la teva creativitat i les teves habilitats de resolució de problemes per explorar i crear mons submarins amb codi!
+          description_short: Minecraft torna amb una activitat del tot nova de l'Hora del Codi!
           lessons:
             Aquatic:
               name: Aquàtiques
@@ -1478,8 +1525,6 @@ ca:
               name: Ciutadania digital
             'Unplugged: Binary':
               name: Imatges binàries
-            Artist Binary:
-              name: Artista binari
             Dance Party:
               name: Festa de ball
         coursee-2019:
@@ -1507,6 +1552,8 @@ ca:
             Songwriting:
               name: Composició de cançons
         express-2019:
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -1599,6 +1646,8 @@ ca:
             'Loops: Getting Loopy':
               name: Fent bucles
         pre-express-2019:
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -1759,10 +1808,17 @@ ca:
               name: Condicionals
             Functions:
               name: Funcions
+        maddie-test:
+          lessons:
+            stage 1:
+              name: etapa 1
         csp3-pilot:
           lesson_groups:
             required:
               display_name: Vista general
+          lessons:
+            Debugging:
+              name: Depuració
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -1827,11 +1883,11 @@ ca:
             required:
               display_name: Vista general
         dance-2019:
-          description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
           lessons:
             Dance Party:
               name: Festa de ball
-          student_description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
         k5-onlinepd-2019:
           lessons:
             Computer Science Fundamentals:
@@ -2008,8 +2064,6 @@ ca:
               name: Condicionals amb targetes
             'Unplugged: Binary':
               name: Imatges binàries
-            Artist Binary:
-              name: Artista binari
             Digital Citizenship:
               name: Ciutadania digital
             Dance Party:
@@ -2042,6 +2096,8 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
         express-2020:
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2057,6 +2113,8 @@ ca:
             Dance Party:
               name: Festa de ball
         pre-express-2020:
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2065,10 +2123,18 @@ ca:
           lessons:
             Spelling Bee:
               name: Abella ortogràfica
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Depuració
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Creant Funcions
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Depuració
         csp5-virtual:
           lessons:
             While Loops:
@@ -2131,6 +2197,8 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+            debugging:
+              display_name: Depuració
         csd3-2021:
           lessons:
             Variables:
@@ -2150,6 +2218,11 @@ ca:
             Functions with Parameters:
               key: Funcions amb Paràmetres
               name: Funcions amb Paràmetres
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Depuració
+              name: Depuració
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2229,7 +2302,6 @@ ca:
               name: Imatges binàries
             Artist Binary:
               key: Artista binari
-              name: Artista binari
           lesson_groups:
             csf_events:
               display_name: Esdeveniments
@@ -2280,6 +2352,8 @@ ca:
             lessonGroup-7:
               display_name: Ciutadania digital
         express-2021:
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
           lessons:
             Dance Party:
               key: Festa de ball
@@ -2300,6 +2374,8 @@ ca:
             lessonGroup-9:
               display_name: Esdeveniments
         pre-express-2021:
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          description_audience: De 4 a 8 anys
           lesson_groups:
             csf_loops:
               display_name: Bucles
@@ -2313,10 +2389,10 @@ ca:
               display_name: Variables
             variables:
               display_name: Variables
+        contagion-pilot:
+          description_audience: Qualificacions 5
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Introducció
             Loops:
               key: Bucles
               name: Bucles
@@ -2337,7 +2413,6 @@ ca:
               name: Per bucles
             Sprite Lab:
               key: Laboratori de personatges
-              name: Laboratori de personatges
           lesson_groups:
             k5_getting_started_1:
               display_name: Introducció
@@ -2348,3 +2423,27 @@ ca:
             Computer Science Fundamentals:
               key: Fonaments de la informàtica
               name: Fonaments de la informàtica
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unitat 1
+            lessonGroup-4:
+              display_name: Unitat 2
+            lessonGroup-5:
+              display_name: Unitat 3
+            lessonGroup-6:
+              display_name: Unitat 4
+            lessonGroup-7:
+              display_name: Unitat 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: prova
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Vista general
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Vista general

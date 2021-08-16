@@ -218,8 +218,8 @@ de:
       mit deiner Anmeldung fortzufahren.
     user_type_button: Kontoart aktualisieren
     user_type_label: Kontentyp
-    user_type_teacher: Lehrer
     user_type_student: Schüler
+    user_type_teacher: Lehrer
     field_is_required: ist erforderlich
     accept_terms: Du musst der Erstellung eines Kontos zustimmen
     error: Ein Fehler ist aufgetreten.
@@ -330,6 +330,7 @@ de:
     invite_sent: Einladung gesendet
     added_teacher: "%{name} wurde als dein Lehrer hinzugefügt"
     registered: Du hast dich für %{section_name} registriert.
+    already_exists: Sie sind der Lerngruppe %{section_name} schon beigetreten.
     error:
       signed_in: Bitte melde dich ab, bevor du fortfährst
       username_not_found: Benutzername %{username} wurde nicht gefunden
@@ -585,6 +586,7 @@ de:
       Laufenden zu bleiben. Sie können diese E-Mail-Adresse auch zur Wiederherstellung
       von Passwörtern verwenden.
     parent_guardian_email_label: Eltern / Erziehungsberechtigten E-Mail-Adresse
+    remove_parent_email_label: Entfernen
     none: Keiner
     only_one_parent_email_supported_warning: 'Hinweis: Zur Zeit können wir nur eine
       E-Mail-Adresse eines Elternteils/Erziehungsberechtigten pro SchülerInnen-Konto
@@ -681,21 +683,21 @@ de:
     help_from_html_old: Entwickler von Google, Microsoft, Facebook und Twitter haben
       geholfen, diese Materialien zu erstellen.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney und Lucasfilm.
+      vorbehalten.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Alle Rechte vorbehalten.<br />Frozen&#8482; &copy; %{current_year} Disney. Alle
       Rechte vorbehalten.<br />Ice Age&#8482; &copy; %{current_year} 20th Century
       Fox. Alle Rechte vorbehalten.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
       Rovio Entertainment Ltd. Alle Rechte vorbehalten.<br />Plants vs. Zombies&#8482;
-      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />Die
-      fantastische Welt von Gumball ist Warenzeichen and &copy; 2015 Cartoon Network.
-    art_from_html_old: Minecraft &#8482; &copy; %{current_year} Microsoft. Alle Rechte
-      vorbehalten. Star Wars &#8482; &copy; %{current_year} Disney und Lucasfilm.
-      Alle Rechte vorbehalten. Frozen &#8482; &copy; %{current_year} Disney. Alle
-      Rechte vorbehalten. Ice Age &#8482; &copy; %{current_year} 20th Century Fox.
-      Alle Rechte vorbehalten. Angry Birds &#8482; &copy; 2009-%{current_year} Rovio
-      Entertainment Ltd. Alle Rechte vorbehalten. Plants vs Zombies &#8482; &copy;
-      %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. Die erstaunliche
-      Welt von Gumball ist Warenzeichen und &copy; 2015 Cartoon Network.
+      &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten.<br />The
+      Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte
+      vorbehalten. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Alle
+      Rechte vorbehalten. Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte
+      vorbehalten. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte
+      vorbehalten. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Alle Rechte vorbehalten. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Alle Rechte vorbehalten. The Amazing World of Gumball is
+      trademark and &copy; 2015 Cartoon Network.
     code_from_html: Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der
       GNU LGPL 2.1</a> lizensiert ist.
     powered_by_aws: Betrieben von Amazon Web Services
@@ -746,13 +748,6 @@ de:
       gamelab_unsupported_tablet: Game Lab funktioniert am Besten auf einem Desktop-PC
         oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe
         auf deinem jetzigen Gerät geben.
-      oceans_unsupported_browser: Dieser Browser wird für dieses Tutorial nicht unterstützt.
-        Bitte versuche diese Seite mit Edge, Chrome, Firefox oder einem anderen modernen
-        Browser zu besuchen.
-      weblab_unsupported_browser: Unglücklicherweise gibt es momentan ein Problem
-        beim Laden von Web Lab in diesem Browser. Sie können einen anderen Browser
-        verwenden bis das Problem gelöst ist. Wir entschuldigen uns vielmals für die
-        Unannehmlichkeiten.
       weblab_unsupported_locale_storage: Es gibt möglicherweise Probleme beim benutzen
         von Web Lab im privaten Browser-Modus. Bitte laden sie ihr Projekt nochmal
         im normalen Modus. Wir entschuldigen uns für die Unannehmlichkeiten.
@@ -1271,7 +1266,7 @@ de:
       school_city: Stadt der Schule
       school_country: Land der Schule
       colombian_school_city: Stadt der Schule
-      colombian_school_name: Schulname
+      colombian_chilean_school_name: Schulname
       ages: Welches Alter unterrichten Sie in diesem Jahr?
       subjects: Welches Fach / welche Fächer unterrichten Sie in diesem Jahr?
       resources: Welche der folgenden informatischen Bildungsressourcen nutzen Sie?
@@ -1405,6 +1400,7 @@ de:
     Sie zurück zu unserer Webseite.
   page_not_found_button: Zurück zur Homepage
   copy: Kopieren
+  confirm: Bestätigen
   maker:
     google_oauth:
       login_with_google: Melde dich in der Maker App mit Google an
@@ -1424,3 +1420,5 @@ de:
       Ihres Kindes auf dem Laufenden zu bleiben!"
     link_your_email: E-Mail-Adresse Verlinken
     not_now: Nicht jetzt
+  behaviors:
+    this_sprite: dieser Sprite

@@ -353,6 +353,62 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Käytä alasvetovalikkoa ja korvaa \"???\" numerolla"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi.",
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Uusi blokki!",
+          "new_block_4": "Uusi blokki!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Louhi tämä rauta!"
         }
       }
     }

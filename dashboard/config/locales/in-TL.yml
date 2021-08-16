@@ -157,8 +157,16 @@ in:
     additional_information: crwdns7492:0crwdne7492:0
     user_type_button: crwdns134925:0crwdne134925:0
     user_type_label: crwdns56993:0crwdne56993:0
-    user_type_teacher: crwdns56994:0crwdne56994:0
     user_type_student: crwdns56995:0crwdne56995:0
+    user_type_student_desc: crwdns2690201:0crwdne2690201:0
+    user_type_student_ability_1: crwdns2690203:0crwdne2690203:0
+    user_type_student_ability_2: crwdns2690205:0crwdne2690205:0
+    user_type_teacher: crwdns56994:0crwdne56994:0
+    user_type_teacher_desc: crwdns2690207:0crwdne2690207:0
+    user_type_teacher_ability_1: crwdns2690209:0crwdne2690209:0
+    user_type_teacher_ability_2: crwdns2690211:0crwdne2690211:0
+    user_type_teacher_ability_3: crwdns2690213:0crwdne2690213:0
+    user_type_teacher_ability_4: crwdns2690215:0crwdne2690215:0
     field_is_required: crwdns58499:0crwdne58499:0
     accept_terms: crwdns58500:0crwdne58500:0
     error: crwdns92055:0crwdne92055:0
@@ -540,8 +548,8 @@ in:
     thank_you: crwdns45293:0crwdne45293:0
     help_from_html: crwdns6548:0crwdne6548:0
     help_from_html_old: crwdns45345:0crwdne45345:0
-    art_from_html: crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0
-    art_from_html_old: crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0
+    art_from_html: crwdns55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdnd55877:0%{current_year}crwdne55877:0
+    art_from_html_old: crwdns55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdnd55878:0%{current_year}crwdne55878:0
     code_from_html: crwdns56267:0crwdne56267:0
     powered_by_aws: crwdns24789:0crwdne24789:0
     built_on_github: crwdns2474796:0crwdne2474796:0
@@ -563,6 +571,7 @@ in:
     make_my_own_app: crwdns55145:0crwdne55145:0
     how_it_works: crwdns55146:0crwdne55146:0
     try_hour_of_code: crwdns55879:0crwdne55879:0
+    store: crwdns2689313:0crwdne2689313:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0
@@ -586,8 +595,6 @@ in:
       link: crwdns56932:0crwdne56932:0
       applab_unsupported_tablet: crwdns78689:0crwdne78689:0
       gamelab_unsupported_tablet: crwdns78690:0crwdne78690:0
-      oceans_unsupported_browser: crwdns2289845:0crwdne2289845:0
-      weblab_unsupported_browser: crwdns78691:0crwdne78691:0
       weblab_unsupported_locale_storage: crwdns78692:0crwdne78692:0
   slow_loading: crwdns3859:0crwdne3859:0
   try_reloading: crwdns3860:0crwdne3860:0
@@ -1022,9 +1029,11 @@ in:
       school_city: crwdns136842:0crwdne136842:0
       school_country: crwdns136843:0crwdne136843:0
       colombian_school_city: crwdns2462256:0crwdne2462256:0
-      colombian_school_department: crwdns2462258:0crwdne2462258:0
+      colombian_chilean_school_department: crwdns2689315:0crwdne2689315:0
       colombian_school_municipality: crwdns2462260:0crwdne2462260:0
-      colombian_school_name: crwdns2462262:0crwdne2462262:0
+      colombian_chilean_school_name: crwdns2689317:0crwdne2689317:0
+      chilean_school_commune: crwdns2689319:0crwdne2689319:0
+      chilean_school_id: crwdns2689321:0crwdne2689321:0
       ages: crwdns136844:0crwdne136844:0
       subjects: crwdns136845:0crwdne136845:0
       resources: crwdns136846:0crwdne136846:0

@@ -9,6 +9,7 @@ ms:
       name:
         course1:
           title: Kursus 1
+          description_audience: Peringkat umur 4-6 tahun
           lessons:
             Happy Maps:
               name: Peta-peta Gembira
@@ -20,9 +21,15 @@ ms:
               name: 'SImpang Siur: Turutan'
             Spelling Bee:
               name: Lebah Ejaan
+            'Studio: Create a Story':
+              name: 'Studio: Reka Cerita'
         course2:
           title: Kursus 2
           lessons:
+            'Artist: Debugging':
+              name: 'Artis: Penyahpepijatan'
+            'Artist: Nested Loops':
+              name: 'Artis: Gelung Bersarang'
             Conditionals:
               name: Bersyarat
             Flappy:
@@ -33,9 +40,20 @@ ms:
               name: 'SImpang Siur: Turutan'
             Relay programming:
               name: Pengaturcaraan penyampai
+            'Studio: Create a Story':
+              name: 'Studio: Reka Cerita'
         course3:
           title: Kursus 3
+          description_audience: Umur 8-18 tahun
           lessons:
+            Artist:
+              name: Artis
+            'Artist: Functions':
+              name: 'Artis: Fungsi'
+            'Artist: Nested Loops':
+              name: 'Artis: Gelung Bersarang'
+            'Artist: Patterns':
+              name: 'Artis: Corak'
             Bounce:
               name: Lantunan
             Computational Thinking:
@@ -46,19 +64,73 @@ ms:
               name: Internet
             Maze:
               name: Maze
+            'Studio: Create a Story':
+              name: 'Studio: Reka Cerita'
+        playlab:
+          description: Cipta cerita atau buat permainan dengan Makmal Mainan!
+          description_short: Cipta cerita atau buat permainan dengan Makmal Mainan!
+          student_description: Cipta cerita atau buat permainan dengan Makmal Mainan!
+        artist:
+          title: Artis
+          description: Lukis gambar and reka bentuk menarik dengan Artis!
+          description_short: Lukis gambar and reka bentuk menarik dengan Artis!
+          lessons:
+            Artist:
+              name: Artis
+          student_description: Lukis gambar and reka bentuk menarik dengan Artis!
         hourofcode:
+          title: Pagar Sesat Klasik
+          description: Cuba asas sains komputer dengan watak daripada Angry Birds,
+            Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
+          description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
           lessons:
             Maze:
               name: Maze
+          student_description: Cuba asas sains komputer dengan watak daripada Angry
+            Birds, Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
         frozen:
+          title: Kod dengan Anna dan Elsa
+          description: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa
+            mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping
+            salji dan corak apabila anda meluncur ais dan membuat alam ajaib musim
+            sejuk yang anda boleh kongsikan dengan rakan anda nanti!
           description_short: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa
             mereka meneroka keajaiban dan kecantikan ais.
+          lessons:
+            Artist:
+              name: Artis
+          student_description: Mari kita gunakan kod untuk menyertai Anna dan Elsa
+            semasa mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta
+            emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib
+            musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!
+        course4:
+          title: Kursus 4
+          description_audience: Umur 9-18 tahun
+          lessons:
+            Artist:
+              name: Artis
+            Artist Binary:
+              name: Binari Artis
+            'Artist: For Loops':
+              name: 'Artis: Untuk Gelung'
+            'Artist: Functions':
+              name: 'Artis: Fungsi'
+            'Artist: Functions with Parameters':
+              name: 'Artis: Fungsi dengan Parameter'
+            'Artist: Variables':
+              name: 'Artis: Pemboleh Ubah'
         Course4pre:
           lessons:
+            'Artist: Functions':
+              name: 'Artis: Fungsi'
+            'Artist: Nested Loops':
+              name: 'Artis: Gelung Bersarang'
             'Maze: Sequence':
               name: 'SImpang Siur: Turutan'
         usability:
           lessons:
+            Intro:
+              name: Intro
             Variables:
               name: Pembolehubah
         algebra:
@@ -66,9 +138,15 @@ ms:
             'Eval: Conditionals':
               name: Bersyarat
         infinity:
+          description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan
+            yang dibintangi oleh watak Disney Infinity.
+          description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan
+            yang dibintangi oleh watak Disney Infinity.
           lessons:
             Infinity:
               name: Infiniti
+          student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan
+            yang dibintangi oleh watak Disney Infinity.
         K5PD:
           lessons:
             Unplugged lessons:
@@ -78,6 +156,7 @@ ms:
           description: Kursus 20 jam ini memperkenalkan asas Sains komputer dan konsep
             programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred
             K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
+          description_audience: Umur 10-18 tahun
           lessons:
             Abstraction:
               name: Abstraksi
@@ -124,15 +203,15 @@ ms:
             bagi gred K-8, tetapi ia adalah menyeronokkan untuk belajar di semua peringkat
             umur.
         edit-code:
-          title: Edit kod
-          description: Edit kod
-          description_short: Edit kod
+          title: Mengedit kod
+          description: Mengedit kod
+          description_short: Mengedit kod
           lessons:
             The Artist:
               name: Pelukis
             The Maze:
               name: Simpang Siur
-          student_description: Edit kod
+          student_description: Mengedit kod
         events:
           title: Acara-acara
           description: Acara-acara
@@ -143,25 +222,42 @@ ms:
           student_description: Acara-acara
         flappy:
           title: Kod Flappy
-          description: ingin menulis permainan anda sendiri dalam masa kurang dari
-            10 minit? Cuba tutorial kod Flappy kami!
+          description: Anda mahu menulis permainan anda sendiri dalam masa kurang
+            daripada 10 minit? Cuba tutorial Kod Flappy kami!
           lessons:
             Flappy Code:
               name: Kod Flappy
-          student_description: ingin menulis permainan anda sendiri dalam masa kurang
-            dari 10 minit? Cuba tutorial kod Flappy kami!
+          student_description: Anda mahu menulis permainan anda sendiri dalam masa
+            kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
+        Hour of Code:
+          description: Cuba asas sains komputer dengan watak daripada Angry Birds
+            dan Tumbuhan lwn. Zombi!
+          description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
+          student_description: Cuba asas sains komputer dengan watak daripada Angry
+            Birds dan Tumbuhan lwn. Zombi!
         cspunit1:
           lessons:
             Sending Numbers:
               name: Menghantar nombor
-        cspunit2:
+            Text Compression:
+              name: Pemampatan Teks
+        text-compression:
+          title: Pemampatan Teks
           lessons:
-            The Internet:
-              name: Internet
+            Text Compression:
+              name: Pemampatan Teks
+        sciencePD2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         allthethings:
           lessons:
+            Artist:
+              name: Artis
             Bounce:
               name: Lantunan
+            Farmer:
+              name: Petani
             Flappy:
               name: Flappy
             Match:
@@ -170,9 +266,29 @@ ms:
               name: Maze
             Multi:
               name: Pelbagai
+            Text Compression:
+              name: Pemampatan Teks
+        cspfacilitator:
+          lessons:
+            Text Compression Lesson:
+              name: Pelajaran Pemampatan Teks
+            Text Compression Widget:
+              name: Widget Pemampatan Teks
         ECSPD2:
           lessons:
             Wrap-up:
+              name: Wrap-up
+        sciencePD2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        science-PD2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        sciencePD2b-iZone:
+          lessons:
+            Wrap-Up:
               name: Wrap-up
         ECSPD2-iZone:
           lessons:
@@ -183,39 +299,115 @@ ms:
             Wrap-up:
               name: Wrap-up
         asUnplugged:
+          description_audience: Umur 6-13 tahun
           lessons:
             Graph Paper Programming:
               name: Pengaturcaraan kertas graf
             Happy Maps:
               name: Peta-peta Gembira
+        afterschool1:
+          description_audience: Umur 7-13 tahun
+        ScienceP3OLPT2:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        Special Fun:
+          description_audience: Umur 10-18 tahun
+        SpecialSeries:
+          description_audience: Umur 10-18 tahun
         starwars:
-          title: 'Star Wars: Membina galaksi dengan kod'
+          description: Pelajari mengatur cara droid dan cipta permainan Star Wars
+            anda sendiri di galaksi yang amat jauh.
+          description_short: Pelajari mengatur cara droid dan cipta permainan Star
+            Wars anda sendiri di galaksi yang amat jauh.
+          student_description: Pelajari mengatur cara droid dan cipta permainan Star
+            Wars anda sendiri di galaksi yang amat jauh.
         starwarsblocks:
-          title: 'Star Wars: Membina galaksi dengan kod'
+          description: Pelajari mengatur cara droid dan cipta permainan Star Wars
+            anda sendiri di galaksi yang amat jauh.
+          description_short: Pelajari mengatur cara droid dan cipta permainan Star
+            Wars anda sendiri di galaksi yang amat jauh.
+          student_description: Pelajari mengatur cara droid dan cipta permainan Star
+            Wars anda sendiri di galaksi yang amat jauh.
+        mc:
+          title: Jam Kod Minecraft
+        oceans:
+          title: Kecerdasan Buatan (AI) untuk Lautan
+        ScienceP3OLPT3:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         csp1-2017:
           lessons:
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        csp2-2017:
+          lessons:
+            Text Compression:
+              name: Pemampatan Teks
+        csp4-2017:
+          lessons:
+            Simple Encryption:
+              name: Penyulitan Mudah
         CSDU3-Draft:
           lessons:
             Functions:
               name: Fungsi
+        CSF_Secret_Sample:
+          description_audience: Umur 8-18 tahun
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-facilitators:
+          lessons:
+            Introduction to Text Compression:
+              name: Pengenalan kepada Pemampatan Teks
+        CSF_Secret_Sample_Story:
+          description_audience: Umur 8-18 tahun+
         MikeTest:
+          description_audience: Umur 8-98 tahun
           lessons:
             Artist Functions:
-              name: Fungsi-fungsi Artis
-        gradeKinder:
+              name: Fungsi Artis
+        artistExemplar:
+          description_audience: Umur 8-18 tahun
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
+            Lesson 2,2:
+              name: 'Pelajaran 2.2: Pemampatan Teks'
+        gradeKinder:
+          description_audience: Umur 5-18 tahun
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
             Events:
               name: Acara-acara
             'Jigsaw: Learn to drag and drop':
               name: 'Jigsaw: Belajar untuk drag and drop'
             Loops:
               name: Gelung
-        grade1:
+        grade4:
+          description_audience: Peringkat umur 9-99 tahun
           lessons:
+            Build a Star Wars Game!:
+              name: Membina Permainan Star Wars!
+            'New Artist: Functions':
+              name: 'Artis Baharu: Fungsi'
+        grade1:
+          description_audience: Umur 5-18 tahun
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
             Events:
               name: Acara-acara
             'Jigsaw: Learn to drag and drop':
@@ -224,14 +416,30 @@ ms:
               name: Gelung
             'Debugging: Unspotted Bugs':
               name: 'Penyahpepijatan: Pepijat Tidak Dikesan'
+        grade5:
+          description_audience: Umur 10-110 tahun
+          lessons:
+            'Artist: For Loops':
+              name: 'Artis: Untuk Gelung'
+            'Artist: Functions with Parameters':
+              name: 'Artis: Fungsi dengan Parameter'
+            'Artist: Variables':
+              name: 'Artis: Pemboleh Ubah'
         ecs-unit1:
           lessons:
             Wrap-up:
               name: Wrap-up
         grade3:
+          description_audience: Umur 5-18 tahun
           lessons:
+            'Artist: Nested Loops':
+              name: 'Artis: Gelung Bersarang'
             Bounce:
               name: Lantunan
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd3-2017:
           lessons:
             Functions:
@@ -243,6 +451,7 @@ ms:
             Conditionals:
               name: Bersyarat
         grade2:
+          description_audience: Umur 5-18 tahun
           lessons:
             Flappy:
               name: Flappy
@@ -258,16 +467,40 @@ ms:
               name: Fungsi-fungsi dengan parameter
             Loops:
               name: Gelung
+            Nested Loops:
+              name: Gelung Bersarang
             Variables:
               name: Pembolehubah
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         basketball:
           lessons:
             Bounce:
               name: Lantunan
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: Penyulitan Mudah
         csd2-2017:
           lessons:
             Lists:
               name: Senarai
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+          lessons:
+            'Lessons 1 - 2: Bytes, File Sizes, and Text Compression':
+              name: 'Pelajaran 1 - 2: Bait, Saiz Fail dan Pemampatan Teks'
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -289,6 +522,8 @@ ms:
               name: 'Gelung: Gelung Bahagia'
             Loops in Collector:
               name: Gelung di dalam Pengumpul
+            Loops in Artist:
+              name: Gelung di dalam Artis
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
             Events in Play Lab:
@@ -314,6 +549,8 @@ ms:
               name: 'Gelung: Rakan Robotik Bergelung Saya'
             Loops in Collector:
               name: Gelung di dalam Pengumpul
+            Loops in Artist:
+              name: Gelung di dalam Artis
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
             Events in Play Lab:
@@ -374,6 +611,10 @@ ms:
               name: Membina Permainan Makmal Mainan
             Conditionals in Bee:
               name: Bersyarat di dalam Lebah
+            Artist Binary:
+              name: Binari Artis
+            Nested Loops:
+              name: Gelung Bersarang
             Nested Loops Project in Artist:
               name: Projek Gelung Bersarang di dalam Artis
             Debugging in Collector:
@@ -454,6 +695,38 @@ ms:
               name: Bersyarat dan Fungsi di dalam Lebah
             'Algorithms: Tangrams':
               name: 'Algoritma: Tangram'
+        classic-hoc-impact-study:
+          description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
+        hoc-impact-study:
+          description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
+        sports:
+          lessons:
+            Sports:
+              name: Sukan
+        2016_sciencePD-phase2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        2016_sciencePD_phase2b:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        sciencepd4:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        science-pd-ol-pt-5:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -469,6 +742,14 @@ ms:
               name: Fungsi di dalam Peladang
             Determine the Concept:
               name: Tentukan Konsep
+        sciencepd5:
+          lessons:
+            Wrap-Up:
+              name: Wrap-up
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd6-draft:
           lessons:
             Lists:
@@ -534,6 +815,10 @@ ms:
               name: Bersyarat dan Fungsi di dalam Lebah
         artist-and-bb8:
           lessons:
+            C9 Artist Loops:
+              name: Gelung Artis C9
+            D6 Frozen Artist:
+              name: Artis Frozen D6
             Bounce:
               name: Lantunan
         coursea-2017:
@@ -558,7 +843,7 @@ ms:
                 untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan
                 kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian
                 penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai
-                langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\r\n\r\nPelajaran
+                langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\\r\n\\\r\nPelajaran
                 ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai
                 lebih banyak masa, silakan meluangkan masa membina dan menyemak semula
                 fasa aktiviti Larian Guli."
@@ -567,7 +852,7 @@ ms:
                 konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam
                 benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran
                 dalam menterjemahkan situasi dunia nyata kepada senario dalam talian
-                dan sebaliknya.\r"
+                dan sebaliknya.\\\r"
             Learn to Drag and Drop:
               name: Penjujukan dengan Tarik dan Lepas
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar
@@ -612,6 +897,7 @@ ms:
                 "Gelung Bahagia," tahap ini akan mempunyai pelajar yang menggunakan
                 gelung untuk mengumpulkan harta karun dengan lebih cekap di Code.org.
             Loops in Artist:
+              name: Gelung di dalam Artis
               description_teacher: Kembali kepada gelung, pelajar mempelajari cara
                 melukis imej dengan penggelungan jujukan arahan ringkas. Dalam pelajaran
                 yang menggunakan alatan digital sebelum ini, gelung digunakan untuk
@@ -662,6 +948,8 @@ ms:
               name: 'Gelung: Rakan Robotik Bergelung Saya'
             Loops in Collector:
               name: Gelung di dalam Pengumpul
+            Loops in Artist:
+              name: Gelung di dalam Artis
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
             Events in Play Lab:
@@ -709,6 +997,8 @@ ms:
               name: 'Kewarganegaraan Digital: Keluarkan Maksudnya'
             Binary Bracelets:
               name: 'Di Luar Pengaturcaraan: Gelang Binari'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
           student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa.
@@ -766,6 +1056,7 @@ ms:
                 akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan
                 dan suara yang berbeza.
             Nested Loops:
+              name: Gelung Bersarang
               description_student: Gelung di dalam gelung di dalam gelung. Apakah
                 yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara
                 yang berlaku apabila anda menempatkan gelung di dalam gelung lain.
@@ -775,7 +1066,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
               description_student: Di sini anda akan menggunakan gelung bersarang
@@ -1144,10 +1435,14 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
+            Nested Loops:
+              name: Gelung Bersarang
             Functions in Harvester:
               name: Fungsi di dalam Penuai
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat
@@ -1401,6 +1696,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -1411,7 +1708,56 @@ ms:
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
           name: kursusf-2017
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         express-2017:
+          description_audience: 'Umur: 9-18 tahun'
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
@@ -1427,6 +1773,8 @@ ms:
               name: 'Penyahpepijatan: Pengaturcaraan Geganti'
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops Project in Artist:
               name: Projek Gelung Bersarang di dalam Artis
             Internet:
@@ -1488,12 +1836,15 @@ ms:
               name: 'Gelung Untuk: Gelung Untuk yang Menyeronokkan'
             'Functions: Songwriting with Parameters':
               name: 'Fungsi : Penulisan Lagu bersama Parameter'
+            Nested Loops:
+              name: Gelung Bersarang
             Conditionals & Loops in Harvester:
               name: Bersyarat & Gelung di dalam Penuai
           student_description: Pelajari asas sains komputer dan keselamatan internet.
             Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
             anda kongsikan.
         pre-express-2017:
+          description_audience: 'Umur: 4-8 tahun'
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan
             kursus tadika dan gred satu yang terbaik.'
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
@@ -1516,6 +1867,8 @@ ms:
               name: 'Gelung: Rakan Robotik Bergelung Saya'
             Loops in Collector:
               name: Gelung di dalam Pengumpul
+            Loops in Artist:
+              name: Gelung di dalam Artis
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
             Events in Play Lab:
@@ -1525,6 +1878,11 @@ ms:
           student_description: Pelajari asas sains komputer dan keselamatan internet.
             Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
             anda kongsikan.
+        applab-intro:
+          title: Pengenalan kepada Makmal Aplikasi
+          lessons:
+            Intro to App Lab:
+              name: Pengenalan kepada Makmal Aplikasi
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -1544,6 +1902,10 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
+            Nested Loops:
+              name: Gelung Bersarang
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
             'Algorithms: Dice Race':
@@ -1584,6 +1946,8 @@ ms:
               name: 'Algoritma: Pengaturcaraan Kertas Graf'
             Events in Bounce:
               name: Peristiwa dalam Lantunan
+            Nested Loops:
+              name: Gelung Bersarang
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
             Nested Loops Project in Artist:
@@ -1600,6 +1964,10 @@ ms:
               name: Bersyarat & Gelung di dalam Pagar Sesat
             Build a Play Lab Game:
               name: Membina Permainan Makmal Mainan
+            Artist Binary:
+              name: Binari Artis
+            Loops in Artist:
+              name: Gelung di dalam Artis
         new-express:
           lesson_groups:
             end_of_course_project:
@@ -1613,6 +1981,10 @@ ms:
               name: Penyahpepijatan di dalam Pengumpul
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
+            Nested Loops Project in Frozen:
+              name: Projek Gelung Bersarang di dalam Frozen
             'Events: The Big Event':
               name: 'Peristiwa: Peristiwa Besar'
             Events in Bounce:
@@ -1653,6 +2025,14 @@ ms:
               name: Bentangkan Projek Anda
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
+            Nested Loops:
+              name: Gelung Bersarang
+            Loops in Artist (UPDATED!):
+              name: Gelung di dalam Artis (DIKEMAS KINI!)
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Gelung di dalam Artis
         new-e:
           lesson_groups:
             csf_e_1:
@@ -1674,6 +2054,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -1725,6 +2107,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -1759,6 +2143,30 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+        pwc:
+          lessons:
+            Simple Encryption:
+              name: Penyulitan Mudah
+            Intro to App Lab:
+              name: Pengenalan kepada Makmal Aplikasi
+            Intro to App Lab (13+):
+              name: Pengenalan kepada Makmal Aplikasi (13+)
+        hero:
+          description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan
+            merentasi Minecraft dengan kod.
+          lessons:
+            Minecraft Hour of Code:
+              name: Jam Kod Minecraft
+          student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu!
+            Perjalanan merentasi Minecraft dengan kod.
+        applab-intro-staging:
+          lessons:
+            Intro to App Lab:
+              name: Pengenalan kepada Makmal Aplikasi
+        halloween:
+          lessons:
+            Halloween Artist:
+              name: Artis Halloween
         course-e-2018:
           lesson_groups:
             csf_e_1:
@@ -1771,7 +2179,7 @@ ms:
               display_name: Kandungan Kursus Tambahan
           lessons:
             courseB_unplugged_MRF_2018:
-              name: courseB_unplugged_MRF_2018
+              name: courseB_unplugged_MRF\_2018
             'Programming: My Robotic Friends':
               name: 'Pengaturcaraan: Rakan Robotik Saya'
             Sequence in Maze:
@@ -1782,6 +2190,10 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
+            Nested Loops:
+              name: Gelung Bersarang
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
             'Algorithms: Dice Race':
@@ -1833,6 +2245,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -1915,7 +2329,7 @@ ms:
                 untuk merasa kecewa dan putus asa. Pelajaran ini akan memperkenalkan
                 kepada pelajar mengenai idea bahawa kekecewaan boleh menjadi bahagian
                 penting dalam pembelajaran. Di sini, kekecewaan ditunjukkan sebagai
-                langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\r\n\r\nPelajaran
+                langkah dalam proses kreatif dan bukannya sebagai tanda kegagalan.\\\r\n\\\r\nPelajaran
                 ini dapat dilakukan dalam satu atau dua sesi kelas. Jika anda mempunyai
                 lebih banyak masa, silakan meluangkan masa membina dan menyemak semula
                 fasa aktiviti Larian Guli."
@@ -1925,7 +2339,7 @@ ms:
                 konsep algoritma kepada aktiviti kehidupan harian, nyata dengan menanam
                 benih sebenar. Di sini, matlamatnya ialah untuk mula membina kemahiran
                 dalam menterjemahkan situasi dunia nyata kepada senario dalam talian
-                dan sebaliknya.\r"
+                dan sebaliknya.\\\r"
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar
@@ -2006,6 +2420,7 @@ ms:
             kongsikan.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Pengaturcaraan kertas graf
@@ -2013,6 +2428,10 @@ ms:
               name: Penyahpepijatan di dalam Pengumpul
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Nested Loops:
+              name: Gelung Bersarang
+            Nested Loops Project in Frozen:
+              name: Projek Gelung Bersarang di dalam Frozen
             Events in Bounce:
               name: Peristiwa dalam Lantunan
             Conditionals in Minecraft:
@@ -2025,6 +2444,8 @@ ms:
               name: Pemboleh Ubah di dalam Makmal Mainan
             'For Loops: For Loop Fun':
               name: 'Gelung Untuk: Gelung Untuk yang Menyeronokkan'
+            For Loops in Artist:
+              name: Untuk Gelung dengan Artis
             'Functions: Songwriting with Parameters':
               name: 'Fungsi : Penulisan Lagu bersama Parameter'
             Functions in Bee:
@@ -2047,6 +2468,8 @@ ms:
               name: Penyahpepijatan dengan Scrat
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
+            Nested Loops in Frozen:
+              name: Gelung Bersarang bersama Anna dan Elsa
             Functions in Artist:
               name: Fungsi di dalam Artis
             Screen Out the Mean:
@@ -2057,6 +2480,12 @@ ms:
               name: Membina Permainan Kibasan
             The Power of Words:
               name: Kuasa Perkataan
+            Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
+            Variables that Change in Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
+            Artist Binary:
+              name: Imej Binari dengan Artis
             Internet:
               name: Internet
             Relay Programming:
@@ -2135,6 +2564,8 @@ ms:
               name: Bersyarat & Gelung di dalam Pagar Sesat
             Build a Play Lab Game:
               name: Permainan Ninja lwn. Lanun
+            Artist Binary:
+              name: Imej Binari dengan Artis
             Nested Loops in Frozen:
               name: Emping Salji dengan Anna dan Elsa
             Conditionals in Maze:
@@ -2188,6 +2619,8 @@ ms:
             anda kongsikan!
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Fungsi-fungsi dengan parameter\_
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         coursee-2018:
@@ -2386,6 +2819,8 @@ ms:
                 secara individu. Menambah kekuatan yang lain membuatkan tugas ini
                 boleh diuruskan. Pelajaran ini akan menunjukkan kepada pelajar anda
                 betapa kerja berpasukan boleh membantu dalam industri sains komputer.
+            Minecraft Hour of Code:
+              name: Jam Kod Minecraft
             Functions in Minecraft:
               name: Fungsi dalam Minecraft
           student_description: Mulakan pengekodan dengan algoritma, gelung, bersyarat
@@ -2520,6 +2955,7 @@ ms:
                 cara penggunaan gelung untuk dengan terperinci agar boleh menyelesaikan
                 masalah yang rumit dengan lebih berkesan.
             For Loops in Artist:
+              name: Untuk Gelung dengan Artis
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
@@ -2623,6 +3059,10 @@ ms:
                 ini, [di sini](https://curriculum.code.org/csf/coursef/15/).
             Conditionals:
               name: Bersyarat dengan Peladang
+            Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
+            Variables that Change in Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
             Conditionals in Farmer:
               name: Bersyarat dengan Peladang
           student_description: Pelajari menggunakan pelbagai jenis gelung, peristiwa,
@@ -2636,12 +3076,90 @@ ms:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        csp2-2018:
+          lessons:
+            Text Compression:
+              name: Pemampatan Teks
+        csp4-2018:
+          lessons:
+            Simple Encryption:
+              name: Penyulitan Mudah
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         pre-express-2018:
+          title: Ekspres Prapembaca (2018)
           description: Pelajari asas sains komputer dan keselamatan internet. Pada
             akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda
             kongsikan.
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan
             kursus tadika dan gred satu yang terbaik.'
+          description_audience: 'Umur: 4-8 tahun'
           lessons:
             Learn to Drag and Drop:
               name: Pelajari Tarik dan Lepas
@@ -2672,13 +3190,35 @@ ms:
           student_description: Pelajari asas sains komputer dan keselamatan internet.
             Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh
             anda kongsikan.
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        frozen-2018:
+          title: Skrip Frozen Baharu
+          lessons:
+            Artist:
+              name: Artis
+        frozen-2018-test:
+          title: Skrip Frozen Baharu
+          lessons:
+            Artist:
+              name: Artis
         dance:
-          title: Majlis Tari-Menari
           description_short: Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith
             Urban, Ciara, dan 25 lagi!
+          description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan
+            rakan anda!
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
+          student_description: Kod majlis tari-menari anda sendiri untuk berkongsi
+            dengan rakan anda!
+        frozen-2018-test-b:
+          title: Skrip Frozen Baharu
+          lessons:
+            Artist:
+              name: Artis
         aquatic:
           description_short: Gunakan kreativiti dan kemahiran menyelesaikan masalah
             anda untuk meneroka dan membina dunia di bawah permukaan air dengan kod!
@@ -2698,6 +3238,10 @@ ms:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+        dance-extras:
+          title: Teruskan Menari (2018)
+          description: Melampaui jam pertama dengan idea projek lanjutan.
+          student_description: Melampaui jam pertama dengan idea projek lanjutan.
         coursef-2019:
           title: Kursus F (2019)
           description: Pelajari menggunakan pelbagai jenis gelung, peristiwa, fungsi
@@ -2730,6 +3274,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -2753,12 +3299,12 @@ ms:
                 daripada kanak-kanak lain yang boleh membuatkan mereka merasa marah,
                 sakit hati, sedih, atau takut. Mereka menerokai cara menangani buli
                 siber dan bertindak balas dalam menghadapi bahasa yang menjengkelkan
-                dalam talian.\r\n\r\nPelajar berbincang mengenai semua cara mereka
+                dalam talian.\\\r\n\\\r\nPelajar berbincang mengenai semua cara mereka
                 gunakan teknologi untuk komunikasi dan menerokai persamaan dan perbezaan
                 antara komunikasi secara peribadi dan dalam talian. Kemudian, pelajar
                 melakukan sumbang saran untuk mencari cara bertindak balas terhadap
-                buli siber. \r\n\r\nUntuk maklumat lebih lanjut, sila kunjungi: [r
-                kuasa perkataan pendidikan yang munasabah]"
+                buli siber. \\\r\n\\\r\nUntuk maklumat lebih lanjut, sila kunjungi:
+                [r kuasa perkataan pendidikan yang munasabah]"
             Envelope Variables:
               description_student: 'Sampul surat dan pemboleh ubah mempunyai suatu
                 persamaan: kedua-duanya boleh menyimpan barangan berharga. Di sini
@@ -2774,6 +3320,7 @@ ms:
                 konsep yang mudah difahami, oleh itu kami menyarankan agar banyak
                 masa diberikan untuk perbincangan pada akhir pelajaran itu.
             Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
               description_student: Jangan lupa membawa kreativiti anda ke kelas! Dalam
                 teka-teki ini, anda akan membuat lukisan yang luar biasa dengan menggunakan
                 pemboleh ubah.
@@ -2788,6 +3335,7 @@ ms:
                 pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan
                 nilai ditukar semasa kod sedang berjalan.
             Variables that Change in Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan
                 dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
               description_teacher: Dalam pelajaran ini, pelajar akan meneroka penciptaan
@@ -2815,6 +3363,7 @@ ms:
                 mengikuti pengenalan mengenai gelung `untuk` dengan terperinci supaya
                 mereka boleh menyelesaikan masalah yang rumit dengan lebih berkesan.
             For Loops in Artist:
+              name: Untuk Gelung dengan Artis
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
@@ -2907,7 +3456,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Sequencing in the Maze:
               name: Penjujukan di dalam Pagar Sesat
             Events with Sprite Lab:
@@ -2967,7 +3516,7 @@ ms:
                 tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek
                 berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran,
                 mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan
-                hasil kerja terakhir mereka. \r\n\r\nPada tahap penerokaan, pelajar
+                hasil kerja terakhir mereka. \\\r\n\\\r\nPada tahap penerokaan, pelajar
                 akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal
                 Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari
                 tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka
@@ -3018,6 +3567,8 @@ ms:
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
         dance-low:
+          description_short: Kod majlis tari-menari anda sendiri untuk berkongsi dengan
+            rakan anda! (Versi ini untuk penyambungan yang perlahan)
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
@@ -3122,7 +3673,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Nested Loops in Artist:
               name: Gelung Bersarang di dalam Artis
             Nested Loops in Frozen:
@@ -3134,7 +3685,7 @@ ms:
                 gelung semasa!'
               description_teacher: "Sebaik sahaja pelajar mencecah pelajaran ini,
                 mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung
-                `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\r\n\r\n_Gelung
+                `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\\r\n\\\r\n_Gelung
                 semasa_ ialah gelung yang terus mengulangi perintah semasa syarat
                 dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui
                 bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu
@@ -3160,7 +3711,7 @@ ms:
                 tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan.
                 Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan
                 komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila
-                masa kod anda dijalankan.\r\n\r"
+                masa kod anda dijalankan.\\\r\n\\\r"
             Conditionals in Bee:
               description_student: Memandangkan anda sudah memahami bersyarat, sudah
                 tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila
@@ -3187,7 +3738,7 @@ ms:
                 ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat
                 pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar
                 mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan
-                maklumat yang selamat dan tidak selamat dikongsi dalam talian.\r\n\r\nPelajar
+                maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\\r\n\\\r\nPelajar
                 juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab
                 dan menghormati komuniti luar dan dalam talian mereka sebagai langkah
                 mempelajari cara menjadi warga digital yang baik."
@@ -3203,6 +3754,7 @@ ms:
                 cara komputer boleh juga menyimpan maklumat yang lebih kompleks (seperti
                 imej dan warna) dalam bentuk binari.
             Artist Binary:
+              name: Imej Binari dengan Artis
               description_student: Dalam pelajaran ini, anda akan mempelajari cara
                 membuat imej dengan menggunakan 0 dan 1 sahaja.
               description_teacher: Siri pelajaran dalam talian ini akan membentuk
@@ -3243,6 +3795,8 @@ ms:
               display_name: Jin
             csf_impacts:
               display_name: Kesan Pengkomputeran
+            csf_nested_loops:
+              display_name: Gelung Bersarang
             csf_functions:
               display_name: Fungsi
             end_of_course_project:
@@ -3258,6 +3812,10 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
+            Nested Loops:
+              name: Gelung Bersarang
             Nested Loops with Frozen:
               name: Gelung Bersarang dengan Frozen
             Conditionals:
@@ -3281,7 +3839,7 @@ ms:
                 yang bersifat sulit.
               description_teacher: "Dibangunkan oleh Pendidikan yang Munasabah, pelajaran
                 ini ialah tentang perbezaan antara maklumat yang selamat dan tidak
-                selamat untuk dikongsi dalam talian.\r\n\r\nSemasa pelajar mengunjungi
+                selamat untuk dikongsi dalam talian.\\\r\n\\\r\nSemasa pelajar mengunjungi
                 laman web yang meminta maklumat tentang identiti masing-masing, mereka
                 belajar mengamalkan proses siasatan kritikal yang memperkasakan mereka
                 untuk melindungi diri dan keluarga mereka daripada pencurian identiti.
@@ -3437,7 +3995,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
               description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh
@@ -3470,7 +4028,7 @@ ms:
                 Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai:
                 menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan
                 blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_
-                dan _penyahpepijatan_ mereka di dalam pagar sesat. \r Penyahpepijatan
+                dan _penyahpepijatan_ mereka di dalam pagar sesat. \\\r Penyahpepijatan
                 ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan
                 bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah.
                 Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat,
@@ -3499,7 +4057,7 @@ ms:
                 sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran
                 pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa
                 meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina
-                dan membentangkan hasil kerja terakhir mereka. \r\n\r\nPada tahap
+                dan membentangkan hasil kerja terakhir mereka. \\\r\n\\\r\nPada tahap
                 penerokaan, pelajar akan bermain dengan contoh projek pradibina di
                 dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya,
                 pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya
@@ -3517,7 +4075,7 @@ ms:
                 maklumat peribadi dan sulit di laman web.
               description_teacher: "Apabila mencipta poster berinteraktif dengan Makmal
                 Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi
-                maklumat peribadi dan sulit di laman web.\r"
+                maklumat peribadi dan sulit di laman web.\\\r"
             Aquatic Conditionals in Minecraft:
               name: Bersyarat Akuatik dalam Minecraft
             Access Ability:
@@ -3561,6 +4119,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -3609,6 +4168,12 @@ ms:
               name: Membina Permainan Kibasan
             The Power of Words:
               name: Kuasa Perkataan
+            Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
+            Variables that Change in Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
+            For Loops in Artist:
+              name: Untuk Gelung dengan Artis
             Explore Project Ideas:
               name: Terokai Idea Projek
             The Design Process:
@@ -3619,6 +4184,8 @@ ms:
               name: Semak Semula Projek Anda
             Present Your Project:
               name: Bentangkan Projek Anda
+            Artist Binary:
+              name: Binari Artis
             Internet:
               name: Internet
             Editing Behaviors:
@@ -3637,9 +4204,16 @@ ms:
             cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan
             dengan rakan, keluarga dan guru.
         andrea-test:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
           lessons:
             'null':
               name: 'null'
+        dance-extras-gallery:
+          title: Teruskan Menari
+          description: Melampaui jam pertama dengan idea projek lanjutan.
+          student_description: Melampaui jam pertama dengan idea projek lanjutan.
         coursec-2019:
           title: Kursus C (2019)
           description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan
@@ -3691,7 +4265,7 @@ ms:
               description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis
                 bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan
                 pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan
-                blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan `belok
+                blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok
                 ke kanan sebanyak 90 darjah '.
             'Loops: Getting Loopy':
               name: 'Gelung: Menjadi Bergelung'
@@ -3703,6 +4277,8 @@ ms:
                 "Menjadi Bergelung," tahap ini akan mempunyai pelajar yang menggunakan
                 gelung untuk membantu BB-8 merentasi pagar sesat dengan lebih cekap
                 berbanding sebelum ini.
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
               description_student: Mari kita gunakan gelung untuk membantu penuai
@@ -3710,7 +4286,7 @@ ms:
               description_teacher: "Pada tahap sebelumnya, pelajar menggunakan gelung
                 untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung
                 untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran
-                yang tumbuh dalam rumpun yang besar.\r"
+                yang tumbuh dalam rumpun yang besar.\\\r"
             'Events: The Big Event':
               description_student: Main permainan yang menyeronokkan untuk mengetahui
                 tentang peristiwa.
@@ -3736,15 +4312,15 @@ ms:
               description_teacher: "Pelajaran ini membantu kanak-kanak untuk mengenali
                 bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai
                 jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau
-                takut. \r\n\r\nPelajar mengetahui bahawa kadang-kadang individu lain
-                boleh bertindak seperti pembuli apabila mereka berada dalam talian.
+                takut. \\\r\n\\\r\nPelajar mengetahui bahawa kadang-kadang individu
+                lain boleh bertindak seperti pembuli apabila mereka berada dalam talian.
                 Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan
                 perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas
                 membaca senario tentang tingkah laku dalam talian yang keji, pelajar
                 membincangkan perkara tentang buli siber ini, sejauh mana kesannya
                 terhadap perasaan seseorang individu dan cara bertindak balas. Akhir
                 sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran
-                petua mudah mengenai buli siber dalam jurnal mereka.\r"
+                petua mudah mengenai buli siber dalam jurnal mereka.\\\r"
             Events in Play Lab:
               name: Permainan Mengejar dengan Peristiwa
               description_student: Sudah tiba masanya menjadi kreatif dan mencipta
@@ -3814,10 +4390,10 @@ ms:
               description_teacher: "Dengan kerjasama **Pendidikan yang Munasabah**,
                 pelajaran ini telah membuatkan pelajar menerokai tujuan individu menggunakan
                 kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui
-                strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\r\n\r\nPelajar
+                strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\\r\n\\\r\nPelajar
                 mempelajari petua kata laluan, menguji kata laluan sedia ada dengan
                 permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan
-                garis panduan untuk kata laluan yang kuat.\r"
+                garis panduan untuk kata laluan yang kuat.\\\r"
             Sticker Art with Loops:
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih
                 menarik dibuat dengan Artis!
@@ -3902,6 +4478,7 @@ ms:
                 Di sini, gelung digunakan untuk mengumpulkan harta karun di dalam
                 ruang gua yang terbuka.
             Loops in Artist:
+              name: Gelung di dalam Artis
               description_teacher: Kembali kepada gelung, pelajar mempelajari cara
                 melukis imej dengan penggelungan jujukan arahan ringkas. Dalam pelajaran
                 yang menggunakan alatan digital sebelum ini, gelung digunakan untuk
@@ -4028,7 +4605,7 @@ ms:
                 karun di dalam ruang gua yang terbuka.
               description_teacher: Dalam pelajaran ini, pelajar terus mempelajari
                 konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk
-                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan
+                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan
                 harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Loops in Artist:
               name: Melukis Taman dengan Gelung
@@ -4121,6 +4698,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan
             kursus tadika dan gred satu yang terbaik.'
+          description_audience: 'Umur: 4-8 tahun'
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -4200,12 +4778,26 @@ ms:
               display_name: Bersyarat
             csp_functions:
               display_name: Fungsi
+            required:
+              display_name: Gambaran Keseluruhan
         csp1-2019:
           lessons:
             Sending Numbers:
               name: Menghantar nombor
             The Internet:
               name: Internet
+        csp2-2019:
+          lessons:
+            Text Compression:
+              name: Pemampatan Teks
+        csp4-2019:
+          lessons:
+            Simple Encryption:
+              name: Penyulitan Mudah
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -4223,6 +4815,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Bee/Zombie:
               name: Gelung Bersarang di dalam Lebah/Zombi
             Nested Loops with Frozen:
@@ -4321,6 +4915,16 @@ ms:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+            required:
+              display_name: Gambaran Keseluruhan
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csd2-pilot:
           lessons:
             Lists:
@@ -4335,6 +4939,17 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        maddie-test:
+          lessons:
+            stage 1:
+              name: peringkat 1
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -4352,18 +4967,76 @@ ms:
               name: Pengaturcaraan dengan Rey dan BB-8
             Ocean Scene with Loops:
               name: Pemandangan Lautan dengan Gelung
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         peru-2019:
           lessons:
             Debugging in Collector:
               name: Penyahpepijatan di dalam Pengumpul
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Gelung di dalam Artis
+            Nested Loops:
+              name: Gelung Bersarang
+            Nested Loops Project in Frozen:
+              name: Projek Gelung Bersarang di dalam Frozen
             Nested Loops in Frozen:
               name: Gelung Bersarang dalam Frozen
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         dance-2019:
+          description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan
+            rakan anda!
           lessons:
             Dance Party:
               name: Majlis Tari-Menari
+          student_description: Kod majlis tari-menari anda sendiri untuk berkongsi
+            dengan rakan anda!
         k5-onlinepd-2019:
           lessons:
             Sequencing:
@@ -4378,6 +5051,10 @@ ms:
               name: Fungsi
             Variables:
               name: Pembolehubah
+        dance-extras-2019:
+          title: Teruskan Menari (2019)
+          description: Melampaui jam pertama dengan idea projek lanjutan.
+          student_description: Melampaui jam pertama dengan idea projek lanjutan.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -4402,6 +5079,8 @@ ms:
           lesson_groups:
             csf_conditionals:
               display_name: Bersyarat
+            csf_nested_loops:
+              display_name: Gelung Bersarang
             csf_functions:
               display_name: Fungsi
             end_of_course_project:
@@ -4485,6 +5164,10 @@ ms:
               name: 'Peristiwa: Peristiwa Besar'
             Alien Dance Party with Sprite Lab:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Gambaran Keseluruhan
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -4729,7 +5412,7 @@ ms:
                 karun di dalam ruang gua yang terbuka.
               description_teacher: Dalam pelajaran ini, pelajar terus mempelajari
                 konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk
-                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan
+                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan
                 harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Loops in Artist:
               name: Melukis Taman dengan Gelung
@@ -4809,25 +5492,25 @@ ms:
               description_teacher: "Pelajaran ini membantu kanak-kanak untuk mengenali
                 bahawa ia adalah penting untuk memberitahu orang dewasa yang dipercayai
                 jika sesuatu dalam talian membuat mereka merasa marah, sedih, atau
-                takut. \r\n\r\nPelajar mengetahui bahawa kadang-kadang individu lain
-                boleh bertindak seperti pembuli apabila mereka berada dalam talian.
+                takut. \\\r\n\\\r\nPelajar mengetahui bahawa kadang-kadang individu
+                lain boleh bertindak seperti pembuli apabila mereka berada dalam talian.
                 Mereka akan meneroka perkara yang dimaksudkan dengan buli siber dan
                 perkara yang boleh mereka lakukan apabila mereka mengalaminya. Selepas
                 membaca senario tentang tingkah laku dalam talian yang keji, pelajar
                 membincangkan perkara tentang buli siber ini, sejauh mana kesannya
                 terhadap perasaan seseorang individu dan cara bertindak balas. Akhir
                 sekali, mereka menggunakan pengetahuan mereka untuk membuat lembaran
-                petua mudah mengenai buli siber dalam jurnal mereka.\r"
+                petua mudah mengenai buli siber dalam jurnal mereka.\\\r"
             Powerful Passwords:
               description_student: Dalam pelajaran ini, anda akan mempelajari cara
                 kata laluan melindungi maklumat anda dan membuat kata laluan yang
                 baik.
               description_teacher: "Pelajar menerokai tujuan individu menggunakan
                 kata laluan, mempelajari manfaat menggunakan kata laluan dan menemui
-                strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\r\n\r\nPelajar
+                strategi untuk mencipta dan menyimpan kata laluan yang kukuh dan selamat.\\\r\n\\\r\nPelajar
                 mempelajari petua kata laluan, menguji kata laluan sedia ada dengan
                 permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan
-                garis panduan untuk kata laluan yang kuat.\r"
+                garis panduan untuk kata laluan yang kuat.\\\r"
             'Programming: My Robotic Friends':
               name: Rakan Robotik Junior Saya
               description_student: Dalam pelajaran ini, anda akan berpura-pura yang
@@ -4872,7 +5555,7 @@ ms:
               description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis
                 bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan
                 pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan
-                blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan `belok
+                blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \`belok
                 ke kanan sebanyak 90 darjah '.
             Binary Bracelets:
               description_student: Cipta gelang binari anda sendiri dan ketahui cara
@@ -4907,7 +5590,7 @@ ms:
               description_teacher: "Pada tahap sebelumnya, pelajar menggunakan gelung
                 untuk mencipta lukisan yang hebat. Kini, mereka akan menggunakan gelung
                 untuk tindakan baharu bagi membantu penuai mengumpulkan banyak sayuran
-                yang tumbuh dalam rumpun yang besar.\r"
+                yang tumbuh dalam rumpun yang besar.\\\r"
             Looking Ahead:
               description_student: Elakkan terkena lahar! Di sini anda akan mula mempelajari
                 tentang bersyarat di dalam dunia Minecraft.
@@ -5110,7 +5793,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Conditionals with Cards:
               description_student: Sudah tiba masanya untuk bermain permainan yang
                 anda memperoleh mata hanya di bawah syarat tertentu!
@@ -5122,7 +5805,7 @@ ms:
                 tahu sama ada situasi akan berlaku atau tidak semasa kod anda berjalan.
                 Itulah masanya situasi bersyarat dimasukkan. Bersyarat membenarkan
                 komputer membuat keputusan, berdasarkan maklumat yang benar pada bila-bila
-                masa kod anda dijalankan.\r\n\r"
+                masa kod anda dijalankan.\\\r\n\\\r"
             Conditionals in Bee:
               description_student: Memandangkan anda sudah memahami bersyarat, sudah
                 tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila
@@ -5140,7 +5823,7 @@ ms:
                 gelung semasa!'
               description_teacher: "Sebaik sahaja pelajar mencecah pelajaran ini,
                 mereka sudah sepatutnya mempunyai banyak latihan menggunakan gelung
-                `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\r\n\r\n_Gelung
+                `berulang`, oleh itu, sekarang sudah tiba masanya untuk mencampuradukkannya.\\\r\n\\\r\n_Gelung
                 semasa_ ialah gelung yang terus mengulangi perintah semasa syarat
                 dipenuhi. Gelung `semasa` digunakan apabila pengatur cara tidak mengetahui
                 bilangan perintah yang perlu diulangi, tetapi tahu syarat yang perlu
@@ -5173,6 +5856,7 @@ ms:
                 cara komputer boleh juga menyimpan maklumat yang lebih kompleks (seperti
                 imej dan warna) dalam bentuk binari.
             Artist Binary:
+              name: Imej Binari dengan Artis
               description_student: Dalam pelajaran ini, anda akan mempelajari cara
                 membuat imej dengan menggunakan 0 dan 1 sahaja.
               description_teacher: Siri pelajaran dalam talian ini akan membentuk
@@ -5186,7 +5870,7 @@ ms:
                 ini membantu pelajar mempelajari berfikir secara kritis tentang maklumat
                 pengguna yang diminta atau diperlukan oleh sesetengah laman web. Pelajar
                 mengetahui perbezaan antara maklumat sulit dan peribadi, membezakan
-                maklumat yang selamat dan tidak selamat dikongsi dalam talian.\r\n\r\nPelajar
+                maklumat yang selamat dan tidak selamat dikongsi dalam talian.\\\r\n\\\r\nPelajar
                 juga akan meneroka perkara yang dimaksudkan dengan bertanggungjawab
                 dan menghormati komuniti luar dan dalam talian mereka sebagai langkah
                 mempelajari cara menjadi warga digital yang baik."
@@ -5234,6 +5918,8 @@ ms:
               display_name: Tingkatkan
             csf_sprites:
               display_name: Jin
+            csf_nested_loops:
+              display_name: Gelung Bersarang
             csf_functions:
               display_name: Fungsi
             csf_impacts:
@@ -5252,7 +5938,7 @@ ms:
                 Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai:
                 menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan
                 blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_
-                dan _penyahpepijatan_ mereka di dalam pagar sesat. \r Penyahpepijatan
+                dan _penyahpepijatan_ mereka di dalam pagar sesat. \\\r Penyahpepijatan
                 ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan
                 bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah.
                 Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat,
@@ -5335,7 +6021,7 @@ ms:
                 maklumat peribadi dan sulit di laman web.
               description_teacher: "Apabila mencipta poster berinteraktif dengan Makmal
                 Peperi, pelajar akan menggunakan pemahaman mereka untuk berkongsi
-                maklumat peribadi dan sulit di laman web.\r"
+                maklumat peribadi dan sulit di laman web.\\\r"
             Access Ability:
               name: Mereka Bentuk untuk Aksesibiliti
               description_student: Dalam pelajaran ini, pelajar akan mempelajari tentang
@@ -5355,7 +6041,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Nested Loops in Artist:
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
               description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh
@@ -5424,7 +6110,7 @@ ms:
                 sebaya dan individu tersayang. Diharapkan boleh menjadi pelajaran
                 pelbagai dan pengalaman pelbagai-minggu, pelajar akan meluangkan masa
                 meneroka sumbang saran, mempelajari tentang proses reka bentuk, membina
-                dan membentangkan hasil kerja terakhir mereka. \r\n\r\nPada tahap
+                dan membentangkan hasil kerja terakhir mereka. \\\r\n\\\r\nPada tahap
                 penerokaan, pelajar akan bermain dengan contoh projek pradibina di
                 dalam Artis dan Makmal Peperi untuk mendapatkan inspirasi. Seterusnya,
                 pelajar akan mempelajari tentang proses reka bentuk dan cara melaksanakannya
@@ -5514,7 +6200,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Envelope Variables:
               description_student: 'Sampul surat dan pemboleh ubah mempunyai suatu
                 persamaan: kedua-duanya boleh menyimpan barangan berharga. Di sini
@@ -5530,6 +6216,7 @@ ms:
                 konsep yang mudah difahami, oleh itu kami menyarankan agar banyak
                 masa diberikan untuk perbincangan pada akhir pelajaran itu.
             Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
               description_student: Jangan lupa membawa kreativiti anda ke kelas! Dalam
                 teka-teki ini, anda akan membuat lukisan yang luar biasa dengan menggunakan
                 pemboleh ubah.
@@ -5544,6 +6231,7 @@ ms:
                 pemboleh ubah boleh menjadikan atur cara lebih kuat dengan membenarkan
                 nilai ditukar semasa kod sedang berjalan.
             Variables that Change in Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan
                 dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
               description_teacher: Dalam pelajaran ini, pelajar akan meneroka penciptaan
@@ -5582,6 +6270,7 @@ ms:
                 mengikuti pengenalan mengenai gelung `untuk` dengan terperinci supaya
                 mereka boleh menyelesaikan masalah yang rumit dengan lebih berkesan.
             For Loops in Artist:
+              name: Untuk Gelung dengan Artis
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
@@ -5658,7 +6347,7 @@ ms:
                 tersayang. Ini diharapkan boleh menjadi pelajaran pelbagai dan projek
                 berbilang-minggu apabila pelajar meluangkan masa untuk sumbang saran,
                 mempelajari tentang proses reka bentuk, membina dan kemudian membentangkan
-                hasil kerja terakhir mereka. \r\n\r\nPada tahap penerokaan, pelajar
+                hasil kerja terakhir mereka. \\\r\n\\\r\nPada tahap penerokaan, pelajar
                 akan dapat melihat contoh projek pradibina di dalam Artis dan Makmal
                 Mainan untuk mendapatkan inspirasi. Seterusnya, pelajar akan mempelajari
                 tentang proses reka bentuk dan cara melaksanakannya dalam projek mereka
@@ -5669,6 +6358,7 @@ ms:
                 selepas pengujian dan penilaian rakan sebaya. Akhir sekali, pelajar
                 akan dapat membentangkan hasil kerja kepada rakan sekelas mereka."
             AI for Oceans:
+              name: Kecerdasan Buatan (AI) untuk Lautan
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan
                 objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk
                 mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan
@@ -5685,19 +6375,20 @@ ms:
                 itu, pelajar akan memilih label mereka sendiri untuk digunakan pada
                 imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan
                 untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej
-                baharu dengan sendirinya.\r\n\r\n\r\n**Menyemak Ketepatan:** Tutorial
-                ini tidak akan memberitahu pelajar sama ada mereka melengkapkan tahap
-                itu dengan betul. Anda boleh melangkau bahagian aktiviti yang berbeza
-                dengan pantas. Sila galakkan pelajar menonton video, membaca arahan
-                dan mencuba perkara yang berbeza sepanjang pengajian ini. Pada bila-bila
-                masa, mereka boleh berkongsi penemuan mereka dengan anda atau rakan
-                sekelas.\r"
+                baharu dengan sendirinya.\\\r\n\\\r\n\\\r\n**Menyemak Ketepatan:**
+                Tutorial ini tidak akan memberitahu pelajar sama ada mereka melengkapkan
+                tahap itu dengan betul. Anda boleh melangkau bahagian aktiviti yang
+                berbeza dengan pantas. Sila galakkan pelajar menonton video, membaca
+                arahan dan mencuba perkara yang berbeza sepanjang pengajian ini. Pada
+                bila-bila masa, mereka boleh berkongsi penemuan mereka dengan anda
+                atau rakan sekelas.\\\r"
           student_description: Pelajari menggunakan pelbagai jenis gelung, peristiwa,
             fungsi dan bersyarat. Selidik teknik penyelesaian masalah yang berbeza
             dan bincangkan kesan pengkomputeran dan internet terhadap kemasyarakatan.
             Dalam bahagian kedua kursus ini, sila reka bentuk dan cipta projek kemuncak
             yang boleh anda kongsikan dengan rakan dan keluarga.
         express-2020:
+          title: Kursus Dipercepatkan (2020)
           description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut
             tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan
             kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan!
@@ -5705,6 +6396,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -5733,6 +6425,8 @@ ms:
               name: Pengaturcaraan di dalam Artis
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
+            Loops in Artist:
+              name: Gelung di dalam Artis
             Nested Loops in Frozen:
               name: Gelung Bersarang dalam Frozen
             Conditionals in Bee:
@@ -5773,6 +6467,12 @@ ms:
               name: Fungsi dengan Penuai
             Functions with Artist:
               name: Fungsi dengan Artis
+            Variables with Artist:
+              name: Pemboleh Ubah dengan Artis
+            Changing Variables with Artist:
+              name: Menukar Pemboleh Ubah dengan Artis
+            For Loops with Artist:
+              name: Untuk Gelung dengan Artis
             Behaviors in Sprite Lab:
               name: Tingkah Laku di dalam Makmal Peperi
           student_description: Pelajari sains komputer dengan mencuba pelajaran di
@@ -5789,6 +6489,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan
             kursus tadika dan gred satu yang terbaik.'
+          description_audience: 'Umur: 4-8 tahun'
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -5836,7 +6537,7 @@ ms:
               name: Gelung di dalam Pengumpul
               description_teacher: Dalam pelajaran ini, pelajar terus mempelajari
                 konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk
-                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan
+                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan
                 harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Ocean Scene with Loops:
               name: Pemandangan Lautan dengan Gelung
@@ -5847,6 +6548,7 @@ ms:
                 mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan
                 peluang mencipta imej mereka sendiri dengan menggunakan gelung.
             Loops in Artist:
+              name: Gelung di dalam Artis
               description_teacher: Kembali kepada gelung, pelajar mempelajari cara
                 melukis imej dengan penggelungan jujukan arahan ringkas. Dalam pelajaran
                 dalam talian sebelum ini, gelung digunakan untuk merentasi pagar sesat
@@ -5881,8 +6583,18 @@ ms:
             komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi
             cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan
             dengan rakan, keluarga dan guru.
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
         csp5-virtual:
           lessons:
+            Intro to App Lab:
+              name: Pengenalan kepada Makmal Aplikasi
             Variables:
               name: Pembolehubah
         virtual-holding-place:
@@ -5931,9 +6643,30 @@ ms:
               name: Kursus E
             Course F:
               name: Kursus F
+            minitoolbox_2021:
+              name: 'Makmal Peperi: Banyak Peperi'
+            csf_slides:
+              name: Slaid Asas CS
+            playlab_2021:
+              name: Pengenalan kepada Makmal Mainan
+          lesson_groups:
+            lesson group:
+              description: Ini ialah tahap pengajaran bersemuka yang dikaitkan dengan
+                rancangan pelajaran. Tahap ini tidak muncul di dalam skrip lain.
+            slides:
+              display_name: Tahap Penterjemah
+              description: Tahap ini mengandungi kod permulaan boleh edit yang sejajar
+                dengan dek slaid kurikulum.
+            video:
+              display_name: Tahap Penangkapan Video
+              description: Tahap ini ialah untuk kegunaan pencipta video.
         virustest:
           title: Mensimulasikan Wabak
           description_short: Gunakan Makmal Jin untuk mencipta simulasi wabak virus.
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Kecerdasan Buatan (AI) untuk Lautan
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5959,6 +6692,8 @@ ms:
               display_name: Pembolehubah
             outbreak:
               display_name: Simulator Wabak
+            debugging:
+              display_name: Penyahpepijatan
         csd3-2021:
           lessons:
             Variables:
@@ -5981,6 +6716,11 @@ ms:
             Functions with Parameters:
               key: Fungsi-fungsi dengan parameter
               name: Fungsi-fungsi dengan parameter
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Penyahpepijatan
+              name: Penyahpepijatan
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -5995,6 +6735,10 @@ ms:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+        csp9-2021:
+          lessons:
+            lesson-10:
+              name: Kepincangan Algoritma
         coursea-2021:
           title: Kursus A (2021)
           description_short: Pengenalan kepada sains komputer untuk prapembaca.
@@ -6118,6 +6862,7 @@ ms:
               description_student: Atur cara pengembara Laurel mengumpulkan harta
                 karun di dalam ruang gua yang terbuka.
             Loops in Artist:
+              key: Gelung di dalam Artis
               name: Melukis Taman dengan Gelung
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
             The Right App:
@@ -6129,7 +6874,6 @@ ms:
                 butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
-              name: Pertempuran Diraja bersama Peristiwa
               description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
                 permainan berinteraktif.
             lesson-1:
@@ -6304,6 +7048,7 @@ ms:
               description_student: Dalam pelajaran ini, anda akan menggunakan blok
                 ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin.
             Loops in Artist:
+              key: Gelung di dalam Artis
               name: Melukis Bentuk dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej menarik
                 dibuat dengan Artis!
@@ -6351,6 +7096,8 @@ ms:
                 cara komputer boleh juga menyimpan maklumat yang lebih kompleks (seperti
                 imej dan warna) dalam bentuk binari.
             Artist Binary:
+              key: Binari Artis
+              name: Imej Binari dengan Artis
               description_student: Dalam pelajaran ini, anda akan mempelajari cara
                 membuat imej dengan menggunakan 0 dan 1 sahaja.
               description_teacher: Siri pelajaran dalam talian ini akan membentuk
@@ -6423,7 +7170,7 @@ ms:
                 Semula` dan `Langkah`. Video ini juga ada membincangkan mengenai:
                 menarik blok Blockly, menghapuskan blok Blockly dan menyambungkan
                 blok Blockly. Seterusnya, pelajar akan berlatih kemahiran _penjujukan_
-                dan _penyahpepijatan_ mereka di dalam pagar sesat. \r Penyahpepijatan
+                dan _penyahpepijatan_ mereka di dalam pagar sesat. \\\r Penyahpepijatan
                 ialah elemen penting pembelajaran untuk mengatur cara. Pelajar akan
                 bertemu dengan beberapa teka-teki yang telah diselesaikan dengan salah.
                 Mereka perlu meneliti kod yang sedia ada untuk mengenal pasti ralat,
@@ -6474,7 +7221,7 @@ ms:
                 lwn Zombi, pelajar akan mempelajari cara mengatur cara gelung supaya
                 berada di dalam gelung lain. Mereka juga akan didorong untuk berfikir
                 sejauh mana sedikit perubahan di dalam mana-mana akan memberikan kesan
-                kepada atur cara mereka apabila mereka mengklik `Jalankan'.
+                kepada atur cara mereka apabila mereka mengklik \`Jalankan'.
             Nested Loops in Artist:
               key: Gelung Bersarang di dalam Artis
               name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
@@ -6533,6 +7280,8 @@ ms:
             lesson-1:
               name: Mereka Bentuk untuk Aksesibiliti
           lesson_groups:
+            ramp_up:
+              display_name: Gelung Bersarang
             csf_sprites:
               display_name: Jin
             csf_nested_loops:
@@ -6618,6 +7367,7 @@ ms:
                 konsep yang mudah difahami, oleh itu kami menyarankan agar banyak
                 masa diberikan untuk perbincangan pada akhir pelajaran itu.
             Variables as Constant in Artist:
+              name: Pemboleh Ubah dengan Artis
               description_student: Jangan lupa membawa kreativiti anda ke kelas! Dalam
                 teka-teki ini, anda akan membuat lukisan yang luar biasa dengan menggunakan
                 pemboleh ubah.
@@ -6647,6 +7397,7 @@ ms:
               description_student: Jalankan simulasi pada komputer dan eksperimen
                 dengan menukar pemboleh ubah.
             AI for Oceans:
+              key: Kecerdasan Buatan (AI) untuk Lautan
               name: Kecerdasan Buatan (AI) Untuk Lautan
             Internet:
               key: Internet
@@ -6658,6 +7409,7 @@ ms:
               key: Untuk Gelung di dalam Lebah
             For Loops in Artist:
               key: Untuk Gelung di dalam Artis
+              name: Untuk Gelung dengan Artis
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
@@ -6710,6 +7462,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum
             sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
           lessons:
             Dance Party:
               key: Majlis Tari-Menari
@@ -6789,6 +7542,7 @@ ms:
               description_student: Membuatkan lukisan yang kompleks menjadi lebih
                 mudah dengan fungsi!
             Variables with Artist:
+              key: Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan
                 dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
@@ -6804,9 +7558,13 @@ ms:
                 menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih
                 dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
             Changing Variables with Artist:
+              key: Menukar Pemboleh Ubah dengan Artis
+              name: Menukar Pemboleh Ubah dengan Artis
               description_student: Dalam pelajaran ini, anda akan membuat lukisan
                 dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
             For Loops with Artist:
+              key: Untuk Gelung dengan Artis
+              name: Untuk Gelung dengan Artis
               description_student: Bersedia untuk membuat hasil kerja agung anda yang
                 seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan
                 membuat beberapa gambar yang cukup luar biasa.
@@ -6864,6 +7622,7 @@ ms:
             dan guru.
           description_short: 'Pengenalan kepada sains komputer untuk prapembaca: menggabungkan
             kursus tadika dan gred satu yang terbaik.'
+          description_audience: 'Umur: 4-8 tahun'
           lessons:
             Learn to Drag and Drop:
               key: Pelajari Tarik dan Lepas
@@ -6892,7 +7651,7 @@ ms:
               name: Gelung dengan Laurel
               description_teacher: Dalam pelajaran ini, pelajar terus mempelajari
                 konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk
-                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok `dapatkan
+                mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \`dapatkan
                 harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.
             Ocean Scene with Loops:
               key: Pemandangan Lautan dengan Gelung
@@ -6944,6 +7703,91 @@ ms:
           description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.
           student_description: Gunakan Makmal Jin untuk memprogramkan simulasi wabak
             virus.
+        csa1-pilot:
+          lessons:
+            lesson-19:
+              description_student: Hari ini anda berjaya melengkapkan Soalan Respons
+                Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan
+                untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan
+                dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada
+                tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa
+                anda meninggalkan tempat tersebut.
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut
+                cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi
+                soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter`
+                penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh
+                Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan
+                rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih
+                soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai
+                penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ
+                ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok
+                binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan
+                ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui
+                secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+        csa2-pilot:
+          lessons:
+            new lesson:
+              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami
+                mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan
+                Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam
+                pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang
+                proses yang dipanggil sebagai pengkapsulan data. '
+              description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta
+                objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh
+                ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian`
+                dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
+            lesson-2:
+              name: Menggunakan Pemboleh Ubah
+              description_student: Pemboleh ubah memberikan cara untuk jurutera perisian
+                menyimpan maklumat. Jenis maklumat yang perlu kita simpan menentukan
+                jenis pemboleh ubah yang perlu kita gunakan, jenis datanya dan cara
+                kita dapat menggunakannya. Di dalam pelajaran ini, anda menggunakan
+                pemboleh ubah bagi menyimpan maklumat yang digunakan untuk mencipta
+                objek `Pelukis` dan menyimpan input maklumat oleh pengguna.
+              description_teacher: Di dalam pelajaran ini, pelajar meneroka kefungsian
+                pemboleh ubah dan membezakan antara pemboleh ubah primitif dan rujukan.
+                Pelajar menggunakan kelas `Pengimbas` untuk mendapatkan input daripada
+                pengguna dan menentukan pemboleh ubah untuk menyimpan nilai yang diberikan
+                oleh pengguna. Nilai ini digunakan untuk membina objek `Pelukis` di
+                dalam Kejiranan.
+            lesson-3:
+              name: Pembina Penulisan
+              description_student: Projek trak makanan Pastri Mercury memerlukan bantuan
+                anda! Pemiliknya mahu menjual pencuci mulut di dalam Kejiranan tetapi
+                perlu boleh memasukkan dan menyimpan pencuci mulut mereka di dalam
+                atur cara. Anda telah diminta menggunakan kemahiran kejuruteraan perisian
+                anda untuk mencipta atur cara yang boleh mencipta objek pencuci mulut
+                supaya pemiliknya dapat menjejaki inventori. Anda mulakan dengan mencipta
+                kelas `Pencuci Mulut` supaya pemiliknya dapat memasukkan perisa, kuantiti
+                tersedia dan harga bagi setiap pencuci mulut yang mereka jual.
+              description_teacher: Pelajar diperkenalkan kepada Projek trak makanan
+                Pastri Mercury dan keperluan pemilik untuk atur cara yang bertujuan
+                memasukkan dan menyimpan item pencuci mulut. Sebagai jurutera perisian,
+                pelajar menggunakan strategi reka bentuk berorientasikan objek untuk
+                mengenal pasti atribut yang perlu dan jenis data yang sesuai bagi
+                kelas `Pencuci Mulut`. Pelajar menulis pembina dan menggunakan objek
+                `Pengimbas` untuk mendapatkan nilai bagi pemboleh ubah contoh bagi
+                memulakan objek `Pencuci Mulut`.
+            lesson-4:
+              name: Menambah Pelbagai Pembina
+            lesson-5:
+              name: Memanipulasi Pemboleh Ubah dan Data Objek
+            lesson-6:
+              name: Meminimumkan Ralat dalam Permulaan
+            lesson-7:
+              name: Pembina Penulisan untuk Hierarki
+            lesson-8:
+              name: Mengakses Data Objek
+            lesson-9:
+              name: Mengubah Suai Data Objek
+            lesson-10:
+              name: Memaparkan Maklumat Objek
+            lesson-11:
+              name: Projek Pengurusan Storan Kejiranan - Hari 1
+            lesson-12:
+              name: Projek Pengurusan Storan Kejiranan - Hari 2
+            lesson-13:
+              name: Projek Pengurusan Storan Kejiranan - Hari 3
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -6964,3 +7808,39 @@ ms:
             Variables:
               key: Pembolehubah
               name: Pembolehubah
+        self-paced-pl-csd5-2021:
+          lessons:
+            lesson-4:
+              name: Proses Reka Bentuk
+        csa2-exemplars:
+          lessons:
+            lesson-2:
+              name: Menggunakan Pemboleh Ubah
+            lesson-3:
+              name: Pembina Penulisan
+            lesson-4:
+              name: Menambah Pelbagai Pembina
+            lesson-5:
+              name: Memanipulasi Pemboleh Ubah dan Data Objek
+            lesson-6:
+              name: Meminimumkan Ralat dalam Permulaan
+            lesson-7:
+              name: Pembina Penulisan untuk Hierarki
+            lesson-8:
+              name: Mengakses Data Objek
+            lesson-9:
+              name: Mengubah Suai Data Objek
+            lesson-10:
+              name: Memaparkan Maklumat Objek
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: ujian
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Gambaran Keseluruhan
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Gambaran Keseluruhan

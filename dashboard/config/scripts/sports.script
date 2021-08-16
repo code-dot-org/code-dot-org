@@ -1,5 +1,8 @@
+family_name 'sports'
+version_year 'unversioned'
 published_state 'preview'
 tts true
+is_course true
 
 lesson 'Sports', display_name: 'Sports', has_lesson_plan: false
 level 'bounce_1_sports'

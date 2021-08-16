@@ -211,8 +211,8 @@ da:
       med at logge dig.
     user_type_button: Opdater kontotype
     user_type_label: Kontotype
-    user_type_teacher: Lærer
     user_type_student: Elev
+    user_type_teacher: Lærer
     field_is_required: er påkrævet
     accept_terms: Du skal acceptere at oprette en konto
     error: Der opstod en fejl.
@@ -392,6 +392,7 @@ da:
       about_contact: Kontakt os
       about_faqs: Ofte stillede spørgsmål
       learn: Lær
+      stats: Statistikker
       help_us: Hjælp os
       teach: Undervis
       about: Om
@@ -697,12 +698,6 @@ da:
       gamelab_unsupported_tablet: Game Lab kører bedst på en stationær eller på en
         bærbar med en mus og et tastatur. Du kan opleve problemer ved brug af dette
         værktøj på din nuværende enhed.
-      oceans_unsupported_browser: Denne browser understøtter ikke denne vejledning.
-        Prøv venligst at besøge denne side ved brug af Edge, Chrome, Firefox eller
-        en anden moderne browser.
-      weblab_unsupported_browser: Desværre oplever vi på nuværende tidspunkt problemer
-        med indlæsning af Web Lab på denne browser. Du bliver nød til at bruge en
-        anden browser indtil problemet er løst. Beklager ulejligheden.
       weblab_unsupported_locale_storage: Du kan opleve problemer ved at bruge Web
         Lab i privat-browsing tilstand. Indlæs venligst dit projekt i normal tilstand.
         Beklager ulejligheden.
@@ -810,6 +805,7 @@ da:
     unplugged_conditionals:
       title: Betingelser
     widgets:
+      audience: I alderen 14+
       cta: Lær hvordan
   landing:
     report_bug: Rapporter fejl
@@ -1049,7 +1045,7 @@ da:
       gender: Køn
       school_name: Skolens navn
       school_country: Skolens land
-      colombian_school_name: Skolens navn
+      colombian_chilean_school_name: Skolens navn
       ages: Hvilket alderstrin underviser du på?
       subjects: Hvilke emner underviser du i?
       workshop_course: Workshop kursus
@@ -1105,7 +1101,9 @@ da:
   cookie_banner:
     more_information: Se Code.org's privatlivspolitik.
     accept: Jeg er enig
+  page_not_found_title: Siden blev ikke fundet
   copy: Kopier
+  confirm: Bekræft
   parent_email_banner:
     text: "** Er du forælder eller værge? ** Knyt din e-mail til denne konto for at
       holde dig opdateret om dit barns fremskridt og projekter!"

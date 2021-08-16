@@ -6,11 +6,13 @@
     "properties": {
       "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}",
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:15 UTC",
+    "family_name": "algebraa",
+    "serialized_at": "2021-08-03 22:46:55 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "AlgebraA"
@@ -201,7 +203,6 @@
           "Calc Circles of Eval .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -225,7 +226,6 @@
           "Calc Circles of Eval .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -249,7 +249,6 @@
           "Calc Circles of Eval .3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -273,7 +272,6 @@
           "Calc Circles of Eval .4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -297,7 +295,6 @@
           "Calc Circles of Eval 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -321,7 +318,6 @@
           "Calc Circles of Eval 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -345,7 +341,6 @@
           "Calc Circles of Eval 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -369,7 +364,6 @@
           "Calc Circles of Eval 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -393,7 +387,6 @@
           "Calc Circles of Eval 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -417,7 +410,6 @@
           "Calc Circles of Eval 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -441,7 +433,6 @@
           "Blocks to Math 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -465,7 +456,6 @@
           "Blocks to Math 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -489,7 +479,6 @@
           "Blocks to Math 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -513,7 +502,6 @@
           "Blocks to Math 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -537,7 +525,6 @@
           "Calc Circles of Eval Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -561,7 +548,6 @@
           "Eval Strings Images .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -585,7 +571,6 @@
           "Eval Strings Images .2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -609,7 +594,6 @@
           "Eval Strings Images 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -633,7 +617,6 @@
           "Eval Strings Images 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -657,7 +640,6 @@
           "Eval Strings Images 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -681,7 +663,6 @@
           "Eval Strings Images 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -705,7 +686,6 @@
           "Eval Strings Images 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -729,7 +709,6 @@
           "Eval Strings Images 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -753,7 +732,6 @@
           "Eval Strings Images 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -777,7 +755,6 @@
           "Eval Strings Images 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -801,7 +778,6 @@
           "Multi Strings Images 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -825,7 +801,6 @@
           "Eval Strings Images Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -849,7 +824,6 @@
           "Contracts"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -873,7 +847,6 @@
           "Eval Contracts A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -897,7 +870,6 @@
           "Eval Contracts B"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -921,7 +893,6 @@
           "Eval Contracts C"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -945,7 +916,6 @@
           "Eval Contracts D"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -969,7 +939,6 @@
           "Eval Contracts E"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -993,7 +962,6 @@
           "Eval Contracts F"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1017,7 +985,6 @@
           "Eval Contracts 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1041,7 +1008,6 @@
           "Eval Contracts 4 B"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1065,7 +1031,6 @@
           "Calc Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1089,7 +1054,6 @@
           "Calc Vars 1.1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1113,7 +1077,6 @@
           "Calc Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1137,7 +1100,6 @@
           "Calc Vars 2.1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1161,7 +1123,6 @@
           "MSM Defining Vars 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1185,7 +1146,6 @@
           "MSM Defining Vars 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1209,7 +1169,6 @@
           "MSM Defining Vars 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1233,7 +1192,6 @@
           "MSM Defining Vars 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1257,7 +1215,6 @@
           "Eval Defining Vars Free Play 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1281,7 +1238,6 @@
           "msm variables multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1305,7 +1261,6 @@
           "msm variables multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1329,7 +1284,6 @@
           "msm variables multi 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1353,7 +1307,6 @@
           "msm variables multi 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1377,7 +1330,6 @@
           "msm variables multi 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1401,7 +1353,6 @@
           "msm variables multi 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1425,7 +1376,6 @@
           "DesignRecipe"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1449,7 +1399,6 @@
           "Eval Define Funcs 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1473,7 +1422,6 @@
           "Eval Define Funcs 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1497,7 +1445,6 @@
           "Eval Define Funcs 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1521,7 +1468,6 @@
           "Eval Define Funcs 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1545,7 +1491,6 @@
           "Eval Define Funcs 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1569,7 +1514,6 @@
           "Calc Define Funcs 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1593,7 +1537,6 @@
           "Calc Define Funcs 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1617,7 +1560,6 @@
           "Calc Define Funcs 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1641,7 +1583,6 @@
           "Calc Define Funcs 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1665,7 +1606,6 @@
           "Multi Define Funcs 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1689,7 +1629,6 @@
           "Multi Define Funcs 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1713,7 +1652,6 @@
           "Multi Define Funcs 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1737,7 +1675,6 @@
           "msm variables multi 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1761,7 +1698,6 @@
           "msm variables multi 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1785,7 +1721,6 @@
           "msm variables multi 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1809,7 +1744,6 @@
           "DesignRecipe"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1833,7 +1767,6 @@
           "Eval Design Recipe .1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1857,7 +1790,6 @@
           "Eval Design Recipe 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1881,7 +1813,6 @@
           "Eval Design Recipe 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1905,7 +1836,6 @@
           "Eval Design Recipe 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1929,7 +1859,6 @@
           "Eval Design Recipe 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1953,7 +1882,6 @@
           "Calc Design Recipe 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1977,7 +1905,6 @@
           "Calc Design Recipe 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2001,7 +1928,6 @@
           "Calc Design Recipe 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2025,7 +1951,6 @@
           "Calc Design Recipe 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2049,7 +1974,6 @@
           "Eval Design Recipe Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2073,7 +1997,6 @@
           "Play Lab Rocket 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2020,6 @@
           "Rocket Height Course A"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2121,7 +2043,6 @@
           "Play Lab Rocket 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2145,7 +2066,6 @@
           "Play Lab Rocket 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2169,7 +2089,6 @@
           "Play Lab Rocket 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2193,7 +2112,6 @@
           "Play Lab Rocket 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2217,7 +2135,6 @@
           "Play Lab Rocket Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

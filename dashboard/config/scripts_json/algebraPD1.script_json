@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:16 UTC",
+    "serialized_at": "2021-08-03 22:46:55 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "algebraPD1"
@@ -137,7 +137,6 @@
           "PDAlg Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -161,7 +160,6 @@
           "PDECS tour"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +183,6 @@
           "PDAlg commitment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -209,7 +206,6 @@
           "PDAlg commitment match"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -233,7 +229,6 @@
           "PDAlg Teacher Introduction"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -257,7 +252,6 @@
           "PDAlg Scope"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -281,7 +275,6 @@
           "PDAlg implementation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,7 +298,6 @@
           "PDAlg course goals"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,7 +321,6 @@
           "AlgPD Break"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -353,7 +344,6 @@
           "PDAlg functions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +367,6 @@
           "PDAlg hard video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -401,7 +390,6 @@
           "PDAlg functional"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -425,7 +413,6 @@
           "PDAlg Blocks Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -449,7 +436,6 @@
           "Calc Circles of Eval 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -473,7 +459,6 @@
           "Calc Circles of Eval 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -497,7 +482,6 @@
           "Calc Circles of Eval 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -521,7 +505,6 @@
           "Calc Circles of Eval 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +528,6 @@
           "Calc Circles of Eval 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -569,7 +551,6 @@
           "Calc Circles of Eval 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -593,7 +574,6 @@
           "Calc Circles of Eval 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,7 +597,6 @@
           "Calc Circles of Eval 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -641,7 +620,6 @@
           "Calc Circles of Eval Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -665,7 +643,6 @@
           "PDK5 Teacher Dashboard 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -689,7 +666,6 @@
           "PDK5 Teacher Dashboard 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -713,7 +689,6 @@
           "PDAlg Teacher Dashboard"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -737,7 +712,6 @@
           "PDAlg End of P1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +735,6 @@
           "PDAlg Post Survey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

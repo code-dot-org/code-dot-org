@@ -16,6 +16,7 @@ import {
   fakeDetailRowsForStudent
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 import sinon from 'sinon';
+import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 const STUDENTS = fakeStudents(3);
 const LESSON_1 = fakeLessonWithLevels({position: 1});
@@ -57,6 +58,8 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('ProgressTableContentView', () => {
+  allowConsoleWarnings();
+
   afterEach(() => {
     FORMATTERS.forEach(formatter => {
       formatter.resetHistory();

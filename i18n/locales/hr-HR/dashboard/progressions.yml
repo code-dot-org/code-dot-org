@@ -1,14 +1,18 @@
 hr:
   data:
     progressions:
-      '"If/Else" with the Bee': 'smjer'
+      '"If/Else" with the Bee': '"If/Else" s pčelom'
       'Artist: Variables': 'Umjetnik: Varijable'
+      Debugging: Otklanjanje pogrešaka
+      Design Mode: Dizajnerski način
       Events: Događaji
-      For Loops: Petlja brojača
+      For Loops: For petlja
       Free Play: Slobodna igra
       Functions: Funkcije
       Functions with Parameters: Funkcije s parametrima
       Lists: Liste
+      Overview: Pregled
       Pair Programming: Programiranje u paru
       Properties: Svojstva
+      Variables: Varijable
       Wrap-up: Zamotavanje

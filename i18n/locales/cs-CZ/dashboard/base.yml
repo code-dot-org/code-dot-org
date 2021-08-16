@@ -167,8 +167,8 @@ cs:
     additional_information: "Potřebujeme další informace pro pokračování vaši registrace."
     user_type_button: "Aktualizovat typ účtu"
     user_type_label: "Typ účtu"
-    user_type_teacher: "Učitel"
     user_type_student: "Student"
+    user_type_teacher: "Učitel"
     field_is_required: "je požadováno"
     accept_terms: "Musíte souhlasit pro vytvoření účtu"
     error: "Došlo k chybě."
@@ -586,8 +586,6 @@ cs:
       link: "Zjisti více"
       applab_unsupported_tablet: "App Lab funguje nejlépe na stolním počítači nebo laptopu s klávesnicí a myší. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
       gamelab_unsupported_tablet: "Game Lab funguje nejlépe na stolním počítači nebo laptopu s myší a klávesnicí. Při používání tohoto nástroje na svém aktuálním zařízení můžete zaznamenat problémy."
-      oceans_unsupported_browser: "Tento kurz nepodporuje váš prohlížeč. Zkuste prosím použít Edge, Chrome, Firefox nebo jiný moderní prohlížeč."
-      weblab_unsupported_browser: "Bohužel právě máme problémy s načítáním Web Lab do tohoto prohlížeče. Možná budete chtít používat jiný prohlížeč, dokud to nebude vyřešeno. Omlouváme se za nepříjemnosti."
       weblab_unsupported_locale_storage: "Při používání Web Lab v režimu soukromého prohlížení možná zaznamenáte problémy. Načtěte prosím svůj projekt znovu v normálním režimu. Omlouváme se za nepříjemnosti."
   slow_loading: 'Trvá to déle než obvykle...'
   try_reloading: 'Zkus znovu načíst stránku'
@@ -965,9 +963,8 @@ cs:
       gender: 'Rod'
       school_name: 'Název školy'
       school_country: 'Země školy'
-      colombian_school_department: 'Školní oddělení '
       colombian_school_municipality: 'Školní městský obvod'
-      colombian_school_name: 'Název školy'
+      colombian_chilean_school_name: 'Název školy'
       ages: 'Jaké jsou věky studentů, které letos učíte?'
       subjects: 'Jaké předměty letos vyučujete?'
       resources: 'Které z následujících vzdělávacích prostředků výuky počítačových věd používáte?'
@@ -1044,6 +1041,8 @@ cs:
     international_opt_in:
       title: 'Účast na dílnách'
       intro: "Děkujeme Vám, že jste si udělali čas nechat se školit na téma osnov výuky u Code.org. Naše poslání přinášet příležitosti k vzdělávání v oboru počítačových věd všem dětem ve všech školách na celém světě by nebylo možné bez Vás."
+      instructions: "Vyplňte prosím níže uvedený formulář a uveďte 1) že jste se zúčastnili cvičných dílen pořádaných jedním z mezinárodních partnerů Code.org, a 2) že souhlasíte se sdělením informací o Vaší osobě našemu zahraniční partnerovi ve Vaší zemi, aby Vás mohli podporovat na Vaší cestě učitele počítačové vědy."
+      thanks_markdown: "Děkujeme Vám za toto podání! Těšíme se, že Vás budeme moci podporovat, jak se budete postupně seznamovat s osnovami výuky a nástroji Code.org. Nadále nám prosím zasílejte své otázky a zpětnou vazbu, pište nám na adresu [support@code.org](%{support_email_url}) nebo zveřejňujte na [teacher forum](%{teacher_forum_url})!"
       facilitator_not_listed: "Můj zprovozňovatel není uveden"
       facilitator_not_applicable: "Nemá význam"
       organizer_not_listed: "Můj organizátor není uveden"
@@ -1058,6 +1057,7 @@ cs:
   page_not_found_header: '404 - Stránka nebyla nalezena'
   page_not_found_button: "Zpět domů"
   copy: 'Kopírovat'
+  confirm: 'Potvrdit'
   parent_email_banner:
     text: "**Jste rodič nebo zákonný zástupce?** Připojte k tomuto účtu svůj e-mail a budete dostávat aktuální informace o pokroku a projektech svého dítěte!"
     link_your_email: "Připojte svůj e-mail."

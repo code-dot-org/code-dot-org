@@ -46,11 +46,16 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "encrypted_examples": "8sJH3P5RgEiI9asf07HQEe7B9XHXl46tzbIiO5BxbMFBN0xso/iwuOH1w1i+\nVtSaj84k06yen9jOPErgIcZKyQ66ZkmBHeNcm87ZmJnInzLVOib68Dhv4qSL\nSVO2jFB5zcEGPFpzPiG/a1EO3hIW9XbcBMuhwRDwB5UNNjw7/gRwGKnCvJUA\nNCvyEvmzd8pkOL/SiaX6sp+zQLVIaSVnqQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:36:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 17:18:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2019-06-19 14:12:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-03 17:44:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:36:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 17:18:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2019-06-19 14:12:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-03 17:44:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

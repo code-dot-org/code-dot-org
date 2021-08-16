@@ -321,7 +321,28 @@
         "grade5_artist_binary8": "Finish this drawing.",
         "grade5_artist_binary9": "Here's a higher resolution\ncanvas to draw on - 16 pixels by 16 pixels!\\\r\n\\\r\nSee what happens when we\nstart to get creative with the bits?",
         "k-1 maze 1": "Can you make me move West to get to the pig?",
-        "scrat 19": "One more practice of the \"if-else\" block, can you\nget it right on your first try?"
+        "scrat 19": "One more practice of the \"if-else\" block, can you\nget it right on your first try?",
+        "Overworld Avoid Monsters_2021": "Running into a Creeper is a bad idea.\nCarefully move past the Creepers and reach the safety of your home.",
+        "Overworld Chop Tree_2021": "Wood is a very important resource. Many things\nare made from it. Walk to the tree and use the “destroy block” command to\nchop it down.",
+        "Overworld Chop Trees_2021": "We need to build a house before the sun\ngoes down. Houses require a lot of wood. Cut down all 3 trees.",
+        "Overworld Free Play 20x20_2021": "Congratulations! You've completed\nall our puzzles! Now mine, build, and create something unique by using everything\nyou've learned so far.",
+        "Overworld House Frame Chosen_2021": "Build the rest of your house from\nany material you'd like. The \"repeat\" command will come in handy.",
+        "Overworld Move to Sheep_2021": "Add a second “move forward” command to\nreach the sheep.",
+        "Overworld Place Wall_2021": "Every house starts with a wall. Build the\nfirst part of your house by putting the \"place\" and \"move forward\" commands\ninside the repeat loop.",
+        "Overworld Plant Crops_2021": "It’s good to plan ahead. Plant crops on\nboth sides of the water so you don’t get hungry later on.",
+        "Overworld Powered Minecart_2021": "Great job! You’ve gathered lots of\nresources and built a modest home. Now lay rail from the edge of the map to\nthe door of your house.",
+        "Overworld Shear Sheep_2021": "Sheep-shearing time! Use the “shear” command\nto gather wool from both sheep.",
+        "Underground Avoiding Lava_2021": "Lava is hiding beneath some of these\nblocks, which you'll need to cover up before moving forward. An \"if\" command\nwill come in handy here. Add a \"move forward\" command in the correct place\nto mine these blocks.",
+        "Underground If Statements_2021": "Now things are getting tricky. Mine\n3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone\nover any lava you uncover.",
+        "Underground Iron_2021": "Walking into molten lava is a bad idea. Place\ncobblestone to create a bridge, then mine at least two of the iron blocks.",
+        "Underground Mining Coal_2021": "You’ll find the most valuable resources\nunderground, but it can get dark. Place at least 2 torches and mine at least\n2 coal.",
+        "courseC_PlayLab_events3_2021": "Can you write a program to make Jorge\n(actor 1) move toward Olive the Cat?",
+        "courseF_artist_for7_2021": "Make three small changes to the\ncode from the last level to get this!",
+        "courseF_artist_for_challenge1_2021": "Can you figure out how to re-create this drawing?",
+        "courseF_artist_for_challenge2_2021": "Can you figure out how to re-create this drawing\nwith a single loop?",
+        "courseF_bee2": "Use a `repeat` loop to collect all of the nectar.",
+        "courseF_bee_for8_2021": "You've got this! What should your\nincrement be to collect 3, 6, 9, 12, 15 nectar?",
+        "courseF_bee_for_challenge2_2021": "Solve this puzzle using the fewest number of\nblocks possible."
       }
     }
   }

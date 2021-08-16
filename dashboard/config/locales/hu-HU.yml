@@ -217,8 +217,8 @@ hu:
     additional_information: Még szükségünk van néhány adatra  a regisztráció folytatásához.
     user_type_button: Felhasználói fiók-típus módosítása
     user_type_label: Fióktípus
-    user_type_teacher: Tanár
     user_type_student: Diák
+    user_type_teacher: Tanár
     field_is_required: szükséges
     accept_terms: El kell fogadnod, hogy fiókot hozhass létre
     error: Hiba történt
@@ -322,7 +322,9 @@ hu:
   follower:
     invite_sent: Meghívó elküldve
     added_teacher: "%{name} hozzáadva mint a tanárod"
-    registered: Regisztráltál %{section_name}-ra.
+    registered: Csatlakoztál a %{section_name} kurzushoz.
+    captcha_required: Kérjük, töltsd ki a CAPTCHA-t, hogy csatlakozzon ehhez a kurzushoz.
+    already_exists: " Már csatlakoztál a %{section_name} kurzushoz."
     error:
       signed_in: Kérjük, jelentkezz ki, mielőtt folytatnád
       username_not_found: "%{username} felhasználónév nem található"
@@ -336,6 +338,10 @@ hu:
       provider_managed_section: Ezt a szakaszt egy másik szolgáltató kezeli és nem
         lehet hozzá csatlakozni. Kérd meg a tanárodat, hogy adjon hozzá a %{provider}
         szolgáltatón keresztül, és szinkronizálja újra a szakaszt.
+      restricted_section: Nem tudtunk hozzáadni a %{section_code} kurzuushoz, mert
+        az le van zárva. Kérj segítséget a tanárodtól!
+      full_section: Nem tudtunk hozzáadni a %{section_code} kurzushoz, mert már %{section_capacity}
+        diák benne van. Kérj segítséget a tanárodtól!
     mail:
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
@@ -401,6 +407,7 @@ hu:
       about_contact: Kapcsolat
       about_faqs: GYIK
       learn: Tanulj
+      stats: statisztikák
       help_us: Támogass minket
       teach: Taníts
       about: Rólunk
@@ -531,7 +538,11 @@ hu:
       olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt.
       A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól.
       További információt az [adatvédelem](%{privacy_policy_url}) részben találsz.'
+    enter_new_login_info: Írd be az új bejelentkezési adataidat!
+    confirm_secret_words: A jelenlegi titkos szavad beírásával erősítsd meg, hogy
+      valóban te akarsz belépni.
     parent_email_label: Szülő/gondviselő e-mail címe (opcionális)
+    parent_email_hint: "(Ezt a jelszavad visszaállításához tudod használni)"
     enter_parent_email: Add meg szülőd vagy gondviselőd e-mail címét (jelszó-visszaállítás
       esetére)
     update: Fiók frissítése
@@ -542,6 +553,7 @@ hu:
       így friss információkat kaphat gyermeke fejlődéséről és projektjeiről. Ezzel
       az e-mail címmel tudja a jelszavát is visszaállítani.  '
     parent_guardian_email_label: Szülő/gondviselő e-mail
+    remove_parent_email_label: Eltávolítás
     none: Egyik sem
     only_one_parent_email_supported_warning: 'Megjegyzés: ez alkalommal diákonként
       csak egy szülői/gondviselői e-mail címet tudunk támogatni.'
@@ -594,6 +606,18 @@ hu:
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Oklevél nyomtatása
+  move_students:
+    new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
+      egy másik kódot beírni!
+    section_code_cant_be_current_section: A jelenlegi kurzus és az új kurzus nem lehet
+      ugyanaz!
+    current_section_dne: Sajnáljuk, de a %{current_section_code} kurzus nem létezik.
+      Próbálkozz egy másik kódot beírni!
+    student_not_found: Egy vagy több diák nem található.
+    all_students_must_be_in_current_section: Az összes diáknak be kell jelentkeznie
+      a kurzusodba.
+    already_enrolled_in_new_section: 'Nem tudod áthelyezni ezeket a diákokat, mert
+      már benne vannak az új kurzusban. '
   share:
     title: Tanulj a Kód Stúdióban
     description: Mindenki megismerkedhet a számítógép-tudománnyal. Készíts játékokat,
@@ -602,6 +626,7 @@ hu:
   gender:
     male: Férfi
     female: Nő
+    non_binary: Nem bináris
     none: Inkább nem válaszolok
   user_type:
     student: Diák
@@ -656,6 +681,7 @@ hu:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
     teacher: Megoldás megtekintése
+    teacher_no_solution: Tovább ne mutasd a megoldásokat!
     auth_error: Nem nézheted meg a megoldást
     submit: Frissítsd a Művész helyét
     direction: Kezdő irány (fokban)
@@ -665,6 +691,8 @@ hu:
     notes_coming_soon: Ehhez a videóhoz hamarosan leírás is lesz.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
+    show_notes: Mutasd a jegyzeteket
+    show_video: Mutasd a videót
     label: Videó
   compatibility:
     upgrade:
@@ -672,9 +700,12 @@ hu:
       applab_unsupported_tablet: Az App Lab legjobban asztali számítógépen vagy laptopon
         működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
         ütközhet.
+      gamelab_unsupported_tablet: A Game Lab legjobban asztali számítógépen vagy laptopon
+        működik, egérrel és billentyűzettel. A jelenlegi eszköz használata nehézségekbe
+        ütközhet.
   slow_loading: Ez a megszokottnál tovább tart...
   try_reloading: Próbálja meg újratölteni az oldalt
-  next_stage: Befejezve! Folytatás a következő pályával.
+  next_stage: Végeztél! Folytasd a következő leckével!
   download_pdf: Óravázlat megnyitása
   lesson_plan: Óravázlat
   view_lesson_plan: Óravázlat megtekintése
@@ -775,6 +806,7 @@ hu:
     unplugged_conditionals:
       title: Feltételek
     widgets:
+      audience: 'Korosztály: 14 +'
       cta: Ismerd meg, hogyan
   landing:
     report_bug: Hiba bejelentése
@@ -958,13 +990,14 @@ hu:
       school_city: Iskola városa
       school_country: Iskola országa
       colombian_school_city: Iskola városa
-      colombian_school_name: Iskola neve
+      colombian_chilean_school_name: Iskola neve
       email_opt_in: Küldhetünk e-maileket a nemzetközi Code-org programról, tanfolyami
         újdonságokról és számítógép-tudománnyal kapcsolatos hírekről?
     form_entries:
       gender:
         male: Férfi
         female: Nő
+        non_binary: Nem bináris
         none: Inkább nem válaszolok
       subjects:
         cs: Számítógép-tudomány
@@ -983,9 +1016,13 @@ hu:
         opt_in_no: Nem
   cookie_banner:
     accept: Egyetértek
+  page_not_found_title: Az oldal nem található
   copy: Másol
+  confirm: Jóváhagy
   parent_email_banner:
     text: "**Ön szülő vagy gondviselő?** Kapcsolja az e-mail címét ehhez a fiókhoz,
       így friss információkat kaphat gyermeke fejlődéséről és projektjeiről!"
     link_your_email: Kapcsold az e-mail címed
     not_now: Most nem
+  behaviors:
+    this_sprite: ez a sprite

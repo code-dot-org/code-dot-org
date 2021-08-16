@@ -373,6 +373,58 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
   end
 
+  test "should create spritelab level" do
+    game = Game.find_by_name("Spritelab")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'GamelabJr'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
+  test "should create applab level" do
+    game = Game.find_by_name("Applab")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Applab'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
+  test "should create gamelab level" do
+    game = Game.find_by_name("Gamelab")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Gamelab'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
+  test "should create dance level" do
+    game = Game.find_by_name("Dance")
+    assert_creates(Level) do
+      post :create, params: {
+        level: {name: "NewCustomLevel", type: 'Dancelab'},
+        game_id: game.id,
+        program: @program
+      }
+    end
+
+    assert_equal edit_level_path(assigns(:level)), JSON.parse(@response.body)["redirect"]
+  end
+
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
     Level.any_instance.stubs(:write_to_file?).returns(true)
@@ -418,12 +470,11 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML" do
     post :update_properties, params: {
       id: create(:applab).id,
-    }, body: URI.escape(
+    }, body:
       {
         start_html: '<h1>foo</h1>',
         start_blocks: 'console.log("hello world");',
       }.to_json
-    )
 
     assert_response :success
     level = assigns(:level)
@@ -434,12 +485,11 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update App Lab starter code and starter HTML with special characters" do
     post :update_properties, params: {
       id: create(:applab).id,
-    }, body: URI.escape(
+    }, body:
       {
         start_html: '<h1>Final Grade: 90%</h1><h2>student@code.org</h2>',
         start_blocks: 'console.log(4 % 2 == 0);',
       }.to_json
-    )
 
     assert_response :success
     level = assigns(:level)

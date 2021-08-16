@@ -30,6 +30,7 @@ class StandaloneVideo < Level
     skip_sound
     video_rounded_corners
     video_full_width
+    background
   )
 
   before_validation do

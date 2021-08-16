@@ -100,15 +100,19 @@ class Census::StateCsOffering < ApplicationRecord
   # The following states use the "V2" format for CSV files in 2018-2019.
   STATES_USING_FORMAT_V2_IN_2018_19 = %w(
     AK
+    AL
     AR
     CA
     CT
     FL
     GA
+    HI
     IA
     ID
     IL
     IN
+    KS
+    KY
     LA
     MA
     MD
@@ -116,12 +120,14 @@ class Census::StateCsOffering < ApplicationRecord
     MO
     MS
     MT
+    NC
     ND
     NE
     NJ
     NM
     NY
     OH
+    OK
     OR
     PA
     RI
@@ -1525,7 +1531,7 @@ class Census::StateCsOffering < ApplicationRecord
     [
       state_code,
       start_year,
-      update || 1,
+      update&.to_i || 1,
       extension
     ]
   end

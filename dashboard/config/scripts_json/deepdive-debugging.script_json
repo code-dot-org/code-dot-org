@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:29:54 UTC",
+    "family_name": "deepdive-debugging",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "deepdive-debugging"
@@ -75,7 +77,6 @@
           "AB_debug_Laurel1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -99,7 +100,6 @@
           "AB_Debug_Artist1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -123,7 +123,6 @@
           "AB_Debug_PlayLab3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -147,7 +146,6 @@
           "CDEF_debugging_farmer1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -171,7 +169,6 @@
           "CDEF_debugging_Artist1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -195,7 +192,6 @@
           "CDEF_debugging_flappy2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

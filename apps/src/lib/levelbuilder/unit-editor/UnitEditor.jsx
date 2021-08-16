@@ -80,6 +80,7 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
@@ -346,6 +347,14 @@ class UnitEditor extends React.Component {
       });
   };
 
+  toggleHiddenCourseUnit = () => {
+    const publishedState =
+      this.state.publishedState === PublishedState.in_development
+        ? null
+        : PublishedState.in_development;
+    this.setState({publishedState});
+  };
+
   render() {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
@@ -610,41 +619,46 @@ class UnitEditor extends React.Component {
                 </HelpTip>
               </label>
               {this.props.hasCourse && (
-                <p>
-                  This unit is part of a course. Go to the course edit page to
-                  publish the course and its units.
-                </p>
+                <div>
+                  <p>
+                    This unit is part of a course. Go to the course edit page to
+                    publish the course and its units.
+                  </p>
+                  {/*
+                   Just use a checkbox instead of a dropdown to set the
+                   published state for now, because (1) units in unit groups
+                   really only need 2 of the 6 possible states at the moment,
+                   but (2) we haven't nailed down how many of these states we
+                   will need in the long term, and (3) we need these 2 states
+                   working now in order to launch the AP CSA pilot. The work to
+                   clean this up is tracked in:
+                   https://codedotorg.atlassian.net/browse/PLAT-1170
+                   */}
+                  <label>
+                    Hide this unit within this course
+                    <input
+                      type="checkbox"
+                      checked={
+                        this.state.publishedState ===
+                        PublishedState.in_development
+                      }
+                      style={styles.checkbox}
+                      onChange={this.toggleHiddenCourseUnit}
+                    />
+                    <HelpTip>
+                      <p>
+                        Whether to hide this unit from the list of units in its
+                        course, as viewed on the course overview page, the edit
+                        section dialog, and the teacher dashboard, as well as
+                        when navigating directly to the unit by its url. Hidden
+                        units will still be visible to levelbuilders.
+                      </p>
+                    </HelpTip>
+                  </label>
+                </div>
               )}
               {!this.props.hasCourse && (
                 <div>
-                  <label>
-                    Is a Standalone Unit
-                    <input
-                      className="isCourseCheckbox"
-                      type="checkbox"
-                      checked={this.state.isCourse}
-                      disabled={!this.state.familyName}
-                      style={styles.checkbox}
-                      onChange={this.handleStandaloneUnitChange}
-                    />
-                    {this.state.familyName && (
-                      <HelpTip>
-                        <p>
-                          If checked, indicates that this Unit represents a
-                          standalone unit. Examples of such Units include
-                          CourseA-F, Express, and Pre-Express.
-                        </p>
-                      </HelpTip>
-                    )}
-                    {!this.state.familyName && (
-                      <HelpTip>
-                        <p>
-                          You must select a family name in order to mark
-                          something as a standalone unit.
-                        </p>
-                      </HelpTip>
-                    )}
-                  </label>
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
@@ -659,9 +673,14 @@ class UnitEditor extends React.Component {
                     families={this.props.unitFamilies}
                     versionYearOptions={this.props.versionYearOptions}
                     isCourse={this.state.isCourse}
+                    updateIsCourse={this.handleStandaloneUnitChange}
+                    showIsCourseSelector
                     publishedState={this.state.publishedState}
                     updatePublishedState={publishedState =>
                       this.setState({publishedState})
+                    }
+                    preventCourseVersionChange={
+                      this.props.preventCourseVersionChange
                     }
                   />
                 </div>

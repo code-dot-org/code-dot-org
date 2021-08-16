@@ -22,8 +22,6 @@ ar:
     mailer:
       confirmation_instructions:
         subject: تعليمات تأكيد Code.org
-      reset_password_instructions:
-        subject: إرشادات إعادة تعيين كلمة المرور Code.org
       unlock_instructions:
         subject: تعليمات إلغاء التأمين
     omniauth_callbacks:

@@ -1,4 +1,7 @@
+family_name 'hero'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Minecraft Hour of Code', display_name: 'Minecraft Hour of Code', has_lesson_plan: false
 level 'MC_HOC_2017_01_RETRY'

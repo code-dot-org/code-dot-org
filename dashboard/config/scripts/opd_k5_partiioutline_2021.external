@@ -6,9 +6,13 @@ markdown <<MARKDOWN
 
 Below is a list of the lessons included in Part II:  Concepts in Courses A - F. 
 
-We suggest planning 20 - 25 minutes to complete lesson 7 through 15 in Part II. However, feel free to start and stop at your own pace and take more or less time as needed.
+We suggest planning 20 - 25 minutes to complete each lesson in Part II. However, feel free to start and stop at your own pace and take more or less time as needed.
 
-**Suggested Total Time: 3 - 4 hours**
+* Suggested total time for a ***single*** course: 3 - 4 hours
+
+* Suggested total time for ***all*** courses: 6 - 8 hours
+
+***
 
 ## Navigating Lessons in Part II
 
@@ -20,7 +24,7 @@ You can go through lessons in Part II using one of two options:
 
 
 ## Option A
-Use the table below to know which lessons and computer science concepts are part of the course you plan to teach.  For example, if you plan on teaching Course E, then click on Lesson 8:  Sequencing with Sprites listed in the table and continue on with Lessons 9, 11, 12, and 15.  
+Use the table below to know which lessons and computer science concepts are part of the course you plan to teach.  For example, if you plan on teaching Course E, then begin by clicking on Lesson 8:  Sequencing with Sprites listed in the table and continue on with Lessons 9, 11, 12, and 15.  
 
 <table style="width:100%; border-style:none;">
   <tr>
@@ -131,5 +135,4 @@ Go lesson by lesson for all concepts included in Computer Science Fundamentals c
 
 * Lesson 15: End of Course Projects
 
-##### <a href="https://studio.code.org/s/k5-onlinepd-2021/lessons/16/levels/1" target="blank" >Click here to access Part III: Next Steps.</a>
 MARKDOWN

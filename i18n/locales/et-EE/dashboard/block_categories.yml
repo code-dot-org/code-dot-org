@@ -3,12 +3,15 @@ et:
     block_categories:
       Actions: Tegevused
       Color: Värv
+      Comment: Kommentaar
       Conditionals: Tingimuslaused
       Events: Sündmused
       Functions: Funktsioonid
+      'Functions ': 'Funktsioonid '
       Location: Asukoht
       Logic: Loogika
       Loops: Tsüklid
       Math: Matemaatika
       Text: Tekst
       Variables: Muutujad
+      'Variables ': 'Muutujad '

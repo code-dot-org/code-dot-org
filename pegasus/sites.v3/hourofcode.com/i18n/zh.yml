@@ -5,30 +5,30 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12 月 7 日
-  campaign_date_start_long: 12 月 7 日
+  campaign_date_start_short: 12 月 5 日
+  campaign_date_start_long: 12 月 4 日
   campaign_date_short: 12月7日13日
   campaign_date_full: 12 月 7 日 - 13 日
   campaign_date_year: '2020'
   campaign_date_full_year: 2020 年 12 月的 7-13 日
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_short: Oct. 1 - Dec. 12
+  latam_campaign_date_full: October 1 - December 12
   latam_campaign_date_year: '2020'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
+  europe_campaign_date_start_short: Oct. 9
+  europe_campaign_date_start_long: October 9
+  europe_campaign_date_short: Oct. 9-24
+  europe_campaign_date_full: October 9-24
   europe_campaign_date_year: '2020'
-  europe_campaign_date_full_year: October 10-25, 2020
+  europe_campaign_date_full_year: October 9-24, 2021
   africa_campaign_date_start_short: Oct. 1
   africa_campaign_date_start_long: October 1
   africa_campaign_date_short: Oct. 1-31
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: October 1-31, 2021
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
   hoc2020_header_with_line_break_markdown: "  馬上開始學習，      打造更美好的明天。  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future

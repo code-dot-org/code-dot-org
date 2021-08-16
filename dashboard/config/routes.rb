@@ -713,6 +713,7 @@ Dashboard::Application.routes.draw do
   get '/api/script_structure/:script', to: 'api#script_structure'
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
+  get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
@@ -850,7 +851,11 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
+  get '/sprites', to: 'sprite_management#sprite_management_directory'
+
   get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
+
+  get '/sprites/default_sprites_editor', to: 'sprite_management#default_sprites_editor'
 
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
@@ -882,8 +887,14 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :code_review_comments, only: [:create, :update, :destroy] do
-    patch :resolve, on: :member
+  resources :code_review_comments, only: [:create, :destroy] do
+    patch :toggle_resolved, on: :member
     get :project_comments, on: :collection
   end
+
+  get '/backpacks/channel', to: 'backpacks#get_channel'
+
+  resources :reviewable_projects, only: [:create, :destroy]
+  get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
+  get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 end

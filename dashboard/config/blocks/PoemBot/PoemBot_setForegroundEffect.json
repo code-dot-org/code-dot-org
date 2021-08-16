@@ -1,0 +1,27 @@
+{
+  "category": "",
+  "config": {
+    "func": "setForegroundEffect",
+    "blockText": "set foreground effect {FG_EFFECT}",
+    "args": [
+      {
+        "name": "FG_EFFECT",
+        "options": [
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "bubbles",
+            "\"bubbles\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

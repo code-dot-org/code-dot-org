@@ -114,6 +114,7 @@ level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
 
 lesson 'exemplars', display_name: 'Exemplars I Accidentally Made in LB', has_lesson_plan: false
 level 'ml-pet exemplar', progression: 'Pet Exemplar'
+level 'ml-intro app lab-book recommender exemplar', progression: 'Book Recommender Exemplar'
 
 lesson 'temp', display_name: 'TEMP LEVELS - DELETE LATER', has_lesson_plan: true
 level 'ml-model cards-medical app', progression: 'Medical Priority App (external app)'
@@ -166,4 +167,7 @@ level 'ml-classroom vocab-1', progression: 'Introduction to AI Lab'
 level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'
 level 'ml-class test-ai lab 2', progression: 'Explore AI Lab'
 level 'ml-class test-app lab 1', progression: 'Importing into App Lab'
+
+lesson 'CSP Tester', display_name: 'CSP Tester', has_lesson_plan: false
+level 'CSP U7 Param Practice App_3_ExemplarIssue', progression: 'Parameters and Returns'
 

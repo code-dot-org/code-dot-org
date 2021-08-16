@@ -200,8 +200,8 @@ pt:
       de inscrição.
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
-    user_type_teacher: Professor
     user_type_student: Estudante
+    user_type_teacher: Professor
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.
     error: Ocorreu um erro.
@@ -312,6 +312,7 @@ pt:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
     registered: Você já está registrado para %{section_name}.
+    already_exists: Você já se juntou à seção %{section_name}.
     error:
       signed_in: Saia antes de prosseguir
       username_not_found: Nome de usuário %{username} não encontrado
@@ -717,11 +718,6 @@ pt:
       gamelab_unsupported_tablet: O Laboratório de Jogos funciona melhor em um computador
         desktop ou um laptop com um mouse e um teclado. Você pode ter problemas usando
         esta ferramenta no seu dispositivo atual.
-      oceans_unsupported_browser: Esse tutorial não roda neste navegador. Tente visitar
-        essa página usando Edge, Chrome, Firefox ou outro navegador moderno.
-      weblab_unsupported_browser: Infelizmente, estamos com problemas com o carregamento
-        do Web Lab neste navegador. Você pode tentar usar um navegador diferente até
-        que isso seja resolvido. Desculpe pela inconveniência.
       weblab_unsupported_locale_storage: Você pode ter problemas ao usar o Laboratório
         Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo
         normal. Desculpe pela inconveniência.
@@ -1220,7 +1216,7 @@ pt:
       school_city: Cidade da Escola
       school_country: País da Escola
       colombian_school_city: Cidade da Escola
-      colombian_school_name: Nome da escola
+      colombian_chilean_school_name: Nome da escola
       ages: Qual idade(s) você ensina este ano?
       subjects: Qual(is) disciplina(s) você ensina este ano?
       resources: Quais dos seguintes recursos de educação de Ciência da Computação
@@ -1354,6 +1350,7 @@ pt:
     página inicial.
   page_not_found_button: Volte para a página inicial
   copy: Copiar
+  confirm: Confirmar
   maker:
     google_oauth:
       login_with_google: Login no aplicativo Maker com o Google
@@ -1372,3 +1369,5 @@ pt:
       manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
     link_your_email: Associe seu e-mail
     not_now: Agora não
+  behaviors:
+    this_sprite: este personagem

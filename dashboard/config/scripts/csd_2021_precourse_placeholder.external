@@ -1,0 +1,7 @@
+name 'CSD 2021 Precourse Placeholder'
+css 'unplugged'
+markdown <<MARKDOWN
+# Survey coming soon!
+
+The CS Discoveries Survey is still under development. It will be available in August!
+MARKDOWN

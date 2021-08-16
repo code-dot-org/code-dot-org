@@ -159,8 +159,9 @@ class LevelsController < ApplicationController
   # GET /levels/:id/get_serialized_maze
   # Get the serialized_maze for the level, if it exists.
   def get_serialized_maze
-    return head :no_content unless @level.properties['serialized_maze'].presence && @level.serialized_maze
-    render json: @level.serialized_maze
+    serialized_maze = @level.try(:get_serialized_maze)
+    return head :no_content unless serialized_maze
+    render json: serialized_maze
   end
 
   # GET /levels/:id/edit_blocks/:type
@@ -227,7 +228,7 @@ class LevelsController < ApplicationController
   end
 
   def update_properties
-    changes = JSON.parse(URI.unescape(request.body.read))
+    changes = JSON.parse(request.body.read)
     changes.each do |key, value|
       @level.properties[key] = value
     end
@@ -287,7 +288,9 @@ class LevelsController < ApplicationController
     params[:level][:maze_data] = params[:level][:maze_data].to_json if type_class <= Grid
     params[:user] = current_user
 
-    create_level_params = level_params
+    # safely convert params to hash now so that if they are modified later, it
+    # will not result in a ActionController::UnfilteredParameters error.
+    create_level_params = level_params.to_h
 
     # Give platformization partners permission to edit any levels they create.
     editor_experiment = Experiment.get_editor_experiment(current_user)
@@ -310,8 +313,14 @@ class LevelsController < ApplicationController
   # DELETE /levels/1
   # DELETE /levels/1.json
   def destroy
-    @level.destroy
-    redirect_to(params[:redirect] || levels_url)
+    result = @level.destroy
+    if result
+      flash.notice = "Deleted #{@level.name.inspect}"
+      redirect_to(params[:redirect] || levels_url)
+    else
+      flash.alert = @level.errors.full_messages.join(". ")
+      redirect_to(edit_level_path(@level))
+    end
   end
 
   def new

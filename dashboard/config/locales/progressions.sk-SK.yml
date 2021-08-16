@@ -7,17 +7,23 @@ sk:
       Adding Images: Pridanie obrázkov
       Adding Screens: Pridanie obrazoviek
       Animate Your Scene: Animuj svoju scénu
+      Arrays: Rady
       Artist Intro with JR Hildebrand: Úvod k Umelcovi s JR Hildebrandom
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
       Artist Project: Umelec - Projekt
       'Artist: Variables': 'Umelec: Premenné'
       Attribution: Uvedenie zdroja
+      Back and Forth: Dozadu a dopredu
       Basic Conditionals: Základné podmienky
+      Bass, Mid, and Treble: Basy, Stredy, a Výšky
+      Be a Super Digital Citizen: Buď super digitálny občan
       Binary Numbers: Binárne čísla
       Board Input and Output: Vstup a výstup dosky plošných spojov
       Boolean Comparison: Porovnanie pravdivosti
+      Booleans and Comparison Operators: Logické výrazy a porovnávacie znamienka
       Build a Screen: Vytvor obrazovku
       Building an App: Vytvorenie aplikácie
+      'Bunny ': 'Zajac '
       CS Discoveries Post-Course Survey: 'Objavujeme informatiku: Záverečný dotazník'
       CS Discoveries Post-course Survey: 'Objavujeme informatiku: Záverečný dotazník'
       Cake Defender: Obranca koláča
@@ -27,8 +33,11 @@ sk:
       Chance: Šanca
       Change: Zmeň
       Checking for a Winner: Určuje sa víťaz
+      'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
       Code Your Own Flappy Game: Vytvor si svoju vlastnú "Flappy" hru
       Collector Game: Hra Zberateľ
+      Collision Detection: Detekcia kolízie
+      Collision Detection Review: Detekcie kolízie - prehľad
       Collisions: Kolízie "sprite" objektov
       Collisions in Games: Kolízie v hrách
       Color LEDs: Farebné LEDky
@@ -36,24 +45,40 @@ sk:
       'Conditionals: If Statements': 'Podmineky: "if" (ak)'
       'Conditionals: If and If/Else Statements': 'Podmienky: "if" (ak) a "if/else"
         (ak/potom)'
+      Course E Sprite Lab Project: Kurz E Lab projekt s postavičkou
+      Course F Artist Project: Projekt Umelec Kurz F
+      Course F Sprite Lab Project: Sprite Lab projekt Kurz F
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
       Creating a Simulation: Vytvorenie simulácie
+      Customize: Prispôsobiť
+      Dance Crews: Tanečné skupiny
       Data Visualization: Vykreslenie údajov
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
       Debugging: Hľadanie a odstraňovanie chýb
       Debugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
       Demo Apps: Demo aplikácie
       Design Mode: Dizajnový mód
+      Design Mode Elements: Prvky dizajnového módu
+      Dogger Example: Príklad s loďou
       Drawing: Kreslenie
+      Editing Images: Úprava obrázkov
+      End of Course Projects: Záverečné projekty
       Events: Udalosti
       Events and Linking Screens: Udalosti a prepájanie obrazoviek
       Events and Properties: Udalosti a vlastnosti
+      Example Projects: Vzorové projekty
       Example projects: Vzorové projekty
       Expanding Personal Website: Rozšírenie vlastnej webstránky
       Expanding Your Website: Rozšírenie tvojej webstránky
       Experiment with Web Lab: Experimentuj s Web Labom
+      Exploration: Objavovanie
+      'Exploration: For Loops': 'Objavovanie: Cykly for'
+      'Exploration: Sample Apps': 'Objavovanie: Vzorové aplikácie'
+      'Exploration: Sample Programs': 'Objavovanie: Vzorové programy'
+      'Exploration: Sample Project': 'Objavovanie: Vzorový projekt'
+      Explore HTML: Objav HTML
       Exploring more CSS: Objavovanie ďalších CSS
       Finish a Screen: Dokonči obrazovku
       Finish the Prototype: Dokonč prototyp
@@ -68,25 +93,38 @@ sk:
       Free Play: Voľná hra
       Functions: Funkcie
       Functions with Parameters: Funkcie s parametrami
+      Geometric Sun: Geometrické Slnko
+      Get In Formation: Všetci do formácie
+      HTML Tags: HTML tag-y
+      Headings: Nadpisy
+      Headings in HTML: Nadpisy v HTML
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
       Ice Age Loops: Cykly Doby Ľadovej
+      If-Else Statements: Výroky "If-Else"
       Images and Sounds: Obrázky a zvuky
       Input Examples: Príklady vstupu
       Input with If-Else: Vstup s "if/else" (ak/potom)
+      Inspiration!: Inšpirácia!
+      Interactive Card: Interaktívna pohľadnica
+      Intro to Design Mode: Úvod do dizajnového módu
       Intro to For Loops: Predstavenie cyklov "for"
       Intro to Sprites: Predstavenie "sprite" objektov
       Intro to Variables: Predstavenie premenných
       Introducing Sprite Lab: Predstavenie Sprite Labu
       Introduction to Arrays: Úvod do zoskupení
+      Introduction to Variables: Predstavenie premenných
+      Introduction to Variables - Part 1: Predstavenie premenných - 1. časť
       Iteration and Parameters: Opakovanie a parametre
       Keyboard Input: Stlačenie kláves ako vstup
       LED Apps: Appky s LEDkami
       Layout with CSS: Rozloženie pomocou CSS
       Learning from Simulations: Učenie sa zo simulácií
       Lesson Extras: Doplnkové materiály
+      Lesson Overview: Prehľad lekcie
       Light Show: Svetelná show
       Lists: Zoznamy
+      Lists in HTML: Zoznamy v HTML
       Loops with the Artist: Cykly s umelcom
       Make a Prediction: Odhadni výsledok
       Make it Interactive: Spravte to interaktívne
@@ -96,6 +134,7 @@ sk:
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou
         blokov'
       Measures: Takty
+      'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
       'Mini-Project: Royal Battle': 'Mini-Projekt: Kráľovský súboj'
@@ -110,6 +149,7 @@ sk:
       'Mini-project: Jorge the Dog': 'Mini projekt: Pes Jorge'
       'Mini-project: Sticker Design': 'Mini-Projekt: Dizajn nálepky'
       Modify simulation variables: Zmeň premenné simulácie
+      More Buttons: Viac tlačidiel
       More Input: Ďalšie vstupy
       More Monsters: Ďalšie príšery
       More Parameters: Ďalšie parametre
@@ -117,19 +157,26 @@ sk:
       Movement with the Counter Pattern: Pohyb pomocou počítacieho vzorca
       Multiframe Animations: Viacsnímkové animácie
       Musical Arrays: Hudobné polia
+      My Online Neighborhood: Moja internetová štvrť
       Nested Loops with the Bee: Vnorené cykly so včelou
       New Shapes: Nové tvary
       Orientation: Orientácia
+      Overview: Prehľad
       Pair Programming: Programovanie v páre
+      Picturing Data: Zobrazenie dát v grafoch
+      Planning: Plánovanie
       Platform Jumper - Background and Variables: Plošinový skokan - Pozadie a premenné
       Platform Jumper - Items: Plošinový skokan - Prvky
       Platform Jumper - Platforms: Plošinový skokan - Plošiny
       Platform Jumper - Player: Plošinový skokan - Hráč
       Playing Notes: Hranie nôt
       Playing with Notes: Hranie pomocou nôt
+      Plotting Shapes in Game Lab: Tvorba tvarov v Game Labe
       Post-Course Survey Instructions: Inštrukcie pre vypĺňanie dotazníka po kurze
       Practice: Cvičenie
+      Predict: Predvídať
       Prediction: Predpoklad
+      Problem Solving: Riešenie problémov
       Programming with Events: Programovanie pomocou udalostí
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
@@ -138,6 +185,8 @@ sk:
       Project - Sprites and Interactions: Projekt - "Sprite" objekty a interakcie
       Project Work: Projektová práca
       Properties: Vlastnosti
+      Publishing Your Website: Publikovanie tvojej webstránky
+      Quarter Notes: Štvrťové doby
       RGB Exploration: Objavovanie RGB
       Reading Sensors: Čítanie snímačov
       Recovery: Zotavenie
@@ -147,7 +196,12 @@ sk:
       Repeat Blocks with the Artist: Opakujúce sa bloky s umelcom
       Repeat Unit Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
       Repeat Until Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
+      Review: Zrevidovať
+      Revise Artist Project: Zreviduj projekt Umelec
+      Revise Sprite Lab Project: Reviduj Sprite Lab projekt
+      Robot Doodle: Robotova čmáranica
       Run a simulation: Spusť simuláciu
+      Sample Platform Jumper Game: Príklad plošinovej skákacej hry
       Sample Programs: Vzorové programy
       Screen Design: Dizajn obrazovky
       Sensor Events: Udalosti obrazovky
@@ -158,19 +212,29 @@ sk:
       Share Your Message: Zdieľajte správu
       Side Scroller: Posúvačka (side-scroller)
       Simple Circuits: Jednoduché el. obvody
+      Skill Building: Budovanie zručností
+      Skill-Building: Budovanie zručností
       Sliders: Posuvníky
       Smart Bike - Blinkers: Inteligentný bicykel - Smerovky
+      Speed it Up, Slow it Down: Zrýchli, spomaľ
+      Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
+      Sprite Properties: Vlastnosti postáv
+      Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
       Star Chaser: Lovec hviezd
       Stopping the Outbreak with Masks: Zastaviť nákazu pomocou masiek
       Styling Text: Tvarovanie textu
       Styling with Classes: Tvarovanie pomocou tried
       Styling your Website: Úprava tvojej webstránky
+      Text Compression: Kompresia textu
+      The Animation Tab: Záložka s animáciami
       The Artist in Code Studio: Umelec v Code Studiu
       The Buzzer: Bzučiak
       The Collector: Zberateľ
+      The Draw Loop: Cyklus kreslenia
       The Harvester: Záhradníčka
+      Tour of Design Mode: Predstavenie dizajnového módu
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
@@ -180,11 +244,31 @@ sk:
       Using the Repeat Block: Používanie bloku opakuj
       Using the Switch: Používanie prepínača
       Vaccines: Vakcíny
+      Variables: Premenné
       Velocity: Rýchlosť
       Video: Video
+      'Video: "If/Else" Statements': 'Video: Podmienkové výroky'
+      'Video: Booleans': 'Video: Logické výrazy'
+      'Video: CS Matters': 'Video: záležitosti počítačových vied'
+      'Video: Conditional Statements': 'Video: Výrazy s podmienkou'
+      'Video: Conditionals': 'Video: Podmienky'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Kreslenie v Game Labe - 1. časť'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Kreslenie v Game Labe - 2. časť'
+      'Video: For Loops': 'Video: "For-loop" Slučky '
+      'Video: Functions': 'Video: Funkcie'
+      'Video: If/Else Statements': 'Video: Podmienkové výroky'
+      'Video: Intro to Web Lab - Part 1': 'Video: Úvod do Web Lab- Časť 1'
+      'Video: Intro to Web Lab - Part 2': 'Video: Úvod do Web Lab - Časť 2'
+      'Video: Introduction to Arrays': Úvod do radov
+      'Video: Introduction to Sprites': 'Video: Predstavenie objeku Sprite'
+      'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
+      'Video: Sprite Movement': 'Video: Pohyb "sprite" objektu'
+      'Video: Velocity': 'Video: Rýchlosť'
+      'Video: What Makes a Computer, a Computer?': 'Video: Čo robí počítač počítačom?'
       Warm Up: Úvodná aktivita
       Website Project: Projekt webstránky
       Welcome to Monster Town: Vitajte v mestečku Monster Town
+      Where'd They Go?: Kam zmizli?
       While Loops with the Farmer: Cykly "pokiaľ" s Farmárkou
       Wrap-up: Zhrnutie
       Your Personal Website: Tvoja vlastná webstránka

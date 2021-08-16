@@ -19,8 +19,6 @@ fi:
     mailer:
       confirmation_instructions:
         subject: Code.org vahvistusohjeet
-      reset_password_instructions:
-        subject: Code.org salasanan palautusohjeet
       unlock_instructions:
         subject: Avausohjeet
     omniauth_callbacks:

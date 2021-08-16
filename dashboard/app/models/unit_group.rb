@@ -34,13 +34,6 @@ class UnitGroup < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
-  FAMILY_NAMES = [
-    CSD = 'csd'.freeze,
-    CSP = 'csp'.freeze,
-    CSA = 'csa'.freeze,
-    TEST = 'ui-test-course'.freeze
-  ].freeze
-
   def skip_name_format_validation
     !!plc_course
   end
@@ -201,9 +194,8 @@ class UnitGroup < ApplicationRecord
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
     units_to_remove -= alternate_units.map {|hash| Script.find_by_name!(hash['alternate_script'])}
 
-    if units_to_remove.any?(&:prevent_course_version_change?)
-      raise 'Cannot remove units that have resources or vocabulary'
-    end
+    unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
+    raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     if new_units_objects.any? do |s|
       s.unit_group != self && s.prevent_course_version_change?
@@ -214,6 +206,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
+        unit.update!(published_state: nil)
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -269,6 +262,10 @@ class UnitGroup < ApplicationRecord
       UnitGroup.all.to_a
     end
     all_courses.freeze
+  end
+
+  def self.family_names
+    CourseVersion.course_offering_keys('UnitGroup')
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -338,7 +335,7 @@ class UnitGroup < ApplicationRecord
     [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil)
+  def summarize(user = nil, for_edit: false)
     {
       name: name,
       id: id,
@@ -366,6 +363,7 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
+      prevent_course_version_change: for_edit && prevent_course_version_change?,
       course_path: link
     }
   end
@@ -423,11 +421,15 @@ class UnitGroup < ApplicationRecord
   # If a user has an experiment enabled corresponding to an alternate unit in
   # this course, use the alternate unit in place of the default unit with
   # the same position.
+  # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
     # @return [Array<Script>]
-    default_unit_group_units.map do |ugu|
+    units = default_unit_group_units.map do |ugu|
       select_unit_group_unit(user, ugu).script
+    end
+    units.compact.reject do |unit|
+      unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
   end
 
@@ -648,7 +650,7 @@ class UnitGroup < ApplicationRecord
   # Returns an array of version year strings, starting with 2017 and ending 1 year
   # from the current year.
   def self.get_version_year_options
-    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+    [CourseVersion::UNVERSIONED] + (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 
   def pilot?
@@ -703,7 +705,19 @@ class UnitGroup < ApplicationRecord
     # For reasons I (Bethany) still don't understand, using a proc here causes
     # the method to terminate unexpectedly without an error. My unproven guess
     # is that this is due to the nested `any?` calls
-    default_units.any? {|s| s.prevent_course_version_change?}
+    resources.any? ||
+      student_resources.any? ||
+      default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
+  end
+
+  # Look through all of the objects with the specified family name which have
+  # a stable published_state, and return the one with the latest version year.
+  def self.latest_stable(family_name)
+    raise unless family_name.present?
+    all_courses.
+      select {|c| c.family_name == family_name && c.stable?}.
+      sort_by(&:version_year).
+      last
   end
 end

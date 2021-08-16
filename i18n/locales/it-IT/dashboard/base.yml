@@ -168,8 +168,8 @@ it:
     additional_information: "Abbiamo bisogno di alcune informazioni aggiuntive per continuare la tua iscrizione."
     user_type_button: "Aggiorna Tipologia di Account"
     user_type_label: "Tipo di account"
-    user_type_teacher: "Insegnante"
     user_type_student: "Studente"
+    user_type_teacher: "Insegnante"
     field_is_required: "è un dato obbligatorio"
     accept_terms: "Devi accettare le condizioni per creare un account"
     error: "Si è verificato un errore."
@@ -272,6 +272,7 @@ it:
     added_teacher: '%{name} è stato aggiunto come tuo insegnante'
     registered: "Ti sei iscritto alla classe %{section_name}."
     captcha_required: 'Compila il CAPTCHA per entrare in classe.'
+    already_exists: 'Ti sei già iscritto alla classe %{section_name}.'
     error:
       signed_in: 'Per favore esci prima di procedere'
       username_not_found: 'Nome utente %{username} non trovato'
@@ -595,8 +596,6 @@ it:
       link: "Ulteriori informazioni"
       applab_unsupported_tablet: "Sviluppo App funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
       gamelab_unsupported_tablet: "Sviluppo Giochi funziona meglio su un PC o un portatile con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo dispositivo attuale."
-      oceans_unsupported_browser: "Questo browser non è supportato per questo tutorial. Sei pregato di provare a visitare questa pagina usando Edge, Chrome, Firefox o un altro browser moderno."
-      weblab_unsupported_browser: "Purtroppo, ci sono al momento dei problemi per usare Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser, finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente."
       weblab_unsupported_locale_storage: "Potrebbero verificarsi problemi utilizzando Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente."
   slow_loading: 'Questa operazione sta prendendo più tempo del solito...'
   try_reloading: 'Prova a ricaricare la pagina'
@@ -982,9 +981,8 @@ it:
       school_city: 'Città della scuola'
       school_country: 'Paese della Scuola'
       colombian_school_city: 'Città della scuola'
-      colombian_school_department: 'Dipartimento Scolastico'
       colombian_school_municipality: 'Provincia della Scuola'
-      colombian_school_name: 'Nome della scuola'
+      colombian_chilean_school_name: 'Nome della scuola'
       ages: 'Qual è l''età degli studenti a cui insegni quest''anno?'
       subjects: 'Quali materie insegni quest''anno?'
       resources: 'Quali delle seguenti risorse di informatica utilizzi?'
@@ -1083,6 +1081,7 @@ it:
   page_not_found_description: "La pagina che stai cercando non esiste a questo indirizzo. Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage."
   page_not_found_button: "Ritorna alla homepage"
   copy: 'Copia'
+  confirm: 'Confermare'
   maker:
     google_oauth:
       login_with_google: 'Accedi all''App Maker con Google'

@@ -18,6 +18,9 @@ import {
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -25,11 +28,8 @@ const ErrorType = {
   Save: 'Save'
 };
 
-const keepWorkingExperiment = 'teacher-feedback-review-state';
-
 export class TeacherFeedback extends Component {
   static propTypes = {
-    user: PropTypes.number,
     isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
@@ -41,7 +41,9 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    updateUserProgress: PropTypes.func.isRequired,
+    canHaveFeedbackReviewState: PropTypes.bool
   };
 
   constructor(props) {
@@ -51,10 +53,6 @@ export class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     const {latestFeedback} = this.props;
-
-    this.isAwaitingTeacherReview =
-      latestFeedback?.review_state === ReviewStates.keepWorking &&
-      latestFeedback?.student_updated_since_feedback;
 
     this.state = {
       comment: latestFeedback?.comment || '',
@@ -86,17 +84,36 @@ export class TeacherFeedback extends Component {
     this.setState({comment: value});
   };
 
-  onReviewStateChange = reviewState =>
-    this.setState({
-      reviewState: reviewState
-    });
-
   // Review state changes are tracked differently than comment or performance
   // because the teacher could repeatedly leave feedback for the student to
   // keep working, which would have the same review_state value, but should be treated
   // as independent feedbacks.
-  onReviewStateUpdated = isChanged =>
-    this.setState({reviewStateUpdated: isChanged});
+  onReviewStateChange = newState => {
+    const oldState = this.getLatestReviewState();
+
+    this.setState({
+      reviewState: newState,
+      reviewStateUpdated: oldState !== newState
+    });
+  };
+
+  recordReviewStateUpdated() {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_feedback',
+        study_group: 'V0',
+        event: 'keep_working',
+        data_json: JSON.stringify({
+          student_id: this.studentId,
+          script_id: this.props.serverScriptId,
+          level_id: this.props.serverLevelId,
+          old_state: this.getLatestReviewState(),
+          new_state: this.state.reviewState
+        })
+      },
+      {includeUserId: true}
+    );
+  }
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
@@ -129,6 +146,13 @@ export class TeacherFeedback extends Component {
       headers: {'X-CSRF-Token': this.props.token}
     })
       .done(data => {
+        if (this.state.reviewStateUpdated) {
+          this.recordReviewStateUpdated();
+          // The review state effects the state of the progress bubbles,
+          // we re-fetch user progress after the review state has changed
+          // so that the progress bubbles reflect the latest feedback
+          this.props.updateUserProgress(this.studentId);
+        }
         this.setState({
           latestFeedback: data,
           reviewStateUpdated: false,
@@ -170,21 +194,27 @@ export class TeacherFeedback extends Component {
     );
   }
 
+  getLatestReviewState() {
+    const {latestFeedback} = this.state;
+    const reviewState = latestFeedback?.is_awaiting_teacher_review
+      ? ReviewStates.awaitingReview
+      : latestFeedback?.review_state;
+    return reviewState || null;
+  }
+
   renderCommentAreaHeaderForTeacher() {
-    // Pilots which the user is enrolled in (such as keep working experiment) are stored on
-    // window.appOptions.experiments, which is queried by experiments.js
-    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
-    const latestFeedback = this.state.latestFeedback;
+    const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
+
+    const hasEditableReviewState =
+      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
 
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {keepWorkingEnabled && (
+        {hasEditableReviewState && (
           <EditableReviewState
-            latestReviewState={latestFeedback?.review_state || null}
-            isAwaitingTeacherReview={this.isAwaitingTeacherReview}
-            setReviewState={this.onReviewStateChange}
-            setReviewStateChanged={this.onReviewStateUpdated}
+            latestReviewState={this.getLatestReviewState()}
+            onReviewStateChange={this.onReviewStateChange}
           />
         )}
       </div>
@@ -192,15 +222,10 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForStudent() {
-    const latestFeedback = this.state.latestFeedback;
-
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        <ReadOnlyReviewState
-          latestReviewState={latestFeedback?.review_state || null}
-          isAwaitingTeacherReview={this.isAwaitingTeacherReview}
-        />
+        <ReadOnlyReviewState latestReviewState={this.getLatestReviewState()} />
       </div>
     );
   }
@@ -309,13 +334,13 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    marginTop: 8,
-    marginBottom: 8
+    paddingBottom: 8
   },
   h1: {
     color: color.charcoal,
@@ -325,15 +350,24 @@ const styles = {
     fontWeight: 'normal'
   },
   commentAndFooter: {
-    margin: '8px 16px 8px 16px'
+    padding: '8px 16px'
   }
 };
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
-  selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
-}))(TeacherFeedback);
+export default connect(
+  state => ({
+    viewAs: state.viewAs,
+    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    selectedSectionId:
+      state.teacherSections && state.teacherSections.selectedSectionId,
+    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+  }),
+  dispatch => ({
+    updateUserProgress(userId) {
+      dispatch(queryUserProgress(userId));
+      dispatch(loadLevelsWithProgress());
+    }
+  })
+)(TeacherFeedback);

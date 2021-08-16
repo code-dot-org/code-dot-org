@@ -5,6 +5,9 @@ sv:
       Green: Grön
       Red: Röd
       actor: aktör
+      age: ålder
+      answer: svar
+      binary: binära
       cats: alla katter
       color: färg
       counter: räknare

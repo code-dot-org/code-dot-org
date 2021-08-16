@@ -38,4 +38,11 @@ class PilotTest < ActiveSupport::TestCase
     pilot = build :pilot, display_name: ''
     refute pilot.valid?
   end
+
+  test 'cannot create a pilot with the same name as one that already exists' do
+    create :pilot, name: 'pilot-a'
+    assert_raises ActiveRecord::RecordInvalid do
+      create :pilot, name: 'pilot-a'
+    end
+  end
 end

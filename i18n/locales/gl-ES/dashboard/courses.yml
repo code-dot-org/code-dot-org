@@ -4,6 +4,7 @@ gl:
     course:
       name:
         csp-2017:
+          assignment_family_title: AP® Principios da informática
           title: Principios da informática ('17-'18)
           version_title: "'17-'18"
         csd-2017:
@@ -22,6 +23,8 @@ gl:
           version_title: "'18-'19"
           description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.
         csp-2018:
+          assignment_family_title: AP® Principios da informática
+          title: Principios da informática ('18-'19)
           version_title: "'18-'19"
         csd-2019:
           description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.

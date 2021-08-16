@@ -114,7 +114,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(22);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(6);
+      expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -131,7 +131,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(26);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(3);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -210,17 +210,7 @@ describe('UnitEditor', () => {
         '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
     });
-
-    it('must set family name in order to check standalone unit', () => {
-      const wrapper = createWrapper({
-        initialFamilyName: 'family1'
-      });
-      let courseCheckbox = wrapper.find('.isCourseCheckbox');
-
-      expect(courseCheckbox.props().disabled).to.be.false;
-    });
   });
-
   it('disables peer review count when instructor review only selected', () => {
     const wrapper = createWrapper({
       initialOnlyInstructorReviewRequired: false,

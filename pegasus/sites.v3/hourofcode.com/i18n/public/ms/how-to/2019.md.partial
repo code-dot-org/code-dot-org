@@ -1,102 +1,102 @@
 ---
-title: Panduan Bagaimana
+title: Panduan Cara
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Cara merancang Jam Kod anda
 
-### Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Sertai pergerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama sains komputer mereka dengan langkah ini. Jam Kod mudah dijalankan - walaupun untuk mereka yang baru bermula! Jika anda memerlukan bantuan tambahan, anda boleh meminta [sukarelawan tempatan]({{ urls/volunteer_local }}) membantu menjalankan Jam Kod di kelas anda.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+### Sila lihat pada [panduan penyertaan kami sekiranya anda masih mempunyai soalan]({{ localized_files/participation_guide }}).
 
 ***
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 1. Sila tonton video panduan cara <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## 2. Explore Activities and Tutorials
+## 2. Terokai Aktiviti dan Tutorial
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Kami menyediakan pelbagai [ tutorial berpandukan pelajar]({{ urls/learn }}) yang menyeronokkan untuk semua kumpulan umur dan tahap pengalaman. Pelajar sangat suka mencuba tutorial pandu diri ini, walaupun banyak aktiviti mengandungi rancangan pelajaran untuk guru membimbing perbincangan atau meluaskan aktivitinya juga.
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+Terokai aktiviti dan tentukan lebih awal sekiranya anda mahu memilih tutorial tunggal untuk semua pelajar anda, atau biarkan setiap kanak-kanak memilihnya sendiri.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+## 3. Cipta Rancangan Anda untuk Hari Ini
 
-### Think about your technology needs - computers are optional!
+### Fikirkan tentang keperluan teknologi anda - komputer adalah pilihan!
 
-- Pengalaman Hour of code yang terbaik melibatkan komputer yang disambungkan kepada Internet. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Pastikan untuk menguji tutorial pada komputer atau peranti pelajar untuk memastikan mereka berfungsi dengan betul dalam pelayar dengan adanya bunyi dan video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
-- Sediakan fon kepala untuk kelas anda, atau meminta pelajar untuk menyediakan sendiri, sekiranya tutorial yang anda pilih memerlukan fungsi bunyi.
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
+- Pengalaman Jam Kod terbaik merangkumi komputer yang disambungkan kepada Internet. Tetapi anda tidak memerlukan komputer untuk setiap kanak-kanak dan anda juga boleh melakukan Jam Kod tanpa komputer sama sekali! Untuk [aktiviti nirplag](/learn), hanya saringkan bahagian Teknologi Kelas untuk menunjukkan pilihan bagi "Tanpa komputer atau peranti".
+- Pastikan untuk menguji tutorial pada komputer atau peranti pelajar bagi memastikannya berfungsi dengan baik pada pelayar bersama bunyi dan video. Masalah dengan lebar jalur yang rendah? Rancang untuk menunjukkan video di bahagian depan kelas, supaya setiap pelajar tidak memuat turun video mereka sendiri. Atau cuba tutorial di luar talian.
+- Sediakan fon kepala untuk kelas anda, atau minta pelajar membawanya sendiri, sekiranya tutorial yang anda pilih sesuai dengan bunyinya.
+- Tidak mempunyai peranti yang mencukupi? Gunakan [pengaturcaraan berpasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar berpasangan, mereka saling membantu antara satu sama lain dan kurang bergantung pada guru. Mereka akan melihat bahawa sains komputer ialah mengenai sosial dan kerjasama.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
-### Pick a day and time
+### Pilih hari dan masa
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Individu di seluruh dunia menyertai sambutan Jam Kod semasa Minggu Pendidikan CS (9-13 Disember) apabila tutorial dan aktiviti terkini dikeluarkan. Tetapi anda boleh melakukan Jam Kod pada bila-bila masa sepanjang tahun!
 
-## 4. Promote your Hour of Code
+## 4. Promosikan Jam Kod anda
 
-Now that you've planned your event, it's time to start promoting it!
+Oleh kerana anda telah merancang acara anda, maka sekarang sudah tiba masa untuk mula mempromosikannya!
 
-### Tell your School and Community
+### Beritahu Sekolah dan Komuniti anda
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+Promosikan Jam Kod kepada guru lain yang mungkin mahu menyertai keseronokan ini! Ini juga ialah peluang terbaik untuk menghubungi PTSA sekolah anda atau berkongsi dalam buletin ibu bapa, memberitahu mereka bahawa anak mereka mungkin pulang ke rumah mahu mencuba lebih banyak aktiviti dan tutorial!
 
-### Let Volunteers Know by Registering Your Event
+### Biarkan Sukarelawan Tahu dengan Mendaftar Acara Anda
 
-When you [sign-up your Hour of Code event](/), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Apabila anda [mendaftar acara Jam Kod](/), anda akan menerima komunikasi e-mel yang berguna bersama berita dan petua untuk menganjurkan acara Jam Kod yang berjaya. Ini juga ialah cara anda memberitahu sukarelawan tempatan bahawa sekolah anda akan menyertainya. Sukarelawan ialah sumber yang hebat dan boleh bercakap dengan kelas anda tentang sains komputer atau hanya membantu pelajar anda dengan aktiviti Jam Kod.
 
-### Get your Students Excited
+### Buatkan Pelajar Anda Teruja
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or order inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Bersiap sedia untuk acara tersebut dengan berkongsi [video yang memberikan inspirasi](/promote/resources) menonjolkan pelbagai individu dan cara kreatif yang sains komputer boleh digunakan. Atau pesan poster yang memberikan inspirasi untuk kelas anda! Pelajar lebih teruja menyertai subjek apabila mereka melihat individu yang kelihatan seperti mereka menggalakkannya.
 
 {{ promote_new_posters }}
 
-Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
+Ketahui lebih lanjut tentang poster, video, pelekat dan cara lain untuk [mempromosikan acara anda](/promote/resources#posters) kepada komuniti anda.
 
-## 5. Start your Hour of Code Strong
+## 5. Mulakan Jam Kod Anda dengan Bersemangat
 
-Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
+Sebaik sahaja sambutan Jam Kod telah tiba, pastikan anda memulakan acara anda dengan penuh bersemangat bersama beberapa alatan dan petua ini.
 
-Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+Jemput [sukarelawan tempatan]({{ urls/volunteer_local }}) memberikan inspirasi kepada pelajar anda dengan bercakap tentang keluasan kemungkinan dalam sains komputer. Terdapat beribu-ribu sukarelawan di seluruh dunia bersedia membantu acara Jam Kod anda melalui sama ada lawatan ke kelas atau mengadakan sembang video dengan pelajar anda!
 
-Tunjukkan sebuah video yang memberi inspirasi:
+Tunjukkan video yang memberikan inspirasi:
 
-- Video asal pelancaran Code.org, bersama dengan Bill Gates, Mark Zuckerberg, dan bintang NBA Chris Bosh. (Terdapat versi [1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc), dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Video asal Code.org, menampilkan Bill Gates, Mark Zuckerberg dan bintang NBA Chris Bosh. (Terdapat versi [1 minit](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minit](https://www.youtube.com/watch?v=nKIu9yen5nc) dan [9 minit](https://www.youtube.com/watch?v=dU1xS07N-FA) yang tersedia)
+- Cari lebih banyak [sumber]({{ urls/inspire }}) dan [video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) yang memberikan inspirasi.
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Tidak menjadi masalah sekiranya anda dan pelajar anda agak baharu kepada sains komputer. Berikut ialah beberapa idea untuk memperkenalkan aktiviti Jam Kod anda:
 
-- Terangkan cara-cara teknologi memberi impak kepada kehidupan kita, dengan contoh-contoh di mana kanak-kanak lelaki dan perempuan akan mengambil berat tentangnya (bercakap tentang menyelamatkan nyawa, membantu orang ramai, menghubungkan orang ramai dan sebagainya).
-- Dalam kelas, senaraikan perkara-perkara yang menggunakan kod dalam kehidupan seharian.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Terangkan cara teknologi memberikan kesan kepada kehidupan kita, dengan contoh yang kanak-kanak lelaki dan perempuan akan mengambil berat mengenainya (bercakap tentang menyelamatkan nyawa, membantu individu, menghubungkan individu dan sebagainya.)
+- Sebagai satu kelas, senaraikan perkara yang menggunakan kod dalam kehidupan seharian.
+- Lihat petua untuk menarik minat kanak-kanak perempuan di dalam sains komputer [di sini]({{ urls/girls }}).
 
 
-## 6. Get Coding!
+## 6. Mari Mengekod!
 
-Direct students to the activity
+Memberikan panduan kepada pelajar mengenai aktiviti
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Tuliskan pautan tutorial pada papan putih. Cari pautan yang disenaraikan pada [maklumat untuk tutorial yang anda pilih]({{ urls/learn }}) di bawah bilangan peserta.
 
-When your students come across difficulties it's okay to respond:
+Apabila pelajar anda mengalami kesukaran, tidak menjadi masalah untuk menjawab:
 
-- “I don’t know. Let’s figure this out together.”
-- "Teknologi tidak selalunya akan menjadi apa yang kita mahukan."
-- "Belajar untuk memprogram adalah sama seperti belajar suatu bahasa yang baru; anda tidak akan fasih secara serta merta."
+- “Saya tidak tahu. Mari kita fikirkan penyelesaiannya bersama.”
+- "Teknologi tidak selalu berfungsi seperti yang kita mahukan."
+- "Belajar mengatur cara ialah seperti mempelajari bahasa baharu; anda tidak akan menjadi fasih dengan serta-merta."
 
-What if a student finishes early?
+Bagaimanakah jika pelajar selesai lebih awal?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-- Atau, meminta pelajar yang selesai awal untuk membantu rakan sekelas yang menghadapi masalah dengan aktiviti.
+- Pelajar boleh melihat semua tutorial dan [cuba aktiviti Jam Kod yang lain]({{ urls/learn }}).
+- Atau, minta pelajar yang selesai lebih awal untuk membantu rakan sekelas yang mengalami masalah dengan aktiviti tersebut.
 
 <p style="clear:both">&nbsp;</p>
 
-## 7. Celebrate your Students' Success
+## 7. Raikan Kejayaan Pelajar Anda
 
 [col-33]
 
@@ -104,20 +104,20 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [Cetak sijil]({{ urls/certificates }}) untuk pelajar anda.
+- [Cetakkan pelekat "Saya telah melaksanakan Jam Kod!"]({{ urls/promote_stickers }}) untuk pelajar anda.
 - [Tempah t-shirt buatan khas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) bagi sekolah anda.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Kongsikan foto dan video acara Jam Kod anda di dalam media sosial. Gunakan #HourOfCode dan @codeorg supaya kami boleh menonjolkan kejayaan anda juga!
 
 ----
 
-## Sumber Hour of Code yang lain untuk warga pendidik:
+## Sumber Jam Kod lain untuk pendidik
 
-- Lawati [Forum Guru Hour of Code](http://forum.code.org/c/plc/hour-of-code) untuk mendapatkan nasihat, teguran dan sokongan daripada warga pendidik yang lain.
-- Mengkaji semula [Soalan Lazim Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Lawati [Forum Guru Jam Kod](http://forum.code.org/c/plc/hour-of-code) untuk mendapatkan nasihat, pandangan dan sokongan daripada pendidik lain.
+- Sila kaji semula [Soalan Lazim Jam Kod](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## Apakah pula selepas Hour of Code?
+## Apakah yang seterusnya selepas Jam Kod?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Sains komputer tidak seharusnya diakhiri dengan Jam Kod! Kurikulum kami berasaskan web dan percuma untuk digunakan, selama-lamanya. [Ketahui cara](/beyond) membawa CS ke sekolah dan kepada pelajar anda.
 
 {{ signup_button }}

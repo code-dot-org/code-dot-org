@@ -2012,3 +2012,284 @@ fil-PH:
 
 
           Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
+      CourseF_outbreak_story2:
+        markdown: "# Pagsiklab: Nag-iisip Tulad ng isang Siyentista\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nAng simulasyon ay isang mahusay na
+          paraan upang malaman ang mga bagay na maaaring mahirap obserbahan sa totoong
+          mundo. Tinutulungan nila ang mga siyentista na malutas ang mga problema
+          at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulasyon
+          ay isang paraan upang maipakita kung ano ang hitsura ng isang pagsiklab
+          ng virus sa Monster Town.\n\n## I-reset at I-replay!\nKahit ikaw ang nagsulat
+          ng code mo, imposibleng eksaktong malaman kung ano ang mangyayari kapag
+          pagaganahin mo ito. Ang mga halimaw ay random na gumagala, kaya hindi mo
+          alam kung kakalat ang virus nang mabilis o mabagal. Kapag binago mo ang
+          code mo, tiyaking paganahin ang simulasyon mo nang higit sa isang beses.
+          Hindi mangyayari ang mga bagay sa parehong paraan nang dalawang beses!\n\n##
+          Nangongolekta ng data\nSubukang isulat ang iyong mga naobserbahan habang
+          pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
+          nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
+          ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Prediksiyon\nKung
+          naiintindihan mo ang iyong modelo, maaari mo itong gamitin upang makagawa
+          ng mga prediksiyon. Maaari mo ring baguhin kung paano gumana ang simulasyon
+          mo at hulaan kung ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari
+          kung merong mas maraming mga halimaw?\n* Ano ang mangyayari kung ang mga
+          halimaw ay gumalaw sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
+          limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
+          \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
+          paglaganap ng virus sa mundo?\n* Ano ang mga pagkakaiba?\nKapag natapos
+          mo ang aktibidad na ito, talakayin ang mga katanungang ito sa mga guro o
+          sa iyong pamilya!\n\n## Ano pa ang maaari nating i-model?\nNakalikha ka
+          na ng isang gumaganang modelo ng pagsiklab sa Monster Town. Ano ang mga
+          bagay na hindi maaaring gawin o maipakita ng simulation mo na nais mong
+          magawa nito? Pindutin ang magpatuloy at matutong mag-modelo ng higit pa:\n*
+          Ang pagdaragdag ng bilang ng mga halimaw sa simulasyon\n* Pagtulong sa mga
+          halimaw na makabawi mula sa virus\n* Ang probabilidad, kaligtasan sa sakit,
+          bakuna, at marami pa!\n\nMaaari mo ring ibahagi ang iyong modelo ng simulasyon
+          sa iba, o magbahagi ng isang mensahe tungkol sa kung ano sa tingin mo ang
+          maaari naming gawin upang matulungan ang iba na maging malusog pagdating
+          ng isang virus sa bayan."
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

@@ -1231,6 +1231,271 @@
           "draw a house": {
             "name": "lukiskan sebuah rumah"
           }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "lukiskan bulatan"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulang"
+            }
+          },
+          "draw a triangle": {
+            "name": "lukiskan satu bentuk segi tiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "lukiskan sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "lukis segi empat",
+            "parameters": {
+              "length": "panjang"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_data wizard_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions5_dani": {
+          "draw a star": {
+            "name": "lukiskan satu  bentuk bintang"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          },
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          }
+        },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "lukis segi empat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "Buat sesuatu"
+          }
+        },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "permainan tamat"
+          }
         }
       }
     }

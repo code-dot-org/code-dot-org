@@ -216,8 +216,8 @@ ro:
       a te putea înscrie.
     user_type_button: Actualizaţi tipul de contul
     user_type_label: Tipul contului
-    user_type_teacher: Profesor
     user_type_student: Elev
+    user_type_teacher: Profesor
     field_is_required: este necesar
     accept_terms: Trebuie să fii de acord pentru a crea un cont
     error: S-a produs o eroare.
@@ -326,6 +326,7 @@ ro:
     invite_sent: Invitație trimisă
     added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
     registered: Te-ai înregistrat pentru %{section_name}.
+    already_exists: Deja te-ai alăturat secțiunii %{section_name}.
     error:
       signed_in: Te rugăm să te deloghezi înainte de a continua
       username_not_found: Utilizatorul %{username} nu a fost găsit
@@ -730,13 +731,6 @@ ro:
       gamelab_unsupported_tablet: Laboratorul de jocuri funcționează cel mai bine
         pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să
         întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent.
-      oceans_unsupported_browser: Acest browser nu este suportat pentru acest tutorial.
-        Te rugăm să vizitezi această pagină folosind Edgge, Chrome, Firefox sau alt
-        browser modern.
-      weblab_unsupported_browser: Din păcate, în prezent, întâmpinăm probleme cu încărcarea
-        Laboratorului de web în acest browser. Poate doriți să utilizați un browser
-        diferit până când acest lucru este rezolvat. Ne cerem scuze pentru neplăcerile
-        create.
       weblab_unsupported_locale_storage: S-ar putea să întâmpinați probleme la utilizarea
         Laboratorului de web în modul de navigare privată. Vă rugăm, reîncărcați proiectul
         în modul normal. Ne pare rău pentru inconveniență.
@@ -1168,7 +1162,7 @@ ro:
       intre în Code Studio, salva progresul sau imprima certificatele. Profesorii
       pot imprima certificatele înainte, din timp <a href="%{url}"> aici</a>.'
     minecraft_name: Ora de Programare Minecraft
-    starwars_blocks_name: 'Star Wars: Programarea unei galaxii cu blocuri de cod'
+    starwars_blocks_name: 'Star Wars: Programarea unei galaxii - Evenimente'
     starwars_javascript_name: 'Star Wars: Programarea unei galaxii - JavaScript'
     download_message: Download %{app_name} pentru utilizare offline (136MB)
     download_in_Albanian: 'Descărcaţi în albaneză:'
@@ -1247,9 +1241,8 @@ ro:
       school_city: Orașul în care se află școala
       school_country: Țara școlii
       colombian_school_city: Orașul în care se află școala
-      colombian_school_department: Departament Școlar
       colombian_school_municipality: Municipiul Școlar
-      colombian_school_name: Numele școlii
+      colombian_chilean_school_name: Numele școlii
       ages: Care este/sunt vârsta/vârstele pentru care predai acest an?
       subjects: Ce materii predai acest an?
       resources: Care dintre următoarele resurse de educație cibernetică folosești?
@@ -1380,6 +1373,7 @@ ro:
       dumneavoastră.
     more_information: Consultaţi Politica de confidenţialitate a Code.org.
     accept: Sunt de acord
+  page_not_found_title: Pagina nu a fost găsită
   copy: Copiază
   confirm: Confirmă
   maker:

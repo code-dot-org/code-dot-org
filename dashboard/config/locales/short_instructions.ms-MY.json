@@ -108,7 +108,27 @@
         "scrat 16": "Acorn! Acorn! Acorn! Gunakan blok \"if\" untuk membawa saya ke sana dengan bilangan blok yang paling sedikit.",
         "scrat 17": "Marilah kita berlatih lagi - ini tidak banyak berbeza, tetapi berhati-hatilah dengan dinding itu!",
         "scrat 18": "Blok \"If-else\" memeriksa keadaan, dan kemudian melakukan satu perkara ATAU yang lain. Untuk membawa saya ke acorn cuba gunakan blok baru ini.",
-        "scrat 20": "Bolehkah anda menambah hanya 3 blok untuk membantu saya menyelesaikan labirin yang lebih kompleks? Sekiranya anda melakukannya dengan betul, saya boleh berjalan di mana-mana jalan melengkung tidak kira panjangnya. Cepat! Ais mencair!"
+        "scrat 20": "Bolehkah anda menambah hanya 3 blok untuk membantu saya menyelesaikan labirin yang lebih kompleks? Sekiranya anda melakukannya dengan betul, saya boleh berjalan di mana-mana jalan melengkung tidak kira panjangnya. Cepat! Ais mencair!",
+        "CourseD_Dance_2020_01_2021": "Seret blok `buat baharu` ke dalam ruang kerja dan sambungkannya dalam blok `persediaan`.",
+        "CourseD_Dance_2020_02_2021": "Blok `apabila anak panah atas ditekan` membolehkan anda menjalankan kod apabila anak panah atas ditekan. Buatkan penari menepuk tangan apabila anda menekan ke atas, atau cuba gerakan lain!",
+        "CourseD_Dance_2020_03_2021": "Tiba masanya untuk pertandingan menari! Atur cara setiap penari untuk bergerak apabila anda menekan kekunci berbeza. Pilih gerakan kegemaran anda untuk setiap penari atau tetapkannya kepada \"(Rawak)\" untuk sesuatu yang tidak dapat diramalkan!",
+        "CourseD_Dance_2020_04_2021": "Buatkan penari anda memulakan gerakan baharu selepas corak berirama keempat.",
+        "CourseD_Dance_2020_05_2021": "Buatkan penari anda memulakan gerakan baharu selepas 6 corak berirama sekarang!",
+        "CourseD_Dance_2020_06_2021": "Tubuh kumpulan penari sandaran di sekeliling penari utama di tengah-tengah.",
+        "CourseD_Dance_2020_07_2021": "Tukar saiz kumpulan penari sandaran.",
+        "CourseD_Dance_2020_08_2021": "Cuba tukar warna seorang daripada penari anda (atau seluruh kumpulan)!",
+        "CourseD_Dance_2020_09_2021": "Jadi kreatif dengan blok baharu ini!",
+        "CourseD_Dance_2020_10_2021": "Rasakan kegirangannya! Cipta tarian anda sendiri untuk berkongsi dengan rakan anda.",
+        "CourseD_Dance_2020_bonus1_2021": "Pergi ke Depan dan ke Belakang! (Klik \"Lebih Banyak Lagi\" untuk maklumat lanjut)",
+        "CourseD_Dance_2020_bonus3_2021": "Mari Kita Berada dalam Formasi!(Klik \"Lebih Banyak Lagi\" untuk maklumat lanjut)",
+        "CourseF_outbreak1": "Cipta 10 jin sihat dan 1 jin sakit. Tukar saiznya dan jadikan mereka berkeliaran.",
+        "CourseF_outbreak2": "Tukar raksasa sihat kepada raksasa sakit apabila mereka bersentuh.",
+        "CourseF_outbreak3": "Tukar raksasa kepada raksasa dengan pelitup muka apabila anda klik mereka.",
+        "CourseF_outbreak4": "Tukar bilangan dan saiz jin raksasa untuk simulasi anda.",
+        "CourseF_outbreak6": "Tambahkan peratusan peluang untuk raksasa jatuh sakit setiap kali raksasa yang sihat menyentuh raksasa yang sakit. Lakukan ini untuk semua kombinasi raksasa dengan dan tanpa pelitup.",
+        "CourseF_outbreak7": "Cipta kostum baru untuk raksasa dengan imuniti terhadap virus dan gunakannya dalam simulasi anda.",
+        "CourseF_outbreak8": "Kongsi mesej dengan simulasi anda.",
+        "HOC 2018 Level_12_2021": "Anda boleh merekabentuk persekitaran dalam laut mengikut idea sendiri !"
       }
     }
   }

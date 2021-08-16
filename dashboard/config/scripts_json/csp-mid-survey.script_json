@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:05 UTC",
+    "family_name": "csp-mid-survey",
+    "serialized_at": "2021-08-03 22:47:40 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp-mid-survey"
@@ -63,7 +65,6 @@
         ],
         "progression": "CS Principles Mid-year Survey"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

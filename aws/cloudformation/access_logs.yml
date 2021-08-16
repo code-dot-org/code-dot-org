@@ -24,9 +24,60 @@ Parameters:
   ShardCount:
     Type: Number
     Default: 1
+  LogFields:
+    Type: CommaDelimitedList
+    # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
+    Default: >
+      timestamp,
+      c-ip,
+      time-to-first-byte,
+      sc-status,
+      sc-bytes,
+      cs-method,
+      cs-protocol,
+      cs-host,
+      cs-uri-stem,
+      cs-bytes,
+      x-edge-location,
+      x-edge-request-id,
+      x-host-header,
+      time-taken,
+      cs-protocol-version,
+      c-ip-version,
+      cs-user-agent,
+      cs-referer,
+      cs-cookie,
+      cs-uri-query,
+      x-edge-response-result-type,
+      x-forwarded-for,
+      ssl-protocol,
+      ssl-cipher,
+      x-edge-result-type,
+      fle-encrypted-fields,
+      fle-status,
+      sc-content-type,
+      sc-content-len,
+      sc-range-start,
+      sc-range-end,
+      c-port,
+      x-edge-detailed-result-type,
+      c-country,
+      cs-accept-encoding,
+      cs-accept,
+      cache-behavior-path-pattern,
+      cs-headers,
+      cs-header-names,
+      cs-headers-count
+  OldLogFields:
+    Type: CommaDelimitedList
+    Description: >
+      When updating fields in a log configuration, a mix of records with old and new fields will
+      arrive for up to several hours after the update. To handle records with old fields properly, copy
+      LogFields to OldLogFields.
 Resources:
   AccessLogConfig:
     Type: AWS::CloudFront::RealtimeLogConfig
+    DependsOn: AccessLogProcessor
     Properties:
       Name: !Ref AWS::StackName
       SamplingRate: 100
@@ -35,48 +86,7 @@ Resources:
           KinesisStreamConfig:
             RoleArn: !GetAtt AccessLogConfigRole.Arn
             StreamArn: !GetAtt AccessLogStream.Arn
-      Fields:
-        # From https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields
-        - timestamp
-        - c-ip
-        - time-to-first-byte
-        - sc-status
-        - sc-bytes
-        - cs-method
-        - cs-protocol
-        - cs-host
-        - cs-uri-stem
-        - cs-bytes
-        - x-edge-location
-        - x-edge-request-id
-        - x-host-header
-        - time-taken
-        - cs-protocol-version
-        - c-ip-version
-        - cs-user-agent
-        - cs-referer
-        - cs-cookie
-        - cs-uri-query
-        - x-edge-response-result-type
-        - x-forwarded-for
-        - ssl-protocol
-        - ssl-cipher
-        - x-edge-result-type
-        - fle-encrypted-fields
-        - fle-status
-        - sc-content-type
-        - sc-content-len
-        - sc-range-start
-        - sc-range-end
-        - c-port
-        - x-edge-detailed-result-type
-        - c-country
-        - cs-accept-encoding
-        - cs-accept
-        - cache-behavior-path-pattern
-        - cs-headers
-        - cs-header-names
-        - cs-headers-count
+      Fields: !Ref LogFields
   AccessLogBucket:
     Type: AWS::S3::Bucket
     DependsOn: AccessLogPartitionPermission
@@ -98,6 +108,19 @@ Resources:
           - Event: 's3:ObjectCreated:*'
             Function: !GetAtt AccessLogPartition.Arn
             Filter: {S3Key: {Rules: [{Name: prefix, Value: !Ref BucketPrefix}]}}
+      IntelligentTieringConfigurations:
+        - Id: AccessLogStorage
+          Prefix: !Ref BucketPrefix
+          Status: Enabled
+          Tierings:
+            - {AccessTier: ARCHIVE_ACCESS, Days: 90}
+            - {AccessTier: DEEP_ARCHIVE_ACCESS, Days: 180}
+      LifecycleConfiguration:
+        Rules:
+          - Prefix: !Ref BucketPrefix
+            Status: Enabled
+            Transitions:
+              - {StorageClass: INTELLIGENT_TIERING, TransitionInDays: 30}
   AccessLogPartition:
     Type: AWS::Lambda::Function
     Properties:
@@ -137,7 +160,7 @@ Resources:
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
       ExtendedS3DestinationConfiguration:
         BufferingHints: 
-          IntervalInSeconds: 60
+          IntervalInSeconds: 180
           SizeInMBs: 128
         BucketARN: !GetAtt AccessLogBucket.Arn
         RoleARN: !GetAtt AccessLogDeliveryRole.Arn
@@ -149,6 +172,8 @@ Resources:
               Parameters:
                 - {ParameterName: LambdaArn, ParameterValue: !GetAtt AccessLogProcessor.Arn}
                 - {ParameterName: RoleArn, ParameterValue: !GetAtt AccessLogDeliveryRole.Arn}
+                - {ParameterName: BufferIntervalInSeconds, ParameterValue: 180}
+                - {ParameterName: BufferSizeInMBs, ParameterValue: 3}
         DataFormatConversionConfiguration:
           Enabled: true
           InputFormatConfiguration: {Deserializer: {OpenXJsonSerDe: {}}}
@@ -165,10 +190,13 @@ Resources:
       Handler: access_logs.handler
       Runtime: ruby2.7
       MemorySize: 1024
+      Timeout: 60
       Environment:
         Variables:
           DATABASE: !Ref AccessLogDatabase
           TABLE: !Ref AccessLogTable
+          LOG_FIELDS: !Join [',', !Ref LogFields]
+          OLD_LOG_FIELDS: !Join [',', !Ref OldLogFields]
       Role: !GetAtt AccessLogRole.Arn
 
   AccessLogDatabase:
@@ -341,6 +369,7 @@ Resources:
                   - lambda:GetFunctionConfiguration
                 Resource:
                   - !GetAtt AccessLogProcessor.Arn
+                  - !Sub "${AccessLogProcessor.Arn}:$LATEST"
   AccessLogRedshiftSpectrumRole:
     Type: AWS::IAM::Role
     Properties:

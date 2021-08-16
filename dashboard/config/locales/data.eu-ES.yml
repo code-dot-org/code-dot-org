@@ -609,6 +609,8 @@ eu:
         C4_unplugged_forloops: For begiztak
         C4_unplugged_parameters: Abestiak idazten parametroekin
         C4_unplugged_binary: Bitarra
+        CSF_debugging_k1_blocks: Arazketa
+        CSF_debugging_text_blocks: Arazketa
         CSF_EF_cs_matters: Informatika Gaiak
         CSF_my_robotic_friends: Nire lagun robotikoak
         CSF_stevie_big_project: Stevie eta Big Proiektua
@@ -658,6 +660,7 @@ eu:
         CSF_loops_AB: Itzuliak
         csd_pair_programming: Bikoteka programatzen
         csd_applab_parameters: Parametrodun funtzioak
+        csd_debugging: Arazketa
         playlab_2021: 'Sarrera: Jolas Laborategia'
         playlab_2021_reader: 'Sarrera: Jolas Laborategia'
     callout:

@@ -184,8 +184,8 @@ ko:
     additional_information: 가입하기 위해서는 추가적인 정보가 필요합니다.
     user_type_button: 계정 유형 업데이트
     user_type_label: 계정 유형
-    user_type_teacher: 선생님
     user_type_student: student
+    user_type_teacher: 선생님
     field_is_required: 이(가) 필요합니다.
     accept_terms: 계정 만들기에 동의해야 합니다.
     error: 오류가 발생하였습니다.
@@ -290,6 +290,8 @@ ko:
     invite_sent: 초대 메일을 발송하였습니다
     added_teacher: "%{name} 가 선생님으로 추가되었습니다"
     registered: "%{section_name}에 등록되었습니다."
+    captcha_required: 이 섹션에 참여하실려면 캡챠를 체크해주세요.
+    already_exists: 이미 섹션 %{section_name}에 가입되어있습니다.
     error:
       signed_in: 먼저, 로그아웃 하세요.
       username_not_found: "%{username} 는 존재하지 않습니다"
@@ -301,6 +303,9 @@ ko:
       cant_join_own_section: 섹션에 참여할 수 없습니다.
       provider_managed_section: 이 섹션은 다른 공급자에 의해 관리되고 있으며 가입할 수 없습니다. 교사에게 %{provider}를
         통해 귀하를 추가하고 섹션을 다시 동기화해 달라고 요청하세요.
+      restricted_section: 섹션이 잠겨있어 %{section_code}섹션에 추가할 수 없습니다.  담당 선생님에게 문의해주세요.
+      full_section: "%{section_code} 섹션에는 이미  %{section_capacity} 명의 학생이 가입되어 있어 더이상
+        추가할 수 없습니다. 담당 선생님께 문의해주세요."
     mail:
       student_disassociated:
         subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
@@ -397,7 +402,7 @@ ko:
       create: 만들기
       algebra_game: 대수학
       applab: 앱 연구실
-      artist: 화가
+      artist: 예술가
       artist_k1: 아티스트 (프리 리더)
       basketball: 농구
       bounce: 바운스
@@ -659,10 +664,6 @@ ko:
         기기 상에서 이 툴을 사용하며 이슈를 경험할 수 있습니다.
       gamelab_unsupported_tablet: 게임 랩은 마우스와 키보드를 사용하는 데스크톱 또는 노트북 상에서 가장 잘 됩니다. 현재
         기기 상에서 이 툴을 사용하며 이슈를 경험할 수 있습니다.
-      oceans_unsupported_browser: 이 브라우저는 이 튜토리얼을 지원하지 않습니다. 에지, 크롬, 파이어폭스 또는 다른 최신
-        브라우저를 사용하여 이 페이지를 방문해 보세요.
-      weblab_unsupported_browser: 불행히도 여러분이 현재 사용하는 브라우저에서 웹 연구실을 불러오는데 문제가 발생하였습니다.
-        이 문제가 해결될 때까지 다른 브라우저를 사용해보세요. 불편을 드려서 죄송합니다.
       weblab_unsupported_locale_storage: 브라우저를 개인정보 보호 모드에서는 사용하면 웹 연구실 사용에 문제가 발생할
         수 있습니다. 일반 모드에서 프로젝트를 다시 불러오세요. 불편을 드려서 죄송합니다.
   slow_loading: 연결이 느립니다.
@@ -1097,9 +1098,8 @@ ko:
       school_city: 학교 도시
       school_country: 학교 국가
       colombian_school_city: 학교 도시
-      colombian_school_department: 학교 부서
       colombian_school_municipality: 학교 도시
-      colombian_school_name: 학교 이름
+      colombian_chilean_school_name: 학교 이름
       ages: 올해 몇 세 아동을 가르치세요?
       subjects: 올해 어느 과목을 가르치세요?
       resources: 다음 CS 교육 리소스 중 어느 것을 사용하세요?
@@ -1128,6 +1128,7 @@ ko:
         malaysia: 말레이시아
         mexico: 멕시코
         thailand: 태국
+        uzbekistan: 우즈베키스탄
       ages:
         ages_under_6: 6세 이하
         ages_7_8: 7-8세
@@ -1232,3 +1233,4 @@ ko:
   behaviors:
     this_sprite: 이 스프라이트
   unit_prefix: 단원 %{n}
+  code_org_logo_alt: Cord.org 홈

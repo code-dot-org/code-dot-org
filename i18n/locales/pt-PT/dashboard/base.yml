@@ -162,8 +162,8 @@ pt:
     additional_information: "Precisamos de mais informações para continuarmos o processo de criação da conta."
     user_type_button: "Atualizar o tipo de conta"
     user_type_label: "Tipo de conta"
-    user_type_teacher: "Professor"
     user_type_student: "Aluno"
+    user_type_teacher: "Professor"
     field_is_required: "é obrigatório"
     accept_terms: "Deves concordar em criar uma conta."
     error: "Ocorreu um erro."
@@ -431,6 +431,7 @@ pt:
     update_email: "Atualizar"
     for_parents_and_guardians: "Para os Pais e Encarregados de Educação"
     parent_guardian_email_label: "Email dos pais ou do encarregado de educação"
+    remove_parent_email_label: "Remover"
     none: "Nenhum"
     encrypted: "encriptado"
   user_level:
@@ -537,7 +538,6 @@ pt:
     upgrade:
       unsupported_message: "O seu navegador não é suportado. Por favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidade podem não estar disponíveis."
       link: "Saber mais"
-      oceans_unsupported_browser: "Este browser não é suportado para este tutorial. Por favor tente visitar esta página usando Edge, Chrome, Firefox, ou outro browser mais moderno."
   slow_loading: 'Isto está a demorar mais do que o habitual...'
   try_reloading: 'Tente recarregar a página'
   next_stage: 'Concluído! Continuar para a próxima fase'
@@ -826,7 +826,7 @@ pt:
       email: 'E-mail'
       school_name: 'Nome da escola'
       school_country: 'País da escola'
-      colombian_school_name: 'Nome da escola'
+      colombian_chilean_school_name: 'Nome da escola'
     form_entries:
       gender:
         male: 'Masculino'
@@ -850,3 +850,4 @@ pt:
     accept: 'Concordar'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
   copy: 'Copiar'
+  confirm: 'Confirmar'

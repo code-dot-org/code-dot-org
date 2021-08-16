@@ -967,12 +967,26 @@
   coursed-2018_name: Corso D (2018)
   coursee-2018_name: Corso E (2018)
   coursef-2018_name: Corso F (2018)
+  coursea-2019_name: Corso A (2019)
+  courseb-2019_name: Corso B (2019)
+  coursec-2019_name: Corso C (2019)
+  coursed-2019_name: Corso D (2019)
+  coursee-2019_name: Corso E (2019)
+  coursef-2019_name: Corso F (2019)
+  coursea-2020_name: Corso A (2020)
+  courseb-2020_name: Corso B (2020)
+  coursec-2020_name: Corso C (2020)
+  coursed-2020_name: Corso D (2020)
+  coursee-2020_name: Corso E (2020)
+  coursef-2020_name: Corso F (2020)
+  coursed-2021_name: Corso D (2021)
   express-2018_name: Corso Rapido (2018)
   pre-express-2018_name: Corso Rapido pre-scolare (2018)
   express-2019_name: Corso Rapido (2017)
   pre-express-2019_name: Corso Rapido pre-scolare (2019)
   express-2020_name: Corso Rapido (2017)
   pre-express-2020_name: Corso Express Pre-lettore (2020)
+  pre-express-2021_name: Corso Rapido pre-scolare (2021)
   csd2_name: 'Unità 2: Sviluppo Web'
   csd3_name: 'Unità 3: Animazioni e Giochi'
   accelerated_name: "Corso rapido"
@@ -1208,6 +1222,12 @@
   coursed-2020_shortdescription_congrats: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   coursee-2020_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   coursef-2020_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursea-2021_shortdescription_congrats: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  courseb-2021_shortdescription_congrats: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursec-2021_shortdescription_congrats: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursed-2021_shortdescription_congrats: 'Gli studenti sviluppano la comprensione dei cicli annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursee-2021_shortdescription_congrats: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed eventi per poi introdurre le funzioni. Nella seconda parte di questo corso, puoi progettare e creare un progetto finale che potrai condividere con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
+  coursef-2021_shortdescription_congrats: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
   codeorg_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   codeintl_longdescription: "Impara i concetti di base dell'informatica con la programmazione visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates e Mark Zuckerberg, ed ispirato ai giochi \"Angry Birds\" e \"Plants vs Zombies\". Impara le istruzioni di ripetizione, le istruzioni di scelta e gli algoritmi fondamentali. Disponibile in 34 lingue."
   thinkersmithspanish_longdescription: "Usando un \"Vocabolario per Robot\" pre-definito gli studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza essersi prima accordati. Questa lezione insegna ai bambini la connessione tra simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi). La lezione \"I miei amici robotici\" funziona meglio se sviluppata in gruppo e include una guida per l'insegnante per l'uso in aula."
@@ -1695,6 +1715,7 @@
   footer_support: "Help and Community"
   footer_terms: "Condizioni"
   ai_for_oceans: "L'Intelligenza Artificiale per il mare"
+  ai_for_oceans_lesson_plan: "piano di lavoro della lezione"
   ai_in_partnership_with: "In collaborazione con"
   ai_microsoft_thanks: "Ringraziamo Microsoft per il supporto che dà alla nostra missione per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e le competenze per avere successo nel XXI secolo."
   ai_activity: "Attività"

@@ -1473,6 +1473,243 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Is féidir leat an uimhir seo a athrú.",
           "courseE_artist_ramp8_2": "Cliceáil anseo chun an líon uaireanta ba mhaith leat an cód a athdhéanamh a chur isteach."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Roghnaigh cineál an damhsóra anseo."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "dance_callout_11_a": "Cuir an bloc seo le do chlár.",
+          "arrow_buttons": "Úsáid na saigheada chun an damhsóir a rialú."
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Cuir an bloc seo le do chlár!"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Cuir teagmhas nua le do chlár."
+        },
+        "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Bloc nua!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Bloc nua!"
+        },
+        "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Bloc nua!",
+          "new_block_4": "Bloc nua!"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Insíonn an t-ordú beag seo don ríomhaire an píosa MÓR cóid sa spás oibre leis an ainm céanna a rith."
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Is lúb \"athdhéan\" é seo! Cuir isteach sa spás oibre é agus cuir cód isteach inti le rith arís is arís eile."
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Tá an Gníomhaire in ann a bheith ar foluain os cionn uisce, ach níl an t-imreoir in ann!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Ní féidir leat fáil réidh leis na blocanna seo, ach is féidir iad a chur in eagar!"
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Tá an Gníomhaire in ann a bheith ar foluain os cionn laibhe, ach níl Steve agus Alex in ann!  "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Tús maith leath na hoibre! Chuireamar cúpla bloc sa chlár cheana"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tosóidh an cód seo tógáil do thí. An féidir leat é a chur i gcrích?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Cliceáil \"Rith\" chun triail a bhaint as",
+          "craft_drag_block_callout": "Tarraing bloc \"téigh ar aghaidh\" agus ceangail faoin bhloc eile é"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Cuir blocanna anseo chun orduithe a dhéanamh arís is arís eile"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Lorgóidh an cód seo laibhe. An féidir leat ordú a chur leis chun bogadh ar aghaidh?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Tochail an t-iarann seo!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ciallaíonn an uimhir seo nach féidir leat ach bloc amháin den chineál seo a úsáid i do réiteach."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "An bhfuil a fhios agat gur féidir leat tarraingt anuas ar líne atá ann aon uair is gá?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Is éard atá san uimhir seo ná an líon blocanna den chineál seo is féidir leat a úsáid sa dúshlán seo."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Úsáid an bolgán solais nuair a theastaíonn leid uait!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Is tagrán é seo"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Cliceáil anseo chun treo na saighde a athrú."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Úsáid é seo le fuaim \"randamach\" a roghnú, rud a chiallaíonn nach mbeidh a fhios agat cén fhuaim a bhéas ann go dtí go gcloisfidh tú é!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Tar éis duit na blocanna go léir a cheangal, cliceáil \"Rith\" chun an clár a thosú."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Níl ach bloc amháin den sórt seo sa mbosca uirlisí. Cén chaoi a n-úsáidfidh tú é?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Úsáid an bolgán solais nuair a theastaíonn leid uait!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Úsáid an tsaighead uaine aníos chun an treo a athrú."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Treoraigh an t-aisteoir don bhratach seo chun dul ar aghaidh go dtí an chéad leibhéal eile."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Cuirfear an bloc seo i bhfeidhm nuair a bhuaileann an phiongain agus an dineasár in aghaidh a chéile."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Is féidir leat an bloc seo a úsáid chun aisteoirí a aistriú timpeall an spáis oibre."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "An bhfeiceann tú blocanna nua sa mbosca uirlisí? Ná buair do cheann, taispeánfaimid duit an bealach chun iad a úsáid níos déanaí sa chéim seo."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Is féidir leat tuilleadh blocanna a fháil ón mbosca uirlisí má theastaíonn siad uait!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Ciallaíonn an uimhir a ceathair ar an bpuimcín go bhfuil ceithre phuimcín ann le baint."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Tá na blocanna seo faoi ghlas agus ní féidir iad a scriosadh!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Tar éis duit na blocanna go léir a cheangal, cliceáil \"Rith\" chun an clár a thosú."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.",
+          "courseC_maze_programming3_3": "Déanta de chloch na blocanna seo agus ní féidir leat fáil réidh leo."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Seo é an chéad ard-dúshlán! Tá na dúshláin seo níos deacra agus seans go mbeidh ort níos mó ná iarracht amháin a dhéanamh.",
+          "courseC_maze_programming7_2": "Tá na blocanna seo déanta de chloch agus ní féidir leat fáil réidh leo."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "Níl ach bloc amháin den chineál seo ar fáil sa dúshlán seo."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Ní gá dathanna a úsáid chun an dúshlán seo a chríochnú. Ach tá sé éasca leis an mbloc \"dath randamach\"!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Ba chóir duit GACH scamall a iniúchadh le féachaint an bhfuil BLÁTH ann. Ní gá duit cíora meala a lorg ar chor ar bith.",
+          "4_5_Bee_Conditionals_2_2": "An bhfuil cúnamh uait? Cliceáil anseo chun leid FÍSE a fháil!"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Úsáid an lúb seo chun an neachtar (nó mil) go léir a bhailiú ó bhláth (nó cíor mheala) amháin."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Ní mór duit an bloc `chomh fada is atá cosán os do chomhair` a úsáid chun an dúshlán seo a réiteach."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Seo é an teorainn blocanna. Insíonn sé duit cé mhéad bloc den chineál seo atá fágtha agat."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Tar éis duit na blocanna go léir a cheangal, cliceáil \"Rith\" chun an clár a thosú."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Seo é an bosca uirlisí, áit a n-aimseoidh tú blocanna breise a chuideoidh leat na dúshláin a chríochnú."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Is féidir leat blocanna breise a tharraingt go dtí an bosca uirlisí le fáil réidh leo.",
+          "stone_block_2": "Tá na blocanna liatha déanta de chloch agus ní féidir leat fáil réidh leo."
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Cliceáil anseo!"
+        },
+        "courseE_artist_functions1_dani": {
+          "courseD_artist_functions1_1": "I dtús báire, úsáid an bloc seo chun cabhrú leat an chéad chearnóg a chruthú."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_1": "Nuair a ritheann an bloc uaine seo, ritheann an cód go léir laistigh den fheidhm. Cad ba chóir don ealaíontóir a dhéanamh tar éis dó an chéad chearnóg a tharraingt?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Cuireadh na blocanna a chruthaíonn feidhmeanna faoin lipéad seo sa mbosca uirlisí."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.",
+          "courseE_artist_functions_challenge1_callout2": "Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Coinnigh an clár seo ag dul trí thuilleadh cóid a chur leis.",
+          "courseE_artist_functions_challenge2_callout2": "Mura dtaitníonn an dearadh seo leat, athraigh é ar do rogha bealach!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Tá leagan amach nua ar an mbosca uirlisí an uair seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Glasra anaithnid. Athraíonn sé gach uair a ritheann tú an clár."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Tá an bosca uirlisí sa mód \"catagóirí\" chun tuilleadh spáis a thabhairt don chód. Gheobhaidh tú na lúba \"do gach\" anseo."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Gheobhaidh tú an lúb \"do gach\" anseo!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Gheobhaidh tú an bloc 'mata' anseo."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Aimseoidh tú do chuid athróg anseo!"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Cliceáil anseo le féachaint conas a oibríonn sé seo."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Tar éis duit na blocanna go léir a cheangal, cliceáil \"Rith\" chun an clár a thosú."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre."
         }
       }
     }

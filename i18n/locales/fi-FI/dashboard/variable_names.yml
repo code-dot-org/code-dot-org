@@ -5,6 +5,9 @@ fi:
       Green: Vihreä
       Red: Punainen
       actor: hahmo
+      age: ikä
+      answer: vastaus
+      binary: binääri
       cats: kaikki kissat
       color: väri
       counter: laskuri

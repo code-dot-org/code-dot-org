@@ -36,6 +36,7 @@ ku-TR:
   twentyhours_text: ئایا یەكەم وانەی "كاتژمێرێك كۆدنووسین" تەواوكرد؟ پتر فێری زانستی
     کۆمپیوتەر و بیرۆکەکانی پرۆگرامسازی بە لەگەڵ ئەم کۆرسە تەواوکاریە.
   og_title: 'Code.org: هەموو كەسێك دەتواتێ فێربێت'
+  og_title_soon: هەفتەی فێربوونی زانستی کۆمپیوتەر
   og_title_here: '"كاتژمێرێك كۆدنووسین" ئێستا بەردەستە!'
   og_description: هەموو فێرخوازێك لە هەر قوتابخانەیەك شایەنی ئەوەیە دەرفەتی فێربوونی
     زانستی کۆمپیوتەری پێبدرێت.
@@ -195,6 +196,7 @@ ku-TR:
   learn_next_level: بەردەوام بە بۆ ئاستی داهاتوو
   learn_online: کۆرسی تر تاقیکەوە
   learn_classes: پۆلی ناوەخۆ بدۆزەوە
+  hoc_is_here: 'تاگی #کاتژێری_کۆدنووسی لێرەیە - سەیرەکی @codeorg بكە'
   just_did_hoc: 'هەرئێستا من #کاتژێری_کۆدنووسی م تەواوکرد - دەتوانی لە @codeorg سەیری
     بکەی'
   learn_hoc: یەك کاژێر فێرە کۆدنووسی ببە
@@ -263,9 +265,12 @@ ku-TR:
     فلۆریسا، مامۆستا
   homepage_hero_text_teacher2: "&ldquo; ئەو پرۆگرامە وای لە قوتابیانم کرد ١٠٠% بەشداربن.&rdquo;
     \nئادەم، مامۆستا"
+  homepage_hero_hoc_is_coming: هەفتەی فێربوونی زانستی کۆمپیوتەر
+  homepage_hero_hoc_is_here: هەفتەی فێربوونی زانستی کۆمپیوتەر
   homepage_slot_text_hoc: كاژێری كۆدنووسی
   homepage_slot_text_frozen: کارتۆنی فرۆزن لەگەڵ ئانا و ئێلسا
   homepage_slot_text_studio: هەموو فێرکاریەکانمان
+  homepage_slot_text_course4: Ders 4
   homepage_slot_text_shop: کڕین
   homepage_action_text_num_served: "# خزمەت کراوە"
   homepage_action_text_sign_up: خۆتۆمارکردن
@@ -328,6 +333,7 @@ ku-TR:
   class_submission_in_school_summer_school_cs_program: پرۆگرامی قوتابخانەی هاوینەی
     زانستی كۆمپیوتەر
   class_submission_out_of_school_other: هی تری دەرەوەی قوتابخانە
+  class_submission_online: سەرهێڵ
   class_submission_online_teacher_resource: سەرچاوەی سەرهێڵی مامۆستا
   class_submission_level_elementary: سەرەتایی
   class_submission_level_middle_school: قوتابخانەی ناوەندی
@@ -339,10 +345,13 @@ ku-TR:
   sports_watch_video: ڤیدیۆکە ببینە
   are_you_teacher: ئایا تۆ مامۆستای؟
   volunteer_engineer_submission_field_name: ناو
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: باسکردن
   volunteer_engineer_submission_field_email: ناونیشانی پۆستی ئەلیكترۆنی
   volunteer_engineer_submission_field_email_placeholder: ناونیشانی پۆستی ئەلیكترۆنی
   volunteer_engineer_submission_submit: بنێرە
+  volunteer_engineer_submission_commitment_more: زیاتر
   volunteer_engineer_submission_experience_university_student_or_researcher: خوێندکاری
     زانکۆ (یان توێژەر)
   volunteer_engineer_submission_experience_software_professional: ئەندازیاری سۆفتوێر
@@ -366,7 +375,11 @@ ku-TR:
   dashboard_students_name: ناو
   dashboard_students_male: نێر
   dashboard_students_female: مێ
+  dashboard_course1: 'Ders 1:'
+  dashboard_course2: 'Ders 2:'
+  dashboard_course3: 'Ders 3:'
   dashboard_sequence: زنجیرە
+  dashboard_curriculum_csp: 'بنەماکانی زانستی کۆمپیوتەر:'
   dashboard_grade_other: هی تر
   dashboard_login_none: پۆستی ئەلیكترۆنی
   dashboard_stage: قۆناغ
@@ -381,6 +394,9 @@ ku-TR:
   teachers_notes: تێبینییەکانی مامۆستا
   blockly_name: بلۆکلی
   course1_name: Ders 1
+  course2_name: Ders 2
+  course3_name: Ders 3
+  course4_name: Ders 4
   applab_name: تاقیگەی ئاپ
   gamelab_name: تاقیگەی یاری
   lightbot_gradelevel: هەموو تەمەنەكان
@@ -400,6 +416,7 @@ ku-TR:
   codeorg_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
   codeintl_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
   hourofcode_shortdescription: فێری کۆد نووسین بە لەگەڵ Mark Zuckerberg و Angry Birds!
+  hourofcode_longdescription: یەكەم پرۆگرامی خۆت بنوسە
   groklearning_beyond_name: بەرنامەسازی پایثۆن فێربە
   lightbot_beyond_gradelevel: هەموو تەمەنەكان
   codecademy_beyond_gradelevel: قوتابخانەی دواناوەندی
@@ -424,6 +441,8 @@ ku-TR:
   user_header_settings: هەژمارەکەم
   user_header_logout: دەرچوون
   user_header_signin: چوونەژوورەوە
+  user_header_create: 'ez '
+  user_header_applab: 'تاقیگەی ئاپ '
   user_header_gamelab: تاقیگەی یاری
   applab_tile_start_tutorial: دەستپێبکە
   account_sign_up_email_opt_in: ئایا دەتوانین نامەی پۆستی ئەلیكترۆنیت بۆ بنێرین دەربارەی

@@ -203,7 +203,7 @@ function yLocationOf(spriteId) {
   return getProp(spriteId, 'y');
 }
 
-//Mike's follow/avoid behavior blocks
+//Mike's follow/avoid/glide behavior blocks
 function startFollowing(sprites,targets){
   addTarget(sprites, targets, "follow");
   addBehaviorSimple(sprites, followingTargets());
@@ -222,22 +222,29 @@ function stopFollowing(sprites){
   removeBehaviorSimple(sprites, avoidingTargets());
 }
 
+function startGliding(sprites){
+  addBehaviorSimple(sprites, glideFunc());
+}
+
+function stopGliding(sprites){
+  removeBehaviorSimple(sprites, glideFunc());
+}
+
 
 //Mike's Say Block Prototype code below this point
-function spriteSay(sprite,speech){
-  setProp(sprite, "speech", speech);
-  setProp(sprite, "timeout", 120);
-}
-
-function spriteSayChoices(sprite,speech){
-  setProp(sprite, "speech", speech);
-  setProp(sprite, "timeout", 120);
-}
-
 function spriteSayTime(sprite,speech,time){
   setProp(sprite, "speech", speech);
   setProp(sprite, "timeout", time*30);
 }
+
+function spriteSay(sprite,speech){
+  spriteSayTime(sprite,speech,4);
+}
+
+function spriteSayChoices(sprite,speech){
+  spriteSay(sprite,speech);
+}
+
 
 function speechBubbles(){
   var spriteIds = getSpriteIdsInUse();

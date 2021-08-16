@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:55 UTC",
+    "serialized_at": "2021-08-03 22:47:36 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "frozen-2018-test-b"
@@ -60,7 +60,6 @@
           "frozen line_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +83,6 @@
           "frozen perpendicular_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +106,6 @@
           "frozen_video_loops_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +129,6 @@
           "frozen square iterative_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +152,6 @@
           "frozen square loop_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +175,6 @@
           "frozen square loop 3x_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +198,6 @@
           "frozen square snowflake_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +221,6 @@
           "frozen cross_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +244,6 @@
           "frozen cross rotate_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +267,6 @@
           "frozen cross rotate dense_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +290,6 @@
           "frozen diamond_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +313,6 @@
           "frozen diamond mini snowflake_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +336,6 @@
           "frozen diamond snowflake_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +359,6 @@
           "frozen_variables_functions_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +382,6 @@
           "frozen snowflake branch_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -420,7 +405,6 @@
           "frozen snowflake full_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -444,7 +428,6 @@
           "frozen snowflake fuller_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -468,7 +451,6 @@
           "frozen freeplay_b"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

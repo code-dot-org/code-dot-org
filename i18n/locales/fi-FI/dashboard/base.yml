@@ -163,8 +163,8 @@ fi:
     additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
     user_type_button: "Aseta tilin laji"
     user_type_label: "Tilin laji"
-    user_type_teacher: "Opettaja"
     user_type_student: "Oppilas"
+    user_type_teacher: "Opettaja"
     field_is_required: "vaaditaan"
     accept_terms: "Sinun on hyväksyttävä luodaksesi tili."
     error: "Tapahtui virhe."
@@ -451,6 +451,7 @@ fi:
     for_parents_and_guardians: "Vanhemmille ja Huoltajille"
     link_a_parent_email: "Liitä vanhemman/huoltajan sähköpostiosoite tähän tiliin saadaksesi päivityksiä lapsesi edistymisestä ja projekteista. Voit käyttää tätä sähköpostiosoitetta myös salasanan palautukseen."
     parent_guardian_email_label: "Huoltajan sähköpostiosoite"
+    remove_parent_email_label: "Poista"
     none: "Ei mitään"
     only_one_parent_email_supported_warning: "Huomaa: Voimme tällä hetkellä tukea vain yhden vanhemman/huoltajan sähköpostiosoitetta oppilasta kohti."
   user_level:
@@ -554,8 +555,6 @@ fi:
     upgrade:
       unsupported_message: "Selaintasi ei tueta. Päivitä selaimesi [johonkin tuetuista selaimistamme](%{supported_browsers_url}). Voit yrittää katsella tätä sivua, mutta todennäköisesti sen toiminnallisuudet ovat rikki."
       link: "Lue lisää"
-      oceans_unsupported_browser: "Tätä oppituntia ei tueta tällä selaimella. Kokeile tätä sivua Edge, Chrome, Firefox, tai muulla nykyaikaisella selaimella."
-      weblab_unsupported_browser: "Valitettavasti meillä on tällä hetkellä vaikeuksia tämän nettilabran laatamisessa tällä selaimella. Voisit onnistua paremmin jollain toisella selaimella kunnes tämä on saatu toimimaan. Pahoittelemme."
   slow_loading: 'Tämä kestää kauemmin kuin tavallisesti...'
   try_reloading: 'Yritä ladata sivu uudelleen'
   next_stage: 'Valmis! Siirry seuraavalle tasolle'
@@ -841,7 +840,7 @@ fi:
       email: 'Sähköposti'
       school_name: 'Koulun nimi'
       school_country: 'Koulun maa'
-      colombian_school_name: 'Koulun nimi'
+      colombian_chilean_school_name: 'Koulun nimi'
     form_entries:
       gender:
         male: 'Mies'
@@ -864,7 +863,9 @@ fi:
     message: 'Jatkamalla sivustollemme tai napsauttamalla "Hyväksyn," hyväksyt evästeiden tallentamisen laitteellesi.'
     more_information: "Katso Code.org -sivuston tietosuojakäytäntö."
     accept: 'Hyväksyn'
+  page_not_found_title: "Sivua ei löydy"
   copy: 'Kopioi'
+  confirm: 'Vahvista'
   parent_email_banner:
     text: "**letko vanhempi tai huoltaja?** Liitä sähköpostiosoitteesi tähän tiliin pysyäksesi ajan tasalla lapsesi edistymisestä ja projekteista!"
     link_your_email: "Liitä sähköpostiosoitteesi"

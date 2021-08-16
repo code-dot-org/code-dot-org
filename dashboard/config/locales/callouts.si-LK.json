@@ -191,6 +191,27 @@
         },
         "Dance_Party_04": {
           "dance_callout_04": "මෙම බ්ලොක් එක ඔබේ වැඩසටහනට එක් කරන්න!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "මෙම බ්ලොක් එක ඔබේ වැඩසටහනට එක් කරන්න!"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
         }
       }
     }

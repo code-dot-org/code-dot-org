@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 18:11:28 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-08-12 14:56:16 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -160,7 +160,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
-        "preparation": "\r\n* Print copies of the Flippy Do Pro, 1 per group\r\n* Scissors",
+        "preparation": "\n* Work through the Candy Shop exercise yourself so you can see where your students may get stuck or have questions.",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "unplugged": true
@@ -975,7 +975,13 @@
       "key": "26116c13-31d4-4fbd-93aa-2fe0214f3290",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to connect to each other on tools like the Internet Simulator, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to connect to each other on tools like the Internet Simulator, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how_to_videos_1/csp/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "26116c13-31d4-4fbd-93aa-2fe0214f3290",
@@ -1007,19 +1013,8 @@
       }
     },
     {
-      "key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
-      "position": 4,
-      "properties": {
-        "description": "*"
-      },
-      "seeding_key": {
-        "activity_section.key": "30bf7b7b-fdde-4af6-9571-2241b78e4fd7",
-        "lesson_activity.key": "4f715f57-8664-46ac-aa62-26655d5db2d3"
-      }
-    },
-    {
       "key": "3a77c2bf-68ca-48ae-851c-d0b8ea2e3bb5",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
       },
@@ -1030,7 +1025,7 @@
     },
     {
       "key": "4e1a0172-7ddb-463a-bf74-4f92e02a0b75",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
         "tips": [
@@ -1101,7 +1096,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students need help coming up with ideas, share these tips:\r\n\r\n* This doesn’t have to be a subject in school - it very well might not be.  \r\n\r\n \t* As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\r\n\r\n"
+            "markdown": "If students need help coming up with ideas, share these tips:\n\n* This doesn’t have to be a subject in school - it very well might not be.  \n\n * As a person, as an individual who is living and breathing in this world, there is something that you probably know a lot about - maybe you feel like you know more about than most people. What is that thing?\n\n"
           }
         ]
       },
@@ -2698,7 +2693,7 @@
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which statement about analog and digital images is true?\r\n\r\n**Question:** Describe how the process of sampling, RGB pixels, and binary sequences work together to display a digital color image.",
         "name": "Assessment: Check For Understanding\r",
-        "progression_name": "Assessment: Check For Understanding\r"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
@@ -3846,14 +3841,13 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "csp-pre-survey-levelgroup_21_22"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3861,7 +3855,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "csp-pre-survey-levelgroup_2021"
+        "csp-pre-survey-levelgroup_21_22"
       ]
     },
     {
@@ -3875,7 +3869,6 @@
         ],
         "progression": "Computer Science is Changing Everything"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3901,7 +3894,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3927,7 +3919,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3953,7 +3944,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3979,7 +3969,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4005,7 +3994,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4031,7 +4019,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4057,7 +4044,6 @@
         ],
         "progression": "Widget: Binary Odometer"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4083,7 +4069,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4109,7 +4094,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4135,7 +4119,6 @@
         ],
         "progression": "Check for Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4161,7 +4144,6 @@
         ],
         "progression": "Video: Intro to Pixelation Encoding B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4187,7 +4169,6 @@
         ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4213,7 +4194,6 @@
         ],
         "progression": "Pixelation Widget: B&W"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4239,7 +4219,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4265,7 +4244,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4291,7 +4269,6 @@
         ],
         "progression": "Sampling an Analog Image"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4317,7 +4294,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4343,7 +4319,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4369,7 +4344,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4395,7 +4369,6 @@
         ],
         "progression": "RGB Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4421,7 +4394,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4447,7 +4419,6 @@
         ],
         "progression": "More Shades of Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4473,7 +4444,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4499,7 +4469,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4525,7 +4494,6 @@
         ],
         "progression": "Color Sampling Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4551,7 +4519,6 @@
         ],
         "progression": "Pixelation Widget: Color"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4577,7 +4544,6 @@
         ],
         "progression": "How Computers Work: Binary and Data"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4601,9 +4567,8 @@
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
         ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4627,9 +4592,8 @@
         "level_keys": [
           "U1L10 CFU Sampling_2021"
         ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4655,7 +4619,6 @@
         ],
         "progression": "Widget: Text Compression"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4681,7 +4644,6 @@
         ],
         "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4707,7 +4669,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4733,7 +4694,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4759,7 +4719,6 @@
         ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4785,7 +4744,6 @@
         ],
         "progression": "Lossy Compression Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4811,7 +4769,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4836,7 +4793,6 @@
           "U1L12 CFU Creative Commons_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4861,7 +4817,6 @@
           "U1L12 CFU Copyright_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4887,7 +4842,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4913,7 +4867,6 @@
         ],
         "progression": "Check For Understanding"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4939,7 +4892,6 @@
         ],
         "progression": "Unit 1 Exam"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4958,9 +4910,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_2021",
+        "level.key": "csp-pre-survey-levelgroup_21_22",
         "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_2021"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -5560,17 +5512,6 @@
       }
     },
     {
-      "name": "Code Studio Teacher Dashboard Video Tutorial",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be",
-      "key": "code-studio-teacher-dashboard-video-tutorial",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
-      }
-    },
-    {
       "name": "Copyright in Practice",
       "url": "https://youtu.be/ITASCSxnBqw",
       "key": "copyright_in_practice",
@@ -5705,7 +5646,7 @@
     },
     {
       "name": "How to videos",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how_to_videos_1",
       "properties": {
         "type": "Video",
@@ -5953,74 +5894,14 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "code-studio-teacher-dashboard-video-tutorial"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "innovation-video-1-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "rubric-personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "how-to-administer-a-locked-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "how_to_videos_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "ag-ab-pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "ab-cutouts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
+        "lesson.key": "Binary Numbers",
         "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
       }
     },
     {
@@ -6032,37 +5913,13 @@
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "u1_l4_how_to_make_a_flippydo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
         "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
-        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "resource.key": "ascii-reference-sheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "resource.key": "csp_unit_1_-_digital_information"
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
       }
     },
     {
@@ -6080,61 +5937,43 @@
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "u1l7_black_and_white_images"
+        "resource.key": "key_u1l8_black_white_images_activity_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Black and White Images",
-        "resource.key": "key_u1l8_black_white_images_activity_guide"
+        "resource.key": "u1l7_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "ab-cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "ag-ab-pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Color Images",
         "resource.key": "how-computers-work-data-and-binary"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Color Images",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "text-compression-widget-tutorial-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "fortnite-article"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "copyright_overview"
       }
     },
     {
@@ -6146,19 +5985,55 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
         "resource.key": "creative_commons_copyright"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "the-ethics-of-computer-generated-actors"
+        "lesson.key": "Intellectual Property",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "resource.key": "dna-testing-kits-the-security-risks-in-digitized-dna"
+        "lesson.key": "Intellectual Property",
+        "resource.key": "fortnite-article"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 14: Assessment Day",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "text-compression-widget-tutorial-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6171,6 +6046,18 @@
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "resource.key": "dna-testing-kits-the-security-risks-in-digitized-dna"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "resource.key": "the-ethics-of-computer-generated-actors"
       }
     },
     {
@@ -6188,13 +6075,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_high_score_sample_poster"
+        "resource.key": "u1_high_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_high_score_sample_article_markup"
+        "resource.key": "u1_high_score_sample_poster"
       }
     },
     {
@@ -6206,13 +6093,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_mid_score_sample_poster"
+        "resource.key": "u1_mid_score_sample_article_markup"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "resource.key": "u1_mid_score_sample_article_markup"
+        "resource.key": "u1_mid_score_sample_poster"
       }
     },
     {
@@ -6223,15 +6110,81 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 14: Assessment Day",
+        "lesson.key": "Representing Information",
         "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "ascii-reference-sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how-to-administer-a-locked-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how_to_videos_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "personal-innovations-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "rubric-personal-innovations-1"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_1",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp1-2021"
       }
     },
@@ -6244,24 +6197,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_1",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_1",
         "script.name": "csp1-2021"
       }
     }

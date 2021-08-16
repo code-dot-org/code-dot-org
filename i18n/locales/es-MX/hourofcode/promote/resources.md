@@ -92,7 +92,7 @@ Este año, vamos a hacer que sea aún más grande. Acompáñanos en la Hora del 
 
 Corre la voz. Organiza un evento. Pide a una escuela local que se inscriba. O prueba la Hora del Código por ti mismo. Todos pueden beneficiarse de aprender los conceptos básicos.
 
-Comienza en http://hourofcode.com/{{ country }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
@@ -132,7 +132,7 @@ Por eso nuestra escuela se une al evento de aprendizaje más grande de la histor
 
 Aprovecha la oportunidad de cambiar el futuro de la educación en [NOMBRE DE LA CIUDAD].
 
-Visita http://hourofcode.com/{{ country }} para ver más detalles y ayudar a difundir la noticia. <br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 

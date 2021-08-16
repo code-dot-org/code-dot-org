@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-26 21:22:36 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-08-10 17:57:44 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1843,7 +1844,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Using the Tool:**\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab. Later, any teacher feedback will appear in the same area\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+            "markdown": "**Using the Tool:** This level contains a new tab, \"Rubric\", that gives guidance on how student work can be evaluated and lets you leave feedback. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Rubric\" tab. Later, any teacher feedback will appear in the same area. [Click Here](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-CS-Discoveries-and-CS-Principles-only-) to learn more about giving feedback to students\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
           }
         ]
       },
@@ -4068,7 +4069,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Planning Checkpoint**\n\nCheck over student plans before allowing them to continue on the rest of the levels."
+            "markdown": "**Planning Checkpoint:** Check over student plans before allowing them to continue on the rest of the levels.\n\n**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
           }
         ]
       },
@@ -5425,7 +5426,13 @@
       "key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\n\n\n**Transition:** Teams log onto Code Studio and begin finalizing their websites."
+        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\n\n\n**Transition:** Teams log onto Code Studio and begin finalizing their websites.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd/2021] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
@@ -5685,7 +5692,6 @@
         ],
         "progression": "Sample Personal Web Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5711,7 +5717,6 @@
         ],
         "progression": "Experiment with Web Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5737,7 +5742,6 @@
         ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5763,7 +5767,6 @@
         ],
         "progression": "Explore HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5789,7 +5792,6 @@
         ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5815,7 +5817,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5841,7 +5842,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5867,7 +5867,6 @@
         ],
         "progression": "Challenge"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5893,7 +5892,6 @@
         ],
         "progression": "Video: Pair Programming"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5919,7 +5917,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5945,7 +5942,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5971,7 +5967,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5997,7 +5992,6 @@
         ],
         "progression": "Quick Check"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6023,7 +6017,6 @@
         ],
         "progression": "Video: Debugging"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6049,7 +6042,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6075,7 +6067,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6101,7 +6092,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6127,7 +6117,6 @@
         ],
         "progression": "Review: HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6153,7 +6142,6 @@
         ],
         "progression": "Challenge: Lists"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6179,7 +6167,6 @@
         ],
         "progression": "Code Your Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6205,7 +6192,6 @@
         ],
         "progression": "Review Your Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6231,7 +6217,6 @@
         ],
         "progression": "Social Sleuth"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6257,7 +6242,6 @@
         ],
         "progression": "Sample Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6283,7 +6267,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6309,7 +6292,6 @@
         ],
         "progression": "Video: Intro to CSS - Part 1"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6335,7 +6317,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6361,7 +6342,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6387,7 +6367,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6413,7 +6392,6 @@
         ],
         "progression": "Video: Intro to CSS - Part 2"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6439,7 +6417,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6465,7 +6442,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6491,7 +6467,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6517,7 +6492,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6543,7 +6517,6 @@
         ],
         "progression": "Review: CSS"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6569,7 +6542,6 @@
         ],
         "progression": "Challenge: RGB Colors"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6595,7 +6567,6 @@
         ],
         "progression": "Add Content and Structure to Your Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6621,7 +6592,6 @@
         ],
         "progression": "Add Style to Your Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6647,7 +6617,6 @@
         ],
         "progression": "Review Your Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6673,7 +6642,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6699,7 +6667,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6725,7 +6692,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6751,7 +6717,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6777,7 +6742,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6803,7 +6767,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6829,7 +6792,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6855,7 +6817,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6881,7 +6842,6 @@
         ],
         "progression": "Sample Personal Websites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6907,7 +6867,6 @@
         ],
         "progression": "Sample Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6933,7 +6892,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6959,7 +6917,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6985,7 +6942,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7011,7 +6967,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7037,7 +6992,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7063,7 +7017,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7089,7 +7042,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7115,7 +7067,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7141,7 +7092,6 @@
         ],
         "progression": "Project Guide"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7167,7 +7117,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7193,7 +7142,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7219,7 +7167,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7245,7 +7192,6 @@
         ],
         "progression": "Website Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7271,7 +7217,6 @@
         ],
         "progression": "Video: Publishing Your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7297,7 +7242,6 @@
         ],
         "progression": "Publishing Your Website"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7323,7 +7267,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7349,7 +7292,6 @@
         ],
         "progression": "Top Websites"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7375,7 +7317,6 @@
         ],
         "progression": "Video: Teamwork"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7401,7 +7342,6 @@
         ],
         "progression": "Video: Managing Disagreement"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7427,7 +7367,6 @@
         ],
         "progression": "Video: How Search Works"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7453,7 +7392,6 @@
         ],
         "progression": "Sample Web Page"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7479,7 +7417,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7505,7 +7442,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7531,7 +7467,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7557,7 +7492,6 @@
         ],
         "progression": "Assessment"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7583,7 +7517,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7609,7 +7542,6 @@
         ],
         "progression": "Upload Your Images"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7635,7 +7567,6 @@
         ],
         "progression": "Exploration"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7661,7 +7592,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7687,7 +7617,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7713,7 +7642,6 @@
         ],
         "progression": "Skill Building"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7739,7 +7667,6 @@
         ],
         "progression": "Practice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7765,7 +7692,6 @@
         ],
         "progression": "Adding Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7791,7 +7717,6 @@
         ],
         "progression": "Challenges"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7817,7 +7742,6 @@
         ],
         "progression": "Your Team Project"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7843,7 +7767,6 @@
         ],
         "progression": "Add Content and HTML"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7869,7 +7792,6 @@
         ],
         "progression": "Share Your Pages"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7895,7 +7817,6 @@
         ],
         "progression": "Add Style"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7921,7 +7842,6 @@
         ],
         "progression": "Share Your Stylesheets"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7947,7 +7867,6 @@
         ],
         "progression": "Check Your Work"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7973,7 +7892,6 @@
         ],
         "progression": "Incorporate Feedback"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7999,7 +7917,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8024,7 +7941,6 @@
           "CSD Web Development Post-Project Test_pilot_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -8043,42 +7959,16 @@
       "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2021",
-        "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
-      },
-      "level_keys": [
-        "csd-post-survey-intro-2019_pilot_2021"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -8086,7 +7976,7 @@
         "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
       },
       "level_keys": [
-        "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     }
   ],
@@ -9185,21 +9075,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-post-survey-intro-2019_pilot_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-post-survey-intro-2019_pilot_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2021",
-        "activity_section.key": "448bf998-e957-41cf-8561-07ef08775139"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021",
-        "script_level.level_keys": [
-          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -9263,18 +9141,6 @@
       },
       "seeding_key": {
         "resource.key": "body-styling"
-      }
-    },
-    {
-      "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
-      "key": "body_styling",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "body_styling"
       }
     },
     {
@@ -9454,6 +9320,18 @@
       },
       "seeding_key": {
         "resource.key": "exploring-web-pages-exemplar-2020"
+      }
+    },
+    {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
+      "key": "extra_code_in_challenge_levels",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels"
       }
     },
     {
@@ -9643,18 +9521,6 @@
       },
       "seeding_key": {
         "resource.key": "layout-properties"
-      }
-    },
-    {
-      "name": "Layout Properties",
-      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
-      "key": "layout_properties",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "layout_properties"
       }
     },
     {
@@ -9870,7 +9736,7 @@
       }
     },
     {
-      "name": "Practices Reflection (2020)",
+      "name": "Practices Reflection",
       "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view",
       "key": "practices-reflection-l21-exemplar-2020",
       "properties": {
@@ -9968,7 +9834,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/",
+      "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
       "key": "social-sleuth",
       "properties": {
         "type": "Activity Guide",
@@ -10222,8 +10088,38 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "classes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "digital-footprint"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "social-sleuth"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "resource.key": "social-sleuth-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "exploring-web-pages-exemplar-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10235,6 +10131,60 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
+        "resource.key": "exploring-web-pages-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "creative-commons-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "licensing-your-work-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "licensing-your-work-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
@@ -10247,19 +10197,7 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
         "resource.key": "html_tags"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
-        "resource.key": "video_intro_to_web_lab_part_1"
       }
     },
     {
@@ -10270,62 +10208,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Headings",
+        "lesson.key": "Intro to HTML",
+        "resource.key": "video_intro_to_web_lab_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "video_pair_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "video_debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Headings",
-        "resource.key": "headings_and_paragraphs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "project-guide-html-project-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "peer-review-html-web-page-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-web-page-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "mini-project-html-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-web-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html-page"
+        "lesson.key": "Linking Pages",
+        "resource.key": "hyperlinks"
       }
     },
     {
@@ -10337,25 +10233,301 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-web-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "html-web-page-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "lists"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "digital-footprint"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "mini-project-html-page"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "social-sleuth-exemplar-2020"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "peer-review-html-web-page-exemplar-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Footprint",
-        "resource.key": "social-sleuth"
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "project-guide-html-project-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "peer-review-your-personal-style-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "project-guide-your-personal-style-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "resource.key": "your-personal-style-1-2-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "peer-review-final-personal-website-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "practices-reflection-l21-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "project-guide-website-for-a-purpose-reflect-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website-for-a-purpose-reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "plan-a-multi-page-website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "peer-review-personal-website-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "person-web-page-reflect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal-web-page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal-web-page-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "personal_web_page_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "practices-reflection-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "project-guide-personal-web-page-reflect-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "publishing_your_website"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "website-for-a-purpose-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "resource.key": "website_for_a_purpose_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "how-search-works-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "internet-scavenger-hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "links-and-research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "resource.key": "links-and-research-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "body-styling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "layout-properties"
       }
     },
     {
@@ -10390,62 +10562,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "project-guide-your-personal-style-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "peer-review-your-personal-style-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style-1-2-3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "your-personal-style"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Your Personal Style",
+        "lesson.key": "Team Problem Solving",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "licensing-your-work-exemplar-2020"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "how-teamwork-works"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "licensing-your-work-2020"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "teamwork-dealing-with-disagreement"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "creative-commons-video"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "website-team-plan"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Team Problem Solving",
+        "resource.key": "website-team-plan-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "creative_commons_search"
       }
     },
     {
@@ -10462,14 +10610,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Images",
-        "resource.key": "creative_commons_search"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Websites for Expression ",
-        "resource.key": "define-your-webpage-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10481,121 +10623,13 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression ",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body-styling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout-properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body_styling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "project-guide-personal-web-page-prepare-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "person-web-page-prepare"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "practices-reflection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "project-guide-personal-web-page-reflect-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "peer-review-personal-website-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal-web-page-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "person-web-page-reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal-web-page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "publishing_your_website"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "personal_web_page_-_student_checklist"
+        "resource.key": "define-your-webpage-2020"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
-        "resource.key": "websites-for-a-purpose-2020"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10607,227 +10641,29 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
+        "resource.key": "websites-for-a-purpose-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
         "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "website-team-plan-2020"
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "person-web-page-prepare"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "teamwork-dealing-with-disagreement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "how-teamwork-works"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "website-team-plan"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Team Problem Solving",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "links-and-research-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "links-and-research"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "how-search-works-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "internet-scavenger-hunt"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "CSS Classes",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "CSS Classes",
-        "resource.key": "classes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "plan-a-multi-page-website"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning a Multi-page Website",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Pages",
-        "resource.key": "hyperlinks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "practices-reflection-l21-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "project-guide-website-for-a-purpose-reflect-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "peer-review-final-personal-website-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website-for-a-purpose-reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "website_for_a_purpose_-_student_checklist"
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "project-guide-personal-web-page-prepare-exemplar-2020"
       }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd2-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_code_2",
@@ -10849,6 +10685,36 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_3",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd2-2021"
       }
     }
@@ -11319,6 +11185,16 @@
       "seeding_key": {
         "lesson.key": "Headings",
         "objective.key": "6b4d8978-99c8-4541-9213-fa14c4132c62"
+      }
+    },
+    {
+      "key": "05f3226e-a69a-45ca-8264-e6cacdfb11ee",
+      "properties": {
+        "description": "Create a webpage using HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "objective.key": "05f3226e-a69a-45ca-8264-e6cacdfb11ee"
       }
     },
     {

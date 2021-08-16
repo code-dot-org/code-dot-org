@@ -8,6 +8,7 @@ import {
   resultFromStatus
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -126,8 +127,10 @@ export function getIconForLevel(level, inProgressView = false) {
   }
 
   // default to desktop
-  return 'desktop';
+  return defaultBubbleIcon;
 }
+
+export const defaultBubbleIcon = 'desktop';
 
 /**
  * @returns Whether a level is an assessment level.
@@ -152,6 +155,22 @@ export function lessonIsAllAssessment(levels) {
  */
 export function lessonHasLevels(lesson) {
   return !!lesson.levels?.length;
+}
+
+/**
+ * Determines if we should show "Keep working" and "Needs review" states for
+ * progress in a unit. User must be enrolled in the relevant pilot and unit
+ * must be either CSF or CSD.
+ */
+export function shouldShowReviewStates(unit) {
+  return (
+    experiments.isEnabled(experiments.KEEP_WORKING) &&
+    (unit.csf || isUnitCsd(unit))
+  );
+}
+
+function isUnitCsd(unit) {
+  return unit.name?.startsWith('csd');
 }
 
 /**
@@ -312,6 +331,7 @@ export const levelProgressFromServer = serverProgress => {
     locked: serverProgress.locked || false,
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
+    teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
     lastTimestamp: serverProgress.last_progress_at,
     pages: getPagesProgress(serverProgress)
   };

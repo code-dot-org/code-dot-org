@@ -15,14 +15,16 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "height": "visina"
+              "height": "visina",
+              "width": "širina"
             }
           }
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
             "parameters": {
-              "height": "visina"
+              "height": "visina",
+              "width": "širina"
             }
           },
           "draw a circle": {
@@ -573,6 +575,11 @@
         "course4_artist_fwp_challenge1": {
           "do something": {
             "name": "radi nešto"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "boja"
+            }
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1005,7 +1012,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "veličina"
+              "size": "veličina",
+              "color": "boja"
             }
           },
           "do something": {
@@ -1031,7 +1039,8 @@
           },
           "checker": {
             "parameters": {
-              "size": "veličina"
+              "size": "veličina",
+              "color": "boja"
             }
           },
           "do something": {
@@ -1070,7 +1079,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "veličina"
+              "size": "veličina",
+              "color": "boja"
             }
           },
           "black outline": {
@@ -1166,6 +1176,11 @@
         "courseF_artist_fwp_challenge1": {
           "do something": {
             "name": "radi nešto"
+          },
+          "draw background": {
+            "parameters": {
+              "color": "boja"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1816,6 +1831,237 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "završi igru"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "moja funkcija"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu",
+            "parameters": {
+              "points": "bodovi",
+              "length": "duljina"
+            }
+          },
+          "draw a circle": {
+            "name": "nacrtaj krug"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "duljina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a triangle": {
+            "name": "nacrtaj trokut",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a house": {
+            "name": "nacrtaj kuću",
+            "parameters": {
+              "length": "duljina"
+            }
+          },
+          "draw a square": {
+            "name": "nacrtaj kvadrat",
+            "parameters": {
+              "length": "duljina"
+            }
+          }
+        },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu"
+          }
+        },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nacrtaj zvijezdu"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          },
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nacrtaj kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "radi nešto"
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "širina"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "širina"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "širina"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "širina"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "parameters": {
+              "width": "širina"
+            }
           }
         }
       }

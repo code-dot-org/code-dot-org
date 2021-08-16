@@ -106,8 +106,8 @@ eu:
     invalid_password: "Pasahitzak gutxienez 6 karaktere izan behar ditu"
     mismatch_password: "Idatzitako bi pasahitzak ez dira berdinak"
     additional_information: "Informazio gehiago behar dugu izen-ematearekin jarraitzeko."
-    user_type_teacher: "Irakaslea"
     user_type_student: "Ikaslea"
+    user_type_teacher: "Irakaslea"
     field_is_required: "beharrezkoa da"
     email_preference_yes: "Bai"
     email_preference_no: "Ez"
@@ -192,6 +192,7 @@ eu:
       course_catalog: "Ikastaroak"
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
+      stats: "Estatistikak Ikusi"
       about: "Code.org-i buruz"
       legal_privacy: "Pribatutasun politika"
       legal_tos: "Erabilera baldintzak"
@@ -268,6 +269,7 @@ eu:
     delete_confirm: 'Ziur zaude zure kontua ezabatu nahi duzula?'
     update_email: "Eguneratu"
     parent_guardian_email_label: "Guraso/tutore emaila"
+    remove_parent_email_label: "Kendu"
   user_level:
     completed: 'Amaituta'
     tried: 'Saiatua'
@@ -423,6 +425,8 @@ eu:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Baldintzak"
+    widgets:
+      audience: "14 urtetik aurrera"
   landing:
     report_bug: "Akatsa jakinarazi"
     support: "Lortu laguntza"

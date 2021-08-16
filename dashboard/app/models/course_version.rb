@@ -32,6 +32,10 @@ class CourseVersion < ApplicationRecord
     with: KEY_RE,
     message: "must contain only digits, letters, or dashes; got \"%{value}\"."
 
+  # Placeholder key for curriculum that will not be updated but want the
+  # features that come with a course version (resources, vocab, etc)
+  UNVERSIONED = 'unversioned'.freeze
+
   def units
     content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
@@ -104,5 +108,15 @@ class CourseVersion < ApplicationRecord
 
   def all_standards_url
     content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
+  end
+
+  def self.should_cache?
+    Script.should_cache?
+  end
+
+  def self.course_offering_keys(content_root_type)
+    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
+    end
   end
 end

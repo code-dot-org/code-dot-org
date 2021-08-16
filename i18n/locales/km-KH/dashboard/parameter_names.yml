@@ -2,6 +2,7 @@ km:
   data:
     parameter_names:
       actor: អ្នកសម្ដែង
+      color: ពណ៌
       counter: ចំនួន​រាប់
       height: កម្ពស់
       honey: ទឹកឃ្មុំ

@@ -5,7 +5,7 @@ published_state 'beta'
 
 lesson_group 'required', display_name: 'Overview'
 lesson 'Apprentice Reflection Overview', display_name: 'Apprentice Reflection Overview', has_lesson_plan: false
-level 'welcome-apprentice-18', named: true
+level 'welcome-apprentice-18', progression: 'Welcome Apprentice Facilitators!'
 
 lesson_group 'content', display_name: 'Content'
 lesson 'Day 1', display_name: 'Day 1', has_lesson_plan: false
@@ -32,5 +32,5 @@ level 'recruiting-thursday'
 level 'csd-pushDL-unit3'
 
 lesson 'Wrap Up', display_name: 'Wrap Up', has_lesson_plan: false
-level 'apprentice-congrats', named: true
+level 'apprentice-congrats', progression: 'Congrats on completing the apprentice program!'
 

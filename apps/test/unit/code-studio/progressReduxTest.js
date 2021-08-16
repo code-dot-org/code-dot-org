@@ -604,7 +604,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '323',
@@ -625,7 +626,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '322',
@@ -646,7 +648,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: true,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           }
         ],
         [
@@ -669,7 +672,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '339',
@@ -690,7 +694,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           },
           {
             id: '341',
@@ -711,7 +716,8 @@ describe('progressReduxTest', () => {
             paired: undefined,
             isLocked: false,
             bonus: false,
-            sublevels: []
+            sublevels: [],
+            teacherFeedbackReviewState: null
           }
         ]
       ];

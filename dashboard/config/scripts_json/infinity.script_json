@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:27:50 UTC",
+    "family_name": "infinity",
+    "serialized_at": "2021-08-03 22:46:45 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "infinity"
@@ -60,7 +62,6 @@
           "Infinity_move_right"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +85,6 @@
           "Infinity_say"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +108,6 @@
           "Infinity_move_directions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
           "Infinity_move_collide"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +154,6 @@
           "Infinity_touch_score"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +177,6 @@
           "Infinity_shoot"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +200,6 @@
           "Infinity_shoot_directions"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +223,6 @@
           "Infinity_repeat"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +246,6 @@
           "Infinity_catch"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +269,6 @@
           "Infinity_finale"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

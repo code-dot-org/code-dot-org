@@ -2,58 +2,170 @@
 de:
   data:
     progressions:
+      Alien Defender: Alien Defender
+      Analog Sensors: Analoge Sensoren
+      'App Project: Bugs and Features': 'App-Projekt: Fehler und Funktionalitäten'
+      'App Project: Linking Screens': 'App-Projekt: Bildschirme verknüpfen'
       'App Project: Screen Design': 'App-Projekt: Bildschirm-Design'
+      'App Project: Screen Import': 'App-Projekt: Bildschirm-Import'
+      Arrays: Arrays
       Artist Project: Künstler Projekt
       'Artist: Variables': 'Künstler: Variablen'
+      Back and Forth: Hin und her
+      Bass, Mid, and Treble: Bass, Mitten und Höhen
       Binary Numbers: Binärzahlen
+      Binary and Data: Binär und Daten
       Board Events: Platinen-Ereignisse
+      'Bunny ': 'Kaninchen '
+      Buttons and Switch: Schaltflächen und Schalter
       CS Discoveries Post-Course Survey: Befragung zu „Erkenntnissen aus der Informatik“
         nach dem Kurs
+      CSS Classes: CSS-Klassen
+      CSS Text Properties: CSS-Text-Eigenschaften
+      CSS and Style Sheets: CSS und Stilvorlagen
       Challenge: Herausforderung
+      'Challenge: Add More Inputs': 'Herausforderung: Weitere Eingaben hinzufügen'
       Challenges: Herausforderungen
+      'Circuit Playground: Introduction': 'Circuit Playground: Einführung'
+      'Circuit Playground: LEDs': 'Schaltungs-Spielplatz: LEDs'
+      Collision Detection: Kollisions-Entdeckung
       Collisions: Kollisionen
       Combining Representations: Kombinieren von Darstellungen
+      Course E Artist Project: Kurs E Künstlerprojekt
+      Course E Sprite Lab Project: Lektion E Fee Lab-Projekt
+      Course F Artist Project: Kurs F Künstlerprojekt
+      Course F Sprite Lab Project: Kurs F Sprite-Lab Projekt
+      Creative Commons Search: Creative Commons Suche
+      Dance Crews: Tanz-Crews
       Debugging: Debugging/Fehlerbeseitigung
       Demo Apps: Demo Apps
       Design Mode: Entwurfsmodus
+      Design Mode Elements: Entwurfsmodus-Elemente
+      Designing Screens with Code: Bildschirme mit Code gestalten
+      Designing for Accessibility: Entwerfen für Barrierefreiheit
+      Dogger Example: Dogger Beispiel
       Drawing: Zeichnung
+      Editing Images: Bilder bearbeiten
+      End of Course Projects: Projekte am Ende des Kurses
+      Event Types: Arten von Ereignissen
       Events: Ereignisse
       Example Projects: Beispiel-Projekte
+      Exploration: Erforschung
+      'Exploration: Adding Style': 'Erkundung: Stil hinzufügen'
+      Explore HTML: HTML entdecken
+      Final Personal Website: Die endgültige persönliche Website
       For Loops: '"Zähle mit"-Schleifen'
+      Formatting HTML: HTML-Formatierung
       Free Play: Freies Spiel
       Functions: Funktionen
       Functions with Parameters: Funktionen mit Parametern
+      Geometric Sun: Geometrische Sonne
+      Get In Formation: Formation einnehmen
+      Getters and Setters: Getters und Setters
       Getting Properties: Eigenschaften abrufen
+      HTML Tags: HTML-Tags
       Headings: Überschriften
+      Headings in HTML: Überschriften in HTML
       How to Make a Sprite: Wie man einen Sprite erstellt
+      Hyperlinks: Hyperlinks
+      Images in HTML: Bilder in HTML
+      Importing Screens: Bildschirme Importieren
+      Improve Your Game: Verbessere Dein Spiel
+      Inspiration!: Inspiration!
+      Interactive Card: Interaktive Karte
+      Intro to Design Mode: Einführung in den Designmodus
       Introducing Sprite Lab: Einführung Sprite Lab
       Introduction to Arrays: Einführung in Arrays
+      Introduction to Variables: Einführung in Variablen
       Keeping Data Secret: Daten geheim halten
       Keyboard Input: Tastatureingabe
       LED Apps: LED Apps
+      Layout Properties: Layout-Eigenschaften
       Lesson Extras: Extras für den Unterricht
+      Lesson Overview: Unterrichtsübersicht
       Linking Pages: Verknüpfe Seiten
       Linking Screens: Verknüpfung der Bildschirme
       Lists: Listen
+      Lists in HTML: Listen in HTML
       Make a Prediction: Mache eine Vorhersage
+      Making Music: Musik machen
       Measures: Takte
+      'Mini-Project: About Me': Über mich mit Sprite Lab
+      More Buttons: Mehr Interaktion
+      Multi-Screen Apps: Mehrbildschirm-Apps
+      My Online Neighborhood: Meine Online-Nachbarschaft
+      Naming Variables: Benennung von Variablen
+      Overview: Übersicht
       Pair Programming: Paarprogrammierung
+      Picturing Data: 'Dartsellung von Daten
+
+'
+      Plane Jumper: Flugzeug-Springer
+      Planning: Planung
+      Polling Events: Polling-Ereignisse
       Practice: Übung
       Predict: Vorhersage
       Prediction: Vorhersage
       Problem Solving: Problemlösung
       Programming with Rey and BB-8: Programmieren mit Rey und BB-8
       Project: Projekt
+      Project - Finishing Touches: Projekt - Feinschliff
       Project Work: Projektarbeit
       Properties: Eigenschaften
       Publishing Your Website: Veröffentlichung Deiner Website
+      Quarter Notes: Viertelnoten
+      RGB Widget: RGB Widget
+      Random Numbers: Zufällige Zahlen
       Reflection: Reflektieren
       Representing Images: Darstellen von Bildern
+      Review: Überprüfung
+      Revise Artist Project: Künstlerprojekt abändern
+      Revise Sprite Lab Project: Sprite-Labor-Projekt überarbeiten
+      Robot Doodle: Roboter-Doodle
+      Sample App: Beispiel-App
+      Sample Program: Beispielprogramm
+      Sample Programs: Beispielprogramme
+      Sensor Experiment: Sensor-Experiment
+      Skill Building: Kompetenzaufbau
+      Speed it Up, Slow it Down: Beschleunigen, verlangsamen
+      Sprite Lab Example Project: Sprite Lab Beispielprojekt
       Sprite Lab Project: Sprite Lab-Projekt
+      Sprite Properties: Sprite Eigenschaften
       Stopping the Outbreak with Masks: Ausbruch mit Masken stoppen
+      Text Compression: Text-Kompression
+      The Accelerometer: Der Beschleunigungssensor
+      The Animation Tab: Der Animations Tab
+      The Body Element: Das Body Element
+      The Draw Loop: Die Zieh-Schleife
       The Harvester: Die Erntearbeiterin
+      Tour of Design Mode: Rundgang durch den Designmodus
       Using the Repeat Block: Benutze den Wiederholungsblock
+      Variables: Variablen
       Velocity: Geschwindigkeit
       Video: Video
+      'Video: "If/Else" Statements': 'Video: "Wenn/Sonst" Anweisungen'
+      'Video: CS Matters': 'Video: Informatik-Angelegenheiten'
+      'Video: Conditional Statements': 'Video: Bedingte Anweisungen'
+      'Video: Conditionals': 'Video: Bedingungen'
+      'Video: Drawing in Game Lab - Part 1': 'Video: Zeichnen im Game Lab - Teil 1'
+      'Video: Drawing in Game Lab - Part 2': 'Video: Zeichnen im Game Lab - Teil 2'
+      'Video: For Loops': 'Video: For-Schleifen'
+      'Video: Functions': 'Video: Funktionen'
+      'Video: If/Else Statements': 'Video: Wenn/Sonst Anweisungen'
+      'Video: Intro to CSS': 'Video: Einführung in CSS'
+      'Video: Intro to CSS Part 2': 'Video: Einführung in CSS (Teil 2)'
+      'Video: Intro to Web Lab - Part 1': 'Video: Einführung in Web Lab - Teil 1'
+      'Video: Intro to Web Lab - Part 2': 'Video: Einführung in Web Lab - Teil 2'
+      'Video: Introduction to Arrays': 'Video: Einführung in Arrays'
+      'Video: Problem Solving Process': 'Video: Problemlösungs-Prozess'
+      'Video: Velocity': 'Video: Geschwindigkeit'
+      'Video: What Makes a Computer, a Computer?': 'Video: Was macht einen Computer
+        zu einem Computer?'
+      Warm Up: 'Aufwärmübung
+
+'
+      Where'd They Go?: Wo sind sie hin?
       While Loops with the Farmer: Während Schleifen mit dem Farmer
       Wrap-up: Zusammenfassung
+      Your Personal Website: Deine persönliche Webseite
+      getNumber: holeZahl

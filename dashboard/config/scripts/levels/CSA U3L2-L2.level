@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "The Theater is opening in The Neighborhood, and the Theater Manager would like to paint their logo on the sidewalk in front of their building. They have decided on a set of colors and given them to you as an array.\r\n\r\n1. Import `PainterPlus.java` from your **Backpack**.\r\n\r\n2. Create a `PainterPlus` object at (2, 7) facing North with 20 units of paint.\r\n\r\n3. Create the logo shown below by accessing each paint color from the `paintColors` array.\r\n\r\n![](https://images.code.org/5107ecc796afa2e6af0b68c073638982-image-1624993054791.png)",
+    "long_instructions": "The Theater is opening in The Neighborhood, and the Theater Manager would like to paint their logo on the sidewalk in front of their building. They have decided on a set of colors and given them to you as an array.\r\n\r\n1. Import `PainterPlus.java` from your **Backpack**.\r\n\r\n2. Create a `PainterPlus` object at `(2, 7)` facing `North` with `20` units of paint.\r\n\r\n3. Create the logo shown below by accessing each paint color from the `paintColors` array.\r\n\r\n![](https://images.code.org/31c61c9b7ff53515fade7f74a7c699b8-image-1628541362517.png)",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
@@ -758,16 +758,14 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U3L2 Template"
+    "project_template_level_name": "CSA U3L2 Neighborhood Template",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tN7auHkLS870w3RdKAg\nly3NAOZRn0QwmSGUxjGkDNDm1HxR1CrQAtCYD6atHUapXJI=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-06-29T17:55:50.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-06-29 18:05:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:52:35 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:53:57 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:57:39 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-06-29 18:05:06 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:52:35 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:53:57 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-29 18:57:39 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-20 20:12:01 +0000\",\"changed\":[\"serialized_maze\",\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-29 12:49:50 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-04 17:04:01 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-09 19:51:57 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-09 20:36:10 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

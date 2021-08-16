@@ -1,4 +1,15 @@
 ar:
   data:
     shared_functions:
+      growing: النمو
+      jittering: الاهتزاز
+      moving east: التحرك ناحية الشرق
+      moving north: التحرك ناحية الشمال
+      moving south: التحرك ناحية الجنوب
+      moving west: التحرك ناحية الغرب
       moving with arrow keys: التحرك من خلال الأسهم
+      patrolling: التجوُّل
+      shrinking: الانقباض
+      spinning left: الدوران ناحية اليسار
+      spinning right: الدوران ناحية اليمين
+      wandering: التحرك

@@ -2,7 +2,11 @@ nn:
   data:
     variable_names:
       actor: spelar
+      age: alder
+      answer: svar
+      binary: binær
       cats: kattar
+      color: farge
       counter: teljar
       dogs: hundar
       height: høgd

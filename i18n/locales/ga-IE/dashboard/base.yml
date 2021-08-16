@@ -164,8 +164,8 @@ ga:
     additional_information: "Teastaíonn tuilleadh eolais uainn sular féidir linn tú a chlárú."
     user_type_button: "Athraigh Cineál an Chuntais"
     user_type_label: "Cineál Cuntais"
-    user_type_teacher: "Múinteoir"
     user_type_student: "Dalta"
+    user_type_teacher: "Múinteoir"
     field_is_required: "Riachtanach"
     accept_terms: "Caithfidh tú glacadh leis chun cuntas a chruthú"
     error: "Tharla earráid."
@@ -267,6 +267,7 @@ ga:
     invite_sent: 'Seoladh an cuireadh'
     added_teacher: 'Is é/í %{name} do mhúinteoir anois'
     registered: "Chláraigh tú le %{section_name}."
+    already_exists: 'Tá tú cláraithe le rannán %{section_name} cheana.'
     error:
       signed_in: 'Ba chóir duit logáil amach ar dtús'
       username_not_found: 'Úsáideoir %{username} gan aimsiú'
@@ -474,6 +475,7 @@ ga:
     for_parents_and_guardians: "Do thuismitheoirí agus do chaomhnóirí"
     link_a_parent_email: "Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste"
     parent_guardian_email_label: "Seoladh ríomhphoist do thuismitheoir"
+    remove_parent_email_label: "Bain"
     none: "Dada"
     only_one_parent_email_supported_warning: "Aire: ní féidir linn glacadh le níos mó ná seoladh r-phoist amháin do thuismitheoir nó caomhnóir."
     encrypted: "criptithe"
@@ -585,8 +587,6 @@ ga:
       link: "Tuilleadh eolais"
       applab_unsupported_tablet: "Is fearr a fheidhmíonn an tSaotharlann Aipeanna ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go mbeidh fadhbanna agat ar an ngléas seo."
       gamelab_unsupported_tablet: "Is fearr a fheidhmíonn an tSaotharlann Cluichíochta ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go mbeidh fadhbanna agat ar an ngléas seo."
-      oceans_unsupported_browser: "Ní thacaímid leis an mbrabhsálaí seo sa chúrsa teagaisc seo. Tabhair cuairt ar an leathanach seo in Edge, Chrome, Firefox, nó brabhsálaí nua-aimseartha eile."
-      weblab_unsupported_browser: "Faraor ní féidir Saotharlann an Ghréasáin a lódáil sa mbrabhsálaí seo faoi láthair. Molaimid duit brabhsálaí difriúil a úsáid go dtí go réiteoimid an fhadhb seo. Gabh ár leithscéal."
       weblab_unsupported_locale_storage: "Seans go mbeidh fadhbanna agat le Saotharlann an Ghréasáin i bhfuinneog phríobháideach. Ba chóir duit an togra a athlódáil i ngnáthfhuinneog. Gabh ár leithscéal."
   slow_loading: 'Moill as an ngnáth air seo...'
   try_reloading: 'Déan iarracht an leathanach a lódáil arís'
@@ -960,7 +960,7 @@ ga:
       school_city: 'Cathair na Scoile'
       school_country: 'Tír na Scoile'
       colombian_school_city: 'Cathair na Scoile'
-      colombian_school_name: 'Ainm na Scoile'
+      colombian_chilean_school_name: 'Ainm na Scoile'
       ages: 'Cad iad na haoiseanna atá tú ag múineadh i mbliana?'
       subjects: 'Cad iad na hábhair atá tú ag múineadh i mbliana?'
       resources: 'Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann tú?'

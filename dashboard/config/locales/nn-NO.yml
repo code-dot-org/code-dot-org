@@ -204,8 +204,8 @@ nn:
       di.
     user_type_button: Oppdater kontotype
     user_type_label: Kontotype
-    user_type_teacher: Lærar
     user_type_student: Elev
+    user_type_teacher: Lærar
     field_is_required: er påkreva
     accept_terms: Du må godta å opprette ein konto.
     error: Ein feil har oppstått.
@@ -307,6 +307,7 @@ nn:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som læraren din"
     registered: Du har meldt deg på %{section_name}.
+    already_exists: Du har allereie blitt med i seksjonen %{section_name}.
     error:
       signed_in: Ver snill å logge ut før du held fram
       username_not_found: Brukarnamnet %{username} fins ikkje
@@ -539,6 +540,7 @@ nn:
     account_successfully_updated: Kontoen er oppdatert.
     update_email: Oppdater
     parent_guardian_email_label: Epost til foreldre/føresette
+    remove_parent_email_label: Fjern
     none: Ingen
     encrypted: kryptert
   user_level:
@@ -689,11 +691,6 @@ nn:
       gamelab_unsupported_tablet: Spill-lab fungerer best på en stasjonær eller bærbar
         datamaskin med mus og tastatur. Det kan oppstå problem med dette verktøyet
         på den gjeldande eininga.
-      oceans_unsupported_browser: Denne nettlesaren vert ikkje støtta for denne øvinga.
-        Prøv Edge, Chrome, Firefox eller ein annan moderne nettlesar.
-      weblab_unsupported_browser: Dessverre opplever vi problem med lasting av Nett-lab
-        på denne nettlesaren. Prøv ein annan nettlesar inntil problemet er løst. Beklager
-        ulempa dette kan ha.
       weblab_unsupported_locale_storage: Du kan oppleve problemer med å bruke Nett-lab
         i privat modus i nettlesaren. Vennligst last prosjektet på nytt i normalmodus.
         Beklager ulempa dette kan gi.
@@ -1167,7 +1164,7 @@ nn:
       school_city: Skulen sin poststad
       school_country: Landet til skulen
       colombian_school_city: Skulen sin poststad
-      colombian_school_name: Namn på skule
+      colombian_chilean_school_name: Namn på skule
       ages: Kva alder underviser du dette året?
       subjects: Kva fag underviser du dette året?
       resources: Kva for følgjande utdanningsressursar i CS nyttar du?
@@ -1289,3 +1286,4 @@ nn:
     nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår.
   page_not_found_button: Gå heim
   copy: Kopier
+  confirm: Bekreft

@@ -276,6 +276,8 @@ uk:
         title: Безмашинна вправа
         desc: Сьогодні ви дізнаєтеся про те, що робити, якщо хтось різко стає неприязним
           онлайн.
+      deeper learning description:
+        desc: 'переклад відсутній: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Життєві алгоритми: посадити насіння'
         desc: Цей урок висвітлює способи використання алгоритмів у повсякденному житті,
@@ -457,6 +459,9 @@ uk:
       courseB_unplugged_MRF_2019:
         title: Мої друзі-роботи
         desc: Навчіться програмувати, пишучи код для своїх друзів!
+      BuildingAFoundation_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'переклад відсутній: en-US.data.unplugged.BuildingAFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
         title: Мої циклічні друзі-роботи
       Conditionals_2019:
@@ -464,6 +469,15 @@ uk:
         desc: Для вивчення команди умови, учні розігрують карткову гру і створюють
           правила, на кшталт "Якщо я витягую червону карту, я отримую бал" і "Якщо
           я витягую чорну карту, ти отримуєш бал".
+      courseF_unplugged_powerOfWords_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'переклад відсутній: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'переклад відсутній: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'переклад відсутній: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Програмування по клітинках
         desc: Учні пишуть алгоритм (набір інструкцій), використовуючи набір попередньо
@@ -483,7 +497,11 @@ uk:
           та кольори) також у двійковому форматі.
       courseE_unplugged_privateInformation_2019:
         title: Приватна та Особиста інформація
+      SongwritingParameters_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'переклад відсутній: en-US.data.unplugged.SongwritingParameters_2018.desc'
       Internet_2019:
+        title: 'переклад відсутній: en-US.data.unplugged.Internet_2018.title'
         desc: 'переклад відсутній: en-US.data.unplugged.Internet_2018.desc'
       Crowdsourcing_2019:
         title: 'переклад відсутній: en-US.data.unplugged.Crowdsourcing_2018.title'

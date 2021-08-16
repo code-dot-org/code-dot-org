@@ -143,8 +143,8 @@
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
-    user_type_teacher: "Lærer"
     user_type_student: "elev"
+    user_type_teacher: "Lærer"
     field_is_required: "må fylles ut"
     accept_terms: "Du må gå med på å opprette en konto"
     error: "En feil har oppstått."
@@ -242,6 +242,7 @@
     invite_sent: 'Invitasjon er sendt'
     added_teacher: '%{name} er lagt til som din lærer'
     registered: "Du har meldt deg på %{section_name}."
+    already_exists: 'Du har allerede blitt med i seksjonen %{section_name}.'
     error:
       signed_in: 'Vennligst logg ut før du fortsetter'
       username_not_found: 'Brukernavnet %{username} finnes ikke'
@@ -439,6 +440,7 @@
     account_successfully_updated: "Kontoen er oppdatert."
     update_email: "Oppdater"
     parent_guardian_email_label: "Foreldre/foresatt epost"
+    remove_parent_email_label: "Fjern"
     none: "Ingen"
     encrypted: "kryptert"
   user_level:
@@ -546,7 +548,6 @@
       link: "Lær mer"
       applab_unsupported_tablet: "App-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet på denne enheten."
       gamelab_unsupported_tablet: "Spill-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet på den gjeldende enheten."
-      weblab_unsupported_browser: "Dessverre opplever vi problemer med lasting av Web Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst. Beklager ulempen dette medfører."
       weblab_unsupported_locale_storage: "Du kan oppleve problemer med å bruke Nett-lab i nettleserens private modus. Vennligst last prosjektet på nytt i normal modus. Beklager ulempen dette medfører."
   slow_loading: 'Dette tar lengre tid enn vanlig...'
   try_reloading: 'Last siden på nytt'
@@ -909,7 +910,7 @@
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'
       colombian_school_city: 'Skolens poststed'
-      colombian_school_name: 'Skolens navn'
+      colombian_chilean_school_name: 'Skolens navn'
     form_entries:
       gender:
         male: 'Mann'
@@ -966,3 +967,4 @@
   page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
   page_not_found_button: "Returner hjem"
   copy: 'Kopier'
+  confirm: 'Bekreft'

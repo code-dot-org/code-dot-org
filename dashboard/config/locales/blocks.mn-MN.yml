@@ -902,7 +902,7 @@ mn:
             '"left"': зүүн
             '"down"': доошоо
             '"right"': баруун
-            '"space"': зай
+            '"space"': сансар
             '"enter"': enter товч
             '"a"': a
             '"b"': b
@@ -981,6 +981,8 @@ mn:
         text: "{SPRITE} дээр дарсан"
       gamelab_comment:
         text: 'сэтгэгдэл: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_createNewSprite:
         text: "шинэ шидтэнг \n {NAME} нэртэй\n {COSTUME} хувцастай\n {LOCATION} дээр
           болгоорой"
@@ -1199,6 +1201,7 @@ mn:
             '"direction"': хөдөлгөөний чиглэл
             '"speed"': хурд
       gamelab_setProp_dropdown:
+        text: "{SPRITE} {PROPERTY}-г {SIZE} руу тохируулах"
         options:
           PROPERTY:
             '"scale"': хэмжээ
@@ -1233,6 +1236,8 @@ mn:
             '"while"': байхад
       gamelab_subjectSpritePointer:
         text: "{SPRITE} дээр дарсан"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_turn:
         text: "{SPRITE}-г {DIRECTION} рүү {N} хэмээ эргүүлэх"
         options:
@@ -1482,6 +1487,8 @@ mn:
           DANCE:
             MOVES.ClapHigh: загас
             MOVES.Clown: миний-шошго биш
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'байршил х: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1577,6 +1584,16 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
+      PoemBot_setBackgroundEffect:
+        options:
+          BG_EFFECT:
+            '"rainbow"': солонго
+      PoemBot_setForegroundEffect:
+        text: урд газрын нөлөөг {FG_EFFECT}-р тохируулах
+        options:
+          FG_EFFECT:
+            '"rain"': бороотой
+            '"bubbles"': хөөс
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:
@@ -1725,6 +1742,7 @@ mn:
             '"stoneBricks"': чулуун тоосго
             '"mossyStoneBricks"': хөвдтэй чулаан тоосго
             '"crackedStoneBricks"': хагарсан чулуун тоосго
+            '"chiseledStoneBricks"': чимэглэгч чулуун тоосго
             '"blueCoralBlock"': хөх шүрэн блок
             '"pinkCoralBlock"': ялгаан шүрэн блок
             '"magentaCoralBlock"': цайвар шүрэн блок
@@ -1772,3 +1790,5 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      validation_validatedBackground:
+        text: суурь өнгийг {IMG} руу тохируулах

@@ -3,15 +3,23 @@ en-GB:
   data:
     script:
       category:
+        hoc_category_name: The Hour of Code
         math_category_name: Mathematics
       name:
         course1:
           title: Course 1
           description_audience: Ages 4-6
+        course2:
+          title: Course 2
         course3:
+          title: Course 3
+          description_audience: Ages 8-18
           lessons:
             Computational Thinking:
               name: Computational Thinking
+        course4:
+          title: Course 4
+          description_audience: Ages 9-18
         usability:
           lessons:
             Variables:
@@ -21,6 +29,7 @@ en-GB:
             Infinity:
               name: Infinity
         20-hour:
+          description_audience: Ages 10-18
           lessons:
             Computational Thinking:
               name: Computational Thinking
@@ -39,18 +48,42 @@ en-GB:
           lessons:
             Step:
               name: Step
+        afterschool1:
+          description_audience: Ages 7-13
+        Special Fun:
+          description_audience: Ages 10-18
+        SpecialSeries:
+          description_audience: Ages 10-18
+        CSF_Secret_Sample:
+          description_audience: Ages 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
+        MikeTest:
+          description_audience: Ages 8-98
+        artistExemplar:
+          description_audience: Ages 8-18
         gradeKinder:
+          description_audience: Ages 5-18
           lessons:
             Loops:
               name: Loops
+        grade4:
+          description_audience: Ages 9-99
         grade1:
+          description_audience: Ages 5-18
           lessons:
             Loops:
               name: Loops
+        grade5:
+          description_audience: Ages 10-110
+        grade3:
+          description_audience: Ages 5-18
         csd3-2017:
           lessons:
             Variables:
               name: Variables
+        grade2:
+          description_audience: Ages 5-18
         k5concepts:
           lessons:
             Loops:
@@ -197,6 +230,10 @@ en-GB:
           lessons:
             Variables:
               name: Variables
+        maddie-test:
+          lessons:
+            stage 1:
+              name: stage 1
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -349,3 +386,7 @@ en-GB:
             Variables:
               key: Variables
               name: Variables
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test

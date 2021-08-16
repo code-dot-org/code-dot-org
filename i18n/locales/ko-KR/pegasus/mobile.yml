@@ -627,6 +627,7 @@
   dashboard_middle_courses_desc: "우리의 중학교 과정은 수학과 과학의 개념을 가르치는 도구로서, 중학교 과정의 수학과 과학 용어 수준 내에서 컴퓨터 과학과 프로그래밍을 활용합니다. 전문 개발 워크샵에 등록하기 위해서 Code.org의 <a href=\"/educate/districts\">전세계 파트너십</a>에 신청하세요."
   dashboard_high_courses: "고등학생을 위한 연간 과정"
   dashboard_high_courses_desc: "우리의 고등학교 프로그램은 전체 학년에 걸쳐서 컴퓨터 과학 수업을 제공이 가능하도록, 기존 선생님들이 준비하는데 도움을 줍니다. 전문 개발 워크샵에 등록하기 위해서 Code.org의 <a href=\"/educate/districts\">전세계 파트너십</a>에 신청하세요."
+  dashboard_course_csina: "대수학 영역의 컴퓨터 과학"
   dashboard_course_csina_desc: "Code.org는 부트스트랩과 제휴하여 컴퓨터 프로그래밍을 통하여 대수와 기하학적 개념을 가르치는 커리큘럼을 개발한다."
   dashboard_course_csins: "과학의 컴퓨터 과학"
   dashboard_course_csins_desc: "Code.org는 Project GUTS와 제휴하여 모델링 컨텍스트와 시뮬레이션을 위한 컴퓨터 과학 개념 소개를 제공한다."
@@ -964,12 +965,15 @@
   coursed-2020_name: 과정 D (2020)
   coursee-2020_name: 과정 E (2020)
   coursef-2020_name: 과정 F (2020)
+  coursea-2021_name: 과정 A (2021)
+  coursed-2021_name: 과정 D (2021)
   express-2018_name: 익스프레스 과정 (2018)
   pre-express-2018_name: 프리 리더 익스프레스 과정 (2018)
   express-2019_name: 익스프레스 과정(2019)
   pre-express-2019_name: 프리 리더 익스프레스 과정 (2019)
   express-2020_name: 익스프레스 과정(2020)
   pre-express-2020_name: 프리 리더 익스프레스 과정 (2020)
+  pre-express-2021_name: 프리 리더 익스프레스 과정 (2021)
   csd2_name: '단원 2: 웹 개발'
   csd3_name: '단원 3: 애니메이션과 게임'
   accelerated_name: "빠른 과정"
@@ -1205,6 +1209,12 @@
   coursed-2020_shortdescription_congrats: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을 너머 학생들은 디지털 시민의식에 대해 배웁니다.
   coursee-2020_shortdescription_congrats: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈 수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
   coursef-2020_shortdescription_congrats: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+  coursea-2021_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+  courseb-2021_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+  coursec-2021_shortdescription_congrats: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+  coursed-2021_shortdescription_congrats: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을 너머 학생들은 디지털 시민의식에 대해 배웁니다.
+  coursee-2021_shortdescription_congrats: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈 수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+  coursef-2021_shortdescription_congrats: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
   codeorg_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   codeintl_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1696,6 +1706,8 @@
   footer_support: "지원"
   footer_terms: "약관"
   ai_for_oceans: "바다를 위한 AI"
+  ai_for_oceans_lesson_plan: "수업 계획"
+  how_ai_works: "AI 작동방법"
   ai_in_partnership_with: "파트너십을 통해"
   ai_microsoft_thanks: "모든 어린이들이 컴퓨터 과학을 배우고 21세기에 성공할 기술을 얻을 수 있는 기회를 갖도록 저희의 비전과 미션에 지원하고 있는 마이크로소프트에 감사드립니다."
   ai_activity: "활동"

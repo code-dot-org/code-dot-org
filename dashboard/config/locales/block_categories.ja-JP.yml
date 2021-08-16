@@ -18,12 +18,14 @@ ja:
       Game/Score: ゲーム/スコア
       Games/Score: ゲーム/スコア
       Groups: グループ
+      Location: ロケーション
       Locations: 場所
       Logic: ロジック
       Loops: くりかえし
       Math: 計算(けいさん)
       Numbers: 数 (かず)
       Properties: プロパティ
+      Sprites: スプライト
       Text: テキスト
       Variables: 変数（へんすう）
       'Variables ': 変数（へんすう）

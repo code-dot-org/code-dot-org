@@ -819,6 +819,7 @@ sk-SK:
     ponúknuť celoročný kurz informatiky prostredníctvom školení učiteľov. Pre registráciu
     na školenie pre učiteľov sa prihláste <a href="/educate/districts">o partnerstvo</a>
     s code.org.
+  dashboard_course_csina: Informatika v algebre
   dashboard_course_csina_desc: Code.org spolupracuje s Bootstrap na rozvoji učebných
     osnov, ktoré učia algebrické a geometrické pojmy cez počítačové programovanie.
   dashboard_course_csins: Inforamtika vo vede
@@ -1234,12 +1235,14 @@ sk-SK:
   coursed-2020_name: Kurz D (2019)
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
+  coursed-2021_name: Kurz D (2021)
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
   pre-express-2019_name: Zrýchlený kurz pre predškolákov (2019)
   express-2020_name: Zrýchlený kurz (2019)
   pre-express-2020_name: Zrýchlený kurz pre predškolákov (2020)
+  pre-express-2021_name: Zrýchlený kurz pre predškolákov (2021)
   csd2_name: 'Lekcia 2: Vývoj webových stránok'
   csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
@@ -1535,6 +1538,22 @@ sk-SK:
     cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
     programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
   coursee-2020_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
+    podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
+    nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
+  coursea-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  courseb-2021_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti
+    na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš
+    zdieľať s priateľmi.
+  coursec-2021_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami
+    a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky
+    riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si
+    vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2021_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených
+    cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem
+    programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2021_shortdescription_congrats: Začneš programovať s algoritmami, cyklami,
     podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
     nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: Nauč sa základné koncepty informatiky pomocou vizuálneho
@@ -2186,6 +2205,7 @@ sk-SK:
   footer_support: Podpora
   footer_terms: Podmienky
   ai_for_oceans: AI pomáha oceánom
+  ai_for_oceans_lesson_plan: učebný plán
   ai_in_partnership_with: V spolupráci s
   ai_activity: Aktivita
   ai_description: Popis

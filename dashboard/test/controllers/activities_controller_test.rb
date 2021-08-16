@@ -37,11 +37,11 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    script_levels = Script.twenty_hour_unit.script_levels
-    @script_level_prev = script_levels[0]
-    @script_level = @script_level_prev.next_progression_level
-    @script_level_next = @script_level.next_progression_level
-    @script = @script_level.script
+    @script = create(:script)
+    @script_level_prev = create(:script_level, script: @script)
+    @script_level = create(:script_level, script: @script)
+    @script_level_next = create(:script_level, script: @script)
+    create(:lesson_group, lessons: [@script_level_prev.lesson, @script_level.lesson, @script_level_next.lesson], script: @script)
     @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
@@ -910,15 +910,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_nil response['share_failure']
     assert response['level_source'].match(/^http:\/\/test.host\/c\//)
-  end
-
-  test 'milestone changes to next lesson in default script' do
-    last_level_in_lesson = @script_level.script.script_levels.reverse.find {|x| x.level.game.name == 'Artist'}
-    post :milestone,
-      params: @milestone_params.merge(script_level_id: last_level_in_lesson.id)
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal({'previous' => {'name' => 'The Artist', 'position' => 5}}, response['lesson_changing'])
   end
 
   test 'milestone changes to next lesson in custom script' do

@@ -404,6 +404,225 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2521754:0crwdne2521754:0",
           "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2521756:0crwdne2521756:0"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "crwdns2576828:0crwdne2576828:0",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "crwdns2576830:0crwdne2576830:0",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "crwdns2576832:0crwdne2576832:0"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "crwdns2576716:0crwdne2576716:0",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "crwdns2576718:0crwdne2576718:0",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "crwdns2576720:0crwdne2576720:0"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "crwdns2576760:0crwdne2576760:0",
+          "78d989e01047ba7043a38650d695abaa": "crwdns2576762:0crwdne2576762:0",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "crwdns2576764:0crwdne2576764:0",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "crwdns2576766:0crwdne2576766:0",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "crwdns2576768:0crwdne2576768:0"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2579216:0crwdne2579216:0",
+          "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2579218:0crwdne2579218:0"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2579230:0crwdne2579230:0",
+          "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2579232:0crwdne2579232:0"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2579240:0crwdne2579240:0",
+          "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2579242:0crwdne2579242:0"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2579250:0crwdne2579250:0",
+          "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2579252:0crwdne2579252:0"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "crwdns2579258:0crwdne2579258:0",
+          "3e11a2dc6edb909c47778bed75a81769": "crwdns2579260:0crwdne2579260:0"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "crwdns2579266:0crwdne2579266:0",
+          "3e11a2dc6edb909c47778bed75a81769": "crwdns2579268:0crwdne2579268:0"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "crwdns2579180:0crwdne2579180:0",
+          "3e11a2dc6edb909c47778bed75a81769": "crwdns2579182:0crwdne2579182:0"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "83db90f8846d091d3532256816f105d9": "crwdns2579190:0crwdne2579190:0",
+          "0192cdc04916ec27aa11738bb6e48d6e": "crwdns2579192:0crwdne2579192:0",
+          "df8312187449c70820d7c58229a6b17e": "crwdns2579194:0crwdne2579194:0",
+          "c084e152431f9116b9fdb3f7d465f13d": "crwdns2579196:0crwdne2579196:0",
+          "b2f02bf648ce32c4362afe1578d41f70": "crwdns2579198:0crwdne2579198:0",
+          "2a28483f9f4f9ee44cec653a445d4c82": "crwdns2579200:0crwdne2579200:0",
+          "5cec903c4d41c49412a70a94d54999ee": "crwdns2579202:0crwdne2579202:0",
+          "3e11a2dc6edb909c47778bed75a81769": "crwdns2579204:0crwdne2579204:0"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "crwdns2579124:0crwdne2579124:0",
+          "30fcc1693fa8402931d13ac3a5f396fd": "crwdns2579126:0crwdne2579126:0"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "crwdns2579146:0crwdne2579146:0",
+          "336ad881e37e713ba0325500a8fa1f00": "crwdns2579148:0crwdne2579148:0",
+          "27944770529dd15319a983bee8951560": "crwdns2579150:0crwdne2579150:0",
+          "22f6f6821f4d6d0a08653935b466ac2f": "crwdns2579152:0crwdne2579152:0",
+          "1c64ef29c853587fbe94f69f05272b79": "crwdns2579154:0crwdne2579154:0",
+          "5b402e6ea05e847a076e03ad74420c45": "crwdns2579156:0crwdne2579156:0",
+          "4b23c908b939eaf7918e07142b9e05e0": "crwdns2579158:0crwdne2579158:0",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "crwdns2579160:0crwdne2579160:0",
+          "71fc859f3abd22273bad5d0d8eda2173": "crwdns2579162:0crwdne2579162:0",
+          "f62038e77820419cd978f7b722da560a": "crwdns2579164:0crwdne2579164:0",
+          "81a2909a24e4ca3b582ab9ee539c080c": "crwdns2579166:0crwdne2579166:0"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "crwdns2586656:0crwdne2586656:0",
+          "810896b14fc6615f0c76628b9b6a727e": "crwdns2586658:0crwdne2586658:0",
+          "8e985f60f328934accd78e7649584840": "crwdns2586660:0crwdne2586660:0",
+          "31ba97bb501bb1f5b448221be09bad32": "crwdns2586662:0crwdne2586662:0",
+          "6f97975a0bda0c9219915161149cbb26": "crwdns2586664:0crwdne2586664:0"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "crwdns2586724:0crwdne2586724:0"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "crwdns2586754:0crwdne2586754:0"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "crwdns2586784:0crwdne2586784:0",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "crwdns2586786:0crwdne2586786:0"
+        },
+        "courseF_apps_aquarium": {
+          "f655df68ec33643278de7e69794e8d76": "crwdns2573144:0crwdne2573144:0",
+          "a1a2a07348784279a1e7a6f46dc7e353": "crwdns2573146:0crwdne2573146:0",
+          "83e4a96aed96436c621b9809e258b309": "crwdns2573148:0crwdne2573148:0",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "crwdns2573150:0crwdne2573150:0",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "crwdns2573152:0crwdne2573152:0",
+          "0d3e73168beb875063ea0f0302fe32bd": "crwdns2573154:0crwdne2573154:0",
+          "caaf8264ca397dba2d35ef902bbbd953": "crwdns2573156:0crwdne2573156:0",
+          "78574118d153534fd0925a2f5ca25e79": "crwdns2573158:0crwdne2573158:0"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "crwdns2572922:0crwdne2572922:0",
+          "d1210f945885351b13feb9bbb868aeef": "crwdns2572924:0crwdne2572924:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2572926:0crwdne2572926:0"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "crwdns2572998:0crwdne2572998:0",
+          "f0e5da70d264f312a1658d51c130b101": "crwdns2573000:0crwdne2573000:0",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "crwdns2573002:0crwdne2573002:0",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "crwdns2573004:0crwdne2573004:0",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "crwdns2573006:0crwdne2573006:0",
+          "605f302ebc9f7fbacba60b15f551a633": "crwdns2573008:0crwdne2573008:0",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "crwdns2573010:0crwdne2573010:0",
+          "ae096fbf24d913754b01a1601672bf62": "crwdns2573012:0crwdne2573012:0",
+          "1f258d88a70309efc1435ef5daa277a0": "crwdns2573014:0crwdne2573014:0"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "crwdns2573230:0crwdne2573230:0",
+          "077449fb290b51b9d70c9f2f3d3213bc": "crwdns2573232:0crwdne2573232:0",
+          "490082498449bd20ff0199737dfa4916": "crwdns2573234:0crwdne2573234:0",
+          "41f2b2212de0105c2a942ebb4a44e449": "crwdns2573236:0crwdne2573236:0"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "crwdns2573058:0crwdne2573058:0",
+          "bf08dd3d1961874f13e77c936aad27e5": "crwdns2573060:0crwdne2573060:0",
+          "514b8d5320196898a9ced3efe0d4c802": "crwdns2573062:0crwdne2573062:0",
+          "88794317e8c695bbc7bc7d2f35792c7f": "crwdns2573064:0crwdne2573064:0",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "crwdns2573066:0crwdne2573066:0",
+          "e522ee28f39133b45497637539ff429b": "crwdns2573068:0crwdne2573068:0",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "crwdns2573070:0crwdne2573070:0",
+          "5306eed2fd2c43fe033efd6016c0c38b": "crwdns2573072:0crwdne2573072:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2573074:0crwdne2573074:0"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "crwdns2575462:0crwdne2575462:0",
+          "d1210f945885351b13feb9bbb868aeef": "crwdns2575464:0crwdne2575464:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575466:0crwdne2575466:0"
+        },
+        "courseF_editable_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "crwdns2575508:0crwdne2575508:0",
+          "f0e5da70d264f312a1658d51c130b101": "crwdns2575510:0crwdne2575510:0",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "crwdns2575512:0crwdne2575512:0",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "crwdns2575514:0crwdne2575514:0",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "crwdns2575516:0crwdne2575516:0",
+          "605f302ebc9f7fbacba60b15f551a633": "crwdns2575518:0crwdne2575518:0",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "crwdns2575520:0crwdne2575520:0",
+          "ae096fbf24d913754b01a1601672bf62": "crwdns2575522:0crwdne2575522:0",
+          "1f258d88a70309efc1435ef5daa277a0": "crwdns2575524:0crwdne2575524:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575526:0crwdne2575526:0"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "crwdns2575572:0crwdne2575572:0",
+          "bf08dd3d1961874f13e77c936aad27e5": "crwdns2575574:0crwdne2575574:0",
+          "514b8d5320196898a9ced3efe0d4c802": "crwdns2575576:0crwdne2575576:0",
+          "88794317e8c695bbc7bc7d2f35792c7f": "crwdns2575578:0crwdne2575578:0",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "crwdns2575580:0crwdne2575580:0",
+          "e522ee28f39133b45497637539ff429b": "crwdns2575582:0crwdne2575582:0",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "crwdns2575584:0crwdne2575584:0",
+          "5306eed2fd2c43fe033efd6016c0c38b": "crwdns2575586:0crwdne2575586:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575588:0crwdne2575588:0"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "crwdns2575380:0crwdne2575380:0",
+          "937dc37c06cc5d89a7096eb048b73590": "crwdns2575382:0crwdne2575382:0"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584394:0crwdne2584394:0"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584716:0crwdne2584716:0"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584482:0crwdne2584482:0"
+        },
+        "courseF_text_choice_events": {
+          "c529a06c3f8518b63ff6dfac482b335c": "crwdns2584528:0crwdne2584528:0",
+          "44506356d48394cd903b579df9de9117": "crwdns2584530:0crwdne2584530:0",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584532:0crwdne2584532:0"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584762:0crwdne2584762:0"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "crwdns2584578:0crwdne2584578:0",
+          "34088af1fb721900963462375b3bbe23": "crwdns2584580:0crwdne2584580:0"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "crwdns2584628:0crwdne2584628:0",
+          "d1210f945885351b13feb9bbb868aeef": "crwdns2584630:0crwdne2584630:0"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584674:0crwdne2584674:0"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584434:0crwdne2584434:0"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2584356:0crwdne2584356:0"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575642:0crwdne2575642:0"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575692:0crwdne2575692:0"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575736:0crwdne2575736:0"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575788:0crwdne2575788:0"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575832:0crwdne2575832:0"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "crwdns2575882:0crwdne2575882:0"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "crwdns2584174:0crwdne2584174:0"
         }
       }
     }

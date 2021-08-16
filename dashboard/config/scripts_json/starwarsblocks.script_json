@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:13 UTC",
+    "family_name": "starwarsblocks",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "starwarsblocks"
@@ -60,7 +62,6 @@
           "blockly:Studio:hoc2015_blockly_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +85,6 @@
           "blockly:Studio:hoc2015_blockly_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +108,6 @@
           "blockly:Studio:hoc2015_blockly_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
           "blockly:Studio:hoc2015_blockly_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +154,6 @@
           "blockly:Studio:hoc2015_blockly_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +177,6 @@
           "blockly:Studio:hoc2015_blockly_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +200,6 @@
           "blockly:Studio:hoc2015_blockly_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +223,6 @@
           "blockly:Studio:hoc2015_blockly_8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +246,6 @@
           "blockly:Studio:hoc2015_blockly_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +269,6 @@
           "blockly:Studio:hoc2015_blockly_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +292,6 @@
           "blockly:Studio:hoc2015_blockly_11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +315,6 @@
           "blockly:Studio:hoc2015_blockly_12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +338,6 @@
           "blockly:Studio:hoc2015_blockly_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +361,6 @@
           "blockly:Studio:hoc2015_blockly_14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +384,6 @@
           "blockly:Studio:hoc2015_blockly_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

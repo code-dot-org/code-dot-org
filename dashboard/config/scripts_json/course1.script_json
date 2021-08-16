@@ -14,11 +14,13 @@
       "curriculum_umbrella": "CSF",
       "tts": true,
       "lesson_extras_available": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:27:42 UTC",
+    "family_name": "course1",
+    "serialized_at": "2021-08-03 22:46:40 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "course1"
@@ -333,7 +335,6 @@
           "UnplugHappyMaps"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -357,7 +358,6 @@
           "K-1 Happy Maps Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,7 +381,6 @@
           "MoveIt"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -405,7 +404,6 @@
           "K-1 Move It Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -429,7 +427,6 @@
           "blockly:Jigsaw:2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,7 +450,6 @@
           "blockly:Jigsaw:3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,7 +473,6 @@
           "blockly:Jigsaw:4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -501,7 +496,6 @@
           "blockly:Jigsaw:5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -525,7 +519,6 @@
           "blockly:Jigsaw:6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -549,7 +542,6 @@
           "blockly:Jigsaw:7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -573,7 +565,6 @@
           "blockly:Jigsaw:8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -597,7 +588,6 @@
           "blockly:Jigsaw:9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -621,7 +611,6 @@
           "blockly:Jigsaw:10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -645,7 +634,6 @@
           "blockly:Jigsaw:11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -669,7 +657,6 @@
           "blockly:Jigsaw:12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -693,7 +680,6 @@
           "blockly:Jigsaw:13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -717,7 +703,6 @@
           "k-1 maze 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -741,7 +726,6 @@
           "K-1 Maze 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -765,7 +749,6 @@
           "K-1 Maze 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -789,7 +772,6 @@
           "K-1 Maze 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -813,7 +795,6 @@
           "K-1 Maze 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -837,7 +818,6 @@
           "K-1 Maze 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,7 +841,6 @@
           "K-1 Maze 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -885,7 +864,6 @@
           "K-1 Maze 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -909,7 +887,6 @@
           "K-1 Maze 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -933,7 +910,6 @@
           "K-1 Maze 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -957,7 +933,6 @@
           "K-1 Maze 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -981,7 +956,6 @@
           "K-1 Maze Sequence Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1005,7 +979,6 @@
           "K-1 Maze Sequence Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1029,7 +1002,6 @@
           "K-1 Maze Multiple Choice 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1053,7 +1025,6 @@
           "K-1 Maze Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1077,7 +1048,6 @@
           "course1_maze_seq_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1101,7 +1071,6 @@
           "course1_maze_seq_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1125,7 +1094,6 @@
           "K-1 maze debug 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1149,7 +1117,6 @@
           "K-1 maze debug 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1173,7 +1140,6 @@
           "K-1 maze debug 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1197,7 +1163,6 @@
           "K-1 maze debug 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1221,7 +1186,6 @@
           "K-1 maze debug 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1245,7 +1209,6 @@
           "K-1 maze debug 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1269,7 +1232,6 @@
           "K-1 maze debug 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1293,7 +1255,6 @@
           "K-1 maze debug 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1317,7 +1278,6 @@
           "K-1 maze debug 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1341,7 +1301,6 @@
           "K-1 maze debug 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1365,7 +1324,6 @@
           "K-1 maze debug 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1389,7 +1347,6 @@
           "K-1 Maze Debugging Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1413,7 +1370,6 @@
           "course1_maze_debugging_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1437,7 +1393,6 @@
           "course1_maze_debugging_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1461,7 +1416,6 @@
           "PlantASeed"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1485,7 +1439,6 @@
           "K-1 Plant a Seed Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1509,7 +1462,6 @@
           "K-1 Plant a Seed Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1533,7 +1485,6 @@
           "K-1 Bee 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1557,7 +1508,6 @@
           "K-1 Bee 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1581,7 +1531,6 @@
           "K-1 Bee 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1605,7 +1554,6 @@
           "K-1 Bee 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1629,7 +1577,6 @@
           "K-1 Bee 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1653,7 +1600,6 @@
           "K-1 Bee 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1677,7 +1623,6 @@
           "K-1 Bee 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1701,7 +1646,6 @@
           "K-1 Bee 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1725,7 +1669,6 @@
           "K-1 Bee 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1749,7 +1692,6 @@
           "K-1 Bee Puzzle 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1773,7 +1715,6 @@
           "K-1 Bee 13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1797,7 +1738,6 @@
           "K-1 Bee 14"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1821,7 +1761,6 @@
           "K-1 Bee 15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1845,7 +1784,6 @@
           "K-1 Bee 1 Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1869,7 +1807,6 @@
           "K-1 Bee 1 Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1893,7 +1830,6 @@
           "K-1 Artist1 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1917,7 +1853,6 @@
           "K-1 Artist1 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1941,7 +1876,6 @@
           "K-1 Artist1 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1965,7 +1899,6 @@
           "K-1 Artist1 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1989,7 +1922,6 @@
           "K-1 Artist1 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2013,7 +1945,6 @@
           "K-1 Artist1 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2037,7 +1968,6 @@
           "K-1 Artist1 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2061,7 +1991,6 @@
           "K-1 Artist1 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2085,7 +2014,6 @@
           "K-1 artist 1 level 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2109,7 +2037,6 @@
           "K-1 artist 1 level 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2133,7 +2060,6 @@
           "K-1 Artist 1 Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2157,7 +2083,6 @@
           "K-1 Artist 1 Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2181,7 +2106,6 @@
           "course1_artist_loops_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,7 +2129,6 @@
           "course1_artist_loops_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2229,7 +2152,6 @@
           "BuildingAFoundation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2253,7 +2175,6 @@
           "K-1 Building a Foundation Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2277,7 +2198,6 @@
           "K-1 Artist2 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2301,7 +2221,6 @@
           "K-1 Artist2 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2325,7 +2244,6 @@
           "K-1 Artist2 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2349,7 +2267,6 @@
           "K-1 Artist2 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2373,7 +2290,6 @@
           "K-1 Artist2 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2397,7 +2313,6 @@
           "K-1 Artist2 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2421,7 +2336,6 @@
           "K-1 Artist2_7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2445,7 +2359,6 @@
           "K-1 Artist2 Assessment1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2469,7 +2382,6 @@
           "K-1 Artist 2 Match 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2493,7 +2405,6 @@
           "K-1 Artist2 Free Draw"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2517,7 +2428,6 @@
           "blockly:CustomMaze:wordsearch_k_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2541,7 +2451,6 @@
           "blockly:CustomMaze:wordsearch_k_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2565,7 +2474,6 @@
           "blockly:CustomMaze:wordsearch_k_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2589,7 +2497,6 @@
           "blockly:CustomMaze:wordsearch_k_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2613,7 +2520,6 @@
           "blockly:CustomMaze:wordsearch_k_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2637,7 +2543,6 @@
           "blockly:CustomMaze:wordsearch_k_9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2661,7 +2566,6 @@
           "blockly:CustomMaze:wordsearch_k_13"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2685,7 +2589,6 @@
           "blockly:CustomMaze:wordsearch_k_15"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2709,7 +2612,6 @@
           "blockly:CustomMaze:wordsearch_k_16"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2733,7 +2635,6 @@
           "blockly:CustomMaze:wordsearch_k_20"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2757,7 +2658,6 @@
           "K-1 Word Search Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2781,7 +2681,6 @@
           "K-1 Word Search Multi 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2805,7 +2704,6 @@
           "GettingLoopy"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2829,7 +2727,6 @@
           "K-1 Getting Loopy Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2853,7 +2750,6 @@
           "K-1 Maze Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2877,7 +2773,6 @@
           "K-1 Maze Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2901,7 +2796,6 @@
           "K-1 Maze Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2925,7 +2819,6 @@
           "K-1 Maze Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2949,7 +2842,6 @@
           "K-1 Maze Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2973,7 +2865,6 @@
           "K-1 Maze Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2997,7 +2888,6 @@
           "K-1 Maze Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3021,7 +2911,6 @@
           "K-1 Maze Loops 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3045,7 +2934,6 @@
           "K-1 Maze Loops 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3069,7 +2957,6 @@
           "K-1 Maze Loops 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3093,7 +2980,6 @@
           "K-1 Maze Loops Assessment 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3117,7 +3003,6 @@
           "K-1 Maze Loops Assessment 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3141,7 +3026,6 @@
           "K-1 Maze Loops Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3165,7 +3049,6 @@
           "K-1 Maze Loops Multi 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3189,7 +3072,6 @@
           "course1_collector_loops_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3213,7 +3095,6 @@
           "course1_collector_loops_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3237,7 +3118,6 @@
           "K-1 Bee Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3261,7 +3141,6 @@
           "K-1 Bee Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3285,7 +3164,6 @@
           "K-1 Bee Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3309,7 +3187,6 @@
           "K-1 Bee Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3333,7 +3210,6 @@
           "K-1 Bee Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3357,7 +3233,6 @@
           "K-1 Bee Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3381,7 +3256,6 @@
           "K-1 Bee Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3405,7 +3279,6 @@
           "K-1 Bee Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3429,7 +3302,6 @@
           "K-1 Bee Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3453,7 +3325,6 @@
           "K-1 Bee Loops 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3477,7 +3348,6 @@
           "K-1 Bee Loops 11"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3501,7 +3371,6 @@
           "K-1 Bee Loops 12"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3525,7 +3394,6 @@
           "K-1 Bee Loops Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3549,7 +3417,6 @@
           "course1_collector_loops_challenge3"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3573,7 +3440,6 @@
           "course1_collector_loops_challenge4"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3597,7 +3463,6 @@
           "BigEvent"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3621,7 +3486,6 @@
           "K-1 Big Event Match 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3645,7 +3509,6 @@
           "blockly:Studio:k1_1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3669,7 +3532,6 @@
           "blockly:Studio:k1_2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3693,7 +3555,6 @@
           "blockly:Studio:k1_3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3717,7 +3578,6 @@
           "blockly:Studio:k1_4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3741,7 +3601,6 @@
           "blockly:Studio:k1_5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3765,7 +3624,6 @@
           "blockly:Studio:k1_6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3789,7 +3647,6 @@
           "course1_playlab_events_challenge1"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3813,7 +3670,6 @@
           "course1_playlab_events_challenge2"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3837,7 +3693,6 @@
           "GoingPlacesSafely"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3861,7 +3716,6 @@
           "K-1 Keep it Private Multi 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3885,7 +3739,6 @@
           "K-1 Artist Loops 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3909,7 +3762,6 @@
           "K-1 Artist Loops 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3933,7 +3785,6 @@
           "K-1 Artist Loops 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3957,7 +3808,6 @@
           "K-1 Artist Loops 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3981,7 +3831,6 @@
           "K-1 Artist Loops 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4005,7 +3854,6 @@
           "K-1 Artist Loops 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4029,7 +3877,6 @@
           "K-1 Artist Loops 7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4053,7 +3900,6 @@
           "K-1 Artist Loops 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4077,7 +3923,6 @@
           "K-1 Artist Loops 9"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4101,7 +3946,6 @@
           "K-1 Artist Loops Free Play"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4125,7 +3969,6 @@
           "course1_artist_loops_challenge3"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4149,7 +3992,6 @@
           "course1_artist_loops_challenge4"
         ]
       },
-      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [

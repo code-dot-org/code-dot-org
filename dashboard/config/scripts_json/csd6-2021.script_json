@@ -21,12 +21,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "is_maker_unit": true
+      "is_maker_unit": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-06-26 21:26:55 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-30 20:28:21 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -7901,42 +7902,17 @@
       "chapter": 172,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ]
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd6-2021",
-        "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
-      },
-      "level_keys": [
-        "csd-post-survey-intro-2019_2021"
-      ]
-    },
-    {
-      "chapter": 173,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ]
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -7944,7 +7920,7 @@
         "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
       },
       "level_keys": [
-        "csd-post-survey-levelgroup_2021"
+        "CSD survey_placeholder_levelgroup"
       ]
     }
   ],
@@ -10003,21 +9979,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-post-survey-intro-2019_2021",
+        "level.key": "CSD survey_placeholder_levelgroup",
         "script_level.level_keys": [
-          "csd-post-survey-intro-2019_2021"
-        ],
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd6-2021",
-        "activity_section.key": "b21a1d42-a519-4539-bf63-b0678dacc333"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-post-survey-levelgroup_2021",
-        "script_level.level_keys": [
-          "csd-post-survey-levelgroup_2021"
+          "CSD survey_placeholder_levelgroup"
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
@@ -10168,6 +10132,18 @@
       }
     },
     {
+      "name": "Circuit Playground",
+      "url": "https://code.org/circuitplayground",
+      "key": "circuit_playground_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground_1"
+      }
+    },
+    {
       "name": "How Computers Work: Circuits & Logic",
       "url": "https://youtu.be/ZoqMiFKspAA",
       "key": "circuits-logic-video",
@@ -10284,6 +10260,18 @@
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Unit 6 - Physical Computing",
+      "url": "https://docs.google.com/presentation/d/1kP-ZflfE6KTH8DC71qVEnptEs_m4eirbgyYpHRammkE/copy",
+      "key": "csd_unit_6_-_physical_computing",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10437,18 +10425,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q",
-      "key": "make-a-game-exemplars",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "make-a-game-exemplars"
-      }
-    },
-    {
       "name": "Make a Game",
       "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit",
       "key": "make-game-guide",
@@ -10462,16 +10438,40 @@
       }
     },
     {
+      "name": "Make a Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1Stnv4TxXnSI8JZWcd5lEXeihz7ok4OxhERcOllVHMy0/view",
+      "key": "make_a_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game_-_student_checklist"
+      }
+    },
+    {
       "name": "Make a Game",
-      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/edit",
-      "key": "make_a_game",
+      "url": "https://docs.google.com/document/d/1FcvT4qD9obqusSkeC0OHYGjKVg5lQ26qgpV62aUB528/view",
+      "key": "make_a_game_1",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "make_a_game"
+        "resource.key": "make_a_game_1"
+      }
+    },
+    {
+      "name": "Make a Game Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1i9wFd-4ulv72MqJleZaOsr-JJrMFL0sdozjvwGOvXoU/view",
+      "key": "make_a_game_sample_marked_rubrics",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game_sample_marked_rubrics"
       }
     },
     {
@@ -10634,18 +10634,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
-      "key": "sample_marked_rubrics_2_2",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_2"
-      }
-    },
-    {
       "name": "Sample Marked Rubrics",
       "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
       "key": "sample_marked_rubrics_4",
@@ -10696,80 +10684,20 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "computing-innovations"
+        "lesson.key": "Accelerometer",
+        "resource.key": "accelerometer_events"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "internet-of-things-video"
+        "lesson.key": "Accelerometer",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Innovations in Computing",
-        "resource.key": "innovation-video-1-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "designing_screens_with_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "responding_to_user_input_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Screens with Code",
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Circuit Playground",
-        "resource.key": "how_computers_word_hardware_software"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Circuit Playground",
-        "resource.key": "circuit_playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Input Unplugged",
-        "resource.key": "input-and-events"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "resource.key": "board_events"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "resource.key": "physical_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
-        "resource.key": "physical_output"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Getting Properties",
-        "resource.key": "taking_input_with_getproperty"
+        "lesson.key": "Accelerometer",
+        "resource.key": "the_accelerometer"
       }
     },
     {
@@ -10787,73 +10715,19 @@
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "resource.key": "date_and_change_events"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analog Input",
         "resource.key": "changing_sensor_scale"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "emoji-race-guide"
+        "lesson.key": "Analog Input",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "if_statements_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Program Design Process",
-        "resource.key": "booleans_and_comparison_operators_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
-        "resource.key": "make-a-game-exemplars"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
-        "resource.key": "make-game-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
-        "resource.key": "sample_marked_rubrics_2_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Game",
-        "resource.key": "make_a_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "resource.key": "introduction_to_arrays"
+        "lesson.key": "Analog Input",
+        "resource.key": "date_and_change_events"
       }
     },
     {
@@ -10876,14 +10750,26 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Making Music",
-        "resource.key": "producing_output"
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Making Music",
-        "resource.key": "playing_notes"
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "for_loops"
       }
     },
     {
@@ -10900,20 +10786,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Arrays and For Loops",
-        "resource.key": "for_loops"
+        "lesson.key": "Board Events",
+        "resource.key": "board_events"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "the_accelerometer"
+        "lesson.key": "Board Events",
+        "resource.key": "physical_input"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accelerometer",
-        "resource.key": "accelerometer_events"
+        "lesson.key": "Board Events",
+        "resource.key": "physical_output"
       }
     },
     {
@@ -10925,13 +10811,151 @@
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
-        "resource.key": "physical-prototyping-project"
+        "resource.key": "circuits_and_buttons"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
-        "resource.key": "circuits_and_buttons"
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing-innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "internet-of-things-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input Unplugged",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input Unplugged",
+        "resource.key": "input-and-events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "producing_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game_sample_marked_rubrics"
       }
     },
     {
@@ -10943,13 +10967,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "prototype-an-innovation-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "planning-your-innovation"
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {
@@ -10967,7 +10985,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_4"
+        "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "prototype-an-innovation-1"
       }
     },
     {
@@ -10975,39 +10999,63 @@
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "prototype_an_innovation_-_student_checklist"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "if_statements_1"
+      }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd6-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_code_4",
@@ -11029,6 +11077,42 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "circuit_playground_1",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd6-2021"
       }
     }

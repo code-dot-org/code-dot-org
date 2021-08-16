@@ -510,6 +510,6 @@ class MakerControllerTest < ActionController::TestCase
 
   def ensure_course(course_name, version_year)
     UnitGroup.find_by_name(course_name) ||
-      create(:unit_group, name: course_name, version_year: version_year, family_name: UnitGroup::CSD, published_state: SharedConstants::PUBLISHED_STATE.stable)
+      create(:unit_group, name: course_name, version_year: version_year, family_name: 'csd', published_state: SharedConstants::PUBLISHED_STATE.stable)
   end
 end

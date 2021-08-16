@@ -1,0 +1,425 @@
+{
+  "hi-IN": {
+    "data": {
+      "resources": {
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "स्प्राइट लैब का परिचय"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "ऐप्स की पड़ताल करना"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "स्प्राइट लैब का परिचय"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "ऐप्स की पड़ताल करना"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "क्रिया में स्प्राइट्स"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "फॉर लूप फन - मूल्यांकन कुंजी"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "फॉर लूप फन"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "फॉर लूप फन"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "फॉर लूप फन"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "अनुकरणों चालू करना"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "इंटरनेट"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP पता कार्ड और डिलीवरी प्रकार कार्ड"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "इंटरनेट"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "इंटरनेट"
+        },
+        "design-process/coursef/2021": {
+          "name": "डिज़ाइन प्रक्रिया"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "फाइनल प्रोजेक्ट डिज़ाइन"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "CS के मूल सिद्धांत फाइनल प्रोजेक्ट"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "इसे मूव करें, इसे मूव करें"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "इसे मूव करें, इसे मूव करें"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "इसे मूव करें, इसे मूव करें"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "इसे मूव करें, इसे मूव करें"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "भावनाओं वाले चेहरे"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक्स (ग्रेड K-1)"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "हैप्पी मैप गेम पीसेज"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "कम्पास रोज़"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "स्टेवी और बड़ा प्रोजेक्ट"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "बिना देखे बग्स"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "लूपी होना"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "लूपी होना"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "लूपी होना"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "लूपी होना"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "CS के मूल सिद्धांत मुख्य गतिविधि सुझाव"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "विशाल इवेंट (कोर्स A, B)"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "हैप्पी मैप्स"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "हैप्पी मैप कार्ड्स"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "हैप्पी मैप कार्ड्स"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "हैप्पी मैप गेम पीसेज"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक्स (ग्रेड K-1)"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "हैप्पी मैप कार्ड्स XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "हैप्पी मैप गेम पीसेज बोनस पैक"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "भावनाओं वाले चेहरे"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "विशाल इवेंट (कोर्स A, B)"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS के मूल सिद्धांत मुख्य गतिविधि सुझाव"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "मेरे रोबोटिक दोस्त"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "मेरे रोबोटिक दोस्त"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "मेरे रोबोटिक दोस्त"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "मेरे रोबोटिक दोस्त"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "मेरे रोबोटिक दोस्त"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS के मूल सिद्धांत मुख्य गतिविधि सुझाव"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "कलाकार का परिचय"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "विशाल इवेंट"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "विशाल इवेंट (कोर्स C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "बिट्स बनाम बाइट्स"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "युग्मक ब्रैस्लेट्स"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "युग्मक ब्रैस्लेट्स"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "युग्मक ब्रैस्लेट्स"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "युग्मक ब्रैस्लेट्स"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "युग्मक ब्रैस्लेट्स"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "ग्राफ पेपर प्रोग्रामिंग"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "रिले प्रोग्रामिंग"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "डांस पार्टी: अनप्लग्ड"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "भावनाओं वाले चेहरे"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "कार्डों के साथ सापेक्ष"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "कार्डों के साथ सापेक्ष"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "कार्ड्स नमूना प्रोग्राम के साथ सापेक्ष"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "कार्डों के साथ सापेक्ष"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "कार्डों के साथ सापेक्ष"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "कार्डों के साथ सापेक्ष"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "pair_programming/express/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "artist_introduction/express/2021": {
+          "name": "कलाकार का परिचय"
+        },
+        "turns_angles/express/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "क्रिया में स्प्राइट्स"
+        },
+        "pause_and_think_online/express/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+        },
+        "variables_video/express/2021": {
+          "name": "चर"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "CS के मूल सिद्धांत फाइनल प्रोजेक्ट"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "जोड़ी प्रोग्रामिंग"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "भावनाओं वाले चेहरे"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "अध्यापक फोरम"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "विराम व ऑनलाइन सोचना"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "घुमाव और कोण"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "फंक्शनों के साथ गीत लिखना"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: गीत लिखना"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: गीत लिखना"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: गीत लिखना"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: गीत लिखना"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "सुलभता के लिए डिज़ाइन करना"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS के मूल सिद्धांत फाइनल प्रोजेक्ट"
+        },
+        "design-process/coursee/2021": {
+          "name": "डिज़ाइन प्रक्रिया"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "आपके छात्रों के लिए यह दिखाने के 72 रचनात्मक तरीके कि वो क्या जानते हैं"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "कार्यान्वयन गाइड"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "अध्यापक फोरम"
+        }
+      }
+    }
+  }
+}

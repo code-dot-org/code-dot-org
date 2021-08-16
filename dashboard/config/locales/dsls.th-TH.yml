@@ -2183,3 +2183,304 @@ th-TH:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
       courseF_EOC_2020:
         display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      CourseF_outbreak_story2:
+        markdown: "# การระบาด: การคิดแบบนักวิทยาศาสตร์\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nการจำลองเป็นวิธีที่ยอดเยี่ยมในการเรียนรู้สิ่งต่างๆ
+          ที่อาจสังเกตเห็นได้ยากในโลกแห่งความเป็นจริง ช่วยให้นักวิทยาศาสตร์แก้ปัญหาและทดสอบแนวคิดใหม่ๆได้อย่างปลอดภัยและมีประสิทธิภาพ
+          การจำลองของคุณเป็นวิธีที่แสดงให้เห็นว่าการระบาดของไวรัสในดินแดนมอนสเตอร์มีลักษณะอย่างไรได้บ้าง\n\n##
+          รีเซ็ตและเล่นซ้ำ!\nแม้ว่าคุณจะเขียนโค้ดด้วยตัวเอง แต่ก็ไม่สามารถรู้ได้ว่าจะเกิดอะไรขึ้นเมื่อคุณกดเล่น
+          มอนสเตอร์เดินไปมาแบบสุ่มดังนั้นคุณจึงไม่รู้ว่าไวรัสจะแพร่กระจายอย่างรวดเร็วหรือช้า
+          เมื่อใดก็ตามที่คุณเปลี่ยนโค้ด อย่าลืมกดเล่นการจำลองมากกว่าหนึ่งครั้ง สิ่งต่างๆจะไม่เกิดขึ้นเหมือนเดิมซ้ำสอง!\n\n##
+          การรวบรวมข้อมูล\nลองเขียนข้อสังเกตของคุณในขณะที่คุณกดเล่นการจำลอง คุณสามารถนับจำนวนมอนสเตอร์ที่ป่วยหรือใช้ตัวจับเวลาเพื่อดูว่าสิ่งต่างๆเกิดขึ้นเร็วแค่ไหน
+          ตัวอย่างเช่น ปกติแล้วใช้เวลานานแค่ไหนที่มอนสเตอร์ทั้งหมดจะป่วยหากไม่สวมใส่หน้ากากอนามัย?\n\n##
+          การทำนาย\nหากคุณเข้าใจแบบจำลองของคุณ คุณสามารถใช้เพื่อคาดคะเนได้ คุณยังสามารถเปลี่ยนวิธีการทำงานของการจำลองและคาดเดาสิ่งที่จะเกิดขึ้นในรูปแบบที่แตกต่างกันได้
+          ตัวอย่างเช่น:\n* จะเกิดอะไรขึ้นถ้ามีมอนสเตอร์เพิ่มขึ้นสองเท่า?\n* จะเกิดอะไรขึ้นถ้ามอนสเตอร์เคลื่อนที่ด้วยความเร็วลดลงครึ่งหนึ่ง?\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## ดินแดนมอนสเตอร์เหมือนโลกแห่งความจริงหรือไม่?\nมีข้อจำกัดว่าแบบจำลองใดๆ
+          นั้นมีความสมจริงมากแค่ไหน \n* การจำลองการระบาดของคุณมีอะไรบ้างที่เหมือนกับการระบาดของไวรัสในโลกแห่งความเป็นจริง?\n*
+          อะไรคือความแตกต่าง?\nเมื่อคุณทำกิจกรรมนี้เสร็จแล้ว ให้พูดคุยแลกเปลี่ยนคำถามเหล่านี้กับครูหรือครอบครัวของคุณ!\n\n##
+          เราสามารถสร้างแบบจำลองอะไรได้อีกบ้าง?\nคุณได้สร้างแบบจำลองการทำงานของการระบาดที่ดินแดนมอนสเตอร์แล้ว
+          อะไรคือสิ่งที่การจำลองของคุณไม่สามารถทำได้หรือเป็นสิ่งที่คุณต้องการให้ทำได้?
+          กดดำเนินการต่อเพื่อดำเนินการและเรียนรู้การสร้างแบบจำลองเพิ่มเติม:\n* เพิ่มจำนวนมอนสเตอร์ในการจำลอง\n*
+          ช่วยเหลือมอนสเตอร์จากไวรัส\n* ความน่าจะเป็น ภูมิคุ้มกัน วัคซีน และอื่นๆ!\n\nคุณยังสามารถแบ่งปันแบบจำลองของคุณให้กับคนอื่นหรือแบ่งปันข้อความเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อช่วยให้ผู้อื่นมีสุขภาพที่ดีเมื่อไวรัสแพร่มา "
+      OPD-K5 CS Courses_dani:
+        markdown: "# การวางแผน > การเริ่มต้นบน Code.org\n\n\n## ขั้นที่ 1: เลือกหลักสูตร\nหลักสูตรทั้งหมดของเรา
+          ตั้งแต่สำหรับเด็กก่อนวัยเรียนจนถึงนักเรียนระดับมัธยมปลายแสดงรายการไว้ใน
+          **[แค็ตตาล็อกหลักสูตร] (https://studio.code.org/courses)** หากต้องการค้นหาหลักสูตรพื้นฐานด้านวิทยาการคอมพิวเตอร์ที่คุณเคยเข้ามาฝึก
+          ให้ไปที่ **[หน้าหลักสูตรพื้นฐาน](https://code.org/educate/curriculum/elementary-school)**
+          และเลื่อนลงไปที่ส่วน \"หลักสูตร\" ที่เปิดให้คุณเรียนรู้ได้โดยไม่เสียค่าใช้จ่าย
+          พูดคุยกับเพื่อนครูที่โรงเรียนเพื่อตัดสินใจเลือกว่าจะรวมหลักสูตรเข้ากับรายวิชาต่างๆ
+          ในโรงเรียนอย่างไร\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          ขั้นที่ 2: ตั้งค่าส่วนที่จะใช้รองรับ\nตั้งค่าส่วนที่จะนำมาใช้ติดตามความคืบหน้าของนักเรียน
+          พิมพ์การ์ดล็อกเข้าระบบไว้ให้กับนักเรียน จัดการบัญชีของนักเรียน และพิมพ์ประกาศนียบัตรที่นักเรียนนำกลับบ้านได้เมื่อเรียนจบหลักสูตรแล้ว
+          คลิกที่ลิงก์นี้เพื่อ **[ดูวิดีโอสรุป](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          ที่จะสาธิตวิธีเตรียมชั้นเรียนวิทยาการคอมพิวเตอร์แรกของคุณบน Code.org คุณยังจะพบขั้นตอนต่าง
+          ๆ ใน **[บทความสนับสนุนนี้](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          ขั้นที่ 3: กำหนดหลักสูตรให้กับส่วนของคุณ\nคลิกในหลักสูตรที่คุณจะสอน คุณควรเห็นหน้าจอที่เหมือนกับด้านล่างนี้
+          หลังจากนั้น ให้คลิกที่ \"กำหนดหลักสูตร\" และมอบหมายหลักสูตรนั้นให้กับส่วนที่เป็นของคุณ
+          \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          ขั้นที่ 4: เริ่มสอน! \nทั้งหมดที่ต้องการคือหนึ่งบทเรียนเพื่อแนะนำแนวคิดเรื่องวิทยาการคอมพิวเตอร์สู่ห้องเรียนของคุณ
+          ทันทีที่คุณเห็นนักเรียนกระตือรือร้นที่จะเรียนรู้เรื่องนี้ ให้แนะนำแผนการเรียนการสอนประจำวันเพื่อแนะแนวทางให้กับนักเรียน
+          กิจกรรมออฟไลน์ที่คุณใช้ได้โดยไม่ต้องมีคอมพิวเตอร์ และฟอรัมเพื่อเชื่อมโยงกับผู้สอนท่านอื่น\n\n\n"
+      courseAB_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseB_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: ก
+          correct: true
+        - text: ข
+        - text: ค
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseE_EOC_examples_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseF_EOC_examples_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseF_EOC_samples_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      express_EOC_2021:
+        display_name: โปรเจกต์ปิดท้ายหลักสูตร
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}

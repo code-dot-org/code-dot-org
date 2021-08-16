@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:41 UTC",
+    "family_name": "minecraft",
+    "serialized_at": "2021-08-03 22:47:04 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "minecraft"
@@ -60,7 +62,6 @@
           "MC HOC 2016 Level 2-2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +85,6 @@
           "MC HOC 2016 Level 3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +108,6 @@
           "MC HOC 2016 Level 4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
           "MC HOC 2016 New Walk"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +154,6 @@
           "MC HOC 2016 New Drop"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +177,6 @@
           "MC HOC 2016 Level 5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +200,6 @@
           "MC HOC 2016 Level 8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +223,6 @@
           "MC HOC 2016 Village Test"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +246,6 @@
           "MC HOC 2016 New Spawn"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +269,6 @@
           "MC HOC 2016 Level 6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +292,6 @@
           "MC HOC 2016 SCORE LEVEL"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +315,6 @@
           "MC HOC 2016 Level 10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

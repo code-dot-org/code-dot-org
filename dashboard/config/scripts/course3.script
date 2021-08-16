@@ -3,9 +3,12 @@ lesson_extras_available true
 curriculum_path 'https://code.org/curriculum/course3/{LESSON}/Teacher'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
+family_name 'course3'
+version_year 'unversioned'
 published_state 'preview'
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Computational Thinking', display_name: 'Computational Thinking', has_lesson_plan: true, unplugged: true
 level 'ComputationalThinking'
@@ -195,48 +198,21 @@ level 'bounce_11'
 level 'bounce_12'
 
 lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story', has_lesson_plan: true
-skin 'studio'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c3_story_1'
-skin 'studio'
-level_concept_difficulty '{"sequencing":2}'
 level 'blockly:Studio:c3_story_2'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c3_story_3'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"events":2}'
 level 'blockly:Studio:c3_story_4'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:c3_story_5'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c3_story_6'
 bonus 'course3_playLab_challenge1'
 
 lesson 'Studio: Create a Game', display_name: 'Play Lab: Create a Game', has_lesson_plan: true
-skin 'studio'
-video_key_for_next_level 'C3_playlab_create_game'
-level_concept_difficulty '{"sequencing":1,"events":3}'
 level 'blockly:Studio:c3_game_1'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"events":5}'
 level 'blockly:Studio:c3_game_2'
-skin 'studio'
-level_concept_difficulty '{"sequencing":2,"repeat_until_while":3}'
 level 'blockly:Studio:c3_game_3'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":4}'
 level 'blockly:Studio:c3_game_4'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":4}'
 level 'blockly:Studio:c3_game_5'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":4}'
 level 'blockly:Studio:c3_game_6'
-skin 'studio'
-level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c3_game_7'
 
 lesson 'Internet', display_name: 'Internet', has_lesson_plan: true, unplugged: true

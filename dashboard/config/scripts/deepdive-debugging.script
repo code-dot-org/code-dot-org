@@ -1,4 +1,7 @@
+family_name 'deepdive-debugging'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Debugging for AB Educators', display_name: 'Debugging for AB Educators', has_lesson_plan: false
 level 'AB_debug_Laurel1'

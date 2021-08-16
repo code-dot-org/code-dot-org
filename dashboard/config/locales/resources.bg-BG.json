@@ -1,0 +1,236 @@
+{
+  "bg-BG": {
+    "data": {
+      "resources": {
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Повторения за забавление"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Повторения за забавление"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Повторения за забавление"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Повторения за забавление"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Повторения за забавление"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Интернет"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Интернет"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Интернет"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Учителски форум"
+        },
+        "mimi-activity/courseb/2021": {
+          "name": "Преместете го, преместете го"
+        },
+        "mimi-debugging/courseb/2021": {
+          "name": "Преместете го, преместете го"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "name": "Преместете го, преместете го"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "name": "Преместете го, Преместете го"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "name": "Стив и Големият проект"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Незабележивите бъгове"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "name": "Да повтаряме"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "name": "Да повтаряме"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "name": "Да повтаряме"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "name": "Да повтаряме"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Голямото събитие"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Голямото събитие"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Голямото събитие"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "Учителски форум"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Щастливи карти"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Голямото събитие"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Голямото събитие"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Голямото събитие"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "Учителски форум"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Моите приятели роботи"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Моите приятели роботи"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Моите приятели роботи"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Моите приятели роботи"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Моите приятели роботи"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Голямото събитие"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Голямото събитие"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Голямото събитие"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "name": "Двоични гривни"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "name": "Двоични гривни"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "name": "Двоични гривни"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "name": "Двоични гривни"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "name": "Двоични гривни"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/coursec/2021": {
+          "name": "Учителски форум"
+        },
+        "graph-paper-programming/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "unplugged-video-graph-paper/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "lesson-in-action-graph-paper/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "activity-answer-graph-paper/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "csf-graph-paper-programming-assessment/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "assessment-answer-graph-paper/coursed/2021": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "relay-assessment/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "name": "Повтори програмирането"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "Условия с карти"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "Условия с карти"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "Условия с карти"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "Условия с карти"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "Условия с карти"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "Учителски форум"
+        },
+        "pair_programming/express/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "variables_video/express/2021": {
+          "name": "Променливи"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "Учителски форум"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "name": "Програмиране по двойки"
+        },
+        "teacher_forum_1/pre-express/2021": {
+          "name": "Учителски форум"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Ръководство за използване"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Учителски форум"
+        }
+      }
+    }
+  }
+}

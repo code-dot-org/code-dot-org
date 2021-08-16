@@ -1,24 +1,14 @@
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
 import {makeEnum} from '../utils';
+import {FatalErrorType} from './constants';
 import logToCloud from '../logToCloud';
-import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
   logToCloud.PageAction.BrambleFilesystemResetSuccess,
   logToCloud.PageAction.BrambleFilesystemResetFailed
 );
-
-const SUPPORT_ARTICLE_URL =
-  'https://support.code.org/hc/en-us/articles/360016804871';
-const SUPPORT_ARTICLE_HTML = `Please see our support article <a href="${SUPPORT_ARTICLE_URL}">"Troubleshooting Web Lab problems"</a> for more information.`;
-const EFILESYSTEMERROR_MESSAGE = `We're sorry, Web Lab failed to load for some reason. ${SUPPORT_ARTICLE_HTML}`;
-const defaultBrambleErrorMessage = message =>
-  `Fatal Error: ${message}. If you're in Private Browsing mode, data can't be written. ${SUPPORT_ARTICLE_HTML}`;
-const RESET_SUCCESS_MESSAGE = `Web Lab reset complete.  Reloading...`;
-const resetFailedMessage = message =>
-  `Failed to reset Web Lab. ${message}. ${SUPPORT_ARTICLE_HTML}`;
 
 export default class CdoBramble {
   constructor(Bramble, api, store, url, projectPath, disallowedHtmlTags) {
@@ -47,6 +37,7 @@ export default class CdoBramble {
       fileRefresh: this.fileRefresh.bind(this),
       redo: this.redo.bind(this),
       refreshPreview: this.refreshPreview.bind(this),
+      resetFilesystem: this.resetFilesystem.bind(this),
       syncFiles: this.syncFiles.bind(this),
       undo: this.undo.bind(this),
       validateProjectChanged: this.validateProjectChanged.bind(this)
@@ -208,14 +199,78 @@ export default class CdoBramble {
     this.invokeAll(this.onProjectChangedCallbacks);
   }
 
+  /**
+   * Find disallowed HTML content based on this.disallowedHtmlTags
+   * @param {string} path HTML file to check
+   * @param {disallowedContentCallback} callback Callback with disallowed content, if found
+   */
+  /**
+   * @callback disallowedContentCallback
+   * @param {string} newDom DOM without disallowed content
+   * @param {string[]} tags Matches from this.disallowedHtmlTags that exist in original DOM
+   */
+  detectDisallowedHtml(path, callback) {
+    const onFileDataReceived = (err, data) => {
+      // No-op if Bramble was unable to read the file.
+      if (err) {
+        callback(err);
+        return;
+      }
+
+      let disallowedTags = [];
+      let disallowedNodes = [];
+      const dom = this.domFromString(data);
+      this.disallowedHtmlTags?.forEach(tag => {
+        const matches = dom.querySelectorAll(tag);
+        if (matches.length > 0) {
+          disallowedNodes = [...disallowedNodes, ...matches];
+          disallowedTags.push(tag);
+        }
+      });
+
+      for (let i = 0; i < disallowedNodes.length; i++) {
+        disallowedNodes[i].parentElement.removeChild(disallowedNodes[i]);
+      }
+
+      const newDom = this.createHtmlDocument(
+        dom.head.innerHTML.trim(),
+        dom.body.innerHTML.trim()
+      );
+      callback(null, {newDom, tags: disallowedTags});
+    };
+
+    this.getFileData(path, onFileDataReceived, 'utf8');
+  }
+
+  preprocessHtml(path, callback) {
+    this.detectDisallowedHtml(path, (err, disallowedContent) => {
+      const {tags, newDom} = disallowedContent;
+
+      // No-op if this check fails or we detect no disallowed content.
+      if (err || tags?.length === 0) {
+        callback();
+        return;
+      }
+
+      this.brambleProxy.enableReadOnly();
+      this.api.openDisallowedHtmlDialog(this.cleanPath(path), tags, () => {
+        this.writeFileData(path, newDom, err => {
+          this.brambleProxy.disableReadOnly();
+          callback();
+        });
+      });
+    });
+  }
+
   onFileChanged(path) {
-    removeDisallowedHtmlContent(
-      this.Bramble.getFileSystem(),
-      this.brambleProxy,
-      path,
-      this.disallowedHtmlTags,
-      this.handleFileChange.bind(this)
-    );
+    const callback = () => this.handleFileChange(path);
+
+    if (this.isHtml(path)) {
+      this.preprocessHtml(path, callback);
+      return;
+    }
+
+    callback();
   }
 
   onFileDeleted(path) {
@@ -361,8 +416,8 @@ export default class CdoBramble {
     });
   }
 
-  getFileData(path, callback) {
-    this.fileSystem().readFile(path, {encoding: null}, (err, fileData) => {
+  getFileData(path, callback, encoding = null) {
+    this.fileSystem().readFile(path, {encoding}, (err, fileData) => {
       err &&
         console.error(`CdoBramble unable to read ${path} from Bramble. ${err}`);
 
@@ -632,75 +687,29 @@ export default class CdoBramble {
     const {message, code} = error;
     this.logAction(PageAction.BrambleError, {error: message});
 
-    const modalMessage =
+    this.api.openFatalErrorDialog(
+      message,
       code === 'EFILESYSTEMERROR'
-        ? EFILESYSTEMERROR_MESSAGE
-        : defaultBrambleErrorMessage(message);
-    this.renderErrorModal(modalMessage);
-  }
-
-  // TODO: Refactor this modal to use React/Redux. https://codedotorg.atlassian.net/browse/STAR-1508
-  renderErrorModal(message, showButtons = true) {
-    const overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.right = 0;
-    overlay.style.bottom = 0;
-    overlay.style.display = 'flex';
-    overlay.style.flexDirection = 'column';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
-
-    const messageBox = document.createElement('div');
-    messageBox.style.backgroundColor = 'white';
-    messageBox.style.border = 'solid black medium';
-    messageBox.style.padding = '1em';
-    messageBox.style.maxWidth = '50%';
-    messageBox.style.borderRadius = '1em';
-    overlay.appendChild(messageBox);
-
-    const messageDiv = document.createElement('div');
-    messageDiv.innerHTML = message;
-    messageBox.appendChild(messageDiv);
-
-    if (showButtons) {
-      const reloadPage = () => parent.location.reload();
-      const hideModal = () => document.body.removeChild(overlay);
-      const resetProject = () => {
-        hideModal();
-        this.resetFilesystem(err => {
-          if (err) {
-            this.renderErrorModal(resetFailedMessage(err.message));
-          } else {
-            this.renderErrorModal(RESET_SUCCESS_MESSAGE, false);
-            reloadPage();
-          }
-        });
-      };
-      const createButton = (text, onClick) => {
-        const button = document.createElement('button');
-        button.innerHTML = text;
-        button.onclick = onClick;
-        button.style.margin = '0.5em';
-        return button;
-      };
-
-      const buttons = document.createElement('div');
-      buttons.style.textAlign = 'center';
-      buttons.style.marginTop = '1em';
-      buttons.appendChild(createButton('Try again', reloadPage));
-      buttons.appendChild(createButton('Reset Web Lab', resetProject));
-      buttons.appendChild(createButton('Dismiss', hideModal));
-      messageBox.appendChild(buttons);
-    }
-
-    document.body.appendChild(overlay);
+        ? FatalErrorType.LoadFailure
+        : FatalErrorType.Default
+    );
   }
 
   logAction(actionName, value = {}) {
     logToCloud.addPageAction(actionName, value);
+  }
+
+  isHtml(path) {
+    return path.endsWith('.html');
+  }
+
+  domFromString(str) {
+    return new DOMParser().parseFromString(str, 'text/html');
+  }
+
+  createHtmlDocument(head, body) {
+    return `<!DOCTYPE html>\n<html>\n  <head>\n    ${head ||
+      ''}\n  </head>\n  <body>\n    ${body || ''}\n  </body>\n</html>`;
   }
 
   addFileHTML() {
@@ -708,7 +717,7 @@ export default class CdoBramble {
       {
         basenamePrefix: 'new',
         ext: 'html',
-        contents: createHtmlDocument()
+        contents: this.createHtmlDocument()
       },
       err => {
         if (err) {

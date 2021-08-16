@@ -1,0 +1,19 @@
+{
+  "is-IS": {
+    "data": {
+      "lessons": {
+        "coursef-2021/Virtual Pet": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "overview": "Lykkjur eru mjög gagnlegt og öflugt verkfæri í forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að haga því þannig að nemendur vilji fá auðveldari leið til að leysa hversdagsleg verkefni."
+        },
+        "express-2021/Virtual Pet with Sprite Lab": {
+          "overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!",
+          "student_overview": "Í þessari kennslustund munu nemendur búa til gagnvirkt sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu rmunu nota \"Búninga\" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins. Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til að blása lífi í gæludýrið!"
+        }
+      }
+    }
+  }
+}

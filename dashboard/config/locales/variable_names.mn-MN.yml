@@ -3,6 +3,9 @@ mn:
   data:
     variable_names:
       actor: жүжигчин
+      age: нас
+      answer: хариулт
+      binary: хоёрт
       cats: муур
       color: өнгө
       counter: тоологч
@@ -12,6 +15,7 @@ mn:
       i: i
       left: зүүн
       length: урт
+      level: түвшин
       name: нэр
       nectar: шүүс
       points: цэгүүд

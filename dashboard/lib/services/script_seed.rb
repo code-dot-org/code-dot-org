@@ -46,7 +46,14 @@ module Services
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
-      lessons_resources = script.lessons.map(&:lessons_resources).flatten
+
+      # Use the existing seeding_key code to efficiently sort LessonsResource
+      # and ScriptsResource objects in a manner that will be stable across environments.
+      lr_seed_context = SeedContext.new(lessons: script.lessons, resources: resources)
+      lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(lr_seed_context).to_json}
+      sr_seed_context = SeedContext.new(script: script, resources: resources)
+      scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sr_seed_context).to_json}
+
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
@@ -65,7 +72,7 @@ module Services
         levels: my_levels,
         resources: resources,
         lessons_resources: lessons_resources,
-        scripts_resources: script.scripts_resources,
+        scripts_resources: scripts_resources,
         scripts_student_resources: script.scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
@@ -90,7 +97,7 @@ module Services
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
         resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
         lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
-        scripts_resources: script.scripts_resources.map {|sr| ScriptSeed::ScriptsResourceSerializer.new(sr, scope: scope).as_json},
+        scripts_resources: scripts_resources.map {|sr| ScriptSeed::ScriptsResourceSerializer.new(sr, scope: scope).as_json},
         scripts_student_resources: script.scripts_student_resources.map {|sr| ScriptSeed::ScriptsResourceSerializer.new(sr, scope: scope).as_json},
         vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
@@ -240,7 +247,20 @@ module Services
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
       Script.import! [script_to_import], on_duplicate_key_update: get_columns(Script)
-      Script.find_by!(name: script_to_import.name)
+
+      # activerecord-import doesn't trigger callbacks for imported models, and
+      # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
+      # so we invoke it manually.
+      #
+      # see https://github.com/zdennis/activerecord-import#callbacks
+      #
+      # Note that we use activerecord-import extensively in the script seeding
+      # process, so we may end up needing to manually invoke these callbacks
+      # for more models than just Script, in which case we should probably
+      # reassess the pattern being used here.
+      imported_script = Script.find_by!(name: script_to_import.name)
+      imported_script.run_callbacks(:save)
+      return imported_script
     end
 
     def self.import_lesson_groups(lesson_groups_data, seed_context)
@@ -359,7 +379,7 @@ module Services
           seed_context.levels.append(level)
         end
 
-        raise 'No level found' if level.nil?
+        raise "No level found: #{seeding_key}" if level.nil?
 
         script_level = script_levels_by_seeding_key[lsl_data['seeding_key'].except('level.key')]
         raise "No ScriptLevel found while seeding script: #{seed_context.script.name}" if script_level.nil?
@@ -762,7 +782,6 @@ module Services
         :activity_section_position,
         :assessment,
         :properties,
-        :named_level,
         :bonus,
         :seeding_key,
         :level_keys
@@ -775,10 +794,6 @@ module Services
       def properties
         # sort properties hash by key
         object.properties.sort.to_h
-      end
-
-      def named_level
-        !!object.named_level
       end
 
       def bonus

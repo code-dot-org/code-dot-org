@@ -65,6 +65,7 @@ hr:
             programe koji rješavaju zadane probleme te razvijati interaktivne igre
             i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
           description_short: Tečaj 2 je napravljen za učenike koji znaju čitati.
+          description_audience: Dob 6+ (potrebno čitanje)
           lessons:
             'Artist: Debugging':
               name: 'Umjetnik: Ispravljanje pogrešaka'
@@ -110,6 +111,11 @@ hr:
             igre i priče koje mogu dijeliti. Preporučuje se za uzrast 2.-5. razreda.
         course3:
           title: Tečaj 3
+          description: Tečaj 3 je napravljen za učenike koji su završili Tečaj 2.
+            Učenici će dublje zaroniti u programerske teme koje su predstavljene u
+            prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
+            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
+            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
           description_short: Tečaj 3 slijedi nakon Tečaja 2.
           description_audience: Godine 8-18
           lessons:
@@ -155,6 +161,11 @@ hr:
               name: 'Laboratorij igara: Napravi igru'
             'Studio: Create a Story':
               name: 'Laboratorij igara: Napravi priču'
+          student_description: Tečaj 3 je napravljen za učenike koji su završili Tečaj
+            2. Učenici će dublje zaroniti u programerske teme koje su predstavljene
+            u prethodnim tečajevima i tražiti fleksibilna rješenja za složenije zadatke.
+            Do kraja ovog tečaja, učenici će napraviti interaktivne priče i igre koje
+            mogu podijeliti s drugima. Preporučeno za učenike 4. i 5. razreda.
         playlab:
           title: Laboratorij igara
           description: Napravi priču ili igru pomoću Laboratorija igara!
@@ -290,8 +301,8 @@ hr:
           student_description: Izbor nivoa iz Tečaja 4 za testiranje upotrebljivosti.
         algebra:
           title: Informatika u algebri
-          description: Nauči funkcionalno programiranje kroz algebru
-          description_short: Nauči funkcionalno programiranje kroz algebru
+          description: Nauči funkcionalno programiranje kroz algebru.
+          description_short: Nauči funkcionalno programiranje kroz algebru.
           lessons:
             'Calc: Defining Variables':
               name: Definiranje varijabli i zamjena
@@ -315,7 +326,7 @@ hr:
               name: 'Izvanmrežno: Dizajn recepta'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Izvanmrežno: Videoigre i Koordinatne ravnine'
-          student_description: Nauči funkcionalno programiranje kroz algebru
+          student_description: Nauči funkcionalno programiranje kroz algebru.
         infinity:
           title: Disney Infinity Laboratorij igara
           description: Koristi Laboratorij igara za stvaranje priče ili igre s likovima
@@ -419,12 +430,12 @@ hr:
             Isprobajte naš tutorijal izrade Flappy kôda!
         jigsaw:
           title: Slagalica
-          description: Isprobaj naš tutorijal Slagalice
-          description_short: Isprobaj naš tutorijal Slagalice
+          description: Isprobaj naš tutorijal Slagalice.
+          description_short: Isprobaj naš tutorijal Slagalice.
           lessons:
             Jigsaw:
               name: Slagalica
-          student_description: Isprobaj naš tutorijal Slagalice
+          student_description: Isprobaj naš tutorijal Slagalice.
         step:
           title: korak
           description: Step tutorijal
@@ -478,16 +489,11 @@ hr:
             Evaluation Blocks:
               name: Blokovi za ocjenjivanje
         sciencePD2:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
-        cspunit2:
-          lessons:
-            The Internet:
-              name: Internet
+            Wrap-Up:
+              name: Zamotavanje
         algebraPD2a:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
@@ -525,6 +531,8 @@ hr:
               name: Minecraft
             Multi:
               name: Višestruki izbor
+            Sprite Lab:
+              name: Lab likova
         algebraPD2b:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
@@ -562,32 +570,32 @@ hr:
               name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         algebraPD2:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
         sciencePD2b:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         science-PD2:
-          description: 'Faza 2 online: Mješoviti ljetni studij'
-          description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
-          student_description: 'Faza 2 online: Mješoviti ljetni studij'
+            Wrap-Up:
+              name: Zamotavanje
         sciencePD2b-iZone:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         ECSPD2-iZone:
           description: 'Faza 2 online: Mješoviti ljetni studij'
@@ -608,6 +616,7 @@ hr:
               name: Zamotavanje
           student_description: 'Faza 2 online: Mješoviti ljetni studij'
         asUnplugged:
+          description_audience: Dob 6-13
           lessons:
             Binary Bracelets:
               name: Binarne narukvice
@@ -627,10 +636,14 @@ hr:
               name: Pisanje pjesama
             The Big Event:
               name: Veliki događaj
+        afterschool1:
+          description_audience: Dob 7-13
         ScienceP3OLPT2:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         Special Fun:
           description_audience: Dob 10+ (nakon Tečaja 3)
         SpecialSeries:
@@ -656,7 +669,6 @@ hr:
               name: Gumball Play Lab
           student_description: Izradi priču ili načini igru s Gumball Play Lab!
         starwars:
-          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
           description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
             ratovi u galaksiji daleko, daleko odavde.
           description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
@@ -667,7 +679,6 @@ hr:
           student_description: Nauči programirati droide i kreiraj vlastitu igricu
             Zvjezdani ratovi u galaksiji daleko, daleko odavde.
         starwarsblocks:
-          title: 'Zvjezdani ratovi: Izgradnja galaksije pomoću koda'
           description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
             ratovi u galaksiji daleko, daleko odavde.
           description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
@@ -691,6 +702,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         AlgebraA:
           description: Nauči funkcionalno programiranje kroz algebru
           description_short: Nauči funkcionalno programiranje kroz algebru
@@ -709,7 +722,6 @@ hr:
               name: 'Izvanmrežno: Dizajn recepta'
           student_description: Nauči funkcionalno programiranje kroz algebru
         AlgebraB:
-          title: Informatika u algebri
           description: Nauči funkcionalno programiranje kroz algebru
           description_short: Nauči funkcionalno programiranje kroz algebru
           lessons:
@@ -774,7 +786,14 @@ hr:
           lessons:
             Game Lab:
               name: Game Lab
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizajnerski način
+        CSF_Secret_Sample_Story:
+          description_audience: Godine 8-18+
         MikeTest:
+          description_audience: Godine 8-98
           lessons:
             Artist Functions:
               name: 'Umjetnik: Funkcije'
@@ -789,7 +808,10 @@ hr:
             'Bee: Conditionals':
               name: 'Pčela: Uvjeti'
         gradeKinder:
+          description_audience: Godine 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -799,13 +821,17 @@ hr:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi u stvarnom životu: Posadi sjeme'
         grade4:
+          description_audience: Dob 9-99
           lessons:
             Digital Citizenship:
               name: Digitalno građanstvo
             Songwriting:
               name: Pisanje pjesama
         grade1:
+          description_audience: Godine 5-18
           lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
             Events:
               name: Događaji
             'Jigsaw: Learn to drag and drop':
@@ -813,6 +839,7 @@ hr:
             Loops:
               name: Petlje
         grade5:
+          description_audience: Dob 10-110
           lessons:
             'Artist: For Loops':
               name: 'Umjetnik: Petlje brojača'
@@ -841,7 +868,10 @@ hr:
             Wrap-up:
               name: Zamotavanje
         grade3:
+          description_audience: Godine 5-18
           lessons:
+            " Bee: Conditionals":
+              name: " Pčela: Uvjeti"
             'Artist: Nested Loops':
               name: 'Umjetnik: Ugniježđene petlje'
             Bee Debugging:
@@ -865,6 +895,7 @@ hr:
             Conditionals:
               name: Uvjeti
         grade2:
+          description_audience: Godine 5-18
           lessons:
             Flappy:
               name: Flappy
@@ -988,6 +1019,8 @@ hr:
               name: Uvod
             Ice Age Play Lab:
               name: Ice Age Play Lab
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
         classic-hoc-impact-study:
           description_short: Isprobaj osnove računalstva s mnogim zanimljivim likovima!
           lessons:
@@ -1002,10 +1035,14 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csp3-support:
           lesson_groups:
             required:
@@ -1018,10 +1055,14 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         science-pd-ol-pt-5:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csf2harvey:
           lessons:
             Binary:
@@ -1030,6 +1071,8 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+            Wrap-Up:
+              name: Zamotavanje
         csp5-support:
           lesson_groups:
             required:
@@ -1110,6 +1153,8 @@ hr:
               name: ništa
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Introduction:
               name: Uvod
             Ice Age Play Lab:
@@ -1138,6 +1183,8 @@ hr:
               name: Ugniježđene petlje
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             For Loop Fun:
@@ -1150,6 +1197,8 @@ hr:
               name: Ugniježđene petlje
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Building a Foundation:
               name: Izrada temelja
         cspnovice:
@@ -1282,6 +1331,8 @@ hr:
           lessons:
             Building a Foundation:
               name: Izrada temelja
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Ice Age Play Lab:
               name: Ice Age Play Lab
             For Loop Fun:
@@ -1318,6 +1369,8 @@ hr:
           lessons:
             Building a Foundation:
               name: Izrada temelja
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Introduction:
               name: Uvod
             Ice Age Play Lab:
@@ -1384,8 +1437,6 @@ hr:
               name: For Petlja Zabava
             Binary Bracelets:
               name: Binarne narukvice
-            Artist Binary:
-              name: Umjetnik binarno
             Internet:
               name: Internet
             Crowdsourcing:
@@ -1414,8 +1465,6 @@ hr:
               name: Uvjeti s kartama
             Digital Citizenship:
               name: Digitalno građanstvo
-            Artist Binary:
-              name: Umjetnik binarno
             Graph Paper Programming:
               name: Grafičko programiranje
             Relay Programming:
@@ -1432,6 +1481,8 @@ hr:
               name: Binarne narukvice
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Funkcije s parametrima\_
             Functions with Parameters:
               name: Funkcije s parametrima
         coursee-2018:
@@ -1458,6 +1509,8 @@ hr:
               name: Moji robotski prijatelji
             Building a Foundation:
               name: Izrada temelja
+            'Algorithms: Tangrams':
+              name: 'Algoritmi: Tangrami'
             Introduction:
               name: Uvod
             Ice Age Play Lab:
@@ -1632,8 +1685,6 @@ hr:
               name: Uvjeti s kartama
             Digital Citizenship:
               name: Digitalno građanstvo
-            Artist Binary:
-              name: Umjetnik binarno
         coursee-2019:
           lesson_groups:
             csf_sprites:
@@ -1924,10 +1975,17 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+        maddie-test:
+          lessons:
+            stage 1:
+              name: nivo 1
         csp3-pilot:
           lesson_groups:
             required:
               display_name: Pregled
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csl-vn:
           lesson_groups:
             csf_loops:
@@ -2005,6 +2063,8 @@ hr:
               name: Događaji
             Functions:
               name: Funkcije
+            Sprite Lab:
+              name: Lab likova
             Variables:
               name: Varijable
             For Loops:
@@ -2166,8 +2226,6 @@ hr:
               name: Odnosno programiranje
             Conditionals with Cards:
               name: Uvjeti s kartama
-            Artist Binary:
-              name: Umjetnik binarno
             Digital Citizenship:
               name: Digitalno građanstvo
         coursee-2020:
@@ -2223,10 +2281,18 @@ hr:
           lessons:
             Spelling Bee:
               name: Slovkanje
+        csp3-2020:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Stvaranje funkcija
+        jess-test-script:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
         csp5-virtual:
           lessons:
             While Loops:
@@ -2261,6 +2327,8 @@ hr:
               name: Varijable
             For Loops:
               name: Petlja brojača
+            Sprite Lab:
+              name: Lab likova
         csd3-virtual:
           lessons:
             Variables:
@@ -2283,6 +2351,8 @@ hr:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            debugging:
+              display_name: Otklanjanje pogriješaka
         csd1-2021:
           lessons:
             What is a Computer?:
@@ -2310,6 +2380,11 @@ hr:
             Functions with Parameters:
               key: Funkcije s parametrima
               name: Funkcije s parametrima
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Otklanjanje pogriješaka
+              name: Otklanjanje pogriješaka
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -2383,7 +2458,6 @@ hr:
               key: 'Izvanmrežno: Logički operatori'
             Artist Binary:
               key: Umjetnik binarno
-              name: Umjetnik binarno
           lesson_groups:
             csf_events:
               display_name: Događaji
@@ -2471,8 +2545,6 @@ hr:
               display_name: Varijable
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Uvod
             Loops:
               key: Petlje
               name: Petlje
@@ -2491,8 +2563,34 @@ hr:
             For Loops:
               key: Petlja brojača
               name: Petlja brojača
+            Sprite Lab:
+              key: Lab likova
           lesson_groups:
             k5_getting_started_1:
               display_name: Uvod
             Introduction:
               display_name: Uvod
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cjelina 1
+            lessonGroup-4:
+              display_name: Cjelina 2
+            lessonGroup-5:
+              display_name: Cjelina 3
+            lessonGroup-6:
+              display_name: Cjelina 4
+            lessonGroup-7:
+              display_name: Cjelina 5
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: provjera
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Pregled
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Pregled

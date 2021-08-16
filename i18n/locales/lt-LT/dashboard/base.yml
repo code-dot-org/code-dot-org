@@ -118,8 +118,8 @@ lt:
     visit_privacy: 'Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}), kad sužinotumėte išsamiau.'
     additional_information: "Mums reikia papildomos informacijos, kad galėtum prisiregistruoti."
     user_type_label: "Paskyros tipas"
-    user_type_teacher: "Mokytojas"
     user_type_student: "Mokinys"
+    user_type_teacher: "Mokytojas"
     field_is_required: "reikalingas"
     accept_terms: "Turite sutikti, norint sukurti paskyrą"
     email_preference_privacy: "Tikrinti savo privatumą"
@@ -240,6 +240,7 @@ lt:
       educate_inspire: "Įkvėpkite mokinius"
       educate_community: "Virtuali bendruomenė"
       educate_tools: "Įrankiai ir vaizdo įrašai"
+      stats: "Statistika"
       legal_privacy: "Privatumo politika"
       legal_tos: "Naudojimo taisyklės"
     user:
@@ -317,6 +318,7 @@ lt:
     delete_text_teacher_note: "Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus panaikintos."
     delete_confirm: 'Ar tikrai norite panaikinti savo paskyrą?'
     update_email: "Atnaujinti"
+    remove_parent_email_label: "Pašalinti"
     none: "Nė vienas"
   user_level:
     completed: 'Baigta'
@@ -492,6 +494,7 @@ lt:
     unplugged_conditionals:
       title: "Sąlyginiai sakiniai"
     widgets:
+      audience: "Amžius 14+"
       cta: "Sužinok, kaip"
   landing:
     report_bug: "Pranešti apie problemą"
@@ -652,7 +655,7 @@ lt:
     form_labels:
       email: 'El. paštas'
       school_name: 'Mokyklos pavadinimas'
-      colombian_school_name: 'Mokyklos pavadinimas'
+      colombian_chilean_school_name: 'Mokyklos pavadinimas'
     form_entries:
       gender:
         male: 'Vyras'
@@ -670,4 +673,5 @@ lt:
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Sutinku'
+  page_not_found_title: "Puslapis nerastas"
   copy: 'Kopijuoti'

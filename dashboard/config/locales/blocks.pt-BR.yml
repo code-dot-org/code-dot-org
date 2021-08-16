@@ -8,17 +8,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           MOVE1:
             MOVES.Roll: Rolar
             MOVES.ClapHigh: Bater palmas
@@ -62,15 +62,15 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
             '"UNICORN"': todos unicórnios
           MOVE:
@@ -122,17 +122,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -146,17 +146,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           MOVE:
             '"rand"': "(Aleatório)"
             MOVES.XBend: Dobrar
@@ -257,7 +257,7 @@ pt:
       Dancelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -280,9 +280,7 @@ pt:
             '"measures"': compassos
             '"seconds"': segundos
           OP:
-            '">"': ">"
             '"<"': "\\<"
-            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} pular para {LOCATION}"
         options:
@@ -303,17 +301,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           LOCATION:
             "{x: 200, y: 100}": parte de cima
             "{x: 200, y: 300}": parte de baixo
@@ -331,17 +329,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           FORMAT:
             '"border"': borda
             '"inner"': quadrado interno
@@ -390,18 +388,18 @@ pt:
           chamada {NAME} em {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': Alienígena
+            '"ALIEN"': alienígena
             '"BEAR"': Urso
-            '"CAT"': Gato
-            '"DOG"': Cão
-            '"DUCK"': Pato
+            '"CAT"': gato
+            '"DOG"': cachorro
+            '"DUCK"': pato
             '"FROG"': Sapo
-            '"MOOSE"': Alce
+            '"MOOSE"': alce
             '"PINEAPPLE"': Abacaxi
-            '"ROBOT"': Robô
+            '"ROBOT"': robô
             '"SHARK"': Tubarão
             '"SLOTH"': preguiça
-            '"UNICORN"': Unicórnio
+            '"UNICORN"': unicórnio
           LOCATION:
             "{x: 200, y: 100}": parte de cima
             "{x: 200, y: 300}": parte de baixo
@@ -439,18 +437,18 @@ pt:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': Alienígenas
+            '"ALIEN"': alienígenas
             '"BEAR"': Ursos
-            '"CAT"': Gatos
-            '"DOG"': Cães
+            '"CAT"': gatos
+            '"DOG"': cachorros
             '"DUCK"': Patos
             '"FROG"': Sapos
-            '"MOOSE"': Alce
+            '"MOOSE"': alce
             '"PINEAPPLE"': Abacaxis
-            '"ROBOT"': Robôs
+            '"ROBOT"': robôs
             '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           LAYOUT:
             '"border"': borda
             '"inner"': quadrado interno
@@ -485,7 +483,7 @@ pt:
         options:
           EFFECT:
             '"none"': Nenhum
-            '"circles"': Círculos
+            '"circles"': Túnel
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
@@ -518,7 +516,7 @@ pt:
           EFFECT:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
-            '"circles"': Círculos
+            '"circles"': Túnel
             '"quads"': Ângulos
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
@@ -567,17 +565,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           SPEED:
             '1': normal
             '2': rápido
@@ -641,17 +639,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -677,17 +675,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -704,34 +702,34 @@ pt:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
       Dancelab_setTintEachInline:
         text: definir tonalidade de {THIS} para {VAL}
         options:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
       Dancelab_setTintInline:
         text: definir tonalidade {SPRITE} para {VAL}
       Dancelab_setVisible:
@@ -746,17 +744,17 @@ pt:
           THIS:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           VISIBILITY:
             'true': visível
             'false': invisível
@@ -781,17 +779,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -826,17 +824,17 @@ pt:
           GROUP:
             sprites: todos
             '"ALIEN"': alienígenas
-            '"BEAR"': ursos
+            '"BEAR"': Ursos
             '"CAT"': gatos
             '"DOG"': cachorros
-            '"DUCK"': patos
-            '"FROG"': sapos
+            '"DUCK"': Patos
+            '"FROG"': Sapos
             '"MOOSE"': alce
-            '"PINEAPPLE"': abacaxis
+            '"PINEAPPLE"': Abacaxis
             '"ROBOT"': robôs
-            '"SHARK"': tubarões
+            '"SHARK"': Tubarões
             '"SLOTH"': preguiças
-            '"UNICORN"': Unicórnios
+            '"UNICORN"': todos unicórnios
           PROPERTY:
             '"scale"': tamanho
             '"width"': largura
@@ -960,6 +958,10 @@ pt:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} começa a {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': evitar
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -988,6 +990,10 @@ pt:
         text: clique {SPRITE}
       gamelab_comment:
         text: 'comentário: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: número de {SPRITE}
       gamelab_createNewSprite:
         text: "faça um novo sprite\n chamado {NAME} \n com fantasia {COSTUME} \n em
           {LOCATION}"
@@ -1056,6 +1062,8 @@ pt:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando as bordas"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} está tocando {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} pular para {LOCATION}"
       gamelab_keyPressed:
@@ -1099,6 +1107,7 @@ pt:
       gamelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} de {LOCATION}"
         options:
           DIRECTION:
             '"North"': Norte
@@ -1207,6 +1216,7 @@ pt:
             '"direction"': direção do movimento
             '"speed"': velocidade
       gamelab_setProp_dropdown:
+        text: definir {SPRITE} {PROPERTY} para {SIZE}
         options:
           PROPERTY:
             '"scale"': tamanho
@@ -1239,8 +1249,14 @@ pt:
           CONDITION:
             '"when"': quando
             '"while"': enquanto
+      gamelab_spriteSay:
+        text: "{SPRITE} diga {SPEECH}"
+      gamelab_spriteSayChoices:
+        text: "{SPRITE} diga {SPEECH}"
       gamelab_subjectSpritePointer:
         text: clique {SPRITE}
+      gamelab_textVariableJoin:
+        text: "{VAR} {TEXT2}"
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} graus"
         options:
@@ -1295,6 +1311,14 @@ pt:
         text: enquanto {SPRITE1} estiver tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: enquanto a seta para cima estiver pressionada
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': very low
+            '25': baixa
+            '50': 50/50
+            '75': alta
+            '90': very high
       gamelab_xLocationOf:
         text: coordenada x do {SPRITE}
       gamelab_yLocationOf:
@@ -1458,7 +1482,7 @@ pt:
       Mikelab_ifDanceIs:
         text: |-
           se {SPRITE} está fazendo {DANCE}
-          {DO1} {DO2}
+          {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Bater palmas
@@ -1496,10 +1520,14 @@ pt:
           DANCE:
             MOVES.ClapHigh: peixe
             MOVES.Clown: não é meu rótulo
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'localização x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: cor aleatória
       Mikelab_removeBehaviorSimple:
@@ -1534,6 +1562,11 @@ pt:
           CORNER:
             '"right"': para direita
             '"left"': para esquerda
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': acima
+            '"below"': abaixo
       Mikelab_sprite:
         text: novo elemento {COSTUME} em {LOCATION}
         options:
@@ -1592,6 +1625,18 @@ pt:
         text: coordenada x do {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      PoemBot_setBackgroundEffect:
+        text: definir o efeito do plano de fundo {BG_EFFECT} [PALETTE][1]
+        options:
+          BG_EFFECT:
+            '"solid"': sólido
+            '"rainbow"': arco-íris
+      PoemBot_setForegroundEffect:
+        text: definir o efeito do primeiro plano {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': chuva
+            '"bubbles"': bolhas
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
@@ -1646,6 +1691,8 @@ pt:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} diga {SPEECH}"
       binary_drawBin:
         text: desenhar o binário {BIN}
       binary_drawBinScreen:
@@ -1740,6 +1787,7 @@ pt:
             '"stoneBricks"': tijolos de pedra
             '"mossyStoneBricks"': tijolos de pedra com musgo
             '"crackedStoneBricks"': tijolos de pedra rachados
+            '"chiseledStoneBricks"': tijolos de pedra decorativos
             '"blueCoralBlock"': bloco de coral azul
             '"pinkCoralBlock"': bloco de coral rosa
             '"magentaCoralBlock"': bloco de coral magenta
@@ -1787,3 +1835,5 @@ pt:
           DIR:
             right: à direita ↻
             left: à esquerda ↺
+      validation_validatedBackground:
+        text: definir plano de fundo para {IMG}

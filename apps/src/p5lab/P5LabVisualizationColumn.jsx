@@ -7,7 +7,6 @@ import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import experiments from '@cdo/apps/util/experiments';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -21,7 +20,6 @@ import TooltipOverlay, {
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
-import PoemBank from './spritelab/PoemBank';
 import TextConsole from './spritelab/TextConsole';
 import SpritelabInput from './spritelab/SpritelabInput';
 import {
@@ -40,6 +38,7 @@ class P5LabVisualizationColumn extends React.Component {
     finishButton: PropTypes.bool.isRequired,
     pauseHandler: PropTypes.func.isRequired,
     hidePauseButton: PropTypes.bool.isRequired,
+    onPromptAnswer: PropTypes.func,
 
     // From redux
     isResponsive: PropTypes.bool.isRequired,
@@ -56,13 +55,6 @@ class P5LabVisualizationColumn extends React.Component {
     consoleMessages: PropTypes.array.isRequired,
     isRtl: PropTypes.bool
   };
-
-  constructor(props) {
-    super(props);
-    this.spritelabPoemBotExperiment = experiments.isEnabled(
-      experiments.POEM_BOT
-    );
-  }
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
@@ -194,7 +186,9 @@ class P5LabVisualizationColumn extends React.Component {
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
-          {isSpritelab && <SpritelabInput />}
+          {isSpritelab && (
+            <SpritelabInput onPromptAnswer={this.props.onPromptAnswer} />
+          )}
         </div>
 
         <GameButtons>
@@ -210,7 +204,6 @@ class P5LabVisualizationColumn extends React.Component {
 
           {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {isSpritelab && this.spritelabPoemBotExperiment && <PoemBank />}
         {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}

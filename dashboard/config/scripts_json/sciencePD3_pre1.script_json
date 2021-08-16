@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:07 UTC",
+    "serialized_at": "2021-08-03 22:46:51 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "sciencePD3_pre1"
@@ -92,7 +92,6 @@
           "sciPD3pre1 intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -116,7 +115,6 @@
           "sciPD2 timeline"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -140,7 +138,6 @@
           "ECSPD PD details"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -164,7 +161,6 @@
           "TLO intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -188,7 +184,6 @@
           "TLO practical"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -212,7 +207,6 @@
           "sciPD3pre1 prep"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -236,7 +230,6 @@
           "sciPD3pre1 remember"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -260,7 +253,6 @@
           "sciPD3pre1 thanks"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

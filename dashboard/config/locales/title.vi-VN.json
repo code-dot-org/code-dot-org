@@ -49,7 +49,14 @@
         "courseD_unplugged_digitalCitizenship": "Hoạt động không dùng máy",
         "courseD_unplugged_digitalCitizenship_2018": "Hoạt động không dùng máy",
         "courseE_unplugged_privateInformation": "Giáo dục ý thức phổ biến: Thông tin riêng tư và cá nhân ",
-        "courseF_unplugged_powerOfWords": "Hoạt động không dùng máy"
+        "courseF_unplugged_powerOfWords": "Hoạt động không dùng máy",
+        "BuildingAFoundation_2018": "bản dịch thiếu: en-US.data.unplugged.BuildingAFoundation_2018.title",
+        "Crowdsourcing_2018": "bản dịch thiếu: en-US.data.unplugged.Crowdsourcing_2018.title",
+        "EnvelopeVariables_2018": "bản dịch thiếu: en-US.data.unplugged.EnvelopeVariables_2018.title",
+        "ForLoopFun_2018": "bản dịch thiếu: en-US.data.unplugged.ForLoopFun_2018.title",
+        "Internet_2018": "bản dịch thiếu: en-US.data.unplugged.Internet_2018.title",
+        "SongwritingParameters_2018": "bản dịch thiếu: en-US.data.unplugged.SongwritingParameters_2018.title",
+        "courseF_unplugged_powerOfWords_2018": "bản dịch thiếu: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }

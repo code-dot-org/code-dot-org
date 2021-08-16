@@ -2,6 +2,7 @@ fa:
   data:
     parameter_names:
       actor: بازیگر
+      color: رنگ
       counter: شمارشگر
       height: ارتفاع
       honey: عسل

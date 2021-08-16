@@ -3,7 +3,10 @@ sr:
   data:
     variable_names:
       actor: учесник
+      age: узраст
+      answer: одговор
       cats: мачке
+      color: боја
       counter: бројач
       dogs: пси
       height: висина
@@ -19,4 +22,5 @@ sr:
       size: величина
       speed: брзина
       variable: променљива
+      width: Širina
       x: x

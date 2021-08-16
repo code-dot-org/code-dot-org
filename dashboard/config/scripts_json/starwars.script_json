@@ -4,10 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:28:12 UTC",
+    "family_name": "starwars",
+    "serialized_at": "2021-08-03 22:46:53 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "starwars"
@@ -60,7 +62,6 @@
           "blockly:StudioEC:js_hoc2015_move_right"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -84,7 +85,6 @@
           "blockly:StudioEC:js_hoc2015_move_right_down"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -108,7 +108,6 @@
           "blockly:StudioEC:js_hoc2015_move_backtrack"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -132,7 +131,6 @@
           "blockly:StudioEC:js_hoc2015_move_diagonal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -156,7 +154,6 @@
           "blockly:StudioEC:js_hoc2015_move_around"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -180,7 +177,6 @@
           "blockly:StudioEC:js_hoc2015_move_finale"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -204,7 +200,6 @@
           "blockly:StudioEC:js_hoc2015_event_two_items"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +223,6 @@
           "blockly:StudioEC:js_hoc2015_event_four_items"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -252,7 +246,6 @@
           "blockly:StudioEC:js_hoc2015_score"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -276,7 +269,6 @@
           "blockly:StudioEC:js_hoc2015_win_lose"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -300,7 +292,6 @@
           "blockly:StudioEC:js_hoc2015_add_characters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -324,7 +315,6 @@
           "blockly:StudioEC:js_hoc2015_chain_characters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -348,7 +338,6 @@
           "blockly:StudioEC:js_hoc2015_multiply_characters"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -372,7 +361,6 @@
           "blockly:StudioEC:js_hoc2015_change_setting"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -396,7 +384,6 @@
           "blockly:StudioEC:js_hoc2015_event_free"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

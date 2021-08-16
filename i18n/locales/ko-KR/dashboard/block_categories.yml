@@ -24,7 +24,9 @@ ko:
       Math: 계산
       Numbers: 숫자
       Properties: 등록 정보
+      Sprites: 스프라이트
       Text: 문장
       Variables: 변수
       'Variables ': '변수 '
+      'Variables  ': '변수  '
       World: 세계

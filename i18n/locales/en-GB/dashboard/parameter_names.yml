@@ -2,6 +2,7 @@ en-GB:
   data:
     parameter_names:
       actor: actor
+      color: color
       height: height
       honey: honey
       min: min

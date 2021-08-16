@@ -5,4 +5,6 @@ reporters = [Minitest::Reporters::SpecReporter.new]
 if ENV['CIRCLECI']
   reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/bin/i18n")
 end
-Minitest::Reporters.use! reporters
+
+# Skip this if the tests are run in RubyMine
+Minitest::Reporters.use! reporters unless ENV['RM_INFO']

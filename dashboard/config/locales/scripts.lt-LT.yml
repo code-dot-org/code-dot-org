@@ -35,7 +35,7 @@ lt:
             Happy Maps:
               name: Laimingieji žemėlapiai
             'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: išmokite, kaip nuvilkti'
+              name: 'Dėlionės: sudėk paveikslėlius'
             'Maze: Debugging':
               name: 'Labirintas: klaidų ieškojimas'
             'Maze: Loops':
@@ -300,8 +300,8 @@ lt:
               name: Kintamieji
         algebra:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
+          description: Išmokite programuoti funkcijas panaudojant algebrą.
+          description_short: Išmokite programuoti funkcijas panaudojant algebrą.
           lessons:
             'Eval: Boolean Operators':
               name: Būlio loginiai operatoriai
@@ -323,7 +323,7 @@ lt:
               name: 'Papildoma pamokėlė: Būlio kintamieji ir logika'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
+          student_description: Išmokite programuoti funkcijas panaudojant algebrą.
         infinity:
           title: Disnėjaus Infinity laboratorija
           description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje
@@ -353,6 +353,8 @@ lt:
               name: Papildomos pamokėlės
             Writing computer programs:
               name: Kompiuterinių programų rašymas
+            new stage:
+              name: naujas lygis
         netsim:
           title: Interneto simuliatorius
         pixelation:
@@ -448,12 +450,12 @@ lt:
             Išmėgink Flappy Code pamokėles!
         jigsaw:
           title: Dėlionės
-          description: Išbandykite Dėlionės pamokėlę
-          description_short: Išbandykite Dėlionės pamokėlę
+          description: Išbandykite Dėlionės pamokėlę.
+          description_short: Išbandykite Dėlionės pamokėlę.
           lessons:
             Jigsaw:
               name: Dėlionės
-          student_description: Išbandykite Dėlionės pamokėlę
+          student_description: Išbandykite Dėlionės pamokėlę.
         step:
           title: Žingsnis
           description: Žingsnio pamoka
@@ -500,12 +502,9 @@ lt:
               name: Bitų persiuntimas realiame pasaulyje
         algebraPD:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algPDmiami:
           title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
@@ -532,14 +531,6 @@ lt:
               name: 14 pamoka
             Lesson 15:
               name: 15 pamoka
-        ECSPD:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
-        sciencePD:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         cspunit3:
           lessons:
             Creating Functions:
@@ -556,55 +547,24 @@ lt:
               name: Eilutės ir paveikslėliai
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-        ECSPD-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
-        ECSPD-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD-NexTech:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD-iZone:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
-        sciencePD-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
-        sciencePD-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         sciencePD2:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
-        cspunit2:
-          lessons:
-            The Internet:
-              name: Internetas
         algebraPD2a:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Booleans:
               name: Loginės reikšmės
@@ -614,7 +574,6 @@ lt:
               name: Šikšnosparnis Semas
             Strings and Images:
               name: Eilutės ir paveikslėliai
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         allthethings:
           lessons:
             Artist:
@@ -641,8 +600,6 @@ lt:
               name: Studija
         algebraPD2b:
           title: Informatika algebroje
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Booleans:
               name: Loginės reikšmės
@@ -656,7 +613,6 @@ lt:
               name: Eilutės ir paveikslėliai
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         cspfacilitator:
           lessons:
             App Lab:
@@ -670,73 +626,53 @@ lt:
             Next Steps:
               name: Kiti žingsniai
         ECSPD2:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD2:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
             Welcome!:
               name: Sveiki atvykę!
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         sciencePD2b:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         science-PD2:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         Equity-OnlinePD:
           lessons:
             Next Steps:
               name: Kiti žingsniai
         sciencePD2b-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-Up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         ECSPD2-iZone:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         ECSPD2-NexTech:
-          description: Išmokite programuoti funkcijas panaudojant algebrą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Welcome!:
               name: Sveiki atvykę!
             Wrap-up:
               name: Apibendrinimas
-          student_description: Išmokite programuoti funkcijas panaudojant algebrą
         asUnplugged:
+          description_audience: Amžius 6-13
           lessons:
             Binary Bracelets:
               name: Dvejetainės apyrankės
@@ -756,6 +692,8 @@ lt:
               name: Dainų rašymas
             The Big Event:
               name: Didelis įvykis
+        afterschool1:
+          description_audience: Amžius 7-13
         algebraPD3a:
           title: Informatika algebroje
         ScienceP3OLPT2:
@@ -791,7 +729,6 @@ lt:
               name: Gumball laboratorija
           student_description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
         starwars:
-          title: 'Žvaigždžių Karai: programuojame Galaktiką'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
@@ -802,7 +739,6 @@ lt:
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių
             Karų žaidimą tolimoje galaktikoje.
         starwarsblocks:
-          title: 'Žvaigždžių Karai: programuojame Galaktiką'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą
             tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
@@ -816,7 +752,7 @@ lt:
           title: Minecraft programavimo valanda
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius
             šiame Minecraft pasaulyje
-          description_short: Tyrinėkite Minecraft pasaulį per kodą
+          description_short: Tyrinėk Minecraft pasaulį koduodamas.
           lessons:
             Hour of Code 2015:
               name: Programavimo valanda 2015
@@ -836,7 +772,6 @@ lt:
               name: 'Žaidimų laboratorija: komandų apibrėžimas'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         AlgebraB:
-          title: Informatika algebroje
           description: Išmokite programuoti funkcijas panaudojant algebrą
           description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
@@ -856,9 +791,7 @@ lt:
               name: 'Papildoma pamokėlė: kompiuteriniai žaidimai ir koordinačių plokštuma'
           student_description: Išmokite programuoti funkcijas panaudojant algebrą
         algebraPD1:
-          title: Informatika algebroje
           description: Algebros mokymas per funkcijų programavimą
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
           lessons:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
@@ -891,8 +824,6 @@ lt:
               name: Greitis
         CSF_Secret_Sample:
           description_audience: Amžius 8-18 metų
-        ECSPD1:
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
         algebraFacilitator:
           description: Algebros mokymas per funkcijų programavimą
           description_short: Algebros mokymas per funkcijų programavimą
@@ -900,8 +831,6 @@ lt:
             Teacher Dashboard:
               name: Mokytojo prietaisų skydelis
           student_description: Algebros mokymas per funkcijų programavimą
-        sciencePD1:
-          description_short: Išmokite programuoti funkcijas panaudojant algebrą
         cspunit1-support:
           lesson_groups:
             required:
@@ -925,11 +854,18 @@ lt:
           lessons:
             Game Lab:
               name: Žaidimų laboratorija
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizaino režimas
         CSDU2-Draft:
           lessons:
             Peer Review:
               name: Tarpusavio peržiūra
+        CSF_Secret_Sample_Story:
+          description_audience: Amžius 8-18 metų+
         MikeTest:
+          description_audience: Amžius 8-98 metų
           lessons:
             Artist Functions:
               name: 'Menininkas: komandos'
@@ -948,30 +884,34 @@ lt:
             'Bee: Conditionals':
               name: 'Bitė: sąlyginiai sakiniai'
         gradeKinder:
+          description_audience: Amžius 5-18 metų
           lessons:
             Events:
               name: Įvykiai
             'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: išmokite, kaip nuvilkti'
+              name: 'Dėlionės: sudėk paveikslėlius'
             Loops:
               name: Kartojimas
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
         grade4:
+          description_audience: Amžius 9-99
           lessons:
             Digital Citizenship:
               name: Virtuali pilietybė
             Songwriting:
               name: Dainų rašymas
         grade1:
+          description_audience: Amžius 5-18 metų
           lessons:
             Events:
               name: Įvykiai
             'Jigsaw: Learn to drag and drop':
-              name: 'Dėlionės: išmokite, kaip nuvilkti'
+              name: 'Dėlionės: sudėk paveikslėlius'
             Loops:
               name: Kartojimas
         grade5:
+          description_audience: Amžius 10-110
           lessons:
             'Artist: For Loops':
               name: 'Menininkas: kartojimai'
@@ -1000,7 +940,10 @@ lt:
             Wrap-up:
               name: Apibendrinimas
         grade3:
+          description_audience: Amžius 5-18 metų
           lessons:
+            " Bee: Conditionals":
+              name: " Bitė: sąlyginiai sakiniai"
             'Artist: Nested Loops':
               name: 'Menininkas: kartojimas kartojime'
             Bee Debugging:
@@ -1017,6 +960,23 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
+          lessons:
+            Lesson 1,10:
+              name: 1,10 pamoka
+            Lesson 1,11:
+              name: 1,11 pamoka
+            Lesson 1,4:
+              name: 1,4 pamoka
+            Lesson 1,6:
+              name: 1,6 pamoka
+            Lesson 1,9:
+              name: 1,9 pamoka
+            Lesson 2,10:
+              name: 2,10 pamoka
+            Lesson 2,2:
+              name: 2,2 pamoka
+            Lesson 2,3:
+              name: 2,3 pamoka
         csd3-2017:
           lessons:
             Velocity:
@@ -1028,6 +988,7 @@ lt:
             Conditionals:
               name: Sąlyginiai sakiniai
         grade2:
+          description_audience: Amžius 5-18 metų
           lessons:
             Flappy:
               name: Flappy
@@ -1093,6 +1054,8 @@ lt:
           student_description: Sukurk kreipšinio žaidimą
         csd2-2017:
           lessons:
+            new stage:
+              name: naujas lygis
             Peer Review:
               name: Tarpusavio peržiūra
             Lists:
@@ -1184,6 +1147,8 @@ lt:
               name: Įvadas
             Ice Age Play Lab:
               name: Ledynmečio laboratorija
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
         classic-hoc-impact-study:
           description_short: Išmėginkite programavimo pradmenis su daug smagių personažų!
           lessons:
@@ -1222,6 +1187,10 @@ lt:
               display_name: Turinys
             practice:
               display_name: Mokymo praktikos
+        csdgraveyard:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp4-support:
           lesson_groups:
             required:
@@ -1279,6 +1248,14 @@ lt:
           lessons:
             Introduction:
               name: Įvadas
+        csd5-draft:
+          lessons:
+            new stage:
+              name: naujas lygis
+        applab-2hour:
+          lessons:
+            new stage:
+              name: naujas lygis
         coursed-ramp:
           lessons:
             Introduction:
@@ -1335,6 +1312,8 @@ lt:
               name: nieko
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Introduction:
               name: Įvadas
             Ice Age Play Lab:
@@ -1367,6 +1346,8 @@ lt:
               name: Kartojimas kartojime
         coursee-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Ice Age Play Lab:
               name: Ledynmečio laboratorija
             Songwriting with Parameters:
@@ -1377,6 +1358,8 @@ lt:
               name: Kartojimas kartojime
         coursef-2017:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Building a Foundation:
               name: Laiptuota piramidė
         cspnovice:
@@ -1480,8 +1463,14 @@ lt:
           lessons:
             Thanks:
               name: Ačiū
+        csp-pre-survey-test-2017:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp3-research-mxghyt:
           lessons:
+            new stage:
+              name: naujas lygis
             Creating Functions:
               name: Komandų kūrimas
         e-f-ramp:
@@ -1512,6 +1501,10 @@ lt:
               name: 'Meninkas: dvejetainis'
             Building a Foundation:
               name: Laiptuota piramidė
+        csp3-a:
+          lessons:
+            new stage:
+              name: naujas lygis
         new-express:
           lesson_groups:
             content:
@@ -1537,18 +1530,40 @@ lt:
           lessons:
             Building a Foundation:
               name: Laiptuota piramidė
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Ice Age Play Lab:
               name: Ledynmečio laboratorija
             Songwriting with Parameters:
               name: Dainų rašymas su parametrais
+        hocali:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp3-staging:
           lessons:
             Creating Functions:
               name: Komandų kūrimas
+        pwc:
+          lessons:
+            new stage:
+              name: naujas lygis
         hero:
           lessons:
             Minecraft Hour of Code:
               name: Minecraft programavimo valanda
+        csp-explore-2017:
+          lessons:
+            new stage:
+              name: naujas lygis
+        aws-demo:
+          lessons:
+            new stage:
+              name: naujas lygis
+        colehoc17:
+          lessons:
+            new stage:
+              name: naujas lygis
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1567,6 +1582,8 @@ lt:
           lessons:
             Building a Foundation:
               name: Laiptuota piramidė
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Introduction:
               name: Įvadas
             Ice Age Play Lab:
@@ -1589,6 +1606,10 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+        textbook:
+          lessons:
+            new stage:
+              name: naujas lygis
         csd3-2018:
           lessons:
             Variables:
@@ -1631,8 +1652,6 @@ lt:
               name: Dvejetainės apyrankės
             'Unplugged: Binary':
               name: Dvejetainiai vaizdai
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
             Internet:
               name: Internetas
             Crowdsourcing:
@@ -1663,8 +1682,6 @@ lt:
               name: Virtuali pilietybė
             'Unplugged: Binary':
               name: Dvejetainiai vaizdai
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
             Graph Paper Programming:
               name: Programavimas ant languoto popieriaus
             Relay Programming:
@@ -1681,6 +1698,8 @@ lt:
               name: Dvejetainės apyrankės
         csd6-2018:
           lessons:
+            Functions with Parameters_:
+              name: Komandos su parametrais\_
             Functions with Parameters:
               name: Komandos su parametrais
         coursee-2018:
@@ -1707,6 +1726,8 @@ lt:
               name: Mano draugai robotai
             Building a Foundation:
               name: Laiptuota piramidė
+            'Algorithms: Tangrams':
+              name: 'Algoritmai: tanagramos'
             Introduction:
               name: Įvadas
             Ice Age Play Lab:
@@ -1859,6 +1880,10 @@ lt:
           lessons:
             Artist:
               name: Menininkas
+        dance:
+          lessons:
+            new stage:
+              name: naujas lygis
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -1917,8 +1942,6 @@ lt:
               name: Virtuali pilietybė
             'Unplugged: Binary':
               name: Dvejetainiai vaizdai
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -1976,6 +1999,8 @@ lt:
             content:
               display_name: Turinys
           lessons:
+            new stage:
+              name: naujas lygis
             'null':
               name: nieko
         coursec-2019:
@@ -2042,6 +2067,10 @@ lt:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        dani-test-script:
+          lessons:
+            new stage:
+              name: naujas lygis
         csd2-2019:
           lessons:
             Lists:
@@ -2093,12 +2122,18 @@ lt:
             required:
               display_name: Peržiūra
           lessons:
+            new stage:
+              name: naujas lygis
             Number Systems:
               name: Skaičių sistemos
             Sending Binary Messages:
               name: Dvejetainių žinučių siuntimas
             Binary Numbers:
               name: Dvejetainiai skaičiai
+        csd-videos:
+          lessons:
+            new stage:
+              name: naujas lygis
         time4csdemo:
           lessons:
             Crowdsourcing:
@@ -2145,6 +2180,10 @@ lt:
               display_name: Sąlyginiai sakiniai
             csp_functions:
               display_name: Komandų kūrimas
+        csp7-pilot-staging:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2181,6 +2220,9 @@ lt:
               display_name: Kartojimas
             required:
               display_name: Peržiūra
+          lessons:
+            new stage:
+              name: naujas lygis
         fit2019-novice:
           lesson_groups:
             required:
@@ -2207,6 +2249,12 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+        maddie-test:
+          lessons:
+            stage 1:
+              name: 1 etapas
+            new stage:
+              name: naujas lygis
         csp3-pilot:
           lesson_groups:
             content:
@@ -2243,6 +2291,9 @@ lt:
               display_name: Peržiūra
             content:
               display_name: Turinys
+          lessons:
+            new stage:
+              name: naujas lygis
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
@@ -2285,8 +2336,13 @@ lt:
               display_name: Turinys
             required:
               display_name: Peržiūra
+          lessons:
+            new stage:
+              name: naujas lygis
         peru-2019:
           lessons:
+            new stage:
+              name: naujas lygis
             Introduction:
               name: Įvadas
             Nested Loops:
@@ -2316,6 +2372,10 @@ lt:
               name: Kintamieji
             For Loops:
               name: Kartojimas
+        csp10-pilot:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2324,6 +2384,9 @@ lt:
               display_name: Sąlyginiai sakiniai
             csp_functions:
               display_name: Komandų kūrimas
+          lessons:
+            new stage:
+              name: naujas lygis
         time4cs-original-unit-1:
           lessons:
             Conditionals:
@@ -2373,6 +2436,10 @@ lt:
           lesson_groups:
             required:
               display_name: Peržiūra
+        csp8-pilot:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -2387,6 +2454,10 @@ lt:
               display_name: Sąrašai
             csp_loops:
               display_name: Kartojimas
+        csp9-pilot:
+          lessons:
+            new stage:
+              name: naujas lygis
         csd6-2020:
           lessons:
             Functions with Parameters:
@@ -2467,8 +2538,6 @@ lt:
               name: Sąlyginiai sakiniai su kortomis
             'Unplugged: Binary':
               name: Dvejetainiai vaizdai
-            Artist Binary:
-              name: 'Meninkas: dvejetainis'
             Digital Citizenship:
               name: Virtuali pilietybė
         coursee-2020:
@@ -2518,12 +2587,46 @@ lt:
               name: Rašanti bitė
         csp1-2020:
           lessons:
+            new stage:
+              name: naujas lygis
             Binary Numbers:
               name: Dvejetainiai skaičiai
+        csp2-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp3-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp6-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp8-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp9-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp10-2020:
+          lessons:
+            new stage:
+              name: naujas lygis
+        csp-march-virtual:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp3-virtual:
           lessons:
             Creating Functions:
               name: Komandų kūrimas
+        jess-test-script:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp5-virtual:
           lessons:
             While Loops:
@@ -2541,10 +2644,16 @@ lt:
               name: Komandų kūrimas
         code-break:
           lessons:
+            new stage:
+              name: naujas lygis
             Algorithms:
               name: Algoritmai
             Events:
               name: Įvykiai
+        no-lg:
+          lessons:
+            new stage:
+              name: naujas lygis
         csp5-virtual-part2:
           lessons:
             While Loops:
@@ -2566,6 +2675,10 @@ lt:
           lesson_groups:
             k5_next_steps_1:
               display_name: Kiti žingsniai
+        dani-june-2020-test:
+          lessons:
+            lesson 2:
+              name: 2 pamoka
         csd3-virtual:
           lessons:
             Variables:
@@ -2601,12 +2714,6 @@ lt:
           lesson_groups:
             lg_1:
               display_name: Turinys
-        ml-playground:
-          lessons:
-            lesson14:
-              name: 14 pamoka
-            lesson15:
-              name: 15 pamoka
         2021drafting:
           lesson_groups:
             introduction:
@@ -2710,7 +2817,6 @@ lt:
               name: Dvejetainiai vaizdai
             Artist Binary:
               key: 'Meninkas: dvejetainis'
-              name: 'Meninkas: dvejetainis'
           lesson_groups:
             csf_events:
               display_name: Įvykiai
@@ -2787,12 +2893,8 @@ lt:
               display_name: Kintamieji
         ai-unit-pilot:
           lessons:
-            lesson14:
-              name: 14 pamoka
-            lesson15:
-              name: 15 pamoka
-            lesson17:
-              name: 15 pamoka
+            intro:
+              name: 1 pamoka
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -2801,10 +2903,20 @@ lt:
           lesson_groups:
             lesson group:
               display_name: Turinys
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         k5-onlinepd-2021:
           lessons:
-            Welcome to "Teaching Computer Science Fundamentals":
-              name: Įvadas
             Loops:
               key: Kartojimas
               name: Kartojimas
@@ -2826,11 +2938,62 @@ lt:
           lesson_groups:
             k5_getting_started_1:
               display_name: Įvadas
-            k5_next_steps_1:
-              display_name: Kiti žingsniai
             Introduction:
               display_name: Įvadas
-        aiml-2021:
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: 1 pamoka
+            Lesson 2:
+              display_name: 2 pamoka
+            Lesson 3:
+              display_name: 3 pamoka
+            Lesson 4:
+              display_name: 4 pamoka
+            Lesson 5:
+              display_name: 5 pamoka
+        kodea-pd-2021:
           lessons:
-            lesson15:
-              name: 15 pamoka
+            Next Steps:
+              key: Kiti žingsniai
+              name: Kiti žingsniai
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Skyrius 1
+            lessonGroup-4:
+              display_name: Skyrius 2
+            lessonGroup-5:
+              display_name: Skyrius 3
+            lessonGroup-6:
+              display_name: Skyrius 4
+            lessonGroup-7:
+              display_name: Skyrius 5
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        tesspltest:
+          lessons:
+            lesson-2:
+              name: 2 pamoka
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: sąlyga
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Peržiūra
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Peržiūra

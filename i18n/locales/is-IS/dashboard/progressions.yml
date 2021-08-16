@@ -1,36 +1,79 @@
 is:
   data:
     progressions:
+      Alien Defender: Geimveruvarnir
       Artist Project: Verkefni með Listamanni
       'Artist: Variables': 'Listamaður: Breytur'
+      Back and Forth: Fram og aftur
+      Bass, Mid, and Treble: Bassa-, Mið- og Diskanthljóð
       Binary Numbers: Tvíundartölur
+      'Bunny ': 'Kanína '
+      'Circuit Playground: Introduction': 'Kynning á Circuit Playground'
+      Collision Detection: Skynjun árekstra
       Collisions: Árekstrar
+      Course E Artist Project: Námskeið E Listamannsverkefni
+      Course E Sprite Lab Project: 'Námskeið E: Verkefni í Kvikasmiðju'
+      Course F Artist Project: Námskeið F Listamannsverkefni
+      Course F Sprite Lab Project: 'Námskeið F: Verkefni í Kvikasmiðju'
+      Dance Crews: Danshópar
       Debugging: Villuleit
+      Design Mode: Hönnun
+      Dogger Example: Dogger dæmi
       Drawing: Teikning
+      End of Course Projects: Lokaverkefni námskeiðs
       Events: Atvik
       For Loops: Frá lykkjur
       Free Play: Frjáls æfing
       Functions: Föll
       Functions with Parameters: Föll með stikum
+      Geometric Sun: Sólarfletir
+      Get In Formation: Stilla upp
       How to Make a Sprite: Hvernig á að búa til kvika
+      Images in HTML: Myndir í HTML
+      Inspiration!: Innblástur!
       Introducing Sprite Lab: Kynning á Kvikasmiðjunni
       Introduction to Arrays: Kynning á fylkjum
       Lesson Extras: Bónusefni
       Lists: Listar
       Make a Prediction: Spáðu hvað mun gerast
+      Making Music: Lagasmíð
       Measures: Taktar
+      More Buttons: Fleiri hnappar
+      Multi-Screen Apps: Öpp með fleiri en eina skjámynd
       My Online Neighborhood: Netumhverfið mitt
+      Overview: Yfirlit
       Pair Programming: Félagaforritun
       Planning: Áætlanagerð
       Predict: Spáðu
       Project: Verkefni
       Properties: Eiginleikar
       Publishing Your Website: Að gefa út vefinn þinn
+      Quarter Notes: Fjórðungsnótur
       Reflection: Endurlit
+      Revise Artist Project: Yfirferð Listamannsverkefnis
+      Revise Sprite Lab Project: Yfirferð Kvikasmiðjuverkefnis
+      Robot Doodle: Krotað vélmenni
+      Speed it Up, Slow it Down: Hraðar, hægar
+      Sprite Lab Example Project: Verkefnadæmi Kvikasmiðju
+      Sprite Properties: Eiginleikar kvika
+      Text Compression: Þjöppun texta
+      The Animation Tab: Hreyfingasíðan
       The Harvester: Bóndinn
+      Using Arrays: Notkun fylkja
       Using the Repeat Block: Notkun "Endurtaka" kubbsins
+      Variables: Breytur
       Velocity: Hraði
       Velocity and the Counter Pattern: Hröðun og Teljaramynstrið
       Video: Myndband
+      'Video: CS Matters': 'Myndband: Tölvunarfræði skiptir máli'
+      'Video: Conditional Statements': 'Myndband: Skilyrtar yrðingar'
       'Video: For Loops': 'Myndband: "For" lykkjur'
+      'Video: Functions': 'Myndband: Föll'
+      'Video: If/Else Statements': 'Myndband: Ef/annars yrðingar'
+      'Video: Introduction to Arrays': 'Myndband: Kynning á fylkjum (arrays)'
+      'Video: Problem Solving Process': 'Myndband: Þrautalausnarferlið'
+      'Video: Sprite Movement': 'Myndband: Hreyfing kvika'
+      'Video: What Makes a Computer, a Computer?': 'Myndband: Hvað gerir tölvu að tölvu?'
+      Where'd They Go?: Hvert fóru þau?
       Wrap-up: Samantekt
+      Your Personal Website: Þinn eiginn vefur
