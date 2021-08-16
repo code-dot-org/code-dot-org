@@ -16,6 +16,8 @@ const PLAYSPACE_SIZE = 400;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
+    this.animationSpeed = 100; // time in frames
+    this.currentLine = 0;
     this.poem = {
       title: '',
       author: '',
@@ -24,6 +26,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
+    this.lineEvents = {};
     this.p5.noStroke();
 
     this.commands = {
@@ -32,6 +35,15 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       // Override the draw loop
       executeDrawLoopAndCallbacks() {
+        if (
+          this.p5.World.frameCount % this.animationSpeed === 0 &&
+          this.poem.lines.length > this.currentLine
+        ) {
+          this.currentLine++;
+
+          // Call callbacks for any line events at the current line
+          this.lineEvents[this.currentLine]?.forEach(callback => callback());
+        }
         this.backgroundEffect();
         this.runBehaviors();
         this.runEvents();
@@ -147,6 +159,13 @@ export default class PoemBotLibrary extends CoreLibrary {
         }
       },
 
+      whenLineShows(lineNum, callback) {
+        if (!this.lineEvents[lineNum]) {
+          this.lineEvents[lineNum] = [];
+        }
+        this.lineEvents[lineNum].push(callback);
+      },
+
       ...backgroundEffects,
       ...foregroundEffects
     };
@@ -188,7 +207,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     }
 
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / this.poem.lines.length;
-    this.poem.lines.forEach(line => {
+    this.poem.lines.slice(0, this.currentLine).forEach(line => {
       this.drawPoemLine(line, yCursor);
       this.p5.textSize(FONT_SIZE);
       yCursor += lineHeight;
