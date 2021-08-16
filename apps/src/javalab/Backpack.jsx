@@ -56,7 +56,7 @@ class Backpack extends Component {
   handleImport = () => {
     const {selectedFiles} = this.state;
     if (selectedFiles.length > 0) {
-      this.validateFilenamesForImport(
+      this.validateAndImportFiles(
         this.importFiles,
         this.showImportWarning,
         this.showImportError
@@ -64,8 +64,8 @@ class Backpack extends Component {
     }
   };
 
-  importFiles = () => {
-    this.state.selectedFiles.forEach(filename => {
+  importFiles = selectedFiles => {
+    selectedFiles.forEach(filename => {
       this.props.backpackApi.fetchFile(
         filename,
         () => {} /* onError, currently do nothing */,
@@ -90,15 +90,12 @@ class Backpack extends Component {
     });
   };
 
-  validateFilenamesForImport = (
-    successCallback,
-    warnCallback,
-    errorCallback
-  ) => {
+  validateAndImportFiles = (successCallback, warnCallback, errorCallback) => {
     let hiddenFilenamesUsed = [];
     let visibleFilenamesUsed = [];
     const {selectedFiles} = this.state;
     const {sources} = this.props;
+
     selectedFiles.forEach(filename => {
       const source = sources[filename];
       if (source) {
@@ -109,12 +106,13 @@ class Backpack extends Component {
         }
       }
     });
+
     if (hiddenFilenamesUsed.length > 0) {
       errorCallback(hiddenFilenamesUsed);
     } else if (visibleFilenamesUsed.length > 0) {
       warnCallback(visibleFilenamesUsed);
     } else {
-      successCallback();
+      successCallback(selectedFiles);
     }
   };
 
@@ -172,11 +170,6 @@ class Backpack extends Component {
   };
 
   getFileImportMessage = (isError, overwriteFileList) => {
-    console.log(overwriteFileList);
-    const listItems = overwriteFileList.map(filename => {
-      return <li key={filename}>{filename}</li>;
-    });
-    console.log(listItems);
     return (
       <div>
         <p>
@@ -184,8 +177,16 @@ class Backpack extends Component {
             ? javalabMsg.fileImportError()
             : javalabMsg.fileImportWarning()}
         </p>
-        <ul>{listItems}</ul>
-        {!isError && <p>{javalabMsg.fileImportWarningConfirm()}</p>}
+        <ul style={styles.importMessageList}>
+          {overwriteFileList.map(filename => {
+            return <li key={filename}>{filename}</li>;
+          })}
+        </ul>
+        {!isError && (
+          <p style={styles.importWarningConfirm}>
+            {javalabMsg.fileImportWarningConfirm()}
+          </p>
+        )}
       </div>
     );
   };
@@ -284,7 +285,7 @@ class Backpack extends Component {
         )}
         <JavalabDialog
           isOpen={openDialog === Dialog.IMPORT_WARNING}
-          handleConfirm={this.importFiles}
+          handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
           message={fileImportMessage}
           isDarkMode={isDarkMode}
@@ -377,6 +378,13 @@ const styles = {
     fontSize: 10,
     lineHeight: '12px',
     padding: 10
+  },
+  importMessageList: {
+    marginBottom: 0
+  },
+  importWarningConfirm: {
+    marginTop: 10,
+    marginBottom: 0
   }
 };
 
