@@ -173,7 +173,7 @@ var baseConfig = {
             loader: 'url-loader',
             options: {
               limit: 1024,
-              name: '[name]wp[contenthash][ext]'
+              name: '[name]wp[contenthash].[ext]'
             }
           }
         ]
