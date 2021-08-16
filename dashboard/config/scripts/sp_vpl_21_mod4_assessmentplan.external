@@ -3,37 +3,28 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Assessment
+# Assessment and grading
 
-## What is my role as the teacher? 
+## How do I assign grades in CS Discoveries? 
 
-##### Your role as the teacher is to provide students with ongoing feedback in order to promote continuous growth. 
-
-## How does the curriculum support assessment? 
-
-##### Frequent formal and informal assessment and feedback are critical to ensure that students are actively involved in their own learning and teachers have evidence that the class is making appropriate progress. We have incorporated opportunities for assessment and feedback throughout the CS Discoveries curriculum to support you in measuring student growth and informing the pace of your instruction. However, since schools have diverse grading systems, it is up to you to decide how to use the assessment resources for grading purposes.
-
-## Lesson-level assessment
-
-##### Opportunities for assessment within each lesson are listed out in the lesson plans themselves.  These opportunities may include sections of the activity guides, discussion and reflection questions, or online programming and quick check levels.  Guidance for how to use these opportunities to assess student progress is included in each lesson plan.
-
-![](https://images.code.org/75301032d5ad8904beefe6bdfb5524f2-image-1626709952308.51.41 AM.png)
-
-<img src="https://images.code.org/125b48193718f2bb9d42ed123808439b-image-1626715785383.27.57 PM.png" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
-
-## Chapter and unit level assessment
+##### Although the curriculum does provide guidance on opportunities to assess whether or not a student has met a specific learning objective, it is up to the teacher to:
 
 
 
-### End of chapter projects
+* ##### Determine the appropriateness of the assessments for their students. 
+* ##### Decide how to use, or not use, the suggested assessments for grading purposes. 
 
-##### End of chapter projects incorporate the skills and understandings students have developed in that chapter’s lessons. These projects are designed to assess unit-specific skills and the five student practices that thread through the entire course. There is broad guidance for the activity, but project implementation leaves room for students to put their personal stamp on the creation. 
 
-### Post-project tests
 
-##### Post-project tests are included at the end of every unit.  These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit.  These tests are aligned to the learning framework of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics.
+## Consider the following:
 
-### <a href="https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview" target="blank" >Click here</a> to read the full CS Discoveries Guide to Assessment. 
+<img src="https://images.code.org/71d3b4ab7a1416c43d67811642dfb473-image-1628537327574.jpg" alt="Three students look on a desktop computer while a teacher kneels down to help them." width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+* ##### What do I believe about the purpose of assessment and the relationship between assessment and grading? 
+* ##### What does my school require of me regarding assessment of student learning and grading? 
+* ##### What tools are available within the curriculum to support me in assessing student learning?
+* ##### How will I assess student learning while implementing a lesson with students?
+* ##### How will I assess student learning at the end of a chapter or unit?
 
 
 MARKDOWN

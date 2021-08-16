@@ -131,12 +131,8 @@ class TeacherFeedback < ApplicationRecord
     return student_last_visited_at if student_last_visited_at && student_last_visited_at > created_at
   end
 
-  def student_updated_since_feedback?
-    user_level.present? && user_level.updated_at > created_at
-  end
-
   # TODO: update to use camelcase
-  def summarize
+  def summarize(is_latest = false)
     {
       id: id,
       student_id: student_id,
@@ -150,7 +146,7 @@ class TeacherFeedback < ApplicationRecord
       student_last_updated: user_level&.updated_at,
       seen_on_feedback_page_at: seen_on_feedback_page_at,
       student_first_visited_at: student_first_visited_at,
-      student_updated_since_feedback: student_updated_since_feedback?
+      is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
     }
   end
 
@@ -170,5 +166,22 @@ class TeacherFeedback < ApplicationRecord
 
     self.student_last_visited_at = now
     save
+  end
+
+  # When a teacher updates their feedback on a level, a new feedback record is created.
+  # Only the latest feedback from the teacher is considered up-to-date and displayed for the
+  # student on the level. We store other feedbacks to keep track of historical feedback given,
+  # which is displayed on the /feedback page. Only the up-to-date feedback (latest feedback record)
+  # can be awaiting review since it's the only relevant feedback to the student.
+  def awaiting_teacher_review?(is_latest = false)
+    return false unless is_latest
+
+    return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
+  end
+
+  private
+
+  def student_updated_since_feedback?
+    user_level.present? && user_level.updated_at > created_at
   end
 end

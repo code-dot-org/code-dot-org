@@ -5606,7 +5606,7 @@ pl-PL:
           feedback: Poprawnie!
         - {}
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.

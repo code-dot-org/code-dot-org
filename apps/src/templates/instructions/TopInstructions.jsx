@@ -68,6 +68,7 @@ class TopInstructions extends Component {
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
+    maxAvailableHeight: PropTypes.number,
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
@@ -102,10 +103,10 @@ class TopInstructions extends Component {
     collapsible: PropTypes.bool,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
+    initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
     // Use this if the instructions will be somewhere other than over the code workspace.
     // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool,
-    onHeightResize: PropTypes.func,
     // Use this if the caller wants to set an explicit height for the instructions rather
     // than allowing this component to manage its own height.
     explicitHeight: PropTypes.number
@@ -132,9 +133,10 @@ class TopInstructions extends Component {
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
-        teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+        this.props.initialSelectedTab ||
+        (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
           ? TabType.COMMENTS
-          : TabType.INSTRUCTIONS,
+          : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
       studentId: studentId,
@@ -285,6 +287,20 @@ class TopInstructions extends Component {
   };
 
   /**
+   * Function to force the height of the instructions area to be the
+   * full size of the content area, up to the max available height. This is
+   * used when the review tab loads in order to make the instructions area
+   * show the whole contents of the review tab.
+   */
+  forceTabResizeToMaxOrAvailableHeight = () => {
+    if (this.state.tabSelected === TabType.REVIEW) {
+      this.props.setInstructionsRenderedHeight(
+        Math.min(this.adjustMaxNeededHeight(), this.props.maxAvailableHeight)
+      );
+    }
+  };
+
+  /**
    * Returns the top Y coordinate of the instructions that are being resized
    * via a call to handleHeightResize from HeightResizer.
    */
@@ -302,10 +318,6 @@ class TopInstructions extends Component {
     newHeight = Math.min(newHeight, this.props.maxHeight);
 
     this.props.setInstructionsRenderedHeight(newHeight);
-
-    if (this.props.onHeightResize) {
-      this.props.onHeightResize(newHeight);
-    }
   };
 
   refForSelectedTab = () => {
@@ -625,8 +637,8 @@ class TopInstructions extends Component {
     }
 
     // ideally these props would get accessed directly from the redux
-    // store in the child, however TopInstructions is also used in
-    // in unconnected context, so we need to manually send these props through
+    // store in the child, however TopInstructions is also used in an unconnected
+    // context (in LevelDetailsDialog), so we need to manually send these props through
     const passThroughHeaderProps = {
       isMinecraft,
       ttsLongInstructionsUrl,
@@ -690,7 +702,6 @@ class TopInstructions extends Component {
             )}
             {displayFeedback && !fetchingData && (
               <TeacherFeedback
-                user={user}
                 visible={tabSelected === TabType.COMMENTS}
                 isEditable={teacherViewingStudentWork}
                 rubric={rubric}
@@ -699,14 +710,18 @@ class TopInstructions extends Component {
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
-                teacher={this.props.user}
+                teacher={user}
+                hasContainedLevels={hasContainedLevels}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
               <DocumentationTab ref={ref => (this.documentationTab = ref)} />
             )}
             {tabSelected === TabType.REVIEW && (
-              <ReviewTab ref={ref => (this.reviewTab = ref)} />
+              <ReviewTab
+                ref={ref => (this.reviewTab = ref)}
+                onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
+              />
             )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
@@ -726,16 +741,13 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView &&
-            resizable &&
-            !dynamicInstructions &&
-            !explicitHeight && (
-              <HeightResizer
-                resizeItemTop={this.getItemTop}
-                position={height}
-                onResize={this.handleHeightResize}
-              />
-            )}
+          {!isEmbedView && resizable && !dynamicInstructions && (
+            <HeightResizer
+              resizeItemTop={this.getItemTop}
+              position={height}
+              onResize={this.handleHeightResize}
+            />
+          )}
         </div>
       </div>
     );
@@ -811,6 +823,7 @@ export default connect(
       state.instructions.maxAvailableHeight,
       state.instructions.maxNeededHeight
     ),
+    maxAvailableHeight: state.instructions.maxAvailableHeight,
     longInstructions: state.instructions.longInstructions,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,

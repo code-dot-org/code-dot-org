@@ -3034,8 +3034,7 @@ km-KH:
         - feedback: ត្រឹមត្រូវ!
         - {}
         questions:
-        - text: ក្រឡេកមើលឲ្យជិតទៅនឹងកូដខាងក្រោម។ តើវានឹងមានអ្វីកើតឡើងបន្ទាប់ពីអ្នកចុចសញ្ញា
-            "រត់"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: |2-

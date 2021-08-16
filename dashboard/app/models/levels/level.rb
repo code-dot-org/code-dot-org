@@ -569,6 +569,12 @@ class Level < ApplicationRecord
     ["Javalab"].include?(type)
   end
 
+  # We hide this feature for contained levels because contained levels are currently not
+  # editable by students so setting the feedback review_state to keepWorking doesn't make sense.
+  def can_have_feedback_review_state?
+    contained_levels.empty?
+  end
+
   def display_as_unplugged?
     # Levelbuilders can select if External/
     # Markdown levels should display as Unplugged.
