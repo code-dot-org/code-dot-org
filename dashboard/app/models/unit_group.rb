@@ -266,22 +266,14 @@ class UnitGroup < ApplicationRecord
     CourseVersion.course_offering_keys('UnitGroup')
   end
 
-  # Get the set of valid courses for the dropdown in our sections table. This
-  # should be static data for users without any course experiments enabled, but
-  # contains localized strings so we can only cache on a per locale basis.
-  #
+  # Get the set of valid courses for the dropdown in our sections table.
   # @param [User] user Whose experiments to check for possible unit substitutions.
+  # @return [Array<UnitGroup>]
   def self.valid_courses(user: nil)
-    # Do not cache if the user might have a course experiment enabled which puts them
-    # on an alternate unit.
+    courses = all_courses.select(&:launched?)
     if user && has_any_course_experiments?(user)
-      return UnitGroup.valid_courses_without_cache
+      return courses
     end
-
-    courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
-      UnitGroup.valid_courses_without_cache.to_a
-    end
-    courses.freeze
 
     if user && has_any_pilot_access?(user)
       pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
