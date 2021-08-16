@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-13 02:31:51 UTC",
+    "serialized_at": "2021-08-16 01:10:09 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd3-2021"
@@ -40,7 +40,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -56,7 +56,7 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Become familiar with the student learning tools used within CS Discoveries.\n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Become familiar with the student learning tools used within CS Discoveries.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -121,8 +121,19 @@
   ],
   "activity_sections": [
     {
-      "key": "75d3b0ab-c6cc-4736-947a-012863734a58",
+      "key": "36c2f2d4-68f2-4d47-933d-41f52a6fcf0e",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "36c2f2d4-68f2-4d47-933d-41f52a6fcf0e",
+        "lesson_activity.key": "3a7b3e5f-b759-4135-96fa-55228480d628"
+      }
+    },
+    {
+      "key": "75d3b0ab-c6cc-4736-947a-012863734a58",
+      "position": 2,
       "properties": {
         "progression_name": "Course overvew"
       },
@@ -133,7 +144,7 @@
     },
     {
       "key": "615dac9f-c81c-4122-9ca2-cd0f48dfe2ff",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Course Design"
       },
@@ -144,7 +155,7 @@
     },
     {
       "key": "a97cc157-a2e7-4538-9893-8ccae313c363",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "The problem solving process"
       },
@@ -216,10 +227,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Overview-CourseOverview"
-        ],
-        "progression": "Course overvew"
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +237,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021",
-        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+        "activity_section.key": "36c2f2d4-68f2-4d47-933d-41f52a6fcf0e"
       },
       "level_keys": [
         "SP-VPL-21-mod3-Overview-CourseOverview"
@@ -238,7 +246,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -263,7 +271,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -821,7 +829,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd3-2021",
-        "activity_section.key": "75d3b0ab-c6cc-4736-947a-012863734a58"
+        "activity_section.key": "36c2f2d4-68f2-4d47-933d-41f52a6fcf0e"
       }
     },
     {
