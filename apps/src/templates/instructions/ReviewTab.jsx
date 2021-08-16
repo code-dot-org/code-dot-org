@@ -22,6 +22,7 @@ class ReviewTab extends Component {
   static propTypes = {
     onLoadComplete: PropTypes.func,
     // Populated by redux
+    codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
@@ -389,7 +390,7 @@ class ReviewTab extends Component {
   }
 
   render() {
-    const {viewAsCodeReviewer, viewAs} = this.props;
+    const {codeReviewEnabled, viewAsCodeReviewer, viewAs} = this.props;
 
     const {
       initialLoadCompleted,
@@ -427,10 +428,11 @@ class ReviewTab extends Component {
           <div style={styles.reviewHeader}>
             {viewAs !== ViewType.Teacher &&
               !errorLoadingReviewblePeers &&
+              codeReviewEnabled &&
               (viewAsCodeReviewer
                 ? this.renderBackToMyProject(this.onClickBackToProject)
                 : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
-            {this.renderReadyForReviewCheckbox()}
+            {codeReviewEnabled && this.renderReadyForReviewCheckbox()}
           </div>
           {errorSavingReviewableProject && (
             <div style={styles.peerReviewErrorMessage}>
@@ -459,6 +461,7 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
+  codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAs: state.viewAs
 }))(ReviewTab);

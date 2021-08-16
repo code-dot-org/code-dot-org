@@ -30,6 +30,7 @@ export const sectionDataPropType = PropTypes.shape({
  */
 export const SET_SECTION = 'sectionData/SET_SECTION';
 export const SET_TTS_AUTOPLAY_ENABLED = 'sectionData/SET_TTS_AUTOPLAY_ENABLED';
+export const SET_CODE_REVIEW_ENABLED = 'sectionData/SET_CODE_REVIEW_ENABLED';
 
 /**
  * Action creators
@@ -54,6 +55,11 @@ export const setSection = section => {
 export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
   type: SET_TTS_AUTOPLAY_ENABLED,
   ttsAutoplayEnabled
+});
+
+export const setCodeReviewEnabled = codeReviewEnabled => ({
+  type: SET_CODE_REVIEW_ENABLED,
+  codeReviewEnabled
 });
 
 /**
@@ -83,6 +89,16 @@ export default function sectionData(state = initialState, action) {
       section: {
         ...state.section,
         ttsAutoplayEnabled: action.ttsAutoplayEnabled
+      }
+    };
+  }
+
+  if (action.type === SET_CODE_REVIEW_ENABLED) {
+    return {
+      ...state,
+      section: {
+        ...state.section,
+        codeReviewEnabled: action.codeReviewEnabled
       }
     };
   }
