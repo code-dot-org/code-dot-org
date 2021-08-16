@@ -549,17 +549,12 @@ class UnitGroup < ApplicationRecord
     return nil unless user && family_name && version_year
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
-    UnitGroup.
-      joins(:default_unit_group_units).
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # select only older versions
-      where("properties -> '$.version_year' < ?", version_year).
-      # exclude the current course.
-      where.not(id: id).
-      # select only courses with units which the user has progress in.
-      where('course_scripts.script_id' => user_unit_ids).
-      count > 0
+    UnitGroup.all_courses.any? do |course|
+      course.family_name == family_name &&
+        course.version_year < version_year &&
+        course.id != id &&
+        default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
+    end
   end
 
   # returns whether a unit in this course has version_warning_dismissed.
