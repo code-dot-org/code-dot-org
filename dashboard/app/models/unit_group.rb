@@ -574,6 +574,7 @@ class UnitGroup < ApplicationRecord
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@course_cache = nil
+    @@all_courses = nil
     Rails.cache.delete COURSE_CACHE_KEY
   end
 
