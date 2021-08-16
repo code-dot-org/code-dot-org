@@ -8,10 +8,13 @@ import {BubbleSize, BubbleShape} from './BubbleFactory';
 export const BadgeType = makeEnum('assessment', 'keepWorking');
 
 export default function BubbleBadge({badgeType, bubbleSize, bubbleShape}) {
-  const badge = getBadge(badgeType);
-  if (!badge || bubbleSize !== BubbleSize.full) {
+  const badge = getBadge(badgeType, bubbleSize);
+
+  const badgeEligible = [BubbleSize.full, BubbleSize.letter];
+  if (!badge || !badgeEligible.includes(bubbleSize)) {
     return null;
   }
+
   return (
     <BubbleBadgeWrapper isDiamond={bubbleShape === BubbleShape.diamond}>
       {badge}
@@ -24,12 +27,12 @@ BubbleBadge.propTypes = {
   bubbleShape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired
 };
 
-function getBadge(badgeType) {
+function getBadge(badgeType, bubbleSize) {
   switch (badgeType) {
     case BadgeType.assessment:
       return <AssessmentBadge />;
     case BadgeType.keepWorking:
-      return <KeepWorkingBadge />;
+      return <KeepWorkingBadge isDot={bubbleSize === BubbleSize.letter} />;
     default:
       return null;
   }
@@ -46,18 +49,23 @@ BubbleBadgeWrapper.propTypes = {
   children: PropTypes.node
 };
 
-export function KeepWorkingBadge({hasWhiteBorder = true, style}) {
+export function KeepWorkingBadge({hasWhiteBorder = true, isDot, style}) {
+  if (isDot) {
+    return <div style={styles.keepWorkingTiny} />;
+  }
+
   return (
     <BaseBadge
       icon="exclamation"
       color={color.red}
       hasWhiteBorder={hasWhiteBorder}
-      style={style}
+      style={{fontSize: 9, ...style}}
     />
   );
 }
 KeepWorkingBadge.propTypes = {
   hasWhiteBorder: PropTypes.bool,
+  isDot: PropTypes.bool,
   style: PropTypes.object
 };
 
@@ -121,5 +129,14 @@ const styles = {
   },
   centerIcon: {
     color: color.white
+  },
+  keepWorkingTiny: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    width: 7,
+    height: 7,
+    borderRadius: '50%',
+    backgroundColor: color.red
   }
 };
