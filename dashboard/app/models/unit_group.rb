@@ -514,14 +514,10 @@ class UnitGroup < ApplicationRecord
   def self.latest_stable_version(family_name)
     return nil unless family_name.present?
 
-    UnitGroup.
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # select only stable courses.
-      where(published_state: SharedConstants::PUBLISHED_STATE.stable).
-      # order by version year.
-      order("properties -> '$.version_year' DESC")&.
-      first
+    all_courses.select do |course|
+      course.family_name == family_name &&
+        course.published_state == SharedConstants::PUBLISHED_STATE.stable
+    end.sort_by(&:version_year).last
   end
 
   # @param family_name [String] The family name for a course family.
@@ -531,14 +527,10 @@ class UnitGroup < ApplicationRecord
     return nil unless family_name && user
     assigned_course_ids = user.section_courses.pluck(:id)
 
-    UnitGroup.
-      # select only courses assigned to this user.
-      where(id: assigned_course_ids).
-      # select only courses in the same course family.
-      where("properties -> '$.family_name' = ?", family_name).
-      # order by version year.
-      order("properties -> '$.version_year' DESC")&.
-      first
+    all_courses.select do |course|
+      assigned_course_ids.include?(course.id) &&
+        course.family_name == family_name
+    end.sort_by(&:version_year).last
   end
 
   # @param user [User]
