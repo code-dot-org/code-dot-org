@@ -31,6 +31,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @unmigrated_unit = create :script
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+    File.stubs(:write)
   end
 
   test "should get index" do
@@ -159,6 +160,15 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should use unit name as param where unit name is words" do
     unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
+
+    assert_response :success
+    assert_equal unit, assigns(:script)
+  end
+
+  test "show get show if family name matches script name" do
+    unit = create(:script, name: 'hoc-script', family_name: 'hoc-script', version_year: 'unversioned', is_course: true)
+    CourseOffering.add_course_offering(unit)
+    get :show, params: {id: 'hoc-script'}
 
     assert_response :success
     assert_equal unit, assigns(:script)
@@ -432,7 +442,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
@@ -453,7 +463,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to in_development" do
@@ -474,7 +484,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
@@ -496,7 +506,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
@@ -517,7 +527,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
@@ -538,7 +548,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
@@ -559,7 +569,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.stable
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -577,7 +587,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -595,7 +605,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update if changes have been made to the database which are not reflected in the current edit page' do
@@ -790,7 +800,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_equal 'pilot-experiment', Script.find_by_name(unit.name).pilot_experiment
     # pilot units are always marked with the pilot published state
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.pilot
   end
 
   test 'does not hide unit with blank pilot_experiment' do
@@ -812,7 +822,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
     assert_nil Script.find_by_name(unit.name).pilot_experiment
     # blank pilot_experiment does not cause unit to have published_state of pilot
-    assert_equal Script.find_by_name(unit.name).published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal Script.find_by_name(unit.name).get_published_state, SharedConstants::PUBLISHED_STATE.preview
   end
 
   test 'update: can update general_params' do
@@ -913,7 +923,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: 'CSF',
       supported_locales: ['fake-locale'],
       project_widget_types: ['gamelab', 'weblab'],
-      background: 'fake-background',
     }
 
     post :update, params: {
@@ -945,7 +954,6 @@ class ScriptsControllerTest < ActionController::TestCase
       curriculum_umbrella: '',
       supported_locales: [],
       project_widget_types: [],
-      background: ''
     }
     assert_response :success
     unit.reload
@@ -1045,7 +1053,8 @@ class ScriptsControllerTest < ActionController::TestCase
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
     sign_in create(:student)
 
-    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901'
+    dogs1 = create :script, name: 'dogs1', family_name: 'ui-test-versioned-script', version_year: '1901', is_course: true
+    CourseOffering.add_course_offering(dogs1)
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {id: 'ui-test-versioned-script'}
@@ -1201,7 +1210,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Script.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Script.expects(:get_from_cache).with(@migrated_unit.name).returns(@migrated_unit).once
+    Script.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Script.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end

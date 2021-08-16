@@ -5,6 +5,7 @@ class VocabulariesControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
     @levelbuilder = create :levelbuilder
     # We don't want to actually write to the file system here
     Vocabulary.any_instance.stubs(:serialize_scripts)

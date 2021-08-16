@@ -1,0 +1,274 @@
+---
+title: Next Steps Discussions for High School Classrooms
+video_player: true
+theme: responsive
+social:
+  "og:title": "Next Steps Discussions for High School Classrooms"
+  "og:description": "This series of four discussions helps demystify next steps students can take on their CS Journeys"
+  "twitter:title": "Next Steps Discussions for High School Classrooms"
+  "twitter:description": "This series of four discussions helps demystify next steps students can take on their CS Journeys"
+  "twitter:image": "/images/csjourneys/og-internships.jpg"
+  "og:image": "/images/csjourneys/og-nextsteps.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+---
+<a id="top"></a>
+<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px; margin-top:50px"/>
+<div class="col-75" style="border-right: 25px solid #ffffff">
+<h1 style="margin-top:0">Next Steps Discussions</h1>
+<p>This series of four discussions will demonstrate a range of opportunities that students can pursue with computer science and demystify next steps they can take. Discussions feature diverse participants, including college students and CS professionals, and will cover frequently asked questions about computer science careers, as well as key topics like college alternatives and the importance of making connections and building support networks. Use the list below to navigate to each event description:</p>
+
+<ul>
+    <li><a href="#event-1">FAQ: Your questions about computer science careers, answered!</a></li>
+    <li><a href="#event-2">College Project Showcase</a></li>
+    <li><a href="#event-3">Panel: Key Alternatives to the 4-year college degree</a></li>
+    <li><a href="#event-4">Panel: Building Your Network: The Power of Community</a></li>
+</ul>
+</div>
+
+<div class="col-25" style="border:1px solid #00adbc; text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
+  <h3 style="margin-top:12px"><strong>Presented by:</strong></h3>
+  <br>
+  <img src="/images/logo.svg" style="width: 35%">
+  <br>
+  <br>
+  <br>
+  <a href="https://www.careervillage.org/" target="_blank">
+  <img src="/images/csjourneys/career-village-nextsteps.png" style="width: 80%; margin-bottom: 12px">
+  </a>
+</div>
+
+<div style="clear: both; margin-bottom:35px"></div>
+
+<a id="event-1"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+  <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
+  <p>This FAQ session is designed to answer some of the most commonly asked questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics and student takeaways, click the Register button below.</p>
+  <button style="margin-bottom:20px">Register</button>
+  <p>Featuring:</p>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Gabriel Saruhashi</strong>
+    <br>
+    Co-founder
+    <br>
+    <a href="https://ameelio.org/" target="_blank">Ameelio</a></p>
+  </div>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Zené Sekou</strong>
+    <br>
+    Software Engineer, Amazon</p>
+  </div>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <br>
+    Marketing Program Manager, Code.org</p>
+  </div>
+  <div style="clear: both"></div>
+<br>
+  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
+        <li style="color:#ffffff">Encourage students to upvote questions they like on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>, and post their own questions using the hashtag #CSJourneys</li><br>
+        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
+    </ul>
+  </div>
+  <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
+        <li style="color:#ffffff">Have students work in pairs or groups to generate follow up questions. Encourage them to post questions on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a></li><br>
+        <li style="color:#ffffff">Have students build a TDL on CareerVillage.</li><br>
+        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
+    </ul>
+  </div>
+  <div style="clear: both"></div>
+<a href="#top">Back to top</a>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="event-2"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+  <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 13th at 11 am EDT / 8 am PDT</strong></h3>
+  <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics and student takeaways, click the Register button below.</p>
+  <button style="margin-bottom:20px">Register</button>
+  <p>Featuring:</p>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Erin Howard</strong>
+    <br>
+    PhD Student in Astronomy
+    <br>
+    Western Washington University</p>
+  </div>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
+    <br>
+    Recent Grad
+    <br>
+    San Jose State University</p>
+  </div>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Brianna Wimer</strong>
+    <br>
+    Student
+    <br>
+    University of Alabama</p>
+  </div>
+  <div style="clear: both"></div>
+<br>
+<div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Have students think of which careers/majors they are interested in and write them down. If there’s time, encourage them to do a little research into that major or career.</li><br>
+        <li style="color:#ffffff">Give students time in class to brainstorm projects or research they would like to do. What do they want to create? What problem(s) do they want to solve?</li><br>
+        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
+    </ul>
+  </div>
+  <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
+        <li style="color:#ffffff">Give students time to reflect and discuss: what surprised them? Excited them? What did they find interesting?</li><br>
+        <li style="color:#ffffff">Encourage students to post any unanswered questions they have on <a href="https://www.careervillage.org/" target="_blank" style="color:#ffffff">CareerVillage.org</a></li>
+    </ul>
+  </div>
+  <div style="clear: both"></div>
+<a href="#top">Back to top</a>
+</div>
+
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="event-3"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+  <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 27th at 11 am EDT / 8 am PDT</strong></h3>
+  <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certifications. To view more details, including key topics and student takeaways, click the Register button below.</p>
+  <button style="margin-bottom:20px">Register</button>
+  <p>Featuring:</p>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <br>
+    Marketing Program Manager, Code.org</p>
+  </div>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <br>
+    Marketing Program Manager, Code.org</p>
+  </div>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Vikram Sreedhar</strong>
+    <br>
+    Co-Founder/Chief Technology Officer 
+    <br>
+    <a href="https://shimmer.care/" target="_blank">shimmer</a></p>
+  </div>
+  <div style="clear: both"></div>
+<br>
+  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Give students time in class to generate a list of goals for their future. These could be career goals (become an engineer, start a company), and/or personal goals (start a family, buy a house). The more specific their goals, the better.</li><br>
+        <li style="color:#ffffff">Have students create a to-do list of steps they need to take in order to achieve their goals. Again, the more specific they are, the better.</li><br>
+        <li style="color:#ffffff">Encourage students to explore <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a> with their goals in mind. They can upvote questions they like and post their own questions using the hashtag #CSJourneys</li><br>
+    </ul>
+  </div>
+  <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
+        <li style="color:#ffffff">Give students time in class to revisit both their list of goals and their to-do list of steps they need to take to achieve their goals. Does anything change?</li><br>
+        <li style="color:#ffffff">Have students research community colleges in your area (city/region/state). What programs are available. How much does it cost? Are there bridge programs between the community college(s) and state universities? What are some of the benefits and drawbacks of going this route?</li><br>
+        <li style="color:#ffffff">Give students time to explore other alternative pathways, like <a href="https://grow.google/certificates/#?modal_active=none target="_blank" style="color:#ffffff">Google Career Certificates</a> and <a href="https://code.org/beyond/internships#apprenticeships" target="_blank" style="color:#ffffff">apprenticeship programs</a>. Again, encourage them to think about benefits and drawbacks.</li>
+    </ul>
+  </div>
+  <div style="clear: both"></div>
+<a href="#top">Back to top</a>
+
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="event-4"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making Connections and Building Support Networks</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+  <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, November 10th at 11 am EDT / 8 am PDT</strong></h3>
+  <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics and student takeaways, click the Register button below.</p>
+  <button style="margin-bottom:20px">Register</button>
+  <p>Featuring:</p>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
+    <br>
+    Executive Director 
+    <br>
+    <a href="https://nativesintech.org/" target="_blank">Natives in Tech</a></p>
+  </div>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/csjourneys/elisabeth-holm.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Elisabeth Holm</strong>
+    <br>
+    Founder
+    <br>
+    <a href="https://sisterhoodofnativeamericancoders.org/" target="_blank">Sisterhood of Native American Coders</a></p>
+  </div>
+  <div class="col-33" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Kianjai Huggan</strong>
+    <br>
+    Curriculum Coordinator 
+    <br>
+    <a href="https://www.blackgirlscode.com/" target="_blank">Black Girls CODE</a></p>
+  </div>
+  <div style="clear: both"></div>
+<br>
+  <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
+        <li style="color:#ffffff">Encourage students to upvote questions they like on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>, and post their own questions using the hashtag #CSJourneys</li><br>
+        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
+    </ul>
+  </div>
+  <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
+    <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
+    <ul style="color:#ffffff; margin-bottom:0">
+        <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
+        <li style="color:#ffffff">Have students work in pairs or groups to generate follow up questions. Encourage them to post questions on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a></li><br>
+        <li style="color:#ffffff">Have students build a TDL on CareerVillage.</li><br>
+        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
+    </ul>
+  </div>
+  <div style="clear: both"></div>
+<a href="#top">Back to top</a>
+
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<hr>
+<p>“footsteps” icon made by freepik. Sourced from www.flaticon.com.</p>

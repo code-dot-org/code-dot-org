@@ -78,6 +78,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import createLibrary from './spritelab/libraries/libraryFactory';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -212,11 +213,12 @@ P5Lab.prototype.init = function(config) {
 
   this.skin = config.skin;
   if (this.isSpritelab) {
-    const MEDIA_URL = '/blockly/media/spritelab/';
-    this.skin.smallStaticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.staticAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.winAvatar = MEDIA_URL + 'avatar.png';
-    this.skin.failureAvatar = MEDIA_URL + 'avatar.png';
+    const mediaUrl = `/blockly/media/spritelab/${config.level
+      .instructionsIcon || 'avatar'}.png`;
+    this.skin.smallStaticAvatar = mediaUrl;
+    this.skin.staticAvatar = mediaUrl;
+    this.skin.winAvatar = mediaUrl;
+    this.skin.failureAvatar = mediaUrl;
 
     injectErrorHandler(
       new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
@@ -297,7 +299,9 @@ P5Lab.prototype.init = function(config) {
 
   config.shareWarningInfo = {
     hasDataAPIs: function() {
-      return this.hasDataStoreAPIs(this.studioApp_.getCode());
+      return this.hasDataStoreAPIs(
+        this.studioApp_.getCode(true /* opt_showHidden */)
+      );
     }.bind(this),
     onWarningsComplete: function() {
       if (config.share) {
@@ -389,10 +393,15 @@ P5Lab.prototype.init = function(config) {
     this.setCrosshairCursorForPlaySpace();
 
     if (this.isSpritelab) {
+      this.currentCode = Blockly.getWorkspaceCode();
       this.studioApp_.addChangeHandler(() => {
-        if (!getStore().getState().runState.isRunning) {
-          this.reset();
-          this.preview.apply(this);
+        const newCode = Blockly.getWorkspaceCode();
+        if (newCode !== this.currentCode) {
+          this.currentCode = newCode;
+          if (!getStore().getState().runState.isRunning) {
+            this.reset();
+            this.preview.apply(this);
+          }
         }
       });
     }
@@ -506,8 +515,9 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
-            pauseHandler={this.onPause}
+            pauseHandler={this.onPause?.bind(this)}
             hidePauseButton={!!this.level.hidePauseButton}
+            onPromptAnswer={this.onPromptAnswer?.bind(this)}
           />
         </Provider>,
         document.getElementById(config.containerId)
@@ -752,6 +762,12 @@ P5Lab.prototype.afterInject_ = function(config) {
 
     // Don't add infinite loop protection
     Blockly.clearInfiniteLoopTrap();
+  }
+
+  if (this.level.blocklyVariables) {
+    Blockly.mainBlockSpace.registerGlobalVariables(
+      this.level.blocklyVariables.split(',').map(varName => varName.trim())
+    );
   }
 
   // Update p5Wrapper's scale and keep it updated with future resizes:
@@ -1071,11 +1087,15 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     }
 
     if (this.isSpritelab) {
-      const spritelabCommands = this.commands;
+      this.spritelabLibrary = createLibrary(this.level, {
+        p5: this.p5Wrapper.p5
+      });
+
+      const spritelabCommands = this.spritelabLibrary.commands;
       for (const command in spritelabCommands) {
         this.JSInterpreter.createGlobalProperty(
           command,
-          spritelabCommands[command].bind(this.p5Wrapper.p5),
+          spritelabCommands[command].bind(this.spritelabLibrary),
           null
         );
       }
@@ -1127,7 +1147,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
     code += this.level.customHelperLibrary + '\n';
   }
   const userCodeStartOffset = code.length;
-  code += this.studioApp_.getCode();
+  code += this.studioApp_.getCode(true /* opt_showHidden */);
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,

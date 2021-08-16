@@ -1,8 +1,11 @@
 hideable_lessons true
 curriculum_path 'https://code.org/curriculum/course4/{LESSON}/Teacher'
+family_name 'course4'
+version_year 'unversioned'
 published_state 'preview'
 curriculum_umbrella 'CSF'
 tts true
+is_course true
 
 lesson 'Unplugged: Tangrams', display_name: 'Unplugged: Tangrams', has_lesson_plan: true, unplugged: true
 level 'TangramAlgorithms'

@@ -18,6 +18,13 @@ social:
 {{ ai_header_stylesheets_links }}
 
 # Learn about Artificial Intelligence (AI)
+<div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
+<div class="col-40" style="margin-bottom:15px">
+<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
+<div class="clear"></div>
+</div>
+
 AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.
 
 Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!
@@ -35,6 +42,17 @@ Join us to explore AI in a new video series, train AI for Oceans in 25+ language
 {{ ai_microsoft_block }}
 
 {{ ai_videos_link }}
+
+<a id="about-aimodule"></a>
+## NEW AI and Machine Learning Module
+<div>
+<div class="col-50">
+<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
+<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+</div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="clear"></div>
+</div>
 
 ## How AI Works
 
@@ -71,6 +89,10 @@ With an introduction by Microsoft CEO Satya Nadella, this series of short videos
 - [Machine Learning: Solving Problems Big, Small, and Prickly](https://youtu.be/_rdINNHLYaQ) (5:19)
 - [How does your phone know this is a dog?](https://youtu.be/bHvf7Tagt18) (5:57)
 - [What is AI?](https://youtu.be/mJeNghZXtMo) (6:14)
+- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+
 
 ## More resources
 

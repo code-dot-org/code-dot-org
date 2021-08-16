@@ -15,10 +15,12 @@
 #  readonly_answers :boolean
 #  unlocked_at      :datetime
 #  time_spent       :integer
+#  deleted_at       :datetime
+#  properties       :text(65535)
 #
 # Indexes
 #
-#  index_user_levels_on_user_id_and_level_id_and_script_id  (user_id,level_id,script_id) UNIQUE
+#  index_user_levels_unique  (user_id,script_id,level_id,deleted_at) UNIQUE
 #
 
 require 'cdo/activity_constants'
@@ -184,6 +186,21 @@ class UserLevel < ApplicationRecord
 
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
+  end
+
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at = true)
+    user_level = UserLevel.find_by(
+      level_id: level_id,
+      script_id: script_id,
+      user_id: user_id
+    )
+
+    if user_level.present?
+      user_level.best_result = best_result
+
+      # touch_updated_at=false preserves updated_at, which represents the user's submission timestamp.
+      user_level.save!(touch: touch_updated_at)
+    end
   end
 
   # Get number of passed levels per user for the given set of user IDs

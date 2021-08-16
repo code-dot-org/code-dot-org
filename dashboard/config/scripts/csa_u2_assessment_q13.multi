@@ -1,0 +1,28 @@
+name 'CSA U2 Assessment q13'
+height 'auto'
+
+wrong ‘Encapsulation requires instance variables of a class to be declared as private.’
+right ‘With encapsulation, the variables of a class are visible to other classes.’
+wrong ‘Encapsulation is the process Java uses to keep details of the class hidden from a user.’
+wrong ‘All of the above are true.’
+wrong ‘None of the above are true.’
+
+
+
+
+teacher_markdown <<MARKDOWN
+Covered in Unit 2 Lesson 1. 
+
+MARKDOWN
+
+markdown <<MARKDOWN
+Which of the following is NOT true about encapsulation?
+
+```
+public class MyClass {
+  public static void main(String[] args){
+    System.out.println("Will this print an int or a double: " + (3.0 + 4));
+  }
+}
+```
+MARKDOWN

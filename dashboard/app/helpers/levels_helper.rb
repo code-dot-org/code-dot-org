@@ -185,6 +185,13 @@ module LevelsHelper
       readonly_view_options if @user
     end
 
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
+    end
+
     # Always pass user age limit
     view_options(is_13_plus: current_user && !current_user.under_13?)
 
@@ -268,10 +275,11 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && @level.can_have_feedback?
+    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
       @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+      @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
     # Blockly caches level properties, whereas this field depends on the user

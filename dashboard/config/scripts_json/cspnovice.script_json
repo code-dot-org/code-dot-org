@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:29:00 UTC",
+    "serialized_at": "2021-08-03 22:47:12 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspnovice"
@@ -133,9 +133,9 @@
       "properties": {
         "level_keys": [
           "welcome-csp-novice"
-        ]
+        ],
+        "progression": "Welcome CS Principles Novices!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -160,7 +160,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -185,7 +184,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -207,9 +205,9 @@
       "properties": {
         "level_keys": [
           "csp-tuesday-pedagogy"
-        ]
+        ],
+        "progression": "Pedagogy Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -231,9 +229,9 @@
       "properties": {
         "level_keys": [
           "csp-tuesday-facilitation"
-        ]
+        ],
+        "progression": "Facilitation Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -258,7 +256,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -283,7 +280,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -305,9 +301,9 @@
       "properties": {
         "level_keys": [
           "csp-wednesday-pedagogy"
-        ]
+        ],
+        "progression": "Pedagogy Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -329,9 +325,9 @@
       "properties": {
         "level_keys": [
           "csp-wednesday-facilitation"
-        ]
+        ],
+        "progression": "Facilitation Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +352,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -381,7 +376,6 @@
         ],
         "progression": "Unit Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -406,7 +400,6 @@
         ],
         "progression": "Pedagogy Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -431,7 +424,6 @@
         ],
         "progression": "Pedagogy Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -453,9 +445,9 @@
       "properties": {
         "level_keys": [
           "csp-thursday-facilitation"
-        ]
+        ],
+        "progression": "Facilitation Reflection"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,9 +469,9 @@
       "properties": {
         "level_keys": [
           "csp-novice-congrats"
-        ]
+        ],
+        "progression": "Congrats on completing the novice program!"
       },
-      "named_level": true,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

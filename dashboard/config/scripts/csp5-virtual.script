@@ -1,8 +1,11 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
+family_name 'csp5-virtual'
+version_year 'unversioned'
 published_state 'preview'
 project_sharing true
+is_course true
 
 lesson 'Intro to App Lab', display_name: 'Intro to App Lab', has_lesson_plan: false
 level 'CSPU5_HOC_virtual1', progression: 'Setting Properties'

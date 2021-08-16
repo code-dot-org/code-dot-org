@@ -320,6 +320,26 @@ class UserLevelTest < ActiveSupport::TestCase
     )
   end
 
+  test 'update_best_result sets best_result to the given value' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+
+    new_best_result = 100
+    UserLevel.update_best_result(@user.id, @level.id, script.id, new_best_result)
+
+    assert_equal new_best_result, UserLevel.find(ul.id).best_result
+  end
+
+  test 'update_best_result does not change the updated_at date if touch_updated_at=false' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+    original_updated_at = ul.reload.updated_at
+
+    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, false)
+
+    assert_equal original_updated_at, UserLevel.find(ul.id).updated_at
+  end
+
   test 'calculate_total_time_spent returns 0 if no time_spent recorded' do
     ul = UserLevel.create(
       user: @user,

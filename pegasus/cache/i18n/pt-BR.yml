@@ -1366,11 +1366,14 @@ pt-BR:
   coursed-2020_name: Curso D (2019)
   coursee-2020_name: Curso E (2019)
   coursef-2020_name: Curso F (2019)
+  coursed-2021_name: Curso D (2021)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
   pre-express-2019_name: Curso Pre-reader Express (2019)
   express-2020_name: Curso Expresso (2019)
+  pre-express-2020_name: Curso Expresso de Pré-Leitor (2020)
+  pre-express-2021_name: Curso Expresso de Pré-Leitor (2021)
   csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
@@ -1691,6 +1694,28 @@ pt-BR:
     deste curso, projete e crie um projeto principal que você possa compartilhar com
     seus amigos e familiares.
   coursef-2020_shortdescription_congrats: Aprenda a usar diferentes tipos de loops,
+    eventos, funções e condicionais. Investigue diferentes técnicas de solução de
+    problemas e discuta os impactos sociais da computação e da Internet. Na segunda
+    parte deste curso, projete e crie um projeto principal que você possa compartilhar
+    com amigos e familiares.
+  coursea-2021_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  courseb-2021_shortdescription_congrats: Aprenda o básixo de Ciências da Computação
+    e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou
+    história, que poderá ser compartilhada.
+  coursec-2021_shortdescription_congrats: Crie programas com sequenciamento, loops
+    e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de
+    solução de problemas e aprenda a responder ao cyberbullying. No final do curso,
+    crie seu próprio jogo ou história que você pode compartilhar!
+  coursed-2021_shortdescription_congrats: Os alunos desenvolvem sua compreensão de
+    loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania
+    digital.
+  coursee-2021_shortdescription_congrats: Comece a codificar com algoritmos, loops,
+    condicionais e eventos e, em seguida, você passará às funções. Na segunda parte
+    deste curso, projete e crie um projeto principal que você possa compartilhar com
+    seus amigos e familiares.
+  coursef-2021_shortdescription_congrats: Aprenda a usar diferentes tipos de loops,
     eventos, funções e condicionais. Investigue diferentes técnicas de solução de
     problemas e discuta os impactos sociais da computação e da Internet. Na segunda
     parte deste curso, projete e crie um projeto principal que você possa compartilhar
@@ -2592,6 +2617,7 @@ pt-BR:
   footer_support: Suporte
   footer_terms: Termos
   ai_for_oceans: IA para oceanos
+  ai_for_oceans_lesson_plan: plano de aula
   ai_in_partnership_with: Em parceria com
   ai_microsoft_thanks: Nós agradecemos à Microsoft por apoiar nossa visão e missão
     para que toda criança tenha a oportunidade de aprender ciência da computação e

@@ -537,7 +537,10 @@ FactoryGirl.define do
     end
 
     trait :script do
-      create(:script_level)
+      after :create do |level|
+        script_level = create(:script_level, levels: [level])
+        create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
+      end
     end
 
     factory :sublevel do
@@ -563,6 +566,7 @@ FactoryGirl.define do
   end
 
   factory :artist, parent: :level, class: Artist do
+    game {Game.custom_artist}
   end
 
   factory :maze, parent: :level, class: :Maze do
@@ -700,6 +704,20 @@ FactoryGirl.define do
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
+
+    trait :with_levels do
+      transient do
+        levels_count 0
+      end
+
+      after(:create) do |script, evaluator|
+        evaluator.levels_count.times do
+          level = create(:level)
+          script_level = create(:script_level, levels: [level])
+          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        end
+      end
+    end
 
     factory :csf_script do
       after(:create) do |csf_script|
@@ -994,22 +1012,25 @@ FactoryGirl.define do
     game {create(:game, app: "bubble_choice")}
     sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name 'display_name'
-    transient do
-      sublevels []
-    end
     properties do
       {
         display_name: display_name,
-        sublevels: sublevels.pluck(:name)
       }
     end
 
+    # Allow passing a list of levels in the create method to automatically set
+    # up sublevels
+    transient do
+      sublevels []
+    end
+
+    after(:create) do |bubble_choice, evaluator|
+      bubble_choice.setup_sublevels(evaluator.sublevels.pluck(:name)) if evaluator.sublevels.present?
+    end
+
+    # Also allow specifying a trait to automatically create sublevels
     trait :with_sublevels do
-      after(:create) do |bc|
-        sublevels = create_list(:level, 3)
-        bc.properties['sublevels'] = sublevels.pluck(:name)
-        bc.save!
-      end
+      sublevels {create_list(:level, 3)}
     end
   end
 
@@ -1380,11 +1401,18 @@ FactoryGirl.define do
   end
 
   factory :code_review_comment do
-    association :commenter, factory: :teacher
+    association :commenter, factory: :student
+    association :project_owner, factory: :student
 
     storage_app_id 1
-    project_version 'a_project_version_string'
     comment 'a comment about your project'
+  end
+
+  factory :reviewable_project do
+    sequence(:storage_app_id)
+    association :user, factory: :student
+    association :level
+    association :script
   end
 
   factory :teacher_score do

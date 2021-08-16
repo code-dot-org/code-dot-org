@@ -2,6 +2,9 @@ class Ability
   include CanCan::Ability
   include Pd::Application::ActiveApplicationModels
 
+  CSA_PILOT = 'csa-pilot'
+  CSA_PILOT_FACILITATORS = 'csa-pilot-facilitators'
+
   # Define abilities for the passed in user here. For more information, see the
   # wiki at https://github.com/ryanb/cancan/wiki/Defining-Abilities.
   def initialize(user)
@@ -56,7 +59,9 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :javabuilder_session
+      :javabuilder_session,
+      CodeReviewComment,
+      ReviewableProject
     ]
     cannot :index, Level
 
@@ -80,6 +85,23 @@ class Ability
       can :destroy, Follower, student_user_id: user.id
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
+      can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
+      can :destroy, CodeReviewComment do |code_review_comment|
+        # Teachers can delete comments on their student's projects,
+        # as well as their own comments.
+        code_review_comment.project_owner&.student_of?(user) ||
+          (user.teacher? && user == code_review_comment.commenter)
+      end
+      can :create, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :project_comments, CodeReviewComment do |_, project_owner|
+        CodeReviewComment.user_can_review_project?(project_owner, user)
+      end
+      can :create, ReviewableProject do |_, project_owner|
+        ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
+      end
+      can :destroy, ReviewableProject, user_id: user.id
       can :create, Pd::RegionalPartnerProgramRegistration, user_id: user.id
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
@@ -90,6 +112,35 @@ class Ability
 
       can :list_projects, Section do |section|
         can?(:manage, section) || user.sections_as_student.include?(section)
+      end
+
+      can :view_as_user, ScriptLevel do |script_level, user_to_assume|
+        can?(:view_as_user_for_code_review, script_level, user_to_assume) ||
+          user_to_assume.student_of?(user) ||
+          user.project_validator?
+      end
+
+      can :view_as_user_for_code_review, ScriptLevel do |script_level, user_to_assume|
+        can_view_as_user_for_code_review = false
+
+        # Only allow a student to view another student's project
+        # only on levels where we have our peer review feature.
+        # For now, that's only Javalab.
+        if script_level&.oldest_active_level&.is_a?(Javalab)
+          reviewable_project = ReviewableProject.find_by(
+            user_id: user_to_assume.id,
+            script_id: script_level.script_id,
+            level_id: script_level.oldest_active_level&.id
+          )
+
+          if reviewable_project &&
+            user != user_to_assume &&
+            (user.sections_as_student & user_to_assume.sections_as_student).any?
+            can_view_as_user_for_code_review = true
+          end
+        end
+
+        can_view_as_user_for_code_review
       end
 
       if user.teacher?
@@ -307,13 +358,15 @@ class Ability
       end
     end
 
+    # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+      if user.has_pilot_experiment?(CSA_PILOT) ||
+        (!user.teachers.empty? &&
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)}) ||
+          user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
+        (!user.teachers.empty? &&
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)})
         can :get_access_token, :javabuilder_session
-
-        # Temporarily allow management of CodeReviewComments by piloters --
-        # more nuanced permissioning up next
-        can :manage, CodeReviewComment
       end
     end
 

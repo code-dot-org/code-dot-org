@@ -60,7 +60,7 @@ module Services
       end
 
       class ResourceCrowdinSerializer < CrowdinSerializer
-        attribute :name
+        attributes :name, :url
 
         # override
         def crowdin_key

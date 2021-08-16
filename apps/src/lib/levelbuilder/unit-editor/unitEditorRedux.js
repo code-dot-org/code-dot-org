@@ -282,6 +282,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
             .map(level => ({
               position: level.position,
               activeId: level.activeId,
+              inactiveIds: level.inactiveIds,
               ids: level.ids.slice(),
               kind: level.kind,
               skin: level.skin,
@@ -360,7 +361,18 @@ const serializeLesson = (lesson, levelKeyList) => {
   s.push(t);
   if (lesson.levels) {
     lesson.levels.forEach(level => {
-      s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+      if (level.inactiveIds && level.inactiveIds.length > 0) {
+        s.push('variants');
+        let lines = serializeLevel(levelKeyList, level.activeId, level);
+        s = s.concat(lines.map(line => `  ${line}`));
+        level.inactiveIds.forEach(id => {
+          lines = serializeLevel(levelKeyList, id, level, false);
+          s = s.concat(lines.map(line => `  ${line}`));
+        });
+        s.push('endvariants');
+      } else {
+        s = s.concat(serializeLevel(levelKeyList, level.ids[0], level));
+      }
     });
   }
   s.push('');
@@ -376,9 +388,9 @@ const serializeLesson = (lesson, levelKeyList) => {
  * to move on to our future system.
  * @param id
  * @param level
- * @return {string}
+ * @return {Array.<string>}
  */
-const serializeLevel = (levelKeyList, id, level) => {
+const serializeLevel = (levelKeyList, id, level, active = true) => {
   const s = [];
   const key = levelKeyList[id];
   if (/^blockly:/.test(key)) {
@@ -398,6 +410,9 @@ const serializeLevel = (levelKeyList, id, level) => {
     }
   }
   let l = level.bonus ? `bonus '${escape(key)}'` : `level '${escape(key)}'`;
+  if (!active) {
+    l += ', active: false';
+  }
   if (level.progression) {
     l += `, progression: '${escape(level.progression)}'`;
   }

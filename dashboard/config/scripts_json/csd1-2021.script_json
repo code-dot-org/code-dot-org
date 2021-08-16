@@ -14,12 +14,13 @@
       "is_migrated": true,
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:05 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-08-16 16:22:16 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -1128,7 +1129,13 @@
       "key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r how-to-videos/csd/2021] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "beb5adaf-44d3-48fe-bb2d-99a2f55caeff",
@@ -1161,7 +1168,7 @@
       "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
       "position": 1,
       "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
+        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [How to Administer a Locked Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) support article provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2601,7 +2608,7 @@
       "key": "30a5ba05-3776-4be9-b6d5-66df2e579294",
       "position": 12,
       "properties": {
-        "description": "The next chart asks students to find two types of processing for every app.  The explanations for processing are included in the teacher notes in Code Studio.  This section asks students to evaluate more complex apps, which may be difficult for younger students.  Feel free to skip this more challenging section and move directly to the \"student app\" section.\r\n\r\n**The Fastest Finger**\r\n\r\nThis app displays which key is being pressed the fastest, the 's' key or the 'k' key. \r\n\r\n\r\n**Guess the Number**\r\n\r\nThis app asks users to guess a number between one and one hundred, and displays whether the guess is too high, too low, or correct.\r\n\r\n**Where Should I Live?**\r\n\r\nThis app gives the user advice on where to live based on the answers to a few questions.",
+        "description": "The next chart asks students to find two types of processing for every app.  The explanations for processing are included in the For Teachers Only section in Code Studio.  This section asks students to evaluate more complex apps, which may be difficult for younger students.  Feel free to skip this more challenging section and move directly to the \"student app\" section.\n\n**The Fastest Finger**\n\nThis app displays which key is being pressed the fastest, the 's' key or the 'k' key. \n\n\n**Guess the Number**\n\nThis app asks users to guess a number between one and one hundred, and displays whether the guess is too high, too low, or correct.\n\n**Where Should I Live?**\n\nThis app gives the user advice on where to live based on the answers to a few questions.",
         "name": "More Processing\r",
         "progression_name": "More Processing Apps"
       },
@@ -4600,14 +4607,13 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csd-pre-survey-levelgroup_2021"
+          "csd-pre-survey-levelgroup_21_22"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pre-survey-levelgroup_2021"
+          "csd-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -4615,7 +4621,7 @@
         "activity_section.key": "c6d73d7e-673c-4e52-acdb-5071f2b6ff01"
       },
       "level_keys": [
-        "csd-pre-survey-levelgroup_2021"
+        "csd-pre-survey-levelgroup_21_22"
       ]
     },
     {
@@ -4629,7 +4635,6 @@
         ],
         "progression": "Video: Problem Solving Process"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4655,7 +4660,6 @@
         ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4681,7 +4685,6 @@
         ],
         "progression": "App: Pet Chooser"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4707,7 +4710,6 @@
         ],
         "progression": "App: Story Creator"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4733,7 +4735,6 @@
         ],
         "progression": "App: Improved Pet App"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4759,7 +4760,6 @@
         ],
         "progression": "App: Is It Your Birthday?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4785,7 +4785,6 @@
         ],
         "progression": "App: National Parks"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4811,7 +4810,6 @@
         ],
         "progression": "App: How Many Countries"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4837,7 +4835,6 @@
         ],
         "progression": "App: My Famous Birthday"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4863,7 +4860,6 @@
         ],
         "progression": "App: Stamp Notebook"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4889,7 +4885,6 @@
         ],
         "progression": "App: The Fastest Finger"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4915,7 +4910,6 @@
         ],
         "progression": "App: Guess the Number"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4941,7 +4935,6 @@
         ],
         "progression": "App: Where Should I Live?"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4967,7 +4960,6 @@
         ],
         "progression": "App: Outfit Picker"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4993,7 +4985,6 @@
         ],
         "progression": "App: Friend Finder"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5019,7 +5010,6 @@
         ],
         "progression": "App: Choose a Kid's Movie"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5045,7 +5035,6 @@
         ],
         "progression": "Video: IOSP Model"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5071,7 +5060,6 @@
         ],
         "progression": "Reflection"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5096,7 +5084,6 @@
           "CSD U1 Test_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5115,9 +5102,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csd-pre-survey-levelgroup_2021",
+        "level.key": "csd-pre-survey-levelgroup_21_22",
         "script_level.level_keys": [
-          "csd-pre-survey-levelgroup_2021"
+          "csd-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -5577,8 +5564,8 @@
       }
     },
     {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
+      "name": "Code.org How-to Videos",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how-to-videos",
       "properties": {
         "audience": "Teacher"
@@ -5613,7 +5600,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+      "name": "Build a Newspaper Table",
       "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
       "key": "intro-to-problem-solving-newspaper-table-2020",
       "properties": {
@@ -5637,7 +5624,7 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Spaghetti Bridge",
+      "name": "Spaghetti Bridge",
       "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
       "properties": {
@@ -5722,7 +5709,7 @@
       }
     },
     {
-      "name": "Processing",
+      "name": "Apps with Processing",
       "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
       "key": "processing-2020",
       "properties": {
@@ -5797,11 +5784,11 @@
       }
     },
     {
-      "name": "Solving Problems ",
+      "name": "Tangrams",
       "url": "https://docs.google.com/document/d/15EVADKK_Dk3UVwDIbuRK6TLjIJJD8-6bVWPsu0zTvLc/edit",
       "key": "solving-problems-tangrams-2020",
       "properties": {
-        "type": "Tangrams",
+        "type": "Resource",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -5822,7 +5809,7 @@
       }
     },
     {
-      "name": "Storage",
+      "name": "Apps with Storage",
       "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
       "key": "storage",
       "properties": {
@@ -5835,7 +5822,7 @@
       }
     },
     {
-      "name": "Storage",
+      "name": "Apps with Storage",
       "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
       "key": "storage-1",
       "properties": {
@@ -5859,7 +5846,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/",
+      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
       "key": "the-problem-solving-process",
       "properties": {
         "type": "Activity Guide",
@@ -5938,62 +5925,50 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "aluminum-boats-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "aluminum-boats-activity-guide-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "how-to-videos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem-solving-process-exemplar-2020"
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "resource.key": "exploring-problem-solving-animal-theme-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem-solving-process-1"
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "resource.key": "solving-problems-activity-guide-animal-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "the-problem-solving-process"
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "resource.key": "solving-problems-tangrams-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem-solving-process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "resource.key": "exploring-problem-solving-games-theme-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "resource.key": "solving-problems-activity-guide-game-2020"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
-        "resource.key": "solving-problems-exemplar-2020"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6005,43 +5980,13 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-1-2-3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-version-a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+        "resource.key": "solving-problems-exemplar-2020"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "resource.key": "input-and-output-2020"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6053,115 +5998,7 @@
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "processing-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "apps-with-processing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "what-do-computers-do"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "storage-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "storage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "project-propose-an-app-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "app-proposal-project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps-and-problem-solving-peer-review-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps-and-problem-solving-marked-rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "peer_review_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "how-to-videos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "intro-to-problem-solving-newspaper-table-2020"
+        "resource.key": "input-and-output-2020"
       }
     },
     {
@@ -6178,25 +6015,19 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
         "resource.key": "how-to-videos"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "intro-to-problem-solving-spaghetti-bridge-2020"
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+        "resource.key": "intro-to-problem-solving-newspaper-table-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "spaghetti-bridge-activity-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
@@ -6220,60 +6051,210 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "exploring-problem-solving-animal-theme-2020"
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "resource.key": "how-to-videos"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "solving-problems-tangrams-2020"
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "resource.key": "intro-to-problem-solving-spaghetti-bridge-2020"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "solving-problems-activity-guide-animal-2020"
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "resource.key": "spaghetti-bridge-activity-guide"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "lesson.key": "Intro to Problem Solving",
+        "resource.key": "aluminum-boats-activity-guide-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "resource.key": "aluminum-boats-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "exploring-problem-solving-games-theme-2020"
+        "lesson.key": "Intro to Problem Solving",
+        "resource.key": "how-to-videos"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "solving-problems-activity-guide-game-2020"
+        "lesson.key": "Processing",
+        "resource.key": "apps-with-processing"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "lesson.key": "Processing",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "resource.key": "processing-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "app-proposal-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps-and-problem-solving-marked-rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps-and-problem-solving-peer-review-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps_and_problem_solving"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps_and_problem_solving_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "peer_review_exemplar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "project-propose-an-app-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "resource.key": "storage"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "resource.key": "storage-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "resource.key": "what-do-computers-do"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "problem-solving-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "problem-solving-process-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "problem-solving-process-exemplar-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "the-problem-solving-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "what-is-a-computer-1-2-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "what-is-a-computer-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "what-is-a-computer-version-a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "what-is-a-computer-version-b"
       }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd1-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "all_resources",
@@ -6301,6 +6282,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd1-2021"
       }
     }

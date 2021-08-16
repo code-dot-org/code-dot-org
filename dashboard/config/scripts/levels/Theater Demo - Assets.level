@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "General Theater demos and tests.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyConcert.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\tStage myStage = Theater.stage;\n    \n\tmyStage.drawImage(\"neighborhood.png\", 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n\n    Image chicken = new Image(\"chicken.png\");\n    myStage.drawImage(chicken, 50, 50, 150, 150, 0);\n\n    myStage.drawImage(\"chicken.png\", 200, 200, 150, 150, 0);\n\n    myStage.play();\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "parent_level_id": 28900
+  },
+  "game_id": 68,
+  "created_at": "2021-07-22T15:01:34.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-07-22T15:01:34.306+00:00\",\"changed\":[\"cloned from \\\"Theater Demo\\\"\"],\"cloned_from\":\"Theater Demo\"},{\"changed_at\":\"2021-07-22 15:01:38 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-22 15:02:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 19:26:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 19:26:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 19:28:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>

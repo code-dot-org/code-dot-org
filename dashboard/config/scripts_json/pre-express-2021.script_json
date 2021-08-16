@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-06-17 22:31:25 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-20 22:21:26 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -7342,8 +7342,32 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "A Royal Battle with Events",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing Gardens with Loops",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "pair-programming-vid"
+        "resource.key": "20_20_20_rule"
       }
     },
     {
@@ -7361,7 +7385,7 @@
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "20_20_20_rule"
+        "resource.key": "pair-programming-vid"
       }
     },
     {
@@ -7372,55 +7396,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "wiggles_-_go_noodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in with Angry Birds",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
+        "lesson.key": "Loops with Laurel",
         "resource.key": "feeling-faces-image"
       }
     },
@@ -7432,32 +7408,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops with Laurel",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
+        "lesson.key": "Ocean Scene with Loops",
         "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing Gardens with Loops",
-        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -7468,24 +7426,60 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
+        "lesson.key": "Programming in Harvester",
         "resource.key": "feeling-faces-image"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "A Royal Battle with Events",
-        "resource.key": "common-sense-media-pause-think"
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "wiggles_-_go_noodle"
       }
     }
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
-        "script.name": "pre-express-2021"
-      }
-    },
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
@@ -7494,13 +7488,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum_1",
+        "resource.key": "csta_standards_mapping",
         "script.name": "pre-express-2021"
       }
     },
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "pre-express-2021"
       }
     }

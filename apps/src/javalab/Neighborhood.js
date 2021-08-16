@@ -1,8 +1,9 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
 const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
-import {NeighborhoodSignalType} from './constants';
+import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from './constants';
 const timeoutList = require('@cdo/apps/lib/util/timeoutList');
+import javalabMsg from '@cdo/javalab/locale';
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
@@ -10,9 +11,13 @@ const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
 export default class Neighborhood {
-  constructor() {
+  constructor(onOutputMessage, onNewlineMessage, setIsRunning) {
     this.controller = null;
     this.numRows = null;
+    this.seenFirstSignal = false;
+    this.onOutputMessage = onOutputMessage;
+    this.onNewlineMessage = onNewlineMessage;
+    this.setIsRunning = setIsRunning;
   }
 
   afterInject(level, skin, config, studioApp) {
@@ -39,11 +44,23 @@ export default class Neighborhood {
     this.speedSlider = new Slider(10, 35, 130, slider);
     this.signals = [];
     this.nextSignalIndex = 0;
+
+    // Expose an interface for testing
+    window.__TestInterface.setSpeedSliderValue = value => {
+      this.speedSlider.setValue(value);
+    };
   }
 
   handleSignal(signal) {
     // add next signal to our queue of signals
     this.signals.push(signal);
+    // if this is the first signal, send a starting painter message
+    if (!this.seenFirstSignal) {
+      this.seenFirstSignal = true;
+      this.onOutputMessage(
+        `${STATUS_MESSAGE_PREFIX} ${javalabMsg.startingPainter()}`
+      );
+    }
   }
 
   // Process avaiable signals recursively. We process recursively to ensure
@@ -53,7 +70,10 @@ export default class Neighborhood {
     if (this.signals.length > this.nextSignalIndex) {
       const signal = this.signals[this.nextSignalIndex];
       if (signal.value === NeighborhoodSignalType.DONE) {
-        // we are done processing commands and can stop checking for signals
+        // we are done processing commands and can stop checking for signals.
+        // Set isRunning to false, add a blank line to the console, and return
+        this.setIsRunning(false);
+        this.onNewlineMessage();
         return;
       }
       const timeForSignal =
@@ -156,6 +176,7 @@ export default class Neighborhood {
   resetSignalQueue() {
     this.signals = [];
     this.nextSignalIndex = 0;
+    this.seenFirstSignal = false;
   }
 
   // Multiplier on the time per action or step at execution time.

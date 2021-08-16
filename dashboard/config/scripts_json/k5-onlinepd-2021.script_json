@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-29 20:07:22 UTC",
+    "serialized_at": "2021-08-03 22:48:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
@@ -327,7 +327,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -352,7 +351,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +375,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -402,7 +399,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -427,7 +423,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -452,7 +447,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -477,7 +471,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -502,7 +495,6 @@
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -527,7 +519,6 @@
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -548,11 +539,82 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "K5-21-ClassSection-vid"
+        ],
+        "progression": "Getting Started"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K5-21-ClassSection-vid"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "K5-21-ClassSection-vid"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "K5-21-StudentExperience-vid"
+        ],
+        "progression": "Getting Started"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K5-21-StudentExperience-vid"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "K5-21-StudentExperience-vid"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "K5-21-video-BasicFeatures"
+        ],
+        "progression": "Getting Started"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K5-21-video-BasicFeatures"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "K5-21-video-BasicFeatures"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "OPD-K5 GettingStarted2_2021"
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -567,33 +629,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 GettingStarted3_2021"
-        ],
-        "progression": "Getting Started"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 GettingStarted3_2021"
-        ],
-        "lesson.key": "Getting Started",
-        "lesson_group.key": "Implementing and Teaching CS",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 GettingStarted3_2021"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 5,
+      "chapter": 14,
+      "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -602,7 +639,6 @@
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -617,33 +653,32 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 6,
+      "chapter": 15,
+      "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5-GettingStarted3-2021"
+        "OPD-K5 GettingStarted4_2021"
       ]
     },
     {
-      "chapter": 14,
-      "position": 7,
+      "chapter": 16,
+      "position": 9,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -652,7 +687,6 @@
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -667,7 +701,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -677,7 +711,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -692,7 +725,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -702,7 +735,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -717,7 +749,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -727,7 +759,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -742,7 +773,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -752,7 +783,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -767,7 +797,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -777,7 +807,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -792,7 +821,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -802,7 +831,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -817,7 +845,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -827,7 +855,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -842,7 +869,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -852,7 +879,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -867,7 +893,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -877,7 +903,6 @@
         ],
         "progression": "Teaching a Lesson"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -892,7 +917,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -902,7 +927,6 @@
         ],
         "progression": "Teaching a Lesson"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -917,7 +941,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -927,7 +951,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -942,7 +965,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -952,7 +975,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -967,7 +989,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -977,7 +999,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -992,7 +1013,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1002,7 +1023,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1017,7 +1037,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1026,7 +1046,6 @@
           "OPD-K5 IntroToConcepts_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1041,7 +1060,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1050,7 +1069,6 @@
           "OPD-K5-PartIIOutline-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1065,7 +1083,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1074,7 +1092,6 @@
           "OPD-K5 Stage3Start_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1089,7 +1106,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1098,7 +1115,6 @@
           "OPD-K5-Sequencing-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1113,7 +1129,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1122,7 +1138,6 @@
           "OPD-K5-SeqVidA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1137,7 +1152,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1146,7 +1161,6 @@
           "OPD-K5-SeqA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1161,7 +1175,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1170,7 +1184,6 @@
           "OPD-K5-DebugB-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1185,7 +1198,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1194,7 +1207,6 @@
           "OPD-K5-SeqB-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1209,7 +1221,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1218,7 +1230,6 @@
           "OPD-K5-SeqC-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1233,7 +1244,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1242,7 +1253,6 @@
           "OPD-K5-SeqDebug-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1257,7 +1267,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1266,7 +1276,6 @@
           "OPD-K5 sequencing free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1281,7 +1290,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1290,7 +1299,6 @@
           "OPD-K5-CourseNav-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1305,7 +1313,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1314,7 +1322,6 @@
           "OPD-K5 sprite lab_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1329,7 +1336,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1338,7 +1345,6 @@
           "OPD-K5-SeqSprites-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1353,7 +1359,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1362,7 +1368,6 @@
           "OPD-K5-IntroSpriteLab-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1377,7 +1382,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1386,7 +1391,6 @@
           "OPD-K5-IntroSprites-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1401,7 +1405,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1410,7 +1414,6 @@
           "OPD-K5-SpritesVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1425,7 +1428,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1434,7 +1437,6 @@
           "OPD-K5-ESprites-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1449,7 +1451,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1458,7 +1460,6 @@
           "OPD-K5-VidSprites-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1473,7 +1474,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1482,7 +1483,6 @@
           "OPD-K5-SpritesE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1497,7 +1497,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1506,7 +1506,6 @@
           "OPD-K5-SpriteLabF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1521,7 +1520,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1530,7 +1529,6 @@
           "OPD-K5-SeqSpritesF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1545,7 +1543,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1554,7 +1552,6 @@
           "OPD-K5 sprite lab free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1569,7 +1566,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1578,7 +1575,6 @@
           "OPD-K5-CourseNav8-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1593,7 +1589,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1602,7 +1598,6 @@
           "OPD-K5-LoopsIntro-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1617,7 +1612,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1626,7 +1621,6 @@
           "OPD-K5-Loops-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1641,7 +1635,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1650,7 +1644,6 @@
           "OPD-K5-LoopsVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1665,7 +1658,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1674,7 +1667,6 @@
           "OPD-K5-LoopsMazeA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1689,7 +1681,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1698,7 +1690,6 @@
           "OPD-K5-LoopsA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1713,7 +1704,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1722,7 +1713,6 @@
           "OPD-K5-LoopArtistB-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1737,7 +1727,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1746,7 +1736,6 @@
           "OPD-K5-LoopsArtB-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1761,7 +1750,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1770,7 +1759,6 @@
           "OPD-K5-ArtistLoopsC-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1785,7 +1773,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -1794,7 +1782,6 @@
           "OPD-K5-NestedLoopsD-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1809,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -1818,7 +1805,6 @@
           "OPD-K5-NestedLoopsPredictionD-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1833,7 +1819,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -1842,7 +1828,6 @@
           "OPD-K5-NestLoopsE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1857,7 +1842,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -1866,7 +1851,6 @@
           "OPD-K5 NestedLoopsE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1881,7 +1865,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -1890,7 +1874,6 @@
           "OPD-K5-RefLoops_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1905,7 +1888,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -1914,7 +1897,6 @@
           "OPD-K5-CourseNav9-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1929,7 +1911,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1938,7 +1920,6 @@
           "OPD-K5 Stage7Start_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1953,7 +1934,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1962,7 +1943,6 @@
           "OPD-K5-EventsIntro-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1977,7 +1957,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1986,7 +1966,6 @@
           "OPD-K5-Events-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2001,7 +1980,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2010,7 +1989,6 @@
           "OPD-K5-PlayLabVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2025,7 +2003,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2034,7 +2012,6 @@
           "OPD-K5-EventsA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2049,7 +2026,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2058,7 +2035,6 @@
           "OPD-K5-BEvents-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2073,7 +2049,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2082,7 +2058,6 @@
           "OPD-K5-Events-Video-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2097,7 +2072,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2106,7 +2081,6 @@
           "OPD-K5-EventsC-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2121,7 +2095,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2130,7 +2104,6 @@
           "OPD-K5-DVidEvents-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2145,7 +2118,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2154,7 +2127,6 @@
           "OPD-K5-DEvents-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2169,7 +2141,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -2178,7 +2150,6 @@
           "OPD-K5-EEvents-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2193,7 +2164,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -2202,7 +2173,6 @@
           "OPD-K5-EventsF2-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2217,7 +2187,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -2226,7 +2196,6 @@
           "OPD-K5 events free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2241,7 +2210,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -2250,7 +2219,6 @@
           "OPD-K5-CourseNav10-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2265,7 +2233,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2274,7 +2242,6 @@
           "OPD-K5 Stage5Start_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2289,7 +2256,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2298,7 +2265,6 @@
           "OPD-K5-Conditionals-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2313,7 +2279,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2322,7 +2288,6 @@
           "OPD-K5-ConditionsVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2337,7 +2302,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2346,7 +2311,6 @@
           "OPD-K5-IfE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2361,7 +2325,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2370,7 +2334,6 @@
           "OPD-K5-IfElseVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2385,7 +2348,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2394,7 +2357,6 @@
           "OPD-K5-IfElse2-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2409,7 +2371,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2418,7 +2380,6 @@
           "OPD-K5-ConditionalsE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2433,7 +2394,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2442,7 +2403,6 @@
           "OPD-K5-ConditionalE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2457,7 +2417,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2466,7 +2426,6 @@
           "OPD-K5 conditionals free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2481,7 +2440,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2490,7 +2449,6 @@
           "OPD-K5-CourseNav11-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2505,7 +2463,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2514,7 +2472,6 @@
           "OPD-K5 diving deeper intro_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2529,7 +2486,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2538,7 +2495,6 @@
           "OPD-K5-FunctionsVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2553,7 +2509,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2562,7 +2518,6 @@
           "OPD-K5-Functions-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2577,7 +2532,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2586,7 +2541,6 @@
           "OPD-K5-FunctionsVideo-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2601,7 +2555,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2610,7 +2564,6 @@
           "OPD-K5-FuncMineCraft-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2625,7 +2578,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2634,7 +2587,6 @@
           "OPD-K5-FuncArtist-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2649,7 +2601,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2658,7 +2610,6 @@
           "OPD-K5 functions free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2673,7 +2624,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2682,7 +2633,6 @@
           "OPD-K5-CourseNav12-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2697,7 +2647,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2706,7 +2656,6 @@
           "OPD-K5 variables_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2721,7 +2670,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2730,7 +2679,6 @@
           "OPD-K5-VariablesVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2745,7 +2693,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2754,7 +2702,6 @@
           "OPD-K5-VariablesF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2769,7 +2716,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -2778,7 +2725,6 @@
           "OPD-K5-VariablesSpriteLab-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2793,7 +2739,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -2802,7 +2748,6 @@
           "OPD-K5-PromptsVariables-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2817,7 +2762,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -2826,7 +2771,6 @@
           "OPD-K5-VariablesArtist-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2841,7 +2785,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -2850,7 +2794,6 @@
           "OPD-K5-ArtistVariables-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2865,7 +2808,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -2874,7 +2817,6 @@
           "OPD-K5-VariablesBee-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2889,7 +2831,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -2898,7 +2840,6 @@
           "OPD-K5 variables free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2913,7 +2854,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -2922,7 +2863,6 @@
           "OPD-K5-CourseNav13-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2937,7 +2877,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2946,7 +2886,6 @@
           "OPD-K5 for loops intro_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2961,7 +2900,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2970,7 +2909,6 @@
           "OPD-K5-CounterVariableVid-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2985,7 +2923,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -2994,7 +2932,6 @@
           "OPD-K5-ForLoopsVidF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3009,7 +2946,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3018,7 +2955,6 @@
           "OPD-K5-ForLoopFBee-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3033,7 +2969,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3042,7 +2978,6 @@
           "OPD-K5-ForLoopsVideoF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3057,7 +2992,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3066,7 +3001,6 @@
           "OPD-K5-ForLoopFArtist-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3081,7 +3015,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3090,7 +3024,6 @@
           "OPD-K5 for loops free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3105,7 +3038,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3114,7 +3047,6 @@
           "OPD-K5 project_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3129,7 +3061,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3138,7 +3070,6 @@
           "OPD-K5-EoCProjectA-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3153,7 +3084,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3162,7 +3093,6 @@
           "OPD-K5-EoCProjectB-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3177,7 +3107,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3186,7 +3116,6 @@
           "OPD-K5-EoCProjectCF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3201,7 +3130,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3210,7 +3139,6 @@
           "OPD-K5-EoCProjectC-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3225,7 +3153,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3234,7 +3162,6 @@
           "OPD-K5-EoCProjectD-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3249,7 +3176,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3258,7 +3185,6 @@
           "OPD-K5-EoCProjectE-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3273,7 +3199,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3282,7 +3208,6 @@
           "OPD-K5-EoCProjectF-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3297,7 +3222,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 126,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3306,7 +3231,6 @@
           "OPD-K5 projects free response_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3321,7 +3245,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3331,7 +3255,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3346,7 +3269,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3356,7 +3279,6 @@
         ],
         "progression": "Introduction"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3371,7 +3293,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 129,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3381,7 +3303,6 @@
         ],
         "progression": "Getting Started"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3396,7 +3317,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 130,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3406,7 +3327,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3421,7 +3341,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 131,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3431,7 +3351,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3446,7 +3365,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3456,7 +3375,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3471,7 +3389,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3481,7 +3399,6 @@
         ],
         "progression": "Teaching Practices and Strategies"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3496,7 +3413,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3506,7 +3423,6 @@
         ],
         "progression": "Teaching a Lesson"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3521,7 +3437,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3531,7 +3447,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3546,7 +3461,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 136,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3556,7 +3471,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3571,7 +3485,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 137,
       "position": 11,
       "activity_section_position": null,
       "assessment": false,
@@ -3581,7 +3495,6 @@
         ],
         "progression": "Addressing Barriers"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3596,7 +3509,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 138,
       "position": 12,
       "activity_section_position": null,
       "assessment": false,
@@ -3606,7 +3519,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3621,7 +3533,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 139,
       "position": 13,
       "activity_section_position": null,
       "assessment": false,
@@ -3631,7 +3543,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3646,7 +3557,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 140,
       "position": 14,
       "activity_section_position": null,
       "assessment": false,
@@ -3656,7 +3567,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3671,7 +3581,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 141,
       "position": 15,
       "activity_section_position": null,
       "assessment": false,
@@ -3681,7 +3591,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3696,7 +3605,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 142,
       "position": 16,
       "activity_section_position": null,
       "assessment": false,
@@ -3706,7 +3615,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3721,7 +3629,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 143,
       "position": 17,
       "activity_section_position": null,
       "assessment": false,
@@ -3731,7 +3639,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3746,7 +3653,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 144,
       "position": 18,
       "activity_section_position": null,
       "assessment": false,
@@ -3756,7 +3663,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3771,7 +3677,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 145,
       "position": 19,
       "activity_section_position": null,
       "assessment": false,
@@ -3781,7 +3687,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3796,7 +3701,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 146,
       "position": 20,
       "activity_section_position": null,
       "assessment": false,
@@ -3806,7 +3711,6 @@
         ],
         "progression": "Concepts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3821,7 +3725,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -3830,7 +3734,6 @@
           "OPD-K5 Stage10Start_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3845,7 +3748,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -3854,7 +3757,6 @@
           "OPD-K5 CS Courses_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3869,7 +3771,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 149,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3878,7 +3780,6 @@
           "OPD-K5 Assessment_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3893,7 +3794,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 150,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3902,7 +3803,6 @@
           "OPD-K5-FinalReflection-2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3917,7 +3817,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 151,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3926,7 +3826,6 @@
           "OPD-K5 Connect_copy_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4043,9 +3942,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 GettingStarted2_2021",
+        "level.key": "K5-21-ClassSection-vid",
         "script_level.level_keys": [
-          "OPD-K5 GettingStarted2_2021"
+          "K5-21-ClassSection-vid"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
@@ -4054,9 +3953,31 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 GettingStarted3_2021",
+        "level.key": "K5-21-StudentExperience-vid",
         "script_level.level_keys": [
-          "OPD-K5 GettingStarted3_2021"
+          "K5-21-StudentExperience-vid"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "K5-21-video-BasicFeatures",
+        "script_level.level_keys": [
+          "K5-21-video-BasicFeatures"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 GettingStarted2_2021",
+        "script_level.level_keys": [
+          "OPD-K5 GettingStarted2_2021"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",
@@ -4076,9 +3997,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-GettingStarted3-2021",
+        "level.key": "OPD-K5 GettingStarted4_2021",
         "script_level.level_keys": [
-          "OPD-K5-GettingStarted3-2021"
+          "OPD-K5 GettingStarted4_2021"
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "Implementing and Teaching CS",

@@ -50,4 +50,14 @@ class CourseOffering < ApplicationRecord
 
     offering
   end
+
+  def self.should_cache?
+    Script.should_cache?
+  end
+
+  def self.get_from_cache(key)
+    Rails.cache.fetch("course_offering/#{key}", force: !should_cache?) do
+      CourseOffering.find_by_key(key)
+    end
+  end
 end

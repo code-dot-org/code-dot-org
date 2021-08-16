@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "tts": true
+      "tts": true,
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-06-17 22:30:25 UTC",
+    "family_name": "dance-2019",
+    "serialized_at": "2021-08-03 22:47:48 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "dance-2019"
@@ -61,7 +63,6 @@
           "Dance_2019_01"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -85,7 +86,6 @@
           "Dance_2019_02"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -109,7 +109,6 @@
           "Dance_2019_03"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -133,7 +132,6 @@
           "Dance_2019_04"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -157,7 +155,6 @@
           "Dance_2019_05"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -181,7 +178,6 @@
           "Dance_2019_06"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -205,7 +201,6 @@
           "Dance_2019_07"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -229,7 +224,6 @@
           "Dance_2019_08"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -253,7 +247,6 @@
           "Dance_2019_09"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -277,7 +270,6 @@
           "Dance_2019_10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

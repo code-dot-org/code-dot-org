@@ -23,6 +23,7 @@ cp_in $orig_dir/en.yml $loc_dir/base.yml
 cp_in $orig_dir/blocks.en.yml $loc_dir/blocks.yml
 cp_in $orig_dir/data.en.yml $loc_dir/data.yml
 cp_in $orig_dir/devise.en.yml $loc_dir/devise.yml
+cp_in $orig_dir/restricted.en.yml $loc_dir/restricted.yml
 cp_in $orig_dir/scripts.en.yml $loc_dir/scripts.yml
 cp_in $orig_dir/slides.en.yml $loc_dir/slides.yml
 cp_in $orig_dir/unplugged.en.yml $loc_dir/unplugged.yml

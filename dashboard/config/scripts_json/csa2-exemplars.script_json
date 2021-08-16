@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-24 13:07:42 UTC",
+    "serialized_at": "2021-07-20 22:21:32 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa2-exemplars"

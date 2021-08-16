@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:28:04 UTC",
+    "serialized_at": "2021-08-03 22:46:50 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "K5-OnlinePD"
@@ -230,7 +230,6 @@
           "OPD-K5 Intro"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -254,7 +253,6 @@
           "OPD-K5 PreSurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -278,7 +276,6 @@
           "OPD-K5 Welcome 2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -302,7 +299,6 @@
           "OPD-K5 About"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -326,7 +322,6 @@
           "OPD-K5 Outline"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -350,7 +345,6 @@
           "OPD-K5 Participation"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -374,7 +368,6 @@
           "OPD-K5 CS Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -398,7 +391,6 @@
           "OPD-K5 CS Tips"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -422,7 +414,6 @@
           "OPD-K5 Stage1Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -446,7 +437,6 @@
           "OPD-K5 Stage2Overview"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -470,7 +460,6 @@
           "OPD-K5 WhatIsCS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -494,7 +483,6 @@
           "OPD-K5 Why teach CS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -518,7 +506,6 @@
           "OPD-K5 Younger Grades"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -542,7 +529,6 @@
           "OPD-K5 Vocabulary"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,7 +552,6 @@
           "OPD-K5 Stage2Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -590,7 +575,6 @@
           "OPD-Stage3Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -614,7 +598,6 @@
           "OPD-K5 Puzzles"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -638,7 +621,6 @@
           "OPD-K5 Unplugged Video"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -662,7 +644,6 @@
           "OPD-K5 What is Mastery"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -686,7 +667,6 @@
           "OPD-K5 Stage3Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -710,7 +690,6 @@
           "OPD-K5 Stage3aGo"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -734,7 +713,6 @@
           "OPD-K5 FirstProgram"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -758,7 +736,6 @@
           "courseA_maze_seq5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -782,7 +759,6 @@
           "courseA_maze_seq6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -806,7 +782,6 @@
           "courseA_maze_seq7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -830,7 +805,6 @@
           "courseA_maze_seq8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -855,7 +829,6 @@
           "courseA_maze_seq10"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -879,7 +852,6 @@
           "OPD-K5 Stage3Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -903,7 +875,6 @@
           "OPD-K5 Stage4Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -927,7 +898,6 @@
           "OPD-K5 Stage4Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -951,7 +921,6 @@
           "OPD-K5 RepeatBlock"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -975,7 +944,6 @@
           "courseC_starWars_loops2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -999,7 +967,6 @@
           "courseC_starWars_loops4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1023,7 +990,6 @@
           "courseC_starWars_loops5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1013,6 @@
           "courseC_starWars_loops6"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1071,7 +1036,6 @@
           "courseC_starWars_loops7"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1095,7 +1059,6 @@
           "courseC_starWars_loops8"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1119,7 +1082,6 @@
           "OPD-K5 Stage4Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1143,7 +1105,6 @@
           "OPD-K5 Stage5Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1167,7 +1128,6 @@
           "OPD-K5 Stage5Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1191,7 +1151,6 @@
           "courseD_bee_conditionalsVid1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1215,7 +1174,6 @@
           "courseD_bee_conditionals1_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1239,7 +1197,6 @@
           "courseD_bee_conditionals2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1263,7 +1220,6 @@
           "courseD_bee_conditionals3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1287,7 +1243,6 @@
           "courseD_bee_conditionals4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1311,7 +1266,6 @@
           "courseD_bee_conditionals5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1335,7 +1289,6 @@
           "OPD-K5 Stage5Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1359,7 +1312,6 @@
           "OPD-K5 Stage6Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1383,7 +1335,6 @@
           "OPD-K5 Stage6Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1407,7 +1358,6 @@
           "courseE_video_functionsArtist"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1431,7 +1381,6 @@
           "courseE_artist_functions1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1455,7 +1404,6 @@
           "courseE_artist_functions_predict1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1479,7 +1427,6 @@
           "courseE_artist_functions2"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1503,7 +1450,6 @@
           "courseE_artist_functions3"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1527,7 +1473,6 @@
           "courseE_artist_functions4"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1551,7 +1496,6 @@
           "courseE_artist_functions5"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1575,7 +1519,6 @@
           "OPD-K5 Stage6Review"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1599,7 +1542,6 @@
           "OPD-K5 Stage7Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1623,7 +1565,6 @@
           "OPD-K5 Stage7Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1647,7 +1588,6 @@
           "OPD-K5 EventsVid"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1671,7 +1611,6 @@
           "iceage_move_events"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1695,7 +1634,6 @@
           "iceage_sound_and_points"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1719,7 +1657,6 @@
           "iceage_warn_ice_age"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1743,7 +1680,6 @@
           "OPD-K5 Congrats"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1767,7 +1703,6 @@
           "OPD-K5 CongratsFinal"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1791,7 +1726,6 @@
           "OPD-K5 Stage8Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1815,7 +1749,6 @@
           "OPD-K5 Culture"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1839,7 +1772,6 @@
           "OPD-K5 LessonPlanning"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1863,7 +1795,6 @@
           "OPD-K5 Pair"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1887,7 +1818,6 @@
           "OPD-K5 Problem Solving"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1911,7 +1841,6 @@
           "OPD-K5 Stage8Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1935,7 +1864,6 @@
           "OPD-K5 Stage9Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1959,7 +1887,6 @@
           "OPD-K5 CS Courses"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1983,7 +1910,6 @@
           "OPD-K5 Using CS"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2007,7 +1933,6 @@
           "OPD-K5 Assessment"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2031,7 +1956,6 @@
           "OPD-K5 Your Plan"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2055,7 +1979,6 @@
           "OPD-K5 Stage9Go"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2079,7 +2002,6 @@
           "OPD-K5 Stage10Start"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2103,7 +2025,6 @@
           "OPD-K5 PostSurvey"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2127,7 +2048,6 @@
           "OPD-K5 Closing"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2151,7 +2071,6 @@
           "OPD-K5 Connect"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2175,7 +2094,6 @@
           "OPD-K5 Celebrate"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

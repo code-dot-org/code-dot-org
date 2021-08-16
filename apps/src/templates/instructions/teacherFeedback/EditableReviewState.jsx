@@ -14,22 +14,16 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 class EditableReviewState extends Component {
   static propTypes = {
     latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
-    isAwaitingTeacherReview: PropTypes.bool,
-    setReviewState: PropTypes.func,
-    setReviewStateChanged: PropTypes.func
+    onReviewStateChange: PropTypes.func
   };
 
   checkbox = null;
-
-  initialReviewState = this.props.isAwaitingTeacherReview
-    ? ReviewStates.awaitingReview
-    : this.props.latestReviewState;
 
   constructor(props) {
     super(props);
 
     this.state = {
-      reviewState: this.initialReviewState
+      reviewState: props.latestReviewState
     };
   }
 
@@ -49,25 +43,21 @@ class EditableReviewState extends Component {
   onCheckboxChange = () => {
     const newReviewState = this.getNextReviewState();
     this.setState({reviewState: newReviewState}, this.setCheckboxState);
-
-    this.props.setReviewState(newReviewState);
-    this.props.setReviewStateChanged(
-      newReviewState !== this.initialReviewState
-    );
+    this.props.onReviewStateChange(newReviewState);
   };
 
   getNextReviewState() {
     if (this.state.reviewState === ReviewStates.awaitingReview) {
       return ReviewStates.completed;
     } else if (this.state.reviewState === ReviewStates.keepWorking) {
-      return this.initialReviewState ? ReviewStates.completed : null;
+      return this.props.latestReviewState ? ReviewStates.completed : null;
     } else {
       return ReviewStates.keepWorking;
     }
   }
 
   getTooltipText() {
-    if (this.initialReviewState === ReviewStates.awaitingReview) {
+    if (this.props.latestReviewState === ReviewStates.awaitingReview) {
       return i18n.teacherFeedbackAwaitingReviewTooltip();
     } else {
       return i18n.teacherFeedbackKeepWorkingTooltip();
@@ -76,7 +66,12 @@ class EditableReviewState extends Component {
 
   render() {
     return (
-      <div style={styles.keepWorking}>
+      <div
+        style={styles.keepWorking}
+        data-tip
+        data-place="bottom"
+        data-for="keep-working-tooltip"
+      >
         <input
           id="keep-working"
           ref={ref => (this.checkbox = ref)}
@@ -84,19 +79,17 @@ class EditableReviewState extends Component {
           style={styles.checkbox}
           onChange={this.onCheckboxChange}
         />
-        <div data-tip data-place="bottom" data-for="keep-working-tooltip">
-          <label htmlFor="keep-working" style={styles.label}>
-            <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
-            {this.initialReviewState === ReviewStates.awaitingReview && (
-              <span style={styles.awaitingReviewText}>
-                {i18n.waitingForTeacherReviewLabel()}
-              </span>
-            )}
-          </label>
-          <ReactTooltip id="keep-working-tooltip" role="tooltip" effect="solid">
-            <div style={styles.tooltipContent}>{this.getTooltipText()}</div>
-          </ReactTooltip>
-        </div>
+        <label htmlFor="keep-working" style={styles.label}>
+          <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
+          {this.props.latestReviewState === ReviewStates.awaitingReview && (
+            <span style={styles.awaitingReviewText}>
+              {i18n.waitingForTeacherReviewLabel()}
+            </span>
+          )}
+        </label>
+        <ReactTooltip id="keep-working-tooltip" role="tooltip" effect="solid">
+          <div style={styles.tooltipContent}>{this.getTooltipText()}</div>
+        </ReactTooltip>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 name 'OPD-K5 CSFCourses_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Computer Science Fundamentals Courses
+# Getting Started
+
+Lesson 2: Getting Started provides teacher tools, curriculum resources, and support to help you start teaching Computer Science Fundamentals.
 
 Computer Science Fundamentals is designed for elementary school educators and students.  You do not need previous computer science experience and we encourage you to learn along with your students. The table below outlines the number of lessons and CS concepts within each course.  
 

@@ -3,23 +3,11 @@ skip_dialog true
 markdown <<MARKDOWN
 # Getting Started
 
-Lesson 2: Getting Started provides teacher tools, curriculum resources, and support to help you start teaching Computer Science Fundamentals.
-
-## Step 1:  Create a teacher account
+## Create a teacher account
 
 Visit the <a href="https://code.org" target="blank" rel="noopener noreferrer">Code.org main website</a> to sign up for an account, if you don't already have one.  
 
 **Note:**  You and your students do not need an account to work on Computer Science Fundamentals courses.  However, having an account allows you to see your students work and for student work to be saved.
 
-
-## Step 2:  Use the teacher dashboard
-
-The teacher dashboard contains tools for checking on and evaluating student work, as well as managing students in a classroom section. The image below is an example of the teacher dashboard with a class section filled with students.  
-
-##### Watch <a href="https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b" target="blank" >this video</a> to guide you in creating a class section and adding students to your section.
-
-<img src="https://images.code.org/2f6a671e5cd2825d77fa733567320f79-image-1623280184259.png" class="center" style="display: block; margin-left: auto; margin-right: auto; height:80%; width:80%">
-
-For information about using Google Classroom or Clever when adding students to your section, check out this <a href="https://support.code.org/hc/en-us/articles/202114633-Creating-accounts-for-students-and-adding-them-to-your-section" target="blank" rel="noopener noreferrer"> Code.org support article</a>.
 
 MARKDOWN

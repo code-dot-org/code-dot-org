@@ -28,9 +28,12 @@ mk-MK:
   twentyhours_text: Го завршите вашиот прв Час на Кодот? Научете повеќе основни концепти
     за компјутерски науки и програмирање во овој курс.
   og_title: Секое дете заслужува шанса
+  og_title_soon: Недела за образување на компјутерски науки
   og_description: Секој ученик во секое училиште заслужува шанса да учи компјутерски
     науки. Тоа менува се.
   csedweek_og_title: Недела за образување на компјутерски науки
+  csedweek_og_description: Секој ученик во секое училиште заслужува шанса да учи компјутерски
+    науки. Тоа менува се.
   hoc2014_heading: Приклучете се на <a href="http://hourofcode.com">Час на Кодот</a><br/>8-14
     Декември, 2014<br/>
   hoc2014_try: Обидете се
@@ -51,15 +54,22 @@ mk-MK:
   congratulations_volunteer: 'Благодариме: Сега откако пробавте како работи часот
     на кодот, пријави се да одиш во училница и да им помогнеш на студентите да научат!'
   congrats_next_tutorials_title: Дипломиај за следното ниво
+  support_url: http://support.code.org/
+  homepage_hero_hoc_is_coming: Недела за образување на компјутерски науки
+  homepage_hero_hoc_is_here: Недела за образување на компјутерски науки
   homepage_action_text_try_it: Обидете се
   homepage_action_text_learn: Започни со учење
   homepage_slot_text_link_hoc: Пробај еден час кодирање
   starwars_blocks_title: Блокови
   volunteer_engineer_submission_field_name: Име
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_submit: Поднеси
   dashboard_action_cancel: Откажи
   dashboard_sections_close: затвори
+  dashboard_students_add_multiple: 'Типкајте ги или вметнете ги имињата на вашите
+    ученици, секој ученик посебно:'
   dashboard_students_name: Име
   blockly_name: Blockly
   gamelab_name: Работилница за апликации

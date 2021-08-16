@@ -9,289 +9,319 @@ layout: wide
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# மணிநேர குறியீடு ™ மற்றும் கணினி அறிவியல் கல்வி வாரத்திற்கான பயிற்சிகள் மற்றும் பாடங்களை உருவாக்கி சமர்ப்பிப்பதற்கான வழிகாட்டுதல்கள்
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org மற்றும் ஹவர் ஆஃப் கோட் வலைத்தளங்களில் பல்வேறு வகையான கோட் ™ செயல்பாடுகள், பாடங்கள் மற்றும் வீடியோக்களை வழங்குகிறது. தற்போதைய பட்டியல் [ hourofcode.com/learn ]({{ urls/learn }}) இல் உள்ளது.
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+கணினி அறிவியல் கொள்கையை விளக்கும் உங்கள் சொந்த வழிகாட்டும் பயிற்சி, ஆசிரியர் தலைமையிலான பாடம் அல்லது ரோபாட்டிக்ஸ் / தயாரிப்பாளர் செயல்பாட்டை சமர்ப்பிக்க விரும்புகிறீர்களா? இந்த உலகளாவிய இயக்கத்தில் சேர்ந்து, உலகெங்கிலும் பங்கேற்பாளர்களுக்கு ஒரு மணிநேர குறியீட்டைத் தொடங்க உதவுங்கள் அல்லது பல பாடங்கள், நாள் முழுவதும் அல்லது வாரம் முழுவதும் செயல்பாடுகளுடன் செல்லுங்கள்.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**வழிகாட்டுதல்களைப் படித்த பிறகு, எங்கள் [ குறியீட்டு நேரம் ™ செயல்பாட்டு சமர்ப்பிப்பு பக்கம் ](https://forms.gle/z8ARSLcJCFdNPVJS8) மூலம் உங்கள் செயல்பாட்டைச் சமர்ப்பிக்கலாம். நீங்கள் எந்த நேரத்திலும் ஒரு செயலைச் சமர்ப்பிக்கலாம், ஆனால் எந்தவொரு காலண்டர் ஆண்டிலும் சேர்ப்பதற்கான காலக்கெடு அக்டோபர் 1 ஆகும். (எடுத்துக்காட்டாக, அக்டோபர் 1 க்குப் பிறகு பெறப்பட்ட எந்தவொரு செயல்பாடும் {{ campaign_date/year }} {{ campaign_date/year }}Code கோட் மணிநேரத்திற்கு பட்டியலிடப்படாது.) ஆரம்பகால தர மதிப்பாய்வுக்கு சமர்ப்பிக்க காலக்கெடு [ (கீழே உள்ள விவரங்கள்) ](#earlyreview) ஆகஸ்ட் 16. </ strong> உங்கள் செயல்பாட்டு சமர்ப்பிப்பு குறித்து ஏதேனும் கேள்விகள் இருந்தால், தயவுசெய்து எங்களை அணுகவும் support@code.org.</p> 
 
-A few tips:
+சில உதவிக்குறிப்புகள்:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
-
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
-
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+1. ** ஒன்றுக்கு மேற்பட்ட செயல்பாடுகளைச் சமர்ப்பிக்கவும் </ strong>: நீங்கள் வெவ்வேறு நிலைகள், வெவ்வேறு வயது அல்லது பிற வகைகளுக்கான செயல்பாடுகளை உருவாக்கியிருந்தால், நாங்கள் உங்கள் செயல்பாடுகளை தனித்தனியாக பட்டியலிடுகிறோம், எனவே ஒவ்வொரு ஆசிரியரும் தங்கள் வகுப்பறைக்கு சரியானதைக் கண்டறிய முடியும். ஒவ்வொரு பயிற்சி அல்லது செயல்பாட்டையும் தனித்தனியாக சமர்ப்பிக்கவும். சமீபத்திய ஆண்டுகளில் நாங்கள் பார்த்த சமர்ப்பிப்புகளின் எண்ணிக்கையைப் பொறுத்தவரை, ஒரு கூட்டாளருக்கு ** 5 செயல்பாடுகள் ** ஐ மதிப்பாய்வு செய்ய எங்களுக்கு நேரம் கிடைக்கும். அதன்பிறகு, மணிநேர குறியீடு தொடங்குவதற்கு முன்பு முடிந்தவரை மதிப்பாய்வு செய்ய சிறந்த முயற்சியை மேற்கொள்வோம்.</p></li> 
+    
+    * **தொடக்கப் பாடங்களுக்கு அப்பால் **: முதன்முறையாக கணினி அறிவியலைக் கற்கும் ஆசிரியர்கள் மற்றும் மாணவர்களுக்கான பாடங்களுக்கு மேலதிகமாக, கணினி அறிவியல் ஆர்வமுள்ள வகுப்பறைகளுக்கான கற்றல் அனுபவங்களை இன்னும் கொஞ்சம் மேலே செல்ல விரும்புகிறோம்! ஏற்கனவே அடிப்படைகளுடன் வசதியாக இருக்கும் வகுப்புகளுக்கான படிப்பினைகளை சமர்ப்பிப்பதன் மூலம் எங்களுக்கு உதவுங்கள்.
+    
+    * **பொருள் பகுதிகள் **: கணினி அறிவியலை கணிதத்தில் ஒருங்கிணைக்கும் சிறந்த பாட யோசனை உள்ளதா? வரலாறு? மொழி கலை? அறிவியல்? கலை? அல்லது வேறு பாடமா? குறியீட்டு நேரத்தை தங்கள் பாடப் பகுதியுடன் இணைக்க விரும்பும் ஆசிரியர்களிடமிருந்து எங்களிடம் ஏராளமான கோரிக்கைகள் உள்ளன. ஆசிரியர்கள் தங்கள் வகுப்பறை வகைக்கு (கிரேடு பேண்ட் அல்லது பொருள் பகுதி) வடிகட்டலாம், எனவே வகுப்பறை நடவடிக்கைகள் அல்லது வெவ்வேறு தர இசைக்குழுக்களுக்கான ஒவ்வொரு முக்கிய பாடப் பகுதியிலும் CS ஸுடன் தொடர்புடைய பாடத் திட்டங்களை வழங்க இடைவெளிகளை நிரப்ப எங்களுக்கு உங்கள் உதவி தேவை. பொதுவான CS செயல்பாடுகளைத் தேடும் ஆசிரியர்களுக்கான “கணினி அறிவியல்” வகையையும் நாங்கள் தொடர்ந்து கொண்டிருக்கிறோம்.</ol> 
+    
+    
 
 <a id="top"></a>
 
-## Index:
-
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Guidelines for submitting for an early qualitative review](#earlyreview)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+    
+    ## அட்டவணை:
+    
+    - [என்ன சமர்ப்பிக்க வேண்டும்](#whatsubmit)
+    - [ஒரு மணிநேர குறியீடு ™ செயல்பாட்டை உருவாக்குவதற்கான பொதுவான வழிகாட்டுதல்கள்](#guidelines)
+    - [சமர்ப்பிப்பது எப்படி](#submit)
+    - [நடவடிக்கைகள் எவ்வாறு மதிப்பீடு செய்யப்படும்](#inclusion)
+    - [ஆரம்பகால தரமான மதிப்பாய்வுக்கு சமர்ப்பிப்பதற்கான வழிகாட்டுதல்கள்](#earlyreview)
+    - [உங்கள் செயல்பாட்டை வடிவமைப்பதற்கான பரிந்துரைகள்](#design)
+    - [வர்த்தக முத்திரை வழிகாட்டுதல்கள்](#tm)
+    - [கண்காணிப்பு பிக்சல்](#pixel)
+    - [உங்கள் செயல்பாடு, CSEdWeek மற்றும் மணிநேர குறியீட்டை மேம்படுத்துதல்](#promote)
+    
+    
 
 <a id="whatsubmit"></a>
 
-## What to submit
-
-**Self-guided puzzle or game ([example](https://code.org/dance))**
-
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
-
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
-
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
-
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
-
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
-
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
-
-**Activities for teachers in other subjects/fields**
-
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
-
-Examples:
-
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
-
-**For students with special needs**
-
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
-
-[**Back to the top**](#top)
+    
+    ## என்ன சமர்ப்பிக்க வேண்டும்
+    
+    **சுய வழிகாட்டுதல் புதிர் அல்லது விளையாட்டு ([ எடுத்துக்காட்டு ](https://code.org/dance))**
+    
+    இந்த நடவடிக்கைகள் மாணவர்கள் ஒரு டுடோரியல் மூலம் சுயமாக இயக்குவதற்காக வடிவமைக்கப்பட்டுள்ளன. அவர்களுக்கு ஆசிரியர் அல்லது ஆசிரியர் தயாரிப்பு பணியிலிருந்து அதிக அறிவுறுத்தல் தேவையில்லை.
+    
+    **ஆசிரியர் வசதியான பாடம் ([ எடுத்துக்காட்டு ](https://studio.code.org/s/course1/lessons/2/levels/1), </a>, [ வார்ப்புரு ](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+    
+    இப்போது நூறாயிரக்கணக்கான கல்வியாளர்கள் மணிநேர குறியீட்டை முயற்சித்திருக்கிறார்கள், கணினி வகுப்பின் அடிப்படைகளை கற்பிக்கும் பல ஆக்கபூர்வமான செயல்பாடுகளுக்கு பல வகுப்பறைகள் தயாராக உள்ளன மேலும் மேம்பட்ட ஆசிரியர்களுக்கு உத்வேகம் தேட உதவுவதற்காக, "ஆசிரியர் தலைமையிலான" பாடங்கள் மற்றும் மணிநேர கோட் வீரர்களுக்கான செயல்பாட்டுத் திட்டங்களை நாங்கள் சேகரித்து நிர்வகிக்கிறோம்.
+    
+    அனுபவம் வாய்ந்த ஆசிரியர்களுக்காக நாங்கள் காண்பிக்கும் ஒரு வகை செயல்பாடு “திறந்த சாண்ட்பாக்ஸ்” உருவாக்கும் திட்டங்கள் மாணவர்கள் தங்கள் சொந்த பயன்பாடு, விளையாட்டு, வலைத்தளம் அல்லது பிற திட்டத்தை உருவாக்க ஊக்குவிக்கும் செயல்பாடுகள். ஒழுங்காக வசதி செய்யப்பட்டால், மேலும் திறந்தநிலை செயல்பாடுகள் கணினி அறிவியலின் படைப்பு தன்மையை சிறப்பாக வெளிப்படுத்தும்.
+    
+    சில கல்வியாளர்கள் வழிகாட்டப்பட்ட-புதிர் / விளையாட்டு அனுபவத்தை விட பாரம்பரிய பாடம் வடிவமைப்பைப் பின்பற்றும் மணிநேர குறியீட்டு நடவடிக்கைகளை நடத்த விரும்புகிறார்கள்
+    
+    உங்கள் பாடம் திட்டத்திற்காக இந்த [ வார்ப்புரு ](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) உடன் தொடங்கலாம்.
+    
+    **பிற பாடங்களில் / துறைகளில் ஆசிரியர்களுக்கான செயல்பாடுகள்**
+    
+    வெவ்வேறு பாடப் பகுதிகளுக்காக வடிவமைக்கப்பட்ட பாடம் திட்டங்களையும் நாங்கள் இடம்பெறுகிறோம். எடுத்துக்காட்டாக, வடிவியல் வகுப்பில் குறியீட்டைக் கற்பிப்பதற்கான ஒரு மணி நேர பாடம் திட்டம். அல்லது ஆங்கில வகுப்புக்கு ஒரு பைத்தியம்-லிப் பயிற்சி. அல்லது வரலாற்று வகுப்பிற்கான ஆக்கபூர்வமான வினாடி வினா-உருவாக்கும் செயல்பாடு. CS எவ்வாறு பல்வேறு பாடப் பிரிவுகளை எவ்வாறு பாதிக்கலாம் மற்றும் மேம்படுத்தலாம் என்பதை நிரூபிக்கும் அதே வேளையில், அவர்களின் துறைக்கு தனித்துவமான ஒரு மணிநேர குறியீடு செயல்பாட்டை வழிநடத்த பிற பாடப் பிரிவுகளில் ஆசிரியர்களை நியமிக்க இவை உதவும்.
+    
+    எடுத்துக்காட்டுகள்:
+    
+    - மிரர் இமேஜஸ் (ஒரு கலை ஆசிரியருக்கான செயல்பாடு)
+    - இயற்பியல் ஆசிரியருக்கான ஒரு ஆர்டுயினோ செயல்பாடு
+    - ஒரு வரலாற்று ஆசிரியருக்கான தொழில்நுட்ப செயல்பாட்டின் வரலாறு
+    - கல்வியாளர்களிடமிருந்து கூடுதல் யோசனைகளுக்கு [ இந்த பட்டியலை ](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) பார்க்கவும் (அல்லது மற்றவர்களை ஊக்குவிக்க பட்டியலில் உங்கள் சொந்தத்தை சேர்க்கவும்)
+    
+    **சிறப்பு தேவைகள் உள்ள மாணவர்களுக்கு**
+    
+    சிறப்புத் தேவை மாணவர்களுக்காக வடிவமைக்கப்பட்ட ஒரு செயல்பாடு அல்லது டுடோரியலை நீங்கள் உருவாக்கினால், தயவுசெய்து அதை விளக்கத்தில் அழைக்கவும். குறிப்பாக, பார்வை குறைபாடுள்ளவர்களுக்கு மிகக் குறைவான விருப்பங்கள் உள்ளன. உங்கள் செயல்பாடு இந்த பார்வையாளர்களுக்காக வடிவமைக்கப்பட்டிருந்தால், எங்களுக்குத் தெரியப்படுத்துங்கள்.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
-
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
-
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability. 
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online. 
-
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
-
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
-
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
-
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
-
-[**Back to the top**](#top)
+    
+    ## ஒரு மணிநேர குறியீடு செயல்பாட்டை உருவாக்குவதற்கான பொதுவான வழிகாட்டுதல்கள்
+    
+    ஒரு மணிநேர குறியீட்டின் குறிக்கோள், கணினி அறிவியல் அல்லது நிரலாக்கத்தின் முதல் சுவை ஆரம்பவர்களுக்கு வழங்குவதாகும். தொனி இருக்க வேண்டும்:
+    
+    - வயது, பாலினம், இனம் அல்லது திறன் / இயலாமை ஆகியவற்றைப் பொருட்படுத்தாமல் யார் வேண்டுமானாலும் கணினி அறிவியலைக் கற்றுக்கொள்ளலாம். 
+    - கணினி அறிவியல் பல்வேறு துறைகள் மற்றும் ஆர்வங்களுடன் இணைக்கப்பட்டுள்ளது. எல்லோரும் அதைக் கற்றுக்கொள்ள வேண்டும்!
+    - பெற்றோர் / நண்பர்களுடன் அல்லது ஆன்லைனில் பகிரக்கூடிய தனித்துவமான ஒன்றை உருவாக்க மாணவர்களை ஊக்குவிக்கவும். 
+    
+    செயல்பாடுகள் சுழல்கள், நிபந்தனைகள், குறியாக்கம் அல்லது இணையம் எவ்வாறு இயங்குகிறது போன்ற கணினி அறிவியல் கருத்தை கற்பிக்க வேண்டும். நிஜ உலக ஆக்கிரமிப்புகள், நிகழ்வுகள் அல்லது வரலாற்றுடன் கணினி அறிவியல் எவ்வாறு இணைகிறது என்பதையும் ஒரு செயல்பாடு கற்பிக்க முடியும். எடுத்துக்காட்டாக, பார்வையாளர்களுக்காக அல்லது காரணத்திற்காக அர்த்தமுள்ள பயன்பாடுகளை உருவாக்க யுஎக்ஸ் வடிவமைப்பைக் கற்பித்தல். கருத்துக்களைக் காட்டிலும் நிரலாக்கத்தின் தொடரியல் மீது கவனம் செலுத்தும் செயல்பாடுகளை நாங்கள் ஊக்கப்படுத்துகிறோம். எடுத்துக்காட்டாக, HTML ஐ கற்பிக்கும் செயல்பாடுகளை நாங்கள் பட்டியலிடுவோம், ஆனால் முன்னிலைப்படுத்த மாட்டோம். இதேபோல், ஒரு வழிமுறை அல்லது செயல்முறையை எவ்வாறு மாதிரியாகக் கற்றுக்கொள்வது என்பதைக் காட்டிலும் கட்டமைப்பு விருப்பங்களை அமைப்பதில் / மாற்றுவதில் கவனம் செலுத்தும் தொகுதி நிரலாக்க பாடங்களை நாங்கள் ஊக்கப்படுத்துகிறோம்.
+    
+    * தொழில்நுட்ப தேவைகள்:* பல்வேறு வகையான பள்ளி மற்றும் வகுப்பறை தொழில்நுட்ப அமைப்புகளின் காரணமாக, சிறந்த செயல்பாடுகள் வலை அடிப்படையிலான அல்லது ஸ்மார்ட்போன் நட்பு, அல்லது பயன்படுத்தப்படாத கணினி அறிவியல் கருத்துக்களைக் கற்பிக்கும் பிரிக்கப்படாத பாணி நடவடிக்கைகள். கணினி ([ http://csunplugged.com/ ](http://csunplugged.com/) ஐப் பார்க்கவும்). பல்வேறு வகையான பள்ளி மற்றும் வகுப்பறை தொழில்நுட்ப அமைப்புகளின் காரணமாக, சிற*ந்த செயல்பாடுகள் வலை அடிப்படையிலான அல்லது ஸ்மார்ட்போன் நட்பு, அல்லது பயன்படுத்தப்படாத கணினி அறிவியல் கருத்துக்களைக் கற்பிக்கும் பிரிக்கப்படாத பாணி நடவடிக்கைகள். கணினி ([ http://csunplugged.com/ ](http://csunplugged.com/) ஐப் பார்க்கவும்). பயன்பாட்டு-நிறுவல், டெஸ்க்டாப் பயன்பாடு அல்லது கேம்-கன்சோல் அனுபவங்கள் தேவைப்படும் செயல்பாடுகள் சரி, ஆனால் சிறந்தவை அல்ல. பதிவு அல்லது கட்டணம் தேவைப்படும் செயல்பாடுகளை நாங்கள் பட்டியலிட மாட்டோம். (ரோபாட்டிக்ஸ் நடவடிக்கைகளுக்கு ரோபாட்டிக்ஸ் கொள்முதல் தேவைப்படலாம்.)</p> 
+    
+    * மாணவர் தலைமையிலான (சுய வழிகாட்டுதல்) வடிவம்:* அசல் மணிநேர குறியீடு பெரும்பாலும் சுய வழிகாட்டுதல் பயிற்சிகள் அல்லது பாடங்களின் வெற்றியின் அடிப்படையில் கட்டப்பட்டது, இது ஆசிரியரால் விருப்பமாக வசதி செய்யப்பட்டது. தற்போதுள்ள ஏராளமான விருப்பங்கள் உள்ளன, ஆனால் நீங்கள் புதிய ஒன்றை உருவாக்க விரும்பினால், இந்த நடவடிக்கைகள் வடிவமைக்கப்பட வேண்டும், எனவே அவை தனியாக வேலை செய்யும் மாணவருக்கு வேடிக்கையாக இருக்கும், அல்லது வகுப்பறையில் ஆசிரியருக்கு குறைந்தபட்ச தயாரிப்பு அல்லது CS பின்னணி இருக்கும். திறந்த-மணிநேர மணிநேர சவாலுக்கு மாறாக அவை மாணவர்களுக்கு வழிகாட்டுதல்களை வழங்க வேண்டும் வெறுமனே, பயிற்சிகள் மற்றும் நிரலாக்க தளங்களுக்கு இடையில் தாவல்கள் அல்லது சாளரங்களை மாற்றுவதைத் தவிர்ப்பதற்காக, அறிவுறுத்தல்கள் மற்றும் பயிற்சிகள் நேரடியாக நிரலாக்க தளத்துடன் ஒருங்கிணைக்கப்படுகின்றன.
+    
+    நீங்கள் உருவாக்கக்கூடிய பல்வேறு வகையான பயிற்சிகள் மற்றும் பாடம் திட்டங்களைப் புரிந்துகொள்ள, [ குறியீடு செயல்பாடுகளின் மணிநேரம் ](https://hourofcode.com/us/learn) ஐப் பார்வையிடவும்.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="submit"></a>
 
-## How to submit
-
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8) and complete the questions to submit your activity.
-
-What you’ll need:
-
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
-
-#### Additional things you’ll need when submitting Lesson Plans
-
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
-
-#### Additional things you’ll need when submitting Online Activities
-
-* Name and logo of your organization
-* whether it is COPPA compliant or not
-* a URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
-
-#### Additional things you’ll need when submitting Robotics
-
-* If you submit a robotics activity, we need to know the cost per student for robotics
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
-
-[**Back to the top**](#top)
+    
+    ## சமர்ப்பிப்பது எப்படி
+    
+    [ குறியீட்டின் மணிநேரம் செயல்பாடு சமர்ப்பிக்கும் பக்கத்தை ](https://forms.gle/L1hjArNnGSMJPzyE8) பார்வையிடவும் மற்றும் உங்கள் செயல்பாட்டைச் சமர்ப்பிக்க கேள்விகளை முடிக்கவும்.
+    
+    உங்களுக்கு என்ன தேவை:
+    
+    * சமர்ப்பிக்கப்பட்ட செயல்பாட்டைக் குறிக்கும் முதன்மை தொடர்பின் பெயர் மற்றும் மின்னஞ்சல்
+    * செயல்பாட்டு பெயர் (பெயரில் “மணிநேர குறியீட்டை” சேர்க்க முடியாது)
+    * செயல்பாட்டுக்கான URL இணைப்பு
+    * செயல்பாட்டு விளக்கம் (அதிகபட்ச எழுத்து எண்ணிக்கை: 400) 
+        * இது முக்கியமாக மாணவர் வழிநடத்தப்பட்டதா அல்லது ஆசிரியர் வசதியுள்ளதா என்பதை விளக்கத்தில் சேர்க்கவும். கூடுதலாக, சில பள்ளிகள் மணிநேர கோட் செயல்பாடுகள் பொதுவான கோர் அல்லது அடுத்த தலைமுறை அறிவியல் தரநிலைகளை உரையாற்றுகின்றனவா என்பதை அறிய ஆர்வமாக உள்ளன. செயல்பாடு குறிப்பிட்ட தரங்களை நிவர்த்தி செய்தால், இந்த தகவலைச் சேர்த்துக் கொள்ளுங்கள்.
+    * நோக்கம் கொண்ட பயனர்களுக்கு பரிந்துரைக்கப்பட்ட தர நிலை(கள்). தரத்திற்கு ஏற்ற கணினி அறிவியல் கருத்துகளுக்கு \[கணினி அறிவியல் ஆசிரியர்கள் சங்கத்தின் K-12 தரநிலைகள்\] (https://k12cs.org/framework-statements-by-grade-band/) ஐப் பார்க்கலாம். எடுத்துக்காட்டு தர நிலைகள் பின்வருமாறு: 
+        * மழலையர் பள்ளி - தரம் 1 (வயது 4-6)
+        * தரங்கள் 2-5 (வயது 7-10)
+        * 6-8 தரங்கள் (வயது 11-13)
+        * 9+ தரங்கள் (வயது 14+)
+    * உங்கள் செயல்பாடு உள்ளடக்கிய பாடப் பிரிவுகளின் பட்டியல் (கணினி அறிவியலுடன் கூடுதலாக). எடுத்துக்காட்டாக, ஒரு கணித ஆசிரியர் உங்கள் செயல்பாட்டை கோணங்கள் அல்லது பரவளையங்களைப் பற்றி கற்பிக்க பயன்படுத்தினால், கணிதமாக பட்டியலிடுங்கள். வினைச்சொற்கள் / பெயர்ச்சொற்கள் / போன்றவற்றைக் கற்பிக்கும் பைத்தியம் லிப்ஸ் செயல்பாடு உங்களிடம் இருந்தால். மொழி கலைகளைத் தேர்வுசெய்க.
+    * உங்கள் செயல்பாடு கற்பிக்கும் நிரலாக்க மொழிகளின் பட்டியல். I.e. C/C++, Java, JavaScript, etc. அல்லது மொழி சுயாதீனமாக (பல மொழிகளில் கற்பிக்கக்கூடிய பாட திட்டங்களுக்கு)
+    * ஆதரிக்கப்படும் இயற்கை மொழிகளின் பட்டியல். குறிப்பு: மொழி கண்டறிதல் என்பது செயல்பாட்டு வழங்குநரின் பொறுப்பு; வழங்கப்பட்ட ஒற்றை URL க்கு அனைத்து பயனர்களையும் திருப்பி விடுவோம்.
+    * உங்கள் செயல்பாட்டை ஒரு கல்வியாளர் பயன்படுத்த வேண்டிய அனுபவம் என்ன? (எ.கா. தொடக்க அல்லது வசதியான.) மேலும், மாணவர்களுக்கு எந்த அளவிலான அனுபவம் இருக்க வேண்டும்? நீங்கள் இன்னும் மேம்பட்ட மணிநேர குறியீடு ™ செயல்பாடுகளைத் தயாரிக்க விரும்பினால், உங்கள் செயல்பாட்டின் விளக்கத்தில் தேவையான முன் அறிவைச் சேர்க்கவும்.
+    * உங்கள் செயல்பாட்டின் நீளம் 
+        * 1 மணி நேரம் மட்டுமே
+        * பின்தொடர்தல் பாடத்துடன் 1 மணிநேரம்
+        * 2-6 மணி நேரம் (பல பாடங்களாக இருக்கலாம்)
+    * உங்கள் செயல்பாடு இருந்தால் அணுகக்கூடிய இடவசதிகளின் பட்டியல். ஸ்கிரீன் ரீடர் பொருந்தக்கூடிய தன்மை, உரைக்கு பேச்சு திறன்கள், உயர்-மாறுபட்ட வண்ணங்களைப் பயன்படுத்துதல் அல்லது குறைபாடுகள் உள்ள கற்பவர்களுக்காக உருவாக்கப்பட்ட வேறு எந்த இடவசதிகளும் இதில் அடங்கும்.
+    
+    #### பாடம் திட்டங்களைச் சமர்ப்பிக்கும்போது உங்களுக்குத் தேவையான கூடுதல் விஷயங்கள்
+    
+    * உங்கள் பாடம் திட்டத்துடன் இணைக்கவும். இது ஒரு வலைப்பக்கம், டிராப்பாக்ஸ் இணைப்பு, கூகிள் டிரைவ் அல்லது ஒத்த சேவையாக இருக்கலாம். 
+    * உங்கள் பாடம் திட்டத்தை (கீறல் செய்ய) ஆசிரியர் செய்ய வேண்டிய மென்பொருள் மற்றும் / அல்லது வன்பொருள். ரோபோக்கள்? ஒன்றுமில்லை?)
+    
+    #### ஆன்லைன் செயல்பாடுகளைச் சமர்ப்பிக்கும்போது உங்களுக்குத் தேவையான கூடுதல் விஷயங்கள்
+    
+    * உங்கள் நிறுவனத்தின் பெயர் மற்றும் லோகோ
+    * அது COPPA இணக்கமானதா இல்லையா
+    * ஆசிரியர் குறிப்புகளுக்கான URL இணைப்பு (விரும்பினால்)
+    * சோதிக்கப்பட்ட / இணக்கமான தளங்களின் பட்டியல்: 
+        * இணைய அடிப்படையிலான: நீங்கள் எந்த தளங்களை சோதித்தீர்கள்? 
+            * OS - மேக், வின் மற்றும் பிற பதிப்புகள்
+            * உலாவிகள் - IE11, எட்ஜ், பயர்பாக்ஸ், குரோம், சஃபாரி
+            * iOS மொபைல் சஃபாரி (மொபைல் உகந்ததாக)
+            * Android Chrome (மொபைல் உகந்ததாக)
+        * இணைய அடிப்படையிலானவை அல்ல: சொந்த குறியீட்டிற்கான தளத்தை குறிப்பிடவும் (மேக், வின், iOS, Android, xBox, மற்றவை)
+        * அவிழ்க்கப்பட்டது
+    * மணிநேர குறியீடு செயல்பாட்டின் ஸ்கிரீன்ஷாட் அல்லது சந்தைப்படுத்தல் படம். 4: 3 பரிமாணங்களுடன் குறைந்தபட்சம் ஒரு படத்தையாவது அனுப்பவும். இது 390px ஆல் குறைந்தது 520px ஆக இருக்க வேண்டும். ஆங்கிலம் அல்லாதவர்களுக்கு இது மிகவும் அணுகக்கூடியதாக இருக்க, இந்த படத்தில் எந்த உரையும் இருக்கக்கூடாது (உங்கள் லோகோவைத் தவிர). பொருத்தமான படம் வழங்கப்படாவிட்டால், உங்கள் டுடோரியலின் எங்கள் சொந்த ஸ்கிரீன் ஷாட்டை நாங்கள் எடுக்கலாம் அல்லது அதை பட்டியலிட வேண்டாம் என்று நாங்கள் தேர்வு செய்யலாம். எல்லா படங்களும் ஒரு .jpg, .jpeg அல்லது .png க்கு URL இணைப்பாக சமர்ப்பிக்கப்பட வேண்டும்.
+    * பங்கேற்பை மிகவும் துல்லியமாகக் கண்காணிக்க, மூன்றாம் தரப்பு டுடோரியல் கூட்டாளர்கள் தங்கள் மணிநேர குறியீடு பயிற்சிகளின் முதல் பக்கத்தில் 1-பிக்சல் கண்காணிப்பு படங்களை சேர்க்க வேண்டும். மேலும் விவரங்களுக்கு கீழே உள்ள [ கண்காணிப்பு பிக்சல் ](#pixel) பகுதியைக் காண்க.
+    * உங்கள் செயல்பாட்டை முடித்ததும், பயனர்கள் [ code.org/api/hour/finish ](https://code.org/api/hour/finish) க்கு அனுப்பப்பட வேண்டும், அங்கு அவர்கள் இதைச் செய்ய முடியும்: 
+        * அவர்கள் மணிநேர குறியீட்டை நிறைவு செய்ததாக சமூக ஊடகங்களில் பகிரவும்
+        * அவர்கள் குறியீட்டு நேரத்தை முடித்ததற்கான சான்றிதழைப் பெறுங்கள்
+        * மணிநேர குறியீடு நடவடிக்கைகளில் எந்த நாடுகள் / நகரங்கள் அதிக பங்கேற்பு விகிதங்களைக் கொண்டுள்ளன என்பது பற்றிய லீடர்போர்டுகளைப் பார்க்கவும்
+        * உங்கள் செயல்பாட்டில் ஒரு மணிநேரம் செலவழித்து அதை முடிக்காத பயனர்களுக்கு, தயவுசெய்து உங்கள் செயல்பாட்டில் ஒரு பொத்தானைச் சேர்க்கவும், அது “எனது மணிநேர குறியீட்டை முடித்துவிட்டேன்” என்று கூறுகிறது, இது [குறியீட்டை மீண்டும் இணைக்கிறது ](https://code.org/api/hour/finish).
+    * (விரும்பினால்) பின்வரும் செயல்பாட்டு அளவீடுகளின் அறிக்கையைக் கேட்கும் ஆன்லைன் கணக்கெடுப்பு / படிவ இணைப்புடன் நாங்கள் பின்தொடரலாம்: 
+        * ஆன்லைன் செயல்பாடுகளுக்கு (குறிப்பாக ஸ்மார்ட்போன் / டேப்லெட் பயன்பாடுகள்): 
+            * பயனர்களின் எண்ணிக்கை
+            * எத்தனை பேர் பணியை முடித்தார்கள்
+            * பணியில் சராசரி நேரம்
+            * அனைத்து பயனர்களிடமும் எழுதப்பட்ட குறியீட்டின் மொத்த வரிகளின் எண்ணிக்கை
+            * மேலதிக கற்றலில் எத்தனை பேர் தொடர்ந்தனர் (பணியை முடித்து உங்கள் தளத்தில் கூடுதல் பணிகளுக்குச் செல்லும் எந்தவொரு பயனராகவும் அளவிடப்படுகிறது)
+        * ஆஃப்லைன் செயல்பாடுகளுக்கு 
+            * செயல்பாட்டின் காகித பதிப்பின் பதிவிறக்கங்களின் எண்ணிக்கை (பொருந்தினால்)
+    
+    #### ரோபாட்டிக்ஸ் சமர்ப்பிக்கும் போது உங்களுக்கு தேவையான கூடுதல் விஷயங்கள்
+    
+    * நீங்கள் ஒரு ரோபாட்டிக்ஸ் செயல்பாட்டை சமர்ப்பித்தால், ரோபாட்டிக்ஸ் ஒரு மாணவருக்கான செலவை நாங்கள் அறிந்து கொள்ள வேண்டும்
+    * இணையதளத்தில் சேர்ப்பதற்கான ரோபாட்டிக்ஸ் நடவடிக்கைகளை மதிப்பீடு செய்ய, நீங்கள் மாதிரி கருவிகளை மதிப்பாய்வாளர்களுக்கு அனுப்ப வேண்டும்.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
-
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
-
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
-
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
-
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
-
-In addition, in order to be listed, all activities must:
-
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up 
-- Require no payment (exception for robotics activities these can require robot/kit purchase) For self-directed activities for new teachers and students the review committee will be looking for whether:
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
-
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
-
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
-
-[**Back to the top**](#top)
+    
+    ## நடவடிக்கைகள் எவ்வாறு மதிப்பீடு செய்யப்படும்
+    
+    கணினி அறிவியல் கல்வியாளர்களின் மாறுபட்ட குழு தரமான மற்றும் அளவு அளவுகோல்களின் அடிப்படையில் சமர்ப்பிப்புகளை வரிசைப்படுத்தும். அடிப்படை அளவுகோல்களுக்கு பொருந்தக்கூடிய அனைத்து செயல்பாடுகளும் பட்டியலிடப்படும். ஆசிரியர்கள் தங்கள் வகுப்பறைக்கு சிறந்த செயல்பாடுகளைக் கண்டறிய வடிகட்டவும் வரிசைப்படுத்தவும் முடியும்.
+    
+    செயல்பாடுகள் மற்றும் பாடம் திட்டங்களை மதிப்பிடுவதற்கான விதிமுறைகள் அனைத்து நடவடிக்கைகளிலும் பின்வரும் அளவுகோல்களைக் கண்டறிந்து அதற்கேற்ப தரவரிசைப்படுத்தும்:
+    
+    - அதிக உற்பத்தி தரம்
+    - அனைத்து மக்கள்தொகை குழுக்களாலும் கற்றலை ஊக்குவிக்கவும் (esp. CS., இளம் பெண்கள், ஓரங்கட்டப்பட்ட இன மற்றும் இனத்தைச் சேர்ந்த மாணவர்கள் மற்றும் குறைபாடுகள் உள்ள மாணவர்கள் போன்ற மாணவர்களைக் குறைவாகக் குறிப்பிடுகின்றனர்)
+    - கல்வி (கணினி அறிவியல் கருத்துக்களை நன்கு கற்பிக்கிறது)
+    - வேடிக்கை மற்றும் ஈடுபாட்டுடன்
+    - அவர்கள் பகிர்ந்து கொள்ளக்கூடிய தனித்துவமான ஒன்றை உருவாக்க மாணவர்களை ஊக்குவிக்கிறது (இளைய மாணவர்களுக்கு: பெற்றோர் மற்றும் வகுப்பு தோழர்களுடன். பழைய மாணவர்களுக்கு: இணையத்தில்)
+    
+    மறுஆய்வுக் குழு செயல்பாட்டின் உற்பத்தி தரத்தில் பூஜ்ஜியத்தை மதிப்பிட்டால் (மோசமான பிழைகள் அல்லது பயன்படுத்த மிகவும் கடினமாக இருக்கும் அறிவுறுத்தல்கள் காரணமாக), குறைவான பிரதிநிதித்துவ குழுக்களில் (இனவெறி / பாலியல் பொருள் காரணமாக) கற்றலை ஊக்குவிப்பதில், கல்வி மதிப்பில் (கற்பிக்கவில்லை சிஎஸ் கருத்துக்கள்), அல்லது வேடிக்கை / ஈடுபாட்டுடன் (மாணவர்கள் கடினமாக / ஊக்கமளிப்பதன் காரணமாக வேலை செய்வதால்), செயல்பாடு பட்டியலிடப்படாது.
+    
+    கூடுதலாக, பட்டியலிட, அனைத்து செயல்பாடுகளும் அவசியம்:
+    
+    - ஒரு பொது பள்ளி வகுப்பறைக்கு பொருத்தமானதாக இருங்கள் (துப்பாக்கிகள் இல்லை, வெளிப்படையான / முதிர்ந்த உள்ளடக்கம் இல்லை, மத உள்ளடக்கம் இல்லை)
+    - பதிவுபெற தேவையில்லை 
+    - கட்டணம் எதுவும் தேவையில்லை (ரோபோடிக்ஸ் நடவடிக்கைகளுக்கு விதிவிலக்கு இவை ரோபோ / கிட் கொள்முதல் தேவைப்படலாம்)புதிய ஆசிரியர்கள் மற்றும் மாணவர்களுக்கான சுய இயக்கிய நடவடிக்கைகளுக்கு, மறுஆய்வுக் குழு பின்வருவனவற்றைத் தேடும்:
+    - கணினி அறிவியலில் பின்னணி இல்லாத ஆசிரியர்கள் பயிற்சி அல்லது செயல்பாட்டைப் பயன்படுத்தலாம்
+    - கணினி அறிவியலில் எந்த பின்னணியும் இல்லாமல் மாணவர்கள் வெற்றிபெற முடியும்
+    - பெற்றோர் அல்லது ஆசிரியர் வழிகாட்டுதல் இல்லாமல் மாணவர்கள் தங்களை டுடோரியல் மூலம் வழிநடத்தலாம்
+    
+    தரம், அனுபவ நிலை, பொருள், வன்பொருள் போன்ற வடிப்பான்களின் அடிப்படையில் ஆசிரியர்கள் மற்றும் மாணவர்கள் எங்கள் செயல்பாடுகளின் பட்டியலைத் தேடலாம் மற்றும் வடிகட்ட முடியும். முன்னிருப்பாக, பாடம் திட்டங்கள் மற்றும் செயல்பாடுகளை முதலில் காண்பிப்போம்:
+    
+    - மறுஆய்வுக் குழுவிலிருந்து அதிக மதிப்பீடுகளைப் பெறுங்கள்
+    - ஆரம்ப (மாணவர்கள் மற்றும் ஆசிரியர்கள்) வடிவமைக்கப்பட்ட ஒரு மணிநேர சுய இயக்கிய நடவடிக்கைகள்
+    - பரவலான பயனர்களுக்கு (தளங்கள், மொழிகள் மற்றும் வயது முழுவதும்) முறையிடவும்
+    - நிறுவல் தேவையில்லை
+    - இந்த ஆண்டு புதியவை
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="earlyreview"></a>
 
-## Guidelines for submitting for an early qualitative review
-
-Any activity submitted between April 30 and August 16 will receive a qualitative review from at least three members of the [Hour of Code Activity Review committee](/review-committee).
-
-Reviewers will focus on providing the following:
-
-* Positive feedback - What's working well?
-* Critical feedback - What could be improved?
-* Bugs or errors - Are there any bugs, syntax errors, or grammatical errors? If so, where in the activity?
-* Does this activity encourage students to create something unique?
-
-Please note: These are the general guidelines for providing feedback. The early review of your activity may include feedback across all of these categories, or it may only include feedback in one or two. There is also **no guarantee that we will catch all bugs or issues in an activity**.
-
-**The early review is not an opportunity to collect feedback on an unfinished activity. Any activity a reviewer deems too incomplete to assess will not be reviewed.**
-
-All activities submitted for early review will receive feedback by September 1st. We will also provide a link to a form you can use to explain specific changes made to an activity in response to feedback.
-
-Every activity submitted before October 1st will receive a standard review, whether it receives an early review or not. During the standard review period (September-October), reviewers will focus on rating the activities according to the criteria described in the "How activities will be evaluated" section above. Unless you note specific changes to an activity, reviewers can and likely will rely on early review feedback to rate activities.
-
-[**Back to the top**](#top)
+    
+    ## ஆரம்பகால தரமான மதிப்பாய்வுக்கு சமர்ப்பிப்பதற்கான வழிகாட்டுதல்கள்
+    
+    ஏப்ரல் 30 முதல் ஆகஸ்ட் 16 வரை சமர்ப்பிக்கப்பட்ட எந்தவொரு செயலும் [ மணிநேர குறியீடு செயல்பாட்டு மறுஆய்வுக் குழுவின் ](/review-committee) உறுப்பினர்களிடமிருந்து குறைந்தபட்சம் மூன்று உறுப்பினர்களிடமிருந்து ஒரு தரமான மதிப்பாய்வைப் பெறும்.
+    
+    விமர்சகர்கள் பின்வருவனவற்றை வழங்குவதில் கவனம் செலுத்துவார்கள்:
+    
+    * நேர்மறையான கருத்து - எது நன்றாக வேலை செய்கிறது?
+    * விமர்சன பின்னூட்டம் - எதை மேம்படுத்தலாம்?
+    * பிழைகள் அல்லது பிழைகள் - ஏதேனும் பிழைகள், தொடரியல் பிழைகள் அல்லது இலக்கண பிழைகள் உள்ளதா? அப்படியானால், செயல்பாட்டில் எங்கே?
+    * இந்த செயல்பாடு மாணவர்களுக்கு தனித்துவமான ஒன்றை உருவாக்க ஊக்குவிக்கிறதா?
+    
+    தயவுசெய்து கவனிக்கவும்: கருத்துக்களை வழங்குவதற்கான பொதுவான வழிகாட்டுதல்கள் இவை. உங்கள் செயல்பாட்டின் ஆரம்ப மதிப்பாய்வில் இந்த வகைகள் அனைத்திலும் பின்னூட்டங்கள் இருக்கலாம் அல்லது அதில் ஒன்று அல்லது இரண்டில் மட்டுமே கருத்து இருக்கலாம். ஒரு செயல்பாட்டில் உள்ள அனைத்து பிழைகள் அல்லது சிக்கல்களையும் நாங்கள் பிடிப்போம் என்பதற்கு ** எந்த உத்தரவாதமும் இல்லை**.
+    
+    **ஆரம்ப மதிப்பாய்வு ஒரு முடிக்கப்படாத செயல்பாடு குறித்த கருத்துக்களை சேகரிப்பதற்கான வாய்ப்பாக இல்லை. மதிப்பாய்வாளர் மதிப்பிடுவதற்கு மிகவும் முழுமையற்றதாகக் கருதும் எந்தவொரு செயலும் மதிப்பாய்வு செய்யப்படாது.**
+    
+    ஆரம்ப மதிப்பாய்வுக்காக சமர்ப்பிக்கப்பட்ட அனைத்து நடவடிக்கைகளும் செப்டம்பர் 1 ஆம் தேதிக்குள் கருத்துக்களைப் பெறும். பின்னூட்டங்களுக்கு பதிலளிக்கும் விதமாக ஒரு செயல்பாட்டில் செய்யப்பட்ட குறிப்பிட்ட மாற்றங்களை விளக்க நீங்கள் பயன்படுத்தக்கூடிய படிவத்திற்கான இணைப்பை நாங்கள் வழங்குவோம்.
+    
+    அக்டோபர் 1 ஆம் தேதிக்கு முன் சமர்ப்பிக்கப்பட்ட ஒவ்வொரு செயல்பாடும் ஒரு ஆரம்ப மதிப்பாய்வைப் பெறுகிறதா இல்லையா என்பது ஒரு நிலையான மதிப்பாய்வைப் பெறும். நிலையான மறுஆய்வு காலத்தில் (செப்டம்பர்-அக்டோபர்), மேலே உள்ள "நடவடிக்கைகள் எவ்வாறு மதிப்பீடு செய்யப்படும்" பிரிவில் விவரிக்கப்பட்டுள்ள அளவுகோல்களின்படி செயல்பாடுகளை மதிப்பிடுவதில் விமர்சகர்கள் கவனம் செலுத்துவார்கள். ஒரு செயல்பாட்டில் குறிப்பிட்ட மாற்றங்களை நீங்கள் கவனிக்காவிட்டால், மதிப்பாய்வாளர்கள் விகித நடவடிக்கைகளுக்கு ஆரம்ப மதிப்பாய்வு பின்னூட்டத்தை நம்பலாம்.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
-
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
-
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
-
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
-
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming? 
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
-
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
-
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
-
-**Create your activity in Spanish or in other languages besides English.**
-
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
-
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
-
-[**Back to the top**](#top)
+    
+    ## ஒரு மணிநேர சுய வழிகாட்டல் பயிற்சிகளை வடிவமைப்பதற்கான பரிந்துரைகள்
+    
+    உங்கள் டுடோரியலில் [ மணிநேர குறியீடு லோகோவை ](https://hourofcode.com/us/promote/resources#logo) சேர்க்கலாம், ஆனால் இது தேவையில்லை. நீங்கள் மணிநேர குறியீட்டு சின்னத்தைப் பயன்படுத்தினால், கீழே உள்ள வர்த்தக முத்திரை வழிகாட்டுதல்களைப் பார்க்கவும். <u> எந்த சூழ்நிலையிலும் கோட்.ஆர்ஜ் லோகோ மற்றும் பெயரைப் பயன்படுத்த முடியாது. </u> இரண்டும் வர்த்தக முத்திரை, மற்றும் வெளிப்படையான எழுத்துப்பூர்வ அனுமதியின்றி 3 வது தரப்பு பிராண்ட் பெயருடன் ஒன்றிணைக்க முடியாது.
+    
+    **சராசரி மாணவர் ஒரு மணி நேரத்தில் வசதியாக முடிக்க முடியும் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள். </ Strong> பாடத்தின் மூலம் விரைவாக நகரும் மாணவர்களுக்கு முடிவில் ஒரு திறந்தநிலை செயல்பாட்டைச் சேர்ப்பதைக் கவனியுங்கள். பெரும்பாலான குழந்தைகள் கணினி அறிவியல் மற்றும் குறியீட்டு முறையின் முழுமையான தொடக்கக்காரர்களாக இருப்பார்கள் என்பதை நினைவில் கொள்ளுங்கள்.</p> 
+    
+    ** ஆசிரியர் குறிப்புகளைச் சேர்க்கவும். ** பெரும்பாலான செயல்பாடுகள் மாணவர் இயக்கியதாக இருக்க வேண்டும், ஆனால் ஒரு செயல்பாடு ஆசிரியரால் வசதி செய்யப்பட்டால் அல்லது நிர்வகிக்கப்பட்டால், தயவுசெய்து ஆசிரியருக்கான தெளிவான மற்றும் எளிய வழிமுறைகளை ஆசிரியர் குறிப்புகள் வடிவில் தனித்தனியாக சேர்க்கவும் உங்கள் செயல்பாட்டுடன் URL சமர்ப்பிக்கப்பட்டது. மாணவர்கள் புதியவர்கள் மட்டுமல்ல, சில ஆசிரியர்களும் கூட. போன்ற தகவல்களைச் சேர்க்கவும்:
+    
+    - எந்த தளங்கள் மற்றும் உலாவிகளில் பயிற்சி சிறப்பாக செயல்படுகிறது?
+    - இது ஸ்மார்ட்போன்களில் வேலை செய்யுமா? மாத்திரைகள்?
+    - ஜோடி நிரலாக்கத்தை பரிந்துரைக்கிறீர்களா? 
+    - வகுப்பறையில் பயன்படுத்துவதற்கான பரிசீலனைகள்? எ.கா. வீடியோக்கள் இருந்தால், முழு வகுப்பறையும் ஒன்றாகக் காண ஒரு திட்டமிடப்பட்ட திரையில் வீடியோக்களைக் காட்ட ஆசிரியர்களுக்கு அறிவுறுத்துங்கள்
+    
+    ** செயல்பாட்டின் முடிவில் கருத்துக்களை இணைக்கவும்.** (எ.கா. “நீங்கள் 10 நிலைகளை முடித்து சுழல்களைப் பற்றி அறிந்து கொண்டீர்கள்! பெரிய வேலை! ”)
+    
+    ** மாணவர்கள் முடிந்ததும் சமூக ஊடகங்களில் (பொருத்தமான இடங்களில்) இடுகையிட மாணவர்களை ஊக்குவிக்கவும்.** எடுத்துக்காட்டாக “நான் ஒரு மணிநேர குறியீட்டை ________ உடன் செய்துள்ளேன்? #HourOfCode ”அல்லது“ நான் #CSEdWeek இன் ஒரு பகுதியாக #HourOfCode செய்தேன். உங்களிடம் இருக்கிறீர்களா? C ஸ்க்ராட்ச். ” ** #HourOfCode ** (பெரிய எழுத்துக்கள் H, O, C உடன்) என்ற ஹேஷ்டேக்கைப் பயன்படுத்தவும்
+    
+    **உங்கள் செயல்பாட்டை ஸ்பானிஷ் அல்லது ஆங்கிலம் தவிர பிற மொழிகளில் உருவாக்கவும்.**
+    
+    ** சமூக முக்கியத்துவம் வாய்ந்த சூழலுடன் செயல்பாட்டை விளக்குங்கள் அல்லது இணைக்கவும். ** உலகத்தை எவ்வாறு சிறப்பாக மாற்ற முடியும் என்பதை மாணவர்கள் பார்க்கும்போது கணினி நிரலாக்கமானது ஒரு வல்லரசாகிறது!
+    
+    ** உங்கள் டுடோரியலை [ ஜோடி புரோகிராமிங் ](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) முன்னுதாரணத்தில் பயன்படுத்தலாம் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள். ** இது மணிநேர குறியீட்டுக்கு மிகவும் பயனுள்ளதாக இருக்கும், ஏனெனில் பல வகுப்பறைகளில் அனைத்து மாணவர்களுக்கும் 1: 1 வன்பொருள் இல்லை.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="tm"></a>
 
-## Trademark Guidelines
-
-Many of our tutorial partners have used our trademark "Hour of Code" on their web sites. We don't want to prevent this usage, but we want to make sure usage falls within a few limits:
-
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-3. Include language on the page (or in the the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that says the following: a. “The '[Hour of Code](http://hourofcode.com)™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.”
-4. பயன்பாட்டு பெயர்களில் "கோட் ஹவர்" இன் பயன்பாடு இல்லை.
-
-[**Back to the top**](#top)
+    
+    ## வர்த்தக முத்திரை வழிகாட்டுதல்கள்
+    
+    எங்கள் டுடோரியல் கூட்டாளர்கள் பலர் தங்கள் வலைத்தளங்களில் "மணிநேர குறியீடு" என்ற வர்த்தக முத்திரையைப் பயன்படுத்தியுள்ளனர். இந்த பயன்பாட்டைத் தடுக்க நாங்கள் விரும்பவில்லை, ஆனால் பயன்பாடு சில வரம்புகளுக்குள் வருவதை உறுதிசெய்ய விரும்புகிறோம்:
+    
+    1. "ஹவர் ஆஃப் கோட்" பற்றிய எந்தவொரு குறிப்பும் ஒரு பாணியில் பயன்படுத்தப்பட வேண்டும், அது உங்கள் சொந்த பிராண்ட் பெயர் என்று பரிந்துரைக்கவில்லை, ஆனால் அது மணிநேர குறியீட்டை ஒரு அடிமட்ட இயக்கம் என்று குறிப்பிடுகிறது. நல்ல எடுத்துக்காட்டு: "ACMECorp.com இல் மணிநேர குறியீட்டில் பங்கேற்க". மோசமான எடுத்துக்காட்டு: "ACME கார்ப் மூலம் மணிநேர குறியீட்டை முயற்சிக்கவும்".
+    2. உங்கள் வலைத்தளத்திலும் பயன்பாட்டு விளக்கங்களிலும் "மணிநேர குறியீடு" என்று நீங்கள் குறிப்பிடும் மிக முக்கியமான இடங்களில் "TM" சூப்பர்ஸ்கிரிப்டைப் பயன்படுத்தவும்.
+    3. பின்வரும் குறியீட்டைக் கூறும் மணிநேர குறியீடு, CSEd.Week மற்றும் Code.org வலைத்தளங்களுக்கான இணைப்புகள் உட்பட, பக்கத்தில் (அல்லது அடிக்குறிப்பில்) மொழியைச் சேர்க்கவும்: a. “[ குறியீட்டு நேரம் ](http://hourofcode.com) ™ 'என்பது [ கணினி அறிவியல் கல்வி வாரம் ](http://csedweek.org)மற்றும் [ Code.org ](http://code.org) மில்லியன் கணக்கான மாணவர்களை ஒரு மணிநேர கணினி அறிவியல் மற்றும் கணினி நிரலாக்கத்திற்கு அறிமுகப்படுத்த.”
+    4. பயன்பாட்டு பெயர்களில் "கோட் ஹவர்" இன் பயன்பாடு இல்லை.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="pixel"></a>
 
-## Tracking Pixel
-
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
-
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
-
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
-
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
-
-Example tracking pixels for Dance Party:
-
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
-
-
-[**Back to the top**](#top)
+    
+    ## கண்காணிப்பு பிக்சல்
+    
+    பங்கேற்பை மிகவும் துல்லியமாகக் கண்காணிக்க, ஒவ்வொரு டுடோரியல் கூட்டாளரிடமும் 1 மணிநேர பிக்சல் கண்காணிப்பு படத்தை அவர்களின் மணிநேர குறியீடு பயிற்சிகளின் முதல் பக்கத்தில் சேர்க்குமாறு கேட்டுக்கொள்கிறோம். பிக்சல்-படம் தொடக்க பக்கத்தில் மட்டுமே இருக்க வேண்டும். உங்கள் டுடோரியலின் எந்த இடைக்கால பக்கங்களிலும் சேர்க்க வேண்டாம்.
+    
+    உங்கள் மணிநேர குறியீடு டுடோரியலைச் செய்யும் பயனர்களை எண்ண இது அனுமதிக்கும். இது உங்கள் டுடோரியலுக்கான மிகவும் துல்லியமான பங்கேற்பு எண்ணிக்கைக்கு வழிவகுக்கும்.
+    
+    உங்கள் டுடோரியல் அங்கீகரிக்கப்பட்டு இறுதி டுடோரியல் பக்கத்தில் சேர்க்கப்பட்டால், உங்கள் டுடோரியலில் ஒருங்கிணைக்க Code.org ஒரு தனித்துவமான கண்காணிப்பு பிக்சலை உங்களுக்கு வழங்கும். கீழே உள்ள உதாரணத்தைக் காண்க.
+    
+    குறிப்பு: நிறுவக்கூடிய பயன்பாடுகளுக்கு (iOS / Android பயன்பாடுகள் அல்லது டெஸ்க்டாப்-நிறுவும் பயன்பாடுகள்) இதைச் செய்வது முக்கியமல்ல
+    
+    டான்ஸ் பார்ட்டிக்கான எடுத்துக்காட்டு கண்காணிப்பு பிக்சல்கள்:
+    
+    IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+    
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
-
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
-
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
-
-[**Back to the top**](#top)
-
-{{signup_button}}
+    
+    ## உங்கள் செயல்பாடுகள், CSEdWeek மற்றும் மணிநேர குறியீட்டை மேம்படுத்துதல்
+    
+    உங்கள் செயல்பாட்டை உங்கள் நெட்வொர்க்கில் ஊக்குவிக்கவும்! உங்கள் மணிநேர குறியீடு பக்கத்திற்கு அவற்றை இயக்கவும். உங்கள் செயல்பாட்டைப் பற்றி உங்களிடமிருந்து ஒரு அஞ்சல் அனுப்ப உங்கள் பயனர்கள் அதிகம் வாய்ப்புள்ளது. கணினி அறிவியல் கல்வி வாரத்தில் சர்வதேச மணிநேர குறியீட்டு பிரச்சாரத்தைப் பயன்படுத்தவும், பயனர்களை மற்றவர்களை சேர அழைக்க ஊக்குவிக்கவும், மேலும் மாணவர்களை அடைய எங்களுக்கு உதவவும்!
+    
+    - உங்கள் வலைத்தளத்தின் சிறப்பு மணிநேர குறியீடு மற்றும் CSEdWeek. Ex: <http://www.tynker.com/hour-of-code> 
+    - #HourOfCode (H, O, C என்ற பெரிய எழுத்துக்களுடன்) என்ற ஹேஷ்டேக்கைப் பயன்படுத்தி சமூக ஊடகங்கள், பாரம்பரிய ஊடகங்கள், அஞ்சல் பட்டியல்கள் போன்றவற்றைப் பயன்படுத்தி மணிநேர குறியீட்டை விளம்பரப்படுத்தவும்.
+    - உள்ளூர் நிகழ்வை நடத்துங்கள் அல்லது உள்ளூர் பள்ளிகள் அல்லது சமூக குழுக்களில் ஒரு நிகழ்வை நடத்த உங்கள் ஊழியர்களைக் கேளுங்கள்.
+    - மேலும் தகவலுக்கு உங்கள் [ ரெசூர்ஸ் கிட் ](https://hourofcode.com/us/promote) ஐப் பார்க்கவும்.
+    
+    [**மீண்டும் மேலே**](#top)
+    
+    {{ signup_button }}

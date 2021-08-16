@@ -13,10 +13,6 @@ import Spinner from '../../components/spinner';
 
 const QUERY_URL = '/api/v1/pd/teacher_attendance_report';
 
-const styles = {
-  link: {cursor: 'pointer'}
-};
-
 export class TeacherAttendanceReport extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
@@ -247,6 +243,10 @@ export class TeacherAttendanceReport extends React.Component {
     );
   }
 }
+
+const styles = {
+  link: {cursor: 'pointer'}
+};
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission

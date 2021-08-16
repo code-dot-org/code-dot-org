@@ -1318,11 +1318,20 @@ fr-FR:
   coursed-2019_name: Cours D (2019)
   coursee-2019_name: Cours E (2019)
   coursef-2019_name: Cours F (2019)
+  coursea-2020_name: Cours A (2020)
+  courseb-2020_name: Cours B (2020)
+  coursec-2020_name: Cours C (2020)
+  coursed-2020_name: Cours D (2020)
+  coursee-2020_name: Cours E (2020)
+  coursef-2020_name: Cours F (2020)
+  coursed-2021_name: Cours D (2021)
   express-2018_name: Cours Express (2018)
   pre-express-2018_name: Cours Express pour les Pré-lecteurs (2018)
   express-2019_name: Cour rapide (2019)
   pre-express-2019_name: Cours Express pour les Pré-lecteurs (2019)
   express-2020_name: Cours Express (2020)
+  pre-express-2020_name: Cours rapide pour les primo-lecteurs (2020)
+  pre-express-2021_name: Cours rapide pour les primo-lecteurs (2021)
   csd2_name: 'Unité 2 : Développement Web'
   csd3_name: 'Unité 3 : Animation et Jeux'
   accelerated_name: Cours accéléré
@@ -1647,6 +1656,28 @@ fr-FR:
     la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux
     partager avec tes amis et ta famille.
   coursef-2020_shortdescription_congrats: Apprends à utiliser différents types de
+    boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques
+    de résolution de problèmes et discute des impacts sociétaux de l'informatique
+    et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet
+    de synthèse que tu peux partager avec tes amis et ta famille.
+  coursea-2021_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  courseb-2021_shortdescription_congrats: Apprends les bases de l'informatique et
+    de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre
+    histoire que tu peux partager.
+  coursec-2021_shortdescription_congrats: Crée des programmes avec séquençage, boucles
+    et événements. Traduis tes initiales en binaire, étudie différentes techniques
+    de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin
+    du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
+  coursed-2021_shortdescription_congrats: Les élèves développent leur compréhension
+    des boucles, des conditions et des événements. Au-delà du codage, les élèves apprennent
+    la citoyenneté numérique.
+  coursee-2021_shortdescription_congrats: Commence à coder avec des algorithmes, des
+    boucles, des conditions et des événements, puis tu passeras aux fonctions. Dans
+    la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux
+    partager avec tes amis et ta famille.
+  coursef-2021_shortdescription_congrats: Apprends à utiliser différents types de
     boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques
     de résolution de problèmes et discute des impacts sociétaux de l'informatique
     et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet
@@ -2491,6 +2522,8 @@ fr-FR:
     de l’informatique. Ce programme sera destiné aux enfants défavorisés du primaire
     au supérieur avec une attention toute particulière pour les jeunes filles. [En
     savoir plus](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Si on est professeur
+    ou élève française, visite [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pour en savoir
     plus sur Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: À propos d'Amazon Future Engineer
@@ -2570,6 +2603,7 @@ fr-FR:
   footer_support: Assistance
   footer_terms: Conditions Générales
   ai_for_oceans: IA pour les Océans
+  ai_for_oceans_lesson_plan: plan de cours
   ai_in_partnership_with: En partenariat avec
   ai_microsoft_thanks: Nous remercions Microsoft du soutien accordé à notre vision
     et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique

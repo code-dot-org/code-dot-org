@@ -10,7 +10,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml) on our 9 model policies for computer science education.
 * Code.org partnered with CSTA and ECEP to create the annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) report on state-level policies that support equitable K-12 computer science education and an analysis of implementation and participation data. You can download the reports from 2017-2020. The 2020 report found that states who adopt more state computer science policies show greater gender diversity in AP computer science exam-taking.
 * [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
-* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
+* Download this [slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
 
 ## Why study computer science? 
 [Six different studies](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) show that studying computer science helps students outperform in school and college. Details on each of the studies follow.

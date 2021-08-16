@@ -8,9 +8,7 @@ import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   latestReviewState: null,
-  isAwaitingTeacherReview: false,
-  setReviewState: () => {},
-  setReviewStateChanged: () => {}
+  onReviewStateChange: () => {}
 };
 
 const setUp = overrideProps => {
@@ -35,16 +33,14 @@ describe('EditableReviewState', () => {
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
     const wrapper = setUp({
-      latestReviewState: ReviewStates.keepWorking,
-      isAwaitingTeacherReview: false
+      latestReviewState: ReviewStates.keepWorking
     });
     expect(wrapper.instance().checkbox.checked).to.be.true;
   });
 
   it('displays a indeterminate checkbox if reviewState is keepWorking and student is awaiting reivew', () => {
     const wrapper = setUp({
-      latestReviewState: ReviewStates.keepWorking,
-      isAwaitingTeacherReview: true
+      latestReviewState: ReviewStates.awaitingReview
     });
     expect(wrapper.instance().checkbox.indeterminate).to.be.true;
   });
@@ -60,72 +56,61 @@ describe('EditableReviewState', () => {
   });
 
   describe('starting with an unchecked box', () => {
-    it('when checkbox is clicked, it calls setReviewState with value keepWorking and setReviewStateChanged true', () => {
-      const setReviewStateStub = sinon.stub();
-      const setReviewStateChangedStub = sinon.stub();
+    it('when checkbox is clicked, it calls onReviewStateChange with value keepWorking', () => {
+      const onReviewStateChangeStub = sinon.stub();
 
       const wrapper = setUp({
-        setReviewState: setReviewStateStub,
-        setReviewStateChanged: setReviewStateChangedStub,
+        onReviewStateChange: onReviewStateChangeStub,
         latestReviewState: null
       });
 
       wrapper.instance().checkbox.checked = true;
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith('keepWorking');
-      expect(setReviewStateChangedStub).to.have.been.calledWith(true);
+      expect(onReviewStateChangeStub).to.have.been.calledWith('keepWorking');
     });
 
-    it('when checkbox is clicked twice, it calls setReviewState with value null and setReviewStateChanged false', () => {
-      const setReviewStateStub = sinon.stub();
-      const setReviewStateChangedStub = sinon.stub();
+    it('when checkbox is clicked twice, it calls onReviewStateChange with value null', () => {
+      const onReviewStateChangeStub = sinon.stub();
 
       const wrapper = setUp({
-        setReviewState: setReviewStateStub,
-        setReviewStateChanged: setReviewStateChangedStub,
+        onReviewStateChange: onReviewStateChangeStub,
         latestReviewState: null
       });
 
       wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith(null);
-      expect(setReviewStateChangedStub).to.have.been.calledWith(false);
+      expect(onReviewStateChangeStub).to.have.been.calledWith(null);
     });
   });
 
   describe('starting with a checked box', () => {
-    it('when checkbox is clicked, it calls setReviewState with value completed and setReviewStateChanged true', () => {
-      const setReviewStateStub = sinon.stub();
-      const setReviewStateChangedStub = sinon.stub();
+    it('when checkbox is clicked, it calls onReviewStateChange with value completed', () => {
+      const onReviewStateChangeStub = sinon.stub();
 
       const wrapper = setUp({
-        setReviewState: setReviewStateStub,
-        setReviewStateChanged: setReviewStateChangedStub,
+        onReviewStateChange: onReviewStateChangeStub,
         latestReviewState: ReviewStates.keepWorking
       });
 
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith('completed');
-      expect(setReviewStateChangedStub).to.have.been.calledWith(true);
+      expect(onReviewStateChangeStub).to.have.been.calledWith('completed');
     });
   });
 
   describe('starting with an indeterminate box', () => {
     it('displays waiting for teacher review text', () => {
       const wrapper = setUp({
-        latestReviewState: ReviewStates.keepWorking,
-        isAwaitingTeacherReview: true
+        latestReviewState: ReviewStates.awaitingReview
       });
       expect(wrapper.contains(i18n.waitingForTeacherReviewLabel())).to.be.true;
     });
 
     it('displays tooltip with awaiting review content', () => {
       const wrapper = setUp({
-        latestReviewState: ReviewStates.keepWorking,
-        isAwaitingTeacherReview: true
+        latestReviewState: ReviewStates.awaitingReview
       });
 
       const tooltip = wrapper.find('ReactTooltip');
@@ -134,39 +119,31 @@ describe('EditableReviewState', () => {
         .be.true;
     });
 
-    it('when checkbox is click, it calls setReviewState with value completed and setReviewStateChanged true', () => {
-      const setReviewStateStub = sinon.stub();
-      const setReviewStateChangedStub = sinon.stub();
+    it('when checkbox is click, it calls onReviewStateChange with value completed', () => {
+      const onReviewStateChangeStub = sinon.stub();
 
       const wrapper = setUp({
-        latestReviewState: ReviewStates.keepWorking,
-        isAwaitingTeacherReview: true,
-        setReviewState: setReviewStateStub,
-        setReviewStateChanged: setReviewStateChangedStub
+        latestReviewState: ReviewStates.awaitingReview,
+        onReviewStateChange: onReviewStateChangeStub
       });
 
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith('completed');
-      expect(setReviewStateChangedStub).to.have.been.calledWith(true);
+      expect(onReviewStateChangeStub).to.have.been.calledWith('completed');
     });
 
-    it('when checkbox is clicked twice, it calls setReviewState with value keepWorking and setReviewStateChanged true', () => {
-      const setReviewStateStub = sinon.stub();
-      const setReviewStateChangedStub = sinon.stub();
+    it('when checkbox is clicked twice, it calls onReviewStateChange with value keepWorking', () => {
+      const onReviewStateChangeStub = sinon.stub();
 
       const wrapper = setUp({
-        latestReviewState: ReviewStates.keepWorking,
-        isAwaitingTeacherReview: true,
-        setReviewState: setReviewStateStub,
-        setReviewStateChanged: setReviewStateChangedStub
+        latestReviewState: ReviewStates.awaitingReview,
+        onReviewStateChange: onReviewStateChangeStub
       });
 
       wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
-      expect(setReviewStateStub).to.have.been.calledWith('keepWorking');
-      expect(setReviewStateChangedStub).to.have.been.calledWith(true);
+      expect(onReviewStateChangeStub).to.have.been.calledWith('keepWorking');
     });
   });
 });

@@ -6,27 +6,2061 @@
     "properties": {
       "curriculum_umbrella": "CSA",
       "is_migrated": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "hideable_lessons": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-06-17 22:31:31 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-08-10 04:49:31 UTC",
+    "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa5-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Creating Tables of Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.",
+        "preparation": "* Gather three sticky notes per student",
+        "student_overview": "In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Traversing a 2D Array by Rows",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.",
+        "preparation": "* Gather two sticky notes per student",
+        "student_overview": "Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Traversing a 2D Array by Columns",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.",
+        "preparation": "* Print copies of the Tracing 2D Array Traversal Algorithms activity guide (one per student)\n* Gather one sticky note per student",
+        "student_overview": "Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Using Enhanced for Loops",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "Students learn the structure of enhanced `for` loops to traverse 2D arrays. Students identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students use nested enhanced `for` loops to write methods to modify the color values of pixels and create effects on the images in their concert.",
+        "preparation": "* Gather 3-5 sticky notes per student\n* Print copies of the Tracing Loops activity guide (one per student)",
+        "student_overview": "Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Evaluating 2D Arrays",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. ",
+        "preparation": "* Print copies of the Vocabulary Bingo Cards (one card per student)\n* Print and shuffle the Vocabulary Bingo definitions\n* Gather two sticky notes per student",
+        "student_overview": "The Mayor asked the Project Mercury Pastries Food Truck to cater desserts at the upcoming concert. To help the owner, you implement new algorithms to prepare for the event. You explore executing a `return` statement inside a loop in comparison to outside a loop. You write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Applying Standard Algorithms",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.",
+        "preparation": "* Print copies of the Sustainable Goals Planning Guide (one per student)",
+        "student_overview": "The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Reversing Elements",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Shifting Elements",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Finding Duplicates",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Searching for Elements",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "A Sustainable Neighborhood Project - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "A Sustainable Neighborhood Project - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "A Sustainable Neighborhood Project - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a",
+      "position": 1,
+      "properties": {
+        "duration": 7,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "a6b98686-d39d-410d-95a6-955b4cc5eb42",
+      "position": 2,
+      "properties": {
+        "duration": 33,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "5455423d-c875-43a3-aee5-69e5d1293d41",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "ce65b65f-6520-4229-8f67-d008b8ec27b1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f28ba244-8c37-44a3-a941-5fbaee1afd80",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "c8f97277-8944-4c49-bd0d-658d58c4f001",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8f97277-8944-4c49-bd0d-658d58c4f001",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "b7ee8d49-cd9b-4630-a201-578dfb75b663",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "6684a47e-d0b4-4761-983a-f622ff1e8ab9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6684a47e-d0b4-4761-983a-f622ff1e8ab9",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "c7c6e894-799d-4354-8409-45c1d882a621",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "4609ed33-376e-4c09-b04a-4d38f3281fe2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4609ed33-376e-4c09-b04a-4d38f3281fe2",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "1afb2d5e-c959-4465-8a08-b846d783eadc",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1afb2d5e-c959-4465-8a08-b846d783eadc",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "0ab896a8-4a80-41d0-b381-8d55821189da",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ab896a8-4a80-41d0-b381-8d55821189da",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "3a3900b8-d57f-4ec3-bf4d-fcdf4f4d9ed1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a3900b8-d57f-4ec3-bf4d-fcdf4f4d9ed1",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "1645d1dc-04e7-44d5-90fb-dbb93629829f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1645d1dc-04e7-44d5-90fb-dbb93629829f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7bb8b3a9-07d4-4f63-9d23-8cfafeb75bfa",
+      "position": 1,
+      "properties": {
+        "description": "Today, we will learn about two-dimensional or 2D arrays. First, let’s review what you know about 1D arrays through a round of the Array Game.",
+        "duration": "5",
+        "name": "The Array Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb8b3a9-07d4-4f63-9d23-8cfafeb75bfa",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "c4b03afe-f5e7-44d9-b0b7-8842366b240a",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student three sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write quantities for cakes, pies, and donuts that the Food Truck owner could have in her inventory on each sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Both the warm-up and wrap-up activities use these sticky notes. After the warm-up activity, have students place the sticky notes on their desks."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c4b03afe-f5e7-44d9-b0b7-8842366b240a",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "9ae176ec-10ad-40af-b865-a7851fda2738",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To play the array game, have students stand up and place them in groups of 3-4. Groups need to stand close to the area where the presentation is displayed. For each question, select a student to use the sticky notes they created.\n* Choose a student to place sticky notes in the designated array square on the slide.\n* Read the question out loud to the class.\n* Have groups discuss, then select a group to answer the question. If the group gets the answer wrong, select another group. Rotate to different groups for each question.\n   * Answers vary based on the student's sticky note.\n   * For the length of the array, have different students place fewer of their stickies on the slide, so the array's length varies.\n* Have the student take the sticky notes off the slide and click through the animation to display the next question.\n* Repeat the instructions for the next round."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ae176ec-10ad-40af-b865-a7851fda2738",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "037ff996-39c9-4f98-8c8d-3aea1953036a",
+      "position": 4,
+      "properties": {
+        "description": "Great work! Arrays are useful for storing and organizing multiple values in a list format. Let’s review the syntax for 1D arrays, as we will be building on these concepts throughout the unit. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "037ff996-39c9-4f98-8c8d-3aea1953036a",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "7687cea2-f792-417f-a841-d3dc9a95b1a6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the syntax for 1D arrays.\n* Declare and initialize an array\n* Initialize with values\n* Access elements of an array\n* Modifies elements of an array\n",
+        "duration": "2",
+        "name": "1D Array Syntax Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "7687cea2-f792-417f-a841-d3dc9a95b1a6",
+        "lesson_activity.key": "5e4a6c13-a7a5-42eb-a1cf-a18df8cd9a3a"
+      }
+    },
+    {
+      "key": "54bfd793-caf2-4608-ab7f-2e969b61a1b1",
+      "position": 1,
+      "properties": {
+        "description": "A two-dimensional, or 2D, array is similar to a 1D array but with one important difference. A 2D array is an array of arrays!",
+        "duration": "9",
+        "name": "Introduction to 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "54bfd793-caf2-4608-ab7f-2e969b61a1b1",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "4913e0f8-0f87-43f2-a866-16c7823115af",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the components of a two-dimensional array.\n* Define two-dimensional array\n* Define outer array\n* Define inner array\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing an array.\n* Declare a two-dimensional array\n* Initialize the array using the `new` keyword\n* Declare and create the array in one line of code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the two ways to declare and store values in an array.\n* Use square brackets ( `[  ]` ) to assign an array to an index position\n* Create an initializer list in curly braces ( `{  }` ) and assign it as the value of the 2D array"
+      },
+      "seeding_key": {
+        "activity_section.key": "4913e0f8-0f87-43f2-a866-16c7823115af",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "7b64b1bd-b48e-4878-8ffa-8b502f12965f",
+      "position": 3,
+      "properties": {
+        "duration": "8",
+        "name": "Unplugged: Creating 2D Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b64b1bd-b48e-4878-8ffa-8b502f12965f",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "51e0c322-9af4-4ced-b3a1-b0890457bae3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Project Mercury Pastries Food Truck owner has expanded her business and now operates four food trucks. The dessert availability and prices vary by location. To help the owner, let’s create 2D arrays to keep track of her expanded inventory. ",
+        "duration": "8",
+        "name": "Accessing Values in 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "51e0c322-9af4-4ced-b3a1-b0890457bae3",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "247f5547-9d30-4aea-8356-cf4d1496d89a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students replace the zeros in the provided 2D array to match the table provided. Have students continue to Level 2 to declare and initialize a 2D."
+      },
+      "seeding_key": {
+        "activity_section.key": "247f5547-9d30-4aea-8356-cf4d1496d89a",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "c18f95b4-c820-4208-a11d-26802c638c69",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access values from a two-dimensional array.\n* Access a row of data by indexing using the row number\n* Access a single element by indexing using the row and column number\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the self-check exercise in pairs before discussing the answers as a class. Click through the animated slide to reveal the correct answers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 3 on Code Studio. Students write a method that returns a given row of data from a 2D array in this choice level.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on the amount of time remaining, you may choose to assign one or both choices. Encourage students who finish early to work on the second choice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c18f95b4-c820-4208-a11d-26802c638c69",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "01ff7a1d-699b-4f46-9dc3-726d90560dfb",
+      "position": 7,
+      "properties": {
+        "description": "The Project Mercury Food Truck is trying new ways to attract new customers to their business, including changing prices, taking larger orders, and adding more desserts to their inventory. Let’s help the owner update the data in the `inventory` and `prices` 2D arrays.  ",
+        "duration": "5",
+        "name": "Updating Values in 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "01ff7a1d-699b-4f46-9dc3-726d90560dfb",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "5db00e16-d5d5-4a27-a339-0fb4e50d1c5c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Each choice provides opportunities to practice accessing and modifying elements in either the `inventory` and `prices` 2D arrays. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may try to use a loop to modify elements of the 2D array, but it is not required. If you notice a student is struggling with this level, assure them that directly accessing each element is sufficient for completing this level. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5db00e16-d5d5-4a27-a339-0fb4e50d1c5c",
+        "lesson_activity.key": "a6b98686-d39d-410d-95a6-955b4cc5eb42"
+      }
+    },
+    {
+      "key": "6cf0b092-83aa-46b2-b243-8baee24ed2c2",
+      "position": 1,
+      "properties": {
+        "description": "Great job! We will be working closely with the 2D arrays we developed today for the remainder of the unit. Let’s review what you learned about 2D arrays by playing a round of the Array Game. This time we will place sticky notes in a 2D array.",
+        "duration": "5",
+        "name": "The 2D Array Game",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6cf0b092-83aa-46b2-b243-8baee24ed2c2",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "649a3712-58f2-4e81-bea2-ebf61ca28518",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Array Game instructions with students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to play the Array Game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary "
+      },
+      "seeding_key": {
+        "activity_section.key": "649a3712-58f2-4e81-bea2-ebf61ca28518",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "11fa8eb4-fbee-4029-8a61-8e13515fbdb3",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "11fa8eb4-fbee-4029-8a61-8e13515fbdb3",
+        "lesson_activity.key": "5455423d-c875-43a3-aee5-69e5d1293d41"
+      }
+    },
+    {
+      "key": "23ea9086-3557-43a9-bbdf-7522183f5ab8",
+      "position": 1,
+      "properties": {
+        "description": "In Unit 3, we learned how to use nested `for` loops to manipulate elements in a 1D array. Yesterday we learned about 2D arrays and how to access their elements. Today we’ll learn how to use these two concepts together!",
+        "name": "Nested Loops and 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "23ea9086-3557-43a9-bbdf-7522183f5ab8",
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1"
+      }
+    },
+    {
+      "key": "2933f0d3-510d-450c-a803-c09d3d0be44f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this code segment do? How does it do it?*\n\n**Discussion Goal:** Students recall nested loops and accessing elements from 2D arrays to guess the purpose and functionality of the code segment. Students determine that the 2D array is printed as a table using nested loops.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students learn how to traverse 2D arrays with nested loops in the upcoming activity. Students should focus on making predictions based on what they already know rather than discussing the new concepts of array iteration during the warm-up. Some ideas they may call out include:\n* The code segment uses nested loops to traverse the 2D array.\n* The inner loop completes a full cycle each time that `i` increments.\n* Line 7 uses both iterator variables to index into the array.\n* Line 7 uses `String` concatenation to add a comma after the number.\n* Line 9 is outside the inner loop, so it only happens after the inner loop has finished a cycle."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2933f0d3-510d-450c-a803-c09d3d0be44f",
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1"
+      }
+    },
+    {
+      "key": "913e36cd-8237-4a1a-a2d5-b9a15b9b46ed",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Click through the animated slide to show the result of running the code segment."
+      },
+      "seeding_key": {
+        "activity_section.key": "913e36cd-8237-4a1a-a2d5-b9a15b9b46ed",
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1"
+      }
+    },
+    {
+      "key": "6dd6910e-b9b8-4ae3-88a0-99af27c643f3",
+      "position": 4,
+      "properties": {
+        "description": "Today, we will build off your prior knowledge of nested loops and algorithms to do some cool things with data, images and write the first method of our concert.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6dd6910e-b9b8-4ae3-88a0-99af27c643f3",
+        "lesson_activity.key": "ce65b65f-6520-4229-8f67-d008b8ec27b1"
+      }
+    },
+    {
+      "key": "c6803c99-e4b0-44f5-b889-291c311efc0f",
+      "position": 1,
+      "properties": {
+        "description": "When we use nested loops to access elements of a 2D array, we use one loop to increment through the indices of a row and the other to increment through the indices of a column. Let’s take a closer look at how this works.",
+        "duration": "20",
+        "name": "Row-Major Order",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c6803c99-e4b0-44f5-b889-291c311efc0f",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "6fecc0c7-f75c-45f5-9282-9db563568d23",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the slides and their animations to introduce traversing a 2D array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review how to access elements in a 2D array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Demonstrate iterating through the first row horizontally using the column indexes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Demonstrate iterating through all the rows vertically using the row indexes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the structure of a nested loop to iterate through the rows and columns.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define row-major order and demonstrate the traversal."
+      },
+      "seeding_key": {
+        "activity_section.key": "6fecc0c7-f75c-45f5-9282-9db563568d23",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "0adaf095-39b7-4552-898a-27d86f809958",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the self-check question independently, then ask for a volunteer to share their answer. Click through the animated slide to reveal the answer and then display the second self-check question.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the second self-check question independently, then ask for a volunteer to share their answer before clicking through the animated slide to reveal the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "0adaf095-39b7-4552-898a-27d86f809958",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "eb53af23-c42e-4ce1-b9bf-ff2e58c2800c",
+      "position": 4,
+      "properties": {
+        "description": "2D arrays are made up of columns and rows. Row-major order traversals allow us to iteratively access data in each row, which is useful for data processing. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb53af23-c42e-4ce1-b9bf-ff2e58c2800c",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "26598035-79f6-4d54-bd0b-6c3c6c6318ae",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide for the prompts.\n* *What do you notice? What do you wonder about this data?*\n* *What are some questions that we might be able to answer by traversing through this data?*\n\n**Discussion Goal:** Students notice that this is data from 2015-2018 about energy sources in the US by percentage. They share their observations, such as the largest energy source or trends over time. Students share their wonderings, including data for years after 2018, and may also ask about the causes of these changes. Students link traversing arrays and evaluating data with sum or averages. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students cannot come up with any questions on their own, ask some example questions to prompt students to consider how they might determine an answer. For example:\n* *How might we determine the total energy collected by each state?*\n* *How might we determine the average energy collected in a month?*\n\nAsk students if there are other questions that they might answer by traversing and processing this data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26598035-79f6-4d54-bd0b-6c3c6c6318ae",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "97b8e4fa-7222-4357-a631-259dff7d126b",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 in Code Studio. In Level 1, they debug code intended to calculate the total solar energy that each state generated. In Level 2, students write code to print the average percent of the energy generated by each energy source. In Level 3, they complete a Check for Understanding.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It may be helpful to check in with students after Level 1 to review the `ArrayIndexOutOfBounds` error."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "97b8e4fa-7222-4357-a631-259dff7d126b",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "389354e8-5af7-4955-a162-83071a62fe1c",
+      "position": 7,
+      "properties": {
+        "description": "You may have noticed that this lesson’s examples are all themed around energy. The Mayor has noticed that the population of The Neighborhood has increased and is concerned about the number of cars that are now on the roads. In future lessons, you will learn more about sustainability. Throughout the unit, you will design a concert at The Theater to educate The Neighborhood about the benefits and strategies for sustainable transportation.",
+        "duration": "5",
+        "name": "The Sustainable Transportation Concert",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "389354e8-5af7-4955-a162-83071a62fe1c",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "5e06438e-1c80-4ccd-bc15-69e378d47e1b",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Sustainable Transportation Concert exemplar."
+      },
+      "seeding_key": {
+        "activity_section.key": "5e06438e-1c80-4ccd-bc15-69e378d47e1b",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "27ef70b6-8131-4f4f-80a0-20be73dd9b9c",
+      "position": 9,
+      "properties": {
+        "description": "Let's get started on our Sustainable Transportation concert! Some of the building blocks for our concert have been created for you in the starter code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "27ef70b6-8131-4f4f-80a0-20be73dd9b9c",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "486d47e3-c00e-4134-af92-e8ef3f64506c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 of Code Studio. Students modify the `displayWelcome()` method to use a background image of their choice."
+      },
+      "seeding_key": {
+        "activity_section.key": "486d47e3-c00e-4134-af92-e8ef3f64506c",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "4336942b-b603-4164-9a29-8f0c7daf0fec",
+      "position": 11,
+      "properties": {
+        "description": "One of the ways that we will be using 2D arrays in this unit is to create image effects by manipulating the pixels in an image.",
+        "duration": "10",
+        "name": "Introduce Pixels",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4336942b-b603-4164-9a29-8f0c7daf0fec",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "ea3f1333-3341-4b41-9cab-d0affa28d216",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define pixel.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Images and Pixels video."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea3f1333-3341-4b41-9cab-d0affa28d216",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "33fd4fc5-057f-427e-a04c-59aaccdd6879",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you saw in the example, we will not only display images in The Theater, but we also want to modify images to create effects. To do that, we need to manipulate images pixel by pixel using a 2D Array.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "33fd4fc5-057f-427e-a04c-59aaccdd6879",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "8dee4b68-a489-4e36-a245-0f241b5807fa",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the relationship between the width of an image and the number of columns in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the relationship between the height of an image and the number of rows in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the functionality of the `getPixel(x, y)` method of The Theater and the relationship between the x and y coordinates and rows and columns in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How would we store this pixel in a 2D array called `pixels`?\n\n**Discussion Goal:** Students recall referring to an element in a 2D array using the row and column indexes. Students identify the relationship between the row index of a 2D array and the y coordinate of the pixel. The column index of a 2D array is associated with the x coordinate.\n\n**Do This:** Click through the animated slide to reveal the solution and identify the relationship between the row and column indexes of a 2D array and the x and y coordinates of the pixel in the image."
+      },
+      "seeding_key": {
+        "activity_section.key": "8dee4b68-a489-4e36-a245-0f241b5807fa",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "06009952-ea60-447e-b672-d37a70c0c617",
+      "position": 15,
+      "properties": {
+        "description": "We're going to want to apply this process to get all of the pixels of an image into a 2D array to create effects on our images in upcoming lessons. Now let's use what you have learned about pixels, 2D arrays, and nested loops!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "06009952-ea60-447e-b672-d37a70c0c617",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "5c0656f3-ced8-4b06-b8b9-8842e203c6bd",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `getPixels()` method, which accepts an `Image` object and returns a 2D array of pixels from the image in row-major order."
+      },
+      "seeding_key": {
+        "activity_section.key": "5c0656f3-ced8-4b06-b8b9-8842e203c6bd",
+        "lesson_activity.key": "f28ba244-8c37-44a3-a941-5fbaee1afd80"
+      }
+    },
+    {
+      "key": "3298550a-a814-4808-b328-eb3072e8398f",
+      "position": 1,
+      "properties": {
+        "description": "We’ve introduced many new ideas today in class and will be returning to all of them throughout this unit. Take a moment to pause and consider what you have learned today. What makes sense? What do you want a little more clarity on in the future?",
+        "name": "Gots and Needs",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3298550a-a814-4808-b328-eb3072e8398f",
+        "lesson_activity.key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896"
+      }
+    },
+    {
+      "key": "b641d530-c8f1-45aa-916e-bd0a4b1fa170",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about 2D arrays, row-major order, or pixels.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect and review student responses to identify students that may need additional support in upcoming lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b641d530-c8f1-45aa-916e-bd0a4b1fa170",
+        "lesson_activity.key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896"
+      }
+    },
+    {
+      "key": "b8edb6c7-1a4e-4526-871b-c0bdd0f123db",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8edb6c7-1a4e-4526-871b-c0bdd0f123db",
+        "lesson_activity.key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896"
+      }
+    },
+    {
+      "key": "51dc8cc0-3304-4a6f-ae9a-4f01c87a0e63",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "51dc8cc0-3304-4a6f-ae9a-4f01c87a0e63",
+        "lesson_activity.key": "b0b42dd5-4ceb-4817-b4c4-b85b9689a896"
+      }
+    },
+    {
+      "key": "5c07da53-fe32-40b2-bede-ac6c4371a458",
+      "position": 1,
+      "properties": {
+        "description": "Today we will continue developing the concert project by adding animations, image backgrounds and developing and applying image effects.    ",
+        "name": "Images Are 2D Arrays",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5c07da53-fe32-40b2-bede-ac6c4371a458",
+        "lesson_activity.key": "c8f97277-8944-4c49-bd0d-658d58c4f001"
+      }
+    },
+    {
+      "key": "6a7cbb84-9a70-46b8-92de-dd8f5de371f0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how an image consists of rows and columns of pixels that consist of red, green, and blue color values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *An image is a 2D array. How might 2D traversal algorithms be helpful when developing a filter or effect that modifies an image?*\n\n**Discussion Goal:** Students should highlight ways to modify pixels in an image while traversing an array. For example:\n* Swap pixels while traversing an array to change the orientation of the photo.\n* Create color filters by manipulating the RGB values of each pixel while traversing an array.\n* Crop or display a portion of a photo while traversing an array. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to recall how they used loops to create custom designs in the `StampPainter` class from Unit 1. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a7cbb84-9a70-46b8-92de-dd8f5de371f0",
+        "lesson_activity.key": "c8f97277-8944-4c49-bd0d-658d58c4f001"
+      }
+    },
+    {
+      "key": "674eda61-59a9-4268-b30f-208a4ca6af9d",
+      "position": 1,
+      "properties": {
+        "description": "Traversal algorithms allow us to move through each pixel of an image and modify them to create effects. In the previous lesson, you learned how to traverse an array in row-major order.",
+        "duration": "5",
+        "name": "Column-Major Order Traversal",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "674eda61-59a9-4268-b30f-208a4ca6af9d",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "0e21535a-c83a-49df-b55a-bceab8bb2d05",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Row-major order traversal is a way of traversing a 2D array by accessing each row from top to bottom. How do you think column-major order traversal is performed?*\n\n**Discussion Goal:** Students guess that column-major order traversal accesses each column from left to right.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce column-major order.\n* Define column-major order\n* Demonstrate column-major traversal"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e21535a-c83a-49df-b55a-bceab8bb2d05",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "a7a98b0c-498e-4181-9701-56c43b8877ce",
+      "position": 3,
+      "properties": {
+        "description": "Now that you have seen how row-major order and column-major order traversals work, let’s see how we implement them in Java. On the activity guide, you will trace two code segments. The first code segment traverses in row-major order, and the second code segment traverses in column-major order.",
+        "duration": "12",
+        "name": "Comparing Row-Major and Column-Major Order",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a7a98b0c-498e-4181-9701-56c43b8877ce",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "aa4a7b45-05cd-44c4-8a0b-f94b680fa5b6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Tracing 2D Traversal Algorithms activity guide to each student.\n\n**Do This:** Students complete the Tracing 2D Traversal Algorithms activity guide in pairs. \n\n**Do This:** Review the Tracing 2D Traversal Algorithms activity guide as a class by drawing the trace tables for each code segment on the whiteboard. Step through each line of the algorithm and ask different pairs of students for the values to add to the new row of the trace table. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If a whiteboard is not available in your classroom, you can digitally simulate drawing a trace table by creating a table on a slide and typing the values into the table cells."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "aa4a7b45-05cd-44c4-8a0b-f94b680fa5b6",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "ba5d279d-fac2-47e8-9550-c8105df1501b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the differences between the row-major and column-major order traversal algorithms?*\n\n**Discussion Goal:** Students highlight that the `for` loop headers are swapped. In row-major order, the loop variable in the outer `for` loop is used as a row index, and the loop variable from the inner `for` loop is used as a column index.  Conversely, in column-major order, the loop variable in the outer `for` loop is used as a column index, and the loop variable from the inner `for` loop is used as a row index.   \n\n**Do This:** Click through the animated slide to show the difference between the row-major and column-major order traversal algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss use cases for each traversal approach.\n* When the data to analyze is arranged in rows, use a row-major traversal.\n* When the data to analyze is arranged in columns, use a column-major traversal."
+      },
+      "seeding_key": {
+        "activity_section.key": "ba5d279d-fac2-47e8-9550-c8105df1501b",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "3af21f0b-01f3-4e6f-93af-363c2e9b1a23",
+      "position": 6,
+      "properties": {
+        "description": "Let’s practice applying column-major order to the owner’s inventory and prices 2D arrays. Using column-major traversal, we can make calculations down each column of the table, such as calculating the total inventory of each dessert and print prices by dessert type. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3af21f0b-01f3-4e6f-93af-363c2e9b1a23",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "e3c81d10-7aae-4122-a432-bf60b7677ee4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they update a method that prints prices elements in row-major order to column-major order."
+      },
+      "seeding_key": {
+        "activity_section.key": "e3c81d10-7aae-4122-a432-bf60b7677ee4",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "7e709bee-dcf2-4a93-b081-d96d03149920",
+      "position": 8,
+      "properties": {
+        "description": "We can also use column-major order traversal to create cool image effects, such as mirroring an image vertically. ",
+        "duration": "10",
+        "name": "Implement mirrorVertically()",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7e709bee-dcf2-4a93-b081-d96d03149920",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "e210b64d-7b17-40ba-a9e3-5a15a9599f4f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the left side of the original photo is mirrored on the right side after `mirrorVertical()` is applied. Students suggest ways to use column-major order traversal to create this effect.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that `mirrorVertical()` mirrors a given image vertically in the center and demonstrate how to manipulate image pixels to create this effect using column-major order traversal.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students complete Level 4 in pairs, where they implement the `mirrorVertical()` method. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e210b64d-7b17-40ba-a9e3-5a15a9599f4f",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "ab047c52-d150-4622-a86f-9426b28142af",
+      "position": 10,
+      "properties": {
+        "description": "**Distribute:** Give a sticky note to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students write down a bug they encountered on their sticky note and add it to the Debugging Wall."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab047c52-d150-4622-a86f-9426b28142af",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "716ca8a5-3437-4b8f-8e32-1208a45b8922",
+      "position": 11,
+      "properties": {
+        "description": "Great work! Now we will add this image effect to the concert. Let’s create a scene that illustrates the impact pollution has on The Neighborhood.",
+        "duration": "8",
+        "name": "Car Pollution Scene",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "716ca8a5-3437-4b8f-8e32-1208a45b8922",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "a2ce2fb5-6ffb-46d4-8de8-b667a1670f9c",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Share information and statistics about the impact of pollution created by cars and how using different modes of transportation can help lower pollution levels. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students further discuss Sustainable Development Goal 11 by prompting them to share how they think pollution impacts their local communities and the efforts they have already taken to contribute towards the goal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2ce2fb5-6ffb-46d4-8de8-b667a1670f9c",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "5e5916c0-0bb7-4ddc-a9e4-9a64acbcb228",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 5 through 7 on Code Studio. Students complete Level 5 in pairs to add a call to `displayCar()` in the `playConcert()` method. In Level 6, students use loops to increment the coordinates of car images to move across the screen. Lastly, in Level 7, students apply their `mirrorVertical()` image effect to the background image and add text to the scene."
+      },
+      "seeding_key": {
+        "activity_section.key": "5e5916c0-0bb7-4ddc-a9e4-9a64acbcb228",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "edfab90f-7074-43b3-95e9-491dfe917e9b",
+      "position": 14,
+      "properties": {
+        "description": "Great job! You have completed all of the tasks to create your first scene of the concert. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "edfab90f-7074-43b3-95e9-491dfe917e9b",
+        "lesson_activity.key": "b7ee8d49-cd9b-4630-a201-578dfb75b663"
+      }
+    },
+    {
+      "key": "96ae4b41-c57e-473b-a619-8dc446d1dc92",
+      "position": 1,
+      "properties": {
+        "description": "In today’s lesson, we learned how to traverse down each column of a 2D array using column-major traversal. Let’s take time to reflect on today’s objectives.",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "96ae4b41-c57e-473b-a619-8dc446d1dc92",
+        "lesson_activity.key": "6684a47e-d0b4-4761-983a-f622ff1e8ab9"
+      }
+    },
+    {
+      "key": "2be40b51-8f1b-4101-a26e-b2feff0dfec7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through a Closing the Loop discussion.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in their understanding of the day’s objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "2be40b51-8f1b-4101-a26e-b2feff0dfec7",
+        "lesson_activity.key": "6684a47e-d0b4-4761-983a-f622ff1e8ab9"
+      }
+    },
+    {
+      "key": "3bcd67b1-76ba-4a68-bcbe-9e19b0e361b5",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bcd67b1-76ba-4a68-bcbe-9e19b0e361b5",
+        "lesson_activity.key": "6684a47e-d0b4-4761-983a-f622ff1e8ab9"
+      }
+    },
+    {
+      "key": "c47290ed-f3ad-4cce-a5a6-52732ebc9d94",
+      "position": 1,
+      "properties": {
+        "description": "You might have noticed that many of the concepts covered in Unit 3 relate to concepts covered in Unit 5. Today, we will be bringing together several concepts that we have seen before. To jog your memory, I am going to show you four different words. When prompted, write down what you remember about each of these ideas. Some of these ideas are from Unit 3. You may not remember all of them, and that is okay!",
+        "name": "Concept Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c47290ed-f3ad-4cce-a5a6-52732ebc9d94",
+        "lesson_activity.key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c"
+      }
+    },
+    {
+      "key": "cb7de5b8-c55d-41b0-ab64-db4f7f17d584",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student 3-5 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and prompt students to write down what they remember about each topic on separate sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share their sticky notes with a partner. "
+      },
+      "seeding_key": {
+        "activity_section.key": "cb7de5b8-c55d-41b0-ab64-db4f7f17d584",
+        "lesson_activity.key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c"
+      }
+    },
+    {
+      "key": "af0b1ca0-55db-4fc5-88c7-eb56f823b51d",
+      "position": 3,
+      "properties": {
+        "description": "We already know so much about nested `for` loops, 2D arrays, and enhanced `for` loops. In today’s lesson, we will revisit all of these topics in new ways.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "af0b1ca0-55db-4fc5-88c7-eb56f823b51d",
+        "lesson_activity.key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c"
+      }
+    },
+    {
+      "key": "b556224f-af96-4515-8c8a-1165ae0dc0fb",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How might enhanced `for` loops, 2D arrays, and nested `for` loops go together?*\n* *What do you think we will be doing during today’s lesson?*\n\n**Discussion Goal:** Students share ideas about how these topics are connected and recall traversing 1D arrays with enhanced `for` loops. These ideas might include using loops with arrays, using an enhanced `for` loop with a 1D array, and tracing the values stored in a 2D array while looping the array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students place their sticky notes on their desks or notebooks as a reference during the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b556224f-af96-4515-8c8a-1165ae0dc0fb",
+        "lesson_activity.key": "a8d92ca7-c4e4-4ec3-bc38-4311eb31ea5c"
+      }
+    },
+    {
+      "key": "ca97b295-cf28-421c-a8ed-d67bc1467a97",
+      "position": 1,
+      "properties": {
+        "description": "In Unit 3, you learned an enhanced `for` loop is a simplified `for` loop to iterate through every element of an array starting at index 0. Looking at your enhanced `for` loop sticky note, see if what you remember is true.",
+        "duration": "10",
+        "name": "Enhanced for Loops",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ca97b295-cf28-421c-a8ed-d67bc1467a97",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "878e59eb-cae6-476b-a773-d24aedd41442",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through the use cases and limitations of using an enhanced `for` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the purpose of the code before the colon?*\n* *What is the purpose of the code after the colon?*\n\n**Discussion Goal:** Students share with a partner that the loop variable comes before the colon and stores the value of the element, and the name of the array to traverse comes after the colon."
+      },
+      "seeding_key": {
+        "activity_section.key": "878e59eb-cae6-476b-a773-d24aedd41442",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "d4b51443-82db-4c68-8686-1b3361d412a0",
+      "position": 3,
+      "properties": {
+        "description": "As you learned in Lesson 1, 2D arrays are arrays of arrays. Just like a 1D array, you can also use an enhanced `for` loop to traverse. However, the loop will be nested to iterate through all elements in the array. ",
+        "duration": "10",
+        "name": "2D Array Enhanced for Loops",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4b51443-82db-4c68-8686-1b3361d412a0",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "9232e778-de2e-4f99-a547-289f550308c8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the outer `for` loop has an array variable on the left side of the colon. Students notice the name of the array to traverse follows the colon and uses a declared variable that is the same type as the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the 2D Array Enhanced for Loop video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Tracing Enhanced for Loops activity guide to each student.\n\n**Do This:** Students complete the Tracing Enhanced for Loops activity guide in pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the code segment from the 2D Array Enhanced for Loops activity guide as a class by completing the trace table. Step through each line of the algorithm and ask different pairs of students for the values to add to the new row of the trace table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between using enhanced `for` loops with 1D array and 2D array?*\n\n**Discussion Goal:** Students notice that traversing a 1D array with an enhanced `for` loop uses a variable of the same data type as the array on one side of the colon and the array's name on the other side of the colon. Traversing a 2D array with an enhanced `for` loop requires a nested loop. The outer loop uses a 1D array variable of the same data type as the 2D array on one side of the colon and the name of the 2D array on the other side of the colon. The inner loop uses a variable of the same data type as the 1D array on one side of the colon. The other side of the colon uses the name of the 1D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "9232e778-de2e-4f99-a547-289f550308c8",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "f1008b10-79fd-49e3-b224-8724263de5e6",
+      "position": 5,
+      "properties": {
+        "description": "We are now going to use enhanced `for` loops to traverse the pixels in The Theater. ",
+        "duration": "15",
+        "name": "The Theater",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f1008b10-79fd-49e3-b224-8724263de5e6",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "68a1dcd9-4600-4b11-b5ac-94233ed1e6cd",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides for students to see each image with the red, green, and blue pixel values removed. \n\n**Discuss:** *What do you notice? What do you wonder?*\n \n**Discussion Goal:** Students notice that lowering the red, green, or blue values alters each image."
+      },
+      "seeding_key": {
+        "activity_section.key": "68a1dcd9-4600-4b11-b5ac-94233ed1e6cd",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "ad6ed40f-a576-4c3c-982c-8c5fd8467725",
+      "position": 7,
+      "properties": {
+        "description": "The Neighborhood Mayor wants The Neighborhood to think about transportation choices they make using visuals in the concert. Use your knowledge of nested enhanced `for` loops to set each pixel's red, green, and blue values in the image to 0 to create a new effect.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ad6ed40f-a576-4c3c-982c-8c5fd8467725",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "f7c03160-1fbc-432a-842d-43faafe5e9c9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete Levels 1-3, where they write a nested enhanced `for` loop. Have students continue to complete the Check for Understanding on Level 4."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7c03160-1fbc-432a-842d-43faafe5e9c9",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "1a64dc57-f5d0-42bb-bcb7-951bb57f853a",
+      "position": 9,
+      "properties": {
+        "description": "The Mayor wants the next part of the concert to have people consider choosing between cars, bicycles, and buses. You have the choice to use one of your remove methods to add an effect to your concert.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1a64dc57-f5d0-42bb-bcb7-951bb57f853a",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "6bf82803-96da-4c84-ac73-7163999113f6",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:** Click through the animated slide to display the prompts.\n* *How would you apply your filter to the background?*\n* *Which remove method are you going to apply?*\n* *How do you update the background?*\n\n**Discussion Goal:** Students share that an `Image` reference variable needs to get the image created from the call to the remove method of their choice. Students suggest using `changeBackground()` with the new `Image` object as the parameter to update the background.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk through the `displayThinking()` starter code. Have students share with a partner how to apply the filter to the background image and update the background to show the modified image.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may struggle to break down the process of applying their filter to the background. To help students think about the process, ask:\n* *Consider a background image you want to update. How did you change the pixel values?*\n* *How can you apply your change to the image? How does the remove method change the background picture?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6bf82803-96da-4c84-ac73-7163999113f6",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "11757368-5fc6-461e-a9fb-2e95e912114e",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 5 and 6 on Code Studio. Students complete Level 5 to add a call to `displayThinking()` in the `playConcert()` method, then continue to Level 6 to create the scene using the provided code segment. "
+      },
+      "seeding_key": {
+        "activity_section.key": "11757368-5fc6-461e-a9fb-2e95e912114e",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "f07475f4-cf5f-4a8d-a42f-b4cee66360de",
+      "position": 12,
+      "properties": {
+        "description": "Great job so far on your progress in the concert! Lastly, you have a choice to create an effect that keeps only the red, green, or blue color values and apply it to one of the images.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f07475f4-cf5f-4a8d-a42f-b4cee66360de",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "e2cd1dc3-c0dc-49ab-937c-45ba9cd8f47b",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that each image is altered by only keeping the red, green, or blue color values for each specific image.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How will you modify your nested enhanced `for` loop to keep the value of your choice?*\n\n**Discussion Goal:** Students suggest setting the other color values to zero to keep an individual color value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 7 Code Studio to write a method for keeping an individual color value and setting the other color values to zero.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Circulate as students work through these levels. If students finish their first level early, encourage them to attempt an additional choice level. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2cd1dc3-c0dc-49ab-937c-45ba9cd8f47b",
+        "lesson_activity.key": "c7c6e894-799d-4354-8409-45c1d882a621"
+      }
+    },
+    {
+      "key": "4dfdbfff-47f2-4054-aa54-a052c8a47a91",
+      "position": 1,
+      "properties": {
+        "description": "Today we use nested enhanced `for` loops to write methods to modify the color values of pixels and create effects on the images in your concert.",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4dfdbfff-47f2-4054-aa54-a052c8a47a91",
+        "lesson_activity.key": "4609ed33-376e-4c09-b04a-4d38f3281fe2"
+      }
+    },
+    {
+      "key": "4f42899f-0199-46d7-b8b7-c6a903547d2d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Guide students through a Closing the Loop discussion.*\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today?*\n\n**Discussion Goal:** This discussion should help reinforce the important beats of the lesson, allowing students to check their understanding and support one another in their understanding of the day’s objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "4f42899f-0199-46d7-b8b7-c6a903547d2d",
+        "lesson_activity.key": "4609ed33-376e-4c09-b04a-4d38f3281fe2"
+      }
+    },
+    {
+      "key": "4b2a835a-4643-4517-a0fe-4aa223e715fe",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b2a835a-4643-4517-a0fe-4aa223e715fe",
+        "lesson_activity.key": "4609ed33-376e-4c09-b04a-4d38f3281fe2"
+      }
+    },
+    {
+      "key": "9d19c08e-051b-4be8-8ede-c0c0f36c86d2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique Vocabulary Bingo Card. ",
+        "name": "Vocabulary Bingo"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d19c08e-051b-4be8-8ede-c0c0f36c86d2",
+        "lesson_activity.key": "1afb2d5e-c959-4465-8a08-b846d783eadc"
+      }
+    },
+    {
+      "key": "39175b78-fb86-4315-8576-88c8371da2eb",
+      "position": 2,
+      "properties": {
+        "description": "We have learned a lot of new terms over the past couple of weeks! Today we will review some of those terms through a game of Vocabulary Bingo.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "39175b78-fb86-4315-8576-88c8371da2eb",
+        "lesson_activity.key": "1afb2d5e-c959-4465-8a08-b846d783eadc"
+      }
+    },
+    {
+      "key": "f6cbd83f-7b59-4d7e-8cc4-5758007b7697",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing Vocabulary Bingo.\n\n**Do This:** Randomly choose a definition and read it out loud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells, \"Hip, Hip, Array!\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To allow for multiple students to \"win\" the game, continue pulling definitions until a couple more students win as well."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f6cbd83f-7b59-4d7e-8cc4-5758007b7697",
+        "lesson_activity.key": "1afb2d5e-c959-4465-8a08-b846d783eadc"
+      }
+    },
+    {
+      "key": "f6bb366a-8163-4c30-ba5b-1978fddf1edc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the purpose of `return` statements?*\n\n**Discussion Goal:** Students share that `return` statements give information at the end of a method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Predict the output of the `main` method.*\n\n**Discussion Goal:** Students share their predictions.",
+        "duration": "10",
+        "name": "Executing a Return Statement Inside a Loop",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before students run the code, ask different students to predict the output of the code segment. Students have not yet seen a `return` statement inside a loop, so they should focus on sharing and justifying ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f6bb366a-8163-4c30-ba5b-1978fddf1edc",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "ce19490e-36da-4ec1-99a9-f86f8b008134",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 Code Studio. Students independently complete Level 1 to predict what would happen with a `return` statement inside of a loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "ce19490e-36da-4ec1-99a9-f86f8b008134",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "36b7b46b-d29f-4428-ad9f-4e9092a85162",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Return Statement video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now, what do you think is the purpose of a `return` statement?*\n\n**Discussion Goal:** Students suggest that `return` statements stop the execution of a loop or method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the effects of executing a `return` statement inside a loop compared to outside the loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "36b7b46b-d29f-4428-ad9f-4e9092a85162",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "4515d529-ce22-443e-97a6-9e985250615d",
+      "position": 4,
+      "properties": {
+        "description": "The food truck owner wants to check if all the dessert quantities are greater than zero, but the previous software engineer wasn’t able to finish the code. Add to the code to return the correct boolean value.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4515d529-ce22-443e-97a6-9e985250615d",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "4b9f9a25-53f5-46ff-af63-4ebf24dddacd",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students continue to Level 3 to complete the Check for Understanding."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b9f9a25-53f5-46ff-af63-4ebf24dddacd",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "e6312ac2-d619-4de1-8104-5e3926fe38f4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Mayor of The Neighborhood wants The Project Mercury Pastries Food Truck to have a special for buying desserts at the concert. Before creating some new standard algorithms, let’s review the use of the mod operator from Unit 2.",
+        "duration": "10",
+        "name": "Creating a Special",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e6312ac2-d619-4de1-8104-5e3926fe38f4",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "2b2408d0-4e3e-4fda-9e3f-f8225f073614",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Click the animated slide reviewing the use of the mod operator. Give time for students to review the equation before revealing the answer.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Given the previous answer, is eight evenly divisible by 3?*\n* *What does evenly divisible mean?*\n* *What should the remainder be when it is evenly divisible?*\n\n**Discussion Goal:** Students recall using mod to find if an integer is or is not evenly divisible by another integer. Students suggest using a nested loop to traverse all the elements in the 2D array and using a conditional statement to check the available quantities. Students list each step the solution needs to take to achieve the desired outcome."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b2408d0-4e3e-4fda-9e3f-f8225f073614",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "454452de-bd0b-4a87-aa4a-8ee4486ca1cc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The owner is catering a party where the order is in multiples of a half dozen (six) and wants to make sure there are no leftovers. The mod operator will help you create a standard algorithm that will help the owner check if the quantities of all the desserts are multiples of 6.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "454452de-bd0b-4a87-aa4a-8ee4486ca1cc",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "5cdf4b41-0149-4c33-a6d4-e6a1999c2bf6",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** Show the example problem to check if the available quantities of each food truck is a multiple of six. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are the key steps we need to take to solve this problem?*\n* *How can we use modulus?*\n\n**Discussion Goal:** Students recall using mod to find if an integer is or is not evenly divisible by another integer. Students also suggest using a nested loop to traverse all the elements in the 2D array and using a conditional statement to check the available quantities. Students list each step the solution needs to take to achieve the desired outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to write the `checkSpecial()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "5cdf4b41-0149-4c33-a6d4-e6a1999c2bf6",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "73412ebd-f248-4e92-a670-6ee1cc4bc0b8",
+      "position": 10,
+      "properties": {
+        "description": "But wait! What if a quantity is zero? Zero is evenly divisible by six, but the owner wants `checkSpecial()` to return `false` if there is a zero quantity. Update your code for the new requirement.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "73412ebd-f248-4e92-a670-6ee1cc4bc0b8",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "9ad41e47-9a56-4b80-ad98-9149d0cbf4fa",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 to update the `checkSpecial()` method. Students continue to Level 6 to complete the Check for Understanding.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to write the `checkSpecial()` method, have them write pseudocode first individually or with a partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ad41e47-9a56-4b80-ad98-9149d0cbf4fa",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "2dfc3a52-df63-4666-8b9b-8f4e641b3346",
+      "position": 12,
+      "properties": {
+        "description": "The owner wants to be able to check the quantities of desserts. Let's write another method that checks how many food trucks have certain quantities of desserts.",
+        "duration": "10",
+        "name": "Checking the Quantities",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2dfc3a52-df63-4666-8b9b-8f4e641b3346",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "a82f2cc3-1625-4f83-a390-f14e7832555d",
+      "position": 13,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the example problem to check if the number of desserts in a food truck is more than 12. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompt.\n* *What are the key steps we need to take to solve this problem?*\n* *How many food trucks have quantities greater than 12?*\n\n**Discussion Goal:** Students suggest using a nested loop to traverse all the elements in the 2D array and using a conditional statement to check if the number of desserts has a quantity greater than 12. Students list each step the solution needed to take to achieve the desired outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 7 to write the `checkQuantities()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to write the `checkQuantities()` method, have them write pseudocode first individually or with a partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a82f2cc3-1625-4f83-a390-f14e7832555d",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "0be9d1aa-273c-4b77-a8f7-9bf971b12ec1",
+      "position": 14,
+      "properties": {
+        "description": "The Mayor is proud! Excellent job implementing new algorithms to prepare for the concert.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0be9d1aa-273c-4b77-a8f7-9bf971b12ec1",
+        "lesson_activity.key": "ea4c29f3-ebd0-4e60-95e0-aca438a7bc0d"
+      }
+    },
+    {
+      "key": "939ddc20-2eb0-4faa-9981-b51a8d55ad68",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about when evaluating 2D Arrays.",
+        "name": "Gots and Needs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect and review student responses to identify students that may need additional support in upcoming lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "939ddc20-2eb0-4faa-9981-b51a8d55ad68",
+        "lesson_activity.key": "0ab896a8-4a80-41d0-b381-8d55821189da"
+      }
+    },
+    {
+      "key": "8a772837-3491-48d3-8ca7-a81c09cc7e44",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a772837-3491-48d3-8ca7-a81c09cc7e44",
+        "lesson_activity.key": "0ab896a8-4a80-41d0-b381-8d55821189da"
+      }
+    },
+    {
+      "key": "eb4d2c04-26b2-44ef-86d4-62d727793503",
+      "position": 1,
+      "properties": {
+        "description": "We have made a lot of progress developing the concert in The Theater and helping the owner of the Project Mercury Pastries Food Truck plan the catering!\n\nToday we will be adding to our concert to spread awareness in The Neighborhood about the benefits of sustainable transportation. Let's first start by exploring some of the other sustainable goals.",
+        "name": "Sustainable Goals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb4d2c04-26b2-44ef-86d4-62d727793503",
+        "lesson_activity.key": "3a3900b8-d57f-4ec3-bf4d-fcdf4f4d9ed1"
+      }
+    },
+    {
+      "key": "0838d52e-4212-4b9a-afc9-a95be919fd55",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Sustainable Goals Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to direct students to choose a sustainable goal from their Sustainable Goals Planning Guide that is meaningful to them. Have students respond to the prompt on page 2 of the guide. Allow students some time to reflect individually before sharing with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some goals that stood out to you?*\n* *Why is the goal you chose important to your community?*\n\n**Discussion Goal:** Students share goals they think are interesting or important to them or their partner and discuss some importance of their chosen goals."
+      },
+      "seeding_key": {
+        "activity_section.key": "0838d52e-4212-4b9a-afc9-a95be919fd55",
+        "lesson_activity.key": "3a3900b8-d57f-4ec3-bf4d-fcdf4f4d9ed1"
+      }
+    },
+    {
+      "key": "3dfe84e4-a3ec-4577-8b2a-7bb477bf36ba",
+      "position": 3,
+      "properties": {
+        "description": "The Mayor of The Neighborhood wants the next part of the concert to be about the benefits of sustainable transportation. One benefit that is important to the Mayor is improved air quality. Let's design some visuals for the concert to illustrate this benefit using some of the standard algorithms we have learned about already!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3dfe84e4-a3ec-4577-8b2a-7bb477bf36ba",
+        "lesson_activity.key": "3a3900b8-d57f-4ec3-bf4d-fcdf4f4d9ed1"
+      }
+    },
+    {
+      "key": "89fb8aa7-eb77-4e31-831f-a9a598746796",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate grayscale effects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the example problem to calculate the average of the 1D array. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the key steps we need to take to solve this problem?*\n\n**Discussion Goal:** Students recall the algorithm they wrote in Unit 3 to find the average of the elements in a 1D array. Students list each step the solution needed to take to achieve the desired outcome.",
+        "duration": "20",
+        "name": "Creating a Grayscale Effect"
+      },
+      "seeding_key": {
+        "activity_section.key": "89fb8aa7-eb77-4e31-831f-a9a598746796",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "662f59d8-bfcc-464f-bbfd-8d2b3c3049fe",
+      "position": 2,
+      "properties": {
+        "description": "The algorithm we wrote in Unit 3 to find the average of a 1D array was a standard algorithm. A standard algorithm easily applies to other situations and data structures such as 2D arrays.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "662f59d8-bfcc-464f-bbfd-8d2b3c3049fe",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "cb84cc36-dcae-4256-864c-fc57fca2bb35",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the example problem to find the average of the 2D array. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we apply the steps that we used in the first problem to this second problem?*\n\n**Discussion Goal:** Students suggest using the same steps within a nested loop to traverse all elements in the 2D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "cb84cc36-dcae-4256-864c-fc57fca2bb35",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "9e8ce722-d28d-453e-9410-0d5d8c45eb72",
+      "position": 4,
+      "properties": {
+        "description": "Since this algorithm to find the average of an array is a standard algorithm, we can use its major components to create a new effect for our images.\n\nTo do this, we know we need to traverse the 2D array of pixels using a nested loop. This time, though, we will get the average of each pixel's red, green, and blue values as we traverse the 2D array, then update the pixel color to the new average value. Let's try it out!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9e8ce722-d28d-453e-9410-0d5d8c45eb72",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "73524925-987f-467b-ab24-1559c7ca9804",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to write the `grayscale()` method.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to write the `grayscale()` method, have them write pseudocode first individually or with a partner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73524925-987f-467b-ab24-1559c7ca9804",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "bdb6ee58-4c51-4393-a542-987106fa35f8",
+      "position": 6,
+      "properties": {
+        "description": "Now that you have written your `grayscale()` method, let's see what it does to an image in the concert!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bdb6ee58-4c51-4393-a542-987106fa35f8",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "64cf419a-c816-4150-8e98-7ff57b392858",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to debug the given program and then complete Level 3 by applying their `grayscale()` method to an image in the `displayAirQuality()` method. Have students complete a Code Review with their partner of their method on Level 3."
+      },
+      "seeding_key": {
+        "activity_section.key": "64cf419a-c816-4150-8e98-7ff57b392858",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "22061872-8258-4aab-883e-fd5a13540892",
+      "position": 8,
+      "properties": {
+        "description": "That's not the only standard algorithm we can use to create effects on our images!\n\nLet's look at an image that was modified using a standard algorithm and see if we can figure out which algorithm created the effect.",
+        "duration": "15",
+        "name": "Modifying Colors",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22061872-8258-4aab-883e-fd5a13540892",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "1e3d7a4b-7f66-4fdd-b51e-032f53750846",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to access the Pixels Widget. Click through the animated slide to discuss:\n* *What happens to the image when you set the green and blue values to 0?*\n* *What happens to the image as you increase or decrease the red values?*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might initially think that all of the pixels in the image contain only one color value. Ask additional probing questions to guide students to finding the highest red value in the image and setting all pixels to have that red value, such as:\n* *If we set the red value for each pixel to 255, what would that do to the image?*\n* *What if this were an image that didn't have any visible red colors in the image? Would anything have happened to the image?*\n* *Do you notice any patterns or similarities between the original and modified image?*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e3d7a4b-7f66-4fdd-b51e-032f53750846",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "a89fba39-8aee-448a-a7f9-d88b6aea7570",
+      "position": 10,
+      "properties": {
+        "description": "This effect used the standard algorithm we wrote to find the maximum value in a 1D array. Let's revisit how we solved that problem in Unit 3.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a89fba39-8aee-448a-a7f9-d88b6aea7570",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "3fe8eb00-34e5-4335-a86c-a395d7cbdc44",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the example problem to find the maximum value in the 1D array. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the key steps we need to take to solve this problem?*\n\n**Discussion Goal:** Students recall the algorithm they wrote in Unit 3 to find the maximum value in a 1D array. Students list each step the solution needed to take to achieve the desired outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the example problem to find the maximum value in the 2D array. Direct students to work with their partners to outline the steps to solve the problem on a piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we apply the steps that we used in the first problem to this second problem?*\n\n**Discussion Goal:** Students suggest using the same steps within a nested loop to traverse all elements in the 2D array."
+      },
+      "seeding_key": {
+        "activity_section.key": "3fe8eb00-34e5-4335-a86c-a395d7cbdc44",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "acff666c-1d69-4019-98d5-00da939e3b69",
+      "position": 12,
+      "properties": {
+        "description": "Now let's see what this standard algorithm can do to your images!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "acff666c-1d69-4019-98d5-00da939e3b69",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "08ee68d6-0a28-478d-b5f7-7956c3aeef7f",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students complete a Check for Understanding then continue to complete Levels 6 and 7 by writing `setMax()` and `setMin()` methods for the color of their choice. Students apply the methods they wrote to images in the `displayAirQuality()` method on Level 8. Have students complete a Code Review with their partner of their methods on Level 8.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use Catch and Release as needed to maintain engagement. Catch and Release is a technique to allow students to explore a problem with intermittent support while preventing students from struggling for too long or disengaging. As students work, circulate and note any misconceptions. After two minutes, briefly clarify issues or pose a question to the class that students have been struggling with, then send them back to their work.\n\nIt is not necessary to bring the class back together after each level. If individual discussions address questions or students do not need additional guidance to continue working, you may choose to address final questions during the wrap-up."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08ee68d6-0a28-478d-b5f7-7956c3aeef7f",
+        "lesson_activity.key": "554a68c6-1f24-48ee-bfc0-4323109cc0ae"
+      }
+    },
+    {
+      "key": "a6ead45d-7428-4c76-a55f-08f591d414d9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Standard Algorithms video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share a stronger understanding of the purpose and usefulness of standard algorithms. Students realize they can use the same algorithms for different situations and data structures. Students share ideas of other algorithms they might revisit in upcoming lessons to use as image effects.",
+        "name": "Three W's"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6ead45d-7428-4c76-a55f-08f591d414d9",
+        "lesson_activity.key": "1645d1dc-04e7-44d5-90fb-dbb93629829f"
+      }
+    },
+    {
+      "key": "a9c9a325-ab2b-450b-9331-4c7245861b00",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9c9a325-ab2b-450b-9331-4c7245861b00",
+        "lesson_activity.key": "1645d1dc-04e7-44d5-90fb-dbb93629829f"
+      }
+    }
   ],
   "script_levels": [
 
@@ -35,10 +2069,398 @@
 
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Tracing 2D Array Traversal Algorithms",
+      "url": "https://docs.google.com/document/d/1JFsWeN6_XwiFwBzP8beH7-yfNfuRsAWM_jxsTUUOHY0/edit?usp=sharing",
+      "key": "_key_tracing_2d_array_traversal_algorithms",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_tracing_2d_array_traversal_algorithms"
+      }
+    },
+    {
+      "name": "[KEY] Tracing Enhanced for Loops",
+      "url": "https://docs.google.com/document/d/1pidSrLDJAlW9D72te1PobpipyhN2cT-JbvWY-ocoqhQ/edit?usp=sharing",
+      "key": "_key_tracing_enhanced_for_loops",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "[KEY] U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1wgQT6zb-L72rpzy6PltrVfEDYuMdD90LEdGObjeP9d4/edit",
+      "key": "_key_u5l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1kopqWpEEDPyjSdmYufEMD5GqElzyOiUc3uJizhXfTB0/edit",
+      "key": "_key_u5l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1mjPTZC6x2rQr2IcCv02qUPstiqk8mGHEwDFrkMb_Flc/edit?usp=sharing",
+      "key": "_key_u5l3_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1O4Z-r8esMpd3vVDCI_D74qq3q2-tAHimwezVRACVfuM/edit?usp=sharing",
+      "key": "_key_u5l4_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ZsuRoqijYZMhcX2pTkF9KQhEVu9Npf4ura04o7eyq30/edit?usp=sharing",
+      "key": "_key_u5l5_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U5L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1zUYa_Jm5or9LSaqaYWFZL5UDLUSisvGunC4sZFDd7wk/edit?usp=sharing",
+      "key": "_key_u5l6_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "Sustainable Goals Planning Guide",
+      "url": "https://docs.google.com/document/d/1OMbvX-MI2ZiYUuQRgyrSGK7e9SsPay4pXoDGN5bme18/edit?usp=sharing",
+      "key": "sustainable_goals_planning_guide",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "sustainable_goals_planning_guide"
+      }
+    },
+    {
+      "name": "Tracing 2D Array Traversal Algorithms",
+      "url": "https://docs.google.com/document/d/13LDyfG6bbaRTSjHE6Xaofs3zONFfn4PEk9psm7ojRdw/edit?usp=sharing",
+      "key": "tracing_2d_array_traversal_algorithms",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "tracing_2d_array_traversal_algorithms"
+      }
+    },
+    {
+      "name": "Tracing Enhanced for Loops",
+      "url": "https://docs.google.com/document/d/1cs9G8RcRif3Y36UD05RLIVebdg4taRsE2T3xe1PIGsk/edit?usp=sharing",
+      "key": "tracing_enhanced_for_loops",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "U5L1 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1I8tnsQSaCx-QA-ow0cIa3Pn13zmLHkhRtCkeDyjdvek/edit",
+      "key": "u5l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l1_extra_practice"
+      }
+    },
+    {
+      "name": "U5L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/18H6Cn-IQNZ4LefrqX4Ux308bM4LsfLr1qtobjws6Xus/edit",
+      "key": "u5l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l2_extra_practice"
+      }
+    },
+    {
+      "name": "U5L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cxQtE-wy_HnWR8y8pN7lzYTGdv7hbLIuM1vjIL26HYY/edit?usp=sharing",
+      "key": "u5l3_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l3_extra_practice"
+      }
+    },
+    {
+      "name": "U5L4 Extra Practice",
+      "url": "https://docs.google.com/document/d/1I2VWTMVr2tpKxcGDkm6UoY_dr8BrVqcO2QBR0SLReEo/edit?usp=sharing",
+      "key": "u5l4_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l4_extra_practice"
+      }
+    },
+    {
+      "name": "U5L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/17o3TFDpoahrdTjJU53i6hqDXaAp1VHBvxPcGadv_3Jo/edit?usp=sharing",
+      "key": "u5l5_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l5_extra_practice"
+      }
+    },
+    {
+      "name": "U5L6 Extra Practice",
+      "url": "https://docs.google.com/document/d/1OPTvdBqG7z1H0-7HEf0tAxbOSyprF9eltondV_aoNKs/edit?usp=sharing",
+      "key": "u5l6_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 5 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1fOFoglAExmIiTifW0hNRxO3lGb1R-mN-1M20CMJYFXY/edit?usp=sharing",
+      "key": "unit_5_presentation_slides",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "name": "Vocabulary Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1zgeUlhiDQFnRz1nTjx_Dv_U0xAecmgNcjTp7t39Z-a0/edit?usp=sharing",
+      "key": "vocabulary_bingo_cards_1",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_bingo_cards_1"
+      }
+    },
+    {
+      "name": "Vocabulary Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1cAGO-qB1QiekD8clh_SMFepkKVI6tI-Zahrzw-0m7TQ/edit?usp=sharing",
+      "key": "vocabulary_bingo_definitions_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_bingo_definitions_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_u5l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "u5l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_tracing_2d_array_traversal_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "tracing_2d_array_traversal_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u5l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u5l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_bingo_cards_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u5l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "sustainable_goals_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u5l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -47,19 +2469,434 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "initializer_list",
+      "word": "Initializer List",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "key": "two_dimensional_d_array",
+      "word": "Two-Dimensional (2D) Array",
+      "definition": "An array of arrays often represented as a table with rows and columns",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "key": "outer_array",
+      "word": "Outer Array",
+      "definition": "The outermost array of a two-dimensional array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "key": "inner_array",
+      "word": "Inner Array",
+      "definition": "An array that is nested inside another array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "key": "row",
+      "word": "Row",
+      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "key": "column",
+      "word": "Column",
+      "definition": "A vertical (up and down) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "Pixel",
+      "definition": "The smallest unit of a digital image",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "row_major_order",
+      "word": "Row-Major Order",
+      "definition": "A way of traversing a 2D array by accessing each row from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
+      "key": "column_major_order",
+      "word": "Column-Major Order",
+      "definition": "A way of traversing a 2D array by accessing each column from left to right",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column_major_order"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "inner_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "row"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "row_major_order"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "column_major_order"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "b0181547-2c7a-44ed-b0e7-a20b34f95878",
+      "properties": {
+        "description": "Declare and initialize a 2D array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b0181547-2c7a-44ed-b0e7-a20b34f95878"
+      }
+    },
+    {
+      "key": "8865bb64-86d6-48cc-82d6-c149a53eca94",
+      "properties": {
+        "description": "Initialize the values of a 2D array using an initializer list"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8865bb64-86d6-48cc-82d6-c149a53eca94"
+      }
+    },
+    {
+      "key": "ba85f416-4529-4853-9019-e7d97ba8a128",
+      "properties": {
+        "description": "Access and modify 2D array elements using row and column indexes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ba85f416-4529-4853-9019-e7d97ba8a128"
+      }
+    },
+    {
+      "key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05",
+      "properties": {
+        "description": "Use nested iteration statements to traverse and access elements of a 2D array in row-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05"
+      }
+    },
+    {
+      "key": "1cca3907-3440-4bc3-8d4e-19cadb8cc7ef",
+      "properties": {
+        "description": "Describe the relationship between pixels in images and 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "1cca3907-3440-4bc3-8d4e-19cadb8cc7ef"
+      }
+    },
+    {
+      "key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc",
+      "properties": {
+        "description": "Traverse a 2D array in column-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc"
+      }
+    },
+    {
+      "key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b",
+      "properties": {
+        "description": "Differentiate row-major order and column-major order traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b"
+      }
+    },
+    {
+      "key": "6650b683-3b95-43fb-b700-d685af359ba1",
+      "properties": {
+        "description": "Access and modify elements of a 2D array in column-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "6650b683-3b95-43fb-b700-d685af359ba1"
+      }
+    },
+    {
+      "key": "dd5f35ed-a027-415b-b7bb-437e54fdace7",
+      "properties": {
+        "description": "Write nested enhanced for loops to traverse 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "dd5f35ed-a027-415b-b7bb-437e54fdace7"
+      }
+    },
+    {
+      "key": "af2ae25f-a086-4fc2-b616-16ebc9238bed",
+      "properties": {
+        "description": "Identify the similarities and differences between the use of enhanced for loops with 1D arrays and 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "af2ae25f-a086-4fc2-b616-16ebc9238bed"
+      }
+    },
+    {
+      "key": "fd08d3f7-bfba-4e45-8f18-5fe191a4a76d",
+      "properties": {
+        "description": "Write trace tables to document iteration"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "fd08d3f7-bfba-4e45-8f18-5fe191a4a76d"
+      }
+    },
+    {
+      "key": "55ad8f14-d068-463a-948e-58ada7215879",
+      "properties": {
+        "description": "Explain the effect of executing a return statement inside a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "55ad8f14-d068-463a-948e-58ada7215879"
+      }
+    },
+    {
+      "key": "ddad331c-348c-4d14-af15-116a4838226e",
+      "properties": {
+        "description": "Traverse a 2D array to find whether values are evenly divisible by another integer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "ddad331c-348c-4d14-af15-116a4838226e"
+      }
+    },
+    {
+      "key": "d8b70241-1f7c-4d50-9102-e466c34e769c",
+      "properties": {
+        "description": "Traverse a 2D array to find the number of elements that meet specific criteria"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "d8b70241-1f7c-4d50-9102-e466c34e769c"
+      }
+    },
+    {
+      "key": "dbcd211b-7f1b-4065-8750-b691c4fdff19",
+      "properties": {
+        "description": "Apply standard algorithms used with 1D arrays to 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "dbcd211b-7f1b-4065-8750-b691c4fdff19"
+      }
+    },
+    {
+      "key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e",
+      "properties": {
+        "description": "Write a method to calculate the average RGB color value of each pixel in an image"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e"
+      }
+    },
+    {
+      "key": "ea67c3f6-8230-4000-ab8a-5cf361526fad",
+      "properties": {
+        "description": "Write methods to find a minimum or maximum red, green, or blue color value of all pixels in an image"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "ea67c3f6-8230-4000-ab8a-5cf361526fad"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.2"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

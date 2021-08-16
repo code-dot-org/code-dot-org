@@ -27,6 +27,12 @@ class ScriptTest < ActiveSupport::TestCase
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
+    # To test level caching, we have to make sure to create a level in a script
+    # *before* generating the caches.
+    # We also want to test level_concept_difficulties, so make sure to give it
+    # one.
+    @cacheable_level = create(:level, :script, level_concept_difficulty: create(:level_concept_difficulty))
+
     # ensure that we have freshly generated caches with this unit_group/unit
     UnitGroup.clear_cache
     Script.clear_cache
@@ -43,6 +49,18 @@ class ScriptTest < ActiveSupport::TestCase
     UnitGroup.stubs(:should_cache?).returns true
     @@course_cached ||= UnitGroup.course_cache_to_cache
     UnitGroup.course_cache
+
+    CourseVersion.stubs(:should_cache?).returns true
+    CourseVersion.course_offering_keys('Script')
+
+    CourseOffering.all.pluck(:key).each do |key|
+      CourseOffering.get_from_cache(key)
+    end
+
+    Script.all.pluck(:id, :name).each do |sid, name|
+      CourseOffering.get_from_cache(sid)
+      CourseOffering.get_from_cache(name)
+    end
 
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
@@ -213,7 +231,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     # Not testing new_name since it causes a new unit to be created.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.get_published_state
     assert unit.login_required?
     assert_equal 'csd1', unit.family_name
 
@@ -222,7 +240,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([unit_file_no_fields])
     unit.reload
 
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.get_published_state
     assert_equal false, unit.login_required?
     assert_nil unit.family_name
   end
@@ -301,7 +319,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by_name('test-migrated-overrides')
     assert unit.is_migrated
     assert unit.tts
-    assert_equal 'my-pilot-experiment', unit.pilot_experiment
+    assert_equal 'my-pilot-experiment', unit.get_pilot_experiment
     refute unit.editor_experiment
     refute unit.login_required
     refute unit.student_detail_progress_view
@@ -387,14 +405,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal original_script_level_ids, unit.script_levels.map(&:id)
   end
 
-  test 'unplugged in unit' do
-    @unit_file = File.join(self.class.fixture_path, 'test-unplugged.script')
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 'Unplugged', unit.script_levels[1].level['type']
-  end
-
   test 'blockly level in custom unit' do
+    game = Game.find_by_name('Studio')
+    create :level, name: 'blockly', game: game, level_num: 100
     unit_data, _ = ScriptDSL.parse(
       "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
@@ -411,16 +424,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -430,16 +443,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -465,6 +478,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
+    create :course_offering, key: 'coursea'
     error = assert_raises do
       Script.get_from_cache('coursea')
     end
@@ -542,13 +556,14 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    level = Script.find_by_name('course4').script_levels.second.level
-    expected = level.level_concept_difficulty
-    assert_not_nil expected
+    script = @cacheable_level.script_levels.first.script
+    expected = @cacheable_level.level_concept_difficulty
+
+    refute_nil expected
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, Script.get_from_cache('course4').script_levels.second.level.level_concept_difficulty
+    assert_equal expected, Script.get_from_cache(script.name).script_levels.first.level.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
@@ -668,6 +683,8 @@ class ScriptTest < ActiveSupport::TestCase
     section = create :section, unit_group: csp_2018
     section.students << student
 
+    csp1_2018.reload
+    csp1_2017.reload
     assert_equal csp1_2018.link, csp1_2017.redirect_to_unit_url(student)
   end
 
@@ -730,6 +747,9 @@ class ScriptTest < ActiveSupport::TestCase
     create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
     student = create :student
     student.scripts << unit1
+    unit_group.reload
+    unit1.reload
+    unit2.reload
 
     assert unit2.can_view_version?(student)
   end
@@ -1105,10 +1125,14 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017')
     create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp_2017.reload
+    csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018')
     create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp_2018.reload
+    csp1_2018.reload
 
     refute csp1_2017.summarize[:show_course_unit_version_warning]
 
@@ -1153,10 +1177,14 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp1', version_year: '2017')
     create(:unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1)
+    csp_2017.reload
+    csp1_2017.reload
 
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp1', version_year: '2018')
     create(:unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1)
+    csp_2018.reload
+    csp1_2018.reload
 
     user = create(:student)
     create(:user_script, user: user, script: csp1_2017)
@@ -1552,6 +1580,8 @@ class ScriptTest < ActiveSupport::TestCase
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
+    unit.reload
+    unit_group.reload
 
     assert_equal '/courses/csp', unit.course_link
   end
@@ -1816,7 +1846,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     assert unit.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.get_published_state
     assert unit.announcements
     assert unit.is_course
 
@@ -1829,7 +1859,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute unit_copy.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.published_state
+    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
     refute unit_copy.announcements
     refute unit_copy.is_course
 
@@ -2133,6 +2163,26 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not Script.modern_elementary_courses_available?("fr-fr")
   end
 
+  test 'supported_locale_codes' do
+    unit = create :script
+    assert_equal ['en-US'], unit.supported_locale_codes
+
+    unit.supported_locales = ['en-US']
+    assert_equal ['en-US'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-FR']
+    assert_equal ['en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-FR', 'ar-SA']
+    assert_equal ['ar-SA', 'en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['en-US', 'fr-FR', 'ar-SA']
+    assert_equal ['ar-SA', 'en-US', 'fr-FR'], unit.supported_locale_codes
+
+    unit.supported_locales = ['fr-fr']
+    assert_equal ['en-US', 'fr-fr'], unit.supported_locale_codes
+  end
+
   test 'supported_locale_names' do
     unit = create :script
     assert_equal ['English'], unit.supported_locale_names
@@ -2200,8 +2250,8 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     assert_equal 'pilot-script', unit.name
-    assert_equal 'pilot-experiment', unit.pilot_experiment
-    assert_equal 'pilot', unit.published_state
+    assert_equal 'pilot-experiment', unit.get_pilot_experiment
+    assert_equal 'pilot', unit.get_published_state
   end
 
   test 'has pilot access' do
@@ -2343,6 +2393,18 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "units_with_standards" do
+    assert_equal(
+      [
+        [
+          @csf_unit_2019.localized_title, @csf_unit_2019.name
+        ]
+      ],
+      Script.units_with_standards
+    )
+  end
+
+  test "units_with_standards doesn't include unversioned scripts" do
+    create :script, family_name: 'family', version_year: CourseVersion::UNVERSIONED
     assert_equal(
       [
         [
@@ -2958,8 +3020,8 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert error.message.include? 'Duplicate entry'
-    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
+    assert_includes error.message, 'Duplicate entry'
+    assert_includes error.message, "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'can add unplugged for lesson' do
@@ -3073,6 +3135,8 @@ class ScriptTest < ActiveSupport::TestCase
       create :course_version, content_root: @unit_group
       @unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
       create :unit_group_unit, unit_group: @unit_group, script: @unit_in_course, position: 1
+      @unit_group.reload
+      @unit_in_course.reload
     end
 
     test 'can copy a standalone unit as another standalone unit' do

@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-01 17:20:51 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-07-30 20:28:26 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -1230,6 +1230,48 @@
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "resource.key": "csp_unit_8_-_create_pt_prep"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "resource.key": "create-pt-survival-guide-20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "resource.key": "csp_unit_8_-_create_pt_prep"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
         "resource.key": "csp-create-pt-college-board-annotated-sample-a"
       }
@@ -1255,19 +1297,19 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
       }
     },
     {
@@ -1309,56 +1351,32 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Make a Plan",
-        "resource.key": "create-pt-survival-guide-20-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Make a Plan",
         "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_8",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_master_vocabulary",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide",
         "script.name": "csp8-2021"
       }
     },
@@ -1371,24 +1389,6 @@
     {
       "seeding_key": {
         "resource.key": "virtual_modification_resources",
-        "script.name": "csp8-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_curriculum_guide",
-        "script.name": "csp8-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_8",
-        "script.name": "csp8-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_8",
         "script.name": "csp8-2021"
       }
     }

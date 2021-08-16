@@ -1074,8 +1074,6 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
-      gamelab_hideHaiku:
-        text: hide haiku
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1221,8 +1219,6 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
-      gamelab_printHaiku:
-        text: show haiku {BREAK} poem title {TITLE} poem author {AUTHOR} line 1 {LINE1} line 2 {LINE2} line 3 {LINE3}
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -1339,6 +1335,18 @@ en:
             '"while"': while
       gamelab_spriteSay:
         text: "{SPRITE} say {SPEECH}"
+      gamelab_spriteSayChoices:
+        text: "{SPRITE} say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
       gamelab_spriteSayTime:
         text: "{SPRITE}say{TEXT1}for{NUM}seconds"
       gamelab_startAvoiding:
@@ -1860,10 +1868,36 @@ en:
         text: random word
       PoemBot_setAuthor:
         text: set poem author {AUTHOR}
+      PoemBot_setBackgroundEffect:
+        text: set background effect {BG_EFFECT}
+        options:
+          BG_EFFECT:
+            '"solid"': solid
+            '"rainbow"': rainbow
+      PoemBot_setForegroundEffect:
+        text: set foreground effect {FG_EFFECT}
+        options:
+          FG_EFFECT:
+            '"rain"': rain
+            '"bubbles"': bubbles
+      PoemBot_setPoem:
+        text: set poem {BG_EFFECT}
+        options:
+          BG_EFFECT:
+            '"---"': "---"
+            '"wordsworth"': I Wandered Lonely as a Cloud
+            '"dickinson"': If I can Stop one Heart from Breaking
+            '"silverstein"': Batty
       PoemBot_setTitle:
         text: set poem title {TITLE}
       PoemBot_showPoem:
         text: show poem
+      PoemBot_stringConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      PoemBot_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
@@ -1981,6 +2015,71 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      batman_batmanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batman!"': I am Batman!
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_batwomanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Batwoman!"': I am Batwoman!
+      batman_bruceSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"Call me Bruce"': Call me Bruce.
+            '"Being kind is never wasted."': Being kind is never wasted.
+            '"When you know better, you do better."': When you know better, you do better.
+            '"You always pass failure on the way to success."': You always pass failure on the way to success.
+            '"Make each day your masterpiece."': Make each day your masterpiece.
+      batman_catwomanSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Catwoman!"': I am Catwoman!
+            '"Never quit!"': Never quit!
+            '"Live Fast."': Live Fast.
+      batman_freezeSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I''m Mr. Freeze!"': I'm Mr. Freeze!
+            '"Stay Cool!"': Stay Cool!
+            '"Everyone, chill!"': Everyone, chill!
+            '"Cool party!"': Cool party!
+            '"Allow me to break the ice."': Allow me to break the ice.
+            '"Tonight’s forecast… a freeze is coming!"': Tonight’s forecast… a freeze is coming!
+      batman_harleySay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Harley Quinn!"': I am Harley Quinn!
+      batman_jokerSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I''m the Joker!"': I'm the Joker!
+      batman_nightwingSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Nightwing!"': I am Nightwing!
+      batman_poisonivySay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Poison Ivy!"': I am Poison Ivy!
+      batman_robinSay:
+        text: "{IMG}say {SPEECH}"
+        options:
+          SPEECH:
+            '"I am Robin!"': I am Robin!
       binary_drawBin:
         text: draw binary {BIN}
       binary_drawBinScreen:
@@ -2123,3 +2222,7 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      validation_validatedBackground:
+        text: set background to {IMG}
+      validation_validatedSound:
+        text: PLAYSound {SOUND}

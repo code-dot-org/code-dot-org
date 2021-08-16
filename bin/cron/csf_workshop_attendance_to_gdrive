@@ -30,7 +30,8 @@ def get_rows
       "Total Hours",
       "Num Registered",
       "Number Scholarship Teachers Attending All Sessions",
-      "Attendance Day 1+"
+      "Attendance Day 1+",
+      "Workshop End Date"
     ]
   ]
 
@@ -54,7 +55,8 @@ def get_rows
         workshop.effective_num_hours,
         workshop.enrollments.count,
         workshop.teachers_attending_all_sessions(true).count,
-        workshop.teachers_attending_all_sessions.count
+        workshop.teachers_attending_all_sessions.count,
+        workshop.sessions.last&.formatted_date
       ]
     end
 

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-06-16 23:01:32 UTC",
+    "serialized_at": "2021-07-27 16:15:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "allthemigratedthings"
@@ -389,7 +389,6 @@
         ],
         "progression": "Levels are Cool"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,9 +409,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ui_lesson_bubble_choice"
+        ],
         "progression": "Bubble Choice"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -433,9 +434,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ui_lesson_standalone_video"
+        ],
         "progression": "Standalone Video"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -456,9 +459,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "uitest_lesson_applab"
+        ],
         "progression": "Level with Instructions"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -556,13 +561,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "teacher_resource"
+        "resource.key": "student_resource"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "student_resource"
+        "resource.key": "teacher_resource"
       }
     }
   ],

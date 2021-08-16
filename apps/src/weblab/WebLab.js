@@ -2,8 +2,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import weblabI18n from '@cdo/weblab/locale';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
+import {
+  DisallowedHtmlWarningDialog,
+  FatalErrorDialog,
+  ResetSuccessDialog,
+  UploadErrorDialog
+} from '@cdo/apps/weblab/dialogs/';
 import {Provider} from 'react-redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
@@ -14,6 +21,7 @@ var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
+import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
@@ -451,7 +459,7 @@ WebLab.prototype.registerBeforeFirstWriteHook = function(hook) {
   filesApi.registerBeforeFirstWriteHook(hook);
   filesApi.registerErrorAction(() => {
     dashboard.assets.hideAssetManager();
-    getStore().dispatch(actions.changeShowError(true));
+    this.openUploadErrorDialog();
   });
 };
 
@@ -556,6 +564,75 @@ WebLab.prototype.reset = function(ignore) {
   // TODO - implement
 };
 
+WebLab.prototype.openFatalErrorDialog = function(
+  message,
+  type = FatalErrorType.Default
+) {
+  const handleResetProject = () => {
+    this.closeDialog();
+    this.brambleHost?.resetFilesystem(err => {
+      if (err) {
+        this.openFatalErrorDialog(err.message, FatalErrorType.ResetFailure);
+      } else {
+        this.openResetSuccessDialog();
+        reload();
+      }
+    });
+  };
+
+  let errorMessage = weblabI18n.fatalError({message});
+  if (type === FatalErrorType.LoadFailure) {
+    errorMessage = weblabI18n.loadFailure();
+  } else if (type === FatalErrorType.ResetFailure) {
+    errorMessage = weblabI18n.resetFailure({message});
+  }
+
+  actions.openDialog(
+    <FatalErrorDialog
+      isOpen
+      errorMessage={errorMessage}
+      handleClose={this.closeDialog}
+      handleResetProject={handleResetProject}
+    />
+  );
+};
+
+WebLab.prototype.openDisallowedHtmlDialog = function(
+  filename,
+  disallowedTags,
+  onClose
+) {
+  const handleClose = () => {
+    this.closeDialog();
+    onClose();
+  };
+
+  actions.openDialog(
+    <DisallowedHtmlWarningDialog
+      isOpen
+      filename={filename}
+      disallowedTags={disallowedTags}
+      handleClose={handleClose}
+    />
+  );
+};
+
+WebLab.prototype.openUploadErrorDialog = function() {
+  actions.openDialog(
+    <UploadErrorDialog isOpen handleClose={this.closeDialog} />
+  );
+};
+
+WebLab.prototype.openResetSuccessDialog = function() {
+  actions.openDialog(
+    <ResetSuccessDialog isOpen handleClose={this.closeDialog} />
+  );
+};
+
+WebLab.prototype.closeDialog = function() {
+  actions.closeDialog();
+};
+
 WebLab.prototype.getAppReducers = function() {
   return reducers;
 };
@@ -613,6 +690,8 @@ WebLab.prototype.brambleApi = function() {
     onBrambleMountable: this.onBrambleMountable.bind(this),
     onBrambleReady: this.onBrambleReady.bind(this),
     onProjectChanged: this.onProjectChanged.bind(this),
+    openDisallowedHtmlDialog: this.openDisallowedHtmlDialog.bind(this),
+    openFatalErrorDialog: this.openFatalErrorDialog.bind(this),
     registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
     redux: this.redux.bind(this),
     renameProjectFile: this.renameProjectFile.bind(this)

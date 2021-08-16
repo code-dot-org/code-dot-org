@@ -2,89 +2,195 @@
 title: पालकांसाठी "कसे करावे” मार्गदर्शिका
 ---
 
-# How to do an Hour of Code with your child
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+# तुमच्या मुलाबरोबर अवर ऑफ कोड कार्यक्रम कसा करावा
+अवर ऑफ कोड करून बघणे हा तुमच्या मुलाचा संगणक शास्त्राशी, कदाचित पहिल्यांदाच परिचय करून देण्याचा एक सोपा आणि मजेशीर मार्ग आहे. अभ्यासाच्या सर्वच क्षेत्रांसाठी संगणक शास्त्र मूलभूत आहे, एवढेच नव्हे तर,<a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">हल्लीच्या काही अभ्यासांनुसार</a>:जी मुले संगणक शास्त्र शिकत असतात, ती इतर विषयांमध्येसुद्धा चांगली कामगिरी करतात, समस्या सोडवण्यात चमकतात आणि त्यांनी<font color="00adbc"><b>महाविद्यालयीन शिक्षण घेण्याची 17% जास्त शक्यता </font></b>असते.</p> 
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+<p spaces-before="0">
+  या जागतिक कार्यक्रमात तुम्ही कोट्यावधी विद्यार्थ्यांच्या बरोबर सहभागी होऊ शकता. एकत्रितपणे आपण मुलांना शिकण्यासाठी, ठराविक साचे मोडून काढण्यासाठी आणि मुलांना नव्याने सापडलेल्या छंदात गुंग होण्यासाठी प्रेरित करू शकतो. सर्वांत चांगली गोष्ट म्हणजे, अवर ऑफ कोड तुमच्या घरी आणण्यासाठी आवश्यक असलेल्या सर्व गोष्टी तुमच्याकडे आधीपासूनच आहेत!
+</p>
 
-[<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" /></a>
+</p>
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<p spaces-before="0">
+  
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+<h3>मी कशी सुरुवात करणे आवश्यक आहे?</h3>
+अवर ऑफ कोड घेणे सोपे आहे - अगदी नवशिक्यांसाठीसुद्धा. तुमच्या मुलांना शिकवणारा आणि हसवणारा हा एक गमतीशीर उपक्रम करून घेण्यासाठी तुम्हाला संगणक शास्त्राचा किंवा शिकण्याचा अनुभव असणे आवश्यक नाही.
+</p>
 
-***
+<p spaces-before="0">
+  तुम्ही अवर ऑफ कोड कॉम्प्युटर, टॅबलेट किंवा स्मार्टफोन वापरून किंवा पूर्णपणे अनप्लग्ड करू शकता! सुरुवात कशी करायची हे शिका.
+</p>
 
-## 1) Explore activities and tutorials.
+<hr />
 
-[<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
+<h2 spaces-before="0">
+  1) कृती आणि ट्युटोरीयल्स पहा.
+</h2>
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/tutorials.png" /></a>
+</p>
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+<p spaces-before="0">
+  जर तुम्ही इंटरनेट उपलब्ध असलेल्या कॉम्प्युटरवर काम करत असाल तर तुमच्यासाठी असंख्य <a href="https://hourofcode.com/us/learn">अवर ऑफ कोड</a> कृती उपलब्ध आहेत. तुमच्याकडे असलेले काही पर्याय तुम्ही आधीच बघून ठेवण्यासाठी आम्ही प्रोत्साहन देत आहोत म्हणजे तुम्ही तुमच्या मुलांना आवडतील अशा उपक्रमांसाठी मार्गदर्शन करू शकाल.
+</p>
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+<p spaces-before="0">
+  आमच्या सर्व कृती समस्या सोडवणे आणि तार्किक विचार यांची मजा आणि कल्पकतेशी सांगड घालतात, पण इथे मुलांच्या काही आवडत्या कृती दिलेल्या आहेत:
+</p>
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<ul>
+  <li>
+    ज्या मुलाला खेळायला आवडते, त्याच्यासाठी: <a href="https://code.org/minecraft">माईनक्राफ्ट</a> किंवा <a href="https://code.org/dance">डान्स पार्टी</a>
+  </li>
+  <li>
+    ज्या मुलाला डिस्ने आवडते त्याच्यासाठी:<a href="https://code.org/starwars">स्टार वॉर्स</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">फ्रोझन</a> किंवा <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">मोआना</a>
+  </li>
+  <li>
+    ज्याला शिकायला आवडते त्या मुलासाठी: <a href="https://code.org/oceans">महासागरांसाठी AI</a> किंवा <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">स्क्रॅचसह संगीत तयार करा</a>
+  </li>
+</ul>
 
-[<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+<h3>कमी तंत्रज्ञान किंवा अजिबात तंत्रज्ञान नाही?</h3>
+जर तुम्ही मर्यादित किंवा कमी तंत्रज्ञान वापरणार असाल तर तुम्ही <a href="https://hourofcode.com/us/learn">अवर ऑफ कोड कृती </a> <em>वर्गासाठी तंत्रज्ञान</em> विभाग फिल्टर करून  '"कॉम्प्युटर्स किंवा डिव्हायसेस नाहीत" निवडून फिल्टर करू शकता.
+</p>
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+</p>
 
-[<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  घरी अनप्लग्ड कृती कशी करून घ्यावी याच्या अधिक कल्पनांसाठी तुम्ही हे <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">छोटे व्हिडीओज</a>सुद्धा पाहू शकता!
+</p>
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<h2 spaces-before="0">
+  2) वेळेपूर्वीच तयारी करा
+</h2>
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. संगणकशास्त्र के परस्पर सहकार्याने करण्याचे आणि सामाजिक असल्याचे याने समजते.
+<p spaces-before="0">
+  आता तुम्ही काही कृती ठरवल्या आहेत तर त्या कृतींची तुमच्या मुलांना ओळख करून देण्यापूर्वी तुम्ही त्या तुमच्या डिव्हाईसवर करून पाहणे उपयुक्त ठरू शकेल.
+</p>
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" /></a>
+</p>
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+<p spaces-before="0">
+  
+
+<h3>घरी एकापेक्षा जास्त मुले आहेत?</h3>
+जर तुमची मुले स्वतंत्र डिव्हायसेस वापरणार असतील तर त्यांना वेगवेगळे हेडफोन्स द्या. म्हणजे ते आवाज असलेल्या कृतींचा एकमेकांचे लक्ष विचलित न करत आनंद घेऊ शकतील.
+</p>
+
+<p spaces-before="0">
+  जर तुम्ही एकच डिव्हाईस वापरणार असाल किंवा तुम्हाला तुमचा अवर ऑफ कोड अधिक इंटरअॅक्टीव्ह करायचा असेल तर <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">पेअर प्रोग्रॅमिंग</a> करून पहा. पेअर प्रोग्रॅमिंगमुळे विद्यार्थ्यांना एकत्र काम करायला प्रोत्साहन मिळते. जेव्हा ते एकत्र काम करतात तेव्हा ते एकमेकांना समस्या सोडवण्यासाठी मदत करतात. संगणकशास्त्र के परस्पर सहकार्याने करण्याचे आणि सामाजिक असल्याचे याने समजते.
+</p>
+
+<p spaces-before="0">
+  
+
+<h3>विद्यार्थ्यांची उत्सुकता वाढवा! </h3>
+तुमच्या मुलाच्या दिवसात एक नवीन प्रकारची कृती समाविष्ट करण्याची ही एक चांगली संधी आहे. तुम्ही या सल्ल्यांचा वापर करून एका ट्युटोरीयलच्या पलीकडे ही गंमत नेऊ शकता:
+</p>
+
+<ul>
+  <li>
+    त्यांच्या आवडत्या रोल मॉडेल्सपैकी एखादी व्यक्ती असलेला<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">प्रेरणादायी व्हिडीओ</a> त्यांना दाखवा
+  </li>
+  <li>
+    संगणक शास्त्रातील कौशल्यामुळे जी <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">अनेक करीयर्स</a> उपलब्ध होतात, त्यापैकी एकाचा व्हिडीओ दाखवून त्यांना प्रेरणा द्या
+  </li>
+  <li>
+    <a href="https://store.code.org/">काही स्वॅग ऑर्डर करा</a>! तुम्ही टी-शर्ट्स, स्टिकर्स किंवा अगदी तात्पुरत्या टॅटूजमधून निवड करू शकता. त्यांची उत्सुकता वाढवण्यासाठी त्यांना ते लगेच द्या किंवा तुमच्या अवर ऑफ कोडच्या शेवटी खास बक्षीस म्हणून ते राखून ठेवा.
+  </li>
+</ul>
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+<h2 spaces-before="0">
+  3) तुमच्या मुलाची संगणक शास्त्राशी ओळख करून देण्यासाठी टिप्स
+</h2>
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+<p spaces-before="0">
+  तुमच्यासाठी आणि तुमच्या मुलासाठी, दोघांसाठीही संगणक शास्त्र हा अतिशय नवीन विषय असेल तरी हरकत नाही. तुमच्या अवर ऑफ कोड कृतीचा परिचय करून देण्यासाठी आणि तुम्हाला दोघांना संगणक शास्त्राचा विचार करायला लावण्यासाठी इथे काही कल्पना दिलेल्या आहेत:
+</p>
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+<ul>
+  <li>
+    तंत्रज्ञान आपल्या आयुष्यावर कसा परिणाम करते हे तुमच्या मुलाला आवडतील अशी उदाहरणे देऊन समजावून सांगा. उदाहरणार्थ, तुम्ही औषधाबद्दल किंवा लोकांशी व्हर्च्युअल पद्धतीने जोडले जाण्याविषयी बोलू शकता. तसेच, सुचवलेल्या चर्चेच्या प्रश्नांसाठी <a href="https://code.org/csforgood">Code.org/CSforGood</a> पहा.
+  </li>
+  <li>
+    एकत्रितपणे, व्यवस्थित चालण्यासाठी दैनंदिन वापरातील कोणत्या गोष्टी कोडचा वापर करतात, त्यांची यादी तयार करा.
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" /></a>
+</p>
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<p spaces-before="0">
+  
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
-- "तंत्रज्ञान कायमच आपल्याला पाहिजे तसेच काम करेल असे नाही."
-- "संगणक आज्ञावली शिकणे हे एखादी नवीन भाषा शिकण्यासारखे आहे; लगेचच काही सहजपणे वापरता येणार नाही."
+<h3>तुमच्या घरी मुली आहेत का?</h3>
+संगणक शास्त्रात त्यांचे स्वारस्य वाढवण्यासाठी <a href="https://code.org/girls"> इथे आमच्या काही शिफारशी</a> आहेत. <strong>प्रो-टीप</strong>: त्यांना ते सहज जमेल, असे सांगून तुम्ही सुरुवात करू शकता!
+</p>
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+<p spaces-before="0">
+  
+
+<h3>एकत्रितपणे समस्या सोडवा</h3>
+शेवटी, तुमच्या मुलाला काही समस्या आल्या तर असे उत्तर दिले तरी चालेल:
+</p>
+
+<ul>
+  <li>
+    "मला माहिती नाही. आपण मिळून शोधूया."
+  </li>
+  <li>
+    "तंत्रज्ञान कायमच आपल्याला पाहिजे तसेच काम करेल असे नाही."
+  </li>
+  <li>
+    "संगणक आज्ञावली शिकणे हे एखादी नवीन भाषा शिकण्यासारखे आहे; लगेचच काही सहजपणे वापरता येणार नाही."
+  </li>
+</ul>
+
+<p spaces-before="0">
+  संगणक शास्त्र म्हणजे आपल्याला जशी स्थिती यायला हवी आहे तशी आली नाही तर "डीबग" करणे. एकत्रितपणे तुम्ही आणि तुमचे मूल समस्या सोडवण्यासाठी कल्पक मार्गांचा विचार करू शकता!
+</p>
 
 
-## 4) Don’t forget to celebrate!
+<h2 spaces-before="0">
+  4)  साजरे करायला विसरू नका!
+</h2>
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+<p spaces-before="0">
+  अवर ऑफ कोड हा एक जागतिक कार्यक्रम आहे आणि तुमच्या कुटुंबाने तो साजरा केला पाहिजे. तुमचा अवर ऑफ कोड अधिक खास करण्यासाठी इथे काही कल्पना दिलेल्या आहेत:
+</p>
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+<ul>
+  <li>
+    तुमच्या मुलाने कृती पूर्ण केल्यावर त्याला बक्षीस देण्यासाठी <a href="https://staging.code.org/certificates">अवर ऑफ कोड प्रमाणपत्रे</a> छापा.
+  </li>
+  <li>
+    घरी <a href="https://staging.hourofcode.com/us/promote/resources#stickers">स्टिकर्स छापा</a> किंवा  विशेष सरप्राईज म्हणून <a href="https://store.code.org/"> ते ऑनलाईन खरेदी करा.</a>
+  </li>
+  <li>
+    तुमच्या सोशल मिडीयावर तुमच्या घरच्या अवर ऑफ कोड कार्यक्रमाचे फोटो आणि व्हिडीओ शेअर करा. #HourOfCode आणि @codeorg वापरा म्हणजे आम्हीसुद्धा तुमच्या यशाला ठळक प्रसिद्धी देऊ!
+  </li>
+</ul>
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
 
-<h2>अवर ऑफ कोड नंतर पुढे काय?</h2>
+<h2>अवर ऑफ कोडनंतर पुढे काय?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+<p spaces-before="0">
+  संगणक शास्त्र अवर ऑफ कोड बरोबर संपू देऊ नका! जरी 90% पालकांना त्यांच्या मुलांनी संगणक शास्त्र शिकावे असे वाटत असले तरीही अनेक शाळा अजूनही ते शिकवत नाहीत. आमचा अभ्यासक्रम वेबवर आधारित आहे आणि वापरण्यासाठी तो कायमचा विनामूल्य आहे. तुमच्या मुलाच्या शाळेत संगणक शास्त्र <a href="https://code.org/yourschool"> कसे आणायचे</a> ते आज जाणून घ्या.
+</p>

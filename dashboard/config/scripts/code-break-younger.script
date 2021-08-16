@@ -1,6 +1,9 @@
 hideable_lessons true
 student_detail_progress_view true
+family_name 'code-break-younger'
+version_year 'unversioned'
 published_state 'preview'
+is_course true
 
 lesson 'Episode 1 - Algorithms with Hill Harper', display_name: 'Episode 1 - Algorithms with Hill Harper', has_lesson_plan: false
 level 'CodeBreak Episode Placeholder', progression: 'Code Break: Episode 1'

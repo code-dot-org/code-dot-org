@@ -573,7 +573,6 @@ function newSectionData(id, courseId, scriptId, loginType) {
   };
 }
 
-const defaultVersionYear = '2017';
 const defaultLessonExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
@@ -643,7 +642,7 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
-    const assignmentFamilies = [];
+    const assignmentFamilyMap = {};
 
     // Array of assignment ids of units which belong to any valid courses.
     let secondaryAssignmentIds = [];
@@ -663,10 +662,13 @@ export default function teacherSections(state = initialState, action) {
         path: `/courses/${course.script_name}`
       };
 
-      // Use the assignment family fields from the course in that family with
-      // the default version year, 2017.
-      if (course.version_year === defaultVersionYear) {
-        assignmentFamilies.push(_.pick(course, assignmentFamilyFields));
+      // Make sure each assignment family is only added once.
+      const familyName = course.assignment_family_name;
+      if (familyName && !assignmentFamilyMap[familyName]) {
+        assignmentFamilyMap[familyName] = _.pick(
+          course,
+          assignmentFamilyFields
+        );
       }
 
       secondaryAssignmentIds.push(...scriptAssignIds);
@@ -681,9 +683,6 @@ export default function teacherSections(state = initialState, action) {
       const assignmentFamilyName =
         unit.assignment_family_name || unit.script_name;
       const assignmentFamilyTitle = unit.assignment_family_title || unit.name;
-      const versionYear = unit.version_year || defaultVersionYear;
-      const versionTitle = unit.version_title || defaultVersionYear;
-
       validAssignments[assignId] = {
         ...unit,
         courseId: null,
@@ -691,22 +690,20 @@ export default function teacherSections(state = initialState, action) {
         assignId,
         path: `/s/${unit.script_name}`,
         assignment_family_name: assignmentFamilyName,
-        version_year: versionYear,
-        version_title: versionTitle
+        version_year: unit.version_year,
+        version_title: unit.version_title
       };
 
       // Do not add assignment families for units belonging to courses. To assign
       // them, one must first select the corresponding course from the assignment
       // family dropdown, and then select the unit from the secondary dropdown.
       if (!secondaryAssignmentIds.includes(assignId)) {
-        // Use the assignment family fields from the unit in that family with
-        // the default version year, 2017.
-        if (versionYear === defaultVersionYear) {
-          assignmentFamilies.push({
+        if (!assignmentFamilyMap[assignmentFamilyName]) {
+          assignmentFamilyMap[assignmentFamilyName] = {
             ..._.pick(unit, assignmentFamilyFields),
             assignment_family_title: assignmentFamilyTitle,
             assignment_family_name: assignmentFamilyName
-          });
+          };
         }
       }
     });
@@ -714,7 +711,7 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       validAssignments,
-      assignmentFamilies
+      assignmentFamilies: _.values(assignmentFamilyMap)
     };
   }
 

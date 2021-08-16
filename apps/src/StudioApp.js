@@ -83,20 +83,21 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+
 var copyrightStrings;
 
 /**
  * The minimum width of a playable whole blockly game.
  */
-var MIN_WIDTH = 1200;
-var DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-var MAX_VISUALIZATION_WIDTH = 400;
-var MIN_VISUALIZATION_WIDTH = 200;
+const MIN_WIDTH = 1200;
+const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
+export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
  * Treat mobile devices with screen.width less than the value below as phones.
  */
-var MAX_PHONE_WIDTH = 500;
+const MAX_PHONE_WIDTH = 500;
 
 class StudioApp extends EventEmitter {
   constructor() {
@@ -301,8 +302,6 @@ StudioApp.prototype.init = function(config) {
     config = {};
   }
   this.config = config;
-
-  this.hasContainedLevels = config.hasContainedLevels;
 
   config.getCode = this.getCode.bind(this);
   copyrightStrings = config.copyrightStrings;
@@ -549,8 +548,6 @@ StudioApp.prototype.init = function(config) {
     this.setupLegacyShareView();
   }
 
-  initializeContainedLevel();
-
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
@@ -770,9 +767,9 @@ StudioApp.prototype.scaleLegacyShare = function() {
   }
 };
 
-StudioApp.prototype.getCode = function() {
+StudioApp.prototype.getCode = function(opt_showHidden) {
   if (!this.editCode) {
-    return Blockly.getWorkspaceCode();
+    return Blockly.getWorkspaceCode(opt_showHidden);
   }
   if (this.hideSource) {
     return this.startBlocks_;
@@ -1004,8 +1001,7 @@ StudioApp.prototype.runChangeHandlers = function() {
 StudioApp.prototype.setupChangeHandlers = function() {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    const blocklyCanvas = Blockly.mainBlockSpace.getCanvas();
-    blocklyCanvas.addEventListener('blocklyBlockSpaceChange', runAllHandlers);
+    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -2120,6 +2116,9 @@ StudioApp.prototype.setConfigValues_ = function(config) {
   this.backToPreviousLevel = config.backToPreviousLevel || function() {};
   this.skin = config.skin;
   this.polishCodeHook = config.polishCodeHook;
+  this.hasContainedLevels = config.hasContainedLevels;
+
+  initializeContainedLevel();
 };
 
 // Overwritten by applab.
@@ -3429,6 +3428,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   const level = config.level;
   const combined = _.assign(
     {
+      canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,
       skinId: config.skinId,

@@ -19,12 +19,12 @@ const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
  * isRecommended and isSelected properties set on the recommended and selected version(s).
  * Note: This method will change the content of the versions array that is passed to it.
  * @param {Array<AssignmentVersionShape>} versions
- * @param {String} localeEnglishName. English name of user's current locale.
+ * @param {String} localeCode. The user's "??-??" locale code.
  * @param {String} selectedVersionYear. Currently selected version year. Optional.
  */
 export const setRecommendedAndSelectedVersions = (
   versions,
-  localeEnglishName = null,
+  localeCode = null,
   selectedVersionYear = null
 ) => {
   // Sort versions by year descending.
@@ -38,11 +38,11 @@ export const setRecommendedAndSelectedVersions = (
    * Versions are sorted from most to least recent, so the first stable version will be the latest.
    */
   let recommendedVersion;
-  if (localeEnglishName) {
+  if (localeCode) {
     recommendedVersion = versions.find(v => {
       const localeSupported =
-        (v.locales || []).includes(localeEnglishName) ||
-        localeEnglishName.toLowerCase().startsWith('en');
+        (v.localeCodes || []).includes(localeCode) ||
+        localeCode.startsWith('en');
 
       return v.isStable && localeSupported;
     });

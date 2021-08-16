@@ -26,7 +26,6 @@
 
 class Javalab < Level
   serialized_attrs %w(
-    project_template_level_name
     start_sources
     validation
     hide_share_and_remix
@@ -34,8 +33,10 @@ class Javalab < Level
     submittable
     encrypted_examples
     csa_view_mode
+    starter_assets
     serialized_maze
     start_direction
+    contained_level_names
   )
 
   before_save :fix_examples, :parse_maze
@@ -59,6 +60,7 @@ class Javalab < Level
   end
 
   def parse_maze
+    return if serialized_maze.blank? && project_template_level&.try(:serialized_maze).present?
     if serialized_maze.nil? && csa_view_mode == 'neighborhood'
       raise ArgumentError.new('neighborhood must have a serialized_maze')
     end
@@ -73,7 +75,10 @@ class Javalab < Level
         end
       end
     end
-
+    # paint bucket asset id is 303
+    if serialized_maze.include?("303") && (maze.length > 16)
+      raise ArgumentError.new("Large mazes cannot have paint buckets")
+    end
     self.serialized_maze = maze
   end
 
@@ -90,6 +95,10 @@ class Javalab < Level
     self.examples = all_examples
   end
 
+  def get_serialized_maze
+    serialized_maze || project_template_level&.try(:serialized_maze)
+  end
+
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
@@ -103,11 +112,19 @@ class Javalab < Level
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
       end
 
+      if csa_view_mode == 'neighborhood'
+        level_prop['serializedMaze'] = get_serialized_maze
+        level_prop['startDirection'] = start_direction || project_template_level.try(:start_direction)
+      end
+
       level_prop['levelId'] = level_num
 
       # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
       # set it to nil here and let other code put it in app_options
       level_prop['teacherMarkdown'] = nil
+
+      # Pull in the level name
+      level_prop['name'] = name
 
       # Set the javabuilder url
       level_prop['javabuilderUrl'] = CDO.javabuilder_url
@@ -116,5 +133,25 @@ class Javalab < Level
       level_prop.reject! {|_, value| value.nil?}
     end
     options.freeze
+  end
+
+  # Add a starter asset to the level and save it in properties.
+  # Starter assets are stored as an object, where the key is the
+  # friendly filename and the value is the UUID filename stored in S3:
+  # {
+  #   # friendly_name => uuid_name
+  #   "welcome.png" => "123-abc-456.png"
+  # }
+  def add_starter_asset!(friendly_name, uuid_name)
+    self.starter_assets ||= {}
+    self.starter_assets[friendly_name] = uuid_name
+    save!
+  end
+
+  # Remove a starter asset by its key (friendly_name) from the level's properties.
+  def remove_starter_asset!(friendly_name)
+    return true unless starter_assets
+    starter_assets.delete(friendly_name)
+    save!
   end
 end
