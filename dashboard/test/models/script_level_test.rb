@@ -131,7 +131,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal sl.position, summary[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]
-    assert_equal student.id, summary[:user_id]
+    assert_equal student.id, summary[:userId]
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
@@ -157,7 +157,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal sl.position, summary[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]
-    assert_equal student.id, summary[:user_id]
+    assert_equal student.id, summary[:userId]
   end
 
   test 'teacher panel summarize for BubbleChoice level' do
@@ -179,13 +179,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
       driver: nil,
       navigator: nil,
       isConceptLevel: false,
-      user_id: student.id,
+      userId: student.id,
       passed: false,
       status: LEVEL_STATUS.not_tried,
       levelNumber: script_level.position,
       assessment: nil,
       bonus: nil,
-      teacherFeedbackReivewState: nil
+      teacherFeedbackReviewState: nil,
+      kind: "puzzle"
     }
 
     # With no progress
@@ -194,10 +195,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     # With progress on a BubbleChoice sublevel
     ul = create :user_level, user: student, level: sublevel1, best_result: 100, script_id: script_level.script.id
+    expected_summary[:userLevelId] = ul.id
+    expected_summary[:updatedAt] = ul.updated_at
     expected_summary[:paired] = false
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.perfect
-    expected_summary.merge!(ul.reload.attributes)
     summary = script_level.summarize_for_teacher_panel(student, teacher)
     assert_equal expected_summary, summary
 
@@ -205,10 +207,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ul2 = create :user_level, user: student, level: sublevel2, best_result: 20, script_id: script_level.script.id
     create :teacher_feedback, student: student, teacher: teacher, level: sublevel2, script: script_level.script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
+    expected_summary[:userLevelId] = ul2.id
+    expected_summary[:updatedAt] = ul2.updated_at
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.passed
-    expected_summary[:teacherFeedbackReivewState] = TeacherFeedback::REVIEW_STATES.keepWorking
-    expected_summary.merge!(ul2.reload.attributes)
+    expected_summary[:teacherFeedbackReviewState] = TeacherFeedback::REVIEW_STATES.keepWorking
     summary = script_level.summarize_for_teacher_panel(student, teacher)
     assert_equal expected_summary, summary
   end
@@ -231,9 +234,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal sl2.assessment, summary2[:assessment]
     assert_equal sl2.position, summary2[:levelNumber]
     assert_equal LEVEL_STATUS.not_tried, summary2[:status]
-    assert_equal TeacherFeedback::REVIEW_STATES.keepWorking, summary2[:teacherFeedbackReivewState]
+    assert_equal TeacherFeedback::REVIEW_STATES.keepWorking, summary2[:teacherFeedbackReviewState]
     assert_equal false, summary2[:passed]
-    assert_equal student.id, summary2[:user_id]
+    assert_equal student.id, summary2[:userId]
     assert_equal true, summary2[:contained]
   end
 
@@ -277,7 +280,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal true, summary[:bonus]
     assert_equal LEVEL_STATUS.not_tried, summary[:status]
     assert_equal false, summary[:passed]
-    assert_equal student.id, summary[:user_id]
+    assert_equal student.id, summary[:userId]
   end
 
   test 'calling next_level when next level is unplugged skips the level for script without lessons' do

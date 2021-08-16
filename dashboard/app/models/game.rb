@@ -236,7 +236,7 @@ class Game < ApplicationRecord
   end
 
   def use_azure_speech_service?
-    [APPLAB, GAMELAB].include? app
+    [APPLAB, GAMELAB, SPRITELAB].include? app
   end
 
   def channel_backed?

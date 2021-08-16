@@ -8,6 +8,12 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     @project_owner_channel_id = 'encrypted_channel_id'
     @project_owner_storage_id = 123
     @project_storage_app_id = 456
+    @new_comment_params = {
+      channel_id: @project_owner_channel_id,
+      script_id: 1,
+      level_id: 2,
+      comment: 'a comment'
+    }
 
     @teacher = create :teacher
     @section = create :section, user: @teacher
@@ -23,23 +29,24 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     stub_storage_apps_calls
 
     sign_in @project_owner
-    post :create, params: {
-      channel_id: @project_owner_channel_id,
-      comment: 'a comment'
-    }
-
+    post :create, params: @new_comment_params
     assert_response :success
-    refute JSON.parse(response.body)['isFromTeacher']
+
+    parsed_response_body = JSON.parse(response.body)
+    refute parsed_response_body['isFromTeacher']
+
+    comment = CodeReviewComment.find(parsed_response_body['id'])
+    assert_not_nil comment.script_id
+    assert_equal @new_comment_params[:script_id], comment.script_id
+    assert_not_nil comment.level_id
+    assert_equal @new_comment_params[:level_id], comment.level_id
   end
 
   test 'student not in same section with project owner cannot comment on project' do
     stub_storage_apps_calls
 
     sign_in @another_student
-    post :create, params: {
-      channel_id: @project_owner_channel_id,
-      comment: 'a comment'
-    }
+    post :create, params: @new_comment_params
 
     assert_response :forbidden
   end
@@ -52,10 +59,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     end
 
     sign_in @another_student
-    post :create, params: {
-      channel_id: @project_owner_channel_id,
-      comment: 'a comment'
-    }
+    post :create, params: @new_comment_params
 
     assert_response :success
     refute JSON.parse(response.body)['isFromTeacher']
@@ -67,10 +71,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     create :follower, student_user: @project_owner, section: @section
 
     sign_in @teacher
-    post :create, params: {
-      channel_id: @project_owner_channel_id,
-      comment: 'a comment'
-    }
+    post :create, params: @new_comment_params
 
     assert_response :success
     assert JSON.parse(response.body)['isFromTeacher']
@@ -80,10 +81,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     stub_storage_apps_calls
 
     sign_in @teacher
-    post :create, params: {
-      channel_id: @project_owner_channel_id,
-      comment: 'a comment'
-    }
+    post :create, params: @new_comment_params
 
     assert_response :forbidden
   end

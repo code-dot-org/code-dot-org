@@ -35,6 +35,7 @@ module Levels
 
       has_many :levels_child_levels,
         class_name: 'ParentLevelsChildLevel',
+        dependent: :destroy,
         foreign_key: :parent_level_id
       has_many :child_levels,
         -> {extending ByKindExtension},

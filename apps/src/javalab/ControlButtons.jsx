@@ -22,6 +22,7 @@ export default function ControlButtons({
     <div>
       <div style={styles.leftButtons}>
         <JavalabButton
+          id="runButton"
           text={isRunning ? i18n.stop() : i18n.runProgram()}
           icon={
             <FontAwesome icon={isRunning ? 'stop' : 'play'} className="fa" />
@@ -30,7 +31,6 @@ export default function ControlButtons({
           isHorizontal
           style={{...styles.button.all, ...styles.button.orange}}
           isDisabled={disableRunButtons}
-          id="javalabRun"
         />
         {showTestButton && (
           <JavalabButton
@@ -51,7 +51,7 @@ export default function ControlButtons({
             onClick={onContinue}
             style={{...styles.button.all, ...styles.button.blue}}
             isDisabled={disableFinishButton}
-            id="javalabFinish"
+            id="finishButton"
           />
         )}
       </div>

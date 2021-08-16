@@ -706,7 +706,7 @@ FactoryGirl.define do
     published_state "beta"
 
     trait :with_levels do
-      ignore do
+      transient do
         levels_count 0
       end
 

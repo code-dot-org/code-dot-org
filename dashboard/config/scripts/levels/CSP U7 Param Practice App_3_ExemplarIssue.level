@@ -74,7 +74,7 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",
-    "encrypted_examples": "9nSFNlnKu7TDmTQi/eKq4cFAfNruLoyoD1h/4KHCAq/S/yfm1BCkdtMLFPIE\n3ckUBscEHONza2W5iDAPyX9Lzg==\n",
+    "encrypted_examples": "TI5W5O5AFI9KEdilj2ubND9GI+nM0GkcQGHlJm7G2p+ABKGqPUrjT/GBncIV\nItxuyVVt/GYwW8OqNLcO00Wpsw==\n",
     "name_suffix": "_2021",
     "ai_enabled": "false",
     "data_library_tables": "TheRoot: 100 Influential African Americans",
@@ -86,7 +86,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-10T18:24:23.581+00:00\",\"changed\":[\"cloned from \\\"U7 Param Practice App 3_2021\\\"\"],\"cloned_from\":\"U7 Param Practice App 3_2021\"},{\"changed_at\":\"2021-08-10 18:26:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:27:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:29:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-10T18:24:23.581+00:00\",\"changed\":[\"cloned from \\\"U7 Param Practice App 3_2021\\\"\"],\"cloned_from\":\"U7 Param Practice App 3_2021\"},{\"changed_at\":\"2021-08-10 18:26:00 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:26:19 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:27:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-10 18:29:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-08-11 21:34:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
