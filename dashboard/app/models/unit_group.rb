@@ -553,7 +553,7 @@ class UnitGroup < ApplicationRecord
       course.family_name == family_name &&
         course.version_year < version_year &&
         course.id != id &&
-        default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
+        course.default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
     end
   end
 
