@@ -59,10 +59,10 @@ social:
     <a href="https://ameelio.org/" target="_blank">Ameelio</a></p>
   </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Zené Sekou</strong>
     <br>
-    Marketing Program Manager, Code.org</p>
+    Software Engineer, Amazon</p>
   </div>
   <div class="col-33" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
