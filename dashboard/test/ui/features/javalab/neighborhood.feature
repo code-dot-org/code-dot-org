@@ -7,6 +7,7 @@ Feature: NeighborhoodPainting
     Given I create a levelbuilder named "Simone"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/7"
     And I wait for the page to fully load
+    Then I press "#levelbuilder-menu-toggle" using jQuery
     Then I set slider speed to fast
     Then I press "runButton"
     And I wait for 15 seconds

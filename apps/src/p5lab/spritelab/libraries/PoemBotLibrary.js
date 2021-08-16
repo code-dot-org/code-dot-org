@@ -19,9 +19,13 @@ export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
     this.poem = _.cloneDeep(getStore().getState().poemBot.selectedPoem);
+    this.animationSpeed = 100; // time in frames
+    this.currentLine = 0;
     this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
+    this.lineEvents = {};
+    this.p5.noStroke();
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -29,6 +33,15 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       // Override the draw loop
       executeDrawLoopAndCallbacks() {
+        if (
+          this.p5.World.frameCount % this.animationSpeed === 0 &&
+          this.poem.lines.length > this.currentLine
+        ) {
+          this.currentLine++;
+
+          // Call callbacks for any line events at the current line
+          this.lineEvents[this.currentLine]?.forEach(callback => callback());
+        }
         this.backgroundEffect();
         this.runBehaviors();
         this.runEvents();
@@ -57,6 +70,14 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       addLine(line) {
         this.poem.lines.push(line || [BLANK_TEXT]);
+      },
+
+      setFontColor(color) {
+        this.p5.fill(color);
+      },
+
+      setFont(font) {
+        this.p5.textFont(font);
       },
 
       setTitle(line) {
@@ -136,6 +157,13 @@ export default class PoemBotLibrary extends CoreLibrary {
         }
       },
 
+      whenLineShows(lineNum, callback) {
+        if (!this.lineEvents[lineNum]) {
+          this.lineEvents[lineNum] = [];
+        }
+        this.lineEvents[lineNum].push(callback);
+      },
+
       ...backgroundEffects,
       ...foregroundEffects
     };
@@ -160,8 +188,6 @@ export default class PoemBotLibrary extends CoreLibrary {
 
   drawPoem() {
     let yCursor = OUTER_MARGIN;
-    this.p5.fill('black');
-    this.p5.noStroke();
     this.p5.textSize(FONT_SIZE);
     this.p5.textAlign(this.p5.CENTER);
     if (this.poem.title) {
@@ -179,7 +205,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     }
 
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / this.poem.lines.length;
-    this.poem.lines.forEach(line => {
+    this.poem.lines.slice(0, this.currentLine).forEach(line => {
       this.drawPoemLine(line, yCursor);
       this.p5.textSize(FONT_SIZE);
       yCursor += lineHeight;
@@ -199,12 +225,6 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.p5.textAlign(this.p5.LEFT);
     let xCursor = start;
     line.forEach(textItem => {
-      // TODO: Make font colors configurable by students
-      if (textItem.type === 'random') {
-        this.p5.fill('blue');
-      } else {
-        this.p5.fill('black');
-      }
       this.p5.text(textItem.value, xCursor, yPos);
       xCursor += this.p5.textWidth(textItem.value + ' ');
     });

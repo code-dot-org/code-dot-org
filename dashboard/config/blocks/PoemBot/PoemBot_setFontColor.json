@@ -1,0 +1,13 @@
+{
+  "category": "",
+  "config": {
+    "func": "setFontColor",
+    "blockText": "set font color {COLOR}",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      }
+    ]
+  }
+}

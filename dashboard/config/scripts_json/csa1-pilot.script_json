@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 15:11:23 UTC",
+    "serialized_at": "2021-08-16 14:10:22 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -3106,7 +3106,7 @@
       "key": "c2e994c5-aa95-423f-963e-10b48563f2d0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus"
       },
       "seeding_key": {
@@ -7770,6 +7770,18 @@
       }
     },
     {
+      "name": "Introduction to Parameters",
+      "url": "https://drive.google.com/file/d/14aJLfsCqFuucALoM0fAiNr7EnKzn19BH/view?usp=sharing",
+      "key": "introduction_to_parameters",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_parameters"
+      }
+    },
+    {
       "name": "Java 2D API Open Source Code",
       "url": "https://docs.google.com/document/d/1Y7KaOXNk05eXeGilUvmIQckFTMlC71kOxq0B6eZW-JM/edit?usp=sharing",
       "key": "java_2d_api_open_source_code",
@@ -7818,6 +7830,18 @@
       },
       "seeding_key": {
         "resource.key": "notes_app_open_source_code"
+      }
+    },
+    {
+      "name": "Objects and Classes",
+      "url": "https://drive.google.com/file/d/1RJQC9DSvyyXysKH6bWBFkhsWZaieq0T4/view?usp=sharing",
+      "key": "objects_and_classes",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "objects_and_classes"
       }
     },
     {
@@ -8242,6 +8266,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-11",
+        "resource.key": "introduction_to_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
         "resource.key": "pseudocode_warm_up"
       }
     },
@@ -8489,6 +8519,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "color_names"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "objects_and_classes"
       }
     },
     {
@@ -8767,7 +8803,7 @@
     {
       "key": "class",
       "word": "Class",
-      "definition": "A user-defined blueprint from which objects are created",
+      "definition": "A programmer-defined blueprint from which objects are created",
       "properties": {
       },
       "seeding_key": {
