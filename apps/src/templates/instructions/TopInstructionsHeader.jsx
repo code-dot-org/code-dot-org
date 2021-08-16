@@ -52,6 +52,7 @@ const styles = {
       position: 'absolute',
       top: 0,
       margin: 0,
+      cursor: 'pointer',
       lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
       ':hover': {

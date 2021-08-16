@@ -23,7 +23,7 @@ import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import NameFileDialog from './NameFileDialog';
-import DeleteConfirmationDialog from './DeleteConfirmationDialog';
+import JavalabDialog from './JavalabDialog';
 import CommitDialog from './CommitDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
@@ -699,12 +699,16 @@ class JavalabEditor extends React.Component {
             }
           />
         </div>
-        <DeleteConfirmationDialog
+        <JavalabDialog
           isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}
           handleClose={() => this.setState({openDialog: null})}
-          filename={fileMetadata[fileToDelete]}
+          message={javalabMsg.deleteFileConfirmation({
+            filename: fileMetadata[fileToDelete]
+          })}
           isDarkMode={isDarkMode}
+          confirmButtonText={javalabMsg.delete()}
+          closeButtonText={javalabMsg.cancel()}
         />
         <NameFileDialog
           isOpen={openDialog === Dialog.RENAME_FILE}
