@@ -136,7 +136,7 @@ module RegistrationsControllerTests
         age: '21',
         user_type: 'teacher'
       }
-      teacher_params = default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+      teacher_params = default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes', share_teacher_email_reg_partner_opt_in: 'no')
       assert_creates(User) do
         post '/users', params: {user: teacher_params}
       end

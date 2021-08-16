@@ -2203,6 +2203,7 @@ class UserTest < ActiveSupport::TestCase
   def email_preference_params(**args)
     {
       email_preference_opt_in: 'no',
+      share_teacher_email_reg_partner_opt_in: 'no',
       email_preference_request_ip: '127.0.0.1',
       email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
       email_preference_form_kind: '0',

@@ -133,7 +133,7 @@ end
 And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
   sign_in_count = new_account ? 0 : 2
 
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
+  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', share_teacher_email_reg_partner_opt_in: 'no', sign_in_count: sign_in_count)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
