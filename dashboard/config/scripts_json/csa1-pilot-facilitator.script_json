@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 16:25:36 UTC",
+    "serialized_at": "2021-08-16 14:10:43 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
@@ -3106,7 +3106,7 @@
       "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus"
       },
       "seeding_key": {
@@ -6471,6 +6471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 1 - Facilitator"
+        ],
         "progression": "CSA Pilot Survey Unit 1"
       },
       "bonus": false,
