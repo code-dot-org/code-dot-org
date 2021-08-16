@@ -1174,4 +1174,9 @@ FactoryGirl.define do
     form_name 'A form that does not actually exist'
     form_version 0
   end
+
+  factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    association :foorm_submission, factory: :basic_foorm_submission
+    association :simple_survey_form, factory: :foorm_simple_survey_form
+  end
 end

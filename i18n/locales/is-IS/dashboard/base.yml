@@ -591,8 +591,6 @@ is:
       link: "Nánar"
       applab_unsupported_tablet: "Appsmiðjan virkar best á borð- eða fartölvu með mús og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris á núverandi tæki."
       gamelab_unsupported_tablet: "Leikjamiðjan virkar best á borð- eða fartölvu með mús og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris á núverandi tæki."
-      oceans_unsupported_browser: "Þessi vafri er ekki studdur fyrir þetta kennsluefni. Vinsamlegast reyndu að opna þessa síðu með Edge, Chrome, Firefox eða öðrum nýlegum vafra."
-      weblab_unsupported_browser: "Því miður eru nú að koma upp vandamál við notkun Vefsmiðjunnar í þessum vafra. Þú gætir prófað að nota annan vafra þar til lausn finnst. Við biðjumst afsökunar á þessu."
       weblab_unsupported_locale_storage: "Það gætu komið upp vandamál við notkun Vefsmiðjunnar þegar stillt er á Private Browsing. Opnaðu verkefnið þitt aftur með vafrann í venjulegri stöðu. Við biðjumst forláts á þessu."
   slow_loading: 'Þetta tekur lengur en venjulega...'
   try_reloading: 'Reyndu að endurhlaða síðunni'
