@@ -36,6 +36,12 @@ class BucketHelperTest < Minitest::Test
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', comment: 'Comment', isLatest: false}], version_list
+
+    # s3 is a class attribute of BucketHelper and needs to be reset
+    # The linter doesn't love this so we have to disable this check here.
+    # rubocop:disable Lint/UselessSetterCall
+    bucket_helper.s3 = nil
+    # rubocop:enable Lint/UselessSetterCall
   end
 
   def test_omits_comments_if_specified_and_none_exist
@@ -63,5 +69,11 @@ class BucketHelperTest < Minitest::Test
 
     version_list = bucket_helper.list_versions('base64', 'main.json', with_comments: true)
     assert_equal [{versionId: '1234', lastModified: '0', isLatest: false}], version_list
+
+    # s3 is a class attribute of BucketHelper and needs to be reset
+    # The linter doesn't love this so we have to disable this check here.
+    # rubocop:disable Lint/UselessSetterCall
+    bucket_helper.s3 = nil
+    # rubocop:enable Lint/UselessSetterCall
   end
 end
