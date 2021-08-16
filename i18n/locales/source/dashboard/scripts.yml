@@ -23586,7 +23586,7 @@ en:
           title: 'Module 3: Overview of CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested Time:** 30 minutes"
+          description: "This module will provide you with an overview of the CS Discoveries course with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom. \n\n**You will:**\n\n-   Gain a high-level understanding of the CS Discoveries curriculum.\n-   Become familiar with the programming environments used within CS Discoveries.\n-   Decide which units of CS Discoveries you will teach in your class.\n\n**Suggested time:** 45 minutes"
         self-paced-pl-csd4-2021:
           lessons:
             lesson-1:
@@ -23594,7 +23594,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: CS practices for students
+              name: Learning CS Discoveries
               description_student: 
               description_teacher: 
             lesson-3:
@@ -23605,10 +23605,10 @@ en:
             lessonGroup-2:
               display_name: Teaching and learning CS Discoveries
           name: self-paced-pl-csd4-2021
-          title: 'Module 4: Best practices for CS Discoveries'
+          title: 'Module 4: Teaching and learning CS Discoveries'
           description_audience: ''
           description_short: ''
-          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Consider the role of the teacher in a CS Discoveries classroom.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom. \n\n**Suggested Time:** 1 hour"
+          description: "In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course. \n\n**You will:**\n\n-   Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n-   Consider the role of the teacher in a CS Discoveries classroom.\n-   Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom. \n\n**Suggested Time:** 60 minutes"
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1:
@@ -24626,3 +24626,93 @@ en:
           description_audience: ''
           description_short: ''
           description: "### Welcome to the 2021 Deeper Learning program for onboarding CS Principles facilitators."
+        csa-u6-dev:
+          lessons:
+            lesson-1:
+              name: Documenting Program Code
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Exploring Integer and Double Objects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Using ArrayLists to Store Data
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Working with ArrayList Data
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Storing Objects in an ArrayList
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Removing Data from an ArrayList
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Using String Methods
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Comparing Strings
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Solving Problems with Strings
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Solving Problems with ArrayLists
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: Code Poetry Project
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: Documenting Program Code
+            lesson-13:
+              name: Exploring Integer and Double Objects
+            lesson-14:
+              name: Using ArrayLists to Store Data
+            lesson-15:
+              name: Working with ArrayList Data
+            lesson-16:
+              name: Storing Objects in an ArrayList
+            lesson-17:
+              name: Removing Data from an ArrayList
+            lesson-18:
+              name: Using String Methods
+            lesson-19:
+              name: Comparing Strings
+            lesson-20:
+              name: Solving Problems with Strings
+            lesson-21:
+              name: Solving Problems with ArrayLists
+            lesson-22:
+              name: Code Poetry Project
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Exemplar Demos
+            lessonGroup-3:
+              display_name: Levels Development
+          name: csa-u6-dev
+          title: CSA Unit 6 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Hello, world!
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: hello-world-draft
+          title: Hello, World
+          description_audience: ''
+          description_short: ''
+          description: ''

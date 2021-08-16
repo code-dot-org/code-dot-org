@@ -1074,6 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1210,7 +1212,7 @@ en:
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
-        text: playSound [SOUND][0]
+        text: play sound [SOUND][0]
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
