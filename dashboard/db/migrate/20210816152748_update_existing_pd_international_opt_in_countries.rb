@@ -8,7 +8,6 @@ class UpdateExistingPdInternationalOptInCountries < ActiveRecord::Migration[5.2]
     reversible do |dir|
       dir.up do
         ActiveRecord::Base.transaction do
-          # Do I need to batch?
           Pd::InternationalOptIn.all.each do |opt_in|
             form = JSON.parse(opt_in.form_data)
             current_country_string = form["schoolCountry"]
@@ -24,7 +23,7 @@ class UpdateExistingPdInternationalOptInCountries < ActiveRecord::Migration[5.2]
                 # Reverse translate and store in English
                 form["schoolCountry"] = country.titleize
                 opt_in.update!(form_data: form.to_json)
-                # break
+                break
               end
             else
               # Capitalize English country string
