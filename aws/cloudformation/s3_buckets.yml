@@ -129,9 +129,6 @@ Resources:
             Effect: "Allow"
             Action: "s3:ListBucket"
             Resource: "arn:aws:s3:::cdo-v3-trained-ml-models"
-            Condition:
-              StringLike:
-                "s3:Prefix": "trained_ml_models_circle/*"
             Principal:
               {
                 AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
