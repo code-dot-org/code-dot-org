@@ -13,6 +13,7 @@ def main
     current_country_string = form["schoolCountry"]
 
     if !ENGLISH_COUNTRIES.include? current_country_string
+      next unless opt_in&.user&.locale    # Some opt in's users are deleted
       # Not in English
       I18n.locale = opt_in.user.locale
       # Reverse translate and store in English
