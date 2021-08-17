@@ -16,10 +16,10 @@ def main
       # Not in English
       I18n.locale = opt_in.user.locale
       # Reverse translate and store in English
-      translatedCountry = ENGLISH_COUNTRIES.find {|country| (I18n.t "pd.form_entries.school_country.#{country}") == current_country_string}
+      translated_country = ENGLISH_COUNTRIES.find {|country| (I18n.t "pd.form_entries.school_country.#{country}") == current_country_string}
 
-      if translatedCountry
-        form["schoolCountry"] = translatedCountry.titleize
+      if translated_country
+        form["schoolCountry"] = translated_country.titleize
         opt_in.form_data = form.to_json
         opt_in.save
       else
