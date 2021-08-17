@@ -23221,7 +23221,9 @@ en:
           description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also explore lesson plans on the [All Resources](/s/aiml-2021/resources) page. Each lesson includes a link to its lesson plan.
+            If you are signed in with a Code.org teacher account, links to lesson plans will appear next to each lesson. You can also create a Verified Teachers Account to view answer keys and exemplars - [click here](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to learn more about becoming a Verified Teacher.
+
+            This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
           student_description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
@@ -23414,8 +23416,9 @@ en:
 
             **Implementation guidance for Unit 7**
 
-            - Complete Unit 1 Chapter 1 and Unit 4 before starting this unit
-            - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information
+            - Complete Unit 1 Chapter 1 before starting this unit
+            - This unit assumes students have seen App Lab from Unit 4: The Design Process before starting the unit. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
+            - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) for more information
             - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
           student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
         kodea-pd-2021:
@@ -24877,7 +24880,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-draft
-          title: Hello, World
+          title: '"Hello, World!"'
           description_audience: ''
           description_short: ''
           description: ''
