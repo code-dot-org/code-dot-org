@@ -203,14 +203,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  def within_united_states?
-    params.
-      require(:user).
-      tap do |user|
-        return user[:school_info_attributes][:country] == 'US'
-      end
-  end
-
   def begin_sign_up_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
