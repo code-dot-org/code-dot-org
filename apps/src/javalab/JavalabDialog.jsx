@@ -9,7 +9,8 @@ export default class JavalabDialog extends Component {
     isDarkMode: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func,
     handleClose: PropTypes.func,
-    message: PropTypes.string,
+    // message could be a string or html
+    message: PropTypes.any,
     confirmButtonText: PropTypes.string,
     closeButtonText: PropTypes.string
   };
