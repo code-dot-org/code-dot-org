@@ -17,7 +17,7 @@ const defaultProps = {
   hasVerifiedResources: true,
   perLevelResults: {},
   unitCompleted: false,
-  unitData: {csf: true},
+  unitData: {csf: false, isCsp: true, isCsd: false},
   scriptId: 123,
   scriptName: 'csp1',
   unitTitle: 'CSP 1',
