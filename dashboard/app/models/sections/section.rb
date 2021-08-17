@@ -294,7 +294,8 @@ class Section < ApplicationRecord
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section
+      restrict_section: restrict_section,
+      code_review_enabled: code_review_enabled
     }
   end
 
