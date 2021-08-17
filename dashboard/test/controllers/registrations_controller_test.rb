@@ -397,7 +397,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with us ip with opt-in to sharing email with regional partners set share_teacher_email_regional_partner_opt_in value to DateTime value" do
-    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in: 'yes')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
@@ -408,7 +408,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do
-    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in: 'no')
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'no')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       post :create, params: {user: teacher_params}
