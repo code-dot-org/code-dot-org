@@ -184,6 +184,7 @@ class HttpCache
               /v3/animations/*
               /v3/files/*
               /v3/libraries/*
+              /level_starter_assets/*
             ),
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
