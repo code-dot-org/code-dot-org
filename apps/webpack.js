@@ -140,7 +140,7 @@ var baseConfig = {
         test: /\.scss$/,
         use: [
           {loader: MiniCssExtractPlugin.loader, options: {esModule: false}},
-          {loader: 'css-loader'},
+          {loader: 'css-loader', options: {modules: true}},
           {
             loader: 'sass-loader',
             options: {
