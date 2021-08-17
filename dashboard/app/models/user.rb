@@ -408,7 +408,6 @@ class User < ApplicationRecord
   attr_accessor :parent_email_preference_request_ip
   attr_accessor :parent_email_preference_source
 
-  attr_accessor :share_teacher_email_reg_partner_opt_in_required
   attr_accessor :share_teacher_email_reg_partner_opt_in
 
   attr_accessor :data_transfer_agreement_required
@@ -472,9 +471,6 @@ class User < ApplicationRecord
   validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
-
-  # Validation for sharing teacher email information with regional partners
-  validates_presence_of :share_teacher_email_reg_partner_opt_in, if: :share_teacher_email_reg_partner_opt_in_required
 
   def parent_email_preference_opt_in_required?
     # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
