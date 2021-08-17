@@ -70,4 +70,22 @@ describe('Java Lab Backpack Test', () => {
     expect(state.selectedFiles.length).to.equal(0);
     expect(state.backpackFilenames.length).to.equal(0);
   });
+
+  it('import shows warning before overwriting files', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: true}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file1', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('IMPORT_WARNING');
+  });
 });
