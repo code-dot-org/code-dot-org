@@ -10,19 +10,19 @@ const PLAYSPACE_SIZE = 400;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
-    this.animationSpeed = 100; // time in frames
-    this.currentLine = 0;
-    this.poem = {
+    this.poemState = {
       title: '',
       author: '',
-      lines: []
+      lines: [],
+      color: 'black',
+      font: 'Arial',
+      isVisible: true
     };
-    this.isVisible = false;
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
     this.lineEvents = {};
-    this.p5.fill('black');
     this.p5.noStroke();
+    this.p5.textAlign(this.p5.CENTER);
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -30,20 +30,24 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       // Override the draw loop
       executeDrawLoopAndCallbacks() {
-        if (
-          this.p5.World.frameCount % this.animationSpeed === 0 &&
-          this.poem.lines.length > this.currentLine
-        ) {
-          this.currentLine++;
-
-          // Call callbacks for any line events at the current line
-          this.lineEvents[this.currentLine]?.forEach(callback => callback());
-        }
         this.backgroundEffect();
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
-        this.drawPoem();
+        const renderInfo = this.getRenderInfo(
+          this.poemState,
+          this.p5.World.frameCount
+        );
+        for (let i = 0; i < renderInfo.textItems.length; i++) {
+          // Fire line events
+          this.lineEvents[i]?.forEach(callback => callback());
+
+          // Clear out line events so they don't fire again. This way, we'll fire
+          // the event only on the first frame where renderInfo.textItems has
+          // that many items
+          this.lineEvents[i] = null;
+        }
+        this.drawFromRenderInfo(renderInfo);
         this.foregroundEffect();
       },
 
@@ -60,40 +64,41 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       addLine(line) {
-        this.poem.lines.push(line || '');
+        this.poemState.lines.push(line || '');
       },
 
       setFontColor(color) {
-        this.p5.fill(color);
+        this.poemState.color = color;
       },
 
       setFont(font) {
-        this.p5.textFont(font);
+        this.poemState.font = font;
       },
 
       setTitle(title) {
         if (title) {
-          this.poem.title = title;
+          this.poemState.title = title;
         }
       },
 
       setAuthor(author) {
         if (author) {
-          this.poem.author = author;
+          this.poemState.author = author;
         }
       },
 
       showPoem() {
-        this.isVisible = true;
+        this.poemState.isVisible = true;
       },
 
       hidePoem() {
-        this.isVisible = false;
+        this.poemState.isVisible = false;
       },
 
       setPoem(key) {
         if (key === 'wordsworth') {
-          this.poem = {
+          this.poemState = {
+            ...this.poemState,
             title: 'I Wandered Lonely as a Cloud',
             author: 'William Wordsworth',
             lines: [
@@ -106,7 +111,8 @@ export default class PoemBotLibrary extends CoreLibrary {
             ]
           };
         } else if (key === 'dickinson') {
-          this.poem = {
+          this.poemState = {
+            ...this.poemState,
             title: 'If I can Stop one Heart from Breaking',
             author: 'Emily Dickinson',
             lines: [
@@ -120,7 +126,8 @@ export default class PoemBotLibrary extends CoreLibrary {
             ]
           };
         } else if (key === 'silverstein') {
-          this.poem = {
+          this.poemState = {
+            ...this.poemState,
             title: 'Batty',
             author: 'Shel Silverstein',
             lines: [
@@ -162,34 +169,56 @@ export default class PoemBotLibrary extends CoreLibrary {
     return scaledSize;
   }
 
-  drawPoem() {
+  getRenderInfo(poemState, frameCount) {
+    if (!poemState.isVisible) {
+      return {
+        textItems: []
+      };
+    }
+    let textItems = [];
     let yCursor = OUTER_MARGIN;
-    this.p5.textSize(FONT_SIZE);
-    this.p5.textAlign(this.p5.CENTER);
-    if (this.poem.title) {
-      this.p5.textSize(this.getScaledFontSize(this.poem.title, FONT_SIZE * 2));
-      this.p5.text(this.poem.title, PLAYSPACE_SIZE / 2, yCursor);
-      this.p5.textSize(FONT_SIZE);
+    if (poemState.title) {
+      textItems.push({
+        text: poemState.title,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor,
+        size: this.getScaledFontSize(poemState.title, FONT_SIZE * 2)
+      });
       yCursor += LINE_HEIGHT;
     }
-    if (this.poem.author) {
+    if (poemState.author) {
       yCursor -= LINE_HEIGHT / 2;
-      this.p5.textSize(this.getScaledFontSize(this.poem.author, 16));
-      this.p5.text(this.poem.author, PLAYSPACE_SIZE / 2, yCursor);
-      this.p5.textSize(FONT_SIZE);
+      textItems.push({
+        text: poemState.author,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor,
+        size: this.getScaledFontSize(poemState.author, 16)
+      });
       yCursor += LINE_HEIGHT;
     }
-
-    const lineHeight = (PLAYSPACE_SIZE - yCursor) / this.poem.lines.length;
-    this.poem.lines.slice(0, this.currentLine).forEach(line => {
-      this.drawPoemLine(line, yCursor);
-      this.p5.textSize(FONT_SIZE);
+    const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
+    poemState.lines.forEach(line => {
+      textItems.push({
+        text: line,
+        x: PLAYSPACE_SIZE / 2,
+        y: yCursor,
+        size: this.getScaledFontSize(line, FONT_SIZE)
+      });
       yCursor += lineHeight;
     });
+    return {
+      color: poemState.color,
+      font: poemState.font,
+      textItems: textItems
+    };
   }
 
-  drawPoemLine(line, yPos) {
-    this.p5.textSize(this.getScaledFontSize(line, FONT_SIZE));
-    this.p5.text(line, PLAYSPACE_SIZE / 2, yPos);
+  drawFromRenderInfo(renderInfo) {
+    this.p5.fill(renderInfo.color || 'black');
+    this.p5.textFont(renderInfo.font || 'Arial');
+    renderInfo.textItems.forEach(item => {
+      this.p5.textSize(item.size);
+      this.p5.text(item.text, item.x, item.y);
+    });
   }
 }
