@@ -467,6 +467,7 @@ PairProgrammingField.propTypes = FieldProps;
 const CodeReviewField = ({value, onChange, disabled}) => (
   <div>
     <FieldName>{i18n.enablePeerFeedback()}</FieldName>
+    <FieldDescription>{i18n.enablePeerFeedbackDescription()}</FieldDescription>
     <YesNoDropdown value={value} onChange={onChange} disabled={disabled} />
   </div>
 );
