@@ -53,7 +53,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
-        code_review_enabled: process[:code_review_enabled].nil? ? false : params[:code_review_enabled]
+        code_review_enabled: params[:code_review_enabled].nil? ? false : params[:code_review_enabled]
       }
     )
     render head :bad_request unless section
