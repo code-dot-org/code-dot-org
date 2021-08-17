@@ -1637,7 +1637,7 @@ class Script < ApplicationRecord
     end.to_h
 
     data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
-    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
+    data[:studentDescription] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
       data[:lessonDescriptions] = lessons.map do |lesson|
