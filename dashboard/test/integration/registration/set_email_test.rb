@@ -258,7 +258,7 @@ module RegistrationsControllerTests
       patch '/users/email', as: :json, params: {
         user: {
           email: new_email,
-          email_preference_opt_in: 'yes',
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :unprocessable_entity
