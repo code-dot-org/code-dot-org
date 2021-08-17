@@ -80,7 +80,6 @@ module OmniauthCallbacksControllerTests
             },
             terms_of_service_version: 1,
             email_preference_opt_in: nil,
-            share_teacher_email_reg_partner_opt_in: nil,
           }.merge(override_params)
         }
       else
@@ -96,7 +95,6 @@ module OmniauthCallbacksControllerTests
             },
             terms_of_service_version: 1,
             email_preference_opt_in: 'yes',
-            share_teacher_email_reg_partner_opt_in: 'no'
           }.merge(override_params)
         }
       end

@@ -197,7 +197,6 @@ module RegistrationsControllerTests
           email: new_email,
           current_password: 'password',
           email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
         }
       }
       assert_response :success
@@ -219,7 +218,6 @@ module RegistrationsControllerTests
           email: new_email,
           current_password: 'password',
           email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
         }
       }
       assert_response :success
@@ -241,7 +239,6 @@ module RegistrationsControllerTests
           email: new_email,
           current_password: 'password',
           email_preference_opt_in: 'no',
-          share_teacher_email_reg_partner_opt_in: 'no'
         }
       }
       assert_response :success
@@ -262,7 +259,6 @@ module RegistrationsControllerTests
         user: {
           email: new_email,
           email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
         }
       }
       assert_response :unprocessable_entity
