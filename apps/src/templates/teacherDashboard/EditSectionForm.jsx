@@ -184,7 +184,7 @@ class EditSectionForm extends Component {
     // These are server-side experiments, which are passed down to the client
     const showCodeReviewEnabledCheckbox =
       experiments.isEnabled('csa-pilot') ||
-      experiments.isEnabled('csa-facilitators-pilot');
+      experiments.isEnabled('csa-pilot-facilitators');
 
     if (!section) {
       return null;
@@ -466,7 +466,7 @@ PairProgrammingField.propTypes = FieldProps;
 
 const CodeReviewField = ({value, onChange, disabled}) => (
   <div>
-    <FieldName>Enable Peer Feedback</FieldName>
+    <FieldName>{i18n.enablePeerFeedback()}</FieldName>
     <YesNoDropdown value={value} onChange={onChange} disabled={disabled} />
   </div>
 );

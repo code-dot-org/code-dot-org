@@ -772,6 +772,7 @@
   "enableMakerDialogDescription": "Maker Toolkit is a feature used in the Computer Science Discoveries curriculum. See the setup page for more details:",
   "enableMakerDialogSetupPageLinkText": "Maker Toolkit Setup",
   "enablePairProgramming": "Allow students to Pair Program?",
+  "enablePeerFeedback": "Enable Peer Feedback?",
   "encrypted": "encrypted",
   "end": "end",
   "englishOnly": "English-only",
