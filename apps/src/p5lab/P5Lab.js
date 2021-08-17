@@ -260,9 +260,9 @@ P5Lab.prototype.init = function(config) {
       getStore().dispatch(
         setInitialAnimationList(
           initialAnimationList,
-          defaultSprites,
           this.isSpritelab /* shouldRunV3Migration */,
-          this.isSpritelab
+          this.isSpritelab,
+          defaultSprites
         )
       );
     });
@@ -306,7 +306,6 @@ P5Lab.prototype.init = function(config) {
     getStore().dispatch(
       setInitialAnimationList(
         this.startAnimations,
-        undefined /* alternativeDefaultSprites */,
         false /* shouldRunV3Migration */,
         this.isSpritelab
       )
