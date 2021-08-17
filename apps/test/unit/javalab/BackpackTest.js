@@ -88,4 +88,40 @@ describe('Java Lab Backpack Test', () => {
     const state = wrapper.instance().state;
     expect(state.openDialog).to.equal('IMPORT_WARNING');
   });
+
+  it('import shows error if hidden file name is used', () => {
+    const otherProps = {
+      sources: {file1: {isVisible: true}, file2: {isVisible: false}}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file2', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal('IMPORT_ERROR');
+  });
+
+  it('no dialog shown if there are no duplicate file names', () => {
+    const otherProps = {
+      sources: {}
+    };
+    const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
+    // set state to something that should be cleared by expandDropdown
+    wrapper.instance().setState({
+      dropdownOpen: true,
+      backpackFilenames: ['file1', 'file2', 'file3'],
+      selectedFiles: ['file2', 'file3']
+    });
+
+    wrapper.instance().handleImport();
+
+    const state = wrapper.instance().state;
+    expect(state.openDialog).to.equal(null);
+  });
 });
