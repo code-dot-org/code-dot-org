@@ -173,7 +173,9 @@ var baseConfig = {
             loader: 'url-loader',
             options: {
               limit: 1024,
-              name: '[name]wp[contenthash].[ext]'
+              // uses the file-loader when file size is over the limit
+              name: '[name]wp[contenthash].[ext]',
+              esModule: false
             }
           }
         ]
