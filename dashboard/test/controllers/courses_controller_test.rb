@@ -53,14 +53,23 @@ class CoursesControllerTest < ActionController::TestCase
     setup do
       Script.stubs(:should_cache?).returns true
       Script.clear_cache
+      UnitGroup.clear_cache
 
-      @unit_group = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
+      offering = create :course_offering, key: 'csx'
 
-      unit1 = create :unit, name: 'unit1', published_state: SharedConstants::PUBLISHED_STATE.stable
+      @unit_group = create :unit_group, name: 'csx-3001', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3001'
+      create :course_version, course_offering: offering, content_root: @unit_group, key: '3001'
+      unit1 = create :unit, name: 'csx1-3001', published_state: SharedConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: @unit_group, script: unit1, position: 1
-
-      unit2 = create :unit, name: 'unit2', published_state: SharedConstants::PUBLISHED_STATE.stable
+      unit2 = create :unit, name: 'csx2-3001', published_state: SharedConstants::PUBLISHED_STATE.stable
       create :unit_group_unit, unit_group: @unit_group, script: unit2, position: 2
+
+      older_unit_group = create :unit_group, name: 'csx-3000', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'csx', version_year: '3000'
+      create :course_version, course_offering: offering, content_root: older_unit_group, key: '3000'
+      unit1 = create :unit, name: 'csx1-3000', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: older_unit_group, script: unit1, position: 1
+      unit2 = create :unit, name: 'csx2-3000', published_state: SharedConstants::PUBLISHED_STATE.stable
+      create :unit_group_unit, unit_group: older_unit_group, script: unit2, position: 2
     end
 
     test 'signed out user views course overview with caching enabled' do
