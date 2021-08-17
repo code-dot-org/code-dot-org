@@ -19,10 +19,7 @@ class ReadOnlyReviewState extends React.Component {
   renderKeepWorking() {
     return (
       <div style={styles.studentReviewState}>
-        <KeepWorkingBadge
-          hasWhiteBorder={false}
-          style={styles.keepWorkingBadge}
-        />
+        <KeepWorkingBadge style={styles.keepWorkingBadge} />
         <span style={styles.keepWorking}>{i18n.keepWorking()}</span>
       </div>
     );
@@ -31,10 +28,7 @@ class ReadOnlyReviewState extends React.Component {
   renderAwaitingReview() {
     return (
       <div style={styles.studentReviewState}>
-        <KeepWorkingBadge
-          hasWhiteBorder={false}
-          style={styles.keepWorkingBadge}
-        />
+        <KeepWorkingBadge style={styles.keepWorkingBadge} />
         <span>{i18n.waitingForTeacherReview()}</span>
       </div>
     );
