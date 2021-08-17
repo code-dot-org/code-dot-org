@@ -140,7 +140,6 @@ class ApplicationController < ActionController::Base
     :hashed_email,
     :terms_of_service_version,
     :email_preference_opt_in,
-    :share_teacher_email_reg_partner_opt_in_required,
     :share_teacher_email_reg_partner_opt_in,
     :data_transfer_agreement_accepted,
     :data_transfer_agreement_required,
