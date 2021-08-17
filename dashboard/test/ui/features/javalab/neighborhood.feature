@@ -11,7 +11,7 @@ Feature: NeighborhoodPainting
     Then I set slider speed to fast
     Then I press "runButton"
     And I wait for 15 seconds
-    And I see no difference for "paint glomming"
+    And I see no difference for "paint glomming" using stitch mode "none"
     Then I close my eyes
 
   #Scenario: Stop Button Closes Connection
