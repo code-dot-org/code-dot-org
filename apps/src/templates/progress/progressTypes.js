@@ -48,7 +48,9 @@ const levelShape = {
   /** sublevels: PropTypes.array */ // See below
 };
 // Avoid recursive definition
-levelShape.sublevels = PropTypes.arrayOf(PropTypes.shape(levelShape));
+levelShape.sublevels = PropTypes.arrayOf(
+  PropTypes.shape(levelWithProgressType)
+);
 
 export const levelType = PropTypes.shape(levelShape);
 
