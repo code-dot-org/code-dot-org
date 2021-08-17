@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 15:04:46 UTC",
+    "serialized_at": "2021-08-16 01:05:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
@@ -39,7 +39,7 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will learn how to:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 30 minutes"
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -55,7 +55,7 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will learn how to:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -71,7 +71,7 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -123,7 +123,7 @@
       "key": "e73a71a3-14bc-456c-986b-1138b2bffdb8",
       "position": 1,
       "properties": {
-        "progression_name": "Overview of navigating the Code.org learning platform"
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "e73a71a3-14bc-456c-986b-1138b2bffdb8",
@@ -175,8 +175,19 @@
       }
     },
     {
-      "key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4",
+      "key": "277a80fa-d1a2-41ad-b3be-72b0a4b5b4c5",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "277a80fa-d1a2-41ad-b3be-72b0a4b5b4c5",
+        "lesson_activity.key": "9d7ceb21-96ad-4330-89de-b54d03180120"
+      }
+    },
+    {
+      "key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4",
+      "position": 2,
       "properties": {
         "progression_name": "Explore course lesson plans"
       },
@@ -187,7 +198,7 @@
     },
     {
       "key": "05f4f7ee-560a-4e52-aef8-2afee74f2357",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Explore additional teacher resources"
       },
@@ -197,8 +208,19 @@
       }
     },
     {
-      "key": "95f80568-ae45-462d-85ff-6189d046ea28",
+      "key": "f25dcce3-c7c7-46a3-9e42-91094232ac9d",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f25dcce3-c7c7-46a3-9e42-91094232ac9d",
+        "lesson_activity.key": "66b9c0d4-d636-411d-aa5b-0115c69c04ee"
+      }
+    },
+    {
+      "key": "95f80568-ae45-462d-85ff-6189d046ea28",
+      "position": 2,
       "properties": {
         "progression_name": "Additional support for teachers"
       },
@@ -209,7 +231,7 @@
     },
     {
       "key": "4d87c9eb-d8bb-482c-bf70-3ec201c7740e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -229,7 +251,7 @@
         "level_keys": [
           "SP-VPL-21-mod2-Overview-WebsiteNavigation"
         ],
-        "progression": "Overview of navigating the Code.org learning platform"
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -501,10 +523,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-TeachersInClassrooms"
-        ],
-        "progression": "Explore course lesson plans"
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -514,7 +533,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
+        "activity_section.key": "277a80fa-d1a2-41ad-b3be-72b0a4b5b4c5"
       },
       "level_keys": [
         "SP-VPL-21-mod2-TeachersInClassrooms"
@@ -523,7 +542,7 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -548,7 +567,7 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -573,7 +592,7 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -651,10 +670,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-TaskResources"
-        ],
-        "progression": "Additional support for teachers"
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -664,7 +680,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "95f80568-ae45-462d-85ff-6189d046ea28"
+        "activity_section.key": "f25dcce3-c7c7-46a3-9e42-91094232ac9d"
       },
       "level_keys": [
         "SP-VPL-21-mod2-TaskResources"
@@ -673,7 +689,7 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -698,7 +714,7 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -723,7 +739,7 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -748,7 +764,7 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -773,7 +789,7 @@
     {
       "chapter": 23,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -963,7 +979,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "8e9a3be1-5e87-4c7c-a418-8a6cbe7e57c4"
+        "activity_section.key": "277a80fa-d1a2-41ad-b3be-72b0a4b5b4c5"
       }
     },
     {
@@ -1035,7 +1051,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-csd2-2021",
-        "activity_section.key": "95f80568-ae45-462d-85ff-6189d046ea28"
+        "activity_section.key": "f25dcce3-c7c7-46a3-9e42-91094232ac9d"
       }
     },
     {

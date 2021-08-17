@@ -461,6 +461,35 @@
           ]
         },
         {
+          "type": "panel",
+          "name": "module_4_panel_part_2",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "how_likely_attend_inperson",
+              "title": "After engaging in this self-paced professional learning course, how likely are you to attend a facilitator-led professional development workshop if one were offered in your region? ",
+              "minRateDescription": "Not at all likely",
+              "maxRateDescription": "Very likely"
+            },
+            {
+              "type": "radiogroup",
+              "name": "participate_focus_group",
+              "title": "May we contact you about participating in a follow-up focus group to provide direct feedback about this online course?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            }
+          ],
+          "visibleIf": "{module} = '4'"
+        },
+        {
           "type": "comment",
           "name": "other_feedback",
           "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "

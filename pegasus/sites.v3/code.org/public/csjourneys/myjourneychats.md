@@ -82,7 +82,7 @@ social:
 
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 3</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<img src="/images/csjourneys/myjourney-nasa.png" style="max-width:100%; border-radius:15px" alt="NASA">
+<img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA">
 </div>
 
 <div class="col-66" style="padding-right:20px;">
@@ -91,11 +91,33 @@ social:
 <p>Hear from two NASA scientists about their career journeys and how they use data science to build 3D models of the universe.</p>
 <p><b>About the speakers</b>:
 <br>
-<strong>Kim Arcand</strong> was working in molecular biology and public health when she was hired for <a href="https://www.nasa.gov/mission_pages/chandra/main/index.html" target="_blank">NASA's Chandra X-ray Observatory</a> in 1998. Since she always wanted to be an astronaut when she was little, this opportunity got Kim close to the cosmos but without the long distance commute. Today, Kim uses data to tell stories about science, whether in the form of a 3D print of an exploded star, a book about light, or a Virtual Reality application for high-energy astrophysics. For more background, please check out Kim’s <a href="https://www.kimarcand.com/" target="_blank">personal page</a>.
+<strong>Kim Arcand</strong> was working in molecular biology and public health when she was hired for <a href="https://www.nasa.gov/mission_pages/chandra/main/index.html" target="_blank">NASA's Chandra X-ray Observatory</a> in 1998. Since she always wanted to be an astronaut when she was little, this opportunity got Kim close to the cosmos but without the long distance commute. Today, Kim uses data to tell stories about science, whether in the form of a 3D print of an exploded star or a Virtual Reality application for high-energy astrophysics. For more background, please check out Kim’s <a href="https://www.kimarcand.com/" target="_blank">personal page</a>.
 <br>
 <br>
-<strong>Sasha Samochina</strong> (sam-ocean-uh) is an award-winning creative technologist, who leads the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. She loves all things digital, animal, sound-emitting, cosmic, and views the world through XR-colored glasses. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.</p>
-<button>Register</button>
+<strong>Rutuparna Das</strong> is an astrophysicist and science communicator at the <a href="https://www.cfa.harvard.edu/" target="_blank">Center for Astrophysics | Harvard & Smithsonian</a>. Through research, she weighs clusters of galaxies to figure out what the cosmos is made of. Through NASA's Universe of Learning, she spreads the joys of space in a variety of ways, including telling stories about the people behind the science.</p>
+
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" rel="noopener noreferrer" target="_blank"></noscript>
+<!-- You can customize this button any way you like -->
+<button id="eventbrite-widget-modal-trigger-167178077129" type="button">Register my class</button>
+<noscript></a>Register on Eventbrite</noscript>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '167178077129',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167178077129',
+        onOrderComplete: exampleCallback
+    });
+</script>
+
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -105,7 +127,7 @@ social:
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, October 13th at 11 am EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Thursday, October 14th at 11 am EDT</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science.</p>
 <p><b>About the speakers</b>:
@@ -118,7 +140,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <!-- Noscript content for added SEO -->
 <noscript><a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" rel="noopener noreferrer" target="_blank"></noscript>
 <!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-166870053823" type="button">Register My Classroom</button>
+<button id="eventbrite-widget-modal-trigger-166870053823" type="button">Register my class</button>
 <noscript></a>Register on Eventbrite</noscript>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -159,7 +181,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <!-- Noscript content for added SEO -->
 <noscript><a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" rel="noopener noreferrer" target="_blank"></noscript>
 <!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-166863869325" type="button">Register My Class</button>
+<button id="eventbrite-widget-modal-trigger-166863869325" type="button">Register my class</button>
 <noscript></a>Register on Eventbrite</noscript>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -181,24 +203,24 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 10</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 8</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<img src="/images/csjourneys/myjourney-sasha.png" style="max-width:100%; border-radius:15px" alt="Sasha Samochina">
+<img src="/images/csjourneys/myjourney-roblox.png" style="max-width:100%; border-radius:15px" alt="Roblox">
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 11 am EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, November 10th at 1 pm EDT</h3>
 <strong>Recommended for grades 6-12</strong>
-<p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
+<p>Learn how one Roblox designer uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 <p><b>About the speaker</b>:
 <br>
-<strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
+As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
 <!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com/e/my-journey-using-artificial-intelligence-in-sports-registration-163522164195" rel="noopener noreferrer" target="_blank"></noscript>
+<noscript><a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" rel="noopener noreferrer" target="_blank"></noscript>
 <!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-163522164195" type="button">Register my class</button>
+<button id="eventbrite-widget-modal-trigger-167177770211" type="button">Register my class</button>
 <noscript></a>Register on Eventbrite</noscript>
 
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -210,9 +232,48 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 
     window.EBWidgets.createWidget({
         widgetType: 'checkout',
-        eventId: '163522164195',
+        eventId: '167177770211',
         modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-163522164195',
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167177770211',
+        onOrderComplete: exampleCallback
+    });
+</script>
+
+</div>
+<div style="clear: both; margin-bottom:35px"></div>
+
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 10</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
+<img src="/images/csjourneys/myjourney-sasha.png" style="max-width:100%; border-radius:15px" alt="Sasha Samochina">
+</div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 1 pm EDT</h3>
+<strong>Recommended for grades 6-12</strong>
+<p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
+<p><b>About the speaker</b>:
+<br>
+<strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
+</p>
+
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" rel="noopener noreferrer" target="_blank"></noscript>
+<!-- You can customize this button any way you like -->
+<button id="eventbrite-widget-modal-trigger-166980004689" type="button">Register my class</button>
+<noscript></a>Register on Eventbrite</noscript>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '166980004689',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-166980004689',
         onOrderComplete: exampleCallback
     });
 </script>

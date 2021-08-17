@@ -14,7 +14,7 @@
   "commitCode": "Commit Code",
   "commitNotes": "Commit Notes",
   "commitNotesPlaceholder": "Enter notes about this commit here...",
-  "compilationSuccess": "Compliation successful.",
+  "compilationSuccess": "Compilation successful.",
   "compileFailed": "Compile Failed.",
   "compilerError": "We couldn't compile your program. Look for bugs in your program and try again.",
   "compiling": "Compiling...",

@@ -1575,10 +1575,10 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.0.tgz#cd42bebfdeb5fcb1c4615882414347af185429f4"
-  integrity sha512-r4Mg7PnMrlI8bmJHkXrNS1+P1kmdXaQCGNl4yddvanqbIW+smx3HDvB6wdGKWhhIRY3xufV0FbpiMUSeEhZ0Ng==
+"@code-dot-org/blockly@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-4.0.1.tgz#77d1f975d75923792b6c72e0aa2ed9cf2bde7841"
+  integrity sha512-gmCY1Lx94chMNxC6ZOdQ/H0MBp+UzJKbJVLQ8JC77DpO5y3+LrFcM3y7DIcyCQEtbKq6qlgfY1nx4lAqdIIalw==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
@@ -13095,13 +13095,12 @@ react-textarea-autosize@^7.0.4:
     "@babel/runtime" "^7.1.2"
     prop-types "^15.6.0"
 
-react-tooltip@^4.2.3:
-  version "4.2.21"
-  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-4.2.21.tgz#840123ed86cf33d50ddde8ec8813b2960bfded7f"
-  integrity sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig==
+react-tooltip@^3.2.7:
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/react-tooltip/-/react-tooltip-3.9.2.tgz#df74e6f5fd454bb15132d5d2d506895cf505cb5e"
   dependencies:
-    prop-types "^15.7.2"
-    uuid "^7.0.3"
+    classnames "^2.2.5"
+    prop-types "^15.6.0"
 
 react-transition-group@2.9.0, react-transition-group@^2.2.1:
   version "2.9.0"
@@ -15959,11 +15958,6 @@ uuid@^3.0.1, uuid@^3.1.0:
 uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
-
-uuid@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
-  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
