@@ -78,7 +78,7 @@ social:
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="csadventures" href="/csjourneys/csadventures" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-placeholder.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Careers with CS photo">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NASA Chandra X-Ray Observatory">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Take your class on a CS adventure</strong></h3>
@@ -177,10 +177,10 @@ social:
 <br>
 
 <div class="col-100" style="border-radius:15px; background-color:#00adbc; padding:25px; width:98%">
-  <img style="width:18%; float: left; margin-right: 2%" src="/images/csjourneys/explore-careers.png" alt="you're a shining star">
+  <img style="width:18%; float: left; margin-right: 2%" src="/images/csjourneys/encouragement.png" alt="you're a shining star">
   <div style="width: 79%; float: left">
     <p style="color:#ffffff; margin-bottom:5px">Did you know?</p>
-    <h2 style="margin-top:0; margin-bottom: 0; color:#ffffff; font-size: 26px">If a parent or teacher tells a student they’d be good at a subject, that student is three times more likely to stick with that subject!</h2>
+    <h2 style="margin-top:0; margin-bottom: 0; color:#ffffff; font-size: 26px">If a parent or teacher tells a student they’d be good at a subject, that student is two-three times more likely to stick with that subject!</h2>
   </div>
   <div style="clear: both"></div>
 </div>

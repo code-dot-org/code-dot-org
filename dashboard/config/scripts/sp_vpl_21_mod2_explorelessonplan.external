@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vR81j4TwBNFbCkQjMxBuKDJIkgU-izAiQ4ru9uhtGodZMjBF7VnOoAxcekzzmEyESOsCd9GzthryHL7/pub?w=823&h=700" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;"> These sections give a high-level description of the lesson. 
 
-The **Overview** describes the activities and tasks students will do in the lesson, as well as the desired learning outcomes. Each lesson has a Question of the Day that helps frame what students will learn by the end of the lesson. 
+The **Overview** describes the activities and tasks students will do in the lesson, as well as the desired learning outcomes. Each lesson has a "Question of the Day" that helps frame what students will learn by the end of the lesson. 
 
 The **Purpose** helps connect this lesson to wider themes or stories throughout the unit, and will sometimes explain the instructional decisions or pedagogical practices behind how a lesson is structured.
 </details>
@@ -53,7 +53,7 @@ The **Preparation** section lists any important steps to take before the lesson,
 
 The **Links** section provides resources for teachers and students. Some resources (like answer keys) can only be viewed by verified teachers. Student resources are usually used throughout the lesson, and will need to be printed or distributed digitally.
 
-The **Vocabulary** section provides definitions for any new academic vocabulary introduced in the lesson. This section only appears if a new vocabulary term is introduced in the lesson. Similarly, if new coding commands are introduced in a lesson, an Introduced Code section will appear that includes any new coding commands.
+The **Vocabulary** section provides definitions for any new academic vocabulary introduced in the lesson. This section only appears if a new vocabulary term is introduced in the lesson. Similarly, if new coding commands are introduced in a lesson, an "Introduced Code" section will appear that includes any new coding commands.
 </details>
 
 <div style="clear:both"/>

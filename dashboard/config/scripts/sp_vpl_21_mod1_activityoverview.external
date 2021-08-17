@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/8934c91734c191e5f837c965716d9691-image-1628732446341.40.29 PM.png" alt="Screenshot of a level in this course containing text about lesson plans." style="float: left; height: 210px; clear: both; margin: 0 20px 20px 0;">
 
 ## Read about a topic 
 
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/a9cb1cf3e46ad7279af35b6d532d50be-image-1628732595895.43.02 PM.png" style="float: left; height: 277px; clear: both; margin: 0 20px 20px 0; ">
+<img src="https://images.code.org/a9cb1cf3e46ad7279af35b6d532d50be-image-1628732595895.43.02 PM.png" alt="Screenshot of a level in this course containing questions to consider and an embedded video." style="float: left; height: 277px; clear: both; margin: 0 20px 20px 0; ">
 
 
 ## Watch a video
@@ -38,21 +38,20 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/c1b33a4136ea8626426a635548cf94b7-image-1628734658167.17.12 PM.png" style="float: left; height: 195px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/c1b33a4136ea8626426a635548cf94b7-image-1628734658167.17.12 PM.png" alt="Screenshot of a level in this course containing directions for how to practice finding a support article." style="float: left; height: 195px; clear: both; margin: 0 20px 20px 0;">
 
 ## Complete a task
 
-##### Follow step by step instructions to learn how to try something new. These tasks will help you learn how to:
+##### Follow step by step instructions to try something new. These tasks will help you:
 
 ##### - Navigate to curriculum, resources, and support.
 ##### - Explore course content.
-##### - Try something new. 
 
 ##### We recommend that you **complete these tasks in a new tab** so you can quickly return to this professional learning course when you have completed the task. 
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/7b83ceeb3734231df5436bc28e608b89-image-1628732273493.27.54 PM.png" style="float: left; height: 203px; clear: both; margin: 0 20px 20px 0; ">
+<img src="https://images.code.org/7b83ceeb3734231df5436bc28e608b89-image-1628732273493.27.54 PM.png" alt="Screenshot of a level in this course containing three options for exploring Code.org learning tools." style="float: left; height: 203px; clear: both; margin: 0 20px 20px 0; ">
 
 ## Choose to explore
 
@@ -60,7 +59,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/462ea629a949a86d722444344efeff24-image-1628734262535.10.50 PM.png" style="float: left; height: 233px; clear: both; margin: 0 20px 20px 0; ">
+<img src="https://images.code.org/462ea629a949a86d722444344efeff24-image-1628734262535.10.50 PM.png" alt="Screenshot of a level in this course containing questions for users to make a plan for course implementation with an empty text box underneath to document the plan." style="float: left; height: 233px; clear: both; margin: 0 20px 20px 0; ">
 
 ## Make a plan
 
@@ -68,7 +67,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-<img src="https://images.code.org/86ed5bd572b17754f5df64f2c3aa0e4a-image-1628735126576.25.12 PM.png" style="float: left; height: 285px; clear: both; margin: 0 20px 20px 0; ">
+<img src="https://images.code.org/86ed5bd572b17754f5df64f2c3aa0e4a-image-1628735126576.25.12 PM.png" alt="Screenshot of a level in this course containing a matching activity to check the user's understanding." style="float: left; height: 285px; clear: both; margin: 0 20px 20px 0; ">
 
 ## Check your understanding
 

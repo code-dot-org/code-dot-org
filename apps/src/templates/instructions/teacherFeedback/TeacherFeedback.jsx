@@ -334,7 +334,8 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   header: {
     display: 'flex',

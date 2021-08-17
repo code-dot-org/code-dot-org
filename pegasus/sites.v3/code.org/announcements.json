@@ -1,6 +1,7 @@
 {
   "pages": {
-    "/projects": "home-learning-2020"
+    "/projects": "home-learning-2020",
+    "/home": "back-to-school-2021"
   },
 
   "banners": {
@@ -11,6 +12,14 @@
       "buttonText": "Take the survey",
       "buttonUrl": "https://docs.google.com/forms/d/e/1FAIpQLScS1FcBADzbFozhAXoICK4g1Yg2Hymhx0QYFP74yqSBXa0gnA/viewform",
       "buttonId": "class-schedule-survey-fall2021"
+    },
+    "back-to-school-2021": {
+      "image": "/images/back-to-school-2021.png",
+      "title": "Back to School Updates",
+      "body": " Check out the latest updates to Code.org’s curriculum and tools (including a new AI / ML module!), plus learn how to use Code.org in your classroom with our new Getting Started video series.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ-Updates-for-August-2021-",
+      "buttonId": "back-to-school-2021"
     },
     "teacher-apps-open-2021": {
       "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
