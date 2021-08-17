@@ -219,7 +219,7 @@ class User < ApplicationRecord
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
-  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in.present?}
+  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
   before_destroy :soft_delete_channels
 
@@ -251,7 +251,7 @@ class User < ApplicationRecord
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
     user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in.downcase == "yes"
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.downcase == "yes"
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
     end
@@ -408,7 +408,7 @@ class User < ApplicationRecord
   attr_accessor :parent_email_preference_request_ip
   attr_accessor :parent_email_preference_source
 
-  attr_accessor :share_teacher_email_reg_partner_opt_in
+  attr_accessor :share_teacher_email_reg_partner_opt_in_radio_choice
 
   attr_accessor :data_transfer_agreement_required
 
