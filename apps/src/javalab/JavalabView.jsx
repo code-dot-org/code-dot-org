@@ -12,7 +12,9 @@ import {
   setLeftWidth,
   setRightWidth,
   setInstructionsHeight,
-  setInstructionsFullHeight
+  setInstructionsFullHeight,
+  setConsoleHeight,
+  setEditorColumnHeight
 } from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
@@ -28,6 +30,10 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const FOOTER_BUFFER = 10;
 
+// The top Y coordinate of the JavaLab panels.  Above them is just the common site
+// header and then a bit of empty space.
+const PANELS_TOP_COORDINATE = 60;
+
 class JavalabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
@@ -39,7 +45,6 @@ class JavalabView extends React.Component {
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
-    editorColumnHeight: PropTypes.number,
     viewMode: PropTypes.string.isRequired,
 
     // populated by redux
@@ -57,12 +62,16 @@ class JavalabView extends React.Component {
     setRightWidth: PropTypes.func,
     setInstructionsHeight: PropTypes.func,
     setInstructionsFullHeight: PropTypes.func,
+    setConsoleHeight: PropTypes.func,
+    setEditorColumnHeight: PropTypes.func,
     leftWidth: PropTypes.number,
     rightWidth: PropTypes.number,
     instructionsHeight: PropTypes.number,
     instructionsFullHeight: PropTypes.number,
     instructionsRenderedHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    consoleHeight: PropTypes.number,
+    editorColumnHeight: PropTypes.number,
     awaitingContainedResponse: PropTypes.bool,
     isVisualizationCollapsed: PropTypes.bool,
     isInstructionsCollapsed: PropTypes.bool
@@ -182,6 +191,25 @@ class JavalabView extends React.Component {
     this.updateLayoutThrottled(this.props.leftWidth);
   };
 
+  handleEditorHeightResize = desiredHeight => {
+    // While the horizontal resizer thinks it's resizing the content above it, which
+    // is the editor panel, we are actually storing the size of the console below it.
+    // That way, if the window resizes, the console stays the same height while the editor
+    // changes in height.
+
+    const consoleDesiredHeight = this.props.editorColumnHeight - desiredHeight;
+
+    const consoleHeightMin = 200;
+    const consoleHeightMax = window.innerHeight - 200;
+
+    let newHeight = Math.max(
+      consoleHeightMin,
+      Math.min(consoleDesiredHeight, consoleHeightMax)
+    );
+
+    this.props.setConsoleHeight(newHeight);
+  };
+
   getInstructionsHeight = () => {
     if (this.props.isInstructionsCollapsed) {
       return 30;
@@ -196,6 +224,11 @@ class JavalabView extends React.Component {
         this.props.instructionsFullHeight
       );
     }
+  };
+
+  getEditorHeight = () => {
+    // Determine the editor height, but do it based on the console height.
+    return this.props.editorColumnHeight - this.props.consoleHeight;
   };
 
   shouldShowInstructionsHeightResizer = () => {
@@ -280,6 +313,10 @@ class JavalabView extends React.Component {
       window.innerHeight - miscExistingElementsHeight
     );
 
+    this.props.setEditorColumnHeight(
+      window.innerHeight - PANELS_TOP_COORDINATE
+    );
+
     // The right width can also change at this point, since it takes up the
     // remaining space.
     const actualLeftWidth = this.isLeftSideVisible()
@@ -347,7 +384,7 @@ class JavalabView extends React.Component {
               />
               {this.shouldShowInstructionsHeightResizer() && (
                 <HeightResizer
-                  resizeItemTop={() => 60}
+                  resizeItemTop={() => PANELS_TOP_COORDINATE}
                   position={
                     this.getInstructionsHeight() +
                     styleConstants['resize-bar-width']
@@ -386,7 +423,18 @@ class JavalabView extends React.Component {
                 showProjectTemplateWorkspaceIcon={
                   showProjectTemplateWorkspaceIcon
                 }
+                height={this.getEditorHeight()}
               />
+
+              <HeightResizer
+                resizeItemTop={() => PANELS_TOP_COORDINATE}
+                position={
+                  this.getEditorHeight() + styleConstants['resize-bar-width']
+                }
+                onResize={this.handleEditorHeightResize}
+                style={styles.rightResizer}
+              />
+
               <JavalabConsole
                 onInputMessage={onInputMessage}
                 style={{
@@ -480,6 +528,9 @@ const styles = {
     width: '100%',
     margin: '10px 0',
     overflowY: 'hidden'
+  },
+  rightResizer: {
+    position: 'static'
   }
 };
 
@@ -504,6 +555,8 @@ export default connect(
     instructionsFullHeight: state.javalab.instructionsFullHeight,
     instructionsRenderedHeight: state.instructions.renderedHeight,
     longInstructions: state.instructions.longInstructions,
+    consoleHeight: state.javalab.consoleHeight,
+    editorColumnFullHeight: state.javalab.editorColumnFullHeight,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isVisualizationCollapsed: state.javalab.isVisualizationCollapsed,
     isInstructionsCollapsed: state.instructions.isCollapsed
@@ -516,6 +569,8 @@ export default connect(
     setRightWidth: width => dispatch(setRightWidth(width)),
     setInstructionsHeight: height => dispatch(setInstructionsHeight(height)),
     setInstructionsFullHeight: height =>
-      dispatch(setInstructionsFullHeight(height))
+      dispatch(setInstructionsFullHeight(height)),
+    setConsoleHeight: height => dispatch(setConsoleHeight(height)),
+    setEditorColumnHeight: height => dispatch(setEditorColumnHeight(height))
   })
 )(UnconnectedJavalabView);
