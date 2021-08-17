@@ -1,0 +1,142 @@
+{
+  "script": {
+    "name": "poetry-hoc",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-08-17 21:46:03 UTC",
+    "published_state": "in_development",
+    "seeding_key": {
+      "script.name": "poetry-hoc"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Moods & Attitudes",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a000fc42-86aa-42bb-95b7-47f722a2abcf",
+      "position": 1,
+      "properties": {
+        "duration": 60,
+        "name": "Lesson 1: Moods and Attitudes "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a000fc42-86aa-42bb-95b7-47f722a2abcf",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899",
+        "lesson_activity.key": "a000fc42-86aa-42bb-95b7-47f722a2abcf"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_addPoem"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc",
+        "activity_section.key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899"
+      },
+      "level_keys": [
+        "poetry_addPoem"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poetry_addPoem",
+        "script_level.level_keys": [
+          "poetry_addPoem"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poetry-hoc",
+        "activity_section.key": "3c1509e7-fbe0-49af-8ba1-b27f6d56d899"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
