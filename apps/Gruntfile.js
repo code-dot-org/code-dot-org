@@ -2,6 +2,7 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
+var os = require('os');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
 var envConstants = require('./envConstants');
@@ -412,6 +413,16 @@ describe('entry tests', () => {
       : ''
   };
 
+  // This is the default karma-webpack output directory, but we need access to it to load test images
+  // see: https://github.com/ryanclark/karma-webpack/issues/498
+  // this is the source of the following warning, which can be ignored:
+  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
+  const output = {
+    path:
+      path.join(os.tmpdir(), '_karma_webpack_') +
+      Math.floor(Math.random() * 1000000)
+  };
+
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -449,8 +460,22 @@ describe('entry tests', () => {
         },
         {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
         {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'static/**/*', watched: false, included: false, nocache: true}
+        {
+          pattern: 'static/**/*',
+          watched: false,
+          included: false,
+          nocache: true
+        },
+        {
+          pattern: `${output.path}/**/*`,
+          watched: false,
+          included: false,
+          nocache: true
+        }
       ],
+      webpack: {
+        output
+      },
       client: {
         mocha: {
           timeout: 14000,
