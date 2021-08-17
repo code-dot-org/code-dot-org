@@ -12798,7 +12798,7 @@ react-dom@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react-dom@~17.0.2:
+react-dom@~17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
   integrity sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==
@@ -13174,7 +13174,7 @@ react@^16.7.0:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react@~17.0.2:
+react@~17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
@@ -15138,10 +15138,10 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-survey-react@1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.4.tgz#41194f0c4c4a96a88676a19f812ff362aa62f243"
-  integrity sha512-s6MsZvHUbp9YYoMsmpxcGEL3hz0iWLUQQ3aR+C1V6EBQrHwnhUN0nl7llpQsTc5pn0l4r0kwlGpKMFArVVInIA==
+survey-react@1.8.60:
+  version "1.8.60"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.8.60.tgz#aea512b776955e3daf781ba3cc45db4281fa7ffc"
+  integrity sha512-wQSG3WUQ4jiZ/OEv+FDGfMpzBPnq6zJNh4NAVoAzeFGLo0lUFt2PdGhL6Ytsyrct3+KB7ligo9emE7+BT2cQjA==
 
 svg-url-loader@^2.3.2:
   version "2.3.2"
