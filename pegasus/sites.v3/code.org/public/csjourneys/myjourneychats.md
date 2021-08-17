@@ -41,7 +41,7 @@ social:
 
 
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 2</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Artificial intelligence and sports</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-patrick.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey">
 </div>
@@ -80,7 +80,7 @@ social:
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 3</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building models of the universe</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA">
 </div>
@@ -121,7 +121,7 @@ social:
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 4</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Computer science for good</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-codeorg.png" style="max-width:100%; border-radius:15px" alt="Code.org">
 </div>
@@ -162,7 +162,45 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 7</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building the Internet of Things</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
+<img src="/images/csjourneys/myjourney-amazon.png" style="max-width:100%; border-radius:15px" alt="Amazon">
+</div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, October 27th at 9 am EDT</h3>
+<strong>Recommended for grades 6-12</strong>
+<p>Learn about how one solutions architect is helping to build the Internet of Things - and hosting Twitch streams!</p>
+<p><b>About the speaker</b>:
+<br>
+<strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things). He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
+
+<!-- Noscript content for added SEO -->
+<noscript><a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" rel="noopener noreferrer" target="_blank"></noscript>
+<!-- You can customize this button any way you like -->
+<button id="eventbrite-widget-modal-trigger-167369924951" type="button">Register my class</button>
+<noscript></a>Register on Eventbrite</noscript>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '167369924951',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-167369924951',
+        onOrderComplete: exampleCallback
+    });
+</script>
+
+</div>
+<div style="clear: both; margin-bottom:35px"></div>
+
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Making <i>Star Wars </i></h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-ilm.png" style="max-width:100%; border-radius:15px" alt="Industrial Light & Magic">
 </div>
@@ -203,7 +241,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 8</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Using Roblox to empower students</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-roblox.png" style="max-width:100%; border-radius:15px" alt="Roblox">
 </div>
@@ -242,7 +280,7 @@ As the senior instruction designer for <a href="https://www.roblox.com/" target=
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 10</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Visual storytelling with data</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <img src="/images/csjourneys/myjourney-sasha.png" style="max-width:100%; border-radius:15px" alt="Sasha Samochina">
 </div>
