@@ -72,8 +72,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: test_email,
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :success
@@ -96,8 +95,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: test_email,
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'no',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'no'
         }
       }
       assert_response :success
@@ -147,8 +145,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: 'wrong_email@example.com',
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :unprocessable_entity
@@ -189,8 +186,7 @@ module RegistrationsControllerTests
           user_type: 'student',
           email: '',
           hashed_email: teacher.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :success
@@ -236,8 +232,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: test_email,
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :success
@@ -260,8 +255,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: test_email,
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'no',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'no'
         }
       }
       assert_response :success
@@ -287,8 +281,7 @@ module RegistrationsControllerTests
         user: {
           user_type: 'teacher',
           email: new_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :success
@@ -315,8 +308,7 @@ module RegistrationsControllerTests
           user_type: 'teacher',
           email: '',
           hashed_email: student.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :unprocessable_entity
@@ -358,8 +350,7 @@ module RegistrationsControllerTests
           user_type: 'student',
           email: '',
           hashed_email: teacher.hashed_email,
-          email_preference_opt_in: 'yes',
-          share_teacher_email_reg_partner_opt_in: 'no'
+          email_preference_opt_in: 'yes'
         }
       }
       assert_response :success
