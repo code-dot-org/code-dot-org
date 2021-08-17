@@ -50,7 +50,7 @@ Scenario: Student sign in from studio.code.org in the eu
 Scenario: Teacher sign in from studio.code.org
   Given I create a teacher named "Casey"
   And I sign out
-  Given I am on "http://code.org/"
+  Given I am on "http://studio.code.org/"
   And I reload the page
   Then I wait to see ".header_user"
   Then I click ".header_user"
@@ -61,7 +61,6 @@ Scenario: Teacher sign in from studio.code.org
   Then I wait to see ".user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Casey"
-  Then I sign out
 
 Scenario: Join non-existent section from sign in page shows error
   Given I am on "http://studio.code.org/users/sign_in/"
