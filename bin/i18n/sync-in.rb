@@ -259,7 +259,7 @@ def localize_level_content(variable_strings, parameter_strings)
       script_i18n_directory =
         if ScriptConstants.unit_in_category?(:hoc, script.name)
           File.join(level_content_directory, "Hour of Code")
-        elsif script.version_year
+        elsif script.version_year && script.version_year != 'unversioned'
           File.join(level_content_directory, script.version_year)
         else
           File.join(level_content_directory, "other")
