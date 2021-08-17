@@ -264,9 +264,9 @@ function generateAnimationName(baseName, animationList) {
  */
 export function setInitialAnimationList(
   serializedAnimationList,
-  alternativeDefaultSprites = serializedAnimationList,
   shouldRunV3Migration,
-  isSpriteLab
+  isSpriteLab,
+  alternativeDefaultSprites = serializedAnimationList
 ) {
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
