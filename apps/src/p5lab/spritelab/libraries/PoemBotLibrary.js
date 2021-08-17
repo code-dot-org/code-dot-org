@@ -16,7 +16,8 @@ export default class PoemBotLibrary extends CoreLibrary {
       lines: [],
       color: 'black',
       font: 'Arial',
-      isVisible: true
+      isVisible: true,
+      effects: [{name: 'default', startFrame: 0, endFrame: 500}]
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
@@ -38,14 +39,15 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.poemState,
           this.p5.World.frameCount
         );
-        for (let i = 0; i < renderInfo.textItems.length; i++) {
+        for (let i = 0; i < renderInfo.lines.length; i++) {
+          const lineNum = i + 1; // students will 1-index the lines
           // Fire line events
-          this.lineEvents[i]?.forEach(callback => callback());
+          this.lineEvents[lineNum]?.forEach(callback => callback());
 
           // Clear out line events so they don't fire again. This way, we'll fire
-          // the event only on the first frame where renderInfo.textItems has
+          // the event only on the first frame where renderInfo.lines has
           // that many items
-          this.lineEvents[i] = null;
+          this.lineEvents[lineNum] = null;
         }
         this.drawFromRenderInfo(renderInfo);
         this.foregroundEffect();
@@ -169,36 +171,59 @@ export default class PoemBotLibrary extends CoreLibrary {
     return scaledSize;
   }
 
+  applyEffect(renderInfo, effect, frameCount) {
+    if (frameCount < effect.startFrame || frameCount > effect.endFrame) {
+      return renderInfo;
+    }
+    const duration = effect.endFrame - effect.startFrame;
+    const progress = (frameCount - effect.startFrame) / duration;
+    switch (effect.name) {
+      case 'default': {
+        const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
+        return {
+          ...renderInfo,
+          lines: renderInfo.lines.slice(0, numLinesToShow)
+        };
+      }
+      default:
+        return renderInfo;
+    }
+  }
+
   getRenderInfo(poemState, frameCount) {
     if (!poemState.isVisible) {
       return {
-        textItems: []
+        lines: []
       };
     }
-    let textItems = [];
     let yCursor = OUTER_MARGIN;
+    let renderInfo = {
+      color: poemState.color,
+      font: poemState.font,
+      lines: []
+    };
     if (poemState.title) {
-      textItems.push({
+      renderInfo.title = {
         text: poemState.title,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: this.getScaledFontSize(poemState.title, FONT_SIZE * 2)
-      });
+      };
       yCursor += LINE_HEIGHT;
     }
     if (poemState.author) {
       yCursor -= LINE_HEIGHT / 2;
-      textItems.push({
+      renderInfo.author = {
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: this.getScaledFontSize(poemState.author, 16)
-      });
+      };
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
     poemState.lines.forEach(line => {
-      textItems.push({
+      renderInfo.lines.push({
         text: line,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
@@ -206,17 +231,32 @@ export default class PoemBotLibrary extends CoreLibrary {
       });
       yCursor += lineHeight;
     });
-    return {
-      color: poemState.color,
-      font: poemState.font,
-      textItems: textItems
-    };
+    poemState.effects.forEach(effect => {
+      renderInfo = this.applyEffect(renderInfo, effect, frameCount);
+    });
+    return renderInfo;
   }
 
   drawFromRenderInfo(renderInfo) {
     this.p5.fill(renderInfo.color || 'black');
     this.p5.textFont(renderInfo.font || 'Arial');
-    renderInfo.textItems.forEach(item => {
+    if (renderInfo.title) {
+      this.p5.textSize(renderInfo.title.size);
+      this.p5.text(
+        renderInfo.title.text,
+        renderInfo.title.x,
+        renderInfo.title.y
+      );
+    }
+    if (renderInfo.author) {
+      this.p5.textSize(renderInfo.author.size);
+      this.p5.text(
+        renderInfo.author.text,
+        renderInfo.author.x,
+        renderInfo.author.y
+      );
+    }
+    renderInfo.lines.forEach(item => {
       this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
