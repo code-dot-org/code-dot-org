@@ -187,9 +187,6 @@ class RegistrationsController < Devise::RegistrationsController
         params[:email_preference_request_ip] = request.ip
         params[:email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
         params[:email_preference_form_kind] = "0"
-        if within_united_states?
-          params[:share_teacher_email_reg_partner_opt_in_required] = true
-        end
       elsif params[:user_type] == "student"
         params[:parent_email_preference_request_ip] = request.ip
         params[:parent_email_preference_source] = EmailPreference::ACCOUNT_SIGN_UP
