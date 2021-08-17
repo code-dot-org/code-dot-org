@@ -7998,3 +7998,15 @@ ru:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: тест
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Краткий обзор
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Краткий обзор

@@ -72,10 +72,11 @@ class CodeReviewCommentsController < ApplicationController
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 
-  # TO DO: modify permit_params to handle other parameters (eg, section ID)
   def code_review_comments_params
     params.permit(
       :comment,
+      :script_id,
+      :level_id,
       :is_resolved
     )
   end

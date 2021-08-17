@@ -25377,3 +25377,22 @@ hi:
               display_name: संसाधन
         dlp21-csp-mod1:
           title: CS के मूल सिद्धांत गहन प्रशिक्षण मॉड्यूल 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: मॉड्यूल 1
+              description: परीक्षण
+            lessonGroup-3:
+              display_name: मॉड्यूल 2
+            lessonGroup-4:
+              display_name: मॉड्यूल 3
+            lessonGroup-5:
+              display_name: मॉड्यूल 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: रूपरेखा
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: रूपरेखा

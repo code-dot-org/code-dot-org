@@ -26072,3 +26072,22 @@ pt:
               name: Lição 2
         dlp21-csp-mod1:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Módulo 1
+              description: teste
+            lessonGroup-3:
+              display_name: Módulo 2
+            lessonGroup-4:
+              display_name: Módulo 3
+            lessonGroup-5:
+              display_name: Módulo 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Visão geral
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Visão geral

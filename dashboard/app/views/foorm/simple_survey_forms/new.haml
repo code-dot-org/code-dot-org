@@ -25,6 +25,9 @@
   .field
     = f.check_box :allow_multiple_submissions
     = f.label :allow_multiple_submissions, 'Allow multiple submissions by the same user?'
+  .field
+    = f.check_box :allow_signed_out
+    = f.label :allow_signed_out, 'Allow submissions from signed out users? Note we cannot control repeat submissions if survey participants are not signed in.'
   %h2
     Variables (optional)
   %p

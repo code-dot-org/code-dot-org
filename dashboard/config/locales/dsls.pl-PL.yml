@@ -7,7 +7,7 @@ pl-PL:
         - text: Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/>
             Umieścić trójkąt poniżej kwadratu
         - text: Zacznij od kwadratu<br/>Umieść trójkąt na prawo od kwadratu<br/>Umieść
-            równoległobok pot kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
+            równoległobok pod kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
           correct: true
         - text: Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść
             trójkąt na prawo od równoległoboku
@@ -5606,7 +5606,7 @@ pl-PL:
           feedback: Poprawnie!
         - {}
         questions:
-        - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.

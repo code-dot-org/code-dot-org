@@ -4605,8 +4605,7 @@ id-ID:
           feedback: Benar!
         - {}
         questions:
-        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
-            "Jalankan"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Pemanen akan mengambil dua labu.
@@ -4783,3 +4782,8 @@ id-ID:
         questions:
         - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
             programnya dijalankan?
+      Unit 1 Lesson 3 Overview:
+        markdown: "## gambaran\nDalam pelajaran ini anda akan menerapkan proses pemecahan
+          masalah untuk berbagai permasalahan \nGuna mengeksplor bagaimana setiap
+          langkah anda membangun dan mening\nkatkan solusi untuk masalah tersebut\n\n##sumber\n*[Solving
+          Problem - Activity Guide]\n(https://docs.google.com/document/d/1cym51Muy41CbvXYe7F57N2Xf16Afp0hjsHovhR0GD2M/export?format=pdf)"

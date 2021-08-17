@@ -187,5 +187,8 @@
   "singleSpriteNotClicked": "crwdns2688826:0crwdne2688826:0",
   "clickButNoSpeech": "crwdns2688828:0crwdne2688828:0",
   "secondClickButNoSpeech": "crwdns2688830:0crwdne2688830:0",
-  "thirdClickButNoSpeech": "crwdns2688832:0crwdne2688832:0"
+  "thirdClickButNoSpeech": "crwdns2688832:0crwdne2688832:0",
+  "changeOrSetSize": "crwdns2689335:0crwdne2689335:0",
+  "changeOrSetCostume": "crwdns2689337:0crwdne2689337:0",
+  "changeBackground": "crwdns2689339:0crwdne2689339:0"
 }

@@ -6,18 +6,6 @@ import cookies from 'js-cookie';
 import {dismissSwipeOverlay} from '@cdo/apps/templates/arrowDisplayRedux';
 import trackEvent from '@cdo/apps/util/trackEvent';
 
-const styles = {
-  overlay: {
-    position: 'absolute',
-    zIndex: 1,
-    opacity: '90%'
-  },
-  minecraft: {
-    top: '62px',
-    left: '17px'
-  }
-};
-
 const HideSwipeOverlayCookieName = 'hide_swipe_overlay';
 
 export class SwipePrompt extends React.Component {
@@ -124,6 +112,18 @@ export class SwipePrompt extends React.Component {
     );
   }
 }
+
+const styles = {
+  overlay: {
+    position: 'absolute',
+    zIndex: 1,
+    opacity: '90%'
+  },
+  minecraft: {
+    top: '62px',
+    left: '17px'
+  }
+};
 
 export const UnconnectedSwipePrompt = SwipePrompt;
 

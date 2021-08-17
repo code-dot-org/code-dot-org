@@ -1,17 +1,17 @@
 ---
-title: Contact International Partners
+title: Kontaktirajte međunarodne partnere
 layout: wide
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Kontaktirajte međunarodne partnere
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?
+Code.org surađuje s mnogim organizacijama diljem svijeta kako bi Sat kodiranja postao zaista međunarodni pokret. Jeste li znali da se u 2017. godini 60% svih događanja Sata kodiranja odvijalo izvan SAD-a?
 
-You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+I vi možete odigrati vodeću ulogu kako biste uključili više ljudi u svojoj zemlji! Ako se nalazite u nekoj od dolje navedenih zemalja, obratite se navedenom partneru i povežite se sa svojim lokalnim Satom kodiranja.
 
-*Don't see your country listed here?* [Apply to become an Hour of Code International Partner](https://airtable.com/shreokz55rqubug8F)! <br /> <br />
+*Ne vidite svoju zemlju ovdje navedenu? [Prijavite se da postanete međunarodni partner Sata kodiranja](https://airtable.com/shreokz55rqubug8F)! <br /> <br /></p> 
 
 {{ international_partners_table }}
 

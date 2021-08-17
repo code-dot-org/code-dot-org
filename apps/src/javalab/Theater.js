@@ -1,9 +1,12 @@
-import {TheaterSignalType} from './constants';
+import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
+import javalabMsg from '@cdo/javalab/locale';
 
 export default class Theater {
-  constructor() {
+  constructor(onOutputMessage, onNewlineMessage) {
     this.canvas = null;
     this.context = null;
+    this.onOutputMessage = onOutputMessage;
+    this.onNewlineMessage = onNewlineMessage;
   }
 
   handleSignal(data) {
@@ -44,5 +47,13 @@ export default class Theater {
 
   getAudioElement() {
     return document.getElementById('theater-audio');
+  }
+
+  onClose() {
+    this.onNewlineMessage();
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+    );
+    this.onNewlineMessage();
   }
 }

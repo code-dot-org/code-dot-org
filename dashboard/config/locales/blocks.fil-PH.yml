@@ -1716,3 +1716,5 @@ fil:
           DIR:
             right: right ↻
             left: kaliwang ↺
+      validation_validatedBackground:
+        text: Itakda ang background sa {IMG}

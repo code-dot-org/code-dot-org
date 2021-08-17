@@ -566,7 +566,6 @@ fil:
       link: "Matuto nang higit pa"
       applab_unsupported_tablet: "Ang App Lab ay mas mainam na gamitin sa desktop o laptop na kompyuter na mayroong mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
       gamelab_unsupported_tablet: "Ang Game Lab ay mas mainam gamitin sa desktop o laptop na kompyuter na may mouse at keyboard. Maaring makaranas ka ng mga problema sa paggamit ng kagamitang ito sa iyong kasalukuyang device."
-      weblab_unsupported_browser: "Sa kasamaan palad, kami ay kasalukuyang nakaranas ng mga problema sa paglo-load ng Web Lab sa iyong browser. Maaring gusto mong gumamit ng ibang browser habang hindi pa nalutas ang problema. Ipagpaumanhin niyo po ang abala."
       weblab_unsupported_locale_storage: "Maaring makaranas ka ng mga problema sa paggamit ng Web Lab sa Private Browsing na mode. Paki-load ulit ang iyong proyekto sa normal na mode. Ipagpaumanhin niyo po ang abala."
   slow_loading: 'Ito ay tumatagal pa sa karaniwan...'
   try_reloading: 'Subukang i-reload ang pahina'

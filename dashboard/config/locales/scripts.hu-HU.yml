@@ -798,6 +798,8 @@ hu:
           lessons:
             Getting Started:
               name: Első lépések
+        cspunit4draft:
+          description_short: Adat
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1053,6 +1055,8 @@ hu:
           lessons:
             Design Mode:
               name: Tervező mód
+        CSDU5-Draft:
+          description_short: Adat
         CSF_Secret_Sample_Story:
           description_audience: 8-tól 18 éves korig+
         MikeTest:
@@ -1542,6 +1546,8 @@ hu:
               name: Listák
             For Loops:
               name: Számláló ciklusok
+            Map:
+              name: Térkép
             Functions with Parameters:
               name: Paraméteres függvények
         workshop-gamelab:
@@ -2429,6 +2435,8 @@ hu:
           lesson_groups:
             csf_variables:
               display_name: változók
+            csf_data:
+              display_name: Adat
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_internet:
@@ -2612,6 +2620,8 @@ hu:
               display_name: hurkok
             csf_events:
               display_name: Események
+            csf_data:
+              display_name: Adat
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Hétköznapi algoritmusok: Papírrepülők'
@@ -3328,6 +3338,8 @@ hu:
               display_name: hurkok
             csf_events:
               display_name: Események
+            csf_data:
+              display_name: Adat
           lessons:
             Powerful Passwords:
               name: Erős jelszavak
@@ -3398,6 +3410,8 @@ hu:
               display_name: Digitális állampolgárság
             csf_variables:
               display_name: változók
+            csf_data:
+              display_name: Adat
             csf_for_loops:
               display_name: Számláló ciklusok
             csf_sprites:
@@ -3777,6 +3791,8 @@ hu:
               display_name: hurkok
             csf_events:
               display_name: Események
+            csf_data:
+              display_name: Adat
         coursed-2021:
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -4018,3 +4034,15 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: 'kifejezés:'
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: Összefoglaló
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: Összefoglaló

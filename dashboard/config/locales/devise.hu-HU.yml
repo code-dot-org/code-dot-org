@@ -20,8 +20,6 @@ hu:
     mailer:
       confirmation_instructions:
         subject: Code.org megerősítés módja
-      reset_password_instructions:
-        subject: 'Code.org: jelszó beállítás módja'
       unlock_instructions:
         subject: Utasítások feloldása
     omniauth_callbacks:

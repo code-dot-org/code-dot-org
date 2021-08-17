@@ -16,14 +16,17 @@ Using resources is a core, authentic practice of computer science.  Whether novi
 
 ## What is my role as the teacher?
 
+<img src="https://images.code.org/e7be9e7d1044b2ae78871193f71cbb66-image-1628699169394.jpg" alt="Two students working on the same laptop computer." width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
 ##### Your role as the teacher is to help students develop the skill of finding answers on their own, rather than directly solving their problems for them. 
 
 ## How is using resources related to the problem solving process?
 
-* ##### **Define** - Describe what you need to know 
-* ##### **Prepare** - Decide where to look for the information
-* ##### **Try** - Read the resources
-* ##### **Reflect** - Think about what worked 
+
+* ##### **Define** - Describe what you need to know.
+* ##### **Prepare** - Decide where to look for the information.
+* ##### **Try** - Read the resources.
+* ##### **Reflect** - Think about what worked.
 
 ## What resources are available to students?
 
@@ -62,7 +65,7 @@ Using resources is a core, authentic practice of computer science.  Whether novi
 <div style="clear:both"/>
 
 <details>
-<summary><strong>Videos</strong></summary>
+<summary><strong>Drop Down Tips</strong></summary>
 
 <img src="https://images.code.org/cf1dcca84ec1fdc3c82efcef9c865b59-image-1626742925098.png" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
@@ -72,7 +75,13 @@ Using resources is a core, authentic practice of computer science.  Whether novi
 <div style="clear:both"/>
 
 
-### <a href="https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/edit" target="blank" >Click here</a> to read the CS Discoveries Guide to Using Resources. 
+
+## How is using resources connected to the curriculum?
+
+
+#####  Informational resources are available to students throughout programming lessons to give them just-in-time information to solve their problems. These resources allow students to self-differentiate, deciding for themselves how much help they need for a particular activity. Students should continue to explore resources and previous solutions throughout the lessons as they experiment and create computational artifacts.
+
+### <a href="https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/edit" target="blank" rel="noopener noreferrer">Click here</a> to read the CS Discoveries Guide to Using Resources. 
 
 
 MARKDOWN

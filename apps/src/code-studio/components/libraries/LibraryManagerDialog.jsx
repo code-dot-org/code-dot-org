@@ -15,67 +15,6 @@ import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
 
-const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default'
-  },
-  linkBox: {
-    cursor: 'auto',
-    height: '32px',
-    marginBottom: 0,
-    flex: 1,
-    maxWidth: 400
-  },
-  header: {
-    textAlign: 'left',
-    fontSize: 24,
-    marginTop: 20
-  },
-  libraryList: {
-    maxHeight: '140px',
-    overflowY: 'auto',
-    borderBottom: `2px solid ${color.purple}`
-  },
-  message: {
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
-  },
-  inputParent: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  add: {
-    margin: DEFAULT_MARGIN,
-    color: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    ':disabled': {
-      color: color.light_gray,
-      borderColor: color.light_gray,
-      backgroundColor: color.lightest_gray
-    }
-  },
-  hidden: {
-    visibility: 'hidden'
-  },
-  error: {
-    color: color.red,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    minHeight: 30,
-    whiteSpace: 'pre-wrap',
-    lineHeight: 1
-  },
-  updateButtons: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-};
-
 // Map userName from class libraries to project libraries so the author is displayed in the UI.
 // We only want users to see the author name for libraries from their classmates.
 export const mapUserNameToProjectLibraries = (
@@ -461,5 +400,66 @@ export class LibraryManagerDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: '0 15px',
+    cursor: 'default'
+  },
+  linkBox: {
+    cursor: 'auto',
+    height: '32px',
+    marginBottom: 0,
+    flex: 1,
+    maxWidth: 400
+  },
+  header: {
+    textAlign: 'left',
+    fontSize: 24,
+    marginTop: 20
+  },
+  libraryList: {
+    maxHeight: '140px',
+    overflowY: 'auto',
+    borderBottom: `2px solid ${color.purple}`
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
+  },
+  inputParent: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  add: {
+    margin: DEFAULT_MARGIN,
+    color: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
+    ':disabled': {
+      color: color.light_gray,
+      borderColor: color.light_gray,
+      backgroundColor: color.lightest_gray
+    }
+  },
+  hidden: {
+    visibility: 'hidden'
+  },
+  error: {
+    color: color.red,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    minHeight: 30,
+    whiteSpace: 'pre-wrap',
+    lineHeight: 1
+  },
+  updateButtons: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
+};
 
 export default Radium(LibraryManagerDialog);

@@ -343,52 +343,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "update: sets published_state on units in unit group" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course'
-    unit1 = create :script, name: 'unit1'
-    unit2 = create :script, name: 'unit2'
-
-    post :update, params: {
-      course_name: 'course',
-      scripts: ['unit1', 'unit2'],
-      published_state: SharedConstants::PUBLISHED_STATE.stable
-    }
-    course.reload
-    unit1.reload
-    unit2.reload
-
-    assert_equal course.published_state, SharedConstants::PUBLISHED_STATE.stable
-    assert_equal unit1.published_state, SharedConstants::PUBLISHED_STATE.stable
-    assert_equal unit2.published_state, SharedConstants::PUBLISHED_STATE.stable
-  end
-
-  test "update: sets pilot_experiment on units in unit group" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    course = create :unit_group, name: 'course'
-    unit1 = create :script, name: 'unit1'
-    unit2 = create :script, name: 'unit2'
-
-    post :update, params: {
-      course_name: 'course',
-      scripts: ['unit1', 'unit2'],
-      pilot_experiment: 'my-pilot',
-      published_state: 'pilot'
-    }
-    course.reload
-    unit1.reload
-    unit2.reload
-
-    assert_equal course.pilot_experiment, 'my-pilot'
-    assert_equal course.published_state, 'pilot'
-    assert_equal unit1.pilot_experiment, 'my-pilot'
-    assert_equal unit1.published_state, 'pilot'
-    assert_equal unit2.pilot_experiment, 'my-pilot'
-    assert_equal unit2.published_state, 'pilot'
-  end
-
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true

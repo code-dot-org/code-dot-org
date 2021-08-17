@@ -1,4 +1,5 @@
 import {commands as behaviorCommands} from './behaviorCommands';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -75,6 +76,23 @@ export const commands = {
     }
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.p5.edges.displace(sprite));
+  },
+
+  glideTo(spriteArg, location) {
+    if (!location) {
+      return;
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      if (!sprite.glideTargets) {
+        sprite.glideTargets = [];
+      }
+      sprite.glideTargets.push(location);
+      this.addBehavior(sprite, {
+        func: behaviorCommands.glideFunc.apply(this),
+        name: 'glide'
+      });
+    });
   },
 
   isCostumeEqual(spriteArg, costumeName) {
@@ -220,6 +238,19 @@ export const commands = {
       } else {
         sprite[prop] = val;
       }
+    });
+  },
+
+  spriteSay(spriteArg, speech) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      const bubbleId = this.addSpeechBubble(sprite, speech);
+      audioCommands.playSpeech({
+        text: speech,
+        gender: 'female',
+        language: 'English',
+        onComplete: () => this.removeSpeechBubble(bubbleId)
+      });
     });
   },
 

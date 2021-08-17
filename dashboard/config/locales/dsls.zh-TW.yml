@@ -5714,7 +5714,7 @@ zh-TW:
         - text: 外星人將從螢幕頂部消失。
           feedback: 不正確。藍色外星人將開始在螢幕上上下移動。
         questions:
-        - text: 仔細查看下方的程式。點擊「運行」按鈕後會發生什麼事呢？
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: 收割機將採收兩顆南瓜。

@@ -22778,3 +22778,22 @@ ko:
           title: AI 랩
         dlp21-csp-mod1:
           title: CS 원리 심화 학습 모듈 1
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 모듈 1
+              description: 검사
+            lessonGroup-3:
+              display_name: 모듈 2
+            lessonGroup-4:
+              display_name: 모듈 3
+            lessonGroup-5:
+              display_name: 모듈 4
+        dlp21-csd-overview:
+          lessons:
+            lesson-1:
+              name: 개요
+        dlp21-csp-overview:
+          lessons:
+            lesson-1:
+              name: 개요

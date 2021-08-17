@@ -27,6 +27,12 @@ class ScriptTest < ActiveSupport::TestCase
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
+    # To test level caching, we have to make sure to create a level in a script
+    # *before* generating the caches.
+    # We also want to test level_concept_difficulties, so make sure to give it
+    # one.
+    @cacheable_level = create(:level, :script, level_concept_difficulty: create(:level_concept_difficulty))
+
     # ensure that we have freshly generated caches with this unit_group/unit
     UnitGroup.clear_cache
     Script.clear_cache
@@ -399,14 +405,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal original_script_level_ids, unit.script_levels.map(&:id)
   end
 
-  test 'unplugged in unit' do
-    @unit_file = File.join(self.class.fixture_path, 'test-unplugged.script')
-    unit_names, _ = Script.setup([@unit_file])
-    unit = Script.find_by!(name: unit_names.first)
-    assert_equal 'Unplugged', unit.script_levels[1].level['type']
-  end
-
   test 'blockly level in custom unit' do
+    game = Game.find_by_name('Studio')
+    create :level, name: 'blockly', game: game, level_num: 100
     unit_data, _ = ScriptDSL.parse(
       "lesson 'Lesson1', display_name: 'Lesson1'; level 'Level 1'; level 'blockly:Studio:100'", 'a filename'
    )
@@ -423,16 +424,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -442,16 +443,16 @@ class ScriptTest < ActiveSupport::TestCase
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New App Lab Project'}]}]}]
-      }] # From level.yml fixture# From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
+      }]
     )
     Script.add_unit(
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         display_name: "Content",
-        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: 'New Game Lab Project'}]}]}]
-      }] # From level.yml fixture
+        lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
+      }]
     )
   end
 
@@ -555,13 +556,14 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'level_concept_difficulty uses preloading' do
-    level = Script.find_by_name('course4').script_levels.second.level
-    expected = level.level_concept_difficulty
-    assert_not_nil expected
+    script = @cacheable_level.script_levels.first.script
+    expected = @cacheable_level.level_concept_difficulty
+
+    refute_nil expected
 
     populate_cache_and_disconnect_db
 
-    assert_equal expected, Script.get_from_cache('course4').script_levels.second.level.level_concept_difficulty
+    assert_equal expected, Script.get_from_cache(script.name).script_levels.first.level.level_concept_difficulty
   end
 
   test 'get_without_cache raises exception for bad id' do
@@ -3018,8 +3020,8 @@ class ScriptTest < ActiveSupport::TestCase
         ScriptDSL.parse(dsl, 'a filename')[0][:lesson_groups]
       )
     end
-    assert error.message.include? 'Duplicate entry'
-    assert error.message.include? "for key 'index_script_levels_on_seed_key'"
+    assert_includes error.message, 'Duplicate entry'
+    assert_includes error.message, "for key 'index_script_levels_on_seed_key'"
   end
 
   test 'can add unplugged for lesson' do

@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### The Maker App  is an environment that allows you to communicate with a Circuit Playground using a set of additional commands available in App Lab. Using the same drag-and-drop editor that students have become comfortable with in App Lab and Game Lab, students can turn on LEDs, read sensors, and write programs that use physical hardware for user input and output. 
 
-![](https://images.code.org/42f71c9e2bebe05af9cd8f2f95eb2748-image-1626282995701.12.19 PM.png)
+![Image of a Circuit Playground and its corresponding app made in App Lab](https://images.code.org/42f71c9e2bebe05af9cd8f2f95eb2748-image-1626282995701.12.19 PM.png)
 
 ## What is the Circuit Playground?
 
@@ -19,6 +19,6 @@ markdown <<MARKDOWN
 
 ## Do I need a class set of Circuit Playgrounds to teach CS Discoveries?
 
-##### You will need a class set of Circuit Playgrounds to teach Unit 6 of CS Discoveries. If you do not have access to Circuit Playgrounds, you will be able to teach all units of CS Discoveries except Unit 6: Physical Computing. <a href="https://code.org/circuitplayground" target="blank" >Click here</a> to learn more about the Circuit Playground and how to purchase Circuit Playgrounds for your classroom. 
+##### You will need a class set of Circuit Playgrounds to teach Unit 6 of CS Discoveries. If you do not have access to Circuit Playgrounds, you will be able to teach all units of CS Discoveries except Unit 6: Physical Computing. <a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about the Circuit Playground and how to purchase Circuit Playgrounds for your classroom. 
 
 MARKDOWN

@@ -402,3 +402,7 @@ my:
           lesson_groups:
             lessonGroup-3:
               display_name: အရင်းအမြစ်များ
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: စမ်းသပ်မှု။

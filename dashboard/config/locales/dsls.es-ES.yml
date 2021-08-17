@@ -10802,8 +10802,7 @@ es-ES:
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
-            clic en "Ejecutar"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La granjera recogerá dos calabazas.

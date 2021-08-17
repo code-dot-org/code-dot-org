@@ -2107,3 +2107,19 @@ eu-ES:
         - {}
         questions:
         - {}
+      HappyMaps-Unplugged_2021:
+        markdown: |+
+          # Mapa zoriontsuak
+
+          Sortu algoritmo bat karaktere bat labirinto batean zehar mugitzeko.
+
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Nire lineako auzokidea
+
+          ## Nola joaten zara segurtasunez lekuetara linean?
+      csf_digital_trails_2021:
+        markdown: |
+          # Jarraitu ibilbide digitala
+
+          ## Zer informazio dago zure aztarna digitalean?

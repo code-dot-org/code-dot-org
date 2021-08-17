@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 // In order for that to work, we will need to refactor <Button/> to allow a button's icon and
 // text to be vertically stacked.
 function JavalabButton({
+  id,
   icon,
   text,
   className,
@@ -24,6 +25,7 @@ function JavalabButton({
 
   return (
     <button
+      id={id}
       type="button"
       className={className}
       style={{
@@ -33,6 +35,7 @@ function JavalabButton({
         ...(isDisabled && styles.disabled)
       }}
       onClick={onClick}
+      disabled={isDisabled}
     >
       {icon}
       {text && <div style={textStyle}>{text}</div>}
@@ -49,7 +52,8 @@ JavalabButton.propTypes = {
   style: PropTypes.object,
   onClick: PropTypes.func.isRequired,
   isHorizontal: PropTypes.bool,
-  isDisabled: PropTypes.bool
+  isDisabled: PropTypes.bool,
+  id: PropTypes.string
 };
 
 JavalabButton.defaultProps = {

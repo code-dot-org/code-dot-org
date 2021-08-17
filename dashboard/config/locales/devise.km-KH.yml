@@ -17,8 +17,6 @@ km:
     mailer:
       confirmation_instructions:
         subject: សេចក្ដី​ណែនាំ​អំពី​ការ​បញ្ជាក់ Code.org
-      reset_password_instructions:
-        subject: សេចក្ដី​ណែនាំ​អំពី​ការ​កំណត់​ឡើង​វិញ​នូវ​ពាក្យ​សម្ងាត់ Code.org
       unlock_instructions:
         subject: សេចក្ដីណែនាំ​អំពី​ការ​ដោះសោ
     sessions:
