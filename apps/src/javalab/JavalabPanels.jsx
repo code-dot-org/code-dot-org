@@ -63,6 +63,14 @@ class JavalabPanels extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      prevProps.isInstructionsCollapsed !== this.props.isInstructionsCollapsed
+    ) {
+      this.updateLayoutThrottled(this.props.leftWidth);
+    }
+  }
+
   handleWidthResize = desiredWidth => {
     const leftWidthMin = 200;
     const leftWidthMax = 600;
@@ -158,7 +166,7 @@ class JavalabPanels extends React.Component {
     // Determine the available height.
     let availableHeight =
       window.innerHeight -
-      this.props.instructionsHeight -
+      this.getInstructionsHeight() -
       miscExistingElementsHeight;
     if (this.props.viewMode === CsaViewMode.NEIGHBORHOOD) {
       availableHeight -= sliderHeight;
