@@ -15132,10 +15132,10 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-survey-react@1.8.33:
-  version "1.8.33"
-  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.8.33.tgz#64bbba4be1dffce040a6d2fe572c21dbb3a33af3"
-  integrity sha512-teOIhg1nzC7Rl5ne53qvE2Ue1UbQzBGoqyr3YYJz8/lA+cZ5aKfl+MQoMCf5TthLk3e2L8XaiNeH6XIobRSgYw==
+survey-react@1.7.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.7.4.tgz#41194f0c4c4a96a88676a19f812ff362aa62f243"
+  integrity sha512-s6MsZvHUbp9YYoMsmpxcGEL3hz0iWLUQQ3aR+C1V6EBQrHwnhUN0nl7llpQsTc5pn0l4r0kwlGpKMFArVVInIA==
 
 svg-url-loader@^2.3.2:
   version "2.3.2"
