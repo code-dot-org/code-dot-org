@@ -935,7 +935,6 @@ describe('entry tests', () => {
                   'radium',
                   'react',
                   'react-dom',
-                  'survey-react',
                   'wgxpath'
                 ].some(libName =>
                   new RegExp(`/apps/node_modules/${libName}/`).test(
