@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 16:15:59 UTC",
+    "serialized_at": "2021-08-18 18:36:12 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "allthethings"
@@ -5705,7 +5705,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 3",
+        "level.key": "4-5 Maze 6",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
@@ -5717,7 +5717,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 6",
+        "level.key": "4-5 Maze 3",
         "script_level.level_keys": [
           "4-5 Maze 3",
           "4-5 Maze 6"
