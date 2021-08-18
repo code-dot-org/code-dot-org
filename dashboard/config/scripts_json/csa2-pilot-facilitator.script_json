@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 16:26:43 UTC",
+    "serialized_at": "2021-08-18 15:03:45 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa2-pilot-facilitator"
@@ -5760,6 +5760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 2 - Facilitator"
+        ],
         "progression": "CSA Pilot Survey Unit 2"
       },
       "bonus": false,
@@ -6766,7 +6769,7 @@
     },
     {
       "name": "Accepting User Input",
-      "url": "https://drive.google.com/file/d/1Br1FmQ4g7mlX5U7lRounjuMczwXoXHuf/view?usp=sharing",
+      "url": "https://youtu.be/7Cs7uEasfmg",
       "key": "accepting_user_input",
       "properties": {
         "type": "Video",
@@ -6811,7 +6814,7 @@
     },
     {
       "name": "Arithmetic Operators",
-      "url": "https://drive.google.com/file/d/1d0opG89VXlYLNaSx47qLJNogC5n6mOQZ/view?usp=sharing",
+      "url": "https://youtu.be/ILSs9qkB9Es",
       "key": "arithmetic_operators",
       "properties": {
         "type": "Video",
@@ -6883,7 +6886,7 @@
     },
     {
       "name": "Constructors",
-      "url": "https://drive.google.com/file/d/1hFJo6GDKW1AitQlF1aCEqaLr0VeemuD9/view?usp=sharing",
+      "url": "https://youtu.be/kgcWKdI4s_c",
       "key": "constructors",
       "properties": {
         "type": "Video",
@@ -6907,7 +6910,7 @@
     },
     {
       "name": "Creating Variables",
-      "url": "https://drive.google.com/file/d/1grm0gWBhw0DAw6G4eUxZ6VWdlY7UoJC-/view?usp=sharing",
+      "url": "https://youtu.be/X5PwhMRPx3A",
       "key": "creating_variables",
       "properties": {
         "type": "Video",
@@ -6955,7 +6958,7 @@
     },
     {
       "name": "Evaluating Expressions",
-      "url": "https://drive.google.com/file/d/1WpOX29P5FWYT4Z5VsPZQRwgj73hVVih6/view?usp=sharing",
+      "url": "https://youtu.be/jQOXijSTMK4",
       "key": "evaluating_expressions",
       "properties": {
         "type": "Video",
@@ -7027,7 +7030,7 @@
     },
     {
       "name": "Instance Variables and Attributes",
-      "url": "https://drive.google.com/file/d/1hwFuwfki5mZbfWViqlDc5_HitC6qefrM/view?usp=sharing",
+      "url": "https://youtu.be/uz4ItwOp5EE",
       "key": "instance_variables_and_attributes",
       "properties": {
         "type": "Video",
@@ -7039,7 +7042,7 @@
     },
     {
       "name": "Methods That Return",
-      "url": "https://drive.google.com/file/d/1u68PpKgybNz45Oh0HwtH8A3T19yur8Wm/view?usp=sharing",
+      "url": "https://youtu.be/JIO3Uy0emFM",
       "key": "methods_that_return",
       "properties": {
         "type": "Video",
@@ -7051,7 +7054,7 @@
     },
     {
       "name": "Mutator Methods",
-      "url": "https://drive.google.com/file/d/1FaxnNgnL0zEbWNgDNUL-5RWFG15tQPQp/view?usp=sharing",
+      "url": "https://youtu.be/TCKJPP2tTEE",
       "key": "mutator_methods",
       "properties": {
         "type": "Video",
@@ -7099,7 +7102,7 @@
     },
     {
       "name": "Overloaded Constructors",
-      "url": "https://drive.google.com/file/d/11OlCi3rX9StSEXRO8Yz-FYNDxYSgtvvG/view?usp=sharing",
+      "url": "https://youtu.be/QRagJB4R-Qw",
       "key": "overloaded_constructors",
       "properties": {
         "type": "Video",
@@ -7135,7 +7138,7 @@
     },
     {
       "name": "The Importance of Code Refactoring",
-      "url": "https://drive.google.com/file/d/16zBidkT4rlee-9ti4j_UYZXeeOVkK37w/view?usp=sharing",
+      "url": "https://youtu.be/SCqd19WjSYs",
       "key": "the_importance_of_code_refactoring",
       "properties": {
         "type": "Video",
@@ -7147,7 +7150,7 @@
     },
     {
       "name": "The toString Method",
-      "url": "https://drive.google.com/file/d/1OelF88p0Tr_wQazfwVL_fUYoAaWI0EVW/view?usp=sharing",
+      "url": "https://youtu.be/gJKC_SkyODc",
       "key": "the_tostring_method",
       "properties": {
         "type": "Video",
