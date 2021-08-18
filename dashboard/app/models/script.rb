@@ -1929,8 +1929,8 @@ class Script < ApplicationRecord
     end
 
     script_levels.each do |script_level|
-      next unless script_level.oldest_active_level.can_have_feedback?
       current_level = script_level.oldest_active_level
+      next unless current_level.can_have_feedback?
 
       section.students.each do |student|
         next unless feedback_hash[student.id]
