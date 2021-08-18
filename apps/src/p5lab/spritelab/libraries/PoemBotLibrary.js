@@ -17,7 +17,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       color: 'black',
       font: 'Arial',
       isVisible: true,
-      effects: [{name: 'default', startFrame: 0, endFrame: 500}]
+      effects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
@@ -142,6 +142,13 @@ export default class PoemBotLibrary extends CoreLibrary {
         }
       },
 
+      setTextEffect(effect) {
+        this.poemState.effects.push({
+          name: effect,
+          duration: 100 // todo: should this be configurable on the block?
+        });
+      },
+
       whenLineShows(lineNum, callback) {
         if (!this.lineEvents[lineNum]) {
           this.lineEvents[lineNum] = [];
@@ -158,8 +165,9 @@ export default class PoemBotLibrary extends CoreLibrary {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  getScaledFontSize(text, desiredSize) {
+  getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
+    this.p5.textFont(font);
     this.p5.textSize(desiredSize);
     const fullWidth = this.p5.textWidth(text);
     const scaledSize = Math.min(
@@ -172,22 +180,52 @@ export default class PoemBotLibrary extends CoreLibrary {
   }
 
   applyEffect(renderInfo, effect, frameCount) {
-    if (frameCount < effect.startFrame || frameCount > effect.endFrame) {
-      return renderInfo;
-    }
-    const duration = effect.endFrame - effect.startFrame;
-    const progress = (frameCount - effect.startFrame) / duration;
-    switch (effect.name) {
-      case 'default': {
-        const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
-        return {
-          ...renderInfo,
-          lines: renderInfo.lines.slice(0, numLinesToShow)
-        };
+    const newLines = [];
+    renderInfo.lines.forEach(line => {
+      const newLine = {...line};
+      if (
+        frameCount >= newLine.start &&
+        frameCount < newLine.start + effect.duration
+      ) {
+        const progress = (frameCount - newLine.start) / effect.duration;
+        switch (effect.name) {
+          case 'fade':
+            newLine.alpha = progress * 255;
+            break;
+          case 'typewriter': {
+            const numCharsToShow = Math.floor(progress * newLine.text.length);
+            newLine.text = newLine.text.substring(0, numCharsToShow);
+            break;
+          }
+          default:
+            break;
+        }
       }
-      default:
-        return renderInfo;
+      newLines.push(newLine);
+    });
+    return {
+      ...renderInfo,
+      lines: newLines
+    };
+  }
+
+  applyGlobalLineAnimation(renderInfo, frameCount) {
+    const duration = 500;
+    const progress = frameCount / duration;
+    const framesPerLine = duration / renderInfo.lines.length;
+    const newLines = [];
+    for (let i = 0; i < renderInfo.lines.length; i++) {
+      const newLine = {...renderInfo.lines[i]};
+      newLine.start = (i + 1) * framesPerLine;
+      newLine.end = (i + 1) * framesPerLine;
+      newLines.push(newLine);
     }
+
+    const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
+    return {
+      ...renderInfo,
+      lines: newLines.slice(0, numLinesToShow)
+    };
   }
 
   getRenderInfo(poemState, frameCount) {
@@ -207,7 +245,11 @@ export default class PoemBotLibrary extends CoreLibrary {
         text: poemState.title,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.title, FONT_SIZE * 2)
+        size: this.getScaledFontSize(
+          poemState.title,
+          poemState.font,
+          FONT_SIZE * 2
+        )
       };
       yCursor += LINE_HEIGHT;
     }
@@ -217,7 +259,7 @@ export default class PoemBotLibrary extends CoreLibrary {
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.author, 16)
+        size: this.getScaledFontSize(poemState.author, poemState.font, 16)
       };
       yCursor += LINE_HEIGHT;
     }
@@ -227,10 +269,11 @@ export default class PoemBotLibrary extends CoreLibrary {
         text: line,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(line, FONT_SIZE)
+        size: this.getScaledFontSize(line, poemState.font, FONT_SIZE)
       });
       yCursor += lineHeight;
     });
+    renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
     poemState.effects.forEach(effect => {
       renderInfo = this.applyEffect(renderInfo, effect, frameCount);
     });
@@ -257,8 +300,25 @@ export default class PoemBotLibrary extends CoreLibrary {
       );
     }
     renderInfo.lines.forEach(item => {
+      let color = this.getP5Color(renderInfo.color || 'black', item.alpha);
+      this.p5.fill(color);
       this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
+  }
+
+  // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
+  getP5Color(hex, alpha) {
+    let color = this.p5.color(hex);
+    if (alpha !== undefined) {
+      color._array[3] = alpha / color.maxes[color.mode][3];
+    }
+    const array = color._array;
+    // (loop backwards for performance)
+    const levels = (color.levels = new Array(array.length));
+    for (let i = array.length - 1; i >= 0; --i) {
+      levels[i] = Math.round(array[i] * 255);
+    }
+    return color;
   }
 }

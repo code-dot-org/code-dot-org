@@ -1,0 +1,43 @@
+{
+  "category": "",
+  "config": {
+    "func": "setTextEffect",
+    "blockText": "set text effect {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "fade",
+            "\"fade\""
+          ],
+          [
+            "typewriter",
+            "\"typewriter\""
+          ],
+          [
+            "fly from left",
+            "\"fly_left\""
+          ],
+          [
+            "fly from right",
+            "\"fly_right\""
+          ],
+          [
+            "fly from top",
+            "\"fly_top\""
+          ],
+          [
+            "fly from bottom",
+            "\"fly_bottom\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}
