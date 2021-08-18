@@ -172,7 +172,7 @@ class JavalabView extends React.Component {
                 resizable={false}
               />
             )}
-            bottomLeftPanel={() => this.renderVisualization()}
+            bottomLeftPanel={this.renderVisualization}
             topRightPanel={height => (
               <JavalabEditor
                 onCommitCode={onCommitCode}
