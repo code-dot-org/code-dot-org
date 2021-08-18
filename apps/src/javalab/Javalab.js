@@ -34,6 +34,8 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import Playground from './Playground';
+import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -119,9 +121,15 @@ Javalab.prototype.init = function(config) {
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
     case CsaViewMode.THEATER:
-    case CsaViewMode.PLAYGROUND:
       this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
       this.visualization = <TheaterVisualizationColumn />;
+      break;
+    case CsaViewMode.PLAYGROUND:
+      this.miniApp = new Playground(
+        this.onOutputMessage,
+        this.onNewlineMessage
+      );
+      this.visualization = <PlaygroundVisualizationColumn />;
       break;
   }
 
