@@ -7,29 +7,15 @@ import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
-let __karmaWebpackManifest__ = [];
+var __karmaWebpackManifest__ = [];
 
 function inManifest(path) {
   return __karmaWebpackManifest__.indexOf(path) >= 0;
 }
 
-function filterFoormTest(path) {
-  return (
-    [
-      './code-studio/pd/foorm/',
-      './code-studio/pd/form_components/',
-      './code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foormTest.js',
-      './code-studio/pd/workshop_dashboard/components/workshop_managementTest.js',
-      './code-studio/pd/workshop_dashboard/reports/foorm/resultsTest.js'
-    ].findIndex(p => path.startsWith(p)) === -1
-  );
-}
+var testsContext = require.context('./unit', true, /\.jsx?$/);
 
-let testsContext = require.context('./unit', true, /\.jsx?$/);
-
-let runnable = testsContext
-  .keys()
-  .filter(path => inManifest(path) || filterFoormTest(path));
+var runnable = testsContext.keys().filter(inManifest);
 
 // Run all tests if we didn't find any changes
 if (!runnable.length) {
