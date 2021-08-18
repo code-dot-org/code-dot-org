@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
