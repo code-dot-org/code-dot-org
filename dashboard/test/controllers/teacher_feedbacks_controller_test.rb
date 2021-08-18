@@ -46,20 +46,22 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     assert_equal 5, all_feedback_data.count
   end
 
-  test 'index returns latest feedback per level marked as latest' do
+  test 'index returns only latest feedback marked awaiting review if student has done work since feedback was given' do
     student = create :student
     script_level = create :script_level
     3.times do
-      create :teacher_feedback, student: student, script: script_level.script, level: script_level.levels.first
+      create :teacher_feedback, student: student, script: script_level.script, level: script_level.levels.first, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
     end
+
+    create :user_level, user: student, level: script_level.levels.first, script: script_level.script, updated_at: 1.week.from_now
 
     sign_in student
     get :index
     assert_response :success
 
     all_feedback_data = get_all_response_feedback_data
-    latest_for_level_vals = all_feedback_data.map {|feedback| feedback['is_latest_for_level']}
-    assert_equal latest_for_level_vals, [true, false, false]
+    awaiting_review_for_level_vals = all_feedback_data.map {|feedback| feedback['is_awaiting_teacher_review']}
+    assert_equal awaiting_review_for_level_vals, [true, false, false]
   end
 
   private

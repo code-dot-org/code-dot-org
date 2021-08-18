@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-02 22:19:13 UTC",
+    "serialized_at": "2021-08-10 17:57:44 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2021"
@@ -9834,7 +9834,7 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/",
+      "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
       "key": "social-sleuth",
       "properties": {
         "type": "Activity Guide",

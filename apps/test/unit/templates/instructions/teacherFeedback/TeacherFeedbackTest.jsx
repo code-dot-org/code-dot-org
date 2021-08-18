@@ -17,10 +17,15 @@ const DEFAULT_PROPS = {
   isEditable: true,
   rubric: null,
   visible: true,
-  viewAs: 'Teacher',
+  serverScriptId: 456,
   serverLevelId: 123,
   teacher: 5,
-  latestFeedback: null
+  latestFeedback: null,
+  viewAs: 'Teacher',
+  verifiedTeacher: true,
+  selectedSectionId: '789',
+  canHaveFeedbackReviewState: true,
+  updateUserProgress: () => {}
 };
 
 const RUBRIC = {
@@ -53,7 +58,7 @@ describe('TeacherFeedback', () => {
 
   describe('viewed as Teacher - looking at student work', () => {
     describe('without previous feedback', () => {
-      it('does not display TeacherFeedbackStatus', () => {
+      it('does not display FeedbackStatus', () => {
         const wrapper = setUp({rubric: null, latestFeedback: null});
         expect(wrapper.find(FeedbackStatus)).to.have.length(0);
       });
@@ -86,7 +91,7 @@ describe('TeacherFeedback', () => {
         expect(confirmButton.props().text).to.equal('Save and share');
       });
 
-      it('renders TeacherFeedbackKeepWorking with expected props if part of the experiment', () => {
+      it('renders EditableReviewState with expected props if part of the experiment', () => {
         sinon.stub(experiments, 'isEnabled').returns(true);
 
         const wrapper = setUp();
@@ -99,7 +104,7 @@ describe('TeacherFeedback', () => {
     });
 
     describe('with previous feedback given', () => {
-      it('displays TeacherFeedbackStatus if latestFeedback exists', () => {
+      it('displays FeedbackStatus if latestFeedback exists', () => {
         const latestFeedback = {
           student_seen_feedback: new Date()
         };
@@ -136,7 +141,25 @@ describe('TeacherFeedback', () => {
         expect(confirmButton.props().text).to.equal('Update');
       });
 
-      it('renders TeacherFeedbackKeepWorking with expected props (completed) if part of the experiment', () => {
+      it('does not render EditableReviewState if part of the experiment and has not canHaveFeedbackReviewState', () => {
+        sinon.stub(experiments, 'isEnabled').returns(true);
+
+        const latestFeedback = {
+          ...FEEDBACK,
+          review_state: ReviewStates.completed
+        };
+        const wrapper = setUp({
+          latestFeedback,
+          canHaveFeedbackReviewState: false
+        });
+
+        const keepWorkingComponent = wrapper.find(EditableReviewState);
+        expect(keepWorkingComponent).to.have.length(0);
+
+        experiments.isEnabled.restore();
+      });
+
+      it('renders EditableReviewState with expected props (completed) if part of the experiment', () => {
         sinon.stub(experiments, 'isEnabled').returns(true);
 
         const latestFeedback = {
@@ -154,13 +177,12 @@ describe('TeacherFeedback', () => {
         experiments.isEnabled.restore();
       });
 
-      it('renders TeacherFeedbackKeepWorking with expected props (awaitingReview) if part of the experiment', () => {
+      it('renders EditableReviewState with expected props (awaitingReview) if part of the experiment', () => {
         sinon.stub(experiments, 'isEnabled').returns(true);
 
         const latestFeedback = {
           ...FEEDBACK,
-          review_state: ReviewStates.keepWorking,
-          student_updated_since_feedback: true
+          is_awaiting_teacher_review: true
         };
         const wrapper = setUp({latestFeedback});
 
@@ -201,7 +223,7 @@ describe('TeacherFeedback', () => {
       isEditable: false
     };
     describe('without previous feedback given', () => {
-      it('does not display TeacherFeedbackStatus', () => {
+      it('does not display FeedbackStatus', () => {
         const wrapper = setUp({
           rubric: RUBRIC,
           ...STUDENT_PROPS
@@ -237,7 +259,7 @@ describe('TeacherFeedback', () => {
         expect(wrapper.find('Button')).to.have.lengthOf(0);
       });
 
-      it('does not display FeedbackStudentReviewState', () => {
+      it('does not display ReadOnlyReviewState', () => {
         const wrapper = setUp({
           rubric: RUBRIC,
           ...STUDENT_PROPS
@@ -247,7 +269,7 @@ describe('TeacherFeedback', () => {
     });
 
     describe('with previous feedback given', () => {
-      it('displays TeacherFeedbackStatus', () => {
+      it('displays FeedbackStatus', () => {
         const latestFeedback = {
           student_seen_feedback: new Date(),
           comment: 'Great!'
@@ -323,7 +345,7 @@ describe('TeacherFeedback', () => {
         expect(wrapper.find('Button')).to.have.lengthOf(0);
       });
 
-      it('renders FeedbackStudentReviewState with expected props - keepWorking', () => {
+      it('renders ReadOnlyReviewState with expected props - keepWorking', () => {
         const latestFeedback = {
           ...FEEDBACK,
           review_state: ReviewStates.keepWorking
@@ -336,11 +358,10 @@ describe('TeacherFeedback', () => {
         );
       });
 
-      it('renders FeedbackStudentReviewState with expected props - awaiting Review', () => {
+      it('renders ReadOnlyReviewState with expected props - awaiting Review', () => {
         const latestFeedback = {
           ...FEEDBACK,
-          review_state: ReviewStates.keepWorking,
-          student_updated_since_feedback: true
+          is_awaiting_teacher_review: true
         };
         const wrapper = setUp({latestFeedback, ...STUDENT_PROPS});
         const reviewState = wrapper.find(ReadOnlyReviewState);

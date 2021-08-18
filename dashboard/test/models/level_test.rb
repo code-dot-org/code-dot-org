@@ -439,14 +439,14 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'find_by_key' do
-    level = Level.find_by_key 'blockly:Unplug1:u_1_1'
-    assert_equal 'u_1_1', level.level_num
+    level = create :level, level_num: 'test_unplugged', game: Game.unplugged
+    assert_equal level, Level.find_by_key('blockly:Unplugged:test_unplugged')
 
-    level = Level.find_by_key 'blockly:Maze:2_7'
-    assert_equal '2_7', level.level_num
+    level = create :level, level_num: 'test_maze', game: Game.find_by_name('maze')
+    assert_equal level, Level.find_by_key('blockly:Maze:test_maze')
 
-    level = Level.find_by_key 'PlantASeed'
-    assert_equal 'PlantASeed', level.name
+    level = create :level, name: 'TestFindByName'
+    assert_equal level, Level.find_by_key('TestFindByName')
   end
 
   test 'cannot create two blockly levels with same key' do
@@ -568,17 +568,12 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    level1 = Script.twenty_hour_unit.script_levels[0].level
-    cache_level1 = Level.cache_find(level1.id)
-    assert_equal(level1, cache_level1)
-
-    level2 = Script.course1_unit.script_levels.last.level
-    cache_level2 = Level.cache_find(level2.id)
-    assert_equal(level2, cache_level2)
+    cache_custom_level = Level.cache_find(@custom_level.id)
+    assert_equal(@custom_level, cache_custom_level)
 
     # Make sure that we can also locate a newly created level.
-    level3 = create(:level)
-    assert_equal(level3, Level.cache_find(level3.id))
+    new_level = create(:level)
+    assert_equal(new_level, Level.cache_find(new_level.id))
   end
 
   test 'where we want to calculate ideal level source' do
@@ -1182,5 +1177,12 @@ class LevelTest < ActiveSupport::TestCase
   test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
     summary = @custom_level.summarize_for_lesson_show(false)
     refute summary.key?('teacherMarkdown')
+  end
+
+  test "can_have_feedback_review_state? returns false if the level has contained levels" do
+    contained_level = create :level
+    level_with_contained = create :level, contained_level_names: [contained_level.name]
+
+    assert_not level_with_contained.can_have_feedback_review_state?
   end
 end

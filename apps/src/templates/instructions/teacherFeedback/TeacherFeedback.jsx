@@ -19,6 +19,8 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -28,7 +30,6 @@ const ErrorType = {
 
 export class TeacherFeedback extends Component {
   static propTypes = {
-    user: PropTypes.number,
     isEditable: PropTypes.bool.isRequired,
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
@@ -40,7 +41,9 @@ export class TeacherFeedback extends Component {
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    updateUserProgress: PropTypes.func.isRequired,
+    canHaveFeedbackReviewState: PropTypes.bool
   };
 
   constructor(props) {
@@ -145,6 +148,10 @@ export class TeacherFeedback extends Component {
       .done(data => {
         if (this.state.reviewStateUpdated) {
           this.recordReviewStateUpdated();
+          // The review state effects the state of the progress bubbles,
+          // we re-fetch user progress after the review state has changed
+          // so that the progress bubbles reflect the latest feedback
+          this.props.updateUserProgress(this.studentId);
         }
         this.setState({
           latestFeedback: data,
@@ -189,10 +196,7 @@ export class TeacherFeedback extends Component {
 
   getLatestReviewState() {
     const {latestFeedback} = this.state;
-    const isAwaitingTeacherReview =
-      latestFeedback?.review_state === ReviewStates.keepWorking &&
-      latestFeedback?.student_updated_since_feedback;
-    const reviewState = isAwaitingTeacherReview
+    const reviewState = latestFeedback?.is_awaiting_teacher_review
       ? ReviewStates.awaitingReview
       : latestFeedback?.review_state;
     return reviewState || null;
@@ -201,10 +205,13 @@ export class TeacherFeedback extends Component {
   renderCommentAreaHeaderForTeacher() {
     const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
 
+    const hasEditableReviewState =
+      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
+
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {keepWorkingEnabled && (
+        {hasEditableReviewState && (
           <EditableReviewState
             latestReviewState={this.getLatestReviewState()}
             onReviewStateChange={this.onReviewStateChange}
@@ -327,7 +334,8 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   header: {
     display: 'flex',
@@ -348,9 +356,18 @@ const styles = {
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
-  selectedSectionId:
-    state.teacherSections && state.teacherSections.selectedSectionId
-}))(TeacherFeedback);
+export default connect(
+  state => ({
+    viewAs: state.viewAs,
+    verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+    selectedSectionId:
+      state.teacherSections && state.teacherSections.selectedSectionId,
+    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+  }),
+  dispatch => ({
+    updateUserProgress(userId) {
+      dispatch(queryUserProgress(userId));
+      dispatch(loadLevelsWithProgress());
+    }
+  })
+)(TeacherFeedback);

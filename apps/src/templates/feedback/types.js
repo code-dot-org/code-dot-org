@@ -15,9 +15,8 @@ export const feedbackShape = PropTypes.shape({
   ]).isRequired,
   comment: PropTypes.string,
   performance: PropTypes.string,
-  is_latest_for_level: PropTypes.bool,
-  review_state: PropTypes.string,
-  student_updated_since_feedback: PropTypes.bool
+  is_awaiting_teacher_review: PropTypes.bool,
+  review_state: PropTypes.string
 });
 
 export const ReviewStates = makeEnum(

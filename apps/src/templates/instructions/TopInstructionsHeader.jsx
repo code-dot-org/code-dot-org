@@ -10,71 +10,6 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 
-const styles = {
-  paneHeaderOverride: {
-    color: color.default_text
-  },
-  audioRTL: {
-    wrapper: {
-      float: 'left'
-    }
-  },
-  audio: {
-    button: {
-      height: 24,
-      marginTop: '3px',
-      marginBottom: '3px'
-    },
-    buttonImg: {
-      lineHeight: '24px',
-      fontSize: 15,
-      paddingLeft: 12
-    }
-  },
-  audioLTR: {
-    wrapper: {
-      float: 'right'
-    }
-  },
-  helpTabs: {
-    paddingTop: 6
-  },
-  helpTabsLtr: {
-    float: 'left',
-    paddingLeft: 30
-  },
-  helpTabsRtl: {
-    float: 'right',
-    paddingRight: 30
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white
-      }
-    },
-    showHideButtonLtr: {
-      left: 8
-    },
-    showHideButtonRtl: {
-      right: 8
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text
-      }
-    }
-  }
-};
-
 function TopInstructionsHeader(props) {
   const {
     teacherOnly,
@@ -232,6 +167,72 @@ function TopInstructionsHeader(props) {
     </PaneHeader>
   );
 }
+
+const styles = {
+  paneHeaderOverride: {
+    color: color.default_text
+  },
+  audioRTL: {
+    wrapper: {
+      float: 'left'
+    }
+  },
+  audio: {
+    button: {
+      height: 24,
+      marginTop: '3px',
+      marginBottom: '3px'
+    },
+    buttonImg: {
+      lineHeight: '24px',
+      fontSize: 15,
+      paddingLeft: 12
+    }
+  },
+  audioLTR: {
+    wrapper: {
+      float: 'right'
+    }
+  },
+  helpTabs: {
+    paddingTop: 6
+  },
+  helpTabsLtr: {
+    float: 'left',
+    paddingLeft: 30
+  },
+  helpTabsRtl: {
+    float: 'right',
+    paddingRight: 30
+  },
+  collapserIcon: {
+    showHideButton: {
+      position: 'absolute',
+      top: 0,
+      margin: 0,
+      cursor: 'pointer',
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
+      fontSize: 18,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.white
+      }
+    },
+    showHideButtonLtr: {
+      left: 8
+    },
+    showHideButtonRtl: {
+      right: 8
+    },
+    teacherOnlyColor: {
+      color: color.lightest_cyan,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.default_text
+      }
+    }
+  }
+};
 
 TopInstructionsHeader.propTypes = {
   teacherOnly: PropTypes.bool,

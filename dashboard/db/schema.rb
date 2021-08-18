@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_03_222704) do
+ActiveRecord::Schema.define(version: 2021_08_16_222729) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -278,6 +278,8 @@ ActiveRecord::Schema.define(version: 2021_08_03_222704) do
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "project_version"
+    t.integer "script_id"
+    t.integer "level_id"
     t.integer "commenter_id", null: false
     t.text "comment", limit: 16777215
     t.integer "project_owner_id"
@@ -1343,6 +1345,16 @@ ActiveRecord::Schema.define(version: 2021_08_03_222704) do
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
+  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.string "object_version_id", null: false
+    t.text "comment", limit: 16777215
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1613,6 +1625,7 @@ ActiveRecord::Schema.define(version: 2021_08_03_222704) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
+    t.boolean "code_review_enabled"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1927,8 +1940,9 @@ ActiveRecord::Schema.define(version: 2021_08_03_222704) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "properties"
+    t.datetime "deleted_at"
     t.index ["script_id"], name: "index_user_scripts_on_script_id"
-    t.index ["user_id", "script_id"], name: "index_user_scripts_on_user_id_and_script_id", unique: true
+    t.index ["user_id", "script_id", "deleted_at"], name: "index_user_scripts_on_user_id_and_script_id_and_deleted_at", unique: true
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

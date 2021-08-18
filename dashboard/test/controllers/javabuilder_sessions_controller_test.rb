@@ -3,6 +3,7 @@ require 'test_helper'
 class JavabuilderSessionsControllerTest < ActionController::TestCase
   URL = "url"
   CSA_PILOT = "csa-pilot"
+  CSA_PILOT_FACILITATORS = "csa-pilot-facilitators"
   CSD_PILOT = "csd-piloters"
 
   setup do
@@ -63,6 +64,17 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'student of csa pilot participant can get access token' do
     teacher = create(:teacher)
     create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT)
+    section = create(:section, user: teacher, login_type: 'word')
+    student_1 = create(:follower, section: section).student_user
+    sign_in(student_1)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL}
+    assert_response :success
+    section.destroy
+  end
+
+  test 'student of csa pilot facilitators participant can get access token' do
+    teacher = create(:teacher)
+    create(:single_user_experiment, min_user_id: teacher.id, name: CSA_PILOT_FACILITATORS)
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)

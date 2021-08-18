@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching and learning CS Discoveries
 
-#### In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
+#### Welcome to Module 4! In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
 
 
-<img src="https://images.code.org/7d40419ff9cc7cc5a2fdf92e461e0434-image-1628005147778.jpg" style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/1573cbac6d34320400fe59ec45012fc2-image-1628884672983.jpg" alt="Three students programming a circuit playground." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
 
 ## You will:
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
 
 
-### **Suggested time:** 60 minutes
+### **Suggested time:** 50 minutes
 
 <div style="clear:both"/>
 

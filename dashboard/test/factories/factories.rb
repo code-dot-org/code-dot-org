@@ -537,7 +537,10 @@ FactoryGirl.define do
     end
 
     trait :script do
-      create(:script_level)
+      after :create do |level|
+        script_level = create(:script_level, levels: [level])
+        create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
+      end
     end
 
     factory :sublevel do
@@ -563,6 +566,7 @@ FactoryGirl.define do
   end
 
   factory :artist, parent: :level, class: Artist do
+    game {Game.custom_artist}
   end
 
   factory :maze, parent: :level, class: :Maze do
@@ -700,6 +704,20 @@ FactoryGirl.define do
   factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
+
+    trait :with_levels do
+      transient do
+        levels_count 0
+      end
+
+      after(:create) do |script, evaluator|
+        evaluator.levels_count.times do
+          level = create(:level)
+          script_level = create(:script_level, levels: [level])
+          create(:lesson_group, lessons: [script_level.lesson], script: script)
+        end
+      end
+    end
 
     factory :csf_script do
       after(:create) do |csf_script|
