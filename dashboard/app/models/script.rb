@@ -1912,7 +1912,8 @@ class Script < ApplicationRecord
 
     review_state_labels = {
       keepWorking: "Needs more work",
-      completed: "Reviewed, completed"
+      completed: "Reviewed, completed",
+      waitingForReview: "Waiting for review"
     }
 
     feedback = {}
@@ -1929,11 +1930,14 @@ class Script < ApplicationRecord
 
     script_levels.each do |script_level|
       next unless script_level.oldest_active_level.can_have_feedback?
+      current_level = script_level.oldest_active_level
+
       section.students.each do |student|
-        current_level = script_level.oldest_active_level
         next unless feedback_hash[student.id]
         temp_feedback = feedback_hash[student.id][current_level.id]
         next unless temp_feedback
+
+        review_state = temp_feedback.awaiting_teacher_review?(true) ? :waitingForReview : temp_feedback.review_state&.to_sym
         feedback[temp_feedback.id] = {
           studentName: student.name,
           lessonNum: script_level.lesson.relative_position.to_s,
@@ -1944,8 +1948,8 @@ class Script < ApplicationRecord
           performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
           comment: temp_feedback.comment,
           timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
-          reviewStateLabel: review_state_labels[temp_feedback.review_state&.to_sym] || "Never reviewed",
-          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r")
+          reviewStateLabel: review_state_labels[review_state] || "Never reviewed",
+          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r"),
         }
       end
     end
