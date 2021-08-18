@@ -11,7 +11,7 @@ import {
   HelpBlock
 } from 'react-bootstrap';
 
-describe('ButtonList', () => {
+describe.skip('ButtonList', () => {
   describe('With type: radio', () => {
     let radioList;
     let onChangeCallback;

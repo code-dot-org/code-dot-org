@@ -1,7 +1,7 @@
 import utils from '@cdo/apps/code-studio/pd/form_components/utils';
 import {expect} from '../../../../util/reconfiguredChai';
 
-describe('FormComponents Utils', () => {
+describe.skip('FormComponents Utils', () => {
   it('normalizes SimpleAnswer to Answer', () => {
     const input = 'simple answer';
     const output = utils.normalizeAnswer(input);

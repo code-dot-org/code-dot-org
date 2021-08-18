@@ -22,7 +22,7 @@ import sinon from 'sinon';
 import _ from 'lodash';
 global.$ = require('jquery');
 
-describe('FoormEntityEditor in Library editing mode', () => {
+describe.skip('FoormEntityEditor in Library editing mode', () => {
   let defaultProps, store, server, wrapper;
   beforeEach(() => {
     stubRedux();
