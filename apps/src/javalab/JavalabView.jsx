@@ -28,8 +28,6 @@ import styleConstants from '../styleConstants';
 import _ from 'lodash';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
-const FOOTER_BUFFER = 10;
-
 // The top Y coordinate of the JavaLab panels.  Above them is just the common site
 // header and then a bit of empty space.
 const PANELS_TOP_COORDINATE = 60;
@@ -78,13 +76,11 @@ class JavalabView extends React.Component {
   };
 
   state = {
-    isTesting: false,
-    rightContainerHeight: 800
+    isTesting: false
   };
 
   componentDidMount() {
     this.props.onMount();
-    this.setRightContainerHeight();
     this.updateLayout(this.props.leftWidth);
     window.addEventListener('resize', () =>
       this.updateLayoutThrottled(this.props.leftWidth)
@@ -156,15 +152,6 @@ class JavalabView extends React.Component {
         &nbsp;
       </div>
     );
-  };
-
-  setRightContainerHeight = () => {
-    let rightContainerHeight = this.editorAndVisualization.getBoundingClientRect()
-      .top;
-    let topPos = window.innerHeight - rightContainerHeight - FOOTER_BUFFER;
-    this.setState({
-      rightContainerHeight: topPos
-    });
   };
 
   handleWidthResize = desiredWidth => {
@@ -344,7 +331,7 @@ class JavalabView extends React.Component {
       rightWidth,
       awaitingContainedResponse
     } = this.props;
-    const {isTesting, rightContainerHeight} = this.state;
+    const {isTesting} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -356,8 +343,7 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div
           style={{
-            ...styles.javalab,
-            ...{height: rightContainerHeight}
+            ...styles.javalab
           }}
         >
           <div
