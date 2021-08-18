@@ -195,6 +195,30 @@ export default class PoemBotLibrary extends CoreLibrary {
             newLine.text = newLine.text.substring(0, numCharsToShow);
             break;
           }
+          case 'flyLeft': {
+            const start = -PLAYSPACE_SIZE / 2;
+            const end = newLine.x;
+            newLine.x = start - progress * (start - end);
+            break;
+          }
+          case 'flyRight': {
+            const start = PLAYSPACE_SIZE * 1.5;
+            const end = newLine.x;
+            newLine.x = start - progress * (start - end);
+            break;
+          }
+          case 'flyTop': {
+            const start = -LINE_HEIGHT;
+            const end = newLine.y;
+            newLine.y = start - progress * (start - end);
+            break;
+          }
+          case 'flyBottom': {
+            const start = PLAYSPACE_SIZE + LINE_HEIGHT;
+            const end = newLine.y;
+            newLine.y = start - progress * (start - end);
+            break;
+          }
           default:
             break;
         }
