@@ -90,7 +90,15 @@
         <block type="PoemBot_textConcat"/>
         <block type="variables_set"/>
         <block type="variables_get"/>
+        <block type="PoemBot_setFont"/>
         <block type="PoemBot_setTitle"/>
+        <block type="PoemBot_setFontColor">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#99ff99</title>
+            </block>
+          </value>
+        </block>
         <block type="PoemBot_setAuthor"/>
         <block type="PoemBot_addLine"/>
         <block type="PoemBot_showPoem"/>
@@ -99,6 +107,13 @@
         <block type="gamelab_whenAllPromptsAnswered"/>
         <block type="PoemBot_setBackgroundEffect"/>
         <block type="PoemBot_setForegroundEffect"/>
+        <block type="PoemBot_whenLineShows">
+          <value name="N">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

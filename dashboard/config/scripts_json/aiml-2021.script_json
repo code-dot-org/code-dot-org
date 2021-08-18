@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-08-11 16:28:56 UTC",
+    "serialized_at": "2021-08-17 17:08:59 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "aiml-2021"
@@ -10961,6 +10961,17 @@
       }
     },
     {
+      "name": "AI and Machine Learning Implementation Options",
+      "url": "https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview",
+      "key": "ai_and_machine_learning_implementation_options",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options"
+      }
+    },
+    {
       "name": "Numerical Data in AI Lab",
       "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
       "key": "ai_lab_numerical_data",
@@ -10982,6 +10993,19 @@
       },
       "seeding_key": {
         "resource.key": "ai_lab_select_label"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
@@ -11961,6 +11985,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson1",
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson1",
         "resource.key": "classifying-fish"
       }
     },
@@ -12314,6 +12344,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "ai_and_machine_learning_implementation_options",
+        "script.name": "aiml-2021"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "all_code",

@@ -1,4 +1,5 @@
 import {commands as behaviorCommands} from './behaviorCommands';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -237,6 +238,19 @@ export const commands = {
       } else {
         sprite[prop] = val;
       }
+    });
+  },
+
+  spriteSay(spriteArg, speech) {
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => {
+      const bubbleId = this.addSpeechBubble(sprite, speech);
+      audioCommands.playSpeech({
+        text: speech,
+        gender: 'female',
+        language: 'English',
+        onComplete: () => this.removeSpeechBubble(bubbleId)
+      });
     });
   },
 

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons
 
-<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/ecd64a145fae016f6b8190371ee85207-image-1626317012906.jpg" alt="Image of a classroom full of students raising their hands." width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 #### Each chapter of CS Discoveries consists of individual lessons that share common characteristics. Knowing the types of lessons in the curriculum will help you understand the intent and purpose along with your role in teaching the lesson.  
 
@@ -25,7 +25,7 @@ Each lesson begins with a warm up, which serves as a highly approachable shared 
 
 <summary><strong>Activity</strong></summary>
 
-Students spend the majority of their time engaging in the lesson activity. Activities provide students with opportunities to explore new computing concepts. Exploration is essential for students to build the content knowledge they need to understand and participate in computing activities. Lesson activities are scaffolded to provide students with just-in-time information to solve their problems as they build their computing knowledge and skills.
+Students spend the majority of their time engaging in the lesson activity. Activities provide students with opportunities to explore new computing concepts. Exploration is essential for students to build the content knowledge they will need to understand and participate in computing activities. Lesson activities are scaffolded to provide students with just-in-time information to solve their problems as they build their computing knowledge and skills.
 
 </details>
 
