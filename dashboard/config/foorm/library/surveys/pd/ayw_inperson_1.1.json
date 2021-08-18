@@ -10,7 +10,7 @@
             {
               "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
-              "name": "better_prepared_unit3",
+              "name": "better_prepared_unit3_csd",
               "title": "I feel better prepared to teach Unit 3 after attending this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -19,7 +19,7 @@
             {
               "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
-              "name": "opportunities_discuss_peers",
+              "name": "opportunities_discuss_peers_csd",
               "title": "I had opportunities to discuss teaching strategies with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -76,7 +76,7 @@
             {
               "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
-              "name": "strategies_ensure_inclusion",
+              "name": "strategies_ensure_inclusion_csd",
               "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -92,89 +92,85 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "type": "matrix",
-              "name": "csp_ayw1_activities",
+              "type": "rating",
+              "name": "better_prepared_unit3_csp",
               "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "Please rate the usefulness of these CS Principles workshop activities.",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "N/A"
-                },
-                {
-                  "value": "2",
-                  "text": "1"
-                },
-                {
-                  "value": "3",
-                  "text": "2"
-                },
-                {
-                  "value": "4",
-                  "text": "3"
-                },
-                {
-                  "value": "5",
-                  "text": "4"
-                },
-                {
-                  "value": "6",
-                  "text": "5"
-                },
-                {
-                  "value": "7",
-                  "text": "6"
-                },
-                {
-                  "value": "8",
-                  "text": "7"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "opener",
-                  "text": "Workshop Opener"
-                },
-                {
-                  "value": "intro_u4_eipm",
-                  "text": "Intro to Unit 4 and EIPM"
-                },
-                {
-                  "value": "model_variable_explore",
-                  "text": "Model Lesson - Variables Explore"
-                },
-                {
-                  "value": "model_investigate",
-                  "text": " Model Lesson - Investigate"
-                },
-                {
-                  "value": "lesson_exploration_var_practice",
-                  "text": "Lesson Exploration - Variables Practice"
-                },
-                {
-                  "value": "lesson_exploration_var_make",
-                  "text": "Lesson Exploration - Variables Make"
-                },
-                {
-                  "value": "eipm",
-                  "text": "Zooming Out - EIPM and the \"Big Picture\""
-                },
-                {
-                  "value": "collaboration_unit4",
-                  "text": "Collaboration and Independent Work in Unit 4"
-                },
-                {
-                  "value": "wrap_up",
-                  "text": "Wrap Up"
-                }
-              ]
+              "title": "I feel better prepared to teach Unit 3 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             },
             {
-              "type": "comment",
-              "name": "other_activities_ayw1",
-              "title": "If you participated in any other activities during this module, please describe them below.",
-              "cols": 40,
-              "rows": 2
+              "type": "rating",
+              "name": "better_prepared_unit4_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel better prepared to teach Unit 4 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_unit4_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach Unit 4.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "beliefs_influence_teaching",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I can provide examples of how my identity, experience, and beliefs about who belongs in CS influence the teaching choices I make",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "adjust_role_for_eipm",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop prepared me to adjust my role in the classroom according to the EIPM sequence",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "understand_purpose_mental_models",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop helped me understand the purpose of shared mental models in the Explore lessons of the EIPM sequence.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "believe_mental_models_equitible",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I believe shared mental models contribute to equitable learning experiences.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             }
           ]
         }
