@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-16 14:10:43 UTC",
+    "serialized_at": "2021-08-16 21:21:06 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
@@ -7620,6 +7620,18 @@
       }
     },
     {
+      "name": "Around the World",
+      "url": "https://youtu.be/6T1jW9R6YIQ",
+      "key": "around_the_world",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "around_the_world"
+      }
+    },
+    {
       "name": "Asphalt Art Project Peer Interview Cards",
       "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
       "key": "asphalt_art_project_peer_interview_cards",
@@ -7684,7 +7696,7 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://drive.google.com/file/d/1hyWJDDhNPcwc98qjfeHwUifAzo3dkxYl/view?usp=sharing",
+      "url": "https://youtu.be/IM_GcUh3oLA",
       "key": "conditionals",
       "properties": {
         "type": "Video",
@@ -7709,7 +7721,7 @@
     },
     {
       "name": "Creating Objects",
-      "url": "https://drive.google.com/file/d/1Yvi3F7mT5I3y4qiYMsyMYpnqmTTOtGLR/view?usp=sharing",
+      "url": "https://youtu.be/Cjd5DutdVW0",
       "key": "creating_objects",
       "properties": {
         "type": "Video",
@@ -7747,7 +7759,7 @@
     },
     {
       "name": "if-else Statements",
-      "url": "https://drive.google.com/file/d/1h-BRs9A-UO_OHAqRA6coeYi_8ri-6aE1/view?usp=sharing",
+      "url": "https://youtu.be/A1zMZrt_0yA",
       "key": "if-else_statements",
       "properties": {
         "type": "Video",
@@ -7759,7 +7771,7 @@
     },
     {
       "name": "Inheritance and Subclasses",
-      "url": "https://drive.google.com/file/d/13nxTym71iAbJ-iiDC64MmP9Xpt9jOX1R/view?usp=sharing",
+      "url": "https://youtu.be/mTU-xJ_WhC8",
       "key": "inheritance_and_subclasses",
       "properties": {
         "type": "Video",
@@ -7771,7 +7783,7 @@
     },
     {
       "name": "Introduction to Parameters",
-      "url": "https://drive.google.com/file/d/14aJLfsCqFuucALoM0fAiNr7EnKzn19BH/view?usp=sharing",
+      "url": "https://youtu.be/01wTIQ9bfBM",
       "key": "introduction_to_parameters",
       "properties": {
         "type": "Video",
@@ -7796,7 +7808,7 @@
     },
     {
       "name": "Methods",
-      "url": "https://drive.google.com/file/d/17tb18nCPZhe61xabjxuE_FB2KJmJYPKq/view?usp=sharing",
+      "url": "https://youtu.be/aDgkQrJWy-Q",
       "key": "methods",
       "properties": {
         "type": "Video",
@@ -7834,7 +7846,7 @@
     },
     {
       "name": "Objects and Classes",
-      "url": "https://drive.google.com/file/d/1RJQC9DSvyyXysKH6bWBFkhsWZaieq0T4/view?usp=sharing",
+      "url": "https://youtu.be/8Wu40UFzFnM",
       "key": "objects_and_classes",
       "properties": {
         "type": "Video",
@@ -7870,7 +7882,7 @@
     },
     {
       "name": "Parameterized Constructors",
-      "url": "https://drive.google.com/file/d/1sFcHpes5Sl1T0tEF8yrt0JV4cjDbJo9S/view?usp=sharing",
+      "url": "https://youtu.be/ZRF6ebbRsA4",
       "key": "parameterized_constructors",
       "properties": {
         "type": "Video",
@@ -8203,7 +8215,7 @@
     },
     {
       "name": "What is Java?",
-      "url": "https://drive.google.com/file/d/1E5L-ADA40ai9CGrpdUkfZIHwPCr1QBPx/view?usp=sharing",
+      "url": "https://youtu.be/Q8fw0cDpL_k",
       "key": "what_is_java_",
       "properties": {
         "type": "Video",
@@ -8393,6 +8405,12 @@
       "seeding_key": {
         "lesson.key": "FRQ Day",
         "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Day",
+        "resource.key": "around_the_world"
       }
     },
     {
