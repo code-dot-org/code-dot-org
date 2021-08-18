@@ -71,7 +71,7 @@ export default class LevelFeedbackEntry extends Component {
     } else {
       return (
         <div style={styles.reviewState}>
-          <KeepWorkingBadge hasWhiteBorder={false} style={{fontSize: 8}} />
+          <KeepWorkingBadge />
           &nbsp;
           <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
         </div>
@@ -226,6 +226,8 @@ const styles = {
     cursor: 'pointer'
   },
   reviewState: {
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: 8,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,

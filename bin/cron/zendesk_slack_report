@@ -32,6 +32,7 @@ STATUSES_TO_REPORT = %w(new open)
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
   'ap-csa-dev' => ['CSA Engineering'],
+  'ap-csa-pilot' => ['CSA Curric.'],
   'csf' => ['CSF'],
   'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
@@ -65,6 +66,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
+  'curriculum-platform' => ['zendesk-curricplatform'],
   'outreach_honky-tonk' => ['zendesk-outreach'],
   'pl-team-only' => ['zendesk-pl']
 }
