@@ -70,6 +70,10 @@ export const TheaterSignalType = {
   VISUAL: 'VISUAL'
 };
 
+export const PlaygroundSignalType = {
+  ADD_IMAGE: 'ADD_IMAGE'
+};
+
 export const StatusMessageType = {
   COMPILING: 'COMPILING',
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
