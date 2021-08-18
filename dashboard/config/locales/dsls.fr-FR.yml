@@ -5073,8 +5073,7 @@ fr-FR:
           feedback: Correct!
         - {}
         questions:
-        - text: Regarde de près le code suivant. Que se passera-t-il après avoir appuyer
-            sur "Démarrer"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La fermière ramassera 2 citrouilles.

@@ -22,12 +22,13 @@
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "is_maker_unit": true,
-      "tts": true
+      "tts": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-07-30 20:28:21 UTC",
-    "published_state": null,
+    "serialized_at": "2021-08-16 21:05:14 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -9917,7 +9918,7 @@
       "key": "board_events",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "board_events"
@@ -10357,7 +10358,7 @@
       "key": "physical_input",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "physical_input"
@@ -10369,7 +10370,7 @@
       "key": "physical_output",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "physical_output"
@@ -10427,7 +10428,7 @@
     },
     {
       "name": "Prototype an Innovation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit",
       "key": "prototype_an_innovation_-_student_checklist",
       "properties": {
         "audience": "Student",
@@ -10616,6 +10617,12 @@
       "seeding_key": {
         "lesson.key": "Board Events",
         "resource.key": "board_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "csd_unit_6_-_physical_computing"
       }
     },
     {

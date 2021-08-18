@@ -538,6 +538,9 @@
     "parent_level_id": 28883,
     "encrypted_examples": [
 
+    ],
+    "reference_links": [
+      "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
     ]
   },
   "game_id": 68,
@@ -545,6 +548,6 @@
   "created_at": "2021-07-08T12:58:52.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-07-07 16:17:24 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:17:56 +0000\",\"changed\":[\"encrypted\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:40:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:41:37 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 13:00:07 +0000\",\"changed\":[\"encrypted\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-07 16:17:24 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:17:56 +0000\",\"changed\":[\"encrypted\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:40:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-07 16:41:37 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-08 13:00:07 +0000\",\"changed\":[\"encrypted\",\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-17 18:34:37 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
 }]]></config>
 </Javalab>

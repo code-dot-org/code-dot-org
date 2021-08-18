@@ -116,7 +116,9 @@ class Script < ApplicationRecord
   before_validation :hide_pilot_units
 
   def hide_pilot_units
-    self.published_state = SharedConstants::PUBLISHED_STATE.pilot unless get_pilot_experiment.blank?
+    if !unit_group && pilot_experiment.present?
+      self.published_state = SharedConstants::PUBLISHED_STATE.pilot
+    end
   end
 
   # As we read and write to files with the unit name, to prevent directory
@@ -129,7 +131,7 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
 
   def prevent_duplicate_levels
     reload
@@ -1296,7 +1298,7 @@ class Script < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: general_params[:published_state].nil? ? SharedConstants::PUBLISHED_STATE.in_development : general_params[:published_state],
+          published_state: general_params[:published_state],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1492,6 +1494,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      isCsd: csd?,
+      isCsp: csp?,
       only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,

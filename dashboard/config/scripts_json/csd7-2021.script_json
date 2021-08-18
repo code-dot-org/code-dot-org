@@ -16,8 +16,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:30 UTC",
-    "published_state": null,
+    "serialized_at": "2021-08-17 17:17:01 UTC",
+    "published_state": "stable",
     "seeding_key": {
       "script.name": "csd7-2021"
     }
@@ -30,7 +30,7 @@
       "properties": {
         "display_name": "Chapter 1 - Understanding Machine Learning",
         "description": "Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.",
-        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n- How can machine learning be used to solve problems in our community?"
+        "big_questions": "- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -10910,6 +10910,18 @@
       }
     },
     {
+      "name": "Accuracy in AI Lab",
+      "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+      "key": "accuracy_in_ai_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
       "name": "AI Code of Ethics",
       "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
       "key": "ai_code_of_ethics",
@@ -10957,6 +10969,63 @@
       },
       "seeding_key": {
         "resource.key": "ai_training_data_bias"
+      }
+    },
+    {
+      "name": "AI: What is Machine Learning?",
+      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+      "key": "ai_what_is_machine_learning_",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/s/csd7-2021/code",
+      "key": "all_code_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_5"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd7-2021/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd7-2021/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd7-2021/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -11033,6 +11102,18 @@
       }
     },
     {
+      "name": "Creating a Survey",
+      "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
+      "key": "creating_a_survey",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_survey"
+      }
+    },
+    {
       "name": "Creating an App",
       "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
       "key": "creating_an_app",
@@ -11042,6 +11123,50 @@
       },
       "seeding_key": {
         "resource.key": "creating_an_app"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
       }
     },
     {
@@ -11160,6 +11285,18 @@
       },
       "seeding_key": {
         "resource.key": "if-statements_in_app_lab"
+      }
+    },
+    {
+      "name": "Importing a Model in App Lab",
+      "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
+      "key": "importing_a_model_in_app_lab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "importing_a_model_in_app_lab"
       }
     },
     {
@@ -11500,6 +11637,30 @@
       }
     },
     {
+      "name": "Selecting a Label",
+      "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
+      "key": "selecting_a_label",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_a_label"
+      }
+    },
+    {
+      "name": "Selecting Features",
+      "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+      "key": "selecting_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_features"
+      }
+    },
+    {
       "name": "Shoe Survey",
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
       "key": "shoe_survey",
@@ -11642,6 +11803,30 @@
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning_2"
+      }
+    },
+    {
+      "name": "Using Data with Categorical Features",
+      "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+      "key": "using_data_with_categorical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "name": "Using Data with Numerical Features",
+      "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
+      "key": "using_data_with_numerical_features",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_numerical_features"
       }
     },
     {
@@ -11819,6 +12004,12 @@
     {
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
+        "resource.key": "importing_a_model_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
         "resource.key": "importing_models_in_app_lab"
       }
     },
@@ -11855,6 +12046,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
         "resource.key": "introduction_to_ai_lab"
       }
     },
@@ -11867,6 +12064,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
+        "resource.key": "selecting_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
         "resource.key": "training_a_model_in_ai_lab"
       }
     },
@@ -11874,6 +12077,18 @@
       "seeding_key": {
         "lesson.key": "Introduction to AI Lab",
         "resource.key": "training_and_testing_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "resource.key": "ai_what_is_machine_learning_"
       }
     },
     {
@@ -11974,6 +12189,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "resource.key": "using_data_with_numerical_features"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Patterns in Data",
         "resource.key": "finding_patterns_in_data"
       }
@@ -12018,6 +12239,12 @@
       "seeding_key": {
         "lesson.key": "Saving Models in AI Lab",
         "resource.key": "saving_models_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "resource.key": "selecting_a_label"
       }
     },
     {
@@ -12089,6 +12316,12 @@
     {
       "seeding_key": {
         "lesson.key": "Survey Planning",
+        "resource.key": "creating_a_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
         "resource.key": "survey_planning"
       }
     },
@@ -12136,7 +12369,54 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code_5",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd7-2021"
+      }
+    }
   ],
   "scripts_student_resources": [
 

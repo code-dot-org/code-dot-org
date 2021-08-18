@@ -6,21 +6,6 @@ import BaseDialog from '../../BaseDialog';
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
 
-const styles = {
-  description: {
-    color: color.dark_charcoal
-  },
-  boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
-};
-
 export class CreateStandardsReportDialog extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -78,5 +63,20 @@ export class CreateStandardsReportDialog extends Component {
     );
   }
 }
+
+const styles = {
+  description: {
+    color: color.dark_charcoal
+  },
+  boldText: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+  }
+};
 
 export const UnconnectedCreateStandardsReportDialog = CreateStandardsReportDialog;

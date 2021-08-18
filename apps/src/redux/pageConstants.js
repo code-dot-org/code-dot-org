@@ -8,6 +8,7 @@ var ALLOWED_KEYS = new Set([
   'ttsShortInstructionsUrl',
   'ttsLongInstructionsUrl',
   'assetUrl',
+  'canHaveFeedbackReviewState',
   'channelId',
   'hasDataMode',
   'hasDesignMode',

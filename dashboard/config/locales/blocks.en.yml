@@ -1886,6 +1886,7 @@ en:
           BG_EFFECT:
             '"---"': "---"
             '"wordsworth"': I Wandered Lonely as a Cloud
+            '"dickinson"': If I can Stop one Heart from Breaking
             '"silverstein"': Batty
       PoemBot_setTitle:
         text: set poem title {TITLE}

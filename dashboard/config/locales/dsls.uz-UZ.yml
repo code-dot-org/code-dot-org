@@ -6672,8 +6672,7 @@ uz-UZ:
           feedback: To‘g’ri!
         - {}
         questions:
-        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
-            bosgandan so'ng nima bo'ladi?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Terimchi ikkita oshqovoqni terib oladi.
