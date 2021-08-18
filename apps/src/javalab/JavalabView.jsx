@@ -346,10 +346,7 @@ class JavalabView extends React.Component {
             ...styles.javalab
           }}
         >
-          <div
-            ref={ref => (this.editorAndVisualization = ref)}
-            style={styles.editorAndVisualization}
-          >
+          <div style={styles.editorAndVisualization}>
             <div
               id="visualizationColumn"
               className="responsive"
