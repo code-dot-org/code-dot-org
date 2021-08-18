@@ -8,141 +8,169 @@
           "name": "module_2_panel",
           "elements": [
             {
-              "type": "html",
-              "name": "question1",
-              "html": "<h2>Foo Foo How useful was Module 2?</h2>\n<p>We're interested in your feedback about how useful the activities in Module 2 were for you.</p>\n"
-            },
-            {
-              "type": "html",
-              "name": "question4",
-              "html": "<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption><span style=\"font-family: arial, helvetica, sans-serif;\"> </span></caption>\n<tbody>\n<tr>\n<td style=\"width: 17%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-size: 13.3333px; font-family: arial, helvetica, sans-serif;\"><strong>N/A</strong></span></td>\n<td style=\"width: 20.2282%; padding-top: 3px; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></span></td>\n<td style=\"width: 21.7718%; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></span></td>\n<td style=\"width: 20%; text-align: center; vertical-align: top;\"><span style=\"font-family: arial, helvetica, sans-serif;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></span></td>\n</tr>\n<tr>\n<td style=\"width: 17%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">I don't recognize this / I don't believe we did this today</span></td>\n<td style=\"width: 20.2282%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Not useful to me</span></td>\n<td style=\"width: 21.7718%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Somewhat useful to me</span></td>\n<td style=\"width: 20%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt; font-family: arial, helvetica, sans-serif;\">Very useful to me</span></td>\n</tr>\n</tbody>\n</table>"
-            },
-            {
-              "type": "matrix",
-              "name": "csd_activities_m2",
               "visibleIf": "{workshop_course}='CS Discoveries'",
-              "title": "Please rate the usefulness of these CS Discoveries workshop activities.",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "N/A"
-                },
-                {
-                  "value": "2",
-                  "text": "1"
-                },
-                {
-                  "value": "3",
-                  "text": "2"
-                },
-                {
-                  "value": "4",
-                  "text": "3"
-                },
-                {
-                  "value": "5",
-                  "text": "4"
-                },
-                {
-                  "value": "6",
-                  "text": "5"
-                },
-                {
-                  "value": "7",
-                  "text": "6"
-                },
-                {
-                  "value": "8",
-                  "text": "7"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "opener",
-                  "text": "Workshop Opener"
-                },
-                {
-                  "value": "curriculum_investigate",
-                  "text": "Summary of Curriculum Investigate"
-                },
-                {
-                  "value": "assessment",
-                  "text": "Assessment"
-                },
-                {
-                  "value": "counseling",
-                  "text": "Counseling Scenarios"
-                },
-                {
-                  "value": "wrap_up",
-                  "text": "Wrap Up"
-                }
-              ]
+              "type": "rating",
+              "name": "better_prepared_unit3",
+              "title": "I feel better prepared to teach Unit 3 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             },
             {
-              "type": "matrix",
-              "name": "csp_activities_m2",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "opportunities_discuss_peers",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "teacher_role_understand_differences",
+              "title": "As a result of this workshop it is clear to me how the role of the teacher changes during the the debugging process, formative assessments, and summative assessments.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "html",
+              "name": "question6",
+              "html": "<br/><br>This workshop gave me a thorough understanding of what the <strong> role of the teacher</strong> is..."
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "role_of_teacher_debugging",
+              "indent": 3,
+              "title": "...during the debugging process.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "role_of_teacher_formative",
+              "indent": 3,
+              "title": "...when conducting formative assessments.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "role_of_teacher_summative",
+              "indent": 3,
+              "title": "...when conducting summative assessments.",
+              "hideNumber": true,
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "strategies_ensure_inclusion",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "type": "rating",
+              "name": "prepared_to_formative_asess",
+              "title": "As a result of this workshop, I am better prepared to incorporate formative assessments to support learning.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit3_csp",
               "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "Please rate the usefulness of these CS Principles workshop activities.",
-              "columns": [
-                {
-                  "value": "1",
-                  "text": "N/A"
-                },
-                {
-                  "value": "2",
-                  "text": "1"
-                },
-                {
-                  "value": "3",
-                  "text": "2"
-                },
-                {
-                  "value": "4",
-                  "text": "3"
-                },
-                {
-                  "value": "5",
-                  "text": "4"
-                },
-                {
-                  "value": "6",
-                  "text": "5"
-                },
-                {
-                  "value": "7",
-                  "text": "6"
-                },
-                {
-                  "value": "8",
-                  "text": "7"
-                }
-              ],
-              "rows": [
-                {
-                  "value": "opener",
-                  "text": "Workshop Opener"
-                },
-                {
-                  "value": "collab_and_ind_in_U4",
-                  "text": "Collaboration and Independent Work in Unit 4"
-                },
-                {
-                  "value": "eipm",
-                  "text": "Zooming Out - EIPM and the “Big Picture”"
-                },
-                {
-                  "value": "wrap_up",
-                  "text": "Wrap Up"
-                }
-              ]
+              "title": "I feel better prepared to teach Unit 3 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             },
             {
-              "type": "comment",
-              "name": "other_activities_m2",
-              "title": "If you participated in any other activities during this workshop, please describe them below.",
-              "cols": 40,
-              "rows": 2
+              "type": "rating",
+              "name": "better_prepared_unit4_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel better prepared to teach Unit 4 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_unit4_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach Unit 4.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "beliefs_influence_teaching",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I can provide examples of how my identity, experience, and beliefs about who belongs in CS influence the teaching choices I make",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_csp",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "adjust_role_for_eipm",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop prepared me to adjust my role in the classroom according to the EIPM sequence",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "understand_purpose_mental_models",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "This workshop helped me understand the purpose of shared mental models in the Explore lessons of the EIPM sequence.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "believe_mental_models_equitible",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I believe shared mental models contribute to equitable learning experiences.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
             }
           ]
         }
