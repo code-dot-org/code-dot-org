@@ -174,15 +174,26 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
+1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
+    1. if you are using bash and setting up a new linux system, follow [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html) and add the following lines to your `~/.bash_profile` config file:
+
+        ```
+        if [ -f ~/.bashrc ]; then
+          source ~/.bashrc
+        fi     
+        ```
+
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
-    1. run `rbenv init' and follow the instructions.
+    1. run `rbenv init` and follow the instructions.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
+        1. `mkdir -p "$(rbenv root)"/plugins`
+        1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
     1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
 1. Install Ruby 2.5.0 with rbenv
     1. `rbenv install 2.5.0`
@@ -196,7 +207,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `sudo apt-get update && sudo apt-get install yarn=1.22.5-1`
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
-    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+    1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
