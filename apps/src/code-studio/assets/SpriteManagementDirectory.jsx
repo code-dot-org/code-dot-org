@@ -15,9 +15,14 @@ export default class SpriteManagementDirectory extends React.Component {
         </h3>
         <div style={styles.pageBreak}>
           <Button
-            text="Move Levelbuilder Change to Production"
+            text="Move Levelbuilder Changes to Production"
             color={Button.ButtonColor.red}
-            onClick={() => console.log('Move to production')}
+            onClick={() =>
+              confirm(
+                'This will release all the sprites you have added and updates to the default sprite list to ' +
+                  'production. Are you sure?'
+              )
+            }
             style={styles.button}
           />
         </div>
@@ -31,6 +36,7 @@ const styles = {
     borderTop: `1px solid ${color.dark_slate_gray}`
   },
   button: {
-    margin: 20
+    margin: 20,
+    fontSize: '20px'
   }
 };
