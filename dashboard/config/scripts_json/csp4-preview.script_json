@@ -905,7 +905,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -966,7 +965,6 @@
       "properties": {
         "progression": "If-Statements"
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
