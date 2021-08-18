@@ -1813,7 +1813,7 @@ class Script < ApplicationRecord
   end
 
   def unversioned?
-    version_year.blank? || version_year == 'unversioned'
+    version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
 
   # If there is an alternate version of this unit which the user should be on
