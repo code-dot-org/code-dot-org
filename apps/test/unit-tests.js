@@ -3,7 +3,7 @@ import '@babel/polyfill';
 import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
