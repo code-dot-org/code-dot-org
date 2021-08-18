@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import SurveyRollupTableFoorm from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foorm';
 import mount from 'enzyme/build/mount';
 
-describe.skip('Survey Rollup Table Foorm', () => {
+describe('Survey Rollup Table Foorm', () => {
   const sampleRollupAverages1 = {
     response_count: 13,
     averages: {

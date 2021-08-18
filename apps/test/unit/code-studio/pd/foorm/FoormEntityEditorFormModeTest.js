@@ -21,7 +21,7 @@ import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 global.$ = require('jquery');
 
-describe.skip('FoormEntityEditor in Form editing mode', () => {
+describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;
   beforeEach(() => {
     // Warnings allowed due to usage of deprecated componentWillMount

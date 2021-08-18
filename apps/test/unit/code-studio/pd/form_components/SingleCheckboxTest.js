@@ -5,7 +5,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-describe.skip('SingleCheckbox', () => {
+describe('SingleCheckbox', () => {
   it('renders a basic checkbox', () => {
     const singleCheckbox = shallow(
       <SingleCheckbox name="testCheckbox" label="This is the label" />
