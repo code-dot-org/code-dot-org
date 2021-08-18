@@ -1,4 +1,9 @@
-import * as Survey from 'survey-react';
+// import loadable from '@cdo/apps/util/loadable';
+// const Survey = loadable(() => import('./LoadableSurveyReact'));
+
+// console.log(Survey);
+
+// import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap';
@@ -63,23 +68,28 @@ export default class Foorm extends React.Component {
       submitting: false
     };
 
-    Survey.StylesManager.applyTheme('default');
+    import('survey-react').then(module => {
+      this.Survey = module;
+      // console.log(this.Survey);
 
-    this.surveyModel = new Survey.Model(this.props.formQuestions);
+      this.Survey.StylesManager.applyTheme('default');
 
-    // Settings to avoid jumping around the page
-    // when SurveyJS produces changes in focus/scrolling
-    // while editing a Foorm configuration.
-    if (this.props.inEditorMode) {
-      // Prevents focus from moving from codemirror in Foorm Editor
-      // to the first question of the rendered SurveyJS Survey.
-      this.surveyModel.focusFirstQuestionAutomatic = false;
+      this.surveyModel = new this.Survey.Model(this.props.formQuestions);
 
-      // Prevents automatic scrolling to top of rendered SurveyJS Survey while editing a long configuration file.
-      this.surveyModel.onScrollingElementToTop.add((unused, options) => {
-        options.cancel = true;
-      });
-    }
+      // Settings to avoid jumping around the page
+      // when SurveyJS produces changes in focus/scrolling
+      // while editing a Foorm configuration.
+      if (this.props.inEditorMode) {
+        // Prevents focus from moving from codemirror in Foorm Editor
+        // to the first question of the rendered SurveyJS Survey.
+        this.surveyModel.focusFirstQuestionAutomatic = false;
+
+        // Prevents automatic scrolling to top of rendered SurveyJS Survey while editing a long configuration file.
+        this.surveyModel.onScrollingElementToTop.add((unused, options) => {
+          options.cancel = true;
+        });
+      }
+    });
   }
 
   onComplete = (survey, options) => {
@@ -148,6 +158,11 @@ export default class Foorm extends React.Component {
   }
 
   render() {
+    const Survey = this.Survey;
+    if (!Survey) {
+      return null;
+    }
+
     const css = {...this.defaultCss, ...this.props.customCssClasses};
     return (
       <div>
