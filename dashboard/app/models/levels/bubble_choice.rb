@@ -143,16 +143,13 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(
+        user_level = UserLevel.find_by(
           level: level,
           script: script_level.try(:script),
           user_id: user_id
-          )&.perfect?
-        level_info[:status] = if level_info[:perfect]
-                                SharedConstants::LEVEL_STATUS.perfect
-                              else
-                                SharedConstants::LEVEL_STATUS.not_tried
-                              end
+          )
+        level_info[:perfect] = user_level&.perfect?
+        level_info[:status] = activity_css_class(user_level)
 
         level_feedback = TeacherFeedback.get_latest_feedbacks_received(user_id, level.id, script_level.try(:script)).first
         level_info[:teacher_feedback_review_state] = level_feedback&.review_state

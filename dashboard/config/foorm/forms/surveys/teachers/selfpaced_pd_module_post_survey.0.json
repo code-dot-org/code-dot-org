@@ -6,7 +6,8 @@
         {
           "type": "dropdown",
           "name": "module",
-          "title": "[FOR TESTING] Select Module",
+          "title": "[UNHIDE THIS FOR TESTING] Select Module",
+          "visible": "false",
           "choices": [
             {
               "value": "2",
@@ -24,8 +25,8 @@
         },
         {
           "type": "html",
-          "name": "title_and_header",
-          "html": "<h2>Code.org Self-paced Online Professional Learning</h2>\n<p>[PRIVACY AND CONFIDENTIALITY STATEMENT]</p>\n<h3>Module {module} Post-Survey</h3>"
+          "name": "question1",
+          "html": "<h2>Code.org Self-paced Online Professional Learning - Module {module} Post Survey </h2><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h3>Module {module} Post-Survey</h3>"
         },
         {
           "type": "panel",
@@ -36,6 +37,7 @@
               "name": "section_setup_instructions",
               "visibleIf": "{module} = 2",
               "title": "Where is the best place to go if you are looking for written instructions for how to set up a class section on the Code.org website?",
+              "enableIf": "{change_answer} = 'yes' or {change_answer} empty",
               "correctAnswer": "help_support",
               "isRequired": true,
               "choices": [
@@ -59,6 +61,7 @@
               "useDisplayValuesInTitle": false,
               "visibleIf": "{module} = 2",
               "title": "Where is the best place to go to find a link to individual lesson plans? ",
+              "enableIf": "{change_answer} = 'yes' or {change_answer} empty",
               "correctAnswer": "teacher_forum",
               "isRequired": true,
               "choices": [
@@ -458,6 +461,35 @@
           ]
         },
         {
+          "type": "panel",
+          "name": "module_4_panel_part_2",
+          "elements": [
+            {
+              "type": "rating",
+              "name": "how_likely_attend_inperson",
+              "title": "After engaging in this self-paced professional learning course, how likely are you to attend a facilitator-led professional development workshop if one were offered in your region? ",
+              "minRateDescription": "Not at all likely",
+              "maxRateDescription": "Very likely"
+            },
+            {
+              "type": "radiogroup",
+              "name": "participate_focus_group",
+              "title": "May we contact you about participating in a follow-up focus group to provide direct feedback about this online course?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            }
+          ],
+          "visibleIf": "{module} = '4'"
+        },
+        {
           "type": "comment",
           "name": "other_feedback",
           "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
@@ -470,7 +502,35 @@
         {
           "type": "html",
           "name": "results_reveal",
-          "html": "<h2>Your Responses</h2>\n<table>\n<tr>\n<th>question</th>\n<th>correct answer</th>\n<th>Your answer</th>\n</tr>\n<tr>\n<td> Where is the best place to go if you are looking for written instructions for how to set up a class section on the Code.org website?</td>\n<td>Help and support</td>\n<td>{section_setup_instructions}</td>\n</tr>\n<tr>\n<td> Where is the best place to go to find a link to individual lesson plans?  </td>\n<td>The unit overview page</td>\n<td> {where_to_find_lesson_plans}</td>\n</tr>\n</table>"
+          "html": "<h2>Your Responses</h2>\n<p>Below you can check your answers for the first two questions on this survey. If you had a difficult time answering these questions, consider revisiting the content in Module 2.</p>\n<table>\n<tr>\n<th>question</th>\n<th>correct answer</th>\n<th>Your answer</th>\n</tr>\n<tr>\n<td> Where is the best place to go if you are looking for written instructions for how to set up a class section on the Code.org website?</td>\n<td>Help and support</td>\n<td>{section_setup_instructions}</td>\n</tr>\n<tr>\n<td> Where is the best place to go to find a link to individual lesson plans?  </td>\n<td>The unit overview page</td>\n<td> {where_to_find_lesson_plans}</td>\n</tr>\n</table>"
+        },
+        {
+          "type": "html",
+          "name": "good_work_display",
+          "visibleIf": "{section_setup_instructions} = 'help_support' and {where_to_find_lesson_plans} = 'unit_overview'",
+          "html": "Good work. You answered both questions correctly.  Please click the \"Complete\" button to submit your survey.  Thanks!"
+        },
+        {
+          "type": "radiogroup",
+          "name": "change_answer",
+          "visibleIf": "{section_setup_instructions} <> 'help_support' or {where_to_find_lesson_plans} <> 'unit_overview'",
+          "title": "You answered one or more of the questions incorrectly. Would you like to go back and change your answer to either of the questions?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "yes"
+            },
+            {
+              "value": "no",
+              "text": "no, thanks"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "go_back_display",
+          "visibleIf": "{change_answer} = 'yes' and {section_setup_instructions} <> 'help_support' and {where_to_find_lesson_plans} <> 'unit_overview'",
+          "html": "Great. Please hit the Previous button to back and change your answer.  Then just continue through the survey normally"
         }
       ],
       "visibleIf": "{module} = 2"

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 12:36:31 UTC",
+    "serialized_at": "2021-08-16 16:22:16 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd1-2021"
@@ -2608,7 +2608,7 @@
       "key": "30a5ba05-3776-4be9-b6d5-66df2e579294",
       "position": 12,
       "properties": {
-        "description": "The next chart asks students to find two types of processing for every app.  The explanations for processing are included in the teacher notes in Code Studio.  This section asks students to evaluate more complex apps, which may be difficult for younger students.  Feel free to skip this more challenging section and move directly to the \"student app\" section.\r\n\r\n**The Fastest Finger**\r\n\r\nThis app displays which key is being pressed the fastest, the 's' key or the 'k' key. \r\n\r\n\r\n**Guess the Number**\r\n\r\nThis app asks users to guess a number between one and one hundred, and displays whether the guess is too high, too low, or correct.\r\n\r\n**Where Should I Live?**\r\n\r\nThis app gives the user advice on where to live based on the answers to a few questions.",
+        "description": "The next chart asks students to find two types of processing for every app.  The explanations for processing are included in the For Teachers Only section in Code Studio.  This section asks students to evaluate more complex apps, which may be difficult for younger students.  Feel free to skip this more challenging section and move directly to the \"student app\" section.\n\n**The Fastest Finger**\n\nThis app displays which key is being pressed the fastest, the 's' key or the 'k' key. \n\n\n**Guess the Number**\n\nThis app asks users to guess a number between one and one hundred, and displays whether the guess is too high, too low, or correct.\n\n**Where Should I Live?**\n\nThis app gives the user advice on where to live based on the answers to a few questions.",
         "name": "More Processing\r",
         "progression_name": "More Processing Apps"
       },
@@ -4606,6 +4606,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22"
+        ]
       },
       "bonus": false,
       "seeding_key": {

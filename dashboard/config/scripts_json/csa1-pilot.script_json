@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 15:11:23 UTC",
+    "serialized_at": "2021-08-16 21:20:38 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -3106,7 +3106,7 @@
       "key": "c2e994c5-aa95-423f-963e-10b48563f2d0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus"
       },
       "seeding_key": {
@@ -7620,6 +7620,18 @@
       }
     },
     {
+      "name": "Around the World",
+      "url": "https://youtu.be/6T1jW9R6YIQ",
+      "key": "around_the_world",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "around_the_world"
+      }
+    },
+    {
       "name": "Asphalt Art Project Peer Interview Cards",
       "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
       "key": "asphalt_art_project_peer_interview_cards",
@@ -7684,7 +7696,7 @@
     },
     {
       "name": "Conditionals",
-      "url": "https://drive.google.com/file/d/1hyWJDDhNPcwc98qjfeHwUifAzo3dkxYl/view?usp=sharing",
+      "url": "https://youtu.be/IM_GcUh3oLA",
       "key": "conditionals",
       "properties": {
         "type": "Video",
@@ -7709,7 +7721,7 @@
     },
     {
       "name": "Creating Objects",
-      "url": "https://drive.google.com/file/d/1Yvi3F7mT5I3y4qiYMsyMYpnqmTTOtGLR/view?usp=sharing",
+      "url": "https://youtu.be/Cjd5DutdVW0",
       "key": "creating_objects",
       "properties": {
         "type": "Video",
@@ -7747,7 +7759,7 @@
     },
     {
       "name": "if-else Statements",
-      "url": "https://drive.google.com/file/d/1h-BRs9A-UO_OHAqRA6coeYi_8ri-6aE1/view?usp=sharing",
+      "url": "https://youtu.be/A1zMZrt_0yA",
       "key": "if-else_statements",
       "properties": {
         "type": "Video",
@@ -7759,7 +7771,7 @@
     },
     {
       "name": "Inheritance and Subclasses",
-      "url": "https://drive.google.com/file/d/13nxTym71iAbJ-iiDC64MmP9Xpt9jOX1R/view?usp=sharing",
+      "url": "https://youtu.be/mTU-xJ_WhC8",
       "key": "inheritance_and_subclasses",
       "properties": {
         "type": "Video",
@@ -7767,6 +7779,18 @@
       },
       "seeding_key": {
         "resource.key": "inheritance_and_subclasses"
+      }
+    },
+    {
+      "name": "Introduction to Parameters",
+      "url": "https://youtu.be/01wTIQ9bfBM",
+      "key": "introduction_to_parameters",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_parameters"
       }
     },
     {
@@ -7784,7 +7808,7 @@
     },
     {
       "name": "Methods",
-      "url": "https://drive.google.com/file/d/17tb18nCPZhe61xabjxuE_FB2KJmJYPKq/view?usp=sharing",
+      "url": "https://youtu.be/aDgkQrJWy-Q",
       "key": "methods",
       "properties": {
         "type": "Video",
@@ -7821,6 +7845,18 @@
       }
     },
     {
+      "name": "Objects and Classes",
+      "url": "https://youtu.be/8Wu40UFzFnM",
+      "key": "objects_and_classes",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "objects_and_classes"
+      }
+    },
+    {
       "name": "Painter Says",
       "url": "https://docs.google.com/document/d/19MrjfFXD4yZ-euo0OrP-D-08JVUZT6vavyCGNbFb22U/edit?usp=sharing",
       "key": "painter_says",
@@ -7846,7 +7882,7 @@
     },
     {
       "name": "Parameterized Constructors",
-      "url": "https://drive.google.com/file/d/1sFcHpes5Sl1T0tEF8yrt0JV4cjDbJo9S/view?usp=sharing",
+      "url": "https://youtu.be/ZRF6ebbRsA4",
       "key": "parameterized_constructors",
       "properties": {
         "type": "Video",
@@ -8179,7 +8215,7 @@
     },
     {
       "name": "What is Java?",
-      "url": "https://drive.google.com/file/d/1E5L-ADA40ai9CGrpdUkfZIHwPCr1QBPx/view?usp=sharing",
+      "url": "https://youtu.be/Q8fw0cDpL_k",
       "key": "what_is_java_",
       "properties": {
         "type": "Video",
@@ -8237,6 +8273,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "introduction_to_parameters"
       }
     },
     {
@@ -8464,6 +8506,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-19",
+        "resource.key": "around_the_world"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
         "resource.key": "u1l19_frq_day"
       }
     },
@@ -8489,6 +8537,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "color_names"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "objects_and_classes"
       }
     },
     {
@@ -8767,7 +8821,7 @@
     {
       "key": "class",
       "word": "Class",
-      "definition": "A user-defined blueprint from which objects are created",
+      "definition": "A programmer-defined blueprint from which objects are created",
       "properties": {
       },
       "seeding_key": {

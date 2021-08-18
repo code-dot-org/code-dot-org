@@ -8,13 +8,21 @@ export function getCodeReviewCommentsForProject(channelId) {
   });
 }
 
-export function submitNewCodeReviewComment(commentText, channelId, token) {
+export function submitNewCodeReviewComment(
+  commentText,
+  channelId,
+  scriptId,
+  levelId,
+  token
+) {
   return $.ajax({
     url: `/code_review_comments`,
     type: 'POST',
     headers: {'X-CSRF-Token': token},
     data: {
       channel_id: channelId,
+      script_id: scriptId,
+      level_id: levelId,
       comment: commentText
     }
   });

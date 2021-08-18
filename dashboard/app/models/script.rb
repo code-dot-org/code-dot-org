@@ -1494,6 +1494,8 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      isCsd: csd?,
+      isCsp: csp?,
       only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
