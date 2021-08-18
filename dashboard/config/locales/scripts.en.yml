@@ -19243,6 +19243,8 @@ en:
           lessons:
             lesson-1:
               name: Moods & Attitudes
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Weird, Wild, Wondrous Words
             lesson-3:
@@ -19250,10 +19252,12 @@ en:
             lesson-4:
               name: The Poem Generator
             lesson-5:
-              name: The Comment Section
+              name: Sharing is Caring
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poetry-hoc
-          title: 'Moods & Attitudes '
+          title: Poetry HoC
           description_audience: ''
           description_short: 'Hour of Code Activity - V2 '
           description: ''
