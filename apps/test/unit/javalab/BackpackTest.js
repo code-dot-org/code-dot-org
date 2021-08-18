@@ -91,14 +91,14 @@ describe('Java Lab Backpack Test', () => {
 
   it('import shows error if hidden file name is used', () => {
     const otherProps = {
-      sources: {file1: {isVisible: true}, file2: {isVisible: false}}
+      sources: {visibleFile: {isVisible: true}, hiddenFile: {isVisible: false}}
     };
     const wrapper = shallow(<Backpack {...{...defaultProps, ...otherProps}} />);
     // set state to something that should be cleared by expandDropdown
     wrapper.instance().setState({
       dropdownOpen: true,
-      backpackFilenames: ['file1', 'file2', 'file3'],
-      selectedFiles: ['file2', 'file3']
+      backpackFilenames: ['visibleFile', 'hiddenFile', 'file3'],
+      selectedFiles: ['hiddenFile', 'file3']
     });
 
     wrapper.instance().handleImport();
