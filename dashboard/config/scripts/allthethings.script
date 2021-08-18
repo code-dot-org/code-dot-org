@@ -1,6 +1,5 @@
 hideable_lessons true
 lesson_extras_available true
-published_state 'beta'
 
 lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 level 'blockly:Jigsaw:3'
@@ -201,8 +200,8 @@ variants
   level '4-5 Maze 6', active: false
 endvariants
 variants
-  level 'csp_socialBelonging_control'
   level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
+  level 'csp_socialBelonging_control'
 endvariants
 
 lesson 'Anonymous student survey', display_name: 'Anonymous student survey', has_lesson_plan: false
@@ -276,6 +275,4 @@ level 'Allthethings Java Lab 4'
 level 'csa widget test2'
 level 'Allthethings Java Lab 6'
 level 'Allthethings Java Lab 7'
-level 'Allthethings Java Lab 8'
 level 'Allthethings Java Lab Playground'
-
