@@ -33,7 +33,7 @@ class DummyForm extends FormController {
   onSuccessfulSubmit() {}
 }
 
-describe.skip('FormController', () => {
+describe('FormController', () => {
   it('Can not be instantiated directly', () => {
     const constructor = () => new FormController();
     expect(constructor).to.throw(

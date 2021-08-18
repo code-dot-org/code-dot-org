@@ -20,7 +20,7 @@ const defaultProps = {
   date: '2017-07-01'
 };
 
-describe.skip('WorkshopManagement', () => {
+describe('WorkshopManagement', () => {
   const fakeRouter = {
     createHref() {},
     push() {}

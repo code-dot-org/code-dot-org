@@ -4,7 +4,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 
-describe.skip('UsPhoneNumberInput', () => {
+describe('UsPhoneNumberInput', () => {
   it('Displays initial value properly formatted', () => {
     const usPhoneNumberInput = shallow(
       <UsPhoneNumberInput name="phone" label="label" value="1234567890" />
