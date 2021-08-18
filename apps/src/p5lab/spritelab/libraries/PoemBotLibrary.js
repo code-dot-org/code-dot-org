@@ -6,6 +6,7 @@ const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
+const POEM_DURATION = 500;
 
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
@@ -144,8 +145,7 @@ export default class PoemBotLibrary extends CoreLibrary {
 
       setTextEffect(effect) {
         this.poemState.effects.push({
-          name: effect,
-          duration: 100 // todo: should this be configurable on the block?
+          name: effect
         });
       },
 
@@ -183,11 +183,9 @@ export default class PoemBotLibrary extends CoreLibrary {
     const newLines = [];
     renderInfo.lines.forEach(line => {
       const newLine = {...line};
-      if (
-        frameCount >= newLine.start &&
-        frameCount < newLine.start + effect.duration
-      ) {
-        const progress = (frameCount - newLine.start) / effect.duration;
+      if (frameCount >= newLine.start && frameCount < newLine.end) {
+        const progress =
+          (frameCount - newLine.start) / (newLine.end - newLine.start);
         switch (effect.name) {
           case 'fade':
             newLine.alpha = progress * 255;
@@ -210,13 +208,12 @@ export default class PoemBotLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
-    const duration = 500;
-    const progress = frameCount / duration;
-    const framesPerLine = duration / renderInfo.lines.length;
+    const progress = frameCount / POEM_DURATION;
+    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
     const newLines = [];
     for (let i = 0; i < renderInfo.lines.length; i++) {
       const newLine = {...renderInfo.lines[i]};
-      newLine.start = (i + 1) * framesPerLine;
+      newLine.start = i * framesPerLine;
       newLine.end = (i + 1) * framesPerLine;
       newLines.push(newLine);
     }
@@ -224,7 +221,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow)
+      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
     };
   }
 
