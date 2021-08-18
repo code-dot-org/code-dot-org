@@ -1814,6 +1814,10 @@ class Script < ApplicationRecord
     unit_group.try(:localized_title)
   end
 
+  def unversioned?
+    version_year.blank? || version_year == CourseVersion::UNVERSIONED
+  end
+
   # If there is an alternate version of this unit which the user should be on
   # due to existing progress or a course experiment, return that unit. Otherwise,
   # return nil.
