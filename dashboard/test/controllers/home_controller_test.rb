@@ -394,7 +394,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 13
+    query_count = 14
     assert_queries query_count do
       get :home
     end
