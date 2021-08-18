@@ -394,7 +394,11 @@ class HomeControllerTest < ActionController::TestCase
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 14
+
+    # try to eliminate query difference between localhost and drone
+    Script.all
+
+    query_count = 13
     assert_queries query_count do
       get :home
     end
