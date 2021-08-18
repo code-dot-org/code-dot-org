@@ -17,19 +17,19 @@
           ],
           [
             "fly from left",
-            "\"fly_left\""
+            "\"flyLeft\""
           ],
           [
             "fly from right",
-            "\"fly_right\""
+            "\"flyRight\""
           ],
           [
             "fly from top",
-            "\"fly_top\""
+            "\"flyTop\""
           ],
           [
             "fly from bottom",
-            "\"fly_bottom\""
+            "\"flyBottom\""
           ]
         ]
       }
