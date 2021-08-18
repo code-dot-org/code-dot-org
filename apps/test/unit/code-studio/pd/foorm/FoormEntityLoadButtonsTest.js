@@ -14,7 +14,7 @@ import {DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEntityLoadButtons from '../../../../../src/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import SingleCheckbox from '../../../../../src/code-studio/pd/form_components/SingleCheckbox';
 
-describe('FoormEntityLoadButtons', () => {
+describe.skip('FoormEntityLoadButtons', () => {
   let defaultProps, store, wrapper;
   beforeEach(() => {
     stubRedux();

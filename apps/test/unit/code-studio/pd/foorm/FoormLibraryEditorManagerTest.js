@@ -19,7 +19,7 @@ import {Button, DropdownButton} from 'react-bootstrap';
 
 global.$ = require('jquery');
 
-describe('FoormLibraryEditorManager', () => {
+describe.skip('FoormLibraryEditorManager', () => {
   let defaultProps, store, server, wrapper;
   beforeEach(() => {
     stubRedux();
