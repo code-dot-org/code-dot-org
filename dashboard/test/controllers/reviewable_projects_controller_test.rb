@@ -12,7 +12,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @project_storage_app_id = 78
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher
+    @section = create :section, user: @teacher, code_review_enabled: true
     @another_student = create :student
 
     create :follower, student_user: @project_owner, section: @section
