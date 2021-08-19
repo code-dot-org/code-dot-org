@@ -13,13 +13,28 @@ function inManifest(path) {
   return __karmaWebpackManifest__.indexOf(path) >= 0;
 }
 
+function filterFoormTest(path) {
+  return (
+    [
+      './code-studio/pd/foorm/',
+      './code-studio/pd/form_components/',
+      './code-studio/pd/workshop_dashboard/components/survey_results/survey_rollup_table_foormTest.js',
+      './code-studio/pd/workshop_dashboard/components/workshop_managementTest.js',
+      './code-studio/pd/workshop_dashboard/reports/foorm/resultsTest.js'
+    ].findIndex(p => path.startsWith(p)) === -1
+  );
+}
+
 var testsContext = require.context('./unit', true, /\.jsx?$/);
 
-var runnable = testsContext.keys().filter(inManifest);
+var runnable = testsContext
+  .keys()
+  .filter(path => inManifest(path) || filterFoormTest(path));
 
 // Run all tests if we didn't find any changes
 if (!runnable.length) {
-  runnable = testsContext.keys();
+  console.log('NO CHANGES FOUND');
+  runnable = testsContext.keys(filterFoormTest);
 }
 
 describe('unit tests', function() {
