@@ -296,7 +296,12 @@ Javalab.prototype.onStop = function() {
 
 // Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
-  this.javabuilderConnection.sendMessage(message);
+  this.javabuilderConnection.sendMessage(
+    JSON.stringify({
+      messageType: 'SYSTEM_IN',
+      message
+    })
+  );
 };
 
 // Called by the Javalab app when it wants to go to the next level.
