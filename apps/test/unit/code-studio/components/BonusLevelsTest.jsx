@@ -3,7 +3,6 @@ import {shallow} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import {bonusLevels} from './lessonExtrasTestHelpers';
 import BonusLevels from '@cdo/apps/code-studio/components/lessonExtras/BonusLevels';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const DEFAULT_PROPS = {
   bonusLevels: bonusLevels,
@@ -28,7 +27,7 @@ describe('BonusLevels', () => {
 
   it('updates the lesson header when arrows are toggled', () => {
     const wrapper = setUp();
-    const leftArrow = wrapper.find(FontAwesome).first();
+    const leftArrow = wrapper.find('FontAwesome').first();
     leftArrow.simulate('click');
     assert(wrapper.contains('Lesson 2 Challenges'));
   });
