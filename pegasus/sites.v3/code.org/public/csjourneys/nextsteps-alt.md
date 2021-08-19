@@ -107,7 +107,7 @@ social:
   <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics and student takeaways, click the Register button below.</p>
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Erin Howard</strong>
     <br>
@@ -115,7 +115,7 @@ social:
     <br>
     <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
@@ -123,7 +123,15 @@ social:
     <br>
     <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
   </div>
-  <div class="col-33" style="text-align:center">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/nicholas-papano.png" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Nicholas Papano</strong>
+    <br>
+    Recent Grad
+    <br>
+    <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
+  </div>
+  <div class="col-25" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Brianna Wimer</strong>
     <br>
