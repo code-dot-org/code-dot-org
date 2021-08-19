@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:49 UTC",
+    "serialized_at": "2021-08-12 14:27:48 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "allthethings"
@@ -4332,6 +4332,29 @@
       "level_keys": [
         "Allthethings Java Lab 7"
       ]
+    },
+    {
+      "chapter": 154,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Java Lab submittable"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab submittable"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "Allthethings Java Lab submittable"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6142,6 +6165,17 @@
         "level.key": "Allthethings Java Lab 7",
         "script_level.level_keys": [
           "Allthethings Java Lab 7"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab submittable",
+        "script_level.level_keys": [
+          "Allthethings Java Lab submittable"
         ],
         "lesson.key": "Java Lab",
         "lesson_group.key": "",
