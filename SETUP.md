@@ -190,9 +190,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `rbenv global 2.5.0`
     1. `rbenv rehash`
 1. Install yarn
-    1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-    1. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    1. `sudo apt-get update && sudo apt-get install yarn=1.22.5-1`
+    1. `npm install -g yarn@1.22.5`.
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
@@ -248,8 +246,10 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
      * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
-     * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
-     * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
+     * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
+     * **Step 3: Configure Instance**: 
+       * Set IAM Role to `DeveloperEC2`
+       * Set VPC to `vpc-a48462c3`
      * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
   1. Connect to the instance by selecting the instance in the AWS EC2 dashboard and clicking "Connect". Follow the provided instructions in order to connect via ssh or PuTTY. Upon completing this step, you should be able to connect to your instance via a command like `ssh -i <keyname>.pem <public-dns-name>`.
