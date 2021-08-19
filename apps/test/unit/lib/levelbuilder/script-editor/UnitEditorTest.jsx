@@ -282,6 +282,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
