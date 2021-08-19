@@ -176,7 +176,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 
     * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
         * Ubuntu 18.04: `sudo snap install pdftk`. 
-        * Ubuntu 18.10 and later: `sudo apt-get isntall pdftk-java`
         * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
    
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
