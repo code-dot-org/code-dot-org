@@ -124,7 +124,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -150,7 +149,6 @@
         ],
         "progression": "Preparation"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -176,7 +174,6 @@
         ],
         "progression": "Scenario prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -202,7 +199,6 @@
         ],
         "progression": "Scenario prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -228,7 +224,6 @@
         ],
         "progression": "Scenario prompts"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

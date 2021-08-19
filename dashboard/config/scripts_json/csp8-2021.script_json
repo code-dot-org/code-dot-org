@@ -873,7 +873,6 @@
         ],
         "progression": "Tech Setup and Tools for Create PT"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -899,7 +898,6 @@
         ],
         "progression": "Create PT Coding Workspace"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
