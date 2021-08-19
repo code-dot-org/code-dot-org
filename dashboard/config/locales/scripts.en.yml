@@ -25786,3 +25786,15 @@ en:
           description_short: ''
           description_audience: ''
           name: csa5-pilot-facilitator
+        poetry-hoc:
+          lessons:
+            lesson-1:
+              name: Moods & Attitudes
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry-hoc
+          title: 'Moods & Attitudes '
+          description_audience: ''
+          description_short: 'Hour of Code Activity - V2 '
+          description: ''

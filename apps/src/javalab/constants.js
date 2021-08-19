@@ -3,12 +3,14 @@ import {makeEnum} from '@cdo/apps/utils';
 export const CsaViewMode = {
   NEIGHBORHOOD: 'neighborhood',
   CONSOLE: 'console',
-  THEATER: 'theater'
+  THEATER: 'theater',
+  PLAYGROUND: 'playground'
 };
 
 export const WebSocketMessageType = {
   NEIGHBORHOOD: 'NEIGHBORHOOD',
   THEATER: 'THEATER',
+  PLAYGROUND: 'PLAYGROUND',
   SYSTEM_OUT: 'SYSTEM_OUT',
   EXCEPTION: 'EXCEPTION',
   DEBUG: 'DEBUG',
