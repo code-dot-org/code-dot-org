@@ -394,12 +394,19 @@ export default class PoemBotLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
+    const longestLine = poemState.lines.reduce((accumulator, current) =>
+      accumulator.length > current.length ? accumulator : current
+    );
+    renderInfo.lineSize = this.getScaledFontSize(
+      longestLine,
+      poemState.font,
+      FONT_SIZE
+    );
     poemState.lines.forEach(line => {
       renderInfo.lines.push({
         text: line,
         x: PLAYSPACE_SIZE / 2,
-        y: yCursor,
-        size: this.getScaledFontSize(line, poemState.font, FONT_SIZE)
+        y: yCursor
       });
       yCursor += lineHeight;
     });
@@ -435,10 +442,10 @@ export default class PoemBotLibrary extends CoreLibrary {
         renderInfo.author.y
       );
     }
+    this.p5.textSize(renderInfo.lineSize);
     renderInfo.lines.forEach(item => {
       let color = this.getP5Color(renderInfo.color || 'black', item.alpha);
       this.p5.fill(color);
-      this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
   }
