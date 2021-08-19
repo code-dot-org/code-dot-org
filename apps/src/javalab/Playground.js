@@ -3,9 +3,10 @@ import javalabMsg from '@cdo/javalab/locale';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 
 export default class Playground {
-  constructor(onOutputMessage, onNewlineMessage) {
+  constructor(onOutputMessage, onNewlineMessage, onInputMessage) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.onInputMessage = onInputMessage;
   }
 
   handleSignal(data) {
@@ -59,6 +60,7 @@ export default class Playground {
 
   handleImageClick(imageId) {
     console.log('got click event for ' + imageId);
+    this.onInputMessage('PLAYGROUND', imageId);
   }
 
   getPixelValue(configValue) {

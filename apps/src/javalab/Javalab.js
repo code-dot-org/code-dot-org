@@ -101,7 +101,7 @@ Javalab.prototype.init = function(config) {
   const onStop = this.onStop.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
-  const onInputMessage = this.onInputMessage.bind(this);
+  const onSystemInMessage = this.onSystemInMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   switch (this.level.csaViewMode) {
@@ -127,7 +127,8 @@ Javalab.prototype.init = function(config) {
     case CsaViewMode.PLAYGROUND:
       this.miniApp = new Playground(
         this.onOutputMessage,
-        this.onNewlineMessage
+        this.onNewlineMessage,
+        this.onInputMessage
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
@@ -244,7 +245,7 @@ Javalab.prototype.init = function(config) {
         onStop={onStop}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
-        onInputMessage={onInputMessage}
+        onInputMessage={onSystemInMessage}
         handleVersionHistory={handleVersionHistory}
         visualization={this.visualization}
         viewMode={this.level.csaViewMode || CsaViewMode.CONSOLE}
@@ -303,8 +304,17 @@ Javalab.prototype.onStop = function() {
 };
 
 // Called by Javalab console to send a message to Javabuilder.
-Javalab.prototype.onInputMessage = function(message) {
-  this.javabuilderConnection.sendMessage(message);
+Javalab.prototype.onSystemInMessage = function(message) {
+  this.onInputMessage('SYSTEM_IN');
+};
+
+Javalab.prototype.onInputMessage = function(type, message) {
+  this.javabuilderConnection.sendMessage(
+    JSON.stringify({
+      messageType: type,
+      message
+    })
+  );
 };
 
 // Called by the Javalab app when it wants to go to the next level.
