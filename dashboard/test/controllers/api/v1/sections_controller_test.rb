@@ -397,8 +397,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL
     }
 
-    assert_false returned_json['code_review_enabled']
-    assert_false returned_section.code_review_enabled
+    refute returned_json['code_review_enabled']
+    refute returned_section.code_review_enabled
   end
 
   test 'cannot set lesson_extras to an invalid value' do
