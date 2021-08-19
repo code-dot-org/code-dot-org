@@ -13,6 +13,41 @@ export const commands = {
         };
         break;
       }
+      case 'squiggles': {
+        const points = [];
+        const dotSpacing = 4;
+        const amplitude = 40;
+        const period = 400;
+        const dotRadius = 14;
+        const numSquiggles = 5;
+        const numPoints = this.p5.height / dotSpacing;
+        for (let i = 0; i < numPoints; i++) {
+          points.push({
+            x: 0,
+            y: i * dotSpacing,
+            theta: (360 / period) * i * dotSpacing,
+            color: utils.lerpColorFromPalette(this.p5, palette, i / numPoints)
+          });
+        }
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          this.p5.angleMode(this.p5.DEGREES);
+          this.p5.background('black');
+          for (let i = 0; i < numSquiggles; i++) {
+            points.forEach(point => {
+              point.x =
+                (this.p5.width / (numSquiggles - 1)) * i +
+                this.p5.sin(point.theta) * amplitude;
+              point.theta = (point.theta + 1) % 360;
+              this.p5.fill(point.color);
+              this.p5.ellipse(point.x, point.y, dotRadius, dotRadius);
+            });
+          }
+          this.p5.pop();
+        };
+        break;
+      }
       case 'darkCircles': {
         const circles = [];
         const NUM_CIRCLES = 20;
