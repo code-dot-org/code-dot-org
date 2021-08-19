@@ -17,6 +17,7 @@ const SET_INSTRUCTIONS_HEIGHT = 'javalab/SET_INSTRUCTIONS_HEIGHT';
 const SET_INSTRUCTIONS_FULL_HEIGHT = 'javalab/SET_INSTRUCTIONS_FULL_HEIGHT';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 const SET_IS_RUNNING = 'javalab/SET_IS_RUNNING';
+const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
@@ -35,6 +36,7 @@ const initialState = {
   instructionsHeight: 200,
   instructionsFullHeight: 200,
   isRunning: false,
+  consoleHeight: 200,
   editorColumnHeight: 600,
   backpackApi: null,
   isStartMode: false,
@@ -206,6 +208,11 @@ export const setInstructionsFullHeight = height => ({
   height
 });
 
+export const setConsoleHeight = height => ({
+  type: SET_CONSOLE_HEIGHT,
+  height
+});
+
 export const setEditorColumnHeight = editorColumnHeight => ({
   type: EDITOR_COLUMN_HEIGHT,
   editorColumnHeight
@@ -328,6 +335,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isRunning: action.isRunning
+    };
+  }
+  if (action.type === SET_CONSOLE_HEIGHT) {
+    return {
+      ...state,
+      consoleHeight: action.height
     };
   }
   if (action.type === EDITOR_COLUMN_HEIGHT) {
