@@ -272,7 +272,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -293,7 +292,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -314,7 +312,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -335,7 +332,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -356,7 +352,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -377,7 +372,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -398,7 +392,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -419,7 +412,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -440,7 +432,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -461,7 +452,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -482,7 +472,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -503,7 +492,6 @@
       "properties": {
         "progression": "console.log Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -524,7 +512,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -545,7 +532,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -566,7 +552,6 @@
       "properties": {
         "progression": "MOD Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -587,7 +572,6 @@
       "properties": {
         "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -608,7 +592,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -629,7 +612,6 @@
       "properties": {
         "progression": "Try the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -650,7 +632,6 @@
       "properties": {
         "progression": "Make the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -671,7 +652,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -692,7 +672,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -713,7 +692,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -734,7 +712,6 @@
       "properties": {
         "progression": "Turn On Student Created Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -755,7 +732,6 @@
       "properties": {
         "progression": "States App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -776,7 +752,6 @@
       "properties": {
         "progression": "Pigify App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -797,7 +772,6 @@
       "properties": {
         "progression": "Check For Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -818,7 +792,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -839,7 +812,6 @@
       "properties": {
         "progression": "Using Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -860,7 +832,6 @@
       "properties": {
         "progression": "Using Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +852,6 @@
       "properties": {
         "progression": "Testing Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,7 +872,6 @@
       "properties": {
         "progression": "Testing Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -923,7 +892,6 @@
       "properties": {
         "progression": "Testing Libraries"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -944,7 +912,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,7 +932,6 @@
       "properties": {
         "progression": "Build Your Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -986,7 +952,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,7 +972,6 @@
       "properties": {
         "progression": "Build Your Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1028,7 +992,6 @@
       "properties": {
         "progression": "Test a Classmate's Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1049,7 +1012,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1070,7 +1032,6 @@
       "properties": {
         "progression": "Build Your Library"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1091,7 +1052,6 @@
       "properties": {
         "progression": "Lesson Overview"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1112,7 +1072,6 @@
       "properties": {
         "progression": "Unit 7 Exam"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1133,7 +1092,6 @@
       "properties": {
         "progression": "Unit 7 STUDENT Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1154,7 +1112,6 @@
       "properties": {
         "progression": "Unit 7 TEACHER Survey"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1175,7 +1132,6 @@
       "properties": {
         "progression": "Try the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1196,7 +1152,6 @@
       "properties": {
         "progression": "Build the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1217,7 +1172,6 @@
       "properties": {
         "progression": "Build the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1238,7 +1192,6 @@
       "properties": {
         "progression": "Build the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1259,7 +1212,6 @@
       "properties": {
         "progression": "Build the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1280,7 +1232,6 @@
       "properties": {
         "progression": "Build the Rock Paper Scissors App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

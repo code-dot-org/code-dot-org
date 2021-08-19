@@ -379,7 +379,6 @@
       "properties": {
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -400,7 +399,6 @@
       "properties": {
         "progression": "Introduction to Lists"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -421,7 +419,6 @@
       "properties": {
         "progression": "Introduction to Lists"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -442,7 +439,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -463,7 +459,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -484,7 +479,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -505,7 +499,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -526,7 +519,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -547,7 +539,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -568,7 +559,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -589,7 +579,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -610,7 +599,6 @@
       "properties": {
         "progression": "List Patterns"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -631,7 +619,6 @@
       "properties": {
         "progression": "List Patterns"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -652,7 +639,6 @@
       "properties": {
         "progression": "Setting up Lists"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -673,7 +659,6 @@
       "properties": {
         "progression": "Setting up Lists"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -694,7 +679,6 @@
       "properties": {
         "progression": "Accessing Elements in a List"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -715,7 +699,6 @@
       "properties": {
         "progression": "Accessing Elements in a List"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -736,7 +719,6 @@
       "properties": {
         "progression": "Accessing Elements in a List"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -757,7 +739,6 @@
       "properties": {
         "progression": "List Operations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -778,7 +759,6 @@
       "properties": {
         "progression": "List Operations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +779,6 @@
       "properties": {
         "progression": "List Operations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -820,7 +799,6 @@
       "properties": {
         "progression": "List Operations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +819,6 @@
       "properties": {
         "progression": "List Operations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -862,7 +839,6 @@
       "properties": {
         "progression": "Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -883,7 +859,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -904,7 +879,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -925,7 +899,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -946,7 +919,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -967,7 +939,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -988,7 +959,6 @@
       "properties": {
         "progression": "Build the Reminders App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1009,7 +979,6 @@
       "properties": {
         "progression": "Student Survey (Lists)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1030,7 +999,6 @@
       "properties": {
         "progression": "Teacher Survey (Lists)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1051,7 +1019,6 @@
       "properties": {
         "progression": "Introduction to Loops"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1072,7 +1039,6 @@
       "properties": {
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1093,7 +1059,6 @@
       "properties": {
         "progression": "Coin Flipper Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1114,7 +1079,6 @@
       "properties": {
         "progression": "While Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1135,7 +1099,6 @@
       "properties": {
         "progression": "While Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1156,7 +1119,6 @@
       "properties": {
         "progression": "While Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1177,7 +1139,6 @@
       "properties": {
         "progression": "For Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1198,7 +1159,6 @@
       "properties": {
         "progression": "For Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1219,7 +1179,6 @@
       "properties": {
         "progression": "For Loop Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1240,7 +1199,6 @@
       "properties": {
         "progression": "Simulations Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1261,7 +1219,6 @@
       "properties": {
         "progression": "Simulations Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1282,7 +1239,6 @@
       "properties": {
         "progression": "Simulations Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1303,7 +1259,6 @@
       "properties": {
         "progression": "Introduction to Traversal"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1324,7 +1279,6 @@
       "properties": {
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1345,7 +1299,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1366,7 +1319,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1387,7 +1339,6 @@
       "properties": {
         "progression": "App Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1408,7 +1359,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1429,7 +1379,6 @@
       "properties": {
         "progression": "The getList() Block"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1450,7 +1399,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1471,7 +1419,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1492,7 +1439,6 @@
       "properties": {
         "progression": "Traversal Patterns"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1513,7 +1459,6 @@
       "properties": {
         "progression": "Traversal Patterns"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1534,7 +1479,6 @@
       "properties": {
         "progression": "Traversal Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1555,7 +1499,6 @@
       "properties": {
         "progression": "Traversal Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1576,7 +1519,6 @@
       "properties": {
         "progression": "Traversal Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1597,7 +1539,6 @@
       "properties": {
         "progression": "Filter and Reduce Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1618,7 +1559,6 @@
       "properties": {
         "progression": "Filter and Reduce Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1639,7 +1579,6 @@
       "properties": {
         "progression": "Filter and Reduce Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1660,7 +1599,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1681,7 +1619,6 @@
       "properties": {
         "progression": "App Practice"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1702,7 +1639,6 @@
       "properties": {
         "progression": "The Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1723,7 +1659,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1744,7 +1679,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1765,7 +1699,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1786,7 +1719,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1807,7 +1739,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1828,7 +1759,6 @@
       "properties": {
         "progression": "Build the Wacky Name Generator App"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1849,7 +1779,6 @@
       "properties": {
         "progression": "Student Survey (Traversals)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1870,7 +1799,6 @@
       "properties": {
         "progression": "Teacher Survey (Traversals)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1891,7 +1819,6 @@
       "properties": {
         "progression": "Instructions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1912,7 +1839,6 @@
       "properties": {
         "progression": "Mini PT"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1933,7 +1859,6 @@
       "properties": {
         "progression": "Student Survey (Mini PT)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1953,7 +1878,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1974,7 +1898,6 @@
       "properties": {
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1995,7 +1918,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2016,7 +1938,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2037,7 +1958,6 @@
       "properties": {
         "progression": "Code Investigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2058,7 +1978,6 @@
       "properties": {
         "progression": "Student Survey (Libraries)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2079,7 +1998,6 @@
       "properties": {
         "progression": "Teacher Survey (Libraries)"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
