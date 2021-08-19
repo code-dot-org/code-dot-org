@@ -370,7 +370,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -390,7 +389,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -410,7 +408,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -431,7 +428,6 @@
       "properties": {
         "progression": "Experiment with Web Lab"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -451,7 +447,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -471,7 +466,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -491,7 +485,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +505,6 @@
       "properties": {
         "progression": "Using HTML Tags"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -533,7 +525,6 @@
       "properties": {
         "progression": "Using HTML Tags"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +545,6 @@
       "properties": {
         "progression": "Using HTML Tags"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -574,7 +564,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -594,7 +583,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -615,7 +603,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -636,7 +623,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -657,7 +643,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -678,7 +663,6 @@
       "properties": {
         "progression": "Video: Debugging"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -699,7 +683,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -720,7 +703,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -741,7 +723,6 @@
       "properties": {
         "progression": "Headings"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -761,7 +742,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -781,7 +761,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -801,7 +780,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -821,7 +799,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -841,7 +818,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -861,7 +837,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -882,7 +857,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -903,7 +877,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -924,7 +897,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -944,7 +916,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,7 +936,6 @@
       "properties": {
         "progression": "Styling your Website"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -986,7 +956,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,7 +976,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1028,7 +996,6 @@
       "properties": {
         "progression": "Styling Text"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1048,7 +1015,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1068,7 +1034,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1089,7 +1054,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1110,7 +1074,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1131,7 +1094,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1152,7 +1114,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1173,7 +1134,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1194,7 +1154,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1215,7 +1174,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1236,7 +1194,6 @@
       "properties": {
         "progression": "Adding Images Challenges"
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1256,7 +1213,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1276,7 +1232,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1296,7 +1251,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1317,7 +1271,6 @@
       "properties": {
         "progression": "Exploring more CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1338,7 +1291,6 @@
       "properties": {
         "progression": "Exploring more CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1359,7 +1311,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1380,7 +1331,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1401,7 +1351,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1422,7 +1371,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1443,7 +1391,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1464,7 +1411,6 @@
       "properties": {
         "progression": "Layout with CSS"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1484,7 +1430,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1504,7 +1449,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1524,7 +1468,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1545,7 +1488,6 @@
       "properties": {
         "progression": "Website Project"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1566,7 +1508,6 @@
       "properties": {
         "progression": "Website Project"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1587,7 +1528,6 @@
       "properties": {
         "progression": "Website Project"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1608,7 +1548,6 @@
       "properties": {
         "progression": "Website Project"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1628,7 +1567,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1649,7 +1587,6 @@
       "properties": {
         "progression": "Publishing Your Website"
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1670,7 +1607,6 @@
       "properties": {
         "progression": "Reflection"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1690,7 +1626,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1710,7 +1645,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1730,7 +1664,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1750,7 +1683,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1770,7 +1702,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1791,7 +1722,6 @@
       "properties": {
         "progression": "Styling with Classes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1812,7 +1742,6 @@
       "properties": {
         "progression": "Styling with Classes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1833,7 +1762,6 @@
       "properties": {
         "progression": "Styling with Classes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1854,7 +1782,6 @@
       "properties": {
         "progression": "Styling with Classes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1874,7 +1801,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1894,7 +1820,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1914,7 +1839,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1935,7 +1859,6 @@
       "properties": {
         "progression": "Exploring Links"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1956,7 +1879,6 @@
       "properties": {
         "progression": "Links and Navigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1977,7 +1899,6 @@
       "properties": {
         "progression": "Links and Navigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1998,7 +1919,6 @@
       "properties": {
         "progression": "Links and Navigation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2019,7 +1939,6 @@
       "properties": {
         "progression": "Adding Pages"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2040,7 +1959,6 @@
       "properties": {
         "progression": "Adding Pages"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2061,7 +1979,6 @@
       "properties": {
         "progression": "Challenge: External Links"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2081,7 +1998,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2102,7 +2018,6 @@
       "properties": {
         "progression": "Upload Your Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2123,7 +2038,6 @@
       "properties": {
         "progression": "Create Your Pages"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2144,7 +2058,6 @@
       "properties": {
         "progression": "Add Content"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2165,7 +2078,6 @@
       "properties": {
         "progression": "Add Style"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2186,7 +2098,6 @@
       "properties": {
         "progression": "Check Your Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2206,7 +2117,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2226,7 +2136,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2247,7 +2156,6 @@
       "properties": {
         "progression": "Reflection"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2267,7 +2175,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2287,7 +2194,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2307,7 +2213,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [

@@ -82,7 +82,6 @@
       "properties": {
         "progression": "My Activity Section"
       },
-      "named_level": null,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
