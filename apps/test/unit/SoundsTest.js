@@ -4,18 +4,18 @@ import sinon from 'sinon';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('Sounds', () => {
-  let sounds, sourceURL, sound, spy;
+  let sounds, sourceURL, sound;
 
   beforeEach(() => {
     sounds = new Sounds();
     sourceURL = winMp3;
     sounds.register({id: sourceURL, mp3: sourceURL});
     sound = sounds.soundsById[sourceURL];
-    spy = sinon.stub(sound, 'playAfterLoad');
+    sinon.stub(sound, 'playAfterLoad');
   });
 
   afterEach(() => {
-    spy.restore();
+    sinon.restore();
     sounds.unmuteURLs();
   });
 
@@ -41,7 +41,7 @@ describe('Sounds', () => {
     sounds.muteURLs();
 
     let soundFromId = sounds.soundsById['testSound'];
-    spy = sinon.stub(soundFromId, 'play');
+    sinon.stub(soundFromId, 'play');
     sounds.play(soundId);
     expect(soundFromId.play).to.have.been.calledOnce;
   });
