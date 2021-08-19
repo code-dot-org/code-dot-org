@@ -1,4 +1,5 @@
 @no_mobile
+@skip
 Feature: Submittable JavaLab
 
 Background:
