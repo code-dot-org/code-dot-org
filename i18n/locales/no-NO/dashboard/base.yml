@@ -548,7 +548,6 @@
       link: "Lær mer"
       applab_unsupported_tablet: "App-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet på denne enheten."
       gamelab_unsupported_tablet: "Spill-lab fungerer best på en stasjonær eller bærbar datamaskin med mus og tastatur. Det kan oppstå problemer med dette verktøyet på den gjeldende enheten."
-      weblab_unsupported_browser: "Dessverre opplever vi problemer med lasting av Web Lab på denne nettleseren. Prøv en annen nettleser inntil problemet er løst. Beklager ulempen dette medfører."
       weblab_unsupported_locale_storage: "Du kan oppleve problemer med å bruke Nett-lab i nettleserens private modus. Vennligst last prosjektet på nytt i normal modus. Beklager ulempen dette medfører."
   slow_loading: 'Dette tar lengre tid enn vanlig...'
   try_reloading: 'Last siden på nytt'

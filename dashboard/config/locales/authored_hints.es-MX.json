@@ -3649,12 +3649,12 @@
         },
         "courseC_PlayLab_eventsFP_2019": {
           "idea3": "_¿Necesitas una idea?_\n\n\\*\\* Pinball\\*\\* - Haz que un personaje se mueva con las flechas (usa los bloques `cuando flecha arriba`, `cuando flecha abajo`), y luego reproduce sonidos al azar cuando choca con otros personajes en la pantalla.",
-          "idea1": "¿Necesitas una idea?\n\n\\*\\*¿Quién está ahí? Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea1": "¿Necesitas una idea?\n\n**¿Quién está ahí?** Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "¿Necesitas una idea?\n\n**Ir a la aventura** - Cambia el fondo y luego haz que los personajes hablen de dónde están ahora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_eventsFP_2020": {
           "idea3": "_¿Necesitas una idea?_\n\n\\*\\* Pinball\\*\\* - Haz que un personaje se mueva con las flechas (usa los bloques `cuando flecha arriba`, `cuando flecha abajo`), y luego reproduce sonidos al azar cuando choca con otros personajes en la pantalla.",
-          "idea1": "¿Necesitas una idea?\n\n\\*\\*¿Quién está ahí? Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea1": "¿Necesitas una idea?\n\n**¿Quién está ahí?** Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "¿Necesitas una idea?\n\n**Ir a la aventura** - Cambia el fondo y luego haz que los personajes hablen de dónde están ahora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1": {
@@ -9580,7 +9580,7 @@
           "courseC_PlayLab_eventsA_a": "Utiliza las teclas de flecha para mover el pingüino. No necesitas escribir ningún código para terminar este nivel."
         },
         "courseC_PlayLab_eventsFP_2021": {
-          "idea1": "¿Necesitas una idea?\n\n\\*\\*¿Quién está ahí? Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+          "idea1": "¿Necesitas una idea?\n\n**¿Quién está ahí?** Haz que los personajes aparezcan con imágenes aleatorias, para que nadie sepa quién es el siguiente en aparecer.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
           "idea2": "¿Necesitas una idea?\n\n**Ir a la aventura** - Cambia el fondo y luego haz que los personajes hablen de dónde están ahora.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
           "idea3": "_¿Necesitas una idea?_\n\n\\*\\* Pinball\\*\\* - Haz que un personaje se mueva con las flechas (usa los bloques `cuando flecha arriba`, `cuando flecha abajo`), y luego reproduce sonidos al azar cuando choca con otros personajes en la pantalla."
         },
@@ -10625,7 +10625,7 @@
           "courseF_bee_variables_3_2021_1": "Para continuar con el patrón, aumenta el número de repeticiones:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_bee_variables_3aa_2021": {
-          "courseF_bee_variables_3_2021_1": "Para añadir una a la variable, puedes utilizar este código en tu programa:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+          "courseF_bee_variables_3_2021_1": "Para añadir uno a la variable, puedes utilizar este código en tu programa:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "En lugar de añadir 1 a la variable, añade 2 cada vez."

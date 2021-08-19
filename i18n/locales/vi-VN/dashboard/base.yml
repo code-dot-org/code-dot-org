@@ -548,7 +548,6 @@ vi:
       link: "Tìm hiểu thêm"
       applab_unsupported_tablet: "App Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay có chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
       gamelab_unsupported_tablet: "Game Lab hoạt động tốt nhất trên máy tính để bàn hoặc máy tính xách tay với chuột và bàn phím. Bạn có thể gặp sự cố khi sử dụng công cụ này trên thiết bị hiện tại của mình."
-      weblab_unsupported_browser: "Rất tiếc, chúng tôi hiện đang gặp sự cố khi tải Lab Web trên trình duyệt này. Bạn có thể muốn sử dụng một trình duyệt khác cho đến khi được giải quyết. Xin lỗi vì sự bất tiện."
       weblab_unsupported_locale_storage: "Bạn có thể gặp sự cố khi sử dụng Web Lab ở chế độ Duyệt web Riêng tư. Vui lòng tải lại dự án của bạn ở chế độ thông thường. Xin lỗi vì sự bất tiện."
   slow_loading: 'Điều này mất nhiều thời gian hơn bình thường...'
   try_reloading: 'Hãy thử tải lại trang'

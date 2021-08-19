@@ -750,12 +750,6 @@ it:
       gamelab_unsupported_tablet: Sviluppo Giochi funziona meglio su un PC o un portatile
         con mouse e tastiera. Potrebbero verificarsi problemi utilizzandolo sul tuo
         dispositivo attuale.
-      oceans_unsupported_browser: Questo browser non è supportato per questo tutorial.
-        Sei pregato di provare a visitare questa pagina usando Edge, Chrome, Firefox
-        o un altro browser moderno.
-      weblab_unsupported_browser: Purtroppo, ci sono al momento dei problemi per usare
-        Sviluppo Web su questo browser. Ti consigliamo di utilizzare un altro browser,
-        finché non risolviamo i problemi attuali. Ci scusiamo per l'inconveniente.
       weblab_unsupported_locale_storage: Potrebbero verificarsi problemi utilizzando
         Sviluppo Web in modalità di navigazione privata. Ti preghiamo di ricaricare
         il progetto in modalità di navigazione normale. Ci scusiamo per l'inconveniente.

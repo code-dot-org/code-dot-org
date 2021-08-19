@@ -59,10 +59,10 @@ social:
     <a href="https://ameelio.org/" target="_blank">Ameelio</a></p>
   </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Zené Sekou</strong>
     <br>
-    Marketing Program Manager, Code.org</p>
+    Software Engineer, Amazon</p>
   </div>
   <div class="col-33" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
@@ -189,18 +189,18 @@ social:
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
-        <li style="color:#ffffff">Encourage students to upvote questions they like on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>, and post their own questions using the hashtag #CSJourneys</li><br>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
+        <li style="color:#ffffff">Give students time in class to generate a list of goals for their future. These could be career goals (become an engineer, start a company), and/or personal goals (start a family, buy a house). The more specific their goals, the better.</li><br>
+        <li style="color:#ffffff">Have students create a to-do list of steps they need to take in order to achieve their goals. Again, the more specific they are, the better.</li><br>
+        <li style="color:#ffffff">Encourage students to explore <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a> with their goals in mind. They can upvote questions they like and post their own questions using the hashtag #CSJourneys</li><br>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
-        <li style="color:#ffffff">Have students work in pairs or groups to generate follow up questions. Encourage them to post questions on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a></li><br>
-        <li style="color:#ffffff">Have students build a TDL on CareerVillage.</li><br>
-        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
+        <li style="color:#ffffff">Give students time in class to revisit both their list of goals and their to-do list of steps they need to take to achieve their goals. Does anything change?</li><br>
+        <li style="color:#ffffff">Have students research community colleges in your area (city/region/state). What programs are available. How much does it cost? Are there bridge programs between the community college(s) and state universities? What are some of the benefits and drawbacks of going this route?</li><br>
+        <li style="color:#ffffff">Give students time to explore other alternative pathways, like <a href="https://grow.google/certificates/#?modal_active=none target="_blank" style="color:#ffffff">Google Career Certificates</a> and <a href="https://code.org/beyond/internships#apprenticeships" target="_blank" style="color:#ffffff">apprenticeship programs</a>. Again, encourage them to think about benefits and drawbacks.</li>
     </ul>
   </div>
   <div style="clear: both"></div>

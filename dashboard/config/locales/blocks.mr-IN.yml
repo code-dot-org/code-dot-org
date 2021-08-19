@@ -854,6 +854,10 @@ mr:
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
             '"tint"': रंग
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': इतर
       gamelab_getTime:
         options:
           UNIT:

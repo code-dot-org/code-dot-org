@@ -2118,3 +2118,8 @@ eu-ES:
           # Nire lineako auzokidea
 
           ## Nola joaten zara segurtasunez lekuetara linean?
+      csf_digital_trails_2021:
+        markdown: |
+          # Jarraitu ibilbide digitala
+
+          ## Zer informazio dago zure aztarna digitalean?

@@ -2139,14 +2139,14 @@
           "answered_block": "¡Busca un nuevo bloque aquí!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "¿Ha cambiado de color el fondo cuando has respondido a la pregunta? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y vuelve a pulsar \"Ejecutar\"."
+          "text_color_finish": "¿El fondo cambió de color cuando respondiste a la pregunta? Si es así, pulsa 'Finalizar'. Si no, pulsa 'Reiniciar', cambia el código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "¿Has terminado? Si es así, pulsa 'Finalizar'. Si no, pulsa 'Reiniciar', cambia el código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_choice_title": {
           "title_block": "¡Busca dos nuevos bloques aquí!",
-          "text_answer_finish": "¿Se ha mostrado una pantalla de título durante 3 segundos? Si es así, pulsa \"Finalizar\". Si no es así, pulsa \"Reiniciar\", cambia el código y pulsa \"Ejecutar\" de nuevo."
+          "text_answer_finish": "¿Se ha mostrado una pantalla de título durante 3 segundos? Si es así, pulsa 'Finalizar'. Si no, pulsa 'Reiniciar', cambia el código y vuelve a pulsar 'Ejecutar'."
         },
         "courseF_text_concat": {
           "join_blocks": "¡Busca nuevos bloques aquí!"

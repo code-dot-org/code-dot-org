@@ -93,7 +93,8 @@
             "parameters": {
               "height": "உயரம்",
               "actor": "நடிகர்"
-            }
+            },
+            "name": "குதி"
           }
         },
         "Course 4 Play Lab Params 4": {
@@ -417,7 +418,8 @@
             "parameters": {
               "height": "உயரம்",
               "actor": "நடிகர்"
-            }
+            },
+            "name": "குதி"
           },
           "patrol": {
             "parameters": {
@@ -1626,6 +1628,16 @@
           },
           "fix short path": {
             "name": "குறுகிய பாதையை சரிசெய்யவும்"
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "குதி"
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "குதி"
           }
         }
       }

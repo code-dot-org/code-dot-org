@@ -595,8 +595,6 @@ in:
       link: crwdns56932:0crwdne56932:0
       applab_unsupported_tablet: crwdns78689:0crwdne78689:0
       gamelab_unsupported_tablet: crwdns78690:0crwdne78690:0
-      oceans_unsupported_browser: crwdns2289845:0crwdne2289845:0
-      weblab_unsupported_browser: crwdns78691:0crwdne78691:0
       weblab_unsupported_locale_storage: crwdns78692:0crwdne78692:0
   slow_loading: crwdns3859:0crwdne3859:0
   try_reloading: crwdns3860:0crwdne3860:0
