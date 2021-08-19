@@ -34,7 +34,7 @@ class Backpack extends Component {
     backpackLoadError: false,
     selectedFiles: [],
     openDialog: null,
-    overwriteFileList: []
+    fileImportMessage: ''
   };
 
   expandDropdown = () => {
@@ -56,7 +56,7 @@ class Backpack extends Component {
   handleImport = () => {
     const {selectedFiles} = this.state;
     if (selectedFiles.length > 0) {
-      this.validateFilenamesForImport(
+      this.validateAndImportFiles(
         this.importFiles,
         this.showImportWarning,
         this.showImportError
@@ -64,8 +64,8 @@ class Backpack extends Component {
     }
   };
 
-  importFiles = () => {
-    this.state.selectedFiles.forEach(filename => {
+  importFiles = selectedFiles => {
+    selectedFiles.forEach(filename => {
       this.props.backpackApi.fetchFile(
         filename,
         () => {} /* onError, currently do nothing */,
@@ -79,26 +79,23 @@ class Backpack extends Component {
   showImportWarning = files => {
     this.setState({
       openDialog: Dialog.IMPORT_WARNING,
-      overwriteFileList: files
+      fileImportMessage: this.getFileImportMessage(false, files)
     });
   };
 
   showImportError = files => {
     this.setState({
       openDialog: Dialog.IMPORT_ERROR,
-      overwriteFileList: files
+      fileImportMessage: this.getFileImportMessage(true, files)
     });
   };
 
-  validateFilenamesForImport = (
-    successCallback,
-    warnCallback,
-    errorCallback
-  ) => {
+  validateAndImportFiles = (successCallback, warnCallback, errorCallback) => {
     let hiddenFilenamesUsed = [];
     let visibleFilenamesUsed = [];
     const {selectedFiles} = this.state;
     const {sources} = this.props;
+
     selectedFiles.forEach(filename => {
       const source = sources[filename];
       if (source) {
@@ -109,19 +106,20 @@ class Backpack extends Component {
         }
       }
     });
+
     if (hiddenFilenamesUsed.length > 0) {
       errorCallback(hiddenFilenamesUsed);
     } else if (visibleFilenamesUsed.length > 0) {
       warnCallback(visibleFilenamesUsed);
     } else {
-      successCallback();
+      successCallback(selectedFiles);
     }
   };
 
   collapseDropdown = () => {
     this.setState({
       dropdownOpen: false,
-      overwriteFileList: [],
+      fileImportMessage: '',
       openDialog: null
     });
   };
@@ -171,20 +169,27 @@ class Backpack extends Component {
     }
   };
 
-  prettyPrintFileNames(filenames) {
-    if (filenames.length === 0) {
-      return '';
-    } else if (filenames.length === 1) {
-      return filenames[0];
-    } else {
-      let result = filenames[0];
-      for (let i = 1; i < filenames.length - 1; i++) {
-        result += `, ${filenames[i]}`;
-      }
-      result += ` and ${filenames[filenames.length - 1]}`;
-      return result;
-    }
-  }
+  getFileImportMessage = (isError, overwriteFileList) => {
+    return (
+      <div>
+        <p>
+          {isError
+            ? javalabMsg.fileImportError()
+            : javalabMsg.fileImportWarning()}
+        </p>
+        <ul style={styles.importMessageList}>
+          {overwriteFileList.map(filename => {
+            return <li key={filename}>{filename}</li>;
+          })}
+        </ul>
+        {!isError && (
+          <p style={styles.importWarningConfirm}>
+            {javalabMsg.fileImportWarningConfirm()}
+          </p>
+        )}
+      </div>
+    );
+  };
 
   render() {
     const {isDarkMode, isDisabled} = this.props;
@@ -195,7 +200,7 @@ class Backpack extends Component {
       backpackLoadError,
       selectedFiles,
       openDialog,
-      overwriteFileList
+      fileImportMessage
     } = this.state;
 
     const showFiles =
@@ -206,7 +211,6 @@ class Backpack extends Component {
       !backpackFilesLoading &&
       !backpackLoadError &&
       backpackFilenames.length === 0;
-    const filenamesForDialog = this.prettyPrintFileNames(overwriteFileList);
 
     return (
       <div>
@@ -281,17 +285,9 @@ class Backpack extends Component {
         )}
         <JavalabDialog
           isOpen={openDialog === Dialog.IMPORT_WARNING}
-          handleConfirm={this.importFiles}
+          handleConfirm={() => this.importFiles(selectedFiles)}
           handleClose={() => this.setState({openDialog: null})}
-          message={
-            overwriteFileList.length > 1
-              ? javalabMsg.fileImportWarningMultiple({
-                  filenames: filenamesForDialog
-                })
-              : javalabMsg.fileImportWarningSingular({
-                  filename: filenamesForDialog
-                })
-          }
+          message={fileImportMessage}
           isDarkMode={isDarkMode}
           confirmButtonText={javalabMsg.replace()}
           closeButtonText={javalabMsg.cancel()}
@@ -299,15 +295,7 @@ class Backpack extends Component {
         <JavalabDialog
           isOpen={openDialog === Dialog.IMPORT_ERROR}
           handleConfirm={() => this.setState({openDialog: null})}
-          message={
-            overwriteFileList.length > 1
-              ? javalabMsg.fileImportErrorMultiple({
-                  filenames: filenamesForDialog
-                })
-              : javalabMsg.fileImportErrorSingular({
-                  filename: filenamesForDialog
-                })
-          }
+          message={fileImportMessage}
           isDarkMode={isDarkMode}
           confirmButtonText={msg.dialogOK()}
         />
@@ -390,6 +378,13 @@ const styles = {
     fontSize: 10,
     lineHeight: '12px',
     padding: 10
+  },
+  importMessageList: {
+    marginBottom: 0
+  },
+  importWarningConfirm: {
+    marginTop: 10,
+    marginBottom: 0
   }
 };
 

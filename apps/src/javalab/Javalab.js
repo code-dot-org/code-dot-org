@@ -101,18 +101,28 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
-  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    this.miniApp = new Neighborhood(
-      this.onOutputMessage,
-      this.onNewlineMessage,
-      this.setIsRunning
-    );
-    config.afterInject = () =>
-      this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    this.visualization = <NeighborhoodVisualizationColumn />;
-  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
-    this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
-    this.visualization = <TheaterVisualizationColumn />;
+
+  switch (this.level.csaViewMode) {
+    case CsaViewMode.NEIGHBORHOOD:
+      this.miniApp = new Neighborhood(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        this.setIsRunning
+      );
+      config.afterInject = () =>
+        this.miniApp.afterInject(
+          this.level,
+          this.skin,
+          config,
+          this.studioApp_
+        );
+      this.visualization = <NeighborhoodVisualizationColumn />;
+      break;
+    case CsaViewMode.THEATER:
+    case CsaViewMode.PLAYGROUND:
+      this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
+      this.visualization = <TheaterVisualizationColumn />;
+      break;
   }
 
   const onMount = () => {
