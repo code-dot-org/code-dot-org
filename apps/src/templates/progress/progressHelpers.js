@@ -160,17 +160,13 @@ export function lessonHasLevels(lesson) {
 /**
  * Determines if we should show "Keep working" and "Needs review" states for
  * progress in a unit. User must be enrolled in the relevant pilot and unit
- * must be either CSF or CSD.
+ * must be either CSD or CSP.
  */
 export function shouldShowReviewStates(unit) {
   return (
     experiments.isEnabled(experiments.KEEP_WORKING) &&
-    (unit.csf || isUnitCsd(unit))
+    (unit.isCsd || unit.isCsp)
   );
-}
-
-function isUnitCsd(unit) {
-  return unit.name?.startsWith('csd');
 }
 
 /**
