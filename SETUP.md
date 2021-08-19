@@ -183,14 +183,13 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
    
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
-    1. if you are using bash and setting up a new linux system, follow [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html) and add the following lines to your `~/.bash_profile` config file:
+    1. if you are using bash and setting up a new linux system, you may need to modify `~/.bash_profile` or `~/.profile` (your login shell configuration file) as per [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html), which recommends adding these lines:
 
         ```
         if [ -f ~/.bashrc ]; then
           source ~/.bashrc
         fi     
         ```
-
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
