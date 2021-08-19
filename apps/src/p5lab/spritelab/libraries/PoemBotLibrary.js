@@ -392,8 +392,10 @@ export default class PoemBotLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
-    const longestLine = poemState.lines.reduce((accumulator, current) =>
-      accumulator.length > current.length ? accumulator : current
+    const longestLine = poemState.lines.reduce(
+      (accumulator, current) =>
+        accumulator.length > current.length ? accumulator : current,
+      '' /* default value */
     );
     renderInfo.lineSize = this.getScaledFontSize(
       longestLine,
