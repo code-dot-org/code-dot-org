@@ -48,6 +48,38 @@ export const commands = {
         };
         break;
       }
+      case 'space': {
+        let stars = [];
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.background('black');
+          for (let i = 0; i < 3; i++) {
+            stars.push({
+              x: 200,
+              y: 200,
+              velocity: this.p5
+                .createVector(0, 1)
+                .rotate(this.p5.random(0, 360)),
+              size: 0.01,
+              color: utils.randomColorFromPalette(palette)
+            });
+          }
+          this.p5.noStroke();
+          stars.forEach(star => {
+            this.p5.fill(star.color);
+            this.p5.ellipse(star.x, star.y, star.size, star.size);
+            const speedMultiplier = this.p5.pow(star.size, 2) / 2;
+            star.x += star.velocity.x * speedMultiplier;
+            star.y += star.velocity.y * speedMultiplier;
+            star.size += 0.1;
+          });
+          stars = stars.filter(
+            star => star.x > -5 && star.x < 405 && star.y > -5 && star.y < 405
+          );
+          this.p5.pop();
+        };
+        break;
+      }
       case 'darkCircles': {
         const circles = [];
         const NUM_CIRCLES = 20;
