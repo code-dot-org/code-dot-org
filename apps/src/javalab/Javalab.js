@@ -331,7 +331,7 @@ Javalab.prototype.afterClearPuzzle = function() {
 };
 
 Javalab.prototype.onCommitCode = function(commitNotes, onSuccessCallback) {
-  project.save(true, false, true).then(result => {
+  project.save(true).then(result => {
     fetch('/project_versions', {
       method: 'POST',
       headers: {
