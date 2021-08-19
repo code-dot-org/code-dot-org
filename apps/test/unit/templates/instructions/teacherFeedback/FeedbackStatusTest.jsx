@@ -21,7 +21,6 @@ describe('Status', () => {
 
       const wrapper = setUp(latestFeedback);
       expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
-      console.log(wrapper.text());
       expect(wrapper.text().includes('Seen by student today')).to.be.true;
     });
 
