@@ -471,7 +471,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -491,7 +490,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -512,7 +510,6 @@
       "properties": {
         "progression": "Sample Programs"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -533,7 +530,6 @@
       "properties": {
         "progression": "Sample Programs"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -554,7 +550,6 @@
       "properties": {
         "progression": "Sample Programs"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -575,7 +570,6 @@
       "properties": {
         "progression": "Sample Programs"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -595,7 +589,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -615,7 +608,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -635,7 +627,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -655,7 +646,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -675,7 +665,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -695,7 +684,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -715,7 +703,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -736,7 +723,6 @@
       "properties": {
         "progression": "Drawing"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -757,7 +743,6 @@
       "properties": {
         "progression": "Drawing"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -778,7 +763,6 @@
       "properties": {
         "progression": "Drawing"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -799,7 +783,6 @@
       "properties": {
         "progression": "Drawing"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -820,7 +803,6 @@
       "properties": {
         "progression": "Drawing"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -840,7 +822,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -860,7 +841,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -881,7 +861,6 @@
       "properties": {
         "progression": "New Shapes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -902,7 +881,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -923,7 +901,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -944,7 +921,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -965,7 +941,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -986,7 +961,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1007,7 +981,6 @@
       "properties": {
         "progression": "More Parameters"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1027,7 +1000,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1019,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1067,7 +1038,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1088,7 +1058,6 @@
       "properties": {
         "progression": "Code Prediction"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1108,7 +1077,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1129,7 +1097,6 @@
       "properties": {
         "progression": "Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1150,7 +1117,6 @@
       "properties": {
         "progression": "Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1171,7 +1137,6 @@
       "properties": {
         "progression": "Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1192,7 +1157,6 @@
       "properties": {
         "progression": "Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1213,7 +1177,6 @@
       "properties": {
         "progression": "Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1233,7 +1196,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1253,7 +1215,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1274,7 +1235,6 @@
       "properties": {
         "progression": "Exploring Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1295,7 +1255,6 @@
       "properties": {
         "progression": "Using Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1316,7 +1275,6 @@
       "properties": {
         "progression": "Using Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1337,7 +1295,6 @@
       "properties": {
         "progression": "Using Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1358,7 +1315,6 @@
       "properties": {
         "progression": "Using Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1379,7 +1335,6 @@
       "properties": {
         "progression": "Using Random Numbers"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1399,7 +1354,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1419,7 +1373,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1439,7 +1392,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1459,7 +1411,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1480,7 +1431,6 @@
       "properties": {
         "progression": "Intro to Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1501,7 +1451,6 @@
       "properties": {
         "progression": "Intro to Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,7 +1471,6 @@
       "properties": {
         "progression": "Intro to Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1542,7 +1490,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1563,7 +1510,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1584,7 +1530,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1605,7 +1550,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1626,7 +1570,6 @@
       "properties": {
         "progression": "Adding Images"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1646,7 +1589,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1666,7 +1608,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1686,7 +1627,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1707,7 +1647,6 @@
       "properties": {
         "progression": "Sprite Properties"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1728,7 +1667,6 @@
       "properties": {
         "progression": "Sprite Properties"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1749,7 +1687,6 @@
       "properties": {
         "progression": "Sprite Properties"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1770,7 +1707,6 @@
       "properties": {
         "progression": "Sprite Properties"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1790,7 +1726,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1810,7 +1745,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1830,7 +1764,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1851,7 +1784,6 @@
       "properties": {
         "progression": "Making Scenes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1872,7 +1804,6 @@
       "properties": {
         "progression": "Making Scenes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1893,7 +1824,6 @@
       "properties": {
         "progression": "Making Scenes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1914,7 +1844,6 @@
       "properties": {
         "progression": "Making Scenes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1935,7 +1864,6 @@
       "properties": {
         "progression": "Making Scenes"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1956,7 +1884,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1976,7 +1903,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1996,7 +1922,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2017,7 +1942,6 @@
       "properties": {
         "progression": "Shapes and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2038,7 +1962,6 @@
       "properties": {
         "progression": "Shapes and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2059,7 +1982,6 @@
       "properties": {
         "progression": "Shapes and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2080,7 +2002,6 @@
       "properties": {
         "progression": "Sprites and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2101,7 +2022,6 @@
       "properties": {
         "progression": "Sprites and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2122,7 +2042,6 @@
       "properties": {
         "progression": "Sprites and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2143,7 +2062,6 @@
       "properties": {
         "progression": "Sprites and the Draw Loop"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2164,7 +2082,6 @@
       "properties": {
         "progression": "Animate Your Scene"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2185,7 +2102,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2205,7 +2121,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2225,7 +2140,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2245,7 +2159,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2266,7 +2179,6 @@
       "properties": {
         "progression": "Movement with the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2287,7 +2199,6 @@
       "properties": {
         "progression": "Movement with the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2308,7 +2219,6 @@
       "properties": {
         "progression": "Movement with the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2329,7 +2239,6 @@
       "properties": {
         "progression": "Movement with the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2350,7 +2259,6 @@
       "properties": {
         "progression": "Movement with the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2371,7 +2279,6 @@
       "properties": {
         "progression": "Animating Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2392,7 +2299,6 @@
       "properties": {
         "progression": "Animating Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2413,7 +2319,6 @@
       "properties": {
         "progression": "Animating Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2434,7 +2339,6 @@
       "properties": {
         "progression": "Animating Sprites"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2455,7 +2359,6 @@
       "properties": {
         "progression": "Create Your Own Animation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2476,7 +2379,6 @@
       "properties": {
         "progression": "Create Your Own Animation"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2497,7 +2399,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2518,7 +2419,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2539,7 +2439,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2559,7 +2458,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2579,7 +2477,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2600,7 +2497,6 @@
       "properties": {
         "progression": "Make a Prediction"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2620,7 +2516,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2641,7 +2536,6 @@
       "properties": {
         "progression": "Boolean Comparison"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2662,7 +2556,6 @@
       "properties": {
         "progression": "Boolean Comparison"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2683,7 +2576,6 @@
       "properties": {
         "progression": "Boolean Comparison"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2704,7 +2596,6 @@
       "properties": {
         "progression": "Boolean Comparison"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2724,7 +2615,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2745,7 +2635,6 @@
       "properties": {
         "progression": "Basic Conditionals"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2766,7 +2655,6 @@
       "properties": {
         "progression": "Basic Conditionals"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2787,7 +2675,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2808,7 +2695,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2828,7 +2714,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2849,7 +2734,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2870,7 +2754,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2891,7 +2774,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2912,7 +2794,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2933,7 +2814,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2954,7 +2834,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2975,7 +2854,6 @@
       "properties": {
         "progression": "Keyboard Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2996,7 +2874,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3017,7 +2894,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3037,7 +2913,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3057,7 +2932,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3077,7 +2951,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3098,7 +2971,6 @@
       "properties": {
         "progression": "Input with If-Else"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3119,7 +2991,6 @@
       "properties": {
         "progression": "Input with If-Else"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3140,7 +3011,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3161,7 +3031,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3182,7 +3051,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3203,7 +3071,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3224,7 +3091,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3245,7 +3111,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3266,7 +3131,6 @@
       "properties": {
         "progression": "More Input"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3287,7 +3151,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3308,7 +3171,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3328,7 +3190,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3348,7 +3209,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3368,7 +3228,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3389,7 +3248,6 @@
       "properties": {
         "progression": "Project Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3410,7 +3268,6 @@
       "properties": {
         "progression": "Project Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3431,7 +3288,6 @@
       "properties": {
         "progression": "Project Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3452,7 +3308,6 @@
       "properties": {
         "progression": "Project Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3473,7 +3328,6 @@
       "properties": {
         "progression": "Project Work"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3494,7 +3348,6 @@
       "properties": {
         "progression": "Reflection"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3514,7 +3367,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3534,7 +3386,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3555,7 +3406,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3576,7 +3426,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3597,7 +3446,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3618,7 +3466,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3639,7 +3486,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3660,7 +3506,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3681,7 +3526,6 @@
       "properties": {
         "progression": "Velocity"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3702,7 +3546,6 @@
       "properties": {
         "progression": "Side Scroller"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3723,7 +3566,6 @@
       "properties": {
         "progression": "Side Scroller"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3744,7 +3586,6 @@
       "properties": {
         "progression": "Side Scroller"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3765,7 +3606,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3785,7 +3625,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3805,7 +3644,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3825,7 +3663,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3846,7 +3683,6 @@
       "properties": {
         "progression": "isTouching"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3867,7 +3703,6 @@
       "properties": {
         "progression": "isTouching"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3888,7 +3723,6 @@
       "properties": {
         "progression": "isTouching"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3909,7 +3743,6 @@
       "properties": {
         "progression": "isTouching"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3930,7 +3763,6 @@
       "properties": {
         "progression": "isTouching"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3951,7 +3783,6 @@
       "properties": {
         "progression": "Collisions in Games"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3972,7 +3803,6 @@
       "properties": {
         "progression": "Collisions in Games"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3993,7 +3823,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4013,7 +3842,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4033,7 +3861,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4054,7 +3881,6 @@
       "properties": {
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4075,7 +3901,6 @@
       "properties": {
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4096,7 +3921,6 @@
       "properties": {
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4117,7 +3941,6 @@
       "properties": {
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4138,7 +3961,6 @@
       "properties": {
         "progression": "Velocity and the Counter Pattern"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4159,7 +3981,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4180,7 +4001,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4201,7 +4021,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4222,7 +4041,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4243,7 +4061,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4264,7 +4081,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4285,7 +4101,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4305,7 +4120,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4325,7 +4139,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4346,7 +4159,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4367,7 +4179,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4388,7 +4199,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4409,7 +4219,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4430,7 +4239,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4451,7 +4259,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4472,7 +4279,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4493,7 +4299,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4514,7 +4319,6 @@
       "properties": {
         "progression": "Collisions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4535,7 +4339,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4556,7 +4359,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4577,7 +4379,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4598,7 +4399,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4619,7 +4419,6 @@
       "properties": {
         "progression": "Flyer Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4640,7 +4439,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4660,7 +4458,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4680,7 +4477,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4701,7 +4497,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4722,7 +4517,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4743,7 +4537,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4764,7 +4557,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4785,7 +4577,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4806,7 +4597,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4827,7 +4617,6 @@
       "properties": {
         "progression": "Functions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4848,7 +4637,6 @@
       "properties": {
         "progression": "Collector Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4869,7 +4657,6 @@
       "properties": {
         "progression": "Collector Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4890,7 +4677,6 @@
       "properties": {
         "progression": "Collector Game"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4910,7 +4696,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4931,7 +4716,6 @@
       "properties": {
         "progression": "Challenge"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4951,7 +4735,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4971,7 +4754,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4991,7 +4773,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5012,7 +4793,6 @@
       "properties": {
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5033,7 +4813,6 @@
       "properties": {
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5054,7 +4833,6 @@
       "properties": {
         "progression": "Multiframe Animations"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5075,7 +4853,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5096,7 +4873,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5117,7 +4893,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5138,7 +4913,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5159,7 +4933,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5180,7 +4953,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5201,7 +4973,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5222,7 +4993,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5243,7 +5013,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5264,7 +5033,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5285,7 +5053,6 @@
       "properties": {
         "progression": "Cake Defender"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5305,7 +5072,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5325,7 +5091,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5345,7 +5110,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5366,7 +5130,6 @@
       "properties": {
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5387,7 +5150,6 @@
       "properties": {
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5408,7 +5170,6 @@
       "properties": {
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5429,7 +5190,6 @@
       "properties": {
         "progression": "Platform Jumper - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5450,7 +5210,6 @@
       "properties": {
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5471,7 +5230,6 @@
       "properties": {
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5492,7 +5250,6 @@
       "properties": {
         "progression": "Platform Jumper - Platforms"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5513,7 +5270,6 @@
       "properties": {
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5534,7 +5290,6 @@
       "properties": {
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5555,7 +5310,6 @@
       "properties": {
         "progression": "Platform Jumper - Items"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5576,7 +5330,6 @@
       "properties": {
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5597,7 +5350,6 @@
       "properties": {
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5618,7 +5370,6 @@
       "properties": {
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5639,7 +5390,6 @@
       "properties": {
         "progression": "Platform Jumper - Player"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5659,7 +5409,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5679,7 +5428,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5699,7 +5447,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5719,7 +5466,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5739,7 +5485,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5760,7 +5505,6 @@
       "properties": {
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5781,7 +5525,6 @@
       "properties": {
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5802,7 +5545,6 @@
       "properties": {
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5823,7 +5565,6 @@
       "properties": {
         "progression": "Project - Background and Variables"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5844,7 +5585,6 @@
       "properties": {
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5865,7 +5605,6 @@
       "properties": {
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5886,7 +5625,6 @@
       "properties": {
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5907,7 +5645,6 @@
       "properties": {
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5928,7 +5665,6 @@
       "properties": {
         "progression": "Project - Sprites and Interactions"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5948,7 +5684,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": true,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5969,7 +5704,6 @@
       "properties": {
         "progression": "Reflection"
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5989,7 +5723,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6009,7 +5742,6 @@
       "assessment": null,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6029,7 +5761,6 @@
       "assessment": true,
       "properties": {
       },
-      "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
