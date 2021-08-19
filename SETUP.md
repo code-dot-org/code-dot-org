@@ -174,9 +174,10 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 
-    * <details>
-        <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate` </summary>
-        If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way. The following should work on Ubuntu 18.04: `sudo snap install pdftk`. If that doesn't work, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
+    * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
+        * Ubuntu 18.04: `sudo snap install pdftk`. 
+        * Ubuntu 18.10 and later: `sudo apt-get isntall pdftk-java`
+        * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
       </details>
    
 
