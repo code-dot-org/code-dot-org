@@ -199,6 +199,33 @@ P5Lab.prototype.injectStudioApp = function(studioApp) {
   this.studioApp_.setCheckForEmptyBlocks(true);
 };
 
+P5Lab.prototype.loadAndSetInitialAnimationList = function(
+  config,
+  defaultSprites
+) {
+  // Push project-sourced animation metadata into store. Always use the
+  // animations specified by the level definition for embed and contained
+  // levels.
+  const useConfig =
+    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
+  let initialAnimationList = useConfig
+    ? config.initialAnimationList
+    : this.startAnimations;
+  initialAnimationList = this.loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultSprites
+  );
+
+  getStore().dispatch(
+    setInitialAnimationList(
+      initialAnimationList,
+      this.isSpritelab /* shouldRunV3Migration */,
+      this.isSpritelab,
+      defaultSprites
+    )
+  );
+};
+
 /**
  * Initialize Blockly and this GameLab instance.  Called on page load.
  * @param {!AppOptionsConfig} config
@@ -253,29 +280,7 @@ P5Lab.prototype.init = function(config) {
         console.error('Unable to parse default animation list', err);
       }
     }
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList,
-      defaultSprites
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isSpritelab /* shouldRunV3Migration */,
-        this.isSpritelab,
-        defaultSprites
-      )
-    );
+    this.loadAndSetInitialAnimationList(config, defaultSprites);
   });
 
   config.usesAssets = true;
