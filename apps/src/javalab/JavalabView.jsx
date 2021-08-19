@@ -72,7 +72,9 @@ class JavalabView extends React.Component {
     editorColumnHeight: PropTypes.number,
     awaitingContainedResponse: PropTypes.bool,
     isVisualizationCollapsed: PropTypes.bool,
-    isInstructionsCollapsed: PropTypes.bool
+    isInstructionsCollapsed: PropTypes.bool,
+    isSubmittable: PropTypes.bool,
+    isSubmitted: PropTypes.bool
   };
 
   state = {
@@ -333,7 +335,9 @@ class JavalabView extends React.Component {
       editorColumnHeight,
       leftWidth,
       rightWidth,
-      awaitingContainedResponse
+      awaitingContainedResponse,
+      isSubmittable,
+      isSubmitted
     } = this.props;
     const {isTesting} = this.state;
 
@@ -437,9 +441,11 @@ class JavalabView extends React.Component {
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
                     disableRunButtons={awaitingContainedResponse}
-                    onContinue={onContinue}
+                    onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
                     showTestButton={false}
+                    isSubmittable={isSubmittable}
+                    isSubmitted={isSubmitted}
                   />
                 }
               />
@@ -528,7 +534,6 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    disableFinishButton: state.javalab.disableFinishButton,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
@@ -546,7 +551,10 @@ export default connect(
     editorColumnFullHeight: state.javalab.editorColumnFullHeight,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     isVisualizationCollapsed: state.javalab.isVisualizationCollapsed,
-    isInstructionsCollapsed: state.instructions.isCollapsed
+    isInstructionsCollapsed: state.instructions.isCollapsed,
+    disableFinishButton: state.javalab.disableFinishButton,
+    isSubmittable: state.pageConstants.isSubmittable,
+    isSubmitted: state.pageConstants.isSubmitted
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
