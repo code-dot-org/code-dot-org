@@ -192,9 +192,7 @@ export default class PoemBotLibrary extends CoreLibrary {
                 '"We have come to fish for the herring-fish',
                 'That live in this beautiful sea;',
                 'Nets of silver and gold have we,"',
-                'Said Wynken,',
-                'Blynken,',
-                'And Nod.'
+                'Said Wynken, Blynken, And Nod.'
               ]
             };
             break;
