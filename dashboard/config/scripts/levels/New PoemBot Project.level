@@ -102,6 +102,7 @@
         <block type="PoemBot_setAuthor"/>
         <block type="PoemBot_addLine"/>
         <block type="PoemBot_showPoem"/>
+        <block type="PoemBot_hidePoem"/>
         <block type="gamelab_setPrompt"/>
         <block type="gamelab_setPromptWithChoices"/>
         <block type="gamelab_whenAllPromptsAnswered"/>

@@ -1,0 +1,16 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is a sample Playground level. For now, it just looks and acts like Theater.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "playground"
+  },
+  "game_id": 68,
+  "created_at": "2021-08-12T17:14:36.000Z",
+  "level_num": "custom",
+  "user_id": 22,
+  "published": true
+}]]></config>
+</Javalab>

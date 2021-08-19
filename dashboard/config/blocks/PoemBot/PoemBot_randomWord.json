@@ -1,9 +1,8 @@
 {
   "category": "",
   "config": {
-    "name": "randomWord",
+    "func": "randomWord",
     "blockText": "random word",
-    "expression": "[{value: randomWord(), type: 'random'}]",
     "returnType": "String",
     "color": [
       160,
