@@ -307,7 +307,9 @@ class JavalabView extends React.Component {
       editorColumnHeight,
       leftWidth,
       rightWidth,
-      awaitingContainedResponse
+      awaitingContainedResponse,
+      isSubmittable,
+      isSubmitted
     } = this.props;
     const {isTesting, rightContainerHeight} = this.state;
 
@@ -404,11 +406,11 @@ class JavalabView extends React.Component {
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
                     disableRunButtons={awaitingContainedResponse}
-                    onContinue={() => onContinue(this.props.isSubmittable)}
+                    onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
                     showTestButton={false}
-                    isSubmittable={this.props.isSubmittable}
-                    isSubmitted={this.props.isSubmitted}
+                    isSubmittable={isSubmittable}
+                    isSubmitted={isSubmitted}
                   />
                 }
               />
