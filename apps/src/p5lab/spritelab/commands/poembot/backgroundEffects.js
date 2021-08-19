@@ -3,6 +3,16 @@ export const commands = {
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
     switch (effectName) {
+      case 'colors': {
+        let amount = 0;
+        this.backgroundEffect = () => {
+          amount += 0.02;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, amount)
+          );
+        };
+        break;
+      }
       case 'darkCircles': {
         const circles = [];
         const NUM_CIRCLES = 20;
