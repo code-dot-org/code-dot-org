@@ -46,7 +46,7 @@ class Javalab < Level
   end
 
   def self.csa_view_modes
-    [['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']]
+    [['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater'], ['Playground', 'playground']]
   end
 
   def self.create_from_level_builder(params, level_params)
