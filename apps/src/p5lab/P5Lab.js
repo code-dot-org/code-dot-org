@@ -515,7 +515,7 @@ P5Lab.prototype.init = function(config) {
           <P5LabView
             showFinishButton={finishButtonFirstLine && showFinishButton}
             onMount={onMount}
-            pauseHandler={this.onPause}
+            pauseHandler={this.onPause?.bind(this)}
             hidePauseButton={!!this.level.hidePauseButton}
             onPromptAnswer={this.onPromptAnswer?.bind(this)}
           />

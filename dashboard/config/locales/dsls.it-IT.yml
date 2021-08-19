@@ -9219,8 +9219,7 @@ it-IT:
           feedback: Corretto!
         - {}
         questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La contadina raccoglierà due zucche.

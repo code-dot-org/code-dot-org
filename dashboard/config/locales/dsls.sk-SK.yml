@@ -5533,7 +5533,7 @@ sk-SK:
           feedback: Správne!
         - {}
         questions:
-        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš "Spustiť"?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Záhradníčka pozbiera dve tekvice.

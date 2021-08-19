@@ -8,6 +8,7 @@
   "duplicateSupportFilenameError": "O nome do arquivo {filename} já está em uso no código de suporte deste nível.  Escolha um nome diferente",
   "editor": "Editor",
   "illegalMethodAccess": "Você tentou acessar um método que está bloqueado por nossa política de segurança.\n {cause}",
+  "import": "Importar",
   "internalCompilerException": "Opa.  Encontramos um erro do nosso lado ao compilar seu programa.  Tente executá-lo novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",
   "internalException": "Opa.  Encontramos um erro do nosso lado.  Tente executar seu programa novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",
   "internalRuntimeException": "Opa.  Encontramos um erro da nossa parte ao executar seu programa.  Tente executá-lo novamente.  Se o erro persistir, entre em contato conosco em support@code.org.  Certifique-se de incluir o ID de conexão {connectionId} em sua mensagem.",

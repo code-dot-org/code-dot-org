@@ -1,2 +1,88 @@
 {
+  "mr-IN": {
+    "data": {
+      "behavior_names": {
+        "courseF_apps_aquarium": {
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+        },
+        "courseF_apps_card": {
+          "blocking movement": "हालचाल ब्लॉक करणे"
+        },
+        "courseF_apps_chatbot": {
+          "blocking movement": "हालचाल ब्लॉक करणे",
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+        },
+        "courseF_apps_collector": {
+          "flying west and looping": "पश्चिमेकडे उडणे आणि लूपिंग",
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+        },
+        "courseF_editable_card": {
+          "blocking movement": "हालचाल ब्लॉक करणे"
+        },
+        "courseF_editable_chatbot": {
+          "blocking movement": "हालचाल ब्लॉक करणे"
+        },
+        "courseF_events_choice_conflict": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_choice_conflict2": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_choice_penguin": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_choice_pufferfish": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_conflict": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_key": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_practice_reorder": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_review": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_ship": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_stops": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_events_time": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_answer": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_choice_color": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_choice_title": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_concat": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_events": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_print": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_prompts": {
+          "moving forward": "पुढे जाणे"
+        },
+        "courseF_text_review": {
+          "moving forward": "पुढे जाणे"
+        }
+      }
+    }
+  }
 }

@@ -35,7 +35,7 @@ describe('BubbleBadge', () => {
     expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
   });
 
-  it('renders nothing for small bubbles', () => {
+  it('renders nothing for dot bubbles and KeepWorking badge for letter bubbles', () => {
     const letter = shallow(
       <BubbleBadge
         badgeType={BadgeType.keepWorking}
@@ -50,14 +50,14 @@ describe('BubbleBadge', () => {
         bubbleShape={BubbleShape.circle}
       />
     );
-    expect(letter).to.be.empty;
+    expect(letter.find(KeepWorkingBadge)).to.have.lengthOf(1);
     expect(dot).to.be.empty;
   });
 
-  it('positions the element correctly is bubbleShape is not a diamond', () => {
+  it('positions the element correctly is bubbleShape is not a diamond for assessment badge', () => {
     const wrapper = mount(
       <BubbleBadge
-        badgeType={BadgeType.keepWorking}
+        badgeType={BadgeType.assessment}
         bubbleShape={BubbleShape.circle}
         bubbleSize={BubbleSize.full}
       />
@@ -66,10 +66,10 @@ describe('BubbleBadge', () => {
     expect(wrapper.find('div').props().style.right).to.equal(-7);
   });
 
-  it('positions the element correctly is bubbleShape is a diamond', () => {
+  it('positions the element correctly is bubbleShape is a diamond for assessment badge', () => {
     const wrapper = mount(
       <BubbleBadge
-        badgeType={BadgeType.keepWorking}
+        badgeType={BadgeType.assessment}
         bubbleShape={BubbleShape.diamond}
         bubbleSize={BubbleSize.full}
       />
@@ -81,23 +81,9 @@ describe('BubbleBadge', () => {
   describe('KeepWorkingBadge', () => {
     it('has a red background', () => {
       const wrapper = mount(<KeepWorkingBadge />);
-      expect(
-        wrapper.find('FontAwesome[icon="circle"]').props().style.color
-      ).to.equal(color.red);
-    });
-
-    it('has a exclamation icon', () => {
-      const wrapper = mount(<KeepWorkingBadge />);
-      expect(wrapper.find('FontAwesome[icon="exclamation"]')).to.have.length(1);
-    });
-
-    it('displays a white border when hasWhiteBorder is true', () => {
-      it('has a exclamation icon', () => {
-        const wrapper = mount(<KeepWorkingBadge hasWhiteBorder={true} />);
-        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(
-          1
-        );
-      });
+      expect(wrapper.find('div').props().style.backgroundColor).to.equal(
+        color.red
+      );
     });
   });
 

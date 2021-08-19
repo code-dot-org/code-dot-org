@@ -3861,7 +3861,7 @@ ja-JP:
           feedback: せいかい！
         - {}
         questions:
-        - text: "”実行（じっこう）”をクリックしたら、どうなるかな？"
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: カボチャを２つしゅうかくする。

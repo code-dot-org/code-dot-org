@@ -6,27 +6,27 @@ import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 export default function PreviewPaneHeader({
   isCollapsed,
   isFullscreen,
+  toggleVisualizationCollapsed,
   disableAssetManagerButton = false,
   showAssetManagerButton = false,
   showPreviewTitle = true
 }) {
   return (
     <PaneHeader hasFocus>
-      {/* Commenting out the button for now since collapsing is not functional.
       <PaneButton
         headerHasFocus
         icon={<CollapserIcon isCollapsed={isCollapsed} />}
-        onClick={() => {}}
+        onClick={toggleVisualizationCollapsed}
         label=""
         isRtl={false}
         style={styles.transparent}
         leftJustified
       />
-      */}
       {showPreviewTitle && (
         <PaneSection style={styles.headerTitle}>{i18n.preview()}</PaneSection>
       )}
@@ -59,15 +59,17 @@ export default function PreviewPaneHeader({
 }
 
 PreviewPaneHeader.propTypes = {
-  isCollapsed: PropTypes.bool.isRequired,
   isFullscreen: PropTypes.bool.isRequired,
+  isCollapsed: PropTypes.bool.isRequired,
   showAssetManagerButton: PropTypes.bool,
   disableAssetManagerButton: PropTypes.bool,
-  showPreviewTitle: PropTypes.bool
+  showPreviewTitle: PropTypes.bool,
+  toggleVisualizationCollapsed: PropTypes.func
 };
 
 const styles = {
   transparent: {
+    marginLeft: -4, // Adjust icon position to align with instructions collapser icon.
     backgroundColor: 'transparent',
     ':hover': {
       backgroundColor: 'transparent'

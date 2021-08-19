@@ -10,7 +10,7 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = (@level.starter_assets || []).map do |friendly_name, uuid_name|
+    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).map do |friendly_name, uuid_name|
       file_obj = get_object(uuid_name)
       summarize(file_obj, friendly_name, uuid_name)
     end.compact
@@ -22,7 +22,8 @@ class LevelStarterAssetsController < ApplicationController
   # Returns requested file body as an IO stream.
   def file
     friendly_name = "#{params[:filename]}.#{params[:format]}"
-    uuid_name = @level.starter_assets[friendly_name]
+    starter_assets = @level&.project_template_level&.starter_assets || @level.starter_assets
+    uuid_name = starter_assets[friendly_name]
     file_obj = get_object(uuid_name)
     content_type = file_content_type(File.extname(uuid_name))
 

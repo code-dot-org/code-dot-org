@@ -131,7 +131,6 @@ const styles = {
     color: color.cyan
   },
   timeTeacher: {
-    paddingTop: 8,
     paddingLeft: 8,
     fontStyle: 'italic',
     fontSize: 12,

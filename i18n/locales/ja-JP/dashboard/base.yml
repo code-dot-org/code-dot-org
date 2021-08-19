@@ -546,7 +546,6 @@ ja:
       link: "もっと詳しく知る"
       applab_unsupported_tablet: "App Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
       gamelab_unsupported_tablet: "Game Labはマウスとキーボードが使える、デスクトップPCやノートPCで正しく動作します。あなたがお使いのタブレット機器では、正しく動作しない場合があります。"
-      weblab_unsupported_browser: "残念ながら、あなたがお使いのブラウザでは、Web Labを正しく読み込めない問題があります。この問題が解決するまでは他のブラウザをお使いください。ご不便をおかけして申し訳ありません。"
       weblab_unsupported_locale_storage: "Web Labは、ブラウザのプライベートモードでは正しくお使いいただけません。通常モードで読み込み直してください。ご不便をおかけして申し訳ありません。"
   slow_loading: '通常よりも長くかかっている...'
   try_reloading: 'ページを再読み込みする'

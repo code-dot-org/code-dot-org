@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-04 20:07:02 UTC",
+    "serialized_at": "2021-08-12 14:56:16 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -2693,7 +2693,7 @@
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which statement about analog and digital images is true?\r\n\r\n**Question:** Describe how the process of sampling, RGB pixels, and binary sequences work together to display a digital color image.",
         "name": "Assessment: Check For Understanding\r",
-        "progression_name": "Assessment: Check For Understanding\r"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
@@ -3841,13 +3841,13 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "survey_placeholder_levelgroup"
+          "csp-pre-survey-levelgroup_21_22"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "survey_placeholder_levelgroup"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
@@ -3855,7 +3855,7 @@
         "activity_section.key": "91b1ed15-4cc9-4e0c-a149-b85fecf1e198"
       },
       "level_keys": [
-        "survey_placeholder_levelgroup"
+        "csp-pre-survey-levelgroup_21_22"
       ]
     },
     {
@@ -4567,7 +4567,7 @@
         "level_keys": [
           "U1L10 Multiple Choice analog vs digital_2021"
         ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4592,7 +4592,7 @@
         "level_keys": [
           "U1L10 CFU Sampling_2021"
         ],
-        "progression": "Assessment: Check For Understanding\r"
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4910,9 +4910,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "survey_placeholder_levelgroup",
+        "level.key": "csp-pre-survey-levelgroup_21_22",
         "script_level.level_keys": [
-          "survey_placeholder_levelgroup"
+          "csp-pre-survey-levelgroup_21_22"
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",

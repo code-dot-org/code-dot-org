@@ -1058,6 +1058,8 @@ in:
           UNIT:
             '"seconds"': crwdns2658414:0crwdne2658414:0
             '"frames"': crwdns2658416:0crwdne2658416:0
+      gamelab_glideTo:
+        text: crwdns2691215:0[SPRITE]crwdnd2691215:0[0]crwdnd2691215:0[LOCATION]crwdnd2691215:0[1]crwdne2691215:0
       gamelab_hideTitleScreen:
         text: crwdns169053:0crwdne169053:0
       gamelab_ifVarEquals:
@@ -1828,6 +1830,7 @@ in:
           BG_EFFECT:
             '"---"': crwdns2688744:0crwdne2688744:0
             '"wordsworth"': crwdns2688584:0crwdne2688584:0
+            '"dickinson"': crwdns2691079:0crwdne2691079:0
             '"silverstein"': crwdns2689307:0crwdne2689307:0
       PoemBot_setTitle:
         text: crwdns2688422:0[TITLE]crwdnd2688422:0[0]crwdne2688422:0

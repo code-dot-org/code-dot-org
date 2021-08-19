@@ -1,3 +1,4 @@
+import {createUuid} from '@cdo/apps/utils';
 import commands from '../commands/index';
 
 export default class CoreLibrary {
@@ -15,6 +16,7 @@ export default class CoreLibrary {
     this.printLog = [];
     this.promptVars = {};
     this.eventLog = [];
+    this.speechBubbles = [];
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -22,6 +24,7 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawSpeechBubbles();
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
@@ -48,6 +51,30 @@ export default class CoreLibrary {
       this.background.resize(400, 400);
       this.p5.image(this.background);
     }
+  }
+
+  drawSpeechBubbles() {
+    this.p5.push();
+    this.p5.fill('black');
+    this.p5.stroke('white');
+    this.p5.strokeWeight(2);
+    this.p5.textSize(25);
+    this.speechBubbles.forEach(bubbleInfo => {
+      this.p5.text(bubbleInfo.text, bubbleInfo.sprite.x, bubbleInfo.sprite.y);
+    });
+    this.p5.pop();
+  }
+
+  addSpeechBubble(sprite, text) {
+    const id = createUuid();
+    this.speechBubbles.push({id, sprite, text});
+    return id;
+  }
+
+  removeSpeechBubble(bubbleId) {
+    this.speechBubbles = this.speechBubbles.filter(
+      bubbleInfo => bubbleInfo.id !== bubbleId
+    );
   }
 
   startPause(time) {

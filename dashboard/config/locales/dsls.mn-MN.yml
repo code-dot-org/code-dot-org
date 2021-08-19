@@ -6698,8 +6698,7 @@ mn-MN:
           feedback: Зөв!
         - {}
         questions:
-        - text: Доорх кодыг анхааралтай ажиглаарай. "Ажиллуулах" дээр дарахад юу болох
-            вэ?
+        - {}
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Ургац хураагч хоёр хулуу түүнэ.
