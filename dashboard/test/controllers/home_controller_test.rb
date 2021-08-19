@@ -391,13 +391,12 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
+  # this test case produces an unreliable number of queries, so we do not
+  # assert the query count on it.
   test 'facilitators see dashboard links' do
     facilitator = create(:facilitator, :with_terms_of_service)
     sign_in facilitator
-    query_count = 14
-    assert_queries query_count do
-      get :home
-    end
+    get :home
     assert_select 'h1', count: 1, text: 'Workshop Dashboard'
   end
 
