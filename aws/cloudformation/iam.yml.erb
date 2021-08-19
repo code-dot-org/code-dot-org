@@ -114,7 +114,7 @@ Resources:
               - cloudformation:UpdateStack
               - cloudformation:DeleteStack
               - cloudformation:CreateChangeSet
-            Resource: '*'
+            NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"

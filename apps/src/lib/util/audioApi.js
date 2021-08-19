@@ -39,9 +39,15 @@ export const commands = {
    * _@param {function} [opts.onEnded] Called back when the sound stops playing
    */
   playSound(opts) {
-    apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
+    const validUrl = apiValidateType(
+      opts,
+      'playSound',
+      'url',
+      opts.url,
+      'string'
+    );
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
-    apiValidateType(
+    const validCallback = apiValidateType(
       opts,
       'playSound',
       'callback',
@@ -49,7 +55,7 @@ export const commands = {
       'function',
       OPTIONAL
     );
-    apiValidateType(
+    const validOnEnded = apiValidateType(
       opts,
       'playSound',
       'onEnded',
@@ -58,9 +64,13 @@ export const commands = {
       OPTIONAL
     );
 
+    if (!validUrl) {
+      return;
+    }
+
     const url = assetPrefix.fixPath(opts.url);
     if (Sounds.getSingleton().isPlaying(url)) {
-      if (opts.callback) {
+      if (opts.callback && validCallback) {
         opts.callback(false);
       }
     }
@@ -95,8 +105,8 @@ export const commands = {
       loop: !!opts.loop,
       forceHTML5: forceHTML5,
       allowHTML5Mobile: true,
-      callback: opts.callback,
-      onEnded: opts.onEnded
+      callback: validCallback && opts.callback,
+      onEnded: validOnEnded && opts.onEnded
     });
   },
 
@@ -105,9 +115,16 @@ export const commands = {
    * @param {string} [opts.url] The sound to stop.  Stops all sounds if omitted.
    */
   stopSound(opts) {
-    apiValidateType(opts, 'stopSound', 'url', opts.url, 'string', OPTIONAL);
+    const validUrl = apiValidateType(
+      opts,
+      'stopSound',
+      'url',
+      opts.url,
+      'string',
+      OPTIONAL
+    );
 
-    if (opts.url) {
+    if (opts.url && validUrl) {
       const url = assetPrefix.fixPath(opts.url);
       if (Sounds.getSingleton().isPlaying(url)) {
         Sounds.getSingleton().stopLoopingAudio(url);
@@ -121,6 +138,7 @@ export const commands = {
    * @param {string} opts.text The text to play as speech.
    * @param {string} opts.gender The gender of the voice to play.
    * @param {string} opts.language The language of the text to play.
+   * @param {function()} opts.onComplete Called when the sound is complete.
    */
   async playSpeech(opts) {
     const validText = apiValidateType(
@@ -137,6 +155,15 @@ export const commands = {
       opts.gender,
       'string'
     );
+    const validOnComplete = apiValidateType(
+      opts,
+      'playSpeech',
+      'onComplete',
+      opts.onComplete,
+      'function',
+      OPTIONAL
+    );
+
     if (!validText || opts.text.length === 0 || !validGender) {
       return;
     }
@@ -153,7 +180,7 @@ export const commands = {
     // This is because script_levels remove Rails' authenticity token from the DOM for caching purposes:
     // https://github.com/code-dot-org/code-dot-org/pull/5753
     const {azureSpeechServiceVoices: voices, authenticityToken} = appOptions;
-    let {text, gender, language} = opts;
+    let {text, gender, language, onComplete} = opts;
 
     // Fall back to defaults if requested language/gender combination is not available.
     if (!(voices[language] && voices[language][gender])) {
@@ -173,7 +200,8 @@ export const commands = {
       gender,
       locale: voices[language].locale,
       authenticityToken,
-      onFailure: message => outputWarning(message + '\n')
+      onFailure: message => outputWarning(message + '\n'),
+      onComplete: validOnComplete ? onComplete : null
     });
     azureTTS.enqueueAndPlay(promise);
   }
@@ -187,7 +215,7 @@ export const executors = {
   playSound: (url, loop = false, callback) =>
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
-  playSpeech: (text, gender, language = 'English') =>
-    executeCmd(null, 'playSpeech', {text, gender, language})
+  playSpeech: (text, gender, language = 'English', onComplete) =>
+    executeCmd(null, 'playSpeech', {text, gender, language, onComplete})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_205147) do
+ActiveRecord::Schema.define(version: 2021_08_16_222729) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -278,6 +278,8 @@ ActiveRecord::Schema.define(version: 2021_08_09_205147) do
   create_table "code_review_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "project_version"
+    t.integer "script_id"
+    t.integer "level_id"
     t.integer "commenter_id", null: false
     t.text "comment", limit: 16777215
     t.integer "project_owner_id"
@@ -1343,6 +1345,16 @@ ActiveRecord::Schema.define(version: 2021_08_09_205147) do
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
+  create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.integer "storage_app_id", null: false
+    t.string "object_version_id", null: false
+    t.text "comment", limit: 16777215
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
+    t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+  end
+
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"
@@ -1613,6 +1625,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_205147) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
+    t.boolean "code_review_enabled"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"

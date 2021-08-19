@@ -3,6 +3,7 @@ require 'test_helper'
 class BubbleChoiceTest < ActiveSupport::TestCase
   include Rails.application.routes.url_helpers
   self.use_transactional_test_case = true
+  include SharedConstants
 
   setup_all do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -215,10 +216,13 @@ DSL
   test 'summarize_sublevels with user_id' do
     student = create :student
     create :user_level, user: student, level: @sublevel1, best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level, user: student, level: @sublevel2, best_result: 1
     sublevel_summary = @bubble_choice.summarize_sublevels(user_id: student.id)
     assert_equal 2, sublevel_summary.length
     assert sublevel_summary.first[:perfect]
-    assert_nil sublevel_summary.last[:perfect]
+    assert_equal LEVEL_STATUS.perfect, sublevel_summary.first[:status]
+    assert_equal false, sublevel_summary.last[:perfect]
+    assert_equal LEVEL_STATUS.attempted, sublevel_summary.last[:status]
   end
 
   test 'summarize_sublevels does not leak progress between scripts' do

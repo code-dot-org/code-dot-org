@@ -6,7 +6,7 @@ class UsersHelperTest < ActionView::TestCase
   include SharedConstants
 
   def test_summarize_user_progress
-    script = Script.twenty_hour_unit
+    script = create(:script, :with_levels, levels_count: 3)
     user = create :user, total_lines: 42
 
     # Verify results for no completed levels.
@@ -16,8 +16,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         progress: {},
-        # second lesson because first is unplugged
-        current_lesson: script.lessons[1].id,
+        current_lesson: script.lessons.first.id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -25,7 +24,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Verify results for two completed levels for one script.
     ul1 = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, script: script, level: script.script_levels[1].level
-    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[3].level
+    ul3 = create :user_level, user: user, best_result: 20, script: script, level: script.script_levels[2].level
 
     assert_equal(
       {
@@ -36,7 +35,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_lesson: script.lessons[1].id,
+        current_lesson: script.lessons.first.id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -53,7 +52,7 @@ class UsersHelperTest < ActionView::TestCase
       summarize_user_progress(script, user, exclude_level_progress)
     )
 
-    assert_in_delta 1.83, percent_complete_total(script, user)
+    assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
   def test_summarize_user_progress_with_pages

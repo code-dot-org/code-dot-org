@@ -22,8 +22,12 @@ export default class AddDefaultSprite extends React.Component {
     this.setState({spriteCategory: event.target.value, displaySuccess: false});
   };
 
-  handleSpriteAdd = () => {
-    this.props.onAdd(this.state.spriteName, this.state.spriteCategory);
+  handleSpriteAdd = addToBeginning => {
+    this.props.onAdd(
+      addToBeginning,
+      this.state.spriteName,
+      this.state.spriteCategory
+    );
     this.setState({spriteName: '', spriteCategory: '', displaySuccess: true});
   };
 
@@ -53,9 +57,16 @@ export default class AddDefaultSprite extends React.Component {
           required
         />
         <Button
-          text="Add"
+          text="Add to start"
           color={Button.ButtonColor.orange}
-          onClick={this.handleSpriteAdd}
+          onClick={() => this.handleSpriteAdd(true)}
+          size={Button.ButtonSize.narrow}
+        />
+        <Button
+          text="Add to end"
+          color={Button.ButtonColor.orange}
+          onClick={() => this.handleSpriteAdd(false)}
+          size={Button.ButtonSize.narrow}
         />
         <i
           style={{

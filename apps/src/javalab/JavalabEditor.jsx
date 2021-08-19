@@ -23,7 +23,7 @@ import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import NameFileDialog from './NameFileDialog';
-import DeleteConfirmationDialog from './DeleteConfirmationDialog';
+import JavalabDialog from './JavalabDialog';
 import CommitDialog from './CommitDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
@@ -32,13 +32,11 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
 import javalabMsg from '@cdo/javalab/locale';
-import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 
 const MIN_HEIGHT = 100;
-const CONSOLE_BUFFER = 270;
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
 const Dialog = makeEnum(
@@ -68,10 +66,6 @@ class JavalabEditor extends React.Component {
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired
-  };
-
-  static defaultProps = {
-    height: 400
   };
 
   constructor(props) {
@@ -135,20 +129,6 @@ class JavalabEditor extends React.Component {
     orderedTabKeys.forEach(tabKey => {
       this.createEditor(tabKey, sources[fileMetadata[tabKey]].text);
     });
-
-    this.handleHeightResize(this.props.height);
-    this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
-
-    window.addEventListener('resize', () => {
-      this.handleHeightResizeThrottled(this.props.height);
-      this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
-    });
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener('resize', () => {
-        this.handleHeightResizeThrottled(this.props.height);
-        this.props.setEditorColumnHeight(window.innerHeight - HEADER_OFFSET);
-      });
-    }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -475,36 +455,6 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  /**
-   * Returns the top Y coordinate of the instructions that are being resized
-   * via a call to handleHeightResize from HeightResizer.
-   */
-  getItemTop = () => {
-    return this.tabContainer.getBoundingClientRect().top + HEADER_OFFSET;
-  };
-
-  /**
-   * Returns the height of the container with the header incorporated.
-   */
-  getPosition = () => {
-    return this.props.height + HEADER_OFFSET;
-  };
-
-  /**
-   * Given a desired height, determines how much we can actually change the
-   * height (account for min/max) and changes the height to that.
-   * @param {number} desired height
-   */
-  handleHeightResize = desiredHeight => {
-    let maxHeight = window.innerHeight - HEADER_OFFSET - CONSOLE_BUFFER;
-    let newHeight = Math.max(MIN_HEIGHT, desiredHeight);
-    newHeight = Math.min(maxHeight, newHeight);
-
-    this.props.setRenderedHeight(newHeight);
-  };
-
-  handleHeightResizeThrottled = _.throttle(this.handleHeightResize, 33);
-
   onOpenCommitDialog() {
     // When the dialog opens, we will compile the user's files and notify them of success/errors.
     // For now, this is mocked out to successfully compile after a set amount of time.
@@ -541,7 +491,8 @@ class JavalabEditor extends React.Component {
       sources,
       isEditingStartSources,
       isReadOnlyWorkspace,
-      showProjectTemplateWorkspaceIcon
+      showProjectTemplateWorkspaceIcon,
+      height
     } = this.props;
 
     let menuStyle = {
@@ -665,19 +616,13 @@ class JavalabEditor extends React.Component {
                       style={{
                         ...styles.editor,
                         ...(isDarkMode && styles.darkBackground),
-                        ...{height: this.props.height}
+                        ...{height: height - HEADER_OFFSET}
                       }}
                     />
                   </Tab.Pane>
                 );
               })}
             </Tab.Content>
-            <HeightResizer
-              resizeItemTop={this.getItemTop}
-              position={this.getPosition()}
-              onResize={this.handleHeightResizeThrottled}
-              style={styles.resizer}
-            />
           </div>
         </Tab.Container>
         <div style={menuStyle}>
@@ -699,12 +644,16 @@ class JavalabEditor extends React.Component {
             }
           />
         </div>
-        <DeleteConfirmationDialog
+        <JavalabDialog
           isOpen={openDialog === Dialog.DELETE_FILE}
           handleConfirm={this.onDeleteFile}
           handleClose={() => this.setState({openDialog: null})}
-          filename={fileMetadata[fileToDelete]}
+          message={javalabMsg.deleteFileConfirmation({
+            filename: fileMetadata[fileToDelete]
+          })}
           isDarkMode={isDarkMode}
+          confirmButtonText={javalabMsg.delete()}
+          closeButtonText={javalabMsg.cancel()}
         />
         <NameFileDialog
           isOpen={openDialog === Dialog.RENAME_FILE}
@@ -782,9 +731,6 @@ const styles = {
     float: 'left',
     overflow: 'visible',
     marginLeft: 3
-  },
-  resizer: {
-    position: 'static'
   }
 };
 
@@ -793,7 +739,6 @@ export default connect(
     sources: state.javalab.sources,
     validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
-    height: state.javalab.renderedEditorHeight,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),

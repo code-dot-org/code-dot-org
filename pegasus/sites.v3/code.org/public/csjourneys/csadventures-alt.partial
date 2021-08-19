@@ -1,12 +1,12 @@
 ---
-title: CS Journeys - Explore the wide world of computer science with your students
+title: Take your class on a CS Adventure!
 video_player: true
 theme: responsive
 social:
-  "og:title": "CS Journeys - Explore the world of computer science with your students"
-  "twitter:title": "CS Journeys - Explore the world of computer science with your students"
-  "og:description": "Discover CS academic and career pathways"
-  "twitter:description": "Discover CS academic and career pathways"
+  "og:title": "Take your class on a CS Adventure!"
+  "twitter:title": "Take your class on a CS Adventure!"
+  "og:description": "Excite and inspire your students with virtual field trips"
+  "twitter:description": "Excite and inspire your students with virtual field trips"
   "og:image": "/images/csjourneys/og-csjourneys.png"
   "twitter:image:": "/images/csjourneys/og-csjourneys.png"
   "og:image:width": 1200
@@ -23,11 +23,25 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=codeorg&utm_medium=fctours&utm_source=us" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/amazon-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Amazon FC Tours">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the technology of Amazon's Fulfillment Centers</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
+        <br>
+        <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=codeorg&utm_medium=fctours&utm_source=us" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the Universe with NASA's Chandra X-ray Observatory</strong></h3>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes, to exploding stars, colliding galaxies and more.</div>
         <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
   </div>
@@ -36,14 +50,13 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/amazon-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Amazon FC Tours">
+      <a class="linktag" id="ncmuseum-trip" href="https://naturalsciences.org/calendar/event/coding-in-the-natural-world/" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/ncmuseum-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NC Museum Tours">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the Technology of Amazon's Fulfillment Centers</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
-        <br>
-        <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours" target="_blank"><button>View details</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Coding in science: Careers from the field to the lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join the NC Museum of Natural Sciences for a behind-the-scenes look into how computer coding helps scientists analyze and find patterns in data to expand our scientific knowledge.</div>
+        <a class="linktag" id=ncmuseum-trip" href="https://naturalsciences.org/calendar/event/coding-in-the-natural-world/" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>
