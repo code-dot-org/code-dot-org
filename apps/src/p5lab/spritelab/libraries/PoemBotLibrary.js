@@ -354,7 +354,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
+      lines: newLines.slice(0, numLinesToShow)
     };
   }
 
@@ -403,6 +403,12 @@ export default class PoemBotLibrary extends CoreLibrary {
       });
       yCursor += lineHeight;
     });
+
+    if (this.p5.frameCount === 1) {
+      // Don't apply effects / line animation for preview
+      return renderInfo;
+    }
+
     renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
     poemState.effects.forEach(effect => {
       renderInfo = this.applyEffect(renderInfo, effect, frameCount);
