@@ -1,14 +1,4 @@
-// NOTE: min and max are inclusive
-function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function randomColor(p5) {
-  return p5
-    .color('hsb(' + randomInt(0, 359) + ', 100%, 100%)')
-    .toString('#rrggbb');
-}
-
+import * as utils from './utils';
 export const commands = {
   setForegroundEffect(effectName) {
     var i;
@@ -43,7 +33,7 @@ export const commands = {
           y: 410,
           velocityX: this.p5.random(-2, 2),
           size: this.p5.random(6, 12, 18),
-          color: randomColor(this.p5)
+          color: utils.randomColor(this.p5)
         });
       }
       this.foregroundEffect = () => {
