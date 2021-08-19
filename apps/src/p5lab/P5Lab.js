@@ -265,7 +265,7 @@ P5Lab.prototype.init = function(config) {
   this.level.helperLibraries = this.level.helperLibraries || [];
 
   this.level.softButtons = this.level.softButtons || [];
-  this.startAnimations = {orderedKeys: [], propsByKey: {}};
+  this.startAnimations = null;
 
   getDefaultListMetadata().then(defaultSprites => {
     if (this.level.useDefaultSprites) {
