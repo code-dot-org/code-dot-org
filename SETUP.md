@@ -178,9 +178,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         * Ubuntu 18.04: `sudo snap install pdftk`. 
         * Ubuntu 18.10 and later: `sudo apt-get isntall pdftk-java`
         * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
-      </details>
-   
-
    
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
