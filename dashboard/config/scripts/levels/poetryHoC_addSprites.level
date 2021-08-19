@@ -1,0 +1,100 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "PoemBot"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Making Sprites\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/c473902f262d99da7e5a212ec4aa400b-image-1610480180510.png)\r\n\r\n</div>\r\n\r\nTo make a sprite, open the **Sprites** category of the toolbox and drag out this block:\r\n\r\n<xml><block type=\"gamelab_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"face_strawberry_1\"</title></block></xml>\r\n\r\n* Connect a `make new sprite` block under the `when run` block.\r\n* Choose a costume for your sprite.\r\n* Each sprite has a **location**. You can set the location by clicking the pin on this block: <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">{\"x\":200,\"y\":200}</title></block></xml>\r\n\r\n* Click the pin ![](https://images.code.org/6e59189145f18fc4e46140409e2ad5b8-image-1610554321961.png) on the location block then choose a new position for your sprite on the screen.\r\n* Press the \"Run\" button when your code is finished.\r\n",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "poet",
+    "callout_json": "[]",
+    "parent_level_id": 29613,
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 64,
+  "published": true,
+  "created_at": "2021-08-18T21:44:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "audit_log": "[{\"changed_at\":\"2021-08-18T21:44:19.545+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-08-18 21:46:43 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:49:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:01:27 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="PoemBot_setForegroundEffect">
+              <title name="FG_EFFECT">"bubbles"</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="PoemBot_setBackgroundEffect">
+            <title name="BG_EFFECT">"solid"</title>
+          </block>
+          <block type="PoemBot_setForegroundEffect">
+            <title name="FG_EFFECT">"rain"</title>
+          </block>
+        </category>
+        <category name="Text">
+          <block type="PoemBot_setFont">
+            <title name="FONT">"Arial"</title>
+          </block>
+          <block type="PoemBot_setFontColor">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#993399</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":325,"y":75}</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

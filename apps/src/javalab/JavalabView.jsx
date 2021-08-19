@@ -41,7 +41,9 @@ class JavalabView extends React.Component {
     setIsRunning: PropTypes.func,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
-    awaitingContainedResponse: PropTypes.bool
+    awaitingContainedResponse: PropTypes.bool,
+    isSubmittable: PropTypes.bool,
+    isSubmitted: PropTypes.bool
   };
 
   state = {
@@ -136,7 +138,9 @@ class JavalabView extends React.Component {
       isRunning,
       showProjectTemplateWorkspaceIcon,
       disableFinishButton,
-      awaitingContainedResponse
+      awaitingContainedResponse,
+      isSubmittable,
+      isSubmitted
     } = this.props;
     const {isTesting} = this.state;
 
@@ -199,9 +203,11 @@ class JavalabView extends React.Component {
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
                     disableRunButtons={awaitingContainedResponse}
-                    onContinue={onContinue}
+                    onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
                     showTestButton={false}
+                    isSubmittable={isSubmittable}
+                    isSubmitted={isSubmitted}
                   />
                 }
               />
@@ -263,7 +269,6 @@ export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    disableFinishButton: state.javalab.disableFinishButton,
     channelId: state.pageConstants.channelId,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
@@ -272,7 +277,10 @@ export default connect(
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse
+    awaitingContainedResponse: state.runState.awaitingContainedResponse,
+    disableFinishButton: state.javalab.disableFinishButton,
+    isSubmittable: state.pageConstants.isSubmittable,
+    isSubmitted: state.pageConstants.isSubmitted
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),

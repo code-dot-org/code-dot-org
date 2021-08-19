@@ -3153,7 +3153,6 @@
         ],
         "progression": "Empty Neighborhood Level"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3179,7 +3178,6 @@
         ],
         "progression": "Empty Java Console Level"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3205,7 +3203,6 @@
         ],
         "progression": "Neighborhood Setup Widget"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3230,7 +3227,6 @@
           "U2L2 Video 1"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

@@ -34,6 +34,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -140,6 +141,12 @@ Javalab.prototype.init = function(config) {
     this.studioApp_.initTimeSpent();
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
 
+    initializeSubmitHelper({
+      studioApp: this.studioApp_,
+      onPuzzleComplete: this.onContinue.bind(this),
+      unsubmitUrl: config.level.unsubmitUrl
+    });
+
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
     if (viewport) {
@@ -158,7 +165,9 @@ Javalab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isEditingStartSources: this.isStartMode,
     isCodeReviewing: !!config.isCodeReviewing,
-    isResponsive: true
+    isResponsive: true,
+    isSubmittable: !!config.level.submittable,
+    isSubmitted: !!config.level.submitted
   });
 
   registerReducers({javalab});
@@ -226,7 +235,11 @@ Javalab.prototype.init = function(config) {
     setBackpackApi(new BackpackClientApi(config.backpackChannel))
   );
 
-  getStore().dispatch(setDisableFinishButton(config.readonlyWorkspace));
+  getStore().dispatch(
+    setDisableFinishButton(
+      !!config.readonlyWorkspace && !config.level.submittable
+    )
+  );
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -300,16 +313,17 @@ Javalab.prototype.onInputMessage = function(message) {
 };
 
 // Called by the Javalab app when it wants to go to the next level.
-Javalab.prototype.onContinue = function() {
+Javalab.prototype.onContinue = function(submit) {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
+  const onComplete = submit ? onSubmitComplete : onReportComplete;
 
   const containedLevelResultsInfo = this.studioApp_.hasContainedLevels
     ? getContainedLevelResultInfo()
     : null;
   if (containedLevelResultsInfo) {
-    runAfterPostContainedLevel(onReportComplete);
+    runAfterPostContainedLevel(onComplete);
   } else {
     this.studioApp_.report({
       app: 'javalab',
@@ -317,8 +331,9 @@ Javalab.prototype.onContinue = function() {
       result: true,
       testResult: TestResults.ALL_PASS,
       program: '',
+      submitted: submit,
       onComplete: result => {
-        onReportComplete(result);
+        onComplete(result);
       }
     });
   }
