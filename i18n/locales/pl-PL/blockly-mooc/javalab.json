@@ -19,6 +19,7 @@
   "compilerError": "Nie mogliśmy skompilować Twojego programu. Poszukaj w nim błędów i spróbuj ponownie.",
   "compiling": "Kompilowanie...",
   "console": "Konsola",
+  "delete": "Usuń",
   "duplicateProjectFilenameError": "Nazwa pliku {filename} jest już używana w tym projekcie. Wybierz inną nazwę",
   "duplicateSupportFilenameError": "Nazwa pliku {filename} jest już używana w kodzie pomocy tego poziomu. Wybierz inną nazwę",
   "disabledPeerReviewMessage": "Włącz recenzowanie, aby umożliwić innym uczniom w Twojej grupie komentowanie Twojego projektu.",
