@@ -635,6 +635,12 @@ in:
         Gettting_Started_StudentExperience: crwdns2690221:0crwdne2690221:0
         Getting_Started_BasicFeatures: crwdns2690223:0crwdne2690223:0
         PL_overview_CSD: crwdns2691217:0crwdne2691217:0
+        PL_CSD_TeacherTips_Advise: crwdns2692601:0crwdne2692601:0
+        PL_CSD_TeacherTips_IntroToCSD: crwdns2692603:0crwdne2692603:0
+        PL_CSD_TeacherTips_ProblemSolvingProcess: crwdns2692605:0crwdne2692605:0
+        PL_CSD_TeacherTips_PairProgramming: crwdns2692607:0crwdne2692607:0
+        PL_CSD_TeacherTips_Debugging: crwdns2692609:0crwdne2692609:0
+        PL_CSD_TeacherTips_LeadLearner: crwdns2692611:0crwdne2692611:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

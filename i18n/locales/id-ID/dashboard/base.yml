@@ -120,7 +120,10 @@ id:
     need_unlock: "Tidak menerima instruksi untuk membuka?"
     not_linked: "Maaf, akun Code.org Anda tidak tertaut ke %{provider}. Anda harus masuk dengan mengetikkan kata sandi Anda di bawah ini."
     use_clever: "Maaf, akun Code.org Anda tidak tertaut ke %{provider}. Masuk melalui Clever Portal."
+    invalid_provider: "Maaf,%{provider} akun tidak bisa ditautkan ke akun Code.org."
+    migration_required: "Maaf,kami tidak bisa tersambung atau putuskan akun yang masih menggunakan akun lama"
     unable_to_connect_provider: "Tidak dapat menghubungkan akun Code.org Anda ke akun %{provider}. Silakan coba lagi."
+    disconnect_successful: "Berhasil! Kami sudah memutuskan akun eksternal dari akun Code.org anda."
     already_in_use: "Akun %{provider} sudah terhubung ke akun Code.org yang lain."
     already_linked: "Akun %{provider} Anda sudah tertaut ke akun Code.org Anda."
     existing_account:
@@ -165,7 +168,14 @@ id:
     user_type_button: "Perbarui Jenis Akun"
     user_type_label: "Jenis Akun"
     user_type_student: "siswa"
+    user_type_student_desc: "Jelajahi semua kursus dan kegiatan kami,ditambah:"
+    user_type_student_ability_1: "Simpan kemajuan dan proyek anda"
+    user_type_student_ability_2: "Bergabung dengan bagian kelas guru"
     user_type_teacher: "Guru"
+    user_type_teacher_ability_1: "Membuat bagian kelas"
+    user_type_teacher_ability_2: "Menetapkan dan melacak pekerjaan siswa"
+    user_type_teacher_ability_3: "Mendaftar dalam pembelajaran profesional"
+    user_type_teacher_ability_4: "Berinteraksi dalam forum guru kami"
     field_is_required: "diperlukan"
     accept_terms: "Anda harus setuju untuk membuat akun."
     error: "Sebuah kesalahan terjadi."
@@ -265,6 +275,7 @@ id:
     invite_sent: 'Undangan telah dikirim'
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
     registered: "Anda sudah terdaftar pada %{section_name}."
+    captcha_required: 'Silahkan isi CAPTCHA untuk bergabung dibagian ini'
     already_exists: 'Anda telah bergabung dengan bagian %{section_name}.'
     error:
       signed_in: 'Silahkan logout sebelum melanjutkan'
@@ -275,6 +286,8 @@ id:
       blank_code: "Masukan kode bagian"
       cant_join_own_section: "Maaf Anda tidak dapat bergabung dengan bagian Anda sendiri."
       provider_managed_section: "Bagian ini dikelola oleh penyedia yang lain dan tidak dapat digabungkan. Mintalah guru Anda untuk menambahkan Anda melalui %{provider} dan sinkronkan bagian mereka."
+      restricted_section: "Kami tidak bisa menambahkan anda ke bagian %{section_code} karena ini terkunci.Silahkan kontak guru anda untuk bantuan."
+      full_section: "Kami tidak bisa nenambahkan anda %{section_code} karena sudah ada siswa %{section_capacity} didalamnya. Silahkan kontak guru anda untuk bantuan."
     mail:
       student_disassociated:
         subject: "Pemberitahuan Code.org : %{student_name} tidak lagi terdaftar sebagai siswa Anda."
@@ -322,6 +335,7 @@ id:
       game_lab_tutorials: "Tutorial lab permainan"
       sprite_lab_documentation: "Dokumentasi Lab Sprite"
       sprite_lab_tutorials: "Tutorial Lab Sprite"
+      web_lab_documentation: "Dokumentasi Web Lab"
       educate_overview: "Ikhtisar Pendidik"
       educate_elementary: "Sekolah Dasar"
       educate_middle: "Sekolah Menengah Pertama"
@@ -436,6 +450,7 @@ id:
       worked_with: 'Bekerja Bersama'
       update_lock_settings: 'Perbarui pengaturan kunci di sini.'
       clear_response: 'Hapus tanggapan'
+    student_code_view_diabled: 'Code siswa tidak bisa dilihat unuk aktifitas ini.'
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
@@ -549,6 +564,7 @@ id:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi. Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi. Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Didukung oleh Amazon Web Services'
+    google_copyright: '&copy: Google inc. digunakan dalam ijin. Google Clasroom adalah merek dagang dari Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: 'Hak cipta'
     more: 'Selengkapnya'
@@ -755,6 +771,8 @@ id:
     open_response_body: "Terima kasih atas jawaban Anda!"
     correct_title: "Benar"
     correct_body: "Itu jawaban yang benar."
+  lesson_extras:
+    bonus_level: "Bonus level"
   dialog:
     ok: "Oke!"
     startover_title: "Kamu yakin ingin memulainya dari awal?"
@@ -787,6 +805,14 @@ id:
     reminder_desc: 'Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Ketentuan Layanan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Privasi</a> kami. Silakan baca ini dengan saksama sebelum menyetujuinya. Catat bahwa alat kami yang mengajarkan JavaScript mungkin tidak tersedia bagi murid Anda sebelum secara tegas menerima persyaratan yang diperbarui.'
     reminder_desc_markdown: Kami sudah memperbarui [Ketentuan Layanan](%{tos_url}) dan [Kebijakan Privasi](%{privacy_url}) kami. Silakan baca ini dengan saksama sebelum menyetujuinya. Catat bahwa alat kami yang mengajarkan JavaScript mungkin tidak tersedia bagi murid Anda sebelum secara tegas menerima persyaratan yang diperbarui.
     review_terms: "Tinjau ketentuan yang diperbarui"
+  donor_interstitial:
+    title: "Kursus gratis CS anda dibuat mungkin oleh..."
+    subtitle: "Kami ingin mengucapkan terimakasih kepada para donatur yang murah hati yang dengan dukungannya membuat Code.org sukses. Kami berkomitmen agar Code.org tetap gratis untuk sekolah dan para siswa,secara global, terimakasih kepada kemurahan hati yang berkelanjutan dari [donors](%{donors_url}) kami!"
+    local_supporters: "Pendukung lokal"
+    global_supporters: "Pendukung global"
+    support_codeorg_1: "Setiap dolar yang diberikan kepada Code.org membawa kesempatan  untuk lebih banyak siswa."
+    support_codeorg_2: "[Berdonasi sekarang](%{donate_url}) untuk mendukung Code.org."
+    get_started: "Memulai di Code.org"
   school_info_interstitial:
     title: "Kami ingin menghadirkan Ilmu Komputer kepada setiap murid - bantu kami memantau kemajuan kami!"
     message: "Masukkan informasi sekolah Anda di bawah ini."
@@ -963,7 +989,11 @@ id:
       school_city: 'Kota sekolah'
       school_country: 'Negara Sekolah'
       colombian_school_city: 'Kota sekolah'
+      colombian_chilean_school_department: 'Departemen sekolah/wilayah'
+      colombian_school_municipality: 'Kotamadya sekolah'
       colombian_chilean_school_name: 'Nama Sekolah'
+      chilean_school_commune: 'Komune'
+      chilean_school_id: 'ID sekolah'
       ages: 'Umur berapa yang Anda ajar tahun ini?'
       subjects: 'Mata pelajaran apa yang Anda ajarkan tahun ini?'
       resources: 'Manakah dari materi pembelajaran pendidikan CS berikut yang Anda gunakan?'
@@ -983,10 +1013,12 @@ id:
       school_country:
         canada: 'Kanada'
         chile: 'Cile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malaysia'
         mexico: 'Meksiko'
         thailand: 'Thailand'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: '< 6 tahun'
         ages_7_8: '7- 8 tahun'
@@ -1032,6 +1064,7 @@ id:
         csf_express: 'CS Fundamentals (Praekspres atau Ekspres)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        not_applicable: "Tidak dapat diterapkan"
       email_opt_in:
         opt_in_yes: 'Ya'
         opt_in_no: 'Tidak'
@@ -1040,6 +1073,9 @@ id:
       intro: "Terima kasih telah meluangkan waktu untuk menerima pelatihan tentang kurikulum Code.org. Misi kami untuk menghadirkan kesempatan pendidikan ilmu komputer kepada semua peserta didik di semua sekolah di seluruh dunia tidak mungkin terwujud tanpa Anda."
       instructions: "Silakan isi formulir berikut untuk menunjukkan bahwa 1) Anda menghadiri workshop pelatihan yang diselenggarakan oleh salah satu rekan internasional Code.org, dan 2) Anda setuju untuk membagikan informasi Anda kepada rekan internasional kami di negara Anda agar dia dapat membantu proses Anda sebagai seorang guru ilmu komputer."
       thanks_markdown: "Terima kasih sudah mengirimkan! Kami tak sabar untuk membantu Anda mengenal kurikulum dan alat Code.org. Silakan terus sampaikan pertanyaan dan masukan Anda kepada kami di [support@code.org](%{support_email_url}) atau dengan memposting di [forum guru](%{teacher_forum_url})!"
+      facilitator_not_listed: "Fasilitator saya tidak terdaftar"
+      facilitator_not_applicable: "Tidak dapat diterapkan"
+      organizer_not_listed: "Penyelenggara saya tidak terdaftar"
     logged_out:
       heading: 'Terima kasih sudah berminat pada Program Pembelajaran Profesional!'
       body: 'Untuk memulai, terlebih dahulu Anda perlu login ke akun Code.org Anda. Jika Anda ingin informasi lebih lanjut tentang program sebelum memulai aplikasi, silakan baca <a href="%{url}">ikhtisar Program Pembelajaran Profesional</a>.'
@@ -1068,7 +1104,12 @@ id:
       error_wrong_provider: 'Penyedia salah. Pastikan Anda login dengan Google.'
       error_invalid_user: 'Id pengguna tidak valid. Silakan coba login lagi.'
       error_no_code: 'Mohon masukkan kode login Anda.'
+      confirm_login: 'Pilih "konfirm" untuk log in dengan akun Google anda.'
   parent_email_banner:
     text: "**Apakah Anda orang tua atau wali?** Tautkan email Anda ke akun ini untuk tetap mendapatkan info terkini mengenai kemajuan dan proyek anak Anda!"
     link_your_email: "Hubungkan email Anda"
     not_now: "Tidak sekarang"
+  behaviors:
+    this_sprite: "Sprite ini"
+  unit_prefix: "Unit %{n}"
+  code_org_logo_alt: "Home Code.org"

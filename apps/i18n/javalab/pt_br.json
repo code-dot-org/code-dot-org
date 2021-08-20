@@ -4,6 +4,7 @@
   "clearConsole": "Limpar Console",
   "compilerError": "Não foi possível compilar seu programa.  Procure por erros em seu programa e tente novamente.",
   "console": "Console",
+  "delete": "Excluir",
   "duplicateProjectFilenameError": "O nome do arquivo {filename} já está em uso neste projeto.  Escolha um nome diferente",
   "duplicateSupportFilenameError": "O nome do arquivo {filename} já está em uso no código de suporte deste nível.  Escolha um nome diferente",
   "editor": "Editor",

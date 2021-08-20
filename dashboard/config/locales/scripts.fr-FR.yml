@@ -27031,3 +27031,59 @@ fr:
           lessons:
             lesson-1:
               name: Aperçu
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Outils
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Leçons
+            lessonGroup-3:
+              display_name: Projet
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-20:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lesson group:
+              display_name: Contenu
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            lesson-15:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu

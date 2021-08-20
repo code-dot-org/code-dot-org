@@ -20586,3 +20586,7 @@ fil:
           lessons:
             lesson-1:
               name: Buod
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Mga Widget

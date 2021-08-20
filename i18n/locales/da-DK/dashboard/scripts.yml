@@ -2682,3 +2682,7 @@ da:
           lessons:
             lesson-1:
               name: Oversigt
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Værktøjer

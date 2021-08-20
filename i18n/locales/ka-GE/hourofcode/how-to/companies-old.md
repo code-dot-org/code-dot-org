@@ -9,7 +9,7 @@ title: როგორ ჩავატაროთ კოდის ერთი 
 
 ***
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## დააკავშირეთ ადგილობრივი მოსწავლეები და მოხალისეები კოდირების საათის ფარგლებში.
 Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
 [<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
@@ -27,11 +27,11 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # როგორ ჩავატაროთ კოდის ერთი საათი მოსწავლეებთან ერთად
 
-## 1. Promote your Hour of Code
+## 1. გაუწიეთ პოპულარიზაცია თქვენს კოდირების საათს
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+## 2. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
@@ -77,7 +77,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 **When participants come across difficulties it's okay to respond:**
 
-- “I don’t know. Let’s figure this out together.”
+- "არ ვიცი. მოდი ერთად გავარჩიოთ."
 - "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
@@ -90,6 +90,6 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- გააზიარეთ თქვენი კოდირების საათის ამსახველი ფოტო და ვიდეო მასალა სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg რათა ჩვენც შევძლოთ თქვენი წარმატების აღნიშვნა!
 
 {{ signup_button }}
