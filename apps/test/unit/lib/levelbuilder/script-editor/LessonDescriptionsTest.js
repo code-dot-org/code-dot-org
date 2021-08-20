@@ -33,6 +33,10 @@ describe('LessonDescriptions', () => {
     };
   });
 
+  afterEach(() => {
+    sinon.restore();
+  });
+
   it('begins collapsed', () => {
     const wrapper = shallow(
       <LessonDescriptions
