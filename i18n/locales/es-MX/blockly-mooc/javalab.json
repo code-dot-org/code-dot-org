@@ -17,6 +17,7 @@
   "compilerError": "No hemos podido compilar tu programa. Busca errores y vuelve a intentarlo.",
   "compiling": "Compilando...",
   "console": "Consola",
+  "delete": "Borrar",
   "duplicateProjectFilenameError": "El archivo {filename} ya está en uso en este proyecto. Elige un nombre diferente.",
   "duplicateSupportFilenameError": "El archivo {filename} ya está en uso en el código de soporte de este nivel. Elige un nombre diferente.",
   "disabledPeerReviewMessage": "Habilita la revisión por pares para que otros estudiantes de tu grupo puedan dejar comentarios en tu proyecto.",

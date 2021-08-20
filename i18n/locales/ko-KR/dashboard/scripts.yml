@@ -18366,3 +18366,61 @@ ko:
           lessons:
             lesson-1:
               name: 개요
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: 툴
+            lesson-18:
+              name: 위젯
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 레슨
+            lessonGroup-3:
+              display_name: 프로젝트
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            lesson-20:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            new lesson:
+              key: 새 레슨
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lesson group:
+              display_name: 컨텐츠
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠

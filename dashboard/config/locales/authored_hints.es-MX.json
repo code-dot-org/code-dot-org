@@ -6497,11 +6497,11 @@
           "courseB_iceage_loops3_b": "Para repetir código, arrastra un ciclo ´repetir´, luego coloca dentro el bloque que quieres repetir."
         },
         "courseD_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Use este nuevo bloque!\n<xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_a": "¡Usa este nuevo bloque!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Para repetir código, arrastra un ciclo ´repetir´, luego coloca dentro el bloque que quieres repetir."
         },
         "courseD_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Use este nuevo bloque!\n<xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_a": "¡Usa este nuevo bloque!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Para repetir código, arrastra un ciclo ´repetir´, luego coloca dentro el bloque que quieres repetir."
         },
         "courseD_iceage_loops4": {
@@ -8730,11 +8730,11 @@
           "courseE_farmer_ramp12e_b": "La solución a este desafío se parecerá mucho a la solución al último desafío, pero girando en la otra dirección."
         },
         "courseD_bee_conditionals5_2019": {
-          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo, y luego repite todo dos veces!",
           "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
         },
         "courseD_bee_conditionals5_2020": {
-          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo, y luego repite todo dos veces!",
           "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
         },
         "outbreak1": {
@@ -10065,7 +10065,7 @@
           "courseD_bee_conditionals4_hintVid2": "Mire este vídeo para ayudar a resolver este desafío."
         },
         "courseD_bee_conditionals5_2021": {
-          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo y luego repite todo dos veces!",
+          "courseD_bee_conditionals5_a": "Si utilizas un bloque ´si hay flor´, puedes resolver esto usando un bucle anidado. ¡Escribe un programa para los caminos de la izquierda y de abajo, y luego repite todo dos veces!",
           "courseD_bee_conditionals5_c": "Para continuar avanzando por el camino, la abeja tendrá que ´avanzar´. Según avanza, la abeja tendrá que comprobar si hay flores. ´Si hay flor´, la abeja tendrá que ´recoger néctar´."
         },
         "courseD_bee_conditionals5_dani": {
@@ -10272,7 +10272,7 @@
           "courseD_iceage_loops2_c": "Sigue este camino para que Scrat llegue a la bellota."
         },
         "courseD_iceage_loops3_2021": {
-          "courseB_iceage_loops3_a": "Use este nuevo bloque!\n<xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_a": "¡Usa este nuevo bloque!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Para repetir código, arrastra un ciclo ´repetir´, luego coloca dentro el bloque que quieres repetir."
         },
         "courseD_iceage_loops4_2021": {

@@ -162,13 +162,18 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
-    let clock;
+    let clock, server;
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+    });
 
     afterEach(() => {
       if (clock) {
         clock.restore();
         clock = undefined;
       }
+      server.restore();
     });
 
     it('can save and keep editing', () => {
@@ -178,7 +183,6 @@ describe('CourseEditor', () => {
       let returnData = {
         coursePath: '/courses/test-course'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
@@ -215,7 +219,6 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
@@ -253,7 +256,6 @@ describe('CourseEditor', () => {
       let returnData = {
         coursePath: '/courses/test-course'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
@@ -284,7 +286,6 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
