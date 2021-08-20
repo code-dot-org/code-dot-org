@@ -3,21 +3,83 @@
     "data": {
       "behavior_names": {
         "courseF_apps_aquarium": {
-          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
-          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग",
+          "moving south2": "दक्षिणेकडे जाणे",
+          "swimming left and right2": "डावीकडे आणि उजवीकडे पोहणे2",
+          "moving north2": "उत्तरेकडे जाणे2",
+          "jittering2": "थरथरणे2 ",
+          "patrolling2": "गस्त घालणे2"
         },
         "courseF_apps_card": {
-          "blocking movement": "हालचाल ब्लॉक करणे"
+          "blocking movement": "हालचाल ब्लॉक करणे",
+          "driving with arrow keys": "ॲरो कीज वापरून ड्रायव्हिंग",
+          "moving with arrow keys": "ॲरो कीज वापरून हालचाल करणे",
+          "wandering": "भटकणे",
+          "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
+          "shrinking": "आकार कमी होणे",
+          "patrolling": "गस्त घालणे",
+          "growing": "आकार वाढवणे",
+          "jittering": "थरथरणे",
+          "moving east": "पूर्वेकडे जाणे",
+          "moving north": "उत्तरेकडे जाणे",
+          "moving south": "दक्षिणेकडे जाणे",
+          "moving west": "पश्चिमेकडे जाणे",
+          "spinning right": "उजवीकडे स्पिन होणे",
+          "spinning left": "डावीकडे स्पिन होणे"
         },
         "courseF_apps_chatbot": {
           "blocking movement": "हालचाल ब्लॉक करणे",
-          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
-          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग",
+          "driving with arrow keys": "ॲरो कीज वापरून ड्रायव्हिंग",
+          "moving with arrow keys": "ॲरो कीज वापरून हालचाल करणे",
+          "wandering": "भटकणे",
+          "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
+          "shrinking": "आकार कमी होणे",
+          "patrolling": "गस्त घालणे",
+          "growing": "आकार वाढवणे",
+          "jittering": "थरथरणे",
+          "moving east": "पूर्वेकडे जाणे",
+          "moving north": "उत्तरेकडे जाणे",
+          "moving south": "दक्षिणेकडे जाणे",
+          "moving west": "पश्चिमेकडे जाणे",
+          "spinning right": "उजवीकडे स्पिन होणे",
+          "spinning left": "डावीकडे स्पिन होणे",
+          "wandering2": "भटकणे2",
+          "moving east2": "पूर्वेकडे जाणे2",
+          "spinning left2": "डावीकडे स्पिन होणे2"
         },
         "courseF_apps_collector": {
           "flying west and looping": "पश्चिमेकडे उडणे आणि लूपिंग",
-          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा ",
-          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग"
+          "moving with arrow keys2": "ॲरो कीज2 वापरून हालचाल करा",
+          "driving with arrow keys2": "ॲरो कीज2 वापरून ड्रायव्हिंग",
+          "wandering": "भटकणे",
+          "moving west2": "पश्चिमेकडे जाणे2",
+          "fluttering": "फडफडणे",
+          "moving east2": "पूर्वेकडे जाणे2",
+          "moving east": "पूर्वेकडे जाणे",
+          "spinning left": "डावीकडे स्पिन होणे",
+          "spinning right": "उजवीकडे स्पिन होणे",
+          "shrinking": "आकार कमी होणे",
+          "growing": "आकार वाढवणे",
+          "moving south": "दक्षिणेकडे जाणे",
+          "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
+          "moving north": "उत्तरेकडे जाणे",
+          "jittering": "थरथरणे",
+          "patrolling": "गस्त घालणे",
+          "moving with arrow keys": "ॲरो कीज वापरून हालचाल करणे",
+          "driving with arrow keys": "ॲरो कीज वापरून ड्रायव्हिंग",
+          "wandering2": "भटकणे2",
+          "spinning left2": "डावीकडे स्पिन होणे2",
+          "spinning right2": "उजवीकडे स्पिन होणे2",
+          "shrinking2": "आकार कमी होणे2",
+          "growing2": "आकार वाढणे2",
+          "moving south2": "दक्षिणेकडे जाणे2",
+          "swimming left and right2": "डावीकडे आणि उजवीकडे पोहणे2",
+          "moving north2": "उत्तरेकडे जाणे2",
+          "jittering2": "थरथरणे2",
+          "patrolling2": "गस्त घालणे2"
         },
         "courseF_editable_card": {
           "blocking movement": "हालचाल ब्लॉक करणे"
@@ -81,6 +143,26 @@
         },
         "courseF_text_review": {
           "moving forward": "पुढे जाणे"
+        },
+        "courseF_apps_pet": {
+          "patrolling": "गस्त घालणे",
+          "wandering": "भटकणे",
+          "moving east": "पूर्वेकडे जाणे",
+          "spinning left": "डावीकडे स्पिन होणे",
+          "spinning right": "उजवीकडे स्पिन होणे",
+          "shrinking": "आकार कमी होणे",
+          "growing": "आकार वाढवणे",
+          "moving south": "दक्षिणेकडे जाणे",
+          "swimming left and right": "डावीकडे आणि उजवीकडे पोहणे",
+          "moving north": "उत्तरेकडे जाणे",
+          "jittering": "थरथरणे",
+          "moving west": "पश्चिमेकडे जाणे",
+          "moving with arrow keys": "ॲरो कीज वापरून हालचाल करणे",
+          "driving with arrow keys": "ॲरो कीज वापरून ड्रायव्हिंग",
+          "fluttering": "फडफडणे",
+          "wobbling": "डगमगणे",
+          "moving west and looping": "पश्चिमेकडे जाणे आणि लूपिंग",
+          "moving east and looping": "पूर्वेकडे जाणे आणि लूपिंग"
         }
       }
     }
