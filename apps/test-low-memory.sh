@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-MEM_PER_PROCESS=6000
+MEM_PER_PROCESS=4096
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
