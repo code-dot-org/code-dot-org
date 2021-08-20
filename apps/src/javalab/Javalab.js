@@ -23,9 +23,9 @@ import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import TheaterVisualizationColumn from './TheaterVisualizationColumn';
-import Theater from './Theater';
-import {CsaViewMode} from './constants';
+// import TheaterVisualizationColumn from './TheaterVisualizationColumn';
+// import Theater from './Theater';
+import {CsaViewMode, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -34,6 +34,8 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import Playground from './Playground';
+import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -118,10 +120,20 @@ Javalab.prototype.init = function(config) {
         );
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
+    // this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
+    // this.visualization = <TheaterVisualizationColumn />;
     case CsaViewMode.THEATER:
     case CsaViewMode.PLAYGROUND:
-      this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
-      this.visualization = <TheaterVisualizationColumn />;
+      this.miniApp = new Playground(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        this.onMiniAppMessage.bind(this, InputMessageType.PLAYGROUND)
+      );
+      this.visualization = (
+        <PlaygroundVisualizationColumn
+          onPlaygroundClicked={(x, y) => this.miniApp.onPlaygroundClicked(x, y)}
+        />
+      );
       break;
   }
 
@@ -296,9 +308,13 @@ Javalab.prototype.onStop = function() {
 
 // Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
+  this.onMiniAppMessage(InputMessageType.SYSTEM_IN, message);
+};
+
+Javalab.prototype.onMiniAppMessage = function(messageType, message) {
   this.javabuilderConnection.sendMessage(
     JSON.stringify({
-      messageType: 'SYSTEM_IN',
+      messageType,
       message
     })
   );

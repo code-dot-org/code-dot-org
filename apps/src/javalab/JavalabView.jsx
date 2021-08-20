@@ -261,6 +261,7 @@ class JavalabView extends React.Component {
       case CsaViewMode.THEATER:
       case CsaViewMode.PLAYGROUND:
         $('#theater-container').css('transform', scaleCss);
+        $('#playground-container').css('transform', scaleCss);
         break;
     }
 

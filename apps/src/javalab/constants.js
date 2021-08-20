@@ -72,12 +72,23 @@ export const TheaterSignalType = {
   VISUAL: 'VISUAL'
 };
 
+export const PlaygroundSignalType = {
+  RUN: 'RUN',
+  EXIT: 'EXIT',
+  UPDATE: 'UPDATE'
+};
+
 export const StatusMessageType = {
   COMPILING: 'COMPILING',
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
   EXITED: 'EXITED'
+};
+
+export const InputMessageType = {
+  SYSTEM_IN: 'SYSTEM_IN',
+  PLAYGROUND: 'PLAYGROUND'
 };
 
 export const SoundExceptionType = makeEnum(
