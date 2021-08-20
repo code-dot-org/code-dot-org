@@ -23,6 +23,20 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=codeorg&utm_medium=fctours&utm_source=us" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/amazon-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Amazon FC Tours">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the technology of Amazon's Fulfillment Centers</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
+        <br>
+        <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=codeorg&utm_medium=fctours&utm_source=us" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
       </a>
@@ -36,25 +50,11 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/amazon-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Amazon FC Tours">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the technology of Amazon's Fulfillment Centers</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
-        <br>
-        <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="ncmuseum-trip" href="https://naturalsciences.org/calendar/event/coding-in-the-natural-world/" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/ncmuseum-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NC Museum Tours">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Coding in the natural world</strong></h3>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Coding in science: Careers from the field to the lab</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join the NC Museum of Natural Sciences for a behind-the-scenes look into how computer coding helps scientists analyze and find patterns in data to expand our scientific knowledge.</div>
         <a class="linktag" id=ncmuseum-trip" href="https://naturalsciences.org/calendar/event/coding-in-the-natural-world/" target="_blank"><button>View details</button></a>
   </div>

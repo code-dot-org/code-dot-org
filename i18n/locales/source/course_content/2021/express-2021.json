@@ -3167,7 +3167,7 @@
   },
   "https://studio.code.org/s/express-2021/lessons/21/levels/13": {
     "short_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
-    "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?",
+    "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?\n\n[expandable][0]",
     "function_definitions": {
       "draw hexagon": {
         "name": "draw hexagon"

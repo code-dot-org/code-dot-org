@@ -163,7 +163,6 @@
         ],
         "progression": "Welcome to Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -189,7 +188,6 @@
         ],
         "progression": "Welcome to Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -215,7 +213,6 @@
         ],
         "progression": "Welcome to Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -241,7 +238,6 @@
         ],
         "progression": "Welcome to Sprite Lab"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -267,7 +263,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -293,7 +288,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -319,7 +313,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -345,7 +338,6 @@
         ],
         "progression": "Create Your Story Board"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -371,7 +363,6 @@
         ],
         "progression": "Mini-Lessons"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -397,7 +388,6 @@
         ],
         "progression": "Free Play"
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
