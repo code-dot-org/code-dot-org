@@ -51,7 +51,7 @@ social:
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Gabriel Saruhashi</strong>
     <br>
     Co-founder
@@ -62,7 +62,9 @@ social:
     <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Zené Sekou</strong>
     <br>
-    Software Engineer, Amazon</p>
+    Software Engineer
+    <br>
+    <a href="https://www.amazon.com/" target="_blank">Amazon</a></p>
   </div>
   <div class="col-33" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
@@ -105,29 +107,37 @@ social:
   <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics and student takeaways, click the Register button below.</p>
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Erin Howard</strong>
     <br>
     PhD Student in Astronomy
     <br>
-    Western Washington University</p>
+    <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
     Recent Grad
     <br>
-    San Jose State University</p>
+    <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
   </div>
-  <div class="col-33" style="text-align:center">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/nicholas-papano.png" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Nicholas Papano</strong>
+    <br>
+    Recent Grad
+    <br>
+    <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
+  </div>
+  <div class="col-25" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Brianna Wimer</strong>
     <br>
     Student
     <br>
-    University of Alabama</p>
+    <a href="https://www.ua.edu/" target="_blank">University of Alabama</a></p>
   </div>
   <div style="clear: both"></div>
 <br>
@@ -166,9 +176,11 @@ social:
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <p style="margin-top:10px"><strong>Robert G. Campbell</strong>
     <br>
-    Marketing Program Manager, Code.org</p>
+    Data Scientist
+    <br>
+    <a href="https://www.ibm.com/us-en/?ar=1" target="_blank">IBM</a></p>
   </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
@@ -177,7 +189,7 @@ social:
     Marketing Program Manager, Code.org</p>
   </div>
   <div class="col-33" style="text-align:center">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/vikram-sreedhar.png" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Vikram Sreedhar</strong>
     <br>
     Co-Founder/Chief Technology Officer 
@@ -221,7 +233,7 @@ social:
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
     <br>
     Executive Director 
@@ -249,18 +261,19 @@ social:
   <div class="col-50" style="margin-bottom:10px; background-color: #7665a0; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">Before you join:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
-        <li style="color:#ffffff">Give students time in class to <a href="https://code.org/careers-with-cs" target="_blank" style="color:#ffffff">explore career pathways</a> and encourage them to write down questions they have.</li><br>
-        <li style="color:#ffffff">Encourage students to upvote questions they like on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a>, and post their own questions using the hashtag #CSJourneys</li><br>
-        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li><br>
+        <li style="color:#ffffff">Have students read through the responses to the question posed by another student on CareerVillage.org, “<a href="https://www.careervillage.org/questions/459689/is-it-possible-to-get-a-good-job-in-computer-science-without-a-strong-network" target="_blank" style="color:#ffffff">Is it possible to get a good job in Computer Science without a strong network?</a>” Have them write down some of the key answers that strike them, and then discuss as a class. If there’s time, give students an opportunity to explore more questions about networking on CareerVillage.org.</li><br>
+        <li style="color:#ffffff">Give students time in class to map out their web of support. This includes <i>strong ties</i> (family members, friends, and any other relationships defined by high levels of time investment, emotional intimacy, trust, and reciprocity, and <i>weak ties</i> (acquaintances, friends of friends, extended family, coworkers, or any relationship defined by lower levels of time investment and trust).</li><br>
+        <li style="color:#ffffff">Spend some time exploring the professional networking site Linkedin with your students. Ask them: what do they notice about it? How do people seem to engage on the site? How is it different from other social networking platforms like Snapchat, TikTok, or Instagram?</li><br>
+        <li style="color:#ffffff">Make sure you can access Zoom and you have a viewing plan (will you watch as a class, using a TV or projector? Or will students access the webinar using their own devices?</li>
     </ul>
   </div>
   <div class="col-50" style="margin-bottom:10px; background-color: #0094ca; border-radius:25px; padding:25px; border:10px solid white">
     <h3 style="color:#ffffff; margin-top:0">After the event:</h3>
     <ul style="color:#ffffff; margin-bottom:0">
         <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
-        <li style="color:#ffffff">Have students work in pairs or groups to generate follow up questions. Encourage them to post questions on <a href="https://www.careervillage.org/questions/tagged/computer-science" target="_blank" style="color:#ffffff">CareerVillage.org</a></li><br>
-        <li style="color:#ffffff">Have students build a TDL on CareerVillage.</li><br>
-        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond" target="_blank" style="color:#ffffff">code.org/beyond</a>, where they can explore opportunities to take the next step on their own CS Journeys.</li>
+        <li style="color:#ffffff">Have students return to their web of support. After hearing from the panelists, would they change anything? Can they think of anyone else who might be part of their support network?</li><br>
+        <li style="color:#ffffff">Point students to <a href="https://code.org/beyond/mentors-and-community" target="_blank" style="color:#ffffff">mentorship and professional networking opportunities</a>. Extracurricular activities like coding clubs are another great way to start building connections; point students to <a href="https://code.org/beyond/extracurricular" target="_blank" style="color:#ffffff">these opportunities</a>, too.</li><br>
+        <li style="color:#ffffff">Helping students build strong support networks often requires more than pointing them in the right direction. Use <a href="https://whoyouknow.org/playbook/" target="_blank" style="color:#ffffff">this report from the Christensen Institute</a> to guide your efforts.</li>
     </ul>
   </div>
   <div style="clear: both"></div>

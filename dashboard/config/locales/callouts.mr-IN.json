@@ -337,7 +337,7 @@
           "whenKey": "इथे असलेला नवीन इव्हेंट ब्लॉक वापरा."
         },
         "courseF_events_practice_reorder": {
-          "stopAllBug": "या ब्लॉकचा क्रम चुकीचा आहे. "
+          "stopAllBug": "या ब्लॉकचा क्रम चुकीचा आहे."
         },
         "courseF_events_time": {
           "events_category": "इव्हेंट्स श्रेणी उघडण्यासाठी इथे क्लिक करा."
@@ -388,6 +388,9 @@
         },
         "courseF_text_choice_color": {
           "text_color_finish": "तुम्ही प्रश्नाचे उत्तर दिल्यावर पार्श्वभूमीचा रंग बदलला का? तसे असेल तर, 'Finish'  दाबा. नसेल तर 'Reset' दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "तुम्ही तुमचा प्रोग्रॅम इथे संथ करू शकता."
         }
       }
     }

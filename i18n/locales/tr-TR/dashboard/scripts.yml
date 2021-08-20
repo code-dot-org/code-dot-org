@@ -18008,3 +18008,61 @@ tr:
           lessons:
             lesson-1:
               name: Genel Bakış
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Araçlar
+            lesson-18:
+              name: Araçlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dersler
+            lessonGroup-3:
+              display_name: Proje
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-20:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            new lesson:
+              key: yeni ders
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lesson group:
+              display_name: İçerik
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik

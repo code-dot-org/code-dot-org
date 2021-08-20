@@ -1332,12 +1332,16 @@ in:
         text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
       gamelab_startFollowing:
         text: crwdns2486192:0[SPRITE]crwdnd2486192:0[0]crwdnd2486192:0[TARGET]crwdnd2486192:0[1]crwdne2486192:0
+      gamelab_startGliding:
+        text: crwdns2692573:0[SPRITE]crwdnd2692573:0[0]crwdne2692573:0
       gamelab_stopAvoiding:
         text: crwdns2547468:0[SPRITE]crwdnd2547468:0[0]crwdne2547468:0
       gamelab_stopCollectingData:
         text: crwdns2478930:0crwdne2478930:0
       gamelab_stopFollowing:
         text: crwdns2486194:0[SPRITE]crwdnd2486194:0[0]crwdne2486194:0
+      gamelab_stopGliding:
+        text: crwdns2692575:0[SPRITE]crwdnd2692575:0[0]crwdne2692575:0
       gamelab_subjectSpritePointer:
         text: crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0
       gamelab_textJoin:
@@ -1818,6 +1822,21 @@ in:
           BG_EFFECT:
             '"solid"': crwdns2688572:0crwdne2688572:0
             '"rainbow"': crwdns2688574:0crwdne2688574:0
+      PoemBot_setFont:
+        text: crwdns2692577:0[FONT]crwdnd2692577:0[0]crwdne2692577:0
+        options:
+          FONT:
+            '"Arial"': crwdns2692579:0crwdne2692579:0
+            '"Georgia"': crwdns2692581:0crwdne2692581:0
+            '"Palatino"': crwdns2692583:0crwdne2692583:0
+            '"Times"': crwdns2692585:0crwdne2692585:0
+            '"Courier"': crwdns2692587:0crwdne2692587:0
+            '"Arial Black"': crwdns2692589:0crwdne2692589:0
+            '"Impact"': crwdns2692591:0crwdne2692591:0
+            '"Tahoma"': crwdns2692593:0crwdne2692593:0
+            '"Verdana"': crwdns2692595:0crwdne2692595:0
+      PoemBot_setFontColor:
+        text: crwdns2692597:0[COLOR]crwdnd2692597:0[0]crwdne2692597:0
       PoemBot_setForegroundEffect:
         text: crwdns2688576:0[FG_EFFECT]crwdnd2688576:0[0]crwdne2688576:0
         options:
@@ -1842,6 +1861,8 @@ in:
         text: crwdns2688588:0[LEFT_QUOTE]crwdnd2688588:0[0]crwdnd2688588:0[TEXT]crwdnd2688588:0[1]crwdnd2688588:0[RIGHT_QUOTE]crwdnd2688588:0[2]crwdne2688588:0
       PoemBot_textConcat:
         text: crwdns2688590:0[LEFT_QUOTE]crwdnd2688590:0[0]crwdnd2688590:0[TEXT1]crwdnd2688590:0[1]crwdnd2688590:0[TEXT2]crwdnd2688590:0[2]crwdnd2688590:0[RIGHT_QUOTE]crwdnd2688590:0[3]crwdne2688590:0
+      PoemBot_whenLineShows:
+        text: crwdns2692599:0[N]crwdnd2692599:0[0]crwdne2692599:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:

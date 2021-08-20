@@ -50,7 +50,8 @@ level 'VPL - CSD - Module 3 - Problem Solving Process Guide', progression: 'Less
 level 'VPL - CSD Module 3 Problem Solving Process', progression: 'Lesson Investigation (~60 mins)'
 level 'VPL - CSD - Module 3 - U4L2 Investigation', progression: 'Lesson Investigation (~60 mins)'
 level 'VPL - CSD Module 3 U4L2 Reflection', progression: 'Reflection (~5 mins)'
-level 'VPL - CSD Module 3 U4L2 Intro Group Dynamics', progression: 'Intro to Group Dynamics (~5 mins)'
+level 'VPL - CSD Module 3 U4L2 Intro Group Dynamics', progression: 'Supporting Effective Group Work (~5 mins)'
+level 'VPL - CSD Module 3 Equity - 2021', progression: 'Equity and Data (~5 mins)'
 level 'VPL - CSD - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap Up (~10 mins)'
 
 lesson 'Module 4', display_name: 'Module 4', has_lesson_plan: false
