@@ -195,7 +195,7 @@ if (envConstants.COVERAGE) {
   });
 }
 
-var devtool = process.env.DEV ? 'inline-cheap-source-map' : 'inline-source-map';
+var devtool = 'inline-source-map';
 
 var storybookConfig = _.extend({}, baseConfig, {
   devtool: devtool,
