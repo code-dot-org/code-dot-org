@@ -1900,31 +1900,10 @@ class Script < ApplicationRecord
   end
 
   def get_feedback_for_section(section)
-    rubric_performance_headers = {
-      performanceLevel1: "Extensive Evidence",
-      performanceLevel2: "Convincing Evidence",
-      performanceLevel3: "Limited Evidence",
-      performanceLevel4: "No Evidence"
-    }
-
-    rubric_performance_json_to_ruby = {
-      performanceLevel1: "rubric_performance_level_1",
-      performanceLevel2: "rubric_performance_level_2",
-      performanceLevel3: "rubric_performance_level_3",
-      performanceLevel4: "rubric_performance_level_4"
-    }
-
-    review_state_labels = {
-      keepWorking: "Needs more work",
-      completed: "Reviewed, completed",
-      waitingForReview: "Waiting for review"
-    }
-
     feedback = {}
 
-    level_ids = script_levels.map(&:oldest_active_level).select(&:can_have_feedback?).map(&:id)
     student_ids = section.students.map(&:id)
-    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, level_ids, id, section.user_id)
+    all_feedback = TeacherFeedback.get_latest_feedbacks_given(student_ids, nil, id, section.user_id)
 
     feedback_hash = {}
     all_feedback.each do |feedback_element|
@@ -1934,27 +1913,22 @@ class Script < ApplicationRecord
 
     script_levels.each do |script_level|
       current_level = script_level.oldest_active_level
-      next unless current_level.can_have_feedback?
 
-      section.students.each do |student|
-        next unless feedback_hash[student.id]
-        temp_feedback = feedback_hash[student.id][current_level.id]
-        next unless temp_feedback
+      if current_level.can_have_feedback?
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, current_level.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(current_level, script_level, student)
+        end
+      end
 
-        review_state = temp_feedback.awaiting_teacher_review?(true) ? :waitingForReview : temp_feedback.review_state&.to_sym
-        feedback[temp_feedback.id] = {
-          studentName: student.name,
-          lessonNum: script_level.lesson.relative_position.to_s,
-          lessonName: script_level.lesson.localized_title,
-          levelNum: script_level.position.to_s,
-          keyConcept: (current_level.rubric_key_concept || ''),
-          performanceLevelDetails: (current_level.properties[rubric_performance_json_to_ruby[temp_feedback.performance&.to_sym]] || ''),
-          performance: rubric_performance_headers[temp_feedback.performance&.to_sym],
-          comment: temp_feedback.comment,
-          timestamp: temp_feedback.updated_at.localtime.strftime("%D at %r"),
-          reviewStateLabel: review_state_labels[review_state] || "Never reviewed",
-          studentSeenFeedback: temp_feedback.student_seen_feedback&.localtime&.strftime("%D at %r"),
-        }
+      next unless sublevels = current_level.try(:sublevels)
+      sublevels.each_with_index do |sublevel, sublevel_index|
+        next unless sublevel.can_have_feedback?
+
+        section.students.each do |student|
+          next unless temp_feedback = feedback_hash.dig(student.id, sublevel.id)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(current_level, script_level, student, sublevel_index)
+        end
       end
     end
 
