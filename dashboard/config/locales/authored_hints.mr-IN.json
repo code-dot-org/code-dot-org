@@ -102,39 +102,39 @@
           "validation": "**मी ही लेव्हल कशी पास करू?**\n\n-   `when left arrow pressed` ब्लॉक वापरून तुम्ही तो दाबल्यावर रोबोला नाचायला लावा.\n\n_ही  लेव्हल 7 मेजर्सनंतर संपेल._"
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**मी हा लेव्हल कशी पास करू?**\n\n- एका डान्सरला स्क्रीनवर दाखवा.\n\n_ही लेव्हल 4 मेझर्सनंतर संपेल._",
-          "challenges": "**पर्यायी आव्हाने**\n\n-  वाजवण्यासाठी इतर एखादे गाणे  निवडा.\n- तुमच्या डान्सरला नवीन ठिकाणी हलवा.\n-  एकापेक्षा जास्त डान्सर्स तयार करा."
+          "validation": "**मी हा लेव्हल कशी पास करू?**\n\n-   एका डान्सरला स्क्रीनवर दाखवा.\n\n_ही लेव्हल 4 मेझर्सनंतर संपेल._",
+          "challenges": "**पर्यायी आव्हाने**\n\n-   वाजवण्यासाठी इतर एखादे गाणे  निवडा.\n-   तुमच्या डान्सरला नवीन ठिकाणी हलवा.\n-   एकापेक्षा जास्त डान्सर्स तयार करा."
         },
         "CourseD_Dance_2020_02": {
           "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   डान्सरने एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो की दाबली पाहिजे.\n    _ही लेव्हल 4 मेजर्सनंतर संपेल._",
           "challenges": "**पर्यायी आव्हान**\n\nएकापेक्षा जास्त <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> ब्लॉक वापरा."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n-   डान्सरने एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो की दाबली पाहिजे.\n_ही लेव्हल 4 मेजर्सनंतर संपेल._",
-          "challenges": "**पर्यायी आव्हान**\n\nएकापेक्षा जास्त [blockly block][0] ब्लॉक वापरा."
+          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   डान्सरने एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो की दाबली पाहिजे.\n    _ही लेव्हल 4 मेजर्सनंतर संपेल._",
+          "challenges": "**पर्यायी आव्हान**\n\nएकापेक्षा जास्त <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> ब्लॉक वापरा."
         },
         "CourseD_Dance_2020_03": {
           "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   दोन्ही डान्सर्सनी एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो कीज दाबल्या पाहिजेत.\n\n_ही लेव्हल 6 मेजर्सनंतर संपेल._",
           "challenges": "**ऐच्छिक आव्हान**\n\n-   डान्सरला डाव्या आणि उजव्या अॅरो कीजना प्रतिसाद द्यायला लावा."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n-   दोन्ही डान्सर्सनी एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो कीज दाबल्या पाहिजेत.\n\n_ही लेव्हल 6 मेजर्सनंतर संपेल._",
-          "challenges": "**ऐच्छिक आव्हान**\n\n- डान्सरला डाव्या आणि उजव्या अॅरो कीजना प्रतिसाद द्यायला लावा."
+          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   दोन्ही डान्सर्सनी एक मूव्ह केली पाहिजे.\n-   तुम्ही अॅरो कीज दाबल्या पाहिजेत.\n\n_ही लेव्हल 6 मेजर्सनंतर संपेल._",
+          "challenges": "**ऐच्छिक आव्हान**\n\n-   डान्सरला डाव्या आणि उजव्या अॅरो कीजना प्रतिसाद द्यायला लावा."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**मी ही लेव्हल कशी पास करू?**\n\n- 4 मेजर्सनंतर डान्सरने मूव्ह बदलली पाहिजे.\n\n_ही लेव्हल 7 मेजर्सनंतर संपेल._"
+          "validation": "**मी ही लेव्हल कशी पास करू?**\n\n-   4 मेजर्सनंतर डान्सरने मूव्ह बदलली पाहिजे.\n\n_ही लेव्हल 7 मेजर्सनंतर संपेल._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-  4 मेजर्सनंतर डान्सर जो नाच करीत होता त्यापेक्षा वेगळा डान्स त्याने 6 मेजर्सनंतर केला पाहिजे.\n\n_ही लेव्हल 11 मेजर्सनंतर संपेल._",
-          "challenges": "**ऐच्छिक आव्हान**\n\n- जेव्हा डान्सर्स मूव्हज बदलतात तेव्हा पार्श्वभूमी बदला."
+          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   4 मेजर्सनंतर डान्सर जो नाच करीत होता त्यापेक्षा वेगळा डान्स त्याने 6 मेजर्सनंतर केला पाहिजे.\n\n_ही लेव्हल 11 मेजर्सनंतर संपेल._",
+          "challenges": "**ऐच्छिक आव्हान**\n\n-   जेव्हा डान्सर्स मूव्हज बदलतात तेव्हा पार्श्वभूमी बदला."
         },
         "CourseD_Dance_2020_06": {
           "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   या गाण्याच्या पहिल्या चार मेजर्समध्ये मध्यभागी एक मुख्य डान्सर आणि बॅकअप डान्सर्सचा एक गट तयार करा.\n\n_ही लेव्हल 7 मेजर्सनंतर संपेल._",
           "challenges": "**ऐच्छिक आव्हान**\n\n-   बॅकअप डान्सर्सचे अनेक गट तयार करा."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n-   या गाण्याच्या पहिल्या चार मेजर्समध्ये मध्यभागी एक मुख्य डान्सर आणि बॅकअप डान्सर्सचा एक गट तयार करा.\n\n_ही लेव्हल 7 मेजर्सनंतर संपेल._",
-          "challenges": "**ऐच्छिक आव्हान**\n\n-  बॅकअप डान्सर्सचे अनेक गट तयार करा."
+          "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   या गाण्याच्या पहिल्या चार मेजर्समध्ये मध्यभागी एक मुख्य डान्सर आणि बॅकअप डान्सर्सचा एक गट तयार करा.\n\n_ही लेव्हल 7 मेजर्सनंतर संपेल._",
+          "challenges": "**ऐच्छिक आव्हान**\n\n-   बॅकअप डान्सर्सचे अनेक गट तयार करा."
         },
         "CourseD_Dance_2020_07": {
           "validation": "\"**मी ही लेव्हल कशी पास करू?**\n\n-   किमान एका डान्सरचा आकार बदला.\n\n_ही लेव्हल 6 मेजर्सनंतर संपेल._",
@@ -158,7 +158,7 @@
           "next_previous": "**ऐच्छिक आव्हान**\n\n-   मूव्ह `(Random)`, `(Next)`, किंवा `(Previous)` ला सेट करून तुम्ही हा नवीन इव्हेंट ब्लॉक वापरून डान्स मूव्ह्जच्या यादीमधून जाऊ शकता.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_09_2021": {
-          "validation": "**मी ही लेव्हल कशी पास करू?**\n\n-    फक्त \"फिनिश\" बटण दाबा!",
+          "validation": "**मी ही लेव्हल कशी पास करू?**\n\n-   फक्त \"फिनिश\" बटण दाबा!",
           "repeat_every_ideas": "**काही कल्पना हव्या आहेत?**\n\n-   डान्सर मोठा होण्यासाठी त्याचा आकार बदला.\n-   डान्सरला स्पिन करण्यासाठी त्याचे रोटेशन सारखे बदला.\n\n_विरुद्ध परिणाम तयार करण्यासाठी तुम्ही ऋण संख्यासुद्धा वापरू शकता!_",
           "next_previous": "**ऐच्छिक आव्हान**\n\n-   मूव्ह `(Random)`, `(Next)`, किंवा `(Previous)` ला सेट करून तुम्ही हा नवीन इव्हेंट ब्लॉक वापरून डान्स मूव्ह्जच्या यादीमधून जाऊ शकता.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
@@ -175,7 +175,7 @@
           "voyage_aquatic_10a": "**सी लँटर्न्स**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) दिसत आहेत का? महासागरातील स्मारकापर्यंत जाण्यासाठी तुम्ही कंडीशनल कसे वापरू शकता?   "
         },
         "CourseE_HOC 2018 Level_10_2021": {
-          "voyage_aquatic_10a": "**सी लँटर्न्स**  [][0] दिसत आहेत का? महासागरातील स्मारकापर्यंत जाण्यासाठी तुम्ही कंडीशनल कसे वापरू शकता?   "
+          "voyage_aquatic_10a": "**सी लँटर्न्स**  ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) दिसत आहेत का? महासागरातील स्मारकापर्यंत जाण्यासाठी तुम्ही कंडीशनल कसे वापरू शकता?   "
         },
         "CourseE_HOC 2018 Level_7a": {
           "aquatic7": "तुम्हाला उजवीकडे वळण्यासाठी तुम्ही if path ब्लॉक वापरू शकता."
@@ -743,7 +743,7 @@
         },
         "MC_HOC_2017_07_Cole_2021": {
           "MC_HOC_2017_07_Cole_c": "तुम्हाला फक्त इतकेच करायचे आहे की एजंटला माईनकार्टपर्यंतचा मार्ग स्वच्छ करायला सांगायचे आहे.  ",
-          "MC_HOC_2017_07_Cole_a": "हे कोडे सोडवण्यासाठी, `clear path` फंक्शन काय करते ते शोधा आणि टूलबॉक्समधील छोटा हिरवा `clear path` ब्लॉक वापरून तुम्हाला हव्या तितक्या वेळा ते कॉल करा.\n",
+          "MC_HOC_2017_07_Cole_a": "हे कोडे सोडवण्यासाठी, `clear path` फंक्शन काय करते ते शोधा आणि टूलबॉक्समधील छोटा हिरवा `clear path` ब्लॉक वापरून तुम्हाला हव्या तितक्या वेळा ते कॉल करा.",
           "MC_HOC_2017_07_Cole_b": "तुम्हाला हे कोडे सोडवण्यास मदत करण्यासाठी टूलबॉक्समधील इतर ब्लॉक्सबरोबर फंक्शन ब्लॉक्स एकत्र करण्याचा प्रयत्न करा"
         },
         "MC_HOC_2017_10_RETRY": {
@@ -1095,7 +1095,7 @@
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "या समस्येचा छोट्या भागांमध्ये विचार करण्याचा प्रयत्न करा. वेळ घ्या. तुम्ही पहिल्याच प्रयत्नात सोडवण्याची गरज नाही!",
           "course_starWars_loops8_b": "या कोड्याच्या पहिल्या भागाचा जिना पायरी कोडे असा विचार करा. तुम्ही ते पूर्वी कसे सोडवले आहे?",
-          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n[][0]"
+          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops8_copy": {
           "course_starWars_loops8_a": "या समस्येचा छोट्या भागांमध्ये विचार करण्याचा प्रयत्न करा. वेळ घ्या. तुम्ही पहिल्याच प्रयत्नात सोडवण्याची गरज नाही!",
@@ -1213,19 +1213,50 @@
           "playlab_right": "तुमच्या पात्राला उजवीकडे जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "तुम्हाला या ब्लॉकचीसुद्धा गरज आहे: \n\n[blockly block][0]"
+          "changeProp": "तुम्हाला या ब्लॉकचीसुद्धा गरज आहे: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
-          "changePropBlock": "तुम्हाला या ब्लॉकचीसुद्धा गरज आहे: \n\n[blockly block][0]"
+          "changePropBlock": "तुम्हाला या ब्लॉकचीसुद्धा गरज आहे: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_sprites_clouds": {
           "behavior_list": "\"moving east and looping\", \"spinning right\" आणि \"wandering\" अशा वर्तणुकी वापरण्याचा प्रयत्न करा."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "`when answered` ब्लॉकमधील व्हेरीएबलचे लेबल बदलण्याचा प्रयत्न करा. एकापेक्षा जास्त प्रॉम्प्ट्स आहेत त्यामुळे ज्या शेवटच्या प्रॉम्प्टसाठी उत्तर दिले जाईल. त्यासाठी लेबल वापरा.\n\n[blockly block][0]"
+          "when_answered_var": "`when answered` ब्लॉकमधील व्हेरीएबलचे लेबल बदलण्याचा प्रयत्न करा. एकापेक्षा जास्त प्रॉम्प्ट्स आहेत त्यामुळे ज्या शेवटच्या प्रॉम्प्टसाठी उत्तर दिले जाईल. त्यासाठी लेबल वापरा.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_bee_variables_3a_2021": {
-          "courseF_bee_variables_3_2021_1": "पॅटर्न सुरू ठेवण्यासाठी, रिपीट्सची संख्ज्या वाढवा:\n[blockly block][0]"
+          "courseF_bee_variables_3_2021_1": "पॅटर्न सुरू ठेवण्यासाठी, रिपीट्सची संख्ज्या वाढवा:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_a": "<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml> ब्लॉक\n\nतुमच्या लूपमध्ये शेवटी घालण्याचा प्रयत्न करा."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_b": "'लांबी' बदलणारा ब्लॉक तुमच्या लूपच्या आत असेल हे सुनिश्चित करा म्हणजे रेषा मोठ्या होत राहतील."
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "इतर बहुभुजाकृती करून पाहण्याचा प्रयत्न करायचा आहे?\n\nतुमच्या `repeat` मध्ये बाजूच्या संख्येचा वापर करा आणि तुमच्या `turn` ब्लॉकमध्ये कोन जोडा.\nहे करून पाहा:\n\n|   आकार  | बाजू |  कोन |\n| :-----: | :--: | :--: |\n| त्रिकोण |   3  | 120° |\n|   चौरस  |   4  |  90° |\n|  पंचकोन |   5  |  72° |\n|  षटकोन  |   6  |  60° |\n| अष्टकोन |   8  |  45° |\n|  नवभुज  |   9  |  40° |\n|  दशभुज  |  10  |  36° |"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "व्हेरीएबलमध्ये एक मिळवण्यासाठी, तुम्ही तुमच्या प्रोग्रॅममध्ये हा कोड जोडू शकता:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "व्हेरीएबलमध्ये 1 मिळवण्याऐवजी दरवेळी 2 मिळवा. "
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "तुम्ही तुमच्या पहिल्या `when answered` इव्हेंटला वेगळा व्हेरीएबल असलेला नवीन प्रॉम्प्ट ब्लॉक जोडून तुम्ही एक दुसरी (किंवा तिसरी किंवा चौथा) प्रॉम्प्ट जोडू शकता.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">नाव</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">तुम्हाला तुमच्या वाढदिवसासाठी काय हवे आहे?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">भेटवस्तू </title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "एका इव्हेंटच्या अंतर्गत तुम्ही `sprite begins` ब्लॉकबरोबर `sprite stops` ब्लॉक वापरून तुम्ही एका बिहेवियरऐवजी दुसरे बिहेवियर वापरू शकता.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">नाव</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">डावीकडे स्पिन होणे</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">उजवीकडे स्पिन करणे</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "जेव्हा युजर एखादे बटण दाबतो तेव्हा किंवा काही वेळ झाल्यावर तुम्ही इतर गोष्टी गह्डवून तुमचा प्रोग्रॅम इंटरॲक्टीव्ह बनवू शकता.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "तुम्ही तुमच्या पहिल्या `when answered` इव्हेंटला वेगळा व्हेरीएबल असलेला नवीन प्रॉम्प्ट ब्लॉक जोडून तुम्ही एक दुसरी (किंवा तिसरी किंवा चौथा) प्रॉम्प्ट जोडू शकता.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">नाव</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">तुमचे वय किती आहे?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">वय</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "एका इव्हेंटच्या अंतर्गत तुम्ही `sprite begins` ब्लॉकबरोबर `sprite stops` ब्लॉक वापरून तुम्ही एका बिहेवियरऐवजी दुसरे बिहेवियर वापरू शकता.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">नाव</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">डावीकडे स्पिन होणे</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">उजवीकडे स्पिन करणे</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "जेव्हा युजर एखादे बटण दाबतो तेव्हा किंवा काही वेळ झाल्यावर तुम्ही इतर गोष्टी गह्डवून तुमचा प्रोग्रॅम इंटरॲक्टीव्ह बनवू शकता.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "तुम्ही एका टायटल स्क्रीन ब्लॉकचा उपयोग करून तुमचा प्रोग्रॅमचा शेवट दाखवू शकता.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">समाप्त</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">चॅटिंग केल्याबद्दल धन्यवाद!</title>\n        </block>\n      </value>\n      </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "तुम्ही वेगळा व्हेरीएबल असलेला नवीन प्रॉम्प्ट ब्लॉक जोडून तुम्ही एक दुसरी (किंवा तिसरी किंवा चौथी) प्रॉम्प्ट जोडू शकता.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">कृती दर्शवणारा एक शब्द जोडा:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">क्रियापद</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "एका इव्हेंटच्या अंतर्गत तुम्ही `sprite begins` ब्लॉकबरोबर `sprite stops` ब्लॉक वापरून तुम्ही एका बिहेवियरऐवजी दुसरे बिहेवियर वापरू शकता.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">नाव</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">डावीकडे स्पिन होणे</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">उजवीकडे स्पिन करणे</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "जेव्हा युजर एखादे बटण दाबतो तेव्हा किंवा काही वेळ झाल्यावर तुम्ही इतर गोष्टी गह्डवून तुमचा प्रोग्रॅम इंटरॲक्टीव्ह बनवू शकता.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"रोबो_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         }
       }
     }

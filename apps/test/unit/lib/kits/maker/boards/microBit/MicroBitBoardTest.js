@@ -40,6 +40,7 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
+    sinon.restore();
   });
 
   describe('Maker Board Interface', () => {

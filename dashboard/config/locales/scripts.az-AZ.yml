@@ -3463,3 +3463,30 @@ az:
           lessons:
             lesson-1:
               name: Yekun
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Alətlər
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dərslər
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Məzmun
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
