@@ -7,7 +7,7 @@ require 'cdo/aws/s3'
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze
 ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaults.json'.freeze
 ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER = 'animation-manifests/manifests-levelbuilder/defaultSprites.json'.freeze
-ANIMATION_DEFAULT_MANIFEST_JSON = 'animation-manifests/manifests-levelbuilder/defaultSprites.json'.freeze
+ANIMATION_DEFAULT_MANIFEST_JSON = 'animation-manifests/manifests/defaultSprites.json'.freeze
 
 #
 # Provides limited access to the cdo-animation-library S3 bucket, which contains

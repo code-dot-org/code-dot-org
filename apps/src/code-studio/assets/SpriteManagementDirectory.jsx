@@ -1,9 +1,26 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+import {moveDefaultSpriteMetadataToProduction} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 export default class SpriteManagementDirectory extends React.Component {
+  state = {
+    updated: false
+  };
+
+  moveChangesToProduction = () => {
+    //Files to move to production folder: defaultSprites.json
+    moveDefaultSpriteMetadataToProduction()
+      .then(() => {
+        this.setState({updated: true});
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
   render() {
+    const {updated} = this.state;
     return (
       <div>
         <h1>Manage Sprite Lab Sprites</h1>
@@ -15,15 +32,26 @@ export default class SpriteManagementDirectory extends React.Component {
         </h3>
         <div style={styles.pageBreak}>
           <Button
-            text="Move Levelbuilder Changes to Production"
+            text="Release Changes to Production"
             color={Button.ButtonColor.red}
-            onClick={() =>
-              confirm(
+            onClick={() => {
+              let shouldRelease = confirm(
                 'This will release all the sprites you have added and updates to the default sprite list to ' +
                   'production. Are you sure?'
-              )
-            }
+              );
+              if (shouldRelease) {
+                this.moveChangesToProduction();
+              }
+            }}
             style={styles.button}
+          />
+          <i
+            style={{
+              ...styles.checkmark,
+              visibility: updated ? 'visible' : 'hidden'
+            }}
+            className="fa fa-check"
+            aria-hidden="true"
           />
         </div>
       </div>
@@ -38,5 +66,13 @@ const styles = {
   button: {
     margin: 20,
     fontSize: '20px'
+  },
+  checkmark: {
+    color: color.light_green,
+    fontSize: 18,
+    left: 5,
+    lineHeight: '25px',
+    position: 'relative',
+    top: 7
   }
 };
