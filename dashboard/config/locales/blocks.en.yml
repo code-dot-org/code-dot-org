@@ -1074,6 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_glideTo:
+        text: "{SPRITE} glide to {LOCATION}"
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1210,7 +1212,7 @@ en:
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
-        text: playSound {SOUND}
+        text: play sound {SOUND}
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1353,12 +1355,16 @@ en:
         text: "{SPRITE} begins avoiding {TARGET}"
       gamelab_startFollowing:
         text: "{SPRITE} begins following {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} starts gliding"
       gamelab_stopAvoiding:
         text: "{SPRITE} stops avoiding other sprites"
       gamelab_stopCollectingData:
         text: stop collecting data
       gamelab_stopFollowing:
         text: "{SPRITE} stops following other sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} stops gliding"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
@@ -1874,6 +1880,21 @@ en:
           BG_EFFECT:
             '"solid"': solid
             '"rainbow"': rainbow
+      PoemBot_setFont:
+        text: set font {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Palatino"': Palatino
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Tahoma"': Tahoma
+            '"Verdana"': Verdana
+      PoemBot_setFontColor:
+        text: set font color {COLOR}
       PoemBot_setForegroundEffect:
         text: set foreground effect {FG_EFFECT}
         options:
@@ -1898,6 +1919,8 @@ en:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       PoemBot_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      PoemBot_whenLineShows:
+        text: when line {N} shows
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:

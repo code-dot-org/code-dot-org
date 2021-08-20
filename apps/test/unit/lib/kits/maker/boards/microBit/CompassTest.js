@@ -12,6 +12,9 @@ describe('MicroBit Compass', function() {
     boardClient = new MicrobitStubBoard();
     compass = new Compass({mb: boardClient});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`attributes are readonly`, () => {
     let desc = Object.getOwnPropertyDescriptor(compass, 'heading');
