@@ -73,7 +73,8 @@ export const TheaterSignalType = {
 };
 
 export const PlaygroundSignalType = {
-  ADD_IMAGE: 'ADD_IMAGE'
+  ADD_IMAGE: 'ADD_IMAGE',
+  CHANGED_IMAGE: 'CHANGED_IMAGE'
 };
 
 export const StatusMessageType = {

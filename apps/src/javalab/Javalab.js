@@ -103,6 +103,7 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onSystemInMessage = this.onSystemInMessage.bind(this);
+  const onInputMessage = this.onInputMessage.bind(this);
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   switch (this.level.csaViewMode) {
@@ -129,7 +130,7 @@ Javalab.prototype.init = function(config) {
       this.miniApp = new Playground(
         this.onOutputMessage,
         this.onNewlineMessage,
-        this.onInputMessage
+        onInputMessage
       );
       this.visualization = <PlaygroundVisualizationColumn />;
       break;
