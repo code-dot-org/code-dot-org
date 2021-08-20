@@ -1211,6 +1211,7 @@ it:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galassia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': griglia
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prato
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arcobaleno
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stelle
@@ -1571,6 +1572,7 @@ it:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prato
       Mikelab_setProp:
         options:
           PROPERTY:
