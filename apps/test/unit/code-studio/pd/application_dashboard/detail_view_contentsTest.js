@@ -16,7 +16,14 @@ describe('DetailViewContents', () => {
 
   // We aren't testing any of the responses of the workshop selector control, so just
   // have a fake server to handle calls and suppress warnings
-  sinon.fakeServer.create();
+  let server;
+  before(() => {
+    server = sinon.fakeServer.create();
+  });
+
+  after(() => {
+    server.restore();
+  });
 
   let context;
 

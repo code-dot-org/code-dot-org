@@ -16,6 +16,9 @@ describe('LightSensor', function() {
     boardClient = new MicrobitStubBoard();
     lightSensor = new LightSensor({mb: boardClient});
   });
+  afterEach(() => {
+    sinon.restore();
+  });
 
   it(`value attribute is readonly`, () => {
     let descriptor = Object.getOwnPropertyDescriptor(lightSensor, 'value');
