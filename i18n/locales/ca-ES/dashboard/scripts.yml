@@ -2447,3 +2447,7 @@ ca:
           lessons:
             lesson-1:
               name: Vista general
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Ginys

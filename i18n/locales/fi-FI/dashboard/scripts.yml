@@ -3183,3 +3183,7 @@ fi:
           lessons:
             lesson-1:
               name: Yleiskatsaus
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Pienoisohjelmat

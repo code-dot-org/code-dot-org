@@ -11,6 +11,7 @@
   "compilerError": "我們不能編譯你的程式。檢查你程式裡面的錯誤並再試一次。",
   "compiling": "編譯中...",
   "console": "主控台",
+  "delete": "删除",
   "duplicateProjectFilenameError": "在這個專案中已經使用過 {filename} 作為檔案名稱了。請使用其他名字。",
   "duplicateSupportFilenameError": "在這關的範例程式碼已經使用過 {filename} 作為檔案名稱了。請使用其他名字。",
   "editor": "編輯器",

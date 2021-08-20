@@ -33873,3 +33873,1575 @@ es:
           lessons:
             lesson-1:
               name: Vista previa
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Herramientas
+            lesson-17:
+              name: Consola
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecciones
+            lessonGroup-3:
+              display_name: Proyecto
+        csa1-pilot-facilitator:
+          lessons:
+            Welcome to CSA:
+              name: Bienvenido a CSA
+              description_student: En esta lección, conocerás los valores de la ingeniería
+                del software y la forma en que practicas estos principios en otros
+                aspectos de tu vida. ¡Al final de esta lección, descubrirás tu propia
+                identidad como ingeniero de software!
+              description_teacher: Creer en la propia identidad de la ingeniería del
+                software fomenta la confianza y la perseverancia. Esta lección presenta
+                los valores fundamentales de la ingeniería del software y contempla
+                las impresiones comunes que pueden tener los alumnos. Los alumnos
+                reflexionan sobre cómo practican ya muchos de estos valores para descubrir
+                su propia identidad de ingeniero de software.
+            Classes and Objects:
+              name: Clases y Objetos
+              description_student: Descubrirás el funcionamiento de "El Barrio" y
+                aprenderás algunos de los componentes clave del lenguaje de programación
+                Java. Conocerás al `Pintor` y harás cambios en el código para aprender
+                lo que el `Pintor` puede hacer.
+              description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar
+                "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan
+                el código de inicio y realizan modificaciones sencillas para lograr
+                diferentes resultados con un objeto `Pintor` y practican la creación
+                de un objeto `Pintor` para identificar la relación entre una clase
+                y un objeto.  '
+            Calling Methods:
+              name: Utilización de comandos
+              description_student: Ahora que has conocido al `Pintor`, en esta lección
+                utilizarás los comandos de acción para mover el `Pintor` por El Barrio.
+                Aprenderás algunas de las reglas de Java que debes seguir para que
+                el Pintor se mueva.
+              description_teacher: En esta lección, los alumnos aplican soluciones
+                utilizando comandos de acción para mover al " Pintor " por El Barrio.
+                Los alumnos desarrollan sus habilidades de pensamiento computacional
+                traduciendo las soluciones en código Java mientras practican la duplicación
+                de patrones. Mientras resuelven estos problemas, los alumnos aprenden
+                la importancia de distinguir entre mayúsculas y minúsculas y del punto
+                y coma en Java, y se les expone al uso de la notación de puntos para
+                llamar a los comandos del "Pintor".
+            Conditionals and Debugging:
+              name: Condicionales y Depuración
+              description_student: Ahora que sabes cómo utilizar los comandos de acción,
+                ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El
+                Barrio utilizando comandos de recopilación de información. También
+                aprendes a depurar e identificar estrategias para usar a lo largo
+                del año.
+              description_teacher: 'En esta lección, los alumnos modifican programas
+                utilizando tres comandos de retorno: `isOnPaint()`, `isOnBucket()`
+                y `canMove()`. Los booleanos, los condicionales y las sentencias de
+                retorno se introducen a través de las sentencias `if` y los comandos
+                de retorno del `Pintor` para que los alumnos practiquen el uso de
+                la lógica condicional en sus programas. Estos conceptos se discuten
+                con más detalle en futuras lecciones y se refuerzan a lo largo del
+                curso. Los alumnos también desarrollan estrategias de depuración mediante
+                la identificación de errores sintácticos y lógicos.'
+            More with Objects:
+              name: Más con Objetos
+              description_student: En esta lección, aprenderás a crear objetos `Pintor`
+                especificando dónde empieza el `Pintor`, en qué dirección está el
+                `Pintor` y el color de la pintura. También tendrás en cuenta qué es
+                un "buen código" y practicarás la escritura de código eficiente.
+              description_teacher: La relación entre clases y objetos se refuerza
+                cuando los alumnos crean sus propios objetos. Los alumnos aprenden
+                a crear objetos con y sin parámetros. Los alumnos empiezan a tener
+                en cuenta lo que constituye un "buen código" y practican la escritura
+                de soluciones eficaces.
+            While Loops and Practice:
+              name: Bucles "while" y práctica
+              description_student: Has practicado el movimiento del  "Pintor" y el
+                uso de condicionales para ayudar al "Pintor" a tomar decisiones sobre
+                la interacción con El Barrio. ¿Qué pasaría si pudieras hacer que el
+                "Pintor" repitiera los comandos? En esta lección, aprenderás a utilizar
+                un bucle "mientras" con algunos comandos nuevos para mover al "Pintor"
+                por El Barrio.
+              description_teacher: Los alumnos han aprendido mucho en su primera semana.
+                En esta lección, los alumnos conocen el bucle "mientras" y otros métodos
+                para controlar el movimiento del "Pintor" en El Barrio. Los alumnos
+                combinan sus conocimientos sobre métodos, constructores y estructuras
+                de control para desarrollar soluciones a puzzles cada vez más complejos.
+            More with Conditionals:
+              name: Más con Condicionales
+              description_student: Has estado utilizando sentencias "si" para ayudar
+                al "Pintor" a tomar decisiones para interactuar con El Barrio. En
+                esta lección, utilizarás las sentencias "si-si no" para dar al "Pintor"
+                una acción alternativa. También aprenderás sobre el operador "!" (no)
+                para ayudar con las decisiones que toma el "Pintor".
+              description_teacher: Los alumnos amplían sus conocimientos sobre las
+                estructuras de control y las expresiones booleanas utilizando las
+                sentencias "si-si no" y el operador lógico "!" (no). Los alumnos practican
+                el uso de la sentencia "si-si no" y "!" (no) para resolver problemas
+                más complejos, además de los comandos del "Pintor" que han utilizado
+                hasta ahora.
+            Introduction to Code Reviews:
+              name: Introducción a Revisiones del Código
+              description_student: Como ingeniero de software, quieres desarrollar
+                un código que sea fácil de leer, mantener y modificar con el tiempo.
+                En esta lección, practicarás el uso de las revisiones de código para
+                proporcionar retroalimentación y comentarás las estrategias para dar
+                y utilizar la retroalimentación. Estas estrategias serán útiles durante
+                todo el año.
+              description_teacher: En este curso, los alumnos se imaginan a sí mismos
+                como ingenieros de software y modelan las habilidades profesionales
+                del mundo real. Los ingenieros de software utilizan las revisiones
+                de código en toda la industria para desarrollar un código que sea
+                fácil de leer, mantener y modificar con el tiempo. Los alumnos se
+                inician en el proceso de revisión de código para sentar las bases
+                de las habilidades que seguirán adquiriendo a lo largo del curso.
+            Inheritance and Methods:
+              name: Herencia y Métodos
+              description_student: A estas alturas, te habrás dado cuenta de que tu
+                `Pintor` tiene comandos limitados para moverse por El Barrio. En esta
+                lección, crearás un nuevo tipo de `Pintor` que pueda realizar todo
+                lo que un `Pintor` puede hacer, así como algo que el `Pintor` no pueda
+                hacer.
+              description_teacher: Los alumnos son introducidos a la "herencia" derivando
+                una subclase de `Pintor` con más comandos. Los alumnos utilizan la
+                palabra clave `super` con los "constructores" y aprenden a escribir
+                sus propios métodos en la clase `PintorPlus`. Los alumnos descubren
+                que los métodos que son llamados deben ser definidos en su propia
+                clase o en la superclase. En futuras lecciones, los alumnos añaden
+                métodos adicionales y subclases de `Pintor`.
+            More Methods, More Features:
+              name: Más Métodos, Más Funciones
+              description_student: En esta lección, darás a tu clase `PintorPlus`
+                nuevas formas de moverse e interactuar con El Barrio. Tendrás en cuenta
+                los casos extremos al aplicar tus nuevos métodos.
+              description_teacher: 'En esta lección, los alumnos continúan aplicando
+                el principio de "herencia" en su código ampliando la clase `PintorPlus`
+                con tres métodos adicionales: `turnAround()`, `takeAllPaint()` y `moveFast()`.
+                Para practicar la sintaxis de Java y el pensamiento algorítmico, los
+                alumnos construyen un proceso paso a paso para implementar cada uno
+                de los métodos a mano antes de codificarlos en Java. Al seguir escribiendo
+                y utilizando nuevos métodos, los alumnos experimentan las ventajas
+                de la reutilización.  '
+            Painting Methods:
+              name: Métodos de Pintura
+              description_student: En esta lección, seguirás ampliando tu clase `PintorPlus`,
+                esta vez añadiendo métodos para mover y pintar líneas horizontales,
+                verticales y diagonales. También participarás en una revisión de código
+                para proporcionar y recibir comentarios para mejorar el código.
+              description_teacher: 'Los alumnos continúan ampliando la `clase PintorPlus`,
+                esta vez añadiendo cuatro nuevos métodos que permiten al `PintorPlus`
+                moverse y pintar líneas horizontales, verticales y diagonales. Los
+                alumnos utilizan el pseudocódigo para escribir los métodos y luego
+                los implementan en la clase `PintorPlus` en Java. A través de la revisión
+                del código, los alumnos analizan sus métodos y tienen en cuenta cuándo
+                es apropiado utilizar los métodos que han escrito en el pasado llamándolos
+                en sus nuevos métodos.  '
+            SprayPainter:
+              name: PintorSpray
+              description_student: Su `PintorPlus` tiene varias formas de moverse
+                e interactuar con El Barrio. En esta lección, desarrollarás un nuevo
+                tipo de `Pintor` llamado `PintorSpray` con un método `PintarSpray`.
+                Con el `PintorSpray`, crearás un mural y más obras de arte interesantes
+                en El Barrio.
+              description_teacher: 'En esta lección, los alumnos aplican sus conocimientos
+                sobre métodos y clases para escribir un nuevo tipo de `Pintor`, el
+                `PintorSpray`, desde cero, incluyendo la escritura de un nuevo método
+                con parámetros: `pinturaSpray(String color1, String color 2)`. La
+                nueva clase `PintorSpray` se implementa para crear un mural abstracto.'
+            StampPainter:
+              name: PintorSellos
+              description_student: Ahora tienes un `PintorPlus` y un `PintorSpray`
+                que puedes utilizar para crear obras de arte en El Barrio. En esta
+                lección, aprenderás sobre el arte de los píxeles y explorarás las
+                oportunidades de utilizar la tecnología en el arte y el diseño. Desarrollarás
+                un nuevo tipo de `Pintor` llamado `PintorEstampado` que puede pintar
+                formas personalizadas.
+              description_teacher: En esta lección, los alumnos continúan aplicando
+                el principio de "herencia" en su código, implementando la clase `PintorEstampado`,
+                una extensión de la clase `PintorPlus` que pinta formas e imágenes
+                personalizadas. Esta lección sirve de refuerzo a la lección anterior
+                sobre la "herencia". Los alumnos continúan practicando la derivación
+                de una nueva clase basada en una clase existente, añadiendo únicamente
+                nuevos métodos.
+            Edge Cases:
+              name: Casos de Borde
+              description_student: En esta lección, ampliarás tus habilidades de ingeniería
+                de software para realizar un desarrollo impulsado por pruebas. Explorarás
+                nuevos casos límite en El Barrio y tomarás decisiones sobre cómo resolver
+                estos problemas. Descubrirás que no siempre hay una única respuesta
+                correcta para resolver los problemas - ¡a veces tienes que tomar tus
+                propias decisiones sobre cómo quieres manejar los casos límite!
+              description_teacher: Antes, los alumnos recibían El Barrio inicial;
+                ahora, los alumnos diseñan su propio Barrio. La lección se centra
+                en responder a preguntas que no tienen una única respuesta correcta.
+                Los alumnos descubren las ventajas y desventajas de las decisiones
+                de diseño y practican la justificación de sus decisiones.
+            Software Engineering Wrap Up:
+              name: Resumen de la Ingeniería de Software
+              description_student: Has aprendido mucho sobre cómo ser un ingeniero
+                de software. Vuelves a ver los valores fundamentales de la ingeniería
+                del software y reflexionas sobre cómo los has utilizado a lo largo
+                de la unidad. También exploras el código fuente abierto y descubres
+                lo mucho que sabes ahora sobre programación e ingeniería del software.
+              description_teacher: En esta lección, los alumnos examinan el código
+                fuente abierto y conectan las aplicaciones del mundo real con los
+                conceptos que han aprendido en esta unidad. Los alumnos repasan los
+                valores fundamentales de la ingeniería del software y reflexionan
+                sobre cómo los han utilizado. A través del descubrimiento, los alumnos
+                afirman los valores fundamentales de la ingeniería del software.
+            Asphalt Art Project - Day 1:
+              description_student: 'Para este proyecto, creas arte asfáltico en El
+                Barrio utilizando las clases que has desarrollado y ampliado en esta
+                unidad. Exploras la expresión creativa utilizando programas informáticos
+                aplicando los conceptos que has aprendido para crear arte en el asfalto
+                que represente algo significativo e interesante para ti. Exploras
+                el hecho de ser un ingeniero de software a medida que haces una aportación
+                de ideas, planificas tu proyecto y construyes tu programa. Fortaleces
+                tus habilidades y procesos de desarrollo de software al participar
+                en una revisión de código para aportar y utilizar comentarios mientras
+                desarrollas tu programa.  '
+              description_teacher: En este proyecto, los alumnos utilizan las habilidades
+                que han desarrollado a lo largo de esta unidad para crear arte en
+                asfalto en El Barrio utilizando las clases que han desarrollado y
+                ampliado. Los alumnos eligen un tema o concepto para su arte en el
+                asfalto que represente algo que les interese o sea significativo para
+                ellos. Los alumnos tienen en cuenta cómo piensan utilizar las clases
+                existentes para crear su arte en el asfalto. Tras una aportación de
+                ideas y una planificación, los alumnos desarrollan sus programas para
+                crear sus diseños.
+            Asphalt Art Project - Day 2:
+              description_student: Ahora pondrás en práctica las clases y comandos
+                que has desarrollado a lo largo de la unidad y tu nueva clase y comando
+                para crear tu arte del asfalto. Fortalecerás tus habilidades y procesos
+                de desarrollo de software al participar en una revisión de código
+                para aportar y utilizar comentarios mientras desarrollas tu programa.
+              description_teacher: 'Los alumnos planificaron los usos de las clases
+                existentes en la lección anterior y diseñaron una nueva clase, con
+                el fin de proporcionar un comportamiento necesario para crear su arte
+                del asfalto. En esta etapa del proyecto, los alumnos aplican las clases
+                y comandos que han desarrollado a lo largo de la unidad y la nueva
+                clase y comando para crear su diseño. Los alumnos refuerzan las habilidades
+                y procesos de desarrollo de software mientras participan en una revisión
+                de código para aportar y utilizar comentarios mientras desarrollan
+                su programa. '
+            Asphalt Art Project - Day 3:
+              description_student: A partir de la experiencia que has recibido en
+                la lección anterior, finalizarás y presentarás tu Proyecto de Arte
+                del Asfalto. ¡Comparte tus proyectos finales con tus compañeros y
+                celebra tu éxito!
+              description_teacher: 'Los alumnos realizaron revisiones de código al
+                final de la lección anterior para aportar y recibir comentarios que
+                les ayuden a identificar áreas de mejora y a solucionar los problemas
+                que encontraron. En esta fase del proyecto, los alumnos tienen en
+                cuenta estos comentarios al finalizar el desarrollo en esta lección.
+                Los alumnos comparten sus proyectos finales con sus compañeros para
+                celebrar sus éxitos. '
+            FRQ Day:
+              name: Día FRQ
+              description_student: Hoy completarás tu primera Pregunta de Respuesta
+                Libre (FRQ). Esto significa que escribes código a mano para completar
+                una gran tarea. Lo harás con un compañero moviéndote por la sala y
+                completando partes de la tarea en cada lugar, comprobando tu trabajo
+                sobre la marcha.
+              description_teacher: "En esta lección, los alumnos completan su primer
+                problema de estilo Pregunta de Respuesta Libre (FRQ). Anotan la pregunta
+                como clase, y luego implementan una clase completa de `SpiralPainter`
+                en parejas a través de una actividad al estilo de \"La vuelta al mundo\".\n\nLos
+                objetivos de esta lección son tres: \n\n-   Crear una sensación de
+                emoción y logro en torno a la realización de FRQs\n-   Practicar una
+                pregunta de estilo FRQ (escrita a mano)\n-   Servir como evaluación
+                sumativa del contenido de la Unidad 1\n\nAunque el formato de este
+                FRQ no es el mismo que el de un FRQ en el examen AP, es un bloque
+                de construcción para ayudar a los alumnos a prepararse para abordar
+                este tipo de preguntas. A medida que los alumnos avanzan en el curso,
+                las preguntas del FRQ que encuentran se acercan poco a poco a las
+                reales."
+            Assessment Day:
+              name: Día de evaluación
+              description_student: Has completado tu primera unidad, ¡felicidades!
+                Hoy realizarás una evaluación de opción múltiple para valorar tu aprendizaje.
+              description_teacher: Los alumnos realizan una evaluación de opción múltiple
+                que abarca los temas de la unidad.
+            Unit 1 Pilot Survey:
+              name: 'Lección de Prueba #1'
+            lesson-1:
+              name: Bienvenido a CSA
+              description_student: En esta lección, conocerás los valores de la ingeniería
+                del software y la forma en que practicas estos principios en otros
+                aspectos de tu vida. ¡Al final de esta lección, descubrirás tu propia
+                identidad como ingeniero de software!
+              description_teacher: Creer en la propia identidad de la ingeniería del
+                software fomenta la confianza y la perseverancia. Esta lección presenta
+                los valores fundamentales de la ingeniería del software y contempla
+                las impresiones comunes que pueden tener los alumnos. Los alumnos
+                reflexionan sobre cómo practican ya muchos de estos valores para descubrir
+                su propia identidad de ingeniero de software.
+            lesson-2:
+              name: Clases y Objetos
+              description_student: Descubrirás el funcionamiento de "El Barrio" y
+                aprenderás algunos de los componentes clave del lenguaje de programación
+                Java. Conocerás al `Pintor` y harás cambios en el código para aprender
+                lo que el `Pintor` puede hacer.
+              description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar
+                "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan
+                el código de inicio y realizan modificaciones sencillas para lograr
+                diferentes resultados con un objeto `Pintor` y practican la creación
+                de un objeto `Pintor` para identificar la relación entre una clase
+                y un objeto.  '
+            lesson-3:
+              name: Utilización de comandos
+              description_student: Ahora que has conocido al `Pintor`, en esta lección
+                utilizarás los comandos de acción para mover el `Pintor` por El Barrio.
+                Aprenderás algunas de las reglas de Java que debes seguir para que
+                el Pintor se mueva.
+              description_teacher: En esta lección, los alumnos aplican soluciones
+                utilizando comandos de acción para mover al " Pintor " por El Barrio.
+                Los alumnos desarrollan sus habilidades de pensamiento computacional
+                traduciendo las soluciones en código Java mientras practican la duplicación
+                de patrones. Mientras resuelven estos problemas, los alumnos aprenden
+                la importancia de distinguir entre mayúsculas y minúsculas y del punto
+                y coma en Java, y se les expone al uso de la notación de puntos para
+                llamar a los comandos del "Pintor".
+            lesson-4:
+              name: Condicionales y Depuración
+              description_student: Ahora que sabes cómo utilizar los comandos de acción,
+                ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El
+                Barrio utilizando comandos de recopilación de información. También
+                aprendes a depurar e identificar estrategias para usar a lo largo
+                del año.
+              description_teacher: 'En esta lección, los alumnos modifican programas
+                utilizando tres comandos de retorno: `isOnPaint()`, `isOnBucket()`
+                y `canMove()`. Los booleanos, los condicionales y las sentencias de
+                retorno se introducen a través de las sentencias `if` y los comandos
+                de retorno del `Pintor` para que los alumnos practiquen el uso de
+                la lógica condicional en sus programas. Estos conceptos se discuten
+                con más detalle en futuras lecciones y se refuerzan a lo largo del
+                curso. Los alumnos también desarrollan estrategias de depuración mediante
+                la identificación de errores sintácticos y lógicos.'
+            lesson-5:
+              name: Más con Objetos
+              description_student: En esta lección, aprenderás a crear objetos `Pintor`
+                especificando dónde empieza el `Pintor`, en qué dirección está el
+                `Pintor` y el color de la pintura. También tendrás en cuenta qué es
+                un "buen código" y practicarás la escritura de código eficiente.
+              description_teacher: La relación entre clases y objetos se refuerza
+                cuando los alumnos crean sus propios objetos. Los alumnos aprenden
+                a crear objetos con y sin parámetros. Los alumnos empiezan a tener
+                en cuenta lo que constituye un "buen código" y practican la escritura
+                de soluciones eficaces.
+            lesson-6:
+              name: Bucles "while" y práctica
+              description_student: Has practicado el movimiento del  "Pintor" y el
+                uso de condicionales para ayudar al "Pintor" a tomar decisiones sobre
+                la interacción con El Barrio. ¿Qué pasaría si pudieras hacer que el
+                "Pintor" repitiera los comandos? En esta lección, aprenderás a utilizar
+                un bucle "mientras" con algunos comandos nuevos para mover al "Pintor"
+                por El Barrio.
+              description_teacher: Los alumnos han aprendido mucho en su primera semana.
+                En esta lección, los alumnos conocen el bucle "mientras" y otros métodos
+                para controlar el movimiento del "Pintor" en El Barrio. Los alumnos
+                combinan sus conocimientos sobre métodos, constructores y estructuras
+                de control para desarrollar soluciones a puzzles cada vez más complejos.
+            lesson-7:
+              name: Más con Condicionales
+              description_student: Has estado utilizando sentencias "si" para ayudar
+                al "Pintor" a tomar decisiones para interactuar con El Barrio. En
+                esta lección, utilizarás las sentencias "si-si no" para dar al "Pintor"
+                una acción alternativa. También aprenderás sobre el operador "!" (no)
+                para ayudar con las decisiones que toma el "Pintor".
+              description_teacher: Los alumnos amplían sus conocimientos sobre las
+                estructuras de control y las expresiones booleanas utilizando las
+                sentencias "si-si no" y el operador lógico "!" (no). Los alumnos practican
+                el uso de la sentencia "si-si no" y "!" (no) para resolver problemas
+                más complejos, además de los comandos del "Pintor" que han utilizado
+                hasta ahora.
+            lesson-8:
+              name: Introducción a Revisiones del Código
+              description_student: Como ingeniero de software, quieres desarrollar
+                un código que sea fácil de leer, mantener y modificar con el tiempo.
+                En esta lección, practicarás el uso de las revisiones de código para
+                proporcionar retroalimentación y comentarás las estrategias para dar
+                y utilizar la retroalimentación. Estas estrategias serán útiles durante
+                todo el año.
+              description_teacher: En este curso, los alumnos se imaginan a sí mismos
+                como ingenieros de software y modelan las habilidades profesionales
+                del mundo real. Los ingenieros de software utilizan las revisiones
+                de código en toda la industria para desarrollar un código que sea
+                fácil de leer, mantener y modificar con el tiempo. Los alumnos se
+                inician en el proceso de revisión de código para sentar las bases
+                de las habilidades que seguirán adquiriendo a lo largo del curso.
+            lesson-9:
+              name: Herencia y Métodos
+              description_student: A estas alturas, te habrás dado cuenta de que tu
+                `Pintor` tiene comandos limitados para moverse por El Barrio. En esta
+                lección, crearás un nuevo tipo de `Pintor` que pueda realizar todo
+                lo que un `Pintor` puede hacer, así como algo que el `Pintor` no pueda
+                hacer.
+              description_teacher: Los alumnos son introducidos a la "herencia" derivando
+                una subclase de `Pintor` con más comandos. Los alumnos utilizan la
+                palabra clave `super` con los "constructores" y aprenden a escribir
+                sus propios métodos en la clase `PintorPlus`. Los alumnos descubren
+                que los métodos que son llamados deben ser definidos en su propia
+                clase o en la superclase. En futuras lecciones, los alumnos añaden
+                métodos adicionales y subclases de `Pintor`.
+            lesson-10:
+              name: Más Métodos, Más Funciones
+              description_student: En esta lección, darás a tu clase `PintorPlus`
+                nuevas formas de moverse e interactuar con El Barrio. Tendrás en cuenta
+                los casos extremos al aplicar tus nuevos métodos.
+              description_teacher: 'En esta lección, los alumnos continúan aplicando
+                el principio de "herencia" en su código ampliando la clase `PintorPlus`
+                con tres métodos adicionales: `turnAround()`, `takeAllPaint()` y `moveFast()`.
+                Para practicar la sintaxis de Java y el pensamiento algorítmico, los
+                alumnos construyen un proceso paso a paso para implementar cada uno
+                de los métodos a mano antes de codificarlos en Java. Al seguir escribiendo
+                y utilizando nuevos métodos, los alumnos experimentan las ventajas
+                de la reutilización.  '
+            lesson-11:
+              name: Métodos de Pintura
+              description_student: En esta lección, seguirás ampliando tu clase `PintorPlus`,
+                esta vez añadiendo métodos para mover y pintar líneas horizontales,
+                verticales y diagonales. También participarás en una revisión de código
+                para proporcionar y recibir comentarios para mejorar el código.
+              description_teacher: 'Los alumnos continúan ampliando la `clase PintorPlus`,
+                esta vez añadiendo cuatro nuevos métodos que permiten al `PintorPlus`
+                moverse y pintar líneas horizontales, verticales y diagonales. Los
+                alumnos utilizan el pseudocódigo para escribir los métodos y luego
+                los implementan en la clase `PintorPlus` en Java. A través de la revisión
+                del código, los alumnos analizan sus métodos y tienen en cuenta cuándo
+                es apropiado utilizar los métodos que han escrito en el pasado llamándolos
+                en sus nuevos métodos.  '
+            lesson-12:
+              name: PintorSpray
+              description_student: Su `PintorPlus` tiene varias formas de moverse
+                e interactuar con El Barrio. En esta lección, desarrollarás un nuevo
+                tipo de `Pintor` llamado `PintorSpray` con un método `PintarSpray`.
+                Con el `PintorSpray`, crearás un mural y más obras de arte interesantes
+                en El Barrio.
+              description_teacher: 'En esta lección, los alumnos aplican sus conocimientos
+                sobre métodos y clases para escribir un nuevo tipo de `Pintor`, el
+                `PintorSpray`, desde cero, incluyendo la escritura de un nuevo método
+                con parámetros: `pinturaSpray(String color1, String color 2)`. La
+                nueva clase `PintorSpray` se implementa para crear un mural abstracto.'
+            lesson-13:
+              name: PintorSellos
+              description_student: Ahora tienes un `PintorPlus` y un `PintorSpray`
+                que puedes utilizar para crear obras de arte en El Barrio. En esta
+                lección, aprenderás sobre el arte de los píxeles y explorarás las
+                oportunidades de utilizar la tecnología en el arte y el diseño. Desarrollarás
+                un nuevo tipo de `Pintor` llamado `PintorEstampado` que puede pintar
+                formas personalizadas.
+              description_teacher: En esta lección, los alumnos continúan aplicando
+                el principio de "herencia" en su código, implementando la clase `PintorEstampado`,
+                una extensión de la clase `PintorPlus` que pinta formas e imágenes
+                personalizadas. Esta lección sirve de refuerzo a la lección anterior
+                sobre la "herencia". Los alumnos continúan practicando la derivación
+                de una nueva clase basada en una clase existente, añadiendo únicamente
+                nuevos métodos.
+            lesson-14:
+              name: Casos de Borde
+              description_student: En esta lección, ampliarás tus habilidades de ingeniería
+                de software para realizar un desarrollo impulsado por pruebas. Explorarás
+                nuevos casos límite en El Barrio y tomarás decisiones sobre cómo resolver
+                estos problemas. Descubrirás que no siempre hay una única respuesta
+                correcta para resolver los problemas - ¡a veces tienes que tomar tus
+                propias decisiones sobre cómo quieres manejar los casos límite!
+              description_teacher: Antes, los alumnos recibían El Barrio inicial;
+                ahora, los alumnos diseñan su propio Barrio. La lección se centra
+                en responder a preguntas que no tienen una única respuesta correcta.
+                Los alumnos descubren las ventajas y desventajas de las decisiones
+                de diseño y practican la justificación de sus decisiones.
+            lesson-15:
+              name: Resumen de la Ingeniería de Software
+              description_student: Has aprendido mucho sobre cómo ser un ingeniero
+                de software. Vuelves a ver los valores fundamentales de la ingeniería
+                del software y reflexionas sobre cómo los has utilizado a lo largo
+                de la unidad. También exploras el código fuente abierto y descubres
+                lo mucho que sabes ahora sobre programación e ingeniería del software.
+              description_teacher: En esta lección, los alumnos examinan el código
+                fuente abierto y conectan las aplicaciones del mundo real con los
+                conceptos que han aprendido en esta unidad. Los alumnos repasan los
+                valores fundamentales de la ingeniería del software y reflexionan
+                sobre cómo los han utilizado. A través del descubrimiento, los alumnos
+                afirman los valores fundamentales de la ingeniería del software.
+            lesson-16:
+              description_student: 'Para este proyecto, creas arte asfáltico en El
+                Barrio utilizando las clases que has desarrollado y ampliado en esta
+                unidad. Exploras la expresión creativa utilizando programas informáticos
+                aplicando los conceptos que has aprendido para crear arte en el asfalto
+                que represente algo significativo e interesante para ti. Exploras
+                el hecho de ser un ingeniero de software a medida que haces una aportación
+                de ideas, planificas tu proyecto y construyes tu programa. Fortaleces
+                tus habilidades y procesos de desarrollo de software al participar
+                en una revisión de código para aportar y utilizar comentarios mientras
+                desarrollas tu programa.  '
+              description_teacher: En este proyecto, los alumnos utilizan las habilidades
+                que han desarrollado a lo largo de esta unidad para crear arte en
+                asfalto en El Barrio utilizando las clases que han desarrollado y
+                ampliado. Los alumnos eligen un tema o concepto para su arte en el
+                asfalto que represente algo que les interese o sea significativo para
+                ellos. Los alumnos tienen en cuenta cómo piensan utilizar las clases
+                existentes para crear su arte en el asfalto. Tras una aportación de
+                ideas y una planificación, los alumnos desarrollan sus programas para
+                crear sus diseños.
+            lesson-17:
+              description_student: Ahora pondrás en práctica las clases y comandos
+                que has desarrollado a lo largo de la unidad y tu nueva clase y comando
+                para crear tu arte del asfalto. Fortalecerás tus habilidades y procesos
+                de desarrollo de software al participar en una revisión de código
+                para aportar y utilizar comentarios mientras desarrollas tu programa.
+              description_teacher: 'Los alumnos planificaron los usos de las clases
+                existentes en la lección anterior y diseñaron una nueva clase, con
+                el fin de proporcionar un comportamiento necesario para crear su arte
+                del asfalto. En esta etapa del proyecto, los alumnos aplican las clases
+                y comandos que han desarrollado a lo largo de la unidad y la nueva
+                clase y comando para crear su diseño. Los alumnos refuerzan las habilidades
+                y procesos de desarrollo de software mientras participan en una revisión
+                de código para aportar y utilizar comentarios mientras desarrollan
+                su programa. '
+            lesson-18:
+              description_student: A partir de la experiencia que has recibido en
+                la lección anterior, finalizarás y presentarás tu Proyecto de Arte
+                del Asfalto. ¡Comparte tus proyectos finales con tus compañeros y
+                celebra tu éxito!
+              description_teacher: 'Los alumnos realizaron revisiones de código al
+                final de la lección anterior para aportar y recibir comentarios que
+                les ayuden a identificar áreas de mejora y a solucionar los problemas
+                que encontraron. En esta fase del proyecto, los alumnos tienen en
+                cuenta estos comentarios al finalizar el desarrollo en esta lección.
+                Los alumnos comparten sus proyectos finales con sus compañeros para
+                celebrar sus éxitos. '
+            lesson-19:
+              name: Día FRQ
+              description_student: Hoy completarás tu primera Pregunta de Respuesta
+                Libre (FRQ). Esto significa que escribes código a mano para completar
+                una gran tarea. Lo harás con un compañero moviéndote por la sala y
+                completando partes de la tarea en cada lugar, comprobando tu trabajo
+                sobre la marcha.
+              description_teacher: "En esta lección, los alumnos completan su primer
+                problema de estilo Pregunta de Respuesta Libre (FRQ). Anotan la pregunta
+                como clase, y luego implementan una clase completa de `SpiralPainter`
+                en parejas a través de una actividad al estilo de \"La vuelta al mundo\".\n\nLos
+                objetivos de esta lección son tres: \n\n-   Crear una sensación de
+                emoción y logro en torno a la realización de FRQs\n-   Practicar una
+                pregunta de estilo FRQ (escrita a mano)\n-   Servir como evaluación
+                sumativa del contenido de la Unidad 1\n\nAunque el formato de este
+                FRQ no es el mismo que el de un FRQ en el examen AP, es un bloque
+                de construcción para ayudar a los alumnos a prepararse para abordar
+                este tipo de preguntas. A medida que los alumnos avanzan en el curso,
+                las preguntas del FRQ que encuentran se acercan poco a poco a las
+                reales."
+            lesson-20:
+              name: Día de evaluación
+              description_student: Has completado tu primera unidad, ¡felicidades!
+                Hoy realizarás una evaluación de opción múltiple para valorar tu aprendizaje.
+              description_teacher: Los alumnos realizan una evaluación de opción múltiple
+                que abarca los temas de la unidad.
+            lesson-21:
+              name: 'Lección de Prueba #1'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        csa2-pilot-facilitator:
+          lessons:
+            Defining Attributes:
+              description_student: 'A través de nuestras experiencias en El Barrio,
+                sabemos que las clases y los objetos son componentes clave del lenguaje
+                de programación Java. Pero, ¿cómo crean las clases objetos exactamente?
+                En esta lección, descubrirás cómo se crea un objeto y aprenderás sobre
+                un proceso llamado encapsulación de datos. '
+              description_teacher: En esta lección desconectada, los alumnos crean
+                objetos y representan los atributos relevantes utilizando variables
+                de instancia. Los alumnos aprenden la diferencia entre `público` y
+                `privado` y el propósito de la encapsulación para ocultar la construcción
+                interna de un objeto.
+            Using Variables:
+              name: Usando Variables
+            Writing Constructors:
+              name: Escribir Constructores
+              description_student: ¡El camión de comida del Proyecto "Pastelería Mercurio"
+                necesita tu ayuda! El propietario quiere vender postres en El Barrio
+                pero necesita poder introducir y almacenar sus postres en un programa.
+                Se te ha pedido que utilices tus conocimientos de ingeniería de software
+                para crear un programa que pueda crear objetos de postre para que
+                el propietario pueda hacer un seguimiento de su inventario. Comienza
+                creando una clase `Postre` para que el propietario pueda introducir
+                el sabor, la cantidad disponible y el precio de cada postre que vende.
+              description_teacher: Los alumnos conocen el camión de comida del Proyecto
+                "Pastelería Mercurio" y la necesidad del propietario de un programa
+                para introducir y almacenar artículos de postre. Como ingenieros de
+                software, los alumnos utilizan estrategias de diseño orientado a objetos
+                para identificar los atributos necesarios y los tipos de datos apropiados
+                para una clase "Postre". Los alumnos escriben un constructor y utilizan
+                un objeto `Escáner` que permite obtener los valores de las variables
+                de instancia para inicializar un objeto `Postre`.
+            Adding Multiple Constructors:
+              name: Agregando Varios Constructores
+              description_student: ¡El camión de comida del Proyecto Pastelería Mercurio
+                ha crecido en popularidad! Para ayudar al propietario a rellenar los
+                pedidos, mejoras la clase `Postre` para crear objetos `Postre` de
+                forma más eficiente. Para resolver este problema, debes implementar
+                "constructores sobrecargados" para simplificar tu código y añadir
+                flexibilidad a la creación de objetos `Postre`. Para rellenar los
+                pedidos estándar, creas un constructor por defecto para utilizar los
+                valores por defecto de los `Postres`.
+              description_teacher: 'Los alumnos continúan trabajando en el programa
+                de camiones de comida del Proyecto Pastelería Mercurio. Los alumnos
+                escriben constructores sobrecargados para la clase `Postre` con el
+                fin de proporcionar múltiples formas de creación de instancias de
+                objetos `Postre`. Los alumnos determinan cuándo es apropiado establecer
+                valores por defecto para una o más variables de instancia y utilizar
+                constructores sin argumentos. '
+            Manipulating Variables and Object Data:
+              name: Manipulación de Variables y Datos de Objeto
+              description_student: Explora las reglas que utiliza un ordenador para
+                determinar el valor resultante y el tipo de una expresión, similares
+                a las que ves en la clase de matemáticas. Creas expresiones para que
+                el ordenador haga las cuentas por ti.
+              description_teacher: En esta lección, los alumnos escriben y evalúan
+                expresiones utilizando variables y datos de objetos. Los alumnos utilizan
+                los operadores aritméticos (+, -, \*, /, %) y los operadores de asignación
+                compuesta (+=, -=, \*=, /=, %=) para realizar cálculos con variables
+                y datos de objetos.
+            Minimizing Errors in Initialization:
+              name: Minimizar Errores en Inicialización
+              description_student: "¿Cómo puedes asegurarte de que los valores dados
+                a un `Postre` son correctos? Recordando lo que has aprendido sobre
+                los casos de borde, añade código para comprobar los errores lógicos
+                en el constructor. En esta lección, exploras dónde están accesibles
+                los diferentes tipos de variables y utilizas estos conceptos para
+                añadir otro constructor a la clase `Postre`."
+              description_teacher: En esta lección, los alumnos emplean condicionales
+                y variables locales para tomar decisiones sobre la inicialización
+                de objetos y verificar los valores pasados al constructor. Los alumnos
+                exploran el alcance de las variables locales y los parámetros dentro
+                de un constructor y utilizan la palabra clave `this` para referirse
+                al objeto actual. Estos conceptos se utilizan para añadir otro constructor
+                a la clase `Postre`.
+            Writing Constructors for Hierarchies:
+              name: Escribir Constructores para Jerarquías
+              description_student: 'El propietario del camión de comida del Proyecto
+                Mercurio está ampliando el menú para incluir diferentes postres. En
+                esta lección, utilizarás técnicas de desarrollo de software para crear
+                clases y constructores para las subclases de `Postres` de forma eficiente.
+                Para inicializar las variables de instancia privadas heredadas, se
+                utiliza la palabra clave `super` para llamar al constructor de la
+                superclase.  '
+              description_teacher: En esta lección, los alumnos escriben constructores
+                para superclases y subclases. Los alumnos utilizan la palabra clave
+                `super` para llamar al constructor de la superclase y pasan los parámetros
+                necesarios al constructor de la superclase para inicializar las variables
+                de instancia. La lección introduce el principio de desarrollo de software
+                D.R.Y. (Don't Repeat Yourself) para resaltar los beneficios de utilizar
+                la herencia en el diseño de la programación orientada a objetos.
+            Accessing Object Data:
+              name: Accediendo a Datos de Objeto
+              description_student: Hemos creado variables de instancia privadas para
+                representar los atributos de los objetos `Postre`, lo que significa
+                que no podemos acceder a estos valores desde fuera de la clase. ¿Pero
+                qué pasaría si necesitáramos utilizar estos valores en nuestros programas?
+                En esta lección, explorarás los métodos que devuelven valores para
+                escribir métodos de acceso para tu clase `Postre` y sus subclases.
+                Utilizarás estos valores para imprimir información sobre los objetos
+                `Postre` y dentro de expresiones para resolver problemas.
+              description_teacher: Los alumnos descubren la necesidad de los métodos
+                de acceso para obtener los valores almacenados en las variables de
+                instancia de una clase. Los alumnos identifican los componentes de
+                la firma de un método y exploran cómo los métodos devuelven valores
+                para utilizarlos en los programas. A medida que los alumnos escriben
+                métodos de acceso para la clase `Postre` y sus subclases, los alumnos
+                trabajan con la impresión de estos valores y el uso de datos de objetos
+                dentro de expresiones.
+            Modifying Object Data:
+              name: Modificando Datos de Objeto
+              description_student: Hemos creado métodos accesores para obtener el
+                valor de las variables de instancia de los objetos `Postre`. ¿Qué
+                pasa si necesitamos cambiar estos valores en nuestros programas? En
+                esta lección, explorarás los métodos `void` para escribir métodos
+                mutadores para tu clase `Postre` y sus subclases. Utilizarás estos
+                métodos junto con los métodos "accesor" para resolver problemas. Fortalecerás
+                tus habilidades y procesos de desarrollo de software a través de revisiones
+                de código para dar y usar retroalimentación y mejorar tu programa.
+              description_teacher: Los alumnos descubren la necesidad de los métodos
+                mutadores para cambiar los valores almacenados en las variables de
+                instancia de una clase. A medida que los alumnos escriben métodos
+                mutadores para la clase `Postre` y sus subclases, aprenden lo que
+                significa `void`, recuerdan casos límite y practican la llamada a
+                métodos mutadores y accesores. Los alumnos participan en una revisión
+                del código para dar y recibir comentarios para mejorar sus programas.
+            Displaying Object Information:
+              name: Visualizando Información de Objeto
+              description_student: 'Hoy veremos "bajo el capó" algunas de las clases
+                incorporadas que utilizamos en Java. Investigarás `System.out.print()`,
+                la clase `Object`, y conocerás el método `toString()`. Practicarás
+                el principio DRY para rediseñar tu código en `Postre` y `Camión de
+                Comida`. '
+              description_teacher: En esta lección, los alumnos trazan `System.out.print()`
+                para explorar los resultados de la impresión de un `Objeto`. Los alumnos
+                sobrescriben un método de la superclase escribiendo métodos `toString()`
+                para `Postre` y `Camión de Comida`. Los alumnos concatenan variables
+                de instancia y cadenas mientras utilizan secuencias de escape para
+                formatear la salida.
+            The Neighborhood Store Management Project - Day 1:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
+              description_student: En este proyecto, trabajas con un socio creando
+                un programa de gestión para un negocio en El Barrio. Comienza por
+                planificar la superclase y sus subclases utilizando un diagrama de
+                Lenguaje de Modelado Unificado (UML) y creando el primer borrador
+                de su superclase.
+              description_teacher: En este proyecto, los alumnos trabajan con un compañero
+                creando un programa de gestión para un negocio en El Barrio. Los alumnos
+                comienzan por planificar la superclase y sus subclases utilizando
+                un diagrama de Lenguaje de Modelado Unificado (UML) y creando el primer
+                borrador de su superclase.
+            The Neighborhood Store Management Project - Day 2:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 2'
+              description_student: Continúa trabajando en tu proyecto de gestión de
+                la tienda del barrio escribiendo subclases que extienden tu superclase.
+                Completas una revisión de código y revisas tu proyecto conforme a
+                la rúbrica para obtener experiencia y continuar desarrollando tu programa.
+              description_teacher: En la lección anterior, los alumnos planificaron
+                su superclase y subclase y comenzaron a escribir su superclase. Los
+                alumnos comienzan esta lección escribiendo individualmente una subclase
+                que extiende su superclase. Participan en una revisión del código
+                y se autoevalúan con respecto a la rúbrica del proyecto para aportar
+                y utilizar la experiencia mientras desarrollan su programa.
+            The Neighborhood Store Management Project - Day 3:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 3'
+              description_student: Finalizas el código de tu superclase y subclase
+                utilizando la lista de prioridades que creaste ayer. Escribes tu método
+                `main` para interactuar con tus clases y luego compartes tus proyectos
+                finales con tus compañeros y ¡celebras tu éxito!
+              description_teacher: En la lección anterior, los alumnos crearon una
+                lista priorizada de trabajo a completar. Los alumnos tienen en cuenta
+                esta lista mientras realizan revisiones de sus superclases y subclases
+                y luego completan su método principal. Por último, comparten sus proyectos
+                finales con sus compañeros para celebrar sus éxitos.
+            FRQ Day:
+              name: Día FRQ
+              description_student: 'Hoy completarás una pregunta de respuesta libre
+                (FRQ). Para ello, primero se mira y se anota una FRQ con los compañeros,
+                luego se escribe un código a mano para resolver un problema, y finalmente
+                se puntúa la solución con un compañero. '
+              description_teacher: "Los alumnos completan una pregunta de respuesta
+                libre (FRQ) en esta lección. Anotan una FRQ del College Board como
+                una clase, y luego escriben un código para responder una FRQ.\n\nLos
+                objetivos de esta lección son:\n\n-   Practicar la lectura de una
+                FRQ del College Board\n-   Practicar la escritura de un FRQ\n-   Servir
+                como evaluación sumativa del contenido de la Unidad 2\n\nAunque el
+                formato de este FRQ no es el mismo que un FRQ del examen AP, ayuda
+                a los alumnos a desarrollar estrategias para abordar estas preguntas. "
+            Assessment Day:
+              name: Día de evaluación
+              description_student: En esta unidad, has creado objetos y definido variables
+                de instancia para representar atributos. Has explorado la creación
+                y el uso de constructores para establecer valores para estos atributos
+                y cómo trabajar con los datos almacenados en los objetos. Has implementado
+                métodos "accessor" y "mutator" para acceder y modificar los valores
+                almacenados en las variables de instancia y has escrito métodos `toString`
+                para obtener información sobre el estado del objeto. Utilizaste la
+                clase `Scanner` para obtener la entrada del usuario y utilizarla como
+                datos del programa para crear y trabajar con tus objetos. Has aprendido
+                a utilizar tipos de datos, operadores y expresiones y a implementar
+                la encapsulación de datos y el diseño orientado a objetos. Ahora,
+                debes evaluar tu logro de los objetivos de aprendizaje y habilidades
+                de la unidad en una evaluación de opción múltiple.
+              description_teacher: En esta unidad, los alumnos desarrollaron una comprensión
+                de la encapsulación de datos y las decisiones de diseño orientado
+                a objetos para construir un programa que respondiera a las necesidades
+                del camión de comida del Proyecto Pastelería Mercurio. Los alumnos
+                crearon objetos con variables de instancia apropiadas en función de
+                las necesidades del programa, al tiempo que exploraron los tipos de
+                datos, las variables y las expresiones para trabajar con los datos
+                de los objetos. Los alumnos también han desarrollado métodos accessor,
+                mutator y `toString` para recuperar, modificar y generar datos de
+                objetos. A lo largo de la unidad, los alumnos utilizaron la clase
+                `Scanner` para obtener información del usuario y ampliar la interactividad
+                de sus programas. Ahora, los alumnos evalúan el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+            new lesson:
+              key: nueva lección
+              description_student: 'A través de nuestras experiencias en El Barrio,
+                sabemos que las clases y los objetos son componentes clave del lenguaje
+                de programación Java. Pero, ¿cómo crean las clases objetos exactamente?
+                En esta lección, descubrirás cómo se crea un objeto y aprenderás sobre
+                un proceso llamado encapsulación de datos. '
+              description_teacher: En esta lección desconectada, los alumnos crean
+                objetos y representan los atributos relevantes utilizando variables
+                de instancia. Los alumnos aprenden la diferencia entre `público` y
+                `privado` y el propósito de la encapsulación para ocultar la construcción
+                interna de un objeto.
+            lesson-2:
+              name: Usando Variables
+            lesson-3:
+              name: Escribir Constructores
+              description_student: ¡El camión de comida del Proyecto "Pastelería Mercurio"
+                necesita tu ayuda! El propietario quiere vender postres en El Barrio
+                pero necesita poder introducir y almacenar sus postres en un programa.
+                Se te ha pedido que utilices tus conocimientos de ingeniería de software
+                para crear un programa que pueda crear objetos de postre para que
+                el propietario pueda hacer un seguimiento de su inventario. Comienza
+                creando una clase `Postre` para que el propietario pueda introducir
+                el sabor, la cantidad disponible y el precio de cada postre que vende.
+              description_teacher: Los alumnos conocen el camión de comida del Proyecto
+                "Pastelería Mercurio" y la necesidad del propietario de un programa
+                para introducir y almacenar artículos de postre. Como ingenieros de
+                software, los alumnos utilizan estrategias de diseño orientado a objetos
+                para identificar los atributos necesarios y los tipos de datos apropiados
+                para una clase "Postre". Los alumnos escriben un constructor y utilizan
+                un objeto `Escáner` que permite obtener los valores de las variables
+                de instancia para inicializar un objeto `Postre`.
+            lesson-4:
+              name: Agregando Varios Constructores
+              description_student: ¡El camión de comida del Proyecto Pastelería Mercurio
+                ha crecido en popularidad! Para ayudar al propietario a rellenar los
+                pedidos, mejoras la clase `Postre` para crear objetos `Postre` de
+                forma más eficiente. Para resolver este problema, debes implementar
+                "constructores sobrecargados" para simplificar tu código y añadir
+                flexibilidad a la creación de objetos `Postre`. Para rellenar los
+                pedidos estándar, creas un constructor por defecto para utilizar los
+                valores por defecto de los `Postres`.
+              description_teacher: 'Los alumnos continúan trabajando en el programa
+                de camiones de comida del Proyecto Pastelería Mercurio. Los alumnos
+                escriben constructores sobrecargados para la clase `Postre` con el
+                fin de proporcionar múltiples formas de creación de instancias de
+                objetos `Postre`. Los alumnos determinan cuándo es apropiado establecer
+                valores por defecto para una o más variables de instancia y utilizar
+                constructores sin argumentos. '
+            lesson-5:
+              name: Manipulación de Variables y Datos de Objeto
+              description_student: Explora las reglas que utiliza un ordenador para
+                determinar el valor resultante y el tipo de una expresión, similares
+                a las que ves en la clase de matemáticas. Creas expresiones para que
+                el ordenador haga las cuentas por ti.
+              description_teacher: En esta lección, los alumnos escriben y evalúan
+                expresiones utilizando variables y datos de objetos. Los alumnos utilizan
+                los operadores aritméticos (+, -, \*, /, %) y los operadores de asignación
+                compuesta (+=, -=, \*=, /=, %=) para realizar cálculos con variables
+                y datos de objetos.
+            lesson-6:
+              name: Minimizar Errores en Inicialización
+              description_student: "¿Cómo puedes asegurarte de que los valores dados
+                a un `Postre` son correctos? Recordando lo que has aprendido sobre
+                los casos de borde, añade código para comprobar los errores lógicos
+                en el constructor. En esta lección, exploras dónde están accesibles
+                los diferentes tipos de variables y utilizas estos conceptos para
+                añadir otro constructor a la clase `Postre`."
+              description_teacher: En esta lección, los alumnos emplean condicionales
+                y variables locales para tomar decisiones sobre la inicialización
+                de objetos y verificar los valores pasados al constructor. Los alumnos
+                exploran el alcance de las variables locales y los parámetros dentro
+                de un constructor y utilizan la palabra clave `this` para referirse
+                al objeto actual. Estos conceptos se utilizan para añadir otro constructor
+                a la clase `Postre`.
+            lesson-7:
+              name: Escribir Constructores para Jerarquías
+              description_student: 'El propietario del camión de comida del Proyecto
+                Mercurio está ampliando el menú para incluir diferentes postres. En
+                esta lección, utilizarás técnicas de desarrollo de software para crear
+                clases y constructores para las subclases de `Postres` de forma eficiente.
+                Para inicializar las variables de instancia privadas heredadas, se
+                utiliza la palabra clave `super` para llamar al constructor de la
+                superclase.  '
+              description_teacher: En esta lección, los alumnos escriben constructores
+                para superclases y subclases. Los alumnos utilizan la palabra clave
+                `super` para llamar al constructor de la superclase y pasan los parámetros
+                necesarios al constructor de la superclase para inicializar las variables
+                de instancia. La lección introduce el principio de desarrollo de software
+                D.R.Y. (Don't Repeat Yourself) para resaltar los beneficios de utilizar
+                la herencia en el diseño de la programación orientada a objetos.
+            lesson-8:
+              name: Accediendo a Datos de Objeto
+              description_student: Hemos creado variables de instancia privadas para
+                representar los atributos de los objetos `Postre`, lo que significa
+                que no podemos acceder a estos valores desde fuera de la clase. ¿Pero
+                qué pasaría si necesitáramos utilizar estos valores en nuestros programas?
+                En esta lección, explorarás los métodos que devuelven valores para
+                escribir métodos de acceso para tu clase `Postre` y sus subclases.
+                Utilizarás estos valores para imprimir información sobre los objetos
+                `Postre` y dentro de expresiones para resolver problemas.
+              description_teacher: Los alumnos descubren la necesidad de los métodos
+                de acceso para obtener los valores almacenados en las variables de
+                instancia de una clase. Los alumnos identifican los componentes de
+                la firma de un método y exploran cómo los métodos devuelven valores
+                para utilizarlos en los programas. A medida que los alumnos escriben
+                métodos de acceso para la clase `Postre` y sus subclases, los alumnos
+                trabajan con la impresión de estos valores y el uso de datos de objetos
+                dentro de expresiones.
+            lesson-9:
+              name: Modificando Datos de Objeto
+              description_student: Hemos creado métodos accesores para obtener el
+                valor de las variables de instancia de los objetos `Postre`. ¿Qué
+                pasa si necesitamos cambiar estos valores en nuestros programas? En
+                esta lección, explorarás los métodos `void` para escribir métodos
+                mutadores para tu clase `Postre` y sus subclases. Utilizarás estos
+                métodos junto con los métodos "accesor" para resolver problemas. Fortalecerás
+                tus habilidades y procesos de desarrollo de software a través de revisiones
+                de código para dar y usar retroalimentación y mejorar tu programa.
+              description_teacher: Los alumnos descubren la necesidad de los métodos
+                mutadores para cambiar los valores almacenados en las variables de
+                instancia de una clase. A medida que los alumnos escriben métodos
+                mutadores para la clase `Postre` y sus subclases, aprenden lo que
+                significa `void`, recuerdan casos límite y practican la llamada a
+                métodos mutadores y accesores. Los alumnos participan en una revisión
+                del código para dar y recibir comentarios para mejorar sus programas.
+            lesson-10:
+              name: Visualizando Información de Objeto
+              description_student: 'Hoy veremos "bajo el capó" algunas de las clases
+                incorporadas que utilizamos en Java. Investigarás `System.out.print()`,
+                la clase `Object`, y conocerás el método `toString()`. Practicarás
+                el principio DRY para rediseñar tu código en `Postre` y `Camión de
+                Comida`. '
+              description_teacher: En esta lección, los alumnos trazan `System.out.print()`
+                para explorar los resultados de la impresión de un `Objeto`. Los alumnos
+                sobrescriben un método de la superclase escribiendo métodos `toString()`
+                para `Postre` y `Camión de Comida`. Los alumnos concatenan variables
+                de instancia y cadenas mientras utilizan secuencias de escape para
+                formatear la salida.
+            lesson-11:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
+              description_student: En este proyecto, trabajas con un socio creando
+                un programa de gestión para un negocio en El Barrio. Comienza por
+                planificar la superclase y sus subclases utilizando un diagrama de
+                Lenguaje de Modelado Unificado (UML) y creando el primer borrador
+                de su superclase.
+              description_teacher: En este proyecto, los alumnos trabajan con un compañero
+                creando un programa de gestión para un negocio en El Barrio. Los alumnos
+                comienzan por planificar la superclase y sus subclases utilizando
+                un diagrama de Lenguaje de Modelado Unificado (UML) y creando el primer
+                borrador de su superclase.
+            lesson-12:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 2'
+              description_student: Continúa trabajando en tu proyecto de gestión de
+                la tienda del barrio escribiendo subclases que extienden tu superclase.
+                Completas una revisión de código y revisas tu proyecto conforme a
+                la rúbrica para obtener experiencia y continuar desarrollando tu programa.
+              description_teacher: En la lección anterior, los alumnos planificaron
+                su superclase y subclase y comenzaron a escribir su superclase. Los
+                alumnos comienzan esta lección escribiendo individualmente una subclase
+                que extiende su superclase. Participan en una revisión del código
+                y se autoevalúan con respecto a la rúbrica del proyecto para aportar
+                y utilizar la experiencia mientras desarrollan su programa.
+            lesson-13:
+              name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 3'
+              description_student: Finalizas el código de tu superclase y subclase
+                utilizando la lista de prioridades que creaste ayer. Escribes tu método
+                `main` para interactuar con tus clases y luego compartes tus proyectos
+                finales con tus compañeros y ¡celebras tu éxito!
+              description_teacher: En la lección anterior, los alumnos crearon una
+                lista priorizada de trabajo a completar. Los alumnos tienen en cuenta
+                esta lista mientras realizan revisiones de sus superclases y subclases
+                y luego completan su método principal. Por último, comparten sus proyectos
+                finales con sus compañeros para celebrar sus éxitos.
+            lesson-14:
+              name: Día FRQ
+              description_student: 'Hoy completarás una pregunta de respuesta libre
+                (FRQ). Para ello, primero se mira y se anota una FRQ con los compañeros,
+                luego se escribe un código a mano para resolver un problema, y finalmente
+                se puntúa la solución con un compañero. '
+              description_teacher: "Los alumnos completan una pregunta de respuesta
+                libre (FRQ) en esta lección. Anotan una FRQ del College Board como
+                una clase, y luego escriben un código para responder una FRQ.\n\nLos
+                objetivos de esta lección son:\n\n-   Practicar la lectura de una
+                FRQ del College Board\n-   Practicar la escritura de un FRQ\n-   Servir
+                como evaluación sumativa del contenido de la Unidad 2\n\nAunque el
+                formato de este FRQ no es el mismo que un FRQ del examen AP, ayuda
+                a los alumnos a desarrollar estrategias para abordar estas preguntas. "
+            lesson-15:
+              name: Día de evaluación
+              description_student: En esta unidad, has creado objetos y definido variables
+                de instancia para representar atributos. Has explorado la creación
+                y el uso de constructores para establecer valores para estos atributos
+                y cómo trabajar con los datos almacenados en los objetos. Has implementado
+                métodos "accessor" y "mutator" para acceder y modificar los valores
+                almacenados en las variables de instancia y has escrito métodos `toString`
+                para obtener información sobre el estado del objeto. Utilizaste la
+                clase `Scanner` para obtener la entrada del usuario y utilizarla como
+                datos del programa para crear y trabajar con tus objetos. Has aprendido
+                a utilizar tipos de datos, operadores y expresiones y a implementar
+                la encapsulación de datos y el diseño orientado a objetos. Ahora,
+                debes evaluar tu logro de los objetivos de aprendizaje y habilidades
+                de la unidad en una evaluación de opción múltiple.
+              description_teacher: En esta unidad, los alumnos desarrollaron una comprensión
+                de la encapsulación de datos y las decisiones de diseño orientado
+                a objetos para construir un programa que respondiera a las necesidades
+                del camión de comida del Proyecto Pastelería Mercurio. Los alumnos
+                crearon objetos con variables de instancia apropiadas en función de
+                las necesidades del programa, al tiempo que exploraron los tipos de
+                datos, las variables y las expresiones para trabajar con los datos
+                de los objetos. Los alumnos también han desarrollado métodos accessor,
+                mutator y `toString` para recuperar, modificar y generar datos de
+                objetos. A lo largo de la unidad, los alumnos utilizaron la clase
+                `Scanner` para obtener información del usuario y ampliar la interactividad
+                de sus programas. Ahora, los alumnos evalúan el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+          lesson_groups:
+            lesson group:
+              display_name: Contenido
+            lessonGroup-2:
+              display_name: "¡Demuestra lo que sabes!"
+        csa3-pilot-facilitator:
+          lessons:
+            Creating Arrays:
+              name: Creando Arrays
+              description_student: La propietaria de un "camión de comida" aumentó
+                su inventario de postres. Antes tenía que declarar variables separadas
+                para hacer un seguimiento del inventario, pero ¿qué pasa si tiene
+                150 postres? ¡Eso sería un montón de variables! En esta lección, explorarás
+                cómo crear un array unidimensional (1D), determinar su longitud y
+                utilizar valores índice para acceder a elementos individuales.
+              description_teacher: En esta lección desconectada, los alumnos crean
+                matrices (Arrays) unidimensionales (1D) para almacenar listas de valores.
+                Los alumnos aprenden a referirse a la longitud de una matriz 1D y
+                a acceder a los elementos individuales que se almacenan.
+            Accessing and Modifying Elements:
+              name: Acceso y Modificación de Elementos
+              description_student: Creas arrays para almacenar valores utilizando
+                la palabra clave `new`. Se explora el Teatro, que permite manipular
+                sonidos y formas. Utiliza El Barrio y El Teatro para practicar el
+                acceso y la modificación de elementos en matrices utilizando valores
+                de índice.
+              description_teacher: En esta lección, los alumnos crean matrices (arrays)
+                para almacenar valores utilizando la palabra clave `new`. Exploran
+                El Teatro, que les permite manipular sonidos y formas. Utilizan El
+                barrio y El teatro para practicar el acceso y la modificación de elementos
+                en matrices utilizando valores de índice.
+            Traversing Arrays with for Loops:
+              name: Recorrido de Arrays con Bucles For
+              description_student: En esta lección, aprenderás sobre los bucles `for`
+                y cómo utilizarlos para recorrer arrays. Volverás a visitar El barrio
+                y utilizarás tablas de seguimiento para documentar cómo se ejecuta
+                el código dentro de un bucle `for`. Utilizarás los bucles `for` para
+                resolver problemas en The Neighborhood y obtendrás experiencia sobre
+                tu trabajo a través de una revisión de código.
+              description_teacher: Los alumnos escriben bucles "for" para recorrer
+                matrices (arrays) y buscar y modificar elementos que cumplan determinadas
+                condiciones. Los alumnos vuelven a visitar El barrio y utilizan tablas
+                de seguimiento para documentar cómo se ejecuta el código dentro de
+                un bucle `for`. Participan en una revisión del código después de completar
+                un nivel de elección y revisan su código basándose en los comentarios.
+            Traversing Arrays with while Loops:
+              name: Recorrido de Arrays con Bucles While
+              description_student: "¿Recuerdas los bucles `while`? En esta lección,
+                investigarás los casos límite de los bucles `while` y harás conexiones
+                entre los bucles `while` y `for`. Creas imágenes para tu música utilizando
+                la clase `Rectangle`."
+              description_teacher: Los alumnos revisan los bucles `while` y aprenden
+                sobre los bucles infinitos. Los alumnos exploran la creación de visuales
+                antes de la conversión entre los bucles `while` y `for`. Los alumnos
+                crean sus propios visuales musicales utilizando la clase `Rectangle`.
+            Storing Objects into Arrays:
+              name: Almacenando Objetos en Arrays
+              description_student: Explorarás la funcionalidad y los beneficios de
+                un principio orientado a objetos llamado polimorfismo para crear y
+                recorrer una matriz de objetos `Shape`. Después de revisar la herencia,
+                descubrirás cómo las subclases implementan versiones específicas de
+                comportamientos. El análisis de un segmento de código proporciona
+                un ejemplo para guiar la implementación del polimorfismo en El Teatro.
+              description_teacher: Los alumnos exploran la funcionalidad y las ventajas
+                del polimorfismo para crear y recorrer un array de objetos `Shape`.
+                Después de revisar la herencia, los alumnos descubren que las subclases
+                pueden implementar versiones específicas de comportamientos. El análisis
+                de un segmento de código proporciona un ejemplo para guiar la implementación
+                del polimorfismo en El Teatro.
+            Traversing Arrays with Enhanced for Loops:
+              name: Recorrido de Arrays con Bucles "For" Mejorados
+              description_student: 'Para acceder a cada elemento almacenado en un
+                array, recorremos el array utilizando un bucle. Anteriormente aprendiste
+                a utilizar los bucles `while` y `for` para acceder a todas o sólo
+                algunas partes de un array. Hoy, implementarás un bucle `for` mejorado,
+                que es un bucle `for` simplificado utilizado para acceder a cada elemento
+                de un array uno por uno. '
+              description_teacher: En esta lección, los alumnos utilizan un bucle
+                `for` mejorado para recorrer un array. Los alumnos identifican las
+                diferencias, ventajas y desventajas de utilizar un bucle `for` mejorado
+                en lugar de un bucle `for` o `while` tradicional para recorrer un
+                array.
+            Using Static Variables and Constants:
+              name: Uso de Variables y Constantes Estáticas
+              description_student: Las variables de instancia son útiles para almacenar
+                atributos únicos de un objeto determinado, pero a veces todos los
+                objetos de una clase necesitan compartir atributos específicos. Usando
+                variables estáticas, se crean atributos compartidos para representar
+                contadores y constantes reutilizables en El Teatro. Examina el código
+                fuente de la clase `Matemáticas` para ver ejemplos adicionales de
+                variables y constantes estáticas.
+              description_teacher: Los alumnos aplican variables estáticas y constantes
+                para contar el número de objetos `Forma` creados y establecer valores
+                máximos y mínimos para el volumen de los sonidos. Los alumnos exploran
+                el código fuente de la clase `Matemáticas` para conectar el código
+                del mundo real y los conceptos que han aprendido hasta ahora.
+            Answering Questions with Arrays:
+              name: Respondiendo Preguntas con Arrays
+              description_student: Hoy en día se desarrollan algoritmos para resolver
+                problemas. Estos algoritmos pueden aplicarse a la búsqueda del artículo
+                más barato de un menú, a la búsqueda de la nota más alta o más baja
+                de un sonido o a la identificación de la ubicación de formas en el
+                escenario. Cada uno de estos problemas utiliza estructuras similares
+                en sus soluciones. Identificarás estos patrones para poder aplicar
+                los algoritmos que desarrolles hoy a los problemas que encuentres
+                en el futuro.
+              description_teacher: Los alumnos desarrollan algoritmos utilizando matrices
+                (arrays) unidimensionales para encontrar los valores mínimos y máximos,
+                calcular sumas y promedios, y encontrar elementos que cumplan criterios
+                específicos. Buscan patrones en la estructura de los problemas y esbozan
+                algoritmos genéricos que pueden utilizarse al responder a preguntas
+                sobre la información contenida en las matrices.
+            Solving Problems with Arrays:
+              name: Resolviendo Problemas con Arrays
+              description_student: Los algoritmos estándar pueden aplicarse para resolver
+                problemas relacionados con arrays. Se implementan algoritmos estándar
+                para manipular arrays unidimensionales y se descubre el efecto de
+                los algoritmos en los sonidos. Antes de escribir el código Java, planifica
+                cada algoritmo utilizando simuladores y pseudocódigo para identificar
+                el proceso necesario para resolver cada problema.
+              description_teacher: Los algoritmos estándar pueden aplicarse a la resolución
+                de problemas relacionados con arrays. Los estudiantes implementan
+                algoritmos estándar para manejar arrays unidimensionales y descubren
+                el efecto de los algoritmos en los sonidos. Antes de escribir el código
+                Java, los estudiantes planifican cada algoritmo utilizando simuladores
+                y pseudocódigo para identificar el proceso necesario para resolver
+                cada problema.
+            Manipulating Elements in an Array:
+              name: Manipulando Elementos en un Array
+              description_student: Aprenderás sobre los bucles anidados, o sea, un
+                bucle dentro de otro bucle. Puedes utilizar un bucle anidado para
+                buscar valores en un array de forma más eficiente. Continúa desarrollando
+                algoritmos con el fin de realizar manipulaciones para cambiar e invertir
+                el orden de los elementos. Antes de escribir el código Java, planifica
+                el algoritmo utilizando el pseudocódigo para identificar el proceso
+                necesario para resolver el problema.
+              description_teacher: Los alumnos utilizan bucles anidados y desarrollan
+                algoritmos que permiten realizar manipulaciones en matrices para desplazar
+                e invertir elementos. Antes de escribir el código Java, los alumnos
+                planifican el algoritmo utilizando el pseudocódigo para identificar
+                el proceso necesario y resolver el problema. Los alumnos participan
+                en una revisión del código para aportar y recibir comentarios que
+                les permitan perfeccionar sus soluciones antes de la vista previa
+                del proyecto de la unidad.
+            Concert in The Theater Project - Day 1:
+              description_student: Para este proyecto, diseñas un concierto en El
+                Teatro. Con un compañero, eliges un algoritmo de remezcla y escribes
+                su pseudocódigo. Traduce el pseudocódigo en código y combínalo con
+                los algoritmos que has desarrollado en lecciones anteriores para crear
+                el audio de tu concierto.
+              description_teacher: Para este proyecto, los alumnos utilizan matrices
+                unidimensionales y algoritmos estándar para desarrollar un concierto
+                en El Teatro. Los alumnos comienzan eligiendo un algoritmo de remezcla
+                de un conjunto de opciones de remezcla y escribiendo su pseudocódigo
+                con un compañero. Traducirán el pseudocódigo en código y combinarán
+                su nuevo algoritmo con los algoritmos que han desarrollado en lecciones
+                anteriores para crear el audio del concierto.
+            Concert in The Theater Project - Day 2:
+              description_student: Continúa diseñando tu concierto en El Teatro, añadiendo
+                restricciones a la duración del mismo y agregando elementos visuales.
+                Realiza una revisión del código para obtener comentarios que te permitan
+                seguir desarrollando tu programa.
+              description_teacher: En la lección anterior, los estudiantes escribieron
+                un algoritmo de remezcla y lo combinaron con los algoritmos que desarrollaron
+                en lecciones anteriores. Los alumnos utilizan variables estáticas
+                y constantes para añadir restricciones a la duración del concierto.
+                Añaden elementos visuales al concierto utilizando un array de `Formas`,
+                y luego participan en una revisión del código para dar y utilizar
+                la experiencia mientras desarrollan su programa.
+            Concert in The Theater Project - Day 3:
+              description_student: En la lección anterior, creaste una lista priorizada
+                de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto
+                a la rúbrica del proyecto y a continuación, revisarás tu lista priorizada
+                para decidir qué revisiones tienes que hacer en tu concierto. ¡A continuación,
+                compartirás tu proyecto final con los compañeros para celebrar tu
+                éxito!
+              description_teacher: En la lección anterior, los alumnos crearon una
+                lista priorizada de trabajo para completar. En esta lección, los alumnos
+                autoevaluarán su trabajo con respecto a la rúbrica del proyecto y,
+                a continuación, revisarán su lista de prioridades para informar sobre
+                las revisiones de su concierto. A continuación, los alumnos comparten
+                sus proyectos finales con los compañeros para celebrar sus éxitos.
+            FRQ Day:
+              name: Día FRQ
+              description_student: Hoy completarás una Pregunta de Respuesta Libre
+                (FRQ). Para ello, primero anotarás la FRQ y luego trabajarás con un
+                grupo para planificar cómo resolver la FRQ. A continuación, escribirás
+                individualmente la solución a la pregunta de respuesta libre utilizando
+                tu planificación. Por último, calificarás tu solución con una rúbrica
+                de puntuación y reflexionarás sobre tu experiencia.
+              description_teacher: |-
+                Los alumnos completan una Pregunta de Respuesta Libre (FRQ) en esta lección. Basándose en el trabajo previo de FRQ, comienzan a trabajar de forma más independiente, trabajando en la anotación y completando una FRQ por su cuenta. Los alumnos también trabajan en pequeños grupos para identificar las entradas, los procesos y las salidas antes de responder a la FRQ.
+
+                Los objetivos de esta lección son:
+
+                -   Practicar la lectura de una FRQ
+                -   Practicar la redacción de una solución para una FRQ
+                -   Practicar la calificación de un FRQ con una rúbrica de calificación
+            Assessment Day:
+              name: Día de evaluación
+            lesson-1:
+              name: Creando Arrays
+              description_student: La propietaria de un "camión de comida" aumentó
+                su inventario de postres. Antes tenía que declarar variables separadas
+                para hacer un seguimiento del inventario, pero ¿qué pasa si tiene
+                150 postres? ¡Eso sería un montón de variables! En esta lección, explorarás
+                cómo crear un array unidimensional (1D), determinar su longitud y
+                utilizar valores índice para acceder a elementos individuales.
+              description_teacher: En esta lección desconectada, los alumnos crean
+                matrices (Arrays) unidimensionales (1D) para almacenar listas de valores.
+                Los alumnos aprenden a referirse a la longitud de una matriz 1D y
+                a acceder a los elementos individuales que se almacenan.
+            lesson-2:
+              name: Acceso y Modificación de Elementos
+              description_student: Creas arrays para almacenar valores utilizando
+                la palabra clave `new`. Se explora el Teatro, que permite manipular
+                sonidos y formas. Utiliza El Barrio y El Teatro para practicar el
+                acceso y la modificación de elementos en matrices utilizando valores
+                de índice.
+              description_teacher: En esta lección, los alumnos crean matrices (arrays)
+                para almacenar valores utilizando la palabra clave `new`. Exploran
+                El Teatro, que les permite manipular sonidos y formas. Utilizan El
+                barrio y El teatro para practicar el acceso y la modificación de elementos
+                en matrices utilizando valores de índice.
+            lesson-3:
+              name: Recorrido de Arrays con Bucles For
+              description_student: En esta lección, aprenderás sobre los bucles `for`
+                y cómo utilizarlos para recorrer arrays. Volverás a visitar El barrio
+                y utilizarás tablas de seguimiento para documentar cómo se ejecuta
+                el código dentro de un bucle `for`. Utilizarás los bucles `for` para
+                resolver problemas en The Neighborhood y obtendrás experiencia sobre
+                tu trabajo a través de una revisión de código.
+              description_teacher: Los alumnos escriben bucles "for" para recorrer
+                matrices (arrays) y buscar y modificar elementos que cumplan determinadas
+                condiciones. Los alumnos vuelven a visitar El barrio y utilizan tablas
+                de seguimiento para documentar cómo se ejecuta el código dentro de
+                un bucle `for`. Participan en una revisión del código después de completar
+                un nivel de elección y revisan su código basándose en los comentarios.
+            lesson-4:
+              name: Recorrido de Arrays con Bucles While
+            lesson-5:
+              name: Almacenando Objetos en Arrays
+              description_teacher: Los alumnos exploran la funcionalidad y las ventajas
+                del polimorfismo para crear y recorrer un array de objetos `Shape`.
+                Después de revisar la herencia, los alumnos descubren que las subclases
+                pueden implementar versiones específicas de comportamientos. El análisis
+                de un segmento de código proporciona un ejemplo para guiar la implementación
+                del polimorfismo en El Teatro.
+            lesson-6:
+              name: Recorrido de Arrays con Bucles "For" Mejorados
+              description_student: 'Para acceder a cada elemento almacenado en un
+                array, recorremos el array utilizando un bucle. Anteriormente aprendiste
+                a utilizar los bucles `while` y `for` para acceder a todas o sólo
+                algunas partes de un array. Hoy, implementarás un bucle `for` mejorado,
+                que es un bucle `for` simplificado utilizado para acceder a cada elemento
+                de un array uno por uno. '
+              description_teacher: En esta lección, los alumnos utilizan un bucle
+                `for` mejorado para recorrer un array. Los alumnos identifican las
+                diferencias, ventajas y desventajas de utilizar un bucle `for` mejorado
+                en lugar de un bucle `for` o `while` tradicional para recorrer un
+                array.
+            lesson-7:
+              name: Uso de Variables y Constantes Estáticas
+              description_student: Las variables de instancia son útiles para almacenar
+                atributos únicos de un objeto determinado, pero a veces todos los
+                objetos de una clase necesitan compartir atributos específicos. Usando
+                variables estáticas, se crean atributos compartidos para representar
+                contadores y constantes reutilizables en El Teatro. Examina el código
+                fuente de la clase `Matemáticas` para ver ejemplos adicionales de
+                variables y constantes estáticas.
+              description_teacher: Los alumnos aplican variables estáticas y constantes
+                para contar el número de objetos `Forma` creados y establecer valores
+                máximos y mínimos para el volumen de los sonidos. Los alumnos exploran
+                el código fuente de la clase `Matemáticas` para conectar el código
+                del mundo real y los conceptos que han aprendido hasta ahora.
+            lesson-8:
+              name: Respondiendo Preguntas con Arrays
+              description_student: Hoy en día se desarrollan algoritmos para resolver
+                problemas. Estos algoritmos pueden aplicarse a la búsqueda del artículo
+                más barato de un menú, a la búsqueda de la nota más alta o más baja
+                de un sonido o a la identificación de la ubicación de formas en el
+                escenario. Cada uno de estos problemas utiliza estructuras similares
+                en sus soluciones. Identificarás estos patrones para poder aplicar
+                los algoritmos que desarrolles hoy a los problemas que encuentres
+                en el futuro.
+              description_teacher: Los alumnos desarrollan algoritmos utilizando matrices
+                (arrays) unidimensionales para encontrar los valores mínimos y máximos,
+                calcular sumas y promedios, y encontrar elementos que cumplan criterios
+                específicos. Buscan patrones en la estructura de los problemas y esbozan
+                algoritmos genéricos que pueden utilizarse al responder a preguntas
+                sobre la información contenida en las matrices.
+            lesson-9:
+              name: Resolviendo Problemas con Arrays
+              description_student: Los algoritmos estándar pueden aplicarse para resolver
+                problemas relacionados con arrays. Se implementan algoritmos estándar
+                para manipular arrays unidimensionales y se descubre el efecto de
+                los algoritmos en los sonidos. Antes de escribir el código Java, planifica
+                cada algoritmo utilizando simuladores y pseudocódigo para identificar
+                el proceso necesario para resolver cada problema.
+              description_teacher: Los algoritmos estándar pueden aplicarse a la resolución
+                de problemas relacionados con arrays. Los estudiantes implementan
+                algoritmos estándar para manejar arrays unidimensionales y descubren
+                el efecto de los algoritmos en los sonidos. Antes de escribir el código
+                Java, los estudiantes planifican cada algoritmo utilizando simuladores
+                y pseudocódigo para identificar el proceso necesario para resolver
+                cada problema.
+            lesson-10:
+              name: Manipulando Elementos en un Array
+              description_student: Aprenderás sobre los bucles anidados, o sea, un
+                bucle dentro de otro bucle. Puedes utilizar un bucle anidado para
+                buscar valores en un array de forma más eficiente. Continúa desarrollando
+                algoritmos con el fin de realizar manipulaciones para cambiar e invertir
+                el orden de los elementos. Antes de escribir el código Java, planifica
+                el algoritmo utilizando el pseudocódigo para identificar el proceso
+                necesario para resolver el problema.
+              description_teacher: Los alumnos utilizan bucles anidados y desarrollan
+                algoritmos que permiten realizar manipulaciones en matrices para desplazar
+                e invertir elementos. Antes de escribir el código Java, los alumnos
+                planifican el algoritmo utilizando el pseudocódigo para identificar
+                el proceso necesario y resolver el problema. Los alumnos participan
+                en una revisión del código para aportar y recibir comentarios que
+                les permitan perfeccionar sus soluciones antes de la vista previa
+                del proyecto de la unidad.
+            lesson-11:
+              description_student: Para este proyecto, diseñas un concierto en El
+                Teatro. Con un compañero, eliges un algoritmo de remezcla y escribes
+                su pseudocódigo. Traduce el pseudocódigo en código y combínalo con
+                los algoritmos que has desarrollado en lecciones anteriores para crear
+                el audio de tu concierto.
+              description_teacher: Para este proyecto, los alumnos utilizan matrices
+                unidimensionales y algoritmos estándar para desarrollar un concierto
+                en El Teatro. Los alumnos comienzan eligiendo un algoritmo de remezcla
+                de un conjunto de opciones de remezcla y escribiendo su pseudocódigo
+                con un compañero. Traducirán el pseudocódigo en código y combinarán
+                su nuevo algoritmo con los algoritmos que han desarrollado en lecciones
+                anteriores para crear el audio del concierto.
+            lesson-12:
+              description_student: Continúa diseñando tu concierto en El Teatro, añadiendo
+                restricciones a la duración del mismo y agregando elementos visuales.
+                Realiza una revisión del código para obtener comentarios que te permitan
+                seguir desarrollando tu programa.
+            lesson-13:
+              description_student: En la lección anterior, creaste una lista priorizada
+                de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto
+                a la rúbrica del proyecto y a continuación, revisarás tu lista priorizada
+                para decidir qué revisiones tienes que hacer en tu concierto. ¡A continuación,
+                compartirás tu proyecto final con los compañeros para celebrar tu
+                éxito!
+              description_teacher: En la lección anterior, los alumnos crearon una
+                lista priorizada de trabajo para completar. En esta lección, los alumnos
+                autoevaluarán su trabajo con respecto a la rúbrica del proyecto y,
+                a continuación, revisarán su lista de prioridades para informar sobre
+                las revisiones de su concierto. A continuación, los alumnos comparten
+                sus proyectos finales con los compañeros para celebrar sus éxitos.
+            lesson-14:
+              name: Día FRQ
+              description_student: Hoy completarás una Pregunta de Respuesta Libre
+                (FRQ). Para ello, primero anotarás la FRQ y luego trabajarás con un
+                grupo para planificar cómo resolver la FRQ. A continuación, escribirás
+                individualmente la solución a la pregunta de respuesta libre utilizando
+                tu planificación. Por último, calificarás tu solución con una rúbrica
+                de puntuación y reflexionarás sobre tu experiencia.
+              description_teacher: |-
+                Los alumnos completan una Pregunta de Respuesta Libre (FRQ) en esta lección. Basándose en el trabajo previo de FRQ, comienzan a trabajar de forma más independiente, trabajando en la anotación y completando una FRQ por su cuenta. Los alumnos también trabajan en pequeños grupos para identificar las entradas, los procesos y las salidas antes de responder a la FRQ.
+
+                Los objetivos de esta lección son:
+
+                -   Practicar la lectura de una FRQ
+                -   Practicar la redacción de una solución para una FRQ
+                -   Practicar la calificación de un FRQ con una rúbrica de calificación
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        csa4-pilot-facilitator:
+          lessons:
+            Using Existing Libraries to Add Capabilities:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+              description_student: El Barrio está organizando una fiesta en la calle
+                y necesita que se desarrolle un juego para que la comunidad juegue
+                con sus amigos y familiares. Examina las API y su documentación para
+                identificar las características que puedes añadir a tus programas.
+                Para empezar a desarrollar el juego " Explotar el globo" en la fiesta
+                del barrio, importas la API de El Parque y la utilizas para introducir
+                imágenes que se puedan pulsar.
+              description_teacher: El Barrio está organizando una fiesta en la calle
+                y necesita que se desarrolle un juego para que la comunidad juegue
+                con sus amigos y familiares. Los alumnos exploran las API y su documentación
+                para identificar las características que pueden añadir a sus programas.
+                Para empezar a desarrollar el juego "Explota el Globo" para la fiesta
+                del barrio, los estudiantes importan la API de El Parque y la utilizan
+                para añadir imágenes que se pueden pulsar.
+            Solving Problems with the Math Class:
+              name: Resolviendo Problemas con la Clase de Matemáticas
+              description_student: En la Unidad 3 has visto el código fuente de la
+                clase `Matemáticas`, pero ahora es el momento de ver lo que puede
+                hacer. En esta lección, aprenderás sobre las clases `final` y los
+                métodos estáticos e identificarás sus propósitos y usos. Utilizarás
+                algunos métodos de la clase `Matemáticas` - `Math.pow(double a, double
+                b)`, `Math.abs(double a)`, y `Math.sqrt(double a)` - para resolver
+                problemas.
+              description_teacher: Los alumnos vuelven a visitar la clase `Matemáticas`,
+                profundizando en sus métodos. Aprenden sobre las clases `final` y
+                los métodos estáticos e identifican sus propósitos y usos. Utilizan
+                `Math.pow(double a, double b)`, `Math.abs(double a)` y `Math.sqrt(double
+                a)` para resolver problemas.
+            Treating Data as a Different Types:
+              name: Tratando los Datos como Tipos Diferentes
+              description_student: "¡El Camión de Comida se ha quedado sin monedas!
+                Como la dueña no puede dar cambio con monedas, sólo puede cobrar cantidades
+                enteras de euros y no céntimos. Aprende a utilizar el reparto, el
+                redondeo y los números aleatorios para ayudar a la dueña a superar
+                su escasez de monedas."
+              description_teacher: Los alumnos vuelven a visitar el Proyecto Camión
+                de Comida de Pasteles Mercurio para aprender sobre el reparto, el
+                redondeo y los números aleatorios. Los alumnos resuelven escenarios
+                para el propietario del camión de comida utilizando sus conocimientos
+                de Java y la clase `Matemáticas`.
+            Comparing Values to Make Decisions:
+              name: Comparando Valores para Tomar Decisiones
+              description_student: 'Hoy, se trata de utilizar el código para tomar
+                decisiones. Se comparan las relaciones entre los valores mientras
+                se utilizan sentencias condicionales para ayudar al `Pintor` a tomar
+                decisiones. '
+              description_teacher: 'Los alumnos utilizan operadores relacionales para
+                escribir y evaluar expresiones. Los alumnos amplían el uso de las
+                sentencias `if` para comparar valores almacenados en variables y elementos
+                de matrices (arrays). '
+            Adding Randomness to a Program:
+              name: Añadiendo Aleatoriedad a un Programa
+              description_student: Uno de los casos de uso más comunes para generar
+                números aleatorios son los juegos de azar, como tirar los dados, barajar
+                las cartas y lanzar una moneda. Los juegos suelen utilizar números
+                aleatorios para generar diferentes resultados. Hoy, se añade la aleatoriedad
+                al juego Explota el Globo añadiendo una función de lanzamiento de
+                dados.
+              description_teacher: En esta lección, los alumnos desarrollan la función
+                de lanzamiento de dados del juego Explota el Globo. Cada subtarea
+                del proceso de desarrollo requiere que los estudiantes añadan diferentes
+                características de aleatoriedad, incluyendo la generación de números
+                entre rangos, el cálculo de probabilidades y el uso de sentencias
+                condicionales que se ejecutan en base a resultados variables.
+            Comparing Object References and Data:
+              name: Comparando Referencias a Objetos y Datos
+            Providing an Alternate Path of Execution:
+              name: Proporcionando una Ruta Alternativa de Ejecución
+            Testing Multiple Conditions:
+              name: Probando Múltiples Condiciones
+            Using Logical Operators:
+              name: Usando Operadores Lógicos
+            Applying De Morgan's Laws to Boolean Expressions:
+              name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            Neighborhood Block Party Project - Day 2:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 2
+            Neighborhood Block Party Project - Day 3:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 3
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            lesson-1:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+              description_student: El Barrio está organizando una fiesta en la calle
+                y necesita que se desarrolle un juego para que la comunidad juegue
+                con sus amigos y familiares. Examina las API y su documentación para
+                identificar las características que puedes añadir a tus programas.
+                Para empezar a desarrollar el juego " Explotar el globo" en la fiesta
+                del barrio, importas la API de El Parque y la utilizas para introducir
+                imágenes que se puedan pulsar.
+              description_teacher: El Barrio está organizando una fiesta en la calle
+                y necesita que se desarrolle un juego para que la comunidad juegue
+                con sus amigos y familiares. Los alumnos exploran las API y su documentación
+                para identificar las características que pueden añadir a sus programas.
+                Para empezar a desarrollar el juego "Explota el Globo" para la fiesta
+                del barrio, los estudiantes importan la API de El Parque y la utilizan
+                para añadir imágenes que se pueden pulsar.
+            lesson-3:
+              name: Resolviendo Problemas con la Clase de Matemáticas
+              description_student: En la Unidad 3 has visto el código fuente de la
+                clase `Matemáticas`, pero ahora es el momento de ver lo que puede
+                hacer. En esta lección, aprenderás sobre las clases `final` y los
+                métodos estáticos e identificarás sus propósitos y usos. Utilizarás
+                algunos métodos de la clase `Matemáticas` - `Math.pow(double a, double
+                b)`, `Math.abs(double a)`, y `Math.sqrt(double a)` - para resolver
+                problemas.
+              description_teacher: Los alumnos vuelven a visitar la clase `Matemáticas`,
+                profundizando en sus métodos. Aprenden sobre las clases `final` y
+                los métodos estáticos e identifican sus propósitos y usos. Utilizan
+                `Math.pow(double a, double b)`, `Math.abs(double a)` y `Math.sqrt(double
+                a)` para resolver problemas.
+            lesson-4:
+              name: Tratando los Datos como Tipos Diferentes
+              description_student: "¡El Camión de Comida se ha quedado sin monedas!
+                Como la dueña no puede dar cambio con monedas, sólo puede cobrar cantidades
+                enteras de euros y no céntimos. Aprende a utilizar el reparto, el
+                redondeo y los números aleatorios para ayudar a la dueña a superar
+                su escasez de monedas."
+              description_teacher: Los alumnos vuelven a visitar el Proyecto Camión
+                de Comida de Pasteles Mercurio para aprender sobre el reparto, el
+                redondeo y los números aleatorios. Los alumnos resuelven escenarios
+                para el propietario del camión de comida utilizando sus conocimientos
+                de Java y la clase `Matemáticas`.
+            lesson-5:
+              name: Comparando Valores para Tomar Decisiones
+              description_student: 'Hoy, se trata de utilizar el código para tomar
+                decisiones. Se comparan las relaciones entre los valores mientras
+                se utilizan sentencias condicionales para ayudar al `Pintor` a tomar
+                decisiones. '
+              description_teacher: 'Los alumnos utilizan operadores relacionales para
+                escribir y evaluar expresiones. Los alumnos amplían el uso de las
+                sentencias `if` para comparar valores almacenados en variables y elementos
+                de matrices (arrays). '
+            lesson-6:
+              name: Añadiendo Aleatoriedad a un Programa
+              description_student: Uno de los casos de uso más comunes para generar
+                números aleatorios son los juegos de azar, como tirar los dados, barajar
+                las cartas y lanzar una moneda. Los juegos suelen utilizar números
+                aleatorios para generar diferentes resultados. Hoy, se añade la aleatoriedad
+                al juego Explota el Globo añadiendo una función de lanzamiento de
+                dados.
+              description_teacher: En esta lección, los alumnos desarrollan la función
+                de lanzamiento de dados del juego Explota el Globo. Cada subtarea
+                del proceso de desarrollo requiere que los estudiantes añadan diferentes
+                características de aleatoriedad, incluyendo la generación de números
+                entre rangos, el cálculo de probabilidades y el uso de sentencias
+                condicionales que se ejecutan en base a resultados variables.
+            lesson-7:
+              name: Comparando Referencias a Objetos y Datos
+            lesson-8:
+              name: Proporcionando una Ruta Alternativa de Ejecución
+            lesson-9:
+              name: Probando Múltiples Condiciones
+            lesson-10:
+              name: Usando Operadores Lógicos
+            lesson-11:
+              name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-12:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 2
+            lesson-13:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 3
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        csa5-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

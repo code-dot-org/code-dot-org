@@ -1,5 +1,20 @@
 {
+  "addAComment": "Aggiungi un commento",
+  "backpackLabel": "Zaino",
+  "backpackListLoadError": "Si è verificato un errore caricando il tuo zaino. Riprova.",
+  "backpackSaveErrorTitle": "Si è verificato un errore",
+  "backpackSaveErrorMessage": "Sei pregato di riprovare",
   "cancel": "Annulla",
+  "clearConsole": "Cancella Console",
+  "classNotFound": "Errore: uno o più dei tuoi file Java mancano della definizione di una classe.",
+  "commentUpdateError": "Si è verificato un errore elaborando la tua richiesta, sei pregato di riprovare.",
+  "commit": "Commit",
+  "commitAndSave": "Commit e Salva",
+  "commitCode": "Commit Codice",
+  "commitNotes": "Commit Note",
+  "commitNotesPlaceholder": "Inserisci le note su questo commit qui...",
+  "compilationSuccess": "Compilazione riuscita.",
+  "delete": "Elimina",
   "import": "Importa",
   "saving": "Salvataggio in corso..."
 }

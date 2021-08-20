@@ -29262,3 +29262,59 @@ de:
           lessons:
             lesson-1:
               name: Übersicht
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Werkzeuge
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichtsstunden
+            lessonGroup-3:
+              display_name: Projekt
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-20:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lesson group:
+              display_name: Inhalt
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt

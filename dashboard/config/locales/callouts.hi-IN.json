@@ -1355,6 +1355,37 @@
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "आप `गणित` ब्लॉक यहां पाएंगे।"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_collector": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_apps_pet": {
+          "run_button": "सबसे पहले चलाएं बटन को दबाएं!",
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
         }
       }
     }
