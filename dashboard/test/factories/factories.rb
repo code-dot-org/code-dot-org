@@ -536,7 +536,7 @@ FactoryGirl.define do
       end
     end
 
-    trait :script do
+    trait :with_script do
       after :create do |level|
         script_level = create(:script_level, levels: [level])
         create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
