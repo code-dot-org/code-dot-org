@@ -49,13 +49,16 @@ export function updateDefaultList(listData) {
 }
 
 export function uploadDefaultListMetadata(metadata) {
-  return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(metadata)
-  })
+  return fetch(
+    `/api/v1/animation-library/default-spritelab-metadata/levelbuilder`,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(metadata)
+    }
+  )
     .then(response => {
       if (!response.ok) {
         throw new Error(

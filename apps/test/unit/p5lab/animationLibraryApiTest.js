@@ -41,12 +41,14 @@ describe('animationLibraryApi', () => {
   describe('regenerateDefaultSpriteMetadata', () => {
     it('sends data to middleware in POST', () => {
       fetchSpy
-        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
         .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultList).then(() => {
         expect(fetchSpy).calledWith(
-          '/api/v1/animation-library/default-spritelab-metadata'
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
         );
         expect(fetchSpy).calledWithMatch(sinon.match.any, {method: 'POST'});
       });
@@ -54,7 +56,9 @@ describe('animationLibraryApi', () => {
 
     it('throws error when bad response', () => {
       fetchSpy
-        .withArgs('/api/v1/animation-library/default-spritelab-metadata')
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
         .returns(
           Promise.resolve({
             ok: false,
