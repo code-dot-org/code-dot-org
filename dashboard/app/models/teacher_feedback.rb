@@ -80,12 +80,16 @@ class TeacherFeedback < ApplicationRecord
 
   # returns the latest feedback for each student on every level in a script given by the teacher
   def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
+    query = {
+      student_id: student_ids,
+      level_id: level_ids,
+      script_id: script_id,
+      teacher_id: teacher_id
+    }.compact
+
     find(
       where(
-        student_id: student_ids,
-        level_id: level_ids,
-        script_id: script_id,
-        teacher_id: teacher_id
+        query
       ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
     )
   end
@@ -147,6 +151,51 @@ class TeacherFeedback < ApplicationRecord
       seen_on_feedback_page_at: seen_on_feedback_page_at,
       student_first_visited_at: student_first_visited_at,
       is_awaiting_teacher_review: awaiting_teacher_review?(is_latest)
+    }
+  end
+
+  # Passing level, script_level and student into the function since it's
+  # called in a loop to avoid N+1s
+  def summarize_for_csv(level, script_level, student, sublevel_index = nil)
+    rubric_performance_json_to_ruby = {
+      performanceLevel1: "rubric_performance_level_1",
+      performanceLevel2: "rubric_performance_level_2",
+      performanceLevel3: "rubric_performance_level_3",
+      performanceLevel4: "rubric_performance_level_4"
+    }
+
+    rubric_performance_headers = {
+      performanceLevel1: "Extensive Evidence",
+      performanceLevel2: "Convincing Evidence",
+      performanceLevel3: "Limited Evidence",
+      performanceLevel4: "No Evidence"
+    }
+
+    review_state_labels = {
+      keepWorking: "Needs more work",
+      completed: "Reviewed, completed",
+    }
+
+    review_state_label = awaiting_teacher_review?(true) ? "Waiting for review" : review_state_labels[review_state&.to_sym]
+    level_num = script_level.position.to_s
+
+    if sublevel_index
+      alphabet = ('a'..'z').to_a
+      level_num += alphabet[sublevel_index]
+    end
+
+    {
+      studentName: student.name,
+      lessonNum: script_level.lesson.relative_position.to_s,
+      lessonName: script_level.lesson.localized_title,
+      levelNum: level_num,
+      keyConcept: (level.rubric_key_concept || ''),
+      performanceLevelDetails: (level.properties[rubric_performance_json_to_ruby[performance&.to_sym]] || ''),
+      performance: rubric_performance_headers[performance&.to_sym],
+      comment: comment,
+      timestamp: updated_at.localtime.strftime("%D at %r"),
+      reviewStateLabel: review_state_label || "Never reviewed",
+      studentSeenFeedback: student_seen_feedback&.localtime&.strftime("%D at %r"),
     }
   end
 
