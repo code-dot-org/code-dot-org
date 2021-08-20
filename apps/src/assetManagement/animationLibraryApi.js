@@ -48,6 +48,29 @@ export function updateDefaultList(listData) {
     });
 }
 
+export function uploadDefaultListMetadata(metadata) {
+  return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(metadata)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(
+          `Default Sprite Metadata Upload Error(${response.status}: ${
+            response.statusText
+          })`
+        );
+      }
+      return Promise.resolve();
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
+}
+
 // Returns the metadata of the list of default sprites in SpriteLab in English
 export function getDefaultListMetadata() {
   return fetch(`/api/v1/animation-library/default-spritelab-metadata`).then(
@@ -91,26 +114,7 @@ export function createDefaultSpriteMetadata(listData) {
 // Regenerates the metadata for the default list of sprites in SpriteLab
 export function regenerateDefaultSpriteMetadata(listData) {
   return createDefaultSpriteMetadata(listData).then(defaultMetadata => {
-    return fetch(`/api/v1/animation-library/default-spritelab-metadata`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(defaultMetadata)
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(
-            `Default Sprite Metadata Upload Error(${response.status}: ${
-              response.statusText
-            })`
-          );
-        }
-        return Promise.resolve();
-      })
-      .catch(err => {
-        return Promise.reject(err);
-      });
+    return uploadDefaultListMetadata(defaultMetadata);
   });
 }
 
