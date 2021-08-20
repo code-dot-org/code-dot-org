@@ -1535,7 +1535,8 @@ class Script < ApplicationRecord
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
-      scriptResourcesPdfUrl: get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: get_unit_resources_pdf_url,
+      updated_at: updated_at.to_s
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
