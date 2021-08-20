@@ -121,6 +121,8 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
   const filteredScriptData = {
     id: scriptData.id,
     csf: !!scriptData.csf,
+    isCsd: scriptData.isCsd,
+    isCsp: scriptData.isCsp,
     hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
