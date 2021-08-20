@@ -26,7 +26,11 @@ export const commands = {
             x: 0,
             y: i * dotSpacing,
             theta: (360 / period) * i * dotSpacing,
-            color: utils.lerpColorFromPalette(this.p5, palette, i / numPoints)
+            color: utils.lerpColorFromPalette(
+              this.p5,
+              palette,
+              (i / numPoints) * utils.PALETTES[palette].length
+            )
           });
         }
         this.backgroundEffect = () => {
