@@ -140,6 +140,20 @@ class ScriptsController < ApplicationController
 
     unit_text = params[:script_text]
     if @script.update_text(unit_params, unit_text, i18n_params, general_params)
+
+      # For migrated scripts, we use the updated_at field to detect potential
+      # write conflicts when a curriculum editor tries to save an out-of-date
+      # script edit page. therefore, touch the `updated_at` column whenever we
+      # we save, even if it did not result an a change to the actual script
+      # object. that way, we'll prevent write conflicts on changes to lesson
+      # groups, as well as on fields which live only in scripts.en.yml.
+      # TODO(dave): consolidate this into the new update api codepath for
+      # migrated scripts, once that codepath exists.
+      if @script.is_migrated
+        @script.touch(:updated_at)
+        @script.save!
+      end
+
       @script.reload
       render json: @script.summarize_for_unit_edit
     else
