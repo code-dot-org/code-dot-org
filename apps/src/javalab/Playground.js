@@ -25,7 +25,7 @@ export default class Playground {
       case PlaygroundSignalType.UPDATE: {
         const {imageUrl, image, audioUrl, audio} = data.detail;
         if (imageUrl) {
-          this.getImgElement().src = imageUrl;
+          this.getImgElement().src = imageUrl + `?t=${Date.now()}`;
         } else {
           // TODO remove this branch once Javabuilder stops sending encoded strings
           const imageString = 'data:image/jpeg;base64,' + image;
@@ -42,7 +42,7 @@ export default class Playground {
 
   setAudio(audioUrl, audio) {
     if (audioUrl) {
-      this.getAudioElement().src = audioUrl;
+      this.getAudioElement().src = audioUrl + `?t=${Date.now()}`;
     } else {
       const audioString = 'data:audio/wav;base64,' + audio;
       this.getAudioElement().src = audioString;
