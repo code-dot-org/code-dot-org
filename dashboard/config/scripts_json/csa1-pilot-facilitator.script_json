@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-20 14:43:50 UTC",
+    "serialized_at": "2021-08-20 15:23:38 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
@@ -2996,7 +2996,7 @@
       "key": "3ca65022-40d6-4fdb-855d-a2dfadb96399",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add a short note to their review group about the types of feedback they find most helpful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a short note to their review group about the types of feedback they find most helpful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Good Feedback"
       },
       "seeding_key": {

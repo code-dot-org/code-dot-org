@@ -1,5 +1,6 @@
 name 'CSA U1L11-L4'
 title 'Check for Understanding'
+height '120'
 description 'Match each term to the correct definition.'
 
 question 'formal parameter'
