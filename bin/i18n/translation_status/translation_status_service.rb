@@ -17,20 +17,24 @@ module I18n
       # days, checks their translation status in every language we support, and then uploads the statuses to the
       # analysis.i18n_string_translation_status Redshift table.
       # @param [Integer] day_count The number of days in the past to look for unique string_key's
-      def update_translation_status(day_count = 7)
-        redshift_client = RedshiftClient.instance
+      # @param [Array<String>] locales All the locale codes we support i.e. en_US, es_MX, de_DE, etc.
+      # @param [String] current_time Record what time we checked the translation status for these strings.
+      #   Use the same time for all the entries so we can tell which batch they were all checked in.
+      #   Timestamp format matches the one supported by Redshift.
+      # @param [RedshiftClient] redshift_client Used to read/write to the Code.org redshift DB.
+      # @param [TranslationService] translation_service Get information about translations.
+      def update_translation_status(
+        day_count = 7,
+        locales = Languages.get_locale.map {|lang| lang[:locale_s]},
+        current_time = Time.now.utc.strftime("%Y-%m-%d %H:%M:%S"),
+        redshift_client = RedshiftClient.instance,
         translation_service = TranslationService.new
+      )
         # Updating the translation status in the Redshift table first requires deleting the existing records and then
         # inserting them. We do this because Redshift doesn't have unique keys, so if we inserted data for a string_key which
         # already exists, then there would be two rows in the database for the string_key.
         delete_translation_status(redshift_client, day_count)
         string_keys = get_all_unique_string_keys(redshift_client, day_count)
-        # All the locale codes we support i.e. en_US, es_MX, de_DE, etc.
-        locales = Languages.get_locale.map {|lang| lang[:locale_s]}
-        # Record what time we checked the translation status for these strings.
-        # Use the same time for all the entries so we can tell which batch they were all checked in.
-        # Timestamp format matches the one supported by Redshift.
-        current_time = Time.now.utc.strftime("%Y-%m-%d %H:%M:%S")
         insert_translation_status(redshift_client, translation_service, locales, string_keys, current_time)
       end
 
