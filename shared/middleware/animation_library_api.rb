@@ -152,7 +152,7 @@ class AnimationLibraryApi < Sinatra::Base
   get %r{/api/v1/animation-library/default-spritelab-metadata} do
     result = Aws::S3::Bucket.
       new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
-      object(ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER).
+      object(ANIMATION_DEFAULT_MANIFEST_JSON).
       get
     content_type 'application/json'
     cache_for 3600
