@@ -8,6 +8,8 @@ import * as redux from '@cdo/apps/redux';
 
 const serverScriptResponse = {
   csf: true,
+  isCsp: false,
+  isCsd: false,
   family_name: 'courseb',
   name: 'courseb-2020',
   hasStandards: false,
@@ -125,6 +127,8 @@ const fullExpectedResult = {
   unitDataByUnit: {
     123: {
       csf: true,
+      isCsp: false,
+      isCsd: false,
       family_name: 'courseb',
       name: 'courseb-2020',
       hasStandards: false,
@@ -397,6 +401,8 @@ describe('sectionProgressLoader.loadScript', () => {
           unitDataByUnit: {
             '0': {
               csf: false,
+              isCsd: undefined,
+              isCsp: undefined,
               family_name: undefined,
               name: undefined,
               hasStandards: undefined,
