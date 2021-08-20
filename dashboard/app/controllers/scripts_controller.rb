@@ -119,6 +119,14 @@ class ScriptsController < ApplicationController
   end
 
   def update
+    if @script.is_migrated && params[:last_updated_at] != @script.updated_at.to_s
+      msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
+      raise msg
+    end
+
+    # TODO: disable this check for migrated scripts once they are using the new,
+    # non-dsl script update api. at that time, the above check on script.updated_at
+    # will provide sufficient protection against write conflicts on migrated scripts.
     if params[:old_unit_text]
       current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
       old_unit_text = params[:old_unit_text].strip
