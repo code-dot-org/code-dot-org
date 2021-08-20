@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-16 21:20:38 UTC",
+    "serialized_at": "2021-08-20 00:10:28 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -7721,7 +7721,7 @@
     },
     {
       "name": "Creating Objects",
-      "url": "https://youtu.be/Cjd5DutdVW0",
+      "url": "https://youtu.be/RdoQv0lUDb0",
       "key": "creating_objects",
       "properties": {
         "type": "Video",
