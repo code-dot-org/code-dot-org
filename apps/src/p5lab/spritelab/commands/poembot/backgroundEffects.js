@@ -80,6 +80,37 @@ export const commands = {
         };
         break;
       }
+      case 'stars': {
+        let stars = [];
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.angleMode(this.p5.DEGREES);
+          this.p5.background('#303030');
+          stars.push({
+            x: utils.randomInt(0, 400),
+            y: utils.randomInt(0, 400),
+            size: utils.randomInt(15, 30),
+            color: utils.randomColorFromPalette(palette)
+          });
+          this.p5.noStroke();
+          stars.forEach(star => {
+            this.p5.push();
+            this.p5.fill(star.color);
+            this.p5.translate(star.x, star.y);
+            for (let i = 0; i < 3; i++) {
+              this.p5.rotate(360 / 5);
+              this.p5.ellipse(0, 0, 1, star.size);
+            }
+            let fadeSpeed = this.p5.map(star.size, 15, 30, 1, 2);
+            star.size -= fadeSpeed;
+            star.y -= 2;
+            this.p5.pop();
+          });
+          stars = stars.filter(star => star.size > 0.1);
+          this.p5.pop();
+        };
+        break;
+      }
       case 'darkCircles': {
         const circles = [];
         const NUM_CIRCLES = 20;
