@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-19 21:57:14 UTC",
+    "serialized_at": "2021-08-20 16:26:36 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "poetry-hoc"
@@ -50,7 +50,7 @@
       "position": 1,
       "properties": {
         "duration": 60,
-        "name": "Lesson 1"
+        "name": "Poetry Hour of Code"
       },
       "seeding_key": {
         "lesson_activity.key": "a000fc42-86aa-42bb-95b7-47f722a2abcf",
@@ -248,6 +248,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_events2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -269,6 +272,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetryHoC_sound"
+        ]
       },
       "bonus": false,
       "seeding_key": {
