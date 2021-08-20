@@ -184,8 +184,14 @@ class HttpCache
               /v3/animations/*
               /v3/files/*
               /v3/libraries/*
-              /level_starter_assets/*
             ),
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
+          },
+          {
+            # Pass through cookies when requesting or deleting starter assets, as user authentication
+            # is required when deleting assets.
+            path: '/level_starter_assets/*',
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
