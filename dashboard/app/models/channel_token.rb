@@ -43,7 +43,7 @@ class ChannelToken < ApplicationRecord
 
         return channel_token if channel_token
 
-        # script_id was recently added to the channel_token table. while the backfills and code changes are
+        # script_id was recently added to the channel_token table. While the backfills and code changes are
         # in progress (https://codedotorg.atlassian.net/browse/LP-1395), script_id will be written to the table
         # but not used in the query for a channel_token yet.
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|

@@ -117,7 +117,7 @@ module LevelsHelper
     return false unless user.present?
 
     if level.channel_backed?
-      return get_channel_for(level, user).present?
+      return get_channel_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
     end
