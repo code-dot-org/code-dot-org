@@ -1151,7 +1151,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   this.JSInterpreter.parse({
     code,
     projectLibraries: this.level.projectLibraries,
-    blocks: dropletConfig.blocks,
+    blocks: this.isSpritelab ? [] : dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,
     initGlobals: injectGamelabGlobals,
