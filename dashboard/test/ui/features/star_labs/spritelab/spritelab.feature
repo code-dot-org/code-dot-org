@@ -1,8 +1,7 @@
 Feature: Sprite Lab
 
 Background:
-  Given I create a student named "Student"
-  And I am on "http://studio.code.org/s/allthethings/lessons/36/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I wait for 3 seconds
@@ -15,7 +14,8 @@ Scenario: Loading the first level
   Then there's an image "spritelab/avatar"
 
 Scenario: Losing the first level
-  Then I press "runButton"
+  Then I reset the puzzle to the starting version
+  And I press "runButton"
   And element "#resetButton" is visible
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
