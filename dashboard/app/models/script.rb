@@ -1927,7 +1927,7 @@ class Script < ApplicationRecord
 
         section.students.each do |student|
           next unless temp_feedback = feedback_hash.dig(student.id, sublevel.id)
-          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(current_level, script_level, student, sublevel_index)
+          feedback[temp_feedback.id] = temp_feedback.summarize_for_csv(sublevel, script_level, student, sublevel_index)
         end
       end
     end
