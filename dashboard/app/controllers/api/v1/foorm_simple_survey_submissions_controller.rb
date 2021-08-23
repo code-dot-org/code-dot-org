@@ -1,6 +1,6 @@
 class Api::V1::FoormSimpleSurveySubmissionsController < ApplicationController
   def create
-    answers = params[:answers]
+    answers = params[:answers] || {}
 
     submission = ::Foorm::SimpleSurveySubmission.new(
       user_id: params[:user_id],

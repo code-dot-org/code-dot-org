@@ -1,7 +1,7 @@
 class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationController
   include Pd::WorkshopSurveyFoormConstants
   def create
-    answers = params[:answers]
+    answers = params[:answers] || {}
 
     # save facilitator answers as separate survey submissions
     # for ease of querying per-facilitator data
