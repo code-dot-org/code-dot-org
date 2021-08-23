@@ -2,8 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedFeedbackDownload as FeedbackDownload} from '@cdo/apps/templates/sectionAssessments/FeedbackDownload';
-import experiments from '@cdo/apps/util/experiments';
-import sinon from 'sinon';
 import {CSVLink} from 'react-csv';
 import i18n from '@cdo/locale';
 
@@ -40,20 +38,10 @@ describe('FeedbackDownload', () => {
     expect(hasHeader(headers, i18n.performanceLevelDetails())).to.be.false;
   });
 
-  it('passes review state header to CSVLink if user is in keep working experiment', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
-
+  it('passes review state header to CSVLink', () => {
     const wrapper = setUp();
     const headers = wrapper.find(CSVLink).props().headers;
     expect(hasHeader(headers, i18n.reviewState())).to.be.true;
-
-    experiments.isEnabled.restore();
-  });
-
-  it('does not pass review state header to CSVLink if user is not in keep working experiment', () => {
-    const wrapper = setUp();
-    const headers = wrapper.find(CSVLink).props().headers;
-    expect(hasHeader(headers, i18n.reviewState())).to.be.false;
   });
 
   it('passes expected file name to CSVLink', () => {
