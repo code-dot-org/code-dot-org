@@ -24,4 +24,30 @@ class ChannelTokenTest < ActiveSupport::TestCase
     assert_equal storage_id, channel_token.storage_id
     assert_equal storage_app_id, channel_token.storage_app_id
   end
+
+  test 'find_or_create_channel_token returns the channel_token if one exists' do
+    level = create :level
+    expected_channel_token = create :channel_token, level: level, storage_id: get_storage_id
+
+    channel_token = ChannelToken.find_or_create_channel_token(
+      level,
+      @fake_ip,
+      get_storage_id,
+      @script.id
+    )
+
+    assert_equal expected_channel_token.id, channel_token.id
+  end
+
+  test 'find_or_create_channel_token will create a new channel token with script_id if no channel token exists' do
+    level = create :level
+    channel_token = ChannelToken.find_or_create_channel_token(
+      level,
+      @fake_ip,
+      get_storage_id,
+      @script.id
+    )
+
+    assert_equal channel_token.script_id, @script.id
+  end
 end
