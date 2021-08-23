@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-20 15:23:38 UTC",
+    "serialized_at": "2021-08-23 16:52:25 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
@@ -3107,7 +3107,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
-        "progression_name": "Creating PainterPlus"
+        "progression_name": "Creating PainterPlus",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Backpack allows students to save and reuse their code in future lessons and projects. Be sure to remind students to update changes to their Backpack to ensure they have the latest version saved."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "98016b24-9e88-4f3c-a314-76c7f599e006",
