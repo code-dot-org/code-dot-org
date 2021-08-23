@@ -2249,6 +2249,8 @@ id-ID:
   header_legal_privacy: Kebijakan privasi
   header_legal_tos: Ketentuan Layanan
   header_tutorials: Tutorial
+  header_screen_reader_hamburger: Menu
+  header_screen_reader_help: Menu bantuan
   app_lab_documentation: Dokumentasi aplikasi Lab
   app_lab_tutorials: Tutorial aplikasi Lab
   game_lab_documentation: Dokumentasi lab permainan
@@ -2567,6 +2569,14 @@ id-ID:
   page_not_available_description: Mohon maaf, halaman yang Anda minta tidak lagi tersedia
     di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link}).
   page_not_available_button: Pulang ke rumah
+  hoc2020_mc_available_code_org: Tersedia di Code.org
+  hoc2020_mc_available_mee: 'Tersedia di Minecraft: Edisi Pendidikan'
+  hoc2020_mc_mee_title: Dongeng minecraft dua desa
+  hoc2020_mc_mee_description: 'Tutorial baru dari Minecraft Hour of Code sekarang
+    tersedia di Minecraft: edisi pendidikan untuk Windows,Mac,Chromebook,dan Ipad.Pelajari
+    dasar koding dan eksplor keragaman dan  penyertaan dengan temanmu! Akses sumber
+    gratis termasuk rencana pembelajaran,video, kurikulum ilmu komputer, ekuitas pelajaran,
+    dan pelatihan guru.'
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   codebytes_skinny_banner_english_only: Bahasa Inggris saja
   footer_privacy_policy: Kebijakan privasi

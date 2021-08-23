@@ -241,7 +241,6 @@
           "VPL - CSD: Sprite Velocity_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -266,7 +265,6 @@
           "VPL - CSD U3 collisions car intro_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -291,7 +289,6 @@
           "VPL - CSD M3 Check-in_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -316,7 +313,6 @@
           "VPL - CSD M3 Theme Introduction_2021"
         ]
       },
-      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [

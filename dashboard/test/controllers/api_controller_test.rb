@@ -23,12 +23,12 @@ class ApiControllerTest < ActionController::TestCase
     end
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
-    @flappy = create(:text_match, :script).script_levels.first.script
+    @flappy = create(:text_match, :with_script).script_levels.first.script
     @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
-    @allthings = create(:text_match, :script).script_levels.first.script
+    @allthings = create(:text_match, :with_script).script_levels.first.script
     @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
@@ -123,7 +123,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with specific script" do
-    script = create(:text_match, :script).script_levels.first.script
+    script = create(:text_match, :with_script).script_levels.first.script
 
     make_text_progress_in_script(@allthings_section.script, @student_allthings)
     make_text_progress_in_script(script, @student_allthings)
