@@ -42,6 +42,6 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::
     assert_equal @simple_survey_form.id, response_body['simple_survey_form_id']
 
     # A submission's answers cannot be null, so we store a blank JSON object string if a submission has no answers
-    assert_equal "{}", Foorm::SimpleSurveySubmission.find(response_body['foorm_submission_id']).foorm_submission.answers
+    assert_equal "{}", Foorm::SimpleSurveySubmission.find(response_body['simple_survey_submission_id']).foorm_submission.answers
   end
 end
