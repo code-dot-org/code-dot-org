@@ -36,7 +36,6 @@
     "instructions_icon": "poet",
     "callout_json": "[]",
     "parent_level_id": 29619,
-    "video_key": "hoc_dance_events",
     "preload_asset_list": null
   },
   "user_id": 1196,
@@ -44,7 +43,7 @@
   "created_at": "2021-08-19T19:41:38.000Z",
   "level_num": "custom",
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-08-19T19:41:38.390+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events2\\\"\"],\"cloned_from\":\"poetryHoC_events2\"},{\"changed_at\":\"2021-08-19 19:42:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-19 19:48:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-19 19:48:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-19T19:41:38.390+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_events2\\\"\"],\"cloned_from\":\"poetryHoC_events2\"},{\"changed_at\":\"2021-08-19 19:42:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-19 19:48:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-19 19:48:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:33:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:34:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,17 +52,29 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="PoemBot_setForegroundEffect">
-              <title name="FG_EFFECT">"bubbles"</title>
+            <block type="PoemBot_setPoem">
+              <title name="BG_EFFECT">"wordsworth"</title>
+              <next>
+                <block type="PoemBot_setForegroundEffect">
+                  <title name="FG_EFFECT">"bubbles"</title>
+                  <next>
+                    <block type="PoemBot_setFont">
+                      <title name="FONT">"Courier"</title>
+                      <next>
+                        <block type="PoemBot_setFontColor">
+                          <value name="COLOR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#339999</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
-        </block>
-        <block type="PoemBot_whenLineShows">
-          <value name="N">
-            <block type="math_number">
-              <title name="NUM">2</title>
-            </block>
-          </value>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
           <mutation>

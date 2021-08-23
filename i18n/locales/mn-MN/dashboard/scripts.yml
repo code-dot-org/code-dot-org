@@ -16569,3 +16569,12 @@ mn:
           lessons:
             lesson-1:
               name: Тойм
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Виджетүүд
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Хичээлүүд
+            lessonGroup-3:
+              display_name: Төсөл

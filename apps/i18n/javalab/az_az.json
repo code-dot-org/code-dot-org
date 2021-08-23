@@ -1,6 +1,7 @@
 {
   "cancel": "İmtina et",
   "compilerError": "Proqramınızı tərtib edə bilmədik. Proqramınızdakı səhvləri axtarın və yenidən cəhd edin.",
+  "delete": "Sil",
   "illegalMethodAccess": "Təhlükəsizlik siyasətimiz tərəfindən bloklanan bir metodu əldə etməyə çalışdınız.",
   "import": "idxal\n",
   "internalCompilerException": "Ups. Proqramınızı tərtib edərkən bizim tərəfimizdə bir səhv var. Yenidən çalışdırın.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
