@@ -3299,3 +3299,7 @@ el:
           lessons:
             lesson-1:
               name: Επισκόπηση
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Έργο

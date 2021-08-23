@@ -1,0 +1,140 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "PoemBot"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Sprite Behaviors\r\n\r\nSprites can have their own behaviors, which are actions they will do over and over while the program runs. To give a sprite a behavior, you need to use this block: [add block]\r\n\r\n* Drag out a green behavior block. Connect the blocks in your workspace. [add block]\r\n* Explore different behaviors. \r\n* *Challenge*: Have your sprite begin two different behaviors at the same time.\r\n",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "true",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "poet",
+    "callout_json": "[]",
+    "parent_level_id": 29615,
+    "preload_asset_list": null
+  },
+  "user_id": 1196,
+  "game_id": 64,
+  "created_at": "2021-08-18T22:06:01.000Z",
+  "level_num": "custom",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-08-18T22:06:01.364+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_spriteProperties\\\"\"],\"cloned_from\":\"poetryHoC_spriteProperties\"},{\"changed_at\":\"2021-08-18 22:25:13 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:26:13 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:27:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:28:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:18:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:19:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:19:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:20:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="PoemBot_setPoem">
+              <title name="BG_EFFECT">"wordsworth"</title>
+              <next>
+                <block type="PoemBot_setForegroundEffect">
+                  <title name="FG_EFFECT">"rain"</title>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <title name="ANIMATION_NAME">"bear"</title>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <title name="LOCATION">{"x":75,"y":325}</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="PoemBot_setBackgroundEffect">
+            <title name="BG_EFFECT">"solid"</title>
+          </block>
+          <block type="PoemBot_setForegroundEffect">
+            <title name="FG_EFFECT">"rain"</title>
+          </block>
+        </category>
+        <category name="Text">
+          <block type="PoemBot_setFont">
+            <title name="FONT">"Arial"</title>
+          </block>
+          <block type="PoemBot_setFontColor">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#993399</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <value name="LOCATION">
+              <block type="gamelab_location_picker">
+                <title name="LOCATION">{"x":325,"y":75}</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <title name="PROPERTY">"scale"</title>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"bear"</title>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <title name="NUM">50</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Behaviors" custom="Behavior">
+          <block type="gamelab_addBehaviorSimple">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <title name="ANIMATION">"bear"</title>
+              </block>
+            </value>
+            <value name="BEHAVIOR">
+              <block type="gamelab_behavior_get">
+                <mutation/>
+                <title name="VAR" id="wandering">wandering</title>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

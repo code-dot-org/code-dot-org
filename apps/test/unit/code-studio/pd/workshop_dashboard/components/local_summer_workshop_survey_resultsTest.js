@@ -119,6 +119,8 @@ describe('Local Summer Workshop Management', () => {
       expect(localSummerWorkshopSurveyResults.find('.well li')).to.have.length(
         2
       );
+
+      server.restore();
     });
 
     it('Displays table after loading is completed for workshop organizer', () => {
@@ -157,6 +159,8 @@ describe('Local Summer Workshop Management', () => {
       expect(
         localSummerWorkshopSurveyResults.find('.well li ul li')
       ).to.have.length(2);
+
+      server.restore();
     });
   });
 });

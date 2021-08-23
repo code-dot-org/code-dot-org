@@ -5,7 +5,7 @@ es-MX:
       reset_password_instructions:
         subject: Instrucciones para cambiar tu contraseña de Code.org
         hello: "¡Hola %{user_email}!"
-        change_password_for: 'Cambiar la contraseña para %{user_name}:'
+        change_password_for: 'Cambiar la contraseña de %{user_name}:'
         change_my_password: 'Cambiar mi contraseña:'
         ignore_if_did_not_request: Si no solicitaste este enlace, puedes ignorar este
           correo electrónico.
@@ -18,5 +18,5 @@ es-MX:
           la contraseña de una cuenta asociada con tu correo electrónico. Para cambiar
           la contraseña de la cuenta correspondiente, usa el enlace de abajo durante
           los próximos %{day_count} días.
-        associated_account_password_wont_change: Las contaseñas no cambiarán hasta
-          que accedas al enlace correspondiente arriba y creas una nueva contraseña.
+        associated_account_password_wont_change: Las contraseñas no cambiarán hasta
+          que accedas al enlace correspondiente arriba y crees una nueva contraseña.

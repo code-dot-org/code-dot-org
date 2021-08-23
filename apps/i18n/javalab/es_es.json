@@ -5,6 +5,7 @@
   "commitCode": "Código de confirmación",
   "compilerError": "No hemos podido compilar el programa. Busca errores en tu programa y vuelve a intentarlo.",
   "console": "Consola",
+  "delete": "Borrar",
   "duplicateProjectFilenameError": "El archivo {filename} ya está en uso en este proyecto. Por favor, elija un nombre diferente",
   "duplicateSupportFilenameError": "El archivo {filename} ya está en uso en el código de soporte de este nivel. Por favor, elija un nombre diferente",
   "editor": "Editor",
