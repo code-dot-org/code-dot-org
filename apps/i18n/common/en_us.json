@@ -811,7 +811,7 @@
   "exploreDataset": "Visualize {datasetName}",
   "export": "Export",
   "exportForWeb": "Export for web",
-  "extrasStageNChallenges": "Lesson {stageNumber} Challenges",
+  "extrasStageNChallenges": "Lesson {lessonNumber} Challenges",
   "extrasStageNumberCompleted": "You Completed Lesson {number}!",
   "extrasTryAChallenge": "Try a Challenge",
   "extrasCreateSomething": "Create Something",

@@ -256,7 +256,7 @@ function speechBubbles(){
     var spriteSpeech=getProp({id: spriteIds[i]}, "speech");
     var spriteTimeout=getProp({id: spriteIds[i]}, "timeout");
 
-    if(spriteTimeout&&spriteSpeech!=undefined){
+    if(spriteTimeout&&spriteSpeech!=undefined&&World.frameCount>1){
       push();
       var widthOfText=textWidth(spriteSpeech);
       var textHeight=16;//font size

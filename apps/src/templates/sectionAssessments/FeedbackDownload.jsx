@@ -12,9 +12,6 @@ import {CSVLink} from 'react-csv';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import experiments from '@cdo/apps/util/experiments';
-
-const keepWorkingExperiment = 'teacher-feedback-review-state';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
@@ -24,6 +21,7 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.keyConcept(), key: 'keyConcept'},
   {label: i18n.performanceLevel(), key: 'performance'},
   {label: i18n.performanceLevelDetails(), key: 'performanceLevelDetails'},
+  {label: i18n.reviewState(), key: 'reviewStateLabel'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
   {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
@@ -34,15 +32,11 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.lessonNumber(), key: 'lessonNum'},
   {label: i18n.lessonName(), key: 'lessonName'},
   {label: i18n.levelHeader(), key: 'levelNum'},
+  {label: i18n.reviewState(), key: 'reviewStateLabel'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
   {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
 ];
-
-const REVIEW_STATE_HEADER = {
-  label: i18n.reviewState(),
-  key: 'reviewStateLabel'
-};
 
 /*
  * Part of the Assessment Tab of Teacher Dashboard.
@@ -70,12 +64,6 @@ class FeedbackDownload extends Component {
     let headers = isCurrentScriptCSD
       ? CSV_FEEDBACK_RUBRIC_HEADERS
       : CSV_FEEDBACK_NO_RUBRIC_HEADERS;
-
-    if (experiments.isEnabled(keepWorkingExperiment)) {
-      // create a copy to avoid modifying original constants
-      headers = [...headers];
-      headers.splice(-3, 0, REVIEW_STATE_HEADER);
-    }
 
     return headers;
   }
