@@ -9,6 +9,7 @@ import progress, {
   setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
+import {allowConsoleWarnings} from '../../../../test/util/throwOnConsole';
 
 const activityPuzzle = {
   ids: ['123'],
@@ -90,6 +91,10 @@ const bonus = {
 };
 
 export default storybook => {
+  if (IN_UNIT_TEST) {
+    allowConsoleWarnings();
+  }
+
   const createStoreForLevels = (
     levels,
     currentLevelIndex,
