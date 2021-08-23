@@ -101,7 +101,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     </details>
 1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
     <details>
       <summary>Troubleshoot: pdftk errors</summary>
 
@@ -153,14 +153,6 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
         ```
     1. close and reopen your current terminal window
     1. make sure that `ulimit -n` returns 8192
-1. Install tidy-html5
-    1. `brew install tidy-html5`
-    1. Take note of the path the package is stored at: `brew info tidy-html5`
-        * ex. `/usr/local/Cellar/tidy-html5/5.8.0`
-    1. Insert the packages path and add it to `~/.bash_profile` or your desired shell configuration file:
-        ```
-        export PATH={INSERT_YOUR_PATH}/bin/tidy:$PATH
-        ```
 1. Install the Xcode Command Line Tools:
     1. `xcode-select --install`
 
