@@ -7,12 +7,14 @@ import StylizedBaseDialog, {
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {connect} from 'react-redux';
 
-class CommitDialog extends React.Component {
+export class UnconnectedCommitDialog extends React.Component {
   state = {
     filesToBackpack: [],
     commitNotes: '',
-    saveInProgress: false,
-    hasSaveError: false
+    backpackSaveInProgress: false,
+    commitSaveInProgress: false,
+    hasBackpackSaveError: false,
+    hasCommitSaveError: false
   };
 
   renderFooter = () => {
@@ -20,8 +22,9 @@ class CommitDialog extends React.Component {
     let footerMessageTitle = '';
     let footerMessageText = '';
     let commitText = i18n.commit();
-    const isCommitButtonDisabled =
-      !this.state.commitNotes || this.state.saveInProgress;
+    const saveInProgress =
+      this.state.backpackSaveInProgress || this.state.commitSaveInProgress;
+    const isCommitButtonDisabled = !this.state.commitNotes || saveInProgress;
     if (this.state.filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
     }
@@ -32,7 +35,10 @@ class CommitDialog extends React.Component {
         <span className="fa fa-spin fa-spinner" style={styles.spinner} />
       );
       footerMessageTitle = i18n.saving();
-    } else if (this.state.hasSaveError) {
+    } else if (
+      this.state.hasBackpackSaveError ||
+      this.state.hasCommitSaveError
+    ) {
       footerIcon = (
         <span className="fa fa-exclamation-circle" style={styles.iconError} />
       );
@@ -53,9 +59,9 @@ class CommitDialog extends React.Component {
           key="cancel"
           type="cancel"
           text={i18n.cancel()}
+          disabled={saveInProgress}
           onClick={this.clearSaveStateAndClose}
         />
-        ,
         <FooterButton
           id="confirmationButton"
           key="confirm"
@@ -69,46 +75,82 @@ class CommitDialog extends React.Component {
   };
 
   commitAndSaveToBackpack = () => {
-    this.props.handleCommit(this.state.commitNotes);
+    this.saveCommit();
     this.saveToBackpack();
+  };
+
+  saveCommit = () => {
+    this.setState({
+      hasCommitSaveError: false,
+      commitSaveInProgress: true
+    });
+    this.props.handleCommit(
+      this.state.commitNotes,
+      this.handleCommitSaveSuccess
+    );
   };
 
   saveToBackpack = () => {
     this.setState({
-      hasSaveError: false,
-      saveInProgress: true
+      hasBackpackSaveError: false,
+      backpackSaveInProgress: true
     });
 
     // TODO: Compile before saving and show error if compile fails
     this.props.backpackApi.saveFiles(
       this.props.sources,
       this.state.filesToBackpack,
-      this.handleSaveError,
-      this.handleSaveSuccess
+      this.handleBackpackSaveError,
+      this.handleBackpackSaveSuccess
     );
   };
 
-  handleSaveError = () => {
+  handleBackpackSaveError = () => {
     this.setState({
-      hasSaveError: true,
-      saveInProgress: false
+      hasBackpackSaveError: true,
+      backpackSaveInProgress: false
     });
   };
 
-  handleSaveSuccess = () => {
+  handleBackpackSaveSuccess = () => {
+    const canClose =
+      !this.state.commitSaveInProgress && !this.state.hasCommitSaveError;
     this.setState({
-      hasSaveError: false,
-      saveInProgress: false,
-      commitNotes: '',
+      hasBackpackSaveError: false,
+      backpackSaveInProgress: false,
       filesToBackpack: []
     });
-    this.props.handleClose();
+    if (canClose) {
+      this.props.handleClose();
+    }
+  };
+
+  handleCommitSaveError = () => {
+    this.setState({
+      hasCommitSaveError: true,
+      commitSaveInProgress: false
+    });
+  };
+
+  handleCommitSaveSuccess = () => {
+    const canClose =
+      !this.state.backpackSaveInProgress && !this.state.hasBackpackSaveError;
+    this.setState({
+      hasCommitSaveError: false,
+      commitSaveInProgress: false,
+      commitNotes: ''
+    });
+    if (canClose) {
+      this.props.handleClose();
+    }
   };
 
   clearSaveStateAndClose = () => {
     this.setState({
-      hasSaveError: false,
-      saveInProgress: false
+      hasBackpackSaveError: false,
+      backpackSaveInProgress: false,
+      hasCommitSaveError: false,
+      commitSaveInProgress: false
     });
     this.props.handleClose();
   };
@@ -123,6 +165,10 @@ class CommitDialog extends React.Component {
     }
 
     this.setState({filesToBackpack});
+  };
+
+  updateNotes = commitNotes => {
+    this.setState({commitNotes});
   };
 
   render() {
@@ -142,7 +188,7 @@ class CommitDialog extends React.Component {
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
-            onChangeNotes={commitNotes => this.setState({commitNotes})}
+            onChangeNotes={this.updateNotes}
           />
         }
         renderFooter={this.renderFooter}
@@ -153,7 +199,7 @@ class CommitDialog extends React.Component {
   }
 }
 
-CommitDialog.propTypes = {
+UnconnectedCommitDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   files: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClose: PropTypes.func.isRequired,
@@ -278,4 +324,4 @@ const styles = {
 export default connect(state => ({
   sources: state.javalab.sources,
   backpackApi: state.javalab.backpackApi
-}))(CommitDialog);
+}))(UnconnectedCommitDialog);

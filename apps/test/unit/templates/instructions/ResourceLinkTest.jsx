@@ -17,5 +17,6 @@ describe('ResourceLink', () => {
     const windowOpenStub = sinon.stub(window, 'open');
     wrapper.instance().selectResource({preventDefault: () => {}});
     expect(windowOpenStub.callCount).to.equal(1);
+    sinon.restore();
   });
 });
