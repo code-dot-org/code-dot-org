@@ -91,6 +91,8 @@ const bonus = {
 };
 
 export default storybook => {
+  // TODO: allowConsoleWarnings can be removed once react-tooltip has been upgraded
+  // to a version that no longer uses unsafe lifecycle hooks.
   if (IN_UNIT_TEST) {
     allowConsoleWarnings();
   }
