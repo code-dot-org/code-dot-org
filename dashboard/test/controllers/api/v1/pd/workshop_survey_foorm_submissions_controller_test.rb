@@ -28,6 +28,17 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ::ActionContro
     assert_not_nil response_body['survey_submission_id']
   end
 
+  test 'can create and save blank survey submission' do
+    response = post :create, params: @default_params.except(:answers)
+    assert_response :created
+    response_body = JSON.parse(response.body)
+    assert_not_nil response_body['submission_id']
+    assert_not_nil response_body['survey_submission_id']
+
+    # A submission's answers cannot be null, so we store a blank JSON object string if a submission has no answers
+    assert_equal "{}", Pd::WorkshopSurveyFoormSubmission.find(response_body['survey_submission_id']).foorm_submission.answers
+  end
+
   test 'return conflict if user had already submitted a response' do
     params = {
       answers: {
