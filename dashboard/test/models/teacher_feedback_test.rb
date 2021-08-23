@@ -365,4 +365,44 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     # we get most recent feedback for each level sorted by created date
     assert_equal([expected_feedback2, expected_feedback1], retrieved)
   end
+
+  test 'summarize_for_csv returns expects values' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    level = create :level
+    script_level = create :script_level, levels: [level]
+    script = script_level.script
+
+    teacher_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: level, performance: 'performanceLevel3', review_state: TeacherFeedback::REVIEW_STATES.keepWorking, comment: "Keep trying"
+
+    summarized_feedback = teacher_feedback.summarize_for_csv(level, script_level, student)
+
+    assert_equal "Limited Evidence", summarized_feedback[:performance]
+    assert_equal "Needs more work", summarized_feedback[:reviewStateLabel]
+    assert_equal script_level.lesson.localized_title, summarized_feedback[:lessonName]
+    assert_equal "Keep trying", summarized_feedback[:comment]
+  end
+
+  test 'summarize_for_csv returns expects values for sublevel' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student(student)
+
+    parent_level = create :bubble_choice_level, :with_sublevels
+    child_level = parent_level.sublevels.first
+    script_level = create :script_level, levels: [parent_level]
+    script = script_level.script
+
+    teacher_feedback = create :teacher_feedback, teacher: teacher, student: student, script: script, level: child_level, comment: "Great work"
+
+    summarized_feedback = teacher_feedback.summarize_for_csv(child_level, script_level, student, 0)
+
+    assert_equal "Great work", summarized_feedback[:comment]
+    assert_equal "1a", summarized_feedback[:levelNum]
+    assert_equal "Never reviewed", summarized_feedback[:reviewStateLabel]
+  end
 end

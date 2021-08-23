@@ -154,7 +154,7 @@ class TeacherFeedback < ApplicationRecord
     }
   end
 
-  # Passing level, script_level and student into the function since it's
+  # Passing level, script_level and student into summarize_for_csv since it's
   # called in a loop to avoid N+1s
   def summarize_for_csv(level, script_level, student, sublevel_index = nil)
     rubric_performance_json_to_ruby = {
