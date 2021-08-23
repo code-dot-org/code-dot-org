@@ -185,7 +185,7 @@ export class DetailViewContents extends React.Component {
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
