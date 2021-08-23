@@ -79,7 +79,7 @@ describe('metaTagDescription() for valid urls', () => {
   </html>`;
 
   beforeEach(() => {
-    sandbox = sinon.sandbox.create();
+    sandbox = sinon.createSandbox();
   });
 
   afterEach(() => {

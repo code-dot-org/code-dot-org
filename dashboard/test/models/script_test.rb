@@ -31,7 +31,7 @@ class ScriptTest < ActiveSupport::TestCase
     # *before* generating the caches.
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
-    @cacheable_level = create(:level, :script, level_concept_difficulty: create(:level_concept_difficulty))
+    @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
 
     # ensure that we have freshly generated caches with this unit_group/unit
     UnitGroup.clear_cache
@@ -1812,7 +1812,6 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal "Level #{level_num}_copy", level.name
       old_level = Level.find_by_name("Level #{level_num}")
       assert_equal old_level.level_num, level.level_num
-      assert_equal old_level.id, level.parent_level_id
       assert_equal '_copy', level.name_suffix
     end
 

@@ -11162,3 +11162,32 @@ ro:
           lessons:
             lesson-1:
               name: Prezentare generală
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Instrumente
+            lesson-18:
+              name: Widget-uri
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecții
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Conţinut
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut

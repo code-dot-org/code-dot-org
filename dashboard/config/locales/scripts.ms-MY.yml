@@ -7844,3 +7844,169 @@ ms:
           lessons:
             lesson-1:
               name: Gambaran Keseluruhan
+        csa1-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              description_student: Hari ini anda berjaya melengkapkan Soalan Respons
+                Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan
+                untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan
+                dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada
+                tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa
+                anda meninggalkan tempat tersebut.
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut
+                cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi
+                soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter`
+                penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh
+                Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan
+                rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih
+                soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai
+                penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ
+                ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok
+                binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan
+                ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui
+                secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+            lesson-19:
+              description_student: Hari ini anda berjaya melengkapkan Soalan Respons
+                Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan
+                untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan
+                dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada
+                tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa
+                anda meninggalkan tempat tersebut.
+              description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut
+                cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi
+                soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter`
+                penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh
+                Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan
+                rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih
+                soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai
+                penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ
+                ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok
+                binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan
+                ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui
+                secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+        csa2-pilot-facilitator:
+          lessons:
+            Defining Attributes:
+              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami
+                mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan
+                Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam
+                pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang
+                proses yang dipanggil sebagai pengkapsulan data. '
+              description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta
+                objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh
+                ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian`
+                dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
+            Using Variables:
+              name: Menggunakan Pemboleh Ubah
+              description_student: Pemboleh ubah memberikan cara untuk jurutera perisian
+                menyimpan maklumat. Jenis maklumat yang perlu kita simpan menentukan
+                jenis pemboleh ubah yang perlu kita gunakan, jenis datanya dan cara
+                kita dapat menggunakannya. Di dalam pelajaran ini, anda menggunakan
+                pemboleh ubah bagi menyimpan maklumat yang digunakan untuk mencipta
+                objek `Pelukis` dan menyimpan input maklumat oleh pengguna.
+              description_teacher: Di dalam pelajaran ini, pelajar meneroka kefungsian
+                pemboleh ubah dan membezakan antara pemboleh ubah primitif dan rujukan.
+                Pelajar menggunakan kelas `Pengimbas` untuk mendapatkan input daripada
+                pengguna dan menentukan pemboleh ubah untuk menyimpan nilai yang diberikan
+                oleh pengguna. Nilai ini digunakan untuk membina objek `Pelukis` di
+                dalam Kejiranan.
+            Writing Constructors:
+              name: Pembina Penulisan
+              description_student: Projek trak makanan Pastri Mercury memerlukan bantuan
+                anda! Pemiliknya mahu menjual pencuci mulut di dalam Kejiranan tetapi
+                perlu boleh memasukkan dan menyimpan pencuci mulut mereka di dalam
+                atur cara. Anda telah diminta menggunakan kemahiran kejuruteraan perisian
+                anda untuk mencipta atur cara yang boleh mencipta objek pencuci mulut
+                supaya pemiliknya dapat menjejaki inventori. Anda mulakan dengan mencipta
+                kelas `Pencuci Mulut` supaya pemiliknya dapat memasukkan perisa, kuantiti
+                tersedia dan harga bagi setiap pencuci mulut yang mereka jual.
+              description_teacher: Pelajar diperkenalkan kepada Projek trak makanan
+                Pastri Mercury dan keperluan pemilik untuk atur cara yang bertujuan
+                memasukkan dan menyimpan item pencuci mulut. Sebagai jurutera perisian,
+                pelajar menggunakan strategi reka bentuk berorientasikan objek untuk
+                mengenal pasti atribut yang perlu dan jenis data yang sesuai bagi
+                kelas `Pencuci Mulut`. Pelajar menulis pembina dan menggunakan objek
+                `Pengimbas` untuk mendapatkan nilai bagi pemboleh ubah contoh bagi
+                memulakan objek `Pencuci Mulut`.
+            Adding Multiple Constructors:
+              name: Menambah Pelbagai Pembina
+            Manipulating Variables and Object Data:
+              name: Memanipulasi Pemboleh Ubah dan Data Objek
+            Minimizing Errors in Initialization:
+              name: Meminimumkan Ralat dalam Permulaan
+            Writing Constructors for Hierarchies:
+              name: Pembina Penulisan untuk Hierarki
+            Accessing Object Data:
+              name: Mengakses Data Objek
+            Modifying Object Data:
+              name: Mengubah Suai Data Objek
+            Displaying Object Information:
+              name: Memaparkan Maklumat Objek
+            The Neighborhood Store Management Project - Day 1:
+              name: Projek Pengurusan Storan Kejiranan - Hari 1
+            The Neighborhood Store Management Project - Day 2:
+              name: Projek Pengurusan Storan Kejiranan - Hari 2
+            The Neighborhood Store Management Project - Day 3:
+              name: Projek Pengurusan Storan Kejiranan - Hari 3
+            new lesson:
+              description_student: 'Melalui pengalaman kami di dalam Kejiranan, kami
+                mengetahui bahawa kelas dan objek ialah komponen utama bahasa pengaturcaraan
+                Java. Tetapi bagaimanakah sebenarnya kelas mencipta objek? Di dalam
+                pelajaran ini, anda menerokai cara objek dicipta dan belajar tentang
+                proses yang dipanggil sebagai pengkapsulan data. '
+              description_teacher: Di dalam pelajaran nirplag ini, pelajar mencipta
+                objek dan mewakili atribut yang berkaitan dengan menggunakan pemboleh
+                ubah contoh. Pelajar mempelajari perbezaan antara `umum` dan `persendirian`
+                dan tujuan pengkapsulan untuk menyembunyikan pelaksanaan dalaman objek.
+            lesson-2:
+              name: Menggunakan Pemboleh Ubah
+              description_student: Pemboleh ubah memberikan cara untuk jurutera perisian
+                menyimpan maklumat. Jenis maklumat yang perlu kita simpan menentukan
+                jenis pemboleh ubah yang perlu kita gunakan, jenis datanya dan cara
+                kita dapat menggunakannya. Di dalam pelajaran ini, anda menggunakan
+                pemboleh ubah bagi menyimpan maklumat yang digunakan untuk mencipta
+                objek `Pelukis` dan menyimpan input maklumat oleh pengguna.
+              description_teacher: Di dalam pelajaran ini, pelajar meneroka kefungsian
+                pemboleh ubah dan membezakan antara pemboleh ubah primitif dan rujukan.
+                Pelajar menggunakan kelas `Pengimbas` untuk mendapatkan input daripada
+                pengguna dan menentukan pemboleh ubah untuk menyimpan nilai yang diberikan
+                oleh pengguna. Nilai ini digunakan untuk membina objek `Pelukis` di
+                dalam Kejiranan.
+            lesson-3:
+              name: Pembina Penulisan
+              description_student: Projek trak makanan Pastri Mercury memerlukan bantuan
+                anda! Pemiliknya mahu menjual pencuci mulut di dalam Kejiranan tetapi
+                perlu boleh memasukkan dan menyimpan pencuci mulut mereka di dalam
+                atur cara. Anda telah diminta menggunakan kemahiran kejuruteraan perisian
+                anda untuk mencipta atur cara yang boleh mencipta objek pencuci mulut
+                supaya pemiliknya dapat menjejaki inventori. Anda mulakan dengan mencipta
+                kelas `Pencuci Mulut` supaya pemiliknya dapat memasukkan perisa, kuantiti
+                tersedia dan harga bagi setiap pencuci mulut yang mereka jual.
+              description_teacher: Pelajar diperkenalkan kepada Projek trak makanan
+                Pastri Mercury dan keperluan pemilik untuk atur cara yang bertujuan
+                memasukkan dan menyimpan item pencuci mulut. Sebagai jurutera perisian,
+                pelajar menggunakan strategi reka bentuk berorientasikan objek untuk
+                mengenal pasti atribut yang perlu dan jenis data yang sesuai bagi
+                kelas `Pencuci Mulut`. Pelajar menulis pembina dan menggunakan objek
+                `Pengimbas` untuk mendapatkan nilai bagi pemboleh ubah contoh bagi
+                memulakan objek `Pencuci Mulut`.
+            lesson-4:
+              name: Menambah Pelbagai Pembina
+            lesson-5:
+              name: Memanipulasi Pemboleh Ubah dan Data Objek
+            lesson-6:
+              name: Meminimumkan Ralat dalam Permulaan
+            lesson-7:
+              name: Pembina Penulisan untuk Hierarki
+            lesson-8:
+              name: Mengakses Data Objek
+            lesson-9:
+              name: Mengubah Suai Data Objek
+            lesson-10:
+              name: Memaparkan Maklumat Objek
+            lesson-11:
+              name: Projek Pengurusan Storan Kejiranan - Hari 1
+            lesson-12:
+              name: Projek Pengurusan Storan Kejiranan - Hari 2
+            lesson-13:
+              name: Projek Pengurusan Storan Kejiranan - Hari 3

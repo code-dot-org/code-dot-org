@@ -4274,8 +4274,12 @@ he:
         csa1-pilot:
           lessons:
             lesson-21: {}
-        csa2-pilot: {}
-        csa3-pilot: {}
+        csa2-pilot:
+          lessons:
+            lesson-1: {}
+        csa3-pilot:
+          lessons:
+            lesson-16: {}
         csa4-pilot: {}
         csa5-pilot: {}
         csa6-pilot: {}
@@ -4590,6 +4594,62 @@ he:
             lesson-10: {}
             lesson-7: {}
             lesson-11: {}
+            lesson-12:
+              name: כלים
+            lesson-13: {}
+            lesson-18:
+              name: ווידג'טים
+          lesson_groups:
+            lessonGroup-2:
+              display_name: שיעורים
+            lessonGroup-3:
+              display_name: פּרוֹיֶקט
         hello-world-draft:
           lessons:
             lesson-1: {}
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform: {}
+            Navigating lesson plans and resources: {}
+            Navigating support: {}
+            lesson-4: {}
+            lesson-3: {}
+            lesson-8: {}
+        csa1-pilot-facilitator:
+          lessons:
+            Unit 1 Pilot Survey: {}
+            lesson-21: {}
+        csa2-pilot-facilitator:
+          lessons:
+            Unit 2 Pilot Survey: {}
+            lesson-1: {}
+        csa3-pilot-facilitator:
+          lessons:
+            Unit 3 Pilot Survey: {}
+            lesson-16: {}
+        csa4-pilot-facilitator:
+          lessons:
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+        csa5-pilot-facilitator:
+          lessons:
+            Reversing Elements: {}
+            Shifting Elements: {}
+            Finding Duplicates: {}
+            Searching for Elements: {}
+            A Sustainable Neighborhood Project - Day 1: {}
+            A Sustainable Neighborhood Project - Day 2: {}
+            A Sustainable Neighborhood Project - Day 3: {}
+            FRQ Day: {}
+            Assessment Day: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
