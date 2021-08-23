@@ -1,5 +1,6 @@
 import {PlaygroundSignalType, STATUS_MESSAGE_PREFIX} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
+import calculator from './PlaygroundLatencyCalculator';
 
 export default class Playground {
   constructor(onOutputMessage, onNewlineMessage, sendMessage) {
@@ -19,20 +20,21 @@ export default class Playground {
       }
       case PlaygroundSignalType.EXIT: {
         this.isRunning = false;
-        this.setAudio(data.detail.audioUrl, data.detail.audio);
+        this.getAudioElement().src = data.detail.audioUrl + `?t=${Date.now()}`;
         break;
       }
       case PlaygroundSignalType.UPDATE: {
-        const {imageUrl, image, audioUrl, audio} = data.detail;
+        const {imageUrl, audioUrl} = data.detail;
+
         if (imageUrl) {
           this.getImgElement().src = imageUrl + `?t=${Date.now()}`;
-        } else {
-          // TODO remove this branch once Javabuilder stops sending encoded strings
-          const imageString = 'data:image/jpeg;base64,' + image;
-          this.getImgElement().src = imageString;
         }
 
-        this.setAudio(audioUrl, audio);
+        if (audioUrl) {
+          this.getAudioElement().src = audioUrl + `?t=${Date.now()}`;
+        }
+
+        calculator.onUpdateReceived();
         break;
       }
       default:

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import PreviewPaneHeader from './PreviewPaneHeader';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import {toggleVisualizationCollapsed} from './javalabRedux';
+import calculator from './PlaygroundLatencyCalculator';
 
 const PLAYGROUND_CONTAINER_ID = 'playground-container';
 const PLAYGROUND_SERVER_WIDTH = 400;
@@ -34,6 +35,7 @@ class PlaygroundVisualizationColumn extends React.Component {
       ((event.clientY - rect.y) / rect.height) * PLAYGROUND_SERVER_HEIGHT
     );
     console.log(`PLAYGROUND clicked (${normalizedX}, ${normalizedY})`);
+    calculator.onClick();
 
     this.props.onPlaygroundClicked(normalizedX, normalizedY);
   };
