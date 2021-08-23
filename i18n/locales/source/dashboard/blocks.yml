@@ -1074,6 +1074,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1210,7 +1212,7 @@ en:
       gamelab_patrollingUpDown:
         text: patrolling up and down
       gamelab_playSound:
-        text: playSound [SOUND][0]
+        text: play sound [SOUND][0]
       gamelab_pointInDirection:
         text: point [SPRITE][0] [DIRECTION][1]
         options:
@@ -1353,12 +1355,16 @@ en:
         text: "[SPRITE][0] begins avoiding [TARGET][1]"
       gamelab_startFollowing:
         text: "[SPRITE][0] begins following [TARGET][1]"
+      gamelab_startGliding:
+        text: "[SPRITE][0] starts gliding"
       gamelab_stopAvoiding:
         text: "[SPRITE][0] stops avoiding other sprites"
       gamelab_stopCollectingData:
         text: stop collecting data
       gamelab_stopFollowing:
         text: "[SPRITE][0] stops following other sprites"
+      gamelab_stopGliding:
+        text: "[SPRITE][0] stops gliding"
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_textJoin:
@@ -1868,6 +1874,21 @@ en:
           BG_EFFECT:
             '"solid"': solid
             '"rainbow"': rainbow
+      PoemBot_setFont:
+        text: set font [FONT][0]
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Georgia"': Georgia
+            '"Palatino"': Palatino
+            '"Times"': Times
+            '"Courier"': Courier
+            '"Arial Black"': Arial Black
+            '"Impact"': Impact
+            '"Tahoma"': Tahoma
+            '"Verdana"': Verdana
+      PoemBot_setFontColor:
+        text: set font color [COLOR][0]
       PoemBot_setForegroundEffect:
         text: set foreground effect [FG_EFFECT][0]
         options:
@@ -1892,6 +1913,8 @@ en:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
       PoemBot_textConcat:
         text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+      PoemBot_whenLineShows:
+        text: when line [N][0] shows
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:
