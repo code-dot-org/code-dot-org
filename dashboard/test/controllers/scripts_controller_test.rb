@@ -652,6 +652,32 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'cannot update migrated unit with outdated timestamp' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: unit
+    create :lesson, script: unit, lesson_group: lesson_group
+    stub_file_writes(unit.name)
+
+    unit.reload
+    timestamp = (unit.updated_at - 1).to_s
+    old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+
+    e = assert_raises do
+      post :update, params: {
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        last_updated_at: timestamp,
+        script_text: old_unit_dsl,
+        old_unit_text: old_unit_dsl
+      }
+    end
+    assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
+  end
+
   test 'can update migrated unit containing migrated script levels' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
