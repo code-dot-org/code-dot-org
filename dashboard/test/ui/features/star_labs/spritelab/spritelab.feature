@@ -25,7 +25,8 @@ Scenario: Losing the first level
   And element "#resetButton" is hidden
 
 Scenario: Winning the first level
-  Then I press dropdown number 6
+  Then I reset the puzzle to the starting version
+  And I press dropdown number 6
   And the dropdown is visible
   And I select item 1 from the dropdown
   And I wait for 1 seconds
