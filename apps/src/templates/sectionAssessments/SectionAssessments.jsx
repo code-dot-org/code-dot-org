@@ -83,7 +83,7 @@ class SectionAssessments extends Component {
     matchDetailDialogOpen: false
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     const {scriptId, asyncLoadAssessments, sectionId} = this.props;
     asyncLoadAssessments(sectionId, scriptId);
   }
