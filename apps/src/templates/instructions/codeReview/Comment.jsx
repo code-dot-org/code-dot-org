@@ -51,9 +51,7 @@ export default class Comment extends Component {
           <span style={styles.nameSuffix}>
             {isFromTeacher && (
               <Tooltip text={javalabMsg.onlyVisibleToYou()} place="top">
-                <span style={styles.tooltipContent}>
-                  {teacherCommentSuffix}
-                </span>
+                {teacherCommentSuffix}
               </Tooltip>
             )}
             {isFromProjectOwner && authorCommentSuffix}
@@ -151,9 +149,6 @@ const styles = {
   },
   nameSuffix: {
     fontStyle: 'italic'
-  },
-  tooltipContent: {
-    fontStyle: 'normal'
   },
   ellipsisMenu: {
     ...sharedIconStyles,
