@@ -1,0 +1,24 @@
+%h1 Delete User Progress
+
+%p You are about to <strong>permanently</strong> delete progress (level status and source code) for:
+
+= form_tag(delete_progress_path, method: :post) do
+  =hidden_field_tag :user_id, @target_user.id
+  User:
+  %strong= @target_user.username
+  %br
+  =hidden_field_tag :script_id, @script.id
+  Script:
+  %strong= @script.name
+  %br
+  Levels affected:
+  %strong= @user_level_count
+  %br
+  %br
+  Reason:
+  %br
+  =text_area_tag :reason, '', placeholder: 'required'
+  %br
+  %br
+  =submit_tag 'Delete Progress'
+
