@@ -118,7 +118,7 @@ social:
     <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/nhat-nguyen.jpg" style="border-radius:50%; width:55%" alt="Nhat Nguyen">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
     Recent Grad
