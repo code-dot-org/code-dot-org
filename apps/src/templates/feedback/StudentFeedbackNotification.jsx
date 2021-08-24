@@ -16,7 +16,7 @@ export default class StudentFeedbackNotification extends Component {
     };
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     const {studentId} = this.props;
 
     $.ajax({

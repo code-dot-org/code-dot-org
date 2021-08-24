@@ -31,7 +31,7 @@ export default class PropertyRow extends React.Component {
     isValidValue: true
   };
 
-  UNSAFE_componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps) {
     this.setState({
       value: newProps.initialValue,
       isValidValue: true

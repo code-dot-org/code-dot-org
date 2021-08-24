@@ -31,11 +31,11 @@ export default class AnimationPreview extends React.Component {
     extraLeftMargin: 0
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.precalculateRenderProps(this.props);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.precalculateRenderProps(nextProps);
     if (nextProps.playBehavior === PlayBehavior.ALWAYS_PLAY && !this.timeout_) {
       this.advanceFrame();

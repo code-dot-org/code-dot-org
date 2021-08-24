@@ -42,7 +42,7 @@ export default class FormController extends React.Component {
     this.onInitialize();
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     let newPage;
     if (
       this.constructor.sessionStorageKey &&
@@ -63,7 +63,7 @@ export default class FormController extends React.Component {
   /**
    * @override
    */
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) {
     // If we got new errors, navigate to the first page containing errors
     if (this.state.errors.length === 0 && nextState.errors.length > 0) {
       for (let i = 0; i < this.getPageComponents().length; i++) {
