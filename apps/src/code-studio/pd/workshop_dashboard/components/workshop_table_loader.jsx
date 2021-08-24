@@ -26,7 +26,7 @@ export default class WorkshopTableLoader extends React.Component {
     workshops: null
   };
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     this.load = _.debounce(this.load, 200);
   }
 
@@ -34,7 +34,7 @@ export default class WorkshopTableLoader extends React.Component {
     this.load();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (!_.isEqual(this.props, nextProps)) {
       this.abortPendingRequests();
       this.load(nextProps);
