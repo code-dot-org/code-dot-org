@@ -6,11 +6,12 @@
     "properties": {
       "is_migrated": true,
       "has_verified_resources": true,
-      "tts": true
+      "tts": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 20:51:32 UTC",
+    "serialized_at": "2021-08-24 14:38:14 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd1-2021"
@@ -39,7 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to Code.org and CS Discoveries.\n\n**Suggested Time:** 8 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Code.org and CS Discoveries.\n\n**Suggested Time:** 8 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org and CS Discoveries.\n\n**Suggested Time:** 8 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -55,7 +57,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 2 minutes"
+        "overview": "**You will:**\n\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 2 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 2 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
