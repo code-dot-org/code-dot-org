@@ -33,7 +33,7 @@ export class ImageWithStatus extends Component {
     };
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.src !== nextProps.src) {
       this.setState({imageStatus: STATUS.LOADING});
     }

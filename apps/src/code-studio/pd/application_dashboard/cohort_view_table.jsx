@@ -55,7 +55,7 @@ export class CohortViewTable extends React.Component {
     };
   }
 
-  UNSAFE_componentWillUpdate() {
+  componentWillUpdate() {
     this.constructColumns();
   }
 
