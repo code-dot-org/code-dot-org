@@ -49,13 +49,13 @@ export class QuickView extends React.Component {
     this.loadRequest = null;
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
       this.load(nextProps.regionalPartnerFilter.value);
     }
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     const statusList = getApplicationStatuses(this.props.route.viewType);
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,

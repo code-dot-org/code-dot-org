@@ -390,7 +390,7 @@ export default class CensusMapReplacement extends Component {
     return infoWindowDom;
   };
 
-  UNSAFE_componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps) {
     if (newProps.school !== this.props.school) {
       this.updateCensusMapSchool(newProps.school);
     }
