@@ -876,6 +876,11 @@ class LevelsControllerTest < ActionController::TestCase
     get :show, params: {id: my_level, game_id: my_level.game}
   end
 
+  test 'should show applab level' do
+    my_level = create :applab, type: 'Applab'
+    get :show, params: {id: my_level, game_id: my_level.game}
+  end
+
   test 'should show legacy unplugged level' do
     level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
     get :show, params: {id: level, game_id: level.game}
