@@ -79,7 +79,7 @@ class PiskelEditor extends React.Component {
     this.piskel = undefined;
   }
 
-  UNSAFE_componentWillReceiveProps(newProps) {
+  componentWillReceiveProps(newProps) {
     if (newProps.selectedAnimation !== this.props.selectedAnimation) {
       this.loadSelectedAnimation_(newProps);
     }

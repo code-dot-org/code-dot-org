@@ -33,7 +33,7 @@ class LessonLockDialog extends React.Component {
     };
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.saving) {
       return;
     }
