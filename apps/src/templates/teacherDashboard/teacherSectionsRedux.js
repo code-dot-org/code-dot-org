@@ -571,7 +571,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     hidden: false,
     isAssigned: undefined,
     restrictSection: false,
-    codeReviewEnabled: false
+    codeReviewEnabled: true
   };
 }
 

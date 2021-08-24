@@ -365,4 +365,31 @@ describe('EditSectionForm', () => {
     expect(wrapper.find('CodeReviewField').length).to.equal(1);
     experimentStub.restore();
   });
+
+  it('does not render CodeReviewField for non-csa-pilot teacher', () => {
+    const experimentStub = sinon.stub(experiments, 'isEnabled');
+    experimentStub.withArgs('csa-pilot').returns(false);
+    experimentStub.withArgs('csa-pilot-facilitators').returns(false);
+    const wrapper = shallow(
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={() => {}}
+        handleClose={() => {}}
+        editSectionProperties={() => {}}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
+        sections={{}}
+        section={{...noStudentsSection, loginType: SectionLoginType.clever}}
+        isSaveInProgress={false}
+        textToSpeechUnitIds={[]}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
+        updateHiddenScript={() => {}}
+        assignedUnitName="script name"
+      />
+    );
+    expect(wrapper.find('CodeReviewField').length).to.equal(0);
+    experimentStub.restore();
+  });
 });

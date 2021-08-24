@@ -75,7 +75,7 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: false
+    code_review_enabled: true
   },
   {
     id: 12,
@@ -97,7 +97,7 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: false
+    code_review_enabled: true
   },
   {
     id: 307,
@@ -119,7 +119,7 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: false
+    code_review_enabled: true
   }
 ];
 
@@ -618,7 +618,7 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: false
+        codeReviewEnabled: true
       });
     });
   });
@@ -646,7 +646,7 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: false
+        codeReviewEnabled: true
       });
     });
   });
@@ -787,7 +787,7 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: false
+      code_review_enabled: true
     };
 
     function successResponse(customProps = {}) {
@@ -939,7 +939,7 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          codeReviewEnabled: false
+          codeReviewEnabled: true
         }
       });
     });
@@ -995,7 +995,7 @@ describe('teacherSectionsRedux', () => {
       script_id: null,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: false
+      code_review_enabled: true
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1228,7 +1228,7 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: false
+      code_review_enabled: true
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
