@@ -138,5 +138,22 @@ export const POEMS = {
       'Maybe it just sags ',
       'Like a heavy load. '
     ]
+  },
+  rios: {
+    author: 'Alberto Rios',
+    title: "Don't Go Into the Library",
+    lines: [
+      'The library is the book of books,',
+      'Its concrete and wood and glass covers',
+      '',
+      'Keeping within them the very big,',
+      'Very long story of everything.',
+      '',
+      'The library is dangerous, full',
+      'Of answers. If you go inside,',
+      '',
+      'You may not come out',
+      'The same person who went in.'
+    ]
   }
 };
