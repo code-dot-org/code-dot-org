@@ -652,6 +652,36 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'updating migrated unit without differences updates timestamp' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Timecop.freeze do
+      unit = create :script, is_migrated: true
+      lesson_group = create :lesson_group, script: unit
+      create :lesson, script: unit, lesson_group: lesson_group
+      stub_file_writes(unit.name)
+
+      unit.reload
+      old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
+      updated_at = unit.updated_at
+
+      Timecop.travel 1.minute
+
+      post :update, params: {
+        id: unit.id,
+        script: {name: unit.name},
+        is_migrated: true,
+        last_updated_at: updated_at.to_s,
+        script_text: old_unit_dsl,
+        old_unit_text: old_unit_dsl
+      }
+      assert_response :success
+      unit.reload
+      refute_equal updated_at, unit.updated_at
+    end
+  end
+
   test 'cannot update migrated unit with outdated timestamp' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
