@@ -93,6 +93,7 @@ class CodeReviewCommentsController < ApplicationController
       isResolved: !!comment.is_resolved,
       isFromTeacher: !!comment.is_from_teacher,
       isFromCurrentUser: !!(comment.commenter == current_user),
+      isFromProjectOwner: !!(comment.commenter == @project_owner),
       isFromOlderVersionOfProject: false
     }
   end
