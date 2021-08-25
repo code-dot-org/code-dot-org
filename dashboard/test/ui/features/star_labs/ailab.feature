@@ -1,5 +1,6 @@
 Feature: AI Lab
 
+  @no_circle
   @as_student
   Scenario: Training a model with an in-house dataset and importing it into App Lab
     Given I am on "http://studio.code.org/s/allthethings/lessons/43/levels/1"
@@ -9,7 +10,7 @@ Feature: AI Lab
     And I select dataset "0"
     And I see the dynamic instructions are showing "selectedDataset" key
     And I wait to see "#data-card"
-    And I click selector "#uitest-continue-button" 
+    And I click selector "#uitest-continue-button"
     And I see the dynamic instructions are showing "dataDisplayLabel" key
     And I click selector "#overlay"
     When I select data table column "1"
