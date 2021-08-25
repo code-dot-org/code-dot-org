@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-12 14:56:16 UTC",
+    "serialized_at": "2021-08-25 20:25:24 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -697,7 +697,7 @@
       "key": "97446980-7e70-4085-86d3-bfd67fb98f60",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -711,7 +711,7 @@
       "key": "544f13a4-73fc-40e4-a1b2-410ca0568674",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
