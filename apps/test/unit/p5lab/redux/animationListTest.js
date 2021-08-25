@@ -227,10 +227,31 @@ describe('animationList', function() {
     return {orderedKeys: orderedKeys, propsByKey: propsByKey};
   };
 
+  let createAnimationListToMigrate = function(count) {
+    let orderedKeys = [];
+    let propsByKey = {};
+    let baseKey = 'animation';
+    for (let i = 1; i <= count; i++) {
+      let key = baseKey + '_' + i;
+      orderedKeys.push(key);
+
+      propsByKey[key] = {
+        name: key,
+        sourceUrl: 'source/v3/url',
+        frameSize: {x: 100, y: 100},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 4,
+        version: null
+      };
+    }
+    return {orderedKeys: orderedKeys, propsByKey: propsByKey};
+  };
+
   describe('action: set initial animationList', function() {
     let server, store;
     beforeEach(function() {
-      project.getCurrentId.returns('');
+      project.getCurrentId.returns('alpha');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -301,6 +322,19 @@ describe('animationList', function() {
       expect(
         store.getState().animationList.propsByKey['animation_3'].name
       ).to.equal('images (1).jpg_1_2');
+    });
+
+    it('when animationList has migratable animations, check that animation is substituted', function() {
+      let animationList = createAnimationListToMigrate(2);
+      let defaultSprites = createAnimationList(2);
+      defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
+
+      store.dispatch(
+        setInitialAnimationList(animationList, true, true, defaultSprites)
+      );
+      expect(
+        store.getState().animationList.propsByKey['animation_1'].sourceUrl
+      ).to.equal('cat');
     });
   });
 
