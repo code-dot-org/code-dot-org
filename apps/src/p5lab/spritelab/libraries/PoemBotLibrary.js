@@ -54,7 +54,11 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.lineEvents[lineNum] = null;
         }
         this.drawFromRenderInfo(renderInfo);
-        this.foregroundEffect();
+
+        // Don't show foreground effect in preview
+        if (this.p5.frameCount > 1) {
+          this.foregroundEffect();
+        }
       },
 
       // And add custom Poem Bot commands
