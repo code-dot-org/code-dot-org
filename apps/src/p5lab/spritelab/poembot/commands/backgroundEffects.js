@@ -159,6 +159,9 @@ export const commands = {
 
         const getMappedColorValue = (color, x, y, anchor) => {
           const distance = Math.sqrt((anchor.x - x) ** 2 + (anchor.y - y) ** 2);
+          // The amount that each anchor point contributes to the color of each
+          // circle is proportional to the fourth root of the distance to
+          // prevent the colors from getting too washed out.
           return this.p5.map(
             distance ** 0.25,
             565 ** 0.25,
