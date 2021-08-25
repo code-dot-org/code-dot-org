@@ -36,7 +36,6 @@ export const commands = {
         this.backgroundEffect = () => {
           this.p5.push();
           this.p5.noStroke();
-          this.p5.angleMode(this.p5.DEGREES);
           this.p5.background('black');
           for (let i = 0; i < numSquiggles; i++) {
             points.forEach(point => {
@@ -88,7 +87,6 @@ export const commands = {
         let stars = [];
         this.backgroundEffect = () => {
           this.p5.push();
-          this.p5.angleMode(this.p5.DEGREES);
           this.p5.background('#303030');
           stars.push({
             x: utils.randomInt(0, 400),

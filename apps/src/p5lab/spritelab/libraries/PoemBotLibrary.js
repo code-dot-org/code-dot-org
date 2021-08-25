@@ -27,6 +27,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.lineEvents = {};
     this.p5.noStroke();
     this.p5.textAlign(this.p5.CENTER);
+    this.p5.angleMode(this.p5.DEGREES);
 
     this.commands = {
       // Keep everything from Core Sprite Lab
