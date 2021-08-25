@@ -1,4 +1,5 @@
 import * as utils from './utils';
+import {PALETTES} from '../constants';
 export const commands = {
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
@@ -149,6 +150,67 @@ export const commands = {
             );
           }
         };
+        break;
+      }
+      case 'fadeColors': {
+        const anchors = [];
+        const circles = [];
+        const spacing = 20;
+
+        const getMappedColorValue = (color, x, y, anchor) => {
+          const distance = Math.sqrt((anchor.x - x) ** 2 + (anchor.y - y) ** 2);
+          return this.p5.map(
+            distance ** 0.25,
+            565 ** 0.25,
+            0,
+            0,
+            anchor[color]
+          );
+        };
+
+        PALETTES[palette].forEach(color => {
+          anchors.push({
+            x: utils.randomInt(0, 400),
+            y: utils.randomInt(0, 400),
+            velocityX: utils.randomInt(-3, 3),
+            velocityY: utils.randomInt(-3, 3),
+            ...utils.hexToRgb(color)
+          });
+        });
+        for (let x = 0; x < 420; x += spacing) {
+          for (let y = 0; y < 420; y += spacing) {
+            circles.push({x, y, red: 0, green: 0, blue: 0});
+          }
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          anchors.forEach(anchor => {
+            anchor.x += anchor.velocityX;
+            if (anchor.x < 0 || anchor.x > 400) {
+              anchor.velocityX *= -1;
+            }
+            anchor.y += anchor.velocityY;
+            if (anchor.y < 0 || anchor.y > 400) {
+              anchor.velocityY *= -1;
+            }
+          });
+          circles.forEach(circle => {
+            let red = 0;
+            let green = 0;
+            let blue = 0;
+            anchors.forEach(anchor => {
+              red += getMappedColorValue('R', circle.x, circle.y, anchor);
+              green += getMappedColorValue('G', circle.x, circle.y, anchor);
+              blue += getMappedColorValue('B', circle.x, circle.y, anchor);
+            });
+            this.p5.fill(this.p5.color(red, green, blue));
+            this.p5.ellipse(circle.x, circle.y, spacing * 2, spacing * 2);
+          });
+          this.p5.pop();
+        };
+
         break;
       }
     }
