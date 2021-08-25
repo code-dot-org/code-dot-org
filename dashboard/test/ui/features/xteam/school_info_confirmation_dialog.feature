@@ -1,5 +1,8 @@
 @dashboard_db_access
+# We need "press keys" to type into the React form's fields, but that doesn't work on IE or mobile Safari.
 @no_ie
+@no_mobile
+
 Feature: School Info Confirmation Dialog
 
 # This test checks three relevant states of the user in the school info confirmation
