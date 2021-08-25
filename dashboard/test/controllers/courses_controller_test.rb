@@ -34,6 +34,7 @@ class CoursesControllerTest < ActionController::TestCase
     setup do
       Script.stubs(:should_cache?).returns true
       Script.clear_cache
+      UnitGroup.clear_cache
 
       @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
     end
