@@ -1,5 +1,6 @@
 name 'CSA U1L5-L3 2'
 title 'Check for Understanding'
+height '100'
 description 'Match each term with its correct definition.'
 
 question 'constructor'

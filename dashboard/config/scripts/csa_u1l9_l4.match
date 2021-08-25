@@ -1,5 +1,6 @@
 name 'CSA U1L9-L4'
 title 'Check for Understanding'
+height '100'
 description 'Match each term with the correct definition.'
 question 'method'
 answer 'has a name and organizes calls to other commands; another word for command'

@@ -1812,7 +1812,6 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal "Level #{level_num}_copy", level.name
       old_level = Level.find_by_name("Level #{level_num}")
       assert_equal old_level.level_num, level.level_num
-      assert_equal old_level.id, level.parent_level_id
       assert_equal '_copy', level.name_suffix
     end
 
