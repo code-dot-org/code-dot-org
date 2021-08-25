@@ -78,7 +78,13 @@ class TeacherFeedback < ApplicationRecord
       order(created_at: :desc)
   end
 
-  # returns the latest feedback for each student on every level in a script given by the teacher
+  # Returns the latest feedback for each student on every level in a script given by the teacher
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>|Integer] student_ids: (optional) one or a list of student_ids. If nil student_id is excluded from the query
+  # @param [Array<Integer>|Integer] level_ids: (optional) one or a list of level_ids. If nil level_id is excluded from the query
+  # @param [Integer] script_id: (optional) if nil, script_id will be excluded from the query
+  # @param [Integer] teacher_id: (optional) if nil, teacher_id will be excluded from the query
+  # @return [Array<TeacherFeedback>] Array of TeacherFeedbacks
   def self.get_latest_feedbacks_given(student_ids, level_ids, script_id, teacher_id)
     query = {
       student_id: student_ids,
@@ -154,8 +160,6 @@ class TeacherFeedback < ApplicationRecord
     }
   end
 
-  # Passing level, script_level and student into summarize_for_csv since it's
-  # called in a loop to avoid N+1s
   def summarize_for_csv(level, script_level, student, sublevel_index = nil)
     rubric_performance_json_to_ruby = {
       performanceLevel1: "rubric_performance_level_1",
@@ -180,8 +184,7 @@ class TeacherFeedback < ApplicationRecord
     level_num = script_level.position.to_s
 
     if sublevel_index
-      alphabet = ('a'..'z').to_a
-      level_num += alphabet[sublevel_index]
+      level_num += BubbleChoice::ALPHABET[sublevel_index]
     end
 
     {
