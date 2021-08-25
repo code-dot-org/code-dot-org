@@ -16,7 +16,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher
+    @section = create :section, user: @teacher, code_review_enabled: true
     @another_student = create :student
   end
 
