@@ -34,9 +34,11 @@ class CodeReviewComment < ApplicationRecord
 
   # To do: move to ReviewableProject model
   def self.user_can_review_project?(project_owner, potential_reviewer)
-    project_owner == potential_reviewer ||
-      project_owner.student_of?(potential_reviewer) ||
-      (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+    return true if project_owner == potential_reviewer
+    return true if project_owner.student_of?(potential_reviewer)
+    return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
+    return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
+    return (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
   end
 
   def compute_is_from_teacher
