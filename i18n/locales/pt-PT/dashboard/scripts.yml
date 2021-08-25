@@ -3883,3 +3883,34 @@ pt:
           lessons:
             lesson-1:
               name: Visão geral
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Ferramentas
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Aulas
+            lessonGroup-3:
+              display_name: Projecto
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

@@ -48,8 +48,16 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
   <p>This FAQ session is designed to answer some of the most commonly asked questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics and student takeaways, click the Register button below.</p>
-  <button style="margin-bottom:20px">Register</button>
+  <a href="https://www.eventbrite.com/e/your-questions-about-cs-careers-answered-registration-167660636477"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/csjourneys/jack-jobes.jpg" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Jack Jobes</strong>
+    <br>
+    Student
+    <br>
+    <a href="https://www.usc.edu/" target="_blank">University of Southern California</a></p>
+  </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Gabriel Saruhashi</strong>
@@ -65,12 +73,6 @@ social:
     Software Engineer
     <br>
     <a href="https://www.amazon.com/" target="_blank">Amazon</a></p>
-  </div>
-  <div class="col-33" style="text-align:center">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
-    <br>
-    Marketing Program Manager, Code.org</p>
   </div>
   <div style="clear: both"></div>
 <br>
@@ -107,7 +109,7 @@ social:
   <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics and student takeaways, click the Register button below.</p>
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Erin Howard</strong>
     <br>
@@ -115,15 +117,23 @@ social:
     <br>
     <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/nhat-nguyen.jpg" style="border-radius:50%; width:55%" alt="Nhat Nguyen">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
     Recent Grad
     <br>
     <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
   </div>
-  <div class="col-33" style="text-align:center">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/nicholas-papano.png" style="border-radius:50%; width:55%">
+    <p style="margin-top:10px"><strong>Nicholas Papano</strong>
+    <br>
+    Recent Grad
+    <br>
+    <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
+  </div>
+  <div class="col-25" style="text-align:center">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
     <p style="margin-top:10px"><strong>Brianna Wimer</strong>
     <br>

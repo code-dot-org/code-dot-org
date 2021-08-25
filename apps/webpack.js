@@ -195,10 +195,20 @@ if (envConstants.COVERAGE) {
   });
 }
 
-var devtool = process.env.DEV ? 'cheap-inline-source-map' : 'inline-source-map';
+function devtool(options) {
+  if (process.env.CI) {
+    return 'eval';
+  } else if (options && options.minify) {
+    return 'source-map';
+  } else if (process.env.DEV) {
+    return 'cheap-inline-source-map';
+  } else {
+    return 'inline-source-map';
+  }
+}
 
 var storybookConfig = _.extend({}, baseConfig, {
-  devtool: devtool,
+  devtool: devtool(),
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util')
@@ -224,7 +234,7 @@ var storybookConfig = _.extend({}, baseConfig, {
 
 // config for our test runner
 var karmaConfig = _.extend({}, baseConfig, {
-  devtool: devtool,
+  devtool: devtool(),
   resolve: _.extend({}, baseConfig.resolve, {
     alias: _.extend({}, baseConfig.resolve.alias, {
       '@cdo/locale': path.resolve(
@@ -353,7 +363,7 @@ function create(options) {
       publicPath: '/assets/js/',
       filename: `[name]${suffix}`
     },
-    devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
+    devtool: devtool(options),
     entry: entries,
     externals: externals,
     optimization: optimization,
