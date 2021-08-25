@@ -519,7 +519,7 @@ class ScriptLevelsController < ApplicationController
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level
     # types, this is the condition that should be extended.
-    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
+    replay_video_view_options(get_channel_for(@level, @script_level.script_id, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {

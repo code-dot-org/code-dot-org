@@ -120,8 +120,10 @@ export default class PropertyRow extends React.Component {
       );
     } else {
       let value = this.state.value;
-      if (!value) {
-        value = this.props.isNumber ? 0 : '';
+      // Number input will throw an error if we set its value to NaN.
+      // Fallback to empty string.
+      if (this.props.isNumber && isNaN(value)) {
+        value = '';
       }
 
       inputElement = (
