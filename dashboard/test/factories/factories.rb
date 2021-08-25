@@ -713,7 +713,7 @@ FactoryGirl.define do
       after(:create) do |script, evaluator|
         evaluator.levels_count.times do
           level = create(:level)
-          script_level = create(:script_level, levels: [level])
+          script_level = create(:script_level, levels: [level], script: script)
           create(:lesson_group, lessons: [script_level.lesson], script: script)
         end
       end
