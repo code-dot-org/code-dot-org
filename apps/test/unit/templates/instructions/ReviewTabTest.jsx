@@ -67,7 +67,11 @@ describe('Code Review Tab', () => {
     );
 
     wrapper = shallow(
-      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        codeReviewEnabled
+        viewAsCodeReviewer={false}
+      />
     );
     wrapper.setState({initialLoadCompleted: true});
   });
@@ -83,7 +87,11 @@ describe('Code Review Tab', () => {
 
   it('renders loading spinner before initial load is completed', () => {
     wrapper = shallow(
-      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        codeReviewEnabled
+        viewAsCodeReviewer={false}
+      />
     );
 
     expect(wrapper.find(Spinner).length).to.equal(1);
@@ -93,7 +101,11 @@ describe('Code Review Tab', () => {
     onLoadComplete.resetHistory();
 
     wrapper = shallow(
-      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={false} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        codeReviewEnabled
+        viewAsCodeReviewer={false}
+      />
     );
     sinon.assert.notCalled(onLoadComplete);
 
@@ -287,6 +299,7 @@ describe('Code Review Tab', () => {
     wrapper = shallow(
       <ReviewTab
         onLoadComplete={onLoadComplete}
+        codeReviewEnabled={false}
         viewAsCodeReviewer={false}
         viewAs={ViewType.Teacher}
       />
@@ -324,7 +337,11 @@ describe('Code Review Tab', () => {
   it('shows back to my project button if viewing peer project', () => {
     server.respond();
     wrapper = shallow(
-      <ReviewTab onLoadComplete={onLoadComplete} viewAsCodeReviewer={true} />
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        codeReviewEnabled
+        viewAsCodeReviewer={true}
+      />
     );
     wrapper.setState({initialLoadCompleted: true});
     expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
@@ -335,6 +352,7 @@ describe('Code Review Tab', () => {
     wrapper = shallow(
       <ReviewTab
         onLoadComplete={onLoadComplete}
+        codeReviewEnabled
         viewAsCodeReviewer={false}
         viewAs={ViewType.Teacher}
       />
@@ -345,6 +363,17 @@ describe('Code Review Tab', () => {
 
     expect(wrapper.find(PeerSelectDropdown).length).to.equal(0);
     expect(wrapper.find(Button).length).to.equal(0);
+  });
+
+  it('does not render enable code review checkbox when codeReviewEnabled is false', () => {
+    wrapper = shallow(
+      <ReviewTab
+        onLoadComplete={onLoadComplete}
+        codeReviewEnabled={false}
+        viewAsCodeReviewer={false}
+      />
+    );
+    expect(wrapper.find("input[type='checkbox']").length).to.equal(0);
   });
 
   function stubReviewableStatusProjectServerCall(reviewableStatus) {
