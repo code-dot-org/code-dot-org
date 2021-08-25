@@ -1,12 +1,14 @@
 ---
-title: Quotes - What leaders and trendsetters have to say about computer science
+title: Quotes on computer science - What leaders and trendsetters have to say
 theme: responsive
 style_min: true
 ---
 <div id="clear" style="clear:both"></div>
 
 <div class="container_responsive">
-<h1>Leaders and trend-setters all agree on one thing</h1>
+<h1>Leaders and trendsetters all agree on one thing</h1>
+<p>
+<h3>See what world leaders, celebrities, politicians, athletes, and more have to say about the importance of computer science.</h3>
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
@@ -102,7 +104,7 @@ Karlie Kloss
 Model and Founder, Kode with Klossy Scholarship
 </h4>
 <p style="padding-right:10px;">
-I quickly came to understand that code is a superpower every young woman should be able to access. Understanding that code is the underlying (and invisible) framework of tech means that we do not have to be passive bystanders in our ever-changing digital world.
+Code is going to continue to play a major role in defining our future. I think it’s crucial that young women learn to code as early as possible to ensure that we as young women have a voice and a stake in what the world looks like.
 </p>
 </div>
 </div>
@@ -119,7 +121,7 @@ President Barack Obama
 Former President
 </h4>
 <p style="padding-right:10px;">
-Computers are going to be a big part of our future...and that future is yours to shape.
+If we want America to stay on the cutting edge, we need young Americans to master the tools and technology that will change the way we do just about everything.
 </p>
 </div>
 </div>
@@ -251,7 +253,7 @@ Ashton Kutcher
 Actor
 </h4>
 <p style="padding-right:10px;">
-I'd like to advocate for computer coding to be an institution in the public school systems right next to biology, chemistry, physics, etc. If we want to spur job growth in the US we have to educate ourselves in the disciplines where jobs are available and where economic growth is feasible.
+I think every field can benefit from computer science and does benefit from computer science. So I really believe that coding should be part of the core curriculum in every school around the world.
 </p>
 </div>
 </div>
@@ -1823,22 +1825,6 @@ Here we are, 2013, we ALL depend on technology to communicate, to bank, and none
 </div>
 </div>
 <div class="row" style="margin-bottom: 20px;"></div>
-<div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
-<div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/mehmet-oz.jpg">
-</div>
-<div class="col-66 left" id="text">
-<h3 style="margin:0px;">
-Dr. Mehmet Oz
-</h3>
-<h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Cardiothoracic Surgeon, Author, and TV Personality
-</h4>
-<p style="padding-right:10px;">
-To best prepare for life in the 21st century, today's students should ideally learn basic computer programming.
-</p>
-</div>
-</div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
 <img src="/images/Headshots/quotes-page-mary.png">
