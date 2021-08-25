@@ -149,6 +149,7 @@ class ScriptsController < ApplicationController
       # groups, as well as on fields which live only in scripts.en.yml.
       # TODO(dave): consolidate this into the new update api codepath for
       # migrated scripts, once that codepath exists.
+      @script.reload
       if @script.is_migrated
         @script.touch(:updated_at)
         @script.save!
