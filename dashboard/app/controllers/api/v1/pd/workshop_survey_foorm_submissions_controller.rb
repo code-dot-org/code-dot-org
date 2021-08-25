@@ -1,12 +1,14 @@
 class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationController
   include Pd::WorkshopSurveyFoormConstants
   def create
-    answers = params[:answers] || {}
+    answers = params[:answers]
 
     # save facilitator answers as separate survey submissions
     # for ease of querying per-facilitator data
-    facilitator_answers = answers[Pd::WorkshopSurveyFoormConstants::FACILITATORS]
-    answers.delete(Pd::WorkshopSurveyFoormConstants::FACILITATORS)
+    if answers
+      facilitator_answers = answers[Pd::WorkshopSurveyFoormConstants::FACILITATORS]
+      answers.delete(Pd::WorkshopSurveyFoormConstants::FACILITATORS)
+    end
 
     pd_session_id = params[:pd_session_id].blank? ? nil : params[:pd_session_id].to_i
     day = params[:day].blank? ? nil : params[:day].to_i
