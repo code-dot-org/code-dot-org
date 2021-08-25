@@ -366,7 +366,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal([expected_feedback2, expected_feedback1], retrieved)
   end
 
-  test 'summarize_for_csv returns expects values' do
+  test 'summarize_for_csv returns expected values' do
     teacher = create :teacher
     student = create :student
     section = create :section, user: teacher
@@ -386,7 +386,7 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal "Keep trying", summarized_feedback[:comment]
   end
 
-  test 'summarize_for_csv returns expects values for sublevel' do
+  test 'summarize_for_csv returns expected values for sublevel' do
     teacher = create :teacher
     student = create :student
     section = create :section, user: teacher
