@@ -1,5 +1,6 @@
 import CoreLibrary from './CoreLibrary';
 import {POEMS} from '../poembot/constants';
+import * as utils from '../poembot/commands/utils';
 import {commands as backgroundEffects} from '../poembot/commands/backgroundEffects';
 import {commands as foregroundEffects} from '../poembot/commands/foregroundEffects';
 
@@ -26,6 +27,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.lineEvents = {};
     this.p5.noStroke();
     this.p5.textAlign(this.p5.CENTER);
+    this.p5.angleMode(this.p5.DEGREES);
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -52,7 +54,11 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.lineEvents[lineNum] = null;
         }
         this.drawFromRenderInfo(renderInfo);
-        this.foregroundEffect();
+
+        // Don't show foreground effect in preview
+        if (this.p5.frameCount > 1) {
+          this.foregroundEffect();
+        }
       },
 
       // And add custom Poem Bot commands
@@ -63,7 +69,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       randomWord() {
         // TODO: get curated random word list from Curriculum
         const words = ['cat', 'dog', 'fish'];
-        const index = this.randomNumber(0, words.length - 1);
+        const index = utils.randomInt(0, words.length - 1);
         return words[index];
       },
 
@@ -124,10 +130,6 @@ export default class PoemBotLibrary extends CoreLibrary {
       ...backgroundEffects,
       ...foregroundEffects
     };
-  }
-
-  randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   getScaledFontSize(text, font, desiredSize) {
