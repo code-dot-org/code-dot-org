@@ -55,7 +55,9 @@ export default class VersionHistoryWithCommits extends React.Component {
         'GET',
         'main.json/versions',
         this.onVersionListReceived,
-        this.onAjaxFailure
+        this.onAjaxFailure,
+        null,
+        ['with_comments=true']
       );
     }
   }
@@ -160,23 +162,18 @@ export default class VersionHistoryWithCommits extends React.Component {
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}
-          <button
-            type="button"
-            className="btn-danger"
-            id="start-over-button"
+          <Button
             style={{marginLeft: 0}}
             onClick={this.onClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_confirm()}
-          </button>
-          <button
-            type="button"
-            id="again-button"
+            color={Button.ButtonColor.red}
+            text={i18n.versionHistory_clearProgress_confirm()}
+          />
+          <Button
             style={{float: 'right'}}
             onClick={this.onCancelClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_cancel()}
-          </button>
+            color={Button.ButtonColor.green}
+            text={i18n.versionHistory_clearProgress_cancel()}
+          />
         </div>
       );
     } else {
@@ -189,17 +186,16 @@ export default class VersionHistoryWithCommits extends React.Component {
           lastModified={new Date(version.lastModified)}
           isLatest={version.isLatest}
           comment={version.comment}
-          onChoose={this.onChooseVersion.bind(this, version.versionId)}
+          onChoose={() => this.onChooseVersion(version.versionId)}
           rowColor={i % 2 === 0 ? color.lightest_gray : null}
         />
       ));
 
       const initialRowColor =
         this.state.versions.length % 2 === 0 ? color.lightest_gray : null;
-      console.log(initialRowColor);
       body = (
         <div>
-          <div style={{maxHeight: '330px', overflowX: 'auto', margin: '1em 0'}}>
+          <div style={{maxHeight: '330px', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -230,6 +226,7 @@ export default class VersionHistoryWithCommits extends React.Component {
         isOpen={this.state.isOpen}
         title={title}
         body={body}
+        hideFooter
         handleClose={() => this.setState({isOpen: false})}
       />
     );
@@ -264,7 +261,9 @@ function VersionWithComment(props) {
           href={
             location.origin + location.pathname + '?version=' + props.versionId
           }
+          target="_blank"
           color={Button.ButtonColor.gray}
+          text={i18n.preview()}
         />
       </a>,
       <Button
@@ -276,7 +275,6 @@ function VersionWithComment(props) {
     ];
   }
 
-  console.log(props);
   const label = props.comment
     ? i18n.committedVersionLabel
     : i18n.autosaveVersionLabel;
@@ -286,9 +284,7 @@ function VersionWithComment(props) {
       <td>
         <p
           style={
-            props.comment
-              ? styles.label
-              : {...styles.label, color: color.charcoal}
+            props.comment ? {...styles.label, fontWeight: 'bold'} : styles.label
           }
         >
           {label({
@@ -315,10 +311,14 @@ VersionWithComment.propTypes = {
 
 const styles = {
   label: {
-    margin: '10px 0 10px 10px'
+    margin: '10px 0 10px 10px',
+    fontSize: 14,
+    color: color.charcoal
   },
   comment: {
     margin: '0 0 10px 10px',
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    fontSize: 14,
+    color: color.charcoal
   }
 };
