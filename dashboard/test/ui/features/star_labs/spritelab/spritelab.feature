@@ -14,8 +14,7 @@ Scenario: Loading the first level
   Then there's an image "spritelab/avatar"
 
 Scenario: Losing the first level
-  Then I reset the puzzle to the starting version
-  And I press "runButton"
+  Then I press "runButton"
   And element "#resetButton" is visible
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
@@ -25,8 +24,7 @@ Scenario: Losing the first level
   And element "#resetButton" is hidden
 
 Scenario: Winning the first level
-  Then I reset the puzzle to the starting version
-  And I press dropdown number 6
+  Then I press dropdown number 6
   And the dropdown is visible
   And I select item 1 from the dropdown
   And I wait for 1 seconds
