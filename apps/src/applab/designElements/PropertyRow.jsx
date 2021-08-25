@@ -122,7 +122,7 @@ export default class PropertyRow extends React.Component {
       inputElement = (
         <input
           type={this.props.isNumber ? 'number' : undefined}
-          value={this.state.value || ''}
+          value={this.state.value}
           onChange={this.handleChangeInternal}
           onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
           style={inputStyle}
