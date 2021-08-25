@@ -3,25 +3,23 @@
 
 require_relative '../../../dashboard/config/environment'
 
-def channel_tokens_without_script_ids
-  ChannelToken.where(script_id: nil)
-end
-
-def puts_count
-  puts "There are #{channel_tokens_without_script_ids.count} channel_tokens without a script_id"
-end
-
-# TODO: not filter by script ID run through all, keep track with a counter
+# TODO: backfill only up to where we start writing script id to DB
 
 def update_script_ids
   puts "backfilling script_ids..."
-  channel_tokens_without_script_ids.find_each do |channel_token|
+  backfill_count = 0
+  unable_to_backfill = 0
+
+  ChannelToken.find_each do |channel_token|
+    next if channel_token.script_id.present?
+
     associated_script_levels = channel_token.level.script_levels
 
     # if the level is associated with only one script_level, use that script
     if associated_script_levels.length == 1
       script_id = associated_script_levels[0].script_id
       channel_token.update_attributes(script_id: script_id)
+      backfill_count += 1
       next
     end
 
@@ -31,6 +29,7 @@ def update_script_ids
     # use that script
     if visible_script_id = script_id_by_visible_scripts(potential_associated_scripts)
       channel_token.update_attributes(script_id: visible_script_id)
+      backfill_count += 1
       next
     end
 
@@ -40,6 +39,7 @@ def update_script_ids
     # if the user has only user_level associated with the level, use the script on that user_level
     if user_level_script_id = script_id_by_user_level(user_id, channel_token.level_id)
       channel_token.update_attributes(script_id: user_level_script_id)
+      backfill_count += 1
       next
     end
 
@@ -47,9 +47,14 @@ def update_script_ids
     # that could be associated with the level, use that script
     if section_script_id = script_id_by_section(user_id, potential_associated_scripts)
       channel_token.update_attributes(script_id: section_script_id)
+      backfill_count += 1
       next
     end
+
+    unable_to_backfill += 1
   end
+
+  puts "backfilled #{backfill_count} script ids, unable to backfill script id for #{unable_to_backfill} channel tokens"
 end
 
 # Given the script_levels that a channel token may be associated with, this method
@@ -100,7 +105,5 @@ def script_id_by_section(user_id, associated_script_ids)
 end
 
 ChannelToken.transaction do
-  puts_count
   update_script_ids
-  puts_count
 end
