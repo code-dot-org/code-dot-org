@@ -135,7 +135,8 @@ class Ability
 
           if reviewable_project &&
             user != user_to_assume &&
-            (user.sections_as_student & user_to_assume.sections_as_student).any?
+            !user_to_assume.student_of?(user) &&
+            CodeReviewComment.user_can_review_project?(user_to_assume, user)
             can_view_as_user_for_code_review = true
           end
         end
