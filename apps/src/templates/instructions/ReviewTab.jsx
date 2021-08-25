@@ -22,6 +22,7 @@ class ReviewTab extends Component {
   static propTypes = {
     onLoadComplete: PropTypes.func,
     // Populated by redux
+    codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
@@ -239,6 +240,7 @@ class ReviewTab extends Component {
     } = this.state;
 
     if (
+      !this.props.codeReviewEnabled ||
       this.props.viewAsCodeReviewer ||
       this.props.viewAs === ViewType.Teacher ||
       !reviewCheckboxEnabled ||
@@ -365,6 +367,18 @@ class ReviewTab extends Component {
   }
 
   renderPeerDropdown(reviewablePeers, onSelectPeer) {
+    const {codeReviewEnabled, viewAsCodeReviewer, viewAs} = this.props;
+    const {errorLoadingReviewblePeers} = this.state;
+
+    if (
+      viewAs === ViewType.Teacher ||
+      errorLoadingReviewblePeers ||
+      !codeReviewEnabled ||
+      viewAsCodeReviewer
+    ) {
+      return null;
+    }
+
     return (
       <PeerSelectDropdown
         text={javalabMsg.reviewClassmateProject()}
@@ -375,6 +389,17 @@ class ReviewTab extends Component {
   }
 
   renderBackToMyProject(onClickBackToProject) {
+    const {codeReviewEnabled, viewAsCodeReviewer, viewAs} = this.props;
+    const {errorLoadingReviewblePeers} = this.state;
+
+    if (
+      viewAs === ViewType.Teacher ||
+      errorLoadingReviewblePeers ||
+      !codeReviewEnabled ||
+      !viewAsCodeReviewer
+    ) {
+      return null;
+    }
     return (
       <Button
         text={javalabMsg.returnToMyProject()}
@@ -397,7 +422,6 @@ class ReviewTab extends Component {
       forceRecreateEditorKey,
       isReadyForReview,
       errorSavingReviewableProject,
-      errorLoadingReviewblePeers,
       reviewablePeers,
       projectOwnerName
     } = this.state;
@@ -425,11 +449,8 @@ class ReviewTab extends Component {
       return (
         <div style={styles.reviewsContainer}>
           <div style={styles.reviewHeader}>
-            {viewAs !== ViewType.Teacher &&
-              !errorLoadingReviewblePeers &&
-              (viewAsCodeReviewer
-                ? this.renderBackToMyProject(this.onClickBackToProject)
-                : this.renderPeerDropdown(reviewablePeers, this.onSelectPeer))}
+            {this.renderBackToMyProject(this.onClickBackToProject)}
+            {this.renderPeerDropdown(reviewablePeers, this.onSelectPeer)}
             {this.renderReadyForReviewCheckbox()}
           </div>
           {errorSavingReviewableProject && (
@@ -459,6 +480,7 @@ class ReviewTab extends Component {
 
 export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
+  codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAs: state.viewAs
 }))(ReviewTab);

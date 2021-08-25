@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-20 16:26:36 UTC",
+    "serialized_at": "2021-08-24 21:19:04 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "poetry-hoc"
