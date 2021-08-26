@@ -48,7 +48,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
   <p>This FAQ session is designed to answer some of the most commonly asked questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics and student takeaways, click the Register button below.</p>
-  <button style="margin-bottom:20px">Register</button>
+  <a href="https://www.eventbrite.com/e/your-questions-about-cs-careers-answered-registration-167660636477"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center">
     <img src="/images/csjourneys/jack-jobes.jpg" style="border-radius:50%; width:55%">
@@ -118,7 +118,7 @@ social:
     <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/nhat-nguyen.jpg" style="border-radius:50%; width:55%" alt="Nhat Nguyen">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
     Recent Grad
