@@ -212,7 +212,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow)
+      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
     };
   }
 

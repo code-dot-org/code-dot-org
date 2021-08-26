@@ -85,11 +85,13 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="PoemBot_playSound"/>
         <block type="PoemBot_stringValue"/>
         <block type="PoemBot_randomWord"/>
         <block type="PoemBot_textConcat"/>
         <block type="variables_set"/>
         <block type="variables_get"/>
+        <block type="PoemBot_setPoem"/>
         <block type="PoemBot_setFont"/>
         <block type="PoemBot_setTitle"/>
         <block type="PoemBot_setFontColor">

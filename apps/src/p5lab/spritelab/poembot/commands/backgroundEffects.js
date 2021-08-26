@@ -30,7 +30,7 @@ export const commands = {
             color: utils.lerpColorFromPalette(
               this.p5,
               palette,
-              (i / numPoints) * utils.PALETTES[palette].length
+              (i / numPoints) * PALETTES[palette].length
             )
           });
         }
