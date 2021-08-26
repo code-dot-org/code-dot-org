@@ -207,8 +207,60 @@ export const commands = {
 
         break;
       }
-      case 'glass':
+      case 'glass': {
+        let glassShards = [];
+        const shardRadius = 10;
+
+        const drawGlass = glass => {
+          this.p5.fill(this.getP5Color(glass.color, 100));
+          this.p5.beginShape();
+          glass.points.forEach(point => {
+            this.p5.vertex(point.x, point.y);
+            point.x += point.velocityX;
+            point.y += point.velocityY;
+          });
+          this.p5.endShape();
+        };
+
+        const reset = () => {
+          for (let i = 0; i < 100; i++) {
+            const numPoints = utils.randomInt(3, 9);
+            const points = [];
+            const velocity = utils.randomInt(4, 12);
+            const theta = utils.randomInt(0, 360);
+            for (let i = 0; i < numPoints; i++) {
+              points.push({
+                x: utils.randomInt(200 - shardRadius, 200 + shardRadius),
+                y: utils.randomInt(200 - shardRadius, 200 + shardRadius),
+                velocityX: velocity * this.p5.cos(theta),
+                velocityY: velocity * this.p5.sin(theta)
+              });
+            }
+            glassShards.push({
+              points: points,
+              color: utils.randomColorFromPalette('ocean')
+            });
+          }
+        };
+        this.foregroundEffect = () => {
+          this.p5.push();
+          glassShards.forEach(glass => drawGlass(glass));
+          glassShards = glassShards.filter(glass =>
+            // the glass shard is considered in bounds if at least one vertex
+            // is in bounds
+            glass.points.some(
+              point =>
+                point.x > 0 && point.x < 400 && point.y > 0 && point.y < 400
+            )
+          );
+          if (glassShards.length === 0) {
+            reset();
+          }
+          this.p5.pop();
+        };
+
         break;
+      }
       case 'smoke':
         break;
       case 'birds':
