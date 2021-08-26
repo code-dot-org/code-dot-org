@@ -213,8 +213,44 @@ export const commands = {
         break;
       case 'birds':
         break;
-      case 'twinkling':
+      case 'twinkling': {
+        let stars = [];
+        const resetStars = () => {
+          for (let i = 0; i < 100; i++) {
+            stars.push({
+              color: utils.randomColor(this.p5),
+              x: utils.randomInt(0, 400),
+              y: utils.randomInt(0, 400),
+              alpha: utils.randomInt(1, 79),
+              delta: utils.randomInt(0, 1) ? 0.5 : -0.5
+            });
+          }
+        };
+
+        this.foregroundEffect = () => {
+          this.p5.push();
+          if (stars.length === 0) {
+            resetStars();
+          }
+
+          stars.forEach(star => {
+            const color = this.getP5Color(star.color, star.alpha);
+            this.p5.fill(color);
+
+            star.alpha += star.delta;
+            if (star.alpha > 80) {
+              star.delta *= -1;
+            }
+            if (star.alpha < 0) {
+              star.delta *= -1;
+            }
+            drawStar(this.p5, star.x, star.y, 3, 9, 5);
+          });
+          this.p5.pop();
+        };
+
         break;
+      }
       default:
         break;
     }
