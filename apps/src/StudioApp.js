@@ -667,8 +667,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     var contentDiv = document.createElement('div');
     var dialog = this.createModalDialog({
       contentDiv: contentDiv,
-      defaultBtnSelector: 'again-button',
-      id: 'showVersionsModal'
+      defaultBtnSelector: 'again-button'
     });
     console.log(config);
     ReactDOM.render(

@@ -16,6 +16,8 @@ export default class VersionHistoryWithCommits extends React.Component {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     versions: PropTypes.arrayOf(PropTypes.object)
   };
 
@@ -194,8 +196,8 @@ export default class VersionHistoryWithCommits extends React.Component {
       const initialRowColor =
         this.state.versions.length % 2 === 0 ? color.lightest_gray : null;
       body = (
-        <div>
-          <div style={{maxHeight: '330px', margin: '1em 0'}}>
+        <div style={{margin: 10}}>
+          <div style={styles.body}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -223,11 +225,11 @@ export default class VersionHistoryWithCommits extends React.Component {
 
     return (
       <StylizedBaseDialog
-        isOpen={this.state.isOpen}
+        isOpen={this.props.isOpen}
         title={title}
         body={body}
         hideFooter
-        handleClose={() => this.setState({isOpen: false})}
+        handleClose={this.props.onClose}
       />
     );
   }
@@ -254,18 +256,19 @@ function VersionWithComment(props) {
     );
   } else {
     button = [
-      <a key={0} target="_blank" rel="noopener noreferrer">
-        <Button
-          icon="eye"
-          iconClassName="f-eye"
-          href={
-            location.origin + location.pathname + '?version=' + props.versionId
-          }
-          target="_blank"
-          color={Button.ButtonColor.gray}
-          text={i18n.preview()}
-        />
-      </a>,
+      <Button
+        key={0}
+        icon="eye"
+        iconClassName="f-eye"
+        href={
+          location.origin + location.pathname + '?version=' + props.versionId
+        }
+        target="_blank"
+        color={Button.ButtonColor.gray}
+        text={i18n.preview()}
+        __useDeprecatedTag
+        style={{verticalAlign: 'middle'}}
+      />,
       <Button
         key={1}
         onClick={props.onChoose}
@@ -320,5 +323,10 @@ const styles = {
     fontStyle: 'italic',
     fontSize: 14,
     color: color.charcoal
+  },
+  body: {
+    overflowY: 'auto',
+    maxHeight: 300,
+    margin: '1em 0'
   }
 };
