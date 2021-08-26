@@ -19,7 +19,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Set Foreground Effects\r\n<div style=\"float:right\">\r\n\r\n![expandable](https://images.code.org/88f405215891a5d823ec49a0ff8aaf13-image-1625773374424.gif)\r\n\r\n</div>\r\n\r\nFind a foreground effect that matches the feeling of this poem. \r\n\r\n* Drag out this block. <xml><block type=\"PoemBot_setForegroundEffect\"><title name=\"FG_EFFECT\">\"rain\"</title></block></xml>\r\n* Choose an effect that matches the mood of the poem. \r\n* Click \"Run.\"",
+    "long_instructions": "# Set Foreground Effects\r\n\r\nFind a foreground effect that matches the feeling of this poem. \r\n\r\n* Drag out this block. <xml><block type=\"PoemBot_setForegroundEffect\"><title name=\"FG_EFFECT\">\"rain\"</title></block></xml>\r\n* Choose an effect that matches the mood of the poem. \r\n* Click \"Run.\"",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -43,7 +43,7 @@
   "created_at": "2021-08-18T21:20:04.000Z",
   "level_num": "custom",
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-08-18T21:20:04.008+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addBackground\\\"\"],\"cloned_from\":\"poetryHoC_addBackground\"},{\"changed_at\":\"2021-08-18 21:22:05 +0000\",\"changed\":[\"video_key\",\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:23:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:24:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 17:58:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-18T21:20:04.008+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addBackground\\\"\"],\"cloned_from\":\"poetryHoC_addBackground\"},{\"changed_at\":\"2021-08-18 21:22:05 +0000\",\"changed\":[\"video_key\",\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:23:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:24:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 17:58:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-23 20:53:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-23 20:54:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-23 22:03:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-24 17:57:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,10 +53,11 @@
         <block type="when_run" movable="false">
           <next>
             <block type="PoemBot_setPoem">
-              <title name="BG_EFFECT">"wordsworth"</title>
+              <title name="BG_EFFECT">"carroll_1"</title>
               <next>
                 <block type="PoemBot_setBackgroundEffect">
-                  <title name="BG_EFFECT">"solid"</title>
+                  <title name="EFFECT">"colors"</title>
+                  <title name="PALETTE">"grayscale"</title>
                 </block>
               </next>
             </block>
@@ -68,7 +69,8 @@
       <xml>
         <category name="World">
           <block type="PoemBot_setBackgroundEffect">
-            <title name="BG_EFFECT">"solid"</title>
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
           </block>
           <block type="PoemBot_setForegroundEffect">
             <title name="FG_EFFECT">"rain"</title>

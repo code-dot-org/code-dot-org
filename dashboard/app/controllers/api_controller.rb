@@ -448,7 +448,7 @@ class ApiController < ApplicationController
           response[:pairingAttempt] = edit_level_source_path(recent_attempt)
         elsif level.channel_backed?
           @level = level
-          recent_channel = get_channel_for(level, recent_user) if recent_user
+          recent_channel = get_channel_for(level, script.id, recent_user) if recent_user
           response[:pairingChannelId] = recent_channel if recent_channel
         end
       end

@@ -13,25 +13,20 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/marketing/hocbanner2.jpg" style="max-width: 100%"/></div>
+<div style="background-color: #00adbc; padding: 15px; margin-top:50px;">
+	<img src="/images/marketing/hocbanner2.jpg" style="max-width: 100%"/>
+</div>
 <h1>Hora del Código En Vivo</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
-
-<p>¡Aprender a programar puede ser muy divertido! Con estos <a href="#activities">episodios y actividades</a> para elegir, puedes aprender sobre inteligencia artificial con Eduardo España, programar tu propia fiesta de baile con Erika de la Vega, o crear tu propia app con Simón Borrero.</p>
-
-<p>Cada episodio es presentado por el Vicepresidente de Alianzas Internacionales, <a href="https://code.org/about/leadership/leonardo_ortiz_villacorta">Leonardo Ortiz Villacorta</a>, y Directora de Alianzas Internacionales para las Américas, Lara Sepúlveda Machado, quienes enseñan conceptos de ciencias de computación acompañados de diversos invitados especiales.</p>
-
-<div style="clear: both;"></div>
-<div style="max-width:100%;">
-<h2>Serie Especial con Miami Art House</h2>
-  <p>Miami Art House se une a la campaña global de Code.org, la Hora del Código, para inspirar a estudiantes alrededor del mundo a aprender las ciencias de computación. El productor colombiano <a href="https://miamiart.house">Julio Reyes Copello</a> será coanfitrión una serie especial de cuatro episodios centrada en la creatividad, la música y la programación. Cada episodio le dará la bienvenida a un artista de habla hispana, se presentará su música y él o la artista ayudará a explicar la importancia de equipar a los estudiantes con las habilidades para convertirse en creadores de tecnología.</p>
-  <p>El primer episodio fue el pasado 15 de abril y recibimos a la cantautora mexicana <a href="https://twitter.com/solamentejoy"> Joy</a>. Si te perdiste el episodio, lo puedes volver a ver <a href="https://www.youtube.com/watch?v=T8Qzo3YfxwI&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=7">aquí.<a/></p>
-<br>
-
-<div style="max-width:490px; position:relative;"><a href="https://www.youtube.com/watch?v=T8Qzo3YfxwI&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=7"><img style="max-width:100%;" src=images/hdcenvivo_joy.jpg></a><style="max-width:490px; position:relative;"></div>
-<p>Síguenos en <a href="http://facebook.com/code.org">Facebook</a> o en <a href="http://twitter.com/codeorg">Twitter</a>.</p>
-
-</div>
+	<p>¡Aprender a programar puede ser muy divertido! Con estos <a href="#activities">episodios y actividades</a> para elegir, puedes aprender sobre inteligencia artificial con Eduardo España, programar tu propia fiesta de baile con Erika de la Vega, o crear tu propia app con Simón Borrero.</p>
+	<p>Cada episodio es presentado por el Vicepresidente de Alianzas Internacionales, <a href="https://code.org/about/leadership/leonardo_ortiz_villacorta">Leonardo Ortiz Villacorta</a>, y Directora de Alianzas Internacionales para las Américas, Lara Sepúlveda Machado, quienes enseñan conceptos de ciencias de computación acompañados de diversos invitados especiales.</p>
+	<div style="clear: both;"></div>
+	<div style="max-width:100%;">
+	<h2>Divertido y fundacional</h2>
+	<p>Las ciencias de computación es <i>súper divertido</i>  porque es una actividad creativa y lúdica. Ya sea que estés resolviendo un rompecabezas, programando arte, o diseñando un aplicativo, los estudiantes prefieren aprender mejor mientras exploran en vez de memorizar. <a href="https://code.org/promote">Ciencias de computación</a> es una de las materias preferidas de los estudiantes sólo después de sus clases de arte, música y danza.</p>
+	<p>Las ciencias de computación son <a href="/promote">fundacionales</a> para todos los ámbitos de estudio, pero como muchas escuelas aún no las ofrecen, esta es una oportunidad única para apoyar a sus hijos, estudiantes o familiares a que aprendan algo nuevo. Adicionalmente, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes demuestran</a>: que los niños y jóvenes que estudian ciencias de computación se desempeñan mejor en otras materias, se destacan en resolución de problemas, <font color="00adbc"><b>y el 17% es más probable que ingrese a la universidad
+</font></b>.</p>
+<p>Síguenos en <a href="http://facebook.com/code.org">Facebook</a> o en <a href="http://twitter.com/codeorg">Twitter</a>.</p></div>
 
 </div><div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
 <img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
@@ -44,17 +39,25 @@ social:
 </div></div>
 
 <div style="clear: both;"></div>
-<div style="max-width:100%;">
-<h2>Divertido y fundacional</h2>
-<p>Las ciencias de computación es <i>súper divertido</i>  porque es una actividad creativa y lúdica. Ya sea que estés resolviendo un rompecabezas, programando arte, o diseñando un aplicativo, los estudiantes prefieren aprender mejor mientras exploran en vez de memorizar. <a href="https://code.org/promote">Ciencias de computación</a> es una de las materias preferidas de los estudiantes sólo después de sus clases de arte, música y danza.</p>
-
-<p>Las ciencias de computación son <a href="/promote">fundacionales</a> para todos los ámbitos de estudio, pero como muchas escuelas aún no las ofrecen, esta es una oportunidad única para apoyar a sus hijos, estudiantes o familiares a que aprendan algo nuevo. Adicionalmente, <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">estudios recientes demuestran</a>: que los niños y jóvenes que estudian ciencias de computación se desempeñan mejor en otras materias, se destacan en resolución de problemas, <font color="00adbc"><b>y el 17% es más probable que ingrese a la universidad
-</font></b>.</p></div>
-
-<div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Episodios de la Hora del Código En Vivo</h1></div>
+<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">En Vivo con Miami Art House</h1></div>
+<div>
+  <div style="clear: both;"></div>
+<div style="max-width:100%;">
+<p>Miami Art House se une a la campaña global de Code.org, la Hora del Código, para inspirar a estudiantes alrededor del mundo a aprender las ciencias de computación. El productor colombiano <a href="https://miamiart.house">Julio Reyes Copello</a> será coanfitrión una serie especial de varios episodios centrados en la creatividad, la música y la programación. Cada episodio le dará la bienvenida a un artista de habla hispana, se presentará su música y él o la artista ayudará a explicar la importancia de equipar a los estudiantes con las habilidades para convertirse en creadores de tecnología.</p>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Episodio con Joy</h4>
+<div class="col-50" style="padding-right:20px">
+<a href="https://www.youtube.com/watch?v=T8Qzo3YfxwI&t=1283s"><img src="/images/hdcenvivo_joy.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a> 
+</div>
+<div class="col-50">
+<p>En este episodio con la cantautora y guitarrista mexicana, Joy, y el productor colombiano Maestro Julio Reyes Copello, explicamos el concepto de 'eventos' en programación al ritmo de 'Aire', una canción del album nuevo de Jesse y Joy. </p>
+<br> <a href="https://www.youtube.com/watch?v=T8Qzo3YfxwI&t=1283s"><i>Ver en Youtube</a></i> I <i><a href="https://www.facebook.com/309754825787494/videos/788762288469827">Ver en Facebook</i></a></div>
+</div>
+
+<div style="clear: both;"></div>
+
+<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">La Hora del Código 2020</h1></div>
 <h2>Episodio 1</h2>
 <div>
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Algoritmos con Nashla Aguilar e Ilona Bodnar</h4>
