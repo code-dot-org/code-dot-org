@@ -19,7 +19,8 @@ import {connect} from 'react-redux';
 import {
   getSerializedLessonGroups,
   init,
-  mapLessonGroupDataForEditor
+  mapLessonGroupDataForEditor,
+  mapLessonGroupDataForUpdate
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
   lessonGroupShape,
@@ -286,6 +287,9 @@ class UnitEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
+      lesson_groups:
+        this.props.isMigrated &&
+        JSON.stringify(mapLessonGroupDataForUpdate(this.props.lessonGroups)),
       script_text: this.props.isMigrated
         ? getSerializedLessonGroups(
             this.props.lessonGroups,

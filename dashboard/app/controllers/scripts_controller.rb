@@ -295,6 +295,7 @@ class ScriptsController < ApplicationController
       :pilot_experiment,
       :editor_experiment,
       :include_student_lesson_plans,
+      :lesson_groups,
       resourceTypes: [],
       resourceLinks: [],
       resourceIds: [],
@@ -304,6 +305,7 @@ class ScriptsController < ApplicationController
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
+    h[:lesson_groups] = JSON.parse(h[:lesson_groups]) if h[:lesson_groups]
 
     h
   end
