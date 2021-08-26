@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": "outbreak",
-    "serialized_at": "2021-08-03 22:48:02 UTC",
+    "serialized_at": "2021-08-26 19:35:28 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "outbreak"
@@ -60,21 +60,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak_story"
+          "CourseF_outbreak_story"
         ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak_story"
+        "CourseF_outbreak_story"
       ]
     },
     {
@@ -84,21 +84,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak1"
+          "CourseF_outbreak1"
         ],
-        "progression": "Creating a Simulation"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak1"
+          "CourseF_outbreak1"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak1"
+        "CourseF_outbreak1"
       ]
     },
     {
@@ -108,21 +108,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak2"
+          "CourseF_outbreak2"
         ],
-        "progression": "Programming with Events"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak2"
+          "CourseF_outbreak2"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak2"
+        "CourseF_outbreak2"
       ]
     },
     {
@@ -132,21 +132,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak3"
+          "CourseF_outbreak3"
         ],
-        "progression": "Stopping the Outbreak with Masks"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak3"
+          "CourseF_outbreak3"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak3"
+        "CourseF_outbreak3"
       ]
     },
     {
@@ -156,21 +156,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak_story2"
+          "CourseF_outbreak4"
         ],
-        "progression": "Learning from Simulations"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak_story2"
+          "CourseF_outbreak4"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak_story2"
+        "CourseF_outbreak4"
       ]
     },
     {
@@ -180,21 +180,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak4"
+          "CourseF_outbreak5"
         ],
-        "progression": "More Monsters"
+        "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak4"
+          "CourseF_outbreak5"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak4"
+        "CourseF_outbreak5"
       ]
     },
     {
@@ -204,21 +204,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak5"
+          "CourseF_outbreak6"
         ],
-        "progression": "Recovery"
+        "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak5"
+          "CourseF_outbreak6"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak5"
+        "CourseF_outbreak6"
       ]
     },
     {
@@ -227,23 +227,22 @@
       "activity_section_position": null,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
-          "outbreak6"
+          "CourseF_outbreak7"
         ],
-        "progression": "Chance"
+        "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak6"
+          "CourseF_outbreak7"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak6"
+        "CourseF_outbreak7"
       ]
     },
     {
@@ -252,23 +251,22 @@
       "activity_section_position": null,
       "assessment": false,
       "properties": {
-        "challenge": true,
         "level_keys": [
-          "outbreak7"
+          "CourseF_outbreak8"
         ],
-        "progression": "Vaccines"
+        "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak7"
+          "CourseF_outbreak8"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak7"
+        "CourseF_outbreak8"
       ]
     },
     {
@@ -278,54 +276,30 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "outbreak8"
-        ],
-        "progression": "Share Your Message"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "outbreak8"
-        ],
-        "lesson.key": "Virus Simulation for Code Bytes",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak"
-      },
-      "level_keys": [
-        "outbreak8"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "outbreak_freeplay_choice"
+          "international_outbreak_freeplay"
         ],
         "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "outbreak_freeplay_choice"
+          "international_outbreak_freeplay"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
         "script.name": "outbreak"
       },
       "level_keys": [
-        "outbreak_freeplay_choice"
+        "international_outbreak_freeplay"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "outbreak_story",
+        "level.key": "CourseF_outbreak_story",
         "script_level.level_keys": [
-          "outbreak_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -334,9 +308,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak1",
+        "level.key": "CourseF_outbreak1",
         "script_level.level_keys": [
-          "outbreak1"
+          "CourseF_outbreak1"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -345,9 +319,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak2",
+        "level.key": "CourseF_outbreak2",
         "script_level.level_keys": [
-          "outbreak2"
+          "CourseF_outbreak2"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -356,9 +330,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak3",
+        "level.key": "CourseF_outbreak3",
         "script_level.level_keys": [
-          "outbreak3"
+          "CourseF_outbreak3"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -367,9 +341,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak_story2",
+        "level.key": "CourseF_outbreak4",
         "script_level.level_keys": [
-          "outbreak_story2"
+          "CourseF_outbreak4"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -378,9 +352,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak4",
+        "level.key": "CourseF_outbreak5",
         "script_level.level_keys": [
-          "outbreak4"
+          "CourseF_outbreak5"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -389,9 +363,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak5",
+        "level.key": "CourseF_outbreak6",
         "script_level.level_keys": [
-          "outbreak5"
+          "CourseF_outbreak6"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -400,9 +374,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak6",
+        "level.key": "CourseF_outbreak7",
         "script_level.level_keys": [
-          "outbreak6"
+          "CourseF_outbreak7"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -411,9 +385,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak7",
+        "level.key": "CourseF_outbreak8",
         "script_level.level_keys": [
-          "outbreak7"
+          "CourseF_outbreak8"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -422,20 +396,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "outbreak8",
+        "level.key": "international_outbreak_freeplay",
         "script_level.level_keys": [
-          "outbreak8"
-        ],
-        "lesson.key": "Virus Simulation for Code Bytes",
-        "lesson_group.key": "outbreak",
-        "script.name": "outbreak"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "outbreak_freeplay_choice",
-        "script_level.level_keys": [
-          "outbreak_freeplay_choice"
+          "international_outbreak_freeplay"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
