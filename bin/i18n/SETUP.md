@@ -11,9 +11,10 @@ npm install
 
 You will additionally need to add a `codeorg_credentials.yml` file to this
 directory (`{project root}/bin/i18n/`) containing the API key for the code.org
-project, and an `hourofcode_credentials.yml` file containing the API key for the
-Hour of Code project.  See [the crowdin documentation][2] for more details; the
-API keys themselves can be found on the project settings page
+project, an `hourofcode_credentials.yml` file containing the API key for the
+Hour of Code project, and a `codeorg_markdown_credentials.yml` file containing
+the API key for the Code.org - Markdown project.  See [the crowdin documentation][2]
+for more details; the API keys themselves can be found on the project settings page
 
 [1]: https://support.crowdin.com/cli-tool/
 [2]: https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials

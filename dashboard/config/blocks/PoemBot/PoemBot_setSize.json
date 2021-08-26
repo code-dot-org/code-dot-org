@@ -1,0 +1,17 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setSize",
+    "docFunc": "gamelab_setProp_dropdown",
+    "blockText": "set {SPRITE} size to {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "VAL"
+      }
+    ]
+  }
+}
