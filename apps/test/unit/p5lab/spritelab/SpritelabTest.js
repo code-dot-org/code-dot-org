@@ -21,6 +21,18 @@ import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 
+const testDefaultSprites = {
+  orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
+  propsByKey: {
+    '44c5937d-c5c0-4676-bd0c-f7a86e99dd98': {
+      name: 'bee',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/b2QZ1J9ww5XYdjExrVb7lWgP2q6Gfx1C/category_animals/bee.png',
+      categories: ['backgrounds']
+    }
+  }
+};
+
 describe('SpriteLab', () => {
   setExternalGlobals();
 
@@ -107,7 +119,8 @@ describe('SpriteLab', () => {
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          testDefaultSprites
         );
         expect(resultingAnimations.orderedKeys.length).to.be.above(1);
       });
@@ -124,7 +137,8 @@ describe('SpriteLab', () => {
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          testDefaultSprites
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });
@@ -132,15 +146,16 @@ describe('SpriteLab', () => {
       it('does not modify the list if there is an animation that matches a background', () => {
         instance.isSpritelab = true;
         const initialAnimationList = {
-          orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
+          orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
           propsByKey: {
-            '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
-              name: 'cave'
+            '44c5937d-c5c0-4676-bd0c-f7a86e99dd98': {
+              name: 'bee'
             }
           }
         };
         const resultingAnimations = instance.loadAnyMissingDefaultAnimations(
-          initialAnimationList
+          initialAnimationList,
+          testDefaultSprites
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
       });

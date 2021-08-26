@@ -31,7 +31,7 @@ class ChannelToken < ApplicationRecord
   # @param [String] user_storage_id The if of the storage app associated with the channel token request.
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
-  def self.find_or_create_channel_token(level, ip, user_storage_id, data = {})
+  def self.find_or_create_channel_token(level, ip, user_storage_id, script_id = nil, data = {})
     storage_app = StorageApps.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
@@ -39,7 +39,14 @@ class ChannelToken < ApplicationRecord
     SeamlessDatabasePool.use_master_connection do
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         # your own channel
-        find_or_create_by!(level: level.host_level, storage_id: user_storage_id) do |ct|
+        channel_token = find_by(level: level.host_level, storage_id: user_storage_id)
+
+        return channel_token if channel_token
+
+        # script_id was recently added to the channel_token table. While the backfills and code changes are
+        # in progress (https://codedotorg.atlassian.net/browse/LP-1395), script_id will be written to the table
+        # but not used in the query for a channel_token yet.
+        create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
           channel = create_channel ip, storage_app, data: data, standalone: false
           _, ct.storage_app_id = storage_decrypt_channel_id(channel)
