@@ -2067,25 +2067,25 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
-    Script.destroy_all
     user = create(:user)
-    create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
+    unit = create(:script)
+    alternate_unit = build(:script)
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
+    Rails.cache.stubs(:fetch).returns([unit])
+    unit.stubs(:alternate_script).returns(alternate_unit)
 
     units = Script.valid_scripts(user)
     assert_equal [alternate_unit], units
   end
 
   test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
-    Script.destroy_all
     user = create(:user)
-    unit = create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    unit = create(:script)
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(nil)
+    Rails.cache.stubs(:fetch).returns([unit])
+    unit.stubs(:alternate_script).returns(nil)
 
     units = Script.valid_scripts(user)
     assert_equal [unit], units
