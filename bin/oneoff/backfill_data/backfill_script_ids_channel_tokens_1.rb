@@ -5,12 +5,16 @@ require_relative '../../../dashboard/config/environment'
 
 # TODO: backfill only up to where we start writing script id to DB
 
+# We started writing script_id to the table here: https://github.com/code-dot-org/code-dot-org/pull/39855
+# so we don't need to backfill past that point
+MAX_CHANNEL_TOKEN_ID_FOR_BACKFILL = 303_500_000
+
 def update_script_ids
   puts "backfilling script_ids..."
   backfill_count = 0
   unable_to_backfill = 0
 
-  ChannelToken.find_each do |channel_token|
+  ChannelToken.where("id < ?", MAX_CHANNEL_TOKEN_ID_FOR_BACKFILL).find_each do |channel_token|
     next if channel_token.script_id.present?
 
     associated_script_levels = channel_token.level.script_levels
@@ -85,6 +89,10 @@ def script_id_by_user_level(user_id, level_id)
 
   if associated_user_levels.count == 1
     script_id = associated_user_levels[0].script_id
+    return script_id if script_id.present?
+  elsif associated_user_levels.count > 1
+    recent_user_levels = associated_user_levels.order(updated_at: :desc)
+    script_id = recent_user_levels[0].script_id
     return script_id if script_id.present?
   end
 end
