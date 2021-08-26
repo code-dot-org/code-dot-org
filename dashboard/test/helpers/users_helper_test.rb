@@ -35,7 +35,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_lesson: script.lessons.first.id,
+        current_lesson: ul3.level.script_levels.first.lesson.id,
         completed: false,
       },
       summarize_user_progress(script, user)
