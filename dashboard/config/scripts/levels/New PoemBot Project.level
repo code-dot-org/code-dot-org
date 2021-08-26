@@ -95,7 +95,12 @@
         <block type="PoemBot_setFont"/>
         <block type="PoemBot_setTitle"/>
         <block type="PoemBot_setFontColor">
-          <value name="COLOR">
+          <value name="FILL">
+            <block type="colour_picker">
+              <title name="COLOUR">#99ff99</title>
+            </block>
+          </value>
+          <value name="STROKE">
             <block type="colour_picker">
               <title name="COLOUR">#99ff99</title>
             </block>
