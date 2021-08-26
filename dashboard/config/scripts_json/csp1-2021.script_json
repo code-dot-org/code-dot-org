@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-25 20:25:24 UTC",
+    "serialized_at": "2021-08-26 16:22:23 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -1892,7 +1892,7 @@
       "key": "7dd34f31-c90e-4a4a-afc8-97b208078550",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systesm\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systems.\n",
         "tips": [
           {
             "type": "teachingTip",
