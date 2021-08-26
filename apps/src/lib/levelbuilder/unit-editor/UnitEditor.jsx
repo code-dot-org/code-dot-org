@@ -54,6 +54,7 @@ class UnitEditor extends React.Component {
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
@@ -126,6 +127,7 @@ class UnitEditor extends React.Component {
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
+      lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
       lessonLevelData:
         this.props.initialLessonLevelData ||
@@ -290,6 +292,7 @@ class UnitEditor extends React.Component {
             this.props.levelKeyList
           )
         : this.state.lessonLevelData,
+      last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
@@ -338,7 +341,8 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            oldScriptText: data.lessonLevelData
+            oldScriptText: data.lessonLevelData,
+            lastUpdatedAt: data.updated_at
           });
         }
       })
