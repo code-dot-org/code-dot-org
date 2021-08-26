@@ -1,6 +1,8 @@
 import CoreLibrary from './CoreLibrary';
-import {commands as backgroundEffects} from '../commands/poembot/backgroundEffects';
-import {commands as foregroundEffects} from '../commands/poembot/foregroundEffects';
+import {POEMS} from '../poembot/constants';
+import * as utils from '../poembot/commands/utils';
+import {commands as backgroundEffects} from '../poembot/commands/backgroundEffects';
+import {commands as foregroundEffects} from '../poembot/commands/foregroundEffects';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -25,6 +27,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     this.lineEvents = {};
     this.p5.noStroke();
     this.p5.textAlign(this.p5.CENTER);
+    this.p5.angleMode(this.p5.DEGREES);
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -51,7 +54,11 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.lineEvents[lineNum] = null;
         }
         this.drawFromRenderInfo(renderInfo);
-        this.foregroundEffect();
+
+        // Don't show foreground effect in preview
+        if (this.p5.frameCount > 1) {
+          this.foregroundEffect();
+        }
       },
 
       // And add custom Poem Bot commands
@@ -62,7 +69,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       randomWord() {
         // TODO: get curated random word list from Curriculum
         const words = ['cat', 'dog', 'fish'];
-        const index = this.randomNumber(0, words.length - 1);
+        const index = utils.randomInt(0, words.length - 1);
         return words[index];
       },
 
@@ -99,46 +106,10 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       setPoem(key) {
-        if (key === 'wordsworth') {
+        if (POEMS[key]) {
           this.poemState = {
             ...this.poemState,
-            title: 'I Wandered Lonely as a Cloud',
-            author: 'William Wordsworth',
-            lines: [
-              'I wandered lonely as a cloud',
-              "That floats on high o'er vales and hills,",
-              'When all at once I saw a crowd,',
-              'A host, of golden daffodils;',
-              'Beside the lake, beneath the trees,',
-              'Fluttering and dancing in the breeze.'
-            ]
-          };
-        } else if (key === 'dickinson') {
-          this.poemState = {
-            ...this.poemState,
-            title: 'If I can Stop one Heart from Breaking',
-            author: 'Emily Dickinson',
-            lines: [
-              'If I can stop one heart from breaking,',
-              'I shall not live in vain;',
-              'If I can ease one life the aching,',
-              'Or cool one pain,',
-              'Or help one fainting robin',
-              'Unto his nest again,',
-              'I shall not live in vain.'
-            ]
-          };
-        } else if (key === 'silverstein') {
-          this.poemState = {
-            ...this.poemState,
-            title: 'Batty',
-            author: 'Shel Silverstein',
-            lines: [
-              'The baby bat',
-              'Screamed out in fright',
-              "'Turn on the dark;",
-              "I'm afraid of the light.'"
-            ]
+            ...POEMS[key]
           };
         }
       },
@@ -159,10 +130,6 @@ export default class PoemBotLibrary extends CoreLibrary {
       ...backgroundEffects,
       ...foregroundEffects
     };
-  }
-
-  randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   getScaledFontSize(text, font, desiredSize) {
@@ -245,7 +212,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
+      lines: newLines.slice(0, numLinesToShow)
     };
   }
 
@@ -285,15 +252,30 @@ export default class PoemBotLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
+    const longestLine = poemState.lines.reduce(
+      (accumulator, current) =>
+        accumulator.length > current.length ? accumulator : current,
+      '' /* default value */
+    );
+    renderInfo.lineSize = this.getScaledFontSize(
+      longestLine,
+      poemState.font,
+      FONT_SIZE
+    );
     poemState.lines.forEach(line => {
       renderInfo.lines.push({
         text: line,
         x: PLAYSPACE_SIZE / 2,
-        y: yCursor,
-        size: this.getScaledFontSize(line, poemState.font, FONT_SIZE)
+        y: yCursor
       });
       yCursor += lineHeight;
     });
+
+    if (this.p5.frameCount === 1) {
+      // Don't apply effects / line animation for preview
+      return renderInfo;
+    }
+
     renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
     poemState.effects.forEach(effect => {
       renderInfo = this.applyEffect(renderInfo, effect, frameCount);
@@ -320,10 +302,10 @@ export default class PoemBotLibrary extends CoreLibrary {
         renderInfo.author.y
       );
     }
+    this.p5.textSize(renderInfo.lineSize);
     renderInfo.lines.forEach(item => {
       let color = this.getP5Color(renderInfo.color || 'black', item.alpha);
       this.p5.fill(color);
-      this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
   }

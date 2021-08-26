@@ -21,7 +21,6 @@ import {
   getCurrentId
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import defaultSprites from '../spritelab/defaultSprites.json';
 import trackEvent from '@cdo/apps/util/trackEvent';
 
 // TODO: Overwrite version ID within session
@@ -260,12 +259,14 @@ function generateAnimationName(baseName, animationList) {
 
 /**
  * @param {!SerializedAnimationList} serializedAnimationList
+ * @param {Object} alternativeDefaultSprites - optional list of default sprites. Otherwise, use serializedAnimationList
  * @returns {function()}
  */
 export function setInitialAnimationList(
   serializedAnimationList,
   shouldRunV3Migration,
-  isSpriteLab
+  isSpriteLab,
+  alternativeDefaultSprites = serializedAnimationList
 ) {
   // Set default empty animation list if none was provided
   if (!serializedAnimationList) {
@@ -300,10 +301,10 @@ export function setInitialAnimationList(
       if (animation.sourceUrl.includes('/v3/')) {
         // We want to replace this sprite with the /v1/ sprite
         let details = `name=${animation.name};key=${loadedKey}`;
-        if (defaultSprites.propsByKey[loadedKey]) {
+        if (alternativeDefaultSprites.propsByKey[loadedKey]) {
           // The key is the same in the main.json and in default sprites. Do a simple replacement.
           serializedAnimationList.propsByKey[loadedKey] =
-            defaultSprites.propsByKey[loadedKey];
+            alternativeDefaultSprites.propsByKey[loadedKey];
           trackEvent('Research', 'ReplacedSpriteByKey', details);
         } else {
           // We were unable to find a replacement for the /v3/ sprite
