@@ -34,6 +34,8 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     parsed_response_body = JSON.parse(response.body)
     refute parsed_response_body['isFromTeacher']
+    assert parsed_response_body['isFromCurrentUser']
+    assert parsed_response_body['isFromProjectOwner']
 
     comment = CodeReviewComment.find(parsed_response_body['id'])
     assert_not_nil comment.script_id
@@ -75,6 +77,8 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert JSON.parse(response.body)['isFromTeacher']
+    assert JSON.parse(response.body)['isFromCurrentUser']
+    refute JSON.parse(response.body)['isFromProjectOwner']
   end
 
   test 'teacher cannot create CodeReviewComment for student not in their section' do
