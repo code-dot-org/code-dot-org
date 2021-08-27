@@ -9,10 +9,6 @@ class ScriptsControllerTest < ActionController::TestCase
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
     @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
 
-    @student_coursez_2017 = create :student
-    @section_coursez_2017 = create :section, script: @coursez_2017
-    @section_coursez_2017.add_student(@student_coursez_2017)
-
     @migrated_unit = create :script, is_migrated: true
     @unmigrated_unit = create :script
 
@@ -217,7 +213,11 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect from new unstable version to assigned version for student" do
-    sign_in @student_coursez_2017
+    student_coursez_2017 = create :student
+    section_coursez_2017 = create :section, script: @coursez_2017
+    section_coursez_2017.add_student(student_coursez_2017)
+
+    sign_in student_coursez_2017
     get :show, params: {id: @coursez_2019.name}
     assert_redirected_to "/s/#{@coursez_2017.name}?redirect_warning=true"
   end
