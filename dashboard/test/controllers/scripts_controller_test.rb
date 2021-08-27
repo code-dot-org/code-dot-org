@@ -4,8 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
-
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
     @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
@@ -1046,8 +1044,6 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
-  no_access_msg = "You don&#39;t have access to this unit."
-
   class CoursePilotTests < ActionController::TestCase
     setup do
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
@@ -1095,27 +1091,35 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  test_user_gets_response_for :show, response: :redirect, user: nil,
-                              params: -> {{id: @in_development_unit.name}},
-                              name: 'signed out user cannot view in-development unit'
+  class CourseInDevelopmentTests < ActionController::TestCase
+    setup do
+      @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    end
 
-  test_user_gets_response_for(:show, response: :success, user: :student,
-                              params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
-  ) do
-    assert response.body.include? no_access_msg
-  end
+    no_access_msg = "You don&#39;t have access to this unit."
 
-  test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {{id: @in_development_unit.name}},
-                              name: 'teacher cannot view in-development unit'
-  ) do
-    assert response.body.include? no_access_msg
-  end
+    test_user_gets_response_for :show, response: :redirect, user: nil,
+      params: -> {{id: @in_development_unit.name}},
+      name: 'signed out user cannot view in-development unit'
 
-  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-                              params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
-  ) do
-    refute response.body.include? no_access_msg
+    test_user_gets_response_for(:show, response: :success, user: :student,
+      params: -> {{id: @in_development_unit.name}}, name: 'student cannot view in-development unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :teacher,
+      params: -> {{id: @in_development_unit.name}},
+      name: 'teacher cannot view in-development unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+      params: -> {{id: @in_development_unit.name}}, name: 'levelbuilder can view in-development unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
   end
 
   test 'should redirect to latest stable version in unit family for student without progress or assignment' do
