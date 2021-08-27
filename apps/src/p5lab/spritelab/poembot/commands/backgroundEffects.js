@@ -284,6 +284,62 @@ export const commands = {
 
         break;
       }
+      case 'ripples': {
+        palette = PALETTES[palette];
+        let ripples = [];
+        let startRipple = false;
+        let colorIndex = 0;
+        const rippleSpacing = 30;
+        const rippleSpeed = 4;
+        const frameDelay = 4;
+        const rippleNumber = palette.length - 1;
+
+        for (let i = 0; i < rippleNumber; i++) {
+          ripples.push({
+            size: (i + 1) * rippleSpacing,
+            color: palette[colorIndex]
+          });
+          colorIndex = (colorIndex + 1) % palette.length;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noFill();
+          this.p5.strokeWeight(3);
+          if (startRipple && this.p5.frameCount % frameDelay === 0) {
+            ripples.push({
+              size:
+                rippleSpacing +
+                ripples.length * (rippleSpacing + rippleSpeed * frameDelay),
+              color: palette[colorIndex]
+            });
+            colorIndex = (colorIndex + 1) % palette.length;
+            if (ripples.length === rippleNumber) {
+              startRipple = false;
+            }
+          }
+
+          if (ripples.length > 0) {
+            // the actual background color is not fully opaque so we need to
+            // "clear out" the previous frame first so we don't see a remnant of it.
+            this.p5.background('white');
+            this.p5.background(this.getP5Color(ripples[0].color, 100));
+          }
+
+          ripples.forEach(ripple => {
+            const alpha = this.p5.map(ripple.size, 400, 0, 0, 255);
+            this.p5.stroke(this.getP5Color(ripple.color, alpha));
+            this.p5.ellipse(200, 200, ripple.size, ripple.size);
+            ripple.size += rippleSpeed;
+          });
+          ripples = ripples.filter(ripple => ripple.size < 500);
+          if (ripples.length === 0) {
+            startRipple = true;
+          }
+          this.p5.pop();
+        };
+        break;
+      }
     }
   }
 };
