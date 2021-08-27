@@ -269,7 +269,7 @@ export const commands = {
         break;
       case 'twinkling': {
         let stars = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 75; i++) {
           stars.push({
             color: utils.randomColorFromPalette('twinkling'),
             x: utils.randomInt(0, 400),
