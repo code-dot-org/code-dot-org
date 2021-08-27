@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
 import CommentOptions from './CommentOptions';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 export default class Comment extends Component {
   static propTypes = {
@@ -28,19 +29,34 @@ export default class Comment extends Component {
   };
 
   renderName = () => {
-    const {name, isFromTeacher, isFromCurrentUser} = this.props.comment;
+    const {
+      name,
+      isFromTeacher,
+      isFromCurrentUser,
+      isFromProjectOwner
+    } = this.props.comment;
 
     if (isFromCurrentUser) {
       return <span style={styles.name}>{msg.you()}</span>;
     }
 
-    const teacherCommentSuffix = ` (${javalabMsg.onlyVisibleToYou()})`;
+    const teacherCommentSuffix = ` (${javalabMsg.teacherLabel()})`;
+    const authorCommentSuffix = ` (${javalabMsg.authorLabel()})`;
     return (
       <span>
-        <span style={styles.name}>{name}</span>
-        {isFromTeacher && (
-          <span style={styles.teacherNameSuffix}>{teacherCommentSuffix}</span>
-        )}
+        <span
+          style={{...(isFromTeacher && styles.teacherName), ...styles.name}}
+        >
+          {name}
+          <span style={styles.nameSuffix}>
+            {isFromTeacher && (
+              <Tooltip text={javalabMsg.onlyVisibleToYou()} place="top">
+                {teacherCommentSuffix}
+              </Tooltip>
+            )}
+            {isFromProjectOwner && authorCommentSuffix}
+          </span>
+        </span>
       </span>
     );
   };
@@ -56,7 +72,7 @@ export default class Comment extends Component {
     const {
       commentText,
       timestampString,
-      isFromCurrentUser,
+      isFromTeacher,
       isFromOlderVersionOfProject,
       isResolved,
       hasError
@@ -105,7 +121,7 @@ export default class Comment extends Component {
           id={'code-review-comment-body'}
           style={{
             ...styles.comment,
-            ...(isFromCurrentUser && styles.currentUserComment),
+            ...(isFromTeacher && styles.commentFromTeacher),
             ...(isFromOlderVersionOfProject &&
               styles.olderVersionCommentBackgroundColor)
           }}
@@ -119,7 +135,7 @@ export default class Comment extends Component {
 }
 
 const sharedIconStyles = {
-  fontSize: '24px',
+  fontSize: 18,
   lineHeight: '18px',
   margin: '0 0 0 5px'
 };
@@ -128,7 +144,10 @@ const styles = {
   name: {
     fontFamily: '"Gotham 5r"'
   },
-  teacherNameSuffix: {
+  teacherName: {
+    color: color.default_blue
+  },
+  nameSuffix: {
     fontStyle: 'italic'
   },
   ellipsisMenu: {
@@ -141,13 +160,14 @@ const styles = {
   },
   comment: {
     clear: 'both',
-    backgroundColor: color.lighter_gray,
-    padding: '10px 12px'
+    backgroundColor: color.lightest_gray,
+    padding: '10px 12px',
+    borderRadius: 8
   },
   commentContainer: {
     marginBottom: '25px'
   },
-  currentUserComment: {
+  commentFromTeacher: {
     backgroundColor: color.lightest_cyan
   },
   olderVersionCommentTextColor: {color: color.light_gray},
