@@ -374,7 +374,8 @@ class ReviewTab extends Component {
       viewAs === ViewType.Teacher ||
       errorLoadingReviewblePeers ||
       !codeReviewEnabled ||
-      viewAsCodeReviewer
+      viewAsCodeReviewer ||
+      reviewablePeers.length === 0
     ) {
       return null;
     }
@@ -510,14 +511,12 @@ const styles = {
   peerReviewErrorMessage: {
     fontStyle: 'italic',
     textAlign: 'center',
-    fontSize: '12px',
+    fontSize: 12,
     marginBottom: '25px'
   },
   messageText: {
-    fontSize: '18px',
+    fontSize: 13,
     marginBottom: '25px',
-    textAlign: 'center',
-    fontStyle: 'italic',
     color: color.light_gray
   },
   reviewHeader: {
