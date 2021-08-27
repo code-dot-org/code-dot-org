@@ -1,6 +1,10 @@
 %h1 Delete User Progress
 
-%p You are about to <strong>permanently</strong> delete progress (level status and source code) for:
+%p
+  You are about to <strong>permanently</strong> delete all progress (level status
+  and source code) and teacher feedback associated with the user and script below.
+  If the user was the driver in any pairing groups, navigators in those groups will
+  also no longer be able to access the source code they worked on together.
 
 = form_tag(delete_progress_path, method: :post) do
   =hidden_field_tag :user_id, @target_user.id
