@@ -21,27 +21,31 @@ export default class VersionHistoryWithCommits extends React.Component {
   };
 
   /**
+   * state:
    * {
    *   statusMessage: string,
    *   versions: (null|{
    *     lastModified: Date,
    *     isLatest: boolean,
-   *     versionId: string
+   *     versionId: string,
+   *     comment: string
    *   }[]),
    *   showSpinner: boolean,
    *   confirmingClearPuzzle: boolean,
+   *   isOpen: boolean
    * }
    */
-  state = {
-    versions: null,
-    statusMessage: '',
-    showSpinner: true,
-    confirmingClearPuzzle: false,
-    isOpen: true
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      versions: null,
+      statusMessage: '',
+      showSpinner: true,
+      confirmingClearPuzzle: false,
+      isOpen: true
+    };
 
-  componentWillMount() {
-    if (this.props.useFilesApi) {
+    if (props.useFilesApi) {
       filesApi.getVersionHistory(
         this.onVersionListReceived,
         this.onAjaxFailure
@@ -142,7 +146,12 @@ export default class VersionHistoryWithCommits extends React.Component {
   render() {
     let title;
     let body;
-    if (this.state.showSpinner) {
+    let footerButtons = [];
+
+    if (this.state.statusMessage) {
+      title = i18n.versionHistory_header();
+      body = <div>{this.state.statusMessage}</div>;
+    } else if (this.state.showSpinner) {
       title = i18n.versionHistory_header();
       body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
@@ -159,25 +168,29 @@ export default class VersionHistoryWithCommits extends React.Component {
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </p>
           )}
-          <Button
-            style={{marginLeft: 0}}
-            onClick={this.onClearPuzzle}
-            color={Button.ButtonColor.red}
-            text={i18n.versionHistory_clearProgress_confirm()}
-          />
-          <Button
-            style={{float: 'right'}}
-            onClick={this.onCancelClearPuzzle}
-            color={Button.ButtonColor.green}
-            text={i18n.versionHistory_clearProgress_cancel()}
-          />
         </div>
       );
+      footerButtons = [
+        <Button
+          key="confirmClearProgress"
+          style={{marginLeft: 0}}
+          onClick={this.onClearPuzzle}
+          color={Button.ButtonColor.red}
+          text={i18n.versionHistory_clearProgress_confirm()}
+        />,
+        <Button
+          key="cancelClearProgress"
+          style={{float: 'right'}}
+          onClick={this.onCancelClearPuzzle}
+          color={Button.ButtonColor.gray}
+          text={i18n.versionHistory_clearProgress_cancel()}
+        />
+      ];
     } else {
       title = i18n.versionHistory_header();
 
       const rows = this.state.versions.map((version, i) => (
-        <VersionWithComment
+        <VersionWithCommit
           key={version.versionId}
           versionId={version.versionId}
           lastModified={new Date(version.lastModified)}
@@ -223,8 +236,9 @@ export default class VersionHistoryWithCommits extends React.Component {
         isOpen={this.props.isOpen}
         title={title}
         body={body}
-        hideFooter
         handleClose={this.props.onClose}
+        hideFooter={footerButtons.length === 0}
+        renderFooter={() => footerButtons}
       />
     );
   }
@@ -237,7 +251,7 @@ function getLastModifiedTimestamp(timestamp) {
   return timestamp.toString();
 }
 
-function VersionWithComment(props) {
+function VersionWithCommit(props) {
   let button;
   if (props.isLatest) {
     button = (
@@ -252,7 +266,7 @@ function VersionWithComment(props) {
   } else {
     button = [
       <Button
-        key={0}
+        key="preview"
         icon="eye"
         iconClassName="f-eye"
         href={
@@ -265,7 +279,7 @@ function VersionWithComment(props) {
         style={{verticalAlign: 'middle'}}
       />,
       <Button
-        key={1}
+        key="restore"
         onClick={props.onChoose}
         text={i18n.restore()}
         color={Button.ButtonColor.blue}
@@ -298,7 +312,7 @@ function VersionWithComment(props) {
   );
 }
 
-VersionWithComment.propTypes = {
+VersionWithCommit.propTypes = {
   versionId: PropTypes.string.isRequired,
   lastModified: PropTypes.instanceOf(Date).isRequired,
   isLatest: PropTypes.bool,
