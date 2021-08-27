@@ -63,7 +63,10 @@ social:
   <div style="clear: both"></div>
 </div>
 
-<div style="clear: both; margin-bottom:35px"></div>
+<div style="clear: both; margin-bottom:15px"></div>
+
+<p style="margin-bottom:35px">View the <a href="files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn more about the CS Journeys program.</p>
+
 <hr style="border: none;  height: 4px;  margin-bottom: 24px; background-image: url(../images/csjourneys/yellowdash.png); background-repeat: repeat-x;"/>
 <br>
 

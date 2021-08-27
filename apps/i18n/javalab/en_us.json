@@ -1,5 +1,6 @@
 {
   "addAComment": "Add a comment",
+  "authorLabel": "author",
   "allFilesCompile": "All Files Compile!",
   "backpackLabel": "Backpack",
   "backpackListLoadError": "An error occurred loading your backpack. Try again.",
@@ -56,7 +57,7 @@
   "noMainMethod": "Error: your program does not contain a main method.",
   "noCodeReviewComments": "Comments from your teacher will appear here.",
   "noCodeReviewUntilStudentEditsCode": "You cannot leave comments until the project owner has modified the default code and clicked the \"Run\" button",
-  "onlyVisibleToYou": "only visible to you",
+  "onlyVisibleToYou": "teacher comments are only visible to you",
   "programCompleted": "Program completed.",
   "reOpen": "Re-open",
   "replace": "Replace",
@@ -69,6 +70,7 @@
   "startingPainter": "Starting painter.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
+  "teacherLabel": "teacher",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "yourPeer": "your peer"

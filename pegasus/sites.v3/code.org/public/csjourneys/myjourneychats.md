@@ -41,7 +41,7 @@ social:
 
 <a id="chats"></a>
 
-<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Developing responsible artifical intelligence</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Developing responsible artificial intelligence</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <a href="https://www.eventbrite.com/e/my-journey-developing-responsible-artificial-intelligence-registration-168002151959" target="_blank"><img src="/images/csjourneys/myjourney-google.png" style="max-width:100%; border-radius:15px" alt="Taylor Roper"></a>
 <center><img src="/images/avatars/google.png" style="max-width:50%; margin-top:15px" alt="Google logo"></center>
