@@ -114,7 +114,9 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script_level
     authorize! :read, @script_level, params.slice(:login_required)
 
-    @code_review_enabled = @script_level.level.is_a?(Javalab) && (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+    @code_review_enabled = @script_level.level.is_a?(Javalab) &&
+      current_user.present? &&
+      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
