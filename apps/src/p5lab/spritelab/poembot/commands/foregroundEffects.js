@@ -189,6 +189,7 @@ export const commands = {
         };
         this.foregroundEffect = () => {
           this.p5.push();
+          this.p5.noStroke();
           if (stars.length === 0) {
             resetStars();
           }
@@ -244,6 +245,7 @@ export const commands = {
         };
         this.foregroundEffect = () => {
           this.p5.push();
+          this.p5.noStroke();
           glassShards.forEach(glass => drawGlass(glass));
           glassShards = glassShards.filter(glass =>
             // the glass shard is considered in bounds if at least one vertex
@@ -279,6 +281,7 @@ export const commands = {
 
         this.foregroundEffect = () => {
           this.p5.push();
+          this.p5.noStroke();
           stars.forEach(star => {
             const color = this.getP5Color(star.color, star.alpha);
             this.p5.fill(color);
