@@ -17,8 +17,7 @@ export default class VersionHistoryWithCommits extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    versions: PropTypes.arrayOf(PropTypes.object)
+    isOpen: PropTypes.bool.isRequired
   };
 
   /**
@@ -42,10 +41,6 @@ export default class VersionHistoryWithCommits extends React.Component {
   };
 
   componentWillMount() {
-    if (this.props.versions) {
-      this.setState({versions: this.props.versions, showSpinner: false});
-      return;
-    }
     if (this.props.useFilesApi) {
       filesApi.getVersionHistory(
         this.onVersionListReceived,
