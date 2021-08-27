@@ -267,30 +267,24 @@ export const commands = {
         break;
       case 'twinkling': {
         let stars = [];
-        const resetStars = () => {
-          for (let i = 0; i < 100; i++) {
-            stars.push({
-              color: utils.randomColor(this.p5),
-              x: utils.randomInt(0, 400),
-              y: utils.randomInt(0, 400),
-              alpha: utils.randomInt(1, 79),
-              delta: utils.randomInt(0, 1) ? 0.5 : -0.5
-            });
-          }
-        };
+        for (let i = 0; i < 100; i++) {
+          stars.push({
+            color: utils.randomColorFromPalette('twinkling'),
+            x: utils.randomInt(0, 400),
+            y: utils.randomInt(0, 400),
+            alpha: utils.randomInt(1, 100),
+            delta: this.p5.random([-6, -5, -4, -3, 3, 4, 5, 6])
+          });
+        }
 
         this.foregroundEffect = () => {
           this.p5.push();
-          if (stars.length === 0) {
-            resetStars();
-          }
-
           stars.forEach(star => {
             const color = this.getP5Color(star.color, star.alpha);
             this.p5.fill(color);
 
             star.alpha += star.delta;
-            if (star.alpha > 80) {
+            if (star.alpha > 100) {
               star.delta *= -1;
             }
             if (star.alpha < 0) {
