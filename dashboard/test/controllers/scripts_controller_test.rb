@@ -11,11 +11,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
 
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
-    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
-    @pilot_student = create(:follower, section: @pilot_section).student_user
-
     @no_progress_or_assignment_student = create :student
 
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
@@ -1053,40 +1048,51 @@ class ScriptsControllerTest < ActionController::TestCase
 
   no_access_msg = "You don&#39;t have access to this unit."
 
-  test_user_gets_response_for :show, response: :redirect, user: nil,
-    params: -> {{id: @pilot_unit.name}},
-    name: 'signed out user cannot view pilot unit'
+  class CoursePilotTests < ActionController::TestCase
+    setup do
+      @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+      @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+      @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
+      @pilot_student = create(:follower, section: @pilot_section).student_user
+    end
 
-  test_user_gets_response_for(:show, response: :success, user: :student,
-    params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
-  ) do
-    assert response.body.include? no_access_msg
-  end
+    no_access_msg = "You don&#39;t have access to this unit."
 
-  test_user_gets_response_for(:show, response: :success, user: :teacher,
-    params: -> {{id: @pilot_unit.name}},
-    name: 'teacher without pilot access cannot view pilot unit'
-  ) do
-    assert response.body.include? no_access_msg
-  end
+    test_user_gets_response_for :show, response: :redirect, user: nil,
+      params: -> {{id: @pilot_unit.name}},
+      name: 'signed out user cannot view pilot unit'
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
-    params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
-    name: 'pilot teacher can view pilot unit'
-  ) do
-    refute response.body.include? no_access_msg
-  end
+    test_user_gets_response_for(:show, response: :success, user: :student,
+      params: -> {{id: @pilot_unit.name}}, name: 'student cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-    params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
-  ) do
-    refute response.body.include? no_access_msg
-  end
+    test_user_gets_response_for(:show, response: :success, user: :teacher,
+      params: -> {{id: @pilot_unit.name}},
+      name: 'teacher without pilot access cannot view pilot unit'
+    ) do
+      assert response.body.include? no_access_msg
+    end
 
-  test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-    params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
-  ) do
-    refute response.body.include? no_access_msg
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+      params: -> {{id: @pilot_unit.name, section_id: @pilot_section.id}},
+      name: 'pilot teacher can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
+      params: -> {{id: @pilot_unit.name}}, name: 'pilot student can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
+
+    test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
+      params: -> {{id: @pilot_unit.name}}, name: 'levelbuilder can view pilot unit'
+    ) do
+      refute response.body.include? no_access_msg
+    end
   end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
