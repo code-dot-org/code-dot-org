@@ -40,12 +40,18 @@ let schoolData = {
 // Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
 let isInUnitedStates = schoolData.countryCode === 'US';
 
+// TO-DELETE ONCE SHARE EMAIL WITH REGIONAL PARTNER OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
+let userInOptimizelyVariant = experiments.isEnabled(
+  experiments.OPT_IN_EMAIL_REG_PARTNER
+);
+// TO-DELETE ONCE SHARE EMAIL WITH REGIONAL PARTNER OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
+
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
   init();
 
   function init() {
-    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
+    // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
     if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style.cssText =
@@ -57,7 +63,7 @@ $(document).ready(() => {
       document.getElementById('signup-select-user-type-label').style.cssText =
         'width:220px;';
     }
-    // TO-DELETE ONCE OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
+    // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
     setUserType(getUserType());
     renderSchoolInfo();
     renderParentSignUpSection();
@@ -76,6 +82,10 @@ $(document).ready(() => {
     // Optimizely-related code for new sign-up user-type buttons (start)
     optimizelyCountUserTypeSelection(getUserType());
     // Optimizely-related code for new sign-up user-type buttons (end)
+
+    // Optimizely-related code for teacher opting to share email with regional partner (start)
+    optimizelyCountSuccessSignupWithRegPartnerOpt();
+    // Optimizely-related code for teacher opting to share email with regional partner (end)
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
@@ -154,6 +164,12 @@ $(document).ready(() => {
     window['optimizely'].push({type: 'event', eventName: userType});
   }
 
+  // Optimizely-related code for sharing email with regional partners experiment
+  function optimizelyCountSuccessSignupWithRegPartnerOpt() {
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({type: 'event', eventName: 'successSignUp'});
+  }
+
   // Keep if sign-up user type experiment favors original (just func. below)
   $('#user_user_type').change(function() {
     var value = $(this).val();
@@ -211,7 +227,7 @@ $(document).ready(() => {
   // Show opt-in for teachers in the U.S. for sharing their email with
   // Code.org regional partners.
   function toggleVisShareEmailRegPartner(isTeacherInUnitedStates) {
-    if (isTeacherInUnitedStates) {
+    if (userInOptimizelyVariant && isTeacherInUnitedStates) {
       $('#share-email-reg-part-preference-radio').fadeIn();
     } else {
       $('#share-email-reg-part-preference-radio').hide();

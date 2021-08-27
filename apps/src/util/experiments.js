@@ -34,6 +34,7 @@ experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
 experiments.POEM_BOT = 'poemBot';
 experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
+experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 
 // backend "pilot" experiment, stored on window.appOptions.experiments
 experiments.KEEP_WORKING = 'teacher-feedback-review-state';
