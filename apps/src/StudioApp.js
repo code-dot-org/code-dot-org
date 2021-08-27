@@ -31,7 +31,7 @@ import FeedbackUtils from './feedback';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
-import VersionHistory from './templates/VersionHistoryWithCommits';
+import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from './util/color';
@@ -667,9 +667,9 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
     var contentDiv = document.createElement('div');
     var dialog = this.createModalDialog({
       contentDiv: contentDiv,
-      defaultBtnSelector: 'again-button'
+      defaultBtnSelector: 'again-button',
+      id: 'showVersionsModal'
     });
-    console.log(config);
     ReactDOM.render(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
