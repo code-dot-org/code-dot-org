@@ -72,7 +72,10 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data && this.props.data.schoolCountry === 'Colombia';
+    return (
+      this.props.data &&
+      this.props.data.schoolCountry.toLowerCase() === 'colombia'
+    );
   }
 
   /**
@@ -83,7 +86,9 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data && this.props.data.schoolCountry === 'Chile';
+    return (
+      this.props.data && this.props.data.schoolCountry.toLowerCase() === 'chile'
+    );
   }
 
   /**
