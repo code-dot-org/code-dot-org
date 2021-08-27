@@ -25844,3 +25844,16 @@ en:
           description_short: 'Hour of Code Activity - V2 '
           description: ''
           student_description: ''
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Template
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csdu6-playground
+          title: CSD Unit 6 Playground
+          description_audience: ''
+          description_short: CSD U6 Playground. See Dan Schneider for questions
+          description: ''
+          student_description: CSD U6 Playground. See Dan Schneider for questions

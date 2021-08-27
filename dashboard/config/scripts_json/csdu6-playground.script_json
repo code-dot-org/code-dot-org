@@ -1,0 +1,189 @@
+{
+  "script": {
+    "name": "csdu6-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "hideable_lessons": true,
+      "is_maker_unit": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-08-27 18:22:55 UTC",
+    "published_state": "in_development",
+    "seeding_key": {
+      "script.name": "csdu6-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Template",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
+      "position": 1,
+      "properties": {
+        "progression_name": "App Lab Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    },
+    {
+      "key": "5374f521-4688-43be-944c-0aef46e5eed8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Maker Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8",
+        "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "App Lab Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - App Lab Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65"
+      },
+      "level_keys": [
+        "CSD U6 - App Lab Template"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Maker Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Maker Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8"
+      },
+      "level_keys": [
+        "CSD U6 Maker Template"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - App Lab Template",
+        "script_level.level_keys": [
+          "CSD U6 - App Lab Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a5422e27-415a-40b3-8367-9f6c8612ba65"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Maker Template",
+        "script_level.level_keys": [
+          "CSD U6 Maker Template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "5374f521-4688-43be-944c-0aef46e5eed8"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
