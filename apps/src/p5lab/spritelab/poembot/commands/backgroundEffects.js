@@ -340,6 +340,46 @@ export const commands = {
         };
         break;
       }
+      case 'clouds': {
+        const tileSize = 8;
+        const noiseScale = 0.05;
+        const speed = 0.015;
+        const tiles = [];
+        let xnoise = 0.01;
+        let ynoise = 0.01;
+        let backgroundAmount = 0;
+        for (let x = 0; x < 400; x += tileSize) {
+          xnoise = 0.01;
+          for (let y = 0; y < 400; y += tileSize) {
+            tiles.push({
+              x,
+              y,
+              xnoise,
+              ynoise
+            });
+            xnoise += noiseScale;
+          }
+          ynoise += noiseScale;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          backgroundAmount += speed;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, backgroundAmount)
+          );
+          tiles.forEach(tile => {
+            tile.alpha = this.p5.noise(tile.xnoise, tile.ynoise) * 255;
+            tile.xnoise += speed;
+            tile.ynoise += speed;
+            this.p5.fill(this.getP5Color('#ffffff', tile.alpha));
+            this.p5.rect(tile.x, tile.y, tileSize, tileSize);
+          });
+          this.p5.pop();
+        };
+        break;
+      }
     }
   }
 };
