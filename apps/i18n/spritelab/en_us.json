@@ -192,4 +192,5 @@
   "changeOrSetCostume": "None of your sprites changed costumes.",
   "changeBackground": "The background was not changed.",
   "poemBotMakeBackground": "You need to add a background effect.",
+  "poemBotMakeForeground": "You need to add a foreground effect."
 }
