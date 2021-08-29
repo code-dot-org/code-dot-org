@@ -273,7 +273,7 @@ class UnitGroup < ApplicationRecord
 
   def self.all_courses
     return all.to_a unless should_cache?
-    @@all_courses ||= course_cache.values.uniq.freeze
+    @@all_courses ||= course_cache.values.uniq.compact.freeze
   end
 
   def self.family_names
