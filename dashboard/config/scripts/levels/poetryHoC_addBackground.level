@@ -36,7 +36,8 @@
     "hide_pause_button": "false",
     "instructions_icon": "poet",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_background\",\r\n  \"callout_text\": \"Find code blocks here. \",\r\n  \"element_id\": \"[id=':1.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (validationInfo.backgroundEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'poemBotMakeBackground');\r\n  }\r\n}"
   },
   "user_id": 1196,
   "game_id": 64,
