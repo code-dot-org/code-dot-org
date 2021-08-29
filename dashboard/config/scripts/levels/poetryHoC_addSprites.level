@@ -40,6 +40,7 @@
     "encrypted_examples": [
 
     ],
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\n\r\nif (spriteIds.length > 0) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'noSprites');\r\n  }\r\n}",
     "video_key": "hoc_dance_properties"
   },
   "game_id": 64,
