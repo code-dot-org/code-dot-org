@@ -317,7 +317,7 @@ class Script < ApplicationRecord
   class << self
     def all_scripts
       return all.to_a unless should_cache?
-      @@all_scripts ||= script_cache.values.uniq.freeze
+      @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
     def family_names
