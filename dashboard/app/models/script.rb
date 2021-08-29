@@ -420,7 +420,7 @@ class Script < ApplicationRecord
   def self.script_cache
     return nil unless should_cache?
     @@unit_cache ||=
-      (unit_cache_from_cache || unit_cache_from_db).freeze
+      unit_cache_from_cache || unit_cache_from_db
   end
 
   # Returns a cached map from script level id to script_level, or nil if in level_builder mode

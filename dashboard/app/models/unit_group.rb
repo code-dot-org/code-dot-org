@@ -618,7 +618,7 @@ class UnitGroup < ApplicationRecord
   def self.course_cache
     return nil unless should_cache?
     @@course_cache ||=
-      (course_cache_from_cache || course_cache_from_db).freeze
+      course_cache_from_cache || course_cache_from_db
   end
 
   def self.get_without_cache(id_or_name)
