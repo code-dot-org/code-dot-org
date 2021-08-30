@@ -472,7 +472,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '25px 5%'
+    margin: '25px 4px'
   },
   label: {
     margin: 0,

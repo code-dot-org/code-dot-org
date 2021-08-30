@@ -81,6 +81,8 @@ export default class Comment extends Component {
 
     const {isShowingCommentOptions} = this.state;
 
+    const nameAndTimeTextStyle = {...(isResolved && {color: color.light_gray})};
+
     return (
       <div
         style={{
@@ -89,46 +91,54 @@ export default class Comment extends Component {
             styles.olderVersionCommentTextColor)
         }}
       >
-        <div style={styles.commentHeaderContainer}>
-          {this.renderName()}
-          <span style={styles.rightAlignedCommentHeaderSection}>
-            <span style={styles.timestamp}>
-              {this.renderFormattedTimestamp(timestampString)}
+        {isResolved && (
+          <i className="fa fa-check-circle" style={styles.check} />
+        )}
+        {!isResolved && <div style={styles.noCheck}>&nbsp;</div>}
+        <div style={{width: 'calc(100% - 25px)', float: 'right'}}>
+          <div style={styles.commentHeaderContainer}>
+            <span style={nameAndTimeTextStyle}>{this.renderName()}</span>
+            <span style={styles.rightAlignedCommentHeaderSection}>
+              <span style={{...styles.timestamp, ...nameAndTimeTextStyle}}>
+                {this.renderFormattedTimestamp(timestampString)}
+              </span>
+              {/*isResolved && <i className="fa fa-check" style={styles.check} />*/}
+              {!viewAsCodeReviewer && (
+                <i
+                  className="fa fa-ellipsis-h"
+                  style={styles.ellipsisMenu}
+                  onClick={() =>
+                    this.setState({
+                      isShowingCommentOptions: !isShowingCommentOptions
+                    })
+                  }
+                >
+                  {isShowingCommentOptions && (
+                    <CommentOptions
+                      isResolved={isResolved}
+                      onResolveStateToggle={() => this.onResolve()}
+                      onDelete={() => this.onDelete()}
+                    />
+                  )}
+                </i>
+              )}
             </span>
-            {isResolved && <i className="fa fa-check" style={styles.check} />}
-            {!viewAsCodeReviewer && (
-              <i
-                className="fa fa-ellipsis-h"
-                style={styles.ellipsisMenu}
-                onClick={() =>
-                  this.setState({
-                    isShowingCommentOptions: !isShowingCommentOptions
-                  })
-                }
-              >
-                {isShowingCommentOptions && (
-                  <CommentOptions
-                    isResolved={isResolved}
-                    onResolveStateToggle={() => this.onResolve()}
-                    onDelete={() => this.onDelete()}
-                  />
-                )}
-              </i>
-            )}
-          </span>
+          </div>
+          {!isResolved && (
+            <div
+              id={'code-review-comment-body'}
+              style={{
+                ...styles.comment,
+                ...(isFromTeacher && styles.commentFromTeacher),
+                ...(isFromOlderVersionOfProject &&
+                  styles.olderVersionCommentBackgroundColor)
+              }}
+            >
+              {commentText}
+            </div>
+          )}
+          {hasError && this.renderErrorMessage()}
         </div>
-        <div
-          id={'code-review-comment-body'}
-          style={{
-            ...styles.comment,
-            ...(isFromTeacher && styles.commentFromTeacher),
-            ...(isFromOlderVersionOfProject &&
-              styles.olderVersionCommentBackgroundColor)
-          }}
-        >
-          {commentText}
-        </div>
-        {hasError && this.renderErrorMessage()}
       </div>
     );
   }
@@ -156,7 +166,14 @@ const styles = {
   },
   check: {
     ...sharedIconStyles,
-    color: color.green
+    color: color.light_gray,
+    width: 20,
+    float: 'left',
+    fontSize: 15
+  },
+  noCheck: {
+    width: 20,
+    float: 'left'
   },
   comment: {
     clear: 'both',
@@ -165,7 +182,9 @@ const styles = {
     borderRadius: 8
   },
   commentContainer: {
-    marginBottom: '25px'
+    marginBottom: 25
+    //display: 'flex',
+    //justifyContent: 'space-between'
   },
   commentFromTeacher: {
     backgroundColor: color.lightest_cyan
