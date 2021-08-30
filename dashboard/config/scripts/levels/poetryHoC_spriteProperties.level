@@ -46,7 +46,7 @@
   "created_at": "2021-08-18T21:53:47.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-08-18T21:53:47.305+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addSprites\\\"\"],\"cloned_from\":\"poetryHoC_addSprites\"},{\"changed_at\":\"2021-08-18 21:59:20 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:00:47 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:16:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:17:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-24 21:25:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-24 21:25:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-18T21:53:47.305+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_addSprites\\\"\"],\"cloned_from\":\"poetryHoC_addSprites\"},{\"changed_at\":\"2021-08-18 21:59:20 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:00:47 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:16:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:17:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-24 21:25:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-24 21:25:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-29 05:22:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-08-29 05:36:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -56,10 +56,10 @@
         <block type="when_run">
           <next>
             <block type="PoemBot_setPoem">
-              <title name="BG_EFFECT">"wordsworth"</title>
+              <title name="POEM">"wordsworth"</title>
               <next>
                 <block type="PoemBot_setForegroundEffect">
-                  <title name="FG_EFFECT">"rain"</title>
+                  <title name="EFFECT">"rain"</title>
                   <next>
                     <block type="gamelab_makeNewSpriteAnon">
                       <title name="ANIMATION_NAME">"bear"</title>
@@ -83,10 +83,9 @@
           <block type="PoemBot_setBackgroundEffect">
             <title name="EFFECT">"colors"</title>
             <title name="PALETTE">"grayscale"</title>
-            <title name="BG_EFFECT">"solid"</title>
           </block>
           <block type="PoemBot_setForegroundEffect">
-            <title name="FG_EFFECT">"rain"</title>
+            <title name="EFFECT">"rain"</title>
           </block>
         </category>
         <category name="Text">
@@ -94,7 +93,12 @@
             <title name="FONT">"Arial"</title>
           </block>
           <block type="PoemBot_setFontColor">
-            <value name="COLOR">
+            <value name="FILL">
+              <block type="colour_picker">
+                <title name="COLOUR">#993399</title>
+              </block>
+            </value>
+            <value name="STROKE">
               <block type="colour_picker">
                 <title name="COLOUR">#993399</title>
               </block>

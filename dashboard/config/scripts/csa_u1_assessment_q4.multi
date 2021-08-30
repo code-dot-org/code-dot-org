@@ -16,15 +16,33 @@ Covered in Unit 1 Lesson 5.
 MARKDOWN
 
 markdown <<MARKDOWN
- Which of the following signatures are correct examples of a constructor for a class called Painter?
+Consider the code segment below.
 
-I. Painter ross = new Painter (3, 4, “North”, 2);
+```
+public class Painter {
+  ...
 
-II. Painter ross = new Paint (“South”, 1,2,5);
+  public Painter() {
+    . . .
+  }
 
-III. Painter ross = new Painter ();
+  public Painter(int x, int y, String direction, int paint) {
+    . . .
+  }
+  
+  . . .
+}
+```
 
-IV. Painter ross = new Painter (0, 0, “East”, 6);’ 
+Which of the following are correct examples of initializing a `Painter` object?
+
+I. `Painter ross = new Painter (3, 4, “North”, 2);`
+
+II. `Painter ross = new Paint (“South”, 1,2,5);`
+
+III. `Painter ross = new Painter ();`
+
+IV. `Painter ross = new Painter (0, 0, “East”, 6);’`
 
 
 MARKDOWN
