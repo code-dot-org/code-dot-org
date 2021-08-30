@@ -13,11 +13,11 @@ export const commands = {
     const id = createUuid();
     switch (effectName) {
       case 'rain': {
-        const drops = [];
+        let drops = [];
         for (let i = 0; i < 20; i++) {
           drops.push({
-            x: utils.randomInt(0, 380),
-            y: utils.randomInt(0, 380),
+            x: utils.randomInt(-400, 380),
+            y: utils.randomInt(-50, -20),
             length: utils.randomInt(10, 20)
           });
         }
@@ -33,9 +33,16 @@ export const commands = {
               this.p5.push();
               this.p5.translate(drops[i].x - 20, drops[i].y - 20);
               this.p5.line(0, 0, drops[i].length, drops[i].length * 2);
-              drops[i].y = (drops[i].y + drops[i].length) % 420;
-              drops[i].x = (drops[i].x + drops[i].length / 2) % 420;
+              drops[i].y = drops[i].y + drops[i].length;
+              drops[i].x = drops[i].x + drops[i].length / 2;
               this.p5.pop();
+            }
+            drops = drops.filter(drop => drop.y < 420 && drop.x < 420);
+            if (drops.length === 0) {
+              // Remove this foreground effect once no more drops are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
             }
             this.p5.pop();
           }
@@ -44,16 +51,18 @@ export const commands = {
       }
       case 'bubbles': {
         let bubbles = [];
+        for (let i = 0; i < 25; i++) {
+          bubbles.push({
+            x: this.p5.random(-100, 400),
+            y: 410,
+            velocityX: this.p5.random(-2, 2),
+            size: this.p5.random(6, 12, 18),
+            color: this.getP5Color(utils.randomColor(this.p5), 60)
+          });
+        }
         this.foregroundEffects.push({
           id,
           func: () => {
-            bubbles.push({
-              x: this.p5.random(-100, 400),
-              y: 410,
-              velocityX: this.p5.random(-2, 2),
-              size: this.p5.random(6, 12, 18),
-              color: this.getP5Color(utils.randomColor(this.p5), 60)
-            });
             this.p5.push();
             this.p5.noStroke();
             bubbles.forEach(bubble => {
@@ -68,13 +77,19 @@ export const commands = {
             });
             this.p5.pop();
             bubbles = bubbles.filter(bubble => bubble.y > 0);
+            if (bubbles.length === 0) {
+              // Remove this foreground effect once no more bubbles are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
           }
         });
         break;
       }
       case 'hearts': {
-        const hearts = [];
-        for (let i = 0; i < 10; i++) {
+        let hearts = [];
+        for (let i = 0; i < 15; i++) {
           hearts.push({
             x: utils.randomInt(10, 390),
             y: utils.randomInt(10, 390),
@@ -93,13 +108,15 @@ export const commands = {
               this.p5.scale(heart.size / 20);
               drawHeart(this.p5._renderer.drawingContext, heart.color);
               heart.size--;
-              if (heart.size < 0) {
-                heart.x = utils.randomInt(10, 390);
-                heart.y = utils.randomInt(10, 390);
-                heart.size = utils.randomInt(10, 120);
-              }
               this.p5.pop();
             });
+            hearts = hearts.filter(heart => heart.size > 0);
+            if (hearts.length === 0) {
+              // Remove this foreground effect once no more hearts are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
           }
         });
         break;
@@ -127,18 +144,18 @@ export const commands = {
 
         const emojiTypes = [lovestruck, smiley, starstruck, tickled, wink];
         let emojis = [];
+        for (let i = 0; i < 15; i++) {
+          emojis.push({
+            x: utils.randomInt(10, 390),
+            y: utils.randomInt(-100, -50),
+            size: utils.randomInt(50, 90),
+            image: emojiTypes[utils.randomInt(0, emojiTypes.length - 1)]
+          });
+        }
 
         this.foregroundEffects.push({
           id,
           func: () => {
-            if (this.p5.frameCount % 10 === 0) {
-              emojis.push({
-                x: utils.randomInt(10, 390),
-                y: -50,
-                size: utils.randomInt(50, 90),
-                image: emojiTypes[utils.randomInt(0, emojiTypes.length - 1)]
-              });
-            }
             emojis.forEach(emoji => {
               emoji.y += this.p5.pow(emoji.size, 0.25);
               this.p5.push();
@@ -152,6 +169,12 @@ export const commands = {
               this.p5.pop();
             });
             emojis = emojis.filter(emoji => emoji.y < 450);
+            if (emojis.length === 0) {
+              // Remove this foreground effect once no more emojis are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
           }
         });
 
@@ -159,18 +182,20 @@ export const commands = {
       }
       case 'confetti': {
         let confetti = [];
+        for (let i = 0; i < 25; i++) {
+          confetti.push({
+            x: utils.randomInt(0, 400),
+            y: utils.randomInt(-50, -20),
+            velocityX: this.p5.random(-2, 2),
+            size: this.p5.random(6, 12, 18),
+            spin: 1,
+            color: utils.randomColor(this.p5)
+          });
+        }
         this.foregroundEffects.push({
           id,
           func: () => {
             this.p5.push();
-            confetti.push({
-              x: utils.randomInt(0, 400),
-              y: -10,
-              velocityX: this.p5.random(-2, 2),
-              size: this.p5.random(6, 12, 18),
-              spin: 1,
-              color: utils.randomColor(this.p5)
-            });
             this.p5.noStroke();
             confetti.forEach(confetto => {
               this.p5.push();
@@ -179,12 +204,18 @@ export const commands = {
               this.p5.scale(this.p5.sin(confetto.spin), 1);
               confetto.spin += 20;
               this.p5.rect(0, 0, 4, confetto.size);
-              const fallSpeed = this.p5.map(confetto.size, 6, 12, 1, 3);
+              const fallSpeed = this.p5.map(confetto.size, 6, 12, 3, 6);
               confetto.y += fallSpeed;
               confetto.x += confetto.velocityX;
               this.p5.pop();
             });
             confetti = confetti.filter(confetto => confetto.y < 420);
+            if (confetti.length === 0) {
+              // Remove this foreground effect once no more confetti are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
 
             this.p5.pop();
           }
@@ -193,27 +224,22 @@ export const commands = {
       }
       case 'starburst': {
         let stars = [];
-        const resetStars = () => {
-          for (let i = 0; i < 100; i++) {
-            const theta = utils.randomInt(0, 360);
-            const velocity = utils.randomInt(4, 12);
-            stars.push({
-              color: utils.randomColor(this.p5),
-              x: 200,
-              y: 200,
-              velocityX: velocity * this.p5.cos(theta),
-              velocityY: velocity * this.p5.sin(theta)
-            });
-          }
-        };
+        for (let i = 0; i < 100; i++) {
+          const theta = utils.randomInt(0, 360);
+          const velocity = utils.randomInt(4, 12);
+          stars.push({
+            color: utils.randomColor(this.p5),
+            x: 200,
+            y: 200,
+            velocityX: velocity * this.p5.cos(theta),
+            velocityY: velocity * this.p5.sin(theta)
+          });
+        }
         this.foregroundEffects.push({
           id,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
-            if (stars.length === 0) {
-              resetStars();
-            }
 
             stars.forEach(star => {
               this.p5.fill(star.color);
@@ -225,6 +251,12 @@ export const commands = {
               star =>
                 star.x > -10 && star.x < 410 && star.y > -10 && star.y < 410
             );
+            if (stars.length === 0) {
+              // Remove this foreground effect once no more stars are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
             this.p5.pop();
           }
         });
@@ -246,26 +278,24 @@ export const commands = {
           this.p5.endShape();
         };
 
-        const reset = () => {
-          for (let i = 0; i < 100; i++) {
-            const numPoints = utils.randomInt(3, 9);
-            const points = [];
-            const velocity = utils.randomInt(4, 12);
-            const theta = utils.randomInt(0, 360);
-            for (let i = 0; i < numPoints; i++) {
-              points.push({
-                x: utils.randomInt(200 - shardRadius, 200 + shardRadius),
-                y: utils.randomInt(200 - shardRadius, 200 + shardRadius),
-                velocityX: velocity * this.p5.cos(theta),
-                velocityY: velocity * this.p5.sin(theta)
-              });
-            }
-            glassShards.push({
-              points: points,
-              color: utils.randomColorFromPalette('ocean')
+        for (let i = 0; i < 100; i++) {
+          const numPoints = utils.randomInt(3, 9);
+          const points = [];
+          const velocity = utils.randomInt(4, 12);
+          const theta = utils.randomInt(0, 360);
+          for (let i = 0; i < numPoints; i++) {
+            points.push({
+              x: utils.randomInt(200 - shardRadius, 200 + shardRadius),
+              y: utils.randomInt(200 - shardRadius, 200 + shardRadius),
+              velocityX: velocity * this.p5.cos(theta),
+              velocityY: velocity * this.p5.sin(theta)
             });
           }
-        };
+          glassShards.push({
+            points: points,
+            color: utils.randomColorFromPalette('ocean')
+          });
+        }
         this.foregroundEffects.push({
           id,
           func: () => {
@@ -281,7 +311,10 @@ export const commands = {
               )
             );
             if (glassShards.length === 0) {
-              reset();
+              // Remove this foreground effect once no more glassShards are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
             }
             this.p5.pop();
           }
@@ -318,11 +351,15 @@ export const commands = {
               if (star.alpha > 100) {
                 star.delta *= -1;
               }
-              if (star.alpha < 0) {
-                star.delta *= -1;
-              }
               drawStar(this.p5, star.x, star.y, 3, 9, 5);
             });
+            stars = stars.filter(star => star.alpha > 0);
+            if (stars.length === 0) {
+              // Remove this foreground effect once no more stars are visible.
+              this.foregroundEffects = this.foregroundEffects.filter(
+                effect => effect.id !== id
+              );
+            }
             this.p5.pop();
           }
         });
