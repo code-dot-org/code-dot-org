@@ -297,13 +297,13 @@ class InternationalOptInComponent extends FormComponent {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
     } else if (
       this.isChileSelected() &&
-      this.props.data.workshopOrganizer === 'Fundacion Kodea'
+      this.props.data.workshopFacilitator !== 'Centro de Innovación - Mineduc' //we want the free text fields in this case
     ) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
       // placeholder text asking the user to select their country first.
-      // Otherwise, if they've selected a non-Colombian country, just render
+      // Otherwise, if they've selected a non-Colombian/Chilean country, just render
       // the inputs normally.
       const selectedCountry = this.props.data && this.props.data.schoolCountry;
       const placeholder = selectedCountry
