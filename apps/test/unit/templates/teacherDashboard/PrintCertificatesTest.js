@@ -68,5 +68,6 @@ describe('PrintCertificates', () => {
       .find('div')
       .last()
       .simulate('click');
+    sinon.restore();
   });
 });

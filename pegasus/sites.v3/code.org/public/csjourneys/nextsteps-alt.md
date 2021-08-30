@@ -29,12 +29,12 @@ social:
 <div class="col-25" style="border:1px solid #00adbc; text-align:center; margin-top:25px; padding:15px; padding-left:15px; padding-right:15px; overflow: hidden; position: relative; border-radius:15px">
   <h3 style="margin-top:12px"><strong>Presented by:</strong></h3>
   <br>
-  <img src="/images/logo.svg" style="width: 35%">
+  <img src="/images/logo.svg" style="width: 35%" alt="Code.org logo">
   <br>
   <br>
   <br>
   <a href="https://www.careervillage.org/" target="_blank">
-  <img src="/images/csjourneys/career-village-nextsteps.png" style="width: 80%; margin-bottom: 12px">
+  <img src="/images/csjourneys/career-village-nextsteps.png" style="width: 80%; margin-bottom: 12px" alt="Career Village logo">
   </a>
 </div>
 
@@ -47,11 +47,19 @@ social:
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>This FAQ session is designed to answer some of the most commonly asked questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics and student takeaways, click the Register button below.</p>
-  <button style="margin-bottom:20px">Register</button>
+  <p>This FAQ session is designed to answer some of the most commonly asked questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <a href="https://www.eventbrite.com/e/your-questions-about-cs-careers-answered-registration-167660636477"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/csjourneys/jack-jobes.jpg" style="border-radius:50%; width:55%" alt="Jack Jobes">
+    <p style="margin-top:10px"><strong>Jack Jobes</strong>
+    <br>
+    Student
+    <br>
+    <a href="https://www.usc.edu/" target="_blank">University of Southern California</a></p>
+  </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/gabe-saruhashi.png" style="border-radius:50%; width:55%" alt="Gabe Saruhashi">
     <p style="margin-top:10px"><strong>Gabriel Saruhashi</strong>
     <br>
     Co-founder
@@ -59,18 +67,12 @@ social:
     <a href="https://ameelio.org/" target="_blank">Ameelio</a></p>
   </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/zene-sekou.jpg" style="border-radius:50%; width:55%" alt="Zene Sekou">
     <p style="margin-top:10px"><strong>Zené Sekou</strong>
     <br>
     Software Engineer
     <br>
     <a href="https://www.amazon.com/" target="_blank">Amazon</a></p>
-  </div>
-  <div class="col-33" style="text-align:center">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
-    <br>
-    Marketing Program Manager, Code.org</p>
   </div>
   <div style="clear: both"></div>
 <br>
@@ -104,19 +106,19 @@ social:
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 13th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics and student takeaways, click the Register button below.</p>
-  <button style="margin-bottom:20px">Register</button>
+  <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will have the opportunity to hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <a href="https://www.eventbrite.com/e/college-project-showcase-registration-167738194455"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/erin-howard.jpg" style="border-radius:50%; width:55%" alt="Erin Howard">
     <p style="margin-top:10px"><strong>Erin Howard</strong>
     <br>
-    PhD Student in Astronomy
+    Student
     <br>
     <a href="https://www.wwu.edu/" target="_blank">Western Washington University</a></p>
   </div>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/nhat-nguyen.jpg" style="border-radius:50%; width:55%" alt="Nhat Nguyen">
     <p style="margin-top:10px"><strong>Nhat Nguyen</strong>
     <br>
     Recent Grad
@@ -124,7 +126,7 @@ social:
     <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
   </div>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/nicholas-papano.png" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/nicholas-papano.png" style="border-radius:50%; width:55%" alt="Nicholas Papano">
     <p style="margin-top:10px"><strong>Nicholas Papano</strong>
     <br>
     Recent Grad
@@ -132,12 +134,12 @@ social:
     <a href="https://www.sjsu.edu/" target="_blank">San Jose State University</a></p>
   </div>
   <div class="col-25" style="text-align:center">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/brianna-wimer.jpg" style="border-radius:50%; width:55%" alt="Brianna Wimer">
     <p style="margin-top:10px"><strong>Brianna Wimer</strong>
     <br>
-    Student
+    PhD Student
     <br>
-    <a href="https://www.ua.edu/" target="_blank">University of Alabama</a></p>
+    <a href="https://www.nd.edu/" target="_blank">University of Notre Dame</a></p>
   </div>
   <div style="clear: both"></div>
 <br>
@@ -171,11 +173,11 @@ social:
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 27th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certifications. To view more details, including key topics and student takeaways, click the Register button below.</p>
+  <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certificates. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
   <button style="margin-bottom:20px">Register</button>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/robert-campbell.jpg" style="border-radius:50%; width:55%" alt="Robert Campbell">
     <p style="margin-top:10px"><strong>Robert G. Campbell</strong>
     <br>
     Data Scientist
@@ -184,12 +186,14 @@ social:
   </div>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/avatars/eric_fershtman.jpg" style="border-radius:50%; width:55%">
-    <p style="margin-top:10px"><strong>Eric Fershtman</strong>
+    <p style="margin-top:10px"><strong>TBD</strong>
     <br>
-    Marketing Program Manager, Code.org</p>
+    TBD
+    <br>
+    <a href="https://www.google.com/" target="_blank">Google</a></p>
   </div>
   <div class="col-33" style="text-align:center">
-    <img src="/images/csjourneys/vikram-sreedhar.png" style="border-radius:50%; width:55%">
+    <img src="/images/csjourneys/vikram-sreedhar.png" style="border-radius:50%; width:55%" alt="Vikram Sreedhar">
     <p style="margin-top:10px"><strong>Vikram Sreedhar</strong>
     <br>
     Co-Founder/Chief Technology Officer 
@@ -212,7 +216,7 @@ social:
         <li style="color:#ffffff">Fill out the post-event survey (sent via email one day after the event).</li><br>
         <li style="color:#ffffff">Give students time in class to revisit both their list of goals and their to-do list of steps they need to take to achieve their goals. Does anything change?</li><br>
         <li style="color:#ffffff">Have students research community colleges in your area (city/region/state). What programs are available. How much does it cost? Are there bridge programs between the community college(s) and state universities? What are some of the benefits and drawbacks of going this route?</li><br>
-        <li style="color:#ffffff">Give students time to explore other alternative pathways, like <a href="https://grow.google/certificates/#?modal_active=none target="_blank" style="color:#ffffff">Google Career Certificates</a> and <a href="https://code.org/beyond/internships#apprenticeships" target="_blank" style="color:#ffffff">apprenticeship programs</a>. Again, encourage them to think about benefits and drawbacks.</li>
+        <li style="color:#ffffff">Give students time to explore other alternative pathways, like <a href="https://grow.google/certificates/#?modal_active=none" target="_blank" style="color:#ffffff">Google Career Certificates</a> and <a href="https://code.org/beyond/internships#apprenticeships" target="_blank" style="color:#ffffff">apprenticeship programs</a>. Again, encourage them to think about benefits and drawbacks.</li>
     </ul>
   </div>
   <div style="clear: both"></div>
@@ -229,27 +233,35 @@ social:
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, November 10th at 11 am EDT / 8 am PDT</strong></h3>
-  <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics and student takeaways, click the Register button below.</p>
-  <button style="margin-bottom:20px">Register</button>
+  <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
+  <a href="https://www.eventbrite.com/e/making-connections-and-building-support-networks-registration-167771632469"><button style="margin-bottom:20px">Register</button></a>
   <p>Featuring:</p>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/nik-bisht.png" style="border-radius:50%; width:55%" alt="Nik Bisht">
+    <p style="margin-top:10px"><strong>Nik Bisht</strong>
+    <br>
+    Software Engineer 
+    <br>
+    <a href="https://www.bolt.com/" target="_blank">Bolt</a></p>
+  </div>
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%" alt="Andrea Delgado-Olson">
     <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
     <br>
     Executive Director 
     <br>
     <a href="https://nativesintech.org/" target="_blank">Natives in Tech</a></p>
   </div>
-  <div class="col-33" style="text-align:center">
-    <img src="/images/csjourneys/elisabeth-holm.jpg" style="border-radius:50%; width:55%">
+  <div class="col-25" style="text-align:center">
+    <img src="/images/csjourneys/elisabeth-holm.jpg" style="border-radius:50%; width:55%" alt="Elisabeth Holm">
     <p style="margin-top:10px"><strong>Elisabeth Holm</strong>
     <br>
     Founder
     <br>
     <a href="https://sisterhoodofnativeamericancoders.org/" target="_blank">Sisterhood of Native American Coders</a></p>
   </div>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
-    <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%" alt="Kianjai Huggan">
     <p style="margin-top:10px"><strong>Kianjai Huggan</strong>
     <br>
     Curriculum Coordinator 

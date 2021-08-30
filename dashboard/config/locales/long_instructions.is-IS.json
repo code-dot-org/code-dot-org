@@ -3286,7 +3286,6 @@
         "courseE_artist_functions8b_2021": "_\"Zombí zvimar.\"_\n\nKallaðu á fallið `teikna ferning` innan úr fallinu `teikna röð ferninga` til að gera þetta enn auðveldara!\n\n* * *\n\n-   Ferningar eru með _50_ díla millibili.",
         "courseE_artist_functions8c_2021": "Bættu við enn einu falli sem býr til þessa röð af víxluðum ferningum með því að nota fallið `teikna röð ferninga`.",
         "courseE_artist_functions9_2021": "**Áskorun:** Búðu til þessa mynd með þeim fáu kubbum sem þú færð.  \n\n-   Hver þríhyrningur hefur **50 díla** hliðar  \n-   Til að teikna tígul, þarftu að snúa til skiptis **60 gráður og 120 gráður**.",
-        "courseE_artist_functionsProj_2021": "**Hugkveikja:** Notaðu það sem þú hefur lært til að búa til það sem þú vilt!  \n\nGetur búið til svona vindrellu?",
         "courseE_artist_functions_challenge1_2021": "Þegar þú hefur einu sinni skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum svo til að búa til þína eigin flottu hönnun!",
         "courseE_artist_functions_challenge2_2021": "Þú getur notað `hoppa` skipunina til að komast á hvað stað sem er í skjámyndinni! Prófaðu þennan kóða til að sjá hvernig hann virkar. Breyttu honum svo eftir eigin höfði!\n\n<xml>\n<block type=\"jump_to_xy\">\n<title name=\"XPOS\">???</title>\n<title name=\"YPOS\">???</title>\n</block></xml>",
         "courseE_artist_functions_predict1_2021": "Hér er þraut sem notar fall (function) sem við höfum skilgreint. ",

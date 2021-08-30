@@ -39,14 +39,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "video_key": "hoc_dance_properties"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2021-08-18T21:44:19.000Z",
   "level_num": "custom",
   "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2021-08-18T21:44:19.545+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-08-18 21:46:43 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:49:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:01:27 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-18T21:44:19.545+00:00\",\"changed\":[\"cloned from \\\"poetryHoC_textEffect\\\"\"],\"cloned_from\":\"poetryHoC_textEffect\"},{\"changed_at\":\"2021-08-18 21:46:43 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:49:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:50:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-18 22:01:27 +0000\",\"changed\":[\"long_instructions\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:01:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:02:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:04:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-08-20 18:22:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -55,8 +56,32 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="PoemBot_setForegroundEffect">
-              <title name="FG_EFFECT">"bubbles"</title>
+            <block type="PoemBot_setPoem">
+              <title name="BG_EFFECT">"wordsworth"</title>
+              <next>
+                <block type="PoemBot_setForegroundEffect">
+                  <title name="FG_EFFECT">"bubbles"</title>
+                  <next>
+                    <block type="PoemBot_setFont">
+                      <title name="FONT">"Arial"</title>
+                      <next>
+                        <block type="PoemBot_setFontColor">
+                          <value name="COLOR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#666666</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="PoemBot_setTextEffect">
+                              <title name="EFFECT">"fade"</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
             </block>
           </next>
         </block>
@@ -82,6 +107,9 @@
                 <title name="COLOUR">#993399</title>
               </block>
             </value>
+          </block>
+          <block type="PoemBot_setTextEffect">
+            <title name="EFFECT">"fade"</title>
           </block>
         </category>
         <category name="Sprites">

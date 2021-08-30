@@ -168,4 +168,13 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
     assert_equal template_level, real_level1.project_template_level
   end
+
+  test 'can unset project template level' do
+    template_level = create(:level)
+    real_level = create(:level, project_template_level_name: template_level.name)
+    assert_equal template_level, real_level.project_template_level
+
+    real_level.update!(project_template_level_name: nil)
+    assert_nil real_level.project_template_level
+  end
 end

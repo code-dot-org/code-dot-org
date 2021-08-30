@@ -13593,3 +13593,183 @@ vi:
           lessons:
             lesson-1:
               name: Tổng quan
+        csa-u6-dev:
+          lessons:
+            lesson-18:
+              name: Vật dụng
+        csa1-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              description_student: Hôm nay, bạn đã hoàn thành Câu hỏi tự luận (FRQ)
+                đầu tiên của mình! Điều này có nghĩa là bạn đã viết mã bằng tay để
+                hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng
+                cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại
+                từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
+              description_teacher: |-
+                Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
+
+                Bài học này bao gồm ba mục tiêu:
+
+                -   Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
+                -   Thực hành câu hỏi kiểu FRQ (viết bằng tay)
+                -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
+
+                Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
+            lesson-19:
+              description_student: Hôm nay, bạn đã hoàn thành Câu hỏi tự luận (FRQ)
+                đầu tiên của mình! Điều này có nghĩa là bạn đã viết mã bằng tay để
+                hoàn thành một bài tập lớn. Bạn làm bài tập này cùng một đối tác bằng
+                cách di chuyển quanh phòng và hoàn thành các phần trong bài tập tại
+                từng vị trí, kiểm tra bài làm của mình trong quá trình đó.
+              description_teacher: |-
+                Học sinh hoàn thành bài tập dạng Câu hỏi tự luận (FRQ) đầu tiên của mình trong bài học này. Các em ghi chú câu hỏi thành một nhóm, sau đó triển khai nhóm `SpiralPainter` đầy đủ theo cặp thông qua hoạt động theo kiểu “Vòng quanh thế giới”.
+
+                Bài học này bao gồm ba mục tiêu:
+
+                -   Tạo cảm giác hứng thú và thành công khi hoàn thành FRQ
+                -   Thực hành câu hỏi kiểu FRQ (viết bằng tay)
+                -   Đóng vai trò bài đánh giá tổng kết nội dung của Bài 1
+
+                Mặc dù hình thức của FRQ này không giống như FRQ trong kỳ thi AP, nhưng đây là tiền đề để giúp học sinh chuẩn bị giải các dạng câu hỏi này. Khi học sinh tiếp tục theo khóa học, các câu hỏi FRQ mà các em gặp phải dần trở nên gần với thực tế hơn.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa2-pilot-facilitator:
+          lessons:
+            Defining Attributes:
+              description_student: Thông qua kinh nghiệm của chúng tôi trong dự án
+                Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần
+                quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm
+                tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách
+                tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
+              description_teacher: Trong bài học không dùng thiết bị điện tử này,
+                học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan
+                bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
+                biệt giữa `public` và `private` và mục đích của việc đóng gói để ẩn
+                cài đặt bên trong của một đối tượng.
+            Using Variables:
+              name: Sử dụng biến
+              description_student: Các biến tạo ra phương pháp lưu trữ thông tin cho
+                các kỹ sư phần mềm. Loại thông tin chúng ta cần lưu trữ xác định loại
+                biến chúng ta cần sử dụng, kiểu dữ liệu của biến và cách chúng ta
+                sử dụng biến đó. Trong bài học này, bạn sẽ sử dụng biến để lưu trữ
+                thông tin dùng để tạo các đối tượng `Painter` và lưu trữ thông tin
+                do người dùng nhập.
+              description_teacher: Trong bài học này, học sinh sẽ khám phá chức năng
+                của biến và phân biệt giữa biến nguyên thủy và biến tham chiếu. Học
+                sinh sử dụng lớp `Scanner` để lấy dữ liệu đầu vào từ người dùng và
+                xác định biến để lưu trữ giá trị do người dùng cung cấp. Các giá trị
+                này được sử dụng để tạo các đối tượng `Painter` trong dự án Khu phố.
+            Writing Constructors:
+              name: Viết hàm khởi tạo
+              description_student: Xe bán hàng Tiệm bánh dự án Mercury cần sự giúp
+                đỡ của bạn! Chủ tiệm muốn bán món tráng miệng trong Khu phố nhưng
+                cần nhập và lưu trữ món tráng miệng của họ trong một chương trình.
+                Bạn cần sử dụng các kỹ năng kỹ thuật phần mềm của mình để viết chương
+                trình có thể tạo các đối tượng món tráng miệng, giúp chủ tiệm theo
+                dõi hàng tồn kho. Bạn bắt đầu bằng cách tạo lớp `dessert` để chủ tiệm
+                có thể nhập hương vị, số lượng có sẵn và giá của mỗi món tráng miệng
+                mà họ bán.
+              description_teacher: Học sinh được giới thiệu về xe bán hàng Tiệm bánh
+                dự án Mercury và nhu cầu của chủ tiệm là một chương trình nhập và
+                lưu trữ các món tráng miệng. Với tư cách là kỹ sư phần mềm, học sinh
+                sử dụng các chiến lược thiết kế hướng đối tượng để xác định các thuộc
+                tính cần thiết và các kiểu dữ liệu thích hợp cho lớp `Dessert`. Học
+                sinh viết hàm khởi tạo và sử dụng đối tượng `Scanner` để lấy các giá
+                trị cho các biến thực thể nhằm khởi tạo đối tượng `Dessert`.
+            Adding Multiple Constructors:
+              name: Thêm nhiều hàm khởi tạo
+            Manipulating Variables and Object Data:
+              name: Thao tác với các biến và dữ liệu đối tượng
+            Minimizing Errors in Initialization:
+              name: Giảm thiểu lỗi khi khởi tạo
+            Writing Constructors for Hierarchies:
+              name: Viết hàm khởi tạo cho cấu trúc phân cấp
+            Accessing Object Data:
+              name: Truy cập dữ liệu đối tượng
+            Modifying Object Data:
+              name: Sửa đổi dữ liệu đối tượng
+            Displaying Object Information:
+              name: Hiển thị thông tin đối tượng
+            The Neighborhood Store Management Project - Day 1:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 1
+            The Neighborhood Store Management Project - Day 2:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 2
+            The Neighborhood Store Management Project - Day 3:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 3
+            new lesson:
+              description_student: Thông qua kinh nghiệm của chúng tôi trong dự án
+                Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần
+                quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm
+                tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách
+                tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
+              description_teacher: Trong bài học không dùng thiết bị điện tử này,
+                học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan
+                bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác
+                biệt giữa `public` và `private` và mục đích của việc đóng gói để ẩn
+                cài đặt bên trong của một đối tượng.
+            lesson-2:
+              name: Sử dụng biến
+              description_student: Các biến tạo ra phương pháp lưu trữ thông tin cho
+                các kỹ sư phần mềm. Loại thông tin chúng ta cần lưu trữ xác định loại
+                biến chúng ta cần sử dụng, kiểu dữ liệu của biến và cách chúng ta
+                sử dụng biến đó. Trong bài học này, bạn sẽ sử dụng biến để lưu trữ
+                thông tin dùng để tạo các đối tượng `Painter` và lưu trữ thông tin
+                do người dùng nhập.
+              description_teacher: Trong bài học này, học sinh sẽ khám phá chức năng
+                của biến và phân biệt giữa biến nguyên thủy và biến tham chiếu. Học
+                sinh sử dụng lớp `Scanner` để lấy dữ liệu đầu vào từ người dùng và
+                xác định biến để lưu trữ giá trị do người dùng cung cấp. Các giá trị
+                này được sử dụng để tạo các đối tượng `Painter` trong dự án Khu phố.
+            lesson-3:
+              name: Viết hàm khởi tạo
+              description_student: Xe bán hàng Tiệm bánh dự án Mercury cần sự giúp
+                đỡ của bạn! Chủ tiệm muốn bán món tráng miệng trong Khu phố nhưng
+                cần nhập và lưu trữ món tráng miệng của họ trong một chương trình.
+                Bạn cần sử dụng các kỹ năng kỹ thuật phần mềm của mình để viết chương
+                trình có thể tạo các đối tượng món tráng miệng, giúp chủ tiệm theo
+                dõi hàng tồn kho. Bạn bắt đầu bằng cách tạo lớp `dessert` để chủ tiệm
+                có thể nhập hương vị, số lượng có sẵn và giá của mỗi món tráng miệng
+                mà họ bán.
+              description_teacher: Học sinh được giới thiệu về xe bán hàng Tiệm bánh
+                dự án Mercury và nhu cầu của chủ tiệm là một chương trình nhập và
+                lưu trữ các món tráng miệng. Với tư cách là kỹ sư phần mềm, học sinh
+                sử dụng các chiến lược thiết kế hướng đối tượng để xác định các thuộc
+                tính cần thiết và các kiểu dữ liệu thích hợp cho lớp `Dessert`. Học
+                sinh viết hàm khởi tạo và sử dụng đối tượng `Scanner` để lấy các giá
+                trị cho các biến thực thể nhằm khởi tạo đối tượng `Dessert`.
+            lesson-4:
+              name: Thêm nhiều hàm khởi tạo
+            lesson-5:
+              name: Thao tác với các biến và dữ liệu đối tượng
+            lesson-6:
+              name: Giảm thiểu lỗi khi khởi tạo
+            lesson-7:
+              name: Viết hàm khởi tạo cho cấu trúc phân cấp
+            lesson-8:
+              name: Truy cập dữ liệu đối tượng
+            lesson-9:
+              name: Sửa đổi dữ liệu đối tượng
+            lesson-10:
+              name: Hiển thị thông tin đối tượng
+            lesson-11:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 1
+            lesson-12:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 2
+            lesson-13:
+              name: Dự án quản lý cửa hàng khu phố – Ngày 3
+          lesson_groups:
+            lesson group:
+              display_name: Nội dung
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung

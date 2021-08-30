@@ -74,7 +74,8 @@ const sections = [
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
-    restrict_section: false
+    restrict_section: false,
+    code_review_enabled: true
   },
   {
     id: 12,
@@ -95,7 +96,8 @@ const sections = [
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
-    restrict_section: false
+    restrict_section: false,
+    code_review_enabled: true
   },
   {
     id: 307,
@@ -116,7 +118,8 @@ const sections = [
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
-    restrict_section: false
+    restrict_section: false,
+    code_review_enabled: true
   }
 ];
 
@@ -614,7 +617,8 @@ describe('teacherSectionsRedux', () => {
         scriptId: null,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
+        codeReviewEnabled: true
       });
     });
   });
@@ -641,7 +645,8 @@ describe('teacherSectionsRedux', () => {
         studentCount: 1,
         hidden: false,
         isAssigned: undefined,
-        restrictSection: false
+        restrictSection: false,
+        codeReviewEnabled: true
       });
     });
   });
@@ -781,7 +786,8 @@ describe('teacherSectionsRedux', () => {
       scriptId: null,
       createdAt: createdAt,
       hidden: false,
-      restrict_section: false
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     function successResponse(customProps = {}) {
@@ -932,7 +938,8 @@ describe('teacherSectionsRedux', () => {
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
-          restrictSection: false
+          restrictSection: false,
+          codeReviewEnabled: true
         }
       });
     });
@@ -987,7 +994,8 @@ describe('teacherSectionsRedux', () => {
       course_id: null,
       script_id: null,
       hidden: false,
-      restrict_section: false
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1219,7 +1227,8 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       studentCount: 10,
       hidden: false,
-      restrict_section: false
+      restrict_section: false,
+      code_review_enabled: true
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1244,6 +1253,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(
         section.restrict_section,
         serverSection.restrictSection
+      );
+      assert.strictEqual(
+        section.code_review_enabled,
+        serverSection.codeReviewEnabled
       );
     });
 

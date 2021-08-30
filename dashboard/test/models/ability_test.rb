@@ -256,14 +256,14 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(project_validator).can? :view_as_user, @login_required_script_level, student
   end
 
-  test 'student in same CSA section as student seeking code review can view as peer' do
+  test 'student in same CSA code review enabled section as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
       levels: [create(:javalab)]
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section
+    section = create :section, code_review_enabled: true
     section.add_student project_owner
     section.add_student peer_reviewer
     create :reviewable_project,
@@ -273,6 +273,25 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
+  end
+
+  test 'student in same CSA non code review enabled section as student seeking code review cannot view as peer' do
+    # We enable read only access to other student work only on Javalab levels
+    javalab_script_level = create :script_level,
+      levels: [create(:javalab)]
+
+    project_owner = create :student
+    peer_reviewer = create :student
+    section = create :section, code_review_enabled: false
+    section.add_student project_owner
+    section.add_student peer_reviewer
+    create :reviewable_project,
+      user_id: project_owner.id,
+      script_id: javalab_script_level.script_id,
+      level_id: javalab_script_level.levels[0].id
+
+    refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
+    refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'student not in same section as student seeking code review cannot view as peer' do
@@ -298,7 +317,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     project_owner = create :student
     peer_reviewer = create :student
-    section = create :section
+    section = create :section, code_review_enabled: true
     section.add_student project_owner
     section.add_student peer_reviewer
 
@@ -312,7 +331,7 @@ class AbilityTest < ActiveSupport::TestCase
       levels: [create(:javalab)]
 
     project_owner = create :student
-    section = create :section
+    section = create :section, code_review_enabled: true
     section.add_student project_owner
     create :reviewable_project,
       user_id: project_owner.id,

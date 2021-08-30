@@ -6187,3 +6187,7 @@ th:
           lessons:
             lesson-1:
               name: ภาพรวม
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: โปรเจกต์
