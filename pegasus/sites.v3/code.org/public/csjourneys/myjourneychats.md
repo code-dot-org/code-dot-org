@@ -7,8 +7,8 @@ social:
   "og:description": "Classroom chats with CS professionals"
   "twitter:title": "My Journey"
   "twitter:description": "Classroom chats with CS professionals"
-  "twitter:image": "/images/csjourneys/og-internships.jpg"
-  "og:image": "/images/csjourneys/og-internships.jpg"
+  "twitter:image": "/images/csjourneys/og-chats.png"
+  "og:image": "/images/csjourneys/og-chats.png"
   "og:image:width": 1200
   "og:image:height": 630
 ---
