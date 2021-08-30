@@ -68,11 +68,16 @@ def update_script_ids(start_id, end_id, is_dry_run)
     # within a level
     if associated_script_levels.empty?
       parent_level_ids = get_parent_level_ids(level)
-      next unless parent_level_ids.present? && user_id
+
+      if parent_level_ids.blank? || user_id.blank?
+        unable_to_backfill += 1
+        next
+      end
 
       script_id_by_parent_user_levels = get_script_id_by_parent_levels(parent_level_ids, user_id)
       if script_id_by_parent_user_levels
         channel_token.update_attributes(script_id: script_id_by_parent_user_levels) unless is_dry_run
+        backfill_count += 1
       end
     end
 
@@ -94,7 +99,10 @@ def update_script_ids(start_id, end_id, is_dry_run)
       next
     end
 
-    next unless user_id
+    if user_id.blank?
+      unable_to_backfill += 1
+      next
+    end
 
     # if the user has only user_level associated with the level, use the script on that user_level
     if user_level_script_id = script_id_by_user_level(user_id, level.id)
