@@ -9,6 +9,13 @@ style_min: true
 <h1>Leaders and trendsetters all agree on one thing</h1>
 <p>
 <h3>See what world leaders, celebrities, politicians, athletes, and more have to say about the importance of computer science.</h3>
+<p style="text-align:center">
+<img src="/images/people/quote-malala.jpg" width="400" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-obama.jpg" width="400" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<p>
+<img src="/images/people/quote-steph.jpg" width="400" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-karlie.jpg" width="400" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<p style="clear: both;">
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
@@ -127,17 +134,17 @@ If we want America to stay on the cutting edge, we need young Americans to maste
 </div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
 <div class="col-18 left" id="headshot" style="margin-bottom: 5px; margin-right: 15px;">
-<img src="/images/people/stephen-hawking.jpg">
+<img src="/images/people/octavia-spencer.jpeg">
 </div>
 <div class="col-66 left" id="text">
 <h3 style="margin:0px;">
-Stephen Hawking
+Octavia Spencer
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Theoretical Physicist, Cosmologist &amp; Author
+Actress
 </h4>
 <p style="padding-right:10px;">
-Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.
+In just one hour, you can take the first step in teaching yourself how to program with a computer and the first step to changing your life and the world.
 </p>
 </div>
 </div>
@@ -1820,7 +1827,7 @@ will.i.am
 Musician, The Black Eyed Peas and Entrepreneur
 </h4>
 <p style="padding-right:10px;">
-Here we are, 2013, we ALL depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.
+We ALL depend on technology to communicate, to bank, and none of us know how to read and write code. It's important for these kids, right now, starting at 8 years old, to read and write code.
 </p>
 </div>
 </div>
