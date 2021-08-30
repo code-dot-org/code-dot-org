@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-19 22:38:22 UTC",
+    "serialized_at": "2021-08-27 22:58:32 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "jess-test-script"
@@ -1048,7 +1048,7 @@
         "level_keys": [
           "VPL - CSD Module 3 Curriculum Investigation Overview"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1072,7 +1072,7 @@
         "level_keys": [
           "VPL - CSD - Module 3 - U4L1 Investigation"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1096,7 +1096,7 @@
         "level_keys": [
           "VPL - CSD - Module 3 - Problem Solving Process Guide"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1120,7 +1120,7 @@
         "level_keys": [
           "VPL - CSD Module 3 Problem Solving Process"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1144,7 +1144,7 @@
         "level_keys": [
           "VPL - CSD - Module 3 - U4L2 Investigation"
         ],
-        "progression": "Lesson Investigation (~60 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
@@ -1168,7 +1168,7 @@
         "level_keys": [
           "VPL - CSD Module 3 U4L2 Reflection"
         ],
-        "progression": "Reflection (~5 mins)"
+        "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
       "seeding_key": {
