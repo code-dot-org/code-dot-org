@@ -653,10 +653,7 @@ exports.install = function(blockly, blockInstallOptions) {
     ].join('\n');
   };
 
-  // This is a modified copy of blockly.Blocks.controls_for with the
-  // variable named "counter" hardcoded.
   blockly.Blocks.controls_for_counter = {
-    // For loop with hardcoded loop variable.
     helpUrl: blockly.Msg.CONTROLS_FOR_HELPURL,
     init: function() {
       this.setHSV(322, 0.9, 0.95);
@@ -683,20 +680,7 @@ exports.install = function(blockly, blockInstallOptions) {
         )
       );
     },
-    getVars: Blockly.Variables.getVars,
-    // serialize the counter variable name to xml so that it can be used across
-    // different locales
-    mutationToDom: function() {
-      var container = document.createElement('mutation');
-      var counter = this.getTitleValue('VAR');
-      container.setAttribute('counter', counter);
-      return container;
-    },
-    // deserialize the counter variable name
-    domToMutation: function(xmlElement) {
-      var counter = xmlElement.getAttribute('counter');
-      this.setTitleValue(counter, 'VAR');
-    }
+    getVars: Blockly.Variables.getVars
   };
 
   generator.controls_for_counter = generator.controls_for;
