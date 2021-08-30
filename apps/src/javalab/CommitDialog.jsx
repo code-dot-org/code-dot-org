@@ -6,16 +6,44 @@ import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {connect} from 'react-redux';
+import _ from 'lodash';
 
 export class UnconnectedCommitDialog extends React.Component {
-  state = {
-    filesToBackpack: [],
-    commitNotes: '',
-    backpackSaveInProgress: false,
-    commitSaveInProgress: false,
-    hasBackpackSaveError: false,
-    hasCommitSaveError: false
-  };
+  constructor(props) {
+    super(props);
+
+    let existingBackpackFiles = [];
+    let hasBackpackLoadError = false;
+    if (props.backpackApi.hasBackpack()) {
+      props.backpackApi.getFileList(
+        () => (hasBackpackLoadError = true),
+        filenames => (existingBackpackFiles = filenames)
+      );
+    }
+
+    this.state = {
+      filesToBackpack: [],
+      existingBackpackFiles: existingBackpackFiles,
+      commitNotes: '',
+      backpackSaveInProgress: false,
+      commitSaveInProgress: false,
+      hasBackpackLoadError: hasBackpackLoadError,
+      hasBackpackSaveError: false,
+      hasCommitSaveError: false
+    };
+  }
+
+  // Get updated backpack file list every time we open the modal
+  componentDidUpdate(prevProps) {
+    if (this.props.isOpen !== prevProps.isOpen && this.props.isOpen) {
+      if (this.props.backpackApi.hasBackpack()) {
+        this.props.backpackApi.getFileList(
+          this.handleBackpackLoadError,
+          filenames => this.setState({existingBackpackFiles: filenames})
+        );
+      }
+    }
+  }
 
   renderFooter = () => {
     let footerIcon = '';
@@ -24,7 +52,10 @@ export class UnconnectedCommitDialog extends React.Component {
     let commitText = i18n.commit();
     const saveInProgress =
       this.state.backpackSaveInProgress || this.state.commitSaveInProgress;
-    const isCommitButtonDisabled = !this.state.commitNotes || saveInProgress;
+    const isCommitButtonDisabled =
+      !this.state.commitNotes ||
+      saveInProgress ||
+      this.state.hasBackpackLoadError;
     if (this.state.filesToBackpack.length > 0) {
       commitText = i18n.commitAndSave();
     }
@@ -42,8 +73,14 @@ export class UnconnectedCommitDialog extends React.Component {
       footerIcon = (
         <span className="fa fa-exclamation-circle" style={styles.iconError} />
       );
-      footerMessageTitle = i18n.backpackSaveErrorTitle();
+      footerMessageTitle = i18n.backpackErrorTitle();
       footerMessageText = i18n.backpackSaveErrorMessage();
+    } else if (this.state.hasBackpackLoadError) {
+      footerIcon = (
+        <span className="fa fa-exclamation-circle" style={styles.iconError} />
+      );
+      footerMessageTitle = i18n.backpackErrorTitle();
+      footerMessageText = i18n.backpackListLoadErrorMessageCommitDialog();
     }
 
     return [
@@ -77,6 +114,13 @@ export class UnconnectedCommitDialog extends React.Component {
   commitAndSaveToBackpack = () => {
     this.saveCommit();
     this.saveToBackpack();
+  };
+
+  getConflictingBackpackFiles = () => {
+    return _.intersection(
+      this.state.filesToBackpack,
+      this.state.existingBackpackFiles
+    );
   };
 
   saveCommit = () => {
@@ -115,15 +159,28 @@ export class UnconnectedCommitDialog extends React.Component {
   handleBackpackSaveSuccess = () => {
     const canClose =
       !this.state.commitSaveInProgress && !this.state.hasCommitSaveError;
-    this.setState({
-      hasBackpackSaveError: false,
-      backpackSaveInProgress: false,
-      filesToBackpack: []
-    });
+
+    if (this.props.backpackApi.hasBackpack()) {
+      this.props.backpackApi.getFileList(
+        this.handleBackpackLoadError,
+        filenames => {
+          this.setState({
+            hasBackpackSaveError: false,
+            hasBackpackLoadError: false,
+            backpackSaveInProgress: false,
+            filesToBackpack: [],
+            existingBackpackFiles: filenames
+          });
+        }
+      );
+    }
+
     if (canClose) {
       this.props.handleClose();
     }
   };
+
+  handleBackpackLoadError = () => this.setState({hasBackpackLoadError: true});
 
   handleCommitSaveError = () => {
     this.setState({
@@ -148,6 +205,7 @@ export class UnconnectedCommitDialog extends React.Component {
   clearSaveStateAndClose = () => {
     this.setState({
       hasBackpackSaveError: false,
+      hasBackpackLoadError: false,
       backpackSaveInProgress: false,
       hasCommitSaveError: false,
       commitSaveInProgress: false
@@ -184,7 +242,10 @@ export class UnconnectedCommitDialog extends React.Component {
           <CommitDialogBody
             files={files.map(name => ({
               name,
-              commit: filesToBackpack.includes(name)
+              commit: filesToBackpack.includes(name),
+              hasConflictingName: this.getConflictingBackpackFiles().includes(
+                name
+              )
             }))}
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
@@ -225,20 +286,7 @@ function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
       <div style={{...styles.bold, ...styles.filesHeader}}>
         {i18n.saveToBackpack()}
       </div>
-      {files.map(file => (
-        <div key={file.name} style={styles.fileRow}>
-          <label htmlFor={`commit-${file.name}`} style={styles.fileLabel}>
-            {file.name}
-          </label>
-          <input
-            id={`commit-${file.name}`}
-            type="checkbox"
-            checked={file.commit}
-            onChange={() => onToggleFile(file.name)}
-            style={styles.checkbox}
-          />
-        </div>
-      ))}
+      {files.map(file => CommitDialogFile(file, onToggleFile))}
     </div>
   );
 }
@@ -247,13 +295,38 @@ CommitDialogBody.propTypes = {
   files: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      commit: PropTypes.bool.isRequired
+      commit: PropTypes.bool.isRequired,
+      hasConflictingName: PropTypes.bool.isRequired
     })
   ).isRequired,
   notes: PropTypes.string,
   onToggleFile: PropTypes.func.isRequired,
   onChangeNotes: PropTypes.func.isRequired
 };
+
+function CommitDialogFile(file, onToggleFile) {
+  return (
+    <div key={file.name} style={styles.fileRow}>
+      <div style={styles.fileLabelContainer}>
+        <label htmlFor={`commit-${file.name}`} style={styles.fileLabel}>
+          {file.name}
+        </label>
+        {file.hasConflictingName && (
+          <div style={styles.fileNameConflictWarning}>
+            {i18n.backpackFileNameConflictWarning()}
+          </div>
+        )}
+      </div>
+      <input
+        id={`commit-${file.name}`}
+        type="checkbox"
+        checked={file.commit}
+        onChange={() => onToggleFile(file.name)}
+        style={styles.checkbox}
+      />
+    </div>
+  );
+}
 
 const PADDING = 8;
 const styles = {
@@ -281,9 +354,18 @@ const styles = {
     paddingBottom: PADDING / 2,
     borderBottom: `1px solid ${color.lightest_gray}`
   },
+  fileLabelContainer: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
   fileLabel: {
     flexGrow: 2,
     color: color.default_text
+  },
+  fileNameConflictWarning: {
+    color: color.default_text,
+    fontStyle: 'italic',
+    fontSize: 12
   },
   checkbox: {
     width: 18,
