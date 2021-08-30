@@ -320,8 +320,10 @@ export default class PoemBotLibrary extends CoreLibrary {
     }
     this.p5.textSize(renderInfo.lineSize);
     renderInfo.lines.forEach(item => {
-      let color = this.getP5Color(renderInfo.font.fill, item.alpha);
-      this.p5.fill(color);
+      let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
+      this.p5.fill(fillColor);
+      let strokeColor = this.getP5Color(renderInfo.font.stroke, item.alpha);
+      this.p5.stroke(strokeColor);
       this.p5.text(item.text, item.x, item.y);
     });
   }
