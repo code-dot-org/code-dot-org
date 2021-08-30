@@ -2,7 +2,7 @@
   "category": "Experimental",
   "config": {
     "func": "startBehavior",
-    "blockText": "sprite {ANIMATION_NAME} starts {BEHAVIOR} ",
+    "blockText": "sprite {ANIMATION_NAME} begins {BEHAVIOR} ",
     "args": [
       {
         "name": "ANIMATION_NAME",
