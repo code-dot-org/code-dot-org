@@ -9,578 +9,581 @@
     "name": "N-taxi-2",
     "sheet": "vehicles.png",
     "row": 0,
-    "column": 0
+    "column": 1
   },
   "2": {
     "name": "N-taxi-3",
     "sheet": "vehicles.png",
-    "row": 0,
-    "column": 1
+    "row": 1,
+    "column": 0
   },
   "3": {
     "name": "N-taxi-4",
     "sheet": "vehicles.png",
-    "row": 0,
-    "column": 2
+    "row": 1,
+    "column": 1
   },
   "4": {
     "name": "N-taxi-5",
     "sheet": "vehicles.png",
-    "row": 0,
-    "column": 3
+    "row": 2,
+    "column": 0
   },
   "5": {
     "name": "N-taxi-6",
     "sheet": "vehicles.png",
-    "row": 0,
-    "column": 4
+    "row": 2,
+    "column": 1
   },
   "6": {
     "name": "E-taxi-1",
     "sheet": "vehicles.png",
     "row": 0,
-    "column": 5
+    "column": 9
   },
   "7": {
     "name": "E-taxi-2",
     "sheet": "vehicles.png",
-    "row": 0,
-    "column": 6
+    "row": 1,
+    "column": 9
   },
   "8": {
     "name": "E-taxi-3",
     "sheet": "vehicles.png",
     "row": 0,
-    "column": 7
+    "column": 8
   },
   "9": {
     "name": "E-taxi-4",
     "sheet": "vehicles.png",
-    "row": 0,
+    "row": 1,
     "column": 8
   },
   "10": {
     "name": "E-taxi-5",
     "sheet": "vehicles.png",
     "row": 0,
-    "column": 9
+    "column": 7
   },
   "11": {
     "name": "E-taxi-6",
     "sheet": "vehicles.png",
     "row": 1,
-    "column": 0
+    "column": 7
   },
   "12": {
     "name": "N-DonutTruck-1",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 1
+    "row": 3,
+    "column": 0
   },
   "13": {
     "name": "N-DonutTruck-2",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 2
+    "row": 3,
+    "column": 1
   },
   "14": {
     "name": "N-DonutTruck-3",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 3
+    "row": 4,
+    "column": 0
   },
   "15": {
     "name": "N-DonutTruck-4",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 4
+    "row": 4,
+    "column": 1
   },
   "16": {
     "name": "N-DonutTruck-5",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 5
+    "row": 5,
+    "column": 0
   },
   "17": {
     "name": "N-DonutTruck-6",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 6
+    "row": 5,
+    "column": 1
   },
   "18": {
     "name": "N-DonutTruck-7",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 7
+    "row": 6,
+    "column": 0
   },
   "19": {
     "name": "N-DonutTruck-8",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 8
+    "row": 6,
+    "column": 1
   },
   "20": {
     "name": "E-DonutTruck-1",
     "sheet": "vehicles.png",
-    "row": 1,
-    "column": 9
+    "row": 4,
+    "column": 7
   },
   "21": {
     "name": "E-DonutTruck-2",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 0
+    "row": 5,
+    "column": 7
   },
   "22": {
     "name": "E-DonutTruck-3",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 1
+    "row": 4,
+    "column": 6
   },
   "23": {
     "name": "E-DonutTruck-4",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 2
+    "row": 5,
+    "column": 6
   },
   "24": {
     "name": "E-DonutTruck-5",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 3
+    "row": 4,
+    "column": 5
   },
   "25": {
     "name": "E-DonutTruck-6",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 4
+    "row": 5,
+    "column": 5
   },
   "26": {
     "name": "E-DonutTruck-7",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 5
+    "row": 4,
+    "column": 4
   },
   "27": {
     "name": "E-DonutTruck-8",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 6
+    "row": 5,
+    "column": 4
   },
   "28": {
     "name": "W-DonutTruck-1",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 7
+    "row": 3,
+    "column": 4
   },
   "29": {
     "name": "W-DonutTruck-2",
     "sheet": "vehicles.png",
     "row": 2,
-    "column": 8
+    "column": 4
   },
   "30": {
     "name": "W-DonutTruck-3",
     "sheet": "vehicles.png",
-    "row": 2,
-    "column": 9
+    "row": 3,
+    "column": 5
   },
   "31": {
     "name": "W-DonutTruck-4",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 0
+    "row": 2,
+    "column": 5
   },
   "32": {
     "name": "W-DonutTruck-5",
     "sheet": "vehicles.png",
     "row": 3,
-    "column": 1
+    "column": 6
   },
   "33": {
     "name": "W-DonutTruck-6",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 2
+    "row": 2,
+    "column": 6
   },
   "34": {
     "name": "W-DonutTruck-7",
     "sheet": "vehicles.png",
     "row": 3,
-    "column": 3
+    "column": 7
   },
   "35": {
     "name": "W-DonutTruck-8",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 4
+    "row": 2,
+    "column": 7
   },
   "36": {
     "name": "S-DonutTruck-1",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 5
+    "row": 6,
+    "column": 3
   },
   "37": {
     "name": "S-DonutTruck-2",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 6
+    "row": 6,
+    "column": 2
   },
   "38": {
     "name": "S-DonutTruck-3",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 7
+    "row": 5,
+    "column": 3
   },
   "39": {
     "name": "S-DonutTruck-4",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 8
+    "row": 5,
+    "column": 2
   },
   "40": {
     "name": "S-DonutTruck-5",
     "sheet": "vehicles.png",
-    "row": 3,
-    "column": 9
+    "row": 4,
+    "column": 3
   },
   "41": {
     "name": "S-DonutTruck-6",
     "sheet": "vehicles.png",
     "row": 4,
-    "column": 0
+    "column": 2
   },
   "42": {
     "name": "S-DonutTruck-7",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 1
+    "row": 3,
+    "column": 3
   },
   "43": {
     "name": "S-DonutTruck-8",
     "sheet": "vehicles.png",
-    "row": 4,
+    "row": 3,
     "column": 2
   },
   "46": {
     "name": "cone",
     "sheet": "other.png",
-    "row": 0,
+    "row": 1,
     "column": 1
   },
   "47": {
     "name": "N-taxi-1",
-    "sheet": "other.png",
+    "sheet": "vehicles.png",
     "row": 0,
-    "column": 2
+    "column": 0
   },
   "48": {
     "name": "grass",
-    "sheet": "other.png",
-    "row": 0,
-    "column": 3
+    "sheet": "sidewalk.png",
+    "row": 1,
+    "column": 5
   },
   "49": {
     "name": "top-left-sidewalk-corner",
     "sheet": "sidewalk.png",
     "row": 0,
-    "column": 0
+    "column": 4
   },
   "50": {
     "name": "top-right-sidwalk-corner",
     "sheet": "sidewalk.png",
     "row": 0,
-    "column": 1
+    "column": 6
   },
   "51": {
     "name": "bottom-right-sidewalk-corner",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 2
+    "row": 2,
+    "column": 6
   },
   "52": {
     "name": "bottom-left-sidewalk-corner",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 3
+    "row": 2,
+    "column": 4
   },
   "53": {
     "name": "south-left-horizontal-bench",
     "sheet": "other.png",
-    "row": 0,
-    "column": 4
+    "row": 1,
+    "column": 2
   },
   "54": {
     "name": "south-right-horizontal-bench",
     "sheet": "other.png",
-    "row": 0,
-    "column": 5
+    "row": 1,
+    "column": 3
   },
   "55": {
     "name": "east-top-vertical-bench",
     "sheet": "other.png",
     "row": 0,
-    "column": 6
+    "column": 5
   },
   "56": {
     "name": "east-bottom-vertical-bench",
     "sheet": "other.png",
-    "row": 0,
-    "column": 7
+    "row": 1,
+    "column": 5
   },
   "57": {
     "name": "north-left-horizontal-bench",
     "sheet": "other.png",
     "row": 0,
-    "column": 8
+    "column": 3
   },
   "58": {
     "name": "north-right-horizontal-bench",
     "sheet": "other.png",
     "row": 0,
-    "column": 9
+    "column": 4
   },
   "59": {
     "name": "west-top-vertical-bench",
     "sheet": "other.png",
-    "row": 1,
-    "column": 0
+    "row": 0,
+    "column": 6
   },
   "60": {
     "name": "west-bottom-vertical-bench",
     "sheet": "other.png",
     "row": 1,
-    "column": 1
+    "column": 6
   },
   "61": {
     "name": "bush",
     "sheet": "other.png",
-    "row": 1,
-    "column": 2
+    "row": 2,
+    "column": 3
   },
   "62": {
     "name": "brick-wall-cracked-1",
     "sheet": "wall.png",
     "row": 0,
-    "column": 0
+    "column": 3
   },
   "63": {
     "name": "brick-wall-cracked-5",
     "sheet": "wall.png",
     "row": 0,
-    "column": 1
+    "column": 7
   },
   "64": {
     "name": "brick-wall-cracked-2",
     "sheet": "wall.png",
     "row": 0,
-    "column": 2
+    "column": 4
   },
   "65": {
     "name": "brick-wall-cracked-3",
     "sheet": "wall.png",
     "row": 0,
-    "column": 3
+    "column": 5
   },
   "66": {
     "name": "brick-wall-cracked-4",
     "sheet": "wall.png",
     "row": 0,
-    "column": 4
+    "column": 6
   },
   "67": {
     "name": "brick-wall-cracked-11",
     "sheet": "wall.png",
-    "row": 0,
-    "column": 5
+    "row": 3,
+    "column": 4
   },
   "68": {
     "name": "brick-wall-cracked-12",
     "sheet": "wall.png",
-    "row": 0,
-    "column": 6
+    "row": 3,
+    "column": 5
   },
   "69": {
     "name": "brick-wall-cracked-13",
     "sheet": "wall.png",
-    "row": 0,
-    "column": 7
+    "row": 3,
+    "column": 6
   },
   "70": {
     "name": "brick-wall-cracked10",
     "sheet": "wall.png",
-    "row": 0,
-    "column": 8
+    "row": 3,
+    "column": 3
   },
   "71": {
     "name": "brick-wall-cracked-14",
     "sheet": "wall.png",
-    "row": 0,
-    "column": 9
+    "row": 3,
+    "column": 7
   },
   "72": {
     "name": "brick-wall-cracked-6",
     "sheet": "wall.png",
     "row": 1,
-    "column": 0
+    "column": 3
   },
   "73": {
     "name": "brick-wall-cracked-7",
     "sheet": "wall.png",
-    "row": 1,
-    "column": 1
+    "row": 2,
+    "column": 3
   },
   "74": {
     "name": "brick-wall-cracked-8",
     "sheet": "wall.png",
     "row": 1,
-    "column": 2
+    "column": 7
   },
   "75": {
     "name": "brick-wall-cracked-9",
     "sheet": "wall.png",
-    "row": 1,
-    "column": 3
+    "row": 2,
+    "column": 7
   },
   "76": {
     "name": "brick-wall-smooth-1",
     "sheet": "wall.png",
-    "row": 1,
-    "column": 4
+    "row": 0,
+    "column": 0
   },
   "77": {
     "name": "brick-wall-smooth-2",
     "sheet": "wall.png",
-    "row": 1,
-    "column": 5
+    "row": 0,
+    "column": 1
   },
   "78": {
     "name": "brick-wall-smooth-3",
     "sheet": "wall.png",
-    "row": 1,
-    "column": 6
+    "row": 0,
+    "column": 2
   },
   "79": {
     "name": "brick-square",
     "sheet": "wall.png",
     "row": 1,
-    "column": 7
+    "column": 1
   },
   "80": {
     "name": "brick-wall-smooth-4",
     "sheet": "wall.png",
     "row": 1,
-    "column": 8
+    "column": 0
   },
   "81": {
     "name": "brick-wall-smooth-5",
     "sheet": "wall.png",
     "row": 1,
-    "column": 9
+    "column": 2
   },
   "82": {
     "name": "brick-cap-vertical-3",
     "sheet": "wall.png",
-    "row": 2,
-    "column": 0
+    "row": 0,
+    "column": 8
   },
   "83": {
     "name": "brick-strip-vertical",
     "sheet": "wall.png",
-    "row": 2,
-    "column": 1
+    "row": 1,
+    "column": 8
   },
   "84": {
     "name": "brick-cap-vertical-1",
     "sheet": "wall.png",
     "row": 2,
-    "column": 2
+    "column": 8
   },
   "85": {
     "name": "brick-wall-smooth-6",
     "sheet": "wall.png",
     "row": 2,
-    "column": 3
+    "column": 0
   },
   "86": {
     "name": "brick-wall-smooth-7",
     "sheet": "wall.png",
     "row": 2,
-    "column": 4
+    "column": 1
   },
   "87": {
     "name": "brick-wall-smooth-8",
     "sheet": "wall.png",
     "row": 2,
-    "column": 5
+    "column": 2
   },
   "88": {
     "name": "brick-cap-horizontal-1",
     "sheet": "wall.png",
-    "row": 2,
-    "column": 6
+    "row": 1,
+    "column": 4
   },
   "89": {
     "name": "brick-strip-horizontal",
     "sheet": "wall.png",
-    "row": 2,
-    "column": 7
+    "row": 1,
+    "column": 5
   },
   "90": {
     "name": "brick-cap-horizontal-3",
     "sheet": "wall.png",
-    "row": 2,
-    "column": 8
+    "row": 1,
+    "column": 6
   },
   "91": {
     "name": "flower-planter-1",
     "sheet": "other.png",
-    "row": 1,
-    "column": 3
+    "row": 0,
+    "column": 7
   },
   "92": {
     "name": "flower-planter-2",
     "sheet": "other.png",
-    "row": 1,
-    "column": 4
+    "row": 0,
+    "column": 8
   },
   "93": {
     "name": "flower-planter-3",
     "sheet": "other.png",
     "row": 1,
-    "column": 5
+    "column": 7
   },
   "94": {
     "name": "flower-planter-4",
     "sheet": "other.png",
     "row": 1,
-    "column": 6
+    "column": 8
   },
   "95": {
     "name": "bush-strip-horizontal-1",
     "sheet": "other.png",
-    "row": 1,
-    "column": 7
+    "row": 2,
+    "column": 1
   },
   "96": {
     "name": "bush-strip-horizontal-2",
     "sheet": "other.png",
-    "row": 1,
-    "column": 8
+    "row": 2,
+    "column": 2
   },
   "97": {
     "name": "bush-strip-vertical-1",
     "sheet": "other.png",
     "row": 1,
-    "column": 9
+    "column": 4
   },
   "98": {
     "name": "bush-strip-vertical-2",
     "sheet": "other.png",
     "row": 2,
-    "column": 0
+    "column": 4
   },
+
+
+
   "99": {
     "name": "N-Bodega-15",
     "sheet": "buildings.png",
@@ -1661,53 +1664,56 @@
     "row": 17,
     "column": 9
   },
+
+
+
   "279": {
     "name": "bottom-left-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 4
+    "row": 2,
+    "column": 1
   },
   "280": {
     "name": "bottom-right-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 5
+    "row": 2,
+    "column": 2
   },
   "281": {
     "name": "top-left-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 6
+    "row": 1,
+    "column": 1
   },
   "282": {
     "name": "top-right-sidewalk-corner-grass",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 7
+    "row": 1,
+    "column": 2
   },
   "283": {
     "name": "bottom-horizontal-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 8
+    "row": 2,
+    "column": 5
   },
   "284": {
     "name": "right-vertical-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 0,
-    "column": 9
+    "row": 1,
+    "column": 6
   },
   "285": {
     "name": "left-vertical-sidewalk-straight",
     "sheet": "sidewalk.png",
     "row": 1,
-    "column": 0
+    "column": 4
   },
   "286": {
     "name": "top-horizontal-sidewalk-straight",
     "sheet": "sidewalk.png",
-    "row": 1,
-    "column": 1
+    "row": 0,
+    "column": 5
   },
   "287": {
     "name": "E-Painter",
@@ -1736,79 +1742,79 @@
   "291": {
     "name": "W-taxi-2",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 3
+    "row": 0,
+    "column": 4
   },
   "292": {
     "name": "W-taxi-4",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 4
+    "row": 0,
+    "column": 5
   },
   "293": {
     "name": "W-taxi-6",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 5
+    "row": 0,
+    "column": 6
   },
   "294": {
     "name": "W-taxi-1",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 6
+    "row": 1,
+    "column": 4
   },
   "295": {
     "name": "W-taxi-3",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 7
+    "row": 1,
+    "column": 5
   },
   "296": {
     "name": "W-taxi-5",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 8
+    "row": 1,
+    "column": 6
   },
   "297": {
     "name": "S-taxi-1",
     "sheet": "vehicles.png",
-    "row": 4,
-    "column": 9
+    "row": 2,
+    "column": 3
   },
   "298": {
     "name": "S-taxi-2",
     "sheet": "vehicles.png",
-    "row": 5,
-    "column": 0
+    "row": 2,
+    "column": 2
   },
   "299": {
     "name": "S-taxi-3",
     "sheet": "vehicles.png",
-    "row": 5,
-    "column": 1
+    "row": 1,
+    "column": 3
   },
   "300": {
     "name": "S-taxi-4",
     "sheet": "vehicles.png",
-    "row": 5,
+    "row": 1,
     "column": 2
   },
   "301": {
     "name": "S-taxi-5",
     "sheet": "vehicles.png",
-    "row": 5,
+    "row": 0,
     "column": 3
   },
   "302": {
     "name": "S-taxi-6",
     "sheet": "vehicles.png",
-    "row": 5,
-    "column": 4
+    "row": 0,
+    "column": 2
   },
   "303": {
     "name": "paintcan",
     "sheet": "other.png",
-    "row": 2,
-    "column": 1
+    "row": 1,
+    "column": 0
   }
 }

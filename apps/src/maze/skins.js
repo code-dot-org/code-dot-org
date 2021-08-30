@@ -190,17 +190,17 @@ var CONFIGS = {
     spriteMap: neighborhoodSprites,
     sheetRows: {
       'other.png': 3,
-      'vehicles.png': 6,
-      'buildings.png': 18,
-      'sidewalk.png': 2,
-      'wall.png': 3
+      'vehicles.png': 7,
+      'buildings.png': 26,
+      'sidewalk.png': 4,
+      'wall.png': 4
     },
-    pegmanHeight: 32,
-    pegmanWidth: 32,
+    pegmanHeight: 80,
+    pegmanWidth: 80,
     pegmanYOffset: 0,
     pegmanXOffset: 0,
-    pegmanSheetWidth: 512,
-    squareSize: 32,
+    pegmanSheetWidth: 1280,
+    squareSize: 80,
     svgHeight: 800,
     svgWidth: 800,
     paintCan: 'paint_can.png'
