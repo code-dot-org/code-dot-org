@@ -275,6 +275,10 @@ export const commands = {
             x: utils.randomInt(0, 400),
             y: utils.randomInt(0, 400),
             alpha: utils.randomInt(1, 100),
+            // amount to change the opacity by each frame. p5.random will choose
+            // a random value from the array. The reason it's not just random(-6, 6)
+            // is that we don't want stars with delta values between 0 and +/-2
+            // because they change too slowly to feel noticeable.
             delta: this.p5.random([-6, -5, -4, -3, 3, 4, 5, 6])
           });
         }
