@@ -7,6 +7,7 @@ import loadable from '../../util/loadable';
 const ImagePicker = loadable(() => import('../components/ImagePicker'));
 const SoundPicker = loadable(() => import('../components/SoundPicker'));
 import Dialog from '../LegacyDialog';
+import {RecordingFileType} from '../components/recorders';
 
 module.exports = {
   showAssetManager,
@@ -36,6 +37,7 @@ function hideAssetManager() {
  * @param [options.showUnderageWarning] {boolean} Warn if underage.
  * @param [options.useFilesApi] {boolean} Use files API instead of assets API.
  * @param [options.disableAudioRecording] {boolean} Do not display option to record and upload audio files
+ * @param [options.recordingFileType] {string} Type of audio file to record and upload. Defaults to MP3
  * @param [options.customAllowedExtensions] {string} Custom list of allowed file extensions. Used in place of typeFilter if provided
  * @param [options.elementId] {string} Logging Purposes: which element is the image chosen for
  */
@@ -73,6 +75,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       projectId: dashboard.project.getCurrentId(),
       soundPlayer: sounds,
       disableAudioRecording: options.disableAudioRecording,
+      recordingFileType: options.recordingFileType || RecordingFileType.MP3,
       elementId: options.elementId,
       libraryOnly: options.libraryOnly,
       currentValue: options.currentValue,

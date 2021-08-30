@@ -14,6 +14,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AddAssetButtonRow from './AddAssetButtonRow';
 import i18n from '@cdo/locale';
 import {STARTER_ASSET_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import {RecordingFileType} from './recorders';
 
 export const AudioErrorType = {
   NONE: 'none',
@@ -58,6 +59,7 @@ export default class AssetManager extends React.Component {
     useFilesApi: PropTypes.bool,
     soundPlayer: PropTypes.object,
     disableAudioRecording: PropTypes.bool,
+    recordingFileType: PropTypes.oneOf(Object.values(RecordingFileType)),
     projectId: PropTypes.string,
     levelName: PropTypes.string,
     isStartMode: PropTypes.bool,
@@ -314,6 +316,7 @@ export default class AssetManager extends React.Component {
           <AudioRecorder
             onUploadDone={this.onUploadDone}
             afterAudioSaved={this.afterAudioSaved}
+            recordingFileType={this.props.recordingFileType}
             imagePicker={this.props.imagePicker}
           />
         )}
