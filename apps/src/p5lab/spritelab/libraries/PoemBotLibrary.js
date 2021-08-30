@@ -26,7 +26,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       effects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
-    this.foregroundEffect = () => {};
+    this.foregroundEffects = [];
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
@@ -59,7 +59,7 @@ export default class PoemBotLibrary extends CoreLibrary {
 
         // Don't show foreground effect in preview
         if (this.p5.frameCount > 1) {
-          this.foregroundEffect();
+          this.foregroundEffects.forEach(effect => effect.func());
         }
       },
 
