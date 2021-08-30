@@ -10,4 +10,7 @@ class SpriteManagementController < ApplicationController
 
   def default_sprites_editor
   end
+
+  def select_start_animations
+  end
 end

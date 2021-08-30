@@ -11,6 +11,9 @@ export default class SpriteManagementDirectory extends React.Component {
         <h3>
           <a href="/sprites/default_sprites_editor">Edit Default Sprites</a>
         </h3>
+        <h3>
+          <a href="/sprites/select_start_animations">Select Start Animations</a>
+        </h3>
       </div>
     );
   }
