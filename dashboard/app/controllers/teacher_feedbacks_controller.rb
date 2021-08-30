@@ -20,24 +20,18 @@ class TeacherFeedbacksController < ApplicationController
       )
     end
 
-    # We need to know which feedback is the latest for a level/script in order to determine
-    # if the level is awaiting another review from the teacher. (A level is awaiting review if it was marked
-    # as keep working by the teacher and then the student made progress. This status can only apply to the
-    # latest feedback left by the teacher)
-    #
-    # marked_latest_for_level is a map from level/script to true if we've marked the latest feedback for the level
-    # in our list
-    marked_latest_for_level = {}
+    @feedbacks_by_level = []
 
-    @feedbacks_as_student_with_level_info = @feedbacks_as_student.map do |feedback|
-      level_feedback_key = [feedback.level_id, feedback.script_id].join('_')
-      is_latest = !marked_latest_for_level[level_feedback_key]
-
-      if is_latest
-        marked_latest_for_level[level_feedback_key] = true
+    @feedbacks_as_student.group_by {|feedback| "#{feedback.level_id}_#{feedback.script_id}"}.each do |_, feedbacks|
+      summarized_feedbacks = feedbacks.each_with_index.map do |feedback, i|
+        feedback.summarize(i == 0)
       end
 
-      feedback.summarize(is_latest).merge(feedback&.get_script_level&.summary_for_feedback)
+      level_summary = feedbacks[0].get_script_level&.summary_for_feedback
+
+      level_feedbacks = level_summary.merge({feedbacks: summarized_feedbacks})
+
+      @feedbacks_by_level.push(level_feedbacks)
     end
   end
 

@@ -10,7 +10,7 @@ function showFeedback() {
   const feedbackData = JSON.parse(script.dataset.feedback);
 
   ReactDOM.render(
-    <AllFeedback feedbacks={feedbackData.all_feedback} />,
+    <AllFeedback feedbackByLevel={feedbackData.all_feedback_by_level} />,
     document.getElementById('feedback-container')
   );
 }

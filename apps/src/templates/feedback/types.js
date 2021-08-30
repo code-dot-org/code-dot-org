@@ -19,6 +19,15 @@ export const feedbackShape = PropTypes.shape({
   review_state: PropTypes.string
 });
 
+export const levelFeedbackShape = PropTypes.shape({
+  lessonName: PropTypes.string.isRequired,
+  lessonNum: PropTypes.number.isRequired,
+  levelNum: PropTypes.number.isRequired,
+  linkToLevel: PropTypes.string.isRequired,
+  unitName: PropTypes.string,
+  feedbacks: PropTypes.arrayOf(feedbackShape)
+});
+
 export const ReviewStates = makeEnum(
   'completed',
   'keepWorking',
