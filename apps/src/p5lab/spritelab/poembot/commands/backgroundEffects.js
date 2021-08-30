@@ -1,5 +1,6 @@
 import * as utils from './utils';
 import {PALETTES} from '../constants';
+
 export const commands = {
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
@@ -30,7 +31,7 @@ export const commands = {
             color: utils.lerpColorFromPalette(
               this.p5,
               palette,
-              (i / numPoints) * utils.PALETTES[palette].length
+              (i / numPoints) * PALETTES[palette].length
             )
           });
         }
@@ -214,6 +215,129 @@ export const commands = {
           this.p5.pop();
         };
 
+        break;
+      }
+      case 'blooming': {
+        let colorIndex = 0;
+        const petalWidth = 35;
+        let petals = [];
+        const addPetalLayer = (color, layer) => {
+          for (let i = 0; i < 8; i++) {
+            petals.push({
+              theta: 45 * i,
+              length: 10 + 140 * layer,
+              ...color
+            });
+          }
+        };
+
+        // initialize with enough petals to fill the screen - this is mostly
+        // useful so that preview shows what the background actually looks like.
+        // increment from 3 down to 0 so that petals are layered correctly with
+        // bigger petals behind smaller peals.
+        for (let layer = 3; layer >= 0; layer--) {
+          const color = utils.hexToRgb(PALETTES[palette][colorIndex]);
+          addPetalLayer(color, layer);
+          colorIndex = (colorIndex + 1) % PALETTES[palette].length;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.strokeWeight(2);
+          if (this.p5.World.frameCount % 70 === 0) {
+            const color = utils.hexToRgb(PALETTES[palette][colorIndex]);
+            addPetalLayer(color, 0 /* layer */);
+            colorIndex = (colorIndex + 1) % PALETTES[palette].length;
+          }
+
+          petals.forEach(petal => {
+            // Multiply each component by 0.8 to have the stroke color be
+            // slightly darker than the fill color.
+            this.p5.stroke(
+              this.p5.color(petal.R * 0.8, petal.G * 0.8, petal.B * 0.8)
+            );
+            this.p5.fill(this.p5.color(petal.R, petal.G, petal.B));
+            const leftAnchor = {
+              x: 200 + petal.length * this.p5.sin(petal.theta - petalWidth),
+              y: 200 + petal.length * this.p5.cos(petal.theta - petalWidth)
+            };
+            const rightAnchor = {
+              x: 200 + petal.length * this.p5.sin(petal.theta + petalWidth),
+              y: 200 + petal.length * this.p5.cos(petal.theta + petalWidth)
+            };
+            this.p5.bezier(
+              200,
+              200,
+              leftAnchor.x,
+              leftAnchor.y,
+              rightAnchor.x,
+              rightAnchor.y,
+              200,
+              200
+            );
+            petal.theta = (petal.theta + 0.5) % 360;
+            petal.length += 2;
+          });
+          petals = petals.filter(petal => petal.length < 700);
+          this.p5.pop();
+        };
+
+        break;
+      }
+      case 'ripples': {
+        palette = PALETTES[palette];
+        let ripples = [];
+        let startRipple = false;
+        let colorIndex = 0;
+        const rippleSpacing = 30;
+        const rippleSpeed = 4;
+        const frameDelay = 4;
+        const rippleNumber = palette.length - 1;
+
+        for (let i = 0; i < rippleNumber; i++) {
+          ripples.push({
+            size: (i + 1) * rippleSpacing,
+            color: palette[colorIndex]
+          });
+          colorIndex = (colorIndex + 1) % palette.length;
+        }
+
+        this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noFill();
+          this.p5.strokeWeight(3);
+          if (startRipple && this.p5.frameCount % frameDelay === 0) {
+            ripples.push({
+              size:
+                rippleSpacing +
+                ripples.length * (rippleSpacing + rippleSpeed * frameDelay),
+              color: palette[colorIndex]
+            });
+            colorIndex = (colorIndex + 1) % palette.length;
+            if (ripples.length === rippleNumber) {
+              startRipple = false;
+            }
+          }
+
+          if (ripples.length > 0) {
+            // the actual background color is not fully opaque so we need to
+            // "clear out" the previous frame first so we don't see a remnant of it.
+            this.p5.background('white');
+            this.p5.background(this.getP5Color(ripples[0].color, 100));
+          }
+
+          ripples.forEach(ripple => {
+            const alpha = this.p5.map(ripple.size, 400, 0, 0, 255);
+            this.p5.stroke(this.getP5Color(ripple.color, alpha));
+            this.p5.ellipse(200, 200, ripple.size, ripple.size);
+            ripple.size += rippleSpeed;
+          });
+          ripples = ripples.filter(ripple => ripple.size < 500);
+          if (ripples.length === 0) {
+            startRipple = true;
+          }
+          this.p5.pop();
+        };
         break;
       }
     }

@@ -2,10 +2,10 @@
   "category": "",
   "config": {
     "func": "setPoem",
-    "blockText": "set poem {BG_EFFECT}",
+    "blockText": "set poem {POEM}",
     "args": [
       {
-        "name": "BG_EFFECT",
+        "name": "POEM",
         "options": [
           [
             "---",
