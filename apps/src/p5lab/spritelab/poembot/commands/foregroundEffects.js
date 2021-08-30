@@ -289,10 +289,6 @@ export const commands = {
 
         break;
       }
-      case 'smoke':
-        break;
-      case 'birds':
-        break;
       case 'twinkling': {
         let stars = [];
         for (let i = 0; i < 75; i++) {
