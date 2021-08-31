@@ -6859,3 +6859,34 @@ ru:
           lessons:
             lesson-1:
               name: Краткий обзор
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Инструменты
+            lesson-18:
+              name: Виджеты
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроки
+            lessonGroup-3:
+              display_name: Проект
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Содержимое
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
