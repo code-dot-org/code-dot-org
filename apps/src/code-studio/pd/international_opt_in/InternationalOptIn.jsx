@@ -72,7 +72,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isColombiaSelected() {
-    return this.props.data && this.props.data.schoolCountry === 'colombia';
+    return this.props.data?.schoolCountry?.toLowerCase() === 'colombia';
   }
 
   /**
@@ -83,7 +83,7 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {boolean}
    */
   isChileSelected() {
-    return this.props.data && this.props.data.schoolCountry === 'chile';
+    return this.props.data?.schoolCountry?.toLowerCase() === 'chile';
   }
 
   /**
@@ -215,7 +215,7 @@ class InternationalOptInComponent extends FormComponent {
   }
 
   /**
-   * Similarly, if they have seleced Chile as their country, we want to display dropdowns
+   * Similarly, if they have selected Chile as their country, we want to display dropdowns
    * for city and name.
    *
    * @returns {Component}
@@ -285,15 +285,17 @@ class InternationalOptInComponent extends FormComponent {
 
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
-
     if (this.isColombiaSelected()) {
       schoolDataFieldGroup = this.renderColombianSchoolDataFieldGroup();
-    } else if (this.isChileSelected()) {
+    } else if (
+      this.isChileSelected() &&
+      this.props.data.workshopFacilitator !== 'Centro de Innovación - Mineduc' //we want the free text fields in this case
+    ) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
       // placeholder text asking the user to select their country first.
-      // Otherwise, if they've selected a non-Colombian country, just render
+      // Otherwise, if they've selected a non-Colombian/Chilean country, just render
       // the inputs normally.
       const selectedCountry = this.props.data && this.props.data.schoolCountry;
       const placeholder = selectedCountry
@@ -392,38 +394,6 @@ class InternationalOptInComponent extends FormComponent {
           required: true
         })}
 
-        {/* School */}
-        {this.renderSchoolFieldGroups()}
-
-        {/* Teaching */}
-        {this.buildButtonsFromOptions({
-          name: 'ages',
-          label: labels.ages,
-          type: 'check',
-          required: true
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'subjects',
-          label: labels.subjects,
-          type: 'check',
-          required: true,
-          textFieldMap: textFieldMapSubjects
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'resources',
-          label: labels.resources,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapResources
-        })}
-        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
-          name: 'robotics',
-          label: labels.robotics,
-          type: 'check',
-          required: false,
-          textFieldMap: textFieldMapRobotics
-        })}
-
         {/* Workshop */}
         <FormGroup
           id="date"
@@ -468,6 +438,38 @@ class InternationalOptInComponent extends FormComponent {
           label: labels.workshopCourse,
           required: true,
           placeholder: i18n.selectAnOption()
+        })}
+
+        {/* School */}
+        {this.renderSchoolFieldGroups()}
+
+        {/* Teaching */}
+        {this.buildButtonsFromOptions({
+          name: 'ages',
+          label: labels.ages,
+          type: 'check',
+          required: true
+        })}
+        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
+          name: 'subjects',
+          label: labels.subjects,
+          type: 'check',
+          required: true,
+          textFieldMap: textFieldMapSubjects
+        })}
+        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
+          name: 'resources',
+          label: labels.resources,
+          type: 'check',
+          required: false,
+          textFieldMap: textFieldMapResources
+        })}
+        {this.buildButtonsWithAdditionalTextFieldsFromOptions({
+          name: 'robotics',
+          label: labels.robotics,
+          type: 'check',
+          required: false,
+          textFieldMap: textFieldMapRobotics
         })}
 
         {/* Opt-Ins */}
