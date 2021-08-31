@@ -33,7 +33,7 @@ OptionParser.new do |opts|
 
   opts.on('--end-id=1234567',
     Integer,
-    'Id of last entry to backfill (exclusive).'
+    'Id of last entry to backfill (inclusive).'
   ) do |end_id|
     options[:end_id] = end_id
   end
@@ -61,8 +61,16 @@ def update_script_ids(start_id, end_id, is_dry_run)
     next if channel_token.script_id.present?
 
     level = channel_token.level
-    associated_script_levels = level.script_levels
     user_id = user_id_for_storage_id(channel_token.storage_id)
+
+    # if the user has only user_level associated with the level, use the script on that user_level
+    if user_id.present? && user_level_script_id = script_id_by_user_level(user_id, level.id)
+      channel_token.update_attributes(script_id: user_level_script_id) unless is_dry_run
+      backfill_count += 1
+      next
+    end
+
+    associated_script_levels = level.script_levels
 
     # if the level is not in any script_levels, check to see if it's a level
     # within a level
@@ -78,6 +86,7 @@ def update_script_ids(start_id, end_id, is_dry_run)
       if script_id_by_parent_user_levels
         channel_token.update_attributes(script_id: script_id_by_parent_user_levels) unless is_dry_run
         backfill_count += 1
+        next
       end
     end
 
@@ -99,21 +108,9 @@ def update_script_ids(start_id, end_id, is_dry_run)
       next
     end
 
-    if user_id.blank?
-      unable_to_backfill += 1
-      next
-    end
-
-    # if the user has only user_level associated with the level, use the script on that user_level
-    if user_level_script_id = script_id_by_user_level(user_id, level.id)
-      channel_token.update_attributes(script_id: user_level_script_id) unless is_dry_run
-      backfill_count += 1
-      next
-    end
-
     # if the user is in or owns a section where the script assigned matches a potential script
     # that could be associated with the level, use that script
-    if section_script_id = script_id_by_section(user_id, potential_associated_scripts)
+    if user_id.present? && section_script_id = script_id_by_section(user_id, potential_associated_scripts)
       channel_token.update_attributes(script_id: section_script_id) unless is_dry_run
       backfill_count += 1
       next
@@ -179,7 +176,9 @@ end
 # method returns a script id if the user is in a section assigned to a script that matches
 # the potential scripts for the channel token
 def script_id_by_section(user_id, associated_script_ids)
-  user = User.find(user_id)
+  user = User.find_by(id: user_id)
+
+  return if user.nil?
 
   user_sections = user.sections_as_student + user.sections
   return if user_sections.empty?
