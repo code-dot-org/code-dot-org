@@ -3219,6 +3219,34 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal @unit_in_course.resources[0], cloned_unit.resources[0]
       assert_equal @unit_in_course.student_resources[0], cloned_unit.student_resources[0]
     end
+
+    test 'can copy a script without a course version' do
+      source_unit = create :script, is_course: true, is_migrated: true
+      lesson = create :lesson, script: source_unit
+      create :lesson_group, script: source_unit, lessons: [lesson]
+
+      cloned_unit = source_unit.clone_migrated_unit('cloned-unit', family_name: 'family-name', version_year: 'unversioned')
+      assert_equal 1, cloned_unit.lesson_groups.count
+      assert_equal 1, cloned_unit.lessons.count
+      refute_nil cloned_unit.get_course_version
+    end
+
+    test 'clone raises exception if destination_unit_group does not have a course version' do
+      versionless_unit_group = create :unit_group
+      assert_nil versionless_unit_group.course_version
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: versionless_unit_group.name)
+      end
+    end
+
+    test 'clone raises exception if cloning as standalone without family name or version year' do
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('standalone-2022', version_year: '2022')
+      end
+      assert_raises do
+        @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
+      end
+    end
   end
 
   private
