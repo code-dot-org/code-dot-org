@@ -25857,27 +25857,44 @@ en:
             lesson-3:
               name: Board Outputs (LED Buzzer)
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - Use the buzzer on the circuit playground
+                - Use the led on the circuit playground
+                - NO variables; NO if statements; NO screen elements
             lesson-4:
               name: App Lab Outputs (setProperty)
               description_student: 
-              description_teacher: 
+              description_teacher: "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
             lesson-5:
               name: Unplugged Board Inputs?
             lesson-6:
               name: Board Inputs (Button Toggle)
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use buttons to change elements on screen
+                - use toggle switch to change elements on screen
+                - use buttons and toggle with buzzer in circuit playground
+                - NO if statements; NO variables; OK screen outputs
             lesson-7:
               name: Variables + If-Statements
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use variables + counter pattern to update elements on screen
+                  - example: count number of times a button is pressed
+                - use if-statements to check position of toggle switch
+                - use variables to check value of variable
+                  - for example: play buzzer after a certain number of clicks
             lesson-8:
               name: 'Mini-Proj: Emoji Race'
             lesson-9:
               name: Color LEDs
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                - use screen events to change color LEDs in circuit playground
+                - use on(), off(), pulse(), toggle(), and blink() LED functions
+                - change intensity of color LEDs
+                - NOT A FOCUS: arrays.
+                  - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)
             lesson-10:
               name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
               description_student: 
@@ -25894,6 +25911,13 @@ en:
                 In tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen.
             lesson-11:
               name: Combining Inputs
+              description_student: 
+              description_teacher: |-
+                - Use dropdowns and sliders to update aspects of the circuit playground
+                - Have CP inputs update screen elements using getProperty() and setProperty()
+                - Screen input <> Board Output is preparation for Maker project at end of Ch 1
+
+                **NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too
             lesson-12:
               name: 'Project: Maker'
           lesson_groups: {}
