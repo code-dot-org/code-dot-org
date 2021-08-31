@@ -13,6 +13,10 @@ const POEM_DURATION = 500;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
+    // Extra information for validation code to be able to inspect the program state
+    this.validationInfo = {
+      endTime: POEM_DURATION
+    };
     this.poemState = {
       title: '',
       author: '',
@@ -26,7 +30,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       effects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
-    this.foregroundEffect = () => {};
+    this.foregroundEffects = [];
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
@@ -59,7 +63,7 @@ export default class PoemBotLibrary extends CoreLibrary {
 
         // Don't show foreground effect in preview
         if (this.p5.frameCount > 1) {
-          this.foregroundEffect();
+          this.foregroundEffects.forEach(effect => effect.func());
         }
       },
 
@@ -134,6 +138,37 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.lineEvents[lineNum] = [];
         }
         this.lineEvents[lineNum].push(callback);
+      },
+
+      getValidationInfo() {
+        return this.validationInfo;
+      },
+
+      setSuccessFrame() {
+        if (!this.validationInfo.successFrame) {
+          // Only set the success frame if it hasn't already been set (the first
+          // frame at which we know the student will pass the level).
+          this.validationInfo.successFrame = this.p5.frameCount;
+        }
+      },
+
+      drawProgressBar() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.validationInfo.successFrame) {
+          // The student will pass the level
+          this.p5.fill(this.p5.rgb(0, 173, 188));
+        } else {
+          // The student will not pass the level (yet);
+          this.p5.fill(this.p5.rgb(118, 102, 160));
+        }
+        this.p5.rect(
+          0,
+          390,
+          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          10
+        );
+        this.p5.pop();
       },
 
       ...backgroundEffects,

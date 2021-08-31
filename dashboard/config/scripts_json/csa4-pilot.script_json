@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-10 04:49:31 UTC",
+    "serialized_at": "2021-08-31 17:03:49 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -55,8 +55,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.",
-        "student_overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images."
+        "overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. To get started, students explore APIs and their documentation to identify features to add to their programs. Students use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.",
+        "student_overview": "The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs to get started. You use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -955,71 +955,67 @@
       }
     },
     {
-      "key": "f35707f4-dd64-4a58-b30d-7619c7111df7",
+      "key": "7c641957-8c85-4c48-b87c-3c795060448a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run the program on Level 1 for the class to demonstrate the error that occurs.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the outcome of the program.",
         "duration": "10",
         "name": "The Scanner Class",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Alternatively, direct students to Level 1 on Code Studio to run the program individually to identify the error."
-          }
-        ]
+        "progression_name": "The Scanner Class"
       },
       "seeding_key": {
-        "activity_section.key": "f35707f4-dd64-4a58-b30d-7619c7111df7",
+        "activity_section.key": "7c641957-8c85-4c48-b87c-3c795060448a",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "f8ed5892-5a5a-4339-8048-3a5354c0b47a",
+      "key": "d9b6161b-d166-472a-bd5b-b99482281c4e",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think caused this error?*\n\n**Discussion Goal:** Students guess the meaning of the error displayed in the console, including that Java does not know what a `Scanner` object is. Some students may have noticed the `import` statement at the top of previous programs they have written and may point out that the `import` statement is missing."
       },
       "seeding_key": {
-        "activity_section.key": "f8ed5892-5a5a-4339-8048-3a5354c0b47a",
+        "activity_section.key": "d9b6161b-d166-472a-bd5b-b99482281c4e",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "ab2be058-bebb-46b5-9150-8ee6fe93d47b",
+      "key": "301174cc-f5e8-4b3e-9081-eed931d1c081",
       "position": 3,
       "properties": {
         "description": "We have created `Scanner` objects before, but we did not have to create a `Scanner` class first.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But remember that no class, __________ (no object)!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "ab2be058-bebb-46b5-9150-8ee6fe93d47b",
+        "activity_section.key": "301174cc-f5e8-4b3e-9081-eed931d1c081",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "65c65052-dd39-4259-9c72-d1b0d33aefcb",
+      "key": "1f0eded7-da24-4e4b-884b-d5474e5c23eb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How were we able to create `Scanner` objects when we did not create a `Scanner` class first?*\n\n**Discussion Goal:** Students guess that something told Java where to find the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `Scanner` class documentation. Have students work with a partner to find the components listed on the slide in the `Scanner` class documentation."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How were we able to create `Scanner` objects when we did not create a `Scanner` class first?*\n\n**Discussion Goal:** Students guess that something told Java where to find the `Scanner` class.\n\n**Do This:** Direct students to Level 2 on Code Studio to access and review the `Scanner` class documentation. Have students work with a partner to navigate the `Scanner` class documentation to answer the questions.",
+        "progression_name": "The Scanner Class"
       },
       "seeding_key": {
-        "activity_section.key": "65c65052-dd39-4259-9c72-d1b0d33aefcb",
+        "activity_section.key": "1f0eded7-da24-4e4b-884b-d5474e5c23eb",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "7e6bc509-adc3-4792-9bf8-3fe53a118ba7",
+      "key": "266f044e-d2f5-4513-a947-980b26d43eff",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find out about the `Scanner` class?*\n* *What did you notice about the constructors and methods for the `Scanner` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `Scanner` class, including descriptions, constructors for creating `Scanner` objects, and methods that they can use. Students may wonder about other methods in the `Scanner` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define packages, explain their purpose, and demonstrate how to use them in a program.\n* A package is a collection of similar classes.\n* The `Scanner` class is in the `java.util` package.\n* Use the `import` statement to use a package in a program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find out about the `Scanner` class?*\n* *What did you notice about the constructors and methods for the `Scanner` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `Scanner` class, including descriptions, constructors for creating `Scanner` objects, and methods that they can use. Students may wonder about other methods in the `Scanner` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define packages, explain their purpose, and demonstrate how to use them in a program."
       },
       "seeding_key": {
-        "activity_section.key": "7e6bc509-adc3-4792-9bf8-3fe53a118ba7",
+        "activity_section.key": "266f044e-d2f5-4513-a947-980b26d43eff",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "1e7da004-e74b-487b-bd22-f1ddca8cf538",
+      "key": "dd80f38b-5c9d-4344-a5af-26282f6afee9",
       "position": 6,
       "properties": {
         "description": "`String` is another object that we create and use in our programs, but we never wrote a `String` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> But no class, ______ (no object)!\n\nLike with the `Scanner` class, we can create `String` objects without first creating a `String` class because it is in a package.",
@@ -1028,129 +1024,120 @@
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1e7da004-e74b-487b-bd22-f1ddca8cf538",
+        "activity_section.key": "dd80f38b-5c9d-4344-a5af-26282f6afee9",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "78288938-1c69-49a2-ae12-0320dce63fb5",
+      "key": "9bbe9d7a-d9b2-4859-ae9f-0c5cd0dce989",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students work with a partner to find the components listed on the slide in the `String` class documentation."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Have students work with a partner to navigate the `String` class documentation to answer the questions.",
+        "progression_name": "The String Class"
       },
       "seeding_key": {
-        "activity_section.key": "78288938-1c69-49a2-ae12-0320dce63fb5",
+        "activity_section.key": "9bbe9d7a-d9b2-4859-ae9f-0c5cd0dce989",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "75d1c1c4-fae2-463a-bdd7-6005d381ba67",
+      "key": "2cbe04e6-df3f-43cf-b240-2abccdb6ac50",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did you find out about the `String` class?*\n* *What did you notice about the constructors and methods for the `String` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `String` class, including descriptions, constructors for creating `String` objects, and methods that they can use. Students may wonder about other methods in the `String` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which package can we find the `String` class?*\n\n**Discussion Goal:** Students share that the `String` class is part of the `java.lang` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think we can create `String` objects without first importing `java.lang`?*\n\n**Discussion Goal:** Students guess that the `java.lang` package is the core package of the Java language. Java automatically includes this package in every program.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did you find out about the `String` class?*\n* *What did you notice about the constructors and methods for the `String` class?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share information they found about the `String` class, including descriptions, constructors for creating `String` objects, and methods that they can use. Students may wonder about other methods in the `String` class that they have not used yet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which package can we find the `String` class?*\n* *Why do you think we can create `String` objects without first importing `java.lang`?*\n\n**Discussion Goal:** Students share that the `String` class is part of the `java.lang` package. Students guess that the `java.lang` package is the core package of the Java language, so it is automatically included in every program.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may wonder about the difference between the `java.util` and the `java.lang` package. Reinforce to students that since packages contain similar classes, they have different types of classes based on their overall purposes or common themes."
+            "markdown": "Students may wonder about the difference between the `java.util` and the `java.lang` package. Reinforce to students that since packages contain similar classes, they have different classes based on their overall purposes or common themes."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "75d1c1c4-fae2-463a-bdd7-6005d381ba67",
+        "activity_section.key": "2cbe04e6-df3f-43cf-b240-2abccdb6ac50",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "6b9b5caf-e594-453b-9e25-1f2f477543d1",
+      "key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
       },
       "seeding_key": {
-        "activity_section.key": "6b9b5caf-e594-453b-9e25-1f2f477543d1",
+        "activity_section.key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "e18c29a7-0b42-458c-97bd-0dc47b610878",
+      "key": "60dde12a-a8a5-4f61-8d59-c8a94e77868e",
       "position": 10,
       "properties": {
-        "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with java, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
+        "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with `java`, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
         "duration": "15",
-        "name": "Exploring APIs",
+        "name": "The Playground",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e18c29a7-0b42-458c-97bd-0dc47b610878",
+        "activity_section.key": "60dde12a-a8a5-4f61-8d59-c8a94e77868e",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "244e6b57-5b27-4d9c-aed1-f4453c6f0349",
+      "key": "f1707318-0d45-427b-bbea-868027a54956",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers.",
+        "progression_name": "Exploring APIs"
       },
       "seeding_key": {
-        "activity_section.key": "244e6b57-5b27-4d9c-aed1-f4453c6f0349",
+        "activity_section.key": "f1707318-0d45-427b-bbea-868027a54956",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "6280b5be-eb03-454c-83d3-206ac44fcac3",
+      "key": "b1520cb5-7216-4563-9e1a-a4af9473d985",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that a software engineer can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that software engineers can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
       },
       "seeding_key": {
-        "activity_section.key": "6280b5be-eb03-454c-83d3-206ac44fcac3",
+        "activity_section.key": "b1520cb5-7216-4563-9e1a-a4af9473d985",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "0e9cdcbd-c6e8-4846-82a7-3deeb59ab2bb",
+      "key": "45aaa9b2-6e4d-431f-a0d4-d5e6f4c4c218",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Park, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
-        "duration": "10",
-        "name": "Introduction to The Park",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Playground, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "0e9cdcbd-c6e8-4846-82a7-3deeb59ab2bb",
+        "activity_section.key": "45aaa9b2-6e4d-431f-a0d4-d5e6f4c4c218",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "197d1fab-8d1f-4441-a222-d45808b9fcb2",
+      "key": "ef528e6f-b9ed-4472-ae60-eab09115b42f",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to review the API documentation for The Park."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to review the API documentation for The Playground.",
+        "progression_name": "Exploring The Playground"
       },
       "seeding_key": {
-        "activity_section.key": "197d1fab-8d1f-4441-a222-d45808b9fcb2",
+        "activity_section.key": "ef528e6f-b9ed-4472-ae60-eab09115b42f",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
     {
-      "key": "d318f824-4ef7-483b-8d73-bd48e63cbbfc",
+      "key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 4 on Code Studio. Students import The Park and run the sample code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio. Students add balloons as `ClickableImage`s, then add popped balloons as `Image`s that show when clicking the balloons.",
+        "progression_name": "Creating Balloons"
       },
       "seeding_key": {
-        "activity_section.key": "d318f824-4ef7-483b-8d73-bd48e63cbbfc",
-        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
-      }
-    },
-    {
-      "key": "6a9c4c5e-899f-4553-8b00-0d2c10854efa",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Park.\n* Adding a `ClickableImage`\n* Writing the `onClick()` method\n* Adding an `Image`\n* Removing an image\n* Playing a sound effect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students add a balloon as a `ClickableImage`, then add a popped balloon as an Image that shows when the balloon is clicked."
-      },
-      "seeding_key": {
-        "activity_section.key": "6a9c4c5e-899f-4553-8b00-0d2c10854efa",
+        "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
         "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
       }
     },
@@ -1158,7 +1145,7 @@
       "key": "ca3d1fd7-5f92-49fd-af52-a1d59c7619ae",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to discuss the prompts.*\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the purpose of APIs and libraries and the benefits of using APIs. Students make predictions about how they will use APIs and libraries throughout the unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students discuss the purpose of APIs and libraries and the benefits of using APIs. Students make predictions about how they will use APIs and libraries throughout the unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Three W's"
       },
       "seeding_key": {
@@ -1171,7 +1158,8 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding"
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "51ae3f43-f446-4315-86dd-555abd31c0ab",
@@ -3813,10 +3801,280 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Scanner Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L1-PredictCode"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "7c641957-8c85-4c48-b87c-3c795060448a"
+      },
+      "level_keys": [
+        "CSA U4L1-L1-PredictCode"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Scanner Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "1f0eded7-da24-4e4b-884b-d5474e5c23eb"
+      },
+      "level_keys": [
+        "CSA U4L1-L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The String Class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9bbe9d7a-d9b2-4859-ae9f-0c5cd0dce989"
+      },
+      "level_keys": [
+        "CSA U4L1-L3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring APIs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f1707318-0d45-427b-bbea-868027a54956"
+      },
+      "level_keys": [
+        "CSA U4L1-L4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring The Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ef528e6f-b9ed-4472-ae60-eab09115b42f"
+      },
+      "level_keys": [
+        "CSA U4L1-L5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Balloons"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7"
+      },
+      "level_keys": [
+        "CSA U4L1-L6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Balloons"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7"
+      },
+      "level_keys": [
+        "CSA U4L1-L7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4L1-L8"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "51ae3f43-f446-4315-86dd-555abd31c0ab"
+      },
+      "level_keys": [
+        "CSA U4L1-L8"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L1-PredictCode",
+        "script_level.level_keys": [
+          "CSA U4L1-L1-PredictCode"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "7c641957-8c85-4c48-b87c-3c795060448a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L2",
+        "script_level.level_keys": [
+          "CSA U4L1-L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "1f0eded7-da24-4e4b-884b-d5474e5c23eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L3",
+        "script_level.level_keys": [
+          "CSA U4L1-L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "9bbe9d7a-d9b2-4859-ae9f-0c5cd0dce989"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L4",
+        "script_level.level_keys": [
+          "CSA U4L1-L4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "f1707318-0d45-427b-bbea-868027a54956"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L5",
+        "script_level.level_keys": [
+          "CSA U4L1-L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "ef528e6f-b9ed-4472-ae60-eab09115b42f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L6",
+        "script_level.level_keys": [
+          "CSA U4L1-L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L7",
+        "script_level.level_keys": [
+          "CSA U4L1-L7"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "249b7a2c-b25b-49b7-832c-7d115907e9a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L1-L8",
+        "script_level.level_keys": [
+          "CSA U4L1-L8"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "51ae3f43-f446-4315-86dd-555abd31c0ab"
+      }
+    }
   ],
   "resources": [
     {
@@ -5047,7 +5305,7 @@
     {
       "key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2",
       "properties": {
-        "description": "Add new functionality to program code by importing an API"
+        "description": "Add new functionality to program code by importing a package"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
