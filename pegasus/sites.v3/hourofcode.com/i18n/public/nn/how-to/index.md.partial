@@ -52,7 +52,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 ### Think about your technology needs - computers are optional!
 
 - Den beste Kodetime-opplevinga får du med datamaskiner tilkopla internett. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- Husk å teste at alle delene av undervisningsopplegget fungerer med lyd og bilde i nettleseren på elevenes datamaskiner eller enheter. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- Prøv ut øvingane på elevane sine datamaskiner eller nettbrett. Ver viss på at dei fungerer skikkeleg med på nettlesaren med både lyd og video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
 - Tilby hovudtelefonar, eller spør deltakarane om å ta med sine eigne, om oppgåva du vel fungerer best med lyd.
 - Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Når elevane går saman to og to, vil dei hjelpe kvarandre og kreve mindre av læraren. Dei vil også oppleva at programmering er sosialt og handlar om samarbeid.
 
@@ -101,7 +101,7 @@ Vis ein inspirerande video:
 - Den opprinnelege lanseringsvideoen fra Code.org med Bill Gates, Mark Zuckerberg og NBA-stjerna Chris Bosh. (Det finst versjonar på [1 minutt](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutt](https://www.youtube.com/watch?v=nKIu9yen5nc) og [9 minutt](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Det er heilt greit om du og elevene dine ikkje er kjend med datavitskap frå før. Her er nokre idear til korleis du kan introdusere kodetimen din:
 
 - Forklar korleis teknologi påverkar liva våre. Bruk gjerne døme som både jenter og gutar kan kjenne seg att i (snakk om å redde liv, hjelpe andre eller om sosiale medier).
 - Lag ei liste over daglegdagse ting som er programmert.
@@ -113,17 +113,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get coding!
 
-Direct students to the activity
+Sett elevane i gong med aktiviteten
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+Når elevane har spørsmål eller synast noko er vanskeleg, er det greit å svare:
 
 - "Eg veit ikkje. La oss finne ut av det i lag."
 - «Det er ikkje alltid teknologien gjer seg slik vi vil.»
 - "Å lære seg å kode er som å lære seg eit nytt språk - du snakkar ikkje perfekt med ein gong."
 
-What if a student finishes early?
+Kva kan eg gjere om ein elev blir tidleg ferdig?
 
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - Eller du kan be dei elevane som blir fort ferdige om å hjelpe dei som slit med å få det til.
