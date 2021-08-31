@@ -17532,6 +17532,7 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-1: {}
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -17539,6 +17540,7 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -17993,6 +17995,97 @@ de:
             lesson-10: {}
             lesson-7: {}
             lesson-11: {}
+            lesson-12:
+              name: Werkzeuge
+            lesson-13: {}
+            lesson-17:
+              name: Konsole
+            lesson-18:
+              name: Widgets
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichtsstunden
+            lessonGroup-3:
+              display_name: Projekt
         hello-world-draft:
           lessons:
             lesson-1: {}
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform: {}
+            Navigating lesson plans and resources: {}
+            Navigating support: {}
+            lesson-4: {}
+            lesson-3: {}
+            lesson-8: {}
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 1 Pilot Survey: {}
+            lesson-20:
+              name: Prüfungstag
+            lesson-21: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 2 Pilot Survey: {}
+            lesson-15:
+              name: Prüfungstag
+            lesson-1: {}
+          lesson_groups:
+            lesson group:
+              display_name: Inhalt
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 3 Pilot Survey: {}
+            lesson-15:
+              name: Prüfungstag
+            lesson-16: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        csa5-pilot-facilitator:
+          lessons:
+            Reversing Elements: {}
+            Shifting Elements: {}
+            Finding Duplicates: {}
+            Searching for Elements: {}
+            A Sustainable Neighborhood Project - Day 1: {}
+            A Sustainable Neighborhood Project - Day 2: {}
+            A Sustainable Neighborhood Project - Day 3: {}
+            FRQ Day: {}
+            Assessment Day:
+              name: Prüfungstag
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
