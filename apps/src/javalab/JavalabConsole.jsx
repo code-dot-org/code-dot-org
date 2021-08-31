@@ -64,11 +64,33 @@ class JavalabConsole extends React.Component {
   };
 
   displayConsoleLogs() {
-    return this.props.consoleLogs.map((log, i) => {
+    return (
+      <div style={styles.log}>
+        {this.props.consoleLogs.map((log, i) => {
+          if (log.type === 'newline') {
+            return '\n';
+          }
+          if (log.type === 'input') {
+            return (
+              <div style={styles.lineWrapper}>
+                <InputPrompt />
+                {log.text}
+              </div>
+            );
+          }
+          if (log.type !== 'newline' && log.type !== 'input') {
+            return log.text;
+          }
+        })}
+      </div>
+    );
+
+    /*
+    this.props.consoleLogs.map((log, i) => {
       if (log.type === 'newline') {
         return (
-          <p key={`log-${i}`} style={styles.log}>
-            <br />
+          <span key={`log-${i}`} style={styles.log}>
+            {'\n''}
           </p>
         );
       } else {
@@ -79,7 +101,7 @@ class JavalabConsole extends React.Component {
           </p>
         );
       }
-    });
+    });*/
   }
 
   onInputKeyDown = e => {

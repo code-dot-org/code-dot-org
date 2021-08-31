@@ -70,9 +70,11 @@ export default class JavabuilderConnection {
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
+        includeLineBreak = true;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
         message = javalabMsg.compilationSuccess();
+        includeLineBreak = true;
         break;
       case StatusMessageType.RUNNING:
         message = javalabMsg.running();
@@ -80,6 +82,7 @@ export default class JavabuilderConnection {
         break;
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
+        includeLineBreak = true;
         break;
       case StatusMessageType.EXITED:
         this.onExit();
