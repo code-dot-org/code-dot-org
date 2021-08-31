@@ -141,6 +141,9 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       getValidationInfo() {
+        this.validationInfo.foregroundEffects = this.foregroundEffects.map(
+          effect => effect.name
+        );
         return this.validationInfo;
       },
 
