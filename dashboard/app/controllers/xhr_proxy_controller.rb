@@ -69,6 +69,7 @@ class XhrProxyController < ApplicationController
     distanza.org
     dweet.io
     enclout.com
+    googleapis.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
