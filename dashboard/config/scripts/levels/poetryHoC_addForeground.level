@@ -39,7 +39,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "validation_code": "var validationInfo = getValidationInfo();\r\nif (validationInfo.foregroundEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'genericSuccess');\r\n  } else {\r\n    levelFailure(3, 'poemBotMakeForeground');\r\n  }\r\n}"
   },
   "game_id": 64,
   "published": true,

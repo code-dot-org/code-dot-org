@@ -4,6 +4,7 @@ import {PALETTES} from '../constants';
 export const commands = {
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
+    this.validationInfo.backgroundEffect = effectName;
     switch (effectName) {
       case 'colors': {
         let amount = 0;
