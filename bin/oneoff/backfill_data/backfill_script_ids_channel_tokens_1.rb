@@ -56,6 +56,7 @@ def update_script_ids(start_id, end_id, is_dry_run)
   puts "backfilling script_ids..."
   backfill_count = 0
   unable_to_backfill = 0
+  levels_missing_backfills = []
 
   ChannelToken.where(id: start_id..end_id).find_each do |channel_token|
     next if channel_token.script_id.present?
@@ -78,6 +79,7 @@ def update_script_ids(start_id, end_id, is_dry_run)
       parent_level_ids = get_parent_level_ids(level)
 
       if parent_level_ids.blank? || user_id.blank?
+        levels_missing_backfills.push(level.id)
         unable_to_backfill += 1
         next
       end
@@ -116,10 +118,15 @@ def update_script_ids(start_id, end_id, is_dry_run)
       next
     end
 
+    levels_missing_backfills.push(level.id)
     unable_to_backfill += 1
   end
 
   puts "backfilled #{backfill_count} script ids, unable to backfill script id for #{unable_to_backfill} channel tokens"
+
+  # for investigation purposes
+  puts "unfilled levels:"
+  puts levels_missing_backfills.uniq!
 end
 
 def get_parent_level_ids(level)
