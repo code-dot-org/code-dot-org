@@ -10,6 +10,7 @@ import * as utils from './utils';
 
 export const commands = {
   setForegroundEffect(effectName) {
+    this.validationInfo.foregroundEffect = effectName;
     const id = createUuid();
     switch (effectName) {
       case 'rain': {
