@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {levelFeedbackShape} from './types';
 import SingleFeedback from '@cdo/apps/templates/feedback/SingleFeedback';
+import Button from '@cdo/apps/templates/Button';
 
 export default class LevelFeedbackEntry extends Component {
   static propTypes = levelFeedbackShape;
@@ -55,13 +56,14 @@ export default class LevelFeedbackEntry extends Component {
           <SingleFeedback feedback={feedback} />
         ))}
         {hasMultipleFeedbacks && (
-          <button
-            type="button"
-            style={styles.showPastComments}
+          <Button
+            text={
+              showPastComments ? 'Hide past comments' : 'Show past comments'
+            }
             onClick={this.toggleshowPastComments}
-          >
-            {showPastComments ? 'Hide past comments' : 'Show past comments'}
-          </button>
+            displayAsText={true}
+            style={styles.showPastComments}
+          />
         )}
       </div>
     );
@@ -92,13 +94,6 @@ const styles = {
     float: 'right',
     color: color.teal,
     fontFamily: '"Gotham 5r", sans-serif',
-    backgroundColor: 'unset',
-    border: 'unset',
-    padding: 0,
-    margin: 0,
-    fontSize: 16,
-    ':hover': {
-      boxShadow: 'none'
-    }
+    fontSize: 16
   }
 };
