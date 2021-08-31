@@ -88,10 +88,13 @@ class Button extends React.Component {
       __useDeprecatedTag
     } = this.props;
 
+    let className = this.props.className || '';
+
     let color, size;
     if (displayAsText) {
       color = ButtonColor.transparent;
       size = ButtonSize.text;
+      className += 'button-active-no-border';
     } else {
       color = this.props.color || ButtonColor.orange;
       size = this.props.size || ButtonSize.default;
@@ -330,8 +333,8 @@ const styles = {
       boxShadow: 'none',
       padding: 0,
       margin: 0,
-      ':focus': {
-        outline: 0
+      ':active': {
+        border: 'none !important'
       }
     }
   },
