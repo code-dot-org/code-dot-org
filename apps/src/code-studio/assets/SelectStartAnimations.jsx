@@ -1,10 +1,12 @@
 import React from 'react';
-import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {
+  getManifest,
+  getLevelAnimationsFiles
+} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 export default class SelectStartAnimations extends React.Component {
   state = {
     spritesByCategory: {},
-    animations: [],
     startAnimations: {},
     expandedCategory: ''
   };
@@ -16,11 +18,17 @@ export default class SelectStartAnimations extends React.Component {
         // this.setState({defaultList: orderedList, isLoading: false});
         const categories = sprites['categories'];
         this.setState({spritesByCategory: categories});
-        let spriteList = [];
-        Object.keys(categories).map(category => {
-          spriteList = spriteList.concat(categories[category]);
+      })
+      .then(() => {
+        getLevelAnimationsFiles().then(sprites => {
+          let updatedCategories = {...this.state.spritesByCategory};
+          let onlyPngs = sprites.files.filter(filename => {
+            let lowercase = filename.toLowerCase();
+            return lowercase.endsWith('png');
+          });
+          updatedCategories['hidden'] = onlyPngs;
+          this.setState({spritesByCategory: updatedCategories});
         });
-        this.setState({animations: spriteList});
       })
       .catch(err => {
         console.log(err);
