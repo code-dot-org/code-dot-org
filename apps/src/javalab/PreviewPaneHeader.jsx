@@ -7,6 +7,7 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import {RecordingFileType} from '../code-studio/components/recorders';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -45,7 +46,8 @@ export default function PreviewPaneHeader({
           headerHasFocus
           onClick={() =>
             assets.showAssetManager(null, null, null, {
-              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png'
+              customAllowedExtensions: '.wav, .jpg, .jpeg, .jfif, .png',
+              recordingFileType: RecordingFileType.WAV
             })
           }
           iconClass="fa fa-upload"

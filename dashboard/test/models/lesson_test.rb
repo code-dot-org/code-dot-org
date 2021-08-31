@@ -801,7 +801,7 @@ class LessonTest < ActiveSupport::TestCase
     # of related_lessons, so that the count is not artificially reduced by
     # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(10) do
+    assert_queries(11) do
       summaries = lesson1.summarize_related_lessons
     end
 

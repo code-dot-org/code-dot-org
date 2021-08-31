@@ -28,12 +28,16 @@
             "\"darkCircles\""
           ],
           [
-            "Cloudy",
-            "\"cloudy\""
-          ],
-          [
             "Fade Colors",
             "\"fadeColors\""
+          ],
+          [
+            "Blooming",
+            "\"blooming\""
+          ],
+          [
+            "Ripples",
+            "\"ripples\""
           ]
         ]
       },

@@ -97,6 +97,18 @@ module Services
       assert_script_trees_equal(script, script_after_seed)
     end
 
+    test 'seed modifies script updated_at' do
+      Timecop.freeze do
+        script = create_script_tree
+        updated_at = script.updated_at
+        Timecop.travel 1.minute
+        json = ScriptSeed.serialize_seeding_json(script)
+        ScriptSeed.seed_from_json(json)
+        script.reload
+        refute_equal updated_at, script.updated_at
+      end
+    end
+
     test 'seed script in unit group' do
       script = create_script_tree(with_unit_group: true)
       refute script.course_version

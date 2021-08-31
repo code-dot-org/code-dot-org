@@ -13,19 +13,25 @@ const POEM_DURATION = 500;
 export default class PoemBotLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
+    // Extra information for validation code to be able to inspect the program state
+    this.validationInfo = {
+      endTime: POEM_DURATION
+    };
     this.poemState = {
       title: '',
       author: '',
       lines: [],
-      color: 'black',
-      font: 'Arial',
+      font: {
+        fill: 'black',
+        stroke: 'white',
+        font: 'Arial'
+      },
       isVisible: true,
       effects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffect = () => {};
     this.lineEvents = {};
-    this.p5.noStroke();
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
 
@@ -77,12 +83,19 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.poemState.lines.push(line || '');
       },
 
-      setFontColor(color) {
-        this.poemState.color = color;
+      setFontColor(fill, stroke) {
+        if (fill) {
+          this.poemState.font.fill = fill;
+        }
+        if (stroke) {
+          this.poemState.font.stroke = stroke;
+        }
       },
 
       setFont(font) {
-        this.poemState.font = font;
+        if (font) {
+          this.poemState.font.font = font;
+        }
       },
 
       setTitle(title) {
@@ -127,6 +140,37 @@ export default class PoemBotLibrary extends CoreLibrary {
         this.lineEvents[lineNum].push(callback);
       },
 
+      getValidationInfo() {
+        return this.validationInfo;
+      },
+
+      setSuccessFrame() {
+        if (!this.validationInfo.successFrame) {
+          // Only set the success frame if it hasn't already been set (the first
+          // frame at which we know the student will pass the level).
+          this.validationInfo.successFrame = this.p5.frameCount;
+        }
+      },
+
+      drawProgressBar() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.validationInfo.successFrame) {
+          // The student will pass the level
+          this.p5.fill(this.p5.rgb(0, 173, 188));
+        } else {
+          // The student will not pass the level (yet);
+          this.p5.fill(this.p5.rgb(118, 102, 160));
+        }
+        this.p5.rect(
+          0,
+          390,
+          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          10
+        );
+        this.p5.pop();
+      },
+
       ...backgroundEffects,
       ...foregroundEffects
     };
@@ -135,6 +179,10 @@ export default class PoemBotLibrary extends CoreLibrary {
   getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
     this.p5.textFont(font);
+    // stroke color doesn't matter here, we just need to set a stroke to get an
+    // accurate width calculation.
+    this.p5.stroke('black');
+    this.p5.strokeWeight(3);
     this.p5.textSize(desiredSize);
     const fullWidth = this.p5.textWidth(text);
     const scaledSize = Math.min(
@@ -212,7 +260,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     const numLinesToShow = Math.floor(progress * renderInfo.lines.length);
     return {
       ...renderInfo,
-      lines: newLines.slice(0, numLinesToShow)
+      lines: newLines.slice(0, numLinesToShow + 1) // end index is not inclusive, so + 1
     };
   }
 
@@ -224,8 +272,9 @@ export default class PoemBotLibrary extends CoreLibrary {
     }
     let yCursor = OUTER_MARGIN;
     let renderInfo = {
-      color: poemState.color,
-      font: poemState.font,
+      font: {
+        ...poemState.font
+      },
       lines: []
     };
     if (poemState.title) {
@@ -235,7 +284,7 @@ export default class PoemBotLibrary extends CoreLibrary {
         y: yCursor,
         size: this.getScaledFontSize(
           poemState.title,
-          poemState.font,
+          poemState.font.font,
           FONT_SIZE * 2
         )
       };
@@ -247,7 +296,7 @@ export default class PoemBotLibrary extends CoreLibrary {
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.author, poemState.font, 16)
+        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16)
       };
       yCursor += LINE_HEIGHT;
     }
@@ -259,7 +308,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     );
     renderInfo.lineSize = this.getScaledFontSize(
       longestLine,
-      poemState.font,
+      poemState.font.font,
       FONT_SIZE
     );
     poemState.lines.forEach(line => {
@@ -284,8 +333,10 @@ export default class PoemBotLibrary extends CoreLibrary {
   }
 
   drawFromRenderInfo(renderInfo) {
-    this.p5.fill(renderInfo.color || 'black');
-    this.p5.textFont(renderInfo.font || 'Arial');
+    this.p5.fill(renderInfo.font.fill);
+    this.p5.stroke(renderInfo.font.stroke);
+    this.p5.strokeWeight(3);
+    this.p5.textFont(renderInfo.font.font);
     if (renderInfo.title) {
       this.p5.textSize(renderInfo.title.size);
       this.p5.text(
@@ -304,8 +355,10 @@ export default class PoemBotLibrary extends CoreLibrary {
     }
     this.p5.textSize(renderInfo.lineSize);
     renderInfo.lines.forEach(item => {
-      let color = this.getP5Color(renderInfo.color || 'black', item.alpha);
-      this.p5.fill(color);
+      let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
+      this.p5.fill(fillColor);
+      let strokeColor = this.getP5Color(renderInfo.font.stroke, item.alpha);
+      this.p5.stroke(strokeColor);
       this.p5.text(item.text, item.x, item.y);
     });
   }
