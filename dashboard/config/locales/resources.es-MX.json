@@ -96,11 +96,34 @@
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Proyecto Final de Fundamentos de Ciencias de la Computación"
         },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Vocabulario del curso\t"
+        },
         "implementation_guide/coursef/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/coursef/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Foro de profesores"
@@ -175,11 +198,34 @@
         "the_big_event_courses_a_b_/courseb/2021": {
           "name": "El Gran Evento (Cursos A, B)"
         },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Vocabulario del curso"
+        },
         "implementation_guide/courseb/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/courseb/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Foro de profesores"
@@ -250,11 +296,34 @@
         "csf-lesson-recommend/coursea/2021": {
           "name": "Sugerencias para la Actividad Principal de Fundamentos de Ciencias de la Computación"
         },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Vocabulario del curso"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Foro de profesores"
@@ -282,6 +351,9 @@
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Sugerencias para la Actividad Principal de Fundamentos de Ciencias de la Computación"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "Guia de Depuración"
         },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
@@ -328,11 +400,33 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Pulseras binarias"
         },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Vocabulario del curso"
+        },
         "implementation_guide/coursec/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/coursec/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Foro de profesores"
@@ -412,11 +506,33 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Condicionales con tarjetas"
         },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "Vocabulario del curso"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/coursed/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/coursed/2021": {
           "name": "Foro de profesores"
@@ -471,8 +587,18 @@
         "rubric-csf-final-projects/express/2021": {
           "name": "Proyecto Final de Fundamentos de Ciencias de la Computación"
         },
+        "csta_standards_mapping/express/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/express-2021/standards"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "Vocabulario del curso\t"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Foro de profesores"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Guia de Depuración"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programación en parejas"
@@ -489,8 +615,18 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Detente y Piensa Online"
         },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "Normas de la CSTA",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Vocabulario del curso\t"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Foro de profesores"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Guia de Depuración"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Sigue el algoritmo"
@@ -538,11 +674,32 @@
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
           "name": "72 formas creativas de que tus estudiantes muestren lo que saben"
         },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "Normas de la CSTA"
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Guia de Common Core y NGSS (para EEUU)"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Extensión de Actividades multidisciplinarias"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "Vocabulario del curso\t"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Guía de implementación"
         },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Guia de Tipos de Lecciones"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Guia de Depuración"
+        },
         "curriculum_guide_1/coursee/2021": {
           "name": "Guía del plan de estudios"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "Record de Cambios 2021"
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Foro de profesores"
