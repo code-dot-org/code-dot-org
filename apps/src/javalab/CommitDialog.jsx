@@ -11,7 +11,6 @@ import _ from 'lodash';
 const fileShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   commit: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired,
   hasConflictingName: PropTypes.bool.isRequired
 });
 
@@ -202,13 +201,6 @@ export class UnconnectedCommitDialog extends React.Component {
       commitSaveInProgress: false,
       commitNotes: ''
     });
-    console.log(
-      `not backpackSaveInProgress: ${!this.state.backpackSaveInProgress}`
-    );
-    console.log(
-      `not hasBackpackSaveError: ${!this.state.hasBackpackSaveError}`
-    );
-    console.log(`can close: ${canClose}`);
     if (canClose) {
       this.props.handleClose();
     }
@@ -257,10 +249,10 @@ export class UnconnectedCommitDialog extends React.Component {
               commit: filesToBackpack.includes(name),
               hasConflictingName: this.getConflictingBackpackFiles().includes(
                 name
-              ),
-              onToggle: () => this.toggleFileToBackpack(name)
+              )
             }))}
             notes={commitNotes}
+            onToggleFile={this.toggleFileToBackpack}
             onChangeNotes={this.updateNotes}
           />
         }
@@ -282,7 +274,7 @@ UnconnectedCommitDialog.propTypes = {
   backpackApi: PropTypes.object
 };
 
-function CommitDialogBody({files, notes, onChangeNotes}) {
+function CommitDialogBody({files, notes, onToggleFile, onChangeNotes}) {
   return (
     <div>
       <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
@@ -299,7 +291,13 @@ function CommitDialogBody({files, notes, onChangeNotes}) {
         {i18n.saveToBackpack()}
       </div>
       {files.map(file => {
-        return <CommitDialogFile file={file} key={file.name} />;
+        return (
+          <CommitDialogFile
+            file={file}
+            onToggleFile={onToggleFile}
+            key={file.name}
+          />
+        );
       })}
     </div>
   );
@@ -308,10 +306,11 @@ function CommitDialogBody({files, notes, onChangeNotes}) {
 CommitDialogBody.propTypes = {
   files: PropTypes.arrayOf(fileShape).isRequired,
   notes: PropTypes.string,
+  onToggleFile: PropTypes.func.isRequired,
   onChangeNotes: PropTypes.func.isRequired
 };
 
-export function CommitDialogFile({file}) {
+export function CommitDialogFile({file, onToggleFile}) {
   return (
     <div style={styles.fileRow}>
       <div style={styles.fileLabelContainer}>
@@ -328,7 +327,7 @@ export function CommitDialogFile({file}) {
         id={`commit-${file.name}`}
         type="checkbox"
         checked={file.commit}
-        onChange={file.onToggle}
+        onChange={() => onToggleFile(file.name)}
         style={styles.checkbox}
       />
     </div>
@@ -336,7 +335,8 @@ export function CommitDialogFile({file}) {
 }
 
 CommitDialogFile.propTypes = {
-  file: fileShape.isRequired
+  file: fileShape.isRequired,
+  onToggleFile: PropTypes.func.isRequired
 };
 
 const PADDING = 8;
