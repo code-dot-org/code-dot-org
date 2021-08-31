@@ -1,0 +1,18 @@
+{
+  "category": "",
+  "config": {
+    "func": "getValidationInfo",
+    "blockText": "getValidationInfo",
+    "args": [
+      {
+        "name": "AUTHOR",
+        "type": "String"
+      }
+    ],
+    "color": [
+      354,
+      0.95,
+      0.65
+    ]
+  }
+}

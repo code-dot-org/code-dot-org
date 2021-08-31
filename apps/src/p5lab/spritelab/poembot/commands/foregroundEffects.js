@@ -10,7 +10,6 @@ import * as utils from './utils';
 
 export const commands = {
   setForegroundEffect(effectName) {
-    this.validationInfo.foregroundEffect = effectName;
     const id = createUuid();
     switch (effectName) {
       case 'rain': {
@@ -25,6 +24,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.stroke(
@@ -65,6 +65,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -104,6 +105,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             hearts.forEach(heart => {
               this.p5.push();
@@ -160,6 +162,7 @@ export const commands = {
 
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             emojis.forEach(emoji => {
               emoji.y += this.p5.pow(emoji.size, 0.25);
@@ -200,6 +203,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -244,6 +248,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -306,6 +311,7 @@ export const commands = {
         }
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
@@ -349,6 +355,7 @@ export const commands = {
 
         this.foregroundEffects.push({
           id,
+          name: effectName,
           func: () => {
             this.p5.push();
             this.p5.noStroke();
