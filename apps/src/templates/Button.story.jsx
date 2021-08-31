@@ -86,6 +86,16 @@ export default storybook => {
       )
     },
     {
+      name: 'Button styled as text',
+      story: () => (
+        <Button
+          displayAsText={true}
+          text="Batman & Robin"
+          onClick={() => console.log('click')}
+        />
+      )
+    },
+    {
       name: 'Button with onClick',
       story: () => (
         <Button
