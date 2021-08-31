@@ -210,6 +210,7 @@
           "name": "Przejrzyj"
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
+          "name": "Używanie zmiennych z Artystą",
           "progression_name": "Przewidywanie"
         },
         "114f0276-db5c-466e-ad8a-a6488a93f019": {
@@ -331,6 +332,7 @@
           "name": "Wstęp"
         },
         "2a282546-3943-4555-adae-45fe80b8207a": {
+          "name": "Symulowanie eksperymentów",
           "progression_name": "Uruchom symulację"
         },
         "a9361037-3164-409e-a061-748c4929e168": {
@@ -508,10 +510,17 @@
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Refleksja"
         },
+        "0375d24a-10d8-4f65-87a3-d832c268c183": {
+          "description": "Jeśli uczniowie wcześniej skończą rozwiązywać łamigłówkę, niech spędzą trochę czasu próbując wymyślić własne łamigłówki w ich Dzienniku refleksji."
+        },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "name": "Przegląd aktywności bez komputera",
           "tips": [
             null
           ]
+        },
+        "af41bb35-0f50-4787-81ac-3658bfa59b98": {
+          "name": "Łamigłówki online z użyciem strzałek"
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "Programowanie z Angry Birds"
@@ -571,6 +580,9 @@
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Refleksja"
         },
+        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
+          "name": "Powtórz po mnie"
+        },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Poznając pętle"
         },
@@ -609,6 +621,9 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Wstęp"
         },
+        "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
+          "name": "Demonstracja nauczyciela"
+        },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "Budowanie umiejętności"
         },
@@ -631,6 +646,7 @@
           "name": "Wstęp"
         },
         "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "name": "Demonstracja nauczyciela",
           "tips": [
             null
           ]
@@ -655,6 +671,9 @@
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "Refleksja"
+        },
+        "690e9bfd-7ca2-49f7-bd24-2ba8a921b4c5": {
+          "name": "Co to za aplikacja?"
         },
         "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
           "progression_name": "Right App - Aktywność bez komputera"
@@ -774,6 +793,9 @@
             null
           ]
         },
+        "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
+          "name": "Programowanie Happy Maps"
+        },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można ich użyć w ramach zajęć pozalekcyjnych lub innej formy rozszerzenia. **Mapy pluszaków** - Utwórz siatkę naturalnej wielkości na chodniku wykorzystując taśmę i poleć uczniom, aby przynieśli do szkoły pluszaki. Teraz uczniowie mogą zaprogramować znajomych, aby przemieszczali swoje pluszaki zgodnie z instrukcjami  programów.\n\\*\\*Utwórz swoje własne \\*\\* -   Nich uczniowie tworzą swoje własne mapy.\n\n-   Niech inni uczniowie rozwiążą je z użyciem programów. "
         },
@@ -786,6 +808,7 @@
           "name": "Podgląd łamigłówek online jako klasa"
         },
         "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "name": "Programowanie z blokami",
           "progression_name": "Film: Programowanie z użyciem bloków"
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
@@ -800,9 +823,13 @@
           "name": "Refleksja"
         },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
+          "name": "Podstawy informatyki bez komputera",
           "tips": [
             null
           ]
+        },
+        "82d24278-d63c-4e22-921d-b92f4f1f8cd8": {
+          "name": "Programowanie ze Scratem"
         },
         "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
           "progression_name": "Film: Programowanie parami "
@@ -861,6 +888,7 @@
           "name": "Refleksja"
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
+          "name": "Podstawy informatyki bez komputera",
           "tips": [
             null
           ]
@@ -898,6 +926,9 @@
         },
         "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
           "name": "Wstęp"
+        },
+        "5679d0c2-9bce-45bb-a7ad-713853ccb683": {
+          "name": "Demonstracja nauczyciela"
         },
         "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
           "tips": [
@@ -1019,6 +1050,7 @@
           "progression_name": "Projekt"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "name": "Opowiadanie historii z Artystą",
           "progression_name": "Projekt"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
@@ -1035,6 +1067,9 @@
           "tips": [
             null
           ]
+        },
+        "4e234f90-8457-4749-866d-cdd800ccaeac": {
+          "name": "Rozmowa z robotami"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "Moi przyjaciele wśród robotów"
@@ -2037,18 +2072,21 @@
           "name": "Refleksja"
         },
         "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "description": "#### Rozgrzewka",
           "progression_name": "Film: Potańcówka Rozgrzewka"
         },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "Ćwiczenia"
         },
         "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
+          "description": "#### Zdarzenia",
           "progression_name": "Film: Potańcówki"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Zdarzenia"
         },
         "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
+          "description": "#### Takty",
           "progression_name": "Film: Takty w Potańcówce"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
@@ -2458,6 +2496,7 @@
           "name": "Przejrzyj"
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
+          "name": "Używanie zmiennych z Artystą",
           "progression_name": "Przewidywanie"
         },
         "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
@@ -2488,6 +2527,9 @@
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Wstęp"
         },
+        "eac3c96a-98e8-4d3f-95de-b60f44c66df2": {
+          "name": "Pętle \"dla\" z Pszczółką"
+        },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Przejrzyj"
         },
@@ -2510,6 +2552,7 @@
           "name": "Wstęp"
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "Pętle \"dla\" z Artistą ",
           "tips": [
             null
           ]
@@ -2538,6 +2581,7 @@
           ]
         },
         "38fe6f18-ce88-45d9-912c-64fc0addd0b7": {
+          "name": "Kodowanie",
           "tips": [
             null
           ]
@@ -2591,6 +2635,7 @@
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "Programowanie z blokami",
           "tips": [
             null
           ]
@@ -2711,6 +2756,9 @@
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "Pętle z Laurel"
+        },
+        "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
+          "name": "Łamigłówki online"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Budowanie umiejętności"
@@ -2848,6 +2896,9 @@
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Wstęp"
+        },
+        "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
+          "name": "Czego nauczyliśmy się?"
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Refleksja",
@@ -3065,6 +3116,9 @@
           "tips": [
             null
           ]
+        },
+        "b249be1c-ef47-4ad8-87dd-2bcfb8d17530": {
+          "name": "Podgląd łamigłówek online"
         },
         "ad677781-a22b-4166-b8f8-6dad3630f9e3": {
           "name": "Funkcje w Minecrafcie",
