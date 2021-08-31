@@ -9165,11 +9165,8 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?",
           "courseF_bee_for10_b": "Prvá skupina kvetov má dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
-          "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nAko súvisia tieto čísla?",
-          "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok."
-        },
-        "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
+          "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok.",
+          "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
@@ -9220,6 +9217,76 @@
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Ak sa vtáčik neposúva k prasiatku, presvedč sa, či sú bloky k sebe dobre pripojené a stlač \"Spustiť\".",
           "courseC_maze_programming1_b": "Neboj sa urobiť chybu! Vyskúšaj niečo, a keď to nefunguje, tak vyskúšaj niečo iné!"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "Na vyriešenie tejto úlohy pridaj k udalosti `po kliknutí na postavu 1` jeden alebo viac blokov `postava 1 povedz`."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "Na vyriešenie tejto úlohy ti stačí pridať jeden blok. Vyber blok `povedz` z panela nástrojov a pripoj ho k bloku s udalosťou `pri spustení`, ktorý už je pripravený na pracovnej ploche. Potom dovnútra napíš „Ahoj!“."
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "Na vyriešenie tejto úlohy musí Sid niečo povedať pomocou bloku `postava 1 povedz`.  Okrem toho musí Manny niečo povedať pomocou bloku `postava 2 povedz`. "
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí `keď šípka ___` pripojiť iný príkaz `posuň postavu 1`. "
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "Na vyriešenie tejto úlohy budeš musieť ku každej z udalostí `keď šípka ___` pripojiť iný príkaz `posuň postavu 1`. "
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "Na vyriešenie tejto úlohy môžeš buď posunúť Diega o 200 pixelov dole, alebo posunúť Mannyho o 200 pixelov hore.",
+          "iceage_move_to_actor_b": "Na vyriešenie tejto úlohy pripoj blok `prehraj zvuk ___` k udalosti `keď postava 1 dotkne sa postavy 2`."
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "Na vyriešenie tejto úlohy použi blok `posuň postavu 1 vpravo 200 pixelov`."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "Na vyriešenie tejto úlohy použi bloky `posuň postavu 1 vľavo` aj `posuň postavu 1 vpravo`."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "Pod udalosť `keď postava 1 dotkne sa postavy 2` budeš musieť pridať dva bloky.",
+          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky `pridaj bod` aj `prehraj zvuj ___`."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "Pod udalosť `keď postava 1 dotkne sa postavy 2` budeš musieť pridať dva bloky.",
+          "iceage_sound_and_points_b": "Na prejdenie tejto úrovne budeš musieť použiť bloky `pridaj bod` aj `prehraj zvuj ___`."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "Vieš naprogramovať, aby si Sid a Manny dali súboj s ľadovými kryštálmi?",
+          "iceage_free_play_b": "Čo keby si Ňaňa zahrala s Diegom naháňačku? Hra sa skončí, keď Ňaňa Diega chytí.",
+          "iceage_free_play_c": "Čo tak nechať Sida hádzať na Diega snehové vločky a nastaviť, aby sa Diego po každom zásahu zväčšil? Hra sa skončí výhrou, keď Sid zasiahne Diega päťkrát."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "Kedy má Sid hádzať na Ňaňu srdcia? Pri stlačení šípky? Keď klikneš na Sida? Keď klikneš na Ňaňu? Je to len na tebe!",
+          "iceage_throw_hearts_b": "Ak chceš, aby sa Ňani po zasiahnutí srdcami nastavila veselá nálada, pod udalosť `keď postava 2 dotkne sa projektilu` musíš pripojiť blok `nastav postavu 2 na veselú náladu`."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "Na vyriešenie tejto úlohy by ti malo stačiť pridať dva bloky. ",
+          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť `pri spustení`, aby sa spustili hneď po spustení programu."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "Na vyriešenie tejto úlohy by ti malo stačiť pridať dva bloky. ",
+          "iceage_warn_ice_age_b": "Oba bloky pridaj pod udalosť `pri spustení`, aby sa spustili hneď po spustení programu."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "Takéto bloky <xml>  <block type=\"simple_move_up_left\"/></xml> umožnia tvojmu umelcovi hýbať sa šikmo!",
+          "courseA_artist_loops_challenge2_b": "Keď dokončíš jeden stan, dvakrát `skoč` hore a dostaneš sa k ďalšiemu!",
+          "courseA_artist_loops_challenge2_c": "Na dokončenie tejto úlohy musia byť všetky tvoje bloky vnútri v cykle."
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Naprogramuj, aby po kliknutí na vtáčika Robina zobrazil tučniak Waddles.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Naprogramuj, aby sa po kliknutí na tučniaka Waddlesa zobrazil dúšik Boo.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Naprogramuj, aby sa po kliknutí na dúšika Booa zobrazila chlpatá príšera Jayden.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Naprogramuj, aby sa po kliknutí na chlpatú príšeru Jaydena zobrazil robot Spiff.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Nakoniec naprogramuj, aby sa po kliknutí na robota Spiffa zobrazil čarodejník Wendel.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "Vtáčika môžeš naprogramovať tak, aby spieval.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Robota môžeš naprogramovať tak, aby pípal.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Nahnevanú príšeru môžeš naprogramovať tak, aby vrčala.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
         }
       }
     }
