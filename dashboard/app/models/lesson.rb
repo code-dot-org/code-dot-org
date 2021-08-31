@@ -107,25 +107,37 @@ class Lesson < ApplicationRecord
 
       numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
 
-      lesson.assign_attributes(
-        name: raw_lesson[:name],
-        absolute_position: (counters.lesson_position += 1),
-        lesson_group: lesson_group,
-        lockable: !!raw_lesson[:lockable],
-        has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        visible_after: raw_lesson[:visible_after],
-        unplugged: !!raw_lesson[:unplugged],
-        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
-      )
+      if unit.is_migrated
+        lesson.assign_attributes(
+          lesson_group: lesson_group,
+          absolute_position: (counters.lesson_position += 1),
+          relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+        )
+      else
+        lesson.assign_attributes(
+          name: raw_lesson[:name],
+          absolute_position: (counters.lesson_position += 1),
+          lesson_group: lesson_group,
+          lockable: !!raw_lesson[:lockable],
+          has_lesson_plan: !!raw_lesson[:has_lesson_plan],
+          visible_after: raw_lesson[:visible_after],
+          unplugged: !!raw_lesson[:unplugged],
+          relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
+        )
+      end
       lesson.save! if lesson.changed?
 
-      lesson.script_levels = ScriptLevel.add_script_levels(
-        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
-      )
+      unless unit.is_migrated
+        lesson.script_levels = ScriptLevel.add_script_levels(
+          unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
+        )
+      end
       lesson.save!
       lesson.reload
 
-      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
+      unless unit.is_migrated
+        Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
+      end
 
       lesson
     end
