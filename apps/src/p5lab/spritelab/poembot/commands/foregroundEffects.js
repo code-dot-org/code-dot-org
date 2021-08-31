@@ -14,8 +14,9 @@ export const commands = {
     const id = createUuid();
     switch (effectName) {
       case 'rain': {
+        const numDrops = 20;
         let drops = [];
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < numDrops; i++) {
           drops.push({
             x: utils.randomInt(-400, 380),
             y: utils.randomInt(-50, -20),
@@ -51,8 +52,9 @@ export const commands = {
         break;
       }
       case 'bubbles': {
+        const numBubbles = 25;
         let bubbles = [];
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < numBubbles; i++) {
           bubbles.push({
             x: this.p5.random(-100, 400),
             y: 410,
@@ -89,8 +91,9 @@ export const commands = {
         break;
       }
       case 'hearts': {
+        const numHearts = 15;
         let hearts = [];
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < numHearts; i++) {
           hearts.push({
             x: utils.randomInt(10, 390),
             y: utils.randomInt(10, 390),
@@ -123,6 +126,7 @@ export const commands = {
         break;
       }
       case 'emojis': {
+        const numEmojis = 15;
         const lovestruck = this.p5.createGraphics(100, 100);
         lovestruck.scale(3);
         drawLovestruck(lovestruck.drawingContext);
@@ -145,7 +149,7 @@ export const commands = {
 
         const emojiTypes = [lovestruck, smiley, starstruck, tickled, wink];
         let emojis = [];
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < numEmojis; i++) {
           emojis.push({
             x: utils.randomInt(10, 390),
             y: utils.randomInt(-100, -50),
@@ -182,8 +186,9 @@ export const commands = {
         break;
       }
       case 'confetti': {
+        const numConfetti = 25;
         let confetti = [];
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < numConfetti; i++) {
           confetti.push({
             x: utils.randomInt(0, 400),
             y: utils.randomInt(-50, -20),
@@ -224,8 +229,9 @@ export const commands = {
         break;
       }
       case 'starburst': {
+        const numStars = 100;
         let stars = [];
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < numStars; i++) {
           const theta = utils.randomInt(0, 360);
           const velocity = utils.randomInt(4, 12);
           stars.push({
@@ -265,6 +271,7 @@ export const commands = {
         break;
       }
       case 'glass': {
+        const numGlassShards = 100;
         let glassShards = [];
         const shardRadius = 10;
 
@@ -279,7 +286,7 @@ export const commands = {
           this.p5.endShape();
         };
 
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < numGlassShards; i++) {
           const numPoints = utils.randomInt(3, 9);
           const points = [];
           const velocity = utils.randomInt(4, 12);
@@ -324,8 +331,9 @@ export const commands = {
         break;
       }
       case 'twinkling': {
+        const numStars = 75;
         let stars = [];
-        for (let i = 0; i < 75; i++) {
+        for (let i = 0; i < numStars; i++) {
           stars.push({
             color: utils.randomColorFromPalette('twinkling'),
             x: utils.randomInt(0, 400),
