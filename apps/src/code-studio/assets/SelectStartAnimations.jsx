@@ -3,11 +3,12 @@ import {
   getManifest,
   getLevelAnimationsFiles
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import Button from '@cdo/apps/templates/Button';
 
 export default class SelectStartAnimations extends React.Component {
   state = {
     spritesByCategory: {},
-    startAnimations: {},
+    startAnimations: [],
     expandedCategory: ''
   };
 
@@ -26,7 +27,7 @@ export default class SelectStartAnimations extends React.Component {
             let lowercase = filename.toLowerCase();
             return lowercase.endsWith('png');
           });
-          updatedCategories['hidden'] = onlyPngs;
+          updatedCategories['level_animations'] = onlyPngs;
           this.setState({spritesByCategory: updatedCategories});
         });
       })
@@ -59,6 +60,12 @@ export default class SelectStartAnimations extends React.Component {
     });
   };
 
+  onAddSprite = sprite => {
+    let updatedSprites = [...this.state.startAnimations];
+    updatedSprites.push(sprite);
+    this.setState({startAnimations: updatedSprites});
+  };
+
   displayExpandedCategory = () => {
     const {spritesByCategory, expandedCategory} = this.state;
     let category = spritesByCategory[expandedCategory];
@@ -67,7 +74,25 @@ export default class SelectStartAnimations extends React.Component {
     }
 
     return category.map(sprite => {
-      return <p key={sprite}>{sprite}</p>;
+      return (
+        <div style={styles.addButtons}>
+          <Button
+            color={Button.ButtonColor.gray}
+            onClick={() => this.onAddSprite(sprite)}
+            size={Button.ButtonSize.narrow}
+            icon="plus"
+            iconClassName="fa-plus"
+          />
+          <p>{sprite}</p>
+        </div>
+      );
+    });
+  };
+
+  displaySelectedSprites = () => {
+    const {startAnimations} = this.state;
+    return startAnimations.map(animation => {
+      return <p>{animation}</p>;
     });
   };
 
@@ -76,9 +101,20 @@ export default class SelectStartAnimations extends React.Component {
       <div>
         <h3>Select Starting Animations</h3>
         <div style={styles.categoryRows}>
-          <div>{this.renderCategories()}</div>
+          <div>
+            <h3>Categories:</h3>
+            {this.renderCategories()}
+          </div>
 
-          <div>{this.displayExpandedCategory()}</div>
+          <div>
+            <h3>Add Animations:</h3>
+            {this.displayExpandedCategory()}
+          </div>
+
+          <div>
+            <h3>Selected Animations:</h3>
+            {this.displaySelectedSprites()}
+          </div>
         </div>
       </div>
     );
@@ -90,5 +126,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'flex-start'
+  },
+  addButtons: {
+    display: 'flex',
+    justifyContent: 'flex-start'
   }
 };
