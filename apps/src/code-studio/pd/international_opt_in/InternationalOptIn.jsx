@@ -325,9 +325,7 @@ class InternationalOptInComponent extends FormComponent {
 
     return (
       <FormGroup>
-        <h4>
-          {i18n.yourSchoolTellUs()}
-        </h4>
+        <h4>{i18n.yourSchoolTellUs()}</h4>
         {this.buildSelectFieldGroupFromOptions({
           name: 'schoolCountry',
           label: this.props.labels.schoolCountry,
