@@ -4,31 +4,29 @@ import {
   getLevelAnimationsFiles
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import Button from '@cdo/apps/templates/Button';
+import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
+import {createUuid} from '@cdo/apps/utils';
 
 export default class SelectStartAnimations extends React.Component {
   state = {
-    spritesByCategory: {},
-    startAnimations: [],
-    expandedCategory: ''
+    levelAnimations: [],
+    libraryManifest: {},
+    orderedKeys: [],
+    propsByKey: {}
   };
 
   componentDidMount() {
     getManifest('spritelab')
       .then(sprites => {
-        // let orderedList = Array.from(spriteDefault['default_sprites']);
-        // this.setState({defaultList: orderedList, isLoading: false});
-        const categories = sprites['categories'];
-        this.setState({spritesByCategory: categories});
+        this.setState({libraryManifest: sprites});
       })
       .then(() => {
         getLevelAnimationsFiles().then(sprites => {
-          let updatedCategories = {...this.state.spritesByCategory};
           let onlyPngs = sprites.files.filter(filename => {
             let lowercase = filename.toLowerCase();
             return lowercase.endsWith('png');
           });
-          updatedCategories['level_animations'] = onlyPngs;
-          this.setState({spritesByCategory: updatedCategories});
+          this.setState({levelAnimations: onlyPngs});
         });
       })
       .catch(err => {
@@ -36,85 +34,46 @@ export default class SelectStartAnimations extends React.Component {
       });
   }
 
-  expandCategory = category => {
-    this.setState({expandedCategory: category});
-  };
+  addAnimationToList = animation => {
+    const key = createUuid();
 
-  renderCategories = () => {
-    const categories = Object.keys(this.state.spritesByCategory);
-    return categories.map(category => {
-      return (
-        <div key={category}>
-          <h5>
-            <a onClick={() => this.expandCategory(category)}>{category}</a>
-          </h5>
-        </div>
-      );
-    });
-  };
+    let updatedOrderedKeys = [key].concat(this.state.orderedKeys);
+    this.setState({orderedKeys: updatedOrderedKeys});
 
-  renderSpecificCategory = category => {
-    const sprites = this.state.spritesByCategory[category];
-    return sprites.map(sprite => {
-      return <p key={sprite}>{sprite}</p>;
-    });
-  };
-
-  onAddSprite = sprite => {
-    let updatedSprites = [...this.state.startAnimations];
-    updatedSprites.push(sprite);
-    this.setState({startAnimations: updatedSprites});
-  };
-
-  displayExpandedCategory = () => {
-    const {spritesByCategory, expandedCategory} = this.state;
-    let category = spritesByCategory[expandedCategory];
-    if (!category) {
-      return;
-    }
-
-    return category.map(sprite => {
-      return (
-        <div style={styles.addButtons}>
-          <Button
-            color={Button.ButtonColor.gray}
-            onClick={() => this.onAddSprite(sprite)}
-            size={Button.ButtonSize.narrow}
-            icon="plus"
-            iconClassName="fa-plus"
-          />
-          <p>{sprite}</p>
-        </div>
-      );
-    });
-  };
-
-  displaySelectedSprites = () => {
-    const {startAnimations} = this.state;
-    return startAnimations.map(animation => {
-      return <p>{animation}</p>;
-    });
+    let propsByKey = {...this.state.propsByKey};
+    propsByKey[key] = animation;
+    this.setState({propsByKey: propsByKey});
   };
 
   render() {
     return (
       <div>
-        <h3>Select Starting Animations</h3>
+        <h2>Select Starting Animations</h2>
+        <Button
+          text="Generate animation JSON"
+          color={Button.ButtonColor.red}
+          onClick={() => console.log('Test')}
+        />
         <div style={styles.categoryRows}>
-          <div>
-            <h3>Categories:</h3>
-            {this.renderCategories()}
-          </div>
-
-          <div>
-            <h3>Add Animations:</h3>
-            {this.displayExpandedCategory()}
-          </div>
-
           <div>
             <h3>Selected Animations:</h3>
             {this.displaySelectedSprites()}
           </div>
+        </div>
+        <div>
+          <AnimationPickerBody
+            is13Plus={true}
+            onDrawYourOwnClick={() => console.log('Not supported at this time')}
+            onPickLibraryAnimation={this.addAnimationToList}
+            onUploadClick={() => console.log('Not supported at this time')}
+            playAnimations={false}
+            libraryManifest={this.state.libraryManifest}
+            hideUploadOption={false}
+            hideAnimationNames={false}
+            navigable={true}
+            hideBackgrounds={false}
+            canDraw={false}
+          />
         </div>
       </div>
     );
