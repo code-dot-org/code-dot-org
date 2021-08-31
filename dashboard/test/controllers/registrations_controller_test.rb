@@ -396,6 +396,60 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal EmailPreference::ACCOUNT_SIGN_UP, email_preference[:source]
   end
 
+  test "create new teacher with us ip with opt-in to sharing email with regional partners set share_teacher_email_regional_partner_opt_in value to DateTime value" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'yes')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
+    assert_creates(User) do
+      post :create, params: {user: teacher_params}
+    end
+
+    teacher = User.last
+    assert_not_nil teacher.share_teacher_email_regional_partner_opt_in
+  end
+
+  test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no', share_teacher_email_reg_partner_opt_in_radio_choice: 'no')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
+    assert_creates(User) do
+      post :create, params: {user: teacher_params}
+    end
+
+    teacher = User.last
+    assert_nil teacher.share_teacher_email_regional_partner_opt_in
+  end
+
+  test "create new teacher with us ip with no selection on sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
+    assert_creates(User) do
+      post :create, params: {user: teacher_params}
+    end
+
+    teacher = User.last
+    assert_nil teacher.share_teacher_email_regional_partner_opt_in
+  end
+
+  test "create new teacher with non-us ip ensure share_teacher_email_regional_partner_opt_in value is nil" do
+    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'no')
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
+    assert_creates(User) do
+      post :create, params: {user: teacher_params}
+    end
+
+    teacher = User.last
+    assert_nil teacher.share_teacher_email_regional_partner_opt_in
+  end
+
+  test "create new student ensure share_teacher_email_regional_partner_opt_in value is nil" do
+    student_params = @default_params
+    assert_creates(User) do
+      post :create, params: {user: student_params}
+    end
+
+    student = User.last
+    assert_nil student.share_teacher_email_regional_partner_opt_in
+  end
+
   test "create new student in eu fails when missing value" do
     eu_student_params = @default_params.update(
       data_transfer_agreement_required: "1"
