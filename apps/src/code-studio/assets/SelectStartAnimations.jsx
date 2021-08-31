@@ -6,6 +6,10 @@ import {
 import Button from '@cdo/apps/templates/Button';
 import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
 import {createUuid} from '@cdo/apps/utils';
+import color from '@cdo/apps/util/color';
+
+const THUMBNAIL_SIZE = 50;
+const THUMBNAIL_BORDER_WIDTH = 1;
 
 export default class SelectStartAnimations extends React.Component {
   state = {
@@ -45,6 +49,33 @@ export default class SelectStartAnimations extends React.Component {
     this.setState({propsByKey: propsByKey});
   };
 
+  removeAnimationFromList = key => {
+    let updatedOrderedKeys = [...this.state.orderedKeys];
+    let indexToRemove = updatedOrderedKeys.indexOf(key);
+    updatedOrderedKeys.splice(indexToRemove, 1);
+    this.setState({orderedKeys: updatedOrderedKeys});
+
+    let propsByKey = {...this.state.propsByKey};
+    delete propsByKey[key];
+    this.setState({propsByKey: propsByKey});
+  };
+
+  displaySelectedSprites = () => {
+    const {propsByKey, orderedKeys} = this.state;
+    return orderedKeys.map(key => {
+      return (
+        <img
+          key={key}
+          src={propsByKey[key].sourceUrl}
+          alt={propsByKey[key].name}
+          style={styles.thumbnail}
+          role="button"
+          onClick={() => this.removeAnimationFromList(key)}
+        />
+      );
+    });
+  };
+
   render() {
     return (
       <div>
@@ -54,11 +85,9 @@ export default class SelectStartAnimations extends React.Component {
           color={Button.ButtonColor.red}
           onClick={() => console.log('Test')}
         />
-        <div style={styles.categoryRows}>
-          <div>
-            <h3>Selected Animations:</h3>
-            {this.displaySelectedSprites()}
-          </div>
+        <div>
+          <h3>Selected Animations:</h3>
+          {this.displaySelectedSprites()}
         </div>
         <div>
           <AnimationPickerBody
@@ -81,13 +110,15 @@ export default class SelectStartAnimations extends React.Component {
 }
 
 const styles = {
-  categoryRows: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start'
-  },
-  addButtons: {
-    display: 'flex',
-    justifyContent: 'flex-start'
+  thumbnail: {
+    height: THUMBNAIL_SIZE,
+    borderStyle: 'solid',
+    borderColor: color.light_gray,
+    borderWidth: THUMBNAIL_BORDER_WIDTH,
+    borderRadius: 12,
+    cursor: 'pointer',
+    ':hover': {
+      borderColor: color.purple
+    }
   }
 };
