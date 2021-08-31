@@ -39,6 +39,7 @@ class Button extends React.Component {
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
+    displayAsText: PropTypes.bool,
     icon: PropTypes.string,
     iconClassName: PropTypes.string,
     iconStyle: PropTypes.object,
@@ -65,9 +66,9 @@ class Button extends React.Component {
 
   render() {
     const {
-      className,
       href,
       text,
+      displayAsText,
       icon,
       iconClassName,
       iconStyle,
@@ -114,10 +115,19 @@ class Button extends React.Component {
     // potential exploits. Therefore, we do so here.
     const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
+    let tagStyle;
+    let className = this.props.className || '';
+    if (displayAsText) {
+      tagStyle = [styles.main, styles.textButton, style];
+      className += 'button-active-no-border';
+    } else {
+      tagStyle = [styles.main, styles.colors[color], sizeStyle, style];
+    }
+
     return (
       <Tag
         className={className}
-        style={[styles.main, styles.colors[color], sizeStyle, style]}
+        style={tagStyle}
         href={disabled ? '#' : href}
         target={target}
         rel={rel}
@@ -302,6 +312,18 @@ const styles = {
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
+    }
+  },
+  textButton: {
+    color: color.teal,
+    border: 'none',
+    backgroundColor: 'unset',
+    fontWeight: 'bold',
+    boxShadow: 'none',
+    padding: 0,
+    margin: 0,
+    ':hover': {
+      backgroundColor: 'unset'
     }
   }
 };
