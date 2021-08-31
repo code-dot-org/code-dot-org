@@ -101,11 +101,11 @@ module Services
       Timecop.freeze do
         script = create_script_tree
         updated_at = script.updated_at
-        Timecop.travel 1
+        Timecop.travel 1.minute
         json = ScriptSeed.serialize_seeding_json(script)
         ScriptSeed.seed_from_json(json)
         script.reload
-        assert_equal updated_at + 1, script.updated_at
+        refute_equal updated_at, script.updated_at
       end
     end
 
