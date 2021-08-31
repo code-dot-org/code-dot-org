@@ -14,6 +14,9 @@
         "exploring_apps_1/coursef/2021": {
           "name": "アプリを探索"
         },
+        "making_sprites/coursef/2021": {
+          "name": "スプライトを作る"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "スプライトラボのドキュメント"
         },
@@ -262,6 +265,9 @@
         },
         "sprite_lab_documentation/express/2021": {
           "name": "スプライトラボのドキュメント"
+        },
+        "making_sprites/express/2021": {
+          "name": "スプライトを作る"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "スプライトラボのドキュメント"
