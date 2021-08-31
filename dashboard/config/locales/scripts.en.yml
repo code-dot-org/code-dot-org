@@ -22598,8 +22598,8 @@ en:
           lessons:
             lesson-1:
               name: Using Existing Libraries to Add Capabilities
-              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs. To begin developing the Pop the Balloon game for The Neighborhood block party, you import The Park API and use it to implement clickable images.
-              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. Students explore APIs and their documentation to identify features that they can add to their programs. To begin developing the Pop the Balloon game for The Neighborhood block party, students import The Park API and use it to implement clickable images.
+              description_student: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. You explore APIs and their documentation to identify features that you can add to your programs to get started. You use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
+              description_teacher: The Neighborhood is hosting a block party and needs a game developed for the community to play with their friends and family. To get started, students explore APIs and their documentation to identify features to add to their programs. Students use `import` statements to import The Playground, implement clickable images, and begin developing the Pop the Balloon game for the block party.
             lesson-2:
               name: Neighborhood Block Party Project - Day 1
               description_student: For this project, you design the core elements for a simple game by planning and developing a game engine. You outline the game mechanics, pseudocode each component, then use an interactive design process to make a game that reacts to a user’s interaction. At the end of this project, you participate in a block party to play one another’s games!
@@ -24734,7 +24734,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by September 3, 2021.  Check back later for your prompts."
+          description: ''
+          student_description: ''
         dlp21-csd-mod3:
           lessons:
             lesson-1:
@@ -24782,7 +24783,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by September 3, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by September <s>3</s> 8, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod3:
           lessons:
             lesson-1:
@@ -25844,3 +25846,60 @@ en:
           description_short: 'Hour of Code Activity - V2 '
           description: ''
           student_description: ''
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Template
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Innovations in Computing
+            lesson-3:
+              name: Board Outputs (LED Buzzer)
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: App Lab Outputs (setProperty)
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unplugged Board Inputs?
+            lesson-6:
+              name: Board Inputs (Button Toggle)
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Variables + If-Statements
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: 'Mini-Proj: Emoji Race'
+            lesson-9:
+              name: Color LEDs
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
+              description_student: 
+              description_teacher: |-
+                Only in App Lab - No Circuit Playground (yet).
+
+                All about getProperty, Variables, and if-statements
+                - get property from dropdown. If (X) -> do (Y)
+                - get property from slider. Use to update position of something on the screen?
+                - get text from input. Use to update a label
+
+                **Focus on new getProperty() command and how to use it with new design elts. Save board inputs/outputs for tomorrow!**
+
+                In tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen.
+            lesson-11:
+              name: Combining Inputs
+            lesson-12:
+              name: 'Project: Maker'
+          lesson_groups: {}
+          name: csdu6-playground
+          title: CSD Unit 6 Playground
+          description_audience: ''
+          description_short: CSD U6 Playground. See Dan Schneider for questions
+          description: ''
+          student_description: CSD U6 Playground. See Dan Schneider for questions
