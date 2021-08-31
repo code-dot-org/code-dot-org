@@ -9,6 +9,7 @@ import * as utils from './utils';
 
 export const commands = {
   setForegroundEffect(effectName) {
+    this.validationInfo.foregroundEffect = effectName;
     switch (effectName) {
       case 'rain': {
         const drops = [];
@@ -189,6 +190,7 @@ export const commands = {
         };
         this.foregroundEffect = () => {
           this.p5.push();
+          this.p5.noStroke();
           if (stars.length === 0) {
             resetStars();
           }
@@ -244,6 +246,7 @@ export const commands = {
         };
         this.foregroundEffect = () => {
           this.p5.push();
+          this.p5.noStroke();
           glassShards.forEach(glass => drawGlass(glass));
           glassShards = glassShards.filter(glass =>
             // the glass shard is considered in bounds if at least one vertex
@@ -265,8 +268,43 @@ export const commands = {
         break;
       case 'birds':
         break;
-      case 'twinkling':
+      case 'twinkling': {
+        let stars = [];
+        for (let i = 0; i < 75; i++) {
+          stars.push({
+            color: utils.randomColorFromPalette('twinkling'),
+            x: utils.randomInt(0, 400),
+            y: utils.randomInt(0, 400),
+            alpha: utils.randomInt(1, 100),
+            // amount to change the opacity by each frame. p5.random will choose
+            // a random value from the array. The reason it's not just random(-6, 6)
+            // is that we don't want stars with delta values between 0 and +/-2
+            // because they change too slowly to feel noticeable.
+            delta: this.p5.random([-6, -5, -4, -3, 3, 4, 5, 6])
+          });
+        }
+
+        this.foregroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
+          stars.forEach(star => {
+            const color = this.getP5Color(star.color, star.alpha);
+            this.p5.fill(color);
+
+            star.alpha += star.delta;
+            if (star.alpha > 100) {
+              star.delta *= -1;
+            }
+            if (star.alpha < 0) {
+              star.delta *= -1;
+            }
+            drawStar(this.p5, star.x, star.y, 3, 9, 5);
+          });
+          this.p5.pop();
+        };
+
         break;
+      }
       default:
         break;
     }
