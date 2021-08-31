@@ -3680,6 +3680,7 @@ id:
               name: Desainer Hour of Code Minecraft
           student_description: Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri.
         flappy-impact-study:
+          title: Flappy Code dengan survey
           lessons:
             Pre Hour of Code Survey:
               name: Survei Pra Hour of Code
@@ -18173,3 +18174,59 @@ id:
           lessons:
             lesson-1:
               name: Tinjauan
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Tool
+            lesson-18:
+              name: Widget
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
+            lessonGroup-3:
+              display_name: Proyek
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-20:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lesson group:
+              display_name: Konten
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-15:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
