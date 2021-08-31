@@ -4,6 +4,7 @@ import {PALETTES} from '../constants';
 export const commands = {
   // TODO: would it be possible to re-use the background/foreground effect code from dance party?
   setBackgroundEffect(effectName, palette) {
+    this.validationInfo.backgroundEffect = effectName;
     switch (effectName) {
       case 'colors': {
         let amount = 0;
@@ -131,6 +132,8 @@ export const commands = {
           circles.push(createCircle());
         }
         this.backgroundEffect = () => {
+          this.p5.push();
+          this.p5.noStroke();
           this.p5.background('black');
           for (let i = 0; i < circles.length; i++) {
             const circle = circles[i];
@@ -150,6 +153,7 @@ export const commands = {
               circle.radius * 2
             );
           }
+          this.p5.pop();
         };
         break;
       }
