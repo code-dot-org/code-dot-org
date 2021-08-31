@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-23 16:52:12 UTC",
+    "serialized_at": "2021-08-31 13:52:40 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csa1-pilot"
@@ -7743,7 +7743,7 @@
       "key": "design_the_neighborhood",
       "properties": {
         "type": "Activity Guide",
-        "audience": "Verified Teacher",
+        "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
