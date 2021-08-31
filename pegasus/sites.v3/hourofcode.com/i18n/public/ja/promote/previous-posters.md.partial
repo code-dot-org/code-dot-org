@@ -4,7 +4,7 @@ layout: wide
 nav: promote_nav
 ---
 
-{{ signup_button }}
+サインアップ
 
 # 過去に使われたHour of Codeのポスター
 
@@ -16,4 +16,4 @@ nav: promote_nav
 
 {{ promote_posters }}
 
-{{ signup_button }}
+サインアップ
