@@ -1287,6 +1287,7 @@ it:
             Unit 6 lessons:
               name: Lezioni dell'Unità 6
         cspunit4draft:
+          description_short: Dati
           lessons:
             Check Your Assumptions:
               name: Verifica le Tue Ipotesi
@@ -1844,6 +1845,8 @@ it:
               name: Orme digitali
             Peer Review:
               name: Valutazioni dei parigrado
+        CSDU5-Draft:
+          description_short: Dati
         CSF_Secret_Sample_Story:
           description_audience: Dai 8 anni in su
         MikeTest:
@@ -5151,6 +5154,8 @@ it:
               display_name: Introduzione
             csf_variables:
               display_name: Variabili
+            csf_data:
+              display_name: Dati
             csf_for_loops:
               display_name: Cicli con contatore
             csf_internet:
@@ -5676,6 +5681,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            csf_data:
+              display_name: Dati
             end_of_course_project:
               display_name: Progetto di fine corso
           lessons:
@@ -7202,6 +7209,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            csf_data:
+              display_name: Dati
             end_of_course_project:
               display_name: Progetto di fine corso
           lessons:
@@ -7438,6 +7447,8 @@ it:
               display_name: Cittadinanza digitale
             csf_variables:
               display_name: Variabili
+            csf_data:
+              display_name: Dati
             csf_for_loops:
               display_name: Cicli con contatore
             csf_sprites:
@@ -8343,6 +8354,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            csf_data:
+              display_name: Dati
             end_of_course_project:
               display_name: Progetto di fine corso
           student_description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -9046,3 +9059,36 @@ it:
           lessons:
             lesson-1:
               name: Panoramica
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: Strumenti
+            lesson-17:
+              name: Console
+            lesson-18:
+              name: Componenti
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lezioni
+            lessonGroup-3:
+              display_name: Progetto
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Contenuto
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
