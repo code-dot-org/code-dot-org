@@ -18259,3 +18259,59 @@ ar:
           lessons:
             lesson-1:
               name: لمحة عامة
+        csa-u6-dev:
+          lessons:
+            lesson-12:
+              name: الأدوات
+            lesson-18:
+              name: عناصر واجهة المستخدم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الدروس
+            lessonGroup-3:
+              display_name: مشروع
+        csa1-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            lesson-20:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa2-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lesson group:
+              display_name: محتوى
+        csa3-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa4-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        csa5-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
