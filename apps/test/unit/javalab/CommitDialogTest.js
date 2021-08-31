@@ -13,13 +13,13 @@ describe('CommitDialog test', () => {
   let defaultProps,
     handleCommitSpy,
     backpackSaveFilesSpy,
-    backpackGetFileListSpy,
+    backpackGetFileListStub,
     hasBackpackStub;
 
   beforeEach(() => {
     handleCommitSpy = sinon.spy();
     backpackSaveFilesSpy = sinon.spy();
-    backpackGetFileListSpy = sinon
+    backpackGetFileListStub = sinon
       .stub(BackpackClientApi.prototype, 'getFileList')
       .callsArgWith(1, ['backpackFile.java']);
     hasBackpackStub = sinon.stub().returns(true);
@@ -32,14 +32,14 @@ describe('CommitDialog test', () => {
       sources: {},
       backpackApi: {
         saveFiles: backpackSaveFilesSpy,
-        getFileList: backpackGetFileListSpy,
+        getFileList: backpackGetFileListStub,
         hasBackpack: hasBackpackStub
       }
     };
   });
 
   afterEach(() => {
-    backpackGetFileListSpy.restore();
+    BackpackClientApi.prototype.getFileList.restore();
   });
 
   it('cannot commit with message', () => {
