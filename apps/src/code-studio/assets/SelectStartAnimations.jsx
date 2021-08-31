@@ -3,7 +3,6 @@ import {
   getManifest,
   getLevelAnimationsFiles
 } from '@cdo/apps/assetManagement/animationLibraryApi';
-import Button from '@cdo/apps/templates/Button';
 import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody.jsx';
 import {createUuid} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
@@ -77,14 +76,11 @@ export default class SelectStartAnimations extends React.Component {
   };
 
   render() {
+    let {orderedKeys, propsByKey} = this.state;
+    let animationObject = {orderedKeys, propsByKey};
     return (
       <div>
         <h2>Select Starting Animations</h2>
-        <Button
-          text="Generate animation JSON"
-          color={Button.ButtonColor.red}
-          onClick={() => console.log('Test')}
-        />
         <div>
           <h3>Selected Animations:</h3>
           {this.displaySelectedSprites()}
@@ -104,6 +100,7 @@ export default class SelectStartAnimations extends React.Component {
             canDraw={false}
           />
         </div>
+        <p>{JSON.stringify(animationObject)}</p>
       </div>
     );
   }
