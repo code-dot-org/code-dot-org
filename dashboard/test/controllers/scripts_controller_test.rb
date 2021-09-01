@@ -4,8 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
-    @not_admin = create(:user)
     @platformization_partner = create(:platformization_partner)
 
     @in_development_unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
@@ -52,7 +50,9 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get index if not levelbuilder" do
-    [@admin, @not_admin].each do |user|
+    admin = create(:admin)
+    not_admin = create(:user)
+    [admin, not_admin].each do |user|
       sign_in user
 
       get :index
@@ -77,7 +77,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of ECSPD if signed in" do
-    sign_in @not_admin
+    not_admin = create(:user)
+    sign_in not_admin
     get :show, params: {id: 'ECSPD'}
     assert_response :success
   end
@@ -130,13 +131,15 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show if not admin" do
-    sign_in @not_admin
+    not_admin = create(:user)
+    sign_in not_admin
     get :show, params: {id: Script::FLAPPY_NAME}
     assert_response :success
   end
 
   test 'should not get show if admin' do
-    sign_in @admin
+    admin = create(:admin)
+    sign_in admin
     get :show, params: {id: Script::FLAPPY_NAME}
     assert_response :forbidden
   end
@@ -288,7 +291,9 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should not get edit if not levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    [@not_admin, @admin].each do |user|
+    admin = create(:admin)
+    not_admin = create(:user)
+    [not_admin, admin].each do |user|
       sign_in user
       get :edit, params: {id: 'course1'}
 
