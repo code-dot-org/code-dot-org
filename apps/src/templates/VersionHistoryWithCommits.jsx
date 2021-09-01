@@ -197,7 +197,7 @@ export default class VersionHistoryWithCommits extends React.Component {
           isLatest={version.isLatest}
           comment={version.comment}
           onChoose={() => this.onChooseVersion(version.versionId)}
-          rowColor={i % 2 === 0 ? color.lightest_gray : null}
+          rowColor={i % 2 === 0 ? color.background_gray : null}
         />
       ));
 
@@ -256,11 +256,11 @@ function VersionWithCommit(props) {
   if (props.isLatest) {
     button = (
       <Button
-        style={{cursor: 'default'}}
         color={Button.ButtonColor.gray}
         text={i18n.current()}
         onClick={props.onChoose}
         disabled
+        style={{cursor: 'default'}}
       />
     );
   } else {

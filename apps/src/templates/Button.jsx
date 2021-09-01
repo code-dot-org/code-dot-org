@@ -241,9 +241,9 @@ const styles = {
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
       ':hover': {
         boxShadow: 'none',
-        color: color.cyan,
-        borderColor: color.cyan,
-        backgroundColor: color.lightest_cyan
+        color: color.teal,
+        borderColor: color.teal,
+        backgroundColor: color.lightest_teal
       },
       ':disabled': {
         color: color.lighter_cyan,
