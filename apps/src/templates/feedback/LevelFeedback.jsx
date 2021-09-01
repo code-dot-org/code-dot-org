@@ -5,7 +5,7 @@ import {levelFeedbackShape} from './types';
 import SingleFeedback from '@cdo/apps/templates/feedback/SingleFeedback';
 import Button from '@cdo/apps/templates/Button';
 
-export default class LevelFeedbackEntry extends Component {
+export default class LevelFeedback extends Component {
   static propTypes = levelFeedbackShape;
 
   state = {

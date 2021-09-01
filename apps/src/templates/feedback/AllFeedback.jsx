@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import LevelFeedbackEntry2 from '@cdo/apps/templates/feedback/LevelFeedbackEntry2';
+import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
 import i18n from '@cdo/locale';
 import {levelFeedbackShape} from './types';
 
@@ -18,7 +18,7 @@ export default class AllFeedback extends Component {
         <h1>{i18n.feedbackAll()}</h1>
         {noFeedback && <div>{i18n.feedbackNoneYet()}</div>}
         {feedbackByLevel.map((levelFeedback, i) => {
-          return <LevelFeedbackEntry2 key={i} {...levelFeedback} />;
+          return <LevelFeedback key={i} {...levelFeedback} />;
         })}
       </div>
     );
