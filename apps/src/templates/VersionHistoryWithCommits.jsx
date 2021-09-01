@@ -282,7 +282,7 @@ function VersionWithCommit(props) {
         key="restore"
         onClick={props.onChoose}
         text={i18n.restore()}
-        color={Button.ButtonColor.blue}
+        color={Button.ButtonColor.teal}
       />
     ];
   }
