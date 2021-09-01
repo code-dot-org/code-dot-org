@@ -27,7 +27,7 @@ export default class PoemBotLibrary extends CoreLibrary {
         font: 'Arial'
       },
       isVisible: true,
-      effects: []
+      textEffects: []
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -49,15 +49,20 @@ export default class PoemBotLibrary extends CoreLibrary {
           this.poemState,
           this.p5.World.frameCount
         );
-        for (let i = 0; i < renderInfo.lines.length; i++) {
-          const lineNum = i + 1; // students will 1-index the lines
-          // Fire line events
-          this.lineEvents[lineNum]?.forEach(callback => callback());
+        // Don't fire line events in preview
+        if (this.p5.frameCount > 1) {
+          for (let i = 0; i < renderInfo.lines.length; i++) {
+            const lineNum = i + 1; // students will 1-index the lines
+            if (this.lineEvents[lineNum]) {
+              // Fire line events
+              this.lineEvents[lineNum].forEach(callback => callback());
 
-          // Clear out line events so they don't fire again. This way, we'll fire
-          // the event only on the first frame where renderInfo.lines has
-          // that many items
-          this.lineEvents[lineNum] = null;
+              // Clear out line events so they don't fire again. This way, we'll fire
+              // the event only on the first frame where renderInfo.lines has
+              // that many items
+              this.lineEvents[lineNum] = null;
+            }
+          }
         }
         this.drawFromRenderInfo(renderInfo);
 
@@ -128,7 +133,7 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       setTextEffect(effect) {
-        this.poemState.effects.push({
+        this.poemState.textEffects.push({
           name: effect
         });
       },
@@ -141,6 +146,14 @@ export default class PoemBotLibrary extends CoreLibrary {
       },
 
       getValidationInfo() {
+        this.validationInfo.lineEvents = Object.keys(this.lineEvents);
+        this.validationInfo.font = {...this.poemState.font};
+        this.validationInfo.textEffects = this.poemState.textEffects.map(
+          effect => effect.name
+        );
+        this.validationInfo.foregroundEffects = this.foregroundEffects.map(
+          effect => effect.name
+        );
         return this.validationInfo;
       },
 
@@ -194,7 +207,7 @@ export default class PoemBotLibrary extends CoreLibrary {
     return scaledSize;
   }
 
-  applyEffect(renderInfo, effect, frameCount) {
+  applyTextEffect(renderInfo, effect, frameCount) {
     const newLines = [];
     renderInfo.lines.forEach(line => {
       const newLine = {...line};
@@ -321,13 +334,13 @@ export default class PoemBotLibrary extends CoreLibrary {
     });
 
     if (this.p5.frameCount === 1) {
-      // Don't apply effects / line animation for preview
+      // Don't apply text effects / line animation for preview
       return renderInfo;
     }
 
     renderInfo = this.applyGlobalLineAnimation(renderInfo, frameCount);
-    poemState.effects.forEach(effect => {
-      renderInfo = this.applyEffect(renderInfo, effect, frameCount);
+    poemState.textEffects.forEach(effect => {
+      renderInfo = this.applyTextEffect(renderInfo, effect, frameCount);
     });
     return renderInfo;
   }

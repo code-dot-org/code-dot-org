@@ -42,7 +42,7 @@ II. `Painter ross = new Paint (“South”, 1,2,5);`
 
 III. `Painter ross = new Painter ();`
 
-IV. `Painter ross = new Painter (0, 0, “East”, 6);’`
+IV. `Painter ross = new Painter (0, 0, “East”, 6);`
 
 
 MARKDOWN

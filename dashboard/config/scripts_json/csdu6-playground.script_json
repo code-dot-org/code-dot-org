@@ -6,11 +6,13 @@
     "properties": {
       "is_migrated": true,
       "hideable_lessons": true,
-      "is_maker_unit": true
+      "is_maker_unit": true,
+      "weekly_instructional_minutes": 225,
+      "show_calendar": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-31 18:32:15 UTC",
+    "serialized_at": "2021-09-01 16:20:05 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csdu6-playground"
@@ -68,6 +70,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "- Use the buzzer on the circuit playground\n- Use the led on the circuit playground\n- NO variables; NO if statements; NO screen elements"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -83,6 +86,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -91,28 +95,14 @@
       }
     },
     {
-      "key": "lesson-5",
-      "name": "Unplugged Board Inputs?",
+      "key": "lesson-6",
+      "name": "Board Inputs (Button Toggle)",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "csdu6-playground"
-      }
-    },
-    {
-      "key": "lesson-6",
-      "name": "Board Inputs (Button Toggle)",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
-      "properties": {
+        "overview": "- use buttons to change elements on screen\n- use toggle switch to change elements on screen\n- use buttons and toggle with buzzer in circuit playground\n- NO if statements; NO variables; OK screen outputs"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -123,11 +113,12 @@
     {
       "key": "lesson-7",
       "name": "Variables + If-Statements",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
+        "overview": "- use variables + counter pattern to update elements on screen\n  - example: count number of times a button is pressed\n- use if-statements to check position of toggle switch\n- use variables to check value of variable\n  - for example: play buzzer after a certain number of clicks"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -138,10 +129,10 @@
     {
       "key": "lesson-8",
       "name": "Mini-Proj: Emoji Race",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -153,11 +144,12 @@
     {
       "key": "lesson-9",
       "name": "Color LEDs",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
+        "overview": "- use screen events to change color LEDs in circuit playground\n- use on(), off(), pulse(), toggle(), and blink() LED functions\n- change intensity of color LEDs\n- NOT A FOCUS: arrays.\n  - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -168,10 +160,10 @@
     {
       "key": "lesson-10",
       "name": "App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "Only in App Lab - No Circuit Playground (yet).\n\nAll about getProperty, Variables, and if-statements\n- get property from dropdown. If (X) -> do (Y)\n- get property from slider. Use to update position of something on the screen?\n- get text from input. Use to update a label\n\n**Focus on new getProperty() command and how to use it with new design elts. Save board inputs/outputs for tomorrow!**\n\nIn tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen."
       },
@@ -184,11 +176,12 @@
     {
       "key": "lesson-11",
       "name": "Combining Inputs",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
+        "overview": "- Use dropdowns and sliders to update aspects of the circuit playground\n- Have CP inputs update screen elements using getProperty() and setProperty()\n- Screen input <> Board Output is preparation for Maker project at end of Ch 1\n\n**NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -199,10 +192,10 @@
     {
       "key": "lesson-12",
       "name": "Project: Maker",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -226,9 +219,25 @@
       }
     },
     {
+      "key": "32bba12d-9d65-4fca-ad24-46d4ac07e7f1",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32bba12d-9d65-4fca-ad24-46d4ac07e7f1",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
       "key": "972e048e-ac78-4387-b63e-60b1305caf77",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "972e048e-ac78-4387-b63e-60b1305caf77",
@@ -241,6 +250,8 @@
       "key": "7f62a02b-f837-443b-976b-b52d7b86c6ca",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "7f62a02b-f837-443b-976b-b52d7b86c6ca",
@@ -253,6 +264,8 @@
       "key": "9317d3ee-905b-4b3c-8d24-998f7201938c",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "9317d3ee-905b-4b3c-8d24-998f7201938c",
@@ -265,6 +278,8 @@
       "key": "55ff1634-84f7-4ffd-9186-90653d86a823",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "55ff1634-84f7-4ffd-9186-90653d86a823",
@@ -274,9 +289,25 @@
       }
     },
     {
+      "key": "5f8b4aed-426a-4b58-b539-3075bf535509",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f8b4aed-426a-4b58-b539-3075bf535509",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
       "key": "2a8431a6-f785-4bfb-a0e1-e64cc602c3e3",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "2a8431a6-f785-4bfb-a0e1-e64cc602c3e3",
@@ -289,10 +320,54 @@
       "key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66",
         "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
+      "key": "b4939116-aab4-415d-ab0b-443c6164ff68",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
+      "key": "f542567c-7d7b-4a6f-a86f-74f26a186f5a",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f542567c-7d7b-4a6f-a86f-74f26a186f5a",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground"
+      }
+    },
+    {
+      "key": "52f61bd8-483b-488b-8994-9deb856f6a2e",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52f61bd8-483b-488b-8994-9deb856f6a2e",
+        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "csdu6-playground"
       }
@@ -330,6 +405,16 @@
       "seeding_key": {
         "activity_section.key": "06e6772e-4270-46f4-98ab-f3c057590864",
         "lesson_activity.key": "47af64cd-8d74-4c01-ae9c-e32a7b9895e8"
+      }
+    },
+    {
+      "key": "0ae6bde6-777f-4b9f-8610-0feeb82b7b92",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0ae6bde6-777f-4b9f-8610-0feeb82b7b92",
+        "lesson_activity.key": "32bba12d-9d65-4fca-ad24-46d4ac07e7f1"
       }
     },
     {
@@ -631,6 +716,16 @@
       }
     },
     {
+      "key": "1d946ea7-11f2-4d5f-b309-c742c44075bb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1d946ea7-11f2-4d5f-b309-c742c44075bb",
+        "lesson_activity.key": "5f8b4aed-426a-4b58-b539-3075bf535509"
+      }
+    },
+    {
       "key": "f9589d70-47ea-4360-99d9-23eb13bf446c",
       "position": 1,
       "properties": {
@@ -696,10 +791,142 @@
       "key": "7c810999-093d-46f3-978f-de49c78c060a",
       "position": 1,
       "properties": {
+        "description": "**TODO:** Edit this to be more like a predict level\n- Take out checkbox?\n- Use getText() instead instead of getProperty for text",
+        "name": "Predict",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "7c810999-093d-46f3-978f-de49c78c060a",
         "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66"
+      }
+    },
+    {
+      "key": "0420e75c-da97-45a5-8e48-ffdae2a168bf",
+      "position": 2,
+      "properties": {
+        "description": "**TODO**: Make low-stakes levels introducing getProperty and how to use it with different elements\n- getText of input\n- getText of dropdown + adding to dropdown\n- getNumber of slider?\n\nIncorporate if-statements and variables here!!",
+        "name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "0420e75c-da97-45a5-8e48-ffdae2a168bf",
+        "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66"
+      }
+    },
+    {
+      "key": "4b585ddf-7566-41af-80bd-b2c3301586bf",
+      "position": 3,
+      "properties": {
+        "description": "**TODO:**\n- Lots of combining screen inputs and outputs. See notes in overview for more ideas.",
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf",
+        "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66"
+      }
+    },
+    {
+      "key": "6ab42cf9-8ba3-409b-a69b-7cb3defe667e",
+      "position": 4,
+      "properties": {
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ab42cf9-8ba3-409b-a69b-7cb3defe667e",
+        "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66"
+      }
+    },
+    {
+      "key": "95cf9c1c-3409-4160-ae4a-a49d7208080e",
+      "position": 5,
+      "properties": {
+        "name": "Challenges",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "95cf9c1c-3409-4160-ae4a-a49d7208080e",
+        "lesson_activity.key": "43cdacb6-e461-4673-bcdb-2f3fdfbe1b66"
+      }
+    },
+    {
+      "key": "f3710cc8-c547-4366-a704-c1e71f8c881d",
+      "position": 1,
+      "properties": {
+        "name": "Predict",
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3710cc8-c547-4366-a704-c1e71f8c881d",
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68"
+      }
+    },
+    {
+      "key": "113b33a8-57c0-4626-a913-ff951db2ead9",
+      "position": 2,
+      "properties": {
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9",
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68"
+      }
+    },
+    {
+      "key": "43e6bd3b-15d8-41d9-9764-ad450656b0c7",
+      "position": 3,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "43e6bd3b-15d8-41d9-9764-ad450656b0c7",
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68"
+      }
+    },
+    {
+      "key": "a2587c74-0874-45c7-aca3-8e46919547f9",
+      "position": 4,
+      "properties": {
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2587c74-0874-45c7-aca3-8e46919547f9",
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68"
+      }
+    },
+    {
+      "key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d",
+      "position": 5,
+      "properties": {
+        "name": "Challenge",
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d",
+        "lesson_activity.key": "b4939116-aab4-415d-ab0b-443c6164ff68"
+      }
+    },
+    {
+      "key": "79356490-2008-42c7-82c4-4be9194ea258",
+      "position": 1,
+      "properties": {
+        "name": "Prepare Project + Materials"
+      },
+      "seeding_key": {
+        "activity_section.key": "79356490-2008-42c7-82c4-4be9194ea258",
+        "lesson_activity.key": "f542567c-7d7b-4a6f-a86f-74f26a186f5a"
+      }
+    },
+    {
+      "key": "536d79d7-d441-4f91-ba11-4406ee248913",
+      "position": 1,
+      "properties": {
+        "name": "Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "536d79d7-d441-4f91-ba11-4406ee248913",
+        "lesson_activity.key": "52f61bd8-483b-488b-8994-9deb856f6a2e"
       }
     }
   ],
@@ -885,6 +1112,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -932,6 +1162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Outputs - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -954,6 +1187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -976,6 +1212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -998,6 +1237,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1020,6 +1262,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1042,6 +1287,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1064,6 +1312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1086,6 +1337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1108,6 +1362,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1130,6 +1387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1152,6 +1412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1174,6 +1437,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1196,6 +1462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1218,6 +1487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1240,6 +1512,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1262,6 +1537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1284,6 +1562,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1306,6 +1587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1328,6 +1612,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - CA_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1350,6 +1637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1372,6 +1662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1394,6 +1687,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1416,6 +1712,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB3_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1438,6 +1737,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB4_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1460,6 +1762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Prac_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1482,6 +1787,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1504,6 +1812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Chal_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1518,6 +1829,356 @@
       },
       "level_keys": [
         "CSD U6 - Color LEDs - Chal_2022"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - P_2022"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - P_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "7c810999-093d-46f3-978f-de49c78c060a"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - P_2022"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Prac_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - Prac_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - PA_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - PA_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - PA_2022"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - PB_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - PB_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - PB_2022"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - Chal_2022"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - Chal_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "95cf9c1c-3409-4160-ae4a-a49d7208080e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - Chal_2022"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - P_2022"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - P_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "f3710cc8-c547-4366-a704-c1e71f8c881d"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - P_2022"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB1_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB1_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB1_2022"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB2_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB2_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB2_2022"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB3_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB3_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB3_2022"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - SB4_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB4_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - SB4_2022"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Prac_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - Prac_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "43e6bd3b-15d8-41d9-9764-ad450656b0c7"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - Chal_2022"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - Chal_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - Chal_2022"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - CA_2022"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - CA_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - CA_2022"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - CB_2022"
+        ],
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - CB_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
+      },
+      "level_keys": [
+        "CSD U6 - Combine Inputs - CB_2022"
       ]
     }
   ],
@@ -1952,6 +2613,174 @@
         "lesson_group.key": "",
         "script.name": "csdu6-playground",
         "activity_section.key": "42505864-b666-45af-9d8e-97bbbb3a1e07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - P_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - P_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "7c810999-093d-46f3-978f-de49c78c060a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - Prac_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - Prac_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - PA_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - PA_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - PB_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - PB_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "4b585ddf-7566-41af-80bd-b2c3301586bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - Chal_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - Chal_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "95cf9c1c-3409-4160-ae4a-a49d7208080e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - P_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - P_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "f3710cc8-c547-4366-a704-c1e71f8c881d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB1_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB2_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB3_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB3_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - SB4_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - SB4_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "113b33a8-57c0-4626-a913-ff951db2ead9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - Prac_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - Prac_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "43e6bd3b-15d8-41d9-9764-ad450656b0c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - Chal_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - Chal_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - CA_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - CA_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Combine Inputs - CB_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Combine Inputs - CB_2022"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "a169ea7b-dc3a-40dd-bb52-9ad385761f1d"
       }
     }
   ],
