@@ -13,11 +13,6 @@ import sinon from 'sinon';
 const DEFAULT_FEEDBACK = {
   seen_on_feedback_page_at: null,
   student_first_visited_at: null,
-  lessonName: 'A Lesson',
-  lessonNum: 1,
-  levelNum: 5,
-  linkToLevel: '/link-to-level',
-  unitName: 'A Unit',
   created_at: new Date(),
   comment: 'Great Work',
   performance: 'performanceLevel1',
@@ -25,26 +20,14 @@ const DEFAULT_FEEDBACK = {
   is_awaiting_teacher_review: false
 };
 
-const setUp = (overrideFeedback, useMount = false) => {
+const setUp = overrideFeedback => {
   const props = {
     feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback}
   };
-  return useMount
-    ? mount(<LevelFeedbackEntry {...props} />)
-    : shallow(<LevelFeedbackEntry {...props} />);
+  return shallow(<LevelFeedbackEntry {...props} />);
 };
 
 describe('LevelFeedbackEntry', () => {
-  it('displays the expected header', () => {
-    const wrapper = setUp();
-    expect(wrapper.contains('A Lesson 1: Level 5')).to.be.true;
-  });
-
-  it('displays the unit name', () => {
-    const wrapper = setUp();
-    expect(wrapper.contains('A Unit')).to.be.true;
-  });
-
   it('displays the created date', () => {
     const createdDate = new Date();
     const wrapper = setUp({created_at: createdDate});
