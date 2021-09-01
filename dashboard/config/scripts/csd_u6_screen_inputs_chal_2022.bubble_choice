@@ -2,3 +2,4 @@ name 'CSD U6 - Screen Inputs - Chal_2022'
 display_name 'Challenge Levels'
 
 sublevels
+level 'ml-use model card-choice2'
